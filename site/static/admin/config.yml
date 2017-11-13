@@ -1,5 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: EvictionLab/eviction-lab-website
+  branch: master
+  base_url: https://operator-menu-82243.netlify.com
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
