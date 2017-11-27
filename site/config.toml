@@ -1,4 +1,5 @@
-baseURL = "//"
+baseURL = "/"
+
 languageCode = "en-us"
 title = "Eviction Lab Sandbox"
 theme = "behave"
