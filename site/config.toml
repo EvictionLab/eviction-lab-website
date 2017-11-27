@@ -1,59 +1,86 @@
-baseurl = "/"
+baseURL = "https://modest-ritchie-0e8120.netlify.com"
 languageCode = "en-us"
-title = "Homepage"
-theme = "minimal"
-disqusShortname = "username" # delete this to disable disqus comments
-googleAnalytics = ""
+title = "Eviction Lab Sandbox"
+theme = "behave"
 
-[params]
-    author = "Calin Tataru"
-    description = "Personal blog theme powered by Hugo"
-    githubUsername = "#"
-    accent = "red"
-    showBorder = true
-    backgroundColor = "white"
-    font = "Raleway" # should match the name on Google Fonts!
+[[menu.updates]]
+    name = "Events"
+    weight = -80
+    identifier = "about"
+    url = "/updates/events/"
+[[menu.updates]]
+    name = "Research"
+    weight = -90
+    url = "/updates/research/"
+[[menu.updates]]
+    name = "Media"
+    weight = -100
+    url = "/updates/whats-new/media/"
+[[menu.updates]]
+    name = "Blog"
+    weight = -110
+    url = "/updates/whats-new/blog/"
 
-[[menu.main]]
-    url = "/"
-    name = "Home"
-    weight = 1
 
-[[menu.main]]
-    url = "/post/"
-    name = "Posts"
-    weight = 2
+[[menu.methods]]
+    name = "Restricted Access Data"
+    weight = -110
+    url = "/methods/restricted-access-data/"
 
-[[menu.main]]
-    url = "/project/"
-    name = "Projects"
-    weight = 3
 
-# Social icons to be shown on the right-hand side of the navigation bar
-# The "name" field should match the name of the icon to be used
-# The list of available icons can be found at http://fontawesome.io/icons/
+[[menu.maps_and_data]]
+    name = "FTP Download Site"
+    weight = -110
+    url = "/maps-and-data/ftp-download-site/"
 
-[[menu.icon]]
-    url = "mailto:me@example.com"
-    name = "envelope-o"
-    weight = 1
 
-[[menu.icon]]
-    url = "https://github.com/username/"
-    name = "github"
-    weight = 2
+[[menu.learn_more_tell_your_story]]
+    name = "Tell Us Your Story"
+    weight = -110
+    url = "/learn-more-tell-your-story/tell-us-your-story/"
+[[menu.learn_more_tell_your_story]]
+    name = "What Happens When You're Evicted"
+    weight = -120
+    url = "/learn-more-tell-your-story/what-happens-when-youre-evicted/"
+[[menu.learn_more_tell_your_story]]
+    name = "Audio Visual Stories"
+    weight = -130
+    url = "/learn-more-tell-your-story/audio-video-stories/"
 
-[[menu.icon]]
-    url = "https://twitter.com/username/"
-    name = "twitter"
-    weight = 3
 
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/username/"
-    name = "linkedin"
-    weight = 4
+[[menu.help_faq]]
+    name = "Questions and Answers re: Site Use"
+    weight = -110
+    url = "/help-faq/questions-answers-site-use/"
+[[menu.help_faq]]
+    name = "Questions and Answers"
+    weight = -120
+    url = "/help-faq/questions-answers/"
 
-[[menu.icon]]
-    url = "https://www.stackoverflow.com/username/"
-    name = "stack-overflow"
-    weight = 5
+
+[[menu.city_rankings]]
+    name = "Mid-sized Cities/Counties"
+    weight = -110
+    url = "/city-rankings/midsized-cities-counties/"
+[[menu.city_rankings]]
+    name = "Top Cities"
+    weight = -120
+    url = "/city-rankings/top-cities/"
+
+
+[[menu.about_us]]
+    name = "Affiliations Funding"
+    weight = -110
+    url = "/about-us/affiliations-funding/"
+[[menu.about_us]]
+    name = "Book"
+    weight = -120
+    url = "/about-us/book/"
+[[menu.about_us]]
+    name = "Research Team Bios"
+    weight = -130
+    url = "/about-us/research-team-bios/"
+[[menu.about_us]]
+    name = "Web Team Bios"
+    weight = -140
+    url = "/about-us/web-team-bios/"

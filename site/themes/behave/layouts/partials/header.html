@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+    <title>Eviction Lab Sandbox</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+		<script src="/js/modernizr.js"></script>
+
+  </head>
+
+  <body class="debug-grid-16x helvetica tracked">
+    <div class="fl w-100 pv3 ph3 bg-white">
+
+			<div class="fl w-three-quarters w-third-l">
+				<a href="/"><img src="/img/logo-mobile.png" /></a>
+			</div>
+
+      <div class="fl w-three-quarters w-two-thirds-l tr">
+
+        <!-- +++++++++ start hamburger nav +++++++++ -->
+
+        <div class="db dn-l"> <!-- show/hide based on media query -->
+					<a href="#cd-nav" class="cd-nav-trigger">Menu
+						<span class="cd-nav-icon"></span>
+
+						<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+							<circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+						</svg>
+					</a>
+
+					<div id="cd-nav" class="cd-nav">
+						<div class="cd-navigation-wrapper">
+
+									<ul class="cd-primary-nav">
+										<li class="pl3 ttu tracked f7"><a class="no-underline link dim white" href="{{ .Site.BaseURL }}/about-us/">about</a></li>
+					          <li class="pl3 ttu tracked f7"><a class="no-underline link dim white" href="{{ .Site.BaseURL }}/city-rankings/">rankings</a></li>
+					          <li class="pl3 ttu tracked f7"><a class="no-underline link dim white" href="{{ .Site.BaseURL }}/help-faq/">faq</a></li>
+					          <li class="pl3 ttu tracked f7"><a class="no-underline link dim white" href="{{ .Site.BaseURL }}/learn-more-tell-your-story/">read/share stories</a></li>
+					          <li class="pl3 ttu tracked f7"><a class="no-underline link dim white" href="{{ .Site.BaseURL }}/maps-and-data/">maps &amp; data</a></li>
+					          <li class="pl3 ttu tracked f7"><a class="no-underline link dim white" href="{{ .Site.BaseURL }}/methods/">methods</a></li>
+					          <li class="pl3 ttu tracked f7"><a class="no-underline link dim white" href="{{ .Site.BaseURL }}/updates/">updates</a></li>
+									</ul>
+
+
+						</div> <!-- .cd-navigation-wrapper -->
+					</div> <!-- .cd-nav -->
+			  </div> <!-- end show/hide based on media query -->
+
+        <!-- +++++++++ end hamburger nav +++++++++ -->
+
+				<ul class="dn db-l">
+					<li class="fr pl3 ttu tracked f7"><a class="no-underline link dim black" href="{{ .Site.BaseURL }}/about-us/">about</a></li>
+          <li class="fr pl3 ttu tracked f7"><a class="no-underline link dim black" href="{{ .Site.BaseURL }}/city-rankings/">rankings</a></li>
+          <li class="fr pl3 ttu tracked f7"><a class="no-underline link dim black" href="{{ .Site.BaseURL }}/help-faq/">faq</a></li>
+          <li class="fr pl3 ttu tracked f7"><a class="no-underline link dim black" href="{{ .Site.BaseURL }}/learn-more-tell-your-story/">read/share stories</a></li>
+          <li class="fr pl3 ttu tracked f7"><a class="no-underline link dim black" href="{{ .Site.BaseURL }}/maps-and-data/">maps &amp; data</a></li>
+          <li class="fr pl3 ttu tracked f7"><a class="no-underline link dim black" href="{{ .Site.BaseURL }}/methods/">methods</a></li>
+          <li class="fr pl3 ttu tracked f7"><a class="no-underline link dim black" href="{{ .Site.BaseURL }}/updates/">updates</a></li>
+
+					<!-- I don't know why but this is not working on the home page when deployed, so I commented it out -->
+					{{/* range .Site.Sections }}
+            <li class="fr ph3 ttu tracked f7"><a class="no-underline link dim black" href="{{ .Site.BaseURL }}/{{ .Section }}/">{{ humanize .Section }}</a></li>
+					{{ end */}}
+        </ul>
+      </div>
+
+    </div>

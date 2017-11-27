@@ -1,0 +1,59 @@
+<div class="fl w-100 pl3 pv3 bg-white" style="box-shadow: inset 0px 1px 1px 1px rgba( 0, 0, 0, 0.1 );">
+  <ul class="ttu tracked f7">
+
+    {{ $currentTitle := .Title }}
+
+   <!-- it seems to me that I should be able to pass the .Section
+        as a variable to the range menus funtion, and only need one
+        condition instead of seven ... but I can't figure it out -->
+
+    {{ if eq .Section "updates"}}
+      {{ range .Site.Menus.updates }}
+        {{ $currentName := .Name }}
+        <li class="fl pr3 pl1"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim orange {{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+      {{ end }}
+
+      {{ else if eq .Section "methods"}}
+        {{ range .Site.Menus.methods }}
+          {{ $currentName := .Name }}
+          <li class="fl pr3 pl1"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim orange {{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+        {{ end }}
+
+      {{ else if eq .Section "maps-and-data"}}
+        {{ range .Site.Menus.maps_and_data }}
+          {{ $currentName := .Name }}
+          <li class="fl pr3 pl1"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim orange {{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+        {{ end }}
+
+      {{ else if eq .Section "learn-more-tell-your-story"}}
+        {{ range .Site.Menus.learn_more_tell_your_story }}
+          {{ $currentName := .Name }}
+          <li class="fl pr3 pl1"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim orange {{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+        {{ end }}
+
+      {{ else if eq .Section "help-faq"}}
+        {{ range .Site.Menus.help_faq }}
+          {{ $currentName := .Name }}
+          <li class="fl pr3 pl1"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim orange {{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+        {{ end }}
+
+      {{ else if eq .Section "city-rankings"}}
+        {{ range .Site.Menus.city_rankings }}
+          {{ $currentName := .Name }}
+          <li class="fl pr3 pl1"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim orange {{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+        {{ end }}
+
+      {{ else if eq .Section "about-us"}}
+        {{ range .Site.Menus.about_us }}
+          {{ $currentName := .Name }}
+          <li class="fl pr3 pl1"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim orange {{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+        {{ end }}
+
+    {{ end }}
+
+  <!--
+  <p>type: {{ .Type }}</p>
+  <p>section: {{ .Section }}</p>
+  <p>the dot: {{ . }}</p>
+  -->
+</div>

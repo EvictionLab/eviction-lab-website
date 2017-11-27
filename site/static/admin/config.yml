@@ -1,39 +1,88 @@
 backend:
   name: github
-  repo: EvictionLab/eviction-lab-website
+  repo: hitchless/el-sandbox
   branch: master
-  site_id: operator-menu-82243
 
-media_folder: "site/static/img" # Folder where user uploaded files should go
-public_folder: "img"
 publish_mode: editorial_workflow
 
-collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "site/content/post" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "site/content/products.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Type, name: type, widget: hidden, default: products}
-          - {label: Page, name: page, widget: hidden, default: "/products.html"}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+media_folder: "static/images/uploads" # Media  files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+- name: "events" # Used in routes, e.g., /admin/collections/blog
+  label: "Events" # Used in the UI
+  folder: "content/updates/events" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Child Of", name: "childof", widget: "hidden", default: "events"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Subtitle", name: "subtitle", widget: "string"}
+    - {label: "Created Date", name: "date", widget: "datetime"}
+    - {label: "Event Date", name: "edate", widget: "datetime"}
+    - {label: "Featured Image", name: "image", widget: "image"}
+    - {label: "Website", name: "website", widget: "string"}
+    - {label: "Address", name: "address", widget: "markdown"}
+    - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "blog" # Used in routes, e.g., /admin/collections/blog
+  label: "Blog" # Used in the UI
+  folder: "content/updates/whats-new/blog" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Child Of", name: "childof", widget: "hidden", default: "blog"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Created Date", name: "date", widget: "datetime"}
+    - {label: "Featured Image", name: "image", widget: "image"}
+    - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "media" # Used in routes, e.g., /admin/collections/blog
+  label: "Media" # Used in the UI
+  folder: "content/updates/whats-new/blog" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Child Of", name: "childof", widget: "hidden", default: "media"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Created Date", name: "date", widget: "datetime"}
+    - {label: "Featured Image", name: "image", widget: "image"}
+    - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "research-team-bios" # Used in routes, e.g., /admin/collections/blog
+  label: "Research Team Bios" # Used in the UI
+  folder: "content/about-us/research-team-bios" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Child Of", name: "childof", widget: "hidden", default: "research-team-bios"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Position", name: "position", widget: "string"}
+    - {label: "Created Date", name: "date", widget: "datetime"}
+    - {label: "Featured Image", name: "image", widget: "image"}
+    - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "web-team-bios" # Used in routes, e.g., /admin/collections/blog
+  label: "Web Team Bios" # Used in the UI
+  folder: "content/about-us/web-team-bios" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Child Of", name: "childof", widget: "hidden", default: "web-team-bios"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Position", name: "position", widget: "string"}
+    - {label: "Created Date", name: "date", widget: "datetime"}
+    - {label: "Featured Image", name: "image", widget: "image"}
+    - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "audio-visual-stories" # Used in routes, e.g., /admin/collections/blog
+  label: "Audio Visual Stories" # Used in the UI
+  folder: "content/learn-more-tell-your-story/audio-video-stories" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Child Of", name: "childof", widget: "hidden", default: "audio-visual-stories"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Created Date", name: "date", widget: "datetime"}
+    - {label: "Featured Image", name: "image", widget: "image"}
+    - {label: "Body", name: "body", widget: "markdown"}
