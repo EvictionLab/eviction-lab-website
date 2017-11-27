@@ -1,11 +1,10 @@
 backend:
   name: github
-  repo: hitchless/el-sandbox
+  repo: EvictionLab/eviction-lab-website
   branch: master
 
+media_folder: "site/static/images/uploads" # Folder where user uploaded files should go
 publish_mode: editorial_workflow
-
-media_folder: "static/images/uploads" # Media  files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
