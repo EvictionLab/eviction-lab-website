@@ -10,7 +10,7 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 collections:
 - name: "events" # Used in routes, e.g., /admin/collections/blog
   label: "Events" # Used in the UI
-  folder: "content/updates/events" # The path to the folder where the documents are stored
+  folder: "site/content/updates/events" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -26,7 +26,7 @@ collections:
 
 - name: "blog" # Used in routes, e.g., /admin/collections/blog
   label: "Blog" # Used in the UI
-  folder: "content/updates/whats-new/blog" # The path to the folder where the documents are stored
+  folder: "site/content/updates/whats-new/blog" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -38,7 +38,7 @@ collections:
 
 - name: "media" # Used in routes, e.g., /admin/collections/blog
   label: "Media" # Used in the UI
-  folder: "content/updates/whats-new/blog" # The path to the folder where the documents are stored
+  folder: "site/content/updates/whats-new/blog" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -50,7 +50,7 @@ collections:
 
 - name: "eviction-lab-research" # Used in routes, e.g., /admin/collections/blog
   label: "Eviction Lab Research" # Used in the UI
-  folder: "content/updates/research/eviction-lab-research" # The path to the folder where the documents are stored
+  folder: "site/content/updates/research/eviction-lab-research" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -63,7 +63,7 @@ collections:
 
 - name: "outside-research" # Used in routes, e.g., /admin/collections/blog
   label: "Outside Research" # Used in the UI
-  folder: "content/updates/research/outside-research" # The path to the folder where the documents are stored
+  folder: "site/content/updates/research/outside-research" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -76,7 +76,7 @@ collections:
 
 - name: "research-team-bios" # Used in routes, e.g., /admin/collections/blog
   label: "Research Team Bios" # Used in the UI
-  folder: "content/about-us/research-team-bios" # The path to the folder where the documents are stored
+  folder: "site/content/about-us/research-team-bios" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -89,7 +89,7 @@ collections:
 
 - name: "web-team-bios" # Used in routes, e.g., /admin/collections/blog
   label: "Web Team Bios" # Used in the UI
-  folder: "content/about-us/web-team-bios" # The path to the folder where the documents are stored
+  folder: "site/content/about-us/web-team-bios" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -102,7 +102,7 @@ collections:
 
 - name: "audio-visual-stories" # Used in routes, e.g., /admin/collections/blog
   label: "Audio Visual Stories" # Used in the UI
-  folder: "content/learn-more-tell-your-story/audio-video-stories" # The path to the folder where the documents are stored
+  folder: "site/content/learn-more-tell-your-story/audio-video-stories" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
