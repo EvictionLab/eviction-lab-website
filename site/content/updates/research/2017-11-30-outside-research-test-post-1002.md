@@ -1,5 +1,6 @@
 ---
-childof: outside-research
+childof: research
+researchtype: outside-research
 title: Outside Research Test Post 1002
 date: 2017-11-30T15:46:40.089Z
 image: /images/uploads/mustard-and-chesse.jpg
