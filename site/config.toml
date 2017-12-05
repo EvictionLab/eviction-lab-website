@@ -50,7 +50,7 @@ theme = "behave"
 
 
 [[menu.help_faq]]
-    name = "Questions and Answers re: Site Use"
+    name = "Site Use Questions and Answers"
     weight = -110
     url = "/help-faq/questions-answers-site-use/"
 [[menu.help_faq]]

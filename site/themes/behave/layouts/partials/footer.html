@@ -8,7 +8,7 @@
 {{ if not .IsHome }}
 <div class="fl w-100 pa blog-bg-color">
     <h1 class="mh2 mv3 fw3 ttu tracked f7">
-      <a class="no-underline link dim white" href="{{ .Site.BaseURL }}/{{ .Section }}">
+      <a class="no-underline link dim white" href="{{ .Site.BaseURL }}{{ .Section }}">
         <i class="fa fa-chevron-left"></i> back to {{ humanize .Section }}
       </a>
     </h1>
