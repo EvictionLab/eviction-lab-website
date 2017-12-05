@@ -126,7 +126,7 @@
         </div>
 
         <div class="fl w-80 w-60-l pa3">
-          <h3 class="f3 mb2">{{ .Title }}</h3>
+          <h3 class="f3 mb2"><a class="no-underline link dim black" href="{{ .Permalink }}">{{ .Title }}</a></h3>
           <h4 class="f4 mb3">{{ .Params.subtitle }}</h4>
           <p class="f6 moon-gray mb3 fw3 lh-copy">{{ markdownify .Params.address }}</p>
           <p class="">
