@@ -61,6 +61,7 @@
 /* do stuff to things inside a rendered content block */
 .page-content p {
   margin: 2em 0;
+  font-family: "Gotham A", "Gotham B", sans-serif;
 }
 
 .page-content em {
