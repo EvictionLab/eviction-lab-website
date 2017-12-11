@@ -1,0 +1,25 @@
+{{ partial "header" . }}
+
+<div class="fl w-100">
+  {{ partial "subnav" . }}
+  {{/* partial "section-header" . */}}
+</div>
+
+<div class="fl w-100">
+
+<figure class="ma0">
+  <img src="{{ .Param "image" }}"/>
+  <figcaption class="pa3 white db fw3" style="margin-top: -120px">
+    <p class="f3 mb4">{{ .Title }}</p>
+    <p class="f7 ttu db mb2 white">{{ .Date.Format "January 2, 2006" }}</p>
+  </figcaption>
+</figure>
+
+<div class="page-content ph3 mw7-l fw3 f4 lh-copy">{{ .Content }}</div>
+
+</div>
+
+{{ partial "debug" . }}
+<span class="debug-visability">rendered by = themes/THEMENAME/layouts/_default/single.html</span>
+
+{{ partial "footer" . }}

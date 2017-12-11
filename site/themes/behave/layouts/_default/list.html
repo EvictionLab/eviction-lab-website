@@ -1,0 +1,30 @@
+{{ partial "header" . }}
+
+<div class="fl w-100">
+  {{ partial "subnav" . }}
+  {{/* partial "section-header" . */}}
+  <div class="fl w-100 pa {{ lower .Section }}-bg-color">
+    <h1 class="mh3 mv4 white fw3 ttu tracked f4">{{ humanize .Title }}</h1>
+  </div>
+</div>
+
+<div class="fl w-100 pa3 page-content">
+{{ .Content }}
+</div>
+
+<div class="fl w-100 alt-rows">
+{{ range where .Site.RegularPages "Params.childof" (lower .Title | urlize) }}
+  <div class="pv4 ph2 bg-white white">
+    <i class="fa fa-chevron-right orange pa2 relative top-1"></i>
+    <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
+    <br>
+    <small class="moon-gray ttu tracked fw3 f7 relative left-4">{{ .Date.Format "January 2, 2006" }}</small>
+  </div>
+{{ end }}
+
+</div>
+
+{{ partial "debug" . }}
+<span class="debug-visability">rendered by = themes/THEMENAME/layouts/_default/list.html</span>
+
+{{ partial "footer" . }}
