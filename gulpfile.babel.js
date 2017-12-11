@@ -9,6 +9,7 @@ import BrowserSync from "browser-sync";
 import watch from "gulp-watch";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
+import sass from 'gulp-sass';
 
 const browserSync = BrowserSync.create();
 
@@ -21,8 +22,14 @@ gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, hugoArgsPreview));
 
 // Build/production tasks
-gulp.task("build", ["css", "js"], (cb) => buildSite(cb, [], "production"));
-gulp.task("build-preview", ["css", "js"], (cb) => buildSite(cb, hugoArgsPreview, "production"));
+gulp.task("build", ["sass", "css", "js"], (cb) => buildSite(cb, [], "production"));
+gulp.task("build-preview", ["sass", "css", "js"], (cb) => buildSite(cb, hugoArgsPreview, "production"));
+
+gulp.task("sass", function() {
+  return gulp.src("./src/sass/main-sass.scss")
+    .pipe(sass()) // Using gulp-sass
+    .pipe(gulp.dest("./dist/css"));
+});
 
 // Compile CSS with PostCSS
 gulp.task("css", () => (
@@ -55,6 +62,7 @@ gulp.task("server", ["hugo", "css", "js"], () => {
     }
   });
   watch("./src/js/**/*.js", () => { gulp.start(["js"]) });
+  watch("./src/sass/**/*.scss", () => { gulp.start(["sass"]) });
   watch("./src/css/**/*.css", () => { gulp.start(["css"]) });
   watch("./site/**/*", () => { gulp.start(["hugo"]) });
 });
