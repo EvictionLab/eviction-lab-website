@@ -4,9 +4,11 @@
   {{ partial "subnav" . }}
   {{/* partial "section-header" . */}}
   <!-- section header -->
-  <div class="fl w-100 pa {{ urlize (lower .Title) }}-bg-color">
-    <h1 class="mh3 mv4 white fw3 ttu tracked f4">{{ .Title }}</h1>
+  <div class="fl w-100 pa3 {{ urlize (lower .Title) }}-bg-color">
+    <h1 class="page-header">{{ .Title }}</h1>
   </div>
+
+  {{ partial "breadcrumb" . }}
 
 </div>
 
