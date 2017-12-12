@@ -4,9 +4,11 @@
   {{ partial "subnav" . }}
   {{/* partial "section-header" . */}}
   <!-- section header -->
-  <div class="fl w-100 pa {{ urlize (lower .Title) }}-bg-color">
-    <h1 class="mh3 mv4 white fw3 ttu tracked f4">{{ .Title }}</h1>
+  <div class="fl w-100 pa3 {{ urlize (lower .Title) }}-bg-color">
+    <h1 class="page-header">{{ .Title }}</h1>
   </div>
+
+  {{ partial "breadcrumb" . }}
 
 </div>
 
@@ -16,17 +18,141 @@
 </div>
 -->
 
-<div class="fl w-100 alt-rows">
-{{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
-  <div class="pv4 ph2 bg-white white">
-    <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
-    <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
-    <br>
-    <small class="moon-gray ttu tracked fw3 f7 pl2 relative top-1">{{ .Date.Format "January 2, 2006" }}</small>
-  </div>
-{{ end }}
+<!--
+  I'd really rather use a seperate template for each collection,
+  but I just can't get that to work, following the "documentation",
+  so I'm just doing it with a bunch of if statement ... it works.
+-->
 
-</div>
+<!-- ******************** -->
+<!-- ******************** -->
+<!-- ******* BLOG ******* -->
+
+{{ if eq .Title "Blog"}} <!-- if we are on the Blog page, do stuff -->
+
+  {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
+  {{ if isset $blog 0 }} <!-- if there are Blog articles, list them -->
+    <div class="fl w-100 alt-rows">
+    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ if eq .Params.childof "blog" }}
+        <div class="pv4 ph2 bg-white white">
+          <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
+          <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
+          <br>
+          <small class="moon-gray ttu tracked fw3 f7 pl2 relative top-1">{{ .Date.Format "January 2, 2006" }}</small>
+        </div>
+      {{ end }}
+    {{ end }}
+    </div>
+  {{ end }} <!-- end Blog listings -->
+
+{{ end }} <!-- end Blog page stuff -->
+
+<!-- ******* MEDIA ******* -->
+
+{{ if eq .Title "Media"}} <!-- if we are on the Media page, do stuff -->
+
+  {{ $media := where .Site.RegularPages "Params.childof" "media" }}
+  {{ if isset $media 0 }} <!-- if there are Media articles, list them -->
+    <div class="fl w-100 alt-rows">
+    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ if eq .Params.childof "media" }}
+        <div class="pv4 ph2 bg-white white">
+          <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
+          <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
+          <br>
+          <small class="moon-gray ttu tracked fw3 f7 pl2 relative top-1">{{ .Date.Format "January 2, 2006" }}</small>
+        </div>
+      {{ end }}
+    {{ end }}
+    </div>
+  {{ end }} <!-- end Media listings -->
+
+{{ end }} <!-- end Media page stuff -->
+
+<!-- ******* RESEARCH ******* -->
+
+{{ if eq .Title "Research"}} <!-- if we are on the Research page, do stuff -->
+
+  {{ $elresearch := where .Site.RegularPages "Params.researchtype" "el-research" }} <!-- count EL Research articles -->
+  {{ if isset $elresearch 0 }} <!-- if there are EL Research articles, list them -->
+    <div class="fl w-100 alt-rows">
+      <span class="db w-100 moon-gray ttu tracked fw3 f6 pa2 bg-white">research from eviction lab</span>
+      {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+        {{ if eq .Params.researchtype "el-research" }}
+        <div class="pv4 ph2 bg-white white">
+          <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
+          <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
+          <br>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }} <!-- end EL Research listings -->
+
+  {{ $outsideresearch := where .Site.RegularPages "Params.researchtype" "outside-research" }} <!-- count Outside Research articles -->
+  {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
+    <div class="fl w-100 alt-rows">
+      <span class="db w-100 moon-gray ttu tracked fw3 f6 pa2 bg-white">research from outside eviction lab</span>
+      {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+        {{ if eq .Params.researchtype "outside-research" }}
+        <div class="pv4 ph2 bg-white white">
+          <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
+          <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
+          <br>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }} <!-- end Outside Research listings -->
+
+{{ end }} <!-- end Research page stuff -->
+
+<!-- ******* EVENTS ******* -->
+
+{{ if eq .Title "Events"}} <!-- if we are on the Events page, do stuff -->
+
+  {{ $events := where .Site.RegularPages "Params.childof" "events" }}
+  {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
+    <div class="fl w-100 flex-l justify-center-l">
+    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ if eq .Params.childof "events" }}
+
+        <div class="fl w-20 w-40-l">
+          <div class="fr w3 ml3 mt3 pa2 bg-near-white tc">
+            {{ with .Params.edate }}
+                <p class="f2 fw4 mb2">{{ dateFormat "3" . }}</p>
+                <p class="ttu f6">{{ dateFormat "Jan" . }}</p>
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="fl w-80 w-60-l pa3">
+          <h3 class="f3 mb2"><a class="no-underline link dim black" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <h4 class="f4 mb3">{{ .Params.subtitle }}</h4>
+          <p class="f6 moon-gray mb3 fw3 lh-copy">{{ markdownify .Params.address }}</p>
+          <p class="">
+            <i class="fa fa-clock-o moon-gray"></i>
+            {{ with .Params.edate }}
+              <span class="ttu f6 pr3">{{ dateFormat "3:04pm" . }}</span>
+            {{ end }}
+            <a class="no-underline link dim blue" href="{{ .Params.website }}">
+              <i class="fa fa-bookmark"></i>
+              <span class="f6">Website</span>
+            </a>
+          </p>
+        </div>
+
+      {{ end }}
+    {{ end }}
+    </div>
+  {{ end }} <!-- end Events listings -->
+
+{{ end }} <!-- end Events page stuff -->
+
+<!-- ************** -->
+<!-- ************** -->
+<!-- ************** -->
 
 {{ partial "debug" . }}
 <span class="debug-visability">rendered by = themes/THEMENAME/layouts/updates/list.html</span>
