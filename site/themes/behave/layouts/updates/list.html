@@ -4,7 +4,7 @@
   {{ partial "subnav" . }}
   {{/* partial "section-header" . */}}
   <!-- section header -->
-  <div class="fl w-100 pa3 {{ urlize (lower .Title) }}-bg-color">
+  <div class="fl w-100 pa3 {{ urlize (lower .Title) }}-bg-color inset-shadow-top">
     <h1 class="page-header">{{ .Title }}</h1>
   </div>
 
@@ -36,7 +36,7 @@
     {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
       {{ if eq .Params.childof "blog" }}
         <div class="pv4 ph2 bg-white white">
-          <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
+          <i class="fl fa fa-chevron-right color1 pa1 relative top-1"></i>
           <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
           <br>
           <small class="moon-gray ttu tracked fw3 f7 pl2 relative top-1">{{ .Date.Format "January 2, 2006" }}</small>
@@ -58,7 +58,7 @@
     {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
       {{ if eq .Params.childof "media" }}
         <div class="pv4 ph2 bg-white white">
-          <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
+          <i class="fl fa fa-chevron-right color1 pa1 relative top-1"></i>
           <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
           <br>
           <small class="moon-gray ttu tracked fw3 f7 pl2 relative top-1">{{ .Date.Format "January 2, 2006" }}</small>
@@ -81,7 +81,7 @@
       {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
         {{ if eq .Params.researchtype "el-research" }}
         <div class="pv4 ph2 bg-white white">
-          <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
+          <i class="fl fa fa-chevron-right color1 pa1 relative top-1"></i>
           <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
           <br>
         </div>
@@ -97,7 +97,7 @@
       {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
         {{ if eq .Params.researchtype "outside-research" }}
         <div class="pv4 ph2 bg-white white">
-          <i class="fl fa fa-chevron-right orange pa1 relative top-1"></i>
+          <i class="fl fa fa-chevron-right color1 pa1 relative top-1"></i>
           <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
           <br>
         </div>

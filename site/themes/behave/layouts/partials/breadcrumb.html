@@ -6,14 +6,14 @@
   <!-- do nothing -->
   {{ else }}
     <div class="fl w-100 breadcrumb pa3">
-        <p class="fw3 ttu tracked f7">
+        <p class="ttu tracked f7">
           <a class="no-underline link dim white" href="{{ .Site.BaseURL }}{{ .Section }}">
             <span class="breadcrumb-dim">{{ humanize .Section }} </span>
           </a>
-            <i class="fa fa-chevron-right orange"></i>
+            <i class="fa fa-chevron-right color1 ph1"></i>
             <span class="white">{{ humanize .Title }}</span>
           </a>
         </p>
     </div>
-  {{ end }}  
+  {{ end }}
 {{ end }}

@@ -125,6 +125,7 @@ $color5: #b5c2b7;
 $z1shadow: 0 1px 3px rgba(0,0,0,0.3);
 $z2shadow: 0 2px 5px rgba(0,0,0,0.5);
 $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
+$insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
 
 // Gradients
 // ----
@@ -168,6 +169,15 @@ $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
    @include gradient(180deg,$color5);
 }
 
+/* various utilities */
+.inset-shadow-top {
+  box-shadow: $insetShadowTop;
+}
+
+.color1 {
+  color: $color1;
+}
+
 .font1 {
   font-family: $boldFontStack;
 }
@@ -179,7 +189,6 @@ $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
 .breadcrumb-dim {
   color: #a3a7a8;
 }
-
 
 .page-header {
   font-family: $headerFontStack;
