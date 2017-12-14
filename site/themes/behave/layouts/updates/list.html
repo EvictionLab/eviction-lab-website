@@ -4,7 +4,7 @@
   {{ partial "subnav" . }}
   {{/* partial "section-header" . */}}
   <!-- section header -->
-  <div class="fl w-100 pa3 {{ urlize (lower .Title) }}-bg-color inset-shadow-top">
+  <div class="fl w-100 pa3 pl4 {{ urlize (lower .Title) }}-bg-color inset-shadow-top">
     <h1 class="page-header">{{ .Title }}</h1>
   </div>
 
@@ -32,14 +32,34 @@
 
   {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
   {{ if isset $blog 0 }} <!-- if there are Blog articles, list them -->
-    <div class="fl w-100 alt-rows">
+    <div class="fl w-100 alt-rows pt1">
     {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
       {{ if eq .Params.childof "blog" }}
-        <div class="pv4 ph2 bg-white white">
-          <i class="fl fa fa-chevron-right color1 pa1 relative top-1"></i>
-          <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
-          <br>
-          <small class="moon-gray ttu tracked fw3 f7 pl2 relative top-1">{{ .Date.Format "January 2, 2006" }}</small>
+        <div class="flex-l justify-center-l pv3 ph2 bg-white cf">
+
+          <div class="fl w-10 w-10-l tr dn-l">
+            <i class="fa fa-chevron-right color1 pa1 relative top-1"></i>
+          </div>
+
+          <div class="fl w-10 w-25-l tr dn db-l">
+            <a class="no-underline" href="{{ .Permalink }}">
+              <img class="list-thumb" src="{{ .Params.image }}">
+            </a>
+          </div>
+
+
+            <div class="fl w-90 w-65-l pl5-l flex items-center">
+              <div class="w-100">
+                <div class="w-100">
+                  <a class="db no-underline link dim black f3 pl2 font1" href="{{ .Permalink }}">{{ .Title }}</a>
+                </div>
+                <div class="w-100">
+                  <small class="db moon-gray ttu tracked fw3 f7 pl2 pt3">{{ .Date.Format "January 2, 2006" }}</small>
+                </div>
+              </div>
+            </div>
+
+
         </div>
       {{ end }}
     {{ end }}
@@ -57,7 +77,7 @@
     <div class="fl w-100 alt-rows">
     {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
       {{ if eq .Params.childof "media" }}
-        <div class="pv4 ph2 bg-white white">
+        <div class="pv4 ph2 bg-white">
           <i class="fl fa fa-chevron-right color1 pa1 relative top-1"></i>
           <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
           <br>
@@ -80,7 +100,7 @@
       <span class="db w-100 moon-gray ttu tracked fw3 f6 pa2 bg-white">research from eviction lab</span>
       {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
         {{ if eq .Params.researchtype "el-research" }}
-        <div class="pv4 ph2 bg-white white">
+        <div class="pv4 ph2 bg-white">
           <i class="fl fa fa-chevron-right color1 pa1 relative top-1"></i>
           <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
           <br>
@@ -96,7 +116,7 @@
       <span class="db w-100 moon-gray ttu tracked fw3 f6 pa2 bg-white">research from outside eviction lab</span>
       {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
         {{ if eq .Params.researchtype "outside-research" }}
-        <div class="pv4 ph2 bg-white white">
+        <div class="pv4 ph2 bg-white">
           <i class="fl fa fa-chevron-right color1 pa1 relative top-1"></i>
           <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
           <br>
