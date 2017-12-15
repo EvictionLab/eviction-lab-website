@@ -182,6 +182,11 @@ $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
   font-family: $boldFontStack;
 }
 
+.font2 {
+  font-family: $fontStack;
+  weight: normal;
+}
+
 .link-bottom-border {
   border-bottom: $color1 5px solid;
   padding-bottom: 25px;
@@ -224,6 +229,22 @@ $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
 
 .page-content em {
   font-style: italic;
+}
+
+/* footer */
+.footer-divider {
+  float: right;
+  position: relative;
+  right: 24px;
+  height: 160px;
+  min-width: 8px;
+  border-right: 1px solid darken( white, 80% );
+  border-left: 1px solid darken( white, 80% );
+}
+
+.footer-divider-right {
+  float: left;
+  right: 4px;
 }
 
 /* debugging helpers */
