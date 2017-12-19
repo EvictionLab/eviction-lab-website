@@ -12,6 +12,9 @@
   right: -10px;
   border: none;
   background: none;
+  @include for-phone-only {
+    right: 0;
+  }
 }
 
 #burger span {
