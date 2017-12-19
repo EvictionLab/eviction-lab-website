@@ -1,6 +1,6 @@
 
-<div class="fl w-100 pl4 pv4 bg-white">
-  <ul class="tracked f6 font1">
+<div class="subnav" role="navigation">
+  <ul class="nav">
 
    {{ $currentTitle := .Params.childof }}
 
@@ -12,48 +12,48 @@
       {{ range .Site.Menus.updates }} <!-- range the updates menu -->
         {{ $currentName := .Name }} <!-- get the name of the current menu item, ie one of Blog, Media, Research, Events -->
         {{ $currentTitle := title $currentTitle }}
-        <li class="fl pr3 pr5-l"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim color1 link-bottom-border{{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+        <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
       {{ end }}
 
       {{ else if eq .Section "methods"}}
         {{ range .Site.Menus.methods }}
           {{ $currentName := .Name }}
           {{ $currentTitle := title $currentTitle }}
-          <li class="fl pr3 pr4-l"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim color1 link-bottom-border{{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+          <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
         {{ end }}
 
       {{ else if eq .Section "maps-and-data"}}
         {{ range .Site.Menus.maps_and_data }}
           {{ $currentName := .Name }}
           {{ $currentTitle := title $currentTitle }}
-          <li class="fl pr3 pr4-l"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim color1 link-bottom-border{{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+          <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
         {{ end }}
 
       {{ else if eq .Section "learn-more-tell-your-story"}}
         {{ range .Site.Menus.learn_more_tell_your_story }}
           {{ $currentName := .Name }}
           {{ $currentTitle := title $currentTitle }}
-          <li class="fl pr3 pr4-l"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim color1 link-bottom-border{{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+          <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
         {{ end }}
 
       {{ else if eq .Section "help-faq"}}
         {{ range .Site.Menus.help_faq }}
           {{ $currentName := .Name }}
           {{ $currentTitle := title $currentTitle }}
-          <li class="fl pr3 pr4-l"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim color1 link-bottom-border{{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+          <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
         {{ end }}
 
       {{ else if eq .Section "city-rankings"}}
         {{ range .Site.Menus.city_rankings }}
           {{ $currentName := .Name }}
-          <li class="fl pr3 pr4-l"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim color1 link-bottom-border{{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+          <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
         {{ end }}
 
       {{ else if eq .Section "about-us"}}
         {{ range .Site.Menus.about_us }}
           {{ $currentName := .Name }}
           {{ $currentTitle := title $currentTitle }}
-          <li class="fl pr3 pr4-l"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim color1 link-bottom-border{{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+          <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
         {{ end }}
 
     {{ end }}

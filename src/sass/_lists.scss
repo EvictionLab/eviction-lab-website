@@ -1,0 +1,12 @@
+/* _lists.scss */
+
+/* alt rows for lists */
+.alt-rows > div:nth-of-type(odd) {
+    background: #F4F7F9;
+}
+
+/* list page thumbnails */
+.list-thumb {
+  width: 160px;
+  height: 120px;
+}

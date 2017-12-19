@@ -1,0 +1,25 @@
+/* _subnav.scss */
+
+/* sub navigation */
+
+.subnav {
+  width: 100%;
+  padding: $defaultPaddingWebsite;
+}
+
+.subnav-link, .subnav-link:hover,
+.subnav-active, .subnav-active:hover {
+  font-family: $boldFontStack;
+  margin-right: 56px;
+  color: $textColor2;
+  text-decoration: none;
+  padding-bottom: 22px;
+  @include for-phone-only {
+    margin-right: 26px;
+  }
+}
+
+.subnav-active, .subnav-active:hover {
+  color: $color1;
+  border-bottom: $color1 5px solid;
+}

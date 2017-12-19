@@ -1,0 +1,20 @@
+/* _utils.scss */
+
+/* various utilities */
+
+.inset-shadow-top {
+  box-shadow: $insetShadowTop;
+}
+
+.color1 {
+  color: $color1;
+}
+
+.font1 {
+  font-family: $boldFontStack;
+}
+
+.font2 {
+  font-family: $fontStack;
+  font-weight: 300;
+}

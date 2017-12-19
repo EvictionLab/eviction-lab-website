@@ -1,0 +1,11 @@
+/* _content.scss */
+
+/* do stuff to things inside a rendered content block */
+.page-content p {
+  margin: 2em 0;
+  @include defaultFont(.9em);
+}
+
+.page-content em {
+  font-style: italic;
+}

@@ -5,15 +5,15 @@
   {{ if eq $currentTitle $currentSection }}
   <!-- do nothing -->
   {{ else }}
-    <div class="fl w-100 breadcrumb pa3 pl4">
-        <p class="ttu tracked f7">
-          <a class="no-underline link dim white" href="{{ .Site.BaseURL }}{{ .Section }}">
-            <span class="breadcrumb-dim">{{ humanize .Section }} </span>
+    <div class="breadcrumbs">
+        <span>
+          <a class="breadcrumbs-link" href="{{ .Site.BaseURL }}{{ .Section }}">
+            <span class="breadcrumbs-dim">{{ humanize .Section }} </span>
           </a>
-            <i class="fa fa-chevron-right color1 ph1"></i>
+            <i class="fa fa-chevron-right color1"></i>
             <span class="white">{{ .Title }}</span>
           </a>
-        </p>
+        </span>
     </div>
   {{ end }}
 {{ end }}

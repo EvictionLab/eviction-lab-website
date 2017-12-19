@@ -1,0 +1,17 @@
+/* _header.scss */
+
+/* header and logo */
+
+header {
+  width: 100%;
+  padding: $defaultPaddingWebsite;
+  padding-bottom: 0;
+}
+
+.header-logo {
+  width: 80%;
+}
+
+.header-menu {
+  width: 20%;
+}

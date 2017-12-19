@@ -1,0 +1,102 @@
+/* _footer.scss */
+
+footer {
+  width: 100%;
+  padding: 145px $defaultPaddingWebsite 280px $defaultPaddingWebsite;
+  background: url('/img/footer-bg.png') #393939;
+  color: $altTextColor;
+  @include defaultFont(1em);
+
+  section {
+    width: 380px;
+    margin: 3px;
+  }
+
+  .left {
+    border-right: 1px solid darken( #fff, 80% );
+    width: 290px;
+    @include for-phone-only {
+      width: 100%;
+      border: none;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  .middle {
+    border-right: 1px solid darken( #fff, 80% );
+    border-left: 1px solid darken( #fff, 80% );
+    width: 520px;
+    @include for-phone-only {
+      width: 100%;
+      border: none;
+    }
+    .left, .right {
+      border: none;
+      width: 50%;
+      padding-left: 70px;
+      @include for-phone-only {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      li {
+        padding-bottom: 10px;
+        a {
+          color: $altTextColor;
+          text-decoration: none;
+        }
+      }
+    }
+    .copywrite {
+      width: 100%;
+      padding: 15px 0 0 70px;
+      color: #a3a7a8;
+      @include defaultFont(.8em);
+      letter-spacing: 1.3px;
+      p {
+        margin-bottom: 0;
+      }
+      @include for-phone-only {
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .right {
+    border-left: 1px solid darken( #fff, 80% );
+    width: 360px;
+    @include for-phone-only {
+      width: 100%;
+      border: none;
+    }
+    .text {
+      width: 60%;
+      padding-left: 70px;
+      p {
+        margin-bottom: 0;
+      }
+      @include for-phone-only {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 40px;
+      }
+    }
+    .img {
+      width: 40%;
+      @include for-phone-only {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 10px;
+      }
+      img {
+        border: 4px solid darken( #fff, 80% );
+        margin-left: 10px;
+      }
+    }
+  }
+}
