@@ -3,36 +3,65 @@
 
 /* blog and media lists */
 .list-item {
-  padding: 0 $defaultPaddingWebsite;
+  padding: $defaultPadding;
+  clear: both;
+  height: 152px;
+  @include for-tablet-portrait-up {
+    padding: $defaultPadding 40px;
+  }
+  @include for-tablet-landscape-up {
+    padding: $defaultPadding 118px;
+  }
   .chevron {
     display: none;
     @include for-phone-only {
       display: block;
+      float: left;
+      width: 50px;
       color: $color1;
       position: relative;
       top: 45px;
-      left: 25px;
+      left: 15px;
     }
   }
   .img {
-    padding: $defaultPadding 90px;
-    @include for-phone-only {
-      display: none;
+    width: 200px;
+    float: left;
+    display: none;
+    @include for-tablet-portrait-up {
+      display: block;
+    }
+    @include for-tablet-landscape-up {
+      width: 230px;
     }
   }
-  .title {
-    @include defaultFontBold(1.5em);
-    a {
-      color: $textColor;
-      text-decoration: none;
+  .details {
+    width: 300px;
+    float: left;
+    padding-top: 22px;
+    @include for-tablet-portrait-up {
+      width: 250px;
     }
+    @include for-tablet-landscape-up {
+      width: 400px;
+    }
+    @include for-desktop-up {
+      width: 700px;
+    }
+    .title {
+      @include defaultFontBold(1.5em);
+      a {
+        color: $textColor;
+        text-decoration: none;
+      }
+    }
+    .date {
+      @include smallCapsTextThin(1em);
+      color: lighten( $textColor, 70% );
+      padding: 5px 0 20px 0;
+    }
+  }
 
-  }
-  .date {
-    @include smallCapsTextThin(1em);
-    color: lighten( $textColor, 70% );
-    padding: 5px 0 20px 0;
-  }
 }
 
 /* research lists */
@@ -70,7 +99,11 @@
 }
 
 /* alt rows for lists */
-.alt-rows > div:nth-of-type(odd) {
+.alt-rows > div:nth-of-type(even) {
+    background: #F4F7F9;
+}
+
+.alt-rows-research > div:nth-of-type(odd) {
     background: #F4F7F9;
 }
 
