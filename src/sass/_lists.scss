@@ -6,13 +6,19 @@
   padding: 0 $defaultPaddingWebsite;
   .chevron {
     display: none;
-    color: #color1;
     @include for-phone-only {
       display: block;
+      color: $color1;
+      position: relative;
+      top: 45px;
+      left: 25px;
     }
   }
   .img {
     padding: $defaultPadding 90px;
+    @include for-phone-only {
+      display: none;
+    }
   }
   .title {
     @include defaultFontBold(1.5em);
@@ -25,7 +31,7 @@
   .date {
     @include smallCapsTextThin(1em);
     color: lighten( $textColor, 70% );
-    padding-top: 5px;
+    padding: 5px 0 20px 0;
   }
 }
 
