@@ -36,11 +36,11 @@
     }
   }
   .details {
-    width: 300px;
+    width: 250px;
     float: left;
     padding-top: 22px;
     @include for-tablet-portrait-up {
-      width: 250px;
+      
     }
     @include for-tablet-landscape-up {
       width: 400px;
