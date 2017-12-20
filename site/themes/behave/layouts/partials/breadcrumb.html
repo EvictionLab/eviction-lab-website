@@ -6,14 +6,42 @@
   <!-- do nothing -->
   {{ else }}
     <div class="breadcrumbs">
-        <span>
-          <a class="breadcrumbs-link" href="{{ .Site.BaseURL }}{{ .Section }}">
-            <span class="breadcrumbs-dim">{{ humanize .Section }} </span>
+
+          <a href="{{ .Site.BaseURL }}{{ .Section }}">
+            <span class="dim">{{ humanize .Section }}</span>
           </a>
-            <i class="fa fa-chevron-right color1"></i>
-            <span class="white">{{ .Title }}</span>
+
+          {{ $childOf := title .Params.childof }}
+          {{ if eq .Title $childOf }}
+            <!-- do nothing -->
+            {{ else }}
+            <i class="fa fa-chevron-right"></i>
+            {{ if eq .Params.childof "blog" }}
+              <a href="{{ .Site.BaseURL }}{{ .Section }}/whats-new/blog/">
+                <span class="dim">{{ humanize .Params.childof }}</span>
+              </a>
+            {{ end }}
+            {{ if eq .Params.childof "media" }}
+              <a href="{{ .Site.BaseURL }}{{ .Section }}/whats-new/media/">
+                <span class="dim">{{ humanize .Params.childof }}</span>
+              </a>
+            {{ end }}
+            {{ if eq .Params.childof "research" }}
+              <a href="{{ .Site.BaseURL }}{{ .Section }}/research/">
+                <span class="dim">{{ humanize .Params.childof }}</span>
+              </a>
+            {{ end }}
+            {{ if eq .Params.childof "events" }}
+              <a href="{{ .Site.BaseURL }}{{ .Section }}/events/">
+                <span class="dim">{{ humanize .Params.childof }}</span>
+              </a>
+            {{ end }}
+          {{ end }}
+
+            <i class="fa fa-chevron-right"></i>
+            <span>{{ .Title }}</span>
           </a>
-        </span>
+
     </div>
   {{ end }}
 {{ end }}

@@ -6,15 +6,21 @@
   color: $altTextColor;
   padding: 16px $defaultPaddingWebsite;
   @include smallCapsText(.8em);
-}
 
-.breadcrumbs-dim {
-  color: #a3a7a8;
-}
+  i {
+    font-size: .75em;
+    padding: 0 $gridSize;
+    position: relative;
+    top: -2px;
+    color: $color1;
+  }
 
-.breadcrumbs i {
-  font-size: .75em;
-  padding: 0 $gridSize;
-  position: relative;
-  top: -2px;
+  a:hover {
+    text-decoration: none;
+  }
+
+  .dim {
+    color: #a3a7a8;
+  }
+
 }

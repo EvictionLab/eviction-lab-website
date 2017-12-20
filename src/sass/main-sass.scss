@@ -75,6 +75,12 @@ $numberFontStack:  "Gotham A", "Gotham B", sans-serif;
   letter-spacing: 0.7px;
 }
 
+@mixin smallCapsTextThin($size) {
+  @include defaultFont($size);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
 @mixin inputText() {
   @include defaultFont(18px);
 }
@@ -118,6 +124,10 @@ $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
 /* ====================== */
 /* ====================== */
 /* ====================== */
+
+body {
+  letter-spacing: .03em;
+}
 
 @import 'utils';
 @import 'header';

@@ -1,5 +1,68 @@
 /* _lists.scss */
 
+
+/* blog and media lists */
+.list-item {
+  padding: 0 $defaultPaddingWebsite;
+  .chevron {
+    display: none;
+    color: #color1;
+    @include for-phone-only {
+      display: block;
+    }
+  }
+  .img {
+    padding: $defaultPadding 90px;
+  }
+  .title {
+    @include defaultFontBold(1.5em);
+    a {
+      color: $textColor;
+      text-decoration: none;
+    }
+
+  }
+  .date {
+    @include smallCapsTextThin(1em);
+    color: lighten( $textColor, 70% );
+    padding-top: 5px;
+  }
+}
+
+/* research lists */
+
+.research-type {
+  @include smallCapsText(.83em);
+  padding: 40px 260px 20px 260px;
+  display: block;
+  @include for-phone-only {
+    padding: 40px $defaultPadding 20px $defaultPadding;
+  }
+}
+
+.research-article {
+  padding: 50px 260px;
+  @include for-phone-only {
+    padding: 50px $defaultPadding;
+  }
+  .title {
+    @include defaultFontBold(1.5em);
+    color: $textColor;
+    text-decoration: none;
+    padding-left: 47px;
+  }
+  i {
+    color: $color1;
+    position: relative;
+    top: 10px;
+  }
+  span {
+    padding-left: 65px;
+    @include defaultFont(.9em);
+    color: lighten( $textColor, 70% );
+  }
+}
+
 /* alt rows for lists */
 .alt-rows > div:nth-of-type(odd) {
     background: #F4F7F9;
