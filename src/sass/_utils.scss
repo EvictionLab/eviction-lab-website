@@ -2,6 +2,30 @@
 
 /* various utilities */
 
+.center-page-wrapper {
+  width: 100%;
+  display: block;
+  padding-left: $defaultPadding;
+  padding-right: $defaultPadding;
+}
+
+.center-page, .center-content, .center-content-small {
+  width: 100%;
+  margin: auto;
+}
+
+.center-page {
+  max-width: 1200px;
+}
+
+.center-content {
+  max-width: 1000px;
+}
+
+.center-content-small {
+  max-width: 720px;
+}
+
 .inset-shadow-top {
   box-shadow: $insetShadowTop;
 }

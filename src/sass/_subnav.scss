@@ -4,7 +4,8 @@
 
 .subnav {
   width: 100%;
-  padding: $defaultPaddingWebsite;
+  padding-top: $defaultPaddingWebsite;
+  padding-bottom: $defaultPaddingWebsite;
 }
 
 .subnav-link, .subnav-link:hover,

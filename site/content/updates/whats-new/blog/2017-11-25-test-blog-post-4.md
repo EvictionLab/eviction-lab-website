@@ -1,6 +1,6 @@
 ---
 childof: blog
-title: Test Blog Post 4
+title: Test Blog Post 4 Lorem ipsum dolor amet etsy chambray fugiat
 date: 2017-11-25T22:04:28.410Z
 image: /images/uploads/mustard-and-chesse.jpg
 ---

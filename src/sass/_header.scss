@@ -3,16 +3,21 @@
 /* header and logo */
 
 header {
-  width: 100%;
+  display: flex !important; // important required to override bootstrap display: block;
+  flex-direction: row;
+  justify-content: space-between;
   height: 78px;
-  padding: $defaultPaddingWebsite;
-  padding-bottom: 0;
+  padding: 24px 0;
 }
 
 .header-logo {
-  width: 80%;
+  flex-grow: 7;
+  max-width: 400px;
 }
 
 .header-menu {
-  width: 20%;
+  flex-grow: 1;
+  max-width: 50px;
+  padding: 0 0 0 6px;
+  margin-top: -5px;
 }

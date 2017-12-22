@@ -5,7 +5,8 @@
   {{ if eq $currentTitle $currentSection }}
   <!-- do nothing -->
   {{ else }}
-    <div class="breadcrumbs">
+    <div class="breadcrumbs center-page-wrapper">
+      <div class="center-page">
 
           <a href="{{ .Site.BaseURL }}{{ .Section }}">
             <span class="dim">{{ humanize .Section }}</span>
@@ -42,6 +43,7 @@
             <span>{{ .Title }}</span>
           </a>
 
+    </div>
     </div>
   {{ end }}
 {{ end }}

@@ -3,14 +3,15 @@
 
 /* blog and media lists */
 .list-item {
-  padding: $defaultPadding;
+  padding-top: $defaultPadding;
+  padding-bottom: $defaultPadding;
   display: flex;
   min-height: 152px;
   @include for-tablet-portrait-up {
-    padding: $defaultPadding 40px;
+    //padding: $defaultPadding 40px;
   }
   @include for-tablet-landscape-up {
-    padding: $defaultPadding 118px;
+    //padding: $defaultPadding 118px;
   }
   .chevron {
     display: none;
@@ -54,28 +55,30 @@
 
 .research-type {
   @include smallCapsText(.83em);
-  padding: 40px $defaultPadding 20px $defaultPadding;
+  padding-top: 40px;
+  padding-bottom: 20px;
   display: block;
   @include for-tablet-portrait-up {
-    padding: 40px 40px 20px 40px;
+    //padding: 40px 40px 20px 40px;
   }
   @include for-tablet-landscape-up {
-    padding: 40px 260px 20px 260px;
+    //padding: 40px 260px 20px 260px;
   }
   @include for-desktop-up {
-    padding: 40px 260px 20px 260px;
+    //padding: 40px 260px 20px 260px;
   }
 }
 
 .research-article-item {
   display: flex;
-  padding: $defaultPadding;
+  padding-top: $defaultPadding;
+  padding-bottom: $defaultPadding;
   min-height: 152px;
   @include for-tablet-portrait-up {
-    padding: $defaultPadding 40px;
+    //padding: $defaultPadding 40px;
   }
   @include for-tablet-landscape-up {
-    padding: $defaultPadding 260px;
+    //padding: $defaultPadding 260px;
   }
   .chevron {
     flex-grow: 1;

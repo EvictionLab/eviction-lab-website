@@ -1,6 +1,6 @@
 ---
 childof: blog
-title: Test Blog Post 3
+title: Test Blog Post 3 Chicharrones hot chicken godard tousled tofu
 date: 2017-11-25T22:03:57.542Z
 image: /images/uploads/mustard-and-chesse.jpg
 ---

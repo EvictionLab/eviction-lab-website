@@ -4,7 +4,8 @@
   background: #333;
   box-shadow: 0 1px 4px 0 rgba(109,109,109,0.5);
   color: $altTextColor;
-  padding: 16px $defaultPaddingWebsite;
+  padding-top: 16px;
+  padding-bottom: 16px;
   @include smallCapsText(.8em);
 
   i {

@@ -1,6 +1,6 @@
 ---
 childof: blog
-title: Test Blog Post 2
+title: Test Blog Post 2 chambray fugiat copper mug subway tile waistcoat
 date: 2017-11-25T22:03:24.300Z
 image: /images/uploads/mustard-and-chesse.jpg
 ---
