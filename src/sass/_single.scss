@@ -1,0 +1,28 @@
+/* _single.scss */
+
+.article-image {
+  img {
+    width: 100%;
+    margin: 40px 0 27px 0;
+  }
+  .title {
+    @include defaultFontBold(34px);
+    margin-bottom: 8px;
+  }
+  .date {
+    @include smallCapsText(.87em);
+    color: #b2b5b7;
+  }
+}
+
+/* do stuff to things inside a rendered content block */
+.page-content {
+  p {
+    margin: 2em 0;
+    @include defaultFont(1.3em);
+    line-height: 1.65em;
+  }
+  em {
+    font-style: italic;
+  }
+}

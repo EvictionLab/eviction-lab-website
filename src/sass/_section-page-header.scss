@@ -48,6 +48,8 @@ the applied class name based on that.
 .other-studies-from-eviction-lab-bg-color,
 .studies-from-outside-election-lab-bg-color,
 .updates-bg-color,
-.whats-new-bg-color {
+.whats-new-bg-color,
+.research-team-bios-bg-color,
+.web-team-bios-bg-color {
    @include gradient(180deg,$color5);
 }

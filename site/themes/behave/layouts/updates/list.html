@@ -1,7 +1,5 @@
 {{ partial "header" . }}
-
-<div>
-  {{ partial "subnav" . }}
+{{ partial "subnav" . }}
   <!-- section header -->
   <div class="{{ urlize (lower .Title) }}-bg-color inset-shadow-top center-page-wrapper">
     <div class="center-page">
@@ -9,14 +7,7 @@
     </div>
   </div>
 
-  {{ partial "breadcrumb" . }}
-</div>
-
-<!--
-<div class="fl w-100 pa3 mb1 bg-white">
-    {{/* .Content */}}
-</div>
--->
+{{ partial "breadcrumb" . }}
 
 <!--
   I'd really rather use a seperate template for each collection,
@@ -178,43 +169,44 @@
 <!-- ******* EVENTS ******* -->
 
 {{ if eq .Title "Events"}} <!-- if we are on the Events page, do stuff -->
-
   {{ $events := where .Site.RegularPages "Params.childof" "events" }}
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
-    <div class="fl w-100 flex-l justify-center-l">
     {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
       {{ if eq .Params.childof "events" }}
+      <div class="center-page-wrapper divider">
+        <div class="event-item center-content-post">
 
-        <div class="fl w-20 w-40-l">
-          <div class="fr w3 ml3 mt3 pa2 bg-near-white tc">
-            {{ with .Params.edate }}
-                <p class="f2 fw4 mb2">{{ dateFormat "3" . }}</p>
-                <p class="ttu f6">{{ dateFormat "Jan" . }}</p>
-            {{ end }}
+          <div class="date">
+              {{ with .Params.edate }}
+                  <p class="day">{{ dateFormat "3" . }}</p>
+                  <p class="month-short">{{ dateFormat "Jan" . }}</p>
+                  <p class="month">{{ dateFormat "January" . }}</p>
+              {{ end }}
           </div>
-        </div>
 
-        <div class="fl w-80 w-60-l pa3">
-          <h3 class="f3 mb2"><a class="no-underline link dim black" href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          <h4 class="f4 mb3">{{ .Params.subtitle }}</h4>
-          <p class="f6 moon-gray mb3 fw3 lh-copy">{{ markdownify .Params.address }}</p>
-          <p class="">
-            <i class="fa fa-clock-o moon-gray"></i>
-            {{ with .Params.edate }}
-              <span class="ttu f6 pr3">{{ dateFormat "3:04pm" . }}</span>
-            {{ end }}
-            <a class="no-underline link dim blue" href="{{ .Params.website }}">
-              <i class="fa fa-bookmark"></i>
-              <span class="f6">Website</span>
-            </a>
-          </p>
-        </div>
+          <div class="details">
+            <h3 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p class="where">{{ markdownify .Params.address }}</p>
+            <div class="teaser">
+              {{ .Content }}
+            </div>
+            <p class="when">
+              <i class="fa fa-clock-o clock"></i>
+              {{ with .Params.edate }}
+                <span class="time">{{ dateFormat "3:04pm" . }}</span>
+              {{ end }}
+              <i class="fa fa-bookmark bookmark"></i>
+              <a class="website" href="{{ .Params.website }}">
+                <span class="">Website</span>
+              </a>
+            </p>
+          </div>
 
+        </div>
+      </div>
       {{ end }}
     {{ end }}
-    </div>
   {{ end }} <!-- end Events listings -->
-
 {{ end }} <!-- end Events page stuff -->
 
 <!-- ************** -->

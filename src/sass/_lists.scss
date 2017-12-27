@@ -106,18 +106,142 @@
   }
 }
 
+/* events lists */
+
+
+.divider {
+  border-bottom: 2px solid $secondaryBackground;
+  @include for-tablet-portrait-up {
+    border-bottom: none;
+  }
+}
+.event-item {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include for-tablet-portrait-up {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include for-tablet-portrait-up {
+    border-bottom: 2px solid $secondaryBackground;
+  }
+  @include for-tablet-portrait-up {
+    //padding: $defaultPadding 40px;
+  }
+  @include for-tablet-landscape-up {
+    //padding: $defaultPadding 260px;
+  }
+  .date {
+    flex-grow: 1;
+    height: 85px;
+    max-width: 85px;
+    min-width: 85px;
+    padding: 5px 0 0 0;
+    background: $secondaryBackground;
+    text-align: center;
+    @include for-tablet-portrait-up {
+      height: 140px;
+      max-width: 140px;
+      min-width: 140px;
+      padding: 25px 0 0 0;
+    }
+    .day {
+      @include numberFont(1.8em);
+      margin-bottom: 0;
+      @include for-tablet-portrait-up {
+        @include numberFont(2.5em);
+      }
+    }
+    .month-short {
+      @include smallCapsText(1em);
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+    }
+    .month {
+      display: none;
+      @include for-tablet-portrait-up {
+        display: inline;
+        @include smallCapsText(1em);
+      }
+    }
+  }
+}
+
+  .details {
+    flex-grow: 10;
+    padding: 0 0 0 20px;
+    @include for-tablet-portrait-up {
+      padding: 0 0 0 55px;
+    }
+    .title {
+      @include defaultFontBold(1.5em);
+      a {
+        color: $textColor;
+        text-decoration: none;
+      }
+    }
+    .where {
+      @include defaultFont(.93em);
+      color: lighten( $textColor, 70% );
+    }
+    .teaser {
+      @include defaultFont(1.1em);
+      display: none;
+      @include for-tablet-portrait-up {
+        display: block;
+      }
+    }
+    .when {
+      margin-bottom: 0;
+      @include defaultFont(.9em);
+      .clock {
+        color: lighten( $textColor, 70% );
+      }
+      .time {
+        @include smallCapsTextThin(1em);
+        padding: 5px 0 20px 0;
+      }
+      .bookmark {
+        color: $color1;
+        padding-left: 40px;
+      }
+      .website {
+        color: $color1;
+        text-decoration: underline;
+      }
+    }
+  }
+
 /* alt rows for lists */
 
 .alt-rows > div:nth-of-type(even) {
-    background: #F4F7F9;
+    background: $secondaryBackground;
 }
 
 .alt-rows-research > div:nth-of-type(odd) {
-    background: #F4F7F9;
+    background: $secondaryBackground;
 }
 
 /* list page thumbnails */
 .list-thumb {
   width: 160px;
   height: 120px;
+}
+
+/* team bio lists */
+.bio-item {
+  img {
+    width: 100%;
+    margin: 40px 0 27px 0;
+  }
+  .title {
+    @include defaultFontBold(34px);
+    margin-bottom: 8px;
+  }
+  .position {
+    @include smallCapsText(.87em);
+    color: #b2b5b7;
+  }
 }

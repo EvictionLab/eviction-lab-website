@@ -2,13 +2,19 @@
 
 footer {
   width: 100%;
-  padding: 145px $defaultPaddingWebsite 280px $defaultPaddingWebsite;
+  padding: 145px 0 280px 0;
   background: url('/img/footer-bg.png') #393939;
   color: $altTextColor;
   @include defaultFont(1em);
 
+  .footer-wrapper {
+    display: flex;
+    @include for-phone-only {
+      display: block;
+    }
+  }
+
   section {
-    width: 380px;
     margin: 3px;
   }
 
@@ -19,7 +25,7 @@ footer {
       width: 100%;
       border: none;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 80px;
     }
   }
 
@@ -31,15 +37,27 @@ footer {
       width: 100%;
       border: none;
     }
+
+    .middle-wrapper {
+      display: flex;
+      @include for-phone-only {
+        display: block;
+      }
+    }
+
     .left, .right {
       border: none;
       width: 50%;
-      padding-left: 70px;
+      padding-left: 14%;
       @include for-phone-only {
         width: 100%;
         text-align: center;
         padding-left: 0;
         margin-bottom: 0;
+      }
+      ul {
+        margin-bottom: .7rem;
+
       }
       li {
         padding-bottom: 10px;
@@ -48,10 +66,13 @@ footer {
           text-decoration: none;
         }
       }
+      li:last-child {
+          padding-bottom: 0;
+      }
     }
     .copywrite {
       width: 100%;
-      padding: 15px 0 0 70px;
+      padding: 15px 0 0 14%;
       color: #a3a7a8;
       @include defaultFont(.8em);
       letter-spacing: 1.3px;
@@ -61,6 +82,7 @@ footer {
       @include for-phone-only {
         text-align: center;
         padding-left: 0;
+        margin: 60px 0;
       }
     }
   }
@@ -68,30 +90,40 @@ footer {
   .right {
     border-left: 1px solid darken( #fff, 80% );
     width: 360px;
+    .right-wrapper {
+      display: block;
+      @include for-tablet-landscape-up {
+        display: flex;
+      }
+    }
     @include for-phone-only {
       width: 100%;
       border: none;
     }
     .text {
-      width: 60%;
-      padding-left: 70px;
+      width: 100%;
+      text-align: center;
+      padding-left: 0;
       p {
         margin-bottom: 0;
       }
+      @include for-tablet-landscape-up {
+        width: 50%;
+        padding-left: 8%;
+        margin-top: 0;
+      }
       @include for-phone-only {
-        width: 100%;
-        text-align: center;
-        padding-left: 0;
         margin-top: 40px;
       }
     }
     .img {
-      width: 40%;
-      @include for-phone-only {
-        width: 100%;
-        text-align: center;
-        padding-left: 0;
-        margin-top: 10px;
+      width: 100%;
+      text-align: center;
+      padding-left: 0;
+      margin-top: 10px;
+      @include for-tablet-landscape-up {
+        width: 50%;
+        margin-top: 0;
       }
       img {
         border: 4px solid darken( #fff, 80% );

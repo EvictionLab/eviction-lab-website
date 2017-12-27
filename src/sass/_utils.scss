@@ -9,7 +9,7 @@
   padding-right: $defaultPadding;
 }
 
-.center-page, .center-content, .center-content-small {
+.center-page, .center-content, .center-content-post, .center-content-small {
   width: 100%;
   margin: auto;
 }
@@ -20,6 +20,10 @@
 
 .center-content {
   max-width: 1000px;
+}
+
+.center-content-post {
+  max-width: 793px;
 }
 
 .center-content-small {
