@@ -10,6 +10,7 @@ $defaultPaddingWebsite: grid(3); // default padding for containers
 $pageMargin: grid(2); // page margin on mobile
 $pageMarginLg: grid(3); // page margin on tablet+
 $maxContentWidth: 1200px; // max width for page content
+$mobile: 766px; // mobile device breakpoint
 $gtMobile: 767px; // greater than mobile device breakpoint
 $gtTablet: 1024px; // greater than tablet device breakpoint
 $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
@@ -20,7 +21,7 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 // some other breakpoint/range stuff
 
 @mixin for-phone-only {
-  @media (max-width: $gtMobile) { @content; }
+  @media (max-width: $mobile) { @content; }
 }
 @mixin for-tablet-portrait-up {
   @media (min-width: $gtMobile) { @content; }
@@ -140,9 +141,3 @@ body {
 @import 'lists';
 @import 'single';
 @import 'footer';
-
-/* debugging helpers */
-
-.debug-visability {
-  display: none;
-}

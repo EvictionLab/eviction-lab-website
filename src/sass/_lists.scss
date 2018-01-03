@@ -8,10 +8,12 @@
   display: flex;
   min-height: 152px;
   @include for-tablet-portrait-up {
-    //padding: $defaultPadding 40px;
+    padding-top: $defaultPadding*1.5;
+    padding-bottom: $defaultPadding*1.5;
   }
   @include for-tablet-landscape-up {
-    //padding: $defaultPadding 118px;
+    padding-top: $defaultPadding*2;
+    padding-bottom: $defaultPadding*2;
   }
   .chevron {
     display: none;
@@ -29,6 +31,9 @@
     max-width: 200px;
     min-width: 200px;
     display: none;
+    @include for-phone-only {
+      display: none;
+    }
     @include for-tablet-portrait-up {
       display: block;
     }
@@ -46,7 +51,7 @@
     .date {
       @include smallCapsTextThin(1em);
       color: lighten( $textColor, 70% );
-      padding: 5px 0 20px 0;
+      padding: 5px 0 0 0;
     }
   }
 }

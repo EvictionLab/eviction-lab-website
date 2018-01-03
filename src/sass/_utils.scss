@@ -1,5 +1,11 @@
 /* _utils.scss */
 
+/* debugging helpers */
+
+.debug-visability {
+  display: none; // none or block, shows template location at bottom of page content above footer
+}
+
 /* various utilities */
 
 .center-page-wrapper {
@@ -7,6 +13,17 @@
   display: block;
   padding-left: $defaultPadding;
   padding-right: $defaultPadding;
+}
+
+.center-page-wrapper-content {
+  width: 100%;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  @include for-tablet-portrait-up {
+    padding-left: $defaultPadding;
+    padding-right: $defaultPadding;
+  }
 }
 
 .center-page, .center-content, .center-content-post, .center-content-small {

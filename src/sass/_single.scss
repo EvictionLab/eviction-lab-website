@@ -3,7 +3,16 @@
 .article-image {
   img {
     width: 100%;
-    margin: 40px 0 27px 0;
+    margin: 0 0 27px 0;
+    @include for-tablet-portrait-up {
+      margin: 40px 0 27px 0;
+    }
+  }
+  .title, .date {
+    padding: 0 $defaultPadding 0 $defaultPadding;
+    @include for-tablet-portrait-up {
+      padding: 0;
+    }
   }
   .title {
     @include defaultFontBold(34px);
@@ -17,6 +26,10 @@
 
 /* do stuff to things inside a rendered content block */
 .page-content {
+  padding: 0 $defaultPadding 0 $defaultPadding;
+  @include for-tablet-portrait-up {
+    padding: 0;
+  }
   p {
     margin: 2em 0;
     @include defaultFont(1.3em);
