@@ -1,0 +1,29 @@
+/* _index.scss */
+
+/* for non-list index pages, such as FAQ, Methods, etc. */
+
+.graphic-header {
+  height: 300px;
+  text-align: center;
+  h1 {
+    padding-top: 113px;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    color: $altTextColor;
+    text-shadow: $textShadow;
+    @include altFont(2.3em);
+  }
+  .underbar {
+    width: 110px;
+    height: 8px;
+    background: $color1;
+    margin: 14px auto;
+    box-shadow: $boxShadowBottom;
+  }
+}
+
+/* background images */
+
+.help-faq {
+  background: url('/img/help-faq-header.jpg') center #000;
+}

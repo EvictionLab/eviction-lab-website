@@ -1,0 +1,42 @@
+{{ partial "header" . }}
+
+<!-- section header -->
+<div class="graphic-header help-faq center-page-wrapper">
+  <div class="center-page">
+    <h1 class="graphic-page-header">help &amp; faq</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
+<!-- subnav -->
+<div class=" inset-shadow-top center-page-wrapper">
+  <div class="center-page">
+    <ul>
+      <li>item one</li>
+      <li>item two</li>
+      <li>and three</li>
+      <li>plus four</li>
+    </ul>
+  </div>
+</div>
+
+<div class="fl w-100 pv3 ph4 page-content">
+{{ .Content }}
+</div>
+
+<div class="fl w-100 alt-rows">
+{{ range where .Site.RegularPages "Params.childof" (lower .Title | urlize) }}
+  <div class="pv4 ph2 bg-white white">
+    <i class="fa fa-chevron-right orange pa2 relative top-1"></i>
+    <a class="no-underline link dim black f4 pl2" href="{{ .Permalink }}">{{ .Title }}</a>
+    <br>
+    <small class="moon-gray ttu tracked fw3 f7 relative left-4">{{ .Date.Format "January 2, 2006" }}</small>
+  </div>
+{{ end }}
+
+</div>
+
+{{ partial "debug" . }}
+<span class="debug-visability">rendered by = themes/THEMENAME/layouts/help-faq/list.html</span>
+
+{{ partial "footer" . }}

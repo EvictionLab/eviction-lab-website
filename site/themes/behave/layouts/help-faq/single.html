@@ -1,0 +1,29 @@
+{{ partial "header" . }}
+
+<div class="fl w-100">
+
+  {{ partial "subnav" . }}
+
+  <div class="fl w-100 pa3 pl4 {{ lower .Section }}-bg-color">
+    <h1 class="page-header">{{ .Title }}</h1>
+  </div>
+
+{{ partial "breadcrumb" . }}
+
+</div>
+
+<div class="fl w-100 pv3 ph4 bg-white">
+  <h3 class="f2">{{ .Title }}</h3>
+  <small>{{ .Date }}</small>
+
+  {{ if .Content }}
+    <p>{{ .Content }}</p>
+    {{ else }}
+    <p>sorry no content here</p>
+  {{ end }}
+</div>
+
+{{ partial "debug" . }}
+<span class="debug-visability">rendered by = themes/THEMENAME/layouts/help-faq/single.html</span>
+
+{{ partial "footer" . }}
