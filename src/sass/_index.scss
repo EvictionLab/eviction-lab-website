@@ -38,23 +38,47 @@
 /* subnav */
 
 .anchor-links {
-  height: 75px;
-  padding: 25px 45px 30px 45px;
+  padding: 25px 0;
   margin-bottom: 60px;
+  text-align: center;
+  @include for-tablet-portrait-up {
+    padding: 25px 45px;
+    text-align: left;
+  }
   li {
-    float: left;
-    margin-right: 45px;
-    @include defaultFontBold(15px);
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    @include defaultFontBold(12px);
     color: $secondaryTextColor;
+    @include for-tablet-portrait-up {
+      margin-right: 25px;
+      @include defaultFontBold(15px);
+    }
+    @include for-tablet-landscape-up {
+      margin-right: 45px;
+    }
     a {
-      @include defaultFontBold(18px);
+      @include defaultFontBold(16px);
       color: $textColor;
       position: relative;
       top: -3px;
       margin-right: 13px;
+      @include for-tablet-portrait-up {
+        @include defaultFontBold(17px);
+      }
+      @include for-tablet-landscape-up {
+        @include defaultFontBold(18px);
+      }
     }
     a:hover {
       text-decoration: none;
+    }
+  }
+  .only-larger-screens {
+    display: none;
+    @include for-tablet-portrait-up {
+      display: inline-block;
     }
   }
 }
