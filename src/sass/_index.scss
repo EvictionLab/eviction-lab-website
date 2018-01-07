@@ -1,5 +1,12 @@
 /* _index.scss */
 
+.page-section-header {
+  @include altFont(1.8em);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: 45px;
+}
+
 /* for non-list index pages, such as FAQ, Methods, etc. */
 
 .graphic-header {
@@ -16,7 +23,7 @@
   .underbar {
     width: 110px;
     height: 8px;
-    background: $color1; 
+    background: $color1;
     margin: 14px auto;
     box-shadow: $boxShadowBottom;
   }
@@ -26,4 +33,80 @@
 
 .help-faq {
   background: url('/img/help-faq-header.jpg') center #000;
+}
+
+/* subnav */
+
+.anchor-links {
+  height: 75px;
+  padding: 25px 45px 30px 45px;
+  margin-bottom: 60px;
+  li {
+    float: left;
+    margin-right: 45px;
+    @include defaultFontBold(15px);
+    color: $secondaryTextColor;
+    a {
+      @include defaultFontBold(18px);
+      color: $textColor;
+      position: relative;
+      top: -3px;
+      margin-right: 13px;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* accordion sections */
+
+.accordion {
+  margin-bottom: 70px;
+}
+.accordion-section {
+  margin-bottom: 16px;
+  border-bottom: 2px solid $secondaryBackground;
+  a {
+    display: block;
+    width: 100%;
+    color: $color1;
+    @include defaultFontBold(20px);
+    padding-bottom: 16px;
+    span {
+      float: left;
+      width: 90%;
+    }
+    div {
+      clear: both;
+    }
+  }
+  a:hover {
+    color: $color1;
+    text-decoration: none;
+  }
+  i {
+    float: right;
+    display: block;
+    color: $color1;
+    position: relative;
+    top: 8px;
+  }
+  .collapsed {
+    @include defaultFont(20px);
+    i {
+      transform: rotate(0.5turn);
+    }
+  }
+  .answer {
+    padding-bottom: 10px;
+    @include defaultFont(20px);
+    a {
+      display: inline;
+    }
+  }
+}
+
+.accordion-section:last-child {
+  border-bottom: none;
 }

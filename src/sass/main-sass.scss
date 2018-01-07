@@ -98,7 +98,7 @@ $fontSizeExtraLarge: 36px;
 // ----
 $textColor: #000;
 $textColor2: #060504;
-$secondaryTextColor: rgba(0,0,0,0.5);
+$secondaryTextColor: rgba(0,0,0,0.3);
 $altTextColor: #fff; // text on dark backgrounds
 $linkColor: #22ABED;
 $defaultBackground: #fff;
@@ -117,7 +117,7 @@ $z1shadow: 0 1px 3px rgba(0,0,0,0.3);
 $z2shadow: 0 2px 5px rgba(0,0,0,0.5);
 $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
 $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
-$boxShadowBottom: 0px 2px 5px rgba( 0, 0, 0, 0.6 );
+$boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.3 );
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 
 // Gradients
@@ -131,7 +131,7 @@ $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 /* ====================== */
 
 body {
-  letter-spacing: .03em;
+  //letter-spacing: .03em;
 }
 
 @import 'utils';

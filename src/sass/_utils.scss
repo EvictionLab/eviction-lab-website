@@ -3,7 +3,7 @@
 /* debugging helpers */
 
 .debug-visability {
-  display: block; // none or block, shows template path at bottom of page content above footer
+  display: none; // none or block, shows template path at bottom of page content above footer
 }
 
 /* various utilities */
@@ -49,6 +49,10 @@
 
 .inset-shadow-top {
   box-shadow: $insetShadowTop;
+}
+
+.shadow-bottom {
+  box-shadow: $boxShadowBottom;
 }
 
 .color1 {
