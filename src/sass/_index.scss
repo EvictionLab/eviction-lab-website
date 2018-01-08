@@ -134,3 +134,22 @@
 .accordion-section:last-child {
   border-bottom: none;
 }
+
+.recommended {
+  text-align: center;
+  margin-bottom: 45px;
+  .header {
+    @include defaultFontBold(15px);
+    color: $secondaryTextColor;
+    text-transform: uppercase;
+    margin: 2em 0 .8em 0;
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  a {
+    @include defaultFontBold(24px);
+    color: $color1;
+    text-decoration: underline;
+  }
+}

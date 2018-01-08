@@ -14,7 +14,18 @@
     </figure>
 
     <div class="page-content">
+
       {{ .Content }}
+
+      <div class="recommended">
+				<p class="header">recommended posts</p>
+				<ul>
+					{{ range where .Site.RegularPages "Params.featured" true }}
+					  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+					{{ end }}
+				</ul>
+			</div>
+
     </div>
 
   </div>
