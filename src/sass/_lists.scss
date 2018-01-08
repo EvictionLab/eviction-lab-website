@@ -1,0 +1,252 @@
+/* _lists.scss */
+
+
+/* blog and media lists */
+.list-item {
+  padding-top: $defaultPadding;
+  padding-bottom: $defaultPadding;
+  display: flex;
+  min-height: 152px;
+  @include for-tablet-portrait-up {
+    padding-top: $defaultPadding*1.5;
+    padding-bottom: $defaultPadding*1.5;
+  }
+  @include for-tablet-landscape-up {
+    padding-top: $defaultPadding*2;
+    padding-bottom: $defaultPadding*2;
+  }
+  .chevron {
+    display: none;
+    @include for-phone-only {
+      display: block;
+      flex-grow: 1;
+      max-width: 50px;
+      min-width: 50px;
+      color: $color1;
+      padding: 45px 0 0 0;
+    }
+  }
+  .img {
+    flex-grow: 1;
+    max-width: 200px;
+    min-width: 200px;
+    display: none;
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-up {
+      display: block;
+    }
+  }
+  .details {
+    flex-grow: 10;
+    padding-top: 22px;
+    .title {
+      @include defaultFontBold(1.5em);
+      a {
+        color: $textColor;
+        text-decoration: none;
+      }
+    }
+    .date {
+      @include smallCapsTextThin(1em);
+      color: lighten( $textColor, 70% );
+      padding: 5px 0 0 0;
+    }
+  }
+}
+
+/* research lists */
+
+.research-type {
+  @include smallCapsText(.83em);
+  padding-top: 40px;
+  padding-bottom: 20px;
+  display: block;
+  @include for-tablet-portrait-up {
+    //padding: 40px 40px 20px 40px;
+  }
+  @include for-tablet-landscape-up {
+    //padding: 40px 260px 20px 260px;
+  }
+  @include for-desktop-up {
+    //padding: 40px 260px 20px 260px;
+  }
+}
+
+.research-article-item {
+  display: flex;
+  padding-top: $defaultPadding;
+  padding-bottom: $defaultPadding;
+  min-height: 152px;
+  @include for-tablet-portrait-up {
+    //padding: $defaultPadding 40px;
+  }
+  @include for-tablet-landscape-up {
+    //padding: $defaultPadding 260px;
+  }
+  .chevron {
+    flex-grow: 1;
+    max-width: 70px;
+    min-width: 70px;
+    color: $color1;
+    padding: 45px 0 0 0;
+  }
+
+  .details {
+    flex-grow: 10;
+    padding-top: 22px;
+    .title {
+      @include defaultFontBold(1.5em);
+      a {
+        color: $textColor;
+        text-decoration: none;
+      }
+    }
+    .date {
+      @include smallCapsTextThin(1em);
+      color: lighten( $textColor, 70% );
+      padding: 5px 0 20px 0;
+    }
+  }
+}
+
+/* events lists */
+
+
+.divider {
+  border-bottom: 2px solid $secondaryBackground;
+  @include for-tablet-portrait-up {
+    border-bottom: none;
+  }
+}
+.event-item {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include for-tablet-portrait-up {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include for-tablet-portrait-up {
+    border-bottom: 2px solid $secondaryBackground;
+  }
+  @include for-tablet-portrait-up {
+    //padding: $defaultPadding 40px;
+  }
+  @include for-tablet-landscape-up {
+    //padding: $defaultPadding 260px;
+  }
+  .date {
+    flex-grow: 1;
+    height: 85px;
+    max-width: 85px;
+    min-width: 85px;
+    padding: 5px 0 0 0;
+    background: $secondaryBackground;
+    text-align: center;
+    @include for-tablet-portrait-up {
+      height: 140px;
+      max-width: 140px;
+      min-width: 140px;
+      padding: 25px 0 0 0;
+    }
+    .day {
+      @include numberFont(1.8em);
+      margin-bottom: 0;
+      @include for-tablet-portrait-up {
+        @include numberFont(2.5em);
+      }
+    }
+    .month-short {
+      @include smallCapsText(1em);
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+    }
+    .month {
+      display: none;
+      @include for-tablet-portrait-up {
+        display: inline;
+        @include smallCapsText(1em);
+      }
+    }
+  }
+}
+
+  .details {
+    flex-grow: 10;
+    padding: 0 0 0 20px;
+    @include for-tablet-portrait-up {
+      padding: 0 0 0 55px;
+    }
+    .title {
+      @include defaultFontBold(1.5em);
+      a {
+        color: $textColor;
+        text-decoration: none;
+      }
+    }
+    .where {
+      @include defaultFont(.93em);
+      color: lighten( $textColor, 70% );
+    }
+    .teaser {
+      @include defaultFont(1.1em);
+      display: none;
+      @include for-tablet-portrait-up {
+        display: block;
+      }
+    }
+    .when {
+      margin-bottom: 0;
+      @include defaultFont(.9em);
+      .clock {
+        color: lighten( $textColor, 70% );
+      }
+      .time {
+        @include smallCapsTextThin(1em);
+        padding: 5px 0 20px 0;
+      }
+      .bookmark {
+        color: $color1;
+        padding-left: 40px;
+      }
+      .website {
+        color: $color1;
+        text-decoration: underline;
+      }
+    }
+  }
+
+/* alt rows for lists */
+
+.alt-rows > div:nth-of-type(even) {
+    background: $secondaryBackground;
+}
+
+.alt-rows-research > div:nth-of-type(odd) {
+    background: $secondaryBackground;
+}
+
+/* list page thumbnails */
+.list-thumb {
+  width: 160px;
+  height: 120px;
+}
+
+/* team bio lists */
+.bio-item {
+  img {
+    width: 100%;
+    margin: 40px 0 27px 0;
+  }
+  .title {
+    @include defaultFontBold(34px);
+    margin-bottom: 8px;
+  }
+  .position {
+    @include smallCapsText(.87em);
+    color: #b2b5b7;
+  }
+}

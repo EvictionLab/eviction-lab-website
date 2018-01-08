@@ -1,64 +1,53 @@
-<!--
-<code>{{/* printf "%#v" $.Site */}}</code>
-<hr>
-<code>{{/* printf "%#v" $.Page */}}</code>
--->
-
 <!-- footer -->
-<div class="fl w-100 pt6 pb6" style="background: url('/img/footer-bg.png') #393939;">
 
-<div class="fl w-100 fw3">
-  <!-- footer left -->
-  <div class="fl w-100 w-33-l tc">
-    <img src="/img/logo-footer.png" style="position: relative; top: -37px;"/>
-  </div>
+  <footer class="center-page-wrapper">
+    <div class="footer-wrapper center-page">
 
-<!-- footer middle -->
-  <div class="fl w-100 w-33-l tc tl-l pl5-l">
+      <!-- footer left -->
+      <section class="left">
+        <img src="/img/logo-footer.png" />
+      </section>
 
-    <div class="fl w-100 w-50-l">
-      <ul>
-        <li class="mb3"><a href="#" class="link dim white">Home</a></li>
-        <li class="mb3"><a href="#" class="link dim white">About Us</a></li>
-        <li class="mb3"><a href="#" class="link dim white">Methods</a></li>
-        <li class="mb3"><a href="#" class="link dim white">Help & FAQ</a></li>
-      </ul>
+      <!-- footer middle -->
+      <section class="middle">
+        <div class="middle-wrapper">
+
+          <div class="left">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about-us/">About Us</a></li>
+              <li><a href="/methods/">Methods</a></li>
+              <li><a href="/help-faq/">Help & FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="right">
+            <ul>
+              <li><a href="/city-rankings/">City Rankings</a></li>
+              <li><a href="/updates/">Updates</a></li>
+              <li><a href="/learn-more-tell-your-story/">Learn More</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copywrite">
+          <p>&copy; {{ now.Format "2006" }} Eviction Lab</p>
+        </div>
+      </section>
+
+      <!-- footer right -->
+      <section class="right">
+        <div class="right-wrapper">
+          <div class="text"><p>Connect with us</p></div>
+          <div class="img">
+              <a href="#"><img class="" src="/img/social-fb-icon.png"/></a>
+              <a href="#"><img class="" src="/img/social-twitter-icon.png"/></a>
+          </div>
+        </div>
+      </section>
+
     </div>
-    <div class="fl w-100 w-50-l">
-      <ul>
-        <li class="mb3"><a href="#" class="link dim white">City Rankings</a></li>
-        <li class="mb3"><a href="#" class="link dim white">Updates</a></li>
-        <li class="mb3"><a href="#" class="link dim white">Learn More</a></li>
-        <li class="mb3"><a href="#" class="link dim white">Did You Know?</a></li>
-      </ul>
-      <p class="mt5 mb5 white">&copy; {{ now.Format "2006" }} Eviction Lab</p>
-    </div>
-
-  </div>
-
-<!-- footer right -->
-  <div class="fl w-100 w-33-l tc">
-
-    <div class="fl w-100 mb3 tc white">
-      <p>Connect with us</p>
-    </div>
-
-
-    <div class="fl w-25">&nbsp;</div>
-    <div class="fl w-25">
-      <a href="#"><img src="/img/social-fb-icon.png"/></a>
-    </div>
-
-    <div class="fl w-25">
-      <a href="#"><img src="/img/social-twitter-icon.png"/></a>
-    </div>
-    <div class="fl w-25">&nbsp;</div>
-
-  </div>
-
-</div>
-
-</div>
+  </footer>
 
 <script src="/js/jquery-2.1.1.js"></script>
 <script src="/js/main.js"></script>

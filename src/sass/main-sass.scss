@@ -6,57 +6,41 @@
 
 $gridSize: 8px; // base grid value used for margins and element sizing
 $defaultPadding: grid(2); // default padding for containers
+$defaultPaddingWebsite: grid(3); // default padding for containers
 $pageMargin: grid(2); // page margin on mobile
 $pageMarginLg: grid(3); // page margin on tablet+
 $maxContentWidth: 1200px; // max width for page content
+$mobile: 766px; // mobile device breakpoint
 $gtMobile: 767px; // greater than mobile device breakpoint
 $gtTablet: 1024px; // greater than tablet device breakpoint
 $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
 $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 
 
+
+// some other breakpoint/range stuff
+
+@mixin for-phone-only {
+  @media (max-width: $mobile) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: $gtMobile) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: $gtTablet) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: $gtSmallDesktop) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: $gtLargeDesktop) { @content; }
+}
+
+
 // Typography
 // ----
 
-@font-face {
-  font-family: "Akkurat-Bold";
-  src:url("./font/Akkurat-Bold/lineto-akkurat-bold.eot");
-  src:url("./font/Akkurat-Bold/lineto-akkurat-bold.eot?#iefix") format("embedded-opentype"),
-      url("./font/Akkurat-Bold/lineto-akkurat-bold.woff2") format("woff2"),
-      url("./font/Akkurat-Bold/lineto-akkurat-bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Akkurat-Regular";
-  src:url("./font/Akkurat-Regular/lineto-akkurat-regular.eot");
-  src:url("./font/Akkurat-Regular/lineto-akkurat-regular.eot?#iefix") format("embedded-opentype"),
-      url("./font/Akkurat-Regular/lineto-akkurat-regular.woff2") format("woff2"),
-      url("./font/Akkurat-Regular/lineto-akkurat-regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GT-Eesti-Display-Medium";
-  src:url("./font/GT-Eesti/GT-Eesti-Display-Medium.eot");
-  src:url("./font/GT-Eesti/GT-Eesti-Display-Medium.eot?#iefix") format("embedded-opentype"),
-      url("./font/GT-Eesti/GT-Eesti-Display-Medium.woff2") format("woff2"),
-      url("./font/GT-Eesti/GT-Eesti-Display-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GT-Eesti-Display-Bold";
-  src:url("./font/GT-Eesti/GT-Eesti-Display-Bold.eot");
-  src:url("./font/GT-Eesti/GT-Eesti-Display-Bold.eot?#iefix") format("embedded-opentype"),
-      url("./font/GT-Eesti/GT-Eesti-Display-Bold.woff2") format("woff2"),
-      url("./font/GT-Eesti/GT-Eesti-Display-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import 'font-face';
 
 $fontStack: Akkurat-Regular, sans-serif;
 $headerFontStack: GT-Eesti-Display-Medium, sans-serif;
@@ -94,6 +78,12 @@ $numberFontStack:  "Gotham A", "Gotham B", sans-serif;
   letter-spacing: 0.7px;
 }
 
+@mixin smallCapsTextThin($size) {
+  @include defaultFont($size);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
 @mixin inputText() {
   @include defaultFont(18px);
 }
@@ -107,7 +97,8 @@ $fontSizeExtraLarge: 36px;
 // Base Colors
 // ----
 $textColor: #000;
-$secondaryTextColor: rgba(0,0,0,0.5);
+$textColor2: #060504;
+$secondaryTextColor: rgba(0,0,0,0.3);
 $altTextColor: #fff; // text on dark backgrounds
 $linkColor: #22ABED;
 $defaultBackground: #fff;
@@ -125,6 +116,9 @@ $color5: #b5c2b7;
 $z1shadow: 0 1px 3px rgba(0,0,0,0.3);
 $z2shadow: 0 2px 5px rgba(0,0,0,0.5);
 $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
+$insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
+$boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.3 );
+$textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 
 // Gradients
 // ----
@@ -132,82 +126,21 @@ $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
   background: linear-gradient($deg, lighten( $gradColor, 20% ) 0%, $gradColor 100%);
 }
 
-
 /* ====================== */
 /* ====================== */
 /* ====================== */
 
-/* set the header gradient background colours for the various sections of the site */
-
-.blog-bg-color {
-  @include gradient(180deg,$color1);
+body {
+  //letter-spacing: .03em;
 }
 
-.media-bg-color {
-  @include gradient(180deg,$color2);
-}
-
-.research-bg-color {
-  @include gradient(180deg,$color3);
-}
-
-.events-bg-color {
-  @include gradient(180deg,$color5);
-}
-
-.about-us-bg-color,
-.city-rankings-bg-color,
-.learn-more-tell-your-story-bg-color,
-.help-faq-bg-color,
-.methods-bg-color,
-.maps-and-data-bg-color,
-.other-studies-from-eviction-lab-bg-color,
-.studies-from-outside-election-lab-bg-color,
-.updates-bg-color,
-.whats-new-bg-color {
-   @include gradient(180deg,$color5);
-}
-
-.font1 {
-  font-family: $boldFontStack;
-}
-
-.breadcrumb {
-  background: #333;
-  box-shadow: 0 1px 4px 0 rgba(109,109,109,0.5);
-}
-.breadcrumb-dim {
-  color: #a3a7a8;
-}
-
-
-.page-header {
-  font-family: $headerFontStack;
-  font-size: $fontSizeMedium;
-  font-weight: 300;
-  color: $altTextColor;
-  letter-spacing: 2.6px;
-  line-height: 26px;
-  text-transform: uppercase;
-}
-
-/* alt rows for lists */
-.alt-rows > div:nth-of-type(odd) {
-    background: #F4F7F9;
-}
-
-/* do stuff to things inside a rendered content block */
-.page-content p {
-  margin: 2em 0;
-  @include defaultFont(.9em);
-}
-
-.page-content em {
-  font-style: italic;
-}
-
-/* debugging helpers */
-
-.debug-visability {
-  display: none;
-}
+@import 'utils';
+@import 'header';
+@import 'burger';
+@import 'subnav';
+@import 'section-page-header';
+@import 'breadcrumbs';
+@import 'index';
+@import 'lists';
+@import 'single';
+@import 'footer';

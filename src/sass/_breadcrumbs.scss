@@ -1,0 +1,27 @@
+/* _breadcrumbs.scss */
+
+.breadcrumbs {
+  background: #333;
+  box-shadow: 0 1px 4px 0 rgba(109,109,109,0.5);
+  color: $altTextColor;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @include smallCapsText(.8em);
+
+  i {
+    font-size: .75em;
+    padding: 0 $gridSize;
+    position: relative;
+    top: -2px;
+    color: $color1;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .dim {
+    color: #a3a7a8;
+  }
+
+}

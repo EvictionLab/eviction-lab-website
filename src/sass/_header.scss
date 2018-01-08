@@ -1,0 +1,23 @@
+/* _header.scss */
+
+/* header and logo */
+
+header {
+  display: flex !important; // important required to override bootstrap display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 78px;
+  padding: 24px 0;
+}
+
+.header-logo {
+  flex-grow: 7;
+  max-width: 400px;
+}
+
+.header-menu {
+  flex-grow: 1;
+  max-width: 50px;
+  padding: 0 0 0 6px;
+  margin-top: -5px;
+}

@@ -1,28 +1,38 @@
 {{ partial "header" . }}
+{{ partial "subnav" . }}
+{{ partial "breadcrumb" . }}
 
-<div class="fl w-100">
-  {{ partial "subnav" . }}
-</div>
+<div class="center-page-wrapper-content">
+	<div class="center-content-post">
 
-<div class="fl w-100 flex justify-center">
-  <div class="fl w-100 w-50-l">
-
-    <figure class="ma0">
-      <img class="w-100" src="{{ .Param "image" }}"/>
-      <figcaption class="pa3 white db fw3" style="margin-top: -120px">
-        <p class="f3 mb4">{{ .Title }}</p>
-        <p class="f7 ttu db mb2 white">{{ .Date.Format "January 2, 2006" }}</p>
+    <figure class="article-image">
+      <img src="{{ .Param "image" }}"/>
+      <figcaption>
+        <p class="title">{{ .Title }}</p>
+        <p class="date">{{ .Date.Format "January 2, 2006" }}</p>
       </figcaption>
     </figure>
 
-    <div class="page-content ph5 mw7-l fw3 f4 lh-copy">
+    <div class="page-content">
+
       {{ .Content }}
+
+      <div class="recommended">
+				<p class="header">recommended posts</p>
+				<ul>
+					{{ range where .Site.RegularPages "Params.featured" true }}
+					  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+					{{ end }}
+				</ul>
+			</div>
+
     </div>
 
   </div>
 </div>
 
+
 {{ partial "debug" . }}
-<span class="debug-visability">rendered by = themes/THEMENAME/layouts/_default/single.html</span>
+<span class="debug-visability">rendered by = themes/THEMENAME/layouts/updates/single.html</span>
 
 {{ partial "footer" . }}

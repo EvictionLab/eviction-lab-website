@@ -1,0 +1,69 @@
+/* _utils.scss */
+
+/* debugging helpers */
+
+.debug-visability {
+  display: none; // none or block, shows template path at bottom of page content above footer
+}
+
+/* various utilities */
+
+.center-page-wrapper {
+  width: 100%;
+  display: block;
+  padding-left: $defaultPadding;
+  padding-right: $defaultPadding;
+}
+
+.center-page-wrapper-content {
+  width: 100%;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  @include for-tablet-portrait-up {
+    padding-left: $defaultPadding;
+    padding-right: $defaultPadding;
+  }
+}
+
+.center-page, .center-content, .center-content-post, .center-content-small {
+  width: 100%;
+  margin: auto;
+}
+
+.center-page {
+  max-width: 1200px;
+}
+
+.center-content {
+  max-width: 1000px;
+}
+
+.center-content-post {
+  max-width: 793px;
+}
+
+.center-content-small {
+  max-width: 720px;
+}
+
+.inset-shadow-top {
+  box-shadow: $insetShadowTop;
+}
+
+.shadow-bottom {
+  box-shadow: $boxShadowBottom;
+}
+
+.color1 {
+  color: $color1;
+}
+
+.font1 {
+  font-family: $boldFontStack;
+}
+
+.font2 {
+  font-family: $fontStack;
+  font-weight: 300;
+}
