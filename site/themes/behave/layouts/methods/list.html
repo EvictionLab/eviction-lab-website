@@ -1,0 +1,85 @@
+{{ partial "header" . }}
+
+<!-- section header -->
+<div class="graphic-header methods center-page-wrapper">
+  <div class="center-page">
+    <h1 class="graphic-page-header">methods</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
+<!-- subnav -->
+<div class="shadow-bottom center-page-wrapper">
+  <div class="center-content-post">
+    <ul class="anchor-links">
+      <li class="only-larger-screens">CHOOSE A SECTION</li>
+      <li><a href="#section-name">Section Name</a></li>
+      <li><a href="#">Section Name 2</a></li>
+      <li><a href="#"><span class="color1">Download PDF</span></a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- *********************************************** -->
+<!-- begin FAQs
+
+++++++++++++++++++++++ READ ME +++++++++++++++++++++++++
+
+NOTE: each faq method is built with an open and
+close partial, to insulate from borking that code. Variables
+are passed to the partial via (dict) definintions.
+
+Double quotes need to be escaped in the (dict) definitions,
+with a backslash, like this: \"example\"
+
+The explanation goes between the partials, and can contain any html
+that may be needed, ie links, images, etc.
+
+NOTE: each item must have a unique "UniqueNumber". A tried
+a million ways to automate this with code, but Hugo does
+NOT (according to the Hugo discussion boards) currently
+have that capability :( Or at least I don't ;)
+
+The system I'm using is each method goes up by 10, starting at 100,
+to leave space for future additions. Feel free to change
+this, as long as the result is unique.
+
+-->
+<!-- *********************************************** -->
+
+<div class="center-page-wrapper">
+  <div class="center-content-post">
+
+    <!-- ************ -->
+    <!-- section name -->
+    <!-- ************ -->
+
+    <a name="section-name"></a>
+    <h2 class="page-section-header">Section Name</h2>
+
+    <div class="accordion">
+
+      <!-- method item -->
+      {{ partial "method-open" (dict "Method" "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur" "UniqueNumber" "100" ) }}
+           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+      {{ partial "method-close" }}
+
+      <!-- method item -->
+      {{ partial "method-open" (dict "Method" "At vero eos et accusamus et iusto odio dignissimos" "UniqueNumber" "110" ) }}
+           <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+      {{ partial "method-close" }}
+
+      <!-- method item -->
+      {{ partial "method-open" (dict "Method" "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus" "UniqueNumber" "120" ) }}
+           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+      {{ partial "method-close" }}
+
+    </div> <!-- close accordion -->
+
+  </div>
+</div>
+
+{{ partial "debug" . }}
+<span class="debug-visability">rendered by = themes/THEMENAME/layouts/methods/list.html</span>
+
+{{ partial "footer" . }}
