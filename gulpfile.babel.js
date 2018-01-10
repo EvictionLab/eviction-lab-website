@@ -55,7 +55,7 @@ gulp.task("js", (cb) => {
 });
 
 // Development server with browsersync
-gulp.task("server", ["hugo", "css", "js"], () => {
+gulp.task("server", ["hugo", "css", "sass", "js"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
