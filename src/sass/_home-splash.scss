@@ -1,0 +1,54 @@
+/* _home-splash.scss */
+.splash-wrapper {
+  width: 100%;
+  display: block;
+  padding-left: $defaultPadding;
+  padding-right: $defaultPadding;
+}
+
+.splash {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.hero-cta {
+  width: 700px;
+  padding: 125px 100px 120px 0;
+  h1 {
+    @include altFont(44px);
+    letter-spacing: 1px;
+  }
+  p {
+    @include defaultFont(18px);
+    color: $secondaryTextColor;
+    margin: 28px 0 44px 0;
+    line-height: 24px;
+  }
+  a {
+    @include defaultFont(14px);
+    color: $altTextColor;
+    background-color: $color1;
+    border-color: $color1;
+    padding: 25px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  a:hover {
+    color: $altTextColor;
+  }
+}
+
+.slider {
+  width: 100%;
+  .carousel-item:before {
+    box-shadow: $insetShadowTop;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+}

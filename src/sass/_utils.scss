@@ -67,3 +67,10 @@
   font-family: $fontStack;
   font-weight: 300;
 }
+
+.high-z {
+  z-index: 10000;
+}
+.low-z {
+  z-index: 1;
+}

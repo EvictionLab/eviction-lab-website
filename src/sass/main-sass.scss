@@ -98,7 +98,7 @@ $fontSizeExtraLarge: 36px;
 // ----
 $textColor: #000;
 $textColor2: #060504;
-$secondaryTextColor: rgba(0,0,0,0.3);
+$secondaryTextColor: rgba(0,0,0,0.38);
 $altTextColor: #fff; // text on dark backgrounds
 $linkColor: #22ABED;
 $defaultBackground: #fff;
@@ -140,6 +140,7 @@ body {
 @import 'subnav';
 @import 'section-page-header';
 @import 'breadcrumbs';
+@import 'home-splash';
 @import 'index';
 @import 'lists';
 @import 'single';
