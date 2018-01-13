@@ -24,6 +24,10 @@
   @include for-iphone-8plus-portrait-only {
     padding: 125px $defaultPadding 120px 0;
   }
+  @include for-tablet-portrait-up {
+    max-width: 478px;
+    padding: 72px $defaultPadding 82px 0;
+  }
   h1 {
     @include altFont(24px);
     letter-spacing: 1px;
@@ -32,6 +36,11 @@
       @include altFont(30px);
       letter-spacing: 2px;
       line-height: 42px;
+    }
+    @include for-tablet-portrait-up {
+      @include altFont(40px);
+      letter-spacing: 2px;
+      line-height: 50px;
     }
   }
   p {
@@ -43,6 +52,11 @@
       @include defaultFont(15px);
       margin: 20px 0 37px 0;
       line-height: 22px;
+    }
+    @include for-tablet-portrait-up {
+      max-width: 440px;
+      @include defaultFont(17px);
+      line-height: 23px;
     }
   }
   a {
@@ -90,7 +104,7 @@
   width: 100%;
   display: none;
   @include for-tablet-landscape-up {
-    display: block;
+    //display: block;
     .carousel-item:before {
       box-shadow: $insetShadowTop;
       position: absolute;
