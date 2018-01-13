@@ -4,6 +4,11 @@
   display: block;
   padding-left: $defaultPadding;
   padding-right: $defaultPadding;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/hero-slide-1.jpg');
+  background-size: cover;
+  @include for-tablet-landscape-up {
+    box-shadow: $insetShadowTop;
+  }
 }
 
 .splash {
@@ -14,17 +19,18 @@
 }
 
 .hero-cta {
-  width: 700px;
-  padding: 125px 100px 120px 0;
+  max-width:300px;
+  padding: 40px $defaultPadding 20px 0;
   h1 {
-    @include altFont(44px);
+    @include altFont(24px);
     letter-spacing: 1px;
+    color: $altTextColor;
   }
   p {
-    @include defaultFont(18px);
-    color: $secondaryTextColor;
-    margin: 28px 0 44px 0;
-    line-height: 24px;
+    @include defaultFont(14px);
+    color: $altTextColor;
+    margin: 15px 0 18px 0;
+    line-height: 21px;
   }
   a {
     @include defaultFont(14px);
@@ -38,17 +44,89 @@
   a:hover {
     color: $altTextColor;
   }
+  div {
+    width: 300px;
+    display: flex;
+    a:hover {
+      border: 5px solid $secondaryAltTextColor;
+    }
+    a {
+      background-color: transparent;
+      border: 5px solid #fff;
+      border-radius: 2px;
+      margin: 30px 20px 0 0;
+      color: $secondaryAltTextColor;
+      font-size: 20px;
+      padding: 5px 10px;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      i {
+        position: relative;
+        top: -3px;
+      }
+    }
+
+  }
 }
 
 .slider {
   width: 100%;
-  .carousel-item:before {
-    box-shadow: $insetShadowTop;
+  display: none;
+  @include for-tablet-landscape-up {
+    display: block;
+    .carousel-item:before {
+      box-shadow: $insetShadowTop;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+    }
+  }
+}
+
+/* *************** */
+
+.new-splash {
+  height: 100%;
+  background: black;
+}
+
+.section {
+  position: relative;
+  height:100%;
+  background: green;
+}
+
+.section-content {
+  width:100%;
+  padding: 0 24px;
+  max-width: 1200px;
+  margin: auto;
+  background: yellow;
+}
+
+.section-split {
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: orange;
+  .section-image {
     position: absolute;
+    left: 50%;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
+    right: 0;
+    width:50%;
+    height:100%;
+    background-image: url('/img/hero-slide-1.jpg');
+    background-color: blue;
+    background-position:50% 50%;
+    background-size: cover;
+  }
+  .hero {
+    width: 17em;
+    background: red;
   }
 }
