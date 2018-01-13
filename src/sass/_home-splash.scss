@@ -21,16 +21,29 @@
 .hero-cta {
   max-width:300px;
   padding: 40px $defaultPadding 20px 0;
+  @include for-iphone-8plus-portrait-only {
+    padding: 125px $defaultPadding 120px 0;
+  }
   h1 {
     @include altFont(24px);
     letter-spacing: 1px;
     color: $altTextColor;
+    @include for-iphone-8plus-portrait-only {
+      @include altFont(30px);
+      letter-spacing: 2px;
+      line-height: 42px;
+    }
   }
   p {
     @include defaultFont(14px);
     color: $altTextColor;
     margin: 15px 0 18px 0;
     line-height: 21px;
+    @include for-iphone-8plus-portrait-only {
+      @include defaultFont(15px);
+      margin: 20px 0 37px 0;
+      line-height: 22px;
+    }
   }
   a {
     @include defaultFont(14px);
@@ -61,6 +74,9 @@
       width: 45px;
       height: 45px;
       text-align: center;
+      @include for-iphone-8plus-portrait-only {
+        margin: 100px 20px 0 0;
+      }
       i {
         position: relative;
         top: -3px;
