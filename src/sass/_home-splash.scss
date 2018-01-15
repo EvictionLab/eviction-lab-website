@@ -119,44 +119,212 @@
 
 /* *************** */
 
+//variables
+$maxWidth: 1200px;
+$defaultMargin: $defaultPadding;
+$heroMargin: 76px;
+$heroWidth: 300px;
+
+// section styles
 .new-splash {
   height: 100%;
-  background: black;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/hero-slide-1.jpg');
+  background-size: cover;
+  @include for-tablet-landscape-up {
+    background: none;
+    box-shadow: $insetShadowTop;
+  }
 }
 
 .section {
   position: relative;
   height:100%;
-  background: green;
 }
 
 .section-content {
+  position:relative;
+  z-index:2;
   width:100%;
-  padding: 0 24px;
-  max-width: 1200px;
+  padding: 0 $defaultMargin;
+  max-width: $maxWidth;
   margin: auto;
-  background: yellow;
+
+  //a messy hack to keep the left padding consistant
+  @media (min-width: 1217px) {
+    padding-left: 15px;
+  }
+  @media (min-width: 1219px) {
+    padding-left: 14px;
+  }
+  @media (min-width: 1221px) {
+    padding-left: 13px;
+  }
+  @media (min-width: 1223px) {
+    padding-left: 12px;
+  }
+  @media (min-width: 1225px) {
+    padding-left: 11px;
+  }
+  @media (min-width: 1227px) {
+    padding-left: 10px;
+  }
+  @media (min-width: 1229px) {
+    padding-left: 9px;
+  }
+  @media (min-width: 1231px) {
+    padding-left: 8px;
+  }
+  @media (min-width: 1233px) {
+    padding-left: 7px;
+  }
+  @media (min-width: 1235px) {
+    padding-left: 6px;
+  }
+  @media (min-width: 1237px) {
+    padding-left: 5px;
+  }
+  @media (min-width: 1239px) {
+    padding-left: 4px;
+  }
+  @media (min-width: 1241px) {
+    padding-left: 3px;
+  }
+  @media (min-width: 1243px) {
+    padding-left: 2px;
+  }
+  @media (min-width: 1245px) {
+    padding-left: 1px;
+  }
+  @media (min-width: 1247px) {
+    padding-left: 0;
+  }
+
+
 }
+
 
 .section-split {
   display:flex;
   align-items: center;
   justify-content: flex-start;
-  background: orange;
   .section-image {
+    display: none;
+    @include for-tablet-landscape-up {
+      display: block;
+      box-shadow: $insetShadowTop;
+    }
     position: absolute;
-    left: 50%;
     top: 0;
     right: 0;
-    width:50%;
-    height:100%;
+    width: calc(100% - (((100% - #{$maxWidth}) / 2) + (#{$heroWidth} + #{$heroMargin} * 2.3)));
+    height: 100%;
     background-image: url('/img/hero-slide-1.jpg');
-    background-color: blue;
     background-position:50% 50%;
     background-size: cover;
   }
   .hero {
-    width: 17em;
-    background: red;
+    max-width: $heroWidth;
+    padding: 40px $defaultPadding 20px 0;
+    color: $altTextColor;
+    @include for-iphone-8plus-portrait-only {
+      padding: 125px $defaultPadding 120px 0;
+    }
+    @include for-tablet-portrait-up {
+      max-width: 478px;
+      padding: 72px $defaultPadding 82px 0;
+    }
+    @include for-tablet-landscape-up {
+      color: $textColor;
+      max-width: 370px;
+      padding: 52px $defaultPadding 10px 0;
+    }
+    h1 {
+      @include altFont(24px);
+      letter-spacing: 1px;
+      @include for-iphone-8plus-portrait-only {
+        @include altFont(30px);
+        letter-spacing: 2px;
+        line-height: 42px;
+      }
+      @include for-tablet-portrait-up {
+        @include altFont(40px);
+        letter-spacing: 2px;
+        line-height: 50px;
+      }
+      @include for-tablet-landscape-up {
+        @include altFont(44px);
+        letter-spacing: 2px;
+        line-height: 50px;
+      }
+    }
+    p {
+      @include defaultFont(14px);
+      margin: 15px 0 18px 0;
+      line-height: 21px;
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFont(15px);
+        margin: 20px 0 37px 0;
+        line-height: 22px;
+      }
+      @include for-tablet-portrait-up {
+        max-width: 440px;
+        @include defaultFont(17px);
+        line-height: 23px;
+      }
+      @include for-tablet-landscape-up {
+        color: $secondaryAltTextColor;
+      }
+    }
+    a {
+      @include defaultFont(14px);
+      color: $altTextColor;
+      background-color: $color1;
+      border-color: $color1;
+      padding: 25px 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    a:hover {
+      color: $altTextColor;
+    }
+    div {
+      width: 300px;
+      display: flex;
+      a:hover {
+        border: 5px solid $secondaryAltTextColor;
+        @include for-tablet-landscape-up {
+          color: #c4c7c9;
+        }
+      }
+      a {
+        background-color: transparent;
+        border: 5px solid #fff;
+        border-radius: 2px;
+        margin: 30px 20px 0 0;
+        color: $secondaryAltTextColor;
+        font-size: 20px;
+        padding: 5px 10px;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        @include for-iphone-8plus-portrait-only {
+          margin: 100px 20px 0 0;
+        }
+        @include for-tablet-landscape-up {
+          border-color: #f4f7f9;
+          margin: 50px 20px 50px 0;
+        }
+        i {
+          position: relative;
+          top: -3px;
+        }
+      }
+
+    }
+
+/* *************** */
+
+
+
   }
 }
