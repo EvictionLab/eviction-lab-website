@@ -92,6 +92,7 @@ $heroWidth: 300px;
   justify-content: flex-start;
   .section-image {
     display: none;
+    overflow: hidden;
     @include for-tablet-landscape-up {
       display: block;
       box-shadow: $insetShadowTop;
