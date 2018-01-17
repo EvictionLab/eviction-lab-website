@@ -1,0 +1,64 @@
+/* _home-pictorial-menu.scss */
+
+/* home page pictorial menu */
+.branding-divider {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pictorial-wrapper {
+  background: red;
+  text-align: center;
+  color: $altTextColor;
+  .top-row div {
+    width: 50%;
+    padding: 145px 180px;
+    background-size: cover;
+  }
+  .top-row {
+    display: flex;
+    height: 430px;
+    .left {
+      background: url('/img/pictorial-menu-top-left-bg.png');
+      background-position: center;
+    }
+    .right {
+      background: url('/img/pictorial-menu-top-right-bg.png');
+      background-position: center;
+    }
+  }
+  .middle-row div {
+    width: 25%;
+    padding: 105px 110px;
+  }
+  .middle-row {
+    display: flex;
+    height: 248px;
+    .left {
+      background: url('/img/pictorial-menu-middle-left-bg.jpg');
+      background-position: center;
+    }
+    .middle-left {
+      background: url('/img/pictorial-menu-middle-middle-left-bg.jpg');
+      background-position: center;
+    }
+    .middle-right {
+      background: url('/img/pictorial-menu-middle-middle-right-bg.jpg');
+      background-position: center;
+    }
+    .right {
+      background: url('/img/pictorial-menu-middle-right-bg.jpg');
+      background-position: center;
+    }
+  }
+  .bottom-row div { width: 50%; }
+  .bottom-row {
+    background: orange;
+    display: flex;
+    .left {
+      background: silver;
+    }
+    .right {
+      background: purple;
+    }
+  }
+}
