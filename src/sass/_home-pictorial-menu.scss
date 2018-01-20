@@ -6,59 +6,113 @@
   padding-bottom: 30px;
 }
 .pictorial-wrapper {
-  background: red;
   text-align: center;
   color: $altTextColor;
   .top-row div {
     width: 50%;
-    padding: 145px 180px;
-    background-size: cover;
+    h2 {
+      @include altFont(32px);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    p {
+      @include defaultFont(18px);
+      line-height: 28px;
+      margin: 20px 0 20px 0;
+    }
+    a {
+      @include altFont(18px);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $altTextColor;
+    }
+    a:hover {
+      text-decoration: none;
+    }
   }
   .top-row {
     display: flex;
     height: 430px;
     .left {
-      background: url('/img/pictorial-menu-top-left-bg.png');
-      background-position: center;
+      @include backgroundImage('/img/pictorial-menu-top-left-bg.png');
+      @include hoverBar('hover-bar-top-left',50px,5px,20px,auto);
+      padding: 145px 130px;
     }
     .right {
-      background: url('/img/pictorial-menu-top-right-bg.png');
-      background-position: center;
+      @include backgroundImage('/img/pictorial-menu-top-right-bg.png');
+      @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
+      padding: 145px 120px;
     }
   }
   .middle-row div {
     width: 25%;
-    padding: 105px 110px;
+    padding: 105px 50px;
+    a {
+      @include altFont(18px);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $altTextColor;
+    }
+    a:hover {
+      text-decoration: none;
+    }
   }
   .middle-row {
     display: flex;
     height: 248px;
     .left {
-      background: url('/img/pictorial-menu-middle-left-bg.jpg');
-      background-position: center;
+      @include backgroundImage('/img/pictorial-menu-middle-left-bg.jpg');
+      @include hoverBar('hover-bar-middle-left',50px,5px,20px,auto);
     }
     .middle-left {
-      background: url('/img/pictorial-menu-middle-middle-left-bg.jpg');
-      background-position: center;
+      @include backgroundImage('/img/pictorial-menu-middle-middle-left-bg.jpg');
+      @include hoverBar('hover-bar-middle-middle-left',50px,5px,20px,auto);
     }
     .middle-right {
-      background: url('/img/pictorial-menu-middle-middle-right-bg.jpg');
-      background-position: center;
+      @include backgroundImage('/img/pictorial-menu-middle-middle-right-bg.jpg');
+      @include hoverBar('hover-bar-middle-middle-right',50px,5px,20px,auto);
     }
     .right {
-      background: url('/img/pictorial-menu-middle-right-bg.jpg');
-      background-position: center;
+      @include backgroundImage('/img/pictorial-menu-middle-right-bg.jpg');
+      @include hoverBar('hover-bar-middle-right',50px,5px,20px,auto);
     }
   }
-  .bottom-row div { width: 50%; }
+  .bottom-row div {
+    width: 50%;
+    padding: 34px 50px 16px 208px;
+    text-align: left;
+    p {
+      @include defaultFont(18px);
+      margin-bottom: 7px;
+      span {
+        @include defaultFontBold(18px);
+      }
+    }
+    i {
+      font-size: 10px;
+      padding-left: 5px;
+    }
+    a {
+      @include defaultFontBold(14px);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $altTextColor;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
   .bottom-row {
-    background: orange;
+    background: #333;
     display: flex;
+    height: 120px;
     .left {
-      background: silver;
+      background: url('/img/pictorial-menu-bottom-left-bg.png');
+      @include hoverBar('hover-bar-bottom-left',50px,5px,8px,0);
     }
     .right {
-      background: purple;
+      background: url('/img/pictorial-menu-bottom-right-bg.png');
+      @include hoverBar('hover-bar-bottom-right',50px,5px,8px,0);
     }
   }
 }

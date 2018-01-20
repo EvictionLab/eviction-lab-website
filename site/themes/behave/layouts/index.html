@@ -74,20 +74,63 @@
 <div class="pictorial-wrapper">
 
   <div class="top-row">
-    <div class="left">top row left</div>
-    <div class="right">top row right</div>
+
+    <div class="left">
+      <h2>map &amp; data</h2>
+      <p>Learn about the American housing crisis by interacting with a customizable map.</p>
+      <a href="#">go to the map</a>
+      <div class="hover-bar-top-left"></div>
+    </div>
+
+    <div class="right">
+      <h2>eviction rankings</h2>
+      <p>Learn which cities rank the highest and <br> lowest in evictions in the U.S.</p>
+      <a href="#">go to eviction rankings</a>
+      <div class="hover-bar-top-right"></div>
+    </div>
+
   </div>
   <!-- ******************** -->
   <div class="middle-row">
-    <div class="left">middle row left</div>
-    <div class="middle-left">middle row middle left</div>
-    <div class="middle-right">middle row middle right</div>
-    <div class="right">middle  row right</div>
+
+    <div class="left">
+      <a href="#">learn about the eviction lab</a>
+      <div class="hover-bar-middle-left"></div>
+    </div>
+
+    <div class="middle-left">
+      <a href="#">learn about the problem</a>
+      <div class="hover-bar-middle-middle-left"></div>
+    </div>
+
+    <div class="middle-right">
+      <a href="#">read about our methodology</a>
+      <div class="hover-bar-middle-middle-right"></div>
+    </div>
+
+    <div class="right">
+      <a href="#">get help and <br> read the faq</a>
+      <div class="hover-bar-middle-right"></div>
+    </div>
+
   </div>
   <!-- ******************** -->
   <div class="bottom-row">
-    <div class="left">bottom row left</div>
-    <div class="right">bottom row right</div>
+
+    <div class="left">
+      {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
+      {{ $first := index $blog 0 }}
+      <p>Blog: <span>{{ $first.Title | truncate 33 }}</span></p>
+      <a href="#">read the blog post <i class="fa fa-chevron-right"></i></a>
+      <div class="hover-bar-bottom-left"></div>
+    </div>
+
+    <div class="right">
+      <p>Follow research, events, and news coverage</p>
+      <a href="#">go to updates</a>
+      <div class="hover-bar-bottom-right"></div>
+    </div>
+
   </div>
 
 </div>

@@ -132,6 +132,30 @@ $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
   background: linear-gradient($deg, lighten( $gradColor, 20% ) 0%, $gradColor 100%);
 }
 
+// BG Images
+// ----
+@mixin backgroundImage($path) {
+  background: url($path);
+  background-position: center;
+  background-size: cover;
+}
+
+// Hover Bars
+// ----
+@mixin hoverBar($className,$width,$height,$topAndBottomMargin,$leftAndRightMargin) {
+  .#{$className} {
+    display: none;
+    width: $width;
+    height: $height;
+    background: $altTextColor;
+    padding: 0;
+    margin: $topAndBottomMargin $leftAndRightMargin;
+  }
+  a:hover + .#{$className} {
+    display: block;
+  }
+}
+
 /* ====================== */
 /* ====================== */
 /* ====================== */
