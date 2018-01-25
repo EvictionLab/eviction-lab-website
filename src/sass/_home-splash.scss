@@ -38,7 +38,7 @@ $heroWidth: 300px;
   width:100%;
   padding: 0 $defaultMargin;
   max-width: $maxWidth;
-  margin: auto;
+  margin: 0 auto;
 
   //a messy hack to keep the left padding consistant
   @media (min-width: 1217px) {
@@ -96,7 +96,7 @@ $heroWidth: 300px;
 
 .section-split {
   display:flex;
-  align-items: center;
+  //align-items: center;
   justify-content: flex-start;
   .section-image {
     display: none;
@@ -128,7 +128,7 @@ $heroWidth: 300px;
     padding: 40px $defaultPadding 20px 0;
     color: $altTextColor;
     @include for-iphone-8plus-portrait-only {
-      padding: 125px $defaultPadding 120px 0;
+      padding: 30px $defaultPadding 120px 0;
     }
     @include for-tablet-portrait-up {
       max-width: 478px;
@@ -163,9 +163,9 @@ $heroWidth: 300px;
       margin: 15px 0 18px 0;
       line-height: 21px;
       @include for-iphone-8plus-portrait-only {
-        @include defaultFont(15px);
+        @include defaultFont(13px);
         margin: 20px 0 37px 0;
-        line-height: 22px;
+        line-height: 19px;
       }
       @include for-tablet-portrait-up {
         max-width: 440px;
@@ -209,7 +209,7 @@ $heroWidth: 300px;
         height: 45px;
         text-align: center;
         @include for-iphone-8plus-portrait-only {
-          margin: 100px 20px 0 0;
+          margin: 205px 20px 0 0;
         }
         @include for-tablet-landscape-up {
           border-color: #f4f7f9;

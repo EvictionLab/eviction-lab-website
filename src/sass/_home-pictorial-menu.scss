@@ -14,16 +14,30 @@
       @include altFont(32px);
       text-transform: uppercase;
       letter-spacing: 4px;
+      @include for-iphone-8plus-portrait-only {
+        @include altFont(18px);
+        letter-spacing: 2px;
+      }
     }
     p {
       @include defaultFont(18px);
       line-height: 28px;
       margin: 20px 0 20px 0;
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFont(11px);
+        line-height: 18px;
+      }
     }
-    a {
+    span {
       @include altFont(18px);
       text-transform: uppercase;
       letter-spacing: 2px;
+      color: $altTextColor;
+      @include for-iphone-8plus-portrait-only {
+        display: none;
+      }
+    }
+    a {
       color: $altTextColor;
     }
     a:hover {
@@ -32,26 +46,46 @@
   }
   .top-row {
     display: flex;
-    height: 430px;
+    min-height: 430px;
+    @include for-iphone-8plus-portrait-only {
+      min-height: 210px;
+    }
     .left {
       @include backgroundImage('/img/pictorial-menu-top-left-bg.png');
       @include hoverBar('hover-bar-top-left',50px,5px,20px,auto);
       padding: 145px 130px;
+      @include for-iphone-8plus-portrait-only {
+        @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
+        padding: 50px 24px 0 24px;
+      }
     }
     .right {
       @include backgroundImage('/img/pictorial-menu-top-right-bg.png');
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
       padding: 145px 120px;
+      @include for-iphone-8plus-portrait-only {
+        @include backgroundImage('/img/pictorial-menu-top-right-bg-iphone8.png');
+        padding: 50px 24px 0 24px;
+      }
     }
   }
   .middle-row div {
     width: 25%;
     padding: 105px 50px;
+    @include for-iphone-8plus-portrait-only {
+      width: 50%;
+      padding: 52px 24px 0 24px;
+      min-height: 150px;
+    }
     a {
       @include altFont(18px);
       text-transform: uppercase;
       letter-spacing: 2px;
       color: $altTextColor;
+      @include for-iphone-8plus-portrait-only {
+        @include altFont(13px);
+        letter-spacing: 2px;
+      }
     }
     a:hover {
       text-decoration: none;
@@ -59,7 +93,8 @@
   }
   .middle-row {
     display: flex;
-    height: 248px;
+    flex-wrap: wrap;
+    min-height: 248px;
     .left {
       @include backgroundImage('/img/pictorial-menu-middle-left-bg.jpg');
       @include hoverBar('hover-bar-middle-left',50px,5px,20px,auto);
@@ -79,13 +114,24 @@
   }
   .bottom-row div {
     width: 50%;
-    padding: 34px 50px 16px 208px;
+    padding: 34px 50px 16px 160px;
     text-align: left;
+    @include for-iphone-8plus-portrait-only {
+      width: 100%;
+      padding: 34px 50px 16px 100px;
+    }
     p {
       @include defaultFont(18px);
       margin-bottom: 7px;
       span {
         @include defaultFontBold(18px);
+      }
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFont(11px);
+        margin-bottom: 5px;
+        span {
+          @include defaultFontBold(11px);
+        }
       }
     }
     i {
@@ -97,22 +143,43 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       color: $altTextColor;
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFontBold(11px);
+        text-transform: none;
+        letter-spacing: 2px;
+        text-decoration: underline;
+      }
     }
     a:hover {
       text-decoration: none;
+      @include for-iphone-8plus-portrait-only {
+        text-decoration: underline;
+      }
     }
   }
   .bottom-row {
     background: #333;
     display: flex;
-    height: 120px;
+    flex-wrap: wrap;
+    min-height: 120px;
+    @include for-iphone-8plus-portrait-only {
+      padding-bottom: 40px;
+    }
     .left {
-      background: url('/img/pictorial-menu-bottom-left-bg.png');
+      background: url('/img/pictorial-menu-bottom-left-bg.png') top left -50px no-repeat;
       @include hoverBar('hover-bar-bottom-left',50px,5px,8px,0);
+      @include for-iphone-8plus-portrait-only {
+        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 25px left -25px no-repeat;
+        background-size: 100%;
+      }
     }
     .right {
-      background: url('/img/pictorial-menu-bottom-right-bg.png');
+      background: url('/img/pictorial-menu-bottom-right-bg.png') top left -50px no-repeat;
       @include hoverBar('hover-bar-bottom-right',50px,5px,8px,0);
+      @include for-iphone-8plus-portrait-only {
+        background: url('/img/pictorial-menu-bottom-right-bg.png') top 25px left -25px no-repeat;
+        background-size: 100%;
+      }
     }
   }
 }

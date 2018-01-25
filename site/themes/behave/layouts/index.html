@@ -76,16 +76,20 @@
   <div class="top-row">
 
     <div class="left">
-      <h2>map &amp; data</h2>
-      <p>Learn about the American housing crisis by interacting with a customizable map.</p>
-      <a href="#">go to the map</a>
+      <a href="#">
+        <h2>map &amp; <br> data</h2>
+        <p>Learn about the American housing crisis by interacting with a customizable map.</p>
+        <span>go to the map</span>
+      </a>
       <div class="hover-bar-top-left"></div>
     </div>
 
     <div class="right">
-      <h2>eviction rankings</h2>
-      <p>Learn which cities rank the highest and <br> lowest in evictions in the U.S.</p>
-      <a href="#">go to eviction rankings</a>
+      <a href="#">
+        <h2>eviction rankings</h2>
+        <p>Learn which cities rank the highest and lowest in evictions in the U.S.</p>
+        <span>go to eviction rankings</span>
+      </a>
       <div class="hover-bar-top-right"></div>
     </div>
 
@@ -121,13 +125,13 @@
       {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
       {{ $first := index $blog 0 }}
       <p>Blog: <span>{{ $first.Title | truncate 33 }}</span></p>
-      <a href="#">read the blog post <i class="fa fa-chevron-right"></i></a>
+      <a href="#">Read the blog post <i class="fa fa-chevron-right"></i></a>
       <div class="hover-bar-bottom-left"></div>
     </div>
 
     <div class="right">
       <p>Follow research, events, and news coverage</p>
-      <a href="#">go to updates</a>
+      <a href="#">Go to Updates</a>
       <div class="hover-bar-bottom-right"></div>
     </div>
 
