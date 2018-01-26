@@ -19,7 +19,7 @@ $heroWidth: 300px;
     min-height: 760px;
   }
   @include for-tablet-portrait-up {
-    min-height: 690px;
+    min-height: 930px;
   }
   @include for-tablet-landscape-up {
     background: none;
@@ -132,7 +132,7 @@ $heroWidth: 300px;
     }
     @include for-tablet-portrait-up {
       max-width: 478px;
-      padding: 72px $defaultPadding 82px 0;
+      padding: 52px $defaultPadding 82px 0;
     }
     @include for-tablet-landscape-up {
       color: $textColor;
@@ -202,7 +202,7 @@ $heroWidth: 300px;
         border: 5px solid #fff;
         border-radius: 2px;
         margin: 30px 20px 0 0;
-        color: $secondaryAltTextColor;
+        //color: $secondaryAltTextColor;
         font-size: 20px;
         padding: 5px 10px;
         width: 45px;
@@ -210,6 +210,10 @@ $heroWidth: 300px;
         text-align: center;
         @include for-iphone-8plus-portrait-only {
           margin: 205px 20px 0 0;
+        }
+        @include for-tablet-portrait-up {
+          border-color: #f4f7f9;
+          margin: 50px 20px 50px 0;
         }
         @include for-tablet-landscape-up {
           border-color: #f4f7f9;
