@@ -24,6 +24,7 @@ $heroWidth: 300px;
   @include for-tablet-landscape-up {
     background: none;
     box-shadow: $insetShadowTop;
+    min-height: 590px;
   }
 }
 
@@ -194,7 +195,7 @@ $heroWidth: 300px;
       a:hover {
         border: 5px solid $secondaryAltTextColor;
         @include for-tablet-landscape-up {
-          color: #c4c7c9;
+          color: $secondaryAltTextColor;
         }
       }
       a {
@@ -216,6 +217,7 @@ $heroWidth: 300px;
           margin: 50px 20px 50px 0;
         }
         @include for-tablet-landscape-up {
+          color: $secondaryAltTextColor;
           border-color: #f4f7f9;
           margin: 50px 20px 50px 0;
         }

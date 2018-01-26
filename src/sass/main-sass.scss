@@ -147,11 +147,15 @@ $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
     visibility: hidden;
     width: $width;
     height: $height;
+    min-height: $height;
     background: $altTextColor;
     padding: 0;
     margin: $topAndBottomMargin $leftAndRightMargin;
     @include for-iphone-8plus-portrait-only {
       display: none;
+    }
+    @include for-tablet-landscape-up {
+      display: block;
     }
   }
   a:hover + .#{$className} {

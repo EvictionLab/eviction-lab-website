@@ -124,7 +124,7 @@
     <div class="left">
       {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
       {{ $first := index $blog 0 }}
-      <p>Blog: <span>{{ $first.Title | truncate 33 }}</span></p>
+      <p>Blog: <span>{{ $first.Title | truncate 70 }}</span></p>
       <a href="#">Read the blog post <i class="fa fa-chevron-right"></i></a>
       <div class="hover-bar-bottom-left"></div>
     </div>
