@@ -12,7 +12,7 @@ $heroWidth: 300px;
 .new-splash {
   //height: 100%;
   height: calc(100vh - 90px);
-  min-height: 650px;
+  min-height: 445px;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/hero-slide-1.jpg');
   background-size: cover;
   @include for-iphone-8plus-portrait-only {

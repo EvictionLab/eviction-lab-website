@@ -12,6 +12,7 @@ $pageMarginLg: grid(3); // page margin on tablet+
 $maxContentWidth: 1200px; // max width for page content
 
 // device breakpoints
+$gtMobilePortrait: 319px; // greater than mobile device breakpoint
 $iphone-8plus-portrait: 414px;
 $mobile: 766px; // mobile device breakpoint
 $gtMobile: 767px; // greater than mobile device breakpoint
@@ -23,6 +24,9 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 
 
 // some other breakpoint/range stuff
+@mixin for-mobile-portrait-up {
+  @media (min-width: $gtMobilePortrait) { @content; }
+}
 @mixin for-iphone-8plus-portrait-only {
   @media (min-width: $iphone-8plus-portrait) { @content; }
 }
@@ -155,6 +159,7 @@ $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
     background: $altTextColor;
     padding: 0;
     margin: $topAndBottomMargin $leftAndRightMargin;
+    display: none;
     @include for-iphone-8plus-portrait-only {
       display: none;
     }
