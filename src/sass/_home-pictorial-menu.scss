@@ -8,6 +8,9 @@
 .pictorial-wrapper {
   text-align: center;
   color: $altTextColor;
+
+  /* -------------TOP ROW------------- */
+
   .top-row div {
     width: 50%;
     h2 {
@@ -22,8 +25,10 @@
         @include altFont(24px);
         letter-spacing: 2px;
       }
-      @include for-tablet-landscape-up {
-
+      @include for-midsize-desktop-up {
+        @include altFont(32px);
+        text-transform: uppercase;
+        letter-spacing: 4px;
       }
     }
     p {
@@ -38,6 +43,12 @@
         @include defaultFont(16px);
         line-height: 24px;
       }
+        @include for-midsize-desktop-up {
+          @include defaultFont(18px);
+          line-height: 28px;
+          letter-spacing: 1px;
+          margin: 16px 0 30px 0;
+        }
     }
     span {
       @include altFont(18px);
@@ -51,6 +62,10 @@
         display: inline;
         @include altFont(17px);
       }
+      @include for-midsize-desktop-up {
+        display: inline;
+        @include altFont(18px);
+      }
     }
     a {
       color: $altTextColor;
@@ -61,12 +76,15 @@
   }
   .top-row {
     display: flex;
-    min-height: 430px;
+    min-height: 180px;
     @include for-iphone-8plus-portrait-only {
       min-height: 210px;
     }
     @include for-tablet-portrait-up {
       min-height: 328px;
+    }
+    @include for-midsize-desktop-up {
+      min-height: 430px;
     }
     .left {
       @include backgroundImage('/img/pictorial-menu-top-left-bg.png');
@@ -88,6 +106,10 @@
           margin: auto;
         }
       }
+      @include for-midsize-desktop-up {
+        @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
+        padding: 144px 144px 0 144px;
+      }
 
     }
     .right {
@@ -102,8 +124,15 @@
         @include backgroundImage('/img/pictorial-menu-top-right-bg-tablet-portrait.png');
         padding: 100px 40px 0 40px;
       }
+      @include for-midsize-desktop-up {
+        @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
+        padding: 144px 158px 0 158px;
+      }
     }
   }
+
+  /* -------------MIDDLE ROW------------- */
+
   .middle-row div {
     width: 25%;
     padding: 105px 50px;
@@ -121,6 +150,10 @@
       width: 25%;
       padding: 80px 30px 0 30px;
     }
+    @include for-midsize-desktop-up {
+      padding: 102px 80px 0 80px;
+      min-height: 248px;
+    }
     a {
       @include altFont(18px);
       text-transform: uppercase;
@@ -136,6 +169,9 @@
       }
       @include for-tablet-landscape-up {
         line-height: 23px;
+      }
+      @include for-midsize-desktop-up {
+        @include altFont(18px);
       }
     }
     a:hover {
@@ -166,6 +202,9 @@
       @include hoverBar('hover-bar-middle-right',50px,5px,17px,auto);
     }
   }
+
+  /* -------------BOTTOM ROW------------- */
+
   .bottom-row div {
     width: 50%;
     padding: 34px 50px 16px 160px;
@@ -181,6 +220,9 @@
     @include for-tablet-landscape-up {
       width: 50%;
       padding: 34px 50px 16px 130px;
+    }
+    @include for-midsize-desktop-up {
+      padding: 34px 50px 16px 220px;
     }
     p {
       @include defaultFont(18px);
@@ -209,6 +251,13 @@
           @include defaultFontBold(17px);
         }
       }
+      @include for-midsize-desktop-up {
+        @include defaultFont(18px);
+        margin-bottom: 7px;
+        span {
+          @include defaultFontBold(18px);
+        }
+      }
     }
     i {
       font-size: 10px;
@@ -233,6 +282,9 @@
       }
       @include for-tablet-landscape-up {
         @include defaultFontBold(13px);
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFontBold(14px);
       }
     }
     a:hover {
@@ -268,6 +320,9 @@
       @include for-tablet-landscape-up {
         background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -70px no-repeat;
       }
+      @include for-midsize-desktop-up {
+        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left 5px no-repeat;
+      }
     }
     .right {
       background: url('/img/pictorial-menu-bottom-right-bg.png') top left -50px no-repeat;
@@ -280,6 +335,9 @@
       }
       @include for-tablet-landscape-up {
         background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left -70px no-repeat;
+      }
+      @include for-midsize-desktop-up {
+        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left 5px no-repeat;
       }
     }
   }

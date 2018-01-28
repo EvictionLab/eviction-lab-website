@@ -17,6 +17,7 @@ $mobile: 766px; // mobile device breakpoint
 $gtMobile: 767px; // greater than mobile device breakpoint
 $gtTablet: 1024px; // greater than tablet device breakpoint
 $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
+$gtMidDesktop: 1439px; // greater than midsize desktop device breakpoint
 $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 
 
@@ -36,6 +37,9 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 }
 @mixin for-desktop-up {
   @media (min-width: $gtSmallDesktop) { @content; }
+}
+@mixin for-midsize-desktop-up {
+  @media (min-width: $gtMidDesktop) { @content; }
 }
 @mixin for-big-desktop-up {
   @media (min-width: $gtLargeDesktop) { @content; }
