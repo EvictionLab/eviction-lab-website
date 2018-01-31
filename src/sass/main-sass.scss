@@ -12,16 +12,21 @@ $pageMarginLg: grid(3); // page margin on tablet+
 $maxContentWidth: 1200px; // max width for page content
 
 // device breakpoints
+$gtMobilePortrait: 319px; // greater than mobile device breakpoint
 $iphone-8plus-portrait: 414px;
 $mobile: 766px; // mobile device breakpoint
 $gtMobile: 767px; // greater than mobile device breakpoint
 $gtTablet: 1024px; // greater than tablet device breakpoint
 $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
+$gtMidDesktop: 1439px; // greater than midsize desktop device breakpoint
 $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 
 
 
 // some other breakpoint/range stuff
+@mixin for-mobile-portrait-up {
+  @media (min-width: $gtMobilePortrait) { @content; }
+}
 @mixin for-iphone-8plus-portrait-only {
   @media (min-width: $iphone-8plus-portrait) { @content; }
 }
@@ -36,6 +41,9 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 }
 @mixin for-desktop-up {
   @media (min-width: $gtSmallDesktop) { @content; }
+}
+@mixin for-midsize-desktop-up {
+  @media (min-width: $gtMidDesktop) { @content; }
 }
 @mixin for-big-desktop-up {
   @media (min-width: $gtLargeDesktop) { @content; }
@@ -147,11 +155,16 @@ $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
     visibility: hidden;
     width: $width;
     height: $height;
+    min-height: $height;
     background: $altTextColor;
     padding: 0;
     margin: $topAndBottomMargin $leftAndRightMargin;
+    display: none;
     @include for-iphone-8plus-portrait-only {
       display: none;
+    }
+    @include for-tablet-landscape-up {
+      display: block;
     }
   }
   a:hover + .#{$className} {
