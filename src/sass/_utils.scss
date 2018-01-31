@@ -8,6 +8,16 @@
 
 /* various utilities */
 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 90px;
+    background: #fff;
+    margin-bottom: 90px;
+    z-index: 2000;
+}
+
 .center-page-wrapper {
   width: 100%;
   display: block;
