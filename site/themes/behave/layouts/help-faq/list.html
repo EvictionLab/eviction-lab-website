@@ -63,17 +63,27 @@ this, as long as the result is unique.
 
       <!-- FAQ item -->
       {{ partial "faq-open" (dict "Question" "What do the red bubbles mean?" "UniqueNumber" "100" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+           <p>The red bubbles represent the eviction rate or eviction filing rate. Bigger bubbles are bigger numbers. Smaller bubbles are smaller numbers.</p>
       {{ partial "faq-close" }}
 
       <!-- FAQ item -->
       {{ partial "faq-open" (dict "Question" "What does the blue mean?" "UniqueNumber" "110" ) }}
-           <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+           <p>The blue represents the concentration of the census value you selected. For example, if you selected “population,” a darker blue means a higher population and a lighter blue means a lower population.</p>
       {{ partial "faq-close" }}
 
       <!-- FAQ item -->
+      {{ partial "faq-open" (dict "Question" "How many locations can I compare in the map?" "UniqueNumber" "111" ) }}
+           <p>You can compare three locations at a time.</p>
+      {{ partial "faq-close" }}
+
+      <!-- FAQ item -->
+      {{ partial "faq-open" (dict "Question" "Why is there no bubble for my chosen location?" "UniqueNumber" "112" ) }}
+          <p>For locations with no bubble, either the eviction rate for the selected year is zero, or there is no available data.</p>
+      {{ partial "faq-close" }} 
+
+      <!-- FAQ item -->
       {{ partial "faq-open" (dict "Question" "What does \"auto\" mean in the Map Level menu? " "UniqueNumber" "120" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+           <p>Selecting "auto" enables you to zoom through the geographic levels (states, counties, cities, census tracts, and block groups) automatically. You can also select your desired geographic level from the same dropdown menu.</p>
       {{ partial "faq-close" }}
 
     </div> <!-- close accordion -->
