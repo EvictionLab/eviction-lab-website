@@ -12,7 +12,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 90px;
+    min-height: 80px;
     background: #fff;
     margin-bottom: 90px;
     z-index: 2000;
@@ -55,6 +55,10 @@
 
 .center-content-small {
   max-width: 720px;
+}
+
+.header-shadow {
+  box-shadow: $outsetShadowTop;
 }
 
 .inset-shadow-top {

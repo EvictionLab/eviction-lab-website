@@ -5,6 +5,8 @@
 #burger {
   border: none;
   background: none;
+  position: relative;
+  top: -6px;
   @include for-phone-only {
     right: -20px;
   }
