@@ -27,6 +27,9 @@ $heroWidth: 300px;
    /* box-shadow: $insetShadowTop; */
     min-height: 590px;
   }
+  @include for-phone-only {
+    margin-top: 55px;
+  }
 }
 
 .section {

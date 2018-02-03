@@ -8,18 +8,25 @@ header {
   justify-content: space-between;
   height: 80px;
   padding: 24px 0;
+  @include for-phone-only {
+    height: 55px;
+  }
 }
 
 .header-logo {
   flex-grow: 7;
   max-width: 400px;
+  @include for-phone-only {
+    position: relative;
+    top: -10px;
+  }
 }
 
 .logo-svg {
   @include for-mobile-portrait-up {
     width: 211px;
   }
-  @include for-iphone-8plus-portrait-only {
+  @include for-tablet-portrait-up {
     width: 274px;
   }
   @include for-tablet-landscape-up {

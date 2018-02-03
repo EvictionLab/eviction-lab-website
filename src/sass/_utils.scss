@@ -16,6 +16,9 @@
     background: #fff;
     margin-bottom: 90px;
     z-index: 2000;
+    @include for-phone-only {
+      min-height: 55px;
+    }
 }
 
 .center-page-wrapper {

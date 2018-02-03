@@ -9,6 +9,7 @@
   top: -6px;
   @include for-phone-only {
     right: 0px;
+    top: -16px;
   }
 }
 
@@ -17,11 +18,19 @@
   @include smallCapsText(.71em);
   position: relative;
   top: -5px;
+  @include for-phone-only {
+    font-size: 9px;
+    top: -18px;
+    left: -2px;
+  }
 }
 
 .svg-hamburger {
   width: 40px;
   height: 35px;
+  @include for-phone-only {
+    width: 22px;
+  }
 }
 
 .svg-hamburger path {
