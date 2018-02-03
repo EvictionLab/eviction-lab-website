@@ -16,7 +16,15 @@ header {
 }
 
 .logo-svg {
-  width: 318px;
+  @include for-mobile-portrait-up {
+    width: 211px;
+  }
+  @include for-iphone-8plus-portrait-only {
+    width: 274px;
+  }
+  @include for-tablet-landscape-up {
+    width: 318px;
+  }
 }
 
 .header-menu {
