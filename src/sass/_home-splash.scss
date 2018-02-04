@@ -5,7 +5,7 @@
 //variables
 $maxWidth: 1200px;
 $defaultMargin: $defaultPadding;
-$bigScreenMargin: 32px;
+$tabletPlusMargin: 32px;
 $heroMargin: 76px;
 $heroWidth: 300px;
 
@@ -42,7 +42,7 @@ $heroWidth: 300px;
   position:relative;
   z-index:2;
   width:100%;
-  padding: 0 $bigScreenMargin;
+  padding: 0 $TabletPlusMargin;
   max-width: $maxWidth;
   margin: 0 auto;
   @include for-phone-only {
