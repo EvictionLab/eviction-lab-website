@@ -17,6 +17,8 @@ $iphone-8plus-portrait: 414px;
 $mobile: 766px; // mobile device breakpoint
 $gtMobile: 767px; // greater than mobile device breakpoint
 $gtTablet: 1024px; // greater than tablet device breakpoint
+$maxWidthMargins: 1232px; // site max width + 32px margins
+$beyondMaxWidthMargins: 1233px; // greater than site max width + 32px margins
 $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
 $gtMidDesktop: 1439px; // greater than midsize desktop device breakpoint
 $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
@@ -36,8 +38,17 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-tablet-portrait-up {
   @media (min-width: $gtMobile) { @content; }
 }
+@mixin for-tablet-portrait-and-landscape {
+  @media (min-width: $gtMobile) and (max-width: $gtTablet) { @content; }
+}  
 @mixin for-tablet-landscape-up {
   @media (min-width: $gtTablet) { @content; }
+}
+@mixin for-tablet-to-max-width-plus-margins {
+  @media  (min-width: $gtMobile) and (max-width: $maxWidthMargins) { @content; }
+}
+@mixin beyond-max-width-plus-margins {
+  @media (min-width: $beyondMaxWidthMargins) { @content; }
 }
 @mixin for-desktop-up {
   @media (min-width: $gtSmallDesktop) { @content; }
