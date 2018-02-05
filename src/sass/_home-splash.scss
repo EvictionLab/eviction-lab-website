@@ -153,6 +153,9 @@ $heroWidth: 300px;
       max-width: 370px;
       padding: 52px $defaultPadding 10px 0;
     }
+    @include for-tablet-landscape-up-w-height {
+      padding: 40px 16px 10px 0;
+    }
     h1 {
       @include altFont(24px);
       letter-spacing: 1px;
@@ -188,6 +191,9 @@ $heroWidth: 300px;
       }
       @include for-tablet-landscape-up {
         color: $secondaryAltTextColor;
+      }
+      @include for-tablet-landscape-up-w-height {
+        margin: 20px 0 29px 0;
       }
     }
     a {
@@ -233,6 +239,9 @@ $heroWidth: 300px;
           color: $secondaryAltTextColor;
           border-color: #f4f7f9;
           margin: 50px 20px 50px 0;
+        }
+        @include for-tablet-landscape-up-w-height {
+          margin: 29px 20px 50px 0;
         }
         i {
           position: relative;

@@ -18,6 +18,7 @@ $mobile: 767px; // mobile device breakpoint
 $gtMobile: 768px; // greater than mobile device breakpoint
 $tabletLimit: 1023px; // max width of tablet landscape
 $gtTablet: 1024px; // greater than tablet device breakpoint
+$tabletLandscapeHeight: 690px; // max tablet landscape height
 $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
 $gtMidDesktop: 1439px; // greater than midsize desktop device breakpoint
 $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
@@ -42,6 +43,9 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 }  
 @mixin for-tablet-landscape-up {
   @media (min-width: $gtTablet) { @content; }
+}
+@mixin for-tablet-landscape-up-w-height {
+  @media (min-width: $gtTablet) and (max-height: $tabletLandscapeHeight) { @content; }
 }
 @mixin for-tablet-to-max-width-plus-margins {
   @media  (min-width: $gtMobile) and (max-width: $maxWidthMargins) { @content; }
