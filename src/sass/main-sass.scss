@@ -14,9 +14,11 @@ $maxContentWidth: 1200px; // max width for page content
 // device breakpoints
 $gtMobilePortrait: 319px; // greater than mobile device breakpoint
 $iphone-8plus-portrait: 414px;
-$mobile: 766px; // mobile device breakpoint
-$gtMobile: 767px; // greater than mobile device breakpoint
+$mobile: 767px; // mobile device breakpoint
+$gtMobile: 768px; // greater than mobile device breakpoint
+$tabletLimit: 1023px; // max width of tablet landscape
 $gtTablet: 1024px; // greater than tablet device breakpoint
+$tabletLandscapeHeight: 690px; // max tablet landscape height
 $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
 $gtMidDesktop: 1439px; // greater than midsize desktop device breakpoint
 $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
@@ -36,8 +38,20 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-tablet-portrait-up {
   @media (min-width: $gtMobile) { @content; }
 }
+@mixin for-tablet-portrait-and-landscape {
+  @media (min-width: $gtMobile) and (max-width: $tabletLimit) { @content; }
+}  
 @mixin for-tablet-landscape-up {
   @media (min-width: $gtTablet) { @content; }
+}
+@mixin for-tablet-landscape-up-w-height {
+  @media (min-width: $gtTablet) and (max-height: $tabletLandscapeHeight) { @content; }
+}
+@mixin for-tablet-to-max-width-plus-margins {
+  @media  (min-width: $gtMobile) and (max-width: $maxWidthMargins) { @content; }
+}
+@mixin beyond-max-width-plus-margins {
+  @media (min-width: $beyondMaxWidthMargins) { @content; }
 }
 @mixin for-desktop-up {
   @media (min-width: $gtSmallDesktop) { @content; }
@@ -131,6 +145,7 @@ $z1shadow: 0 1px 3px rgba(0,0,0,0.3);
 $z2shadow: 0 2px 5px rgba(0,0,0,0.5);
 $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
 $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
+$outsetShadowTop: 0px -2px 8px 3px rgba(0, 0, 0, 0.24);
 $boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.3 );
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 

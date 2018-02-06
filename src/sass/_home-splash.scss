@@ -5,6 +5,7 @@
 //variables
 $maxWidth: 1200px;
 $defaultMargin: $defaultPadding;
+$tabletPlusMargin: 32px;
 $heroMargin: 76px;
 $heroWidth: 300px;
 
@@ -14,6 +15,7 @@ $heroWidth: 300px;
   min-height: 445px;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/hero-slide-1.jpg');
   background-size: cover;
+
   @include for-iphone-8plus-portrait-only {
     min-height: 760px;
   }
@@ -22,8 +24,12 @@ $heroWidth: 300px;
   }
   @include for-tablet-landscape-up {
     background: none;
-    box-shadow: $insetShadowTop;
+   /* box-shadow: $insetShadowTop; */
     min-height: 590px;
+    margin-left: 32px;
+  }
+  @include for-phone-only {
+    margin-top: 55px;
   }
 }
 
@@ -36,11 +42,18 @@ $heroWidth: 300px;
   position:relative;
   z-index:2;
   width:100%;
-  padding: 0 $defaultMargin;
   max-width: $maxWidth;
   margin: 0 auto;
+   @include for-phone-only {
+    padding: 0 $defaultMargin;
+  }
+   @include for-tablet-portrait-and-landscape {
+    padding: 0 $tabletPlusMargin;
+  }
 
   //a messy hack to keep the left padding consistant
+  
+  /*
   @media (min-width: 1217px) {
     padding-left: 15px;
   }
@@ -89,7 +102,7 @@ $heroWidth: 300px;
   @media (min-width: 1247px) {
     padding-left: 0;
   }
-
+*/
 
 }
 
@@ -139,6 +152,9 @@ $heroWidth: 300px;
       max-width: 370px;
       padding: 52px $defaultPadding 10px 0;
     }
+    @include for-tablet-landscape-up-w-height {
+      padding: 40px 16px 10px 0;
+    }
     h1 {
       @include altFont(24px);
       letter-spacing: 1px;
@@ -174,6 +190,9 @@ $heroWidth: 300px;
       }
       @include for-tablet-landscape-up {
         color: $secondaryAltTextColor;
+      }
+      @include for-tablet-landscape-up-w-height {
+        margin: 20px 0 29px 0;
       }
     }
     a {
@@ -219,6 +238,9 @@ $heroWidth: 300px;
           color: $secondaryAltTextColor;
           border-color: #f4f7f9;
           margin: 50px 20px 50px 0;
+        }
+        @include for-tablet-landscape-up-w-height {
+          margin: 29px 20px 50px 0;
         }
         i {
           position: relative;
