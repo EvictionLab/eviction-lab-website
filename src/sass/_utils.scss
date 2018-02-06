@@ -9,12 +9,12 @@
 /* various utilities */
 
 .sticky {
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
     top: 0;
     left: 0;
     min-height: 80px;
     background: #fff;
-    margin-bottom: 90px;
     z-index: 2000;
     @include for-phone-only {
       min-height: 55px;
