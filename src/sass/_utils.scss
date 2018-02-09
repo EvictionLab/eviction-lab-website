@@ -8,6 +8,19 @@
 
 /* various utilities */
 
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    min-height: 80px;
+    background: #fff;
+    z-index: 2000;
+    @include for-phone-only {
+      min-height: 55px;
+    }
+}
+
 .center-page-wrapper {
   width: 100%;
   display: block;
@@ -47,6 +60,10 @@
   max-width: 720px;
 }
 
+.header-shadow {
+  box-shadow: $outsetShadowTop;
+}
+
 .inset-shadow-top {
   box-shadow: $insetShadowTop;
 }
@@ -66,4 +83,11 @@
 .font2 {
   font-family: $fontStack;
   font-weight: 300;
+}
+
+.high-z {
+  z-index: 10000;
+}
+.low-z {
+  z-index: 1;
 }

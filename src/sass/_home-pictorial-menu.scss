@@ -1,0 +1,381 @@
+/* _home-pictorial-menu.scss */
+
+/* home page pictorial menu */
+.branding-divider {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pictorial-wrapper {
+  text-align: center;
+  color: $altTextColor;
+
+  /* -------------TOP ROW------------- */
+
+  .top-row div {
+    width: 50%;
+    h2 {
+      @include altFont(14px);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      @include for-iphone-8plus-portrait-only {
+        @include altFont(18px);
+        letter-spacing: 2px;
+      }
+      @include for-tablet-portrait-up {
+        @include altFont(24px);
+        letter-spacing: 2px;
+      }
+      @include for-midsize-desktop-up {
+        @include altFont(32px);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+    }
+    p {
+      @include defaultFont(10px);
+      line-height: 14px;
+      margin: 14px 0 0 0;
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFont(11px);
+        line-height: 18px;
+      }
+      @include for-tablet-portrait-up {
+        @include defaultFont(16px);
+        line-height: 24px;
+        margin: 16px 0 26px 0;
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFont(18px);
+        line-height: 28px;
+        letter-spacing: 1px;
+        margin: 16px 0 30px 0;
+      }
+    }
+    span {
+      @include altFont(18px);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $altTextColor;
+      display: none;
+      @include for-iphone-8plus-portrait-only {
+        display: none;
+      }
+      @include for-tablet-portrait-up {
+        display: inline;
+        @include altFont(17px);
+      }
+      @include for-midsize-desktop-up {
+        display: inline;
+        @include altFont(18px);
+      }
+    }
+    a {
+      color: $altTextColor;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  .top-row {
+    display: flex;
+    min-height: 137px;
+    @include for-iphone-8plus-portrait-only {
+      min-height: 210px;
+    }
+    @include for-tablet-portrait-up {
+      min-height: 328px;
+    }
+    @include for-midsize-desktop-up {
+      min-height: 430px;
+    }
+    .left {
+      @include backgroundImage('/img/pictorial-menu-top-left-bg-mobile.png');
+      @include hoverBar('hover-bar-top-left',50px,5px,20px,auto);
+      padding: 25px 22px 0 22px;
+      .break-me {
+        width: 100px;
+        margin: 0 auto;
+      }
+      @include for-iphone-8plus-portrait-only {
+        @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
+        padding: 50px 24px 0 24px;
+        .break-me {
+          width: 100px;
+          margin: 0 auto;
+        }
+      }
+      @include for-tablet-portrait-up {
+        @include backgroundImage('/img/pictorial-menu-top-left-bg-tablet-portrait.png');
+        padding: 100px 40px 0 40px;
+        .break-me {
+          width: auto;
+          margin: auto;
+        }
+      }
+      @include for-tablet-landscape-up {
+        padding: 100px 60px 0 60px;
+        .break-me {
+          width: auto;
+          margin: auto;
+        }
+      }
+      @include for-midsize-desktop-up {
+        @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
+        padding: 144px 144px 0 144px;
+      }
+
+    }
+    .right {
+      @include backgroundImage('/img/pictorial-menu-top-right-bg-mobile.png');
+      @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
+      padding: 25px 22px 0 22px;
+      @include for-iphone-8plus-portrait-only {
+        @include backgroundImage('/img/pictorial-menu-top-right-bg-iphone8.png');
+        padding: 50px 24px 0 24px;
+      }
+      @include for-tablet-portrait-up {
+        @include backgroundImage('/img/pictorial-menu-top-right-bg-tablet-portrait.png');
+        padding: 100px 50px 0 50px;
+      }
+      @include for-tablet-landscape-up {
+        padding: 100px 70px 0 70px;
+      }
+      @include for-midsize-desktop-up {
+        @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
+        padding: 144px 158px 0 158px;
+      }
+    }
+  }
+
+  /* -------------MIDDLE ROW------------- */
+
+  .middle-row div {
+    width: 50%;
+    padding: 20px 15px;
+    @include for-mobile-portrait-up {
+      line-height: 14px;
+    }
+    @include for-iphone-8plus-portrait-only {
+      width: 50%;
+      padding: 52px 24px 0 24px;
+      min-height: 150px;
+      line-height: inherit;
+    }
+    @include for-tablet-portrait-up {
+      width: 50%;
+      padding: 72px 90px 0 90px;
+      min-height: 192px;
+    }
+    @include for-tablet-landscape-up {
+      width: 25%;
+      padding: 80px 30px 0 30px;
+    }
+    @include for-midsize-desktop-up {
+      padding: 102px 80px 0 80px;
+      min-height: 248px;
+    }
+    a {
+      @include altFont(11px);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $altTextColor;
+      @include for-mobile-portrait-up {
+        line-height: 14px;
+      }
+      @include for-iphone-8plus-portrait-only {
+        @include altFont(13px);
+        letter-spacing: 2px;
+      }
+      @include for-tablet-portrait-up {
+        @include altFont(17px);
+        letter-spacing: 2px;
+      }
+      @include for-tablet-landscape-up {
+        line-height: 23px;
+      }
+      @include for-midsize-desktop-up {
+        @include altFont(18px);
+      }
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  .middle-row {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80px;
+    @include for-tablet-landscape-up {
+      min-height: 196px;
+    }
+    @include for-midsize-desktop-up {
+      min-height: 248px;
+    }
+    .left {
+      @include backgroundImage('/img/pictorial-menu-middle-left-bg-mobile.png');
+      @include hoverBar('hover-bar-middle-left',50px,5px,17px,auto);
+      @include for-iphone-8plus-portrait-only {
+        @include backgroundImage('/img/pictorial-menu-middle-left-bg.jpg');
+      }
+    }
+    .middle-left {
+      @include backgroundImage('/img/pictorial-menu-middle-middle-left-bg-mobile.png');
+      @include hoverBar('hover-bar-middle-middle-left',50px,5px,17px,auto);
+      @include for-iphone-8plus-portrait-only {
+        @include backgroundImage('/img/pictorial-menu-middle-middle-left-bg.jpg');
+      }
+    }
+    .middle-right {
+      @include backgroundImage('/img/pictorial-menu-middle-middle-right-bg-mobile.png');
+      @include hoverBar('hover-bar-middle-middle-right',50px,5px,17px,auto);
+      @include for-iphone-8plus-portrait-only {
+        @include backgroundImage('/img/pictorial-menu-middle-middle-right-bg.jpg');
+      }
+    }
+    .right {
+      @include backgroundImage('/img/pictorial-menu-middle-right-bg-mobile.png');
+      @include hoverBar('hover-bar-middle-right',50px,5px,17px,auto);
+      @include for-iphone-8plus-portrait-only {
+          @include backgroundImage('/img/pictorial-menu-middle-right-bg.jpg');
+      }
+    }
+  }
+
+  /* -------------BOTTOM ROW------------- */
+
+  .bottom-row div {
+    width: 100%;
+    padding: 34px 50px 16px 100px;
+    text-align: left;
+    @include for-iphone-8plus-portrait-only {
+      width: 100%;
+      padding: 34px 50px 16px 100px;
+    }
+    @include for-tablet-portrait-up {
+      width: 100%;
+      padding: 34px 50px 16px 230px;
+    }
+    @include for-tablet-landscape-up {
+      width: 50%;
+      padding: 34px 50px 16px 130px;
+    }
+    @include for-midsize-desktop-up {
+      padding: 34px 50px 16px 220px;
+    }
+    p {
+      @include defaultFont(11px);
+      margin-bottom: 0;
+      span {
+        @include defaultFontBold(11px);
+      }
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFont(11px);
+        margin-bottom: 5px;
+        span {
+          @include defaultFontBold(11px);
+        }
+      }
+      @include for-tablet-portrait-up {
+        @include defaultFont(16px);
+        margin-bottom: 5px;
+        span {
+          @include defaultFontBold(16px);
+        }
+      }
+      @include for-tablet-landscape-up {
+        @include defaultFont(17px);
+        margin-bottom: 20px;
+        span {
+          @include defaultFontBold(17px);
+        }
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFont(18px);
+        margin-bottom: 7px;
+        span {
+          @include defaultFontBold(18px);
+        }
+      }
+    }
+    i {
+      font-size: 10px;
+      padding-left: 5px;
+    }
+    a {
+      @include defaultFontBold(10px);
+      text-decoration: underline;
+      letter-spacing: 2px;
+      color: $altTextColor;
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFontBold(11px);
+        text-transform: none;
+        letter-spacing: 2px;
+      }
+      @include for-tablet-portrait-up {
+        @include defaultFontBold(14px);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+      }
+      @include for-tablet-landscape-up {
+        @include defaultFontBold(13px);
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFontBold(14px);
+      }
+    }
+    a:hover {
+      @include for-iphone-8plus-portrait-only {
+        text-decoration: underline;
+      }
+      @include for-tablet-landscape-up {
+        text-decoration: none;
+      }
+    }
+  }
+  .bottom-row {
+    background: #333;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 120px;
+    padding-bottom: 20px;
+    @include for-iphone-8plus-portrait-only {
+      padding-bottom: 40px;
+    }
+    @include for-tablet-portrait-up {
+      padding-bottom: 0;
+    }
+    .left {
+      background: url('/img/pictorial-menu-bottom-left-bg.png') top 0 left -85px no-repeat;
+      @include hoverBar('hover-bar-bottom-left',50px,5px,8px,0);
+      @include for-iphone-8plus-portrait-only {
+        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -85px no-repeat;
+      }
+      @include for-tablet-portrait-up {
+        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left 5px no-repeat;
+      }
+      @include for-tablet-landscape-up {
+        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -70px no-repeat;
+      }
+      @include for-midsize-desktop-up {
+        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left 5px no-repeat;
+      }
+    }
+    .right {
+      background: url('/img/pictorial-menu-bottom-right-bg.png') top 0 left -85px no-repeat;
+      @include hoverBar('hover-bar-bottom-right',50px,5px,8px,0);
+      @include for-iphone-8plus-portrait-only {
+        background: url('/img/pictorial-menu-bottom-right-bg.png') top 0 left -85px no-repeat;
+      }
+      @include for-tablet-portrait-up {
+        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left 5px no-repeat;
+      }
+      @include for-tablet-landscape-up {
+        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left -70px no-repeat;
+      }
+      @include for-midsize-desktop-up {
+        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left 5px no-repeat;
+      }
+    }
+  }
+}

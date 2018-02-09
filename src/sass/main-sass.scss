@@ -10,27 +10,54 @@ $defaultPaddingWebsite: grid(3); // default padding for containers
 $pageMargin: grid(2); // page margin on mobile
 $pageMarginLg: grid(3); // page margin on tablet+
 $maxContentWidth: 1200px; // max width for page content
-$mobile: 766px; // mobile device breakpoint
-$gtMobile: 767px; // greater than mobile device breakpoint
+
+// device breakpoints
+$gtMobilePortrait: 319px; // greater than mobile device breakpoint
+$iphone-8plus-portrait: 414px;
+$mobile: 767px; // mobile device breakpoint
+$gtMobile: 768px; // greater than mobile device breakpoint
+$tabletLimit: 1023px; // max width of tablet landscape
 $gtTablet: 1024px; // greater than tablet device breakpoint
+$tabletLandscapeHeight: 690px; // max tablet landscape height
 $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
+$gtMidDesktop: 1439px; // greater than midsize desktop device breakpoint
 $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 
 
 
 // some other breakpoint/range stuff
-
+@mixin for-mobile-portrait-up {
+  @media (min-width: $gtMobilePortrait) { @content; }
+}
+@mixin for-iphone-8plus-portrait-only {
+  @media (min-width: $iphone-8plus-portrait) { @content; }
+}
 @mixin for-phone-only {
   @media (max-width: $mobile) { @content; }
 }
 @mixin for-tablet-portrait-up {
   @media (min-width: $gtMobile) { @content; }
 }
+@mixin for-tablet-portrait-and-landscape {
+  @media (min-width: $gtMobile) and (max-width: $tabletLimit) { @content; }
+}  
 @mixin for-tablet-landscape-up {
   @media (min-width: $gtTablet) { @content; }
 }
+@mixin for-tablet-landscape-up-w-height {
+  @media (min-width: $gtTablet) and (max-height: $tabletLandscapeHeight) { @content; }
+}
+@mixin for-tablet-to-max-width-plus-margins {
+  @media  (min-width: $gtMobile) and (max-width: $maxWidthMargins) { @content; }
+}
+@mixin beyond-max-width-plus-margins {
+  @media (min-width: $beyondMaxWidthMargins) { @content; }
+}
 @mixin for-desktop-up {
   @media (min-width: $gtSmallDesktop) { @content; }
+}
+@mixin for-midsize-desktop-up {
+  @media (min-width: $gtMidDesktop) { @content; }
 }
 @mixin for-big-desktop-up {
   @media (min-width: $gtLargeDesktop) { @content; }
@@ -98,8 +125,9 @@ $fontSizeExtraLarge: 36px;
 // ----
 $textColor: #000;
 $textColor2: #060504;
-$secondaryTextColor: rgba(0,0,0,0.3);
+$secondaryTextColor: rgba(0,0,0,0.38);
 $altTextColor: #fff; // text on dark backgrounds
+$secondaryAltTextColor: #919191; // text on dark-ish backgrounds
 $linkColor: #22ABED;
 $defaultBackground: #fff;
 $secondaryBackground: #F4F7F9;
@@ -117,6 +145,7 @@ $z1shadow: 0 1px 3px rgba(0,0,0,0.3);
 $z2shadow: 0 2px 5px rgba(0,0,0,0.5);
 $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
 $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
+$outsetShadowTop: 0px -2px 8px 3px rgba(0, 0, 0, 0.24);
 $boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.3 );
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 
@@ -124,6 +153,38 @@ $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 // ----
 @mixin gradient ($deg,$gradColor) {
   background: linear-gradient($deg, lighten( $gradColor, 20% ) 0%, $gradColor 100%);
+}
+
+// BG Images
+// ----
+@mixin backgroundImage($path) {
+  background: url($path);
+  background-position: center;
+  background-size: cover;
+}
+
+// Hover Bars
+// ----
+@mixin hoverBar($className,$width,$height,$topAndBottomMargin,$leftAndRightMargin) {
+  .#{$className} {
+    visibility: hidden;
+    width: $width;
+    height: $height;
+    min-height: $height;
+    background: $altTextColor;
+    padding: 0;
+    margin: $topAndBottomMargin $leftAndRightMargin;
+    display: none;
+    @include for-iphone-8plus-portrait-only {
+      display: none;
+    }
+    @include for-tablet-landscape-up {
+      display: block;
+    }
+  }
+  a:hover + .#{$className} {
+    visibility: visible;
+  }
 }
 
 /* ====================== */
@@ -140,6 +201,8 @@ body {
 @import 'subnav';
 @import 'section-page-header';
 @import 'breadcrumbs';
+@import 'home-splash';
+@import 'home-pictorial-menu';
 @import 'index';
 @import 'lists';
 @import 'single';

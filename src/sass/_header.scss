@@ -6,13 +6,32 @@ header {
   display: flex !important; // important required to override bootstrap display: block;
   flex-direction: row;
   justify-content: space-between;
-  height: 78px;
+  height: 80px;
   padding: 24px 0;
+  @include for-phone-only {
+    height: 55px;
+  }
 }
 
 .header-logo {
   flex-grow: 7;
   max-width: 400px;
+  @include for-phone-only {
+    position: relative;
+    top: -10px;
+  }
+}
+
+.logo-svg {
+  @include for-mobile-portrait-up {
+    width: 211px;
+  }
+  @include for-tablet-portrait-up {
+    width: 274px;
+  }
+  @include for-tablet-landscape-up {
+    width: 318px;
+  }
 }
 
 .header-menu {

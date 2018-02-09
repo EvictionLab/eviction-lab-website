@@ -35,6 +35,10 @@
   background: url('/img/help-faq-header.jpg') center #000;
 }
 
+.methods {
+  background: url('/img/methods-header.jpg') center #000;
+}
+
 /* subnav */
 
 .anchor-links {
@@ -44,6 +48,9 @@
   @include for-tablet-portrait-up {
     padding: 25px 45px;
     text-align: left;
+  }
+  li:last-child {
+    margin-right: 0;
   }
   li {
     display: inline-block;
