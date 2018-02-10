@@ -18,7 +18,11 @@ header {
   max-width: 400px;
   @include for-phone-only {
     position: relative;
-    top: -10px;
+    top: -6px;
+  }
+  @include for-tablet-portrait-up {
+    position: relative;
+    top: 4px;
   }
 }
 
