@@ -23,10 +23,10 @@
   h1 {
     padding-top: 113px;
     text-transform: uppercase;
-    letter-spacing: .09em;
+    letter-spacing: .42rem;
     color: $altTextColor;
     text-shadow: $textShadow;
-    @include altFont(2.3em);
+    @include altFont(3.6rem);
   }
   .underbar {
     width: 110px;
@@ -38,12 +38,6 @@
 }
 
 /* article hero images */
-
-/* img.article-hero {
-  object-fit: cover;
-  width: 100%;
-  max-height: 300px;
-} */
 
 .help-faq {
   background: url('/img/help-faq-header.jpg') center #000;
