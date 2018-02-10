@@ -5,6 +5,8 @@
 @function grid($n) { @return $n * $gridSize; }
 
 $gridSize: 8px; // base grid value used for margins and element sizing
+$zoneOnePadding: 20px; // page padding for 320+
+$zoneTwoPadding: 28px; // page padding for 768+
 $defaultPadding: grid(2); // default padding for containers
 $defaultPaddingWebsite: grid(3); // default padding for containers
 $pageMargin: grid(2); // page margin on mobile

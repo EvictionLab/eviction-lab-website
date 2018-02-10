@@ -26,6 +26,12 @@
   display: block;
   padding-left: $defaultPadding;
   padding-right: $defaultPadding;
+  @include for-phone-only{
+    padding: 0 $zoneOnePadding;
+  }
+  @include for-tablet-portrait-and-landscape {
+    padding: 0 $zoneTwoPadding;
+  }
 }
 
 .center-page-wrapper-content {
@@ -46,6 +52,10 @@
 
 .center-page {
   max-width: 1200px;
+  &.hero-title {
+    position: relative;
+    top: -292px;
+}
 }
 
 .center-content {
@@ -53,7 +63,8 @@
 }
 
 .center-content-post {
-  max-width: 793px;
+  max-width: 790px;
+  line-height: 32px;
 }
 
 .center-content-small {
