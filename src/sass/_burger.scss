@@ -15,12 +15,12 @@
 
 #burger span {
   color: $color1;
-  @include smallCapsText(.71em);
+  @include smallCapsText(13px);
   position: relative;
-  top: -5px;
+  top: 0px;
   @include for-phone-only {
     font-size: 9px;
-    top: -18px;
+    top: -9px;
     left: -2px;
   }
 }
