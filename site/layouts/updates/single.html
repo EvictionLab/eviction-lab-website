@@ -1,0 +1,38 @@
+{{ partial "header" . }}
+{{ partial "subnav" . }}
+{{ partial "breadcrumb" . }}
+
+<div class="center-page-wrapper-content">
+	<div class="center-content-post">
+
+    <figure class="article-image">
+      <img src="{{ .Param "image" }}"/>
+      <figcaption>
+        <p class="title">{{ .Title }}</p>
+        <p class="date">{{ .Date.Format "January 2, 2006" }}</p>
+      </figcaption>
+    </figure>
+
+    <div class="page-content">
+
+      {{ .Content }}
+
+      <div class="recommended">
+				<p class="header">recommended posts</p>
+				<ul>
+					{{ range where .Site.RegularPages "Params.featured" true }}
+					  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+					{{ end }}
+				</ul>
+			</div>
+
+    </div>
+
+  </div>
+</div>
+
+
+{{ partial "debug" . }}
+<span class="debug-visability">rendered by = themes/THEMENAME/layouts/updates/single.html</span>
+
+{{ partial "footer" . }}

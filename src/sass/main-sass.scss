@@ -1,7 +1,7 @@
 // Layout
 // ----
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // sets sitewide font sizes based on user's font size in browser
 }
 // shortcut function for sizing based on grid
 @function grid($n) { @return $n * $gridSize; }
@@ -119,11 +119,11 @@ $numberFontStack:  "Gotham A", "Gotham B", sans-serif;
   @include defaultFont(18px);
 }
 
-$fontSizeExtraSmall: 10px;
-$fontSizeSmall: 12px;
-$fontSizeMedium: 26px;
-$fontSizeLarge: 30px;
-$fontSizeExtraLarge: 36px;
+$fontSizeExtraSmall: 1rem;
+$fontSizeSmall: 1.4rem;
+$fontSizeMedium: 2.1rem;
+$fontSizeLarge: 3.0rem;
+$fontSizeExtraLarge: 3.6rem;
 
 // Base Colors
 // ----
@@ -197,6 +197,15 @@ $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 
 body {
   //letter-spacing: .03em;
+}
+
+p {
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+  @include for-phone-only {
+    font-size: $fontSizeSmall;
+    line-height: 2.2rem;
+  }
 }
 
 @import 'utils';

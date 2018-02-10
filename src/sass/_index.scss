@@ -1,10 +1,13 @@
 /* _index.scss */
 
 .page-section-header {
-  @include altFont(1.8em);
+  @include altFont(2.6rem);
   text-transform: uppercase;
   letter-spacing: .07em;
   margin-bottom: 45px;
+  @include for-phone-only {
+    @include altFont(2rem);
+  }
 }
 
 /* for non-list index pages, such as FAQ, Methods, etc. */
@@ -27,6 +30,12 @@
     color: $altTextColor;
     text-shadow: $textShadow;
     @include altFont(3.6rem);
+    @include for-tablet-portrait-and-landscape {
+      @include altFont(3rem);
+    }
+    @include for-phone-only {
+      @include altFont(2rem);
+    }
   }
   .underbar {
     width: 110px;
@@ -112,9 +121,17 @@
     display: block;
     width: 100%;
     color: $color1;
-    @include defaultFontBold(20px);
+    @include defaultFontBold($fontSizeMedium);
+    @include for-phone-only {
+      font-size: $fontSizeSmall;
+    }
     padding-bottom: 16px;
     span {
+      font-size: 2.1rem;
+      @include for-phone-only {
+        font-size: $fontSizeSmall;
+        line-height: 2.2rem;
+      }
       float: left;
       width: 90%;
     }
@@ -132,6 +149,11 @@
     color: $color1;
     position: relative;
     top: 8px;
+  }
+  .fa {
+    @include for-phone-only {
+      font-size: 1.4rem;
+    }
   }
   .collapsed {
     @include defaultFont(20px);
