@@ -24,7 +24,7 @@
     height: 300px;
   }
   h1 {
-    padding-top: 113px;
+    padding-top: 120px;
     text-transform: uppercase;
     letter-spacing: .42rem;
     color: $altTextColor;
@@ -32,9 +32,13 @@
     @include altFont(3.6rem);
     @include for-tablet-portrait-and-landscape {
       @include altFont(3rem);
+      padding-top: 100px;
+      letter-spacing: .33rem;
     }
     @include for-phone-only {
       @include altFont(2rem);
+      padding-top: 57px;
+      letter-spacing: .2rem;
     }
   }
   .underbar {
@@ -43,6 +47,11 @@
     background: $color1;
     margin: 14px auto;
     box-shadow: $boxShadowBottom;
+    @include for-phone-only {
+      width: 70px;
+      height: 5px;
+      margin: 8px auto;
+    }
   }
 }
 
@@ -130,7 +139,7 @@
       font-size: $fontSizeSmall;
       padding-bottom: 2rem;
     }
-    
+
     span {
       font-size: $fontSizeMedium;
       @include for-phone-only {
