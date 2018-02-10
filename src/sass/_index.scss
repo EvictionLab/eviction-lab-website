@@ -115,19 +115,24 @@
   margin-bottom: 70px;
 }
 .accordion-section {
-  margin-bottom: 16px;
+  margin-bottom: 3rem;
+  @include for-phone-only {
+    margin-bottom: 2rem;
+  }
   border-bottom: 2px solid $secondaryBackground;
   a {
     display: block;
     width: 100%;
     color: $color1;
+    padding-bottom: 3rem;
     @include defaultFontBold($fontSizeMedium);
     @include for-phone-only {
       font-size: $fontSizeSmall;
+      padding-bottom: 2rem;
     }
-    padding-bottom: 16px;
+    
     span {
-      font-size: 2.1rem;
+      font-size: $fontSizeMedium;
       @include for-phone-only {
         font-size: $fontSizeSmall;
         line-height: 2.2rem;
