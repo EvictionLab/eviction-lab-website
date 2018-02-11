@@ -78,12 +78,13 @@
   }
   .top-row {
     display: flex;
-    min-height: 137px;
+    /*min-height: 137px; */
+    height: calc(56vh - 80px);
     @include for-iphone-8plus-portrait-only {
       min-height: 210px;
     }
     @include for-tablet-portrait-up {
-      min-height: 328px;
+      min-height: 280px;
     }
     @include for-midsize-desktop-up {
       min-height: 430px;
@@ -204,12 +205,13 @@
   .middle-row {
     display: flex;
     flex-wrap: wrap;
-    min-height: 80px;
+    height: 27vh;
+    /* min-height: 80px; */
     @include for-tablet-landscape-up {
       min-height: 196px;
     }
     @include for-midsize-desktop-up {
-      min-height: 248px;
+      min-height: 200px;
     }
     .left {
       @include backgroundImage('/img/pictorial-menu-middle-left-bg-mobile.png');
@@ -337,7 +339,8 @@
     background: #333;
     display: flex;
     flex-wrap: wrap;
-    min-height: 120px;
+    height: 17vh;
+    /* min-height: 120px; */
     padding-bottom: 20px;
     @include for-iphone-8plus-portrait-only {
       padding-bottom: 40px;
