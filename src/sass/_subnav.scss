@@ -9,7 +9,7 @@
   height: 75px;
   background: white;
   position: sticky;
-  -webkit-position: sticky;
+  position: -webkit-sticky;
   top: 80px;
   @include for-phone-only {
       top: 55px;
