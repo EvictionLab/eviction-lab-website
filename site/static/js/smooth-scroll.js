@@ -13,7 +13,7 @@ $(function() {
         }
       }
     });
-  });
+  }); 
   
   // Change the speed to whatever you want
   // Personally i think 1000 is too much

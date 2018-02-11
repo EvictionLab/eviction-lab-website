@@ -4,8 +4,16 @@
 
 .subnav {
   width: 100%;
-  padding-top: $defaultPaddingWebsite;
-  padding-bottom: $defaultPaddingWebsite;
+  /*padding-top: $defaultPaddingWebsite;
+  padding-bottom: $defaultPaddingWebsite;*/
+  height: 75px;
+  background: white;
+  position: sticky;
+  -webkit-position: sticky;
+  top: 80px;
+  @include for-phone-only {
+      top: 55px;
+    }
 }
 
 .subnav-link, .subnav-link:hover,
