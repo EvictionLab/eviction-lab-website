@@ -51,6 +51,9 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-tablet-landscape-up-w-height {
   @media (min-width: $gtTablet) and (max-height: $tabletLandscapeHeight) { @content; }
 }
+@mixin up-thru-tablet {
+  @media (max-width: $tabletLimit) { @content; }
+}  
 @mixin for-tablet-to-max-width-plus-margins {
   @media  (min-width: $gtMobile) and (max-width: $maxWidthMargins) { @content; }
 }
@@ -124,6 +127,10 @@ $fontSizeSmall: 1.4rem;
 $fontSizeMedium: 2.1rem;
 $fontSizeLarge: 3.0rem;
 $fontSizeExtraLarge: 3.6rem;
+
+$subnavFontDesktop: 1.6rem;
+$subnavFontTablet: 1.5rem;
+$subnavFontPhone: 1.2rem;
 
 // Base Colors
 // ----

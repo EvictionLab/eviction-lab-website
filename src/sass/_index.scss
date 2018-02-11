@@ -73,9 +73,9 @@
   padding: 25px 0;
   margin-bottom: 60px;
   text-align: center;
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     padding: 25px 45px;
-    text-align: left;
+   /* text-align: left; */
   }
   li:last-child {
     margin-right: 0;
@@ -99,11 +99,18 @@
       position: relative;
       top: -3px;
       margin-right: 13px;
-      @include for-tablet-portrait-up {
-        @include defaultFontBold(17px);
+      @include for-phone-only {
+        @include defaultFontBold($subnavFontPhone);
+        text-transform: uppercase;
+        top: -15px; 
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFontBold($subnavFontTablet);
+        text-transform: uppercase;
+        top: -15px;
       }
       @include for-tablet-landscape-up {
-        @include defaultFontBold(18px);
+        @include defaultFontBold($subnavFontDesktop);
       }
     }
     a:hover {
@@ -112,7 +119,7 @@
   }
   .only-larger-screens {
     display: none;
-    @include for-tablet-portrait-up {
+    @include for-tablet-landscape-up {
       display: inline-block;
     }
   }

@@ -11,6 +11,9 @@
   position: sticky;
   position: -webkit-sticky;
   top: 80px;
+  @include up-thru-tablet {
+    height: 50px; 
+  }
   @include for-phone-only {
       top: 55px;
     }
