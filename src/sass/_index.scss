@@ -3,10 +3,11 @@
 .page-section-header {
   @include altFont(2.6rem);
   text-transform: uppercase;
-  letter-spacing: .07em;
-  margin-bottom: 45px;
+  letter-spacing: 0.25rem;
+  margin-bottom: 4.5rem;
   @include for-phone-only {
     @include altFont(2rem);
+    letter-spacing: 0.2rem;
   }
 }
 
@@ -103,11 +104,13 @@
         @include defaultFontBold($subnavFontPhone);
         text-transform: uppercase;
         top: -15px; 
+        letter-spacing: 0.05rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFontBold($subnavFontTablet);
         text-transform: uppercase;
         top: -15px;
+        letter-spacing: 0.08rem;
       }
       @include for-tablet-landscape-up {
         @include defaultFontBold($subnavFontDesktop);
@@ -121,14 +124,25 @@
     display: none;
     @include for-tablet-landscape-up {
       display: inline-block;
+      position: relative;
+      top: -3px;
     }
+  }
+}
+
+/* set list page content padding, etc. */
+
+.center-content-post.page-list {
+  padding-top: 5.5rem;
+  @include for-phone-only {
+    padding-top: 3.5rem;
   }
 }
 
 /* accordion sections */
 
 .accordion {
-  margin-bottom: 70px;
+  margin-bottom: 4rem;
 }
 .accordion-section {
   margin-bottom: 3rem;

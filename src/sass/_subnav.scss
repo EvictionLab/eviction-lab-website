@@ -11,6 +11,7 @@
   position: sticky;
   position: -webkit-sticky;
   top: 80px;
+  z-index: 1;
   @include up-thru-tablet {
     height: 50px; 
   }
