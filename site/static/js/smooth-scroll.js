@@ -7,7 +7,7 @@ $(function() {
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
           $('html,body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top -80 + 'px'
           }, 1000); // The number here represents the speed of the scroll in milliseconds
           return false;
         }
