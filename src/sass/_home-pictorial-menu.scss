@@ -97,6 +97,9 @@
       min-height:initial;
       height: auto;
     }
+    @include for-480-thru-767 {
+        height: calc(47vh - 35px);
+    }
     @include for-tablet-portrait-up {
       min-height: 280px;
     }
@@ -175,11 +178,9 @@
       height: 25vh;
       padding: 20px 15px;
     }
-    @include for-above480 {
+    @include for-480-thru-767 {
       width: 50%;
-      padding: 52px 24px 0 24px;
-      min-height: 150px;
-      line-height: inherit;
+      height: calc(18vh - 5px);
     }
     @include for-tablet-portrait-up {
       width: 50%;
@@ -232,6 +233,10 @@
       height: auto;
       min-height: initial; 
     }
+    @include for-480-thru-767 {
+      display: flex;
+      height: auto;
+    }
     @include for-tablet-landscape-up {
       min-height: 196px;
     }
@@ -274,8 +279,8 @@
     width: 100%;
     padding: 34px 50px 16px 100px;
     text-align: left;
-    @include for-iphone-8plus-portrait-only {
-      width: 100%;
+    @include for-480-thru-767 {
+      width: 50%;
       padding: 34px 50px 16px 100px;
     }
     @include for-tablet-portrait-up {
@@ -371,6 +376,10 @@
       display: block;
       height: auto;
       min-height: initial;
+    }
+    @include for-480-thru-767 {
+      height: 16vh;
+      padding-bottom: 20px;
     }
     @include for-above480 {
       padding-bottom: 40px;

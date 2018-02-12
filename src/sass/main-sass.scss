@@ -45,11 +45,20 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-above480 {
   @media (min-width:$above480) { @content; }
 }
+@mixin for-480-thru-767 {
+  @media (min-width:$above480) and (max-width:$mobile) { @content; }
+}
+@mixin for-480-thru-1023 {
+  @media (min-width:$above480) and (max-width:$tabletLimit) { @content; }
+}
 @mixin for-phone-only {
   @media (max-width: $mobile) { @content; }
 }
 @mixin for-tablet-portrait-up {
   @media (min-width: $gtMobile) { @content; }
+}
+@mixin for-768-thru-1023 {
+  @media (min-width:$above480) and (max-width:$tabletLimit) { @content; }
 }
 @mixin for-tablet-portrait-thru-sm-desktop {
   @media (min-width: $gtMobile) and (max-width: $smDesktopLimit) { @content; }
