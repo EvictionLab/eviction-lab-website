@@ -21,8 +21,8 @@
         @include altFont(18px);
         letter-spacing: 2px;
       }
-      @include for-tablet-portrait-up {
-        @include altFont(24px);
+      @include sm-thru-med-desktop {
+        @include altFont(2.6rem);
         letter-spacing: 2px;
       }
       @include for-midsize-desktop-up {
@@ -35,19 +35,24 @@
       @include defaultFont(10px);
       line-height: 14px;
       margin: 14px 0 0 0;
-      @include for-iphone-8plus-portrait-only {
-        @include defaultFont(11px);
+      @include for-phone-only {
+        @include defaultFont(1.1rem);
         line-height: 18px;
       }
-      @include for-tablet-portrait-up {
-        @include defaultFont(16px);
-        line-height: 24px;
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFont(1.6rem);
+        line-height: 2.3rem;
+        margin: 16px 0 26px 0;
+      }
+      @include sm-thru-med-desktop {
+        @include defaultFont(1.7rem);
+        line-height: 2.3rem;
         margin: 16px 0 26px 0;
       }
       @include for-midsize-desktop-up {
-        @include defaultFont(18px);
-        line-height: 28px;
-        letter-spacing: 1px;
+        @include defaultFont(1.8rem);
+        line-height: 2.4rem;
+        letter-spacing: 0px;
         margin: 16px 0 30px 0;
       }
     }
@@ -62,11 +67,11 @@
       }
       @include for-tablet-portrait-up {
         display: inline;
-        @include altFont(17px);
+        @include altFont(1.7rem);
       }
       @include for-midsize-desktop-up {
         display: inline;
-        @include altFont(18px);
+        @include altFont(1.8rem);
       }
     }
     a {
@@ -187,9 +192,10 @@
         @include altFont(13px);
         letter-spacing: 2px;
       }
-      @include for-tablet-portrait-up {
-        @include altFont(17px);
-        letter-spacing: 2px;
+      @include for-tablet-portrait-thru-sm-desktop {
+        @include altFont(1.7rem);
+        letter-spacing: 0.15rem;
+        line-height: 2.3rem;
       }
       @include for-tablet-landscape-up {
         line-height: 23px;
