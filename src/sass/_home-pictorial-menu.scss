@@ -119,7 +119,7 @@
         margin: 0 auto;
       }
       @include for-sub480 {
-        padding: 23% 13%;
+        padding: 20% 10%;
         .break-me {
           width: 320px;
         }
@@ -158,7 +158,7 @@
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
       padding: 25px 22px 0 22px;
       @include for-sub480 {
-        padding: 23% 13%;
+        padding: 20% 10%;
         .break-me {
           width: 320px;
         }
