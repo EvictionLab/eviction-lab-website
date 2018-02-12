@@ -121,7 +121,7 @@
       @include for-sub480 {
         padding: 20% 10%;
         .break-me {
-          width: 320px;
+          width: auto;
         }
       }
       @include for-iphone-8plus-portrait-only {
@@ -160,7 +160,7 @@
       @include for-sub480 {
         padding: 20% 10%;
         .break-me {
-          width: 320px;
+          width: auto;
         }
       }  
       @include for-iphone-8plus-portrait-only {
