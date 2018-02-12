@@ -13,6 +13,10 @@
 
   .top-row div {
     width: 50%;
+    @include for-sub480 {
+      width: 100%;
+      height: calc(50vh - 28px);
+    }
     h2 {
       @include altFont(14px);
       text-transform: uppercase;
@@ -85,8 +89,13 @@
     display: flex;
     /*min-height: 137px; */
     height: calc(56vh - 80px);
-    @include for-iphone-8plus-portrait-only {
+    @include for-above480 {
       min-height: 210px;
+    }
+    @include for-sub480 {
+      display: block;
+      min-height:initial;
+      height: auto;
     }
     @include for-tablet-portrait-up {
       min-height: 280px;
@@ -161,7 +170,12 @@
     @include for-mobile-portrait-up {
       line-height: 14px;
     }
-    @include for-iphone-8plus-portrait-only {
+    @include for-sub480 {
+      width: 100%;
+      height: 25vh;
+      padding: 20px 15px;
+    }
+    @include for-above480 {
       width: 50%;
       padding: 52px 24px 0 24px;
       min-height: 150px;
@@ -213,6 +227,11 @@
     flex-wrap: wrap;
     height: 27vh;
     /* min-height: 80px; */
+    @include for-sub480 {
+      display: block;
+      height: auto;
+      min-height: initial; 
+    }
     @include for-tablet-landscape-up {
       min-height: 196px;
     }
@@ -348,7 +367,12 @@
     height: 17vh;
     /* min-height: 120px; */
     padding-bottom: 20px;
-    @include for-iphone-8plus-portrait-only {
+    @include for-sub480 {
+      display: block;
+      height: auto;
+      min-height: initial;
+    }
+    @include for-above480 {
       padding-bottom: 40px;
     }
     @include for-tablet-portrait-up {
