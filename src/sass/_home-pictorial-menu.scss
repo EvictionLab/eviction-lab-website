@@ -21,8 +21,8 @@
       @include altFont(14px);
       text-transform: uppercase;
       letter-spacing: 2px;
-      @include for-iphone-8plus-portrait-only {
-        @include altFont(18px);
+      @include for-sub480 {
+        @include altFont(2.4rem);
         letter-spacing: 2px;
       }
       @include sm-thru-med-desktop {
@@ -39,9 +39,10 @@
       @include defaultFont(10px);
       line-height: 14px;
       margin: 14px 0 0 0;
-      @include for-phone-only {
-        @include defaultFont(1.1rem);
-        line-height: 18px;
+      @include for-sub480 {
+        @include defaultFont(1.6rem);
+        line-height: 2.3rem;
+        padding: 11px 0 27px;
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFont(1.6rem);
@@ -65,8 +66,8 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       color: $altTextColor;
-      display: none;
-      @include for-iphone-8plus-portrait-only {
+      /* display: none; */
+      @include for-480-thru-767 {
         display: none;
       }
       @include for-tablet-portrait-up {
@@ -117,11 +118,17 @@
         width: 100px;
         margin: 0 auto;
       }
+      @include for-sub480 {
+        padding: 23% 13%;
+        .break-me {
+          width: 320px;
+        }
+      }
       @include for-iphone-8plus-portrait-only {
         @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
-        padding: 50px 24px 0 24px;
+        /* padding: 50px 24px 0 24px; */
         .break-me {
-          width: 100px;
+          width: 320px;
           margin: 0 auto;
         }
       }
@@ -150,9 +157,15 @@
       @include backgroundImage('/img/pictorial-menu-top-right-bg-mobile.png');
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
       padding: 25px 22px 0 22px;
+      @include for-sub480 {
+        padding: 23% 13%;
+        .break-me {
+          width: 320px;
+        }
+      }  
       @include for-iphone-8plus-portrait-only {
         @include backgroundImage('/img/pictorial-menu-top-right-bg-iphone8.png');
-        padding: 50px 24px 0 24px;
+        /* padding: 50px 24px 0 24px; */
       }
       @include for-tablet-portrait-up {
         @include backgroundImage('/img/pictorial-menu-top-right-bg-tablet-portrait.png');
@@ -179,7 +192,7 @@
     @include for-sub480 {
       width: 100%;
       height: 25vh;
-      padding: 20px 15px;
+      padding: 17% 20%;
     }
     @include for-480-thru-767 {
       width: 50%;
@@ -204,9 +217,10 @@
       @include for-mobile-portrait-up {
         line-height: 14px;
       }
-      @include for-iphone-8plus-portrait-only {
-        @include altFont(13px);
-        letter-spacing: 2px;
+      @include for-sub480 {
+        @include altFont(1.7rem);
+        letter-spacing: .15rem;
+        line-height: 2.4rem;
       }
       @include for-tablet-portrait-thru-sm-desktop {
         @include altFont(1.7rem);
