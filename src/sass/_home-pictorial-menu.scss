@@ -100,6 +100,9 @@
     @include for-480-thru-767 {
         height: calc(47vh - 35px);
     }
+    @include for-768-thru-1023 {
+      height: calc(47vh - 60px);
+    }
     @include for-tablet-portrait-up {
       min-height: 280px;
     }
@@ -182,10 +185,8 @@
       width: 50%;
       height: calc(18vh - 5px);
     }
-    @include for-tablet-portrait-up {
-      width: 50%;
-      padding: 72px 90px 0 90px;
-      min-height: 192px;
+    @include for-768-thru-1023 {
+      height: calc(18vh - 10px);
     }
     @include for-tablet-landscape-up {
       width: 25%;
@@ -237,6 +238,9 @@
       display: flex;
       height: auto;
     }
+    @include for-768-thru-1023 {
+      height: auto;
+    }
     @include for-tablet-landscape-up {
       min-height: 196px;
     }
@@ -283,9 +287,8 @@
       width: 50%;
       padding: 34px 50px 16px 100px;
     }
-    @include for-tablet-portrait-up {
-      width: 100%;
-      padding: 34px 50px 16px 230px;
+    @include for-768-thru-1023 {
+      width:50%;
     }
     @include for-tablet-landscape-up {
       width: 50%;
@@ -393,8 +396,8 @@
       @include for-iphone-8plus-portrait-only {
         background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -85px no-repeat;
       }
-      @include for-tablet-portrait-up {
-        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left 5px no-repeat;
+      @include for-768-thru-1023 {
+        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -75px no-repeat;
       }
       @include for-tablet-landscape-up {
         background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -70px no-repeat;
@@ -409,8 +412,8 @@
       @include for-iphone-8plus-portrait-only {
         background: url('/img/pictorial-menu-bottom-right-bg.png') top 0 left -85px no-repeat;
       }
-      @include for-tablet-portrait-up {
-        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left 5px no-repeat;
+      @include for-768-thru-1023 {
+        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left -75px no-repeat;
       }
       @include for-tablet-landscape-up {
         background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left -70px no-repeat;
