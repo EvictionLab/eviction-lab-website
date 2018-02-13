@@ -192,7 +192,7 @@
     @include for-sub480 {
       width: 100%;
       height: 17vh;
-      padding: 10% 20%;
+      padding: 9% 20% 0;
     }
     @include for-480-thru-767 {
       width: 50%;
