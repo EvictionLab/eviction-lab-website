@@ -191,8 +191,8 @@
     }
     @include for-sub480 {
       width: 100%;
-      height: 25vh;
-      padding: 17% 20%;
+      height: 17vh;
+      padding: 10% 20%;
     }
     @include for-480-thru-767 {
       width: 50%;
@@ -267,12 +267,24 @@
       @include for-iphone-8plus-portrait-only {
         @include backgroundImage('/img/pictorial-menu-middle-left-bg.jpg');
       }
+      @include for-sub480 {
+        background: #E04119;
+        background: #e04119; /* Old browsers */
+        background: -moz-linear-gradient(top, #e04119 2%, #bf4116 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #e04119 2%,#bf4116 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #e04119 2%,#bf4116 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
     }
     .middle-left {
       @include backgroundImage('/img/pictorial-menu-middle-middle-left-bg-mobile.png');
       @include hoverBar('hover-bar-middle-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
         @include backgroundImage('/img/pictorial-menu-middle-middle-left-bg.jpg');
+      }
+      @include for-sub480 {
+        background: #434878;
+        background: -webkit-linear-gradient(top, #434878 0%,#3d406d 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #434878 0%,#3d406d 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
     .middle-right {
@@ -281,12 +293,26 @@
       @include for-iphone-8plus-portrait-only {
         @include backgroundImage('/img/pictorial-menu-middle-middle-right-bg.jpg');
       }
+      @include for-sub480 {
+        background: #2C897F;
+        background: #2c897f; /* Old browsers */
+        background: -moz-linear-gradient(top, #2c897f 0%, #257069 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #2c897f 0%,#257069 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #2c897f 0%,#257069 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
     }
     .right {
       @include backgroundImage('/img/pictorial-menu-middle-right-bg-mobile.png');
       @include hoverBar('hover-bar-middle-right',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
           @include backgroundImage('/img/pictorial-menu-middle-right-bg.jpg');
+      }
+      @include for-sub480 {
+        background: #94AABD;
+        background: #94aabd; /* Old browsers */
+        background: -moz-linear-gradient(top, #94aabd 0%, #7a8b9b 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #94aabd 0%,#7a8b9b 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #94aabd 0%,#7a8b9b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
   }
