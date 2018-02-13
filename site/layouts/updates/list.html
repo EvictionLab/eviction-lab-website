@@ -14,7 +14,47 @@
   but I just can't get that to work, following the "documentation",
   so I'm just doing it with a bunch of if statement ... it works.
 -->
+<!-- ******************** -->
+<!-- ******************** -->
+<!-- ******* UPDATES ******* -->
 
+{ if eq .Title "Updates"}} <!-- if we are on the Media page, do stuff -->
+
+{{ $media := where .Site.RegularPages "Params.childof" "media" }}
+  {{ if isset $media 0 }} <!-- if there are Media articles, list them -->
+    <div class="alt-rows">
+    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ if eq .Params.childof "media" }}
+      <div class="center-page-wrapper">
+        <div class="list-item center-content">
+
+          <div class="chevron">
+            <i class="fa fa-chevron-right"></i>
+          </div>
+
+          <div class="img">
+            <a href="{{ .Permalink }}">
+              <img class="list-thumb" src="{{ .Params.image }}">
+            </a>
+          </div>
+
+          <div class="details">
+            <div class="title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+            <div class="date">
+              <small>{{ .Date.Format "January 2, 2006" }}</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+    </div>
+  {{ end }} <!-- end Media listings -->
+
+{{ end }} <!-- end Media page stuff -->
 <!-- ******************** -->
 <!-- ******************** -->
 <!-- ******* BLOG ******* -->

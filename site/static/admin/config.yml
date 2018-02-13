@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: EvictionLab/eviction-lab-website
-  branch: master
+  branch: jm-updates
 
 media_folder: "site/static/images/uploads" # Folder where user uploaded files should go
 publish_mode: editorial_workflow
@@ -26,12 +26,12 @@ collections:
 
 - name: "blog" # Used in routes, e.g., /admin/collections/blog
   label: "Blog" # Used in the UI
-  folder: "site/content/updates/whats-new/blog" # The path to the folder where the documents are stored
+  folder: "site/content/updates/blog" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "blog"}
-    - {label: "Featured", name: "featured", widget: "boolean", default: false}
+    - {label: "Featured on Front Page", name: "featured", widget: "boolean", default: false}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Created Date", name: "date", widget: "datetime"}
     - {label: "Featured Image", name: "image", widget: "image"}
@@ -39,7 +39,7 @@ collections:
 
 - name: "media" # Used in routes, e.g., /admin/collections/blog
   label: "Media" # Used in the UI
-  folder: "site/content/updates/whats-new/blog" # The path to the folder where the documents are stored
+  folder: "site/content/updates/media" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -103,14 +103,4 @@ collections:
     - {label: "Featured Image", name: "image", widget: "image"}
     - {label: "Body", name: "body", widget: "markdown"}
 
-- name: "audio-visual-stories" # Used in routes, e.g., /admin/collections/blog
-  label: "Audio Visual Stories" # Used in the UI
-  folder: "site/content/learn-more-tell-your-story/audio-video-stories" # The path to the folder where the documents are stored
-  create: true # Allow users to create new documents in this collection
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  fields: # The fields for each document, usually in front matter
-    - {label: "Child Of", name: "childof", widget: "hidden", default: "audio-visual-stories"}
-    - {label: "Title", name: "title", widget: "string"}
-    - {label: "Created Date", name: "date", widget: "datetime"}
-    - {label: "Featured Image", name: "image", widget: "image"}
-    - {label: "Body", name: "body", widget: "markdown"}
+
