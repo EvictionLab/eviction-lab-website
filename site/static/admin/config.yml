@@ -73,6 +73,7 @@ collections:
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "research"}
+    - {label: "Content Type", name: "content-type", widget: "hidden", default: "updates"}
     - {label: "Research Type", name: "researchtype", widget: "hidden", default: "outside-research"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Created Date", name: "date", widget: "datetime"}
