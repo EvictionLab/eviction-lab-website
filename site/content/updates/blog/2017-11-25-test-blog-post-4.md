@@ -1,7 +1,7 @@
 ---
 childof: blog
-featured: false
 content-type: updates
+featured: false
 title: New params test 4
 date: 2017-11-25T22:06:24.300Z
 image: /images/uploads/mustard-and-chesse.jpg
