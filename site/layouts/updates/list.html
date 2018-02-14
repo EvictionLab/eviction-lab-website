@@ -21,11 +21,11 @@
 
 {{ if eq .Title "Updates"}} <!-- if we are on the Updates page, do stuff -->
 
-  {{ $updates := where .Site.RegularPages "Params.content-type" "updates" }}
+  {{ $updates := where .Site.RegularPages "Params.contenttype" "updates" }}
   {{ if isset $updates 0 }} <!-- if there are Blog articles, list them -->
     <div class="alt-rows">
-    {{ range where .Site.RegularPages "Params.content-type" ("updates")}}
-      {{ if eq .Params.content-type "updates" }}    
+    {{ range where .Site.RegularPages "Params.contenttype" ("updates")}}
+      {{ if eq .Params.contenttype "updates" }}    
 
         <div class="center-page-wrapper">
           <div class="list-item center-content">
