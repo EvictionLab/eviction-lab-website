@@ -40,18 +40,56 @@
   }
   .postlist-right-col {
     flex-grow: 10;
-    padding-top: 22px;
+    /* padding-top: 22px;*/
     .title {
-      @include defaultFontBold(1.5em);
+      @include for-phone-only {
+        @include altFont($fontSize320H3);
+        letter-spacing: 0.04rem;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include altFont($fontSizeMedium);
+        letter-spacing: 0.06rem;
+      }
+      @include sm-thru-med-desktop {
+        @include altFont($fontSize1024H3);
+        letter-spacing: 0.07rem;
+        line-height: 3.2rem;
+      }
+      @include for-midsize-desktop-up {
+        @include altFont($fontSizeLarge);
+        letter-spacing: 0.09rem;
+      }
       a {
-        color: $textColor;
+        /*color: $textColor;*/
         text-decoration: none;
       }
     }
+
     .date {
       @include smallCapsTextThin(1em);
       color: lighten( $textColor, 70% );
       padding: 5px 0 0 0;
+    }
+  }
+  .post-summary {
+    @include for-phone-only {
+      @include defaultFont($fontSize1024Body);
+      letter-spacing: 0.04rem;
+    }
+    @include for-tablet-portrait-and-landscape {
+      @include defaultFont($fontSize1024Body);
+      letter-spacing: 0rem;
+      line-height: 2.2rem;
+    }
+    @include sm-thru-med-desktop {
+      @include defaultFont($fontSize1024Body);
+      letter-spacing: 0rem;
+      line-height: 2.2rem;
+    }
+    @include for-midsize-desktop-up {
+      @include defaultFont($fontSize1440Body);
+      letter-spacing: 0rem;
+      line-height: 2.8rem;
     }
   }
 }

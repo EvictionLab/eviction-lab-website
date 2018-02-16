@@ -37,6 +37,7 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-iphone-8plus-portrait-only {
   @media (min-width: $iphone-8plus-portrait) { @content; }
 }
+// up to 767
 @mixin for-phone-only {
   @media (max-width: $mobile) { @content; }
 }
@@ -46,6 +47,7 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-tablet-portrait-thru-sm-desktop {
   @media (min-width: $gtMobile) and (max-width: $smDesktopLimit) { @content; }
 }
+// 768-1023px
 @mixin for-tablet-portrait-and-landscape {
   @media (min-width: $gtMobile) and (max-width: $tabletLimit) { @content; }
 }  
@@ -57,13 +59,15 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 }
 @mixin up-thru-tablet {
   @media (max-width: $tabletLimit) { @content; }
-}  
+} 
+// 1024-1439px 
 @mixin sm-thru-med-desktop {
   @media (min-width: $gtTablet) and (max-width: $smDesktopLimit) { @content; }
 }
 @mixin for-desktop-up {
   @media (min-width: $gtSmallDesktop) { @content; }
 }
+// 1440+ 
 @mixin for-midsize-desktop-up {
   @media (min-width: $gtMidDesktop) { @content; }
 }
@@ -125,7 +129,11 @@ $numberFontStack:  "Gotham A", "Gotham B", sans-serif;
 
 $fontSizeExtraSmall: 1rem;
 $fontSizeSmall: 1.4rem;
+$fontSize320H3: 1.6rem;
+$fontSize1024Body: 1.6rem;
+$fontSize1440Body: 1.8rem;
 $fontSizeMedium: 2.1rem;
+$fontSize1024H3: 2.8rem;
 $fontSizeLarge: 3.0rem;
 $fontSizeExtraLarge: 3.6rem;
 
@@ -227,4 +235,6 @@ p {
 @import 'index';
 @import 'lists';
 @import 'single';
+@import 'updates';
 @import 'footer';
+
