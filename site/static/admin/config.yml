@@ -48,7 +48,13 @@ collections:
           fields:
             - {label: Name, name: name, widget: string, default: "Emmet"}
             - {label: Avatar, name: avatar, widget: image}
-    - {label: 'Option list', name: 'option-list', widget: 'select', options: [label: 'Web Development', value: webdev]}
+    - label: "City"
+      name: "airport-code"
+      widget: "select"
+      options:
+        - { label: "Chicago", value: "ORD" }
+        - { label: "Paris", value: "CDG" }
+        - { label: "Tokyo", value: "HND" }
   
 
 - name: "media" # Used in routes, e.g., /admin/collections/blog
