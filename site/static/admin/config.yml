@@ -28,7 +28,7 @@ collections:
   label: "Authors"
   folder: "site/content/updates/authors"
   create: true # Allow users to create new documents in this collection
-  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  slug: "{{authorname}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Name", name: "authorname", widget: "string"}
     - {label: "Author Title", name: "authortitle", widget: "string"}
@@ -44,14 +44,15 @@ collections:
     - {label: "Featured on Front Page", name: "featured", widget: "boolean", default: false}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Created Date", name: "date", widget: "datetime"}
-    - {label: "Featured Image", name: "image", widget: "image", required: false}
-    - {label: "Body", name: "body", widget: "markdown"}
     - label: "Post Author"
-      name: "author"
+      name: "postauthorname"
       widget: "relation"
       collection: "authors"
-      searchFields: ["name", "authortitle"]
-      valueField: "name"
+      searchFields: ["authorname", "authortitle"]
+      valueField: "authorname"
+    - {label: "Featured Image", name: "image", widget: "image", required: false}
+    - {label: "Body", name: "body", widget: "markdown"}
+    
        
   
 

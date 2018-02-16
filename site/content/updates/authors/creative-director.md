@@ -1,5 +1,6 @@
 ---
 authorname: James Minton
-title: Creative Director
+authortitle: Creative Director
 ---
+
 
