@@ -28,10 +28,12 @@ collections:
   label: "Authors"
   folder: "site/content/updates/authors"
   create: true # Allow users to create new documents in this collection
-  slug: "{{authorname}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  slug: "{{authorurl}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Name", name: "authorname", widget: "string"}
     - {label: "Author Title", name: "authortitle", widget: "string"}
+    - {label: "Author Photo", name: "authorphoto", widget: "image", required: false}
+    - {label: "URL", name: "authorurl", widget: "string"}
 
 - name: "blog" # Used in routes, e.g., /admin/collections/blog
   label: "Blog" # Used in the UI
@@ -48,8 +50,9 @@ collections:
       name: "postauthorname"
       widget: "relation"
       collection: "authors"
-      searchFields: ["authorname", "authortitle"]
+      searchFields: ["authorname", "authortitle", "authorurl"]
       valueField: "authorname"
+    - {label: "Author Photo", name: "authorpic", widget: "image", required: false}  
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
     

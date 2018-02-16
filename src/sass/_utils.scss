@@ -60,6 +60,9 @@
 
 .center-content {
   max-width: 1000px;
+  &.list-item {
+    max-width: 720px;
+  }
 }
 
 .center-content-post {
