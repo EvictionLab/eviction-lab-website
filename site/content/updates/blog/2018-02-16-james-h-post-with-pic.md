@@ -2,7 +2,7 @@
 childof: blog
 contenttype: updates
 featured: false
-title: James H post with pic
+title: This is an example of a post in the blog category
 date: 2018-02-16T15:15:05.556Z
 postauthorname: James Hendrickson
 authorpic: /images/uploads/james_hendrickson_thumb.jpg
