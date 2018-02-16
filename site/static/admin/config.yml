@@ -24,6 +24,15 @@ collections:
     - {label: "Address", name: "address", widget: "markdown"}
     - {label: "Body", name: "body", widget: "markdown"}
 
+- name: "authors"
+  label: "Authors"
+  folder: "site/content/updates/authors"
+  create: true # Allow users to create new documents in this collection
+  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Name", name: "authorname", widget: "string"}
+    - {label: "Author Title", name: "authortitle", widget: "string"}
+
 - name: "blog" # Used in routes, e.g., /admin/collections/blog
   label: "Blog" # Used in the UI
   folder: "site/content/updates/blog" # The path to the folder where the documents are stored
@@ -37,24 +46,13 @@ collections:
     - {label: "Created Date", name: "date", widget: "datetime"}
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
-    - label: "Testimonials"
-      name: "testimonials"
-      widget: "list"
-      fields:
-        - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-        - label: Author
-          name: author
-          widget: object
-          fields:
-            - {label: Name, name: name, widget: string, default: "Emmet"}
-            - {label: Avatar, name: avatar, widget: image}
-    - label: "City"
-      name: "airport-code"
-      widget: "select"
-      options:
-        - { label: "Chicago", value: "ORD" }
-        - { label: "Paris", value: "CDG" }
-        - { label: "Tokyo", value: "HND" }
+    - label: "Post Author"
+      name: "author"
+      widget: "relation"
+      collection: "authors"
+      searchFields: ["name", "authortitle"]
+      valueField: "name"
+       
   
 
 - name: "media" # Used in routes, e.g., /admin/collections/blog
