@@ -30,13 +30,70 @@
     flex-grow: 1;
     max-width: 200px;
     min-width: 200px;
-    display: none;
-    @include for-phone-only {
-      display: none;
+    .authorname {
+      @include for-phone-only {
+        @include defaultFontBold($fontSizeExtraSmall);
+        letter-spacing: 0.04rem;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFontBold($fontSizeSmall);
+        letter-spacing: 0.06rem;
+      }
+      @include sm-thru-med-desktop {
+        @include defaultFontBold($fontSizeSmall);
+        letter-spacing: 0rem;
+        line-height: 1.3rem;
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFontBold($fontSizeSmall1440);
+        letter-spacing: 0.09rem;
+      }
     }
-    @include for-tablet-portrait-up {
-      display: block;
-    }
+    .post-date {
+      color: #919191;
+      @include for-phone-only {
+        @include defaultFont($fontSizeExtraSmall);
+        letter-spacing: 0rem;
+        line-height: 1.3rem;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFont($fontSizeSmall);
+        letter-spacing: 0rem;
+        line-height: 2rem;
+      }
+      @include sm-thru-med-desktop {
+        @include defaultFont($fontSizeSmall);
+        letter-spacing: 0rem;
+        line-height: 2rem;
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFont($fontSizeSmall1440);
+        letter-spacing: 0rem;
+        line-height: 2rem;
+      }
+      }
+    .post-cat {
+      @include for-phone-only {
+        @include defaultFont($fontSizeExtraSmall);
+          letter-spacing: 0rem;
+          line-height: 1.3rem;
+        }
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFont($fontSizeSmall);
+          letter-spacing: 0rem;
+          line-height: 2rem;
+        }
+      @include sm-thru-med-desktop {
+        @include defaultFont($fontSizeSmall);
+          letter-spacing: 0rem;
+          line-height: 2rem;
+        }
+      @include for-midsize-desktop-up {
+        @include defaultFont($fontSizeSmall1440);
+          letter-spacing: 0rem;
+          line-height: 2rem;
+          }
+        }  
   }
   .postlist-right-col {
     flex-grow: 10;
@@ -75,6 +132,7 @@
     @include for-phone-only {
       @include defaultFont($fontSize1024Body);
       letter-spacing: 0.04rem;
+      display: none;
     }
     @include for-tablet-portrait-and-landscape {
       @include defaultFont($fontSize1024Body);
