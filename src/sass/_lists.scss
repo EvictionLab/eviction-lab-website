@@ -17,19 +17,24 @@
   }
   .chevron {
     display: none;
-    @include for-phone-only {
+    /* @include for-phone-only {
       display: block;
       flex-grow: 1;
       max-width: 50px;
       min-width: 50px;
       color: $color1;
       padding: 45px 0 0 0;
-    }
+    } */
   }
   .postlist-left-col {
     flex-grow: 1;
     max-width: 200px;
     min-width: 200px;
+    @include for-phone-only {
+      max-width: 18%;
+      min-width: initial;
+      margin-right: 32px;
+    }
     .authorname {
       @include for-phone-only {
         @include defaultFontBold($fontSizeExtraSmall);
@@ -98,6 +103,10 @@
   .postlist-right-col {
     flex-grow: 10;
     /* padding-top: 22px;*/
+    @include for-phone-only {
+      flex-grow: 3;
+      max-width: 72%;
+    }
     .title {
       @include for-phone-only {
         @include altFont($fontSize320H3);
