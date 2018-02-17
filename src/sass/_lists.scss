@@ -31,9 +31,10 @@
     max-width: 200px;
     min-width: 200px;
     @include for-phone-only {
-      max-width: 18%;
+      max-width: 32%;
       min-width: initial;
       margin-right: 32px;
+      flex-grow: initial;
     }
     .authorname {
       @include for-phone-only {
@@ -104,8 +105,8 @@
     flex-grow: 10;
     /* padding-top: 22px;*/
     @include for-phone-only {
-      flex-grow: 3;
-      max-width: 72%;
+      flex-grow: initial;
+      max-width: 62%;
     }
     .title {
       @include for-phone-only {
