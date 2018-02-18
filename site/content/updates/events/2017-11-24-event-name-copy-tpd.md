@@ -4,7 +4,11 @@ contenttype: events
 title: Event Name Copy TPD
 subtitle: Line 2
 date: 2018-02-11T21:28:22-05:00
+<<<<<<< HEAD
 edate: 2018-11-29T02:28:22.000Z
+=======
+edate: 2018-03-22T21:28:22-04:00
+>>>>>>> 49b7f533a1c9764646908df92cc017264fd52c4d
 image: /images/uploads/mustard-and-chesse.jpg
 website: 'http://examplewebsite.com'
 address: |-
