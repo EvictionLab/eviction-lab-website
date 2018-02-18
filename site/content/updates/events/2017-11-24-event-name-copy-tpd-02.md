@@ -1,6 +1,6 @@
 ---
 childof: events
-contenttype: updates
+contenttype: events
 title: Event Name Copy TPD 02
 subtitle: Line 2
 date: 2017-11-25T02:28:22.323Z

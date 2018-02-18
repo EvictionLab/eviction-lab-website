@@ -26,7 +26,7 @@
   {{ $updates := where .Site.RegularPages "Params.contenttype" "updates" }}
   {{ if isset $updates 0 }} <!-- if there are Blog articles, list them -->
     <div class="alt-rows">
-    {{ range where .Site.RegularPages "Params.contenttype" ("updates")}}
+    {{ range first 5 (where .Site.RegularPages "Params.contenttype" ("updates")) }}
       {{ if eq .Params.contenttype "updates" }}    
 
         <div class="center-page-wrapper">
@@ -69,11 +69,11 @@
     </div><!-- end alt-rows -->
   {{ end }} <!-- end Blog listings -->
 
- <!-- _________________ "Most recent event" section _____________________ --> 
+ <!-- "Most recent event" section -->
  {{ $events := where .Site.RegularPages "Params.contenttype" "events" }}
-  {{ if isset $events 0 }} <!-- if there are Blog articles, list them -->
-    {{ range where .Site.RegularPages "Params.contenttype" ("events")}}
-      {{ if eq .Params.contenttype "events" }}     
+  {{ if isset $events 0 }} <!-- if there are events articles, list them -->
+    {{ range first 1 (where .Site.RegularPages "Params.contenttype" ("events")) }}
+      {{ if eq .Params.contenttype "events" }}   
         <div class="center-page-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
             <!--<div class="chevron">
@@ -91,10 +91,10 @@
               </div>
             </div>
         </div> 
-      </div>      
-    {{ end }}
-  {{ end }}
-{{ end }}
+      </div>
+    {{ end }}        
+  {{ end }} 
+  {{ end }} 
 {{ end }} <!-- end Blog page stuff -->
 
 
