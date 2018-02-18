@@ -12,4 +12,4 @@ address: |-
   350 West Maryland Street\
   Dallas, Texas 78001
 ---
-Lorem ipsum dolor amet etsy chambray fugiat copper mug subway tile nostrud tousled occupy waistcoat slow-carb. Chicharrones hot chicken godard tofu, magna bespoke whatever gochujang tumeric jean shorts ullamco nulla fixie. XOXO waistcoat copper mug eu. Sint voluptate drinking vinegar meh ipsum.
+Lorem ipsum dolor sit amet etsy chambray fugiat copper mug subway tile nostrud tousled occupy waistcoat slow-carb. Chicharrones hot chicken godard tofu, magna bespoke whatever gochujang tumeric jean shorts ullamco nulla fixie. XOXO waistcoat copper mug eu. Sint voluptate drinking vinegar meh ipsum.
