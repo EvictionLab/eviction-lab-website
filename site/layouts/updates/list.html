@@ -56,18 +56,45 @@
                     {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More …</a>
                 </div>
                 <div class="post-cat">
+                  <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" />
                   <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
                   {{ .Params.childof }}</a>
                 </div> 
               </div>
-
-          </div>
-        </div>
+        </div>      
+          
+        </div><!-- end center-page-wrapper -->
       {{ end }}
     {{ end }}
-    </div>
+    </div><!-- end alt-rows -->
   {{ end }} <!-- end Blog listings -->
 
+ <!-- _________________ "Most recent event" section _____________________ --> 
+ {{ $events := where .Site.RegularPages "Params.contenttype" "events" }}
+  {{ if isset $events 0 }} <!-- if there are Blog articles, list them -->
+    {{ range where .Site.RegularPages "Params.contenttype" ("events")}}
+      {{ if eq .Params.contenttype "events" }}     
+        <div class="center-page-wrapper">
+          <div class="list-item center-content {{ .Params.childof }}-list">
+            <!--<div class="chevron">
+            <i class="fa fa-chevron-right"></i>
+            </div>-->
+            <div class="postlist-left-col">  
+              <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+            </div>
+            <div class="postlist-right-col">
+              <div class="title">
+              <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+              </div>
+              <div class="post-summary">
+                {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More …</a>
+              </div>
+            </div>
+        </div> 
+      </div>      
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ end }} <!-- end Blog page stuff -->
 
 

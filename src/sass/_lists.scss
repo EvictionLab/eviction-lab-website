@@ -12,6 +12,8 @@
     min-height: initial;
     height: 12.2rem;
     grid-template-columns: 135px 1fr;
+    display: -ms-grid;
+    -ms-grid-columns: 135px 1fr;
   }
   @include for-tablet-portrait-up {
     padding-top: $defaultPadding*1.5;
@@ -32,6 +34,11 @@
       padding: 45px 0 0 0;
     } */
   }
+  img.cat-bookmark {
+    width: 7px;
+    height: 10px;
+    margin-right: 8px;
+    }
   .postlist-left-col {
     flex-grow: 1;
     max-width: 200px;
@@ -43,7 +50,7 @@
       flex-direction: column;
       justify-content: space-between;
       .list-thumb-container {
-        flex-grow: 1;
+        flex-grow: 3;
         .list-thumb {
           width: 32px;
           height: 32px;
@@ -54,7 +61,7 @@
       @include for-phone-only {
         @include defaultFontBold($fontSizeExtraSmall);
         letter-spacing: 0.04rem;
-        flex-grow: 1;
+        flex-grow: 3;
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFontBold($fontSizeSmall);
@@ -76,7 +83,7 @@
         @include defaultFont($fontSizeExtraSmall);
         letter-spacing: 0rem;
         line-height: 1.3rem;
-        flex-grow: 1;
+        flex-grow: 0;
         vertical-align: bottom;
       }
       @include for-tablet-portrait-and-landscape {
@@ -138,7 +145,7 @@
         @include altFont($fontSize320H3);
         letter-spacing: 0.04rem;
         flex-grow: 2;
-        height: 48px;
+        height: 76px;
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont($fontSizeMedium);
