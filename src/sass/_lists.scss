@@ -7,6 +7,12 @@
   padding-bottom: $defaultPadding;
   display: flex;
   min-height: 152px;
+  @include for-phone-only {
+    display: grid;
+    min-height: initial;
+    height: 12.2rem;
+    grid-template-columns: 135px 1fr;
+  }
   @include for-tablet-portrait-up {
     padding-top: $defaultPadding*1.5;
     padding-bottom: $defaultPadding*1.5;
@@ -31,15 +37,24 @@
     max-width: 200px;
     min-width: 200px;
     @include for-phone-only {
-      max-width: 32%;
       min-width: initial;
-      margin-right: 32px;
-      flex-grow: initial;
+      padding-right: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .list-thumb-container {
+        flex-grow: 1;
+        .list-thumb {
+          width: 32px;
+          height: 32px;
+          }
+        }  
     }
     .authorname {
       @include for-phone-only {
         @include defaultFontBold($fontSizeExtraSmall);
         letter-spacing: 0.04rem;
+        flex-grow: 1;
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFontBold($fontSizeSmall);
@@ -61,6 +76,8 @@
         @include defaultFont($fontSizeExtraSmall);
         letter-spacing: 0rem;
         line-height: 1.3rem;
+        flex-grow: 1;
+        vertical-align: bottom;
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFont($fontSizeSmall);
@@ -80,10 +97,8 @@
       }
     .post-cat {
       @include for-phone-only {
-        @include defaultFont($fontSizeExtraSmall);
-          letter-spacing: 0rem;
-          line-height: 1.3rem;
-        }
+        display: none;
+      }
       @include for-tablet-portrait-and-landscape {
         @include defaultFont($fontSizeSmall);
           letter-spacing: 0rem;
@@ -105,13 +120,25 @@
     flex-grow: 10;
     /* padding-top: 22px;*/
     @include for-phone-only {
-      flex-grow: initial;
-      max-width: 62%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
+    .post-cat {
+      @include defaultFont($fontSizeExtraSmall);
+        letter-spacing: 0rem;
+        line-height: 1.3rem;
+        flex-grow: 1;
+      @include for-tablet-portrait-up {
+        display: none;
+      }   
+      }
     .title {
       @include for-phone-only {
         @include altFont($fontSize320H3);
         letter-spacing: 0.04rem;
+        flex-grow: 2;
+        height: 48px;
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont($fontSizeMedium);

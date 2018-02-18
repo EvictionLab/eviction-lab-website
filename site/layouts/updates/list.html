@@ -38,11 +38,14 @@
 
             <div class="postlist-left-col">
                 <div class="authorname">{{ .Params.postauthorname }}</div>
-                <img class="list-thumb" src="{{ .Params.authorpic }}">
+                <div class="list-thumb-container">
+                  <img class="list-thumb" src="{{ .Params.authorpic }}">
+                </div>  
                 <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
-                <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
-                  <div class="post-cat">{{ .Params.childof }}</div>
-                </a>  
+                <div class="post-cat">
+                  <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
+                  {{ .Params.childof }}</a>
+                </div>  
               </div>
   
               <div class="postlist-right-col">
@@ -52,6 +55,10 @@
                 <div class="post-summary">
                     {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More …</a>
                 </div>
+                <div class="post-cat">
+                  <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
+                  {{ .Params.childof }}</a>
+                </div> 
               </div>
 
           </div>
