@@ -121,8 +121,64 @@
           letter-spacing: 0rem;
           line-height: 2rem;
           }
-        }  
+        } 
+      .date-number {
+        color: $color2;
+        @include for-phone-only {
+          @include numberFont(2.4rem);
+        }
+        @include for-tablet-portrait-up {
+          @include numberFont(3.6rem);
+        }
+      }
+      .date-month {
+        text-transform: uppercase;
+        color: $textColor2;
+        letter-spacing: 0.05rem;
+        @include for-phone-only {
+          @include defaultFontBold(1rem);
+        }
+        @include for-tablet-portrait-up {
+          @include defaultFontBold(1.3rem);
+        }
+      }    
   }
+  &.events-list {
+    .post-date {
+      /* display: block; */
+      text-align: center;
+      background: #EEF2F5;
+      @include for-phone-only {
+        height: 48px;
+        width: 48px;
+        padding-top: 10px;
+      }
+      @include for-tablet-portrait-and-landscape {
+        height: 80px;
+        width: 80px;
+        padding-top: 20px;
+      }
+      @include sm-thru-med-desktop {
+        height: 120px;
+        width: 120px;
+        padding-top: 40px;
+        }
+      @include for-midsize-desktop-up {
+        height: 120px;
+        width: 120px;
+        padding-top: 40px;  
+      } 
+    }
+    .postlist-right-col {
+      /*flex-grow: 10;*/
+      /* padding-top: 22px;*/
+      @include for-phone-only {
+        display: block;
+        /* flex-direction: column;
+        justify-content: initial !important;*/
+       }  
+    } 
+  }  
   .postlist-right-col {
     flex-grow: 10;
     /* padding-top: 22px;*/
@@ -142,10 +198,20 @@
       }
     .title {
       @include for-phone-only {
+        height: 76px;  
+      }
+    }
+    .event-title {
+      @include for-phone-only {
+        padding-bottom: 1.6rem;
+      }
+    }     
+    .title, .event-title {
+      @include for-phone-only {
         @include altFont($fontSize320H3);
         letter-spacing: 0.04rem;
         flex-grow: 2;
-        height: 76px;
+        line-height: 1.9rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont($fontSizeMedium);

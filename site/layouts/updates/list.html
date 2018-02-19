@@ -79,15 +79,16 @@
             <!--<div class="chevron">
             <i class="fa fa-chevron-right"></i>
             </div>-->
-            <div class="postlist-left-col">  
-              <div class="post-date">{{ Params.edate }}</div>
+            <div class="postlist-left-col">   
+              <div class="post-date"><span class="date-number">{{ dateFormat "2" (.Params.edate) }}</span><br />
+                <span class="date-month">{{ dateFormat "Jan" (.Params.edate) }}</span></div>
             </div>
             <div class="postlist-right-col">
-              <div class="title">
+              <div class="event-title">
               <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </div>
-              <div class="post-summary">
-                {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More …</a>
+              <div class="event-address">
+                {{ .Params.address }}
               </div>
             </div>
         </div> 
