@@ -236,15 +236,18 @@
       @include for-tablet-portrait-and-landscape {
         @include altFont($fontSizeMedium);
         letter-spacing: 0.06rem;
+        margin-bottom: 1.6rem;
       }
       @include sm-thru-med-desktop {
         @include altFont($fontSize1024H3);
         letter-spacing: 0.07rem;
         line-height: 3.2rem;
+        margin-bottom: 1.6rem;
       }
       @include for-midsize-desktop-up {
         @include altFont($fontSizeLarge);
         letter-spacing: 0.09rem;
+        margin-bottom: 1.6rem;
       }
       a {
         /*color: $textColor;*/
