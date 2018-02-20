@@ -35,12 +35,12 @@
     -ms-grid-columns: 135px 1fr;
   }
   @include for-tablet-portrait-up {
-    padding-top: $defaultPadding*1.5;
-    padding-bottom: $defaultPadding*1.5;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   @include for-tablet-landscape-up {
-    padding-top: $defaultPadding*2;
-    padding-bottom: $defaultPadding*2;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   .chevron {
     display: none;
@@ -56,7 +56,7 @@
   img.cat-bookmark {
     width: 7px;
     height: 10px;
-    margin-right: 8px;
+    margin-right: 6px;
     } 
   .postlist-left-col {
     flex-grow: 1;
@@ -76,6 +76,11 @@
           }
         }  
     }
+    @include for-tablet-portrait-up {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     .authorname {
       @include for-phone-only {
         @include defaultFontBold($fontSizeExtraSmall);
@@ -85,6 +90,9 @@
       @include for-tablet-portrait-and-landscape {
         @include defaultFontBold($fontSizeSmall);
         letter-spacing: 0.06rem;
+      }
+      @include for-tablet-portrait-up {
+        flex-grow: 1;
       }
       @include sm-thru-med-desktop {
         @include defaultFontBold($fontSizeSmall);
@@ -96,6 +104,11 @@
         letter-spacing: 0.09rem;
       }
     }
+    .list-thumb-container {
+      @include for-tablet-portrait-up {
+        flex-grow: 1;
+      }
+    } 
     .post-date {
       color: #919191;
       @include for-phone-only {
@@ -109,6 +122,9 @@
         @include defaultFont($fontSizeSmall);
         letter-spacing: 0rem;
         line-height: 2rem;
+      }
+      @include for-tablet-portrait-up {
+        flex-grow: 1;
       }
       @include sm-thru-med-desktop {
         @include defaultFont($fontSizeSmall);
@@ -130,6 +146,9 @@
           letter-spacing: 0rem;
           line-height: 2rem;
         }
+      @include for-tablet-portrait-up {
+          flex-grow: 4;
+        }  
       @include sm-thru-med-desktop {
         @include defaultFont($fontSizeSmall);
           letter-spacing: 0rem;

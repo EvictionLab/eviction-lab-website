@@ -2,7 +2,6 @@ backend:
   name: github
   repo: EvictionLab/eviction-lab-website
   branch: jm-updates
-
 media_folder: "site/static/images/uploads" # Folder where user uploaded files should go
 publish_mode: editorial_workflow
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
