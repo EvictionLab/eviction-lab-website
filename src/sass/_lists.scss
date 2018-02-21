@@ -21,6 +21,21 @@
     letter-spacing: 0.1rem;
     }  
 } 
+.custom-pagination {
+  text-align: center;
+  @include for-phone-only {
+    max-width: 200px;
+    margin: auto;
+    height: 90px;
+    @include numberFont(1.5rem);
+    }
+  .pagination {
+    justify-content: space-evenly;
+    li.pag-first, li.pag-last {
+      display: none;
+    }
+  }  
+}
 .list-item {
   padding-top: $defaultPadding;
   padding-bottom: $defaultPadding;

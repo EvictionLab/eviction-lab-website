@@ -1,6 +1,317 @@
 {{ partial "header" . }}
-{{ $paginator := .Paginate (where .Site.Pages "Type" "updates") }}
-{{ range first 20 (.Paginator.Pages) }}
-  <div>{{ .Title }} - {{ .Permalink }}</div>
-{{ end }}
-{{ template "_internal/pagination.html" . }}
+  <!-- section header -->
+  {{ if eq .Title "Updates"}} <!-- if we are on the Updates page, do stuff --> 
+  <div class="graphic-header methods center-page-wrapper">
+      <div class="center-page">
+        <h1 class="graphic-page-header">updates</h1>
+        <div class="underbar"></div>
+      </div>
+    </div>
+  {{ end }}  
+
+{{ partial "breadcrumb" . }}
+
+<!--
+  I'd really rather use a seperate template for each collection,
+  but I just can't get that to work, following the "documentation",
+  so I'm just doing it with a bunch of if statement ... it works.
+-->
+
+<!-- ******************** -->
+<!-- ******************** -->
+<!-- ******* Updates ******* -->
+
+{{ if eq .Title "Updates"}} <!-- if we are on the Updates page, do stuff -->
+
+  {{ $updates := where .Site.RegularPages "Params.contenttype" "updates" }}
+  {{ if isset $updates 0 }} <!-- if there are Blog articles, list them -->
+    <div class="alt-rows">
+       
+{{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") 2 }}   
+{{ range .Paginator.Pages }}   
+<!--{{ if eq .Params.contenttype "updates" }}    -->
+
+        <div class="center-page-wrapper">
+            <div class="list-item center-content {{ .Params.childof }}-list">
+
+            <!--<div class="chevron">
+              <i class="fa fa-chevron-right"></i>
+            </div>-->
+
+            <div class="postlist-left-col">
+                <div class="authorname">{{ .Params.postauthorname }}</div>
+                <div class="list-thumb-container">
+                  <img class="list-thumb" src="{{ .Params.authorpic }}">
+                </div>  
+                <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+                <div class="post-cat">
+                  <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" />
+                  <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
+                  {{ .Params.childof }}</a>
+                </div>  
+              </div>
+  
+              <div class="postlist-right-col">
+                <div class="title">
+                  <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+                </div>
+                <div class="post-summary">
+                    {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More …</a>
+                </div>
+                <div class="post-cat">
+                  <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" />
+                  <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
+                  {{ .Params.childof }}</a>
+                </div> 
+              </div>
+        </div>      
+          
+        </div><!-- end center-page-wrapper -->
+      <!--{{ end }}-->
+    {{ end }}
+    </div><!-- end alt-rows -->
+  {{ end }} <!-- end Blog listings -->
+  
+<!-- PAGINATION -->  
+ <div class="center-page-wrapper">
+   <div class="custom-pagination">
+    {{ partial "pagination" . }}
+   </div> 
+</div>
+
+ <!-- "NEXT EVENT" section -->
+ {{ $events := where .Site.RegularPages "Params.contenttype" "events" }}
+  {{ if isset $events 0 }} <!-- if there are events articles, list them -->
+    {{ range first 1 (where .Site.RegularPages "Params.contenttype" ("events")) }}
+      {{ if eq .Params.contenttype "events" }}   
+        <div class="center-page-wrapper">
+          <div class="events-list-header">Upcoming events</div>
+          <div class="list-item center-content {{ .Params.childof }}-list">
+            <!--<div class="chevron">
+            <i class="fa fa-chevron-right"></i>
+            </div>-->
+            <div class="postlist-left-col">   
+              <div class="post-date"><span class="date-number">{{ dateFormat "2" (.Params.edate) }}</span><br />
+                <span class="date-month">{{ dateFormat "Jan" (.Params.edate) }}</span></div>
+            </div>
+            <div class="postlist-right-col">
+              <div class="event-title">
+              <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+              </div>
+              <div class="event-address">
+                {{ .Params.address }}
+              </div>
+            </div>
+        </div> 
+      </div>
+    
+    {{ end }}        
+  {{ end }} 
+  {{ end }} 
+{{ end }} <!-- end Blog page stuff -->
+
+
+<!-- ******************** -->
+<!-- ******************** -->
+<!-- ******* BLOG ******* -->
+
+{{ if eq .Title "Blog"}} <!-- if we are on the Blog page, do stuff -->
+
+  {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
+  {{ if isset $blog 0 }} <!-- if there are Blog articles, list them -->
+    <div class="alt-rows">
+    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ if eq .Params.childof "blog" }}
+
+        <div class="center-page-wrapper">
+          <div class="list-item center-content {{ .Params.childof }}-list">
+
+            <div class="chevron">
+              <i class="fa fa-chevron-right"></i>
+            </div>
+
+            <div class="postlist-left-col">
+              <div class="authorname">{{ .Params.postauthorname }}</div>
+              <img class="list-thumb" src="{{ .Params.authorpic }}">
+              <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+                <div class="post-cat">{{ .Params.childof }}</div>
+            </div>
+
+            <div class="postlist-right-col">
+              <div class="title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </div>
+              <div class="post-summary">
+                  {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More…</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+    </div>
+  {{ end }} <!-- end Blog listings -->
+
+{{ end }} <!-- end Blog page stuff -->
+
+<!-- ******* MEDIA ******* -->
+
+{{ if eq .Title "Media"}} <!-- if we are on the Media page, do stuff -->
+
+  {{ $media := where .Site.RegularPages "Params.childof" "media" }}
+  {{ if isset $media 0 }} <!-- if there are Media articles, list them -->
+    <div class="alt-rows">
+    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ if eq .Params.childof "media" }}
+      <div class="center-page-wrapper">
+          <div class="list-item center-content {{ .Params.childof }}-list">
+
+          <div class="chevron">
+            <i class="fa fa-chevron-right"></i>
+          </div>
+
+          <div class="postlist-left-col">
+              <div class="authorname">{{ .Params.postauthorname }}</div>
+              <img class="list-thumb" src="{{ .Params.authorpic }}">
+              <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+                <div class="post-cat">{{ .Params.childof }}</div>
+            </div>
+
+            <div class="postlist-right-col">
+              <div class="title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </div>
+              <div class="post-summary">
+                  {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More…</a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+    </div>
+  {{ end }} <!-- end Media listings -->
+
+{{ end }} <!-- end Media page stuff -->
+
+<!-- ******* RESEARCH ******* -->
+
+{{ if eq .Title "Research"}} <!-- if we are on the Research page, do stuff -->
+
+  {{ $elresearch := where .Site.RegularPages "Params.researchtype" "el-research" }} <!-- count EL Research articles -->
+  {{ if isset $elresearch 0 }} <!-- if there are EL Research articles, list them -->
+    <div class="alt-rows-research">
+      <span class="center-page-wrapper">
+        <span class="research-type center-content-small">more research from the eviction lab</span>
+      </span>
+      {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+        {{ if eq .Params.researchtype "el-research" }}
+        <div class="center-page-wrapper">
+          <div class="research-article-item center-content-small">
+
+            <div class="chevron">
+              <i class="fa fa-chevron-right"></i>
+            </div>
+
+            <div class="details">
+              <div class="title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </div>
+              <div class="date">
+                <small>{{ .Date.Format "January 2, 2006" }}</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }} <!-- end EL Research listings -->
+
+  {{ $outsideresearch := where .Site.RegularPages "Params.researchtype" "outside-research" }} <!-- count Outside Research articles -->
+  {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
+    <div class="alt-rows-research">
+      <span class="center-page-wrapper">
+        <span class="research-type center-content-small">research outside researchers</span>
+      </span>
+      {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+        {{ if eq .Params.researchtype "outside-research" }}
+        <div class="center-page-wrapper">
+          <div class="research-article-item center-content-small">
+
+            <div class="chevron">
+              <i class="fa fa-chevron-right"></i>
+            </div>
+
+            <div class="details">
+              <div class="title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </div>
+              <div class="date">
+                <small>{{ .Date.Format "January 2, 2006" }}</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }} <!-- end Outside Research listings -->
+
+{{ end }} <!-- end Research page stuff -->
+
+<!-- ******* EVENTS ******* -->
+
+{{ if eq .Title "Events"}} <!-- if we are on the Events page, do stuff -->
+  {{ $events := where .Site.RegularPages "Params.childof" "events" }}
+  {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
+    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ if eq .Params.childof "events" }}
+      <div class="center-page-wrapper divider">
+        <div class="event-item center-content-post">
+
+          <div class="date">
+              {{ with .Params.edate }}
+                  <p class="day">{{ dateFormat "3" . }}</p>
+                  <p class="month-short">{{ dateFormat "Jan" . }}</p>
+                  <p class="month">{{ dateFormat "January" . }}</p>
+              {{ end }}
+          </div>
+
+          <div class="details">
+            <h3 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p class="where">{{ markdownify .Params.address }}</p>
+            <div class="teaser">
+              {{ .Content }}
+            </div>
+            <p class="when">
+              <i class="fa fa-clock-o clock"></i>
+              {{ with .Params.edate }}
+                <span class="time">{{ dateFormat "3:04pm" . }}</span>
+              {{ end }}
+              <i class="fa fa-bookmark bookmark"></i>
+              <a class="website" href="{{ .Params.website }}">
+                <span class="">Website</span>
+              </a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+  {{ end }} <!-- end Events listings -->
+{{ end }} <!-- end Events page stuff -->
+
+<!-- ************** -->
+<!-- ************** -->
+<!-- ************** -->
+
+{{ partial "debug" . }}
+<span class="debug-visability">rendered by = themes/THEMENAME/layouts/updates/list.html</span>
+
+{{ partial "footer" . }}
