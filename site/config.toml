@@ -16,11 +16,11 @@ theme = "behave"
 [[menu.updates]]
     name = "Media"
     weight = -100
-    url = "/updates/whats-new/media/"
+    url = "/updates/media/"
 [[menu.updates]]
     name = "Blog"
     weight = -110
-    url = "/updates/whats-new/blog/"
+    url = "/updates/blog/"
 
 
 [[menu.methods]]
