@@ -13,7 +13,7 @@
         {{ range .Site.Menus.updates }} <!-- range the updates menu -->
           {{ $currentName := .Name }} <!-- get the name of the current menu item, ie one of Blog, Media, Research, Events -->
           {{ $currentTitle := title $currentTitle }}
-          <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+          <li class="nav-item"><a class="{{ if eq $currentName @currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
         {{ end }}
 
         {{ else if eq .Section "methods"}}
