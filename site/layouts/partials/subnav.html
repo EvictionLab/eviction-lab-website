@@ -1,14 +1,14 @@
 
-<div class="subnav center-page-wrapper" role="navigation">
+<div class="subnav center-page-wrapper shadow-bottom" role="navigation">
   <div class="center-page">
-    <ul class="nav">
+    <ul class="updates-nav">
 
      {{ $currentTitle := .Params.childof }}
 
      <!-- it seems to me that I should be able to pass the .Section
           as a variable to the range menus funtion, and only need one
           condition instead of seven ... but I can't figure it out -->
-
+          <li class="nav-item only-larger-screens">Categories</li>
       {{ if eq .Section "updates"}}
         {{ range .Site.Menus.updates }} <!-- range the updates menu -->
           {{ $currentName := .Name }} <!-- get the name of the current menu item, ie one of Blog, Media, Research, Events -->

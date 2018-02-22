@@ -2,6 +2,17 @@
 
 
 /* blog and media lists */
+.events-list {
+  @include for-phone-only {
+    margin-bottom: $bottomMarginPhone;
+  }
+  @include for-tablet-portrait-and-landscape {
+    margin-bottom: $bottomMarginTablet;
+  }
+  @include for-tablet-landscape-up {
+    margin-bottom: $bottomMarginDesktop;
+  }
+}
 .events-list-header {
   text-transform: uppercase;
   color: $color6;
@@ -19,20 +30,68 @@
     border-top: 5px solid $color6;
     padding-top: 10px;
     letter-spacing: 0.1rem;
-    }  
+    } 
+  a.see-all-events {
+    float: right;
+    text-transform: initial;
+    color: $color6;
+    @include defaultFont(1.4rem);
+    @include for-phone-only {
+      display: none;
+    }
+  } 
+  a.see-all-events:hover {
+    text-decoration: none;
+  } 
 } 
 .custom-pagination {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
   @include for-phone-only {
     max-width: 200px;
-    margin: auto;
     height: 90px;
-    @include numberFont(1.5rem);
+    @include numberFont(1.2rem);
     }
-  .pagination {
+  @include for-tablet-portrait-up {
+    max-width: 240px;
+    @include numberFont(1.5rem);
+    height: 112px;
+  }  
+  ul.pagination {
     justify-content: space-evenly;
+    margin-bottom: 0px;
     li.pag-first, li.pag-last {
       display: none;
+    }
+    li a {
+      color: #333333;
+    }
+    li a:hover {
+      color: $color1;
+      text-decoration: none;
+    }
+    li.active a {
+      font-weight: 700;
+      color: #919191;
+    }
+    li.pag-ellipse {
+      position: relative;
+      top: -6px;
+    }
+    li.pag-prev i, li.pag-next i, li.pag-ellipse {
+      color: $color1;
+      @include for-phone-only {
+        font-size: 1.8rem;
+      }
+      @include for-tablet-portrait-up {
+        font-size: 2.1rem;
+      }
+    }
+    li.disabled.pag-prev i, li.disabled.pag-next i {
+      color: #919191;
     }
   }  
 }
@@ -177,6 +236,7 @@
         } 
       .date-number {
         color: $color2;
+        font-weight: 700 !important;
         @include for-phone-only {
           @include numberFont(2.4rem);
         }
@@ -286,6 +346,29 @@
       a {
         /*color: $textColor;*/
         text-decoration: none;
+      }
+    }
+    .event-address {
+      @include for-phone-only {
+        @include defaultFont($fontSizeExtraSmall);
+        letter-spacing: 0rem;
+        line-height: 1.3rem;
+        display: none;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFont($fontSizeSmall);
+        letter-spacing: 0rem;
+        line-height: 2rem;
+      }
+      @include sm-thru-med-desktop {
+        @include defaultFont($fontSize1024Body);
+        letter-spacing: 0rem;
+        line-height: 2rem;
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFont($fontSize1440Body);
+        letter-spacing: 0rem;
+        line-height: 2.8rem;
       }
     }
 

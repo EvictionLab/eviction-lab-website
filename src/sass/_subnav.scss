@@ -23,7 +23,7 @@
 .subnav-link, .subnav-link:hover,
 .subnav-active, .subnav-active:hover {
   font-family: $boldFontStack;
-  margin-right: 56px;
+  /* margin-right: 56px; */
   color: $textColor2;
   text-decoration: none;
   padding-bottom: 22px;
@@ -35,4 +35,76 @@
 .subnav-active, .subnav-active:hover {
   color: $color1;
   border-bottom: $color1 5px solid;
+}
+
+/* Updates subnavigation */
+
+.updates-nav {
+  padding: 25px 0;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 720px;
+  margin: auto;
+  @include for-tablet-landscape-up {
+    padding: 25px 45px;
+  }
+  li:last-child {
+   /* margin-right: 0;*/
+  }
+  li {
+    display: inline-block;
+    vertical-align: top;
+   /* margin-right: 5px; */
+    @include defaultFontBold(12px);
+    color: $secondaryTextColor;
+    @include for-phone-only {
+      position: relative;
+      top: 7px;
+    }
+    @include for-tablet-portrait-and-landscape {
+      position: relative;
+      top: 4px;
+    }
+    @include for-tablet-portrait-up {
+     /* margin-right: 25px; */
+      @include defaultFontBold(15px);
+    }
+    @include for-tablet-landscape-up {
+     /* margin-right: 45px; */
+    }
+    a {
+      @include defaultFontBold(16px);
+      color: $textColor;
+      position: relative;
+     /* margin-right: 13px; */
+      @include for-phone-only {
+        @include defaultFontBold($subnavFontPhone);
+        text-transform: uppercase;
+        top: -15px; 
+        letter-spacing: 0.05rem;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFontBold($subnavFontTablet);
+        text-transform: uppercase;
+        top: -15px;
+        letter-spacing: 0.08rem;
+      }
+      @include for-tablet-landscape-up {
+        @include defaultFontBold($subnavFontDesktop);
+      }
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  .only-larger-screens {
+    display: none;
+    @include for-tablet-landscape-up {
+      display: inline-block;
+      position: relative;
+      top: 1px;
+      text-transform: uppercase;
+    }
+  }
 }

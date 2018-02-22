@@ -15,6 +15,10 @@ $pageMargin: grid(2); // page margin on mobile
 $pageMarginLg: grid(3); // page margin on tablet+
 $maxContentWidth: 1200px; // max width for page content
 
+$bottomMarginPhone: grid(6);
+$bottomMarginTablet: grid(7);
+$bottomMarginDesktop: grid(9);
+
 // device breakpoints
 $gtMobilePortrait: 319px; // greater than mobile device breakpoint
 $iphone-8plus-portrait: 414px;
