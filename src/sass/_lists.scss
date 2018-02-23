@@ -15,26 +15,26 @@
 }
 .events-list-header {
   text-transform: uppercase;
-  color: $color6;
+  /* color: $color6; */
   border-top: 3px solid;
   max-width: 720px;
   margin: auto;
   @include for-phone-only {
     @include altFont(1.2rem);
-    border-top: 3px solid $color6;
+    border-top: 3px solid;
     padding-top: 10px;
     letter-spacing: 0.05rem
     }
   @include for-tablet-portrait-up {
     @include altFont(1.8rem);
-    border-top: 5px solid $color6;
+    border-top: 5px solid;
     padding-top: 10px;
     letter-spacing: 0.1rem;
     } 
   a.see-all-events {
     float: right;
+    color: inherit;
     text-transform: initial;
-    color: $color6;
     @include defaultFont(1.4rem);
     @include for-phone-only {
       display: none;
