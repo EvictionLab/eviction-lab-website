@@ -53,7 +53,7 @@ collections:
       collection: "authors"
       searchFields: ["authorname", "authortitle", "authorurl"]
       valueField: "authorname"
-    - {label: "Author Photo", name: "authorpic", widget: "image", required: false}  
+    - {label: "Author Photo", name: "authorpic", widget: "image", default: "images/uploads/james_hendrickson_thumb.jpg", required: false}  
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
     
@@ -89,6 +89,7 @@ collections:
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "File", name: "file", widget: "file", required: false}
+    - {label: "Author Photo", name: "authorpic", widget: "image", default: "/images/uploads/james_hendrickson_thumb.jpg", required: false}  
 
 - name: "outsideresearch" # Used in routes, e.g., /admin/collections/blog
   label: "Outside Research" # Used in the UI
@@ -105,6 +106,7 @@ collections:
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "File", name: "file", widget: "file", required: false}
+    - {label: "Author Photo", name: "authorpic", widget: "image", default: "/images/uploads/james_hendrickson_thumb.jpg", required: false}  
 
 - name: "research-team-bios" # Used in routes, e.g., /admin/collections/blog
   label: "Research Team Bios" # Used in the UI

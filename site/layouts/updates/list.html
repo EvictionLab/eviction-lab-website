@@ -86,7 +86,7 @@
     {{ range first 1 (where .Site.RegularPages "Params.contenttype" ("events")) }}
       {{ if eq .Params.contenttype "events" }}   
         <div class="center-page-wrapper">
-          <div class="events-list-header">Upcoming events <a class="see-all-events" href="./events">See all events</a></div>
+          <div class="events-list-header">Upcoming events <a class="see-all-events" href="/updates/events">See all events</a></div>
           <div class="list-item center-content {{ .Params.childof }}-list">
             <!--<div class="chevron">
             <i class="fa fa-chevron-right"></i>
@@ -226,7 +226,7 @@
       <span class="center-page-wrapper">
         <span class="research-type center-content-small">more research from the eviction lab</span>
       </span>
-      {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ range first 3 (where .Site.RegularPages "Params.childof" (lower .Title)) }}
         {{ if eq .Params.researchtype "el-research" }}
         <div class="center-page-wrapper">
           <div class="research-article-item center-content-small">
@@ -257,7 +257,7 @@
       <span class="center-page-wrapper">
         <span class="research-type center-content-small">research outside researchers</span>
       </span>
-      {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
+      {{ range first 3 (where .Site.RegularPages "Params.childof" (lower .Title)) }}
         {{ if eq .Params.researchtype "outside-research" }}
         <div class="center-page-wrapper">
           <div class="research-article-item center-content-small">

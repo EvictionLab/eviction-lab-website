@@ -1,6 +1,8 @@
 ---
 childof: research
 researchtype: outside-research
+contenttype: updates
+contentcat: research
 title: Outside Research Test Post 1002 vegan taiyaki art
 date: 2017-11-30T15:46:40.089Z
 image: /images/uploads/mustard-and-chesse.jpg
