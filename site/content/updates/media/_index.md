@@ -5,4 +5,3 @@ type: index
 childof: media
 ---
 
-Media content ... makes a great distraction

@@ -1,6 +1,7 @@
 ---
 childof: blog
 contenttype: updates
+contentcat: blog
 featured: false
 title: This is an example of a post in the blog category
 date: 2018-02-16T15:15:05.556Z

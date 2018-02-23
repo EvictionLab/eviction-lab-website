@@ -5,7 +5,7 @@
   {{ if eq $currentTitle $currentSection }}
   <!-- do nothing -->
   {{ else }}
-    <div class="breadcrumbs center-page-wrapper">
+    <div class="breadcrumbs bc-{{ .Params.childof }} center-page-wrapper">
       <div class="center-page">
 
           <a href="{{ .Site.BaseURL }}{{ .Section }}">
@@ -40,7 +40,7 @@
           {{ end }}
 
             <i class="fa fa-chevron-right"></i>
-            <span>{{ .Title }}</span>
+            <span class="current-crumb">{{ .Title }}</span>
           </a>
 
     </div>

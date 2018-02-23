@@ -75,7 +75,7 @@
   margin-bottom: 60px;
   text-align: center;
   @include for-tablet-landscape-up {
-    padding: 25px 45px;
+    padding: 17px 45px;
   }
   li:last-child {
     margin-right: 0;
@@ -84,35 +84,35 @@
     display: inline-block;
     vertical-align: top;
     margin-right: 5px;
-    @include defaultFontBold(12px);
+    @include altFont(12px);
     color: $secondaryTextColor;
     @include for-tablet-portrait-up {
       margin-right: 25px;
-      @include defaultFontBold(15px);
+      @include altFont(15px);
     }
     @include for-tablet-landscape-up {
       margin-right: 45px;
     }
     a {
-      @include defaultFontBold(16px);
+      @include altFont(16px);
       color: $textColor;
       position: relative;
       top: -3px;
       margin-right: 13px;
       @include for-phone-only {
-        @include defaultFontBold($subnavFontPhone);
+        @include altFont($subnavFontPhone);
         text-transform: uppercase;
         top: -15px; 
         letter-spacing: 0.05rem;
       }
       @include for-tablet-portrait-and-landscape {
-        @include defaultFontBold($subnavFontTablet);
-        text-transform: uppercase;
+        @include altFont($subnavFontTablet);
         top: -15px;
         letter-spacing: 0.08rem;
       }
       @include for-tablet-landscape-up {
-        @include defaultFontBold($subnavFontDesktop);
+        @include altFont($subnavFontDesktop);
+        letter-spacing: 0.04rem;
       }
     }
     a:hover {
@@ -125,6 +125,7 @@
       display: inline-block;
       position: relative;
       top: -3px;
+      letter-spacing: 0.04rem;
     }
   }
 }

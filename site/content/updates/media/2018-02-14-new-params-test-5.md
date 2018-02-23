@@ -1,6 +1,7 @@
 ---
 childof: media
 contenttype: updates
+contentcat: media
 featured: false
 title: This is an example of a media post
 date: 2018-02-14T19:45:09.300Z

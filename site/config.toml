@@ -14,6 +14,16 @@ theme = "behave"
     weight = -90
     url = "/updates/research/"
 [[menu.updates]]
+    name = "EL Research"
+    parent = "Research"
+    weight = -94
+    url = "/updates/research/el-research" 
+[[menu.updates]]
+    name = "Outside Research"
+    parent = "Research"
+    weight = -96
+    url = "/updates/research/outside-research"        
+[[menu.updates]]
     name = "Media"
     weight = -100
     url = "/updates/media/"

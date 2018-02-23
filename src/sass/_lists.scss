@@ -116,6 +116,16 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+  &.updates-list .post-date {
+    flex-grow: 1;
+    @include for-phone-only {
+      flex-grow: 0;
+    }
+    @include for-tablet-portrait-up {
+      flex-grow: 1 !important;
+    }
+  }  
+ 
   .chevron {
     display: none;
     /* @include for-phone-only {
@@ -183,8 +193,10 @@
         flex-grow: 1;
       }
     } 
+
     .post-date {
       color: #919191;
+      flex-grow: 4;
       @include for-phone-only {
         @include defaultFont($fontSizeExtraSmall);
         letter-spacing: 0rem;
@@ -198,7 +210,7 @@
         line-height: 2rem;
       }
       @include for-tablet-portrait-up {
-        flex-grow: 1;
+        flex-grow: 4;
       }
       @include sm-thru-med-desktop {
         @include defaultFont($fontSizeSmall);
@@ -211,6 +223,7 @@
         line-height: 2rem;
       }
       }
+      
     .post-cat {
       @include for-phone-only {
         display: none;

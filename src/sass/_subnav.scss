@@ -6,7 +6,7 @@
   width: 100%;
   /*padding-top: $defaultPaddingWebsite;
   padding-bottom: $defaultPaddingWebsite;*/
-  height: 75px;
+  height: 56px;
   background: white;
   position: sticky;
   position: -webkit-sticky;
@@ -22,7 +22,7 @@
 
 .subnav-link, .subnav-link:hover,
 .subnav-active, .subnav-active:hover {
-  font-family: $boldFontStack;
+  font-family: $altFontStack;
   /* margin-right: 56px; */
   color: $textColor2;
   text-decoration: none;
@@ -47,7 +47,7 @@
   max-width: 720px;
   margin: auto;
   @include for-tablet-landscape-up {
-    padding: 25px 45px;
+    padding: 17px 45px;
   }
   li:last-child {
    /* margin-right: 0;*/
@@ -56,7 +56,7 @@
     display: inline-block;
     vertical-align: top;
    /* margin-right: 5px; */
-    @include defaultFontBold(12px);
+    @include altFont(12px);
     color: $secondaryTextColor;
     @include for-phone-only {
       position: relative;
@@ -68,30 +68,30 @@
     }
     @include for-tablet-portrait-up {
      /* margin-right: 25px; */
-      @include defaultFontBold(15px);
+      @include altFont(15px);
     }
     @include for-tablet-landscape-up {
      /* margin-right: 45px; */
     }
     a {
-      @include defaultFontBold(16px);
-      color: $textColor;
+      @include altFont(16px);
+      color: $textColor3;
       position: relative;
      /* margin-right: 13px; */
       @include for-phone-only {
-        @include defaultFontBold($subnavFontPhone);
+        @include altFont($subnavFontPhone);
         text-transform: uppercase;
         top: -15px; 
         letter-spacing: 0.05rem;
       }
       @include for-tablet-portrait-and-landscape {
-        @include defaultFontBold($subnavFontTablet);
-        text-transform: uppercase;
+        @include altFont($subnavFontTablet);
         top: -15px;
         letter-spacing: 0.08rem;
       }
       @include for-tablet-landscape-up {
-        @include defaultFontBold($subnavFontDesktop);
+        @include altFont($subnavFontDesktop);
+        letter-spacing: 0.04rem;
       }
     }
     a:hover {
@@ -105,6 +105,7 @@
       position: relative;
       top: 1px;
       text-transform: uppercase;
+      letter-spacing: 0.04rem;
     }
   }
 }

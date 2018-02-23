@@ -143,13 +143,14 @@ $fontSizeLarge: 3.0rem;
 $fontSizeExtraLarge: 3.6rem;
 
 $subnavFontDesktop: 1.6rem;
-$subnavFontTablet: 1.5rem;
+$subnavFontTablet: 1.6rem;
 $subnavFontPhone: 1.2rem;
 
 // Base Colors
 // ----
 $textColor: #000;
 $textColor2: #060504;
+$textColor3: #333;
 $secondaryTextColor: rgba(0,0,0,0.38);
 $altTextColor: #fff; // text on dark backgrounds
 $secondaryAltTextColor: #919191; // text on dark-ish backgrounds
@@ -172,7 +173,7 @@ $z2shadow: 0 2px 5px rgba(0,0,0,0.5);
 $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
 $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
 $outsetShadowTop: 0px -2px 8px 3px rgba(0, 0, 0, 0.24);
-$boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.3 );
+$boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.2 );
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 
 // Gradients

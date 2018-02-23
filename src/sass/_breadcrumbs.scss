@@ -1,19 +1,39 @@
 /* _breadcrumbs.scss */
 
 .breadcrumbs {
-  background: #333;
   box-shadow: 0 1px 4px 0 rgba(109,109,109,0.5);
   color: $altTextColor;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  @include smallCapsText(.8em);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  @include for-phone-only {
+    height: 40px;
+    padding-top: 1.2rem;
+    @include altFont(1.2rem);
+  }
+  @include for-tablet-portrait-up {
+    height: 50px;
+    @include altFont(1.4rem);
+    padding-top: 1.5rem;
+  }
+  &.bc-blog {
+    background: $color1;
+  }
+  &.bc-media {
+    background: $color2;
+  }
+  &.bc-research {
+    background: $color3;
+  }
+  &.bc-events {
+    background: $color6;
+  }
 
   i {
     font-size: .75em;
     padding: 0 $gridSize;
     position: relative;
     top: -2px;
-    color: $color1;
+    color: #ffffff;
   }
 
   a:hover {
@@ -21,7 +41,10 @@
   }
 
   .dim {
-    color: #a3a7a8;
+    color: #ffffff;
+  }
+  span.current-crumb {
+    font-family: $headerFontStack;
   }
 
 }

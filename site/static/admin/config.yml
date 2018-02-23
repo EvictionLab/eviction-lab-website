@@ -43,6 +43,7 @@ collections:
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "blog"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "updates"}
+    - {label: "Content Category", name: "contentcat", widget: "hidden", default: "blog"}
     - {label: "Featured on Front Page", name: "featured", widget: "boolean", default: false}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Created Date", name: "date", widget: "datetime"}
@@ -67,6 +68,7 @@ collections:
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "media"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "updates"}
+    - {label: "Content Category", name: "contentcat", widget: "hidden", default: "media"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Created Date", name: "date", widget: "datetime"}
     - {label: "Featured Image", name: "image", widget: "image", required: false}
@@ -80,6 +82,7 @@ collections:
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "research"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "updates"}
+    - {label: "Content Category", name: "contentcat", widget: "hidden", default: "research"}
     - {label: "Research Type", name: "researchtype", widget: "hidden", default: "elresearch"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Created Date", name: "date", widget: "datetime"}
@@ -95,6 +98,7 @@ collections:
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "research"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "updates"}
+    - {label: "Content Category", name: "contentcat", widget: "hidden", default: "research"}
     - {label: "Research Type", name: "researchtype", widget: "hidden", default: "outsideresearch"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Created Date", name: "date", widget: "datetime"}

@@ -33,7 +33,7 @@
 <!--{{ if eq .Params.contenttype "updates" }}    -->
 
         <div class="center-page-wrapper">
-            <div class="list-item center-content {{ .Params.childof }}-list">
+            <div class="list-item center-content {{ .Params.contenttype }}-list">
 
             <!--<div class="chevron">
               <i class="fa fa-chevron-right"></i>
@@ -57,7 +57,7 @@
                   <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
                 </div>
                 <div class="post-summary">
-                    {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More …</a>
+                    {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More</a>
                 </div>
                 <div class="post-cat">
                   <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" />
@@ -118,32 +118,33 @@
 
 {{ if eq .Title "Blog"}} <!-- if we are on the Blog page, do stuff -->
 
-  {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
+  {{ $blog := where .Site.RegularPages "Params.contentcat" "blog" }}
   {{ if isset $blog 0 }} <!-- if there are Blog articles, list them -->
     <div class="alt-rows">
-      {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "blog") 5 }}   
+      {{ $paginator := .Paginate (where .Site.Pages "Params.contentcat" "blog") 5 }}   
       {{ range .Paginator.Pages }} 
 
         <div class="center-page-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
 
-            <div class="chevron">
+            <!--<div class="chevron">
               <i class="fa fa-chevron-right"></i>
-            </div>
+            </div>-->
 
             <div class="postlist-left-col">
               <div class="authorname">{{ .Params.postauthorname }}</div>
-              <img class="list-thumb" src="{{ .Params.authorpic }}">
-              <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
-                <div class="post-cat">{{ .Params.childof }}</div>
+              <div class="list-thumb-container">
+                <img class="list-thumb" src="{{ .Params.authorpic }}">
+            </div>
+            <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
             </div>
 
             <div class="postlist-right-col">
               <div class="title">
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </div>
               <div class="post-summary">
-                  {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More…</a>
+                  {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More</a>
               </div>
             </div>
 
@@ -163,45 +164,55 @@
 
 {{ end }} <!-- end Blog page stuff -->
 
-
+<!-- ********************* -->
+<!-- ********************* -->
 <!-- ******* MEDIA ******* -->
 
 {{ if eq .Title "Media"}} <!-- if we are on the Media page, do stuff -->
 
-  {{ $media := where .Site.RegularPages "Params.childof" "media" }}
+  {{ $media := where .Site.RegularPages "Params.contentcat" "media" }}
   {{ if isset $media 0 }} <!-- if there are Media articles, list them -->
     <div class="alt-rows">
-    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
-      {{ if eq .Params.childof "media" }}
+      {{ $paginator := .Paginate (where .Site.Pages "Params.contentcat" "media") 5 }}   
+      {{ range .Paginator.Pages }}
+      
       <div class="center-page-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
 
-          <div class="chevron">
+          <!--<div class="chevron">
             <i class="fa fa-chevron-right"></i>
-          </div>
+          </div>-->
 
           <div class="postlist-left-col">
               <div class="authorname">{{ .Params.postauthorname }}</div>
-              <img class="list-thumb" src="{{ .Params.authorpic }}">
+              <div class="list-thumb-container">
+                <img class="list-thumb" src="{{ .Params.authorpic }}">
+              </div>  
               <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
-                <div class="post-cat">{{ .Params.childof }}</div>
             </div>
 
             <div class="postlist-right-col">
               <div class="title">
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </div>
               <div class="post-summary">
-                  {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More…</a>
+                  {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More</a>
               </div>
             </div>
 
         </div>
       </div>
       {{ end }}
-    {{ end }}
-    </div>
+  
+    
   {{ end }} <!-- end Media listings -->
+   <!-- PAGINATION -->  
+</div>
+<div class="center-page-wrapper">
+  <div class="custom-pagination">
+    {{ partial "pagination" . }}
+  </div> 
+</div>
 
 {{ end }} <!-- end Media page stuff -->
 
