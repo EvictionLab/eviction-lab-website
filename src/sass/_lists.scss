@@ -104,6 +104,9 @@
   padding-bottom: $defaultPadding;
   display: flex;
   min-height: 152px;
+  &.updates-list .title a {
+    color: #333333;
+  }
   @include for-phone-only {
     display: grid;
     min-height: initial;
@@ -418,7 +421,11 @@
     }
   }
 }
-
+a.read-more {
+  font-family: $headerFontStack;
+  text-decoration: underline;
+  color: $color1;
+}
 /* research lists */
 
 /* .research-type {

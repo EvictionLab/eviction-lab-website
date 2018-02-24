@@ -5,6 +5,7 @@ contentcat: research
 researchtype: elresearch
 title: New Research Post Test 2-22
 date: 2018-02-23T03:38:12.093Z
+postauthorname: James Hendrickson
 authorpic: /images/uploads/james_hendrickson_thumb.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet diam vitae ipsum aliquam hendrerit id vitae ipsum. Quisque et egestas diam, ut consequat neque. Quisque quis vestibulum lectus. Sed cursus ante id ex commodo, a ornare sem auctor. Donec aliquet massa eu luctus volutpat. Sed at justo ex. Donec interdum sagittis magna eget aliquam. Ut accumsan odio eu augue tincidunt, ac mollis dui vulputate.
