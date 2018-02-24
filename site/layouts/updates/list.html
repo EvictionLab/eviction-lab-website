@@ -226,7 +226,7 @@
       <span class="center-page-wrapper">
         <div class="events-list-header research-type">research from the eviction lab <a class="see-all-events" href="/updates/research/el-research">See all</a></div>
       </span>
-      {{ range first 3 (where .Site.RegularPages "Params.childof" (lower .Title)) }}
+      {{ range first 2 (where .Site.RegularPages "Params.researchtype" ( "el-research" )) }}
         {{ if eq .Params.researchtype "el-research" }}
         <div class="center-page-wrapper">
           <div class="research-article-item center-content-small">
@@ -257,7 +257,7 @@
       <span class="center-page-wrapper">
           <div class="events-list-header research-type">outside research <a class="see-all-events" href="/updates/research/el-research">See all</a></div>
       </span>
-      {{ range first 3 (where .Site.RegularPages "Params.childof" (lower .Title)) }}
+      {{ range first 2 (where .Site.RegularPages "Params.researchtype" ( "outside-research" )) }}
         {{ if eq .Params.researchtype "outside-research" }}
         <div class="center-page-wrapper">
           <div class="research-article-item center-content-small">
