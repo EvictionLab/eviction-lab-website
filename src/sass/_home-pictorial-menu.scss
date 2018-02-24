@@ -21,7 +21,6 @@
       @include altFont(14px);
       text-transform: uppercase;
       letter-spacing: 2px;
-      @include for-iphone-8plus-portrait-only {
       @include for-sub480 {
         @include altFont(2.4rem);
         letter-spacing: 2px;

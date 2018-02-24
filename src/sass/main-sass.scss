@@ -43,9 +43,6 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-iphone-8plus-portrait-only {
   @media (min-width: $iphone-8plus-portrait) { @content; }
 }
-<<<<<<< HEAD
-// up to 767
-=======
 @mixin for-sub480 {
   @media (max-width:$sub480) { @content; }
 }
@@ -58,7 +55,6 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-480-thru-1023 {
   @media (min-width:$above480) and (max-width:$tabletLimit) { @content; }
 }
->>>>>>> pic-menu-phone2
 @mixin for-phone-only {
   @media (max-width: $mobile) { @content; }
 }
