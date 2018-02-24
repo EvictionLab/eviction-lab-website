@@ -222,59 +222,75 @@
 
   {{ $elresearch := where .Site.RegularPages "Params.researchtype" "el-research" }} <!-- count EL Research articles -->
   {{ if isset $elresearch 0 }} <!-- if there are EL Research articles, list them -->
-    <div class="alt-rows-research">
       <span class="center-page-wrapper">
-        <div class="events-list-header research-type">research from the eviction lab <a class="see-all-events" href="/updates/research/el-research">See all</a></div>
+        <div class="events-list-header research-type el-research">research from the eviction lab <a class="see-all-events" href="/updates/research/el-research">See all</a></div>
       </span>
-      {{ range first 2 (where .Site.RegularPages "Params.researchtype" ( "el-research" )) }}
+      {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "el-research" )) }}
         {{ if eq .Params.researchtype "el-research" }}
+        <div class="alt-rows">
         <div class="center-page-wrapper">
-          <div class="research-article-item center-content-small">
+            <div class="list-item center-content {{ .Params.childof }}-list">
 
-            <div class="chevron">
+            <!--<div class="chevron">
               <i class="fa fa-chevron-right"></i>
-            </div>
+            </div>-->
 
-            <div class="details">
-              <div class="title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <div class="postlist-left-col">
+                <div class="authorname">{{ .Params.postauthorname }}</div>
+                <div class="list-thumb-container">
+                  <img class="list-thumb" src="{{ .Params.authorpic }}">
+                </div>  
+                <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
               </div>
-              <div class="date">
-                <small>{{ .Date.Format "January 2, 2006" }}</small>
+  
+              <div class="postlist-right-col">
+                <div class="title">
+                  <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+                </div>
+                <div class="post-summary">
+                    {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More</a>
+                </div>
               </div>
-            </div>
-
+  
           </div>
         </div>
         {{ end }}
       {{ end }}
-    </div>
+      </div>
   {{ end }} <!-- end EL Research listings -->
 
   {{ $outsideresearch := where .Site.RegularPages "Params.researchtype" "outside-research" }} <!-- count Outside Research articles -->
   {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
-    <div class="alt-rows-research">
       <span class="center-page-wrapper">
           <div class="events-list-header research-type">outside research <a class="see-all-events" href="/updates/research/el-research">See all</a></div>
       </span>
-      {{ range first 2 (where .Site.RegularPages "Params.researchtype" ( "outside-research" )) }}
+      {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "outside-research" )) }}
         {{ if eq .Params.researchtype "outside-research" }}
+        <div class="alt-rows">
         <div class="center-page-wrapper">
-          <div class="research-article-item center-content-small">
+            <div class="list-item center-content {{ .Params.childof }}-list">
 
-            <div class="chevron">
+            <!--<div class="chevron">
               <i class="fa fa-chevron-right"></i>
-            </div>
+            </div>-->
 
-            <div class="details">
-              <div class="title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <div class="postlist-left-col">
+                <div class="authorname">{{ .Params.postauthorname }}</div>
+                <div class="list-thumb-container">
+                  <img class="list-thumb" src="{{ .Params.authorpic }}">
+                </div>  
+                <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
               </div>
-              <div class="date">
-                <small>{{ .Date.Format "January 2, 2006" }}</small>
+  
+              <div class="postlist-right-col">
+                <div class="title">
+                  <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+                </div>
+                <div class="post-summary">
+                    {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read More</a>
+                </div>
               </div>
-            </div>
-
+  
           </div>
         </div>
         {{ end }}

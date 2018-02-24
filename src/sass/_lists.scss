@@ -43,6 +43,10 @@
   a.see-all-events:hover {
     text-decoration: none;
   } 
+  &.research-type.el-research {
+    border-top: none; 
+    margin-top: 40px;
+}
 } 
 .custom-pagination {
   text-align: center;
