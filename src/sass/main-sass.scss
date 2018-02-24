@@ -22,6 +22,8 @@ $bottomMarginDesktop: grid(9);
 // device breakpoints
 $gtMobilePortrait: 319px; // greater than mobile device breakpoint
 $iphone-8plus-portrait: 414px;
+$sub480: 479px; // small mobile breakpoint
+$above480: 480px; // above small mobile breakpoint
 $mobile: 767px; // mobile device breakpoint
 $gtMobile: 768px; // greater than mobile device breakpoint
 $tabletLimit: 1023px; // max width of tablet landscape
@@ -41,12 +43,30 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 @mixin for-iphone-8plus-portrait-only {
   @media (min-width: $iphone-8plus-portrait) { @content; }
 }
+<<<<<<< HEAD
 // up to 767
+=======
+@mixin for-sub480 {
+  @media (max-width:$sub480) { @content; }
+}
+@mixin for-above480 {
+  @media (min-width:$above480) { @content; }
+}
+@mixin for-480-thru-767 {
+  @media (min-width:$above480) and (max-width:$mobile) { @content; }
+}
+@mixin for-480-thru-1023 {
+  @media (min-width:$above480) and (max-width:$tabletLimit) { @content; }
+}
+>>>>>>> pic-menu-phone2
 @mixin for-phone-only {
   @media (max-width: $mobile) { @content; }
 }
 @mixin for-tablet-portrait-up {
   @media (min-width: $gtMobile) { @content; }
+}
+@mixin for-768-thru-1023 {
+  @media (min-width:$above480) and (max-width:$tabletLimit) { @content; }
 }
 @mixin for-tablet-portrait-thru-sm-desktop {
   @media (min-width: $gtMobile) and (max-width: $smDesktopLimit) { @content; }
