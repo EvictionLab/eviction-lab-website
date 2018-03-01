@@ -13,7 +13,13 @@
     margin-bottom: $bottomMarginDesktop;
   }
 }
-.events-list-header {
+.list-item.center-content.events-list-main {
+  padding-bottom: 0rem;
+}
+.list-item.center-content.events-list-sum {
+  padding-top: 0.8rem;
+}
+.bordered-header {
   text-transform: uppercase;
   /* color: $color6; */
   border-top: 3px solid;
@@ -31,15 +37,17 @@
     padding-top: 10px;
     letter-spacing: 0.1rem;
     } 
-  a.see-all-events {
+  .subhead-rt {
     float: right;
     color: inherit;
     text-transform: initial;
-    @include defaultFont(1.4rem);
+  }
+  a.subhead-rt {
+  @include defaultFont(1.4rem);
     @include for-phone-only {
       display: none;
-    }
-  } 
+    } 
+  }
   a.see-all-events:hover {
     text-decoration: none;
   } 

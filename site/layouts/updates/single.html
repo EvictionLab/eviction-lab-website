@@ -1,19 +1,20 @@
 {{ partial "header" . }}
-{{ partial "subnav" . }}
+<!--{{ partial "subnav" . }}-->
 {{ partial "breadcrumb" . }}
 
 <div class="center-page-wrapper-content">
-	<div class="center-content-post">
+	<div class="center-content-post {{ .Params.childof }}-post updates-post">
 
     <figure class="article-image">
       <img src="{{ .Param "image" }}"/>
       <figcaption>
-        <p class="title">{{ .Title }}</p>
-        <p class="date">{{ .Date.Format "January 2, 2006" }}</p>
+          <div class="bordered-header {{ .Params.childof }}-type">Eviction Lab Updates<span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span></div>
+        
       </figcaption>
     </figure>
 
     <div class="page-content">
+        <p class="title">{{ .Title }}</p>
 
       {{ .Content }}
 

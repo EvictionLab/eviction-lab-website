@@ -16,6 +16,10 @@ a.cat-link {
 .research-type {
     color: #2C897F;
     border-color: $color3;
+    border: none;
+}
+.events-list-header.research-type.outside-research {
+    padding-top: 32px;
 }
 .events-type {
     color: #768693;

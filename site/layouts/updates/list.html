@@ -86,7 +86,7 @@
     {{ range first 1 (where .Site.RegularPages "Params.contenttype" ("events")) }}
       {{ if eq .Params.contenttype "events" }}   
         <div class="center-page-wrapper">
-          <div class="events-list-header events-type">Upcoming events <a class="see-all-events" href="/updates/events">See all events</a></div>
+          <div class="bordered-header events-type">Upcoming events <a class="subhead-rt" href="/updates/events">See all events</a></div>
           <div class="list-item center-content {{ .Params.childof }}-list">
             <!--<div class="chevron">
             <i class="fa fa-chevron-right"></i>
@@ -144,7 +144,7 @@
                 <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </div>
               <div class="post-summary">
-                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read More</a>
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
               </div>
             </div>
 
@@ -196,7 +196,7 @@
                 <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </div>
               <div class="post-summary">
-                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read More</a>
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
               </div>
             </div>
 
@@ -216,6 +216,8 @@
 
 {{ end }} <!-- end Media page stuff -->
 
+<!-- ************************ -->
+<!-- ************************ -->
 <!-- ******* RESEARCH ******* -->
 
 {{ if eq .Title "Research"}} <!-- if we are on the Research page, do stuff -->
@@ -248,7 +250,7 @@
                   <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
                 </div>
                 <div class="post-summary">
-                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read More</a>
+                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
                 </div>
               </div>
   
@@ -256,18 +258,17 @@
         </div>
         {{ end }}
       {{ end }}
-      </div>
+      
   {{ end }} <!-- end EL Research listings -->
 
   {{ $outsideresearch := where .Site.RegularPages "Params.researchtype" "outside-research" }} <!-- count Outside Research articles -->
   {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
-      <span class="center-page-wrapper">
-          <div class="events-list-header research-type">outside research <a class="see-all-events" href="/updates/research/el-research">See all</a></div>
-      </span>
+  <div class="center-page-wrapper">          
+    <div class="events-list-header research-type outside-research">outside research <a class="see-all-events" href="/updates/research/outside-research">See all</a></div>
       {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "outside-research" )) }}
         {{ if eq .Params.researchtype "outside-research" }}
-        <div class="alt-rows">
-        <div class="center-page-wrapper">
+       
+      
             <div class="list-item center-content {{ .Params.childof }}-list">
 
             <!--<div class="chevron">
@@ -287,7 +288,7 @@
                   <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
                 </div>
                 <div class="post-summary">
-                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read More</a>
+                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
                 </div>
               </div>
   
@@ -300,6 +301,111 @@
 
 {{ end }} <!-- end Research page stuff -->
 
+<!-- *********************************** -->
+<!-- *********************************** -->
+<!-- ******* EL RESEARCH SUBPAGE ******* -->
+
+{{ if eq .Title "Eviction Lab Research" }} <!-- if we are on the EL Research page, do stuff -->
+
+  {{ $elresearch := where .Site.RegularPages "Params.researchtype" "el-research" }}
+  {{ if isset $elresearch 0 }} <!-- if there are EL Research articles, list them -->
+    <div class="alt-rows">
+      {{ $paginator := .Paginate (where .Site.Pages "Params.researchtype" "el-research") 5 }}   
+      {{ range .Paginator.Pages }}
+      
+      <div class="center-page-wrapper">
+          <div class="list-item center-content {{ .Params.childof }}-list">
+
+          <!--<div class="chevron">
+            <i class="fa fa-chevron-right"></i>
+          </div>-->
+
+          <div class="postlist-left-col">
+              <div class="authorname">{{ .Params.postauthorname }}</div>
+              <div class="list-thumb-container">
+                <img class="list-thumb" src="{{ .Params.authorpic }}">
+              </div>  
+              <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+            </div>
+
+            <div class="postlist-right-col">
+              <div class="title">
+                <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+              </div>
+              <div class="post-summary">
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      {{ end }}
+  
+    
+  {{ end }} <!-- end EL Research listings -->
+   <!-- PAGINATION -->  
+</div>
+<div class="center-page-wrapper">
+  <div class="custom-pagination">
+    {{ partial "pagination" . }}
+  </div> 
+</div>
+
+{{ end }} <!-- end EL Research page stuff -->
+
+
+<!-- *********************************** -->
+<!-- *********************************** -->
+<!-- **** OUTSIDE RESEARCH SUBPAGE ***** -->
+
+{{ if eq .Title "Outside Research" }} <!-- if we are on the Outside Research page, do stuff -->
+
+  {{ $outsideresearch := where .Site.RegularPages "Params.researchtype" "outside-research" }}
+  {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
+    <div class="alt-rows">
+      {{ $paginator := .Paginate (where .Site.Pages "Params.researchtype" "outside-research") 5 }}   
+      {{ range .Paginator.Pages }}
+      
+      <div class="center-page-wrapper">
+          <div class="list-item center-content {{ .Params.childof }}-list">
+
+          <!--<div class="chevron">
+            <i class="fa fa-chevron-right"></i>
+          </div>-->
+
+          <div class="postlist-left-col">
+              <div class="authorname">{{ .Params.postauthorname }}</div>
+              <div class="list-thumb-container">
+                <img class="list-thumb" src="{{ .Params.authorpic }}">
+              </div>  
+              <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+            </div>
+
+            <div class="postlist-right-col">
+              <div class="title">
+                <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+              </div>
+              <div class="post-summary">
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      {{ end }}
+  
+    
+  {{ end }} <!-- end Outside Research listings -->
+   <!-- PAGINATION -->  
+</div>
+<div class="center-page-wrapper">
+  <div class="custom-pagination">
+    {{ partial "pagination" . }}
+  </div> 
+</div>
+
+{{ end }} <!-- end EL Research page stuff -->
+
 <!-- ******* EVENTS ******* -->
 
 {{ if eq .Title "Events"}} <!-- if we are on the Events page, do stuff -->
@@ -307,37 +413,30 @@
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
     {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
       {{ if eq .Params.childof "events" }}
-      <div class="center-page-wrapper divider">
-        <div class="event-item center-content-post">
-
-          <div class="date">
-              {{ with .Params.edate }}
-                  <p class="day">{{ dateFormat "3" . }}</p>
-                  <p class="month-short">{{ dateFormat "Jan" . }}</p>
-                  <p class="month">{{ dateFormat "January" . }}</p>
-              {{ end }}
-          </div>
-
-          <div class="details">
-            <h3 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            <p class="where">{{ markdownify .Params.address }}</p>
-            <div class="teaser">
-              {{ .Content }}
+      <div class="center-page-wrapper">
+          <div class="list-item center-content {{ .Params.childof }}-list-main">
+            <!--<div class="chevron">
+            <i class="fa fa-chevron-right"></i>
+            </div>-->
+            <div class="postlist-left-col">   
+              <div class="post-date"><span class="date-number">{{ dateFormat "2" (.Params.edate) }}</span><br />
+                <span class="date-month">{{ dateFormat "Jan" (.Params.edate) }}</span></div>
             </div>
-            <p class="when">
-              <i class="fa fa-clock-o clock"></i>
-              {{ with .Params.edate }}
-                <span class="time">{{ dateFormat "3:04pm" . }}</span>
-              {{ end }}
-              <i class="fa fa-bookmark bookmark"></i>
-              <a class="website" href="{{ .Params.website }}">
-                <span class="">Website</span>
-              </a>
-            </p>
-          </div>
-
-        </div>
-      </div>
+            <div class="postlist-right-col">
+              <div class="event-title">
+              <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+              </div>
+              <div class="event-address">
+                {{ .Params.address }}
+              </div>
+            </div>
+          </div>  
+          <div class="list-item center-content {{ .Params.childof }}-list-sum">
+            <div class="post-summary">
+              {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+            </div>
+          </div>  
+      
       {{ end }}
     {{ end }}
   {{ end }} <!-- end Events listings -->

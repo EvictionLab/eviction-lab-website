@@ -6,14 +6,16 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   @include for-phone-only {
-    height: 40px;
+    min-height: 40px;
     padding-top: 1.2rem;
+    padding-bottom: 1rem;
     @include altFont(1.2rem);
   }
   @include for-tablet-portrait-up {
-    height: 50px;
+    min-height: 50px;
     @include altFont(1.4rem);
     padding-top: 1.5rem;
+    padding-bottom: 1.4rem;
   }
   &.bc-blog {
     background: $color1;
