@@ -14,10 +14,19 @@
     </figure>
 
     <div class="page-content">
-        <p class="title">{{ .Title }}</p>
-
-      {{ .Content }}
-
+      <div class="title">{{ .Title }}</div>
+    </div>  
+  </div> 
+  <div class="alt-bg">
+    <div class="center-content-post {{ .Params.childof }}-post updates-post">
+      <div class="page-content">
+        <div class="post-body">
+          {{ .Content }}
+          
+        </div>
+      </div> 
+    </div> 
+  </div>
       <div class="recommended">
 				<p class="header">recommended posts</p>
 				<ul>
@@ -28,7 +37,7 @@
 			</div>
 
     </div>
-
+  </div>
   </div>
 </div>
 
