@@ -3,6 +3,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Eviction Lab Sandbox"
 theme = "behave"
+summaryLength = 50
 
 [[menu.updates]]
     name = "Events"
