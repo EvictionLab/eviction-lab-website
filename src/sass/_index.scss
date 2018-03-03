@@ -197,13 +197,15 @@
     }
   }
   .answer {
-    padding-bottom: 3rem;
-    @include for-phone-only {
-      padding-bottom: 2rem;
-    }
     @include defaultFont(20px);
     a {
       display: inline;
+    }
+    p {
+      padding-bottom: 3rem;
+      @include for-phone-only {
+        padding-bottom: 2rem;
+      }
     }
   }
 }
