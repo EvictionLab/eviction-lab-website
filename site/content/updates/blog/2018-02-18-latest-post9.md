@@ -6,6 +6,7 @@ featured: false
 title: This is the eleventh example of a post in the blog category
 date: 2018-02-18T23:15:05.556Z
 postauthorname: James Hendrickson
+postauthortitle: Research Specialist
 authorpic: /images/uploads/james_hendrickson_thumb.jpg
 image: /images/uploads/mustard-and-chesse.jpg
 ---

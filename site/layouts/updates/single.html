@@ -6,7 +6,7 @@
 	<div class="center-content-post {{ .Params.childof }}-post updates-post">
 
     <figure class="article-image">
-      <img src="{{ .Param "image" }}"/>
+      <img src="{{ .Param "image" }}" onError="this.onerror=null;this.classList.add('null-img');" />
       <figcaption>
           <div class="bordered-header {{ .Params.childof }}-type">Eviction Lab Updates<span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span></div>
         
@@ -15,6 +15,11 @@
 
     <div class="page-content">
       <div class="title">{{ .Title }}</div>
+      <div class="authorbox">
+        <img class="post-thumb" src="{{ .Params.authorpic }}">
+        <span class="authorname">{{ .Params.postauthorname }}</span>
+        <span class="authortitle">{{ .Params.postauthortitle }}</span>
+      </div>
     </div>  
   </div> 
   <div class="alt-bg">

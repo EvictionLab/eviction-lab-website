@@ -5,6 +5,62 @@
     margin: 0 -16px;
   }
 }
+/* ---- img handling --- */
+img.null-img {
+  position: absolute;
+}
+/* --- author meta --- */
+img.post-thumb {
+  width: 56px;
+  @include for-phone-only {
+    width: 32px;
+  }
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.6rem;
+}
+
+.updates-post {
+  .authorbox {
+    overflow: auto;
+    @include for-tablet-portrait-and-landscape {
+      padding-bottom: 2.4rem;
+    }
+    @include for-tablet-landscape-up {
+      padding-bottom: 3.6rem;
+    }
+  }
+  .authorname, .authortitle {
+    @include for-phone-only {
+      @include defaultFont($fontSizeExtraSmall);
+      letter-spacing: 0.04rem;
+      flex-grow: 3;
+    }
+    @include for-tablet-portrait-and-landscape {
+      @include defaultFont(1.3rem);
+      letter-spacing: 0.06rem;
+    }
+    @include for-tablet-portrait-up {
+      flex-grow: 1;
+    }
+    @include sm-thru-med-desktop {
+      @include defaultFont(1.3rem);
+      letter-spacing: 0rem;
+      line-height: 1.3rem;
+    }
+    @include for-midsize-desktop-up {
+      @include defaultFont($fontSizeSmall1440);
+      letter-spacing: 0.09rem;
+    }
+  }
+  .authorname {
+    font-family: $boldFontStack;
+  }
+  span.authortitle {
+    display: block;
+  }
+}
+/* --- Post typography and padding --- */
 .center-content-post.updates-post {
   .page-content {
     margin: 0 auto;
@@ -62,6 +118,7 @@
 figure.article-image {
     margin-top: 32px;
 }
+/* --- Top Image box --- */
 .article-image {
   img {
     width: 100%;
@@ -117,18 +174,19 @@ figure.article-image {
       @include altFont($fontSizeLarge);
       letter-spacing: 0.07rem;
       line-height: 3.6rem;
+      padding-bottom: 1.4rem;
     }
     @include sm-thru-med-desktop {
       @include altFont($fontSizeExtraLarge);
       letter-spacing: 0.1rem;
       line-height: 4.2rem;
-      margin-bottom: 1.6rem;
+      margin-bottom: 2.6rem;
     }
     @include for-midsize-desktop-up {
       @include altFont(4rem);
       letter-spacing: 0.1rem;
       line-height: 4.8rem;
-      margin-bottom: 1.6rem;
+      margin-bottom: 2.6rem;
     }
   }
 }
