@@ -35,32 +35,34 @@
     <div class="center-content-post {{ .Params.childof }}-post updates-post">
       <div class="page-content">
         <div class="post-body">
-          {{ .Content }}
-         
-          
-
-
-            
-         
+          {{ .Content }} 
         </div>
       </div> 
     </div> 
   </div>
-      <div class="recommended">
-        <p class="header">recommended posts</p>
+  <div class="center-content-post {{ .Params.childof }}-post updates-post">
+    <div class="page-content">
+      <div class="next-prev">
+        <p class="header">Next Post</p>
+        <ul>
         {{ with .Next }}
-          <a href="{{ .Permalink }}">Next Post: {{ .Title }}</a>
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
           {{ end }}
+        </ul> 
+        <p class="header">Previous Post</p>
+        <ul>
           {{ with .Prev }}
-        <a href="{{ .Permalink }}">Previous Post: {{ .Title }}</a>
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
           {{ end }}
+        </ul>  
 				<ul>
 					{{ range where .Site.RegularPages "Params.featured" true }}
 					  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 					{{ end }}
 				</ul>
-			</div>
-
+      </div>
+    </div>
+  </div>
     </div>
   </div>
   </div>
