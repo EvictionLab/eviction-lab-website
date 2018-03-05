@@ -14,11 +14,25 @@
     </figure>
 
     <div class="page-content">
-      <div class="title">{{ .Title }}</div>
+      <h2 class="title">{{ .Title }}</h2>
       <div class="authorbox">
         <img class="post-thumb" src="{{ .Params.authorpic }}">
-        <span class="authorname">{{ .Params.postauthorname }}</span>
-        <span class="authortitle">{{ .Params.postauthortitle }}</span>
+        <ul>
+          <li class="authorname">{{ .Params.postauthorname }}</li>
+          <li class="authortitle">{{ .Params.postauthortitle }}</li>
+        </ul>
+      </div>
+      <div class="social-box">
+        <ul class="social-sprite">
+            <li><a class="facebook" href="#"></a></li>
+            <li><a class="twitter twitter-share-button">#</a></li>
+            <li><a class="send-email" href="#"></a></li>
+            <li><a class="copy-link" href="#"></a></li>
+        </ul>
+        <!--<span class="social-icon"><img src="/images/icons/social/social_fb_48px_inactive.png" /></span>
+        <span class="social-icon"><img src="/images/icons/social/social_tw_48px_inactive.png" /></span>
+        <span class="social-icon"><img src="/images/icons/social/social_email_48px_inactive.png" /></span>
+        <span class="social-icon"><img src="/images/icons/social/social_getlink_48px_inactive.png" /></span>-->
       </div>
     </div>  
   </div> 
