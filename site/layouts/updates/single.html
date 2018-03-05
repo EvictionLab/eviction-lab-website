@@ -37,11 +37,15 @@
       <div class="page-content">
         <div class="post-body">
           {{ .Content }}
-          {{ with .Next }}
-          <a href="{{ .Permalink }}">Next Post: {{ .Title }}</a>
+          {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "!=" "events") }}
+            {{ if lt $.Date.Unix .Date.Unix }}
+              <a href="{{ .Permalink }}">Next Post: {{ .Title }}</a>
+            {{ end }}
           {{ end }}
-          {{ with .Prev }}
-          <a href="{{ .Permalink }}">Previous Post: {{ .Title }}</a>
+          {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "!=" "events") }}
+            {{ if gt $.Date.Unix .Date.Unix }}
+              <a href="{{ .Permalink }}">Previous Post: {{ .Title }}</a>
+            {{ end }}
           {{ end }}
         </div>
       </div> 
