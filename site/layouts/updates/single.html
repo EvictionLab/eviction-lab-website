@@ -24,15 +24,11 @@
       </div>
       <div class="social-box">
         <ul class="social-sprite">
-            <li><a class="facebook" href="#"></a></li>
-            <li><a class="twitter twitter-share-button"></a></li>
-            <li><a class="send-email" href="#"></a></li>
+            <li><a class="facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a></li>
+            <li><a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a></li>
+            <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
             <li><a class="copy-link" href="#"></a></li>
         </ul>
-        <!--<span class="social-icon"><img src="/images/icons/social/social_fb_48px_inactive.png" /></span>
-        <span class="social-icon"><img src="/images/icons/social/social_tw_48px_inactive.png" /></span>
-        <span class="social-icon"><img src="/images/icons/social/social_email_48px_inactive.png" /></span>
-        <span class="social-icon"><img src="/images/icons/social/social_getlink_48px_inactive.png" /></span>-->
       </div>
     </div>  
   </div> 
@@ -41,9 +37,12 @@
       <div class="page-content">
         <div class="post-body">
           {{ .Content }}
-          <a href="{{ .Next.Permalink }}">Next Post: {{ .Next.Title }}</a>
-          <a href="{{ .Prev.Permalink }}">Previous Post: {{ .Prev.Title }}</a>
-          
+          {{ with .Next }}
+          <a href="{{ .Permalink }}">Next Post: {{ .Title }}</a>
+          {{ end }}
+          {{ with .Prev }}
+          <a href="{{ .Permalink }}">Previous Post: {{ .Title }}</a>
+          {{ end }}
         </div>
       </div> 
     </div> 
