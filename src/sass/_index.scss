@@ -214,8 +214,8 @@
   border-bottom: none;
 }
 
-.recommended {
-  text-align: center;
+.next-prev {
+  text-align: left;
   margin-bottom: 45px;
   .header {
     @include defaultFontBold(15px);
@@ -227,8 +227,8 @@
     margin-bottom: 20px;
   }
   a {
-    @include defaultFontBold(24px);
+    @include altFont(21px);
     color: $color1;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
