@@ -27,7 +27,6 @@
             <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a></li>
             <li><a class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a></li>
             <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
-            <li><a class="copy-link" href="#"></a></li>
         </ul>
       </div>
     </div>  
@@ -37,18 +36,24 @@
       <div class="page-content">
         <div class="post-body">
           {{ .Content }}
-          {{ with .Next }}
-          <a href="{{ .Permalink }}">Next Post: {{ .Title }}</a>
-          {{ end }}
-          {{ with .Prev }}
-          <a href="{{ .Permalink }}">Previous Post: {{ .Title }}</a>
-          {{ end }}
+         
+          
+
+
+            
+         
         </div>
       </div> 
     </div> 
   </div>
       <div class="recommended">
-				<p class="header">recommended posts</p>
+        <p class="header">recommended posts</p>
+        {{ with .Next }}
+          <a href="{{ .Permalink }}">Next Post: {{ .Title }}</a>
+          {{ end }}
+          {{ with .Prev }}
+        <a href="{{ .Permalink }}">Previous Post: {{ .Title }}</a>
+          {{ end }}
 				<ul>
 					{{ range where .Site.RegularPages "Params.featured" true }}
 					  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
