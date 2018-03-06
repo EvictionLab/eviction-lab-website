@@ -18,6 +18,10 @@ deploy:
   local_dir: dist
   on:
     branch: cms-dev
+- provider: script
+  script: aws cloudfront create-invalidation --distribution-id=$CLOUDFRONT_ID_DEV --paths="/*"
+  on:
+    branch: cms-dev
 - skip_cleanup: true
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
@@ -29,6 +33,6 @@ deploy:
   on:
     branch: master
 - provider: script
-  script: aws cloudfront create-invalidation --distribution-id=$CLOUDFRONT_ID --paths="/*"
+  script: aws cloudfront create-invalidation --distribution-id=$CLOUDFRONT_ID_PROD --paths="/*"
   on:
     branch: master
