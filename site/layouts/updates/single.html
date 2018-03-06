@@ -45,14 +45,18 @@
       <div class="next-prev">
         <p class="header">Next Post</p>
         <ul>
-        {{ with .Next }}
-          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "!=" "events") }}
+          {{ if lt $.Date.Unix .Date.Unix }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
           {{ end }}
+        {{ end }}
         </ul> 
         <p class="header">Previous Post</p>
         <ul>
-          {{ with .Prev }}
-          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "!=" "events") }}
+            {{ if gt $.Date.Unix .Date.Unix }}
+              <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
           {{ end }}
         </ul>  
 				<ul>
