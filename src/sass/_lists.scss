@@ -74,10 +74,13 @@
   }  
   ul.pagination {
     justify-content: space-evenly;
+    @include for-phone-only {
     -webkit-box-pack: justify;
     -moz-box-pack: justify;
     -ms-flex-pack: justify;
-    -webkit-justify-content: space-evenly;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    }
     margin-bottom: 0px;
     li.pag-first, li.pag-last {
       display: none;
