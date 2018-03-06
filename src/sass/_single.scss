@@ -100,12 +100,10 @@ img.post-thumb {
   .authorname, .authortitle {
     @include for-phone-only {
       @include defaultFont($fontSizeExtraSmall);
-      letter-spacing: 0.04rem;
       flex-grow: 3;
     }
     @include for-tablet-portrait-and-landscape {
       @include defaultFont(1.3rem);
-      letter-spacing: 0.06rem;
       line-height: 2.4rem;
     }
     @include for-tablet-portrait-up {
@@ -118,7 +116,6 @@ img.post-thumb {
     }
     @include for-midsize-desktop-up {
       @include defaultFont($fontSizeSmall1440);
-      letter-spacing: 0.09rem;
       line-height: 2.4rem;
     }
   }
@@ -133,8 +130,11 @@ img.post-thumb {
 .center-content-post.updates-post {
   .page-content {
     margin: 0 auto;
+    p:last-child {
+      margin-bottom: 0 !important;
+    }
     @include for-phone-only {
-      padding: 2.4rem 0;
+      padding: 2.4rem 16px;
       .post-body {
         padding: 2.4rem 0;
       }
@@ -186,6 +186,9 @@ img.post-thumb {
  }
 figure.article-image {
     margin-top: 32px;
+    @include for-phone-only {
+      margin-top: 0px;
+    }
 }
 /* --- Top Image box --- */
 .article-image {
@@ -215,8 +218,12 @@ figure.article-image {
     border-top: 3px solid;
     margin-top: 24px;
     padding-top: 0.6rem;
+    @include for-phone-only {
+      margin: 0 16px;
+    }
   }
 }
+
 
 /* do stuff to things inside a rendered content block */
 .page-content {
@@ -262,4 +269,65 @@ figure.article-image {
   }
 }
 
+}
+
+/* Next and Previous Posts / Bottom Meta */
+
+.center-content-post {
+  .btm-meta {
+    text-align: left;
+    margin: 3.2rem 0 5.2rem;
+    ul {
+      @include for-phone-only {
+        margin-bottom: 0;
+      }
+    }
+    .header {
+      color: $secondaryTextColor;
+      @include for-phone-only {
+        @include defaultFont(1rem);
+        margin: 0;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFont(1.3rem);
+        margin: 0;
+      }
+      @include sm-thru-med-desktop {
+        @include defaultFont(1.3rem);
+        margin: 0rem 0 .4rem 0;
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFont(1.5rem);
+        margin: 0rem 0 1.6rem 0;
+      }
+    }
+    li {
+      
+    }
+    a {
+      text-decoration: none;
+      @include for-phone-only {
+        @include altFont(1.5rem);
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include altFont(2.1rem);
+      }
+      @include sm-thru-med-desktop {
+        @include altFont(2.1rem);
+        /* color: $color1; */
+        line-height: 2.7rem;
+      }
+      @include for-midsize-desktop-up {
+        @include altFont(3rem);
+      }
+    } 
+    img.cat-bookmark {
+      width: 9px;
+      vertical-align: sub;
+      margin-right: 8px;
+    }
+    .btm-meta-cat {
+      margin-bottom: 3.2rem;
+    }
+  }
 }

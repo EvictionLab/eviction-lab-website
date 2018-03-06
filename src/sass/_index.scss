@@ -214,21 +214,4 @@
   border-bottom: none;
 }
 
-.next-prev {
-  text-align: left;
-  margin-bottom: 45px;
-  .header {
-    @include defaultFontBold(15px);
-    color: $secondaryTextColor;
-    text-transform: uppercase;
-    margin: 2em 0 .8em 0;
-  }
-  li {
-    margin-bottom: 20px;
-  }
-  a {
-    @include altFont(21px);
-    color: $color1;
-    text-decoration: none;
-  }
-}
+

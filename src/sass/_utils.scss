@@ -105,3 +105,9 @@
 .low-z {
   z-index: 1;
 }
+.capitalize {
+  text-transform: capitalize;
+}
+.ak-bold {
+  font-family: $boldFontStack;
+}

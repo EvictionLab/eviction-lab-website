@@ -42,23 +42,24 @@
   </div>
   <div class="center-content-post {{ .Params.childof }}-post updates-post">
     <div class="page-content">
-      <div class="next-prev">
-        <p class="header">Next Post</p>
-        <ul>
-        {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "!=" "events") }}
-          {{ if lt $.Date.Unix .Date.Unix }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        {{ end }}
-        </ul> 
-        <p class="header">Previous Post</p>
+      <div class="btm-meta">
+          <div class="btm-meta-cat"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <span class="ak-bold {{ .Params.childof }}-type capitalize">{{ .Params.childof }}</span></span></div>
         <ul>
           {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "!=" "events") }}
             {{ if gt $.Date.Unix .Date.Unix }}
-              <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+              <li class="header">Next Post</li>
+              <li><a class="{{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
             {{ end }}
           {{ end }}
         </ul>  
+        <ul>
+            {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "!=" "events") }}
+              {{ if lt $.Date.Unix .Date.Unix }}
+                <li class="header">Previous Post</li>
+                <li><a class="{{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
+              {{ end }}
+            {{ end }}
+            </ul> 
 				<ul>
 					{{ range where .Site.RegularPages "Params.featured" true }}
 					  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
