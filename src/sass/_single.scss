@@ -63,6 +63,9 @@ a.copy-link:hover {
 /* ---- img handling --- */
 img.null-img {
   position: absolute;
+  @include for-phone-only {
+    position: relative;
+  }
 }
 /* --- author meta --- */
 img.post-thumb {
@@ -323,23 +326,36 @@ figure.article-image {
       }
     }
     li {
-      
+      line-height: 1.7rem;
+      letter-spacing: 0.05rem;
+      &.header {
+        padding-bottom: 1.6rem;
+      }
+      &.header.prev-post {
+        padding-top: 1.6rem;
+      }
     }
     a {
       text-decoration: none;
       @include for-phone-only {
         @include altFont(1.5rem);
+        letter-spacing: 0.05rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont(2.1rem);
+        line-height: 2.1rem;
+        letter-spacing: 0.06rem;
       }
       @include sm-thru-med-desktop {
         @include altFont(2.1rem);
         /* color: $color1; */
         line-height: 2.7rem;
+        letter-spacing: 0.06rem;
       }
       @include for-midsize-desktop-up {
         @include altFont(3rem);
+        line-height: 3.2rem;
+        letter-spacing: 0.09rem;
       }
     } 
     img.cat-bookmark {

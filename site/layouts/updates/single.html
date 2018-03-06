@@ -56,7 +56,7 @@
         <ul>
             {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "!=" "events") }}
               {{ if lt $.Date.Unix .Date.Unix }}
-                <li class="header">Previous Post</li>
+                <li class="header prev-post">Previous Post</li>
                 <li><a class="{{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
               {{ end }}
             {{ end }}
