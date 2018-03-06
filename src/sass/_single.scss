@@ -308,6 +308,8 @@ figure.article-image {
     }
     .header {
       color: $secondaryAltTextColor;
+    }
+    .header, .header a {
       @include for-phone-only {
         @include defaultFont(1rem);
         margin: 0;
@@ -324,6 +326,9 @@ figure.article-image {
         @include defaultFont(1.5rem);
         margin: 0rem 0 1.6rem 0;
       }
+    }
+    .header a {
+      font-family: $boldFontStack;
     }
     li {
       line-height: 1.7rem;
