@@ -2,7 +2,7 @@
 
 /* debugging helpers */
 
-.debug-visability {
+.debug-visibility {
   display: none; // none or block, shows template path at bottom of page content above footer
 }
 
@@ -110,4 +110,14 @@
 }
 .ak-bold {
   font-family: $boldFontStack;
+}
+.mobile-off {
+  @include for-phone-only {
+    display: none;
+  }
+}
+.mobile-on {
+  @include for-tablet-portrait-up {
+    display: none;
+  }
 }

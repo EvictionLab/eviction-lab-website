@@ -1,6 +1,6 @@
 {{ partial "header" . }}
 <!--{{ partial "subnav" . }}-->
-{{ partial "breadcrumb" . }}
+<div class="mobile-off">{{ partial "breadcrumb" . }}</div>
 
 <div class="center-page-wrapper-content">
 	<div class="center-content-post {{ .Params.childof }}-post updates-post">
@@ -8,12 +8,12 @@
     <figure class="article-image">
       <img src="{{ .Param "image" }}" onError="this.onerror=null;this.classList.add('null-img');" />
       <figcaption>
-          <div class="bordered-header {{ .Params.childof }}-type">Eviction Lab Updates<span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span></div>
+          <div class="bordered-header {{ .Params.childof }}-type"><span class="mobile-off">Eviction Lab</span> {{ .Params.contenttype }}<span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span></div>
         
       </figcaption>
     </figure>
 
-    <div class="page-content">
+    <div class="page-content single-title">
       <h2 class="title">{{ .Title }}</h2>
       <div class="authorbox">
         <img class="post-thumb" src="{{ .Params.authorpic }}">
@@ -22,7 +22,7 @@
           <li class="authortitle">{{ .Params.postauthortitle }}</li>
         </ul>
       </div>
-      <div class="social-box">
+      <div class="social-box mobile-off">
         <ul class="social-sprite">
             <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a></li>
             <li><a class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a></li>
@@ -35,7 +35,8 @@
     <div class="center-content-post {{ .Params.childof }}-post updates-post">
       <div class="page-content">
         <div class="post-body">
-          {{ .Content }} 
+          {{ .Content }}
+          <div class="btm-meta-cat mobile-on"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <span class="ak-bold {{ .Params.childof }}-type capitalize">{{ .Params.childof }}</span></span></div> 
         </div>
       </div> 
     </div> 
@@ -43,7 +44,7 @@
   <div class="center-content-post {{ .Params.childof }}-post updates-post">
     <div class="page-content">
       <div class="btm-meta">
-          <div class="btm-meta-cat"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <span class="ak-bold {{ .Params.childof }}-type capitalize">{{ .Params.childof }}</span></span></div>
+          <div class="btm-meta-cat mobile-off"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <span class="ak-bold {{ .Params.childof }}-type capitalize">{{ .Params.childof }}</span></span></div>
         <ul>
           {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "!=" "events") }}
             {{ if gt $.Date.Unix .Date.Unix }}
@@ -75,6 +76,6 @@
 
 
 {{ partial "debug" . }}
-<span class="debug-visability">rendered by = themes/THEMENAME/layouts/updates/single.html</span>
+<span class="debug-visibility">rendered by = themes/THEMENAME/layouts/updates/single.html</span>
 
 {{ partial "footer" . }}
