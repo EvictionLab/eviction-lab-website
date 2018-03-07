@@ -17,8 +17,8 @@ collections:
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "events"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Subtitle", name: "subtitle", widget: "string"}
-    - {label: "Created Date", name: "date", widget: "datetime"}
-    - {label: "Event Date", name: "edate", widget: "datetime"}
+    - {label: "Created Date", name: "publishDate", widget: "datetime"}
+    - {label: "Event Date", name: "date", widget: "datetime"}
     - {label: "Featured Image", name: "image", widget: "image"}
     - {label: "Website", name: "website", widget: "string"}
     - {label: "Address", name: "address", widget: "markdown"}
@@ -46,7 +46,7 @@ collections:
     - {label: "Content Category", name: "contentcat", widget: "hidden", default: "blog"}
     - {label: "Featured on Front Page", name: "featured", widget: "boolean", default: false}
     - {label: "Title", name: "title", widget: "string"}
-    - {label: "Created Date", name: "date", widget: "datetime"}
+    - {label: "Created Date", name: "publishDate", widget: "datetime"}
     - label: "Post Author"
       name: "postauthorname"
       widget: "relation"

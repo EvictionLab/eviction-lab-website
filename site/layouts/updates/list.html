@@ -411,16 +411,19 @@
 {{ if eq .Title "Events"}} <!-- if we are on the Events page, do stuff -->
   {{ $events := where .Site.RegularPages "Params.childof" "events" }}
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
-    {{ range where .Site.RegularPages "Params.childof" (lower .Title) }}
-      {{ if eq .Params.childof "events" }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Params.childof" "events") 5 }}   
+  {{ range .Paginator.Pages }}
       <div class="center-page-wrapper">
-          <div class="list-item center-content {{ .Params.childof }}-list-main">
+          <div class="list-item center-content {{ .Params.childof }}-list-main events-list list-head">
             <!--<div class="chevron">
             <i class="fa fa-chevron-right"></i>
             </div>-->
-            <div class="postlist-left-col">   
-              <div class="post-date"><span class="date-number">{{ dateFormat "2" (.Params.edate) }}</span><br />
-                <span class="date-month">{{ dateFormat "Jan" (.Params.edate) }}</span></div>
+            <div class="postlist-left-col"> 
+              <!--<div class="date-bg">-->
+                <div class="post-date"><span class="date-number">{{ dateFormat "2" (.Params.edate) }}</span><br />
+                  <span class="date-month">{{ dateFormat "Jan" (.Params.edate) }}</span>
+                </div>
+              <!--</div>-->
             </div>
             <div class="postlist-right-col">
               <h3 class="event-title">
@@ -431,17 +434,29 @@
               </div>
             </div>
           </div>  
-          <div class="list-item center-content {{ .Params.childof }}-list-sum">
+          <div class="list-item center-content events-list-main events-list {{ .Params.childof }}-list-sum">
             <div class="post-summary">
-              {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+              {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+            </div>
+            <div class="event-deets">
+              <ul>
+                <li><img src="images/icons/datetime.png" />April 1, 2018, 5:30PM—6:30PM</li>
+                <li><img src="images/icons/compass.png" />Website</li>
+              </ul>
             </div>
           </div>  
+        </div>  
       
-      {{ end }}
+     
     {{ end }}
   {{ end }} <!-- end Events listings -->
+  <div class="center-page-wrapper">
+      <div class="custom-pagination">
+        {{ partial "pagination" . }}
+      </div> 
+    </div>
 {{ end }} <!-- end Events page stuff -->
-
+</div>
 <!-- ************** -->
 <!-- ************** -->
 <!-- ************** -->

@@ -44,6 +44,9 @@
   margin-bottom: 60px;
   display: flex;
   justify-content: space-evenly;
+  @include for-phone-only {
+    justify-content: space-between;
+  }
   max-width: 720px;
   margin: auto;
   @include for-tablet-landscape-up {
