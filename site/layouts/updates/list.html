@@ -412,7 +412,7 @@
   {{ $events := where .Site.RegularPages "Params.childof" "events" }}
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
   {{ $paginator := .Paginate (where .Site.RegularPages "Params.childof" "events") 5 }}   
-  {{ range .Paginator.Pages }}
+  {{ range .Paginator.Pages.Reverse }}
       <div class="center-page-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list-main events-list list-head">
             <!--<div class="chevron">
@@ -440,8 +440,8 @@
             </div>
             <div class="event-deets">
               <ul>
-                <li><img src="images/icons/clock.svg" />April 1, 2018, 5:30PM—6:30PM</li>
-                <li><img src="images/icons/compass.png" />Website</li>
+                <li><img src="/images/icons/clock.svg" />April 1, 2018, 5:30PM—6:30PM</li>
+                <li><img src="/images/icons/browser.svg" />Website</li>
               </ul>
             </div>
           </div>  

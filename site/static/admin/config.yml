@@ -18,11 +18,12 @@ collections:
     - {label: "Child Of", name: "childof", widget: "hidden", default: "events"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "events"}
     - {label: "Title", name: "title", widget: "string"}
-    - {label: "Subtitle", name: "subtitle", widget: "string"}
-    - {label: "Created Date", name: "date", widget: "datetime"}
-    - {label: "Featured Image", name: "image", widget: "image"}
-    - {label: "Website", name: "website", widget: "string"}
-    - {label: "Address", name: "address", widget: "markdown"}
+    - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+    - {label: "Event Date", name: "date", widget: "datetime"}
+    - {label: "Time or Time Range", name: "timeRange", widget: "string"}
+    - {label: "Featured Image", name: "image", widget: "image", required: false}
+    - {label: "Website", name: "website", widget: "string", required: false}
+    - {label: "Address", name: "address", widget: "markdown", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
 
 - name: "authors"
