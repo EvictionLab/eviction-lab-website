@@ -6,9 +6,11 @@ media_folder: "site/static/images/uploads" # Folder where user uploaded files sh
 publish_mode: editorial_workflow
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
+
 collections:
 - name: "events" # Used in routes, e.g., /admin/collections/blog
   label: "Events" # Used in the UI
+  buildFuture: true
   folder: "site/content/updates/events" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -17,8 +19,7 @@ collections:
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "events"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Subtitle", name: "subtitle", widget: "string"}
-    - {label: "Created Date", name: "publishDate", widget: "datetime"}
-    - {label: "Event Date", name: "date", widget: "datetime"}
+    - {label: "Created Date", name: "date", widget: "datetime"}
     - {label: "Featured Image", name: "image", widget: "image"}
     - {label: "Website", name: "website", widget: "string"}
     - {label: "Address", name: "address", widget: "markdown"}
@@ -46,7 +47,7 @@ collections:
     - {label: "Content Category", name: "contentcat", widget: "hidden", default: "blog"}
     - {label: "Featured on Front Page", name: "featured", widget: "boolean", default: false}
     - {label: "Title", name: "title", widget: "string"}
-    - {label: "Created Date", name: "publishDate", widget: "datetime"}
+    - {label: "Created Date", name: "date", widget: "datetime"}
     - label: "Post Author"
       name: "postauthorname"
       widget: "relation"
