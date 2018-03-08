@@ -411,8 +411,8 @@
 {{ if eq .Title "Events"}} <!-- if we are on the Events page, do stuff -->
   {{ $events := where .Site.RegularPages "Params.childof" "events" }}
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
-  {{ $paginator := .Paginate (where .Site.RegularPages "Params.childof" "events") 5 }}   
-  {{ range .Paginator.Pages.Reverse }}
+  {{ $paginator := .Paginate (where .Site.RegularPages.Reverse "Params.childof" "events") 5 }}   
+  {{ range .Paginator.Pages }}
       <div class="center-page-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list-main events-list list-head">
             <!--<div class="chevron">

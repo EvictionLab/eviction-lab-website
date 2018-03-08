@@ -366,6 +366,7 @@
         @include altFont($fontSizeMedium);
         letter-spacing: 0.06rem;
         margin-bottom: 1.6rem;
+        line-height: 2.7rem;
       }
       @include sm-thru-med-desktop {
         @include altFont($fontSize1024H3);
@@ -497,8 +498,13 @@ a.read-more {
   }
 }
 
-/* events lists */
+/* Full Events Lists */
 
+@include for-tablet-portrait-and-landscape {
+  .breadcrumbs.bc-events.center-page-wrapper {
+    margin-bottom: 0.8rem;
+    }
+  }
 .list-item.events-list-main.events-list {
   height: auto;
   @include for-phone-only {
@@ -508,6 +514,28 @@ a.read-more {
      padding-top: 3.2rem;
    }
   }
+  @include for-tablet-portrait-and-landscape {
+    margin-bottom: 0px; 
+    grid-template-columns: 72px 1fr;
+    &.list-head {
+      padding-top: 3.2rem;
+      display: grid;
+      grid-template-columns: 152px 1fr;
+    }
+   }
+  @include for-tablet-portrait-and-landscape {
+    max-width: 560px;
+    margin-bottom: 1.6rem;
+    .post-date {
+      height: 120px;
+      width: 120px;
+      padding-top: 26px;
+      line-height: 3.2rem;
+    }
+    &.events-list-sum .post-summary {
+      font-size: 1.6rem;
+    }  
+  }
   .postlist-right-col {
     @include for-phone-only {
       padding-bottom: 0.8rem;
@@ -516,24 +544,35 @@ a.read-more {
        padding-bottom: 0rem; 
     }
     .event-address {
+      color: $secondaryAltTextColor;
       @include for-phone-only {
         display: block;
-        color: $secondaryAltTextColor;
+        }
       }
     }
-    
-  }
   .event-deets {
     ul {
       margin-bottom: 0rem;
     }
+    background-color: #EEF2F5;
     @include for-phone-only {
     font-size: 1rem;
-    background-color: #EEF2F5;
     padding: .8rem 1.6rem;
     margin: 1.6rem 0 0;
       li {
         line-height: 2.4rem;
+        img {
+          width: 16px;
+          margin-right: .8rem;
+        }
+      }
+    }
+    @include for-tablet-portrait-and-landscape {
+      font-size: 1.3rem;
+      padding: 2.4rem 1.6rem;
+      margin: 2.4rem 0 0;
+      li {
+        line-height: 3.2rem;
         img {
           width: 16px;
           margin-right: .8rem;
