@@ -83,7 +83,7 @@
  <!-- "NEXT EVENT" section -->
  {{ $events := where .Site.RegularPages "Params.contenttype" "events" }}
   {{ if isset $events 0 }} <!-- if there are events articles, list them -->
-    {{ range first 1 (where .Site.RegularPages "Params.contenttype" ("events")) }}
+    {{ range last 1 (where .Site.RegularPages "Params.contenttype" ("events")) }}
       {{ if eq .Params.contenttype "events" }}   
         <div class="center-page-wrapper">
           <div class="bordered-header events-type">Upcoming events <a class="subhead-rt" href="/updates/events">See all events</a></div>
@@ -92,8 +92,8 @@
             <i class="fa fa-chevron-right"></i>
             </div>-->
             <div class="postlist-left-col">   
-              <div class="post-date"><span class="date-number">{{ dateFormat "2" (.Params.edate) }}</span><br />
-                <span class="date-month">{{ dateFormat "Jan" (.Params.edate) }}</span></div>
+              <div class="post-date"><span class="date-number">{{ dateFormat "2" (.Params.date) }}</span><br />
+                <span class="date-month">{{ dateFormat "Jan" (.Params.date) }}</span></div>
             </div>
             <div class="postlist-right-col">
               <h3 class="event-title">
@@ -408,6 +408,7 @@
 
 <!-- ******* EVENTS ******* -->
 
+<div class="page-id-events-list">
 {{ if eq .Title "Events"}} <!-- if we are on the Events page, do stuff -->
   {{ $events := where .Site.RegularPages "Params.childof" "events" }}
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
