@@ -106,8 +106,15 @@ img.post-thumb {
     margin-right: -16px;
     position: relative;
     top: 21px;
+     &.event-single {
+      position: relative;
+      top: 62px;
+    } 
   }
   .authorname, .authortitle {
+    img {
+      margin-right: 8px;
+    }
     @include for-phone-only {
       @include defaultFont($fontSizeExtraSmall);
       flex-grow: 3;
@@ -247,6 +254,8 @@ figure.article-image {
 
 
 /* do stuff to things inside a rendered content block */
+
+
 .page-content {
   padding: 0 $defaultPadding 0 $defaultPadding;
   @include for-tablet-portrait-up {
@@ -286,6 +295,25 @@ figure.article-image {
       letter-spacing: 0.1rem;
       line-height: 4.8rem;
       margin-bottom: 2.6rem;
+    }
+  }
+  h2.title.events-type {
+    @include for-phone-only {
+      margin-bottom: 0rem;
+    }
+    @include for-tablet-portrait-and-landscape {
+      margin-bottom: 0rem;
+    }
+    @include sm-thru-med-desktop {
+      margin-bottom: 1.6rem;
+    }
+  }
+  .authorbox.events li {
+    @include for-phone-only {
+    line-height: 2.4rem;
+    }
+    @include for-tablet-portrait-up {
+      line-height: 2.8rem;
     }
   }
 }

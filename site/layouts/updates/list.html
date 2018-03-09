@@ -442,7 +442,9 @@
             <div class="event-deets">
               <ul>
                 <li><img src="/images/icons/clock.svg" />April 1, 2018, 5:30PM—6:30PM</li>
-                <li><img src="/images/icons/browser.svg" />Website</li>
+                {{ if isset .Params "website" }}
+                  <li><img src="/images/icons/browser.svg" /><a class="bold-link" href="{{ .Params.website }}">Website</a></li>
+                {{ end }}  
               </ul>
             </div>
           </div>  

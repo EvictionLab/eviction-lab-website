@@ -1,3 +1,4 @@
+
 {{ partial "header" . }}
 <!--{{ partial "subnav" . }}-->
 <div class="mobile-off">{{ partial "breadcrumb" . }}</div>
@@ -14,7 +15,9 @@
     </figure>
 
     <div class="page-content single-title">
-      <h2 class="title">{{ .Title }}</h2>
+      <h2 class="title {{ .Params.childof }}-type ">{{ .Title }}</h2>
+<!-- /// UPDATES META SECTION /// -->       
+      {{ if eq .Params.contenttype "updates" }}
       <div class="authorbox">
         <img class="post-thumb" src="{{ .Params.authorpic }}">
         <ul>
@@ -29,6 +32,28 @@
             <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
         </ul>
       </div>
+      {{ end }}
+<!-- /// END UPDATES META SECTION /// --> 
+<!-- /// EVENTS META SECTION // -->
+  {{ if eq .Params.contenttype "events" }}
+    <div class="authorbox events">
+      <ul>
+        <li class="authorname">{{ .Params.address }}</li>
+        <li class="authortitle"><img src="/images/icons/clock.svg" />{{ dateFormat "Monday Jan 2 2006" (.Params.date) }}, {{ .Params.timeRange }}</li>
+        <li class="authortitle"><img src="/images/icons/browser.svg" /><a class="bold-link" href="{{ .Params.website }}">Website</a></li>
+      </ul>
+    </div>
+    <div class="social-box mobile-off event-single">
+      <ul class="social-sprite">
+          <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a></li>
+          <li><a class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a></li>
+          <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
+      </ul>
+    </div>
+
+  {{ end }}
+
+<!-- /// END EVENTS META SECTION /// -->          
     </div>  
   </div> 
   <div class="alt-bg">

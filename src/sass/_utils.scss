@@ -69,36 +69,28 @@
   max-width: 790px;
   line-height: 32px;
 }
-
 .center-content-small {
   max-width: 720px;
 }
-
 .header-shadow {
   box-shadow: $outsetShadowTop;
 }
-
 .inset-shadow-top {
   box-shadow: $insetShadowTop;
 }
-
 .shadow-bottom {
   box-shadow: $boxShadowBottom;
 }
-
 .color1 {
   color: $color1;
 }
-
 .font1 {
   font-family: $boldFontStack;
 }
-
 .font2 {
   font-family: $fontStack;
   font-weight: 300;
 }
-
 .high-z {
   z-index: 10000;
 }
@@ -110,6 +102,11 @@
 }
 .ak-bold {
   font-family: $boldFontStack;
+}
+.bold-link {
+  font-family: $boldFontStack;
+  text-decoration: underline;
+  color: $color1;
 }
 .mobile-off {
   @include for-phone-only {
@@ -124,11 +121,10 @@
 .padding3 {
   padding: $defaultPaddingWebsite;
 }
-
 .paddingtop3 {
   padding-top: $defaultPaddingWebsite;
 }
-
 .mobile-vh {
   transition: $mobileVhTransition;
 }
+

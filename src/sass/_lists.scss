@@ -644,8 +644,8 @@ a.read-more {
         }
       }
     }
-    @include for-desktop-up {
-      font-size: 1.3rem;
+    @include for-midsize-desktop-up {
+      font-size: 1.6rem;
       padding: 1.6rem 1.6rem;
       margin: 2.4rem 0 0;
       li {
