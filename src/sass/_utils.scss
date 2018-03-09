@@ -128,3 +128,7 @@
 .paddingtop3 {
   padding-top: $defaultPaddingWebsite;
 }
+
+.mobile-vh {
+  transition: $mobileVhTransition;
+}
