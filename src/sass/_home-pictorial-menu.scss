@@ -170,7 +170,11 @@
     .right {
       @include full-shadow-animate;
       &:hover .hover-bar-top-right { visibility: visible; }
-      @include backgroundImage('/img/pictorial-menu-top-right-bg-mobile.png');
+      background: url(/img/pictorial-menu-top-right-bg-mobile.png);
+      background-position: center;
+      background-size: 54%;
+      background-repeat: no-repeat;
+      background-color: #282827;
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
       
       @include for-sub480 {
@@ -296,9 +300,9 @@
       @include for-sub480 {
         background: #E04119;
         background: #e04119; /* Old browsers */
-        background: -moz-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
   
@@ -312,9 +316,9 @@
       }
       @include for-sub480 {
         background: #434878;
-        background: -moz-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
     .middle-right {
@@ -328,9 +332,9 @@
       @include for-sub480 {
         background: #2C897F;
         background: #2c897f; /* Old browsers */
-        background: -moz-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
     .right {
@@ -344,9 +348,9 @@
       @include for-sub480 {
         background: #94AABD;
         background: #94aabd; /* Old browsers */
-        background: -moz-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
   }
