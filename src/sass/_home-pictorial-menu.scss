@@ -27,7 +27,7 @@
     width: 50%;
     @include for-sub480 {
       width: 100%;
-      height: calc(30vh - 28px);
+      height: calc(32vh - 28px);
     }
     h2 {
       @include altFont(14px);
