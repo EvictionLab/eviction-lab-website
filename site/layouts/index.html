@@ -57,7 +57,7 @@
   </div>
 </div>
 
-<!-- ********** end splash section ********** -->
+<!-- ********** end splash section ******************************** -->
 
 <!-- ********** pictorial menu section ********** -->
 
@@ -67,62 +67,93 @@
 
     <div class="left mobile-vh">
       <a href="#">
-        <h2 class="break-me">map &amp; data</h2>
-        <p>Learn about the American housing crisis by interacting with a customizable map.</p>
-        <span>go to the map</span>
+        <div class="menu-wrapper">
+          <h2 class="break-me">map &amp; data</h2>
+          <p>Learn about the American housing crisis by interacting with a customizable map.</p>
+          <span>go to the map</span>
+          <div class="hover-bar-top-left"></div>
+        </div>
       </a>
-      <div class="hover-bar-top-left"></div>
+      
     </div>
+   
 
     <div class="right mobile-vh">
       <a href="#">
-        <h2>eviction rankings</h2>
-        <p>Learn which cities rank the highest and lowest in evictions in the U.S.</p>
-        <span>go to eviction rankings</span>
+        <div class="menu-wrapper">
+          <h2>eviction rankings</h2>
+          <p>Learn which cities rank the highest and lowest in evictions in the U.S.</p>
+          <span>go to eviction rankings</span>
+          <div class="hover-bar-top-right"></div>
+        </div>      
       </a>
-      <div class="hover-bar-top-right"></div>
+     
     </div>
 
   </div>
-  <!-- ******************** -->
+  <!-- ********** middle row ********** -->
   <div class="middle-row mobile-vh">
 
-    <div class="left mobile-vh">
-      <a href="#">learn about the eviction lab</a>
-      <div class="hover-bar-middle-left"></div>
+    <div class="left mr-block mobile-vh">
+      <a href="#">
+        <div class="menu-wrapper">
+          <span>learn about the eviction lab</span>
+          <div class="hover-bar-middle-left"></div>
+        </div>
+      </a>  
+  </div>
+
+    <div class="middle-left mr-block mobile-vh">
+      <a href="#">
+        <div class="menu-wrapper">
+            <span>why eviction matters</span>
+            <div class="hover-bar-middle-middle-left"></div>
+        </div>  
+      </a>
     </div>
 
-    <div class="middle-left mobile-vh">
-      <a href="#">learn about the problem</a>
-      <div class="hover-bar-middle-middle-left"></div>
+    <div class="middle-right mr-block mobile-vh">
+      <a href="#">
+          <div class="menu-wrapper">
+            <span>read about our methodology</span>
+            <div class="hover-bar-middle-middle-right"></div>
+          </div>
+      </a>
     </div>
 
-    <div class="middle-right mobile-vh">
-      <a href="#">read about our methodology</a>
-      <div class="hover-bar-middle-middle-right"></div>
-    </div>
-
-    <div class="right mobile-vh">
-      <a href="#">get help and <br> read the faq</a>
-      <div class="hover-bar-middle-right"></div>
+    <div class="right mr-block mobile-vh">
+      <a href="#">
+        <div class="menu-wrapper">
+          <span>get help and read the faq</span>
+          <div class="hover-bar-middle-right"></div>
+        </div>  
+      </a>
     </div>
 
   </div>
   <!-- ******************** -->
   <div class="bottom-row mobile-vh">
 
-    <div class="left">
-      {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
-      {{ $first := index $blog 0 }}
-      <p>Blog: <span>{{ $first.Title | truncate 43 }}</span></p>
-      <a href="#">Read the blog post <i class="fa fa-chevron-right"></i></a>
-      <div class="hover-bar-bottom-left"></div>
+    <div class="left br-block ">
+      <a href="#">
+        <div class="menu-wrapper">
+          {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
+          {{ $first := index $blog 0 }}
+          <p>Blog: <span>{{ $first.Title | truncate 43 }}</span></p>
+          <span class="br-link">Read the blog post <i class="fa fa-chevron-right"></i></span>
+          <div class="hover-bar-bottom-left"></div>
+        </div>  
+      </a>
     </div>
 
-    <div class="right">
-      <p>Follow research, events, and news coverage</p>
-      <a href="#">Go to Updates <i class="fa fa-chevron-right"></i></a>
-      <div class="hover-bar-bottom-right"></div>
+    <div class="right br-block ">
+      <a href="#">
+        <div class="menu-wrapper">
+          <p>Follow research, events, and news coverage</p>
+          <span class="br-link">Go to Updates <i class="fa fa-chevron-right"></i></span>
+          <div class="hover-bar-bottom-right"></div>
+        </div>  
+      </a>  
     </div>
 
   </div>

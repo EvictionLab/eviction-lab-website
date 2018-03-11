@@ -8,22 +8,29 @@
 .pictorial-wrapper {
   text-align: center;
   color: $altTextColor;
+  a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
 
   /* -------------TOP ROW------------- */
-
+  .top-row .menu-wrapper {
+    width: 100%;
+  }
   .top-row div {
     width: 50%;
     @include for-sub480 {
       width: 100%;
-      height: calc(50vh - 28px);
+      height: calc(11vh - 28px);
     }
     h2 {
       @include altFont(14px);
       text-transform: uppercase;
       letter-spacing: 2px;
       @include for-sub480 {
-        @include altFont(2.4rem);
-        letter-spacing: 2px;
+        @include altFont(1.4rem);
+        letter-spacing: 0.1rem;
       }
       @include sm-thru-med-desktop {
         @include altFont(2.6rem);
@@ -40,8 +47,8 @@
       line-height: 14px;
       margin: 14px 0 0 0;
       @include for-sub480 {
-        @include defaultFont(1.6rem);
-        line-height: 2.3rem;
+        @include defaultFont(0.9rem);
+        line-height: 1.2rem;
         padding: 11px 0 27px;
       }
       @include for-tablet-portrait-and-landscape {
@@ -66,7 +73,7 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       color: $altTextColor;
-      /* display: none; */
+      display: none; 
       @include for-480-thru-767 {
         display: none;
       }
@@ -111,15 +118,17 @@
       min-height: 430px;
     }
     .left {
+      @include full-shadow-animate;
+      &:hover .hover-bar-top-left { visibility: visible; }
       @include backgroundImage('/img/pictorial-menu-top-left-bg-mobile.png');
       @include hoverBar('hover-bar-top-left',50px,5px,20px,auto);
-      padding: 25px 22px 0 22px;
+      .menu-wrapper {padding: 25px 22px 0 22px;}
       .break-me {
         width: 100px;
         margin: 0 auto;
       }
       @include for-sub480 {
-        padding: 20% 10%;
+        .menu-wrapper {padding: 20% 10%;}
         .break-me {
           width: auto;
         }
@@ -134,31 +143,34 @@
       }
       @include for-tablet-portrait-up {
         @include backgroundImage('/img/pictorial-menu-top-left-bg-tablet-portrait.png');
-        padding: 100px 40px 0 40px;
+        .menu-wrapper {padding: 100px 40px 0 40px;}
         .break-me {
           width: auto;
           margin: auto;
         }
       }
       @include for-tablet-landscape-up {
-        padding: 100px 60px 0 60px;
+        .menu-wrapper {padding: 100px 60px 0 60px;}
         .break-me {
           width: auto;
           margin: auto;
         }
       }
       @include for-midsize-desktop-up {
+        
         @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
-        padding: 144px 144px 0 144px;
+        .menu-wrapper {padding: 144px 144px 0 144px;}
       }
 
     }
     .right {
+      @include full-shadow-animate;
+      &:hover .hover-bar-top-right { visibility: visible; }
       @include backgroundImage('/img/pictorial-menu-top-right-bg-mobile.png');
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
-      padding: 25px 22px 0 22px;
+      .menu-wrapper {padding: 25px 22px 0 22px;}
       @include for-sub480 {
-        padding: 20% 10%;
+        .menu-wrapper {padding: 20% 10%;}
         .break-me {
           width: auto;
         }
@@ -169,30 +181,30 @@
       }
       @include for-tablet-portrait-up {
         @include backgroundImage('/img/pictorial-menu-top-right-bg-tablet-portrait.png');
-        padding: 100px 50px 0 50px;
+        .menu-wrapper {padding: 100px 50px 0 50px;}
       }
       @include for-tablet-landscape-up {
-        padding: 100px 70px 0 70px;
+        .menu-wrapper {padding: 100px 70px 0 70px;}
       }
       @include for-midsize-desktop-up {
         @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
-        padding: 144px 158px 0 158px;
+        .menu-wrapper {padding: 144px 158px 0 158px;}
       }
     }
   }
 
   /* -------------MIDDLE ROW------------- */
 
-  .middle-row div {
+  .middle-row .mr-block {
     width: 50%;
-    padding: 20px 15px;
+    .menu-wrapper {padding: 20px 15px;}
     @include for-mobile-portrait-up {
       line-height: 14px;
     }
     @include for-sub480 {
       width: 100%;
-      height: 17vh;
-      padding: 8% 20% 0;
+      height: 9vh;
+      .menu-wrapper {padding: 8% 20% 0;}
     }
     @include for-480-thru-767 {
       width: 50%;
@@ -203,10 +215,10 @@
     }
     @include for-tablet-landscape-up {
       width: 25%;
-      padding: 80px 30px 0 30px;
+      .menu-wrapper {padding: 80px 30px 0 30px;}
     }
     @include for-midsize-desktop-up {
-      padding: 102px 80px 0 80px;
+      .menu-wrapper {padding: 102px 80px 0 80px;}
       min-height: 248px;
     }
     a {
@@ -218,9 +230,9 @@
         line-height: 14px;
       }
       @include for-sub480 {
-        @include altFont(1.7rem);
-        letter-spacing: .15rem;
-        line-height: 2.4rem;
+        @include altFont(1.1rem);
+        letter-spacing: .08rem;
+        line-height: 1.4rem;
       }
       @include for-tablet-portrait-thru-sm-desktop {
         @include altFont(1.7rem);
@@ -261,7 +273,11 @@
     @include for-midsize-desktop-up {
       min-height: 200px;
     }
+
+            
     .left {
+      @include full-shadow-animate;
+      &:hover .hover-bar-middle-left { visibility: visible; }
       @include backgroundImage('/img/pictorial-menu-middle-left-bg-mobile.png');
       @include hoverBar('hover-bar-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
@@ -270,12 +286,15 @@
       @include for-sub480 {
         background: #E04119;
         background: #e04119; /* Old browsers */
-        background: -moz-linear-gradient(top, #e04119 2%, #bf4116 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #e04119 2%,#bf4116 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #e04119 2%,#bf4116 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
+  
     .middle-left {
+      @include full-shadow-animate;
+      &:hover .hover-bar-middle-middle-left { visibility: visible; }
       @include backgroundImage('/img/pictorial-menu-middle-middle-left-bg-mobile.png');
       @include hoverBar('hover-bar-middle-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
@@ -283,11 +302,14 @@
       }
       @include for-sub480 {
         background: #434878;
-        background: -webkit-linear-gradient(top, #434878 0%,#3d406d 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #434878 0%,#3d406d 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
     .middle-right {
+      @include full-shadow-animate;
+      &:hover .hover-bar-middle-middle-right { visibility: visible; }
       @include backgroundImage('/img/pictorial-menu-middle-middle-right-bg-mobile.png');
       @include hoverBar('hover-bar-middle-middle-right',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
@@ -296,12 +318,14 @@
       @include for-sub480 {
         background: #2C897F;
         background: #2c897f; /* Old browsers */
-        background: -moz-linear-gradient(top, #2c897f 0%, #257069 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #2c897f 0%,#257069 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #2c897f 0%,#257069 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
     .right {
+      @include full-shadow-animate;
+      &:hover .hover-bar-middle-right { visibility: visible; }
       @include backgroundImage('/img/pictorial-menu-middle-right-bg-mobile.png');
       @include hoverBar('hover-bar-middle-right',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
@@ -310,32 +334,36 @@
       @include for-sub480 {
         background: #94AABD;
         background: #94aabd; /* Old browsers */
-        background: -moz-linear-gradient(top, #94aabd 0%, #7a8b9b 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #94aabd 0%,#7a8b9b 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #94aabd 0%,#7a8b9b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #9F2D00 2%, #8D2400 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
   }
 
   /* -------------BOTTOM ROW------------- */
 
-  .bottom-row div {
+  .bottom-row .br-block {
     width: 100%;
-    padding: 34px 50px 16px 100px;
+    .menu-wrapper {padding: 34px 50px 16px 100px;}
     text-align: left;
+   
+    @include for-sub480 {
+      height: 8vh;
+    }
     @include for-480-thru-767 {
       width: 50%;
-      padding: 34px 50px 16px 100px;
+      .menu-wrapper {padding: 34px 50px 16px 100px;}
     }
     @include for-768-thru-1023 {
       width:50%;
     }
     @include for-tablet-landscape-up {
       width: 50%;
-      padding: 34px 50px 16px 130px;
+      .menu-wrapper {padding: 34px 50px 16px 130px;}
     }
     @include for-midsize-desktop-up {
-      padding: 34px 50px 16px 220px;
+      .menu-wrapper {padding: 34px 50px 16px 220px;}
     }
     p {
       @include defaultFont(11px);
@@ -388,7 +416,6 @@
       }
       @include for-tablet-portrait-up {
         @include defaultFontBold(14px);
-        text-transform: uppercase;
         letter-spacing: 2px;
         text-decoration: none;
       }
@@ -407,17 +434,20 @@
         text-decoration: none;
       }
     }
+    span.br-link {
+      text-transform: uppercase;
+    }
   }
   .bottom-row {
     background: #333;
     display: flex;
     flex-wrap: wrap;
-    height: 17vh;
+    height: 16vh;
     /* min-height: 120px; */
     padding-bottom: 20px;
     @include for-sub480 {
       display: block;
-      height: auto;
+      /* height: auto; */
       min-height: initial;
     }
     @include for-480-thru-767 {
@@ -431,6 +461,7 @@
       padding-bottom: 0;
     }
     .left {
+      @include full-shadow-animate;
       background: url('/img/pictorial-menu-bottom-left-bg.png') top 0 left -85px no-repeat;
       @include hoverBar('hover-bar-bottom-left',50px,5px,8px,0);
       @include for-iphone-8plus-portrait-only {
@@ -447,6 +478,7 @@
       }
     }
     .right {
+      @include full-shadow-animate;
       background: url('/img/pictorial-menu-bottom-right-bg.png') top 0 left -85px no-repeat;
       @include hoverBar('hover-bar-bottom-right',50px,5px,8px,0);
       @include for-iphone-8plus-portrait-only {

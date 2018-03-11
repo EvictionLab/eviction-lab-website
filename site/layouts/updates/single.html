@@ -1,5 +1,6 @@
 
 {{ partial "header" . }}
+{{ $pagetype := .Params.childof }}
 <!--{{ partial "subnav" . }}-->
 <div class="mobile-off">{{ partial "breadcrumb" . }}</div>
 
@@ -35,24 +36,22 @@
       {{ end }}
 <!-- /// END UPDATES META SECTION /// --> 
 <!-- /// EVENTS META SECTION // -->
-  {{ if eq .Params.contenttype "events" }}
-    <div class="authorbox events">
-      <ul>
-        <li class="authorname">{{ .Params.address }}</li>
-        <li class="authortitle"><img src="/images/icons/clock.svg" />{{ dateFormat "Monday Jan 2 2006" (.Params.date) }}, {{ .Params.timeRange }}</li>
-        <li class="authortitle"><img src="/images/icons/browser.svg" /><a class="bold-link" href="{{ .Params.website }}">Website</a></li>
-      </ul>
-    </div>
-    <div class="social-box mobile-off event-single">
-      <ul class="social-sprite">
-          <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a></li>
-          <li><a class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a></li>
-          <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
-      </ul>
-    </div>
-
-  {{ end }}
-
+      {{ if eq .Params.contenttype "events" }}
+        <div class="authorbox events">
+          <ul>
+            <li class="authorname">{{ .Params.address }}</li>
+            <li class="authortitle"><img src="/images/icons/clock.svg" />{{ dateFormat "Monday Jan 2 2006" (.Params.date) }}, {{ .Params.timeRange }}</li>
+            <li class="authortitle"><img src="/images/icons/browser.svg" /><a class="bold-link" href="{{ .Params.website }}">Website</a></li>
+          </ul>
+        </div>
+        <div class="social-box mobile-off event-single">
+          <ul class="social-sprite">
+              <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a></li>
+              <li><a class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a></li>
+              <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
+          </ul>
+        </div>
+      {{ end }}
 <!-- /// END EVENTS META SECTION /// -->          
     </div>  
   </div> 
@@ -68,21 +67,23 @@
   </div>
   <div class="center-content-post {{ .Params.childof }}-post updates-post">
     <div class="page-content">
+<!-- //////// NEXT / PREV FOR UPDATES CONTENT TYPE ///////// -->
+      {{ if eq .Params.contenttype "updates" }}
       <div class="btm-meta">
           <div class="btm-meta-cat mobile-off"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <a class="ak-bold {{ .Params.childof }}-type capitalize" href="/updates/{{ .Params.childof }}">{{ .Params.childof }}</a></span></div>
         <ul>
-          {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "!=" "events") }}
+          {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "=" "updates") }}
             {{ if gt $.Date.Unix .Date.Unix }}
               <li class="header">Next Post</li>
-              <li><a class="{{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
+              <li><a class="{{ $pagetype }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
             {{ end }}
           {{ end }}
         </ul>  
         <ul>
-            {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "!=" "events") }}
+            {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "=" "updates") }}
               {{ if lt $.Date.Unix .Date.Unix }}
                 <li class="header prev-post">Previous Post</li>
-                <li><a class="{{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                <li><a class="{{ $pagetype }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
               {{ end }}
             {{ end }}
             </ul> 
@@ -92,6 +93,36 @@
 					{{ end }}
 				</ul>
       </div>
+    {{ end }}
+<!-- //////// END NEXT / PREV FOR UPDATES CONTENT TYPE ///////// -->
+<!-- //////// NEXT / PREV FOR EVENTS CONTENT TYPE ///////// -->
+{{ if eq .Params.contenttype "events" }}
+<div class="btm-meta">
+    <div class="btm-meta-cat mobile-off"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <a class="ak-bold {{ .Params.childof }}-type capitalize" href="/updates/{{ .Params.childof }}">{{ .Params.childof }}</a></span></div>
+  <ul>
+    {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "=" "events") }}
+      {{ if lt $.Date.Unix .Date.Unix }}
+        <li class="header">Next Event</li>
+        <li><a class="{{ $pagetype }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>  
+  <ul>
+      {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "=" "events") }}
+        {{ if gt $.Date.Unix .Date.Unix }}
+          <li class="header prev-post">Previous Event</li>
+          <li><a class="{{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      {{ end }}
+      </ul> 
+  <ul>
+    {{ range where .Site.RegularPages "Params.featured" true }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+<!-- //////// END NEXT / PREV FOR EVENTS CONTENT TYPE ///////// -->
     </div>
   </div>
     </div>

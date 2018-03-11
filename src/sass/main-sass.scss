@@ -191,6 +191,14 @@ $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
 $outsetShadowTop: 0px -2px 8px 3px rgba(0, 0, 0, 0.24);
 $boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.2 );
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
+$fullShadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+@mixin full-shadow-animate {
+  &:hover {
+    box-shadow: $fullShadow;
+    -webkit-transition: 0.3s; /* Safari */
+    transition: 0.3s;    
+  }
+}
 
 // Mobile VH fix
 // ----
@@ -232,6 +240,8 @@ $mobileVhTransition: height 3600s steps(1);
   a:hover + .#{$className} {
     visibility: visible;
   }
+
+
 }
 
 /* ====================== */
