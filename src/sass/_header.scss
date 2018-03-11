@@ -6,6 +6,8 @@ header {
   display: flex !important; // important required to override bootstrap display: block;
   flex-direction: row;
   justify-content: space-between;
+  align-content: center;
+  align-items: center;
   height: 80px;
   padding: 24px 0;
   @include for-phone-only {
