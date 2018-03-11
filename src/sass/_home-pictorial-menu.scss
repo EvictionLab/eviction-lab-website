@@ -27,7 +27,7 @@
     width: 50%;
     @include for-sub480 {
       width: 100%;
-      height: calc(24vh - 28px);
+      height: calc(30vh - 28px);
     }
     h2 {
       @include altFont(14px);
@@ -172,7 +172,7 @@
       &:hover .hover-bar-top-right { visibility: visible; }
       background: url(/img/pictorial-menu-top-right-bg-mobile.png);
       background-position: center;
-      background-size: 54%;
+      background-size: 78%;
       background-repeat: no-repeat;
       background-color: #282827;
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
@@ -217,7 +217,7 @@
     }
     @include for-sub480 {
       width: 100%;
-      height: 9vh;
+      height: 10vh;
       .menu-wrapper {}
     }
     @include for-480-thru-767 {
