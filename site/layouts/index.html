@@ -45,8 +45,8 @@
       <a class="btn smoothScroll " href="#pictorial-anchor">get started</a>
 
       <div>
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/evictionlab/"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/evictionlab"><i class="fa fa-twitter"></i></a>
       </div>
 
       </div>
@@ -65,8 +65,8 @@
 
   <div class="top-row mobile-vh">
 
-    <div class="left mobile-vh">
-      <a href="#">
+    <div class="left tr-block mobile-vh">
+      <a href="http://eviction-maps.s3-website.us-east-2.amazonaws.com/">
         <div class="menu-wrapper">
           <h2 class="break-me">map &amp; data</h2>
           <p>Learn about the American housing crisis by interacting with a customizable map.</p>
@@ -74,12 +74,10 @@
           <div class="hover-bar-top-left"></div>
         </div>
       </a>
-      
     </div>
    
-
-    <div class="right mobile-vh">
-      <a href="#">
+    <div class="right tr-block mobile-vh">
+      <a href="http://eviction-maps.s3-website.us-east-2.amazonaws.com/evictions/">
         <div class="menu-wrapper">
           <h2>eviction rankings</h2>
           <p>Learn which cities rank the highest and lowest in evictions in the U.S.</p>
@@ -87,7 +85,6 @@
           <div class="hover-bar-top-right"></div>
         </div>      
       </a>
-     
     </div>
 
   </div>
@@ -95,16 +92,17 @@
   <div class="middle-row mobile-vh">
 
     <div class="left mr-block mobile-vh">
-      <a href="#">
+      <a href="/about-us">
         <div class="menu-wrapper">
-          <span>learn about the eviction lab</span>
+          <span class="mobile-off">learn about the eviction lab</span>
+          <span class="mobile-on">about the eviction lab</span>
           <div class="hover-bar-middle-left"></div>
         </div>
       </a>  
   </div>
 
     <div class="middle-left mr-block mobile-vh">
-      <a href="#">
+      <a href="/why-eviction-matters">
         <div class="menu-wrapper">
             <span>why eviction matters</span>
             <div class="hover-bar-middle-middle-left"></div>
@@ -113,18 +111,20 @@
     </div>
 
     <div class="middle-right mr-block mobile-vh">
-      <a href="#">
+      <a href="/methods">
           <div class="menu-wrapper">
-            <span>read about our methodology</span>
-            <div class="hover-bar-middle-middle-right"></div>
+              <span class="mobile-off">read about our methodology</span>
+              <span class="mobile-on">our methodology</span>
+              <div class="hover-bar-middle-middle-right"></div>
           </div>
       </a>
     </div>
 
     <div class="right mr-block mobile-vh">
-      <a href="#">
+      <a href="/help-faq">
         <div class="menu-wrapper">
-          <span>get help and read the faq</span>
+          <span class="mobile-off">get help and read the faq</span>
+          <span class="mobile-on">help &amp; faq</span>
           <div class="hover-bar-middle-right"></div>
         </div>  
       </a>
@@ -139,9 +139,14 @@
         <div class="menu-wrapper">
           {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
           {{ $first := index $blog 0 }}
-          <p>Blog: <span>{{ $first.Title | truncate 43 }}</span></p>
-          <span class="br-link">Read the blog post <i class="fa fa-chevron-right"></i></span>
-          <div class="hover-bar-bottom-left"></div>
+          <div class="left-column pm-ftr">
+            <img src="/images/icons/pm-bookmark.svg" />
+          </div>
+          <div class="right-column">
+            <p>Blog: <span>{{ $first.Title | truncate 43 }}</span></p>
+            <span class="br-link">Read the blog post <i class="fa fa-chevron-right"></i></span>
+            <div class="hover-bar-bottom-left"></div>
+          </div>  
         </div>  
       </a>
     </div>
@@ -149,9 +154,14 @@
     <div class="right br-block ">
       <a href="#">
         <div class="menu-wrapper">
-          <p>Follow research, events, and news coverage</p>
-          <span class="br-link">Go to Updates <i class="fa fa-chevron-right"></i></span>
-          <div class="hover-bar-bottom-right"></div>
+          <div class="left-column pm-updates">
+            <img src="/images/icons/pm-research.svg" />
+          </div>
+          <div class="right-column">
+            <p>Follow research, events, and news coverage</p>
+            <span class="br-link">Go to Updates <i class="fa fa-chevron-right"></i></span>
+            <div class="hover-bar-bottom-right"></div>
+          </div>  
         </div>  
       </a>  
     </div>

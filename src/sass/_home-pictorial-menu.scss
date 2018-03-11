@@ -16,13 +16,18 @@
 
   /* -------------TOP ROW------------- */
   .top-row .menu-wrapper {
-    width: 100%;
+    width: 54%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .top-row div {
+  .top-row .tr-block {
     width: 50%;
     @include for-sub480 {
       width: 100%;
-      height: calc(11vh - 28px);
+      height: calc(24vh - 28px);
     }
     h2 {
       @include altFont(14px);
@@ -30,6 +35,7 @@
       letter-spacing: 2px;
       @include for-sub480 {
         @include altFont(1.4rem);
+        padding-bottom: 0.8rem;
         letter-spacing: 0.1rem;
       }
       @include sm-thru-med-desktop {
@@ -45,11 +51,10 @@
     p {
       @include defaultFont(10px);
       line-height: 14px;
-      margin: 14px 0 0 0;
+      margin: 0px 0 0 0;
       @include for-sub480 {
         @include defaultFont(0.9rem);
         line-height: 1.2rem;
-        padding: 11px 0 27px;
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFont(1.6rem);
@@ -122,13 +127,12 @@
       &:hover .hover-bar-top-left { visibility: visible; }
       @include backgroundImage('/img/pictorial-menu-top-left-bg-mobile.png');
       @include hoverBar('hover-bar-top-left',50px,5px,20px,auto);
-      .menu-wrapper {padding: 25px 22px 0 22px;}
+      
       .break-me {
         width: 100px;
         margin: 0 auto;
       }
       @include for-sub480 {
-        .menu-wrapper {padding: 20% 10%;}
         .break-me {
           width: auto;
         }
@@ -168,9 +172,9 @@
       &:hover .hover-bar-top-right { visibility: visible; }
       @include backgroundImage('/img/pictorial-menu-top-right-bg-mobile.png');
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
-      .menu-wrapper {padding: 25px 22px 0 22px;}
+      
       @include for-sub480 {
-        .menu-wrapper {padding: 20% 10%;}
+        .menu-wrapper {}
         .break-me {
           width: auto;
         }
@@ -197,14 +201,20 @@
 
   .middle-row .mr-block {
     width: 50%;
-    .menu-wrapper {padding: 20px 15px;}
+    .menu-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     @include for-mobile-portrait-up {
       line-height: 14px;
     }
     @include for-sub480 {
       width: 100%;
       height: 9vh;
-      .menu-wrapper {padding: 8% 20% 0;}
+      .menu-wrapper {}
     }
     @include for-480-thru-767 {
       width: 50%;
@@ -345,11 +355,9 @@
 
   .bottom-row .br-block {
     width: 100%;
-    .menu-wrapper {padding: 34px 50px 16px 100px;}
     text-align: left;
-   
     @include for-sub480 {
-      height: 8vh;
+      height: 9vh;
     }
     @include for-480-thru-767 {
       width: 50%;
@@ -365,15 +373,41 @@
     @include for-midsize-desktop-up {
       .menu-wrapper {padding: 34px 50px 16px 220px;}
     }
+    .menu-wrapper {
+      display: grid;
+      height: 100%;
+      @include for-sub480 {
+        grid-template-columns: 56px 1fr;
+        }
+      .left-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &.pm-ftr img {
+          width: 10px;
+        }
+      } 
+      .right-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &.pm-updates img {
+          width: 20px;
+          }
+        } 
+      }
     p {
-      @include defaultFont(11px);
+      @include defaultFont(1rem);
       margin-bottom: 0;
+      line-height: 1.3rem;
       span {
         @include defaultFontBold(11px);
       }
       @include for-iphone-8plus-portrait-only {
         @include defaultFont(11px);
         margin-bottom: 5px;
+        
         span {
           @include defaultFontBold(11px);
         }
@@ -406,7 +440,6 @@
     }
     a {
       @include defaultFontBold(10px);
-      text-decoration: underline;
       letter-spacing: 2px;
       color: $altTextColor;
       @include for-iphone-8plus-portrait-only {
@@ -442,7 +475,7 @@
     background: #333;
     display: flex;
     flex-wrap: wrap;
-    height: 16vh;
+    height: 18vh;
     /* min-height: 120px; */
     padding-bottom: 20px;
     @include for-sub480 {
@@ -462,36 +495,28 @@
     }
     .left {
       @include full-shadow-animate;
-      background: url('/img/pictorial-menu-bottom-left-bg.png') top 0 left -85px no-repeat;
+      background: #333;
       @include hoverBar('hover-bar-bottom-left',50px,5px,8px,0);
       @include for-iphone-8plus-portrait-only {
-        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -85px no-repeat;
       }
       @include for-768-thru-1023 {
-        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -75px no-repeat;
       }
       @include for-tablet-landscape-up {
-        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left -70px no-repeat;
       }
       @include for-midsize-desktop-up {
-        background: url('/img/pictorial-menu-bottom-left-bg.png')  top 0 left 5px no-repeat;
       }
     }
     .right {
       @include full-shadow-animate;
-      background: url('/img/pictorial-menu-bottom-right-bg.png') top 0 left -85px no-repeat;
+      background: #333;
       @include hoverBar('hover-bar-bottom-right',50px,5px,8px,0);
       @include for-iphone-8plus-portrait-only {
-        background: url('/img/pictorial-menu-bottom-right-bg.png') top 0 left -85px no-repeat;
       }
       @include for-768-thru-1023 {
-        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left -75px no-repeat;
       }
       @include for-tablet-landscape-up {
-        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left -70px no-repeat;
       }
       @include for-midsize-desktop-up {
-        background: url('/img/pictorial-menu-bottom-right-bg.png')  top 0 left 5px no-repeat;
       }
     }
   }
