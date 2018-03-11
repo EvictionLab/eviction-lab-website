@@ -26,18 +26,17 @@ $menuMargin: grid(5);
     &.el-button-menu {
       display: block;
       cursor: pointer;
+      color: $color1;
+
+      svg {
+        fill: $color1;
+        margin: 2px auto 6px;
+        width:22px;
+        height: 22px;
+      }
+      span { display: block; }
     }
   }
-  .icon {
-    width:22px;
-    height: 22px;
-    margin: 2px auto 6px;
-  }
-  // icon colors
-  .btn-icon { color: $headerButtonColor; }
-  .icon { fill: $headerButtonColor; }
-  .btn-icon.active { color: $headerActiveButtonColor; }
-  .btn-icon.active .icon { fill: $headerActiveButtonColor; }
 }
 // boost icon size on tablet+
 @media(min-width: $gtMobile) {
@@ -68,27 +67,6 @@ $menuMargin: grid(5);
     }
   }
 }
-// Condensed Header
-// ---
-// @media(min-width: $gtMobile) {
-//     // resize menu icon
-//     .header-icons {
-//         width:grid(4);
-//         height:grid(5);
-//         & .btn.btn-icon.el-button-menu {
-//             width: grid(4);
-//             height: grid(5);
-//             .icon {
-//                 width: 22px;
-//                 height: 22px;
-//             }
-//             span {
-//                 top:auto;
-//                 @include iconLabelText();
-//             }
-//         }
-//     }
-// }
 
 // Container layout
 // ---
