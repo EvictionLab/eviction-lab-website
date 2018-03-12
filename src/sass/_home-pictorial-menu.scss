@@ -30,6 +30,7 @@
     }
     @include sm-thru-med-desktop {
       width: 78%;
+      padding-top: 4%;
     }
   }
   .top-row .tr-block {
@@ -220,6 +221,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include for-tablet-landscape-up {
+        padding-top: 8%;
+      }
+     
     }
     @include for-mobile-portrait-up {
       line-height: 14px;
@@ -399,6 +404,9 @@
       @include sm-thru-med-desktop {
         grid-template-columns: 120px 1fr;
        }  
+       @include for-midsize-desktop-up {
+        grid-template-columns: 136px 1fr;
+       }   
       .left-column {
         display: flex;
         flex-direction: column;
@@ -421,6 +429,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include for-tablet-portrait-up {
+          padding-top: 3%;
+         }
         } 
       }
     p {
@@ -449,7 +460,7 @@
       }
       @include for-tablet-landscape-up {
         @include defaultFont(17px);
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         line-height: 2.3rem;
         span {
           @include defaultFontBold(17px);
@@ -524,6 +535,9 @@
     @include sm-thru-med-desktop {
       height: 20vh;
     }
+    @include for-midsize-desktop-up {
+      height: 14vh;
+    }
     .left {
       @include full-shadow-animate;
       background: #3c3c3c;
@@ -533,6 +547,7 @@
       @include for-768-thru-1023 {
       }
       @include for-tablet-landscape-up {
+        &:hover .hover-bar-bottom-left { visibility: visible; }
       }
       @include for-midsize-desktop-up {
       }
@@ -546,6 +561,7 @@
       @include for-768-thru-1023 {
       }
       @include for-tablet-landscape-up {
+        &:hover .hover-bar-bottom-right { visibility: visible; }
       }
       @include for-midsize-desktop-up {
       }
