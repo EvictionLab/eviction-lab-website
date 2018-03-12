@@ -236,10 +236,10 @@
     }
     @include for-480-thru-767 {
       width: 50%;
-      height: calc(18vh - 5px);
+      height: 18vh;
     }
     @include for-768-thru-1023 {
-      height: calc(21vh - 10px);
+      height: 20vh;
     }
     @include for-tablet-landscape-up {
       width: 25%;
