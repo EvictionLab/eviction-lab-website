@@ -17,7 +17,7 @@ $heroWidth: 300px;
   background-size: cover;
 
   @include for-iphone-8plus-portrait-only {
-    min-height: 760px;
+    min-height: 600px;
   }
   @include for-tablet-portrait-up {
     min-height: 930px;
@@ -161,9 +161,9 @@ $heroWidth: 300px;
     }
     .hero-social {
       @include for-iphone-8plus-portrait-only {
-       /* position: relative;
-        top: 79vh; */
-          
+        position: absolute;
+        bottom: 32px;
+        left: 16px;
       }
     }
     div {
