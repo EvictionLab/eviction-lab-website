@@ -25,6 +25,9 @@
     @include for-480-thru-767 {
       width:66%;
     }
+    @include for-tablet-portrait-and-landscape {
+      width: 78%; 
+    }
   }
   .top-row .tr-block {
     width: 50%;
@@ -44,6 +47,11 @@
       }
       @include for-480-thru-767 {
         padding-bottom: 0.8rem;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include altFont(2.4rem);
+        letter-spacing: .18rem;
+        line-height: 2.8rem;
       }
       @include sm-thru-med-desktop {
         @include altFont(2.6rem);
@@ -154,10 +162,9 @@
       }
       @include for-tablet-portrait-up {
         @include backgroundImage('/img/pictorial-menu-top-left-bg-tablet-portrait.png');
-        .menu-wrapper {padding: 100px 40px 0 40px;}
         .break-me {
           width: auto;
-          margin: auto;
+          margin: 0 auto;
         }
       }
       @include for-tablet-landscape-up {
@@ -196,7 +203,7 @@
       }
       @include for-tablet-portrait-up {
         @include backgroundImage('/img/pictorial-menu-top-right-bg-tablet-portrait.png');
-        .menu-wrapper {padding: 100px 50px 0 50px;}
+
       }
       @include for-tablet-landscape-up {
         .menu-wrapper {padding: 100px 70px 0 70px;}
@@ -390,6 +397,9 @@
       @include for-480-thru-767 {
         grid-template-columns: 56px 1fr;
         }  
+      @include for-tablet-portrait-and-landscape {
+       grid-template-columns: 80px 1fr;
+      }  
       .left-column {
         display: flex;
         flex-direction: column;
