@@ -361,7 +361,7 @@
     width: 100%;
     text-align: left;
     @include for-sub480 {
-      height: 9vh;
+      height: 14vh;
     }
     @include for-480-thru-767 {
       width: 50%;
@@ -479,7 +479,7 @@
     background: #333;
     display: flex;
     flex-wrap: wrap;
-    height: 18vh;
+    height: 28vh;
     /* min-height: 120px; */
     padding-bottom: 20px;
     @include for-sub480 {
