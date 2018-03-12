@@ -34,7 +34,10 @@ $menuMargin: grid(5);
         width:22px;
         height: 22px;
       }
-      span { display: block; }
+      span {
+        display: block;
+        transition: font-size .4s ease
+      }
     }
   }
 }

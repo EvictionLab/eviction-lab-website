@@ -2,6 +2,10 @@
 
 /* header and logo */
 
+.header-wrapper {
+  transition: all 0.4s ease;
+}
+
 header {
   display: flex !important; // important required to override bootstrap display: block;
   flex-direction: row;
@@ -9,9 +13,53 @@ header {
   align-content: center;
   align-items: center;
   height: 80px;
-  padding: 24px 0;
+  transition: height 0.4s ease;
   @include for-phone-only {
     height: 55px;
+  }
+}
+
+// Condensed Header
+// ---
+@media(min-width: $gtMobile) {
+  .header-wrapper {
+    &.condensed {
+      height: $headerHeightSm;
+      min-height: $headerHeightSm;
+
+      header { height: $headerHeightSm; }
+
+      .header-logo img {
+        width: grid(31); // 248px
+        height: 18px;
+      }
+      // resize menu icon
+      .header-icons {
+        width:grid(4);
+        height:grid(5);
+        & .btn.btn-icon.el-button-menu {
+          width: grid(4);
+          height: grid(5);
+          .icon {
+            width: 22px;
+            height: 22px;
+          }
+          span {
+            top:auto;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// scale header
+@media(min-width: $gtTablet) {
+  .condensed {
+    .header-logo img {
+      transform: scale(0.775);
+    }
   }
 }
 

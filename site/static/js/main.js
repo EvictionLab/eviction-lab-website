@@ -19,6 +19,25 @@ function setupMenu() {
   });
 }
 
+// Toggle condensed class on header if scrolled to top
+function setupScrollEnd() {
+  var debounceTime = 250;
+  var isScrolling;
+  var headerWrapper = document.querySelector('.header-wrapper');
+
+  window.addEventListener('scroll', function (event) {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(function () {
+      if (document.documentElement.scrollTop === 0) {
+        headerWrapper.classList.remove('condensed');
+      } else {
+        headerWrapper.classList.add('condensed');
+      }
+    }, debounceTime);
+  }, false);
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
   setupMenu();
+  setupScrollEnd();
 });
