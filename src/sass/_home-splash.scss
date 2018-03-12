@@ -52,58 +52,6 @@ $heroWidth: 300px;
     padding: 0 $tabletPlusMargin;
   }
 
-  //a messy hack to keep the left padding consistant
-  
-  /*
-  @media (min-width: 1217px) {
-    padding-left: 15px;
-  }
-  @media (min-width: 1219px) {
-    padding-left: 14px;
-  }
-  @media (min-width: 1221px) {
-    padding-left: 13px;
-  }
-  @media (min-width: 1223px) {
-    padding-left: 12px;
-  }
-  @media (min-width: 1225px) {
-    padding-left: 11px;
-  }
-  @media (min-width: 1227px) {
-    padding-left: 10px;
-  }
-  @media (min-width: 1229px) {
-    padding-left: 9px;
-  }
-  @media (min-width: 1231px) {
-    padding-left: 8px;
-  }
-  @media (min-width: 1233px) {
-    padding-left: 7px;
-  }
-  @media (min-width: 1235px) {
-    padding-left: 6px;
-  }
-  @media (min-width: 1237px) {
-    padding-left: 5px;
-  }
-  @media (min-width: 1239px) {
-    padding-left: 4px;
-  }
-  @media (min-width: 1241px) {
-    padding-left: 3px;
-  }
-  @media (min-width: 1243px) {
-    padding-left: 2px;
-  }
-  @media (min-width: 1245px) {
-    padding-left: 1px;
-  }
-  @media (min-width: 1247px) {
-    padding-left: 0;
-  }
-*/
 
 }
 
@@ -159,10 +107,13 @@ $heroWidth: 300px;
     h1 {
       @include altFont(24px);
       letter-spacing: 1px;
+      line-height: 28px;
+      width: 75%;
       @include for-iphone-8plus-portrait-only {
         @include altFont(30px);
         letter-spacing: 2px;
         line-height: 42px;
+        width: 86%;
       }
       @include for-tablet-portrait-up {
         @include altFont(40px);
@@ -177,12 +128,12 @@ $heroWidth: 300px;
     }
     p {
       @include defaultFont(14px);
-      margin: 15px 0 18px 0;
+      margin: 24px 0 32px 0;
       line-height: 21px;
       @include for-iphone-8plus-portrait-only {
-        @include defaultFont(13px);
-        margin: 20px 0 37px 0;
-        line-height: 19px;
+        @include defaultFont(15px);
+        margin: 32px 0 40px 0;
+        line-height: 21px;
       }
       @include for-tablet-portrait-up {
         max-width: 440px;
@@ -201,12 +152,18 @@ $heroWidth: 300px;
       color: $altTextColor;
       background-color: $color1;
       border-color: $color1;
-      padding: 25px 30px;
+      padding: 24px 32px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
     a:hover {
       color: $altTextColor;
+    }
+    .hero-social {
+      @include for-iphone-8plus-portrait-only {
+        position: absolute;
+        top: 79vh;
+      }
     }
     div {
       width: 300px;
@@ -229,7 +186,7 @@ $heroWidth: 300px;
         height: 45px;
         text-align: center;
         @include for-iphone-8plus-portrait-only {
-          margin: 205px 20px 0 0;
+          /* margin: 205px 20px 0 0; */
         }
         @include for-tablet-portrait-up {
           border-color: #f4f7f9;
