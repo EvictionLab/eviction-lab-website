@@ -30,8 +30,8 @@ header {
       header { height: $headerHeightSm; }
 
       .header-logo img {
-        width: grid(31); // 248px
-        height: 18px;
+        width: grid(40);
+        height: grid(3);
       }
       // resize menu icon
       .header-icons {
