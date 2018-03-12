@@ -161,8 +161,9 @@ $heroWidth: 300px;
     }
     .hero-social {
       @include for-iphone-8plus-portrait-only {
-        position: absolute;
-        top: 79vh;
+       /* position: relative;
+        top: 79vh; */
+          
       }
     }
     div {
