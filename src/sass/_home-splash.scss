@@ -29,7 +29,7 @@ $heroWidth: 300px;
     margin-left: 32px;
   }
   @include for-phone-only {
-    margin-top: 0px;
+    margin-top: 56px;
     height: calc(100vh - 56px);
   }
 }

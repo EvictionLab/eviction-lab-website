@@ -28,6 +28,9 @@
     @include for-tablet-portrait-and-landscape {
       width: 78%; 
     }
+    @include sm-thru-med-desktop {
+      width: 78%;
+    }
   }
   .top-row .tr-block {
     width: 50%;
@@ -154,30 +157,24 @@
       }
       @include for-iphone-8plus-portrait-only {
         @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
-        /* padding: 50px 24px 0 24px; */
         .break-me {
           width: auto;
-          margin: 0 auto;
         }
       }
       @include for-tablet-portrait-up {
         @include backgroundImage('/img/pictorial-menu-top-left-bg-tablet-portrait.png');
         .break-me {
           width: auto;
-          margin: 0 auto;
         }
       }
       @include for-tablet-landscape-up {
-        .menu-wrapper {padding: 100px 60px 0 60px;}
         .break-me {
           width: auto;
-          margin: auto;
         }
       }
       @include for-midsize-desktop-up {
         
         @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
-        .menu-wrapper {padding: 144px 144px 0 144px;}
       }
 
     }
@@ -206,11 +203,9 @@
 
       }
       @include for-tablet-landscape-up {
-        .menu-wrapper {padding: 100px 70px 0 70px;}
       }
       @include for-midsize-desktop-up {
         @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
-        .menu-wrapper {padding: 144px 158px 0 158px;}
       }
     }
   }
@@ -243,10 +238,8 @@
     }
     @include for-tablet-landscape-up {
       width: 25%;
-      .menu-wrapper {padding: 80px 30px 0 30px;}
     }
     @include for-midsize-desktop-up {
-      .menu-wrapper {padding: 102px 80px 0 80px;}
       min-height: 248px;
     }
     a {
@@ -268,7 +261,7 @@
         line-height: 2.3rem;
       }
       @include for-tablet-landscape-up {
-        line-height: 23px;
+        line-height: 2.3rem;
       }
       @include for-midsize-desktop-up {
         @include altFont(18px);
@@ -375,7 +368,8 @@
     width: 100%;
     text-align: left;
     @include for-sub480 {
-      height: 14vh;
+      height: 9vh;
+      padding-right: 16px;
     }
     @include for-480-thru-767 {
       width: 50%;
@@ -386,6 +380,7 @@
     }
     @include for-tablet-landscape-up {
       width: 50%;
+      padding-right: 32px;
     }
     @include for-midsize-desktop-up {
     }
@@ -401,6 +396,9 @@
       @include for-tablet-portrait-and-landscape {
        grid-template-columns: 96px 1fr;
       }  
+      @include sm-thru-med-desktop {
+        grid-template-columns: 120px 1fr;
+       }  
       .left-column {
         display: flex;
         flex-direction: column;
@@ -408,13 +406,13 @@
         align-items: center;
         &.pm-ftr img {
           width: 10px;
-          @include for-tablet-portrait-and-landscape {
+          @include for-tablet-portrait-up {
             width: 25px;
           }
         }
         &.pm-updates img {
           width: 20px;
-          @include for-tablet-portrait-and-landscape {
+          @include for-tablet-portrait-up {
             width: 48px;
           }
         }
@@ -452,6 +450,7 @@
       @include for-tablet-landscape-up {
         @include defaultFont(17px);
         margin-bottom: 20px;
+        line-height: 2.3rem;
         span {
           @include defaultFontBold(17px);
         }
@@ -484,6 +483,7 @@
       }
       @include for-tablet-landscape-up {
         @include defaultFontBold(13px);
+        line-height: 2.3rem;
       }
       @include for-midsize-desktop-up {
         @include defaultFontBold(14px);
@@ -520,6 +520,9 @@
     @include for-tablet-portrait-and-landscape {
       padding-bottom: 0;
       height: 12vh;
+    }
+    @include sm-thru-med-desktop {
+      height: 20vh;
     }
     .left {
       @include full-shadow-animate;
