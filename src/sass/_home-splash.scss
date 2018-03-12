@@ -165,6 +165,11 @@ $heroWidth: 300px;
         bottom: 32px;
         left: 16px;
       }
+      @include for-tablet-portrait-up {
+        position: relative;
+        bottom: initial;
+        left: initial;
+      }
     }
     div {
       width: 300px;
