@@ -22,8 +22,8 @@ $bottomMarginDesktop: grid(9);
 // device breakpoints
 $gtMobilePortrait: 319px; // greater than mobile device breakpoint
 $iphone-8plus-portrait: 414px;
-$sub480: 479px; // small mobile breakpoint
-$above480: 480px; // above small mobile breakpoint
+$sub480: 413px; // small mobile breakpoint
+$above480: 414px; // above small mobile breakpoint
 $mobile: 767px; // mobile device breakpoint
 $gtMobile: 768px; // greater than mobile device breakpoint
 $tabletLimit: 1023px; // max width of tablet landscape
@@ -252,6 +252,14 @@ $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
 $outsetShadowTop: 0px -2px 8px 3px rgba(0, 0, 0, 0.24);
 $boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.2 );
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
+$fullShadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.02);
+@mixin full-shadow-animate {
+  &:hover {
+    box-shadow: $fullShadow;
+    -webkit-transition: 0.3s; /* Safari */
+    transition: 0.3s;    
+  }
+}
 
 // Mobile VH fix
 // ----
@@ -293,6 +301,8 @@ $mobileVhTransition: height 3600s steps(1);
   a:hover + .#{$className} {
     visibility: visible;
   }
+
+
 }
 
 @mixin focusState() {

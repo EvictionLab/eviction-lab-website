@@ -2,6 +2,14 @@
 
 
 /* blog and media lists */
+.alt-rows {
+  &.blog-list, &.media-list, &.research-list {
+    margin-top: 0.8rem;
+  }
+  &.dual-research .center-page-wrapper:last-child {
+    padding-bottom: 1.6rem;
+  }
+}
 .events-list {
   @include for-phone-only {
     margin-bottom: $bottomMarginPhone;
@@ -51,9 +59,14 @@
   a.see-all-events:hover {
     text-decoration: none;
   } 
-  &.research-type.el-research {
+  &.research-type.el-research, &.research-type.outside-research {
     border-top: none; 
     margin-top: 40px;
+    border-bottom: 3px solid;
+    @include for-phone-only {
+      margin-top:1.6rem;
+    }
+
 }
 } 
 .custom-pagination {
@@ -120,12 +133,12 @@
   display: flex;
   min-height: 152px;
   &.updates-list .title a {
-    color: #333333;
+    /* color: #333333; */
   }
   @include for-phone-only {
     display: grid;
     min-height: initial;
-    height: 12.2rem;
+    /* height: 12.2rem; */
     grid-template-columns: 135px 1fr;
     display: -ms-grid;
     -ms-grid-columns: 135px 1fr;

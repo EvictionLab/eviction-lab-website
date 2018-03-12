@@ -54,7 +54,7 @@
   
               <div class="postlist-right-col">
                 <h3 class="title">
-                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
                 </h3>
                 <div class="post-summary">
                     {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
@@ -120,7 +120,7 @@
 
   {{ $blog := where .Site.RegularPages "Params.contentcat" "blog" }}
   {{ if isset $blog 0 }} <!-- if there are Blog articles, list them -->
-    <div class="alt-rows">
+    <div class="alt-rows blog-list">
       {{ $paginator := .Paginate (where .Site.Pages "Params.contentcat" "blog") 5 }}   
       {{ range .Paginator.Pages }} 
 
@@ -172,7 +172,7 @@
 
   {{ $media := where .Site.RegularPages "Params.contentcat" "media" }}
   {{ if isset $media 0 }} <!-- if there are Media articles, list them -->
-    <div class="alt-rows">
+    <div class="alt-rows media-list">
       {{ $paginator := .Paginate (where .Site.Pages "Params.contentcat" "media") 5 }}   
       {{ range .Paginator.Pages }}
       
@@ -225,11 +225,11 @@
   {{ $elresearch := where .Site.RegularPages "Params.researchtype" "el-research" }} <!-- count EL Research articles -->
   {{ if isset $elresearch 0 }} <!-- if there are EL Research articles, list them -->
       <span class="center-page-wrapper">
-        <div class="events-list-header research-type el-research">research from the eviction lab <a class="see-all-events" href="/updates/research/el-research">See all</a></div>
+        <div class="bordered-header events-list-header research-type el-research">research from the eviction lab <a class="see-all-events subhead-rt" href="/updates/research/el-research">See all</a></div>
       </span>
       {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "el-research" )) }}
         {{ if eq .Params.researchtype "el-research" }}
-        <div class="alt-rows">
+        <div class="alt-rows dual-research">
         <div class="center-page-wrapper">
             <div class="list-item center-content {{ .Params.childof }}-list">
 
@@ -264,7 +264,7 @@
   {{ $outsideresearch := where .Site.RegularPages "Params.researchtype" "outside-research" }} <!-- count Outside Research articles -->
   {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
   <div class="center-page-wrapper">          
-    <div class="events-list-header research-type outside-research">outside research <a class="see-all-events" href="/updates/research/outside-research">See all</a></div>
+    <div class="events-list-header bordered-header research-type outside-research">outside research <a class="see-all-events subhead-rt" href="/updates/research/outside-research">See all</a></div>
       {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "outside-research" )) }}
         {{ if eq .Params.researchtype "outside-research" }}
        
@@ -309,7 +309,7 @@
 
   {{ $elresearch := where .Site.RegularPages "Params.researchtype" "el-research" }}
   {{ if isset $elresearch 0 }} <!-- if there are EL Research articles, list them -->
-    <div class="alt-rows">
+    <div class="alt-rows research-list">
       {{ $paginator := .Paginate (where .Site.Pages "Params.researchtype" "el-research") 5 }}   
       {{ range .Paginator.Pages }}
       
@@ -362,7 +362,7 @@
 
   {{ $outsideresearch := where .Site.RegularPages "Params.researchtype" "outside-research" }}
   {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
-    <div class="alt-rows">
+    <div class="alt-rows research-list">
       {{ $paginator := .Paginate (where .Site.Pages "Params.researchtype" "outside-research") 5 }}   
       {{ range .Paginator.Pages }}
       
