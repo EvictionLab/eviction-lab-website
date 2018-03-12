@@ -523,7 +523,7 @@
     }
     .left {
       @include full-shadow-animate;
-      background: #333;
+      background: #3c3c3c;
       @include hoverBar('hover-bar-bottom-left',50px,5px,8px,0);
       @include for-iphone-8plus-portrait-only {
       }
@@ -536,7 +536,7 @@
     }
     .right {
       @include full-shadow-animate;
-      background: #333;
+      background: #3c3c3c;
       @include hoverBar('hover-bar-bottom-right',50px,5px,8px,0);
       @include for-iphone-8plus-portrait-only {
       }
