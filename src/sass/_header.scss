@@ -2,14 +2,64 @@
 
 /* header and logo */
 
+.header-wrapper, .header-logo img {
+  transition: all 0.4s ease;
+}
+
 header {
   display: flex !important; // important required to override bootstrap display: block;
   flex-direction: row;
   justify-content: space-between;
-  height: 80px;
-  padding: 24px 0;
+  align-content: center;
+  align-items: center;
+  height: $headerHeightLg;
+  transition: height 0.4s ease;
   @include for-phone-only {
-    height: 55px;
+    height: $headerHeightSm;
+  }
+}
+
+// Condensed Header
+// ---
+@media(min-width: $gtMobile) {
+  .header-wrapper {
+    &.condensed {
+      height: $headerHeightSm;
+      min-height: $headerHeightSm;
+
+      header { height: $headerHeightSm; }
+
+      .header-logo img {
+        width: grid(40);
+        height: grid(3);
+      }
+      // resize menu icon
+      .header-icons {
+        width:grid(4);
+        height:grid(5);
+        & .btn.btn-icon.el-button-menu {
+          width: grid(4);
+          height: grid(5);
+          .icon {
+            width: 22px;
+            height: 22px;
+          }
+          span {
+            top:auto;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// scale header
+@media(min-width: $gtTablet) {
+  .condensed {
+    .header-logo img {
+      transform: scale(0.775);
+    }
   }
 }
 

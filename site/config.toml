@@ -6,6 +6,39 @@ theme = "behave"
 summaryLength = 50
 buildFuture = true
 
+[[menu.main]]
+    name = "Home"
+    weight = 1
+    url = "/"
+[[menu.main]]
+    name = "Map & Data"
+    weight = 2
+    url = "/map/"
+[[menu.main]]
+    name = "Eviction Rankings"
+    weight = 3
+    url = "/rankings/"
+[[menu.main]]
+    name = "About Eviction Lab"
+    weight = 4
+    url = "/about/"
+[[menu.main]]
+    name = "The Problem"
+    weight = 5
+    url = "/"
+[[menu.main]]
+    name = "Our Methodology"
+    weight = 6
+    url = "/methods/"
+[[menu.main]]
+    name = "Help & FAQ"
+    weight = 7
+    url = "/help-faq/"
+[[menu.main]]
+    name = "Updates"
+    weight = 8
+    url = "/updates/"
+
 [[menu.updates]]
     name = "Events"
     weight = -80

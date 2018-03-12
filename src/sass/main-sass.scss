@@ -33,6 +33,7 @@ $gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
 $smDesktopLimit: 1439px; // 
 $gtMidDesktop: 1440px; // greater than midsize desktop device breakpoint
 $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
+$gtLaptop: 1439px; // greater than laptop device breakpoint
 
 
 
@@ -93,6 +94,12 @@ $gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
 }
 @mixin for-big-desktop-up {
   @media (min-width: $gtLargeDesktop) { @content; }
+}
+@mixin fill-parent() {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;left:0;right:0;bottom:0;
 }
 
 
@@ -162,6 +169,8 @@ $subnavFontDesktop: 1.6rem;
 $subnavFontTablet: 1.6rem;
 $subnavFontPhone: 1.2rem;
 
+
+
 // Base Colors
 // ----
 $textColor: #000;
@@ -180,7 +189,59 @@ $color3: #2c897f;
 $color4: #4a4238;
 $color5: #b5c2b7;
 $color6: #768693;
+$black: #050403;
+$grey0: #666;
+$grey1: #7F7F7F;
+$grey1a: #919191;
+$grey2: #A3A7A8;
+$grey2a: #B2B5B7;
+$grey3: #C6CCCF;
+$grey4: #efefef; 
+$grey4a: #EEF2F5;
+$grey5: #F4F7F9;
+$grey5a: #F9FAFB;
+$white: #fff;
+$red: #f00;
+$focusBgColor: #FFE8DE;
 
+// Buttons
+// ----
+// layout
+$buttonHeight: grid(7);
+$buttonHeightSm: grid(5);
+// colors
+$buttonColor: $shadingColor;
+$buttonHoverColor: darken($buttonColor, 5%);
+$primaryButtonColor: $color1;
+$primaryButtonHoverColor: #F9471A;
+$closeButtonColor: rgba(0,0,0,0.5);
+$altCloseButtonColor: #fff;
+// fonts
+$buttonTextSize: 14px;
+
+// Header Bar
+// ----
+$headerHeightSm: grid(7);
+$headerHeightLg: grid(10);
+$headerContentHeight: grid(7); // height form field / buttons on large displays
+$headerButtonColor: $grey0; // color for mobile icon buttons
+$headerActiveButtonColor: $color1; // color for active mobile icon button
+
+// Footer
+// ----
+$footerGradientFrom: #282828;
+$footerGradientTo: #2F2D2B;
+$footerIconBorder: #333;
+$footerHoverIconBorder: $white;
+$footerCopyrightColor: $grey2a;
+
+// Menu
+// ----
+$menuBg: $color2;
+$menuShadow: -2px 0px 5px rgba(0,0,0,0.4);
+$menuWidth: grid(37); // 296px, leaves 24px gutter on 320px device 
+$menuWidthLg: grid(52); // 416px
+$menuGrey: $grey2;
 
 // Shadows
 // ----
@@ -244,6 +305,26 @@ $mobileVhTransition: height 3600s steps(1);
 
 }
 
+@mixin focusState() {
+  outline: 0;
+  box-shadow: 0 0 5px 1px $color1;
+  border-color: $color1;
+}
+
+@mixin smallCapsText($size) {
+  $letterSpacingRatio: 0.066666666666667;
+  @include defaultFontBold($size);
+  text-transform: uppercase;
+  letter-spacing: $size*$letterSpacingRatio;
+}
+
+@mixin altSmallCapsText($size) {
+  $letterSpacingRatio: 0.057894736842105;
+  @include altFont($size);
+  text-transform: uppercase;
+  letter-spacing: $size*$letterSpacingRatio;
+}
+
 /* ====================== */
 /* ====================== */
 /* ====================== */
@@ -274,5 +355,8 @@ p {
 @import 'lists';
 @import 'single';
 @import 'updates';
+@import 'menu';
+@import 'buttons';
+@import 'inputs';
 @import 'footer';
 

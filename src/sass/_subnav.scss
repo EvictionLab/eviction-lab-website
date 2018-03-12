@@ -6,18 +6,23 @@
   width: 100%;
   /*padding-top: $defaultPaddingWebsite;
   padding-bottom: $defaultPaddingWebsite;*/
-  height: 56px;
+  height: $headerHeightSm;
   background: white;
   position: sticky;
   position: -webkit-sticky;
-  top: 80px;
+  top: $headerHeightLg;
   z-index: 1;
+  transition: all 0.4s ease;
   @include up-thru-tablet {
     height: 50px; 
   }
   @include for-phone-only {
-      top: 55px;
+      top: $headerHeightSm;
     }
+}
+
+.condensed ~ .subnav {
+  top: $headerHeightSm
 }
 
 .subnav-link, .subnav-link:hover,
