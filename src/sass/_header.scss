@@ -1,21 +1,156 @@
 /* _header.scss */
-
-/* header and logo */
-
-.header-wrapper, .header-logo img {
-  transition: all 0.4s ease;
+@mixin iconLabelText() {
+  @include altSmallCapsText(10px);
 }
 
-header {
-  display: flex !important; // important required to override bootstrap display: block;
-  flex-direction: row;
+@mixin iconLabelTextLg() {
+  @include altSmallCapsText(14px);
+}
+
+header { 
+  position: fixed; 
+  top:0; 
+  left:0; 
+  right:0; 
+  width:100vw; 
+  z-index:999;
+  max-width: 100%;
+}
+
+/* header and logo */
+.header-wrapper {
+  position:absolute;
+  top:0;left:0;right:0;
+  width: 100%;
+  height: $headerHeightSm;
+  background:$defaultBackground;
+  box-shadow: $z1shadow;
+  padding: grid(1) $pageMargin;
+  z-index:999;
+  .header-content {
+    position:relative;
+    width: 100%;
+    max-width: $maxContentWidth;    
+    height:100%;
+    padding:0;
+    margin:0 auto;
+    box-sizing:border-box;
+    display:flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+// Add margin to next div equal to height
+header + * {
+  margin-top: $headerHeightSm;
+}
+
+// boost header height on tablet+
+@media(min-width: $gtMobile) {
+  .header-wrapper {
+    height: $headerHeightLg;
+    padding: 0 $pageMarginLg;    
+  }
+  header + * {
+    margin-top: $headerHeightLg;
+  }
+}
+
+// Toolbar Icons (show menu button only by default)
+// ---
+.header-icons {
+  width: grid(5);
+  height: 100%;
+  display:flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  height: $headerHeightLg;
-  transition: height 0.4s ease;
-  @include for-phone-only {
-    height: $headerHeightSm;
+  .btn.btn-icon {
+    display: none;
+    width: grid(5);
+    height: grid(5);
+    @include iconLabelText();
+    // only show menu button by default
+    &.el-button-menu {
+      display: block;
+      cursor: pointer;
+      color: $color1;
+
+      svg {
+        fill: $color1;
+        margin: 2px auto 6px;
+        width:22px;
+        height: 22px;
+      }
+      span {
+        display: block;
+        transition: font-size .4s ease
+      }
+    }
+  }
+}
+// boost icon size on tablet+
+@media(min-width: $gtMobile) {
+  .header-icons {
+    flex:none;
+    width:grid(5);
+    height:grid(7);
+    order: 4;
+    // increase menu button size and show
+    & .btn.btn-icon.el-button-menu {
+      display:flex;
+      width: grid(5);
+      height: $headerContentHeight;
+      color: $color1;
+      .icon {
+        width:grid(5);
+        height: grid(4.5);
+        fill: $color1;
+        transition: width, height 0.4s ease;
+      }
+      span {
+        position:relative;
+        top:1px;
+        @include iconLabelTextLg();
+        line-height: 1;
+        transition: font-size 0.4s ease;
+      }
+    }
+  }
+}
+
+// Logo
+// ---
+.header-logo {
+  display: block;
+  flex:1;
+  img { 
+    transform-origin: 0 0;
+    transition: transform 0.4s ease;
+    width: 152px; 
+  }
+}
+
+// boost logo size on tablet
+@media(min-width: $gtMobile) {
+  .header-logo {
+    order:1;
+    display:block;
+    flex: 1;
+    a { display: inline-block; line-height:1; }
+    img { 
+      width:grid(31); // 248px 
+      height: 18px;
+    }
+  }
+}
+// boost size on laptop+
+@media(min-width: $gtTablet) {
+  .header-logo img {
+    width: grid(40); // 320px
+    height: 24px;
   }
 }
 
@@ -23,74 +158,42 @@ header {
 // ---
 @media(min-width: $gtMobile) {
   .header-wrapper {
-    &.condensed {
+    transition: height 0.4s ease;
+  }
+  .condensed {
+    .header-wrapper {
       height: $headerHeightSm;
-      min-height: $headerHeightSm;
-
-      header { height: $headerHeightSm; }
-
-      .header-logo img {
-        width: grid(40);
-        height: grid(3);
-      }
-      // resize menu icon
-      .header-icons {
-        width:grid(4);
-        height:grid(5);
-        & .btn.btn-icon.el-button-menu {
-          width: grid(4);
-          height: grid(5);
-          .icon {
-            width: 22px;
-            height: 22px;
-          }
-          span {
-            top:auto;
-            font-size: 10px;
-          }
+    }
+    .header-logo img {
+      width: grid(31); // 248px
+      height: 18px;
+    }
+    // resize menu icon
+    .header-icons {
+      width:grid(4);
+      height:grid(5);
+      & .btn.btn-icon.el-button-menu {
+        width: grid(4);
+        height: grid(5);
+        .icon {
+          width: 22px;
+          height: 22px;
+        }
+        span {
+          top:auto;
+          font-size: 10px;
         }
       }
     }
   }
 }
-
 // scale header
 @media(min-width: $gtTablet) {
   .condensed {
     .header-logo img {
+      width: grid(40); // 320px
+      height: 24px;
       transform: scale(0.775);
     }
   }
-}
-
-.header-logo {
-  flex-grow: 7;
-  max-width: 400px;
-  @include for-phone-only {
-    position: relative;
-    top: -6px;
-  }
-  @include for-tablet-portrait-up {
-    position: relative;
-    top: 4px;
-  }
-}
-
-.logo-svg {
-  @include for-mobile-portrait-up {
-    width: 211px;
-  }
-  @include for-tablet-portrait-up {
-    width: 274px;
-  }
-  @include for-tablet-landscape-up {
-    width: 318px;
-  }
-}
-
-.header-menu {
-  flex-grow: 1;
-  max-width: 50px;
-  padding: 0 0 0 6px;
-  margin-top: -5px;
 }
