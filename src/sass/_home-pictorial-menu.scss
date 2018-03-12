@@ -22,6 +22,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include for-480-thru-767 {
+      width:66%;
+    }
   }
   .top-row .tr-block {
     width: 50%;
@@ -33,10 +36,14 @@
       @include altFont(14px);
       text-transform: uppercase;
       letter-spacing: 2px;
+      margin-bottom: 0px;
       @include for-sub480 {
         @include altFont(1.4rem);
         padding-bottom: 0.8rem;
         letter-spacing: 0.1rem;
+      }
+      @include for-480-thru-767 {
+        padding-bottom: 0.8rem;
       }
       @include sm-thru-med-desktop {
         @include altFont(2.6rem);
@@ -141,7 +148,7 @@
         @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
         /* padding: 50px 24px 0 24px; */
         .break-me {
-          width: 320px;
+          width: auto;
           margin: 0 auto;
         }
       }
@@ -365,17 +372,14 @@
     }
     @include for-480-thru-767 {
       width: 50%;
-      .menu-wrapper {padding: 34px 50px 16px 100px;}
     }
     @include for-768-thru-1023 {
       width:50%;
     }
     @include for-tablet-landscape-up {
       width: 50%;
-      .menu-wrapper {padding: 34px 50px 16px 130px;}
     }
     @include for-midsize-desktop-up {
-      .menu-wrapper {padding: 34px 50px 16px 220px;}
     }
     .menu-wrapper {
       display: grid;
@@ -383,6 +387,9 @@
       @include for-sub480 {
         grid-template-columns: 56px 1fr;
         }
+      @include for-480-thru-767 {
+        grid-template-columns: 56px 1fr;
+        }  
       .left-column {
         display: flex;
         flex-direction: column;
@@ -408,7 +415,7 @@
       span {
         @include defaultFontBold(11px);
       }
-      @include for-iphone-8plus-portrait-only {
+      @include for-480-thru-767 {
         @include defaultFont(11px);
         margin-bottom: 5px;
         
@@ -446,7 +453,7 @@
       @include defaultFontBold(10px);
       letter-spacing: 2px;
       color: $altTextColor;
-      @include for-iphone-8plus-portrait-only {
+      @include for-480-thru-767 {
         @include defaultFontBold(11px);
         text-transform: none;
         letter-spacing: 2px;
@@ -464,7 +471,7 @@
       }
     }
     a:hover {
-      @include for-iphone-8plus-portrait-only {
+      @include for-480-thru-767 {
         text-decoration: underline;
       }
       @include for-tablet-landscape-up {
@@ -481,7 +488,6 @@
     flex-wrap: wrap;
     height: 28vh;
     /* min-height: 120px; */
-    padding-bottom: 20px;
     @include for-sub480 {
       display: block;
       /* height: auto; */
@@ -489,10 +495,8 @@
     }
     @include for-480-thru-767 {
       height: 16vh;
-      padding-bottom: 20px;
     }
     @include for-above480 {
-      padding-bottom: 40px;
     }
     @include for-tablet-portrait-up {
       padding-bottom: 0;
