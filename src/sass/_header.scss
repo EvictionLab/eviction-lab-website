@@ -2,7 +2,7 @@
 
 /* header and logo */
 
-.header-wrapper {
+.header-wrapper, .header-logo img {
   transition: all 0.4s ease;
 }
 
@@ -12,10 +12,10 @@ header {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  height: 80px;
+  height: $headerHeightLg;
   transition: height 0.4s ease;
   @include for-phone-only {
-    height: 55px;
+    height: $headerHeightSm;
   }
 }
 

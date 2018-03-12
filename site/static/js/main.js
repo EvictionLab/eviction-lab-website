@@ -21,7 +21,7 @@ function setupMenu() {
 
 // Toggle condensed class on header if scrolled to top
 function setupScrollEnd() {
-  var debounceTime = 250;
+  var debounceTime = 100;
   var isScrolling;
   var headerWrapper = document.querySelector('.header-wrapper');
 
