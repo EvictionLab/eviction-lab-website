@@ -3,6 +3,15 @@
 
 .el-bios {
  .bio-thumbs {
+    a {
+        &:focus {
+            outline: 0;
+            img.bio-thumb {
+                filter: none;
+            }    
+        }
+
+    }
     img.bio-thumb {
         width: 192px;
         height: 192px;

@@ -1,5 +1,6 @@
 ---
 childof: research-team-bios
+abbrev: mdes
 title: Matthew Desmond
 position: Principal Investigator
 date: 2017-11-26T03:54:30.075Z
