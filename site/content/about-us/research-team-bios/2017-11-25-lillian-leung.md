@@ -1,9 +1,11 @@
 ---
 childof: research-team-bios
 title: Lillian Leung
+abbrev: lleu
 position: Research Specialist
 date: 2017-11-26T03:48:38.081Z
 image: /images/uploads/research-team-lillian.jpg
+thumb: /images/bios/lleung_thumb.jpg
 ---
 
 
