@@ -3,7 +3,7 @@ childof: blog
 contenttype: updates
 contentcat: blog
 featured: false
-title: This is the eleventh example of a post in the blog category
+title: "Finding stories in the data: a journalist's guide"
 date: 2018-02-18T23:15:05.556Z
 postauthorname: James Hendrickson
 postauthortitle: Research Specialist

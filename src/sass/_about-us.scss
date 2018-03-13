@@ -1,0 +1,55 @@
+/* _about-us.scss */
+
+
+.el-bios {
+ .bio-thumbs {
+    img.bio-thumb {
+        width: 192px;
+        height: 192px;
+        border-radius: 50%;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        @include for-midsize-desktop-up {
+            width: 216px;
+            height: 216px;
+        }
+    &:hover {
+        filter: initial;
+        -webkit-filter: initial;
+        transition: 150ms;
+        -webkit-transition: 150ms;
+        }  
+    &:hover ~ img.bio-arrow-active {
+        opacity: 1;
+        /* transition: 150ms;
+        -webkit-transition: 150ms; */
+        }       
+    }
+     
+    img.bio-arrow {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 74px;
+        right: 35px;
+        box-shadow: $boxShadowIcon;
+        &:hover ~ img.bio-thumb {
+            filter: initial;
+            -webkit-filter: initial;
+            transition: 150ms;
+            -webkit-transition: 150ms;
+            }     
+    }
+    img.bio-arrow-active {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 74px;
+        right: 78px;
+        opacity: 0; 
+    &:hover {
+        opacity: 1; 
+        }
+    } 
+ }
+}

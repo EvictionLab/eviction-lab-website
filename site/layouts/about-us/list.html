@@ -1,38 +1,108 @@
 {{ partial "header" . }}
-{{ partial "subnav" . }}
-  <!-- section header -->
-  <div class="{{ urlize (lower .Title) }}-bg-color inset-shadow-top center-page-wrapper">
-    <div class="center-page">
-      <h1 class="page-header">{{ .Title }}</h1>
-    </div>
+
+<!-- section header -->
+<div class="graphic-header help-faq center-page-wrapper">
+  <div class="center-page">
+    <h1 class="graphic-page-header">about us</h1>
+    <div class="underbar"></div>
   </div>
+</div>
 
-{{ partial "breadcrumb" . }}
+<!-- subnav -->
+<div class="shadow-bottom center-page-wrapper subnav">
+  <div class="center-content-post">
+    <ul class="anchor-links">
+      <li class="only-larger-screens">CHOOSE A SECTION</li>
+      <li><a href="#introduction" class="smoothScroll">Intro</a></li>
+      <li><a href="#data" class="smoothScroll">Background</a></li>
+      <li><a href="#definitions" class="smoothScroll">Our Work</a></li>
+      <li><a href="#team" class="smoothScroll">Our Team</a></li>
+    </ul>
+  </div>
+</div>
 
-{{ range where .Site.RegularPages "Params.childof" (lower .Title | urlize) }}
+
 <div class="center-page-wrapper">
-  <div class="bio-item center-content">
+  <div class="center-content-post page-list">
 
-    <!-- the photo -->
-    <div class="img">
-      <img src="{{ .Param "image" }}" />
-    </div>
+    <!-- ************ -->
+    <!-- maps section -->
+    <!-- ************ -->
 
-    <!-- the text -->
-    <div class="copy">
-      <h2 class="title">{{ .Title }}</h2>
-      <p class="position">{{ .Params.position }}</p>
-      <div class="page-content">
-        {{ .Content }}
-      </div>
-    </div>
+    <a name="introduction"></a>
+    <h2 class="page-section-header">Introduction</h2>
+
+    <div class="accordion">
+
+      
+
+    </div> <!-- close accordion -->
+
+    <!-- ************ -->
+    <!-- data section -->
+    <!-- ************ -->
+
+    <a name="data"></a>
+    <h2 class="page-section-header">Background</h2>
+
+    <div class="accordion">
+
+    </div> <!-- close accordion -->
+
+    <!-- ******************* -->
+    <!-- definitions section -->
+    <!-- ******************* -->
+
+    <a name="definitions"></a>
+    <h2 class="page-section-header">Our Work</h2>
+
+    <div class="accordion">
+
+    </div> <!-- close accordion -->
+
+    <!-- *************** -->
+    <!-- methods section -->
+    <!-- *************** -->
+    <a name="team"></a>
+    <h2 class="page-section-header">Eviction Lab Team</h2>
+
+    <div class="el-bios">
+        <div class="bio-thumbs">
+          <a class="mdes" data-toggle="modal" data-target="#exampleModalCenter"href="#">
+            <img class="bio-thumb" src="/images/bios/mdesmond_thumb.jpg" />
+            <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
+            <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
+          </a> 
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div> 
+        </div>
+     
+
+  </div> <!-- close accordion -->
+
 
   </div>
 </div>
-{{ end }}
 
 
 {{ partial "debug" . }}
-<span class="debug-visability">rendered by = theme/THEMENAME/layouts/about-us/list.html</span>
+<span class="debug-visibility">rendered by = theme/THEMENAME/layouts/about-us/list.html</span>
 
 {{ partial "footer" . }}

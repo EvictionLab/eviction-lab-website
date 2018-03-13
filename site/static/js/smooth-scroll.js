@@ -1,12 +1,12 @@
 // Get smooth scroll offset depending on window width
 function getWindowOffset() {
-  var BREAK_MOBILE = 600;
-  var BREAK_TABLET = 800;
-  var BREAK_DESKTOP = 1200;
+  var BREAK_MOBILE = 767;
+  var BREAK_TABLET = 1023;
+  var BREAK_DESKTOP = 1440;
 
-  var OFFSET_MOBILE = 60;
-  var OFFSET_TABLET = 80;
-  var OFFSET_DESKTOP = 80;
+  var OFFSET_MOBILE = 56;
+  var OFFSET_TABLET = 56;
+  var OFFSET_DESKTOP = 56;
 
   if (window.innerWidth < BREAK_MOBILE) {
     return OFFSET_MOBILE;
@@ -20,7 +20,13 @@ function getWindowOffset() {
 // Add an additional page offset where needed by checking the URL
 function getPageOffset(url) {
   if (url.indexOf('help-faq') !== -1) {
-    return 40;
+    return 80;
+  }
+  if (url.indexOf('methods') !== -1) {
+    return 80;
+  }
+  if (url.indexOf('about-us') !== -1) {
+    return 80;
   }
   return 0;
 }

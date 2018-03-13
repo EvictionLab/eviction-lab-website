@@ -251,6 +251,7 @@ $z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
 $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
 $outsetShadowTop: 0px -2px 8px 3px rgba(0, 0, 0, 0.24);
 $boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.2 );
+$boxShadowIcon: 0px 4px 11px rgba( 0, 0, 0, .16 );
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 $fullShadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.02);
 @mixin full-shadow-animate {
@@ -358,5 +359,6 @@ p {
 @import 'menu';
 @import 'buttons';
 @import 'inputs';
+@import 'about-us';
 @import 'footer';
 

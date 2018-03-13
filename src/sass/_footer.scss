@@ -219,7 +219,10 @@ footer {
     @include defaultFont(12px);
     line-height: 1;
   }
-  li { height: grid(3.5); }
+  li { height: grid(3.5);
+    a:hover {
+      color: $color1;
+    } }
 }
 @media(min-width: $gtMobile) {
   .footer-navigation {
