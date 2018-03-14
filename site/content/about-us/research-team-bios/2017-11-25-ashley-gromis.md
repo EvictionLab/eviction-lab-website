@@ -1,6 +1,6 @@
 ---
 childof: research-team-bios
-title: ASHLEY GROMIS
+title: Ashlet Gromis
 abbrev: agro
 position: Postdoctoral Research Associate
 date: 2017-11-26T03:52:04.376Z

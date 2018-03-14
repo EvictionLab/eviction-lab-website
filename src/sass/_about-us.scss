@@ -1,5 +1,7 @@
 /* _about-us.scss */
-
+.modal-open .modal {
+    /* height: 96vh; */
+    }
 
 .el-bios {
  .bio-thumbs {
@@ -61,4 +63,57 @@
         }
     } 
  }
-}
+
+// Modal CSS
+// Contained within el-bios
+    .modal-content {    
+        display: grid;
+        -ms-flex-direction: column;
+        /* flex-direction: column; */
+        grid-template-columns: 40% 1fr;
+        }
+   
+        @include for-tablet-landscape-up {
+            div.modal {
+                overflow-y: hidden;
+            }
+            .modal-dialog {
+                max-width: 80%;
+            }
+        }
+
+    .left-column {
+    /* background-color: blue; */
+        background-image: url(/images/bios/mdesmond_full.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+    .right-column {
+        @include for-tablet-landscape-up {
+        max-height: 480px;
+        overflow-y: scroll;
+        }   
+    }  
+    .modal-body {
+        h3 {
+            text-transform: uppercase;
+            color: $color2;
+        }
+        p.bio-position {
+            color: $grey2a;
+            @include for-midsize-desktop-up {
+                margin-bottom: 4rem;
+            }
+            @include sm-thru-med-desktop {
+                margin-bottom: 3.2rem;
+            }
+            @include for-tablet-portrait-and-landscape {
+                margin-bottom: 3.2rem;
+            }
+            @include for-phone-only {
+                margin-bottom: 2.4rem;
+            }
+        }
+        }
+    }
+

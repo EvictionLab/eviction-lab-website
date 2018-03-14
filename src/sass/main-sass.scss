@@ -159,6 +159,7 @@ $fontSizeSmall: 1.4rem;
 $fontSizeSmall1440: 1.5rem;
 $fontSize320H3: 1.6rem;
 $fontSize1024Body: 1.6rem;
+$fontsize1024H3sm: 1.7rem;
 $fontSize1440Body: 1.8rem;
 $fontSizeMedium: 2.1rem;
 $fontSize1024H3: 2.8rem;
@@ -169,6 +170,43 @@ $subnavFontDesktop: 1.6rem;
 $subnavFontTablet: 1.6rem;
 $subnavFontPhone: 1.2rem;
 
+
+// Headers & Paragraph 
+// -------
+
+h3 {
+  @include sm-thru-med-desktop {
+    @include altFont($fontsize1024H3sm); 
+    letter-spacing: 0.1rem;
+  }
+  @include for-midsize-desktop-up {
+    @include altFont($fontSize1440Body); 
+    letter-spacing: 0.1rem;
+  }
+}
+
+p {
+  @include for-phone-only {
+    @include defaultFont(1.4rem); 
+    line-height: 2rem;
+    letter-spacing: 0px;
+  }
+  @include for-tablet-portrait-and-landscape {
+    @include defaultFont(1.8rem); 
+    line-height: 2.5rem;
+    letter-spacing: 0px;
+  }
+  @include sm-thru-med-desktop {
+    @include defaultFont(1.8rem); 
+    line-height: 2.5rem;
+    letter-spacing: 0px;
+  }
+  @include for-midsize-desktop-up {
+    @include defaultFont(2rem); 
+    line-height: 2.8rem;
+    letter-spacing: 0px;
+  }
+}
 
 
 // Base Colors
@@ -334,6 +372,7 @@ body {
   //letter-spacing: .03em;
 }
 
+/*
 p {
   font-size: 2.1rem;
   line-height: 3.2rem;
@@ -342,7 +381,7 @@ p {
     line-height: 2.2rem;
   }
 }
-
+*/
 
 @import 'utils';
 @import 'header';
