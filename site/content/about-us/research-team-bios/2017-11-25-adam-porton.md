@@ -1,5 +1,5 @@
 ---
-childof: research-team-bios
+childof: research-team-bios2
 title: Adam Porton
 abbrev: apor
 position: Research Specialist

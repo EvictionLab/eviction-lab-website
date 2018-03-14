@@ -1,5 +1,5 @@
 ---
-childof: research-team-bios
+childof: research-team-bios2
 title: Lillian Leung
 abbrev: lleu
 position: Research Specialist

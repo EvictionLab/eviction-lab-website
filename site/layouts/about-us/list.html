@@ -10,7 +10,7 @@
 
 <!-- subnav -->
 <div class="shadow-bottom center-page-wrapper subnav">
-  <div class="center-content-post">
+  <div class="center-content-post max1200">
     <ul class="anchor-links">
       <li class="only-larger-screens">CHOOSE A SECTION</li>
       <li><a href="#introduction" class="smoothScroll">Intro</a></li>
@@ -23,7 +23,7 @@
 
 
 <div class="center-page-wrapper">
-  <div class="center-content-post page-list">
+  <div class="center-content-post max1200 page-list">
 
     <!-- ************ -->
     <!-- maps section -->
@@ -78,11 +78,13 @@
           <div class="bio-thumbs">
             {{ range (where .Site.RegularPages "Params.childof" ("research-team-bios")) }}
             {{ if eq .Params.childof "research-team-bios" }} 
+            <div class="bio-thumb-wrapper">
             <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
               <img class="bio-thumb" src="{{ .Params.thumb }}" />
               <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
               <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
             </a> 
+            </div>
             <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">

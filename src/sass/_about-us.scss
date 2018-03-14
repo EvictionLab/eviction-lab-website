@@ -5,6 +5,22 @@
 
 .el-bios {
  .bio-thumbs {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include for-480-up {
+        grid-template-columns: 1fr 1fr; 
+    }
+    @include for-tablet-portrait-up {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include for-tablet-landscape-up {
+        padding: 32px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @include for-midsize-desktop-up {
+        padding: 40px;
+    }
+    
     a {
         &:focus {
             outline: 0;
@@ -13,6 +29,9 @@
             }    
         }
 
+    }
+    .bio-thumb-wrapper {
+        position: relative;
     }
     img.bio-thumb {
         width: 192px;
@@ -40,9 +59,15 @@
     img.bio-arrow {
         width: 40px;
         height: 40px;
-        position: relative;
-        top: 74px;
-        right: 35px;
+        position: absolute;
+        @include for-tablet-landscape-up {
+            top: 150px;
+            left: 143px;
+        }
+        @include for-midsize-desktop-up {
+            top: 172px;
+            left: 175px;
+        }
         box-shadow: $boxShadowIcon;
         &:hover ~ img.bio-thumb {
             filter: initial;
@@ -54,10 +79,16 @@
     img.bio-arrow-active {
         width: 40px;
         height: 40px;
-        position: relative;
-        top: 74px;
-        right: 78px;
+        position: absolute;
         opacity: 0; 
+        @include for-tablet-landscape-up {
+            top: 150px;
+            left: 143px;
+        }
+        @include for-midsize-desktop-up {
+            top: 172px;
+            left: 175px;
+        }
     &:hover {
         opacity: 1; 
         }

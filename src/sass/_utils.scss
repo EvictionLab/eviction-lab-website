@@ -68,6 +68,9 @@
 .center-content-post {
   max-width: 790px;
   line-height: 32px;
+  &.max1200 {
+    max-width: 1200px;
+  }
 }
 .center-content-small {
   max-width: 720px;

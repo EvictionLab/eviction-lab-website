@@ -53,6 +53,9 @@ $gtLaptop: 1439px; // greater than laptop device breakpoint
 @mixin for-480-thru-767 {
   @media (min-width:$above480) and (max-width:$mobile) { @content; }
 }
+@mixin for-480-up {
+  @media (min-width: 480px) { @content; }
+}
 @mixin for-480-thru-1023 {
   @media (min-width:$above480) and (max-width:$tabletLimit) { @content; }
 }
