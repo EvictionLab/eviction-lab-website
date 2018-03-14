@@ -57,6 +57,15 @@ this, as long as the result is unique.
     <h2 class="page-section-header">Methods FAQ</h2>
 
     <div class="accordion">
+        {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
+        {{ if eq .Params.childof "methods" }}
+        <!-- method item -->
+      {{ partial "method-open" (dict "Method" "What is the Eviction Lab?" "UniqueNumber" "102" ) }}
+      <p>{{ .Content }}</p>
+      {{ partial "method-close" }}
+        
+        {{ end }}
+        {{ end }}
 
       <!-- method item -->
       {{ partial "method-open" (dict "Method" "What is the Eviction Lab?" "UniqueNumber" "100" ) }}
