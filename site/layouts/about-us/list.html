@@ -67,50 +67,125 @@
     <h2 class="page-section-header">Eviction Lab Team</h2>
 
     <div class="el-bios">
-        <div class="bio-thumbs">
-          {{ range (where .Site.RegularPages "Params.childof" ("research-team-bios")) }}
-          {{ if eq .Params.childof "research-team-bios" }} 
-          <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
-            <img class="bio-thumb" src="{{ .Params.thumb }}" />
-            <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
-            <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
-          </a> 
-          <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
+      <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#team1" aria-controls="home" role="tab" data-toggle="tab">Research Team</a></li>
+          <li role="presentation"><a href="#team2" aria-controls="profile" role="tab" data-toggle="tab">Student Researchers</a></li>
+          <li role="presentation"><a href="#team3" aria-controls="profile" role="tab" data-toggle="tab">Web Team</a></li>
+      </ul>
+      <div class="tab-content">
+        <!-- ************* Research Team Bios ***************** -->
+        <div role="tabpanel" class="tab-pane active" id="team1">    
+          <div class="bio-thumbs">
+            {{ range (where .Site.RegularPages "Params.childof" ("research-team-bios")) }}
+            {{ if eq .Params.childof "research-team-bios" }} 
+            <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
+              <img class="bio-thumb" src="{{ .Params.thumb }}" />
+              <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
+              <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
+            </a> 
+            <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="left-column">
+                    <div class="left-column"></div>
+                    <div class="right-column">      
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
                       </div>
-                <div class="right-column">      
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    
-                    
-                      <h3>{{ .Params.title }}</h3>
-                      <p class="bio-position">{{ .Params.position }}</p>
-                      <p class="bio-content">{{ .Content }}</p>
-                    </div>  
-                 
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
+                      <div class="modal-body">                    
+                        <h3>{{ .Params.title }}</h3>
+                        <p class="bio-position">{{ .Params.position }}</p>
+                        <p class="bio-content">{{ .Content }}</p>
+                      </div>  
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
             {{ end }}
             {{ end }}
         </div>
+        </div> <!-- End Research Team tab-pane -->
+        <!-- *************** Student Researcher Bios ******************** -->
+        <div role="tabpanel" class="tab-pane" id="team2">
+          <div class="bio-thumbs">
+              {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+              {{ if eq .Params.childof "student-researcher-bios" }} 
+              <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
+                <img class="bio-thumb" src="{{ .Params.thumb }}" />
+                <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
+                <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
+              </a> 
+              <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                      <div class="left-column"></div>
+                      <div class="right-column">      
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">                    
+                          <h3>{{ .Params.title }}</h3>
+                          <p class="bio-position">{{ .Params.position }}</p>
+                          <p class="bio-content">{{ .Content }}</p>
+                        </div>  
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+              {{ end }}
+          </div>
+          </div> <!-- End Student Researcher tab-pane -->
+          <!-- *************** Web Team Bios ******************** -->
+          <div role="tabpanel" class="tab-pane" id="team3">
+              <div class="bio-thumbs">
+                  {{ range (where .Site.RegularPages "Params.childof" ("web-team-bios")) }}
+                  {{ if eq .Params.childof "web-team-bios" }} 
+                  <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
+                    <img class="bio-thumb" src="{{ .Params.thumb }}" />
+                    <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
+                    <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
+                  </a> 
+                  <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                          <div class="left-column"></div>
+                          <div class="right-column">      
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">                    
+                              <h3>{{ .Params.title }}</h3>
+                              <p class="bio-position">{{ .Params.position }}</p>
+                              <p class="bio-content">{{ .Content }}</p>
+                            </div>  
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  {{ end }}
+                  {{ end }}
+              </div>
+              </div> <!-- End Web Team tab-pane -->  
+        </div> <!-- tab-content -->
        
      
-
-  </div> <!-- close accordion -->
-
-
-  </div>
+</div>
+</div>
 </div>
 
 
