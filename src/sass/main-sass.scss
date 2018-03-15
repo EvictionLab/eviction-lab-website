@@ -174,8 +174,48 @@ $subnavFontTablet: 1.6rem;
 $subnavFontPhone: 1.2rem;
 
 
+
+// Base Colors
+// ----
+$textColor: #000;
+$textColor2: #060504;
+$textColor3: #333;
+$secondaryTextColor: rgba(0,0,0,0.38);
+$altTextColor: #fff; // text on dark backgrounds
+$secondaryAltTextColor: #919191; // text on dark-ish backgrounds
+$linkColor: #22ABED;
+$defaultBackground: #fff;
+$secondaryBackground: #F4F7F9;
+$shadingColor: #efefef;
+$color1: #e24000;
+$color2: #434878;
+$color3: #2c897f;
+$color4: #4a4238;
+$color5: #b5c2b7;
+$color6: #768693;
+$black: #050403;
+$grey0: #666;
+$grey1: #7F7F7F;
+$grey1a: #919191;
+$grey2: #A3A7A8;
+$grey2a: #B2B5B7;
+$grey3: #C6CCCF;
+$grey4: #efefef; 
+$grey4a: #EEF2F5;
+$grey5: #F4F7F9;
+$grey5a: #F9FAFB;
+$white: #fff;
+$red: #f00;
+$focusBgColor: #FFE8DE;
+
 // Headers & Paragraph 
 // -------
+
+h2 {
+  &.page-section-header {
+    color: $color2;
+  }
+}
 
 h3 {
   @include sm-thru-med-desktop {
@@ -210,40 +250,6 @@ p {
     letter-spacing: 0px;
   }
 }
-
-
-// Base Colors
-// ----
-$textColor: #000;
-$textColor2: #060504;
-$textColor3: #333;
-$secondaryTextColor: rgba(0,0,0,0.38);
-$altTextColor: #fff; // text on dark backgrounds
-$secondaryAltTextColor: #919191; // text on dark-ish backgrounds
-$linkColor: #22ABED;
-$defaultBackground: #fff;
-$secondaryBackground: #F4F7F9;
-$shadingColor: #efefef;
-$color1: #e24000;
-$color2: #434878;
-$color3: #2c897f;
-$color4: #4a4238;
-$color5: #b5c2b7;
-$color6: #768693;
-$black: #050403;
-$grey0: #666;
-$grey1: #7F7F7F;
-$grey1a: #919191;
-$grey2: #A3A7A8;
-$grey2a: #B2B5B7;
-$grey3: #C6CCCF;
-$grey4: #efefef; 
-$grey4a: #EEF2F5;
-$grey5: #F4F7F9;
-$grey5a: #F9FAFB;
-$white: #fff;
-$red: #f00;
-$focusBgColor: #FFE8DE;
 
 // Buttons
 // ----

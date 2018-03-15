@@ -7,7 +7,7 @@
   /*padding-top: $defaultPaddingWebsite;
   padding-bottom: $defaultPaddingWebsite;*/
   height: $headerHeightSm;
-  background: white;
+  background-color: #EEF2F5;
   position: sticky;
   position: -webkit-sticky;
   top: $headerHeightLg;
@@ -19,6 +19,23 @@
   @include for-phone-only {
       top: $headerHeightSm;
     }
+  a:after {
+    opacity:0;
+  } 
+  a.highlight:after {
+    content: "";
+    width: 48px;
+    position: absolute;
+    bottom: -18px;
+    left:0;
+    border-bottom: 4px solid #e24000;
+    opacity:1;
+    transition: 150ms;
+  }
+  a:hover {
+    color: $color1 !important;
+    transition: 70ms;
+  }
 }
 
 .condensed ~ .subnav {

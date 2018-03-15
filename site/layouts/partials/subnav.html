@@ -20,7 +20,7 @@
           {{ range .Site.Menus.methods }}
             {{ $currentName := .Name }}
             {{ $currentTitle := title $currentTitle }}
-            <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></li>
+            <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" data-toggle="tab" href="{{.URL}}">{{ .Name }}</a></li>
           {{ end }}
 
         {{ else if eq .Section "maps-and-data"}}
@@ -54,7 +54,7 @@
           {{ range .Site.Menus.about_us }}
             {{ $currentName := .Name }}
             {{ $currentTitle := title $currentTitle }}
-            <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" href="{{.URL}}">{{ .Name }}</a></li>
+            <li class="nav-item"><a class="{{ if eq $currentName $currentTitle }}subnav-active{{ else }}subnav-link{{ end }}" data-toggle="tab" href="{{.URL}}">{{ .Name }}</a></li>
           {{ end }}
 
       {{ end }}

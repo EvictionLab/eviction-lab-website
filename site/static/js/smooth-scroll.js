@@ -25,7 +25,7 @@ function getPageOffset(url) {
   if (url.indexOf('methods') !== -1) {
     return 80;
   }
-  if (url.indexOf('about-us') !== -1) {
+  if (url.indexOf('about') !== -1) {
     return 80;
   }
   return 0;

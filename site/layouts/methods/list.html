@@ -28,7 +28,7 @@
 
     <a name="section-name"></a>
     <h2 class="page-section-header">Methods FAQ</h2>
-
+<!-- *************** Methods loop ************* -->
     <div class="accordion">
         {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
         {{ if eq .Params.childof "methods" }}
@@ -50,7 +50,7 @@
 
   </div>
 </div>
-
+<script src="/js/subnav-active.js"></script>
 {{ partial "debug" . }}
 <span class="debug-visibility">rendered by = themes/THEMENAME/layouts/methods/list.html</span>
 
