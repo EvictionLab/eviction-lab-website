@@ -19,33 +19,6 @@
   </div>
 </div>
 
-<!-- *********************************************** -->
-<!-- begin FAQs
-
-++++++++++++++++++++++ READ ME +++++++++++++++++++++++++
-
-NOTE: each faq method is built with an open and
-close partial, to insulate from borking that code. Variables
-are passed to the partial via (dict) definintions.
-
-Double quotes need to be escaped in the (dict) definitions,
-with a backslash, like this: \"example\"
-
-The explanation goes between the partials, and can contain any html
-that may be needed, ie links, images, etc.
-
-NOTE: each item must have a unique "UniqueNumber". A tried
-a million ways to automate this with code, but Hugo does
-NOT (according to the Hugo discussion boards) currently
-have that capability :( Or at least I don't ;)
-
-The system I'm using is each method goes up by 10, starting at 100,
-to leave space for future additions. Feel free to change
-this, as long as the result is unique.
-
--->
-<!-- *********************************************** -->
-
 <div class="center-page-wrapper">
   <div class="center-content-post page-list">
 
@@ -60,114 +33,25 @@ this, as long as the result is unique.
         {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
         {{ if eq .Params.childof "methods" }}
         <!-- method item -->
-      {{ partial "method-open" (dict "Method" "What is the Eviction Lab?" "UniqueNumber" "102" ) }}
-      <p>{{ .Content }}</p>
-      {{ partial "method-close" }}
-        
+        <div class="accordion-section">
+            <a class="collapsed" data-toggle="collapse" href="#{{ .Params.weight }}" aria-expanded="false" aria-controls="collapseExample">
+               <span>{{ .Params.Title }}</span>
+               <i class="fa fa-chevron-up"></i>
+               <div class="clear-float"></div>
+             </a>
+          <div class="answer collapse" id="{{ .Params.weight }}">
+            {{ .Content }}
+          </div>
+        </div>
         {{ end }}
         {{ end }}
-
-      <!-- method item -->
-      {{ partial "method-open" (dict "Method" "What is the Eviction Lab?" "UniqueNumber" "100" ) }}
-           <p>The Eviction Lab is a research organization dedicated to studying the prevalence, causes, and consequences of eviction. The database it has built represents the largest accumulation of U.S. court records related to eviction ever compiled.</p>
-      {{ partial "method-close" }}
-
-      <!-- method item -->
-      {{ partial "method-open" (dict "Method" "What data has the Eviction Lab collected?" "UniqueNumber" "110" ) }}
-           <p>The data we collected is comprised of formal eviction records from all fifty states. 
-             Eviction records include information related to an eviction court case, such as defendant or plaintiff names, the defendant’s address, monetary judgment information, and an outcome for the case. 
-             In addition, we collected demographic variables from the Census which we combined with the years in which we had data. 
-             This allows us to paint a better picture of the areas in which these evictions are happening. </p>
-      {{ partial "method-close" }}
-
-      <!-- method item -->
-      {{ partial "method-open" (dict "Method" "Are these all the evictions that have taken place?" "UniqueNumber" "120" ) }}
-           <p>No. Evictions can happen outside of the courtroom, as when landlords pay renters to leave or execute illegal lockouts. 
-             There is some evidence that “informal evictions” are more common than “formal”, court-ordered evictions. 
-             Informal evictions are not captured in our dataset. 
-             Moreover, while we have tried to collect every recorded court-ordered eviction case, going back to 2000, some records were unavailable. 
-             Some courts seal eviction cases; others have not archived data; still others make recording eviction cases time-consuming and difficult.</p>
-      {{ partial "method-close" }}
-
-      <!-- method item -->
-      {{ partial "method-open" (dict "Method" "How did you collect the data?" "UniqueNumber" "130" ) }}
-           <p>First, we requested a bulk report of cases directly from courts. These reports include all recorded information regarding to eviction-related cases. 
-             Second, we conducted automated record collection from online portals, via web scraping and text parsing protocols. 
-             Third, we partnered with companies that carry out manual collection of records, going directly into the courts and extracting the relevant case information by hand.</p>
-      {{ partial "method-close" }}
-
-            <!-- method item -->
-      {{ partial "method-open" (dict "Method" "Where do your data come from?" "UniqueNumber" "140" ) }}
-           <p>We have accumulated over 80 million records related to eviction. The Eviction Lab directly collected court records from 15 states. 
-             But many states either did not centralize their eviction data or were unwilling to release this information. 
-             Accordingly, the Eviction Lab then purchased more comprehensive datasets of public eviction records from two companies: LexisNexis and American Information Research Services Inc.</p>
-      {{ partial "method-close" }}
-
-         <!-- method item -->
-      {{ partial "method-open" (dict "Method" "What is the difference between a filing rate and an eviction rate?" "UniqueNumber" "150" ) }}
-           <p>A “filing rate” the percentage of renter homes in an area that were threatened with a court-ordered eviction. 
-             An “eviction rate” is the subset of those homes that received an eviction judgement in which renters were ordered to leave.  
-             That’s why the filing rate is always bigger than the eviction rate. 
-            </p>
-      {{ partial "method-close" }}
-
-      <!-- method item -->
-      {{ partial "method-open" (dict "Method" "How did you calculate the filing/eviction rate?" "UniqueNumber" "160" ) }}
-           <p>For the denominator of our rate, we used the number of renting households in each area. 
-             Estimates of these numbers were drawn from the Census and American Community Survey (ACS) at geographies down to the block group. </p>
-      {{ partial "method-close" }}
-
-            <!-- method item -->
-      {{ partial "method-open" (dict "Method" "How did you clean the data?" "UniqueNumber" "170" ) }}
-           <p>Court records contain errors caused by data entry mistakes or technological glitches. 
-             Cases can be filed with incomplete information or entered into the system with spelling errors in the names or addresses. 
-             To create the best estimates, all data we obtained underwent a rigorous cleaning protocol. 
-             This included formatting the data so that each observation represented a household; cleaning and standardizing the names and addresses; and dropping duplicate cases. 
-             The details of this process can be found in the Methodology Report.
-            </p>
-      {{ partial "method-close" }}
-
-         <!-- method item -->
-      {{ partial "method-open" (dict "Method" "How were you able to determine the amount of evictions in each neighborhood?" "UniqueNumber" "180" ) }}
-           <p>Eviction records contain addresses. We had these addresses geocoded and spatially joined by the Environmental Systems Research Institute (ESRI). 
-             This process allowed us to match each address record to a latitude and a longitude. 
-             Then, by overlaying the geographic boundaries on top of these points, we can observe how many evictions took place in that area. 
-            </p>
-      {{ partial "method-close" }}
-
-      <!-- method item -->
-      {{ partial "method-open" (dict "Method" "For regions where you did not have comprehensive data, how did you estimate the eviction rate?" "UniqueNumber" "190" ) }}
-           <p>We used a common practice for missing data called “imputation.” 
-             This process applied statistical models to our existing data to estimate eviction counts for missing regions. 
-             For more information on this, please see the Methodology Report.</p>
-      {{ partial "method-close" }}
-
-            <!-- method item -->
-      {{ partial "method-open" (dict "Method" "How did you validate your estimates?" "UniqueNumber" "200" ) }}
-           <p>We linked individual records from overlapping data sources. 
-             Through this procedure, we determined that the content of the records (e.g., address, name information) purchased from LexisNexis had a high rate of validity in comparison to previously received state court data. 
-             In addition, we obtained statistics from 31 states that gave us numbers of cases filed per year at the county level. 
-             These figures allowed us to know what proportion of all cases filed in an area were present in our data.
-            </p>
-      {{ partial "method-close" }}
-
-      <!-- method item -->
-      {{ partial "method-open" (dict "Method" "Can I read a more thorough report on your methods?" "UniqueNumber" "205" ) }}
-           <p>Yes. You can <a href="#" target="_blank">download the full report here.</a>
-            </p>
-      {{ partial "method-close" }}
-
-         <!-- method item -->
-      {{ partial "method-open" (dict "Method" "What if I have more questions?" "UniqueNumber" "210" ) }}
-           <p>We’re here to help. Please contact us via email at research@evictionlab.org or call 609-258-3071. </p>
-      {{ partial "method-close" }}
-
+     
     </div> <!-- close accordion -->
 
   </div>
 </div>
 
 {{ partial "debug" . }}
-<span class="debug-visability">rendered by = themes/THEMENAME/layouts/methods/list.html</span>
+<span class="debug-visibility">rendered by = themes/THEMENAME/layouts/methods/list.html</span>
 
 {{ partial "footer" . }}
