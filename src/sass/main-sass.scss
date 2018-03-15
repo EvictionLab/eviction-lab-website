@@ -218,9 +218,17 @@ h2 {
 }
 
 h3 {
+  @include altFont($fontSizeSmall);
+  line-height: 1.7rem;
+  letter-spacing: 0.1rem;
+  @include for-tablet-portrait-up {
+    @include altFont($fontsize1024H3sm);
+    letter-spacing: 0.11rem;
+    line-height: 3rem;
+  }
   @include sm-thru-med-desktop {
     @include altFont($fontsize1024H3sm); 
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.11rem;
   }
   @include for-midsize-desktop-up {
     @include altFont($fontSize1440Body); 

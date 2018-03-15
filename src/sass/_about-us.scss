@@ -4,6 +4,21 @@
     }
 
 .el-bios {
+    p.bio-position {
+        color: $grey2a;
+        @include for-midsize-desktop-up {
+            margin-bottom: 4rem;
+        }
+        @include sm-thru-med-desktop {
+            margin-bottom: 3.2rem;
+        }
+        @include for-tablet-portrait-and-landscape {
+            margin-bottom: 3.2rem;
+        }
+        @include for-phone-only {
+            margin-bottom: 2.4rem;
+        }   
+    } 
  .bio-thumbs {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,7 +35,6 @@
     @include for-midsize-desktop-up {
         padding: 40px;
     }
-    
     a {
         &:focus {
             outline: 0;
@@ -28,14 +42,31 @@
                 filter: none;
             }    
         }
-
     }
     .bio-thumb-wrapper {
         position: relative;
+        a {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+        }
+        .bio-container {
+            position: relative;
+        }
+        h3 {
+            color: $color2;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+            text-align: center;
+        }
+        p.bio-position {
+            text-align: center;
+        }
     }
     img.bio-thumb {
         width: 192px;
         height: 192px;
+        margin-bottom: 2.4rem;
         border-radius: 50%;
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
@@ -60,10 +91,8 @@
         width: 40px;
         height: 40px;
         position: absolute;
-        @include for-tablet-landscape-up {
-            top: 150px;
-            left: 143px;
-        }
+        top: 150px;
+        left: 143px;
         @include for-midsize-desktop-up {
             top: 172px;
             left: 175px;
@@ -79,12 +108,10 @@
     img.bio-arrow-active {
         width: 40px;
         height: 40px;
+        top: 150px;
+        left: 143px;
         position: absolute;
         opacity: 0; 
-        @include for-tablet-landscape-up {
-            top: 150px;
-            left: 143px;
-        }
         @include for-midsize-desktop-up {
             top: 172px;
             left: 175px;
@@ -130,21 +157,8 @@
             text-transform: uppercase;
             color: $color2;
         }
-        p.bio-position {
-            color: $grey2a;
-            @include for-midsize-desktop-up {
-                margin-bottom: 4rem;
-            }
-            @include sm-thru-med-desktop {
-                margin-bottom: 3.2rem;
-            }
-            @include for-tablet-portrait-and-landscape {
-                margin-bottom: 3.2rem;
-            }
-            @include for-phone-only {
-                margin-bottom: 2.4rem;
-            }
+       
         }
-        }
+    
     }
 

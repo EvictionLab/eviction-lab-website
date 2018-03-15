@@ -61,30 +61,12 @@ this, as long as the result is unique.
 
     <div class="accordion">
 
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "What do the red bubbles mean?" "UniqueNumber" "100" ) }}
-           <p>The red bubbles represent the eviction rate or eviction filing rate. Bigger bubbles are bigger numbers. Smaller bubbles are smaller numbers.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "What does the blue mean?" "UniqueNumber" "110" ) }}
-           <p>The blue represents the concentration of the census value you selected. For example, if you selected “population,” a darker blue means a higher population and a lighter blue means a lower population.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "How many locations can I compare in the map?" "UniqueNumber" "111" ) }}
-           <p>You can compare three locations at a time.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "Why is there no bubble for my chosen location?" "UniqueNumber" "112" ) }}
-          <p>For locations with no bubble, either the eviction rate for the selected year is zero, or there is no available data.</p>
-      {{ partial "faq-close" }} 
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "What does \"auto\" mean in the Map Level menu? " "UniqueNumber" "120" ) }}
-           <p>Selecting "auto" enables you to zoom through the geographic levels (states, counties, cities, census tracts, and block groups) automatically. You can also select your desired geographic level from the same dropdown menu.</p>
-      {{ partial "faq-close" }}
+        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "map" }}
+        <!-- faq item -->
+          {{ partial "faqs" . }}
+        {{ end }}
+        {{ end }}
 
     </div> <!-- close accordion -->
 
@@ -97,19 +79,12 @@ this, as long as the result is unique.
 
     <div class="accordion">
 
-      {{ partial "faq-open" (dict "Question" "How many locations can I compare in the graphs?" "UniqueNumber" "200" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "What is \"Get More Data\"?" "UniqueNumber" "210" ) }}
-           <p>Get More Data will take you to a page where you can search for and download large data sets for the entire United States.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "What does the site share when I click on Twitter or Facebook? " "UniqueNumber" "220" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-      {{ partial "faq-close" }}
+        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "data" }}
+        <!-- faq item -->
+          {{ partial "faqs" . }}
+        {{ end }}
+        {{ end }}
 
     </div> <!-- close accordion -->
 
@@ -122,19 +97,12 @@ this, as long as the result is unique.
 
     <div class="accordion">
 
-      {{ partial "faq-open" (dict "Question" "How were evictions calculated?" "UniqueNumber" "300" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "What is an eviction?" "UniqueNumber" "310" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "What is an eviction rate and how is it calculated?" "UniqueNumber" "320" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-      {{ partial "faq-close" }}
+        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "definitions" }}
+        <!-- faq item -->
+          {{ partial "faqs" . }}
+        {{ end }}
+        {{ end }}
 
     </div> <!-- close accordion -->
 
@@ -146,19 +114,12 @@ this, as long as the result is unique.
 
     <div class="accordion">
 
-      {{ partial "faq-open" (dict "Question" "Where does the census data come from?" "UniqueNumber" "400" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "Where does the eviction data come from?" "UniqueNumber" "410" ) }}
-           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-      {{ partial "faq-close" }}
-
-      <!-- FAQ item -->
-      {{ partial "faq-open" (dict "Question" "Do you have any data on how many women, children, or the elderly are affected by eviction?" "UniqueNumber" "420" ) }}
-           <p>We have data from XXXX to XXXX. <a href="#">For more information, please click here to go to our Methods page</a>.</p>
-      {{ partial "faq-close" }}
+        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "methods" }}
+        <!-- faq item -->
+          {{ partial "faqs" . }}
+        {{ end }}
+        {{ end }}
 
   </div> <!-- close accordion -->
 
@@ -167,6 +128,6 @@ this, as long as the result is unique.
 </div>
 <script src="/js/subnav-active.js"></script>
 {{ partial "debug" . }}
-<span class="debug-visability">rendered by = themes/THEMENAME/layouts/help-faq/list.html</span>
+<span class="debug-visibility">rendered by = themes/THEMENAME/layouts/help-faq/list.html</span>
 
 {{ partial "footer" . }}

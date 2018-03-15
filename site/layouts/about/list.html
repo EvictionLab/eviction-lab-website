@@ -3,7 +3,7 @@
 <!-- section header -->
 <div class="graphic-header help-faq center-page-wrapper">
   <div class="center-page">
-    <h1 class="graphic-page-header">about eviction lab</h1>
+    <h1 class="graphic-page-header">about us</h1>
     <div class="underbar"></div>
   </div>
 </div>
@@ -78,35 +78,7 @@
           <div class="bio-thumbs">
             {{ range (where .Site.RegularPages "Params.childof" ("research-team-bios")) }}
             {{ if eq .Params.childof "research-team-bios" }} 
-            <div class="bio-thumb-wrapper">
-            <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
-              <img class="bio-thumb" src="{{ .Params.thumb }}" />
-              <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
-              <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
-            </a> 
-            </div>
-            <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="left-column"></div>
-                    <div class="right-column">      
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                      </div>
-                      <div class="modal-body">                    
-                        <h3>{{ .Params.title }}</h3>
-                        <p class="bio-position">{{ .Params.position }}</p>
-                        <p class="bio-content">{{ .Content }}</p>
-                      </div>  
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>
+              {{ partial "about-modal" . }}
             {{ end }}
             {{ end }}
         </div>
@@ -116,33 +88,7 @@
           <div class="bio-thumbs">
               {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
               {{ if eq .Params.childof "student-researcher-bios" }} 
-              <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
-                <img class="bio-thumb" src="{{ .Params.thumb }}" />
-                <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
-                <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
-              </a> 
-              <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                      <div class="left-column"></div>
-                      <div class="right-column">      
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">                    
-                          <h3>{{ .Params.title }}</h3>
-                          <p class="bio-position">{{ .Params.position }}</p>
-                          <p class="bio-content">{{ .Content }}</p>
-                        </div>  
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
+                {{ partial "about-modal" . }}
               {{ end }}
               {{ end }}
           </div>
@@ -152,33 +98,7 @@
               <div class="bio-thumbs">
                   {{ range (where .Site.RegularPages "Params.childof" ("web-team-bios")) }}
                   {{ if eq .Params.childof "web-team-bios" }} 
-                  <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
-                    <img class="bio-thumb" src="{{ .Params.thumb }}" />
-                    <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
-                    <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
-                  </a> 
-                  <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                          <div class="left-column"></div>
-                          <div class="right-column">      
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
-                            <div class="modal-body">                    
-                              <h3>{{ .Params.title }}</h3>
-                              <p class="bio-position">{{ .Params.position }}</p>
-                              <p class="bio-content">{{ .Content }}</p>
-                            </div>  
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
+                    {{ partial "about-modal" . }}
                   {{ end }}
                   {{ end }}
               </div>

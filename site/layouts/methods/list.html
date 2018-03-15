@@ -33,16 +33,7 @@
         {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
         {{ if eq .Params.childof "methods" }}
         <!-- method item -->
-        <div class="accordion-section">
-            <a class="collapsed" data-toggle="collapse" href="#{{ .Params.weight }}" aria-expanded="false" aria-controls="collapseExample">
-               <span>{{ .Params.Title }}</span>
-               <i class="fa fa-chevron-up"></i>
-               <div class="clear-float"></div>
-             </a>
-          <div class="answer collapse" id="{{ .Params.weight }}">
-            {{ .Content }}
-          </div>
-        </div>
+          {{ partial "faqs" . }}
         {{ end }}
         {{ end }}
      
