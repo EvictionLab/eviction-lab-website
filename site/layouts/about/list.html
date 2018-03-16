@@ -32,11 +32,6 @@
     <a name="introduction"></a>
     <h2 class="page-section-header">Introduction</h2>
 
-    <div class="accordion">
-
-      
-
-    </div> <!-- close accordion -->
 
     <!-- ************ -->
     <!-- data section -->
@@ -45,9 +40,7 @@
     <a name="background"></a>
     <h2 class="page-section-header">Background</h2>
 
-    <div class="accordion">
-
-    </div> <!-- close accordion -->
+    
 
     <!-- ******************* -->
     <!-- definitions section -->
@@ -56,18 +49,21 @@
     <a name="work"></a>
     <h2 class="page-section-header">Our Work</h2>
 
-    <div class="accordion">
-
-    </div> <!-- close accordion -->
-
+  
+  </div><!-- end max-1200 wrapper -->
+</div><!-- end center wrapper -->
     <!-- *************** -->
     <!-- methods section -->
     <!-- *************** -->
-    <a name="team"></a>
-    <h2 class="page-section-header">Eviction Lab Team</h2>
+<div class="alt-bg">
+  <div class="center-page-wrapper">
+    <div class="center-content-post max1200 page-list">
+      <a name="team"></a>
+      <h2 class="page-section-header">Eviction Lab Team</h2>
 
     <div class="el-bios">
-      <ul class="nav nav-tabs" role="tablist">
+      <ul class="nav nav-tabs anchor-links" role="tablist">
+          <li class="only-larger-screens" role="presentation">Choose a team:</li>
           <li role="presentation" class="active"><a href="#team1" aria-controls="home" role="tab" data-toggle="tab">Research Team</a></li>
           <li role="presentation"><a href="#team2" aria-controls="profile" role="tab" data-toggle="tab">Student Researchers</a></li>
           <li role="presentation"><a href="#team3" aria-controls="profile" role="tab" data-toggle="tab">Web Team</a></li>
@@ -93,22 +89,25 @@
               {{ end }}
           </div>
           </div> <!-- End Student Researcher tab-pane -->
-          <!-- *************** Web Team Bios ******************** -->
-          <div role="tabpanel" class="tab-pane" id="team3">
-              <div class="bio-thumbs">
-                  {{ range (where .Site.RegularPages "Params.childof" ("web-team-bios")) }}
-                  {{ if eq .Params.childof "web-team-bios" }} 
-                    {{ partial "about-modal" . }}
-                  {{ end }}
-                  {{ end }}
-              </div>
-              </div> <!-- End Web Team tab-pane -->  
+        <!-- *************** Web Team Bios ******************** -->
+        <div role="tabpanel" class="tab-pane" id="team3">
+            <div class="bio-thumbs">
+                {{ range (where .Site.RegularPages "Params.childof" ("web-team-bios")) }}
+                {{ if eq .Params.childof "web-team-bios" }} 
+                  {{ partial "about-modal" . }}
+                {{ end }}
+                {{ end }}
+            </div>
+            </div> <!-- End Web Team tab-pane -->  
         </div> <!-- tab-content -->
        
      
-</div>
-</div>
-</div>
+      </div><!-- end el-bios -->
+    </div><!-- end page-content wrapper -->
+  </div><!-- end center page wrapper -->
+</div><!-- end alt-bg -->
+
+
 
 <script src="/js/subnav-active.js"></script>
 {{ partial "debug" . }}

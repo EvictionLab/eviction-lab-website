@@ -4,6 +4,28 @@
     }
 
 .el-bios {
+    ul.nav {
+        a:hover {
+            color: $color1;
+        }
+            flex-direction: column;
+        @include for-tablet-portrait-up {
+            flex-direction: row;
+        }    
+        }
+    @include for-tablet-portrait-up {
+        .nav a.highlight:after {
+            content: "";
+            width: 48px;
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+            border-bottom: 4px solid #e24000;
+            opacity: 1;
+            transition: 150ms;
+         }
+        }  
+    
     p.bio-position {
         color: $grey2a;
         @include for-midsize-desktop-up {
@@ -50,6 +72,7 @@
             display: flex;
             justify-content: center;
         }
+        
         .bio-container {
             position: relative;
         }
@@ -61,6 +84,7 @@
         }
         p.bio-position {
             text-align: center;
+            max-width: 192px;
         }
     }
     img.bio-thumb {
