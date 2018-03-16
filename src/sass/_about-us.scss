@@ -2,8 +2,11 @@
 .modal-open .modal {
     /* height: 96vh; */
     }
-.alt-bg h2.page-section-header {
+.alt-bg h2.page-section-headerv2 {
     margin-bottom: 4rem;
+    @include for-tablet-portrait-up {
+        margin-bottom: 7rem;
+    }
 }
 .el-bios {
     
@@ -17,11 +20,16 @@
         }    
         @include for-tablet-portrait-up {
             flex-direction: row;
+            justify-content: center;
         }    
         }
     .anchor-links {
         margin-bottom: 0;
         padding: 0rem 0 2.3rem 0;
+        @include for-tablet-portrait-up {
+            padding-bottom: 5rem;
+        }
+        
     }    
     .anchor-links li, .anchor-links li a {
         @include for-phone-only {
@@ -31,14 +39,14 @@
     .nav-tabs {
         border-bottom: none;
     }  
-    .anchor-links .only-larger-screens {
+    .anchor-links li.only-larger-screens {
             display: inline-block;
             position: relative;
             top: -15px;
             letter-spacing: 0.04rem;
             text-transform: uppercase;
             @include for-tablet-portrait-up {
-                text-transform: none;
+                display: none;
             }
             @include for-tablet-landscape-up {
                 top: -3px;
@@ -47,7 +55,7 @@
         }
 
     @include for-tablet-portrait-up {
-        .nav a.highlight:after {
+        .nav a.highlight:after, .nav li.active a:after {
             content: "";
             width: 48px;
             position: absolute;
@@ -61,27 +69,29 @@
     
     p.bio-position {
         color: $grey2a;
-        @include for-midsize-desktop-up {
-            margin-bottom: 4rem;
+        @include for-phone-only {
+            margin-bottom: 4.8rem;
+        } 
+       /* @include for-tablet-portrait-and-landscape {
+            margin-bottom: 3.2rem;
         }
         @include sm-thru-med-desktop {
             margin-bottom: 3.2rem;
         }
-        @include for-tablet-portrait-and-landscape {
-            margin-bottom: 3.2rem;
-        }
-        @include for-phone-only {
+        @include for-midsize-desktop-up {
             margin-bottom: 4rem;
-        }   
+        }  */
     } 
  .bio-thumbs {
     display: grid;
     grid-template-columns: 1fr;
+    padding-bottom: 3.2rem;
     @include for-480-up {
         grid-template-columns: 1fr 1fr; 
     }
     @include for-tablet-portrait-up {
         grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 1.6rem;
     }
     @include for-tablet-landscape-up {
         padding: 32px;
@@ -108,6 +118,9 @@
         
         .bio-container {
             position: relative;
+            @include for-tablet-portrait-up {
+                padding-bottom: 6.4rem;
+            }
         }
         h3 {
             color: $color2;
@@ -182,22 +195,44 @@
 // Modal CSS
 // Contained within el-bios
     .modal-content {  
-        @include for-phone-only {
-            display: flex;
+        display: flex;
+        @include for-tablet-landscape-up {
+            display: grid;
         }  
-        display: grid;
         -ms-flex-direction: column;
         /* flex-direction: column; */
         grid-template-columns: 40% 1fr;
         .modal-header {
-            border: none;
+            border: none; 
+            }
+           
+            .bio-nav {
+                @include defaultFont(1.4rem);
+                .fa { font-size: 1.2rem;}
+                    @include for-tablet-portrait-up {
+                    @include defaultFont(1.6rem);
+                    .fa { font-size: 1.4rem;}
+                    }
+                a:hover {
+                    /* @include defaultFontBold(inherit); */
+                    color: $color1;
+                }
+            }
+            .bio-nav.separator {
+                @include defaultFontBold(1.4rem);
+                margin: 0 2rem;
             }
         }
-   
+       .modal {
+            overflow-y: auto;
+        }
+        @include for-tablet-portrait-up {
+            
+        }
         @include for-tablet-landscape-up {
             div.modal {
                 overflow-y: hidden;
-            }
+                }
             .modal-dialog {
                 max-width: 80%;
             }
@@ -208,23 +243,49 @@
         background-image: url(/images/bios/mdesmond_full.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center top;
         @include for-phone-only {
             height: 400px;
         }
+        @include for-tablet-portrait-up {
+            height: 400px;
+        }
+        @include for-tablet-landscape-up {
+            height: auto;
+        }
         }
     .right-column {
-        @include for-tablet-landscape-up {
-        max-height: 480px;
         overflow-y: scroll;
+        @include for-tablet-landscape-up {
+        max-height: 90vh;
+        
         }   
     }  
     .modal-body {
+        padding: 2.4rem 1.6rem;
+        @include for-tablet-landscape-up {
+            padding: 0rem 4.8rem 3.2rem;;
+            }
+        @include for-midsize-desktop-up {
+            padding: 0rem 6.4rem 4.8rem;
+            }    
+        
         h3 {
             text-transform: uppercase;
             color: $color2;
+            }
         }
-       
+    .modal-footer {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        @include for-tablet-landscape-up {
+            padding-left: 4.8rem;
+            padding-right: 4.8rem;
+            }
+        @include for-midsize-desktop-up {
+            padding-left: 6.4rem;
+            padding-right: 6.4rem;
+            }  
         }
-    
     }
 

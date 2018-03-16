@@ -11,6 +11,19 @@
   }
 }
 
+.page-section-headerv2 {
+  @include altFont(2rem);
+  letter-spacing: 0.2rem;
+  color: $color2;
+  text-transform: uppercase;
+  @include for-tablet-portrait-up {
+    @include altFont(2.4rem);
+    letter-spacing: 0.18rem;
+    line-height: 2.6rem;
+    margin-bottom: 4.5rem;
+  }
+}
+
 /* for non-list index pages, such as FAQ, Methods, etc. */
 
 .graphic-header {

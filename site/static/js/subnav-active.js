@@ -1,5 +1,6 @@
 $(".nav a").click(function () { 
     $(".nav a").css("color", "#050403").removeClass("highlight");
+    $(".nav li").removeClass("active");
     $(this).css("color", "#E24000").addClass("highlight");
   });
 

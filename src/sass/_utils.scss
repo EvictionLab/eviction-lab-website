@@ -8,6 +8,10 @@
 
 /* various utilities */
 
+.red {
+  color: $color1;
+} 
+
 .sticky {
     position: sticky;
     position: -webkit-sticky;
@@ -121,6 +125,21 @@
     display: none;
   }
 }
+
+.tablet-p-off {
+  @include for-tablet-portrait-only {
+    display: none;
+  }
+}
+.tablet-p-on {
+  @include for-tablet-portrait-only {
+    display: initial;
+  }
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+
 .padding3 {
   padding: $defaultPaddingWebsite;
 }
