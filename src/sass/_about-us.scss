@@ -2,17 +2,50 @@
 .modal-open .modal {
     /* height: 96vh; */
     }
-
+.alt-bg h2.page-section-header {
+    margin-bottom: 4rem;
+}
 .el-bios {
+    
     ul.nav {
         a:hover {
             color: $color1;
         }
             flex-direction: column;
+        li.active a {
+            color: $color1;
+        }    
         @include for-tablet-portrait-up {
             flex-direction: row;
         }    
         }
+    .anchor-links {
+        margin-bottom: 0;
+        padding: 0rem 0 2.3rem 0;
+    }    
+    .anchor-links li, .anchor-links li a {
+        @include for-phone-only {
+            margin-right: 0;
+        } 
+    }  
+    .nav-tabs {
+        border-bottom: none;
+    }  
+    .anchor-links .only-larger-screens {
+            display: inline-block;
+            position: relative;
+            top: -15px;
+            letter-spacing: 0.04rem;
+            text-transform: uppercase;
+            @include for-tablet-portrait-up {
+                text-transform: none;
+            }
+            @include for-tablet-landscape-up {
+                top: -3px;
+                
+            }
+        }
+
     @include for-tablet-portrait-up {
         .nav a.highlight:after {
             content: "";
@@ -38,7 +71,7 @@
             margin-bottom: 3.2rem;
         }
         @include for-phone-only {
-            margin-bottom: 2.4rem;
+            margin-bottom: 4rem;
         }   
     } 
  .bio-thumbs {
@@ -148,11 +181,17 @@
 
 // Modal CSS
 // Contained within el-bios
-    .modal-content {    
+    .modal-content {  
+        @include for-phone-only {
+            display: flex;
+        }  
         display: grid;
         -ms-flex-direction: column;
         /* flex-direction: column; */
         grid-template-columns: 40% 1fr;
+        .modal-header {
+            border: none;
+            }
         }
    
         @include for-tablet-landscape-up {
@@ -169,6 +208,9 @@
         background-image: url(/images/bios/mdesmond_full.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        @include for-phone-only {
+            height: 400px;
+        }
         }
     .right-column {
         @include for-tablet-landscape-up {

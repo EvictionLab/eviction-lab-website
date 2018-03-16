@@ -221,6 +221,8 @@ h3 {
   @include altFont($fontSizeSmall);
   line-height: 1.7rem;
   letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: $color2;
   @include for-tablet-portrait-up {
     @include altFont($fontsize1024H3sm);
     letter-spacing: 0.11rem;
