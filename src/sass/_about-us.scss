@@ -4,10 +4,20 @@
     .alt-bg {
         padding-left: 24px;
         padding-right: 24px;
+        height: 100%;
         @include for-tablet-portrait-up {
         padding-left: 40px;
         padding-right: 40px;
         } 
+        p:last-child {
+            padding-bottom: 2rem;
+            @include for-tablet-portrait-up {
+                padding-bottom: 3rem;
+            }
+            @include for-midsize-desktop-up {
+                padding-bottom: 5rem;
+            }
+        }
     }
     
     .center-content-post.page-list {
@@ -67,6 +77,9 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            .about-imgs {
+                height: 0;
+            }
         }
         @include for-tablet-portrait-up {
             padding-right: 5.6rem;
