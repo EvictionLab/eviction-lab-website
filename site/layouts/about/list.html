@@ -21,7 +21,7 @@
   </div>
 </div>
 
-
+<div class="about-us">
 <div class="center-page-wrapper">
   <div class="center-content-post max1200 page-list">
 
@@ -37,27 +37,33 @@
         {{ end }}
         {{ end }}
     </div>
-
+  </div><!-- End center content post -->
+</div><!-- End center page wrapper -->
     <!-- ************ -->
     <!-- data section -->
     <!-- ************ -->
 
-    <a name="background"></a>
-    <div class="about-block">
+<div class="alt-bg">
+  <div class="center-content-post max1200 page-list">
+      <a name="background"></a>
+      <div class="about-block">
         
         {{ range (where .Site.RegularPages "Params.childof" ("pageText")) }}
         {{ if eq .Params.type "background" }} 
           {{ partial "about-block" . }}
         {{ end }}
         {{ end }}
+      </div>
     </div>
-
+</div>    
     
 
     <!-- ******************* -->
     <!-- definitions section -->
     <!-- ******************* -->
 
+<div class="center-page-wrapper">
+  <div class="center-content-post max1200 page-list">    
     <a name="work"></a>
     <div class="about-block">
         
@@ -126,7 +132,7 @@
   </div><!-- end center page wrapper -->
 </div><!-- end alt-bg -->
 
-
+</div><!-- end About Us Page ID -->
 
 <script src="/js/subnav-active.js"></script>
 {{ partial "debug" . }}

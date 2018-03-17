@@ -1,25 +1,90 @@
 /* _about-us.scss */
 
+.about-us {
+    .alt-bg {
+        padding-left: 24px;
+        padding-right: 24px;
+        @include for-tablet-portrait-up {
+        padding-left: 40px;
+        padding-right: 40px;
+        } 
+    }
+    
+    .center-content-post.page-list {
+        @include for-tablet-portrait-up {
+            padding-top: 5.6rem;
+            }
+        @include for-midsize-desktop-up {
+        padding-top: 7.2rem;
+        }
+    }
+    .center-content-post.max1200 {
+        max-width: 1024px;
+    }
+}
 .about-block {
     @include for-tablet-portrait-up {
         display: grid;
-        grid-template-columns: 41% 1fr;
+        grid-template-columns: 40% 1fr;
     }
-    img { max-width: 100%;}
+    img { 
+        max-width: 100%;
+        @include for-phone-only {
+            padding-bottom: 1.6rem;
+        }
+        @include for-tablet-portrait-up {
+            padding-top: 2.4rem;
+        }
+        @include for-tablet-landscape-up {
+            padding-top: 3.2rem;
+        }
+        @include for-midsize-desktop-up {
+            padding-top: 5.6rem;
+        }
+    }
+    .bordered-header {
+        padding: 1.6rem 0 3.2rem;
+        @include for-tablet-portrait-up {
+            padding: 1.6rem 0 3.2rem;
+        }
+        @include for-midsize-desktop-up {
+            padding: 2.4rem 0 4.8rem;
+        }
+    }
+
     h2.pullquote {
         @include for-tablet-portrait-up {
             @include altFont(3rem);
         }
         @include for-midsize-desktop-up {
             @include altFont(3.6rem);
+            line-height: 4.4rem;
+            letter-spacing: .082rem;
         }
     }
     .left-column {
+        &.no-img {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
         @include for-tablet-portrait-up {
             padding-right: 5.6rem;
         }
         @include for-tablet-landscape-up {
+            padding-right: 6.4rem;
+        }
+        @include for-midsize-desktop-up {
             padding-right: 8rem;
+        }
+    }
+    p:last-child {
+        padding-bottom: 2rem;
+        @include for-tablet-portrait-up {
+            padding-bottom: 3rem;
+        }
+        @include for-midsize-desktop-up {
+            padding-bottom: 5rem;
         }
     }
 }
