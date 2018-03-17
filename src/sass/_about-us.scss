@@ -175,7 +175,7 @@
     p.bio-position {
         color: $grey2a;
         @include for-phone-only {
-            margin-bottom: 4.8rem;
+            margin-bottom: 2.4rem;
         } 
        /* @include for-tablet-portrait-and-landscape {
             margin-bottom: 3.2rem;
@@ -187,6 +187,9 @@
             margin-bottom: 4rem;
         }  */
     } 
+    .bio-content  p:last-child {
+        padding-bottom: 0;
+    }
  .bio-thumbs {
     display: grid;
     grid-template-columns: 1fr;
