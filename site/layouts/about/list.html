@@ -26,19 +26,31 @@
   <div class="center-content-post max1200 page-list">
 
     <!-- ************ -->
-    <!-- maps section -->
+    <!-- Intro section -->
     <!-- ************ -->
-
     <a name="introduction"></a>
-    <h2 class="page-section-headerv2">Introduction</h2>
-
+    <div class="about-block">
+        
+        {{ range (where .Site.RegularPages "Params.childof" ("pageText")) }}
+        {{ if eq .Params.type "intro" }} 
+          {{ partial "about-block" . }}
+        {{ end }}
+        {{ end }}
+    </div>
 
     <!-- ************ -->
     <!-- data section -->
     <!-- ************ -->
 
     <a name="background"></a>
-    <h2 class="page-section-headerv2">Background</h2>
+    <div class="about-block">
+        
+        {{ range (where .Site.RegularPages "Params.childof" ("pageText")) }}
+        {{ if eq .Params.type "background" }} 
+          {{ partial "about-block" . }}
+        {{ end }}
+        {{ end }}
+    </div>
 
     
 
@@ -47,7 +59,14 @@
     <!-- ******************* -->
 
     <a name="work"></a>
-    <h2 class="page-section-headerv2">Our Work</h2>
+    <div class="about-block">
+        
+        {{ range (where .Site.RegularPages "Params.childof" ("pageText")) }}
+        {{ if eq .Params.type "work" }} 
+          {{ partial "about-block" . }}
+        {{ end }}
+        {{ end }}
+    </div>
 
   
   </div><!-- end max-1200 wrapper -->

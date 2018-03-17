@@ -1,5 +1,5 @@
 ---
-childof: research-team-bios
+childof: student-researchers
 title: Lillian Leung
 abbrev: lleung
 position: Research Specialist

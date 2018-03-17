@@ -1,4 +1,31 @@
 /* _about-us.scss */
+
+.about-block {
+    @include for-tablet-portrait-up {
+        display: grid;
+        grid-template-columns: 41% 1fr;
+    }
+    img { max-width: 100%;}
+    h2.pullquote {
+        @include for-tablet-portrait-up {
+            @include altFont(3rem);
+        }
+        @include for-midsize-desktop-up {
+            @include altFont(3.6rem);
+        }
+    }
+    .left-column {
+        @include for-tablet-portrait-up {
+            padding-right: 5.6rem;
+        }
+        @include for-tablet-landscape-up {
+            padding-right: 8rem;
+        }
+    }
+}
+
+// ****** TEAM BIOS SECTION ***********
+
 .modal-open .modal {
     /* height: 96vh; */
     }
