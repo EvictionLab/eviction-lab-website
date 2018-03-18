@@ -1,0 +1,108 @@
+{{ partial "header" . }}
+
+<!-- section header -->
+<div class="graphic-header help-faq center-page-wrapper">
+  <div class="center-page">
+    <h1 class="graphic-page-header">why eviction matters</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
+<!-- subnav -->
+<div class="shadow-bottom center-page-wrapper subnav">
+  <div class="center-content-post max1200">
+    <ul class="anchor-links">
+      <li class="only-larger-screens">CHOOSE A SECTION</li>
+      <li><a href="#eviction-facts" class="smoothScroll">Eviction Facts</a></li>
+      <li><a href="#video" class="smoothScroll">Video</a></li>
+      <li><a href="#evicted" class="smoothScroll">Evicted: The Book</a></li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="alt-page eviction-matters">
+<div class="center-page-wrapper">
+  <div class="center-content-post page-list">
+      <a name="eviction-factss"></a>
+
+    <!-- ************ -->
+    <!-- Eviction FAQ Section -->
+    <!-- ************ -->
+    <h2 class="page-section-header">Questions &amp; Answers About Eviction</h2>
+
+    <div class="accordion">
+
+        {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+        {{ if eq .Params.childof "evictionMatters" }}
+        <!-- faq item -->
+          {{ partial "faqs" . }}
+        {{ end }}
+        {{ end }}
+
+    </div>
+
+  </div><!-- End center content post -->
+</div><!-- End center page wrapper -->
+    <!-- ************ -->
+    <!-- Video section -->
+    <!-- ************ -->
+
+<div class="alt-bg">
+  <div class="center-content-post page-list">
+      <a name="video"></a>
+      
+        <h4 class="subhead bordered-header">Video</h4>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="video1"> 
+              <div class="video-container"><iframe width="720" height="405" src="https://www.youtube.com/embed/KElgG_s1DkE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="video2">  
+              <div class="video-container"><iframe width="720" height="435" src="https://www.youtube.com/embed/2ovyccOXyoQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="video3">  
+              <div class="video-container"><iframe width="720" height="405" src="https://www.youtube.com/embed/NY4Q8XQ0n6E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
+          </div>
+          
+        </div>  
+        <ul class="nav nav-tabs anchor-links" role="tablist">
+            <li role="presentation" class="active"><a href="#video1" aria-controls="home" role="tab" data-toggle="tab">How Housing is Ignored in the Poverty Discussion</a> | </li>
+            <li role="presentation"><a href="#video2" aria-controls="profile" role="tab" data-toggle="tab">EVICTED Book Trailer</a> | </li>
+            <li role="presentation"><a href="#video3" aria-controls="profile" role="tab" data-toggle="tab">Unstable Housing</a></li>
+        </ul>
+            
+    </div>
+</div>    
+    
+
+    <!-- ******************* -->
+    <!-- Evicted Book Section -->
+    <!-- ******************* -->
+
+<div class="center-page-wrapper">
+  <div class="center-content-post page-list">    
+    <a name="evicted-book"></a>
+    <div class="about-block">
+        
+        
+    </div>
+
+  
+  </div><!-- end max-1200 wrapper -->
+</div><!-- end center wrapper -->
+    <!-- *************** -->
+    <!-- methods section -->
+    <!-- *************** -->
+
+    </div><!-- end page-content wrapper -->
+  </div><!-- end center page wrapper -->
+</div><!-- end alt-bg -->
+
+</div><!-- end About Us Page ID -->
+
+<script src="/js/subnav-active.js"></script>
+{{ partial "debug" . }}
+<span class="debug-visibility">rendered by = theme/THEMENAME/layouts/about-us/list.html</span>
+
+{{ partial "footer" . }}

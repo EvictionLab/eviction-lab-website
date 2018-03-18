@@ -1,6 +1,6 @@
 /* _about-us.scss */
 
-.about-us {
+.alt-page {
     .alt-bg {
         padding-left: 24px;
         padding-right: 24px;
@@ -104,9 +104,7 @@
 
 // ****** TEAM BIOS SECTION ***********
 
-.modal-open .modal {
-    /* height: 96vh; */
-    }
+
 .alt-bg h2.page-section-headerv2 {
     margin-bottom: 4rem;
     @include for-tablet-portrait-up {
