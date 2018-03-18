@@ -19,13 +19,13 @@ buildFuture = true
     weight = 3
     url = "/rankings/"
 [[menu.main]]
-    name = "About Eviction Lab"
+    name = "About Us"
     weight = 4
     url = "/about/"
 [[menu.main]]
-    name = "The Problem"
+    name = "Why Eviction Matters"
     weight = 5
-    url = "/"
+    url = "/why-eviction-matters"
 [[menu.main]]
     name = "Our Methodology"
     weight = 6
