@@ -27,7 +27,7 @@ buildFuture = true
     weight = 5
     url = "/why-eviction-matters"
 [[menu.main]]
-    name = "Our Methodology"
+    name = "Methods"
     weight = 6
     url = "/methods/"
 [[menu.main]]

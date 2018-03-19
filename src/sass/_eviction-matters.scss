@@ -1,7 +1,7 @@
 /* -- eviction-matters.scss -- */
 
 .eviction-matters {
-    .alt-bg {
+    .alt-bg.video-panel {
         background: #424670; /* Old browsers */
         background: -moz-linear-gradient(top, #424670 0%, #2F3251 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(top, #424670 0%, #2F3251 100%); /* Chrome10-25,Safari5.1-6 */
@@ -9,6 +9,39 @@
         color: #fff;
         li, a {
             color: #fff;
+            display: inline;
+        }
+        a {
+            margin-right: 5px;
+        }
+        .nav-tabs {
+            border-bottom: 0;
+        }
+        .center-content-post.page-list {
+            padding-top: 0;
+        }
+        .anchor-links {
+            margin-bottom: 0;
+        }
+    }
+    .alt-bg.book-panel {
+        .center-content-post.page-list {
+            background-color: #fff;
+        }
+        h2 {text-align: center;}
+        .book-img {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            p {
+                text-align: center;
+            }
+
+
+        }
+        img {
+            width: 120px;
         }
     }
     .center-content-post {
