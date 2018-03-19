@@ -28,6 +28,9 @@ function getPageOffset(url) {
   if (url.indexOf('about') !== -1) {
     return 80;
   }
+  if (url.indexOf('why-eviction-matters') !== -1) {
+    return 80;
+  }
   return 0;
 }
 

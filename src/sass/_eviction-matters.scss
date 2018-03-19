@@ -30,6 +30,9 @@
                     margin-right: 5px;
                 }
             }
+            @include for-tablet-landscape-up {
+                padding: 1.6rem 0 4.4rem;
+            }
         }
     }
     /* ----- Book Panel ------- */    
@@ -44,12 +47,15 @@
             @include for-tablet-portrait-up {
                 max-width: 680px;
             }
+            @include for-tablet-landscape-up {
+                max-width: 840px;
+            }
         }
         .center-content-post.page-list {
             background-color: #fff;
             padding: 3.2rem 2rem 2.4rem;
             @include for-tablet-portrait-up {
-                padding: 4rem 6rem 4.8rem;
+                padding: 4rem 6rem .08rem;
             }
             
         }
@@ -62,9 +68,12 @@
         }
         .evicted-book {
             @include for-tablet-portrait-up {
-            display: grid;
-            grid-template-columns: 37% 1fr;
+                display: grid;
+                grid-template-columns: 37% 1fr;
             }
+            @include for-tablet-portrait-up {
+                grid-template-columns: 34% 1fr;
+             }
         }
         .book-img {
             display: flex;
@@ -105,6 +114,9 @@
                 width: 160px;
                 margin-bottom: 2.4rem;
             }
+            @include for-midsize-desktop-up {
+                width: 184px;
+            }
         }
         p.subcopy {
             @include defaultFont(1rem);
@@ -121,7 +133,16 @@
                 line-height: 2rem;
                 span {
                     @include defaultFontBold(1.4rem);
-                }
+                }  
+            }
+            @include for-midsize-desktop-up {
+                font-size: 1.5rem;
+                letter-spacing: 0;
+                line-height: 20px;
+                width: 220px;
+                span {
+                    @include defaultFontBold(1.5rem);
+                } 
             }
         }
         p {
@@ -130,13 +151,66 @@
                 line-height: 2.2rem;
                 margin-bottom: 4.8rem;
             }
+            @include for-midsize-desktop-up {
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                margin-bottom: 4.8rem;
+            }
         }
         .praise {
+            .column-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                @include for-tablet-portrait-only {
+                    display: block;
+                    .column-right {
+                        p:last-child {
+                            padding-bottom: 3rem;
+                        }
+                    }
+                }
+                @include for-tablet-landscape-up {
+                    .column-left {
+                        padding-right: 24px;
+                    }
+                    .column-right {
+                        padding-left: 24px;
+                    }
+                }
+                @include for-midsize-desktop-up {
+                    .column-left {
+                        padding-right: 28px;
+                    }
+                    .column-right {
+                        padding-left: 28px;
+                    }
+                }
+                p:last-child {
+                    padding-bottom: 0;
+                }
+            }
+
             p {
                 font-size: 1.4rem;
                 line-height: 2rem;
+                margin-bottom: 1.6rem;
                 &.attrib {
                     color: $grey1a;
+                    margin-bottom: 2.4rem;
+                }
+                @include for-midsize-desktop-up {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+            }
+            .bordered-header {
+                margin-bottom: 3.2rem;
+                margin-top: 4.8rem;
+                @include for-tablet-landscape-up {
+                    margin-top: 2.4rem;
+                }
+                @include for-midsize-desktop-up {
+                    margin-top: 4.8rem;
                 }
             }
         }
@@ -144,7 +218,7 @@
     /* ------ General -------- */
     .center-content-post {
         max-width: 720px;
-        @include for-tablet-portrait-up {
+        @include for-tablet-portrait-only {
             max-width: 560px;
         }
     }
@@ -159,6 +233,11 @@
             font-size: 3rem;
             letter-spacing: .07rem;
             line-height: 3.6rem;
+        }
+        @include for-tablet-landscape-up {
+            font-size: 3.6rem;
+            letter-spacing: .1rem;
+            line-height: 4.2rem;
         }
     }
     .bordered-header {

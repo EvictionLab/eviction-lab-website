@@ -175,10 +175,13 @@
     }
 
     span {
-      font-size: $fontSizeMedium;
+      font-size: 1.6rem;
       @include for-phone-only {
         font-size: $fontSizeSmall;
         line-height: 2.2rem;
+      }
+      @include for-midsize-desktop-up {
+        font-size: 1.8rem;
       }
       float: left;
       width: 90%;

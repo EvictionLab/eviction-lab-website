@@ -15,7 +15,7 @@
       <li class="only-larger-screens">CHOOSE A SECTION</li>
       <li><a href="#eviction-facts" class="smoothScroll">Eviction Facts</a></li>
       <li><a href="#video" class="smoothScroll">Video</a></li>
-      <li><a href="#evicted" class="smoothScroll">Evicted: The Book</a></li>
+      <li><a href="#evicted-book" class="smoothScroll">Evicted: The Book</a></li>
       
     </ul>
   </div>
@@ -81,8 +81,8 @@
     <!-- ******************* -->
 
 <div class="alt-bg book-panel">
-  <div class="center-content-post page-list">    
     <a name="evicted-book"></a>
+  <div class="center-content-post page-list">    
     <h2 class="page-section-header">Evicted: The Book</h2>
       <div class="evicted-book">
         <div class="book-img">
@@ -96,13 +96,29 @@
         </div> 
       </div><!-- end evicted-book -->
       <div class="praise mobile-off">
-        <h4 class="subhead bordered-header">Praise</h4> 
-        {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
-        {{ if eq .Params.type "praise" }} 
-        {{ .Content }}
-        <p class="attrib">{{ .Params.attrib }}</p>  
-        {{ end }}
-        {{ end }}
+        <h4 class="subhead bordered-header blue">Praise</h4> 
+        <div class="column-wrap">
+         
+       
+          <div class="column-left">
+            {{ range (where .Site.RegularPages "Params.col" ("col-left")) }}
+            {{ if eq .Params.col "col-left" }} 
+            {{ .Content }}
+            <p class="attrib">{{ .Params.attrib }}</p> 
+            {{ end }}
+            {{ end }}
+          </div>
+          <div class="column-right">
+              {{ range (where .Site.RegularPages "Params.col" ("col-right")) }}
+              {{ if eq .Params.col "col-right" }} 
+              {{ .Content }}
+              <p class="attrib">{{ .Params.attrib }}</p> 
+              {{ end }}
+              {{ end }}
+            </div>
+       
+        </div>      
+       
       </div><!-- end Praise -->
   
   </div><!-- end center-content-post -->

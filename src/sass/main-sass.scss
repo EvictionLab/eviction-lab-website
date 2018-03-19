@@ -252,19 +252,19 @@ p {
     margin-bottom: 1.6rem;
   }
   @include for-tablet-portrait-and-landscape {
-    @include defaultFont(1.8rem); 
-    line-height: 2.5rem;
+    @include defaultFont(1.6rem); 
+    line-height: 2.2rem;
     letter-spacing: 0px;
     margin-bottom: 2.4rem;
   }
   @include sm-thru-med-desktop {
-    @include defaultFont(1.8rem); 
-    line-height: 2.5rem;
+    @include defaultFont(1.6rem); 
+    line-height: 2.2rem;
     letter-spacing: 0px;
     margin-bottom: 2.4rem;
   }
   @include for-midsize-desktop-up {
-    @include defaultFont(2rem); 
+    @include defaultFont(1.8rem); 
     line-height: 2.8rem;
     letter-spacing: 0px;
     margin-bottom: 3.2rem;
