@@ -1,6 +1,7 @@
 /* -- eviction-matters.scss -- */
 
 .eviction-matters {
+   /* ----- Video Panel ------- */ 
     .alt-bg.video-panel {
         background: #424670; /* Old browsers */
         background: -moz-linear-gradient(top, #424670 0%, #2F3251 100%); /* FF3.6-15 */
@@ -31,6 +32,7 @@
             }
         }
     }
+    /* ----- Book Panel ------- */    
     .alt-bg.book-panel {
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -38,11 +40,16 @@
             padding-top: 5.6rem;
             padding-bottom: 5.6rem;
         }
+        .center-content-post {
+            @include for-tablet-portrait-up {
+                max-width: 680px;
+            }
+        }
         .center-content-post.page-list {
             background-color: #fff;
             padding: 3.2rem 2rem 2.4rem;
             @include for-tablet-portrait-up {
-                padding: 4rem 2rem 2.4rem;
+                padding: 4rem 6rem 4.8rem;
             }
             
         }
@@ -56,7 +63,7 @@
         .evicted-book {
             @include for-tablet-portrait-up {
             display: grid;
-            grid-template-columns: 33% 1fr;
+            grid-template-columns: 37% 1fr;
             }
         }
         .book-img {
@@ -78,18 +85,26 @@
             .button-wrap {
             display: flex;
             justify-content: center;
-            .btn-primary {
+                .btn-primary {
                     font-size: 1rem;
                     letter-spacing: 0.054rem;
                     height: 4rem;
                     padding: 0 2rem;
                     border-radius: 2px;
+                    @include for-tablet-portrait-up {
+                        height: 6.4rem;
+                        padding: 0 4rem;
+                        }
                     }
                 }
             } 
         img {
             width: 120px;
             margin-bottom: 1.6rem;
+            @include for-tablet-portrait-up {
+                width: 160px;
+                margin-bottom: 2.4rem;
+            }
         }
         p.subcopy {
             @include defaultFont(1rem);
@@ -100,14 +115,40 @@
             span {
                 @include defaultFontBold(1rem);
             }
+            @include for-tablet-portrait-up {
+                width: 180px;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                span {
+                    @include defaultFontBold(1.4rem);
+                }
+            }
+        }
+        p {
+            @include for-tablet-portrait-up {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                margin-bottom: 4.8rem;
+            }
+        }
+        .praise {
+            p {
+                font-size: 1.4rem;
+                line-height: 2rem;
+                &.attrib {
+                    color: $grey1a;
+                }
+            }
         }
     }
+    /* ------ General -------- */
     .center-content-post {
         max-width: 720px;
         @include for-tablet-portrait-up {
             max-width: 560px;
         }
     }
+
     .page-section-header {
         text-transform: none;
         font-size: 1.6rem;
