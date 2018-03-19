@@ -22,37 +22,91 @@
         }
         .anchor-links {
             margin-bottom: 0;
+            @include for-tablet-portrait-up {
+                padding-top: 1rem;
+                margin-bottom: 1.2rem;
+                li {
+                    margin-right: 5px;
+                }
+            }
         }
     }
     .alt-bg.book-panel {
         padding-top: 4rem;
         padding-bottom: 4rem;
+        @include for-tablet-portrait-up {
+            padding-top: 5.6rem;
+            padding-bottom: 5.6rem;
+        }
         .center-content-post.page-list {
             background-color: #fff;
-            padding: 3.2rem 2rem;
+            padding: 3.2rem 2rem 2.4rem;
+            @include for-tablet-portrait-up {
+                padding: 4rem 2rem 2.4rem;
+            }
             
         }
         h2 {text-align: center;}
+        .page-section-header {
+            margin-bottom: 2.4rem;
+            @include for-tablet-portrait-up {
+                margin-bottom: 4rem;
+            }
+        }
+        .evicted-book {
+            @include for-tablet-portrait-up {
+            display: grid;
+            grid-template-columns: 33% 1fr;
+            }
+        }
         .book-img {
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
+            @include for-tablet-portrait-up {
+                display: block;
+            }
             p {
                 text-align: center;
+                @include for-tablet-portrait-up {
+                    text-align: left;
+                }
             }
         }
-        .button-wrap {
+        @include for-phone-only {
+            .button-wrap {
             display: flex;
             justify-content: center;
-            }    
-        
+            .btn-primary {
+                    font-size: 1rem;
+                    letter-spacing: 0.054rem;
+                    height: 4rem;
+                    padding: 0 2rem;
+                    border-radius: 2px;
+                    }
+                }
+            } 
         img {
             width: 120px;
+            margin-bottom: 1.6rem;
+        }
+        p.subcopy {
+            @include defaultFont(1rem);
+            line-height: 1.3rem;
+            color: $grey1a;
+            width: 200px;
+            margin-bottom: 0;
+            span {
+                @include defaultFontBold(1rem);
+            }
         }
     }
     .center-content-post {
         max-width: 720px;
+        @include for-tablet-portrait-up {
+            max-width: 560px;
+        }
     }
     .page-section-header {
         text-transform: none;
@@ -60,12 +114,23 @@
         letter-spacing: .04rem;
         line-height: 1.9rem;
         margin-bottom: 3.2rem;
+        @include for-tablet-portrait-up {
+            font-size: 3rem;
+            letter-spacing: .07rem;
+            line-height: 3.6rem;
+        }
     }
     .bordered-header {
         font-size: 1.3rem;
         padding-top: 0.8rem;
         letter-spacing: 0.07rem;
         margin-bottom: 2.4rem;
+        @include for-tablet-portrait-up {
+            font-size: 1.6rem;
+            letter-spacing: .09rem;
+            margin-top: 2.4rem;
+            padding-top: 1.6rem;
+        }
     }
     .nav {
         display: inline-block;
@@ -93,7 +158,7 @@
             content: "";
             width: 48px;
             position: absolute;
-            bottom: -18px;
+            top: 31px;
             left: 0;
             border-bottom: 4px solid #e24000;
             opacity: 1;
