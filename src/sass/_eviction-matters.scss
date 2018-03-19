@@ -25,8 +25,12 @@
         }
     }
     .alt-bg.book-panel {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
         .center-content-post.page-list {
             background-color: #fff;
+            padding: 3.2rem 2rem;
+            
         }
         h2 {text-align: center;}
         .book-img {
@@ -37,9 +41,12 @@
             p {
                 text-align: center;
             }
-
-
         }
+        .button-wrap {
+            display: flex;
+            justify-content: center;
+            }    
+        
         img {
             width: 120px;
         }
