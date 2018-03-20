@@ -4,7 +4,7 @@ type: work
 title: Our Work
 blockquote: Big problems demand big data.
 date: 2017-11-26T03:54:30.075Z
-image: /images/assets/family-searching-for-apartment.jpg
+image: /images/assets/woman-with-belongings.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
 weight: 2
 color: green

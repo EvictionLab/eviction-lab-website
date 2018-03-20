@@ -1,6 +1,10 @@
 /* -- eviction-matters.scss -- */
 
 .eviction-matters {
+    /*----- Eviction Facts ----- */
+    .eviction-facts .bordered-header {
+        margin-top: 0rem;
+    }    
    /* ----- Video Panel ------- */ 
     .alt-bg.video-panel {
         background: #424670; /* Old browsers */

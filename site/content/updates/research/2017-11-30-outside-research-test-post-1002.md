@@ -3,7 +3,7 @@ childof: research
 researchtype: outside-research
 contenttype: updates
 contentcat: research
-title: Outside Research Test Post 1002 vegan taiyaki art
+title: UW Madison researchers find a telling pattern of evictions in Milwaukee
 date: 2017-11-30T15:46:40.089Z
 image: /images/uploads/mustard-and-chesse.jpg
 file: /images/uploads/sample-research-file.pdf

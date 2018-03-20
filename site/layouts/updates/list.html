@@ -74,11 +74,11 @@
   {{ end }} <!-- end Blog listings -->
   
 <!-- PAGINATION -->  
-  <div class="center-page-wrapper">
+  <!--<div class="center-page-wrapper">
     <div class="custom-pagination">
       {{ partial "pagination" . }}
     </div> 
-  </div>
+  </div>-->
 
  <!-- "NEXT EVENT" section -->
  {{ $events := where .Site.RegularPages "Params.contenttype" "events" }}
@@ -222,13 +222,13 @@
 
 {{ if eq .Title "Research"}} <!-- if we are on the Research page, do stuff -->
 
-  {{ $elresearch := where .Site.RegularPages "Params.researchtype" "el-research" }} <!-- count EL Research articles -->
+  {{ $elresearch := where .Site.RegularPages "Params.researchtype" "elresearch" }} <!-- count EL Research articles -->
   {{ if isset $elresearch 0 }} <!-- if there are EL Research articles, list them -->
       <span class="center-page-wrapper">
         <div class="bordered-header events-list-header research-type el-research">research from the eviction lab <a class="see-all-events subhead-rt" href="/updates/research/el-research">See all</a></div>
       </span>
-      {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "el-research" )) }}
-        {{ if eq .Params.researchtype "el-research" }}
+      {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "elresearch" )) }}
+        {{ if eq .Params.researchtype "elresearch" }}
         <div class="alt-rows dual-research">
         <div class="center-page-wrapper">
             <div class="list-item center-content {{ .Params.childof }}-list">
@@ -307,10 +307,10 @@
 
 {{ if eq .Title "Eviction Lab Research" }} <!-- if we are on the EL Research page, do stuff -->
 
-  {{ $elresearch := where .Site.RegularPages "Params.researchtype" "el-research" }}
+  {{ $elresearch := where .Site.RegularPages "Params.researchtype" "elresearch" }}
   {{ if isset $elresearch 0 }} <!-- if there are EL Research articles, list them -->
     <div class="alt-rows research-list">
-      {{ $paginator := .Paginate (where .Site.Pages "Params.researchtype" "el-research") 5 }}   
+      {{ $paginator := .Paginate (where .Site.Pages "Params.researchtype" "elresearch") 5 }}   
       {{ range .Paginator.Pages }}
       
       <div class="center-page-wrapper">

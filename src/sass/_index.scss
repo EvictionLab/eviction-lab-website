@@ -181,6 +181,13 @@
 
 .accordion {
   margin-bottom: 4rem;
+  margin-top: 2.4rem;
+  @include for-tablet-portrait-up {
+    margin-top: 3.2rem;
+  }
+  @include for-midsize-desktop-up {
+    margin-top: 4.8rem;
+  }
 }
 .accordion-section {
   margin-bottom: 3rem;
