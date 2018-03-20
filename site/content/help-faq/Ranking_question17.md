@@ -5,4 +5,4 @@ childof: faq
 type: rankings
 weight: 168
 ---
-Over 30,000 places&mdash;cities, towns, villages, and unincorporated areas&mdash;are included in our database.
+Nearly 30,000 places&mdash;cities, towns, villages, and unincorporated areas&mdash;are included in our database.
