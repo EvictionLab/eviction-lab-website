@@ -5,4 +5,6 @@ childof: faq
 type: methods
 weight: 230
 ---
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+We have accumulated over 80 million records related to eviction. The Eviction Lab directly collected court records from 15 states. But many states either did not centralize their eviction data or were unwilling to release this information. Accordingly, the Eviction Lab then purchased more comprehensive datasets of public eviction records from two companies: LexisNexis and American Information Research Services Inc. 
+
+For more information about our data collection, see our Methods page.

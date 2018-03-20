@@ -5,4 +5,4 @@ childof: faq
 type: methods
 weight: 220
 ---
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+This data comes from the decennial census and the American Community Survey (ACS), both conducted by the U.S. Census Bureau.
