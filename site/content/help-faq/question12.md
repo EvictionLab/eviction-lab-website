@@ -5,4 +5,4 @@ childof: faq
 type: definitions
 weight: 210
 ---
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+An eviction rate is the number of evictions per 100 renter homes in an area. An eviction rate of 5% means that 5 of every 100 renter homes faced eviction in the selected area that year.
