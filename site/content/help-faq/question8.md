@@ -5,4 +5,4 @@ childof: faq
 weight: 170
 type: data
 ---
-You can share links to any of our pages via social share buttons. From our Map and Eviction Rankings pages, you can share customized links preloaded with the locations and data you have selected. 
+You can share links to any of our pages via social share buttons. From our [Map](/map) and [Eviction Rankings](/rankings) pages, you can share customized links preloaded with the locations and data you have selected. 
