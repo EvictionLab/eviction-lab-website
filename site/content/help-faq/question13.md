@@ -5,4 +5,4 @@ childof: faq
 type: methods
 weight: 220
 ---
-This data comes from the decennial census and the American Community Survey (ACS), both conducted by the U.S. Census Bureau.
+This data comes from the decennial census and the American Community Survey (ACS), both conducted by the U.S. Census Bureau. For more information about our data collection, see our [Methods page](/methods).

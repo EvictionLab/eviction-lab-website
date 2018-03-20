@@ -200,9 +200,9 @@
     width: 100%;
     color: $color1;
     padding-bottom: 3rem;
-    @include defaultFontBold($fontSizeMedium);
+    font-family: $boldFontStack;
     @include for-phone-only {
-      font-size: $fontSizeSmall;
+      /* font-size: $fontSizeSmall; */
       padding-bottom: 2rem;
     }
 
