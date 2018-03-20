@@ -5,4 +5,4 @@ childof: faq
 type: data
 weight: 150
 ---
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+You can compare up to 3 locations. The U.S. average eviction rate is also included by default.

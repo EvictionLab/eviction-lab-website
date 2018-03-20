@@ -5,4 +5,4 @@ childof: faq
 weight: 170
 type: data
 ---
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+You can share links to any of our pages via social share buttons. From our Map and Eviction Rankings pages, you can share customized links preloaded with the locations and data you have selected. 
