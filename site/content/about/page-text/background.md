@@ -2,7 +2,7 @@
 childof: pageText
 type: background
 title: Background
-blockquote:
+blockquote: |
   “Eviction functions as a cause, not just a condition of poverty."
   —Matthew Desmond
 date: 2017-11-26T03:54:30.075Z

@@ -1,5 +1,5 @@
 ---
-title: "What if I can't find the place I'm looking for in the rankings?"
+title: "Why can't I find the place I'm looking for in the rankings?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: rankings

@@ -254,6 +254,9 @@
       @include for-phone-only {
       /*  padding-bottom: 2rem; */
       }
+    img {
+        width: 20px;
+    }  
     }
   }
 }

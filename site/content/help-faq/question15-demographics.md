@@ -5,4 +5,4 @@ childof: faq
 type: methods
 weight: 240
 ---
-We have data from XXXX to XXXX. For more information, please click here to go to our Methods page.
+Research team -- care to speak to this? It was a frequent question in our user testing.
