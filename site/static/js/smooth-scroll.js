@@ -45,7 +45,8 @@ $(function() {
           $('html,body').animate({
             scrollTop: target.offset().top - (getWindowOffset() + getPageOffset(location.pathname)) + 'px'
           }, 1000); // The number here represents the speed of the scroll in milliseconds
-          return false;
+          // Don't preventDefault in dropdowns
+          if (!$(this).hasClass('dropdown-item')) { return false; }
         }
       }
     });
