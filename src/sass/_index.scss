@@ -168,6 +168,55 @@
   }
 }
 
+/* --- Dropdowns --- */
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  button {
+    @include altFont(12px);
+    color: $secondaryTextColor;
+    border: none;
+    background: none;
+    height: 50px;
+    @include for-tablet-landscape-up {
+      height: 56px;
+    }
+    width: 320px;
+    &:focus {
+      color: $color1;
+      outline: 0;
+    }
+    @include for-tablet-portrait-up {
+      @include altFont(15px);
+    }
+    
+  }
+  ul.anchor-links {
+    padding: 0;
+      width: 320px;
+      z-index: 1000;
+      &.dropdown-menu {
+        background-color: #F4F7F9;
+      }
+    
+    li {
+      display: block;
+      margin: 2px 0;
+      a {
+        top: initial;
+        margin: 0;
+        &:hover {
+          background-color: #F4F7F9;
+        }
+      }
+      a:after {
+        display: none;
+      }
+    }
+  }
+}
+
 /* set list page content padding, etc. */
 
 .center-content-post.page-list {
