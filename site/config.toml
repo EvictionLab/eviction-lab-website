@@ -114,19 +114,4 @@ buildFuture = true
     url = "/city-rankings/top-cities/"
 
 
-[[menu.about_us]]
-    name = "Affiliations Funding"
-    weight = -110
-    url = "/about-us/affiliations-funding/"
-[[menu.about_us]]
-    name = "Book"
-    weight = -120
-    url = "/about-us/book/"
-[[menu.about_us]]
-    name = "Research Team Bios"
-    weight = -130
-    url = "/about-us/research-team-bios/"
-[[menu.about_us]]
-    name = "Web Team Bios"
-    weight = -140
-    url = "/about-us/web-team-bios/"
+
