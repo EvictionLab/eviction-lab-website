@@ -13,5 +13,5 @@ Examples: Clarksdale, MS; Fremont, OH
 Mid-sized Cities are places with populations of between 20,000 and 100,000. We rank 1,858 of these places.
 Examples: Carson City, CA; Evanston, IL
 
-Small Cities & Rural Areas are places with populations of 100,000 and above. We rank 313 of these places.
+Large Cities are places with populations of 100,000 and above. We rank 313 of these places.
 Examples: Los Angeles, NYC, Detroit

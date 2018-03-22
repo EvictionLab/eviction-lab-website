@@ -9,16 +9,32 @@
 </div>
 
 <!-- subnav -->
-<div class="shadow-bottom center-page-wrapper subnav">
+<!-- <div class="shadow-bottom center-page-wrapper subnav">
   <div class="center-content-post">
     <ul class="anchor-links">
-      <!--<li class="only-larger-screens">CHOOSE A SECTION</li>-->
-      <li><a href="#maps" class="smoothScroll">Maps</a></li>
+      <li><a href="#maps" class="smoothScroll">Map</a></li>
       <li><a href="#data" class="smoothScroll">Data</a></li>
       <li><a href="#rankings" class="smoothScroll">Rankings</a></li>
       <li><a href="#definitions" class="smoothScroll">Definitions</a></li>
       <li><a href="#methods" class="smoothScroll">Methods</a></li>
+      <li><a href="#stories" class="smoothScroll">Storytelling &amp; Activism</a></li>
     </ul>
+  </div>
+</div> -->
+<div class="shadow-bottom center-page-wrapper subnav">
+    <div class="center-content-post">  
+<div class="dropdown">
+    <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+      <ul class="anchor-links dropdown-menu">
+      <li><a class="dropdown-item smoothScroll" href="#data">Data</a></li>
+      <li><a class="dropdown-item smoothScroll" href="#rankings">Rankings</a></li>
+      <li><a class="dropdown-item smoothScroll" href="#definitions">Definitions</a></li>
+    </ul>
+    <!--</div>-->
+  </div>
   </div>
 </div>
 
@@ -58,7 +74,7 @@ this, as long as the result is unique.
     <!-- ************ -->
 
     <a name="maps"></a>
-    <h2 class="bordered-header blue">Maps</h2>
+    <h2 class="bordered-header blue">Map</h2>
 
     <div class="accordion">
 
@@ -135,6 +151,23 @@ this, as long as the result is unique.
 
         {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
         {{ if eq .Params.type "methods" }}
+        <!-- faq item -->
+          {{ partial "faqs" . }}
+        {{ end }}
+        {{ end }}
+
+  </div> <!-- close accordion -->
+
+   <!-- *************** -->
+    <!-- Storytelling section -->
+    <!-- *************** -->
+    <a name="stories"></a>
+    <h2 class="bordered-header blue">Storytelling &amp; Activism</h2>
+
+    <div class="accordion">
+
+        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "stories" }}
         <!-- faq item -->
           {{ partial "faqs" . }}
         {{ end }}
