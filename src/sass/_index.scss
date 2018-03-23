@@ -108,6 +108,10 @@
 
 /* subnav */
 
+.subnav {
+  z-index: 991;
+}
+
 .anchor-links {
   padding: 25px 0;
   margin-bottom: 60px;
@@ -169,7 +173,9 @@
 }
 
 /* --- Dropdowns --- */
-
+ul.anchor-links.dropdown-menu.show {
+  transform: translate3d(200px, 56px, 0px) !important;
+}
 .dropdown {
   display: flex;
   justify-content: center;
@@ -190,6 +196,7 @@
     @include for-tablet-portrait-up {
       @include altFont(15px);
     }
+  
     
   }
   ul.anchor-links {
