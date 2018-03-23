@@ -5,6 +5,7 @@ title = "Eviction Lab Sandbox"
 theme = "behave"
 summaryLength = 50
 buildFuture = true
+enableRobotsTXT = true
 
 [[menu.main]]
     name = "Home"
