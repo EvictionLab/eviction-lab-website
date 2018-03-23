@@ -94,6 +94,21 @@
                 }
             }
         }
+        .button-wrap {
+            margin: 2.4rem 0 1.6rem;
+            @include for-tablet-portrait-up {
+                margin: 4rem 0 3.2rem;
+            }
+            @include for-midsize-desktop-up {
+                margin: 4.8rem 0 4rem;
+            }
+        }
+        .btn-primary {
+            @include for-tablet-portrait-up {
+                height: 6.4rem;
+                padding: 0 4rem;
+                }
+        }
         @include for-phone-only {
             .button-wrap {
             display: flex;
@@ -153,15 +168,23 @@
             @include for-tablet-portrait-up {
                 font-size: 1.6rem;
                 line-height: 2.2rem;
-                margin-bottom: 4.8rem;
+               /* margin-bottom: 4.8rem; */
             }
             @include for-midsize-desktop-up {
                 font-size: 1.8rem;
                 line-height: 2.8rem;
-                margin-bottom: 4.8rem;
+              /*  margin-bottom: 4.8rem; */
             }
         }
         .praise {
+           margin-bottom: 0.8rem;
+            @include for-tablet-portrait-up {
+                margin-bottom: 1.6rem;
+            }
+            @include for-midsize-desktop-up {
+                margin-bottom: 3.2rem;
+            }
+            
             .column-wrap {
                 display: grid;
                 grid-template-columns: 1fr 1fr;

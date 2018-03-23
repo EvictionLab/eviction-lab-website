@@ -91,7 +91,12 @@
               by Matthew Desmond</p>
         </div>
         <div class="book-copy">
-          <p>In this brilliant, heartbreaking book, Matthew Desmond takes us into the poorest neighborhoods of Milwaukee to tell the story of eight families on the edge. Arleen is a single mother trying to raise her two sons on the $20 a month she has left after paying for their rundown apartment. Scott is a gentle nurse consumed by a heroin addiction. Lamar, a man with no legs and a neighborhood full of boys to look after, tries to work his way out of debt. Vanetta participates in a botched stickup after her hours are cut. All are spending almost everything they have on rent, and all have fallen behind.</p>
+            {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+            {{ if eq .Params.type "bookcopy" }} 
+            {{ .Content }}
+            {{ end }}
+            {{ end }}   
+          
           <div class="button-wrap"><a href="http://evictedbook.com"><button class="btn-primary">Learn more</button></a></div>
         </div> 
       </div><!-- end evicted-book -->
