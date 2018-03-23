@@ -174,9 +174,13 @@
 
 /* --- Dropdowns --- */
 ul.anchor-links.dropdown-menu.show {
+  @include for-tablet-landscape-up {
   transform: translate3d(200px, 56px, 0px) !important;
+  }
+  
 }
 .dropdown {
+  border: none;
   display: flex;
   justify-content: center;
   button {
@@ -196,8 +200,9 @@ ul.anchor-links.dropdown-menu.show {
     @include for-tablet-portrait-up {
       @include altFont(15px);
     }
-  
-    
+  }
+  .dropdown-menu {
+    border: none;
   }
   ul.anchor-links {
     padding: 0;
@@ -213,6 +218,7 @@ ul.anchor-links.dropdown-menu.show {
       a {
         top: initial;
         margin: 0;
+        text-transform: uppercase;
         &:hover {
           background-color: #F4F7F9;
         }
