@@ -271,6 +271,16 @@ p {
   }
 }
 
+.subcopy {
+  font-size: 1rem;
+  @include for-tablet-portrait-up {
+    font-size: 1.4rem;
+  }
+  @include for-midsize-desktop-up {
+    font-size: 1.5rem;
+  }
+}
+
 // Buttons
 // ----
 // layout
