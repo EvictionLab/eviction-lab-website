@@ -4,7 +4,23 @@
     /*----- Eviction Facts ----- */
     .eviction-facts .bordered-header {
         margin-top: 0rem;
-    }    
+        @include for-tablet-portrait-up {
+            margin-bottom: 3.2rem;
+        }
+        @include for-midsize-desktop-up {
+            margin-bottom: 4rem;
+        }
+    }
+    .eviction-facts {
+        @include for-tablet-portrait-up {
+        margin-bottom: 5.6rem;
+        }
+        img {
+            margin: 1.6rem 0;
+            max-width: 100%;
+        }
+    }
+
    /* ----- Video Panel ------- */ 
     .alt-bg.video-panel {
         background: #424670; /* Old browsers */
