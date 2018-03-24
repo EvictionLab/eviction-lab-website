@@ -260,6 +260,16 @@ ul.anchor-links.dropdown-menu.show {
   @include for-midsize-desktop-up {
     margin-top: 4.8rem;
   }
+  li:before {
+    content: '\b7\a0';
+    position:absolute;
+    right:100%
+}
+  li {
+      list-style:none;
+      position:relative;
+      margin-left: 7px;
+  }
 }
 .accordion-section {
   margin-bottom: 3rem;

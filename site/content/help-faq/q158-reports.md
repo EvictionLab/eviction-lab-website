@@ -7,7 +7,7 @@ weight: 158
 ---
 Reports, which are customized to display the same data and locations you've selected via the map and search, are designed as tools to support research and activism. You can download
 
-+ an Excel spreadsheet containing raw data 
-+ a Powerpoint presentation to share in your classroom, lecture, or meeting
-+ a PDF file, which also contains a fact sheet about evictions, for wide sharing. You can, for instance, bring this document to your city council or community group meeting, to educate your fellow citizens about eviction in your area.
++ An Excel spreadsheet containing raw data 
++ A Powerpoint presentation to share in your classroom, lecture, or meeting
++ A PDF file, which also contains a fact sheet about evictions, for wide sharing. You can, for instance, bring this document to your city council or community group meeting, to educate your fellow citizens about eviction in your area.
 

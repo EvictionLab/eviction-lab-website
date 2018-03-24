@@ -244,7 +244,7 @@ h3 {
   }
 }
 
-p {
+p, .center-content-post.page-list li {
   @include for-phone-only {
     @include defaultFont(1.4rem); 
     line-height: 2rem;

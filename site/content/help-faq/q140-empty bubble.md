@@ -5,4 +5,4 @@ childof: faq
 type: map
 weight: 140
 ---
-For locations with an empty bubble (with a grey outline), there is no available data for the selected year. Data for that location may exist for other years, however.
+For locations with an empty bubble, there is no available data for the selected year. Data for that location may exist for other years, however.
