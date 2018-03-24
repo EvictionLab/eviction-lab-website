@@ -174,8 +174,17 @@
 
 /* --- Dropdowns --- */
 ul.anchor-links.dropdown-menu.show {
+  @include for-phone-only {
+    transform: translate3d(-160px, 51px, 0px)!important;
+    left: 50%!important;
+  }
+  @include for-tablet-portrait-only {
+      transform: translate3d(-160px, 51px, 0px)!important;
+      left: 50%!important;
+  }
   @include for-tablet-landscape-up {
   transform: translate3d(200px, 56px, 0px) !important;
+ 
   }
   
 }
