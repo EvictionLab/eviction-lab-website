@@ -5,4 +5,4 @@ childof: faq
 type: stories
 weight: 250
 ---
-For journalists, please see our Media Guide for a walkthrough of using our tools to uncover stories about eviction. For educators, please see our Teacher Guide. Citizens/activists, please see our Site Introduction.
+For journalists, please see our Media Guide for suggestions on using our tools to uncover stories about eviction. For educators, please see our Teacher Guide. Citizens/activists, please see our Site Introduction.
