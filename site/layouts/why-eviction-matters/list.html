@@ -31,12 +31,12 @@
     <!-- ************ -->
     <h2 class="bordered-header blue ">Questions &amp; Answers About Eviction</h2>
       
-    <div class="accordion">
+    <div class="eviction-qa">
 
         {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
         {{ if eq .Params.type "faq" }}
         <!-- faq item -->
-          {{ partial "faqs" . }}
+          {{ partial "evictionfaqs" . }}
         {{ end }}
         {{ end }}
 

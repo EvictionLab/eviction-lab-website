@@ -5,4 +5,4 @@ childof: evictionMatters
 type: faq
 weight: 170
 ---
-The website justshelter.org contains links to over 600 community and national organizations offering housing assistance, education and advocacy, legal aid and tenants' rights counseling. 
+The website [Just Shelter](https://justshelter.org) contains links to over 600 community and national organizations offering housing assistance, education and advocacy, legal aid and tenants' rights counseling. 
