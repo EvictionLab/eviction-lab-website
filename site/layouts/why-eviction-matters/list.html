@@ -13,6 +13,7 @@
   <div class="center-content-post max1200">
     <ul class="anchor-links">
       <li class="only-larger-screens">GO TO SECTION</li>
+      <li><a href="#wem-intro-link" class="smoothScroll">Introduction</a></li>
       <li><a href="#eviction-facts" class="smoothScroll">Eviction Q&amp;A</a></li>
       <li><a href="#video" class="smoothScroll">Video</a></li>
       <li><a href="#evicted-book" class="smoothScroll">Evicted: The Book</a></li>
@@ -24,6 +25,16 @@
 <div class="alt-page eviction-matters">
 <div class="center-page-wrapper">
   <div class="center-content-post page-list eviction-facts">
+    <div id="wem-intro">
+        <a name="wem-intro-link"></a>
+      <h2 class="bordered-header blue ">Introduction</h2>
+      {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+        {{ if eq .Params.type "intro" }}
+        <!-- faq item -->
+          {{ .Content }}
+        {{ end }}
+        {{ end }}
+    </div>
       <a name="eviction-facts"></a>
 
     <!-- ************ -->
