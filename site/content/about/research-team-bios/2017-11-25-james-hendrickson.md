@@ -2,7 +2,7 @@
 childof: research-team-bios
 title: James Hendrickson
 abbrev: jhendrickson
-position: Research Specialist
+position: Senior Research Specialist
 date: 2017-11-26T03:50:19.190Z
 image: /images/bios/jhendrickson_full.jpg
 thumb: /images/bios/jhendrickson_thumb.jpg
