@@ -22,7 +22,13 @@
         margin-bottom: 5.6rem;
         }
         #wem-intro {
+            margin-bottom: 3.2rem;
+            @include for-tablet-portrait-up {
             margin-bottom: 4.8rem;
+            }
+            @include for-tablet-landscape-up {
+                margin-bottom: 5.6rem;
+                }
         }
         img {
             margin: 1.6rem 0 0.8rem;
