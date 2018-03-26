@@ -34,7 +34,16 @@
                   <div class="modal-footer">
                       <div class="bio-nav prev">{{ if .NextInSection }} <a class="red" data-toggle="modal" data-target="#modal-{{ .NextInSection.Params.abbrev }}" data-dismiss="modal" href="#"><i class="fa fa-chevron-left">&nbsp;&nbsp;</i>Previous bio</a> {{ end }}</div>
                       {{ if (.NextInSection ) (.PrevInSection) }}<div class="bio-nav red separator"> | </div>{{ end }}
-                      <div class="bio-nav next">{{ if .PrevInSection }} <a class="red" data-toggle="modal" data-target="#modal-{{ .PrevInSection.Params.abbrev }}" data-dismiss="modal" href="#">Next bio&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a> {{ end }}</div>
+                      <div class="bio-nav next">{{ if .PrevInSection }} 
+                        <a class="red" data-toggle="modal" data-target="#modal-{{ .PrevInSection.Params.abbrev }}" data-dismiss="modal" href="#">Next bio&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a> 
+                        
+          <!-- Would like this conditional built so that when user reaches the end of the bios, the link below connects them to the first bio in the section -->
+                        
+                        {{ else }}
+                          <a class="red" data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-dismiss="modal" href="#">Next bio&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a>
+                        {{ end }}</div>
+
+          
                     <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
                   </div>
                 </div>
