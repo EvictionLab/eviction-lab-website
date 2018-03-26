@@ -3,7 +3,7 @@
 .alt-bg {
   clear: both;
   @include for-tablet-portrait-up {
-    margin: 0 -16px;
+    /* margin: 0 -16px; */
   }
 }
 /* ---- css sprites --- */
