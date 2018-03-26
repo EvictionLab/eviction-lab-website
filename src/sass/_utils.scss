@@ -132,7 +132,7 @@
 }
 .mobile-on {
   @include for-tablet-portrait-up {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -147,6 +147,11 @@
   }
   @include for-tablet-landscape-up {
     display: none;
+  }
+}
+.tablet-up-off {
+  @include for-tablet-portrait-up {
+    display:none;
   }
 }
 

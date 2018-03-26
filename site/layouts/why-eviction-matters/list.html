@@ -11,19 +11,44 @@
 <!-- subnav -->
 <div class="shadow-bottom center-page-wrapper subnav">
   <div class="center-content-post max1200">
-    <ul class="anchor-links">
+    <ul class="anchor-links mobile-off">
       <li class="only-larger-screens">GO TO SECTION</li>
+      <li><a href="#wem-intro-link" class="smoothScroll">Introduction</a></li>
       <li><a href="#eviction-facts" class="smoothScroll">Eviction Q&amp;A</a></li>
       <li><a href="#video" class="smoothScroll">Video</a></li>
       <li><a href="#evicted-book" class="smoothScroll">Evicted: The Book</a></li>
       
     </ul>
+    <div class="dropdown mobile-on">
+        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            GO TO SECTION
+        </button>
+        <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+          <ul class="anchor-links dropdown-menu">
+            <li><a class="dropdown-item smoothScroll" href="#wem-intro-link">Introduction</a></li>
+            <li><a class="dropdown-item smoothScroll" href="#eviction-facts">Eviction Q&amp;A</a></li>
+            <li><a class="dropdown-item smoothScroll" href="#video">Video</a></li>
+            <li><a class="dropdown-item smoothScroll" href="#evicted-book">Evicted: The Book</a></li>
+            
+        </ul>
+        <!--</div>-->
+      </div>
   </div>
 </div>
 
 <div class="alt-page eviction-matters">
 <div class="center-page-wrapper">
   <div class="center-content-post page-list eviction-facts">
+    <div id="wem-intro">
+        <a name="wem-intro-link"></a>
+      <h2 class="bordered-header blue ">Introduction</h2>
+      {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+        {{ if eq .Params.type "intro" }}
+        <!-- faq item -->
+          {{ .Content }}
+        {{ end }}
+        {{ end }}
+    </div>
       <a name="eviction-facts"></a>
 
     <!-- ************ -->
@@ -55,21 +80,25 @@
         <h4 class="subhead bordered-header">Video</h4>
 
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="video1"> 
+            <div role="tabpanel" class="tab-pane active" id="video1"> 
+                <div class="video-container"><iframe width="720" height="405" src="https://www.youtube.com/embed/zOsr3AcZAsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
+            </div>
+          <div role="tabpanel" class="tab-pane" id="video2"> 
               <div class="video-container"><iframe width="720" height="405" src="https://www.youtube.com/embed/KElgG_s1DkE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
           </div>
-          <div role="tabpanel" class="tab-pane" id="video2">  
+          <div role="tabpanel" class="tab-pane" id="video3">  
               <div class="video-container"><iframe width="720" height="435" src="https://www.youtube.com/embed/2ovyccOXyoQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
           </div>
-          <div role="tabpanel" class="tab-pane" id="video3">  
+          <div role="tabpanel" class="tab-pane" id="video4">  
               <div class="video-container"><iframe width="720" height="405" src="https://www.youtube.com/embed/NY4Q8XQ0n6E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
           </div>
           
         </div>  
         <ul class="nav nav-tabs anchor-links" role="tablist">
-            <li role="presentation" class="active"><a href="#video1" aria-controls="home" role="tab" data-toggle="tab">How Housing is Ignored in the Poverty Discussion </a> | </li>
-            <li role="presentation"><a href="#video2" aria-controls="profile" role="tab" data-toggle="tab">EVICTED Book Trailer</a> | </li>
-            <li role="presentation"><a href="#video3" aria-controls="profile" role="tab" data-toggle="tab">Unstable Housing</a></li>
+            <li role="presentation" class="active"><a href="#video1" aria-controls="home" role="tab" data-toggle="tab">The Eviction Epidemic</a> | </li>
+            <li role="presentation"><a href="#video2" aria-controls="home" role="tab" data-toggle="tab">How Housing is Ignored in the Poverty Discussion</a> | </li>
+            <li role="presentation"><a href="#video3" aria-controls="profile" role="tab" data-toggle="tab">EVICTED Book Trailer</a> | </li>
+            <li role="presentation"><a href="#video4" aria-controls="profile" role="tab" data-toggle="tab">Unstable Housing</a></li>
         </ul>
             
     </div>
