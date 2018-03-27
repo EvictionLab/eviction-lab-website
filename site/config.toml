@@ -1,69 +1,75 @@
 baseURL = "/"
 
+DefaultContentLanguage = "en"
 languageCode = "en-us"
-title = "Eviction Lab"
 theme = "behave"
 summaryLength = 50
 buildFuture = true
 enableRobotsTXT = true
 
-[[menu.main]]
+[Languages]
+[Languages.en]
+weight = 0
+title = "Eviction Lab" 
+
+
+[[languages.en.menu.main]]
     name = "Home"
     weight = 1
     url = "/"
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Map & Data"
     weight = 2
     url = "/map/"
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Eviction Rankings"
     weight = 3
     url = "/rankings/"
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "About Us"
     weight = 4
     url = "/about/"
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Why Eviction Matters"
     weight = 5
     url = "/why-eviction-matters"
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Methods"
     weight = 6
     url = "/methods/"
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Help & FAQ"
     weight = 7
     url = "/help-faq/"
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Updates"
     weight = 8
     url = "/updates/"
 
-[[menu.updates]]
+[[languages.en.menu.updates]]
     name = "Events"
     weight = -80
     identifier = "about"
     url = "/updates/events/"
-[[menu.updates]]
+[[languages.en.menu.updates]]
     name = "Research"
     weight = -90
     url = "/updates/research/"
-[[menu.updates]]
+[[languages.en.menu.updates]]
     name = "EL Research"
     parent = "Research"
     weight = -94
     url = "/updates/research/el-research" 
-[[menu.updates]]
+[[languages.en.menu.updates]]
     name = "Outside Research"
     parent = "Research"
     weight = -96
     url = "/updates/research/outside-research"        
-[[menu.updates]]
+[[languages.en.menu.updates]]
     name = "Media"
     weight = -100
     url = "/updates/media/"
-[[menu.updates]]
+[[languages.en.menu.updates]]
     name = "Blog"
     weight = -110
     url = "/updates/blog/"
