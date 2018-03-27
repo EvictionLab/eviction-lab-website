@@ -13,63 +13,64 @@ weight = 0
 title = "Eviction Lab" 
 
 
-[[languages.en.menu.main]]
+
+[[menu.main]]
     name = "Home"
     weight = 1
     url = "/"
-[[languages.en.menu.main]]
+[[menu.main]]
     name = "Map & Data"
     weight = 2
     url = "/map/"
-[[languages.en.menu.main]]
+[[menu.main]]
     name = "Eviction Rankings"
     weight = 3
     url = "/rankings/"
-[[languages.en.menu.main]]
+[[menu.main]]
     name = "About Us"
     weight = 4
     url = "/about/"
-[[languages.en.menu.main]]
+[[menu.main]]
     name = "Why Eviction Matters"
     weight = 5
     url = "/why-eviction-matters"
-[[languages.en.menu.main]]
+[[menu.main]]
     name = "Methods"
     weight = 6
     url = "/methods/"
-[[languages.en.menu.main]]
+[[menu.main]]
     name = "Help & FAQ"
     weight = 7
     url = "/help-faq/"
-[[languages.en.menu.main]]
+[[menu.main]]
     name = "Updates"
     weight = 8
     url = "/updates/"
 
-[[languages.en.menu.updates]]
+[[menu.updates]]
     name = "Events"
     weight = -80
     identifier = "about"
     url = "/updates/events/"
-[[languages.en.menu.updates]]
+[[menu.updates]]
     name = "Research"
     weight = -90
     url = "/updates/research/"
-[[languages.en.menu.updates]]
+[[menu.updates]]
     name = "EL Research"
     parent = "Research"
     weight = -94
     url = "/updates/research/el-research" 
-[[languages.en.menu.updates]]
+[[menu.updates]]
     name = "Outside Research"
     parent = "Research"
     weight = -96
     url = "/updates/research/outside-research"        
-[[languages.en.menu.updates]]
+[[menu.updates]]
     name = "Media"
     weight = -100
     url = "/updates/media/"
-[[languages.en.menu.updates]]
+[[menu.updates]]
     name = "Blog"
     weight = -110
     url = "/updates/blog/"
