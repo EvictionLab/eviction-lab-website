@@ -144,7 +144,11 @@
             <img src="/images/icons/pm-bookmark.svg" />
           </div>
           <div class="right-column">
-            <p>Blog: <span>{{ $first.Title | truncate 60 }}</span></p>
+            <p>Blog: <span>
+               
+                {{ if isset $blog 0 }}
+              {{ $first.Title | truncate 60 }}</span></p>
+              {{ end }}
             <span class="br-link">Read the blog post <i class="fa fa-chevron-right"></i></span>
             <div class="hover-bar-bottom-left"></div>
           </div>  

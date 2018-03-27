@@ -12,6 +12,10 @@ enableRobotsTXT = true
 weight = 0
 title = "Eviction Lab" 
 
+[Languages.es]
+weight = 1
+title = "Eviction Lab" 
+
 
 
 [[menu.main]]
