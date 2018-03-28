@@ -127,7 +127,7 @@
 }
 .mobile-off {
   @include for-phone-only {
-    display: none;
+    display: none !important;
   }
 }
 .mobile-on {
@@ -166,5 +166,15 @@
 }
 .align-center {
   text-align: center;
+}
+.mt1rem {
+  margin-top: 1.8rem;
+  @include for-tablet-portrait-up {
+  margin-top: 1rem;
+  }
+  @include for-midsize-desktop-up {
+    margin-top: 1.8rem;
+    }
+
 }
 

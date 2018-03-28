@@ -78,3 +78,56 @@
     background: none;
   }
 }
+
+// Social share floating box
+
+.social-fixed {
+  height: 176px;
+  width: 80px;
+  position: fixed;
+  background: #F4F7F9;
+  text-align: center;
+  box-shadow: $matShadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $headerFontStack;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #919191;
+  line-height: 1.4rem;
+  letter-spacing: 0.05rem;
+  margin-top: 56px;
+  z-index: 991;
+  .social-sprite-vert {
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      a {
+        background-image: url('/images/icons/social/social-lockup-inactive.svg');
+        display: block;
+        height: 30px;
+        width: 21px;
+        transition: all 10ms ease-out;
+        -webkit-transition: all 10ms ease-out;
+        -o-transition: all 10ms ease-out;
+        /* zoom: 1; */
+        background-size: 21px 113px;
+        &:hover {
+          background-image: url('/images/icons/social/social-lockup-active.svg');
+        }
+        &.facebook {
+          background-position: 0 0;
+        }
+        &.twitter {
+          background-position: 0 83px;
+        }
+        &.send-email {
+          background-position: 0 51px;
+        }
+      }
+    }
+
+  }
+}
