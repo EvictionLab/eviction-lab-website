@@ -345,7 +345,7 @@
                 overflow-y: hidden;
                 }
             .modal-dialog {
-                max-width: 80%;
+                max-width: 1000px;
             }
         }
 
@@ -356,10 +356,10 @@
         background-size: cover;
         background-position: center top;
         @include for-phone-only {
-            height: 400px;
+            height: 500px;
         }
         @include for-tablet-portrait-up {
-            height: 400px;
+            height: 500px;
         }
         @include for-tablet-landscape-up {
             height: auto;
