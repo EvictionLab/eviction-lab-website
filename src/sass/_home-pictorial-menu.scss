@@ -321,10 +321,10 @@
     .middle-left {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-middle-left { visibility: visible; }
-      @include backgroundImage('/img/pictorial-menu-middle-middle-left-bg-mobile.png');
+      @include backgroundImage('/images/assets/menu/child-in-court3.jpg');
       @include hoverBar('hover-bar-middle-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/img/pictorial-menu-middle-middle-left-bg.jpg');
+        @include backgroundImage('/images/assets/menu/child-in-court3.jpg');
       }
       @include for-sub480 {
         background: #434878;
