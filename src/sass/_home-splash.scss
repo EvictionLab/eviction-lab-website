@@ -43,7 +43,7 @@ $heroWidth: 300px;
   position:relative;
   z-index:2;
   width:100%;
-  max-width: $maxWidth;
+  max-width: 1232px;
   margin: 0 auto;
    @include for-phone-only {
     padding: 0 $defaultMargin;
@@ -71,6 +71,9 @@ $heroWidth: 300px;
     top: 0;
     right: 0;
     width: calc(100% - (((100% - #{$maxWidth}) / 2) + (#{$heroWidth} + #{$heroMargin} * 2.3)));
+    @include for-midsize-desktop-up {
+      width: calc(100% - (((100% - #{$maxWidth}) / 2) + (240px + #{$heroMargin} * 2.3)));
+    }
     height: 100%;
     background-image: url('/img/hero-slide-1.jpg');
     background-position:50% 50%;
@@ -148,13 +151,18 @@ $heroWidth: 300px;
       }
     }
     a {
-      @include defaultFont(14px);
       color: $altTextColor;
       background-color: $color1;
       border-color: $color1;
-      padding: 24px 32px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      @include altFont(1rem);
+      padding: 11px 15px;
+      letter-spacing: .054rem;
+      @include for-tablet-portrait-up {
+        @include altFont(14px);
+        padding: 20px 64px;
+        letter-spacing: 1px;
+      }
     }
     a:hover {
       color: $altTextColor;
