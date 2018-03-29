@@ -77,6 +77,9 @@
 
 .center-content-post {
   max-width: 720px;
+  @include for-tablet-portrait-only {
+    max-width: 560px;
+  }
   line-height: 32px;
   &.max1200 {
     max-width: 1200px;
@@ -127,7 +130,7 @@
 }
 .mobile-off {
   @include for-phone-only {
-    display: none;
+    display: none !important;
   }
 }
 .mobile-on {
@@ -166,5 +169,15 @@
 }
 .align-center {
   text-align: center;
+}
+.mt1rem {
+  margin-top: 1.8rem;
+  @include for-tablet-portrait-up {
+  margin-top: 1rem;
+  }
+  @include for-midsize-desktop-up {
+    margin-top: 1.8rem;
+    }
+
 }
 

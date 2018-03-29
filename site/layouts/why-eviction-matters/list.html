@@ -35,15 +35,16 @@
       </div>
   </div>
 </div>
-
+{{ partial "social-share-vert" . }}
 <div class="alt-page eviction-matters">
+   
 <div class="center-page-wrapper">
   <div class="center-content-post page-list eviction-facts">
     <div id="wem-intro">
         <a name="wem-intro-link"></a>
-      <h2 class="bordered-header blue ">Introduction</h2>
-      {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+        {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
         {{ if eq .Params.type "intro" }}
+        <h2 class="bordered-header blue ">{{ .Title }}</h2>
         <!-- faq item -->
           {{ .Content }}
         {{ end }}
@@ -54,7 +55,11 @@
     <!-- ************ -->
     <!-- Eviction FAQ Section -->
     <!-- ************ -->
-    <h2 class="bordered-header blue ">Questions &amp; Answers About Eviction</h2>
+    {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+    {{ if eq .Params.type "faqHeader" }}
+    <h2 class="bordered-header blue ">{{ .Params.header }}</h2>
+    {{ end }}
+    {{ end }}
       
     <div class="eviction-qa">
 
@@ -76,8 +81,9 @@
 <div class="alt-bg video-panel">
   <div class="center-content-post page-list">
       <a name="video"></a>
-      
-        <h4 class="subhead bordered-header">Video</h4>
+      {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+        {{ if eq .Params.type "video" }}
+        <h4 class="subhead bordered-header">{{ .Params.header }}</h4>
 
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="video1"> 
@@ -95,12 +101,13 @@
           
         </div>  
         <ul class="nav nav-tabs anchor-links" role="tablist">
-            <li role="presentation" class="active"><a href="#video1" aria-controls="home" role="tab" data-toggle="tab">The Eviction Epidemic</a> | </li>
-            <li role="presentation"><a href="#video2" aria-controls="home" role="tab" data-toggle="tab">How Housing is Ignored in the Poverty Discussion</a> | </li>
-            <li role="presentation"><a href="#video3" aria-controls="profile" role="tab" data-toggle="tab">EVICTED Book Trailer</a> | </li>
-            <li role="presentation"><a href="#video4" aria-controls="profile" role="tab" data-toggle="tab">Unstable Housing</a></li>
+            <li role="presentation" class="active"><a href="#video1" aria-controls="home" role="tab" data-toggle="tab">{{ .Params.v1 }}</a> | </li>
+            <li role="presentation"><a href="#video2" aria-controls="home" role="tab" data-toggle="tab">{{ .Params.v2 }}</a> | </li>
+            <li role="presentation"><a href="#video3" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.v3 }}</a> | </li>
+            <li role="presentation"><a href="#video4" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.v4 }}</a></li>
         </ul>
-            
+        {{ end }}
+      {{ end }}      
     </div>
 </div>    
     
@@ -111,29 +118,35 @@
 
 <div class="alt-bg book-panel">
     <a name="evicted-book"></a>
-  <div class="center-content-post page-list">    
-    <h2 class="page-section-header">Evicted: The Book</h2>
+  <div class="center-content-post page-list"> 
+      {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+      {{ if eq .Params.type "bookheader" }}    
+    <h2 class="page-section-header">{{ .Params.header }}</h2>
       <div class="evicted-book">
         <div class="book-img">
           <img src="/images/assets/evicted-book.jpg" />
-          <p class="subcopy"><span>Evicted: Poverty and Profit in The American City</span><br />
-              by Matthew Desmond</p>
+          <p class="subcopy"><span>{{ .Params.subcopy }}</span><br />{{ .Params.subcopy2 }}</p>
         </div>
+        {{ end }}
+        {{ end }}
         <div class="book-copy">
             {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
             {{ if eq .Params.type "bookcopy" }} 
             {{ .Content }}
-            {{ end }}
-            {{ end }}   
+           
           
-          <div class="button-wrap"><a href="http://evictedbook.com"><button class="btn-primary">Buy the book</button></a></div>
+          <div class="button-wrap"><a href="http://evictedbook.com"><button class="btn-primary">{{ .Params.button1 }}</button></a></div>
+          {{ end }}
+          {{ end }}
         </div> 
       </div><!-- end evicted-book -->
       <div class="praise mobile-off">
-        <h4 class="subhead bordered-header blue">Praise</h4> 
+          {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+          {{ if eq .Params.type "bookheader" }} 
+        <h4 class="subhead bordered-header blue">{{ .Params.header2 }}</h4> 
         <div class="column-wrap">
-         
-       
+            {{ end }}
+            {{ end }}   
           <div class="column-left">
             {{ range (where .Site.RegularPages "Params.col" ("col-left")) }}
             {{ if eq .Params.col "col-left" }} 
@@ -170,3 +183,4 @@
 <span class="debug-visibility">rendered by = theme/THEMENAME/layouts/about-us/list.html</span>
 
 {{ partial "footer" . }}
+

@@ -35,10 +35,18 @@
     }
     .center-content-post.max1200 {
         max-width: 1024px;
+        @media (min-width: 768px) and (max-width: 1240px) {
+            padding-left: 66px;
+            padding-right: 66px;
+        }
     }
 }
 .about-block {
     @include for-tablet-portrait-up {
+        display: grid;
+        grid-template-columns: 46% 1fr;
+    }
+    @include for-tablet-landscape-up {
         display: grid;
         grid-template-columns: 40% 1fr;
     }
@@ -87,7 +95,7 @@
             }
         }
         @include for-tablet-portrait-up {
-            padding-right: 5.6rem;
+            padding-right: 4.8rem;
         }
         @include for-tablet-landscape-up {
             padding-right: 6.4rem;
@@ -345,7 +353,7 @@
                 overflow-y: hidden;
                 }
             .modal-dialog {
-                max-width: 80%;
+                max-width: 1000px;
             }
         }
 
@@ -356,10 +364,10 @@
         background-size: cover;
         background-position: center top;
         @include for-phone-only {
-            height: 400px;
+            height: 500px;
         }
         @include for-tablet-portrait-up {
-            height: 400px;
+            height: 500px;
         }
         @include for-tablet-landscape-up {
             height: auto;

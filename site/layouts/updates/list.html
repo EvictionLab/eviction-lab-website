@@ -1,6 +1,6 @@
 {{ partial "header" . }}
   <!-- section header -->
-  {{ if eq .Title "Updates"}} <!-- if we are on the Updates page, do stuff --> 
+  {{ if eq .Title "Updates | Eviction Lab"}} <!-- if we are on the Updates page, do stuff --> 
   <div class="graphic-header updates-hero center-page-wrapper">
       <div class="center-page">
         <h1 class="graphic-page-header">updates</h1>
@@ -22,7 +22,7 @@
 <!-- **************************** -->
 <!-- ******* Updates Home ******* -->
 
-{{ if eq .Title "Updates"}} <!-- if we are on the Updates page, do stuff -->
+{{ if eq .Title "Updates | Eviction Lab"}} <!-- if we are on the Updates page, do stuff -->
 
   {{ $updates := where .Site.RegularPages "Params.contenttype" "updates" }}
   {{ if isset $updates 0 }} <!-- if there are Blog articles, list them -->
@@ -32,7 +32,7 @@
 {{ range .Paginator.Pages }}   
 <!--{{ if eq .Params.contenttype "updates" }}    -->
 
-        <div class="center-page-wrapper">
+        <div class="center-page-wrapper mt1rem">
             <div class="list-item center-content {{ .Params.contenttype }}-list">
 
             <!--<div class="chevron">

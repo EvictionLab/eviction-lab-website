@@ -331,6 +331,7 @@ $boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.2 );
 $boxShadowIcon: 0px 4px 11px rgba( 0, 0, 0, .16 );
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 $fullShadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.02);
+$matShadow: 0 3px 6px 0 rgba(0,0,0,.16);
 @mixin full-shadow-animate {
   &:hover {
     box-shadow: $fullShadow;

@@ -1,8 +1,7 @@
 <!-- back to section link -->
 {{ if not .IsHome }}
-{{ $currentTitle := humanize .Title }}
-{{ $currentSection := humanize .Section }}
-  {{ if eq $currentTitle $currentSection }}
+ 
+  {{ if eq .Params.homepage "updates" }}
   <!-- do nothing -->
   {{ else }}
     <div class="breadcrumbs bc-{{ .Params.childof }} center-page-wrapper">

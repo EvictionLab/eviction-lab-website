@@ -1,11 +1,23 @@
 baseURL = "/"
 
+DefaultContentLanguage = "en"
 languageCode = "en-us"
-title = "Eviction Lab"
 theme = "behave"
 summaryLength = 50
 buildFuture = true
 enableRobotsTXT = true
+
+
+[Languages]
+[Languages.en]
+weight = 0
+title = "Eviction Lab" 
+
+[Languages.es]
+weight = 1
+title = "Eviction Lab" 
+
+
 
 [[menu.main]]
     name = "Home"
