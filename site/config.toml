@@ -7,6 +7,7 @@ summaryLength = 50
 buildFuture = true
 enableRobotsTXT = true
 
+
 [Languages]
 [Languages.en]
 weight = 0
