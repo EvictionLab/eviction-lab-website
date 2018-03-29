@@ -84,7 +84,8 @@
 .social-fixed {
   height: 176px;
   width: 80px;
-  position: fixed;
+  position: sticky;
+  top: 160px;
   background: #F4F7F9;
   text-align: center;
   box-shadow: $matShadow;
@@ -98,7 +99,8 @@
   line-height: 1.4rem;
   letter-spacing: 0.05rem;
   margin-top: 56px;
-  z-index: 991;
+  z-index: 989;
+  margin-bottom: -232px;
   .social-sprite-vert {
     li {
       display: flex;
