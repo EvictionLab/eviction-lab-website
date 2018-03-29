@@ -183,20 +183,20 @@ $heroWidth: 300px;
       width: 300px;
       display: flex;
       a:hover {
-        border: 5px solid $secondaryAltTextColor;
+       /* border: 5px solid $secondaryAltTextColor; */
         @include for-tablet-landscape-up {
-          color: $secondaryAltTextColor;
+          color: #666;
         }
       }
       a {
         background-color: transparent;
-        border: 5px solid #fff;
+        /* border: 5px solid #fff; */
         border-radius: 2px;
         margin: 30px 20px 0 0;
         //color: $secondaryAltTextColor;
         font-size: 20px;
         padding: 5px 10px;
-        width: 45px;
+        width: 32px;
         height: 45px;
         text-align: center;
         @include for-iphone-8plus-portrait-only {

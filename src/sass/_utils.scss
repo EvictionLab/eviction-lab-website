@@ -77,6 +77,9 @@
 
 .center-content-post {
   max-width: 720px;
+  @include for-tablet-portrait-only {
+    max-width: 560px;
+  }
   line-height: 32px;
   &.max1200 {
     max-width: 1200px;
