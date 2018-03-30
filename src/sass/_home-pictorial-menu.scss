@@ -323,10 +323,10 @@
     .middle-left {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-middle-left { visibility: visible; }
-      @include backgroundImage('/images/assets/menu/child-in-court-4.jpg');
+      @include backgroundImage('/images/assets/menu/child-in-court-5.jpg');
       @include hoverBar('hover-bar-middle-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/images/assets/menu/child-in-court-4.jpg');
+        @include backgroundImage('/images/assets/menu/child-in-court-5.jpg');
       }
       @include for-sub480 {
         background: #434878;
@@ -338,10 +338,10 @@
     .middle-right {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-middle-right { visibility: visible; }
-      @include backgroundImage('/images/assets/menu/sheriff-deputy-notes.jpg');
+      @include backgroundImage('/images/assets/menu/sheriff-deputy-notes-menu.jpg');
       @include hoverBar('hover-bar-middle-middle-right',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/images/assets/menu/sheriff-deputy-notes.jpg');
+        @include backgroundImage('/images/assets/menu/sheriff-deputy-notes-menu.jpg');
       }
       @include for-sub480 {
         background: #2C897F;
