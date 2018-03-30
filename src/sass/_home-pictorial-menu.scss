@@ -306,10 +306,10 @@
     .left {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-left { visibility: visible; }
-      @include backgroundImage('/images/assets/menu/belongings-on-curb-menu.jpg');
+      @include backgroundImage('/images/assets/menu/overhead-belongings-menu.jpg');
       @include hoverBar('hover-bar-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/images/assets/menu/belongings-on-curb-menu.jpg');
+        @include backgroundImage('/images/assets/menu/overhead-belongings-menu.jpg');
       }
       @include for-sub480 {
         background: #E04119;
