@@ -43,10 +43,12 @@
 }
 .about-block {
     @include for-tablet-portrait-up {
+        display: flex;
         display: grid;
         grid-template-columns: 46% 1fr;
     }
     @include for-tablet-landscape-up {
+        display: flex;
         display: grid;
         grid-template-columns: 40% 1fr;
     }
@@ -96,6 +98,7 @@
         }
         @include for-tablet-portrait-up {
             padding-right: 4.8rem;
+            flex: 1;
         }
         @include for-tablet-landscape-up {
             padding-right: 6.4rem;
@@ -103,6 +106,9 @@
         @include for-midsize-desktop-up {
             padding-right: 8rem;
         }
+    }
+    .right-column {
+        flex: 2;
     }
     p:last-child {
         padding-bottom: 2rem;
