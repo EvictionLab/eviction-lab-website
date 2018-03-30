@@ -279,6 +279,8 @@
   .middle-row {
     display: flex;
     flex-wrap: wrap;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
     height: 27vh;
     /* min-height: 80px; */
     @include for-sub480 {
@@ -304,10 +306,10 @@
     .left {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-left { visibility: visible; }
-      @include backgroundImage('/img/pictorial-menu-middle-left-bg-mobile.png');
+      @include backgroundImage('/images/assets/menu/belongings-on-curb-menu.jpg');
       @include hoverBar('hover-bar-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/img/pictorial-menu-middle-left-bg.jpg');
+        @include backgroundImage('/images/assets/menu/belongings-on-curb-menu.jpg');
       }
       @include for-sub480 {
         background: #E04119;
@@ -321,10 +323,10 @@
     .middle-left {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-middle-left { visibility: visible; }
-      @include backgroundImage('/images/assets/menu/child-in-court3.jpg');
+      @include backgroundImage('/images/assets/menu/child-in-court-4.jpg');
       @include hoverBar('hover-bar-middle-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/images/assets/menu/child-in-court3.jpg');
+        @include backgroundImage('/images/assets/menu/child-in-court-4.jpg');
       }
       @include for-sub480 {
         background: #434878;
@@ -336,10 +338,10 @@
     .middle-right {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-middle-right { visibility: visible; }
-      @include backgroundImage('/img/pictorial-menu-middle-middle-right-bg-mobile.png');
+      @include backgroundImage('/images/assets/menu/sheriff-deputy-notes.jpg');
       @include hoverBar('hover-bar-middle-middle-right',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/img/pictorial-menu-middle-middle-right-bg.jpg');
+        @include backgroundImage('/images/assets/menu/sheriff-deputy-notes.jpg');
       }
       @include for-sub480 {
         background: #2C897F;
@@ -352,10 +354,10 @@
     .right {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-right { visibility: visible; }
-      @include backgroundImage('/img/pictorial-menu-middle-right-bg-mobile.png');
+      @include backgroundImage('/images/assets/menu/girl-looking-out-window-menu.jpg');
       @include hoverBar('hover-bar-middle-right',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-          @include backgroundImage('/img/pictorial-menu-middle-right-bg.jpg');
+          @include backgroundImage('/images/assets/menu/girl-looking-out-window-menu.jpg');
       }
       @include for-sub480 {
         background: #94AABD;
