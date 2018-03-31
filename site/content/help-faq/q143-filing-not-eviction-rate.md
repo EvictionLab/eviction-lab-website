@@ -1,8 +1,8 @@
 ---
-title: "Why is there an empty bubble for my chosen location?"
+title: "Why does my state have an eviction filing rate but not an eviction rate?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: map
-weight: 140
+weight: 143
 ---
-For locations with an empty bubble, there is no available data for the selected year. Data for that location may exist for other years, however.
+Because you live in Arkansas, North Dakota, Alaska, or South Dakota, states for which we have not yet obtained individual-level eviction records. In these states, we can display reported statistics about eviction filings, however. For more details about how we handled data from different sources see our Methodology.

@@ -306,10 +306,10 @@
     .left {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-left { visibility: visible; }
-      @include backgroundImage('/images/assets/menu/overhead-belongings-menu.jpg');
+      @include backgroundImage('/images/assets/menu/outside-in-snow-menu.jpg');
       @include hoverBar('hover-bar-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/images/assets/menu/overhead-belongings-menu.jpg');
+        @include backgroundImage('/images/assets/menu/outside-in-snow-menu.jpg');
       }
       @include for-sub480 {
         background: #E04119;
@@ -323,10 +323,10 @@
     .middle-left {
       @include full-shadow-animate;
       &:hover .hover-bar-middle-middle-left { visibility: visible; }
-      @include backgroundImage('/images/assets/menu/child-in-court-5.jpg');
+      @include backgroundImage('/images/assets/menu/child-in-court-7.jpg');
       @include hoverBar('hover-bar-middle-middle-left',50px,5px,17px,auto);
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/images/assets/menu/child-in-court-5.jpg');
+        @include backgroundImage('/images/assets/menu/child-in-court-7.jpg');
       }
       @include for-sub480 {
         background: #434878;
