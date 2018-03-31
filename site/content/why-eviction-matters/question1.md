@@ -7,5 +7,5 @@ weight: 102
 ---
 An eviction happens when a landlord expels people from property he or she owns. Evictions are landlord-initiated involuntary moves that happen to renters, whereas foreclosures are involuntary moves that happen to homeowners when a bank or other lending agency repossesses a home. 
 
-<img src="/images/assets/eviction-in-home.jpg" />
+<img src="/images/assets/woman-evicted-from-home.jpg" />
 <span class="subcopy ital">Law enforcement and movers evict a tenant from a home</span>
