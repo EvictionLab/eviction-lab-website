@@ -52,6 +52,7 @@ title = "Eviction Lab"
     weight = 8
     url = "/updates/"
 
+
 [[menu.updates]]
     name = "Events"
     weight = -80

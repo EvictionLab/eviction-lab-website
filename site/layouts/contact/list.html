@@ -1,0 +1,25 @@
+{{ partial "header" . }}
+
+{{ range (where .Site.RegularPages "Params.childof" ("contact")) }}
+    {{ if eq .Params.type "form1" }} 
+    <div class="graphic-header about-us-hero center-page-wrapper">
+            <div class="center-page">
+              <h1 class="graphic-page-header">{{ .Title }}</h1>
+              <div class="underbar"></div>
+            </div>
+          </div>   
+    {{ end }}
+<!-- section header -->
+
+{{ if eq .Params.type "form1" }} 
+    <div class="center-page-wrapper">
+        <div class="center-content-post page-list">
+            <p>{{ .Content }} </p>
+{{ end }}
+{{ if eq .Params.type "form2" }} 
+            <p>{{ .Content }} </p>
+{{ end }}
+
+    
+
+{{ end }}<!-- range statement -->
