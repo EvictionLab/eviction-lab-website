@@ -44,7 +44,20 @@ function setupScrollEnd() {
   }, false);
 }
 
+// Update contact form action with selected email path
+function setupContactForm() {
+  var form = $('#contactform');
+  var formActionBase = 'https://formspree.io/';
+  $('#contact-select').change(function (el) {
+    var selected = $(this).find('option:selected');
+    form.attr('action', formActionBase + selected.data('email'));
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
   setupMenu();
   setupScrollEnd();
+  if ($('#contactform').length) {
+    setupContactForm();
+  }
 });
