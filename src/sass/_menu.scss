@@ -102,23 +102,89 @@ $menuMargin: grid(5);
 
 // Language Toggle - Only visible on "maps" mobile view
 // ---
-.app-menu .language-select { display: none; }
-.map-tool .app-menu .language-select {
+.app-menu .language-select.dropdown {
   display: block;
   position:absolute;
   width: grid(27);
   left: $menuMargin;
   bottom: grid(15);
-  .el-select .dropdown-toggle.btn {
-    background: none!important;
-    color: $white!important;
-    border: 4px solid $white;
-    border-radius: 2px;
+  background: none;
+  border: 4px solid #383d65;
+  border-radius: 0;
+  box-shadow: none;
+  height: 40px;
+
+  .dropdown-menu {
+    top: auto;
+    margin-bottom: 2px;
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0;
+    border: none;
+    margin-top: 1px;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 80px;
+    max-height: 224px;
+    padding: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+
+    li {
+      cursor: pointer;
+      a {
+        font-family: Akkurat-Regular,sans-serif;
+        width: 100%;
+        display: block;
+        clear: both;
+        font-weight: 400;
+        padding: 16px;
+        border-top: 1px solid #efefef;
+        min-height: 48px;
+        white-space: normal;
+        box-sizing: border-box;
+        color: #050403;
+        text-decoration: none;
+
+        &:hover { background-color: #efefef; }
+        &:focus { box-shadow: 0 0 5px 1px #e24000; }
+      }
+    }
   }
-}
-@media(min-width: $gtMobile) {
-  .map-tool .app-menu .language-select {
-    display: none;
+
+  .el-select.dropdown-toggle {
+    padding: 8px 20px 8px 8px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-family: GT-Eesti-Display-Bold, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .325px;
+    text-transform: uppercase;
+    letter-spacing: .73125px;
+    text-align: left;
+    cursor: pointer;
+
+    &::after { display: none; }
+    .fa {
+      font-size: 8px;
+      right: 8px;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #e24000;
+    }
   }
 }
 
