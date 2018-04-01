@@ -1,0 +1,60 @@
+/* _contact.scss */
+
+textarea {
+    display: block;
+    width: 100%;
+}
+input {
+    width: 100%;
+}
+
+.contact-us {
+    .center-content-post.page-list {
+        padding-top: 2.4rem;
+        &.form2 {
+            padding-bottom: 2.4rem;
+            @include for-tablet-portrait-up {
+                padding-top: 2.4rem;
+                padding-bottom: 3.2rem;
+            }
+            @include for-tablet-landscape-up {
+                padding-top: 3.2rem;
+                padding-bottom: 4rem;
+            }
+            @include for-midsize-desktop-up {
+                padding-top: 3.2rem;
+                padding-bottom: 4.8rem;
+            }
+        }
+    }
+    .alt-bg {
+        padding: 0 16px 3.2rem;
+        @include for-tablet-portrait-up {
+        padding: 0.8rem 24px 3.2rem;
+        }
+        @include for-midsize-desktop-up {
+            padding: 1.6rem 24px 4rem;
+        }
+    }
+    select {
+        max-width: 100%;
+    }
+    .button-wrap {
+        display: flex;
+        justify-content: center;
+        @include for-tablet-portrait-up {
+           display: block;
+        }
+    }
+    a {
+        color: $color1;
+        font-family: $boldFontStack;
+        @include for-phone-only {
+          /* font-size: $fontSizeSmall; */
+        }
+    }
+    
+
+
+
+}

@@ -244,7 +244,7 @@ h3 {
   }
 }
 
-p, .center-content-post.page-list li {
+p, .center-content-post.page-list li, select, input, textarea {
   @include for-phone-only {
     @include defaultFont(1.4rem); 
     line-height: 2rem;
@@ -454,4 +454,5 @@ p {
 @import 'about-us';
 @import 'eviction-matters';
 @import 'footer';
+@import 'contact';
 
