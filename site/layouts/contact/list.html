@@ -27,10 +27,10 @@
 <form name="contact" method="POST" id="contactform" action="#">
     <select id="contact-select" name="routing" required>
         <option selected="selected" disabled="disabled">{{ .Params.select1 }}</option>
-        <option value="help" class="mail-options" id="help">{{ .Params.mail1 }}</option>
-        <option value="research" class="mail-options" id="research">{{ .Params.mail2 }}</option>
-        <option value="press" class="mail-options" id="press">{{ .Params.mail3 }}</option>
-        <option value="general" class="mail-options" id="general">{{ .Params.mail4 }}</option>
+        <option value="help" class="mail-options" id="help" data-email="help@evictionlab.org">{{ .Params.mail1 }}</option>
+        <option value="research" class="mail-options" id="research" data-email="research@evictionlab.org">{{ .Params.mail2 }}</option>
+        <option value="press" class="mail-options" id="press" data-email="press@evictionlab.org">{{ .Params.mail3 }}</option>
+        <option value="general" class="mail-options" id="general" data-email="info@evictionlab.org">{{ .Params.mail4 }}</option>
     </select>
     <input type="email" name="email" placeholder="{{ .Params.form1 }}">
     <textarea name="message" rows="6" placeholder="{{ .Params.form2 }}"></textarea>            
