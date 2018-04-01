@@ -27,7 +27,7 @@
 <form name="contact" method="POST" id="contactform" action="#">
     <select id="contact-select" name="routing" required>
         <option selected="selected" disabled="disabled">{{ .Params.select1 }}</option>
-        <option value="help" class="mail-options" id="help">https://formspree.io/james@evictionlab.org</option>
+        <option value="help" class="mail-options" id="help">{{ .Params.mail1 }}</option>
         <option value="research" class="mail-options" id="research">{{ .Params.mail2 }}</option>
         <option value="press" class="mail-options" id="press">{{ .Params.mail3 }}</option>
         <option value="general" class="mail-options" id="general">{{ .Params.mail4 }}</option>
@@ -51,14 +51,3 @@
 </div><!-- contact us -->
 
 {{ partial "footer" . }}
-<script>
-        $( "select" )
-          .change(function () {
-            var str = "";
-            $( "select option:selected" ).each(function() {
-              str += $( this ).text() + " ";
-            });
-            $( '#contactform' ).attr( 'action' ).text( str );
-          })
-          .change();
-        </script>
