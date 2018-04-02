@@ -34,23 +34,40 @@ function getPageOffset(url) {
   return 0;
 }
 
+function smoothScroll(path, cb) {
+  if (
+    location.pathname.replace(/^\//, '') == path.pathname.replace(/^\//, '') &&
+    location.hostname == path.hostname &&
+    path.hash.length
+  ) {
+    var target = $(path.hash);
+    target = target.length ? target : $('[name="' + path.hash.slice(1) + '"]');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top - (getWindowOffset() + getPageOffset(location.pathname)) + 'px'
+      }, 1000); // The number here represents the speed of the scroll in milliseconds
+      if (cb) cb(target);
+      return false;
+    }
+  }
+}
+
 $(function() {
-    // This will select everything with the class smoothScroll
-    // This should prevent problems with carousel, scrollspy, etc...
-    $('.smoothScroll').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top - (getWindowOffset() + getPageOffset(location.pathname)) + 'px'
-          }, 1000); // The number here represents the speed of the scroll in milliseconds
-          // Close dropdown if a dropdown link
-          if ($(this).hasClass('dropdown-item')) {
-            $(this).closest('div.dropdown').find('.dropdown-toggle').dropdown('toggle');
-          }
-          return false;
-        }
-      }
-    });
+  // Run smoothscroll on page load
+  console.log(window.location);
+  smoothScroll(window.location, function(target) {
+    // If link is an accordion, toggle it
+    if (target.hasClass('collapsed')) {
+      target.collapse('toggle');
+      $(target.attr('href')).collapse('toggle');
+    }
   });
+
+  $('.smoothScroll').click(function () {
+    smoothScroll(this);
+    // Close dropdown if dropdown link
+    if ($(this).hasClass('dropdown-item')) {
+      $(this).closest('div.dropdown').find('.dropdown-toggle').dropdown('toggle');
+    }
+  });
+});
