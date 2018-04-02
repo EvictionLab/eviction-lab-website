@@ -35,9 +35,13 @@ function getPageOffset(url) {
 }
 
 function smoothScroll(path, cb) {
-  if (location.pathname.replace(/^\//, '') == path.pathname.replace(/^\//, '') && location.hostname == path.hostname) {
+  if (
+    location.pathname.replace(/^\//, '') == path.pathname.replace(/^\//, '') &&
+    location.hostname == path.hostname &&
+    path.hash.length
+  ) {
     var target = $(path.hash);
-    target = target.length ? target : $('[name=' + path.hash.slice(1) + ']');
+    target = target.length ? target : $('[name="' + path.hash.slice(1) + '"]');
     if (target.length) {
       $('html,body').animate({
         scrollTop: target.offset().top - (getWindowOffset() + getPageOffset(location.pathname)) + 'px'
@@ -50,6 +54,7 @@ function smoothScroll(path, cb) {
 
 $(function() {
   // Run smoothscroll on page load
+  console.log(window.location);
   smoothScroll(window.location, function(target) {
     // If link is an accordion, toggle it
     if (target.hasClass('collapsed')) {
