@@ -7,4 +7,4 @@ weight: 172
 ---
 Our rankings visualization shows only the top 100 areas based on your selections. Using the search bar, however, you can find the ranking for any place in America.
 
-If you cannot find a place via the search bar, it may not be a place listed in the census, or it may be a kind of place (like a state or county) that is not ranked in this tool.
+If you cannot find a place via the search bar, it may not be a place listed in the Census, or it may be a kind of place (like a state or county) that is not ranked in this tool.

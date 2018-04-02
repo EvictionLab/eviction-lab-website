@@ -5,6 +5,4 @@ childof: faq
 type: definitions
 weight: 212
 ---
-An eviction filing is the result of a landlord filing a case in court to have a tenant removed from a property. An eviction is a judgment from the court that a tenant should be removed. Not every eviction filing results in an eviction. In our data, the estimate of eviction filings reflects the total
-amount of eviction cases each year, with a first recorded action in that year.
-
+An eviction filing is the result of a landlord filing a case in court to have a tenant removed from a property. An eviction is a judgment from the court that a tenant should be removed. Not every eviction filing results in an eviction. 

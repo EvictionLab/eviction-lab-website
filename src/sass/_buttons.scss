@@ -5,7 +5,7 @@
 
 // Primary color buttons
 .btn-primary {
-  @include altSmallCapsText($buttonTextSize);
+  @include altFont($buttonTextSize); 
   border: none;
   background: $primaryButtonColor;
   color: $white;
@@ -23,6 +23,22 @@
   span + .icon {
     margin: grid(0.5) auto 0;
   }
+}
+
+.btn-primary {
+  /* font-family: GT-Eesti-Text-Bold,sans-serif;*/
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .35px;
+  text-transform: uppercase;
+  letter-spacing: .7875px;
+  border: none;
+  background-color: #e24000;
+  color: #fff;
+  height: 56px;
+  padding: 0 56px;
+  transition: background-color .4s ease-in-out;
+  cursor: pointer;
 }
 
 // icon button with optional label

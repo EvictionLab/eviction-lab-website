@@ -45,20 +45,7 @@
                 padding: 0;
             }
         }
-        .subcopy {
-            display: block;
-            text-align: center;
-            color: $grey1a;
-            @include for-tablet-portrait-up {
-            margin-bottom: 3.2rem;
-            }
-            @include for-tablet-landscape-up {
-                margin-bottom: 3.2rem;
-                }
-            @include for-midsize-desktop-up {
-                margin-bottom: 0;
-                }    
-        }
+        
     }
 
    /* ----- Video Panel ------- */ 

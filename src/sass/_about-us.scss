@@ -3,7 +3,13 @@
     a, a:hover {
         color: $color1;
     }
-
+    .subcopy.caption {
+        margin-bottom: 1.6rem;
+        @include for-tablet-portrait-up {
+            margin-top: 0.8rem;
+            margin-bottom: 2.4rem;
+        }
+    }
 }
 .alt-page {
     .alt-bg {

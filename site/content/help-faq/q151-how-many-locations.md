@@ -1,7 +1,7 @@
 ---
 title: "How many locations can I compare in the graphs?"
 date: 2017-11-19T20:43:49-08:00
-childof: faq
+childof: faqout
 type: data
 weight: 151
 ---

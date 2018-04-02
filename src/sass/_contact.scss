@@ -1,0 +1,83 @@
+/* _contact.scss */
+
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.6rem;
+}
+input {
+    width: 100%;
+    padding: 0.8rem 1.6rem;
+}
+
+.contact-us, .data-merge {
+    .center-content-post.page-list {
+        padding-top: 1.6rem;
+        &.form2 {
+            padding-bottom: 2.4rem;
+            @include for-tablet-portrait-up {
+                padding-top: 2.4rem;
+                padding-bottom: 3.2rem;
+            }
+            @include for-tablet-landscape-up {
+                padding-top: 3.2rem;
+                padding-bottom: 4rem;
+            }
+            @include for-midsize-desktop-up {
+                padding-top: 3.2rem;
+                padding-bottom: 4.8rem;
+            }
+        }
+    }
+    .alt-bg {
+       background: #fff;
+        padding: 0 16px 3.2rem;
+        @include for-tablet-portrait-up {
+        padding: 0.8rem 24px 3.2rem;
+        }
+        @include for-midsize-desktop-up {
+            padding: 1.6rem 24px 4rem;
+        }
+    }
+    select {
+        max-width: 100%;
+        height: 3.2rem;
+    }
+    .button-wrap {
+        display: flex;
+        justify-content: center;
+        @include for-tablet-portrait-up {
+           display: block;
+        }
+    }
+    a {
+        color: $color1;
+        font-family: $boldFontStack;
+        @include for-phone-only {
+          /* font-size: $fontSizeSmall; */
+        }
+    }
+    .text-li ol.list-initial, .text-li ol.list-initial li {
+        list-style: initial;
+        list-style-type: decimal;
+        } 
+        .text-li ol.list-initial li:before {
+            content: initial;
+        }  
+        .text-li ol.list-initial li {
+            margin-left: 1.6rem;
+        }  
+}
+.data-merge {
+    padding-bottom: 3.2rem;
+        @include for-tablet-portrait-up {
+       
+            padding-bottom: 4rem;
+        }
+        @include for-tablet-landscape-up {
+            padding-bottom: 4.8rem;
+        }
+        @include for-midsize-desktop-up {
+            padding-bottom: 5.6rem;
+        }
+}

@@ -11,11 +11,11 @@ In New York, records are often kept as “abstracted judgments,” which means t
 
 In California, many cases that end in eviction are sealed and therefore not accessible by the general public. In addition, it can be difficult to collect data from California as a whole, owing to restrictions on the number of records one can collect.
 
-In most jurisdictions, the eviction process starts with an out-of- court notice delivered to a tenant, but in Maryland the process begins with an eviction filed in court. This means Maryland has a very high case volume. Because of that, it is difficult to collect data from Maryland, with the exception of Prince George’s county where we have consistency in case volume over time.
+In most jurisdictions, the eviction process starts with an out-of-court notice delivered to a tenant, but in Maryland the process begins with an eviction filed in court. This means Maryland has a very high case volume. Because of that, it is difficult to collect data from Maryland, with the exception of Prince George’s county where we have consistency in case volume over time.
 
 In Kentucky, Louisiana, Tennessee, and Texas, there is good data coverage in the urban centers, but there are some more rural areas that are missing data, owing to collection difficulties.
 
-You can compare eviction rates from our map and raw data with court-reported statistics on eviction filings from 27 states and the District of Columbia. These statistics provide annual counts of evictions filed in counties. To keep things consistent, we haven’t included these statistics in our map of evictions, but you can use them to help validate estimates.
+You can compare eviction rates from our map and raw data with court-reported statistics on eviction filings from 27 states and the District of Columbia <a href="#">(download court-reported statistics)</a>. These statistics provide annual counts of evictions filed in counties. To keep things consistent, we haven’t included these statistics in our map of evictions, but you can use them to help validate estimates.
 
 The court-reported statistics show that Hawaii, Vermont, Connecticut, Wyoming, and the District of Columbia have low counts in our map and raw data, owing either to the remoteness of some areas or data collection difficulties.
 

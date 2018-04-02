@@ -104,7 +104,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  
+}
+.contact-hero {
+  background: url('/images/assets/hero/stacks-of-mail-hero.jpg') #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
 }
 
 /* subnav */
@@ -284,6 +289,7 @@ ul.anchor-links.dropdown-menu.show {
     color: $color1;
     padding-bottom: 3rem;
     font-family: $boldFontStack;
+    font-size: 20px;
     @include for-phone-only {
       /* font-size: $fontSizeSmall; */
       padding-bottom: 2rem;
@@ -328,11 +334,15 @@ ul.anchor-links.dropdown-menu.show {
     }
   }
   .answer {
-    @include defaultFont(20px);
+    /* @include defaultFont(20px); */
     a {
       display: inline;
     }
     p {
+      a {
+        font-size: inherit;
+        font-family: inherit;
+      }
       /* padding-bottom: 3rem; */
       @include for-phone-only {
       /*  padding-bottom: 2rem; */

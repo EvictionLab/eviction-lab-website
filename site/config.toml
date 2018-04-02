@@ -12,10 +12,12 @@ enableRobotsTXT = true
 [Languages.en]
 weight = 0
 title = "Eviction Lab" 
+languageName = "English"
 
 [Languages.es]
 weight = 1
-title = "Eviction Lab" 
+title = "Eviction Lab"
+languageName = "Español"
 
 
 
@@ -51,6 +53,7 @@ title = "Eviction Lab"
     name = "Updates"
     weight = 8
     url = "/updates/"
+
 
 [[menu.updates]]
     name = "Events"

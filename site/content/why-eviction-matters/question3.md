@@ -8,4 +8,4 @@ weight: 120
 Today, most poor renting families spend at least half of their income on housing costs, with one in four of those families spending over 70 percent of their income just on rent and utilities. Incomes for Americans of modest means have flatlined while housing costs have soared. Only one in four families who qualifies for affordable housing programs gets any kind of help. Under those conditions, it has become harder for low-income families to keep up with rent and utility costs, and a growing number are living one misstep or emergency away from eviction. 
 
 <img src="/images/assets/defendants-eviction-court2.jpg" />
-<span class="subcopy ital">Defendants in eviction court</span>
+<span class="subcopy caption ital">Defendants in eviction court</span>
