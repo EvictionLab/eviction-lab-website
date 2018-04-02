@@ -19,4 +19,4 @@ You can also email us directly regarding
 + Media inquiries at <a href="mailto:media@evictionlab.org">media@evictionlab.org</a>
 + General questions or comments at <a href="mailto:info@evictionlab.org">info@evictionlab.org</a>
 
-If you would like to merge your data with The Eviction Lab's dataset, please use our Data Merge Application.
+If you would like to merge your data with The Eviction Lab's dataset, please use our <a href="/data-merge">Data Merge Application.</a>

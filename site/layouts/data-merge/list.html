@@ -1,0 +1,25 @@
+{{ partial "header" . }}
+
+{{ range (where .Site.RegularPages "Params.childof" ("datamerge")) }}
+    {{ if eq .Params.pagename "datamerge" }} 
+    <div class="graphic-header contact-hero center-page-wrapper">
+            <div class="center-page">
+              <h1 class="graphic-page-header">{{ .Title }}</h1>
+              <div class="underbar"></div>
+            </div>
+          </div>   
+    {{ end }}
+<!-- section header -->
+<div class="data-merge">
+{{ if eq .Params.pagename "datamerge" }} 
+    <div class="center-page-wrapper">
+        <div class="center-content-post page-list text-li">
+            <p>{{ .Content }} </p>
+
+        </div>
+    </div>
+    {{ end }}    
+{{ end }}    
+    
+</div>
+{{ partial "footer" . }}
