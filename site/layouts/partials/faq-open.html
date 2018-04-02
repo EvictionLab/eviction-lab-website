@@ -2,7 +2,7 @@
 <div class="accordion-section">
   <a class="collapsed"
      data-toggle="collapse"
-     href="#{{ .UniqueNumber }}"
+     href="#accordionOpen{{ .UniqueNumber }}"
      aria-expanded="false"
      aria-controls="collapseExample">
      <span>{{ .Question }}</span>
@@ -10,4 +10,4 @@
      <div class="clear-float"></div>
    </a>
 
-<div class="answer collapse" id="{{ .UniqueNumber }}">
+<div class="answer collapse" id="accordionOpen{{ .UniqueNumber }}">
