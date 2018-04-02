@@ -15,7 +15,7 @@ In most jurisdictions, the eviction process starts with an out-of-court notice d
 
 In Kentucky, Louisiana, Tennessee, and Texas, there is good data coverage in the urban centers, but there are some more rural areas that are missing data, owing to collection difficulties.
 
-You can compare eviction rates from our map and raw data with court-reported statistics on eviction filings from 27 states and the District of Columbia. These statistics provide annual counts of evictions filed in counties. To keep things consistent, we haven’t included these statistics in our map of evictions, but you can use them to help validate estimates.
+You can compare eviction rates from our map and raw data with court-reported statistics on eviction filings from 27 states and the District of Columbia <a href="#">(download court-reported statistics)</a>. These statistics provide annual counts of evictions filed in counties. To keep things consistent, we haven’t included these statistics in our map of evictions, but you can use them to help validate estimates.
 
 The court-reported statistics show that Hawaii, Vermont, Connecticut, Wyoming, and the District of Columbia have low counts in our map and raw data, owing either to the remoteness of some areas or data collection difficulties.
 
