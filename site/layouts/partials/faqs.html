@@ -1,10 +1,10 @@
 <div class="accordion-section">
-    <a class="collapsed" data-toggle="collapse" href="#{{ .Params.weight }}" aria-expanded="false" aria-controls="collapseExample" name="{{ .Params.aname }}">
+    <a class="collapsed" data-toggle="collapse" href="#accordion{{ .Params.weight }}" aria-expanded="false" aria-controls="collapseExample" name="{{ .Params.aname }}">
        <span>{{ .Params.Title }}</span>
        <i class="fa fa-chevron-up"></i>
        <div class="clear-float"></div>
      </a>
-  <div class="answer collapse" id="{{ .Params.weight }}">
+  <div class="answer collapse" id="accordion{{ .Params.weight }}">
     {{ .Content }}
   </div>
 </div>
