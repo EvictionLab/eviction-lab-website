@@ -54,10 +54,18 @@ function setupContactForm() {
   });
 }
 
+// Make sure modal-open class is added to the body whenever a modal is opened
+function setupModals() {
+  $(".modal").on("show.bs.modal", function () {
+    setTimeout(function() { $("body").addClass("modal-open") }, 500);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
   setupMenu();
   setupScrollEnd();
   if ($('#contactform').length) {
     setupContactForm();
   }
+  setupModals();
 });
