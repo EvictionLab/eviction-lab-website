@@ -22,6 +22,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include for-sub480 {
+      width: 59%;
+    }
     @include for-480-thru-767 {
       width:66%;
     }
@@ -37,7 +40,8 @@
     width: 50%;
     @include for-sub480 {
       width: 100%;
-      height: calc(32vh - 28px);
+      /* height: calc(32vh - 28px); */
+      height: 104px;
     }
     h2 {
       @include altFont(14px);
@@ -72,8 +76,8 @@
       line-height: 14px;
       margin: 0px 0 0 0;
       @include for-sub480 {
-        @include defaultFont(0.9rem);
-        line-height: 1.2rem;
+        @include defaultFont(1.2rem);
+        line-height: 1.7rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFont(1.6rem);
@@ -188,7 +192,7 @@
       &:hover .hover-bar-top-right { visibility: visible; }
       background: url(/img/pictorial-menu-top-right-bg-mobile.png);
       background-position: center;
-      background-size: 78%;
+      background-size: 40%;
       background-repeat: no-repeat;
       background-color: #282827;
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
@@ -234,8 +238,9 @@
       line-height: 14px;
     }
     @include for-sub480 {
-      width: 100%;
-      height: 10vh;
+      width: 50%;
+      height: 100px;
+      float:left;
       
     }
     @include for-480-thru-767 {
@@ -292,6 +297,7 @@
       display: block;
       height: auto;
       min-height: initial; 
+      overflow: auto;
     }
     @include for-480-thru-767 {
       display: flex;
@@ -382,6 +388,7 @@
     @include for-sub480 {
       height: 9vh;
       padding-right: 16px;
+      min-height: 80px;
     }
     @include for-480-thru-767 {
       width: 50%;
