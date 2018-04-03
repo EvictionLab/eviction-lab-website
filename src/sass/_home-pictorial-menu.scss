@@ -564,6 +564,9 @@
       height: 14vh;
     }
     .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       @include full-shadow-animate;
       background: #3c3c3c;
       @include hoverBar('hover-bar-bottom-left',50px,5px,8px,0);
@@ -578,6 +581,9 @@
       }
     }
     .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       @include full-shadow-animate;
       background: #3c3c3c;
       @include hoverBar('hover-bar-bottom-right',50px,5px,8px,0);
