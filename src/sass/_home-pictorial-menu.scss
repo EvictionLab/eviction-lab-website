@@ -135,6 +135,10 @@
     @include for-768-thru-1023 {
       height: calc(38vh - 28px);
     }
+    @media (max-width: 1023px) and (min-width: 414px) and (max-height: 380px) {
+        height: calc(38vh - 28px);
+        min-height: 260px;
+    }
     @include for-tablet-portrait-up {
       min-height: 280px;
     }
