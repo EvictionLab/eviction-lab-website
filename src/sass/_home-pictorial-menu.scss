@@ -532,6 +532,7 @@
     }
     @include for-480-thru-767 {
       height: 16vh;
+      min-height: 100px;
     }
     @include for-above480 {
     }
