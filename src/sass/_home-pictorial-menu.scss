@@ -240,6 +240,7 @@
     }
     @include for-768-thru-1023 {
       height: 19vh;
+      min-height: 240px;
     }
     @include for-tablet-landscape-up {
       width: 25%;
