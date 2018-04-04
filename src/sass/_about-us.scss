@@ -346,101 +346,101 @@
         }
     } 
  }
+}
 
-// Modal CSS
-// Contained within el-bios
-    .modal-content {  
-        display: flex;
-        @include for-tablet-landscape-up {
-            display: grid;
-        }  
-        -ms-flex-direction: column;
-        /* flex-direction: column; */
-        grid-template-columns: 40% 1fr;
-        .modal-header {
-            border: none; 
-            }
-           
-            .bio-nav {
-                @include defaultFont(1.4rem);
-                .fa { font-size: 1.2rem;}
-                    @include for-tablet-portrait-up {
-                    @include defaultFont(1.6rem);
-                    .fa { font-size: 1.4rem;}
-                    }
-                a:hover {
-                    /* @include defaultFontBold(inherit); */
-                    color: $color1;
-                }
-            }
-            .bio-nav.separator {
-                @include defaultFontBold(1.4rem);
-                margin: 0 2rem;
-            }
-        }
-       .modal {
-            overflow-y: auto;
-        }
-        @include for-tablet-portrait-up {
-            
-        }
-        @include for-tablet-landscape-up {
-            div.modal {
-                overflow-y: hidden;
-                }
-            .modal-dialog {
-                max-width: 1000px;
-            }
-        }
+// Modal CSS overrides
+.el-bios {
+  .modal-content {
+    padding: 0;
+    overflow-y: auto;
 
-    .left-column {
-    /* background-color: blue; */
-        background-image: url(/images/bios/mdesmond_full.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center top;
-        @include for-phone-only {
-            height: 500px;
-        }
-        @include for-tablet-portrait-up {
-            height: 500px;
-        }
-        @include for-tablet-landscape-up {
-            height: auto;
-        }
-        }
-    .right-column {
-        overflow-y: scroll;
-        @include for-tablet-landscape-up {
-        max-height: 90vh;
-        
-        }   
-    }  
-    .modal-body {
-        padding: 2.4rem 1.6rem;
-        @include for-tablet-landscape-up {
-            padding: 0rem 4.8rem 3.2rem;;
-            }
-        @include for-midsize-desktop-up {
-            padding: 0rem 6.4rem 4.8rem;
-            }    
-        
-        h3 {
-            text-transform: uppercase;
-            color: $color2;
-            }
-        }
-    .modal-footer {
-        padding-left: 1.6rem;
-        padding-right: 1.6rem;
-        @include for-tablet-landscape-up {
-            padding-left: 4.8rem;
-            padding-right: 4.8rem;
-            }
-        @include for-midsize-desktop-up {
-            padding-left: 6.4rem;
-            padding-right: 6.4rem;
-            }  
-        }
+    @include for-tablet-landscape-up {
+      display: grid;
     }
+    -ms-flex-direction: column;
+    grid-template-columns: 40% 1fr;
+    
+    .bio-nav {
+      @include defaultFont(1.4rem);
+      .fa { font-size: 1.2rem;}
+      @include for-tablet-portrait-up {
+        @include defaultFont(1.6rem);
+        .fa { font-size: 1.4rem;}
+      }
+      a:hover { color: $color1; }
+    }
+    .bio-nav.separator {
+      @include defaultFontBold(1.4rem);
+      margin: 0 2rem;
+    }
+  }
+  
+  .modal-dialog {
+    width: auto;
+    margin: grid(2) auto;
+  }
+  @include for-tablet-landscape-up {
+    .modal-dialog {
+      max-width: 1000px;
+    }
+  }
 
+  .modal-header {
+    margin: 0;
+    display: initial;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .left-column {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    @include for-phone-only {
+      height: 500px;
+    }
+    @include for-tablet-portrait-up {
+      height: 500px;
+    }
+    @include for-tablet-landscape-up {
+      height: auto;
+    }
+  }
+  .right-column {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    @include for-tablet-landscape-up {
+      max-height: 90vh;
+    }   
+  }  
+  .modal-body {
+    padding: 2.4rem 1.6rem;
+    @include for-tablet-landscape-up {
+      padding: 3.2rem 4.8rem 3.2rem;;
+    }
+    @include for-midsize-desktop-up {
+      padding: 4.8rem 6.4rem 4.8rem;
+    }    
+    
+    h3 {
+      text-transform: uppercase;
+      color: $color2;
+    }
+  }
+  .modal-footer {
+    padding: grid(2);
+    margin-top: 0;
+    border-top: 1px solid #e9ecef;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    @include for-tablet-landscape-up {
+      padding-left: 4.8rem;
+      padding-right: 4.8rem;
+    }
+    @include for-midsize-desktop-up {
+      padding-left: 6.4rem;
+      padding-right: 6.4rem;
+    }  
+  }
+}
