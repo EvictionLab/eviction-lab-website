@@ -12,7 +12,7 @@ collections:
   label: "Events" # Used in the UI
   folder: "/site/content/updates/events" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "events"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "events"}
@@ -41,7 +41,7 @@ collections:
   label: "Blog" # Used in the UI
   folder: "/site/content/updates/blog" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "blog"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "updates"}
@@ -66,7 +66,7 @@ collections:
   label: "Media" # Used in the UI
   folder: "/site/content/updates/media" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "media"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "updates"}
@@ -80,7 +80,7 @@ collections:
   label: "Research" # Used in the UI
   folder: "/site/content/updates/research" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "research"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "updates"}
@@ -97,7 +97,7 @@ collections:
   label: "Outside Research" # Used in the UI
   folder: "/site/content/updates/research" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
     - {label: "Child Of", name: "childof", widget: "hidden", default: "research"}
     - {label: "Content Type", name: "contenttype", widget: "hidden", default: "updates"}

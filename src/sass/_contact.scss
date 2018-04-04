@@ -81,3 +81,13 @@ input {
             padding-bottom: 5.6rem;
         }
 }
+ol.list-initial, .text-li ol.list-initial li {
+    list-style: initial;
+    list-style-type: decimal;
+    } 
+    .text-li ol.list-initial li:before {
+        content: initial;
+    }  
+    .text-li ol.list-initial li {
+        margin-left: 1.6rem;
+    }  
