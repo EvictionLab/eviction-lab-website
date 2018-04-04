@@ -1,10 +1,10 @@
 ---
-title: "What is an eviction rate and how is it calculated?"
+title: "¿Qué es una tasa de desalojo y cómo se calcula?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: definitions
 weight: 210
 ---
-An eviction rate is the number of evictions per 100 renter homes in an area. An eviction rate of 5% means that 5 of every 100 renter homes faced eviction in the selected area that year.
+Una tasa de desalojo es la cantidad de desalojos por cada 100 viviendas alquiladas en un área. Una tasa de desalojo del 5% significa que 5 de cada 100 viviendas alquiladas enfrentaron el desalojo en el área seleccionada ese año.
 
-Information on the number of renter homes in an area comes from the U.S. Census and ESRI Business Analyst demographic estimates. We interpolate between 2000 and 2010 Census years for renting households to calculate yearly estimates for all geographies. For 2011-2016 estimates, we interpolate between 2010 Census counts and 2016 ESRI Business Analyst demographic estimates.
+La información sobre el número de viviendas para inquilinos en un área proviene del censo de los EE. UU. y las estimaciones demográficas de ESRI Business Analyst. Interpolamos entre los años del censo 2000 y 2010 para el alquiler de hogares para calcular las estimaciones anuales para todas las geografías. Para las estimaciones de 2011-2016, interpolamos los recuentos del Censo de 2010 y las estimaciones demográficas de ESRI Business Analyst de 2016.

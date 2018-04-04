@@ -1,8 +1,8 @@
 ---
-title: "What does the blue mean?"
+title: "¿Qué significa el azul? "
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: map
 weight: 110
 ---
-The blue represents the concentration of the census value you selected. For example, if you selected “population,” a darker blue means a higher population and a lighter blue means a lower population.
+El azul representa la concentración del valor del censo que seleccionó. Por ejemplo, si seleccionó "población", un azul más oscuro significa una población más alta y un azul más claro significa una población más baja.

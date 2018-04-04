@@ -1,25 +1,24 @@
 ---
-title: "My state shows a low filing or eviction rate. What does this mean?"
+title: "Mi estado muestra una tasa baja de presentación o desalojo. ¿Qué significa esto?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: map
 weight: 145
 ---
-On the map, we have indicated with the symbol [TK] states with underestimated eviction counts. Of course, some places have low eviction rates because there are few renters living there or because there are very few evictions. But some states and the District of Columbia have underestimated eviction counts in our dataset for a variety of reasons.
+En el mapa, hemos indicado con el símbolo [TK] estados con recuentos de desalojo subestimados. Por supuesto, algunos lugares tienen bajas tasas de desalojo porque hay pocos inquilinos que viven allí o porque hay muy pocos desalojos. Pero algunos estados y el Distrito de Columbia han subestimado los conteos de desalojo en nuestro conjunto de datos por una variedad de razones.
 
-In New York, records are often kept as “abstracted judgments,” which means they are only in the public record if the plaintiff/landlord pays to have them placed there. That plus the amount of town and village courts in the state makes collection difficult. 
+En Nueva York, los registros a menudo se guardan como "juicios abstractos", lo que significa que solo están en el registro público si el demandante/propietario paga para que se los coloquen allí. Eso, sumado a la cantidad de tribunales de la ciudad y el pueblo en el estado dificulta la recaudación.
 
-In California, many cases that end in eviction are sealed and therefore not accessible by the general public. In addition, it can be difficult to collect data from California as a whole, owing to restrictions on the number of records one can collect.
+En California, muchos casos que terminan en desalojo están sellados y por lo tanto no son accesibles para el público en general. Además, puede ser difícil recopilar datos de California en su conjunto, debido a las restricciones en la cantidad de registros que se pueden recopilar.
 
-In most jurisdictions, the eviction process starts with an out-of-court notice delivered to a tenant, but in Maryland the process begins with an eviction filed in court. This means Maryland has a very high case volume. Because of that, it is difficult to collect data from Maryland, with the exception of Prince George’s county where we have consistency in case volume over time.
+En la mayoría de las jurisdicciones, el proceso de desalojo comienza con un aviso extrajudicial entregado a un inquilino, pero en Maryland el proceso comienza con un desalojo presentado ante el tribunal. Esto significa que Maryland tiene un volumen de casos muy elevado. Debido a eso, es difícil recopilar datos de Maryland, con la excepción del condado de Prince George, donde tenemos coherencia en el volumen de casos a lo largo del tiempo.
 
-In Kentucky, Louisiana, Tennessee, and Texas, there is good data coverage in the urban centers, but there are some more rural areas that are missing data, owing to collection difficulties.
+En Kentucky, Louisiana, Tennessee y Texas, existe una buena cobertura de datos en los centros urbanos, pero hay algunas áreas rurales más que faltan datos, debido a dificultades de recolección.
 
-You can compare eviction rates from our map and raw data with court-reported statistics on eviction filings from 27 states and the District of Columbia <a href="https://data-downloads.evictionlab.org/court-reported-stats/ExtStatsFull.xlsx">(download court-reported statistics)</a>. These statistics provide annual counts of evictions filed in counties. To keep things consistent, we haven’t included these statistics in our map of evictions, but you can use them to help validate estimates.
+Se puede comparar las tasas de desalojo de nuestro mapa y los datos sin procesar con las estadísticas presentadas por la corte sobre las presentaciones de desalojo de 27 estados y el Distrito de Columbia <a href="https://data-downloads.evictionlab.org/court-reported-stats/ExtStatsFull.xlsx">(descargue las estadísticas informadas por la corte)</a>. Estas estadísticas proporcionan recuentos anuales de desalojos archivados en los condados. Para mantener las cosas consistentes, no hemos incluido estas estadísticas en nuestro mapa de desalojos, pero se puede usarlas para ayudar a validar las estimaciones.
 
-The court-reported statistics show that Hawaii, Vermont, Connecticut, Wyoming, and the District of Columbia have low counts in our map and raw data, owing either to the remoteness of some areas or data collection difficulties.
+Las estadísticas reportadas por la corte muestran que Hawaii, Vermont, Connecticut, Wyoming y el Distrito de Columbia tienen recuentos bajos en nuestro mapa y datos brutos, debido a la lejanía de algunas áreas o dificultades en la recopilación de datos.
 
-We also suspect that the numbers in Arizona, Idaho, New Hampshire, and Washington may be too low, based on an estimator we created that factors in things like the number of renter homes and caseloads in other places. 
+También sospechamos que los números en Arizona, Idaho, New Hampshire y Washington pueden ser demasiado bajos, según un estimador que creamos que tenga en cuenta factores como el número de hogares alquilados y el número de casos en otros lugares.
 
-We will continue our effort to provide the most comprehensive data on evictions in America and invite you to stay tuned for updates to our dataset by signing up for our email list.
-
+Continuaremos nuestro esfuerzo para proporcionar la información más completa sobre los desalojos en los Estados Unidos y lo invitamos a permanecer atento a las actualizaciones de nuestro conjunto de datos suscribiéndose a nuestra lista de correo electrónico.

@@ -1,10 +1,9 @@
 ---
-title: "Why are the filing and eviction rates similar in my area?"
+title: "¿Por qué son similares las tasas de presentación y desalojo en mi área?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: map
 weight: 146
 ---
-It’s probably not because almost all eviction cases end in eviction but because of our inability to collect all eviction cases in your area. We attempted to collect every court record related to eviction—including filings that didn’t result in eviction—but some of our data sources prioritized cases that ended in a civil judgment. For example, in some areas, dismissals were not recorded, which deflated the total filings numbers. When this happens, filing and eviction rates are very similar.
-
+Probablemente no sea porque casi todos los casos de desalojo terminan en desalojo, pero debido a nuestra incapacidad para reunir todos los casos de desalojo en su área. Intentamos recopilar todos los registros judiciales relacionados con el desalojo, incluidas las presentaciones que no dieron como resultado el desalojo, pero algunas de nuestras fuentes de datos priorizaron casos que culminaron en un juicio civil. Por ejemplo, en algunas áreas, los despidos no se registraron, lo que desinfló las cifras totales de presentación. Cuando esto sucede, las tasas de presentación y desalojo son muy similares.
 

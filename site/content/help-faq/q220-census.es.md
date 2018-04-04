@@ -1,8 +1,8 @@
 ---
-title: "Where does the Census data come from?"
+title: "¿De dónde provienen los datos del Censo?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: methods
 weight: 220
 ---
-This data comes from the decennial Census and the American Community Survey (ACS), both conducted by the U.S. Census Bureau. For more information about our data collection, see our [Methods page](/methods) and <a href="#">Methodology Report (PDF)</a>.
+Estos datos provienen del Censo decenal y la Encuesta de la Comunidad Estadounidense (ACS), ambos realizados por la Oficina del Censo de EE. UU. Para obtener más información sobre nuestra recopilación de datos, consulte nuestra [página Métodos](/methods) e <a href="#">Informe de metodología (PDF)</a>.

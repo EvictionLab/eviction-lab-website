@@ -1,17 +1,17 @@
 ---
-title: 'Why are places in Eviction Rankings divided into 3 different area types? What do these mean?'
+title: '¿Por qué se dividen los lugares en los Rankings de desalojos en tres tipos de área diferentes? ¿Qué significan?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: rankings
 weight: 175
 ---
-We chose to categorize places in our Rankings (as Large Cities, Mid-sized Cities, or Small Cities & Rural Areas) to allow for more meaningful comparisons among places with similar populations. 
+Elegimos categorizar lugares en nuestros Rankings (como ciudades grandes, ciudades medianas o pequeñas ciudades y áreas rurales) para permitir comparaciones más significativas entre lugares con poblaciones similares. 
 
-+ <span class="ak-bold">Small Cities & Rural Areas</span> are places with populations under 20,000. We rank 27,403 of these places.
-<span class="ital">Examples: Clarksdale, MS; Fremont, OH</span>
++ <span class="ak-bold">Las ciudades pequeñas y las áreas rurales</span> son lugares con poblaciones menores de 20.000. Clasificamos 27.403 de estos lugares.
+<span class="ital">Ejemplos: Clarksdale, MS; Fremont, OH</span>
 
-+ <span class="ak-bold">Mid-sized Cities</span> are places with populations of between 20,000 and 100,000. We rank 1,858 of these places.
-<span class="ital">Examples: Carson City, CA; Evanston, IL</span>
++ <span class="ak-bold">Las ciudades medianas</span> son lugares con poblaciones entre 20.000 y 100.000. Clasificamos 1.858 de estos lugares.
+<span class="ital">Ejemplos: Carson City, CA; Evanston, IL</span>
 
-+ <span class="ak-bold">Large Cities</span> are places with populations of 100,000 and above. We rank 313 of these places.
-<span class="ital">Examples: Los Angeles, NYC, Detroit</span>
++ <span class="ak-bold"> Las grandes ciudades</span> son lugares con poblaciones de 100.000 y más. Clasificamos 313 de estos lugares. 
+<span class="ital">Ejemplos: Los Angeles, NYC, Detroit</span>

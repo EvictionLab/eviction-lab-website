@@ -1,8 +1,8 @@
 ---
-title: 'What is Rent Burden, and why is it capped at 50%?'
+title: '¿Cuál es la carga del alquiler y por qué está limitado al 50%?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
 weight: 155
 ---
-Rent Burden is the percentage of household income spent on rent in a given area. The U.S. Census Bureau only calculates this statistic up to 50%&mdash;any number above that is listed as "50% or more."
+La carga de alquiler es el porcentaje del ingreso familiar que se gasta en el alquiler en un área determinada. La Oficina del Censo de EE. UU. solo calcula esta estadística hasta en un 50%, cualquier cantidad superior se indica como "50% o más."
