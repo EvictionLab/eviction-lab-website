@@ -6,8 +6,6 @@ header: "Evicted: The Book"
 subcopy: "Evicted: Poverty and Profit in The American City"
 subcopy2: by Matthew Desmond
 header2: Praise
-
-
 ---
 <span class="ak-bold">WINNER OF THE 2017 PULITZER PRIZE FOR GENERAL NONFICTION </span>
 

@@ -4,7 +4,7 @@ date: 2017-11-19T20:43:49-08:00
 type: meta
 h1: Sobre Nosotros
 childof: about
-li1: IR A LA SECCION 
+li1: IR A LA SECCIÓN 
 li2: Introducción 
 li3: El trasfondo
 li4: Nuestro
