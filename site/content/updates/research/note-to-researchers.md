@@ -4,7 +4,7 @@ researchtype: outside-research
 contenttype: updates
 contentcat: research
 title: A Note to Researchers
-date: 2017-11-30T15:46:40.089Z
+date: 2018-04-06T15:46:40.089Z
 image:
 file: /images/uploads/sample-research-file.pdf
 postauthorname: James Hendrickson
