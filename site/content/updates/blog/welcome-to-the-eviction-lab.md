@@ -4,7 +4,7 @@ contenttype: updates
 contentcat: blog
 featured: false
 title: "Welcome to the Eviction Lab!  Let’s Get to Work."
-date: 2018-02-18T23:15:05.556Z
+date: 2018-04-07T23:15:05.556Z
 postauthorname: Matthew Desmond
 postauthortitle: Principal Investigator
 authorpic: /images/bios/mdesmond_thumb.jpg
@@ -18,7 +18,7 @@ From the beginning, we saw our work not only as a research endeavor but also as 
 
 This is just the beginning, and we need your help. First, use the data. Researchers and journalists can take this information and deepen what we know about the prevalence, causes, and consequences of residential insecurity. Citizen organizers and elected officials can examine trends in their communities to design effective policy solutions. Teachers, business and faith leaders, and healthcare professionals can leverage the data to raise awareness of evictions in their communities and spark conversations about the importance of a stable, affordable home. 
 
-Second, help us improve the data. Even after collecting 80 million records, we still don’t have every eviction in America. As we explain in the Help & FAQ, our eviction counts are underestimated in some states. In other areas, the estimates were so unstable from year to year that we couldn’t publish them. All data have limitations; get to know ours. The Methodology Report is a good place to start. We will continue our effort to provide the most comprehensive data on evictions in America, and we invite you to stay tuned for updates. Moreover, we hope you’ll pitch in. The breadth and depth of America’s eviction epidemic—and its data trail—requires attention from a wide array of people with different perspectives and skills. This is why we’ve adopted an open-source model of data sharing. We need more researchers, city planners, court officers, political leaders, and concerned citizens to join us in filling in the gaps.
+Second, help us improve the data. Even after collecting 80 million records, we still don’t have every eviction in America. As we explain in the <a href="/help-faq">Help & FAQ</a>, our eviction counts are underestimated in some states. In other areas, the estimates were so unstable from year to year that we couldn’t publish them. All data have limitations; get to know ours. The <a href="#">Methodology Report</a> is a good place to start. We will continue our effort to provide the most comprehensive data on evictions in America, and we invite you to stay tuned for <a href="/updates">updates</a>. Moreover, we hope you’ll pitch in. The breadth and depth of America’s eviction epidemic—and its data trail—requires attention from a wide array of people with different perspectives and skills. This is why we’ve adopted an open-source model of data sharing. We need more researchers, city planners, court officers, political leaders, and concerned citizens to join us in filling in the gaps.
 
 Addressing the nation’s housing crisis is central to reducing poverty, stabilizing communities, and expanding opportunity. To effectively address this crisis, we must fully understand it. 
 
