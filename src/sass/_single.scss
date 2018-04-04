@@ -79,6 +79,13 @@ img.post-thumb {
 }
 
 .updates-post {
+   ol {
+    list-style-type: decimal;
+      li {
+        margin-left: 1.6rem;
+        }
+    }
+    
   .authorbox {
     overflow: auto;
     float: left;
