@@ -150,10 +150,17 @@ img.post-thumb {
     p:last-child {
       margin-bottom: 0 !important;
     }
+    .post-body a {
+        color: $color1;
+        &:hover {
+          color: $color1;
+        }  
+    }
     @include for-phone-only {
       padding: 2.4rem 16px;
       .post-body {
         padding: 0;
+        
         img.cat-bookmark {
           width: 7px;
           vertical-align: sub;

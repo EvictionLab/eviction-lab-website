@@ -22,6 +22,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include for-sub480 {
+      width: 80%;
+    }
     @include for-480-thru-767 {
       width:66%;
     }
@@ -37,7 +40,8 @@
     width: 50%;
     @include for-sub480 {
       width: 100%;
-      height: calc(32vh - 28px);
+      /* height: calc(32vh - 28px); */
+      height: 104px;
     }
     h2 {
       @include altFont(14px);
@@ -72,8 +76,8 @@
       line-height: 14px;
       margin: 0px 0 0 0;
       @include for-sub480 {
-        @include defaultFont(0.9rem);
-        line-height: 1.2rem;
+        @include defaultFont(1.2rem);
+        line-height: 1.7rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFont(1.6rem);
@@ -133,7 +137,11 @@
         height: calc(47vh - 28px);
     }
     @include for-768-thru-1023 {
-      height: calc(40vh - 28px);
+      height: calc(38vh - 28px);
+    }
+    @media (max-width: 1023px) and (min-width: 414px) and (max-height: 380px) {
+        height: calc(38vh - 28px);
+        min-height: 260px;
     }
     @include for-tablet-portrait-up {
       min-height: 280px;
@@ -144,14 +152,18 @@
     .left {
       @include full-shadow-animate;
       &:hover .hover-bar-top-left { visibility: visible; }
-      @include backgroundImage('/img/pictorial-menu-top-left-bg-mobile.png');
+      @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
       @include hoverBar('hover-bar-top-left',50px,5px,20px,auto);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       
       .break-me {
         width: 100px;
         margin: 0 auto;
       }
       @include for-sub480 {
+        background-position: right 15%;
         .break-me {
           width: auto;
         }
@@ -184,9 +196,12 @@
       &:hover .hover-bar-top-right { visibility: visible; }
       background: url(/img/pictorial-menu-top-right-bg-mobile.png);
       background-position: center;
-      background-size: 78%;
+      background-size: 40%;
       background-repeat: no-repeat;
       background-color: #282827;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       @include hoverBar('hover-bar-top-right',50px,5px,20px,auto);
       
       @include for-sub480 {
@@ -221,6 +236,9 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include for-sub480 {
+        padding: 0 19%;
+      }
       @include for-tablet-landscape-up {
         padding-top: 8%;
       }
@@ -230,8 +248,9 @@
       line-height: 14px;
     }
     @include for-sub480 {
-      width: 100%;
-      height: 10vh;
+      width: 50%;
+      height: 100px;
+      float:left;
       
     }
     @include for-480-thru-767 {
@@ -240,6 +259,7 @@
     }
     @include for-768-thru-1023 {
       height: 19vh;
+      min-height: 200px;
     }
     @include for-tablet-landscape-up {
       width: 25%;
@@ -287,6 +307,7 @@
       display: block;
       height: auto;
       min-height: initial; 
+      overflow: auto;
     }
     @include for-480-thru-767 {
       display: flex;
@@ -314,9 +335,9 @@
       @include for-sub480 {
         background: #E04119;
         background: #e04119; /* Old browsers */
-        background: -moz-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to left, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to left, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to left, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
   
@@ -346,9 +367,9 @@
       @include for-sub480 {
         background: #2C897F;
         background: #2c897f; /* Old browsers */
-        background: -moz-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to right, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to right, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
     .right {
@@ -362,9 +383,9 @@
       @include for-sub480 {
         background: #94AABD;
         background: #94aabd; /* Old browsers */
-        background: -moz-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(to right, #952800 2%, #9F2D00 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to right, #952800 2%, #9F2D00 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #952800 2%, #9F2D00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       }
     }
   }
@@ -375,8 +396,9 @@
     width: 100%;
     text-align: left;
     @include for-sub480 {
-      height: 9vh;
+     /* height: 9vh; */
       padding-right: 16px;
+      height: 74px;
     }
     @include for-480-thru-767 {
       width: 50%;
@@ -437,43 +459,43 @@
         } 
       }
     p {
-      @include defaultFont(1rem);
+      @include defaultFont(1.2rem);
       margin-bottom: 0;
-      line-height: 1.3rem;
-      span {
+      line-height: 1.7rem;
+      /* span {
         @include defaultFontBold(11px); 
-      }
+      } */
       @include for-480-thru-767 {
         @include defaultFont(11px);
         margin-bottom: 5px;
         
-        span {
+        /* span {
           @include defaultFontBold(11px);
-        }
+        } */
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFont(1.6rem);
         letter-spacing: 0px;
         margin-bottom: 5px;
         line-height: 2.3rem;
-        span {
+        /* span {
           @include defaultFont(1.6rem); 
-        }
+        } */
       }
       @include for-tablet-landscape-up {
         @include defaultFont(17px);
         margin-bottom: 16px;
         line-height: 2.3rem;
-        span {
+       /* span {
           @include defaultFontBold(17px);
-        }
+        } */
       }
       @include for-midsize-desktop-up {
         @include defaultFont(18px);
         margin-bottom: 7px;
-        span {
+        /* span {
           @include defaultFontBold(18px);
-        }
+        } */
       }
     }
     i {
@@ -518,7 +540,7 @@
     background: #333;
     display: flex;
     flex-wrap: wrap;
-    height: 28vh;
+    /* height: 28vh; */
     /* min-height: 120px; */
     @include for-sub480 {
       display: block;
@@ -527,6 +549,7 @@
     }
     @include for-480-thru-767 {
       height: 16vh;
+      min-height: 100px;
     }
     @include for-above480 {
     }
@@ -541,6 +564,9 @@
       height: 14vh;
     }
     .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       @include full-shadow-animate;
       background: #3c3c3c;
       @include hoverBar('hover-bar-bottom-left',50px,5px,8px,0);
@@ -555,6 +581,9 @@
       }
     }
     .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       @include full-shadow-animate;
       background: #3c3c3c;
       @include hoverBar('hover-bar-bottom-right',50px,5px,8px,0);

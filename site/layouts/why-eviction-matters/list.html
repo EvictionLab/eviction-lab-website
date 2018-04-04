@@ -1,9 +1,11 @@
 {{ partial "header" . }}
 
 <!-- section header -->
+{{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+        {{ if eq .Params.type "meta" }} 
 <div class="graphic-header wem-hero center-page-wrapper">
   <div class="center-page">
-    <h1 class="graphic-page-header">why eviction matters</h1>
+    <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
     <div class="underbar"></div>
   </div>
 </div>
@@ -12,29 +14,31 @@
 <div class="shadow-bottom center-page-wrapper subnav">
   <div class="center-content-post max1200">
     <ul class="anchor-links mobile-off">
-      <li class="only-larger-screens">GO TO SECTION</li>
-      <li><a href="#wem-intro-link" class="smoothScroll">Introduction</a></li>
-      <li><a href="#eviction-facts" class="smoothScroll">Eviction Q&amp;A</a></li>
-      <li><a href="#video" class="smoothScroll">Video</a></li>
-      <li><a href="#evicted-book" class="smoothScroll">Evicted: The Book</a></li>
+      <li class="only-larger-screens">{{ .Params.li1 }}</li>
+      <li><a href="#wem-intro-link" class="smoothScroll">{{ .Params.li2 }}</a></li>
+      <li><a href="#eviction-facts" class="smoothScroll">{{ .Params.li3 }}</a></li>
+      <li><a href="#video" class="smoothScroll">{{ .Params.li4 }}</a></li>
+      <li><a href="#evicted-book" class="smoothScroll">{{ .Params.li5 }}</a></li>
       
     </ul>
     <div class="dropdown mobile-on">
         <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            GO TO SECTION
+            {{ .Params.li1 }}
         </button>
         <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
           <ul class="anchor-links dropdown-menu">
-            <li><a class="dropdown-item smoothScroll" href="#wem-intro-link">Introduction</a></li>
-            <li><a class="dropdown-item smoothScroll" href="#eviction-facts">Eviction Q&amp;A</a></li>
-            <li><a class="dropdown-item smoothScroll" href="#video">Video</a></li>
-            <li><a class="dropdown-item smoothScroll" href="#evicted-book">Evicted: The Book</a></li>
+            <li><a class="dropdown-item smoothScroll" href="#wem-intro-link">{{ .Params.li2 }}</a></li>
+            <li><a class="dropdown-item smoothScroll" href="#eviction-facts">{{ .Params.li3 }}</a></li>
+            <li><a class="dropdown-item smoothScroll" href="#video">{{ .Params.li4 }}</a></li>
+            <li><a class="dropdown-item smoothScroll" href="#evicted-book">{{ .Params.li5 }}</a></li>
             
         </ul>
         <!--</div>-->
       </div>
   </div>
 </div>
+{{ end }}
+{{ end }}
 {{ partial "social-share-vert" . }}
 <div class="alt-page eviction-matters">
    
