@@ -54,6 +54,51 @@ languageName = "Español"
     weight = 8
     url = "/updates/"
 
+[[menu.footer]]
+    name = "Home"
+    weight = 1
+    url = "/"
+[[menu.footer]]
+    name = "Map & Data"
+    weight = 2
+    url = "/map/"
+[[menu.footer]]
+    name = "Eviction Rankings"
+    weight = 3
+    url = "/rankings/"
+[[menu.footer]]
+    name = "About Us"
+    weight = 4
+    url = "/about/"
+[[menu.footer]]
+    name = "Why Eviction Matters"
+    weight = 5
+    url = "/why-eviction-matters"
+[[menu.footer]]
+    name = "Methods"
+    weight = 6
+    url = "/methods/"
+[[menu.footer]]
+    name = "Help & FAQ"
+    weight = 7
+    url = "/help-faq/"
+[[menu.footer]]
+    name = "Updates"
+    weight = 8
+    url = "/updates/"
+[[menu.footer]]
+    name = "Contact Us"
+    weight = 9
+    url = "/contact"
+[[menu.footer]]
+    name = "Get the Data"
+    weight = 10
+    url = "/get-the-data"
+[[menu.footer]]
+    name = "Data Merge Application"
+    weight = 11
+    url = "/data-merge-application"
+
 
 [[menu.updates]]
     name = "Events"
