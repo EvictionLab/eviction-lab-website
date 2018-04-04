@@ -1,9 +1,11 @@
 {{ partial "header" . }}
 
 <!-- section header -->
+{{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
 <div class="graphic-header help-faq center-page-wrapper">
   <div class="center-page">
-    <h1 class="graphic-page-header">help &amp; faq</h1>
+    <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
     <div class="underbar"></div>
   </div>
 </div>
@@ -25,16 +27,16 @@
     <div class="center-content-post">  
 <div class="dropdown">
     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        GO TO SECTION
+        {{ .Params.li1 }}
     </button>
     <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
       <ul class="anchor-links dropdown-menu">
-        <li><a class="dropdown-item smoothScroll" href="#map">Map</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#data">Data</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#rankings">Rankings</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#definitions">Definitions</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#methods">Methods</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#stories">Storytelling &amp; Activism</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#map">{{ .Params.li2 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#data">{{ .Params.li3 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#rankings">{{ .Params.li4 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#definitions">{{ .Params.li5 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#methods">{{ .Params.li6 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#stories">{{ .Params.li7 }}</a></li>
     </ul>
     <!--</div>-->
   </div>
@@ -43,7 +45,8 @@
 
 <!-- *********************************************** -->
 <!-- begin FAQs -->
-
+{{ end }}
+{{ end }}
 {{ partial "social-share-vert" . }}
 
 <div class="center-page-wrapper">

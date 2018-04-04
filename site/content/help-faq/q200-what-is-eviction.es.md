@@ -1,12 +1,12 @@
 ---
-title: "What is an eviction?"
+title: "¿Qué es un desalojo? "
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: definitions
 weight: 200
 ---
-An eviction happens when a landlord expels people from property he or she owns. Evictions are landlord-initiated involuntary moves that happen to renters, whereas foreclosures are involuntary moves that happen to homeowners when a bank or other lending agency repossesses a home.
+Un desalojo ocurre cuando un propietario expulsa a las personas de la propiedad que posee. Los desalojos son movimientos involuntarios iniciados por el propietario que ocurren a los inquilinos, mientras que las ejecuciones hipotecarias son movimientos involuntarios que suceden a los propietarios cuando un banco u otra agencia prestataria recupera un hogar.
 
-In our data, an eviction is defined as an eviction judgment issued to a renting home. If a renter at the same address has multiple eviction judgments, we only count the last one. For more information, please see our <a href="#">Methodology Report (PDF)</a>.
+En nuestros datos, un desalojo se define como un juicio de desalojo emitido a una casa alquilada. Si un inquilino en la misma dirección tiene múltiples juicios de desalojo, solo contamos el último. Para obtener más información, consulte nuestro <a href="#">Informe de metodología (PDF)</a>.
 
-For more information about eviction and its effects, see our [Why Eviction Matters](/why-eviction-matters) page.
+Para obtener más información sobre el desalojo y sus efectos, consulte nuestra página [Por Qué Importa el Desalojo](/why-eviction-matters) page.

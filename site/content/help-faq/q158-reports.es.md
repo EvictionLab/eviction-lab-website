@@ -1,13 +1,12 @@
 ---
-title: 'What reports can I download, and what can I do with them?'
+title: '¿Qué informes puedo descargar y qué puedo hacer con ellos?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
 weight: 158
 ---
-Reports, which are customized to display the same data and locations you've selected via the map and search, are designed as tools to support research and activism. You can download
+Los informes, que están personalizados para mostrar los mismos datos y lugares que ha seleccionado a través del mapa y la búsqueda, están diseñados como herramientas para apoyar la investigación y el activismo. Se puede descargar
 
-+ An Excel spreadsheet containing raw data 
-+ A Powerpoint presentation to share in your classroom, lecture, or meeting
-+ A PDF file, which also contains a fact sheet about evictions, for wide sharing. You can, for instance, bring this document to your city council or community group meeting, to educate your fellow citizens about evictions in your area.
-
++ Una hoja de cálculo de Excel que contiene datos brutos
++ Una presentación de Powerpoint para compartir en su aula, conferencia o reunión
++ Un archivo PDF, que también contiene una hoja informativa sobre desalojos, para compartir ampliamente. Se puede, por ejemplo, traer este documento a su concilio de la ciudad o reunión de grupo comunitario para educar a sus conciudadanos acerca de los desalojos en su área.

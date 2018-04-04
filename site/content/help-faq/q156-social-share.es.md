@@ -1,8 +1,8 @@
 ---
-title: "What does the site share when I click on Twitter or Facebook?"
+title: "¿Qué comparte el sitio cuando hago clic en Twitter o Facebook?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 weight: 156
 type: data
 ---
-You can share links to any of our pages via social share buttons. From our [Map](/map) and [Eviction Rankings](/rankings) pages, you can share customized links preloaded with the locations and data you have selected. 
+Se puede compartir enlaces a cualquiera de nuestras páginas a través de los botones de compartir con sus redes sociales. Desde nuestras páginas de [Mapa](/map) y [Rankings de Desalojo](/rankings), se puede compartir enlaces personalizados preinstalados con los lugares y los datos que ha seleccionado.

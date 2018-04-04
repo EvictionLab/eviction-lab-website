@@ -1,9 +1,8 @@
 ---
-title: 'I can download imputed or non-imputed data. What does this mean?'
+title: 'Puedo descargar datos imputados o no imputados. ¿Qué significa esto?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
 weight: 163
 ---
-Because these data were collected manually from courts across the country, some areas are missing data over time. In other cases, statistical models indicated that there was too much variance in collection from one year to the next. In these cases, we filled in some of those gaps by “imputing”
-data based on a set of procedures listed in our <a href="#">Methodology Report (PDF)</a>. We use the imputed dataset in our maps, but we also wanted to give everyone the opportunity to download non-imputed data.
+Debido a que estos datos fueron recolectados manualmente de los tribunales de todo el país, algunas áreas carecen de datos a lo largo del tiempo. En otros casos, los modelos estadísticos indicaron que había demasiada variación en la recolección de un año a otro. En estos casos, completamos algunas de esas brechas al "imputar" datos en función de un conjunto de procedimientos enumerados en nuestro  <a href="#">Methodology Report (PDF)</a>. Utilizamos el conjunto de datos imputados en nuestros mapas, pero también queríamos dar a todos la oportunidad de descargar datos no imputados.

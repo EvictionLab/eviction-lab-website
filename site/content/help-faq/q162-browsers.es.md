@@ -1,8 +1,8 @@
 ---
-title: 'What devices / browsers do you support?'
+title: '¿Qué dispositivos/navegadores son compatibles?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: map
 weight: 162
 ---
-We support the last two major releases of Edge, Chrome, Firefox, and Safari. We also support Internet Explorer 11.
+Admitimos las dos últimas versiones principales de Edge, Chrome, Firefox y Safari. También admitimos Internet Explorer 11.

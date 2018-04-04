@@ -5,4 +5,4 @@ childof: faq
 type: data
 weight: 160
 ---
-Get More Data will take you to a page where you can search for and download large data sets for the entire United States.
+Obtener Más Datos lo llevará a una página donde se puede buscar y descargar grandes conjuntos de datos para todo Estados Unidos.
