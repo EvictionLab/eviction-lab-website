@@ -4,12 +4,12 @@ date: 2017-11-19T20:43:49-08:00
 type: form2
 childof: contact
 select1: "Please select the reason you're contacting us (required)"
-mail1: I need help with using the site, or have feedback on how to make it better
-mail2: I'm a researcher and have questions, or would like to share my own research
-mail3: I'm a member of the press / media, or would like to discuss a speaking engagement
+mail1: I need help using the site or have feedback on how to make it better 
+mail2: I'm a researcher and have questions or would like to share my own research 
+mail3: I'm a member of the press/media or would like to discuss a speaking engagement
 mail4: I have general questions or comments
 form1: Your email (required)
-form2: Please enter your message (required)
+form2: Please type your message (required) 
 submit: Submit
 ---
 You can also email us directly regarding

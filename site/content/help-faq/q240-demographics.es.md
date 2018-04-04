@@ -1,9 +1,8 @@
 ---
-title: 'Do you have any data on how many women, children, or the elderly are affected by eviction?'
+title: '¿Tiene Eviction Lab datos sobre cuántos mujeres, niños, o ancianos son afectados por el desalojo?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: methods
 weight: 240
 ---
-
-Since eviction records do not include demographic information like age or gender, we do not have direct access to these numbers. However, local studies show that households with children are especially vulnerable to forced displacement. While we don't have the full picture now, the Eviction Lab dataset enables users to create estimates on a scale that was previously impossible, and important questions like these can be addressed in future research. 
+Dado que los registros de desalojo no incluyen información demográfica como edad o sexo, no tenemos acceso directo a estos números. Sin embargo, los estudios locales muestran que los hogares con niños son especialmente vulnerables al desplazamiento forzado. Si bien no tenemos la imagen completa ahora, el conjunto de datos de Eviction Lab permite a los usuarios crear estimaciones en una escala que antes era imposible, y preguntas importantes como estas pueden abordarse en futuras investigaciones.
