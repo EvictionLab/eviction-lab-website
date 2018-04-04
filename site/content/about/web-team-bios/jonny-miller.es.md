@@ -2,11 +2,11 @@
 childof: web-team-bios
 title: Jonny Miller
 abbrev: jmiller
-position: CMS Specialist
+position: Especialista en sistemas de gestión de contenidos 
 date: 2017-11-20T18:43:11-08:00
 image: /images/assets/jmiller_full.jpg
 thumg: /images/assets/jmiller_thumb.jpg
-weight: 7
+weight: 57
 
 ---
-Jonny brings over 17 years of experience in the fields of web development, design, UI/UX, and project management to the team. Previously he worked with one of western Canada’s largest online education providers, where he was the UI/UX Team Lead, and a web developer Jack-of-all. As the CMS Specialist at Eviction Lab, Jonny is inspired to be working with modern content delivery services such as Netlify and Hugo, and the general world of “JAMstack” architecture. When he’s not slinging ones and zeros, Jonny will most likely be writing a song, or recording, as he is an award winning singer/songwriter in the Southern Gulf Islands of British Columbia, Canada.
+Jonny aporta al equipo más de 17 años de experiencia en los campos de desarrollo web, diseño, UI / UX y gestión de proyectos. Anteriormente trabajó con uno de los proveedores de educación en línea más grandes del oeste de Canadá, donde fue el líder del equipo UI / UX y un desarrollador web milusos. Como especialista en sistemas de gestión de contenidos (CMS) en Eviction Lab, Jonny está inspirado para trabajar con servicios modernos de entrega de contenido como Netlify y Hugo, y el mundo general de la arquitectura "JAMstack". Cuando no está tirando unos y ceros, lo más probable es que Jonny esté escribiendo una canción o grabando, ya que es cantante / compositor galardonado en las islas del sur del Golfo de British Columbia, Canadá.

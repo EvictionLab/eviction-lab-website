@@ -2,10 +2,10 @@
 childof: web-team-bios
 title: Lane Olson
 abbrev: lolson
-position: Technical Lead
+position: Líder Técnico 
 date: 2017-11-23T01:56:53.000Z
 image: /images/bios/lolson_full.jpg
 thumb: /images/bios/lolson_thumb.jpg
-weight: 4
+weight: 54
 ---
-Lane Olson holds a Bachelor of Science in computing science, with distinction, from the University of Alberta. With nearly two decades of web design and development experience, Lane has created interactive experiences for art galleries, universities, and highly acclaimed online courses. Through his previous work creating data visualizations and maps for online courses, like Mountains 101 and Indigenous Canada, Lane has developed a keen interest in creating interactive tools that are effective and easy to use. As the Technical Lead at Eviction Lab, Lane is working with the team to create the software architecture and implementation of the mapping and data tools for the project. When Lane’s not writing documentation or code, he’s helping out with a friend’s music project or working on one of his own.
+Lane Olson tiene una Licenciatura en Ciencias de la computación, con distinción, de la Universidad de Alberta. Con casi dos décadas de experiencia en diseño y desarollo web, Lane ha creado experiencias interactivas para galerías de arte, universidades y cursos en línea altamente aclamados. A través de su trabajo previo de creación de visualizaciones de datos y mapas para cursos en línea, como Mountains 101 y Indigenous Canada, Lane ha desarrollado un gran interés en crear herramientas interactivas que sean efectivas y fáciles de usar. Como Líder Técnico en Eviction Lab, Lane está trabajando con el equipo para crear la arquitectura del software y la implementación de las herramientas de mapeo y datos para el proyecto. Cuando Lane no está escribiendo documentación o código, está ayudando con el proyecto de música de un amigo o trabajando en uno propio.

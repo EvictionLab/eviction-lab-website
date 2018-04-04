@@ -1,11 +1,11 @@
 ---
 childof: web-team-bios
 title: ABBY BAJUNIEMI
-position: 'User Experience Consultant, Translator'
+position: 'Consultora de UX'
 abbrev: abajuniemi
 date: 2017-11-24T17:49:52-08:00
 image: /images/bios/abajuniemi_full.jpg
 thumb: /images/bios/abajuniemi_thumb.jpg
-weight: 2
+weight: 52
 ---
-Abby Bajuniemi is a former visiting professor of Linguistics and Spanish at Macalester College. She completed a PhD in Hispanic and Lusophone Literatures, Cultures and Linguistics at the University of Minnesota, where her research interests centered on language acquisition and sociolinguistics. She translates that love of language structure and teaching into a passion for accessibility and inclusivity in design and content. As part of Eviction Lab’s web team and resident User Experience consultant, she conducts research that informs the design and function of the website and its content (English and Spanish). Outside of work, she writes and speaks on the intersection of UX and linguistics and mentors young professional women.
+Abby Bajuniemi es ex-profesora visitante de lingüística y español en Macalester College. Completó un doctorado en Literaturas, Culturas y Lingüística Hispánicas y Lusófonas en la Universidad de Minnesota, donde sus intereses de investigación se centraron en la adquisición del lenguaje y la sociolingüística. Ella traduce ese amor de la estructura del lenguaje y la enseñanza en una pasión por la accesibilidad y la inclusión en el diseño y el contenido. Como parte del equipo web de Eviction Lab y consultora de Experiencia de Usuario residente, realiza investigaciones que informan sobre el diseño y la función del sitio web y su contenido (inglés y español). Fuera del trabajo, escribe y habla en la intersección de UX y lingüística y aconseja jóvenes mujeres profesionales.

@@ -1,11 +1,11 @@
 ---
 childof: web-team-bios
 title: Patrick Sier
-position: Web Developer
+position: Desarrollador Web 
 abbrev: psier
 date: 2017-11-21T17:58:39-08:00
 image: /images/bios/psier_full.jpg
 thumb: /images/bios/psier_thumb.jpg
-weight: 5
+weight: 55
 ---
-Patrick received a Bachelor of Arts in public policy from the University of Michigan. This background has informed his work as a web developer, most recently creating tools for evaluations and interactive dashboards at a university research center. He has experience in data visualization and analysis as well as civic technology projects involving tenants’ rights and the justice system. As a developer for Eviction Lab’s web team, he works to integrate data and build functionality to make our mapping tool useful across a range of audiences and use cases.
+Patrick recibió una Licenciatura en Artes en la política pública de la Universidad de Michigan. Este fondo ha informado su trabajo como desarrollador web, creando recientemente herramientas para evaluaciones y paneles de control interactivos en un centro de investigación universitario. Tiene experiencia en visualización y análisis de datos, así como proyectos de tecnología cívica que involucran los derechos de inquilinos y el sistema de justicia. Como desarrollador del equipo web de Eviction Lab, trabaja para integrar los datos y construir la funcionalidad para hacer que nuestra herramienta de mapeo sea útil en una amplia gama de audiencias y casos de uso.
