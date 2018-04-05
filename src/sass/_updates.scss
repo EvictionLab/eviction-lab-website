@@ -9,14 +9,23 @@ a.cat-link {
 }
 .blog-type {
     color: #E04119;
+    &:hover {
+        color: $color1;
+    }
 }
 .media-type {
     color: #434878;
+    &:hover {
+        color: #434878;
+    }
 }
 .research-type {
     color: #2C897F;
     border-color: $color3;
     border: none;
+    &:hover {
+        color: $color3;
+    }
 }
 .events-list-header.research-type.outside-research {
     padding-top: 32px;
@@ -24,6 +33,9 @@ a.cat-link {
 .events-type {
     color: #768693;
     border-color: $color6;
+    &:hover {
+        color: #768693;
+    }
 }
 .alt-bg {
     background: #F4F7F9;

@@ -61,10 +61,12 @@ a.copy-link:hover {
   background-position: 24px 25px;
 }
 /* ---- img handling --- */
-img.null-img {
+.center-content-post figure.article-image img.null-img {
   position: absolute;
   @include for-phone-only {
     position: relative;
+    margin: 0 0 72px;
+
   }
 }
 /* --- author meta --- */
@@ -105,6 +107,12 @@ img.post-thumb {
       @include for-phone-only {
         top: 0px;
         line-height: 1.6rem;
+      }
+      li {
+        margin: 0;
+      }
+      li:before {
+        display: none;
       }
     }
   }
@@ -236,7 +244,7 @@ figure.article-image {
 .article-image {
   img {
     width: 100%;
-    margin: 0 0 27px 0;
+    margin: 56px 0 27px 0;
     @include for-tablet-portrait-up {
       margin: 0 0 0 0;
     }
@@ -346,6 +354,13 @@ figure.article-image {
     ul {
       @include for-phone-only {
         margin-bottom: 0;
+      }
+      li {
+        margin: 0;
+      }
+      li:before {
+        display: none;
+       
       }
     }
     .header {

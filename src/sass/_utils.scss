@@ -179,12 +179,12 @@
     margin-top: 1.8rem;
     }
 }
-.text-li li {
+.text-li li, .center-content-post li {
   list-style: none;
   position: relative;
   margin-left: 7px;
 }
-.text-li li:before {
+.text-li li:before, .center-content-post li:before {
   content: '\b7\a0';
   position:absolute;
   right:100%

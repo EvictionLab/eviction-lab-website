@@ -274,7 +274,7 @@
         .bio-container {
             position: relative;
             @include for-tablet-portrait-up {
-                padding-bottom: 6.4rem;
+                padding: 0 8px 6.4rem;
             }
         }
         h3 {
