@@ -108,6 +108,12 @@ img.post-thumb {
         top: 0px;
         line-height: 1.6rem;
       }
+      li {
+        margin: 0;
+      }
+      li:before {
+        display: none;
+      }
     }
   }
   .social-box {
@@ -348,6 +354,13 @@ figure.article-image {
     ul {
       @include for-phone-only {
         margin-bottom: 0;
+      }
+      li {
+        margin: 0;
+      }
+      li:before {
+        display: none;
+       
       }
     }
     .header {

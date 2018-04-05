@@ -4,7 +4,7 @@ contenttype: updates
 contentcat: blog
 featured: false
 title: "The Eviction Lab Teacher's Guide"
-date: 2018-04-07T23:13:05.556Z
+date: 2018-04-07T13:13:05.556Z
 postauthorname: Katie Krywokulski
 postauthortitle: Administrative Assistant
 authorpic: /images/bios/kkrywokulski_thumb.jpg
