@@ -287,6 +287,12 @@
             text-align: center;
             max-width: 192px;
         }
+        a:focus {
+            box-shadow: none;
+            img.bio-arrow-active {
+                opacity:1;
+            }
+        }
     }
     img.bio-thumb {
         width: 192px;
