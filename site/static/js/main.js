@@ -1,20 +1,20 @@
 // Add toggling of menu
 function setupMenu() {
-  var menu = document.querySelector('.app-menu');
-  var menuClose = document.querySelector('.app-menu .menu-close');
-  var menuButton = document.querySelector('.el-button-menu');
+  var menu = $('.app-menu');
+  var menuClose = $('.app-menu .menu-close');
+  var menuButton = $('.el-button-menu');
 
-  menuButton.addEventListener('click', function () {
-    menu.classList.add('expanded');
-    menu.querySelectorAll('a').forEach(function (el) {
-      el.tabIndex = null;
+  menuButton.click(function () {
+    menu.addClass('expanded');
+    menu.find('a').each(function () {
+      $(this).attr('tabindex', null);
     });
   });
 
-  menuClose.addEventListener('click', function () {
-    menu.classList.remove('expanded');
-    menu.querySelectorAll('a').forEach(function (el) {
-      el.tabIndex = -1;
+  menuClose.click(function () {
+    menu.removeClass('expanded');
+    menu.find('a').each(function () {
+      $(this).attr('tabindex', -1);
     });
   });
 }
@@ -23,13 +23,13 @@ function setupMenu() {
 function setupScrollEnd() {
   var debounceTime = 50;
   var isScrolling;
-  var headerWrapper = document.querySelector('header');
+  var headerWrapper = $('header');
 
   function toggleCondense () {
     if (document.documentElement.scrollTop === 0) {
-      headerWrapper.classList.remove('condensed');
+      headerWrapper.removeClass('condensed');
     } else {
-      headerWrapper.classList.add('condensed');
+      headerWrapper.addClass('condensed');
     }
     isScrolling = undefined;
   }
@@ -61,7 +61,7 @@ function setupModals() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
+$(document).ready(function () {
   setupMenu();
   setupScrollEnd();
   if ($('#contactform').length) {

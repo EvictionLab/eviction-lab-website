@@ -101,16 +101,17 @@ $menuMargin: grid(5);
 
 
 .language-select.dropdown {
-  display: block;
+  display: flex;
   margin: 0 grid(3) 0 grid(2);
   height: grid(7);
   width: grid(14);
   -ms-flex-order: 3;
-  order: 3;
+  order: 2;
   transition: all .4s ease; 
   border-radius: 0;
   box-shadow: none;
   color: #050403;
+  transform: none;
 
   .dropdown-menu {
     text-align: left;
@@ -188,60 +189,9 @@ $menuMargin: grid(5);
   }
 }
 
-.header-content > .language-select.dropdown {
-  display: none;
-}
-@media(min-width: $gtMobile) {
-  .header-content > .language-select.dropdown {
-    display: block;
-  }
-}
-
-// scale language select
-@media(min-width: $gtTablet) {
-  .condensed {
-    .language-select.dropdown {
-      transform: scale(0.775);
-    }
-  }
-}
-
-// Language Toggle - Only visible on "maps" mobile view
-// ---
-.app-menu .language-select.dropdown {
-  position:absolute;
-  width: grid(27);
-  margin: 0;
-  left: $menuMargin;
-  bottom: grid(15);
-  background: none;
-  border: grid(0.5) solid #383d65;
-  height: grid(5);
-  font-family: GT-Eesti-Display-Bold, sans-serif;
-
-  .dropdown-menu {
-    padding: 0;
-    margin-bottom: 2px;
-  }
-  .el-select.dropdown-toggle {
-    padding: 8px 24px 8px 16px;
-    text-transform: uppercase;
-    border: none;
-    color: #fff;
-    font-size: 13px;
-
-    .fa {
-      font-size: grid(1);
-      height: grid(1);
-      right: grid(1);
-      width: grid(1);
-    }
-  }
-}
-
-@media(min-width: $gtTablet) {
-  .app-menu .language-select.dropdown {
-    display: none;
+.condensed {
+  .language-select.dropdown {
+    transform: scale(0.775);
   }
 }
 
