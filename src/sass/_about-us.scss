@@ -137,7 +137,15 @@
     }
 }
 .el-bios {
-    
+    // give bio images some breathing room
+    @include for-480-up {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    @include for-tablet-portrait-up {
+        margin-left: -66px;
+        margin-right: -66px;
+    }
     ul.nav {
         a:hover {
             color: $color1;
@@ -216,41 +224,13 @@
  .bio-thumbs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    display: grid;
-    grid-template-columns: 1fr; 
+    justify-content: center;
     padding-bottom: 3.2rem;
-    @include for-480-up {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        display: -webkit-flex;
-        -webkit-flex-wrap: wrap;
-        -webkit-justify-content: space-evenly;
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-    }
     @include for-tablet-portrait-up {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        display: -webkit-flex;
-        -webkit-flex-wrap: wrap;
-        -webkit-justify-content: space-evenly;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
         padding-bottom: 1.6rem;
     }
     @include for-tablet-landscape-up {
         padding: 32px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        display: -webkit-flex;
-        -webkit-flex-wrap: wrap;
-        -webkit-justify-content: space-evenly;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
     }
     @include for-midsize-desktop-up {
         padding: 40px;
@@ -265,6 +245,16 @@
     }
     .bio-thumb-wrapper {
         position: relative;
+        width: 100%;
+        @include for-480-up {
+            width: 50%;
+        }
+        @include for-tablet-portrait-up {
+            width: 33.333%;
+        }
+        @include for-tablet-landscape-up {
+            width: 25%;
+        }
         a {
             text-decoration: none;
             display: flex;
