@@ -1,0 +1,15 @@
+.data-form .alt-bg {
+  padding-bottom: grid(10);
+
+  .center-content-post h1 {
+    font-family: $headerFontStack;
+    color: $color1;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+  }
+}
+
+.form-footer {
+  margin-top: 3rem;
+}
