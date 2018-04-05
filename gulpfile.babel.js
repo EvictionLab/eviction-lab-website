@@ -34,7 +34,7 @@ gulp.task("sass", function() {
 // Compile CSS with PostCSS
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
-    .pipe(postcss([cssImport({from: "./src/css/main.css"}), cssnext()]))
+    .pipe(postcss([cssImport({from: "./src/css/main.css"}), cssnext({ browserslist: [ ">= 1% in US" ]})]))
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
 ));
