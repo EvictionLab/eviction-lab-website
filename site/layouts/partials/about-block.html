@@ -1,7 +1,9 @@
 <div class="left-column {{ .Params.class }}">
         <h2 class="pullquote mobile-off {{ .Params.color }}">{{ .Params.blockquote }}<br>{{ .Params.attr }}</h2>
         <div class="about-imgs"><img src="{{ .Params.image }}" /></div>
-        <span class="subcopy caption ital">{{ .Params.caption }}</span>
+        <div class="caption">
+          <span class="subcopy ital">{{ .Params.caption }}</span> <span class="subcopy credit">{{ .Params.credit }}</span>
+        </div>
       </div>
       <div class="right-column">
         <h4 class="subhead bordered-header {{ .Params.color }}">{{ .Params.title }}</h4>

@@ -3,9 +3,15 @@
     a, a:hover {
         color: $color1;
     }
-    .subcopy.caption {
+    .caption {
+        color: #737373;
         margin-bottom: 1.6rem;
+        text-align: left;
+        line-height: 2rem;
+        text-align: center;
+
         @include for-tablet-portrait-up {
+            line-height: 2.4rem;
             margin-top: 0.8rem;
             margin-bottom: 2.4rem;
         }

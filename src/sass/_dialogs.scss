@@ -1,4 +1,4 @@
-
+/* --- dialogs.scss --- */
 // Modal CSS
 .modal-open {
   overflow: hidden;
@@ -127,6 +127,8 @@
       border-radius: grid(3);
       margin: auto;
       border: 2px solid #eef2f5;
+      background: #333;
+      z-index: -1;
     }
 
     &:hover {
