@@ -97,7 +97,7 @@ languageName = "Español"
 [[menu.footer]]
     name = "Data Merge Application"
     weight = 11
-    url = "/data-merge-application"
+    url = "/data-merge"
 
 
 [[menu.updates]]
