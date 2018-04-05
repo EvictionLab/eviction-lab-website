@@ -305,6 +305,10 @@ ul.anchor-links.dropdown-menu.show {
       }
       width: auto;
       display:inline-block;
+      padding: 0 grid(1);
+      margin: 0 (-1*grid(1));
+      margin-right:0;
+      max-width: 90%;
     }
     div {
       clear: both;
@@ -312,7 +316,6 @@ ul.anchor-links.dropdown-menu.show {
     &:focus {
       box-shadow: none;
       span {
-        padding: 0 grid(1);
         border: $focusBorder;
         // offset margins to keep in place
         margin: -$focusBorderWidth ((-1*grid(1))-$focusBorderWidth);
