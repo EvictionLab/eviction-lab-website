@@ -224,7 +224,7 @@
  .bio-thumbs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     padding-bottom: 3.2rem;
     @include for-tablet-portrait-up {
         padding-bottom: 1.6rem;
