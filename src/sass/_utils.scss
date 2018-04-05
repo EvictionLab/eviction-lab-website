@@ -179,14 +179,20 @@
     margin-top: 1.8rem;
     }
 }
-.text-li li, .center-content-post li {
+.text-li ul li, .center-content-post ul li {
   list-style: none;
   position: relative;
   margin-left: 7px;
 }
-.text-li li:before, .center-content-post li:before {
+.text-li ul li:before, .center-content-post ul li:before {
   content: '\b7\a0';
   position:absolute;
   right:100%
+}
+ul.nav.nav-tabs.anchor-links li {
+  margin-left: 0;
+  &:before {
+    display: none;
+  }
 }
 
