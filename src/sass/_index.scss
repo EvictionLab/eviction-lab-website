@@ -294,7 +294,6 @@ ul.anchor-links.dropdown-menu.show {
       /* font-size: $fontSizeSmall; */
       margin-bottom: 2rem;
     }
-
     span {
       font-size: 1.6rem;
       @include for-phone-only {
@@ -304,11 +303,24 @@ ul.anchor-links.dropdown-menu.show {
       @include for-midsize-desktop-up {
         font-size: 1.8rem;
       }
-      float: left;
-      width: 90%;
+      width: auto;
+      display:inline-block;
+      padding: 0 grid(1);
+      margin: 0 (-1*grid(1));
+      margin-right:0;
+      max-width: 90%;
     }
     div {
       clear: both;
+    }
+    &:focus {
+      box-shadow: none;
+      span {
+        border: $focusBorder;
+        // offset margins to keep in place
+        margin: -$focusBorderWidth ((-1*grid(1))-$focusBorderWidth);
+        margin-right:0;
+      }
     }
   }
   a:hover {
