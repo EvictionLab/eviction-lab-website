@@ -136,12 +136,13 @@
     /* color: #333333; */
   }
   @include for-phone-only {
+    display: -ms-grid;
     display: grid;
     min-height: initial;
     /* height: 12.2rem; */
-    grid-template-columns: 135px 1fr;
+    grid-template-columns: 126px 1fr;
     display: -ms-grid;
-    -ms-grid-columns: 135px 1fr;
+    -ms-grid-columns: 126px 1fr;
   }
   @include for-tablet-portrait-up {
     padding-top: 4rem;

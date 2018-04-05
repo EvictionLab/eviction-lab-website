@@ -9,6 +9,7 @@ postauthorname: Katie Krywokulski
 postauthortitle: Administrative Assistant
 authorpic: /images/bios/kkrywokulski_thumb.jpg
 image: 
+hasSubhead: sub
 subhead: Bring EvictionLab.org into the Classroom
 ---
  

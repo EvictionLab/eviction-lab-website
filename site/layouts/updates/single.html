@@ -59,7 +59,9 @@
     <div class="center-content-post {{ .Params.childof }}-post updates-post">
       <div class="page-content">
         <div class="post-body">
+          {{ if eq .Params.hasSubhead "sub" }}
           <p><span class="ak-bold">{{ .Params.subhead }}</span></p>
+          {{ end }}
           {{ .Content }}
           <div class="btm-meta-cat mobile-on"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <a class="ak-bold {{ .Params.childof }}-type capitalize" href="/updates/{{ .Params.childof }}">{{ .Params.childof }}</a></span></div> 
         </div>
