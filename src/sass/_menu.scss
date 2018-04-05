@@ -155,7 +155,7 @@ $menuMargin: grid(5);
         text-decoration: none;
 
         &:hover { background-color: #efefef; }
-        &:focus { box-shadow: 0 0 5px 1px #e24000; }
+        &:focus { @include focusStateInset(); }
       }
     }
   }
@@ -175,6 +175,7 @@ $menuMargin: grid(5);
     color: #050403;
     font-size: 14px;
 
+    &:focus { @include focusState(); }
     &::after { display: none; }
     .fa {
       font-size: 14px;

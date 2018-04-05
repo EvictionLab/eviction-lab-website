@@ -405,6 +405,12 @@ $mobileVhTransition: height 3600s steps(1);
   border-color: $color1;
 }
 
+@mixin focusStateInset() {
+  outline: 0;
+  box-shadow: inset 0 0 5px 1px $color1;
+  border-color: $color1;
+}
+
 @mixin smallCapsText($size) {
   $letterSpacingRatio: 0.066666666666667;
   @include defaultFontBold($size);
@@ -425,6 +431,7 @@ $mobileVhTransition: height 3600s steps(1);
 
 
 
+a:focus { @include focusState(); }
 /*
 p {
   font-size: 2.1rem;

@@ -9,6 +9,7 @@ function setupMenu() {
     menu.find('a').each(function () {
       $(this).attr('tabindex', null);
     });
+    menuClose.attr('tabindex', null);
   });
 
   menuClose.click(function () {
@@ -16,6 +17,7 @@ function setupMenu() {
     menu.find('a').each(function () {
       $(this).attr('tabindex', -1);
     });
+    menuClose.attr('tabindex', -1);
   });
 }
 

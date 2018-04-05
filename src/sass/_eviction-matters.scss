@@ -7,6 +7,7 @@
             color: $color1;
         }
     }
+    a.btn-primary { color: $white; border-radius: 2px;  }
     /*----- Eviction Facts ----- */
     .eviction-facts .bordered-header {
         margin-top: 0rem;
@@ -149,8 +150,8 @@
         .btn-primary {
             @include for-tablet-portrait-up {
                 height: 6.4rem;
-                padding: 0 4rem;
-                }
+                padding: 2rem 4rem;
+            }
         }
         @include for-phone-only {
             .button-wrap {
