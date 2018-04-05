@@ -244,7 +244,7 @@ h3 {
   }
 }
 
-p, .center-content-post.page-list li, select, input, textarea, .updates-post ol li {
+p, .center-content-post.page-list li, select, input, textarea, .post-body ol li, .post-body ul li {
   @include for-phone-only {
     @include defaultFont(1.4rem); 
     line-height: 2rem;

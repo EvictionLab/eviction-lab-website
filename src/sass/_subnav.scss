@@ -36,6 +36,12 @@
     color: $color1 !important;
     transition: 70ms;
   }
+  ul li {
+    margin-left: 0;
+    &:before {
+      display:none;
+    }
+  }
 }
 
 .condensed ~ .subnav {
