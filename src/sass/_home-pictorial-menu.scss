@@ -442,28 +442,24 @@
     @include for-midsize-desktop-up {
     }
     .menu-wrapper {
-      display: grid;
+      display: flex;
       height: 100%;
-      @include for-sub480 {
-        grid-template-columns: 56px 1fr;
-        }
-      @include for-480-thru-767 {
-        grid-template-columns: 56px 1fr;
-        }  
-      @include for-tablet-portrait-and-landscape {
-       grid-template-columns: 96px 1fr;
-      }  
-      @include sm-thru-med-desktop {
-        grid-template-columns: 120px 1fr;
-       }  
-       @include for-midsize-desktop-up {
-        grid-template-columns: 136px 1fr;
-       }   
+
       .left-column {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width:56px;
+        @include for-tablet-portrait-up {
+          width: 96px;
+        }  
+        @include for-desktop-up {
+          width: 120px;
+        }  
+        @include for-midsize-desktop-up {
+          width: 136px;
+        }   
         &.pm-ftr img {
           width: 10px;
           @include for-tablet-portrait-up {
@@ -481,6 +477,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        flex:1;
         @include for-tablet-portrait-up {
           padding-top: 3%;
          }
