@@ -402,14 +402,14 @@ $mobileVhTransition: height 3600s steps(1);
 // TODO: Re-add alternate state
 @mixin focusState() {
   // outline: 0;
-  box-shadow: 0 0 5px 1px $color1;
-  border-color: $color1;
+  // box-shadow: 0 0 5px 1px $color1;
+  // border-color: $color1;
 }
 
 @mixin focusStateInset() {
   // outline: 0;
-  box-shadow: inset 0 0 5px 1px $color1;
-  border-color: $color1;
+  // box-shadow: inset 0 0 5px 1px $color1;
+  // border-color: $color1;
 }
 
 @mixin smallCapsText($size) {
