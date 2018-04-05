@@ -101,3 +101,7 @@ input[type=checkbox] {
     font-size: $inputFontSize_lg;
   }
 }
+
+.form-check-label {
+  @include defaultFont(15px);
+}
