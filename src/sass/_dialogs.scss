@@ -127,8 +127,10 @@
       border-radius: grid(3);
       margin: auto;
       border: 2px solid #eef2f5;
+      @include for-phone-only {
       background: #333;
       z-index: -1;
+      }
     }
 
     &:hover {
