@@ -26,10 +26,10 @@ function setupScrollEnd() {
   var headerWrapper = $('header');
 
   function toggleCondense () {
-    if (document.documentElement.scrollTop === 0) {
-      headerWrapper.removeClass('condensed');
-    } else {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       headerWrapper.addClass('condensed');
+    } else {
+      headerWrapper.removeClass('condensed');
     }
     isScrolling = undefined;
   }

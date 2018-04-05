@@ -20,6 +20,7 @@ $newsletterBg: #333;
   color: $grey2a;
   .content-inner {
     max-width: grid(34);
+    margin: auto;
   }
   p {
     @include defaultFont(10px);
@@ -34,11 +35,13 @@ $newsletterBg: #333;
     margin-right: grid(2);
     font-size:10px;
     height: grid(5);
+    margin-bottom: 0;
   }
   .btn.btn-primary {
     padding: 0 grid(2);
     font-size:10px;
     height: grid(5);
+    margin-bottom: 0;
   }
 }
 // display signup form in one line on tablet+
