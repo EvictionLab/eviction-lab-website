@@ -189,4 +189,10 @@
   position:absolute;
   right:100%
 }
+ul.nav.nav-tabs.anchor-links li {
+  margin-left: 0;
+  &:before {
+    display: none;
+  }
+}
 
