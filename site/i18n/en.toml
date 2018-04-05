@@ -1,5 +1,36 @@
 [head_title]
 other = "Multilingual"
 
+[splashHeader]
+other = "We're unpacking America's eviction crisis." 
+[splashBody]
+other = "The Eviction Lab at Princeton University has built the first nationwide database of evictions. Find out how many evictions happen in your community. Create custom maps, charts, and reports. Share facts with your neighbors and elected officials."
+[cta]
+other = "Get Started" 
 [mapData]
 other = "Map & Data"
+[mapSub]
+other = "Learn about the American housing crisis by interacting with a customizable map"
+[mapCTA]
+other = "Go to the map"
+[rankingsHead]
+other = "Eviction Rankings"
+[rankingsSubhead]
+other = "See which cities rank the highest in evictions in the US"
+[rankingsCTA]
+other = "Go to eviction rankings"
+[aboutHead1]
+other = "About the"
+[aboutHead2]
+other = "Eviction Lab"
+[whyHead1]
+other = "Why Eviction"
+[whyHead2]
+other = "Matters"
+[methodsHead]
+other = "Methods"
+[helpHead]
+other = "Help and FAQ"
+
+
+

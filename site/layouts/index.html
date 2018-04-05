@@ -35,14 +35,12 @@
       <div class="hero">
 
       <h1>
-        We're unpacking America's eviction crisis.
+          {{ i18n "splashHeader" }}
       </h1>
 
-      <p>The Eviction Lab at Princeton University has built the first nationwide database of evictions. 
-        Find out how many evictions happen in your community. Create custom maps, charts, and reports. 
-        Share facts with your neighbors and elected officials.</p>
+      <p>{{ i18n "splashBody" }}</p>
 
-      <a class="btn smoothScroll " href="#pictorial-anchor">get started</a>
+      <a class="btn smoothScroll " href="#pictorial-anchor">{{ i18n "cta" }}</a>
 
       <div class="hero-social">
           <a href="https://www.facebook.com/evictionlab/"><i class="fa fa-facebook"></i></a>
@@ -69,8 +67,8 @@
       <a href="/map">
         <div class="menu-wrapper">
           <h2 class="break-me">{{ i18n "mapData" }}</h2>
-          <p>Learn about the American housing crisis by interacting with a customizable map.</p>
-          <span>go to the map</span>
+          <p>{{ i18n "mapSub" }}</p>
+          <span>{{ i18n "mapCTA" }}</span>
           <div class="hover-bar-top-left"></div>
         </div>
       </a>
@@ -79,9 +77,9 @@
     <div class="right tr-block mobile-vh">
       <a href="/rankings">
         <div class="menu-wrapper">
-          <h2>eviction rankings</h2>
-          <p>See which cities rank the highest in evictions in the U.S.</p>
-          <span>go to eviction rankings</span>
+          <h2>{{ i18n "rankingsHead" }}</h2>
+          <p>{{ i18n "rankingsSubhead" }}</p>
+          <span>{{ i18n "rankingsCTA" }}</span>
           <div class="hover-bar-top-right"></div>
         </div>      
       </a>
@@ -94,8 +92,8 @@
     <div class="left mr-block mobile-vh">
       <a href="/about">
         <div class="menu-wrapper">
-          <span class="mobile-off">About the <br />eviction lab</span>
-          <span class="mobile-on">about the eviction lab</span>
+          <span class="mobile-off">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
+          <span class="mobile-on">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
           <div class="hover-bar-middle-left"></div>
         </div>
       </a>  
@@ -104,8 +102,8 @@
     <div class="middle-left mr-block mobile-vh">
       <a href="/why-eviction-matters">
         <div class="menu-wrapper">
-            <span class="mobile-off">why eviction <br /> matters</span>
-            <span class="mobile-on">why eviction matters</span>
+            <span class="mobile-off">{{ i18n "whyHead1" }}<br />{{ i18n "whyHead2" }}</span>
+            <span class="mobile-on">{{ i18n "whyHead3" }}</span>
             <div class="hover-bar-middle-middle-left"></div>
         </div>  
       </a>
@@ -114,8 +112,8 @@
     <div class="middle-right mr-block mobile-vh">
       <a href="/methods">
           <div class="menu-wrapper">
-              <span class="mobile-off">Methods</span>
-              <span class="mobile-on">our methodology</span>
+              <span class="mobile-off">{{ i18n "methodsHead" }}</span>
+              <span class="mobile-on">{{ i18n "methodsHead" }}</span>
               <div class="hover-bar-middle-middle-right"></div>
           </div>
       </a>
@@ -124,8 +122,8 @@
     <div class="right mr-block mobile-vh">
       <a href="/help-faq">
         <div class="menu-wrapper">
-          <span class="mobile-off">Help and faq</span>
-          <span class="mobile-on">help &amp; faq</span>
+          <span class="mobile-off">{{ i18n "helpHead" }}</span>
+          <span class="mobile-on">{{ i18n "helpHead" }}</span>
           <div class="hover-bar-middle-right"></div>
         </div>  
       </a>
