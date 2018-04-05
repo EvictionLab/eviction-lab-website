@@ -3,7 +3,8 @@ dist: trusty
 node_js:
 - '8'
 script:
-- if [ "$TRAVIS_BRANCH" = "master" ]; then cp site/layouts/robots.prod.txt site/layouts/robots.txt; fi
+- if [ "$TRAVIS_BRANCH" = "master" ]; then export HUGO_BASEURL=$PROD_URL && cp site/layouts/robots.prod.txt site/layouts/robots.txt; fi
+- if [ "$TRAVIS_BRANCH" = "cms-dev" ]; then export HUGO_BASEURL=$STAGING_URL; fi
 - npm run build
 before_deploy:
 - pip install --user awscli
