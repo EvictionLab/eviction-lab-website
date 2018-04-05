@@ -42,11 +42,11 @@
             <div class="postlist-left-col">
                 <div class="authorname">{{ .Params.postauthorname }}</div>
                 <div class="list-thumb-container">
-                  <img class="list-thumb" src="{{ .Params.authorpic }}">
+                  <img class="list-thumb" alt="{{ .Params.postauthorname }} photo" src="{{ .Params.authorpic }}">
                 </div>  
                 <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
                 <div class="post-cat">
-                  <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" />
+                  <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" alt="Bookmark icon" />
                   <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
                   {{ .Params.childof }}</a>
                 </div>  
@@ -60,7 +60,7 @@
                     {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
                 </div>
                 <div class="post-cat">
-                  <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" />
+                  <img src="/images/icons/{{ .Params.childof }}_bookmark.png" alt="Bookmark icon" class="cat-bookmark" />
                   <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
                   {{ .Params.childof }}</a>
                 </div> 
@@ -134,7 +134,7 @@
             <div class="postlist-left-col">
               <div class="authorname">{{ .Params.postauthorname }}</div>
               <div class="list-thumb-container">
-                <img class="list-thumb" src="{{ .Params.authorpic }}">
+                <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
             </div>
             <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
             </div>
@@ -186,7 +186,7 @@
           <div class="postlist-left-col">
               <div class="authorname">{{ .Params.postauthorname }}</div>
               <div class="list-thumb-container">
-                <img class="list-thumb" src="{{ .Params.authorpic }}">
+                <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
               </div>  
               <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
             </div>
@@ -240,7 +240,7 @@
             <div class="postlist-left-col">
                 <div class="authorname">{{ .Params.postauthorname }}</div>
                 <div class="list-thumb-container">
-                  <img class="list-thumb" src="{{ .Params.authorpic }}">
+                  <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
                 </div>  
                 <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
               </div>
@@ -278,7 +278,7 @@
             <div class="postlist-left-col">
                 <div class="authorname">{{ .Params.postauthorname }}</div>
                 <div class="list-thumb-container">
-                  <img class="list-thumb" src="{{ .Params.authorpic }}">
+                  <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
                 </div>  
                 <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
               </div>
@@ -323,7 +323,7 @@
           <div class="postlist-left-col">
               <div class="authorname">{{ .Params.postauthorname }}</div>
               <div class="list-thumb-container">
-                <img class="list-thumb" src="{{ .Params.authorpic }}">
+                <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
               </div>  
               <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
             </div>
@@ -376,7 +376,7 @@
           <div class="postlist-left-col">
               <div class="authorname">{{ .Params.postauthorname }}</div>
               <div class="list-thumb-container">
-                <img class="list-thumb" src="{{ .Params.authorpic }}">
+                <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
               </div>  
               <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
             </div>
@@ -441,9 +441,9 @@
             </div>
             <div class="event-deets">
               <ul>
-                <li><img src="/images/icons/clock.svg" />April 1, 2018, 5:30PM—6:30PM</li>
+                <li><img src="/images/icons/clock.svg" alt="Clock icon" />April 1, 2018, 5:30PM—6:30PM</li>
                 {{ if isset .Params "website" }}
-                  <li><img src="/images/icons/browser.svg" /><a class="bold-link" href="{{ .Params.website }}">Website</a></li>
+                  <li><img src="/images/icons/browser.svg" alt="Browser icon" /><a class="bold-link" href="{{ .Params.website }}">Website</a></li>
                 {{ end }}  
               </ul>
             </div>

@@ -67,6 +67,7 @@ header + * {
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  order: 3;
   .btn.btn-icon {
     display: none;
     width: grid(5);

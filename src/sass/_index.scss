@@ -287,12 +287,12 @@ ul.anchor-links.dropdown-menu.show {
     display: block;
     width: 100%;
     color: $color1;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
     font-family: $boldFontStack;
     font-size: 20px;
     @include for-phone-only {
       /* font-size: $fontSizeSmall; */
-      padding-bottom: 2rem;
+      margin-bottom: 2rem;
     }
 
     span {

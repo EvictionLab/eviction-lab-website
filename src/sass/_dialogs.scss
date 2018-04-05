@@ -87,6 +87,7 @@
   margin:0;
   opacity:1;
   text-shadow: none;
+  &:focus { @include focusState(); }
 }
 
 // Eviction Lab dialog styles

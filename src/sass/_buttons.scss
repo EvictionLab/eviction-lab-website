@@ -3,6 +3,10 @@
   cursor: pointer;
 }
 
+.btn.focus, .btn:focus {
+  @include focusState();
+}
+
 // Primary color buttons
 .btn-primary {
   @include altFont($buttonTextSize); 
