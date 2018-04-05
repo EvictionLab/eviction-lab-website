@@ -90,7 +90,9 @@
         </p>
       </div>
       <div class="footer-credits">
-        <p>Header photo by John Appleseed</p>
+        {{ if .Params.photoCredit }}
+        <p>Header photo by {{ .Params.photoCredit }}</p>
+        {{ end }}
       </div>
     </div>
   </footer>
