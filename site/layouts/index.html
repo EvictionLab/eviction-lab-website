@@ -59,79 +59,79 @@
 
 <!-- ********** pictorial menu section ********** -->
 
-<div class="pictorial-wrapper mobile-vh" id="pictorial-anchor">
+<div class="pictorial-wrapper" id="pictorial-anchor">
 
-  <div class="top-row mobile-vh">
+  <div class="top-row">
 
-    <div class="left tr-block mobile-vh">
+    <div class="left tr-block">
       <a href="/map">
         <div class="menu-wrapper">
           <h2 class="break-me">{{ i18n "mapData" }}</h2>
           <p>{{ i18n "mapSub" }}</p>
           <span>{{ i18n "mapCTA" }}</span>
-          <div class="hover-bar-top-left"></div>
+          <div class="hover-bar"></div>
         </div>
       </a>
     </div>
    
-    <div class="right tr-block mobile-vh">
+    <div class="right tr-block">
       <a href="/rankings">
         <div class="menu-wrapper">
           <h2>{{ i18n "rankingsHead" }}</h2>
           <p>{{ i18n "rankingsSubhead" }}</p>
           <span>{{ i18n "rankingsCTA" }}</span>
-          <div class="hover-bar-top-right"></div>
+          <div class="hover-bar"></div>
         </div>      
       </a>
     </div>
 
   </div>
   <!-- ********** middle row ********** -->
-  <div class="middle-row mobile-vh">
+  <div class="middle-row">
 
-    <div class="left mr-block mobile-vh">
+    <div class="left mr-block">
       <a href="/about">
         <div class="menu-wrapper">
           <span class="mobile-off">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
           <span class="mobile-on">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
-          <div class="hover-bar-middle-left"></div>
+          <div class="hover-bar"></div>
         </div>
       </a>  
   </div>
 
-    <div class="middle-left mr-block mobile-vh">
+    <div class="middle-left mr-block">
       <a href="/why-eviction-matters">
         <div class="menu-wrapper">
             <span class="mobile-off">{{ i18n "whyHead1" }}<br />{{ i18n "whyHead2" }}</span>
             <span class="mobile-on">{{ i18n "whyHead3" }}</span>
-            <div class="hover-bar-middle-middle-left"></div>
+            <div class="hover-bar"></div>
         </div>  
       </a>
     </div>
 
-    <div class="middle-right mr-block mobile-vh">
+    <div class="middle-right mr-block">
       <a href="/methods">
           <div class="menu-wrapper">
               <span class="mobile-off">{{ i18n "methodsHead" }}</span>
               <span class="mobile-on">{{ i18n "methodsHead" }}</span>
-              <div class="hover-bar-middle-middle-right"></div>
+              <div class="hover-bar"></div>
           </div>
       </a>
     </div>
 
-    <div class="right mr-block mobile-vh">
+    <div class="right mr-block">
       <a href="/help-faq">
         <div class="menu-wrapper">
           <span class="mobile-off">{{ i18n "helpHead" }}</span>
           <span class="mobile-on">{{ i18n "helpHead" }}</span>
-          <div class="hover-bar-middle-right"></div>
+          <div class="hover-bar"></div>
         </div>  
       </a>
     </div>
 
   </div>
   <!-- ******************** -->
-  <div class="bottom-row mobile-vh">
+  <div class="bottom-row">
 
     <div class="left br-block ">
       {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
@@ -148,7 +148,7 @@
               {{ $first.Title | truncate 60 }}</span></p>
               {{ end }}
             <span class="br-link">Read the blog post <i class="fa fa-chevron-right"></i></span>
-            <div class="hover-bar-bottom-left"></div>
+            <div class="hover-bar"></div>
           </div>  
         </div>  
       </a>
@@ -163,7 +163,7 @@
           <div class="right-column">
             <p>Follow research, events, and news coverage</p>
             <span class="br-link">Go to Updates <i class="fa fa-chevron-right"></i></span>
-            <div class="hover-bar-bottom-right"></div>
+            <div class="hover-bar"></div>
           </div>  
         </div>  
       </a>  

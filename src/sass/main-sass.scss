@@ -44,20 +44,17 @@ $gtLaptop: 1439px; // greater than laptop device breakpoint
 @mixin for-iphone-8plus-portrait-only {
   @media (min-width: $iphone-8plus-portrait) { @content; }
 }
-@mixin for-sub480 {
-  @media (max-width:$sub480) { @content; }
+@mixin for-below-414 {
+  @media (max-width: 413px) { @content; }
 }
-@mixin for-above480 {
-  @media (min-width:$above480) { @content; }
+@mixin for-414-up {
+  @media (min-width:414px) { @content; }
 }
-@mixin for-480-thru-767 {
-  @media (min-width:$above480) and (max-width:$mobile) { @content; }
+@mixin for-414-thru-767 {
+  @media (min-width: 414px) and (max-width: 767px) { @content; }
 }
 @mixin for-480-up {
   @media (min-width: 480px) { @content; }
-}
-@mixin for-480-thru-1023 {
-  @media (min-width:$above480) and (max-width:$tabletLimit) { @content; }
 }
 @mixin for-phone-only {
   @media (max-width: $mobile) { @content; }
@@ -397,8 +394,6 @@ $mobileVhTransition: height 3600s steps(1);
   a:hover + .#{$className} {
     visibility: visible;
   }
-
-
 }
 
 // TODO: Re-add alternate state
