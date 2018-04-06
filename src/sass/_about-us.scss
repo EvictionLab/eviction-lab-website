@@ -5,7 +5,7 @@
     }
     .caption {
         color: #737373;
-        margin-bottom: 1.6rem;
+        margin-bottom: 3.2rem;
         text-align: left;
         line-height: 2rem;
         text-align: center;
@@ -14,6 +14,17 @@
             line-height: 2.4rem;
             margin-top: 0.8rem;
             margin-bottom: 2.4rem;
+        }
+    }
+    .no-img h4.subhead.mobile-on.bordered-header {
+        padding-bottom: 0rem;
+    }
+    span.attr {
+        font-size: 80%;
+    }
+    .modal {
+        @include for-tablet-portrait-up {
+        top: 5vh;
         }
     }
 }
@@ -81,6 +92,7 @@
     }
     .bordered-header {
         padding: 1.6rem 0 3.2rem;
+        margin: initial;
         @include for-tablet-portrait-up {
             padding: 1.6rem 0 3.2rem;
         }
@@ -270,7 +282,8 @@
         .bio-container {
             position: relative;
             @include for-tablet-portrait-up {
-                padding: 0 8px 6.4rem;
+                /* padding: 0 8px 6.4rem; */
+                padding: 0 8px 0;
             }
         }
         h3 {
