@@ -387,3 +387,18 @@
 	width:100%;
 	height:100%;
 }
+
+#buy-book-modal {
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        a.btn-primary {
+            height: 4.2rem;
+            padding: 1rem;
+            width: 16rem;
+            margin: 1rem;
+        }
+    }
+}

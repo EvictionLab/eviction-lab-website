@@ -155,7 +155,7 @@
 
 @media(min-width: $gtMobile) {
   .modal-dialog {
-    margin: $pageMargin;
+    margin: $pageMargin auto;
     width: grid(80);
   }
   .modal-content {
