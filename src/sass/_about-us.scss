@@ -422,13 +422,6 @@
       height: auto;
     }
   }
-  .right-column {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    @include for-tablet-landscape-up {
-      max-height: 90vh;
-    }   
-  }  
   .modal-body {
     padding: 2.4rem 1.6rem;
     @include for-tablet-landscape-up {
