@@ -5,7 +5,7 @@ childof: faq
 type: map
 weight: 145
 ---
-En el mapa, hemos indicado con el símbolo [TK] estados con recuentos de desalojo subestimados. Por supuesto, algunos lugares tienen bajas tasas de desalojo porque hay pocos inquilinos que viven allí o porque hay muy pocos desalojos. Pero algunos estados y el Distrito de Columbia han subestimado los conteos de desalojo en nuestro conjunto de datos por una variedad de razones.
+En el mapa, hemos indicado con el símbolo <img class="hint" src="/images/icons/hint-icon.png" /> estados con recuentos de desalojo subestimados. Por supuesto, algunos lugares tienen bajas tasas de desalojo porque hay pocos inquilinos que viven allí o porque hay muy pocos desalojos. Pero algunos estados y el Distrito de Columbia han subestimado los conteos de desalojo en nuestro conjunto de datos por una variedad de razones.
 
 En Nueva York, los registros a menudo se guardan como "juicios abstractos", lo que significa que solo están en el registro público si el demandante/propietario paga para que se los coloquen allí. Eso, sumado a la cantidad de tribunales de la ciudad y el pueblo en el estado dificulta la recaudación.
 

@@ -58,7 +58,11 @@
       <!-- ************ -->
 
       <a name="map"></a>
-      <h2 class="bordered-header blue">Map</h2>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li2 }}</h2>
+      {{ end }}
+      {{ end }}
 
       <div class="accordion">
 
@@ -76,7 +80,11 @@
       <!-- ************ -->
 
       <a name="data"></a>
-      <h2 class="bordered-header blue">Data</h2>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li3 }}</h2>
+      {{ end }}
+      {{ end }}
 
       <div class="accordion">
 
@@ -94,7 +102,11 @@
       <!-- ************ -->
 
       <a name="rankings"></a>
-      <h2 class="bordered-header blue">Eviction Rankings</h2>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li4 }}</h2>
+      {{ end }}
+      {{ end }}
 
       <div class="accordion">
 
@@ -112,7 +124,11 @@
       <!-- ******************* -->
 
       <a name="definitions"></a>
-      <h2 class="bordered-header blue">Definitions</h2>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li5 }}</h2>
+      {{ end }}
+      {{ end }}
 
       <div class="accordion">
 
@@ -129,7 +145,11 @@
       <!-- methods section -->
       <!-- *************** -->
       <a name="methods"></a>
-      <h2 class="bordered-header blue">Methods</h2>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li6 }}</h2>
+      {{ end }}
+      {{ end }}
 
       <div class="accordion">
 
@@ -146,7 +166,11 @@
       <!-- Storytelling section -->
       <!-- *************** -->
       <a name="stories"></a>
-      <h2 class="bordered-header blue">Storytelling &amp; Activism</h2>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li7 }}</h2>
+      {{ end }}
+      {{ end }}
 
       <div class="accordion">
 

@@ -20,8 +20,7 @@
     </ul>
   </div>
 </div>
-{{ end }}
-{{ end }}
+
 <div class="methods-content social-side">
     {{ partial "social-share-vert" . }}
     <div class="center-page-wrapper">
@@ -32,7 +31,9 @@
           <!-- ************ -->
       
           <a name="section-name"></a>
-          <h2 class="bordered-header blue">Methods FAQ</h2>
+          <h2 class="bordered-header blue">{{ .Params.li2 }}</h2>
+          {{ end }}
+          {{ end }}
       <!-- *************** Methods loop ************* -->
           <div class="accordion">
               {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
