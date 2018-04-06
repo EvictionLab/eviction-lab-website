@@ -128,54 +128,75 @@
 .subnav {
   z-index: 991;
 }
+// sub nav text styles 
+ul.anchor-links li {
+  text-transform: uppercase;
+  color: $secondaryTextColor;
+  @include altFont(12px);
+  @include for-tablet-portrait-up {
+    @include altFont(15px);
+  }
+}
+// sub nav links
+ul.anchor-links a {
+  position: relative;
+  color: $textColor;
+  @include altFont($subnavFontPhone);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  @include for-tablet-portrait-and-landscape {
+    @include altFont($subnavFontTablet);
+    letter-spacing: 0.08rem;
+  }
+  @include for-tablet-portrait-up {
+    text-transform: none;
+  }
+  @include for-tablet-landscape-up {
+    @include altFont($subnavFontDesktop);
+    letter-spacing: 0.04rem;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
 
 .anchor-links {
-  padding: 25px 0;
-  margin-bottom: 60px;
+  height: grid(5);
   text-align: center;
-  @include for-tablet-landscape-up {
-    padding: 17px 45px;
-  }
-  li:last-child {
-    margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include for-tablet-portrait-up {
+    height: grid(8);
   }
   li {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 5px;
-    @include altFont(12px);
-    color: $secondaryTextColor;
+    display: block;
+    margin-right: grid(2);
     @include for-tablet-portrait-up {
-      margin-right: 25px;
-      @include altFont(15px);
+      margin-right: grid(4);
     }
-    @include for-tablet-landscape-up {
-      margin-right: 45px;
+    &:last-child {
+      margin-right: 0;
     }
     a {
-      @include altFont(16px);
-      color: $textColor;
       position: relative;
-      top: -3px;
-      margin-right: 13px;
-      @include for-phone-only {
-        @include altFont($subnavFontPhone);
-        text-transform: uppercase;
-        top: -15px; 
-        letter-spacing: 0.05rem;
-      }
-      @include for-tablet-portrait-and-landscape {
-        @include altFont($subnavFontTablet);
-        top: -15px;
-        letter-spacing: 0.08rem;
-      }
-      @include for-tablet-landscape-up {
-        @include altFont($subnavFontDesktop);
-        letter-spacing: 0.04rem;
-      }
     }
-    a:hover {
-      text-decoration: none;
+    a:after {
+      opacity:0;
+    } 
+    &.active a:after,
+    a.highlight:after {
+      content: "";
+      width: 48px;
+      position: absolute;
+      bottom: -1*grid(3);
+      left:0;
+      border-bottom: 4px solid #e24000;
+      opacity:0;
+      transition: 150ms;
+      @include for-tablet-portrait-up {
+        opacity:1;
+      }
     }
   }
   .only-larger-screens {
@@ -183,8 +204,33 @@
     @include for-tablet-landscape-up {
       display: inline-block;
       position: relative;
-      top: -3px;
       letter-spacing: 0.04rem;
+    }
+  }
+}
+
+.dropdown .anchor-links {
+  padding: 0;
+  width: 320px;
+  z-index: 1000;
+  height: auto;
+  background-color: #F4F7F9;
+  padding: 10px 0;
+  display:none;
+  &.show { display:block;}
+  li {
+    display: block;
+    margin: 2px 0;
+    a {
+      top: initial;
+      margin: 0;
+      text-transform: uppercase;
+      &:hover {
+        background-color: #F4F7F9;
+      }
+    }
+    a:after {
+      display: none;
     }
   }
 }
@@ -192,15 +238,15 @@
 /* --- Dropdowns --- */
 ul.anchor-links.dropdown-menu.show {
   @include for-phone-only {
-    transform: translate3d(-160px, 51px, 0px)!important;
+    transform: translate3d(-160px, 40px, 0px)!important;
     left: 50%!important;
   }
   @include for-tablet-portrait-only {
-      transform: translate3d(-160px, 51px, 0px)!important;
+      transform: translate3d(-160px, 64px, 0px)!important;
       left: 50%!important;
   }
   @include for-tablet-landscape-up {
-  transform: translate3d(200px, 56px, 0px) !important;
+  transform: translate3d(200px, 64px, 0px) !important;
  
   }
   
@@ -214,9 +260,9 @@ ul.anchor-links.dropdown-menu.show {
     color: $secondaryTextColor;
     border: none;
     background: none;
-    height: 50px;
-    @include for-tablet-landscape-up {
-      height: 56px;
+    height: grid(5);
+    @include for-tablet-portrait-up {
+      height: grid(8);
     }
     width: 320px;
     &:focus {
@@ -229,31 +275,6 @@ ul.anchor-links.dropdown-menu.show {
   }
   .dropdown-menu {
     border: none;
-  }
-  ul.anchor-links {
-    padding: 0;
-      width: 320px;
-      z-index: 1000;
-      &.dropdown-menu {
-        background-color: #F4F7F9;
-        padding: 10px 0;
-      }
-    
-    li {
-      display: block;
-      margin: 2px 0;
-      a {
-        top: initial;
-        margin: 0;
-        text-transform: uppercase;
-        &:hover {
-          background-color: #F4F7F9;
-        }
-      }
-      a:after {
-        display: none;
-      }
-    }
   }
 }
 
