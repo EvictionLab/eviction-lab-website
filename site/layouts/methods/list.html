@@ -36,9 +36,11 @@
       <!-- *************** Methods loop ************* -->
           <div class="accordion">
               {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
-              {{ if eq .Params.childof "methods" }}
+              {{ if eq .Params.type "methods" }}
+            
               <!-- method item -->
                 {{ partial "faqs" . }}
+         
               {{ end }}
               {{ end }}
            

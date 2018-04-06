@@ -417,8 +417,24 @@ ul.anchor-links.dropdown-menu.show {
 
 .accordion-section:last-child {
   border-bottom: none;
+  margin-bottom: 2.4rem;
+  @include for-tablet-portrait-up {
+    margin-bottom: 4.8rem;
+  }
+  @include for-midsize-desktop-up {
+    margin-bottom: 5.6rem;
+  }
 }
 
 .page-404 {
   height: 500px;
+}
+.help-faq-content.social-side, .methods-content.social-side {
+  margin-bottom: 4.8rem;
+  @include for-tablet-portrait-up {
+    margin-bottom: 8rem;
+  }
+  @include for-midsize-desktop-up {
+    margin-bottom: 9.6rem;
+  }
 }
