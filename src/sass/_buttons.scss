@@ -154,4 +154,6 @@
   }
 }
 // shift the element after the sticky element up to account for the space
-.social-side .social-fixed + * { margin-top: -232px; }
+@include for-tablet-portrait-up {
+  .social-side .social-fixed + * { margin-top: -232px; }
+}
