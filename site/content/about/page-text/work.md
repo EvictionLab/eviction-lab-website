@@ -8,6 +8,8 @@ image: /images/assets/eviction-court.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
 weight: 2
 color: green
+caption: 'Case files are stacked high inside a housing courtroom.' 
+credit: '(Photo: Sally Ryan)'
 ---
 Through this website, the Eviction Lab has made <a href="/map">nationwide eviction data</a> publicly available and accessible. We hope this data is used by policymakers, community organizers, journalists, educators, non-profit organizations, students, and citizens interested in understanding more about housing, eviction, and poverty in their own backyards. You can look at evictions over time, map evictions anywhere in the United States, compare the eviction rates of different neighborhoods, cities, or states, and generate custom reports about America’s eviction epidemic.  
 

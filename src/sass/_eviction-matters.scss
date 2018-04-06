@@ -1,6 +1,20 @@
 /* -- eviction-matters.scss -- */
 
 .eviction-matters {
+    .caption {
+        color: #737373;
+        margin-bottom: 1.6rem;
+        text-align: left;
+        line-height: 2rem;
+        text-align: center;
+
+        @include for-tablet-portrait-up {
+            line-height: 2.4rem;
+            margin-top: 0.8rem;
+            margin-bottom: 2.4rem;
+            margin-top: -24px;
+        }
+    }
     a {
         color: $color1;
         &:hover {
@@ -372,4 +386,19 @@
 	left:0;
 	width:100%;
 	height:100%;
+}
+
+#buy-book-modal {
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        a.btn-primary {
+            height: 4.2rem;
+            padding: 1rem;
+            width: 16rem;
+            margin: 1rem;
+        }
+    }
 }

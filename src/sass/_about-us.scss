@@ -3,11 +3,28 @@
     a, a:hover {
         color: $color1;
     }
-    .subcopy.caption {
-        margin-bottom: 1.6rem;
+    .caption {
+        color: #737373;
+        margin-bottom: 3.2rem;
+        text-align: left;
+        line-height: 2rem;
+        text-align: center;
+
         @include for-tablet-portrait-up {
+            line-height: 2.4rem;
             margin-top: 0.8rem;
             margin-bottom: 2.4rem;
+        }
+    }
+    .no-img h4.subhead.mobile-on.bordered-header {
+        padding-bottom: 0rem;
+    }
+    span.attr {
+        font-size: 80%;
+    }
+    .modal {
+        @include for-tablet-portrait-up {
+        /* top: 5vh;*/
         }
     }
 }
@@ -75,6 +92,7 @@
     }
     .bordered-header {
         padding: 1.6rem 0 3.2rem;
+        margin: initial;
         @include for-tablet-portrait-up {
             padding: 1.6rem 0 3.2rem;
         }
@@ -137,7 +155,15 @@
     }
 }
 .el-bios {
-    
+    // give bio images some breathing room
+    @include for-480-up {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    @include for-tablet-portrait-up {
+        margin-left: -66px;
+        margin-right: -66px;
+    }
     ul.nav {
         a:hover {
             color: $color1;
@@ -216,41 +242,13 @@
  .bio-thumbs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    display: grid;
-    grid-template-columns: 1fr; 
+    justify-content: center;
     padding-bottom: 3.2rem;
-    @include for-480-up {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        display: -webkit-flex;
-        -webkit-flex-wrap: wrap;
-        -webkit-justify-content: space-evenly;
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-    }
     @include for-tablet-portrait-up {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        display: -webkit-flex;
-        -webkit-flex-wrap: wrap;
-        -webkit-justify-content: space-evenly;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
         padding-bottom: 1.6rem;
     }
     @include for-tablet-landscape-up {
         padding: 32px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        display: -webkit-flex;
-        -webkit-flex-wrap: wrap;
-        -webkit-justify-content: space-evenly;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
     }
     @include for-midsize-desktop-up {
         padding: 40px;
@@ -265,6 +263,16 @@
     }
     .bio-thumb-wrapper {
         position: relative;
+        width: 100%;
+        @include for-480-up {
+            width: 50%;
+        }
+        @include for-tablet-portrait-up {
+            width: 33.333%;
+        }
+        @include for-tablet-landscape-up {
+            width: 25%;
+        }
         a {
             text-decoration: none;
             display: flex;
@@ -274,7 +282,8 @@
         .bio-container {
             position: relative;
             @include for-tablet-portrait-up {
-                padding: 0 8px 6.4rem;
+                /* padding: 0 8px 6.4rem; */
+                padding: 0 8px 0;
             }
         }
         h3 {

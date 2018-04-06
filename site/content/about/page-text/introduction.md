@@ -6,7 +6,8 @@ blockquote: Bearing witness to America’s eviction epidemic.
 date: 2017-11-26T03:54:30.075Z
 image: /images/assets/woman-with-belongings.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
-caption: A woman watches as her belongings are removed from her home.
+caption: 'A woman watches as her belongings are removed from her home.' 
+credit: '(Photo: Michael Kienitz)'
 weight: 1
 color: red
 ---

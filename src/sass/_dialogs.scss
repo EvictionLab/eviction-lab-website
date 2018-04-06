@@ -1,4 +1,4 @@
-
+/* --- dialogs.scss --- */
 // Modal CSS
 .modal-open {
   overflow: hidden;
@@ -127,6 +127,10 @@
       border-radius: grid(3);
       margin: auto;
       border: 2px solid #eef2f5;
+      @include for-phone-only {
+      background: #333;
+      z-index: -1;
+      }
     }
 
     &:hover {
@@ -151,7 +155,7 @@
 
 @media(min-width: $gtMobile) {
   .modal-dialog {
-    margin: $pageMargin;
+    margin: $pageMargin auto;
     width: grid(80);
   }
   .modal-content {

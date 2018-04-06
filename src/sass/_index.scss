@@ -90,6 +90,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
+  @include for-phone-only {
+    background-position-x: 43%;
+  }
 }
 
 .wem-hero {
