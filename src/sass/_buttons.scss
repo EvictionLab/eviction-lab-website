@@ -100,7 +100,7 @@
 }
 
 // Social share floating box
-
+// ---
 .social-fixed {
   height: 176px;
   width: 72px;
@@ -121,7 +121,7 @@
   letter-spacing: 0.05rem;
   margin-top: 56px;
   z-index: 989;
-  margin-bottom: -232px;
+  margin-bottom:16px;
   .social-sprite-vert {
     li {
       display: flex;
@@ -145,6 +145,9 @@
         &.send-email { font-size: 13px; }
       }
     }
-
   }
+}
+// shift the element after the sticky element up to account for the space
+@include for-tablet-portrait-up {
+  .social-side .social-fixed + * { margin-top: -232px; }
 }
