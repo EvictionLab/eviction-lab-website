@@ -22,29 +22,32 @@
 </div>
 {{ end }}
 {{ end }}
-{{ partial "social-share-vert" . }}
-<div class="center-page-wrapper">
-  <div class="center-content-post page-list">
-
-    <!-- ************ -->
-    <!-- section name -->
-    <!-- ************ -->
-
-    <a name="section-name"></a>
-    <h2 class="bordered-header blue">Methods FAQ</h2>
-<!-- *************** Methods loop ************* -->
-    <div class="accordion">
-        {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
-        {{ if eq .Params.childof "methods" }}
-        <!-- method item -->
-          {{ partial "faqs" . }}
-        {{ end }}
-        {{ end }}
-     
-    </div> <!-- close accordion -->
-
-  </div>
+<div class="methods-content social-side">
+    {{ partial "social-share-vert" . }}
+    <div class="center-page-wrapper">
+        <div class="center-content-post page-list">
+      
+          <!-- ************ -->
+          <!-- section name -->
+          <!-- ************ -->
+      
+          <a name="section-name"></a>
+          <h2 class="bordered-header blue">Methods FAQ</h2>
+      <!-- *************** Methods loop ************* -->
+          <div class="accordion">
+              {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
+              {{ if eq .Params.childof "methods" }}
+              <!-- method item -->
+                {{ partial "faqs" . }}
+              {{ end }}
+              {{ end }}
+           
+          </div> <!-- close accordion -->
+      
+        </div>
+      </div>
 </div>
+
 <script src="/js/subnav-active.js"></script>
 {{ partial "debug" . }}
 <span class="debug-visibility">rendered by = themes/THEMENAME/layouts/methods/list.html</span>
