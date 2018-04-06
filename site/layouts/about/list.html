@@ -1,8 +1,9 @@
 {{ partial "header" . }}
 
 <!-- section header -->
+
 {{ range (where .Site.RegularPages "Params.childof" ("about")) }}
-        {{ if eq .Params.type "meta" }} 
+        {{ if eq .Params.type "meta" }}       
 <div class="graphic-header about-us-hero center-page-wrapper">
   <div class="center-page">
     <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>

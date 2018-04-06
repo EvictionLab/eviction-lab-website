@@ -13,6 +13,8 @@ En California, muchos casos que terminan en desalojo están sellados y por lo ta
 
 En la mayoría de las jurisdicciones, el proceso de desalojo comienza con un aviso extrajudicial entregado a un inquilino, pero en Maryland el proceso comienza con un desalojo presentado ante el tribunal. Esto significa que Maryland tiene un volumen de casos muy elevado. Debido a eso, es difícil recopilar datos de Maryland, con la excepción del condado de Prince George, donde tenemos coherencia en el volumen de casos a lo largo del tiempo.
 
+En Nueva Jersey, si bien el número de casos de desalojo se recopiló de manera confiable, la información sobre los resultados de esos casos no fue fácilmente accesible. Como resultado, creemos que nuestra tasa de desalojo es una subestimación.
+
 En Kentucky, Louisiana, Tennessee y Texas, existe una buena cobertura de datos en los centros urbanos, pero hay algunas áreas rurales más que faltan datos, debido a dificultades de recolección.
 
 Se puede comparar las tasas de desalojo de nuestro mapa y los datos sin procesar con las estadísticas presentadas por la corte sobre las presentaciones de desalojo de 27 estados y el Distrito de Columbia <a href="https://data-downloads.evictionlab.org/court-reported-stats/ExtStatsFull.xlsx">(descargue las estadísticas informadas por la corte)</a>. Estas estadísticas proporcionan recuentos anuales de desalojos archivados en los condados. Para mantener las cosas consistentes, no hemos incluido estas estadísticas en nuestro mapa de desalojos, pero se puede usarlas para ayudar a validar las estimaciones.

@@ -5,4 +5,4 @@ childof: faq
 type: map
 weight: 143
 ---
-Porque usted vive en Arkansas, Dakota del Norte, Alaska o Dakota del Sur, estados para los cuales aún no hemos obtenido registros de desalojo a nivel individual. Sin embargo, en estos estados, podemos mostrar las estadísticas informadas sobre los registros de desalojo. Para obtener más detalles sobre cómo manejamos los datos de diferentes fuentes, consulte nuestra <a href="/methods">página de Método</a>.
+Porque que usted vive en Arkansas, Dakota del Norte, Alaska o Dakota del Sur, los estados para los que no tenemos suficientes registros de desalojo a nivel individual para hacer una estimación. Sin embargo, en estos estados, podemos mostrar las estadísticas informadas sobre las presentaciones de desalojo. Para obtener más detalles sobre cómo manejamos los datos de diferentes fuentes, consulte nuestra <a href="/methods">página de Método</a>.

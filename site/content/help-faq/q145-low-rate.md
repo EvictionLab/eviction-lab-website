@@ -5,13 +5,15 @@ childof: faq
 type: map
 weight: 145
 ---
-On the map, we have indicated with the symbol [TK] states with underestimated eviction counts. Of course, some places have low eviction rates because there are few renters living there or because there are very few evictions. But some states and the District of Columbia have underestimated eviction counts in our dataset for a variety of reasons.
+On the map, we have indicated with the symbol states with underestimated eviction counts. Of course, some places have low eviction rates because there are few renters living there or because there are very few evictions. But some states and the District of Columbia have underestimated eviction counts in our dataset for a variety of reasons.
 
-In New York, records are often kept as “abstracted judgments,” which means they are only in the public record if the plaintiff/landlord pays to have them placed there. That plus the amount of town and village courts in the state makes collection difficult. 
+In New York, records are often kept as “abstracted judgments,” which means they are only in the public record if the plaintiff/landlord pays to have them placed there. That plus the amount of town and village courts in the state makes collection difficult.
 
 In California, many cases that end in eviction are sealed and therefore not accessible by the general public. In addition, it can be difficult to collect data from California as a whole, owing to restrictions on the number of records one can collect.
 
 In most jurisdictions, the eviction process starts with an out-of-court notice delivered to a tenant, but in Maryland the process begins with an eviction filed in court. This means Maryland has a very high case volume. Because of that, it is difficult to collect data from Maryland, with the exception of Prince George’s county where we have consistency in case volume over time.
+
+In New Jersey, while the number of eviction cases was collected reliably, information about the outcomes of those cases were not readily accessible. As a result, we believe our eviction rate is an underestimate.
 
 In Kentucky, Louisiana, Tennessee, and Texas, there is good data coverage in the urban centers, but there are some more rural areas that are missing data, owing to collection difficulties.
 
