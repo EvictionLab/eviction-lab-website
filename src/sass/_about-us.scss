@@ -27,6 +27,18 @@
         /* top: 5vh;*/
         }
     }
+    .modal-header {
+        .close {
+          &::after {
+            @include for-phone-only {
+            background: #333;
+            z-index: -1;
+            }
+          }
+      
+        }
+      }
+      
 }
 .alt-page {
     .alt-bg {
