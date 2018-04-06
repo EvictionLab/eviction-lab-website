@@ -183,6 +183,9 @@
         @include for-tablet-portrait-up {
             padding-bottom: 5rem;
         }
+        @include for-tablet-landscape-up {
+                padding-bottom: 2.4rem;
+        }
         
     }    
     .anchor-links li, .anchor-links li a {
