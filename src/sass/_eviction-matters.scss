@@ -417,10 +417,23 @@
         justify-content: center;
 
         a.btn-primary {
-            height: 4.2rem;
-            padding: 1rem;
-            width: 16rem;
-            margin: 1rem;
+            width: grid(25);
+            margin: 0.5rem;
+            height: grid(7);
+            padding: grid(1);
+            box-sizing: border-box;
+            background: #fff;
+            border: 5px solid #f4f7f9;
+            color: rgb(145, 145, 145);
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: .9px;
+            line-height: grid(4);
+            border-radius: 0;
+
+            &:hover, &:active {
+                color: #050403;
+            }
         }
     }
 }
