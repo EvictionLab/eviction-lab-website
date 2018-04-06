@@ -18,6 +18,13 @@
     display: block;
   }
 
+  .tr-block, .mr-block, .br-block {
+    @include full-shadow-animate;
+    &:hover .hover-bar { visibility: visible; }
+    a:focus .hover-bar { visibility: visible; }
+    a:focus { outline: 0; box-shadow: none; }
+  }
+
   /* -------------TOP ROW------------- */
   .top-row {
     position: relative;
@@ -40,10 +47,7 @@
     position: relative;
     width: 100%;
     height: 104px;
-    > a:focus { @include focusStateInset(); }
     @include hoverBar('hover-bar',50px,5px,20px,auto);
-    &:hover .hover-bar { visibility: visible; }
-    @include full-shadow-animate;
     @include for-414-up {
       flex-direction: row;
       width:50%;
@@ -199,12 +203,6 @@
     @include for-midsize-desktop-up {
       min-height: 248px;
     }
-    @include full-shadow-animate;
-    &:hover .hover-bar { visibility: visible; }
-    a:focus {
-      box-shadow: none;
-      .menu-wrapper { @include focusStateInset(); }
-    }
     &.left {
       background: #E04119;
       background: linear-gradient(to left, #952800 2%, #9F2D00 99%);
@@ -304,7 +302,6 @@
     flex-direction: column;
     justify-content: center;
     height:74px;
-    @include full-shadow-animate;
     background: #3c3c3c;
     @include hoverBar('hover-bar',50px,5px,8px,0);
     &:hover .hover-bar { visibility: visible; }

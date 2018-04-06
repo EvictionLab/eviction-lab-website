@@ -101,7 +101,7 @@ footer {
   color: $white;
   a {
     color: $white;
-    &:hover { color: $color1; text-decoration: none; }
+    &:hover, &:focus { color: $color1; text-decoration: none; box-shadow:none; outline:0; }
   }
   p { @include defaultFont(10px); }
 }
