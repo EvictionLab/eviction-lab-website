@@ -323,6 +323,7 @@ ul.anchor-links.dropdown-menu.show {
     }
     &:focus {
       box-shadow: none;
+      outline:0;
       span {
         border: $focusBorder;
         // offset margins to keep in place
