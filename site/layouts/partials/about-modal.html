@@ -27,14 +27,19 @@
                   </div>
                   <div class="modal-footer">
                       <div class="bio-nav prev">
+                        {{ $.Scratch.Set "hasNext" false }}
                         {{ if .NextInSection }}
-                        <a class="red" data-toggle="modal" data-target="#modal-{{ .NextInSection.Params.abbrev }}" data-dismiss="modal" href="#">
-                          <i class="fa fa-chevron-left">&nbsp;&nbsp;</i>Previous bio
-                        </a>
+                          {{ if .NextInSection.Params.abbrev }}
+                          {{ $.Scratch.Set "hasNext" true }}
+
+                          <a class="red" data-toggle="modal" data-target="#modal-{{ .NextInSection.Params.abbrev }}" data-dismiss="modal" href="#">
+                            <i class="fa fa-chevron-left">&nbsp;&nbsp;</i>Previous bio
+                          </a>
+                          {{ end }}
                         {{ end }}
                       </div>
                       {{ $sectionPages := where .Site.RegularPages "Params.childof" .Params.childof }}
-                      {{ if and (.NextInSection) (or (.PrevInSection) (ge (len $sectionPages) 1)) }}
+                      {{ if and ($.Scratch.Get "hasNext") (or (.PrevInSection) (ge (len $sectionPages) 1)) }}
                       <div class="bio-nav red separator"> | </div>
                       {{ end }}
                       <div class="bio-nav next">
