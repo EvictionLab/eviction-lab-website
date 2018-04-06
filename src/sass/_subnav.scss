@@ -71,7 +71,7 @@
   padding: 25px 0;
   margin-bottom: 60px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   @include for-phone-only {
     justify-content: space-between;
   }
