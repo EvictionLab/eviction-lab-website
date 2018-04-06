@@ -373,11 +373,12 @@
     overflow-y: auto;
 
     @include for-tablet-landscape-up {
-      display: grid;
-    }
-    -ms-flex-direction: column;
-    grid-template-columns: 40% 1fr;
-    
+      display: flex;
+      flex-direction:row;
+      justify-content: stretch;
+      align-items: stretch;
+      flex-wrap:nowrap;
+    }    
     .bio-nav {
       @include defaultFont(1.4rem);
       .fa { font-size: 1.2rem;}
@@ -422,16 +423,13 @@
       height: 500px;
     }
     @include for-tablet-landscape-up {
-      height: auto;
+        min-height: 100%;
+        width: 40%;
+        display: block;
+        flex-shrink: 0;
+        height:auto;
     }
   }
-  .right-column {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    @include for-tablet-landscape-up {
-      max-height: 90vh;
-    }   
-  }  
   .modal-body {
     padding: 2.4rem 1.6rem;
     @include for-tablet-landscape-up {
