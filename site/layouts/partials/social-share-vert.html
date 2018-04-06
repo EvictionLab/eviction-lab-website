@@ -1,13 +1,19 @@
 <div class="social-fixed mobile-off">{{ i18n "shareOne" }}<br />{{ i18n "shareTwo" }}
     <ul class="social-sprite-vert">
       <li>
-        <a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a>
+        <a aria-label="Share on Facebook" class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}">
+          <i class="fa fa-facebook"></i>
+        </a>
       </li>
       <li>
-        <a class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a>
+        <a aria-label="Share on Twitter" class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}">
+          <i class="fa fa-twitter"></i>
+        </a>
       </li>
       <li>
-        <a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a>
+        <a aria-label="Share by Email" class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}">
+          <i class="fa fa-envelope"></i>
+        </a>
       </li>
     </ul>
   </div>  
