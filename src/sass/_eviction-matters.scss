@@ -92,6 +92,10 @@
         background: -webkit-linear-gradient(top, #424670 0%, #2F3251 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to bottom, #424670 0%,#2F3251 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         color: #fff;
+        padding-bottom: 2.4rem;
+        @include for-tablet-portrait-up {
+            padding-bottom: 4.8rem;
+        }
         li, a {
             color: #fff;
             display: inline;
@@ -197,7 +201,7 @@
                     font-size: 1rem;
                     letter-spacing: 0.054rem;
                     height: 4rem;
-                    padding: 0 2rem;
+                    padding: 0.5rem 2rem;
                     border-radius: 2px;
                     @include for-tablet-portrait-up {
                         height: 6.4rem;
