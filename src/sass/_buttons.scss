@@ -123,6 +123,7 @@
   z-index: 989;
   margin-bottom:16px;
   .social-sprite-vert {
+    margin-top:8px;
     li {
       display: flex;
       flex-direction: row;
@@ -131,7 +132,7 @@
         color:#919191;
         display: block;
         height: 30px;
-        padding-top:16px;
+        padding: 8px 0 8px;
         width: 21px;
         transition: all 10ms ease-out;
         -webkit-transition: all 10ms ease-out;
