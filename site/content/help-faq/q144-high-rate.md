@@ -5,7 +5,7 @@ childof: faq
 type: map
 weight: 144
 ---
-On the map, we have indicated with the symbol [TK] Census tracts and block groups with filing and eviction rates in top 1%. There are areas with high rates because housing insecurity is especially acute there. But there are other considerations as well.
+On the map, we have indicated with the symbol <img class="hint" src="/images/icons/hint-icon-red.png" /> Census tracts and block groups with filing and eviction rates in the top 1%. There are areas with high rates because housing insecurity is especially acute there. But there are other considerations as well.
 
 Remember that filing and eviction rates are calculated by dividing the number of filings or evictions in an area by the number of renter homes. That means that very high rates could be the result of (1) a large number of evictions or filings or (2) a small number of renter homes in an area.
 

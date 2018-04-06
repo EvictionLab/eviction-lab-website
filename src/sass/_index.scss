@@ -404,7 +404,13 @@ ul.anchor-links.dropdown-menu.show {
       }
     img {
         width: 20px;
-    }  
+    } 
+    img.hint {
+      width: 16px;
+      margin: 0 4px;
+      position: relative;
+      top: -2px;
+    } 
     }
   }
 }
