@@ -5,7 +5,7 @@ abbrev: jmiller
 position: Especialista en sistemas de gestión de contenidos 
 date: 2017-11-20T18:43:11-08:00
 image: /images/bios/jmiller_full.jpg
-thumg: /images/bios/jmiller_thumb.jpg
+thumb: /images/bios/jmiller_thumb.jpg
 weight: 57
 
 ---
