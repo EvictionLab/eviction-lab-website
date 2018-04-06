@@ -104,7 +104,10 @@
   background: url('/images/assets/hero/child-in-court-hero.jpg') #000;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: 20%;
+  background-position-x: 57%;  
+  @include for-tablet-landscape-up {
+    background-position-x: 20%;
+  }
   background-position-y: bottom;
 }
 .updates-hero {

@@ -1,12 +1,33 @@
 /* -- eviction-matters.scss -- */
 
+.graphic-header.wem-hero h1 {
+    @include for-phone-only {
+        padding-top: 45px;
+        width: 200px;
+        margin: auto;
+    }
+    @include for-tablet-portrait-up {
+        padding-top: 84px;
+        letter-spacing: .33rem;
+        width: 400px;
+        margin: auto;
+    }
+    @include for-tablet-landscape-up {
+        padding-top: 100px;
+        width: 489px;
+        margin: auto;
+    }
+}
+
 .eviction-matters {
     .caption {
         color: #737373;
-        margin-bottom: 1.6rem;
+        margin-bottom: 2.4rem;
         text-align: left;
         line-height: 2rem;
         text-align: center;
+        margin-top: -1.6rem;
+
 
         @include for-tablet-portrait-up {
             line-height: 2.4rem;
@@ -33,6 +54,7 @@
         }
     }
     .eviction-facts {
+        margin-bottom: 4rem;
         @include for-tablet-portrait-up {
         margin-bottom: 5.6rem;
         }
@@ -50,7 +72,7 @@
             max-width: 100%;
             @include for-tablet-portrait-only {
                 margin: 2.4rem 0 0.8rem;
-                padding: 0 9.6rem;
+                padding: 0;
             }
             @include for-tablet-landscape-up {
                 margin: 2.4rem 0 0.8rem;
