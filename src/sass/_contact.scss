@@ -11,6 +11,7 @@ input {
 }
 
 .contact-us, .data-merge {
+    background: #F4F7F9;
     .center-content-post.page-list {
         padding-top: 1.6rem;
         &.form2 {
@@ -30,7 +31,7 @@ input {
         }
     }
     .alt-bg {
-       background: #fff;
+
         padding: 0 16px 3.2rem;
         @include for-tablet-portrait-up {
         padding: 0.8rem 24px 3.2rem;
