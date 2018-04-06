@@ -8,6 +8,8 @@ image: /images/assets/eviction-court.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
 weight: 2
 color: green
+caption: 'Los archivos de caso están apilados en una sala judicial de viviendas.' 
+credit: '(Foto: Sally Ryan)'
 ---
 A través de este sitio web, Eviction Lab ha hecho públicos y accesibles <a href="/map">los datos de desalojo a nivel nacional</a>. Esperamos que esta información sea utilizada por los políticos, los organizadores de la comunidad, los periodistas, los educadores, las organizaciones sin fines de lucro, los estudiantes y los ciudadanos interesados en comprender más acerca de la vivienda, el desalojo y la pobreza en sus propios barrios. Se puede ver los desalojos a lo largo del tiempo, hacer mapas de desalojos en cualquier lugar de los Estados Unidos, comparar las tasas de desalojo de diferentes barrios, ciudades o estados y generar informes personalizados sobre la epidemia de desalojos en los Estados Unidos.
 

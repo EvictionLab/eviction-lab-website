@@ -12,7 +12,7 @@ $menuMargin: grid(5);
   transform: translate3d(($menuWidth+5px),0,0); // translate a little extra so shadow doesn't show
   z-index:999;
   background: $menuBg;
-  padding: 0 $menuMargin; // 40px margin on menu
+  padding: 0 $pageMarginLg; // large margin on menu
   display:block;
   transition: transform 0.4s ease;
   box-shadow: $menuShadow;
@@ -26,6 +26,7 @@ $menuMargin: grid(5);
   .app-menu {
     width: $menuWidthLg;
     transform: translate3d(($menuWidthLg+5px),0,0);
+    padding: 0 grid(5);
     &.expanded {
       transform:translate3d(0,0,0);
     }
@@ -40,7 +41,6 @@ $menuMargin: grid(5);
   right: grid(1);
   width: grid(6);
   height: grid(6);
-  cursor: pointer;
   .icon { 
     width: 22px; 
     height: 22px; 
@@ -54,7 +54,7 @@ $menuMargin: grid(5);
   }
 }
 @media(min-width: $gtMobile) {
-  .app-menu .menu-close {
+  .app-menu .menu-close.btn.btn-icon {
     width: grid(7);
     height: grid(7);
     .icon { 
@@ -71,6 +71,7 @@ $menuMargin: grid(5);
   @include altFont(18px);
   letter-spacing: 0.6px;
   margin-top: $menuMargin;
+  line-height: 1.42857143;
   ul {
     list-style: none;
     margin:0;
@@ -87,6 +88,8 @@ $menuMargin: grid(5);
       color: $white;
       border-bottom-color: $white;
       text-decoration: none;
+      box-shadow:none;
+      outline:0;
     }
   }
 }
@@ -101,16 +104,17 @@ $menuMargin: grid(5);
 
 
 .language-select.dropdown {
-  display: block;
+  display: flex;
   margin: 0 grid(3) 0 grid(2);
   height: grid(7);
   width: grid(14);
   -ms-flex-order: 3;
-  order: 3;
+  order: 2;
   transition: all .4s ease; 
   border-radius: 0;
   box-shadow: none;
   color: #050403;
+  transform: scale(0.775);;
 
   .dropdown-menu {
     text-align: left;
@@ -154,7 +158,7 @@ $menuMargin: grid(5);
         text-decoration: none;
 
         &:hover { background-color: #efefef; }
-        &:focus { box-shadow: 0 0 5px 1px #e24000; }
+        &:focus { @include focusStateInset(); }
       }
     }
   }
@@ -174,6 +178,7 @@ $menuMargin: grid(5);
     color: #050403;
     font-size: 14px;
 
+    &:focus { @include focusState(); }
     &::after { display: none; }
     .fa {
       font-size: 14px;
@@ -188,60 +193,35 @@ $menuMargin: grid(5);
   }
 }
 
-.header-content > .language-select.dropdown {
-  display: none;
-}
 @media(min-width: $gtMobile) {
-  .header-content > .language-select.dropdown {
-    display: block;
+  .language-select.dropdown {
+    transform: none;
   }
 }
 
-// scale language select
-@media(min-width: $gtTablet) {
-  .condensed {
-    .language-select.dropdown {
-      transform: scale(0.775);
+.condensed {
+  .language-select.dropdown {
+    transform: scale(0.775);
+  }
+}
+
+@media(max-width: $gtMobile) {
+  .language-select.dropdown {
+    height: 40px;
+    width: 72px;
+    transform: scale(1);
+    margin:0;
+    margin-right: 8px;
+    .el-select.dropdown-toggle {
+      font-size: 10px;
+      padding:8px;
+      
+      .fa {
+        right: 4px;
+        font-size:10px;
+        margin-top:1px;
+      }
     }
-  }
-}
-
-// Language Toggle - Only visible on "maps" mobile view
-// ---
-.app-menu .language-select.dropdown {
-  position:absolute;
-  width: grid(27);
-  margin: 0;
-  left: $menuMargin;
-  bottom: grid(15);
-  background: none;
-  border: grid(0.5) solid #383d65;
-  height: grid(5);
-  font-family: GT-Eesti-Display-Bold, sans-serif;
-
-  .dropdown-menu {
-    padding: 0;
-    margin-bottom: 2px;
-  }
-  .el-select.dropdown-toggle {
-    padding: 8px 24px 8px 16px;
-    text-transform: uppercase;
-    border: none;
-    color: #fff;
-    font-size: 13px;
-
-    .fa {
-      font-size: grid(1);
-      height: grid(1);
-      right: grid(1);
-      width: grid(1);
-    }
-  }
-}
-
-@media(min-width: $gtTablet) {
-  .app-menu .language-select.dropdown {
-    display: none;
   }
 }
 
@@ -251,7 +231,7 @@ $menuMargin: grid(5);
   position:absolute;
   bottom:0;
   left:0;
-  padding: 0 0 $menuMargin $menuMargin;
+  padding: 0 0 $pageMargin $pageMargin;
   list-style: none;
   margin:0;
   display:flex;
@@ -262,22 +242,18 @@ $menuMargin: grid(5);
     padding: grid(1);
     background: none;
     margin-right: grid(1.5);
-    width: grid(5.5);
-    height: grid(5.5);
-    border-width: grid(0.5);
-    border-color: $grey5;
-    border-radius: 0;
-    color: $grey4;
-    i { 
-      margin: 0 auto;
-      width: grid(2);
-      height: grid(2);
-      color: $menuGrey;
-      font-size: 18px;
-    }
-    &:hover {
-      i { color: $white; }
-    }
+    width: grid(5);
+    height: grid(5);
+    border-width: 0;
+    color: $white;
+    font-size:18px;
+  }
+}
+
+@media(min-width: $gtMobile) {
+  .social-media-links {
+    left: grid(2);
+    bottom: grid(2); 
   }
 }
 
@@ -285,9 +261,15 @@ $menuMargin: grid(5);
 // ---
 .menu-copyright {
   position:absolute;
-  bottom: $menuMargin;
-  right: $menuMargin;
+  bottom: $pageMarginLg;
+  right: $pageMarginLg;
   @include defaultFont(11px);
   color: $menuGrey;
 }
 
+@media(min-width: $gtMobile) {
+  .menu-copyright { 
+    bottom: grid(5); 
+    font-size:14px;
+  }
+}

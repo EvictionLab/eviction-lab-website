@@ -1,4 +1,4 @@
-
+/* --- dialogs.scss --- */
 // Modal CSS
 .modal-open {
   overflow: hidden;
@@ -87,6 +87,7 @@
   margin:0;
   opacity:1;
   text-shadow: none;
+  &:focus { @include focusState(); }
 }
 
 // Eviction Lab dialog styles
@@ -150,7 +151,7 @@
 
 @media(min-width: $gtMobile) {
   .modal-dialog {
-    margin: $pageMargin;
+    margin: $pageMargin auto;
     width: grid(80);
   }
   .modal-content {

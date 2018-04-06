@@ -2,9 +2,9 @@
 <div class="bio-thumb-wrapper">
         <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
           <div class="bio-container">
-            <img class="bio-thumb" src="{{ .Params.thumb }}" />
-            <img class="bio-arrow" src="/images/icons/bio-arrow.svg" />
-            <img class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
+            <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
+            <img alt="Bio arrow icon" class="bio-arrow" src="/images/icons/bio-arrow.svg" />
+            <img alt="Active bio arrow icon" class="bio-arrow-active" src="/images/icons/bio-arrow-active.svg" />
             <h3>{{ .Params.title }}</h3>
             <p class="bio-position">{{ .Params.position }}</p>
           </div>
@@ -27,18 +27,32 @@
                   </div>
                   <div class="modal-footer">
                       <div class="bio-nav prev">
+                        {{ $.Scratch.Set "hasNext" false }}
                         {{ if .NextInSection }}
-                        <a class="red" data-toggle="modal" data-target="#modal-{{ .NextInSection.Params.abbrev }}" data-dismiss="modal" href="#">
-                          <i class="fa fa-chevron-left">&nbsp;&nbsp;</i>Previous bio
-                        </a>
+                          {{ if and .NextInSection.Params.abbrev .NextInSection.Params.childof }}
+                            {{ if eq .NextInSection.Params.childof .Params.childof }}
+                              {{ $.Scratch.Set "hasNext" true }}
+                              <a class="red" data-toggle="modal" data-target="#modal-{{ .NextInSection.Params.abbrev }}" data-dismiss="modal" href="#">
+                                <i class="fa fa-chevron-left">&nbsp;&nbsp;</i>Previous bio
+                              </a>
+                            {{ end }}
+                          {{ end }}
                         {{ end }}
                       </div>
                       {{ $sectionPages := where .Site.RegularPages "Params.childof" .Params.childof }}
-                      {{ if and (.NextInSection) (or (.PrevInSection) (ge (len $sectionPages) 1)) }}
+                      {{ $.Scratch.Set "hasPrev" false }}
+                      {{ if .PrevInSection }}
+                        {{ if .PrevInSection.Params.childof }}
+                          {{ if eq .PrevInSection.Params.childof .Params.childof }}
+                            {{ $.Scratch.Set "hasPrev" true }}
+                          {{ end }}
+                        {{ end }}
+                      {{ end }}
+                      {{ if and ($.Scratch.Get "hasNext") (or ($.Scratch.Get "hasPrev") (ge (len $sectionPages) 1)) }}
                       <div class="bio-nav red separator"> | </div>
                       {{ end }}
                       <div class="bio-nav next">
-                        {{ if .PrevInSection }}
+                        {{ if $.Scratch.Get "hasPrev" }}
                           <a class="red" data-toggle="modal" data-target="#modal-{{ .PrevInSection.Params.abbrev }}" data-dismiss="modal" href="#">
                             Next bio&nbsp;&nbsp;<i class="fa fa-chevron-right"></i>
                           </a>

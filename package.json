@@ -45,6 +45,7 @@
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
+    "autoprefixer": "^8.2.0",
     "gulp": "^3.9.1"
   }
 }

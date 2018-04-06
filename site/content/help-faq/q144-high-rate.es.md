@@ -5,7 +5,7 @@ childof: faq
 type: map
 weight: 144
 ---
-En el mapa, hemos indicado con el símbolo [TK] Tramos del censo y grupos de bloques con tasas de presentación y desalojo en el 1% superior. Hay áreas con altas tasas porque la inseguridad de la vivienda es especialmente aguda allí. Pero hay otras consideraciones también. 
+En el mapa, hemos indicado con el símbolo <img class="hint" src="/images/icons/hint-icon-red.png" /> Tramos del censo y grupos de bloques con tasas de presentación y desalojo en el 1% superior. Hay áreas con altas tasas porque la inseguridad de la vivienda es especialmente aguda allí. Pero hay otras consideraciones también. 
 
 Recuerde que las tasas de presentación y desalojo se calculan dividiendo la cantidad de presentaciones o desalojos en un área por el número de hogares alquilados. Eso significa que las tasas muy altas podrían ser el resultado de (1) una gran cantidad de desalojos o presentaciones o (2) un pequeño número de viviendas para inquilinos en un área.
 

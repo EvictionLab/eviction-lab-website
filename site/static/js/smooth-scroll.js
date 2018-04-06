@@ -54,7 +54,6 @@ function smoothScroll(path, cb) {
 
 $(function() {
   // Run smoothscroll on page load
-  console.log(window.location);
   smoothScroll(window.location, function(target) {
     // If link is an accordion, toggle it
     if (target.hasClass('collapsed')) {

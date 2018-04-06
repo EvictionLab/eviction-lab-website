@@ -14,121 +14,223 @@ weight = 0
 title = "Eviction Lab" 
 languageName = "English"
 
+[[Languages.en.menu.main]]
+    name = "Home"
+    weight = 1
+    url = "/"
+[[Languages.en.menu.main]]
+    name = "Map & Data"
+    weight = 2
+    url = "/map/"
+[[Languages.en.menu.main]]
+    name = "Eviction Rankings"
+    weight = 3
+    url = "/rankings/"
+[[Languages.en.menu.main]]
+    name = "About Us"
+    weight = 4
+    url = "/about/"
+[[Languages.en.menu.main]]
+    name = "Why Eviction Matters"
+    weight = 5
+    url = "/why-eviction-matters"
+[[Languages.en.menu.main]]
+    name = "Methods"
+    weight = 6
+    url = "/methods/"
+[[Languages.en.menu.main]]
+    name = "Help & FAQ"
+    weight = 7
+    url = "/help-faq/"
+[[Languages.en.menu.main]]
+    name = "Updates"
+    weight = 8
+    url = "/updates/"
+
+[[Languages.en.menu.footer]]
+    name = "Home"
+    weight = 1
+    url = "/"
+[[Languages.en.menu.footer]]
+    name = "Map & Data"
+    weight = 2
+    url = "/map/"
+[[Languages.en.menu.footer]]
+    name = "Eviction Rankings"
+    weight = 3
+    url = "/rankings/"
+[[Languages.en.menu.footer]]
+    name = "About Us"
+    weight = 4
+    url = "/about/"
+[[Languages.en.menu.footer]]
+    name = "Why Eviction Matters"
+    weight = 5
+    url = "/why-eviction-matters"
+[[Languages.en.menu.footer]]
+    name = "Methods"
+    weight = 6
+    url = "/methods/"
+[[Languages.en.menu.footer]]
+    name = "Help & FAQ"
+    weight = 7
+    url = "/help-faq/"
+[[Languages.en.menu.footer]]
+    name = "Updates"
+    weight = 8
+    url = "/updates/"
+[[Languages.en.menu.footer]]
+    name = "Contact Us"
+    weight = 9
+    url = "/contact"
+[[Languages.en.menu.footer]]
+    name = "Get the Data"
+    weight = 10
+    url = "/get-the-data"
+[[Languages.en.menu.footer]]
+    name = "Data Merge Application"
+    weight = 11
+    url = "/data-merge"
+
+
+[[Languages.en.menu.updates]]
+    name = "Events"
+    weight = -80
+    identifier = "about"
+    url = "/updates/events/"
+[[Languages.en.menu.updates]]
+    name = "Research"
+    weight = -90
+    url = "/updates/research/"
+[[Languages.en.menu.updates]]
+    name = "EL Research"
+    parent = "Research"
+    weight = -94
+    url = "/updates/research/el-research" 
+[[Languages.en.menu.updates]]
+    name = "Outside Research"
+    parent = "Research"
+    weight = -96
+    url = "/updates/research/outside-research"        
+[[Languages.en.menu.updates]]
+    name = "Media"
+    weight = -100
+    url = "/updates/media/"
+[[Languages.en.menu.updates]]
+    name = "Blog"
+    weight = -110
+    url = "/updates/blog/"
+
+
 [Languages.es]
 weight = 1
 title = "Eviction Lab"
 languageName = "Español"
 
 
-
-[[menu.main]]
-    name = "Home"
+[[Languages.es.menu.main]]
+    name = "Inicio"
     weight = 1
     url = "/"
-[[menu.main]]
-    name = "Map & Data"
+[[Languages.es.menu.main]]
+    name = "Mapa y datos"
     weight = 2
     url = "/map/"
-[[menu.main]]
-    name = "Eviction Rankings"
+[[Languages.es.menu.main]]
+    name = "Rankings de desalojos"
     weight = 3
     url = "/rankings/"
-[[menu.main]]
-    name = "About Us"
+[[Languages.es.menu.main]]
+    name = "Acerca de nosotros"
     weight = 4
     url = "/about/"
-[[menu.main]]
-    name = "Why Eviction Matters"
+[[Languages.es.menu.main]]
+    name = "Por qué es importante el desalojo"
     weight = 5
     url = "/why-eviction-matters"
-[[menu.main]]
-    name = "Methods"
+[[Languages.es.menu.main]]
+    name = "Métodos"
     weight = 6
     url = "/methods/"
-[[menu.main]]
-    name = "Help & FAQ"
+[[Languages.es.menu.main]]
+    name = "Ayuda y preguntas frequentes"
     weight = 7
     url = "/help-faq/"
-[[menu.main]]
-    name = "Updates"
+[[Languages.es.menu.main]]
+    name = "Actualizaciones"
     weight = 8
     url = "/updates/"
 
-[[menu.footer]]
-    name = "Home"
+[[Languages.es.menu.footer]]
+    name = "Inicio"
     weight = 1
     url = "/"
-[[menu.footer]]
-    name = "Map & Data"
+[[Languages.es.menu.footer]]
+    name = "Mapa y datos"
     weight = 2
     url = "/map/"
-[[menu.footer]]
-    name = "Eviction Rankings"
+[[Languages.es.menu.footer]]
+    name = "Rankings de desalojos"
     weight = 3
     url = "/rankings/"
-[[menu.footer]]
-    name = "About Us"
+[[Languages.es.menu.footer]]
+    name = "Acerca de nosotros"
     weight = 4
     url = "/about/"
-[[menu.footer]]
-    name = "Why Eviction Matters"
+[[Languages.es.menu.footer]]
+    name = "Por qué es importante el desalojo"
     weight = 5
     url = "/why-eviction-matters"
-[[menu.footer]]
-    name = "Methods"
+[[Languages.es.menu.footer]]
+    name = "Métodos"
     weight = 6
     url = "/methods/"
-[[menu.footer]]
-    name = "Help & FAQ"
+[[Languages.es.menu.footer]]
+    name = "Ayuda y preguntas frequentes"
     weight = 7
     url = "/help-faq/"
-[[menu.footer]]
-    name = "Updates"
+[[Languages.es.menu.footer]]
+    name = "Actualizaciones"
     weight = 8
     url = "/updates/"
-[[menu.footer]]
-    name = "Contact Us"
+[[Languages.es.menu.footer]]
+    name = "Contactarnos"
     weight = 9
     url = "/contact"
-[[menu.footer]]
-    name = "Get the Data"
+[[Languages.es.menu.footer]]
+    name = "Obtener los datos"
     weight = 10
     url = "/get-the-data"
-[[menu.footer]]
-    name = "Data Merge Application"
+[[Languages.es.menu.footer]]
+    name = "Aplicación de combinación de datos"
     weight = 11
-    url = "/data-merge-application"
+    url = "/data-merge"
 
 
-[[menu.updates]]
+[[Languages.es.menu.updates]]
     name = "Events"
     weight = -80
     identifier = "about"
     url = "/updates/events/"
-[[menu.updates]]
+[[Languages.es.menu.updates]]
     name = "Research"
     weight = -90
     url = "/updates/research/"
-[[menu.updates]]
+[[Languages.es.menu.updates]]
     name = "EL Research"
     parent = "Research"
     weight = -94
     url = "/updates/research/el-research" 
-[[menu.updates]]
+[[Languages.es.menu.updates]]
     name = "Outside Research"
     parent = "Research"
     weight = -96
     url = "/updates/research/outside-research"        
-[[menu.updates]]
+[[Languages.es.menu.updates]]
     name = "Media"
     weight = -100
     url = "/updates/media/"
-[[menu.updates]]
+[[Languages.es.menu.updates]]
     name = "Blog"
     weight = -110
     url = "/updates/blog/"
-
-
-
-
-
