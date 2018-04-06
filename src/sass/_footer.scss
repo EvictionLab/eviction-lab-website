@@ -23,7 +23,7 @@ $newsletterBg: #333;
     margin: auto;
   }
   p {
-    @include defaultFont(10px);
+    @include defaultFont(12px);
     line-height: 15px;
     color: $grey3;
     margin-bottom: grid(2);
@@ -33,7 +33,7 @@ $newsletterBg: #333;
   }
   .form-control {
     margin-right: grid(2);
-    font-size:10px;
+    font-size:12px;
     height: grid(5);
     margin-bottom: 0;
   }
