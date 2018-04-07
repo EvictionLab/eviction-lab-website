@@ -2,7 +2,7 @@
 childof: events
 contenttype: events
 title: 'The Power of Eviction Data: Putting Residential Instability Numbers into Public Hands'
-date: 2018-04-12T22:43:04.337Z
+date: 2018-04-12
 image: 
 website: 'https://www.urban.org/events/power-eviction-data-putting-residential-instability-numbers-public-hands'
 address: 'Urban Institute (Washington, DC)'

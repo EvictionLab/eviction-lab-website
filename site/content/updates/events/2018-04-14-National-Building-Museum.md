@@ -2,7 +2,7 @@
 childof: events
 contenttype: events
 title: 'Evicted: The Exhibition'
-date: 2018-04-14T22:43:04.337Z
+date: 2018-04-14
 image: 
 website: 'https://www.nbm.org/exhibition/evicted/'
 address: 'National Building Museum (Washington, DC)'
