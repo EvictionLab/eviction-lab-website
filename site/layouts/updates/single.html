@@ -103,7 +103,7 @@
 <div class="btm-meta">
     <div class="btm-meta-cat mobile-off"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <a class="ak-bold {{ .Params.childof }}-type capitalize" href="/updates/{{ .Params.childof }}">{{ .Params.childof }}</a></span></div>
   <ul>
-    {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "=" "events") }}
+    {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "=" "events") }}
       {{ if lt $.Date.Unix .Date.Unix }}
         <li class="header">Next Event</li>
         <li><a class="{{ $pagetype }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
@@ -111,13 +111,13 @@
     {{ end }}
   </ul>  
   <ul>
-      {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "=" "events") }}
-        {{ if gt $.Date.Unix .Date.Unix }}
-          <li class="header prev-post">Previous Event</li>
-          <li><a class="{{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
+    {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "=" "events") }}
+      {{ if gt $.Date.Unix .Date.Unix }}
+        <li class="header prev-post">Previous Event</li>
+        <li><a class="{{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
       {{ end }}
-      </ul> 
+    {{ end }}
+  </ul>
   <ul>
     {{ range where .Site.RegularPages "Params.featured" true }}
       <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
