@@ -135,11 +135,11 @@ languageName = "Español"
 [[Languages.es.menu.main]]
     name = "Mapa y datos"
     weight = 2
-    url = "/map/"
+    url = "/map/#/2016?lang=es"
 [[Languages.es.menu.main]]
     name = "Rankings de desalojos"
     weight = 3
-    url = "/rankings/"
+    url = "/rankings/#/evictions?lang=es"
 [[Languages.es.menu.main]]
     name = "Acerca de nosotros"
     weight = 4
@@ -168,11 +168,11 @@ languageName = "Español"
 [[Languages.es.menu.footer]]
     name = "Mapa y datos"
     weight = 2
-    url = "/map/"
+    url = "/map/#/2016?lang=es"
 [[Languages.es.menu.footer]]
     name = "Rankings de desalojos"
     weight = 3
-    url = "/rankings/"
+    url = "/rankings/#/evictions?lang=es"
 [[Languages.es.menu.footer]]
     name = "Acerca de nosotros"
     weight = 4
