@@ -27,19 +27,19 @@
 <form name="contact" method="POST" id="contactform" action="#">
     <p>{{ .Params.select1 }}</p>
     <div class="radio-row">
-      <input type="radio" id="help" name="routing" value="help" checked="checked">
+      <input class="contact-radio" data-email="help@evictionlab.org" type="radio" id="help" name="routing" value="help" checked="checked">
       <label for="help">{{ .Params.mail1 }}</label>
     </div>
     <div class="radio-row">
-    <input type="radio" id="research" name="routing" value="research">
+    <input class="contact-radio" data-email="research@evictionlab.org" type="radio" id="research" name="routing" value="research">
     <label for="research">{{ .Params.mail2 }}</label>
   </div>
   <div class="radio-row">
-    <input type="radio" id="press" name="routing" value="press">
+    <input class="contact-radio" data-email="press@evictionlab.org" type="radio" id="press" name="routing" value="press">
     <label for="press">{{ .Params.mail3 }}</label>
   </div>
   <div class="radio-row">
-    <input type="radio" id="general" name="routing" value="general">
+    <input class="contact-radio" data-email="info@evictionlab.org" type="radio" id="general" name="routing" value="general">
     <label for="general">{{ .Params.mail4 }}</label>
   </div>
     <input class="form-control" type="email" name="email" placeholder="{{ .Params.form1 }}" required>

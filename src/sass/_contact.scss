@@ -12,9 +12,9 @@ input {
 input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: grid(5);
-  height: grid(5);
-  border-radius: grid(2.5);
+  width: grid(3);
+  height: grid(3);
+  border-radius: grid(1.5);
   margin:0;
   background-color: $white;
   border: 1px solid $grey4;
@@ -25,8 +25,8 @@ input[type=radio] {
   &:checked:after {
     content: '';
     display: block;
-    width: 10px;
-    height: 20px;
+    width: 7px;
+    height: 12px;
     border: solid $color1;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
@@ -34,7 +34,7 @@ input[type=radio] {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 4px;
+    bottom: 2px;
     margin: auto;
   }
   &:focus {
