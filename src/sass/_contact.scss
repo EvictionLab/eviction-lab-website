@@ -9,7 +9,54 @@ input {
     width: 100%;
     padding: 0.8rem 1.6rem;
 }
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: grid(5);
+  height: grid(5);
+  border-radius: grid(2.5);
+  margin:0;
+  background-color: $white;
+  border: 1px solid $grey4;
+  box-shadow: none;
+  display: inline-block;
+  position: relative;
+  // add a checkmark when checked
+  &:checked:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 20px;
+    border: solid $color1;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    margin: auto;
+  }
+  &:focus {
+    @include focusState();
+  }
+}
 
+.radio-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: grid(2);
+  label { 
+    font-size: 14px; 
+    margin:0;
+    line-height: 1.42;
+  }
+  input { 
+    margin-right: grid(2);
+    flex-shrink:0;
+  }
+}
+.radio-row + input { margin: grid(3) 0; }
 .contact-us, .data-merge {
     background: #F4F7F9;
     .center-content-post.page-list {
