@@ -90,7 +90,7 @@
   <div class="middle-row">
 
     <div class="left mr-block">
-      <a href="/about">
+      <a href="{{ "about" | relLangURL }}">
         <div class="menu-wrapper">
           <span class="mobile-off">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
           <span class="mobile-on">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
@@ -100,7 +100,7 @@
   </div>
 
     <div class="middle-left mr-block">
-      <a href="/why-eviction-matters">
+      <a href="{{ "why-eviction-matters" | relLangURL }}">
         <div class="menu-wrapper">
             <span class="mobile-off">{{ i18n "whyHead1" }}<br />{{ i18n "whyHead2" }}</span>
             <span class="mobile-on">{{ i18n "whyHead1" }}<br />{{ i18n "whyHead2" }}</span>
@@ -110,7 +110,7 @@
     </div>
 
     <div class="middle-right mr-block">
-      <a href="/methods">
+      <a href="{{ "methods" | relLangURL }}">
           <div class="menu-wrapper">
               <span class="mobile-off">{{ i18n "methodsHead" }}</span>
               <span class="mobile-on">{{ i18n "methodsHead" }}</span>
@@ -120,7 +120,7 @@
     </div>
 
     <div class="right mr-block">
-      <a href="/help-faq">
+      <a href="{{ "help-faq" | relLangURL }}">
         <div class="menu-wrapper">
           <span class="mobile-off">{{ i18n "helpHead" }}</span>
           <span class="mobile-on">{{ i18n "helpHead" }}</span>
@@ -155,7 +155,7 @@
     </div>
 
     <div class="right br-block ">
-      <a href="{{ "/updates" | absURL }}">
+      <a href="/updates">
         <div class="menu-wrapper">
           <div class="left-column pm-updates">
             <img alt="Research icon" src="/images/icons/pm-research.svg" />
