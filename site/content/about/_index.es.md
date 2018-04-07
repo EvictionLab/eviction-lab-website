@@ -6,7 +6,7 @@ h1: About Eviction Lab
 childof: about
 photoCredit: Sally Ryan
 hasSubnav: true
-description: We’ve built the first nationwide database of evictions. 
+description: Hemos construido la primera base de datos nacional de desalojos. 
 fbImage: 'https://evictionlab.org/images/og/eviction-lab-about-us-fb.jpg'
 twImage: 'https://evictionlab.org/images/og/eviction-lab-about-us-tw.jpg'
 ---
