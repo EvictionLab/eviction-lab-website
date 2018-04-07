@@ -6,7 +6,7 @@ researchtype: elresearch
 title: Our Methodology Report
 date: 2018-04-06T16:46:40.089Z
 postauthorname: The Eviction Lab
-postauthortitle: Matthew Desmond, James Hendrickson, et al
+postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb.jpg
 hasSubhead: sub
 subhead: ABSTRACT

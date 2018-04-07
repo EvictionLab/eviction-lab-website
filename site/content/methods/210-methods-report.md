@@ -5,4 +5,4 @@ childof: methods
 type: methods
 weight: 210
 ---
-Yes. You can <a href="#" target="_blank">download the full report (PDF) here</a>.
+Yes. You can <a href="/docs/Eviction Lab -Methodology Report v.1.0.0.pdf" target="_blank">download the full report (PDF) here</a>.

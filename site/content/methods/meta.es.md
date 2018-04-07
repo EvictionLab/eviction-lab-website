@@ -6,5 +6,5 @@ h1: Métodos
 childof: methods
 li1: IR A LA SECCIÓN
 li2: FAQ de Métodos
-li3: Descargue informe completo
+li3: 'Descargue informe completo (PDF)'
 ---

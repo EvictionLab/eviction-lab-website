@@ -6,5 +6,5 @@ h1: Methods
 childof: methods
 li1: GO TO SECTION
 li2: Methods FAQ
-li3: Download Full Report
+li3: 'Download Full Report (PDF)'
 ---
