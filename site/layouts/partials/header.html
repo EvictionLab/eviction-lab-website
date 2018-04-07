@@ -64,7 +64,7 @@
     <!-- <base href="{{ $.Site.BaseURL }}"> -->
   </head>
 
-  <body class="debug-grid-16x helvetica tracked">
+  <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}">
 
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M955JVB"

@@ -5,5 +5,6 @@ type: index
 h1: About Eviction Lab
 childof: about
 photoCredit: Sally Ryan
+hasSubnav: true
 ---
 

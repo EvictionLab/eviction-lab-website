@@ -41,6 +41,9 @@ header {
     align-items: center;
   }
 }
+.page-subnav .header-wrapper {
+  box-shadow: none;
+}
 
 // Add margin to next div equal to height
 header + * {
