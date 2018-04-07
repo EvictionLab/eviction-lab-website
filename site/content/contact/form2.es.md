@@ -16,7 +16,7 @@ También se puede enviarnos un correo electrónico directamente con respecto a
 
 + Solicitudes de ayuda o comentarios del sitio en <a href="mailto:help@evictionlab.org">help@evictionlab.org</a>  
 + Preguntas sobre investigación en <a href="mailto:research@evictionlab.org">research@evictionlab.org</a>
-+ Preguntas o comentarios generales en <a href="mailto:media@evictionlab.org">media@evictionlab.org</a>
++ Preguntas o comentarios generales en <a href="mailto:press@evictionlab.org">press@evictionlab.org</a>
 + General questions or comments at <a href="mailto:info@evictionlab.org">info@evictionlab.org</a>
 
 Si desea fusionar sus datos con el conjunto de datos de The Eviction Lab, utilice nuestra <a href="/data-merge">aplicación de fusión de datos.</a>

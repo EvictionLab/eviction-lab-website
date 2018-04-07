@@ -16,7 +16,7 @@ You can also email us directly regarding
 
 + Help requests or site feedback at <a href="mailto:help@evictionlab.org">help@evictionlab.org</a>  
 + Research inquiries at <a href="mailto:research@evictionlab.org">research@evictionlab.org</a>
-+ Media inquiries at <a href="mailto:media@evictionlab.org">media@evictionlab.org</a>
++ Media inquiries at <a href="mailto:press@evictionlab.org">press@evictionlab.org</a>
 + General questions or comments at <a href="mailto:info@evictionlab.org">info@evictionlab.org</a>
 
 If you would like to merge your data with The Eviction Lab's dataset, please use our <a href="/data-merge">Data Merge Application.</a>
