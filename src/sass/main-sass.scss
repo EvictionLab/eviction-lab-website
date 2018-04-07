@@ -212,7 +212,10 @@ $focusBorder: $focusBorderWidth dotted $grey3;
 
 // Headers & Paragraph 
 // -------
-
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 a:hover {
   text-decoration: none;
 }
