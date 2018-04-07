@@ -5,4 +5,4 @@ childof: faq
 type: map
 weight: 110
 ---
-El azul representa la concentración del valor del censo que seleccionó. Por ejemplo, si seleccionó "población", un azul más oscuro significa una población más alta y un azul más claro significa una población más baja.
+El azul representa la concentración del valor del Censo que seleccionó. Por ejemplo, si seleccionó "población", un azul más oscuro significa una población más alta y un azul más claro significa una población más baja.

@@ -5,4 +5,4 @@ childof: faq
 type: map
 weight: 110
 ---
-The blue represents the concentration of the census value you selected. For example, if you selected “population,” a darker blue means a higher population and a lighter blue means a lower population.
+The blue represents the concentration of the Census value you selected. For example, if you selected “population,” a darker blue means a higher population and a lighter blue means a lower population.
