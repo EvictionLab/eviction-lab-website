@@ -11,7 +11,39 @@
 		<!-- End Google Tag Manager -->
 
 		<title>{{ .Title }}</title>
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		{{ $.Scratch.Set "description" "We’ve built the first nationwide database of evictions. Use our customizable map to find and compare eviction rates in your neighborhood, city, or state." }}
+		{{ $.Scratch.Set "fbImage" "https://evictionlab.org/tool/assets/images/el-facebook-img.jpg" }}
+		{{ $.Scratch.Set "twImage" "https://evictionlab.org/tool/assets/images/el-twitter-img.jpg" }}
+		{{ if .Params.description }}
+			{{ $.Scratch.Set "description" .Params.description }}
+		{{ end }}
+		{{ if .Params.fbImage }}
+			{{ $.Scratch.Set "fbImage" .Params.fbImage }}
+		{{ end }}
+		{{ if .Params.twImage }}
+			{{ $.Scratch.Set "twImage" .Params.twImage }}
+		{{ end }}
+
+		<!-- General metadata -->
+		<meta name="description" content="{{ $.Scratch.Get "description" }}" />
+		<meta name='author' content='Eviction Lab' />
+		<!-- Facebook metadata -->
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{{ .Title }}" />
+		<meta property="og:description" content="{{ $.Scratch.Get "description" }}" />
+		<meta property="og:url" content="{{ .Permalink }}" />
+		<meta property="og:site_name" content="Eviction Lab" />
+		<meta property="og:image" content="{{ $.Scratch.Get "fbImage" }}" />
+		<meta property="og:image:secure_url" content="{{ $.Scratch.Get "fbImage" }}" />
+		<!-- Twitter metadata -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@EvictionLab" />
+		<meta name="twitter:title" content="{{ .Title }}" />
+		<meta name="twitter:description" content="{{ $.Scratch.Get "description" }}" />
+		<meta name="twitter:image" content="{{ $.Scratch.Get "twImage" }}" />
 
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -28,17 +60,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="/css/main-sass.css" />
 
-		<!--<script type="text/javascript">
-		$('.toggler').click(function(){
-		  $('.togglee').toggleClass('closed open');
-		});
-		</script>-->
-
 		<script src="/js/modernizr.js"></script>
     <!-- <base href="{{ $.Site.BaseURL }}"> -->
   </head>
 
-  <body class="debug-grid-16x helvetica tracked">
+  <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}">
 
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M955JVB"

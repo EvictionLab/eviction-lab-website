@@ -212,7 +212,10 @@ $focusBorder: $focusBorderWidth dotted $grey3;
 
 // Headers & Paragraph 
 // -------
-
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 a:hover {
   text-decoration: none;
 }
@@ -336,16 +339,15 @@ $menuGrey: $grey2;
 
 // Shadows
 // ----
-$z1shadow: 0 1px 3px rgba(0,0,0,0.3);
-$z2shadow: 0 2px 5px rgba(0,0,0,0.5);
-$z3shadow: 0 2px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.5);
+$z1shadow: 0 3px 6px 0 rgba(145,145,145,0.23);
+$z2shadow: 0 6px 6px 0 rgba(145,145,145,0.26);
+$z3shadow: 0 10px 10px 0 rgba(145,145,145,0.26);
+$z4shadow: 0 15px 12px 0 rgba(145,145,145,0.22);
 $insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
-$outsetShadowTop: 0px -2px 8px 3px rgba(0, 0, 0, 0.24);
-$boxShadowBottom: 0px 2px 3px rgba( 0, 0, 0, 0.2 );
-$boxShadowIcon: 0px 4px 11px rgba( 0, 0, 0, .16 );
+$boxShadowBottom: $z1shadow;
+$boxShadowIcon: $z1shadow;
 $textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
 $fullShadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.02);
-$matShadow: 0 3px 6px 0 rgba(0,0,0,.16);
 @mixin full-shadow-animate {
   &:hover {
     box-shadow: $fullShadow;

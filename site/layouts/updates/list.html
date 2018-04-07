@@ -441,9 +441,9 @@
             </div>
             <div class="event-deets">
               <ul>
-                <li><img src="/images/icons/clock.svg" alt="Clock icon" />April 1, 2018, 5:30PM—6:30PM</li>
+                <li><img src="/images/icons/clock.svg" alt="Clock icon" />{{ dateFormat "Monday Jan 2 2006" (.Params.date) }}, {{ .Params.timeRange }}</li>
                 {{ if isset .Params "website" }}
-                  <li><img src="/images/icons/browser.svg" alt="Browser icon" /><a class="bold-link" href="{{ .Params.website }}">Website</a></li>
+                  <li><img src="/images/icons/browser.svg" alt="Browser icon" /><a class="bold-link" href="{{ .Params.website }}" target="_blank">Website</a></li>
                 {{ end }}  
               </ul>
             </div>

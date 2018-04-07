@@ -120,7 +120,19 @@
   background-position-x: center;
 }
 .contact-hero {
-  background: url('/images/assets/hero/stacks-of-mail-hero.jpg') #000;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2), 
+    rgba(0, 0, 0, 0.5)
+  ),url('/images/assets/hero/stacks-of-mail-hero.jpg') #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+}
+.data-merge-hero {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0), 
+    rgba(0, 0, 0, 0.9)
+  ),url('/images/assets/hero/stacks-of-eviction-documents-hero.jpg') #000;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: right;

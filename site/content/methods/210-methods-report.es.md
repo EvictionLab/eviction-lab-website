@@ -5,4 +5,4 @@ childof: methods
 type: methods
 weight: 210
 ---
-Sí. Se puede  <a href="#" target="_blank">descargar el informe completo (PDF) aquí</a>.
+Sí. Se puede  <a href="/docs/Eviction Lab -Methodology Report v.1.0.0.pdf" target="_blank">descargar el informe completo (PDF) aquí</a>.

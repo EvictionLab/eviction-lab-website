@@ -5,4 +5,4 @@ childof: faq
 type: methods
 weight: 220
 ---
-Estos datos provienen del Censo decenal y la Encuesta de la Comunidad Estadounidense (ACS), ambos realizados por la Oficina del Censo de EE. UU. Para obtener más información sobre nuestra recopilación de datos, consulte nuestra [página Métodos](/methods) e <a href="#">Informe de metodología (PDF)</a>.
+Estos datos provienen del Censo decenal y la Encuesta de la Comunidad Estadounidense (ACS), ambos realizados por la Oficina del Censo de EE. UU. Para obtener más información sobre nuestra recopilación de datos, consulte nuestra [página Métodos](/methods) e <a href="/docs/Eviction Lab -Methodology Report v.1.0.0.pdf" target="_blank">Informe de metodología (PDF)</a>.
