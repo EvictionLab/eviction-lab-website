@@ -20,7 +20,7 @@
 
   .tr-block, .mr-block, .br-block {
     @include full-shadow-animate;
-    &:hover .hover-bar { visibility: visible; }
+    a:hover .hover-bar { visibility: visible; }
     a:focus .hover-bar { visibility: visible; }
     a:focus { outline: 0; box-shadow: none; }
   }
