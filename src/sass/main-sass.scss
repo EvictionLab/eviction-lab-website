@@ -378,7 +378,6 @@ $mobileVhTransition: height 3600s steps(1);
 // ----
 @mixin hoverBar($className,$width,$height,$topAndBottomMargin,$leftAndRightMargin) {
   .#{$className} {
-    visibility: hidden;
     width: $width;
     height: $height;
     min-height: $height;
@@ -386,6 +385,7 @@ $mobileVhTransition: height 3600s steps(1);
     padding: 0;
     margin: $topAndBottomMargin $leftAndRightMargin;
     display: none;
+    opacity:0;
     @include for-iphone-8plus-portrait-only {
       display: none;
     }
@@ -394,7 +394,7 @@ $mobileVhTransition: height 3600s steps(1);
     }
   }
   a:hover + .#{$className} {
-    visibility: visible;
+    opacity:0;
   }
 }
 
