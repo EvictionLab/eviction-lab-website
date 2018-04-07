@@ -131,7 +131,7 @@ languageName = "Español"
 [[Languages.es.menu.main]]
     name = "Inicio"
     weight = 1
-    url = "/"
+    url = "/es/"
 [[Languages.es.menu.main]]
     name = "Mapa y datos"
     weight = 2
@@ -143,19 +143,19 @@ languageName = "Español"
 [[Languages.es.menu.main]]
     name = "Acerca de nosotros"
     weight = 4
-    url = "/about/"
+    url = "/es/about/"
 [[Languages.es.menu.main]]
     name = "Por qué es importante el desalojo"
     weight = 5
-    url = "/why-eviction-matters"
+    url = "/es/why-eviction-matters"
 [[Languages.es.menu.main]]
     name = "Métodos"
     weight = 6
-    url = "/methods/"
+    url = "/es/methods/"
 [[Languages.es.menu.main]]
     name = "Ayuda y preguntas frequentes"
     weight = 7
-    url = "/help-faq/"
+    url = "/es/help-faq/"
 [[Languages.es.menu.main]]
     name = "Actualizaciones"
     weight = 8
@@ -164,7 +164,7 @@ languageName = "Español"
 [[Languages.es.menu.footer]]
     name = "Inicio"
     weight = 1
-    url = "/"
+    url = "/es/"
 [[Languages.es.menu.footer]]
     name = "Mapa y datos"
     weight = 2
@@ -176,19 +176,19 @@ languageName = "Español"
 [[Languages.es.menu.footer]]
     name = "Acerca de nosotros"
     weight = 4
-    url = "/about/"
+    url = "/es/about/"
 [[Languages.es.menu.footer]]
     name = "Por qué es importante el desalojo"
     weight = 5
-    url = "/why-eviction-matters"
+    url = "/es/why-eviction-matters"
 [[Languages.es.menu.footer]]
     name = "Métodos"
     weight = 6
-    url = "/methods/"
+    url = "/es/methods/"
 [[Languages.es.menu.footer]]
     name = "Ayuda y preguntas frequentes"
     weight = 7
-    url = "/help-faq/"
+    url = "/es/help-faq/"
 [[Languages.es.menu.footer]]
     name = "Actualizaciones"
     weight = 8
@@ -196,15 +196,15 @@ languageName = "Español"
 [[Languages.es.menu.footer]]
     name = "Contactarnos"
     weight = 9
-    url = "/contact"
+    url = "/es/contact"
 [[Languages.es.menu.footer]]
     name = "Obtener los datos"
     weight = 10
-    url = "/get-the-data"
+    url = "/es/get-the-data"
 [[Languages.es.menu.footer]]
     name = "Aplicación de combinación de datos"
     weight = 11
-    url = "/data-merge"
+    url = "/es/data-merge"
 
 
 [[Languages.es.menu.updates]]
