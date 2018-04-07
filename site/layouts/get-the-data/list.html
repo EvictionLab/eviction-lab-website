@@ -1,0 +1,31 @@
+{{ partial "header" . }}
+
+<div class="data-form">
+    <div class="alt-bg"> 
+        <div class="center-content-post page-list text-li">
+            <h1>{{ .Params.introTitle }}</h1>
+            <p>{{ .Params.intro }}</p>
+            <form action="https://evrdhdxdjb.execute-api.us-east-1.amazonaws.com/prod/" method="post" name="get-the-data" class="validate" target="_blank">
+                <div>
+                    <div class="mc-field-group">
+                        <label for="email-field" class="sr-only">{{ .Params.email }}</label>
+                        <input id="email-field" class="form-control" type="email" value="" name="email" required placeholder="{{ .Params.email }}">
+                    </div>
+                    <div class="mc-field-group input-group">
+                        <input type="checkbox" value="1" name="newsletter" id="newsletter-check">
+                        <label class="form-check-label" for="newsletter-check">{{ .Params.newsletterLabel }}</label>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_8e16f46a586eeb4578fbfe6ba_9c55c12d21" tabindex="-1" value="">
+                    </div>
+                    <div class="form-footer">
+                        <input type="submit" value="{{ .Params.submitLabel }}" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+                    </div>
+                </div>
+            </form>
+        </div>  
+    </div>
+</div>
+
+{{ partial "footer" . }}

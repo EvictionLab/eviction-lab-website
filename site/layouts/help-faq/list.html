@@ -47,118 +47,144 @@
 <!-- begin FAQs -->
 {{ end }}
 {{ end }}
-{{ partial "social-share-vert" . }}
 
-<div class="center-page-wrapper">
-  <div class="center-content-post page-list">
+<div class="help-faq-content social-side">
+  {{ partial "social-share-vert" . }}
+  <div class="center-page-wrapper">
+    <div class="center-content-post page-list">
 
-    <!-- ************ -->
-    <!-- maps section -->
-    <!-- ************ -->
+      <!-- ************ -->
+      <!-- maps section -->
+      <!-- ************ -->
 
-    <a name="map"></a>
-    <h2 class="bordered-header blue">Map</h2>
+      <a name="map"></a>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li2 }}</h2>
+      {{ end }}
+      {{ end }}
 
-    <div class="accordion">
+      <div class="accordion">
 
-        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
-        {{ if eq .Params.type "map" }}
-        <!-- faq item -->
-          {{ partial "faqs" . }}
-        {{ end }}
-        {{ end }}
+          {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+          {{ if eq .Params.type "map" }}
+          <!-- faq item -->
+            {{ partial "faqs" . }}
+          {{ end }}
+          {{ end }}
 
-    </div> <!-- close accordion -->
+      </div> <!-- close accordion -->
 
-    <!-- ************ -->
-    <!-- data section -->
-    <!-- ************ -->
+      <!-- ************ -->
+      <!-- data section -->
+      <!-- ************ -->
 
-    <a name="data"></a>
-    <h2 class="bordered-header blue">Data</h2>
+      <a name="data"></a>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li3 }}</h2>
+      {{ end }}
+      {{ end }}
 
-    <div class="accordion">
+      <div class="accordion">
 
-        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
-        {{ if eq .Params.type "data" }}
-        <!-- faq item -->
-          {{ partial "faqs" . }}
-        {{ end }}
-        {{ end }}
+          {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+          {{ if eq .Params.type "data" }}
+          <!-- faq item -->
+            {{ partial "faqs" . }}
+          {{ end }}
+          {{ end }}
 
-    </div> <!-- close accordion -->
+      </div> <!-- close accordion -->
 
-    <!-- ************ -->
-    <!-- Rankings section -->
-    <!-- ************ -->
+      <!-- ************ -->
+      <!-- Rankings section -->
+      <!-- ************ -->
 
-    <a name="rankings"></a>
-    <h2 class="bordered-header blue">Eviction Rankings</h2>
+      <a name="rankings"></a>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li4 }}</h2>
+      {{ end }}
+      {{ end }}
 
-    <div class="accordion">
+      <div class="accordion">
 
-        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
-        {{ if eq .Params.type "rankings" }}
-        <!-- faq item -->
-          {{ partial "faqs" . }}
-        {{ end }}
-        {{ end }}
+          {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+          {{ if eq .Params.type "rankings" }}
+          <!-- faq item -->
+            {{ partial "faqs" . }}
+          {{ end }}
+          {{ end }}
 
-    </div> <!-- close accordion -->
+      </div> <!-- close accordion -->
 
-    <!-- ******************* -->
-    <!-- definitions section -->
-    <!-- ******************* -->
+      <!-- ******************* -->
+      <!-- definitions section -->
+      <!-- ******************* -->
 
-    <a name="definitions"></a>
-    <h2 class="bordered-header blue">Definitions</h2>
+      <a name="definitions"></a>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li5 }}</h2>
+      {{ end }}
+      {{ end }}
 
-    <div class="accordion">
+      <div class="accordion">
 
-        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
-        {{ if eq .Params.type "definitions" }}
-        <!-- faq item -->
-          {{ partial "faqs" . }}
-        {{ end }}
-        {{ end }}
+          {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+          {{ if eq .Params.type "definitions" }}
+          <!-- faq item -->
+            {{ partial "faqs" . }}
+          {{ end }}
+          {{ end }}
+
+      </div> <!-- close accordion -->
+
+      <!-- *************** -->
+      <!-- methods section -->
+      <!-- *************** -->
+      <a name="methods"></a>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li6 }}</h2>
+      {{ end }}
+      {{ end }}
+
+      <div class="accordion">
+
+          {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+          {{ if eq .Params.type "methods" }}
+          <!-- faq item -->
+            {{ partial "faqs" . }}
+          {{ end }}
+          {{ end }}
 
     </div> <!-- close accordion -->
 
     <!-- *************** -->
-    <!-- methods section -->
-    <!-- *************** -->
-    <a name="methods"></a>
-    <h2 class="bordered-header blue">Methods</h2>
+      <!-- Storytelling section -->
+      <!-- *************** -->
+      <a name="stories"></a>
+      {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+        {{ if eq .Params.type "meta" }} 
+      <h2 class="bordered-header blue">{{ .Params.li7 }}</h2>
+      {{ end }}
+      {{ end }}
 
-    <div class="accordion">
+      <div class="accordion">
 
-        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
-        {{ if eq .Params.type "methods" }}
-        <!-- faq item -->
-          {{ partial "faqs" . }}
-        {{ end }}
-        {{ end }}
+          {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
+          {{ if eq .Params.type "stories" }}
+          <!-- faq item -->
+            {{ partial "faqs" . }}
+          {{ end }}
+          {{ end }}
 
-  </div> <!-- close accordion -->
-
-   <!-- *************** -->
-    <!-- Storytelling section -->
-    <!-- *************** -->
-    <a name="stories"></a>
-    <h2 class="bordered-header blue">Storytelling &amp; Activism</h2>
-
-    <div class="accordion">
-
-        {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
-        {{ if eq .Params.type "stories" }}
-        <!-- faq item -->
-          {{ partial "faqs" . }}
-        {{ end }}
-        {{ end }}
-
-  </div> <!-- close accordion -->
+    </div> <!-- close accordion -->
 
 
+    </div>
   </div>
 </div>
 <script src="/js/subnav-active.js"></script>

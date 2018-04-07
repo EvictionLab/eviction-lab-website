@@ -100,7 +100,7 @@
 }
 
 // Social share floating box
-
+// ---
 .social-fixed {
   height: 176px;
   width: 72px;
@@ -119,18 +119,20 @@
   color: #919191;
   line-height: 1.4rem;
   letter-spacing: 0.05rem;
-  margin-top: 56px;
+  margin-top: 40px;
   z-index: 989;
-  margin-bottom: -232px;
+  margin-bottom:16px;
   .social-sprite-vert {
+    margin-top:8px;
     li {
       display: flex;
       flex-direction: row;
       justify-content: center;
       a {
-        background-image: url('/images/icons/social/social-lockup-inactive.svg');
+        color:#919191;
         display: block;
         height: 30px;
+        padding: 8px 0 8px;
         width: 21px;
         transition: all 10ms ease-out;
         -webkit-transition: all 10ms ease-out;
@@ -138,19 +140,15 @@
         /* zoom: 1; */
         background-size: 21px 113px;
         &:hover {
-          background-image: url('/images/icons/social/social-lockup-active.svg');
+          color: $black;
         }
-        &.facebook {
-          background-position: 0 0;
-        }
-        &.twitter {
-          background-position: 0 83px;
-        }
-        &.send-email {
-          background-position: 0 51px;
-        }
+        &.twitter { font-size: 14px; }
+        &.send-email { font-size: 13px; }
       }
     }
-
   }
+}
+// shift the element after the sticky element up to account for the space
+@include for-tablet-portrait-up {
+  .social-side .social-fixed + * { margin-top: -232px; }
 }

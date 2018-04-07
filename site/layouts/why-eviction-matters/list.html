@@ -39,9 +39,9 @@
 </div>
 {{ end }}
 {{ end }}
+<div class="alt-page eviction-matters social-side">
 {{ partial "social-share-vert" . }}
-<div class="alt-page eviction-matters">
-   
+
 <div class="center-page-wrapper">
   <div class="center-content-post page-list eviction-facts">
     <div id="wem-intro">
@@ -137,9 +137,8 @@
             {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
             {{ if eq .Params.type "bookcopy" }} 
             {{ .Content }}
-           
-          
-          <div class="button-wrap"><a class="btn-primary" href="http://evictedbook.com">{{ .Params.button1 }}</a></div>
+          {{ partial "book-modal" . }}
+          <div class="button-wrap"><a class="btn-primary" data-toggle="modal" data-target="#buy-book-modal" href="#">{{ .Params.button1 }}</a></div>
           {{ end }}
           {{ end }}
         </div> 

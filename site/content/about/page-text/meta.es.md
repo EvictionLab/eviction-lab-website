@@ -5,7 +5,7 @@ type: meta
 h1: Sobre Nosotros
 childof: about
 li1: IR A LA SECCIÓN 
-li2: Introducción 
+li2: Intro
 li3: El trasfondo
 li4: Nuestro
 li5: Trabajo

@@ -8,4 +8,4 @@ weight: 150
 Las mujeres de bajos ingresos, especialmente las mujeres de color pobres, tienen alto riesgo de desalojo. La investigación ha demostrado que las víctimas de violencia doméstica y las familias con niños también corren un riesgo particularmente alto de desalojo.
 
 <img src="/images/assets/for-rent-sign-family.jpg" />
-<span class="subcopy caption ital">A family searches for housing after being evicted</span>
+<div class="caption"><span class="subcopy ital">Una familia busca vivienda después de ser desalojada.</span> <span class="subcopy credit">(Foto: Matthew Desmond)</div>

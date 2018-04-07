@@ -1,8 +1,9 @@
 {{ partial "header" . }}
 
 <!-- section header -->
+
 {{ range (where .Site.RegularPages "Params.childof" ("about")) }}
-        {{ if eq .Params.type "meta" }} 
+        {{ if eq .Params.type "meta" }}       
 <div class="graphic-header about-us-hero center-page-wrapper">
   <div class="center-page">
     <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
@@ -13,19 +14,34 @@
 <!-- subnav -->
 <div class="shadow-bottom center-page-wrapper subnav">
   <div class="center-content-post max1200">
-    <ul class="anchor-links">
+    <ul class="anchor-links mobile-off">
       <li class="only-larger-screens">{{ .Params.li1 }}</li>
       <li><a href="#introduction" class="smoothScroll">{{ .Params.li2 }}</a></li>
       <li><a href="#background" class="smoothScroll">{{ .Params.li3 }}</a></li>
       <li><a href="#work" class="smoothScroll"><span class="mobile-off">{{ .Params.li4 }} </span>{{ .Params.li5 }}</a></li>
       <li><a href="#team" class="smoothScroll"><span class="mobile-off">{{ .Params.li6 }} </span>{{ .Params.li7 }}</a></li>
     </ul>
+    <div class="dropdown mobile-on">
+      <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ .Params.li1 }}
+      </button>
+      <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+        <ul class="anchor-links dropdown-menu">
+          <li><a class="dropdown-item smoothScroll" href="#introduction">{{ .Params.li2 }}</a></li>
+          <li><a class="dropdown-item smoothScroll" href="#background">{{ .Params.li3 }}</a></li>
+          <li><a class="dropdown-item smoothScroll" href="#work">{{ .Params.li4 }} {{ .Params.li5 }}</a></li>
+          <li><a class="dropdown-item smoothScroll" href="#team">{{ .Params.li6 }} {{ .Params.li7 }}</a></li>
+          
+      </ul>
+      <!--</div>-->
+    </div>
   </div>
 </div>
 {{ end }}
 {{ end }}
+
+<div class="alt-page about-us social-side">
 {{ partial "social-share-vert" . }}
-<div class="alt-page about-us">
 <div class="center-page-wrapper">
   <div class="center-content-post max1200 page-list">
 

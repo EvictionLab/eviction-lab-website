@@ -58,17 +58,17 @@
         <p>Connect With Us</p>
         <ul>
           <li>
-            <a class="btn btn-border dark icon" href="#">
+            <a aria-label="Eviction Lab on Facebook" class="btn btn-border dark icon" href="https://www.facebook.com/evictionlab/">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="btn btn-border dark icon" href="#">
+            <a aria-label="Eviction Lab on Twitter" class="btn btn-border dark icon" href="https://twitter.com/evictionlab">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="btn btn-border dark icon" href="https://github.com/EvictionLab/eviction-maps" target="_blank">
+            <a aria-label="Eviction Lab on GitHub" class="btn btn-border dark icon" href="https://github.com/EvictionLab/eviction-maps" target="_blank">
               <i class="fa fa-github"></i>
             </a>
           </li>
@@ -86,11 +86,13 @@
       <div class="footer-funders">
         <p>
           <strong>Our Funders</strong>
-          Bill and Melinda Gates Foundation  •  Chan Zuckerberg Initiative  •  Ford Foundation   •  JBP Foundation  •  Princeton University
+          Bill and Melinda Gates Foundation  •  Chan Zuckerberg Initiative  •  Ford Foundation   •  JPB Foundation  •  Princeton University
         </p>
       </div>
       <div class="footer-credits">
-        <p>Header photo by John Appleseed</p>
+        {{ if .Params.photoCredit }}
+        <p>Header photo by {{ .Params.photoCredit }}</p>
+        {{ end }}
       </div>
     </div>
   </footer>

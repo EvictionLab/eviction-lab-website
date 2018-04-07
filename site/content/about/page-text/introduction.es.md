@@ -6,7 +6,8 @@ blockquote: Dando testimonio de la epidemia de desalojo de Estados Unidos.
 date: 2017-11-26T03:54:30.075Z
 image: /images/assets/woman-with-belongings.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
-caption: A woman watches as her belongings are removed from her home.
+caption: Una mujer observa mientras sus pertenencias son sacadas de su hogar.
+credit: '(Foto: Michael Kienitz)'
 weight: 1
 color: red
 ---

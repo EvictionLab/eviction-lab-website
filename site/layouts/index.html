@@ -35,18 +35,16 @@
       <div class="hero">
 
       <h1>
-        We're unpacking America's eviction crisis.
+          {{ i18n "splashHeader" }}
       </h1>
 
-      <p>The Eviction Lab at Princeton University has built the first nationwide database of evictions. 
-        Find out how many evictions happen in your community. Create custom maps, charts, and reports. 
-        Share facts with your neighbors and elected officials.</p>
+      <p>{{ i18n "splashBody" }}</p>
 
-      <a class="btn smoothScroll " href="#pictorial-anchor">get started</a>
+      <a class="btn smoothScroll " href="#pictorial-anchor">{{ i18n "cta" }}</a>
 
       <div class="hero-social">
-          <a href="https://www.facebook.com/evictionlab/"><i class="fa fa-facebook"></i></a>
-          <a href="https://twitter.com/evictionlab"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/evictionlab/" aria-label="Eviction Lab on Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/evictionlab" aria-label="Eviction Lab on Twitter"><i class="fa fa-twitter"></i></a>
       </div>
 
       </div>
@@ -61,79 +59,79 @@
 
 <!-- ********** pictorial menu section ********** -->
 
-<div class="pictorial-wrapper mobile-vh" id="pictorial-anchor">
+<div class="pictorial-wrapper" id="pictorial-anchor">
 
-  <div class="top-row mobile-vh">
+  <div class="top-row">
 
-    <div class="left tr-block mobile-vh">
+    <div class="left tr-block">
       <a href="/map">
         <div class="menu-wrapper">
-          <h2 class="break-me">map &amp; data</h2>
-          <p>Learn about the American housing crisis by interacting with a customizable map.</p>
-          <span>go to the map</span>
-          <div class="hover-bar-top-left"></div>
+          <h2 class="break-me">{{ i18n "mapData" }}</h2>
+          <p>{{ i18n "mapSub" }}</p>
+          <span>{{ i18n "mapCTA" }}</span>
+          <div class="hover-bar"></div>
         </div>
       </a>
     </div>
    
-    <div class="right tr-block mobile-vh">
+    <div class="right tr-block">
       <a href="/rankings">
         <div class="menu-wrapper">
-          <h2>eviction rankings</h2>
-          <p>See which cities rank the highest in evictions in the U.S.</p>
-          <span>go to eviction rankings</span>
-          <div class="hover-bar-top-right"></div>
+          <h2>{{ i18n "rankingsHead" }}</h2>
+          <p>{{ i18n "rankingsSubhead" }}</p>
+          <span>{{ i18n "rankingsCTA" }}</span>
+          <div class="hover-bar"></div>
         </div>      
       </a>
     </div>
 
   </div>
   <!-- ********** middle row ********** -->
-  <div class="middle-row mobile-vh">
+  <div class="middle-row">
 
-    <div class="left mr-block mobile-vh">
-      <a href="{{ "about" | absLangURL }}">
+    <div class="left mr-block">
+      <a href="{{ "about" | relLangURL }}">
         <div class="menu-wrapper">
-          <span class="mobile-off">About the <br />eviction lab</span>
-          <span class="mobile-on">about the eviction lab</span>
-          <div class="hover-bar-middle-left"></div>
+          <span class="mobile-off">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
+          <span class="mobile-on">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
+          <div class="hover-bar"></div>
         </div>
       </a>  
   </div>
 
-    <div class="middle-left mr-block mobile-vh">
-      <a href="{{ "why-eviction-matters" | absLangURL }}">
+    <div class="middle-left mr-block">
+      <a href="{{ "why-eviction-matters" | relLangURL }}">
         <div class="menu-wrapper">
-            <span class="mobile-off">why eviction <br /> matters</span>
-            <span class="mobile-on">why eviction matters</span>
-            <div class="hover-bar-middle-middle-left"></div>
+            <span class="mobile-off">{{ i18n "whyHead1" }}<br />{{ i18n "whyHead2" }}</span>
+            <span class="mobile-on">{{ i18n "whyHead1" }}<br />{{ i18n "whyHead2" }}</span>
+            <div class="hover-bar"></div>
         </div>  
       </a>
     </div>
 
-    <div class="middle-right mr-block mobile-vh">
-      <a href="{{ "methods" | absLangURL }}">
+    <div class="middle-right mr-block">
+      <a href="{{ "methods" | relLangURL }}">
           <div class="menu-wrapper">
-              <span class="mobile-off">Methods</span>
-              <span class="mobile-on">our methodology</span>
-              <div class="hover-bar-middle-middle-right"></div>
+              <span class="mobile-off">{{ i18n "methodsHead" }}</span>
+              <span class="mobile-on">{{ i18n "methodsHead" }}</span>
+              <div class="hover-bar"></div>
           </div>
       </a>
     </div>
 
-    <div class="right mr-block mobile-vh">
-      <a href="{{ "help-faq" | absLangURL }}">
+    <div class="right mr-block">
+      <a href="{{ "help-faq" | relLangURL }}">
         <div class="menu-wrapper">
-          <span class="mobile-off">Help and faq</span>
-          <span class="mobile-on">help &amp; faq</span>
-          <div class="hover-bar-middle-right"></div>
+          <span class="mobile-off">{{ i18n "helpHead" }}</span>
+          <span class="mobile-on">{{ i18n "helpHead" }}</span>
+          <div class="hover-bar"></div>
         </div>  
       </a>
     </div>
 
   </div>
   <!-- ******************** -->
-  <div class="bottom-row mobile-vh">
+  <div class="bottom-row">
 
     <div class="left br-block ">
       {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
@@ -150,14 +148,14 @@
               {{ $first.Title | truncate 60 }}</span></p>
               {{ end }}
             <span class="br-link">Read the blog post <i class="fa fa-chevron-right"></i></span>
-            <div class="hover-bar-bottom-left"></div>
+            <div class="hover-bar"></div>
           </div>  
         </div>  
       </a>
     </div>
 
     <div class="right br-block ">
-      <a href="{{ "updates" | absLangURL }}">
+      <a href="updates">
         <div class="menu-wrapper">
           <div class="left-column pm-updates">
             <img alt="Research icon" src="/images/icons/pm-research.svg" />
@@ -165,7 +163,7 @@
           <div class="right-column">
             <p>Follow research, events, and news coverage</p>
             <span class="br-link">Go to Updates <i class="fa fa-chevron-right"></i></span>
-            <div class="hover-bar-bottom-right"></div>
+            <div class="hover-bar"></div>
           </div>  
         </div>  
       </a>  

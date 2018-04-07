@@ -4,7 +4,7 @@ date: 2017-11-19T20:43:49-08:00
 pagename: datamerge
 childof: datamerge
 ---
-The Eviction Lab at Princeton University is the only research institution to collect and clean every eviction record in America. These eviction records can be merged with other data sources, by name and address, to provide previously unknown information about eviction experiences in other data sources.  All these merges will take place in the Eviction Lab at no cost.
+Eviction records can be merged with other data sources, by name and address, to provide previously unknown information about eviction experiences in other data sources.  All these merges will take place in the Eviction Lab at no cost.
 
 <span class="ak-bold">For your data to be considered for a merge, please apply via email to <a href="mailto:research@evictionlab.org?subject=Data Merge Application" target="_blank">research@evictionlab.org</a> and answer all the following questions:</span>
 
