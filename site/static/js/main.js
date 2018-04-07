@@ -50,8 +50,9 @@ function setupScrollEnd() {
 function setupContactForm() {
   var form = $('#contactform');
   var formActionBase = 'https://formspree.io/';
-  $('#contact-select').change(function (el) {
-    var selected = $(this).find('option:selected');
+  form.attr('action', formActionBase + $("input:radio[name=routing]:checked").data('email'));
+  $('.contact-radio').click(function (el) {
+    var selected = $(this);
     form.attr('action', formActionBase + selected.data('email'));
   });
 }
