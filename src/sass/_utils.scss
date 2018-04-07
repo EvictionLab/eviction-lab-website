@@ -198,4 +198,12 @@ ul.nav.nav-tabs.anchor-links li {
 span.middot:before {
   content: '\b7\a0';
 }
+.alt-margin {
+  .alt-bg {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 

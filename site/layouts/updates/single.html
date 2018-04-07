@@ -4,7 +4,7 @@
 <!--{{ partial "subnav" . }}-->
 <div class="mobile-off">{{ partial "breadcrumb" . }}</div>
 
-<div class="center-page-wrapper-content">
+<div class="center-page-wrapper-content alt-margin">
 	<div class="center-content-post {{ .Params.childof }}-post updates-post">
 
     <figure class="article-image">
@@ -41,7 +41,7 @@
           <ul>
             <li class="authorname">{{ .Params.address }}</li>
             <li class="authortitle"><img src="/images/icons/clock.svg" />{{ dateFormat "Monday Jan 2 2006" (.Params.date) }}, {{ .Params.timeRange }}</li>
-            <li class="authortitle"><img src="/images/icons/browser.svg" /><a class="bold-link" href="{{ .Params.website }}">Website</a></li>
+            <li class="authortitle"><img src="/images/icons/browser.svg" /><a class="bold-link" href="{{ .Params.website }}" target="_blank">Website</a></li>
           </ul>
         </div>
         <div class="social-box mobile-off event-single">
