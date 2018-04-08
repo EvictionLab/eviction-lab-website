@@ -9,4 +9,6 @@ intro: Enter your email to access the data and join our email list for notificat
 emailLabel: Email
 newsletterLabel: Subscribe to our newsletter
 submitLabel: Get Data
+socialDescription: We’ve built the first nationwide database of evictions.  
+description: Download the full Eviction Lab dataset.
 ---

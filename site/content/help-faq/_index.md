@@ -5,5 +5,7 @@ type: index
 homepage: updates
 photoCredit: Michael Kienitz
 hasSubnav: true
+socialDescription: We’ve built the first nationwide database of evictions.  
+description: Get help and read Frequently Asked Questions about The Eviction Lab.
 ---
 
