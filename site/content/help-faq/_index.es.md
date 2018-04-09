@@ -5,5 +5,7 @@ type: index
 homepage: updates
 photoCredit: Michael Kienitz
 hasSubnav: true
+socialDescription: Hemos construido la primera base de datos nacional de desalojos.  
+description: Get help and read Frequently Asked Questions about The Eviction Lab.
 ---
 
