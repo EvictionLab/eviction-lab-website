@@ -5,6 +5,6 @@ type: index
 childof: contact
 photoCredit: Sasha Israel
 description: Contact the Eviction Lab.
-socialDescription: We’ve built the first nationwide database of evictions.
+socialDescription: Hemos construido la primera base de datos nacional de desalojos. 
 ---
 Para ponerse en contacto, utilice el formulario a continuación.
