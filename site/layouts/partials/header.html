@@ -25,6 +25,10 @@
 		{{ if .Params.twImage }}
 			{{ $.Scratch.Set "twImage" .Params.twImage }}
 		{{ end }}
+		{{ if .Params.socialDescription }}
+			{{ $.Scratch.Set "socialDescription" .Params.socialDescription }}
+		{{ end }}
+		
 
 		<!-- General metadata -->
 		<meta name="description" content="{{ $.Scratch.Get "description" }}" />
@@ -33,7 +37,7 @@
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="{{ .Title }}" />
-		<meta property="og:description" content="{{ $.Scratch.Get "description" }}" />
+		<meta property="og:description" content="{{ $.Scratch.Get "socialDescription" }}" />
 		<meta property="og:url" content="{{ .Permalink }}" />
 		<meta property="og:site_name" content="Eviction Lab" />
 		<meta property="og:image" content="{{ $.Scratch.Get "fbImage" }}" />
@@ -42,7 +46,7 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@EvictionLab" />
 		<meta name="twitter:title" content="{{ .Title }}" />
-		<meta name="twitter:description" content="{{ $.Scratch.Get "description" }}" />
+		<meta name="twitter:description" content="{{ $.Scratch.Get "socialDescription" }}" />
 		<meta name="twitter:image" content="{{ $.Scratch.Get "twImage" }}" />
 
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
