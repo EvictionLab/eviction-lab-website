@@ -134,7 +134,7 @@
   <div class="bottom-row">
 
     <div class="left br-block ">
-      {{ $blog := where .Site.RegularPages "Params.childof" "blog" }}
+      {{ $blog := where .Site.AllPages "Params.featured" "home" }}
       {{ $first := index $blog 0 }}
       <a href="{{ $first.RelPermalink }}">
         <div class="menu-wrapper">
