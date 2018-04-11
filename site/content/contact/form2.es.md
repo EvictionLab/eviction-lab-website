@@ -10,6 +10,7 @@ mail3: Soy miembro de la prensa/medios o me gustaría hablar sobre un compromiso
 mail4: Tengo preguntas o comentarios generales 
 form1: Su correo electrónico (requerido) 
 form2: Favor de escribir su mensaje
+form3: Asunto (requerido)
 submit: Enviar 
 ---
 También se puede enviarnos un correo electrónico directamente con respecto a
