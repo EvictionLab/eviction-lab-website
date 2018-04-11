@@ -43,7 +43,7 @@
     <label for="general">{{ .Params.mail4 }}</label>
   </div>
     <input class="form-control" type="email" name="email" placeholder="{{ .Params.form1 }}" required>
-    <input class="form-control" name="_subject" placeholder="Subject" required>
+    <input class="form-control" name="_subject" placeholder="{{ .Params.form3 }}" required>
     <textarea class="form-control" name="message" rows="6" placeholder="{{ .Params.form2 }}"></textarea>            
     <div class="button-wrap">
         <button type="submit" class="btn-primary">{{ .Params.submit }}</button>
