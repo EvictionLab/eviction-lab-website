@@ -29,7 +29,7 @@ gulp.task("build-preview", ["sass", "css", "js"], (cb) => buildSite(cb, hugoArgs
 gulp.task("sass", function() {
   return gulp.src("./src/sass/main-sass.scss")
     .pipe(sass()) // Using gulp-sass
-    .pipe(postcss([cssnext({browserslist: [ ">= 1% in US" ]})]))
+    .pipe(postcss([cssnext({browserslist: [ ">= 1% in US" ]}), cssnano()]))
     .pipe(gulp.dest("./dist/css"));
 });
 
