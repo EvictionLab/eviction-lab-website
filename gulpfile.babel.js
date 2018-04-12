@@ -10,6 +10,7 @@ import watch from "gulp-watch";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
 import sass from 'gulp-sass';
+import cssnano from 'cssnano';
 
 const browserSync = BrowserSync.create();
 
@@ -28,6 +29,7 @@ gulp.task("build-preview", ["sass", "css", "js"], (cb) => buildSite(cb, hugoArgs
 gulp.task("sass", function() {
   return gulp.src("./src/sass/main-sass.scss")
     .pipe(sass()) // Using gulp-sass
+    .pipe(postcss([cssnext({browserslist: [ ">= 1% in US" ]})]))
     .pipe(gulp.dest("./dist/css"));
 });
 
