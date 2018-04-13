@@ -2,7 +2,6 @@ baseURL = "/"
 
 DefaultContentLanguage = "en"
 languageCode = "en-us"
-theme = "behave"
 summaryLength = 50
 buildFuture = true
 enableRobotsTXT = true
