@@ -136,12 +136,10 @@
     /* color: #333333; */
   }
   @include for-phone-only {
-    display: -ms-grid;
     display: grid;
-    min-height: initial;
-    /* height: 12.2rem; */
-    grid-template-columns: 126px 1fr;
     display: -ms-grid;
+    min-height: initial;
+    grid-template-columns: 126px 1fr;    
     -ms-grid-columns: 126px 1fr;
   }
   @include for-tablet-portrait-up {
@@ -545,14 +543,14 @@ a.read-more {
      padding-top: 3.2rem;
    }
   }
-  @include for-tablet-portrait-and-landscape {
+  @include for-tablet-portrait-up {
     margin-bottom: 1.6rem;
     max-width: 560px;
     grid-template-columns: 72px 1fr;
     &.list-head {
       padding-top: 3.2rem;
-      display: grid;
-      grid-template-columns: 152px 1fr;
+      display: flex;
+      .postlist-left-col { min-width: 152px; flex:0; }
     }
     .post-date {
       height: 120px;
@@ -565,43 +563,18 @@ a.read-more {
     }  
   }
   @include sm-thru-med-desktop {
-    margin-bottom: 1.6rem;
     &.events-list-sum .post-summary {
       font-size: 1.6rem;
     }  
-    &.list-head {
-      padding-top: 3.2rem;
-      display: grid;
-      grid-template-columns: 152px 1fr;
-    }
-    .post-date {
-      height: 120px;
-      width: 120px;
-      padding-top: 26px;
-      line-height: 3.2rem;
-    }
     .page-id-events-list .custom-pagination {
       margin-bottom: 1.6rem;
       margin-top: -1.6rem;
     }
   }
   @include for-midsize-desktop-up {
-    margin-bottom: 1.6rem;
     &.events-list-sum .post-summary {
       font-size: 1.8rem;
-    }  
-    &.list-head {
-      padding-top: 3.2rem;
-      display: grid;
-      grid-template-columns: 152px 1fr;
     }
-    .post-date {
-      height: 120px;
-      width: 120px;
-      padding-top: 26px;
-      line-height: 3.2rem;
-    }
-    
   }
   .postlist-right-col {
     @include for-phone-only {
