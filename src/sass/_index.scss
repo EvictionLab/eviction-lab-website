@@ -450,3 +450,9 @@ ul.anchor-links.dropdown-menu.show {
     margin-bottom: 9.6rem;
   }
 }
+
+// margins for get the data form
+.get-data-content {
+  padding: 0 16px;
+  input[type=checkbox] { margin-right: 16px; }
+}
