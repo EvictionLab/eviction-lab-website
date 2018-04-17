@@ -1,6 +1,6 @@
 ---
-childof: events
-contenttype: events
+childof: events2
+contenttype: events2
 title: 'The Power of Eviction Data: Putting Residential Instability Numbers into Public Hands'
 date: 2018-04-12
 image: 

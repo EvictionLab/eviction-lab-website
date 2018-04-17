@@ -56,9 +56,15 @@
                 <h2 class="title">
                   <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
                 </h2>
+                {{ if .Params.listSummary }}
+                <div class="post-summary">
+                    {{ .Params.listSummary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                </div>
+                {{ else }}
                 <div class="post-summary">
                     {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
                 </div>
+                {{ end }}
                 <div class="post-cat">
                   <img src="/images/icons/{{ .Params.childof }}_bookmark.png" alt="Bookmark icon" class="cat-bookmark" />
                   <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
