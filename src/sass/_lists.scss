@@ -16,6 +16,7 @@
 .blog-list .list-wrapper:last-child, 
 .media-list .list-wrapper:last-child,
 .research-list .list-wrapper:last-child,
+.dual-research .list-wrapper:last-child
  {
     padding-bottom: 2.4rem;
     @include for-tablet-portrait-up {
