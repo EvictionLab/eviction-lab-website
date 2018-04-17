@@ -2,6 +2,34 @@
 
 
 /* blog and media lists */
+
+.list-wrapper {
+  overflow: auto;
+  &.mt1rem {
+    @include for-below-414 {
+        margin-top: 0; 
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+    }
+  }
+}
+.blog-list .list-wrapper:last-child, 
+.media-list .list-wrapper:last-child,
+.research-list .list-wrapper:last-child,
+ {
+    padding-bottom: 2.4rem;
+    @include for-tablet-portrait-up {
+      padding-bottom: 3.2rem;
+    }
+    @include for-tablet-landscape-up {
+      padding-bottom: 4rem;
+    }
+    @include for-midsize-desktop-up {
+      padding-bottom: 4.8rem;
+    }
+    
+}
+
 .alt-rows {
   &.blog-list, &.media-list, &.research-list {
     margin-top: 0.8rem;
@@ -135,7 +163,11 @@
   &.updates-list .title a {
     /* color: #333333; */
   }
-  @include for-phone-only {
+  @include for-below-414 {
+    display: block;
+    min-height: initial;
+  }
+  @include for-414-thru-767 {
     display: grid;
     display: -ms-grid;
     min-height: initial;
@@ -180,6 +212,11 @@
     flex-grow: 1;
     max-width: 200px;
     min-width: 200px;
+    @include for-below-414 {
+      display: block;
+      float: left;
+      width: 34%;
+    }
     @include for-phone-only {
       min-width: initial;
       padding-right: 32px;
@@ -200,9 +237,12 @@
       justify-content: space-between;
     }
     .authorname {
+      @include for-below-414 {
+        margin-bottom: 0.8rem;
+      }
       @include for-phone-only {
         @include defaultFontBold($fontSizeExtraSmall);
-        letter-spacing: 0.04rem;
+        letter-spacing: 0rem;
         flex-grow: 3;
       }
       @include for-tablet-portrait-and-landscape {
@@ -223,6 +263,9 @@
       }
     }
     .list-thumb-container {
+      @include for-below-414 {
+        margin-bottom: 0.8rem;
+      }
       @include for-tablet-portrait-up {
         flex-grow: 1;
       }
@@ -231,6 +274,9 @@
     .post-date {
       color: #919191;
       flex-grow: 4;
+      @include for-below-414 {
+        margin-bottom: 1.6rem;
+      }
       @include for-phone-only {
         @include defaultFont($fontSizeExtraSmall);
         letter-spacing: 0rem;
@@ -343,6 +389,7 @@
   .postlist-right-col {
     flex-grow: 10;
     /* padding-top: 22px;*/
+    
     @include for-phone-only {
       display: flex;
       flex-direction: column;
@@ -358,7 +405,11 @@
       }   
       }
     .title {
-      @include for-phone-only {
+      @include for-below-414 {
+        height: auto;
+        margin-bottom: 1.6rem;
+      }
+      @include for-414-thru-767 {
         height: 76px;  
       }
     }
