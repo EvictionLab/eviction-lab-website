@@ -20,10 +20,10 @@ Equally remarkable, however, has been the local media coverage of eviction rates
 <span class="ak-bold">Other mentions:</span>
 
 <ul>
-<li><a href="https://www.democracynow.org/2018/4/13/nearly_4_people_are_evicted_every" target="_blank">Democracy Now!</a></li> 
+<li><a href="https://www.democracynow.org/2018/4/13/nearly_4_people_are_evicted_every" target="_blank">Democracy Now!</a>: interview with Matthew Desmond</li> 
 <li><a href="http://fortune.com/2018/04/13/counting-down-to-the-scandal-finale/" target="_blank">Fortune:</a> <span class="ital">"You don’t have to be a data or infographics nerd to appreciate the importance of this extraordinary interactive map, the first nationwide database of evictions."</span></li>
-<li><a href="https://www.urban.org/urban-wire/five-strategies-address-americas-eviction-crisis" target="_blank">Urban Institute</a></li>
-<li><a href="https://slate.com/business/2018/04/good-times-in-america-for-homeowners-bad-times-for-renters.html" target="_blank">Slate</a></li>
+<li><a href="https://www.urban.org/urban-wire/five-strategies-address-americas-eviction-crisis" target="_blank">Urban Institute</a>: Five strategies to address America’s eviction crisis</li>
+<li><a href="https://slate.com/business/2018/04/good-times-in-america-for-homeowners-bad-times-for-renters.html" target="_blank">Slate</a>: Good Times in America for Homeowners, Bad Times for Renters</li>
 </ul>
 
 
