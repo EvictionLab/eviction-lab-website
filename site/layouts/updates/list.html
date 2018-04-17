@@ -32,7 +32,7 @@
 {{ range .Paginator.Pages }}   
 <!--{{ if eq .Params.contenttype "updates" }}    -->
 
-        <div class="center-page-wrapper mt1rem">
+        <div class="center-page-wrapper mt1rem list-wrapper">
             <div class="list-item center-content {{ .Params.contenttype }}-list">
 
             <!--<div class="chevron">
@@ -130,7 +130,7 @@
       {{ $paginator := .Paginate (where .Site.Pages "Params.contentcat" "blog") 5 }}   
       {{ range .Paginator.Pages }} 
 
-        <div class="center-page-wrapper">
+        <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
 
             <!--<div class="chevron">
@@ -163,9 +163,7 @@
   <!-- PAGINATION -->  
 </div>
 <div class="center-page-wrapper">
-  <div class="custom-pagination">
-    {{ partial "pagination" . }}
-  </div> 
+  {{ partial "pagination" . }}
 </div>
 
 {{ end }} <!-- end Blog page stuff -->
@@ -182,7 +180,7 @@
       {{ $paginator := .Paginate (where .Site.Pages "Params.contentcat" "media") 5 }}   
       {{ range .Paginator.Pages }}
       
-      <div class="center-page-wrapper">
+      <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
 
           <!--<div class="chevron">
@@ -215,9 +213,7 @@
    <!-- PAGINATION -->  
 </div>
 <div class="center-page-wrapper">
-  <div class="custom-pagination">
-    {{ partial "pagination" . }}
-  </div> 
+  {{ partial "pagination" . }}
 </div>
 
 {{ end }} <!-- end Media page stuff -->
@@ -236,7 +232,7 @@
       {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "elresearch" )) }}
         {{ if eq .Params.researchtype "elresearch" }}
         <div class="alt-rows dual-research">
-        <div class="center-page-wrapper">
+        <div class="center-page-wrapper list-wrapper">
             <div class="list-item center-content {{ .Params.childof }}-list">
 
             <!--<div class="chevron">
@@ -269,7 +265,7 @@
 
   {{ $outsideresearch := where .Site.RegularPages "Params.researchtype" "outside-research" }} <!-- count Outside Research articles -->
   {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
-  <div class="center-page-wrapper">          
+  <div class="center-page-wrapper list-wrapper">          
     <div class="events-list-header bordered-header research-type outside-research">outside research <a class="see-all-events subhead-rt" href="/updates/research/outside-research">See all</a></div>
       {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "outside-research" )) }}
         {{ if eq .Params.researchtype "outside-research" }}
@@ -319,7 +315,7 @@
       {{ $paginator := .Paginate (where .Site.Pages "Params.researchtype" "elresearch") 5 }}   
       {{ range .Paginator.Pages }}
       
-      <div class="center-page-wrapper">
+      <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
 
           <!--<div class="chevron">
@@ -352,9 +348,7 @@
    <!-- PAGINATION -->  
 </div>
 <div class="center-page-wrapper">
-  <div class="custom-pagination">
-    {{ partial "pagination" . }}
-  </div> 
+  {{ partial "pagination" . }}
 </div>
 
 {{ end }} <!-- end EL Research page stuff -->
@@ -372,7 +366,7 @@
       {{ $paginator := .Paginate (where .Site.Pages "Params.researchtype" "outside-research") 5 }}   
       {{ range .Paginator.Pages }}
       
-      <div class="center-page-wrapper">
+      <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
 
           <!--<div class="chevron">
@@ -404,11 +398,11 @@
   {{ end }} <!-- end Outside Research listings -->
    <!-- PAGINATION -->  
 </div>
-<div class="center-page-wrapper">
+<!--<div class="center-page-wrapper">
   <div class="custom-pagination">
     {{ partial "pagination" . }}
   </div> 
-</div>
+</div>-->
 
 {{ end }} <!-- end EL Research page stuff -->
 
@@ -420,7 +414,7 @@
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
   {{ $paginator := .Paginate (where .Site.RegularPages.Reverse "Params.childof" "events") 5 }}   
   {{ range .Paginator.Pages }}
-      <div class="center-page-wrapper">
+      <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list-main events-list list-head">
             <!--<div class="chevron">
             <i class="fa fa-chevron-right"></i>
@@ -460,10 +454,8 @@
     {{ end }}
   {{ end }} <!-- end Events listings -->
   <div class="center-page-wrapper">
-      <div class="custom-pagination">
-        {{ partial "pagination" . }}
-      </div> 
-    </div>
+    {{ partial "pagination" . }}
+  </div>
 {{ end }} <!-- end Events page stuff -->
 </div>
 <!-- ************** -->
