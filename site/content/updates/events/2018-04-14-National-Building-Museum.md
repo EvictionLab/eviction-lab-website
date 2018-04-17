@@ -1,6 +1,6 @@
 ---
-childof: events
-contenttype: events
+childof: events2
+contenttype: events2
 title: 'Evicted: The Exhibition'
 date: 2018-04-14
 image: 
