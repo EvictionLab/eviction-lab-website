@@ -3,7 +3,7 @@ childof: media
 contenttype: updates
 contentcat: media
 featured: false
-title: 'The Eviction Lab in the Media: a Recap'
+title: 'Eviction Lab Media Coverage Roundup'
 date: 2018-04-17T15:45:09.300Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
@@ -20,7 +20,7 @@ Equally remarkable, however, has been the local media coverage of eviction rates
 <span class="ak-bold">Other mentions:</span>
 
 <ul>
-<li><span class="ak-bold">Democracy Now!</span>: <a href="https://www.democracynow.org/2018/4/13/nearly_4_people_are_evicted_every" target="_blank">interview with Matthew Desmond</a></li> 
+<li><span class="ak-bold">Democracy Now!</span>: <a href="https://www.democracynow.org/2018/4/13/nearly_4_people_are_evicted_every" target="_blank">Interview with Matthew Desmond</a></li> 
 <li><span class="ak-bold">Urban Institute:</span> <a href="https://www.urban.org/urban-wire/five-strategies-address-americas-eviction-crisis" target="_blank">Five strategies to address America’s eviction crisis</a></li>
 <li><span class="ak-bold">Slate:</span> <a href="https://slate.com/business/2018/04/good-times-in-america-for-homeowners-bad-times-for-renters.html" target="_blank">Good Times in America for Homeowners, Bad Times for Renters</a></li>
 <li><span class="ak-bold">Fortune:</span> <a href="http://fortune.com/2018/04/13/counting-down-to-the-scandal-finale/" target="_blank">A Map of Evictions Across the U.S.</a></li>
