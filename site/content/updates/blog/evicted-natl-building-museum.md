@@ -10,7 +10,7 @@ postauthortitle: Creative Director
 authorpic: /images/bios/jminton_thumb.jpg
 image: /images/assets/blog/evicted-exhibit-boxes-nation.jpg
 ---
-First there was <a href="http://evictedbook.com" target="_blank">the book <span class="ital">Evicted</span></a>, with its heartbreaking stories of families and individuals struggling to maintain stable shelter. Then came the release of <a href="/map" target="_blank">The Eviction Lab's database</a>, revealing the often-surprising scale and span of the epidemic. Now eviction and its consequences are explored in a 3-dimensional, immersive presentation at <a href="https://www.nbm.org/exhibition/evicted/" target="_blank">The National Building Museum's <span class="ital">Evicted</span> exhibition</a>.
+First there was <a href="http://evictedbook.com" target="_blank">the book <span class="ital">Evicted</span></a>, with its heartbreaking stories of families and individuals struggling to maintain stable shelter. Then came the release of <a href="/map" target="_blank">The Eviction Lab's database</a>, revealing the often-surprising scale and span of the crisis. Now eviction and its consequences are explored in a 3-dimensional, immersive presentation at <a href="https://www.nbm.org/exhibition/evicted/" target="_blank">The National Building Museum's <span class="ital">Evicted</span> exhibition</a>.
 
 <div class="video-container"><iframe width="720" height="435" src="https://www.youtube.com/embed/vbtwQATOcN8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
