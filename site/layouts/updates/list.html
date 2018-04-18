@@ -28,7 +28,7 @@
   {{ if isset $updates 0 }} <!-- if there are Blog articles, list them -->
     <div class="alt-rows">
        
-{{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") 5 }}   
+{{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") 15 }}   
 {{ range .Paginator.Pages }}   
 <!--{{ if eq .Params.contenttype "updates" }}    -->
 
