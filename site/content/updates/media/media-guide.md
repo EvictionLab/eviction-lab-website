@@ -10,7 +10,7 @@ postauthortitle: Senior Research Specialist
 authorpic: /images/bios/jhendrickson_thumb_sm.jpg
 image: 
 ---
-Welcome to the Eviction Lab! We hope you will engage with the data we’ve been able to gather and make public. Here are some considerations to keep in mind as you interpret our numbers.
+<span class="section-intro media-type">Welcome to the Eviction Lab!</span> We hope you will engage with the data we’ve been able to gather and make public. Here are some considerations to keep in mind as you interpret our numbers.
 
 On the <a href="/map" target="_blank">Map &amp; Data</a> section of our website, we have included a national database of eviction estimates. Toggles allow you to choose years, eviction filings or evictions, demographic characteristics, and the geography at which you would like to view the data. You can select up to three areas for comparison, and then, by clicking “View More Data”, you will be able to look at additional information about those areas.
 
@@ -18,7 +18,9 @@ On the <a href="/map" target="_blank">Map &amp; Data</a> section of our website,
 
 <span class="ital">Eviction judgments</span> represent those who have been ordered to leave a property or have received a money judgment against them. This does not count the times the sheriff arrives, as many have left before this happens. We also cannot measure informal evictions, where tenants leave as a result of notices or warnings outside of the courts.
 
-While we have collected over 83 million eviction records, we are still in the process of collecting additional data to fill in gaps where we haven’t yet been able to obtain all the records. To date, there are certain states where we believe we have not collected all available eviction records.
+<hr />
+
+<span class="section-intro media-type">While we have collected</span> over 83 million eviction records, we are still in the process of collecting additional data to fill in gaps where we haven’t yet been able to obtain all the records. To date, there are certain states where we believe we have not collected all available eviction records.
 
 These include:
 
@@ -32,5 +34,19 @@ can collect.
 
 You can compare eviction rates from our map and raw data with court-reported statistics on eviction filings from 27 states and the District of Columbia (<a href="https://data-downloads.evictionlab.org/court-reported-stats/ExtStatsFull.xlsx" target="_blank">download court-reported statistics</a>). These statistics provide annual counts of evictions filed in counties. To keep things consistent, we haven’t included these statistics in our map of evictions, but you can use them to help validate estimates.
 
-We will continue our effort to provide the most comprehensive data on evictions in America and invite you to stay tuned for updates to our dataset by signing up for our email list. If you have any questions or would like to get in touch with the Eviction Lab, please email us at
+<hr />
+
+<span class="section-intro media-type">There are countless untold stories</span> in these data. Here are a few suggestions of possible questions to pursue:
+
++ <span class="ak-bold">Prevalence:</span> For many areas across the country, our data offer the first public estimates of eviction. The sheer number of families affected by eviction is staggering. Are there certain areas in your city that have more evictions than others? Why? 
+
++ <span class="ak-bold">Comparison:</span> Eviction is fascinating because it does not affect every area uniformly. How does your area compare to other similar places? How do rates change from year to year? What factors could be contributing to a decrease in evictions over time?
+
++ <span class="ak-bold">Policy/Economics:</span> How does the legal system in your community shape evictions? What does the affordable housing situation look like in your area, and how might it affect hospitals, schools, communities, and other institutions? 
+
++ <span class="ak-bold">Investigate:</span> There are many investigative stories to tell. Who owns your city? What landlords are responsible for the lion’s share of evictions? How long does the average tenant spend in eviction court? Who is being most affected by eviction? And what policies are in place to prevent eviction or soften its blow?
+
+<hr />
+
+<span class="section-intro media-type">We will continue</span> our effort to provide the most comprehensive data on evictions in America and invite you to stay tuned for updates to our dataset by signing up for our email list. If you have any questions or would like to get in touch with the Eviction Lab, please email us at
 <a href="mailto:help@evictionlab.org" target="_blank">help@evictionlab.org</a> or <a href="mailto:press@evictionlab.org" target="_blank">press@evictionlab.org</a> (for media inquiries). We also invite you to explore <a href="https://justshelter.org" target="_blank">justshelter.org</a>, a resource built by our team with contact information for housing advocates all across the country.

@@ -190,7 +190,7 @@ img.post-thumb {
           margin-bottom: 0rem;
         }
       }
-      p {
+      p, hr {
           font-size: $fontSizeSmall;
           line-height: 2rem;
           margin-bottom: 1.6rem
@@ -205,18 +205,18 @@ img.post-thumb {
       .post-body {
         padding: 3.2rem 0 1.6rem;
       }
-      p {
+      p, hr {
         font-size: $fontSize1024Body;
         line-height: 2.2rem;
       }
     }
     @include for-tablet-portrait-and-landscape {
-      p {
+      p, hr {
         margin-bottom: 2.4rem
       }
     }
     @include sm-thru-med-desktop {
-      p {
+      p, hr {
         margin-bottom: 3.2rem;
       }
     }
@@ -226,7 +226,7 @@ img.post-thumb {
       .post-body {
         padding: 4rem 0;
       }
-      p {
+      p, hr {
         font-size: $fontSize1440Body;
         line-height: 2.8rem;
         margin-bottom: 4rem
