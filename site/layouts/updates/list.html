@@ -79,12 +79,9 @@
     </div><!-- end alt-rows -->
   {{ end }} <!-- end Blog listings -->
   
-<!-- PAGINATION -->  
-  <!--<div class="center-page-wrapper">
-    <div class="custom-pagination">
+  <div class="center-page-wrapper">
       {{ partial "pagination" . }}
-    </div> 
-  </div>-->
+  </div>
 
  <!-- "NEXT EVENT" section -->
  {{ $events := where .Site.RegularPages "Params.contenttype" "events" }}

@@ -72,6 +72,11 @@ a.copy-link:hover {
 /* --- author meta --- */
 img.post-thumb {
   width: 56px;
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
   @include for-phone-only {
     width: 32px;
   }
