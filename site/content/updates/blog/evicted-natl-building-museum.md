@@ -16,7 +16,7 @@ First came <a href="http://evictedbook.com" target="_blank">the book <span class
 
 <p></p>
 
-The exhibit offers photographic and video profiles of two families threatened with eviction, along with tactile infographics and artifacts of the experience of a forced move, such as belongings piled on a pallet and wrapped in plastic for storage. <a href="/map" target="_blank">The Eviction Lab's map</a> is also accessible to visitors via tablets, so they can explore the impact of the problem in locations of their choice.
+The exhibit offers photographic and video profiles of two families threatened with eviction, along with tactile infographics and artifacts of the experience of a forced move, such as belongings piled on a pallet and wrapped in plastic for storage. <a href="/map" target="_blank">The Eviction Lab's map</a> is also accessible to visitors via touchscreen tablets, so they can explore the impact of the problem in locations of their choice.
 
 <span class="ak-bold">Links:</span>
 
