@@ -208,6 +208,10 @@ languageName = "Español"
     name = "Aplicación de combinación de datos"
     weight = 11
     url = "/es/data-merge"
+[[Languages.es.menu.footer]]
+    name = "Guía de Medios"
+    weight = 12
+    url = "/updates/media/media-guide/"     
 
 
 [[Languages.es.menu.updates]]
