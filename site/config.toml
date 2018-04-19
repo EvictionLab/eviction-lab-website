@@ -209,7 +209,7 @@ languageName = "Español"
     weight = 11
     url = "/es/data-merge"
 [[Languages.es.menu.footer]]
-    name = "Guía de Medios"
+    name = "Guía de medios"
     weight = 12
     url = "/updates/media/media-guide/"     
 
