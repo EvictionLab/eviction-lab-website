@@ -5,9 +5,9 @@ contentcat: blog
 featured: 
 title: '"Evicted" Takes Shape in New Museum Exhibit'
 date: 2018-04-18T23:15:05.556Z
-postauthorname: James Minton
-postauthortitle: Creative Director
-authorpic: /images/bios/jminton_thumb.jpg
+postauthorname: The Eviction Lab
+postauthortitle: Princeton University
+authorpic: /images/bios/elab_thumb.jpg
 image: /images/assets/blog/evicted-exhibit-boxes-nation.jpg
 ---
 First came <a href="http://evictedbook.com" target="_blank">the book <span class="ital">Evicted</span></a>, with its heartbreaking stories of families and individuals struggling to maintain stable shelter. Next came the release of <a href="/map" target="_blank">The Eviction Lab's database</a>, revealing the often-surprising scale and span of the eviction crisis. Now eviction and its consequences are explored in a 3-dimensional, immersive presentation at <a href="https://www.nbm.org/exhibition/evicted/" target="_blank">The National Building Museum's <span class="ital">Evicted</span> exhibition</a>.
@@ -16,7 +16,7 @@ First came <a href="http://evictedbook.com" target="_blank">the book <span class
 
 <p></p>
 
-The exhibit offers photographic and video profiles of two families threatened with eviction, along with tactile infographics and affecting artifacts of the experience of a forced move, such as belongings piled on a pallet and wrapped in plastic for storage. <a href="/map" target="_blank">The Eviction Lab's map</a> is also accessible to visitors via tablets, so they can explore the impact of the problem in locations of their choice.
+The exhibit offers photographic and video profiles of two families threatened with eviction, along with tactile infographics and artifacts of the experience of a forced move, such as belongings piled on a pallet and wrapped in plastic for storage. <a href="/map" target="_blank">The Eviction Lab's map</a> is also accessible to visitors via tablets, so they can explore the impact of the problem in locations of their choice.
 
 <span class="ak-bold">Links:</span>
 
