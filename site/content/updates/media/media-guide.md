@@ -10,7 +10,7 @@ postauthortitle: Senior Research Specialist
 authorpic: /images/bios/jhendrickson_thumb_sm.jpg
 image: 
 ---
-<span class="section-intro media-type">Welcome to the Eviction Lab!</span> We hope you will engage with the data we’ve been able to gather and make public. Here are some considerations to keep in mind as you interpret our numbers.
+<span class="section-intro media-type">Welcome to the Eviction Lab.</span> We hope you will engage with the data we’ve been able to gather and make public. Here are some considerations to keep in mind as you interpret our numbers.
 
 On the <a href="/map" target="_blank">Map &amp; Data</a> section of our website, we have included a national database of eviction estimates. Toggles allow you to choose years, eviction filings or evictions, demographic characteristics, and the geography at which you would like to view the data. You can select up to three areas for comparison, and then, by clicking “View More Data”, you will be able to look at additional information about those areas.
 
