@@ -7,7 +7,7 @@ title: "Marketplace: Millions of Americans are evicted every year — and not ju
 date: 2018-04-11T15:45:09.300Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
-authorpic: /images/bios/elab_thumb.jpg
+authorpic: /images/bios/elab_thumb_sm.jpg
 image: 
 ---
 NPR's <span class="ital">Marketplace</span> features an interview between host David Brancaccio and Matthew Desmond, detailing the shocking volume of evictions in the US, their deeper causes, and how the hotspots of the eviction crisis are often places you wouldn't expect.

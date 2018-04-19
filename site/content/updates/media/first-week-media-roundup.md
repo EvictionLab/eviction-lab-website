@@ -7,7 +7,7 @@ title: 'Eviction Lab Media Coverage Roundup'
 date: 2018-04-17T15:45:09.300Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
-authorpic: /images/bios/elab_thumb.jpg
+authorpic: /images/bios/elab_thumb_sm.jpg
 image: 
 listSummary: 
 ---

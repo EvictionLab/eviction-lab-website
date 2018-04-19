@@ -7,7 +7,7 @@ title: Our Methodology Report
 date: 2018-04-06T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
-authorpic: /images/bios/elab_thumb.jpg
+authorpic: /images/bios/elab_thumb_sm.jpg
 hasSubhead: sub
 subhead: Introduction
 ---

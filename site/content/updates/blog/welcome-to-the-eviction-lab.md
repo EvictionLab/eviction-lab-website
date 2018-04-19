@@ -7,7 +7,7 @@ title: "Welcome to the Eviction Lab.  Let’s Get to Work!"
 date: 2018-04-07T23:15:05.556Z
 postauthorname: Matthew Desmond
 postauthortitle: Principal Investigator
-authorpic: /images/bios/mdesmond_thumb.jpg
+authorpic: /images/bios/mdesmond_thumb_sm.jpg
 image: 
 ---
 Imagine if we didn’t know how many Americans were incarcerated each year or how many dropped out of high school, got divorced, or lost their job. If we don’t know how big a problem something is, where it is happening, or how many families are touched by it, then how can we begin the critical work of finding solutions? 

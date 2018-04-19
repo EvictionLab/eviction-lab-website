@@ -9,7 +9,7 @@ image:
 file: /images/uploads/sample-research-file.pdf
 postauthorname: James Hendrickson
 postauthortitle: Senior Research Specialist
-authorpic: /images/uploads/james_hendrickson_thumb.jpg
+authorpic: /images/bios/jhendrickson_thumb_sm.jpg
 ---
 As mentioned in our <a href="/updates/blog/welcome-to-the-eviction-lab/">Welcome</a> blog post, we're offering <a href="/get-the-data">the full Eviction Lab dataset</a> to enable research on housing, eviction, and inequality in America.  
 

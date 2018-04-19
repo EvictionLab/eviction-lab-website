@@ -7,7 +7,7 @@ title: "Fresh Air: First-Ever Evictions Database Shows 'We're In the Middle Of A
 date: 2018-04-12T15:45:09.300Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
-authorpic: /images/bios/elab_thumb.jpg
+authorpic: /images/bios/elab_thumb_sm.jpg
 image: 
 ---
 Today on NPR's <span class="ital">Fresh Air</span>, Terry Gross interviews Matthew Desmond, who helps put the eviction crisis in perspective.
