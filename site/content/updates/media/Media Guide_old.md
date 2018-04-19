@@ -1,7 +1,7 @@
 ---
 childof: media
-contenttype: updates
-contentcat: media
+contenttype: updates2
+contentcat: media2
 featured: false
 title: The Eviction Lab Media Guide
 date: 2018-04-07T15:45:09.300Z

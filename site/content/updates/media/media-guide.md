@@ -3,7 +3,7 @@ childof: media
 contenttype: updates
 contentcat: media
 featured: "home"
-title: 'For the Media: A Guide to Interpreting Our Numbers'
+title: 'The Eviction Lab Media Guide'
 date: 2018-04-19T15:45:09.300Z
 postauthorname: James Hendrickson
 postauthortitle: Senior Research Specialist
