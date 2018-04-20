@@ -1,13 +1,13 @@
 ---
 childof: media
-contenttype: updates
-contentcat: media
+contenttype: updates2
+contentcat: media2
 featured: false
 title: The Eviction Lab Media Guide
 date: 2018-04-07T15:45:09.300Z
 postauthorname: James Hendrickson
 postauthortitle: Senior Research Specialist
-authorpic: /images/uploads/james_hendrickson_thumb.jpg
+authorpic: /images/bios/jhendrickson_thumb_sm.jpg
 image: 
 ---
 The Eviction Lab is excited to partner with journalists across the country. One of the central tenets of this lab is to be <span class="ital">accessible</span> and <span class="ital">useful</span> to those interested in exploring the link between poverty, eviction, and housing in America. 

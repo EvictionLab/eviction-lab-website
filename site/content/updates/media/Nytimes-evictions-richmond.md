@@ -7,7 +7,7 @@ title: The New York Times Profiles The Eviction Lab
 date: 2018-04-10T15:45:09.300Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
-authorpic: /images/bios/elab_thumb.jpg
+authorpic: /images/bios/elab_thumb_sm.jpg
 image: /images/assets/blog/nyt-eviction-map.jpg
 ---
 The New York Times has chosen Richmond, VA (listed at #2 in our <a href="/rankings">Eviction Rankings</a>) as the focus of a front-page story, which also profiles Matthew Desmond and <a href="/about/#work">The Eviction Lab's work</a> in collecting over 83 million eviction records from across the country.
