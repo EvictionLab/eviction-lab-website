@@ -63,7 +63,7 @@
       @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
       
       @include for-tablet-portrait-up {
-        @include backgroundImage('/img/pictorial-menu-top-left-bg-tablet-portrait.png');
+        @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
       }
       @include for-midsize-desktop-up {
         @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
@@ -80,11 +80,12 @@
         @include backgroundImage('/img/pictorial-menu-top-right-bg-iphone8.png');
       }
       @include for-tablet-portrait-up {
-        @include backgroundImage('/img/pictorial-menu-top-right-bg-tablet-portrait.png');
-
+        @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
+        background-size: 120%;
       }
       @include for-midsize-desktop-up {
         @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
+        background-size: cover;
       }
     }
     
