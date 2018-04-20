@@ -83,6 +83,10 @@ $gtLaptop: 1439px; // greater than laptop device breakpoint
 }
 @mixin up-thru-tablet {
   @media (max-width: $tabletLimit) { @content; }
+}
+// 1180-1439px
+@mixin med-desktop {
+  @media (min-width: 1160px) and (max-width: $smDesktopLimit) { @content; }
 } 
 // 1024-1439px 
 @mixin sm-thru-med-desktop {
