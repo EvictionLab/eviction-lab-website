@@ -4,7 +4,7 @@ contenttype: updates
 contentcat: media
 featured: "home"
 title: 'The Eviction Lab Media Guide'
-date: 2018-04-19T15:45:09.300Z
+date: 2018-04-20T15:45:09.300Z
 postauthorname: James Hendrickson
 postauthortitle: Senior Research Specialist
 authorpic: /images/bios/jhendrickson_thumb_sm.jpg
