@@ -16,4 +16,4 @@ Today on NPR's <span class="ital">Fresh Air</span>, Terry Gross interviews Matth
 
 "That's twice the number of Americans that die in car accidents every day. That's twice the number of people who get arrested for drug offenses every year. We heard a lot about the opioid crisis last year, and for good reason, it's an incredibly important topic. There are around 63,000 overdose deaths in 2016 and about 2.3 million people evicted, so for every tragic overdose there are 36 people that are pushed into the street. This is a problem of enormous scope and consequence." 
 
-<span class="smallcaps">Read the article:</span> <a class="ak-bold" href="https://www.npr.org/2018/04/12/601783346/first-ever-evictions-database-shows-were-in-the-middle-of-a-housing-crisis">Millions of Americans are evicted every year — and not just in big cities</a>
+<span class="smallcaps">Read the article:</span> <a class="ak-bold" href="https://www.npr.org/2018/04/12/601783346/first-ever-evictions-database-shows-were-in-the-middle-of-a-housing-crisis" target="_blank">First-Ever Evictions Database Shows: "We're In the Middle Of A Housing Crisis"</a>
