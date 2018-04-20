@@ -20,6 +20,18 @@ On the <a href="/map" target="_blank">Map &amp; Data</a> section of our website,
 
 <hr />
 
+There are countless untold stories in these data. Here are a few suggestions of possible questions to pursue:
+
+<span class="ak-bold">Prevalence:</span> For many areas across the country, our data offer the first public estimates of eviction. The sheer number of families affected by eviction is staggering. Are there certain areas in your city that have more evictions than others? Why? 
+
+<span class="ak-bold">Comparison:</span> Eviction is fascinating because it does not affect every area uniformly. How does your area compare to other similar places? How do rates change from year to year? What factors could be contributing to a decrease in evictions over time?
+
+<span class="ak-bold">Policy/Economics:</span> How does the legal system in your community shape evictions? What does the affordable housing situation look like in your area, and how might it affect hospitals, schools, communities, and other institutions? 
+
+<span class="ak-bold">Investigate:</span> There are many investigative stories to tell. Who owns your city? What landlords are responsible for the lion’s share of evictions? How long does the average tenant spend in eviction court? Who is being most affected by eviction? And what policies are in place to prevent eviction or soften its blow?
+
+<hr />
+
 While we have collected over 83 million eviction records, we are still in the process of collecting additional data to fill in gaps where we haven’t yet been able to obtain all the records. To date, there are certain states where we believe we have not collected all available eviction records.
 
 These include:
@@ -38,18 +50,6 @@ Based on an analysis of our data, it also appears that a handful of states have 
 In <span class="ak-bold">Kentucky</span>, <span class="ak-bold">Louisiana</span>, <span class="ak-bold">Tennessee</span>, and <span class="ak-bold">Texas</span>, there is good data coverage in the urban centers, but there are some more rural areas that are missing data.
 
 You can compare eviction rates from our map and raw data with court-reported statistics on eviction filings from 27 states and the District of Columbia (<a href="https://data-downloads.evictionlab.org/court-reported-stats/ExtStatsFull.xlsx" target="_blank">download court-reported statistics</a>). These statistics provide annual counts of evictions filed in counties. To keep things consistent, we haven’t included these statistics in our map of evictions, but you can use them to help validate estimates.
-
-<hr />
-
-There are countless untold stories in these data. Here are a few suggestions of possible questions to pursue:
-
-<span class="ak-bold">Prevalence:</span> For many areas across the country, our data offer the first public estimates of eviction. The sheer number of families affected by eviction is staggering. Are there certain areas in your city that have more evictions than others? Why? 
-
-<span class="ak-bold">Comparison:</span> Eviction is fascinating because it does not affect every area uniformly. How does your area compare to other similar places? How do rates change from year to year? What factors could be contributing to a decrease in evictions over time?
-
-<span class="ak-bold">Policy/Economics:</span> How does the legal system in your community shape evictions? What does the affordable housing situation look like in your area, and how might it affect hospitals, schools, communities, and other institutions? 
-
-<span class="ak-bold">Investigate:</span> There are many investigative stories to tell. Who owns your city? What landlords are responsible for the lion’s share of evictions? How long does the average tenant spend in eviction court? Who is being most affected by eviction? And what policies are in place to prevent eviction or soften its blow?
 
 <hr />
 
