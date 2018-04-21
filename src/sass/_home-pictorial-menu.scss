@@ -77,11 +77,11 @@
     }
     &.right {
       @include full-shadow-animate;
-      background: url(/img/pictorial-menu-top-right-bg-mobile.png);
+      /* background: url(/img/pictorial-menu-top-right-bg-mobile.png);
       background-position: center;
       background-size: 60%;
       background-repeat: no-repeat;
-      background-color: #282827;
+      background-color: #282827; */
       @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-320@2x.png');
       @include for-iphone-8plus-portrait-only {
         @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-768@2x.jpg');
