@@ -27,7 +27,7 @@ function setupScrollEnd() {
   var isScrolling;
   var headerWrapper = $('header');
 
-  function toggleCondense () {
+  function toggleCondense() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       headerWrapper.addClass('condensed');
     } else {
@@ -60,7 +60,9 @@ function setupContactForm() {
 // Make sure modal-open class is added to the body whenever a modal is opened
 function setupModals() {
   $(".modal").on("show.bs.modal", function () {
-    setTimeout(function() { $("body").addClass("modal-open") }, 500);
+    setTimeout(function () {
+      $("body").addClass("modal-open")
+    }, 500);
   });
 }
 
@@ -82,7 +84,9 @@ $(document).ready(function () {
   var width = window.innerWidth;
   window.addEventListener("resize", function (e) {
     // Only trigger transition if the width has changed, otherwise exit
-    if (window.innerWidth === width) { return; }
+    if (window.innerWidth === width) {
+      return;
+    }
     width = window.innerWidth;
 
     $('.mobile-vh').each(function () {
@@ -92,7 +96,9 @@ $(document).ready(function () {
 
       setTimeout(function () {
         el.css('height', null)
-        setTimeout(function () { el.css('transition', null); }); 
+        setTimeout(function () {
+          el.css('transition', null);
+        });
       }, 350);
     });
   });
@@ -157,9 +163,9 @@ function smoothScroll(path, cb) {
   }
 }
 
-$(function() {
+$(function () {
   // Run smoothscroll on page load
-  smoothScroll(window.location, function(target) {
+  smoothScroll(window.location, function (target) {
     // If link is an accordion, toggle it
     if (target.hasClass('collapsed')) {
       target.collapse('toggle');
@@ -184,7 +190,7 @@ $(function() {
 $(document).ready(function () {
   $('a.social-share-popup').each(function () {
     var el = $(this);
-    el.on('click', function(e) {
+    el.on('click', function (e) {
       e.preventDefault();
       window.open(el.attr('href'), 'Social Share', 'height=285,width=550,resizable=1');
     });
@@ -195,19 +201,19 @@ $(document).ready(function () {
  * Subnav link highlighting
  */
 
-$(document).ready(function() {
-  $(".nav a").click(function () { 
+$(document).ready(function () {
+  $(".nav a").click(function () {
     $(".nav a").css("color", "#050403").removeClass("highlight");
     $(".nav li").removeClass("active");
     $(this).css("color", "#E24000").addClass("highlight");
   });
-  
-  $(".subnav a").click(function () { 
+
+  $(".subnav a").click(function () {
     $(".subnav a").css("color", "#050403").removeClass("highlight");
     $(this).css("color", "#E24000").addClass("highlight");
-  });  
-  
-  $(".video-panel .nav a").click(function () { 
+  });
+
+  $(".video-panel .nav a").click(function () {
     $(".nav a").css("color", "#fff").removeClass("highlight");
     $(".nav li").removeClass("active");
     $(this).css("color", "#E24000").addClass("highlight");
