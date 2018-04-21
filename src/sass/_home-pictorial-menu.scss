@@ -61,13 +61,18 @@
     @include for-midsize-desktop-up {
     }
     &.left {
-      @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
-      
+      @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-320@2x.png');
+      @include for-414-up {
+        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-768@2x.jpg');
+      }
       @include for-tablet-portrait-up {
-        @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
+        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-768@2x.jpg');
+      }
+      @include for-tablet-landscape-up {
+        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-1024@2x.jpg');
       }
       @include for-midsize-desktop-up {
-        @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
+        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-1440+@2x.jpg');
       }
     }
     &.right {
@@ -77,15 +82,18 @@
       background-size: 60%;
       background-repeat: no-repeat;
       background-color: #282827;
+      @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-320@2x.png');
       @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/img/pictorial-menu-top-right-bg-iphone8.png');
+        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-768@2x.jpg');
       }
       @include for-tablet-portrait-up {
-        @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
-        background-size: 120%;
+        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-768@2x.jpg');
+      }
+      @include for-tablet-landscape-up {
+        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-1024@2x.jpg');
       }
       @include for-midsize-desktop-up {
-        @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
+        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-1440+@2x.jpg');
         background-size: cover;
       }
     }
