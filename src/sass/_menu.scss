@@ -8,8 +8,8 @@ $menuMargin: grid(5);
   width: $menuWidth;
   height:100%;
   top:0;
-  right: 0;
-  transform: translate3d(($menuWidth+5px),0,0); // translate a little extra so shadow doesn't show
+  right: -1*($menuWidth+5px);
+  transform: translate3d(0,0,0); // translate a little extra so shadow doesn't show
   z-index:999;
   background: $menuBg;
   padding: 0 $pageMarginLg; // large margin on menu
@@ -18,17 +18,17 @@ $menuMargin: grid(5);
   box-shadow: $menuShadow;
   overflow:auto;
   &.expanded {
-    transform: translate3d(0,0,0);
+    transform: translate3d((-1*($menuWidth+5px)),0,0);
   }
 }
 // boost size on tablet+
 @media(min-width: $gtMobile) {
   .app-menu {
     width: $menuWidthLg;
-    transform: translate3d(($menuWidthLg+5px),0,0);
+    right: -1*($menuWidthLg+5px);
     padding: 0 grid(5);
     &.expanded {
-      transform:translate3d(0,0,0);
+      transform: translate3d((-1*($menuWidthLg+5px)),0,0);
     }
   }
 }
