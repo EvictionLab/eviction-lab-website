@@ -61,7 +61,13 @@
     @include for-midsize-desktop-up {
     }
     &.left {
-      @include backgroundImage('/images/assets/menu/maps-bubbles.svg');
+      @include backgroundImage('/images/assets/menu/maps-bubbles-320.svg');
+      @include for-tablet-portrait-up {
+        @include backgroundImage('/images/assets/menu/maps-bubbles-768.svg');
+      }
+      @include for-midsize-desktop-up {
+        @include backgroundImage('/images/assets/menu/maps-bubbles-1440.svg');
+      }
     }
     &.right {
       background-color: #282827;
