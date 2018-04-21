@@ -11,6 +11,7 @@
   background: #3c3c3c;
   @include for-tablet-landscape-up {
     height: calc(100vh - 56px);
+    min-height: 528px; // must be atleast this tall for all rows to render properly
   }
   a {
     width: 100%;
