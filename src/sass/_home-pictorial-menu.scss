@@ -61,19 +61,7 @@
     @include for-midsize-desktop-up {
     }
     &.left {
-      @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-320@2x.png');
-      @include for-414-up {
-        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-768@2x.jpg');
-      }
-      @include for-tablet-portrait-up {
-        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-768@2x.jpg');
-      }
-      @include for-tablet-landscape-up {
-        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-1024@2x.jpg');
-      }
-      @include for-midsize-desktop-up {
-        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Map-1440+@2x.jpg');
-      }
+      @include backgroundImage('/images/assets/menu/maps-bubbles.svg');
     }
     &.right {
       background-color: #282827;
