@@ -77,24 +77,19 @@
     }
     &.right {
       @include full-shadow-animate;
-      /* background: url(/img/pictorial-menu-top-right-bg-mobile.png);
+      background-color: #282827;
+      background-image: url('/images/assets/menu/rankings-bars.svg');
       background-position: center;
-      background-size: 60%;
+      background-size: 117px 80px;
       background-repeat: no-repeat;
-      background-color: #282827; */
-      @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-320@2x.png');
-      @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-768@2x.jpg');
-      }
       @include for-tablet-portrait-up {
-        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-768@2x.jpg');
+        background-size: 244px 184px;
       }
       @include for-tablet-landscape-up {
-        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-1024@2x.jpg');
+        background-size: 281px 211px;
       }
       @include for-midsize-desktop-up {
-        @include backgroundImage('/images/assets/menu/Pictorial-Menu-Graphic-Bar-Graph-1440+@2x.jpg');
-        background-size: cover;
+        background-size: 395px 302px;
       }
     }
     
