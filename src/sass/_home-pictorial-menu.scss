@@ -76,7 +76,6 @@
       }
     }
     &.right {
-      @include full-shadow-animate;
       background-color: #282827;
       background-image: url('/images/assets/menu/rankings-bars.svg');
       background-position: center;
