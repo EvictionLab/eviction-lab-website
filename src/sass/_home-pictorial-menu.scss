@@ -202,9 +202,6 @@
       width: 25%;
       height: 100%;
     }
-    @include for-midsize-desktop-up {
-      min-height: 248px;
-    }
     &.left {
       background: #E04119;
       background: linear-gradient(to left, #952800 2%, #9F2D00 99%);
