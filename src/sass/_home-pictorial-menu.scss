@@ -61,32 +61,28 @@
     @include for-midsize-desktop-up {
     }
     &.left {
-      @include backgroundImage('/img/pictorial-menu-top-left-bg-iphone8.png');
-      
+      @include backgroundImage('/images/assets/menu/maps-bubbles-320.svg');
       @include for-tablet-portrait-up {
-        @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
+        @include backgroundImage('/images/assets/menu/maps-bubbles-768.svg');
       }
       @include for-midsize-desktop-up {
-        @include backgroundImage('/img/pictorial-menu-top-left-bg-midsize-desktop.png');
+        @include backgroundImage('/images/assets/menu/maps-bubbles-1440.svg');
       }
     }
     &.right {
-      @include full-shadow-animate;
-      background: url(/img/pictorial-menu-top-right-bg-mobile.png);
-      background-position: center;
-      background-size: 60%;
-      background-repeat: no-repeat;
       background-color: #282827;
-      @include for-iphone-8plus-portrait-only {
-        @include backgroundImage('/img/pictorial-menu-top-right-bg-iphone8.png');
-      }
+      background-image: url('/images/assets/menu/rankings-bars.svg');
+      background-position: center;
+      background-size: 117px 80px;
+      background-repeat: no-repeat;
       @include for-tablet-portrait-up {
-        @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
-        background-size: 120%;
+        background-size: 244px 184px;
+      }
+      @include for-tablet-landscape-up {
+        background-size: 281px 211px;
       }
       @include for-midsize-desktop-up {
-        @include backgroundImage('/img/pictorial-menu-top-right-bg-midsize-desktop.png');
-        background-size: cover;
+        background-size: 395px 302px;
       }
     }
     
@@ -201,9 +197,6 @@
     @include for-tablet-landscape-up {
       width: 25%;
       height: 100%;
-    }
-    @include for-midsize-desktop-up {
-      min-height: 248px;
     }
     &.left {
       background: #E04119;
