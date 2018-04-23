@@ -62,7 +62,7 @@
                 </div>
                 {{ else }}
                 <div class="post-summary">
-                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
                 </div>
                 {{ end }}
                 <div class="post-cat">
@@ -147,7 +147,7 @@
                 <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </h2>
               <div class="post-summary">
-                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
               </div>
             </div>
 
@@ -197,7 +197,7 @@
                 <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </h2>
               <div class="post-summary">
-                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
               </div>
             </div>
 
@@ -249,7 +249,7 @@
                   <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
                 </h2>
                 <div class="post-summary">
-                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
                 </div>
               </div>
   
@@ -287,7 +287,7 @@
                   <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
                 </h2>
                 <div class="post-summary">
-                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
                 </div>
               </div>
   
@@ -332,7 +332,7 @@
                 <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </h2>
               <div class="post-summary">
-                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
               </div>
             </div>
 
@@ -383,7 +383,7 @@
                 <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </h2>
               <div class="post-summary">
-                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
               </div>
             </div>
 
@@ -433,8 +433,17 @@
             </div>
           </div>  
           <div class="list-item center-content events-list-main events-list {{ .Params.childof }}-list-sum">
-            <div class="post-summary">
-              {{ .Summary }} <a class="read-more" href="{{ .RelPermalink }}">Read more</a>
+              {{ if .Params.listSummary }}
+              <div class="post-summary">
+                  {{ .Params.listSummary }} 
+              
+              {{ else }}
+              <div class="post-summary">
+                  {{ .Summary }} 
+              
+              {{ end }}
+              <br />
+              <br /><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
             </div>
             <div class="event-deets">
               <ul>

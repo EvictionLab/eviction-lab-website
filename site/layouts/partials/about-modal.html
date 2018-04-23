@@ -33,7 +33,7 @@
                             {{ if eq .NextInSection.Params.childof .Params.childof }}
                               {{ $.Scratch.Set "hasNext" true }}
                               <a class="red" data-toggle="modal" data-target="#modal-{{ .NextInSection.Params.abbrev }}" data-dismiss="modal" href="#">
-                                <i class="fa fa-chevron-left">&nbsp;&nbsp;</i>Previous bio
+                                <i class="fa fa-chevron-left">&nbsp;</i>Previous bio
                               </a>
                             {{ end }}
                           {{ end }}

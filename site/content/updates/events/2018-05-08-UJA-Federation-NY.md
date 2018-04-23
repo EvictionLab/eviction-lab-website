@@ -8,6 +8,7 @@ edate: 2018-04-23T17:43:04-05:00
 image: 
 website: 'https://www.ujafedny.org/event/view/tackling-poverty-today/'
 address: UJA-Federation of New York
+listSummary: Join UJA-Federation and other leaders in the nonprofit, public, and for-profit sectors as we come together to learn, foster collaborations, and strategize about how to best address poverty in the greater New York community today.
 timeRange: '9:00 am—3:30pm'
 ---
 Join UJA-Federation and other leaders in the nonprofit, public, and for-profit sectors as we come together to learn, foster collaborations, and strategize about how to best address poverty in the greater New York community today.
