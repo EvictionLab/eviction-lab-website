@@ -3,7 +3,7 @@ title: 'How many people are evicted nationwide?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
-weight: 155.5
+weight: 154
 ---
 See the following table:
 
