@@ -482,7 +482,7 @@
   .post-summary {
     @include for-phone-only {
       @include defaultFont($fontSize1024Body);
-      letter-spacing: 0.04rem;
+      letter-spacing: 0rem;
       display: none;
     }
     @include for-tablet-portrait-and-landscape {
@@ -503,9 +503,14 @@
   }
 }
 a.read-more {
-  font-family: $headerFontStack;
-  text-decoration: underline;
+  font-family: Akkurat-Regular, sans-serif;
   color: $color1;
+  .fa-chevron-right:before {
+    top: 1px;
+    position: relative;
+    font-size: 82%;
+    padding-left: 3px;
+  }
 }
 /* research lists */
 
