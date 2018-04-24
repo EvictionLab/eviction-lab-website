@@ -9,6 +9,6 @@ li2: Map
 li3: Data
 li4: Rankings
 li5: Definitions
-li6: Methods
+li6: About the Data
 li7: Storytelling & Activism
 ---

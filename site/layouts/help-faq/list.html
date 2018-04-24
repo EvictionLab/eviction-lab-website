@@ -32,10 +32,9 @@
     <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
       <ul class="anchor-links dropdown-menu">
         <li><a class="dropdown-item smoothScroll" href="#map">{{ .Params.li2 }}</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#data">{{ .Params.li3 }}</a></li>
         <li><a class="dropdown-item smoothScroll" href="#rankings">{{ .Params.li4 }}</a></li>
         <li><a class="dropdown-item smoothScroll" href="#definitions">{{ .Params.li5 }}</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#methods">{{ .Params.li6 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#about-data">{{ .Params.li6 }}</a></li>
         <li><a class="dropdown-item smoothScroll" href="#stories">{{ .Params.li7 }}</a></li>
     </ul>
     <!--</div>-->
@@ -79,7 +78,7 @@
       <!-- data section -->
       <!-- ************ -->
 
-      <a name="data"></a>
+      <!--<a name="data"></a>
       {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
         {{ if eq .Params.type "meta" }} 
       <h2 class="bordered-header blue">{{ .Params.li3 }}</h2>
@@ -90,12 +89,12 @@
 
           {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
           {{ if eq .Params.type "data" }}
-          <!-- faq item -->
+         
             {{ partial "faqs" . }}
           {{ end }}
           {{ end }}
 
-      </div> <!-- close accordion -->
+      </div>--> <!-- close accordion -->
 
       <!-- ************ -->
       <!-- Rankings section -->
@@ -142,9 +141,9 @@
       </div> <!-- close accordion -->
 
       <!-- *************** -->
-      <!-- methods section -->
+      <!-- About the Data section -->
       <!-- *************** -->
-      <a name="methods"></a>
+      <a name="about-data"></a>
       {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
         {{ if eq .Params.type "meta" }} 
       <h2 class="bordered-header blue">{{ .Params.li6 }}</h2>
@@ -154,7 +153,7 @@
       <div class="accordion">
 
           {{ range (where .Site.RegularPages "Params.childof" ("faq")) }}
-          {{ if eq .Params.type "methods" }}
+          {{ if eq .Params.type "data" }}
           <!-- faq item -->
             {{ partial "faqs" . }}
           {{ end }}

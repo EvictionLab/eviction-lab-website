@@ -2,8 +2,9 @@
 title: '¿Qué informes puedo descargar y qué puedo hacer con ellos?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
-type: data
+type: map
 weight: 158
+faqid: reports
 ---
 Los informes, que están personalizados para mostrar los mismos datos y lugares que ha seleccionado a través del mapa y la búsqueda, están diseñados como herramientas para apoyar la investigación y el activismo. Se puede descargar
 

@@ -251,7 +251,7 @@ h3 {
   }
 }
 
-p, .center-content-post.page-list li, select, input, textarea, .post-body ol li, .post-body ul li {
+p, .center-content-post.page-list li, select, input, textarea, .post-body ol li, .post-body ul li, table.page-stats {
   @include for-phone-only {
     @include defaultFont(1.4rem); 
     line-height: 2rem;
@@ -301,6 +301,28 @@ p, .center-content-post.page-list li, select, input, textarea, .post-body ol li,
   @include for-midsize-desktop-up {
       margin-bottom: 0;
       }    
+}
+
+// Table
+
+table.page-stats {
+  th {
+    font-family: Akkurat-Bold, sans-serif;
+    padding-bottom: 1.6rem; 
+  }
+  td, th {
+    padding: 1.6rem;
+    border: 1px solid #efefef;
+  }
+  tr:nth-child(even) {
+    background-color: #f4f7f9;
+  }
+  td {
+    font-family: $numberFontStack;
+    font-weight: 500;
+    color: $color2;
+    
+  }
 }
 
 // Buttons
