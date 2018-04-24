@@ -2,8 +2,9 @@
 title: 'What reports can I download, and what can I do with them?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
-type: data
+type: map
 weight: 158
+faqid: reports
 ---
 Reports, which are customized to display the same data and locations you've selected via the map and search, are designed as tools to support research and activism. You can download
 

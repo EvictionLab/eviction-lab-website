@@ -9,6 +9,6 @@ li2: Mapa
 li3: Datos
 li4: Clasificaciones 
 li5: Definiciones 
-li6: Métodos 
+li6: Sobre los datos 
 li7: Narración y activismo 
 ---

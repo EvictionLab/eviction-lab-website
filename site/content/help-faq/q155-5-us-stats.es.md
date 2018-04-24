@@ -1,21 +1,22 @@
 ---
-title: 'How many people are evicted nationwide?'
+title: '¿Cuantas personas son desalojadas en todo el país?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
 weight: 159
 faqid: us-stats
 ---
-See the following table:
+Aquí están las estadísticas:
 
 <table class="page-stats table-responsive">
  <tr>
-  <th>Year</td>
-  <th>Renter Occupied Households</td>
-  <th>Eviction Filings</td>
-  <th>Evictions</td>
-  <th>Eviction Filing Rate</td>
-  <th>Eviction Rate</td>
+  <th>Año</td>
+  <th>Casas ocupadas por inquilinos</td>
+  <th>Presentaciones</td>
+  <th>Desalojos totales</td>
+  <th>Tasa de presentaciones</td>
+  <th>Tasa de desalojo
+</td>
  </tr>
  <tr>
   <td>2000</td>

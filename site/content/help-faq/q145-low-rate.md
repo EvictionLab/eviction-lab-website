@@ -2,8 +2,9 @@
 title: "My state shows a low filing or eviction rate. What does this mean?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
-type: map
+type: data
 weight: 145
+faqid: low-rate
 ---
 On the map, we have indicated with the symbol <img class="hint" src="/images/icons/hint-icon.png" /> states with underestimated eviction counts. Of course, some places have low eviction rates because there are few renters living there or because there are very few evictions. But some states and the District of Columbia have underestimated eviction counts in our dataset for a variety of reasons.
 

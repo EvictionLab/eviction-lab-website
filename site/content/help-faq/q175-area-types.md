@@ -4,6 +4,7 @@ date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: rankings
 weight: 175
+faqid: area-types
 ---
 We chose to categorize places in our Rankings (as Large Cities, Mid-sized Cities, or Small Cities & Rural Areas) to allow for more meaningful comparisons among places with similar populations. 
 

@@ -4,6 +4,7 @@ date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: definitions
 weight: 210
+faqid: eviction-rate
 ---
 Una tasa de desalojo es la cantidad de desalojos por cada 100 viviendas alquiladas en un área. Una tasa de desalojo del 5% significa que 5 de cada 100 viviendas alquiladas enfrentaron el desalojo en el área seleccionada ese año.
 
