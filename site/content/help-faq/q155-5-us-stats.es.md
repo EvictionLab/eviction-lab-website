@@ -3,7 +3,7 @@ title: '¿Cuantas personas son desalojadas en todo el país?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
-weight: 159
+weight: 142.7
 faqid: us-stats
 ---
 Aquí están las estadísticas:
