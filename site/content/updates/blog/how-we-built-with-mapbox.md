@@ -18,7 +18,7 @@ In all of the above, we were greatly aided by our partnership with <a href="http
 
 They also honored us with <a href="https://blog.mapbox.com/eviction-lab-map-617edfced73b" target="_blank">an interview</a>, where we took a deep dive into our design and technical processes, and offered a preview of things to come. If you're curious about how our site and tools were built, give it a read!
 
-<span class="smallcaps">Read the article:</span> <a class="ak-bold" href="https://blog.mapbox.com/eviction-lab-map-617edfced73b" target="_blank">Mapping nationwide evictions: How We Built It</a>
+<span class="smallcaps">Read the article:</span> <a class="ak-bold" href="https://blog.mapbox.com/eviction-lab-map-617edfced73b" target="_blank">Mapping Nationwide Evictions: How We Built It</a>
 
 
 
