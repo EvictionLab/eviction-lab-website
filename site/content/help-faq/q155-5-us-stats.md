@@ -3,7 +3,7 @@ title: 'How many people are evicted nationwide?'
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
-weight: 159
+weight: 142.7
 faqid: us-stats
 ---
 See the following table:
