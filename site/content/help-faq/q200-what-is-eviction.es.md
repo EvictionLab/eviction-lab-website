@@ -4,6 +4,7 @@ date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: definitions
 weight: 200
+faqid: what-is-eviction
 ---
 Un desalojo ocurre cuando un propietario expulsa a las personas de la propiedad que posee. Los desalojos son movimientos involuntarios iniciados por el propietario que ocurren a los inquilinos, mientras que las ejecuciones hipotecarias son movimientos involuntarios que suceden a los propietarios cuando un banco u otra agencia prestataria recupera un hogar.
 

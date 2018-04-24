@@ -4,6 +4,7 @@ date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: rankings
 weight: 175
+faqid: area-types
 ---
 Elegimos categorizar lugares en nuestros Rankings (como ciudades grandes, ciudades medianas o pequeñas ciudades y áreas rurales) para permitir comparaciones más significativas entre lugares con poblaciones similares. 
 

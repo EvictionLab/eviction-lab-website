@@ -2,8 +2,9 @@
 title: "Mi estado muestra una tasa baja de presentación o desalojo. ¿Qué significa esto?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
-type: map
+type: data
 weight: 145
+faqid: low-rate
 ---
 En el mapa, hemos indicado con el símbolo <img class="hint" src="/images/icons/hint-icon.png" /> estados con recuentos de desalojo subestimados. Por supuesto, algunos lugares tienen bajas tasas de desalojo porque hay pocos inquilinos que viven allí o porque hay muy pocos desalojos. Pero algunos estados y el Distrito de Columbia han subestimado los conteos de desalojo en nuestro conjunto de datos por una variedad de razones.
 

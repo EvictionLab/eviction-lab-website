@@ -2,8 +2,9 @@
 title: "My area shows a high filing or eviction rate. What does this mean?"
 date: 2017-11-19T20:43:49-08:00
 childof: faq
-type: map
+type: data
 weight: 144
+faqid: high-rate
 ---
 On the map, we have indicated with the symbol <img class="hint" src="/images/icons/hint-icon-red.png" /> Census tracts and block groups with filing and eviction rates in the top 1%. There are areas with high rates because housing insecurity is especially acute there. But there are other considerations as well.
 

@@ -4,5 +4,6 @@ date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: stories
 weight: 250
+faqid: stories
 ---
 Hemos desarrollado una <a href="/updates/media/media-guide/">Guía de medios</a> y una <a href="/updates/blog/eviction-lab-teacher-guide/">Guía para maestros</a>. Destacaremos cómo los periodistas, maestros, organizadores comunitarios, legisladores y ciudadanos comprometidos han utilizado nuestros datos, tanto en nuestras cuentas de <a href="https://www.facebook.com/evictionlab/" target="_blank">Facebook</a> y <a href="https://twitter.com/evictionlab" target="_blank">Twitter</a> como en nuestras <a href="/updates">páginas de Actualizaciones</a>. También se puede descargar <a href="http://www.evictedbook.com/reading-group-guides" target="_blank">guías de grupo de lectura</a> para el libro <span class="ital">Evicted</span>. 
