@@ -151,8 +151,13 @@ function smoothScroll(path, cb) {
     location.hostname == path.hostname &&
     path.hash.length
   ) {
-    var target = $(path.hash);
-    target = target.length ? target : $('[name="' + path.hash.slice(1) + '"]');
+    // check for accordion link
+    var target = $('[href="' + path.hash + '"].collapsed');
+    // if no accordion link look for an element with the ID
+    if (target.length === 0) { target = $(path.hash); }
+    // if no ID element look for an element with the name
+    if (target.length === 0) { target = $('[name="' + path.hash.slice(1) + '"]'); }
+    // scroll to the target
     if (target.length) {
       $('html,body').animate({
         scrollTop: target.offset().top - (getWindowOffset() + getPageOffset(location.pathname)) + 'px'
