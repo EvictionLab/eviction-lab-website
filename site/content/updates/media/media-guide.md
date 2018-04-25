@@ -53,5 +53,19 @@ You can compare eviction rates from our map and raw data with court-reported sta
 
 <hr />
 
+Regarding use of our visualizations, feel free to 
+
++ <a href="/help-faq/#map-embed" target="_blank">Embed the map</a> within your site 
++ Use screenshots of our data visualizations (from the <a href="/map" target="_blank">map</a> and <a href="/rankings" target="_blank">rankings</a> pages)
++ Create custom visualizations of your own using the data
+
+How to credit: the embedded map contains its own credit; any other visuals can be credited as "courtesy of The Eviction Lab at Princeton University."
+
+Photos on the site are licensed via their photographers, and you may reach out to them to inquire about usage; all photographers are credited either within captions or in the footer.
+
+If you'd like for us to create custom screenshots or advise on map embedding, feel free to reach out to <a href="mailto:press@evictionlab.org">press@evictionlab.org</a>, and we'd be glad to help.
+
+<hr />
+
 We will continue our effort to provide the most comprehensive data on evictions in America and invite you to stay tuned for updates to our dataset by signing up for our email list. If you have any questions or would like to get in touch with the Eviction Lab, please email us at
 <a href="mailto:help@evictionlab.org" target="_blank">help@evictionlab.org</a> or <a href="mailto:press@evictionlab.org" target="_blank">press@evictionlab.org</a> (for media inquiries). We also invite you to explore <a href="https://justshelter.org" target="_blank">justshelter.org</a>, a resource built by our team with contact information for housing advocates all across the country.
