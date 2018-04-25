@@ -63,7 +63,7 @@ How to credit: the embedded map contains its own credit; any other visuals can b
 
 Photos on the site are licensed via their photographers, and you may reach out to them to inquire about usage; all photographers are credited either within captions or in the footer.
 
-If you'd like for us to create custom screenshots or advise on map embedding, feel free to reach out to <a href="mailto:press@evictionlab.org">press@evictionlab.org</a>, and we'd be glad to help.
+If you'd like us to create custom screenshots or advise on map embedding, feel free to reach out to <a href="mailto:press@evictionlab.org">press@evictionlab.org</a>, and we'd be glad to help.
 
 <hr />
 
