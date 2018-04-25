@@ -9,6 +9,7 @@ postauthorname: James Hendrickson
 postauthortitle: Senior Research Specialist
 authorpic: /images/bios/jhendrickson_thumb_sm.jpg
 image: 
+url: /media-guide
 ---
 Welcome to the Eviction Lab. We hope you will engage with the data we’ve been able to gather and make public. Here are some considerations to keep in mind as you interpret our numbers.
 
