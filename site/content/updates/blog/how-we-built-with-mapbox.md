@@ -12,7 +12,7 @@ image: /images/assets/blog/eviction-lab-southeast-map5.jpg
 fbImage: 'https://evictionlab.org/images/assets/blog/eviction-lab-southeast-map5.jpg'
 twImage: 'https://evictionlab.org/images/assets/blog/eviction-lab-southeast-map5.jpg'
 ---
-When Matthew Desmond and his Eviction Lab research team offered us the task of mapping and visualizing their first-of-its-kind database of eviction statistics, we (the web team) were excited, honored, and humbled. And then, when things began to get real and the project took shape, we took a collective deep breath as we grasped the magnitude of the challenges ahead of us.
+When Matthew Desmond and his Eviction Lab research team offered us the task of mapping and visualizing their first-of-its-kind database of eviction statistics, we (the web team) were excited, honored, and humbled. And then, when things began to get real and the project took shape, we drew a collective deep breath as we grasped the magnitude of the challenges ahead of us.
 
 First, for our <a href="/map" target="_blank">Map & Data tool</a>, we needed to display eviction rates on a map of the entire country, at scales ranging from US states to Census block groups and everything in between. And not just those statistics, but a long list of Census variables too, making this a bivariate map. We needed geocoding so users could enter addresses and place names to find the locations of their choice. And we needed to be able to load all this data—almost a gigabyte of it, in total—at a speed rapid enough to keep pace with our users' curiosity. (Oh, and not to mention: have the ability to create custom PDF and Powerpoint reports on the fly!)
 

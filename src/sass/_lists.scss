@@ -574,6 +574,11 @@ a.read-more {
 }
 .page-id-events-list {
   padding-bottom: 4rem;
+  .postlist-left-col {
+    @include for-below-414 {
+      width: initial;
+    }
+  }
 }
 @include for-tablet-portrait-up {
   .page-id-events-list {
@@ -670,7 +675,7 @@ a.read-more {
     @include for-phone-only {
     font-size: 1rem;
     padding: .8rem 1.6rem;
-    margin: 1.6rem 0 0;
+    margin: 2.4rem 0 0;
       li {
         line-height: 2.4rem;
         img {

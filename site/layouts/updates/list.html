@@ -78,11 +78,11 @@
     {{ end }}
     </div><!-- end alt-rows -->
   {{ end }} <!-- end Blog listings -->
-  
+ 
   <div class="center-page-wrapper">
       {{ partial "pagination" . }}
   </div>
-
+  
  <!-- "NEXT EVENT" section -->
  {{ $events := where .Site.RegularPages "Params.contenttype" "events" }}
   {{ if isset $events 0 }} <!-- if there are events articles, list them -->
@@ -112,6 +112,7 @@
     {{ end }}        
   {{ end }} 
   {{ end }} 
+  
 {{ end }} <!-- end Blog page stuff -->
 
 
@@ -405,8 +406,9 @@
 
 <!-- ******* EVENTS ******* -->
 
-<div class="page-id-events-list">
+
 {{ if eq .Title "Events"}} <!-- if we are on the Events page, do stuff -->
+<div class="page-id-events-list">
   {{ $events := where .Site.RegularPages "Params.childof" "events" }}
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
   {{ $paginator := .Paginate (where .Site.RegularPages.Reverse "Params.childof" "events") 5 }}   
@@ -469,6 +471,5 @@
 <!-- ************** -->
 
 {{ partial "debug" . }}
-<span class="debug-visibility">rendered by = themes/THEMENAME/layouts/updates/list.html</span>
 
 {{ partial "footer" . }}
