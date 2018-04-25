@@ -572,11 +572,23 @@ a.read-more {
   margin-bottom: 0.8rem;
   margin-top: -1.6rem;
 }
+.page-id-events-list {
+  padding-bottom: 4rem;
+}
 @include for-tablet-portrait-up {
+  .page-id-events-list {
+    padding-bottom: 4.8rem;
+  }
   .breadcrumbs.bc-events.center-page-wrapper {
     margin-bottom: 0.8rem;
     }
   }
+@include for-tablet-landscape-up {
+  .page-id-events-list {
+    padding-bottom: 5.6rem;
+    padding-top: 0.8rem;
+  }
+}  
   @include sm-thru-med-desktop {  
     .page-id-events-list .custom-pagination {
       margin-bottom: 2.4rem;
@@ -587,6 +599,9 @@ a.read-more {
   .page-id-events-list .custom-pagination {
     margin-bottom: 3.2rem;
     margin-top: -1.6rem;
+    }  
+    .page-id-events-list {
+      padding-bottom: 7.2rem;
     }  
   } 
   
