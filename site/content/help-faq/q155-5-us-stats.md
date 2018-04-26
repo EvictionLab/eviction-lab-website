@@ -10,12 +10,12 @@ See the following table:
 
 <table class="page-stats table-responsive">
  <tr>
-  <th>Year</td>
-  <th>Renter Occupied Households</td>
-  <th>Eviction Filings</td>
-  <th>Evictions</td>
-  <th>Eviction Filing Rate</td>
-  <th>Eviction Rate</td>
+  <th>Year</th>
+  <th>Renter Occupied Households</th>
+  <th>Eviction Filings</th>
+  <th>Evictions</th>
+  <th>Eviction Filing Rate</th>
+  <th>Eviction Rate</th>
  </tr>
  <tr>
   <td>2000</td>
