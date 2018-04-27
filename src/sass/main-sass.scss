@@ -251,7 +251,8 @@ h3 {
   }
 }
 
-p, .center-content-post.page-list li, select, input, textarea, .post-body ol li, .post-body ul li, table.page-stats {
+p, .center-content-post.page-list li, select, input, textarea, .post-body ol li, .post-body ul li, table.page-stats, 
+table.page-stats td.table-text {
   @include for-phone-only {
     @include defaultFont(1.4rem); 
     line-height: 2rem;
@@ -325,7 +326,9 @@ table.page-stats {
     font-family: $numberFontStack;
     font-weight: 500;
     color: $color2;
-    
+  }
+  td.table-text {
+    color: #212529;
   }
 }
 

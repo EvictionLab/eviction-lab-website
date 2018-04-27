@@ -93,7 +93,7 @@ languageName = "English"
 [[Languages.en.menu.footer]]
     name = "Media Guide"
     weight = 12
-    url = "/updates/media/media-guide/"    
+    url = "/media-guide/"    
 
 
 [[Languages.en.menu.updates]]
@@ -211,7 +211,7 @@ languageName = "Español"
 [[Languages.es.menu.footer]]
     name = "Guía de medios"
     weight = 12
-    url = "/updates/media/media-guide/"     
+    url = "/media-guide/"     
 
 
 [[Languages.es.menu.updates]]
