@@ -187,6 +187,20 @@ $(function () {
   });
 });
 
+/**
+ * Update URL on accordion expand
+ */
+$(function() {
+  $('.accordion-section .collapsed').click(function() {
+    if (history.pushState) {
+      history.replaceState(null, null, $(this).attr('href'));
+    }
+    else {
+      location.hash = $(this).attr('href');
+    }
+  });
+});
+
 /** 
  * Social Share Popup 
  * ---
