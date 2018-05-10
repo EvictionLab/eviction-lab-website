@@ -42,6 +42,10 @@ $newsletterBg: #333;
     font-size:10px;
     height: grid(5);
     margin-bottom: 0;
+    letter-spacing: 0.054rem;
+  }
+  input#mce-EMAIL::placeholder {
+    color: #fff;
   }
 }
 // display signup form in one line on tablet+
@@ -67,9 +71,10 @@ $newsletterBg: #333;
       margin-right: grid(2);
     }
     .btn.btn-primary {
-      font-size: 15px;
+      font-size: 14px;
       height: grid(7);
       padding: 0 grid(7);
+      letter-spacing: 0.1rem;
     }
   }
 }
