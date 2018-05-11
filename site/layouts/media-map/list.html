@@ -1,9 +1,16 @@
 {{ partial "header" . }}
 
-<div class="page-list">
+<div class="page-list">  
     <div data-pym-src="https://evictionlab.github.io/media-map/">Loading...</div>
     <script type="text/javascript" src="https://pym.nprapps.org/pym-loader.v1.min.js"></script>
-    <table id="national-media-table" class="page-stats table-responsive"></table>
+    
+    <div class="center-page-wrapper">
+        <div class="center-content-post page-list">
+            <h2 class="bordered-header blue">National Media Coverage</h2>
+            <p></p>
+            <table id="national-media-table" class="page-stats table-responsive"></table>
+        </div>
+    </div>        
 </div>
 
 {{ partial "footer" . }}
