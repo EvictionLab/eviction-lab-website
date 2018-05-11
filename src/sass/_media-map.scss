@@ -1,0 +1,20 @@
+/* -- media-map.scss -- */
+
+
+.media-map {
+    padding-bottom: 4rem;
+        @include for-tablet-portrait-up {
+            padding-bottom: 5.6rem;
+        }
+    .bordered-header {
+        margin-bottom: 3.2rem;
+        /* margin-top: 4.8rem;
+        @include for-tablet-landscape-up {
+            margin-top: 2.4rem;
+        }
+        @include for-midsize-desktop-up {
+            margin-top: 4.8rem;
+        } */
+    }
+
+}
