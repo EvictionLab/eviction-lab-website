@@ -10,9 +10,10 @@
         margin-bottom: 3.2rem;
       
     }
-    div#pym-0-q1id6 {
+    div[data-pym-auto-initialized] {
         @include for-phone-only {
-        max-height: 90vh;
+        max-height: 65vh;
+        overflow: auto;
         }
     }
 }
