@@ -330,6 +330,18 @@ table.page-stats {
   td.table-text {
     color: #212529;
   }
+  a, a:hover {
+    color: $color1;
+  }
+}
+table#national-media-table {
+  height: 800px;
+  td {
+    font-family: Akkurat-Regular, sans-serif;
+    font-weight: 400;
+    
+  }
+  
 }
 
 // Buttons
@@ -498,3 +510,4 @@ p {
 @import 'footer';
 @import 'contact';
 @import 'data-form';
+@import 'media-map';
