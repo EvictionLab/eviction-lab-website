@@ -11,9 +11,13 @@
       
     }
     div[data-pym-auto-initialized] {
+        @media (max-height: 600px) {
+            max-height: 70vh;
+            overflow: auto;
+        }
         @include for-phone-only {
-        max-height: 65vh;
-        overflow: auto;
+            max-height: 65vh;
+            overflow: auto;
         }
     }
 }
