@@ -222,3 +222,37 @@ span.section-intro {
   letter-spacing: 0rem;
   margin-right: 2px;
 }
+
+// Graph embeds
+
+.graph-wrapper {
+  max-width: 800px;
+  margin: 0px auto;
+}
+.graph-embed {
+  position:relative;
+  width:100%;
+  height:112px;
+  margin:auto;
+  padding-top:56.25%;
+}
+.graph-embed iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.graph-wrapper .embed-responsive {
+  @include for-tablet-portrait-up {  
+    width: 124%;
+    margin-left: -12%;
+  }
+  @include for-midsize-desktop-up {
+    width: 110%;
+    margin-left: -5%;
+  }
+  @media (max-width: 446px) {
+    padding-bottom: 13%;
+  }
+}

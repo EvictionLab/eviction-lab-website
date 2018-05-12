@@ -40,3 +40,41 @@ a.cat-link {
 .alt-bg {
     background: #F4F7F9;
 }
+
+.natl-blog-table {
+    @include for-phone-only {
+        margin: 32px 24px;
+    }
+    @include for-tablet-portrait-up {
+        padding-top: 1.6rem;
+        padding-bottom: 4rem;
+        }
+    table.page-stats.table-responsive.natl-est {
+        height: 480px;
+        @include for-tablet-portrait-up {
+            width: 110%;
+            margin-left: -5%;
+        }
+        @include for-midsize-desktop-up {
+            width: 100%;
+            margin-left: 0;
+        }
+        tbody {
+            background: #fff;
+        }
+        tr {
+        @media (max-width: 1439px) {
+             font-size: 90%; 
+            }
+        }
+        tr:nth-child(even) {
+            background-color: #f4f4f7;
+          }
+    }
+}
+
+#natl-blog {
+    hr {
+        margin-top: 0;
+    }
+}
