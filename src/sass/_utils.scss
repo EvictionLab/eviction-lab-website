@@ -244,6 +244,7 @@ span.section-intro {
   height:100%;
 }
 .graph-wrapper .embed-responsive {
+  width: 90%;
   @include for-tablet-portrait-up {  
     width: 124%;
     margin-left: -12%;
