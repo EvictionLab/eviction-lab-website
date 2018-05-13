@@ -226,9 +226,6 @@ span.section-intro {
 // Graph embeds
 
 .graph-wrapper {
-  @include for-phone-only {
-    max-width: 80%;
-  }
   max-width: 800px;
   margin: 0px auto;
 }
