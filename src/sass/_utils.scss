@@ -244,7 +244,6 @@ span.section-intro {
   height:100%;
 }
 .graph-wrapper .embed-responsive {
-  width: 90%;
   @include for-tablet-portrait-up {  
     width: 124%;
     margin-left: -12%;
@@ -258,5 +257,10 @@ span.section-intro {
   }
   @media (min-width: 341px) and (max-width: 446px) {
     padding-bottom: 56px;
+  }
+  @media (max-width: 446px) {
+    [_nghost-c6]  {
+      width: 350px;
+  }
   }
 }
