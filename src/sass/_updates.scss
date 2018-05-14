@@ -7,19 +7,19 @@
 a.cat-link {
     text-transform: capitalize;
 }
-.blog-type {
+.blog-type, .blog-type a {
     color: #E04119;
     &:hover {
         color: $color1;
     }
 }
-.media-type {
+.media-type, .media-type a {
     color: #434878;
     &:hover {
         color: #434878;
     }
 }
-.research-type {
+.research-type, .research-type a {
     color: #2C897F;
     border-color: $color3;
     border: none;
@@ -30,7 +30,7 @@ a.cat-link {
 .events-list-header.research-type.outside-research {
    /* padding-top: 32px; */
 }
-.events-type {
+.events-type, .events-type a {
     color: #768693;
     border-color: $color6;
     &:hover {
