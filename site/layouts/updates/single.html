@@ -10,7 +10,7 @@
     <figure class="article-image">
       <img src="{{ .Param "image" }}" onError="this.onerror=null;this.classList.add('null-img');" />
       <figcaption>
-          <div class="bordered-header {{ .Params.childof }}-type"><span class="mobile-off">Eviction Lab</span> {{ .Params.contenttype }}<span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span></div>
+          <div class="bordered-header {{ .Params.childof }}-type"><a href="/updates"><span class="mobile-off">Eviction Lab</span> {{ .Params.contenttype }}</a><span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span></div>
         
       </figcaption>
     </figure>

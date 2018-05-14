@@ -237,6 +237,12 @@
       flex-direction: column;
       justify-content: space-between;
     }
+    @include for-tablet-portrait-up {
+      padding-top: 2px;
+    }
+    @include for-tablet-landscape-up {
+      padding-top: 6px;
+    }
     .authorname {
       @include for-below-414 {
         margin-bottom: 0.8rem;
