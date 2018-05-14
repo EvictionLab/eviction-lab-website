@@ -172,12 +172,12 @@ As the figures above show, our current data suggest there is nearly 1 eviction f
 
 <div class="graph-wrapper natl-graph1">
   <div class="embed-responsive embed-responsive-4by3 table-responsive">
-    <iframe src="https://evictionlab.org/tool/#/graph?items=nationwide%7Ce%2Bnationwide%7Cef" frameborder="0"></iframe>
+    <iframe class="embed-responsive-item" src="https://evictionlab.org/tool/#/graph?items=nationwide%7Ce%2Bnationwide%7Cef" frameborder="0"></iframe>
   </div>
 </div>
 <div class="graph-wrapper">
   <div class="embed-responsive embed-responsive-4by3 table-responsive">
-    <iframe src="https://evictionlab.org/tool/#/graph?items=nationwide%7Cer%2Bnationwide%7Cefr" frameborder="0"></iframe>
+    <iframe class="embed-responsive-item" src="https://evictionlab.org/tool/#/graph?items=nationwide%7Cer%2Bnationwide%7Cefr" frameborder="0"></iframe>
   </div>
 </div>
 
