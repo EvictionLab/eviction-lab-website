@@ -171,7 +171,7 @@ Below you will find a table that shows the number of evictions and filings we ar
 As the figures above show, our current data suggest there is nearly 1 eviction filing for every 17 renter households each year, with 1 in 40 receiving an eviction judgement against them. To put these numbers into perspective, at the peak of the financial crisis in 2010, <a href="https://www.corelogic.com/research/foreclosure-report/national-foreclosure-report-10-year.pdf" target="_blank">estimates suggest</a> slightly over one million foreclosures were completed nationally. By comparison, we see almost a million evictions against tenants every single year. The narrative on housing often focuses on displacement among homeowners, but our data suggests that there is an ongoing epidemic of eviction and displacement in the renting market. As you’ll see from the graphs below, the national eviction/filing rate has stayed very consistent over time, with small declines over the last few years.
 
 <div class="graph-wrapper natl-graph1">
-  <div class="graph-embed">
+  <div class="embed-responsive embed-responsive-4by3 table-responsive">
     <iframe src="https://evictionlab.org/tool/#/graph?items=nationwide%7Ce%2Bnationwide%7Cef" frameborder="0"></iframe>
   </div>
 </div>
