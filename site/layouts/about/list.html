@@ -114,6 +114,7 @@
           <li role="presentation" class="active"><a href="#team1" aria-controls="home" role="tab" data-toggle="tab">{{ .Params.Bios1 }}</a></li>
           <li role="presentation"><a href="#team2" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios2 }}</a></li>
           <li role="presentation"><a href="#team3" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios3 }}</a></li>
+          <li role="presentation"><a href="#team4" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios4 }}</a></li>
       </ul>
         {{ end }}
         {{ end }}
@@ -139,7 +140,7 @@
           </div>
           </div> <!-- End Student Researcher tab-pane -->
         <!-- *************** Web Team Bios ******************** -->
-        <div role="tabpanel" class="tab-pane" id="team3">
+          <div role="tabpanel" class="tab-pane" id="team3">
             <div class="bio-thumbs">
                 {{ range (where .Site.RegularPages "Params.childof" ("web-team-bios")) }}
                 {{ if eq .Params.childof "web-team-bios" }} 
@@ -147,6 +148,17 @@
                 {{ end }}
                 {{ end }}
             </div>
+          </div> <!-- End Web Team tab-pane -->  
+         <!-- *************** Citizen Researcher Bios ******************** -->  
+            <div role="tabpanel" class="tab-pane" id="team4">
+              <p>We thank the following Citizen Researchers for helping us build America’s first national database of evictions by providing original data to the Eviction Lab. If you would like to share eviction data with us, please email research@evictionlab.org. </p>
+                <div class="bio-thumbs citizen-r">
+                    {{ range (where .Site.RegularPages "Params.childof" ("citizen-researchers-bios")) }}
+                    {{ if eq .Params.childof "citizen-researchers-bios" }} 
+                      {{ partial "citizens-panel" . }}
+                    {{ end }}
+                    {{ end }}
+                </div>
             </div> <!-- End Web Team tab-pane -->  
         </div> <!-- tab-content -->
        
