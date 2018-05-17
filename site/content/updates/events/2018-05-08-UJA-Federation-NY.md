@@ -1,6 +1,6 @@
 ---
-childof: events
-contenttype: events
+childof: events2
+contenttype: events2
 title: Tackling Poverty Today
 subtitle: Well damn
 date: 2018-05-08T22:43:04.337Z
