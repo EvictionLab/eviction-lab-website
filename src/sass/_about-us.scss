@@ -58,6 +58,15 @@
                 padding-bottom: 5rem;
             }
         }
+       .bio-thumbs p:last-child {
+            padding-bottom: 4.4rem;
+        @include for-tablet-landscape-up {
+            padding-bottom: 5.4rem;
+            }
+        @include for-midsize-desktop-up {
+            padding-bottom: 6.2rem;
+            }
+        }
     }
     
     .center-content-post.page-list {
@@ -161,6 +170,10 @@
     }
 }
 .el-bios {
+    margin-bottom: 1.6rem;
+	@include for-midsize-desktop-up {
+    		margin-bottom: 2.4rem;
+    }
     // give bio images some breathing room
     @include for-480-up {
         margin-left: -16px;
@@ -257,7 +270,7 @@
             }
             margin: .4rem auto 0;
             @include for-tablet-portrait-up {
-                margin: .4rem auto 0;
+                margin: .6rem auto 0;
             }
         }
         /* .bio-container p:first-of-type {
@@ -341,6 +354,7 @@
         p.bio-position {
             text-align: center;
             max-width: 192px;
+            margin: auto;
         }
         a:focus {
             box-shadow: none;
