@@ -1,6 +1,6 @@
 ---
-childof: events
-contenttype: events
+childof: events2
+contenttype: events2
 title: 'Pathstone Presents: Provoking Thought'
 subtitle: Well damn
 date: 2018-05-09T22:43:04.337Z
