@@ -151,15 +151,19 @@
           </div> <!-- End Web Team tab-pane -->  
          <!-- *************** Citizen Researcher Bios ******************** -->  
             <div role="tabpanel" class="tab-pane" id="team4">
-              <p>We thank the following Citizen Researchers for helping us build America’s first national database of evictions by providing original data to the Eviction Lab. If you would like to share eviction data with us, please email research@evictionlab.org. </p>
-                <div class="bio-thumbs citizen-r">
-                    {{ range (where .Site.RegularPages "Params.childof" ("citizen-researchers-bios")) }}
-                    {{ if eq .Params.childof "citizen-researchers-bios" }} 
-                      {{ partial "citizens-panel" . }}
-                    {{ end }}
-                    {{ end }}
-                </div>
-            </div> <!-- End Web Team tab-pane -->  
+              {{ range (where .Site.RegularPages "Params.childof" ("about")) }}
+              {{ if eq .Params.type "meta" }}  
+                {{ .Content }}
+              {{ end }}
+              {{ end }}  
+                  <div class="bio-thumbs citizen-r">
+                      {{ range (where .Site.RegularPages "Params.childof" ("citizen-researchers-bios")) }}
+                      {{ if eq .Params.childof "citizen-researchers-bios" }} 
+                        {{ partial "citizens-panel" . }}
+                      {{ end }}
+                      {{ end }}
+                  </div>
+              </div> <!-- End Web Team tab-pane -->  
         </div> <!-- tab-content -->
        
      

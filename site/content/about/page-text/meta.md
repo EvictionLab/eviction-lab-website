@@ -17,4 +17,5 @@ Bios2: Student Researchers
 Bios3: Web Team
 Bios4: Citizen Researchers
 ---
+We thank the following Citizen Researchers for helping us build America’s first national database of evictions by providing original data to the Eviction Lab. If you would like to share eviction data with us, please email <a href="mailto:research@evictionlab.org">research@evictionlab.org</a>.
 

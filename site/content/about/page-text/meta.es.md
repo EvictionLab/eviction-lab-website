@@ -17,4 +17,4 @@ Bios2: Estudiantes Investigadores
 Bios3: Equipo Web
 Bios4: Investigadores Ciudadanos
 ---
-
+Agradecemos a los siguientes investigadores ciudadanos por ayudarnos a construir la primera base de datos nacional de desalojos de los Estados Unidos al proporcionar datos originales al Eviction Lab. Si desea compartir datos de desalojo con nosotros, envíe un correo electrónico a <a href="mailto:research@evictionlab.org">research@evictionlab.org</a>.
