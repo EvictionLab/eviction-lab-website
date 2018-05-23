@@ -8,6 +8,10 @@ faqid: low-rate
 ---
 On the map, we have indicated with the symbol <img class="hint" src="/images/icons/hint-icon.png" /> states with underestimated eviction counts. Of course, some places have low eviction rates because there are few renters living there or because there are very few evictions. But some states and the District of Columbia have underestimated eviction counts in our dataset for a variety of reasons.
 
+Because coverage within our dataset is dependent on the area and year, it is possible for a single county to have fluctuations in data collection over time. As explained in our Methodology Report, we have flagged counties and embedded geographies (e.g., census tracts, block groups) with low eviction estimates. However, since we validated our estimates at the county level, eviction estimates of census tracts and block groups that make up a low-estimate county may not in fact be undercounted. Data downloaded from the Get the Data page will contain these flags.
+
+Here is a list of known issues with data collection at the state level, which have been flagged on our map:
+
 In New York, records are often kept as “abstracted judgments,” which means they are only in the public record if the plaintiff/landlord pays to have them placed there. That plus the amount of town and village courts in the state makes collection difficult.
 
 In California, many cases that end in eviction are sealed and therefore not accessible by the general public. In addition, it can be difficult to collect data from California as a whole, owing to restrictions on the number of records one can collect.

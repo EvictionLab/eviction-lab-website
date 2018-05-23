@@ -6,4 +6,4 @@ type: methods
 weight: 190
 faqid: estimate-rate
 ---
-We used a common practice for missing data called “imputation.” For more information on this, please see the <a href="/docs/Eviction Lab -Methodology Report v.1.0.0.pdf" target="_blank">Methodology Report (PDF)</a>.
+We used a common practice for missing data called “imputation.” For more information on this, please see the <a href="/docs/Eviction Lab Methodology Report.pdf" target="_blank">Methodology Report (PDF)</a>.

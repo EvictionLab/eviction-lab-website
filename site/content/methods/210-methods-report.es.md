@@ -6,4 +6,4 @@ type: methods
 weight: 210
 faqid: methods-report
 ---
-Sí. Se puede  <a href="/docs/Eviction Lab -Methodology Report v.1.0.0.pdf" target="_blank">descargar el informe completo (PDF) aquí</a>.
+Sí. Se puede  <a href="/docs/Eviction Lab Methodology Report.pdf" target="_blank">descargar el informe completo (PDF) aquí</a>.
