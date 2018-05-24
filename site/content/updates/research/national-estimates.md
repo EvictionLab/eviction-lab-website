@@ -2,6 +2,7 @@
 childof: research
 contenttype: updates
 contentcat: research
+featured: "home"
 researchtype: elresearch
 title: 'National Estimates: Eviction in America'
 date: 2018-05-11T16:46:40.089Z
