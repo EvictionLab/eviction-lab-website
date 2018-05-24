@@ -37,4 +37,4 @@ information.
 The following report details the Eviction Lab’s methodology. For further information, please
 email <a href="mailto:research@evictionlab.com">research@evictionlab.com</a>.
 
-<a href="/docs/Eviction Lab -Methodology Report v.1.0.0.pdf" target="_blank">Read the full report (PDF)</a>
+<a href="/docs/Eviction Lab Methodology Report.pdf" target="_blank">Read the full report (PDF)</a>

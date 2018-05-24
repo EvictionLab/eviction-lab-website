@@ -8,6 +8,10 @@ faqid: low-rate
 ---
 En el mapa, hemos indicado con el símbolo <img class="hint" src="/images/icons/hint-icon.png" /> estados con recuentos de desalojo subestimados. Por supuesto, algunos lugares tienen bajas tasas de desalojo porque hay pocos inquilinos que viven allí o porque hay muy pocos desalojos. Pero algunos estados y el Distrito de Columbia han subestimado los conteos de desalojo en nuestro conjunto de datos por una variedad de razones.
 
+Debido a que la cobertura dentro de nuestro conjunto de datos depende del área y el año, es posible que un solo condado tenga fluctuaciones en la recopilación de datos a lo largo del tiempo. Como se explica en nuestro informe de metodología, hemos marcado condados y geografías incrustadas (por ejemplo, secciones censales, grupos de bloques) con estimaciones de desalojo bajas. Sin embargo, dado que validamos nuestras estimaciones a nivel de condado, las estimaciones de desalojo de secciones censales y grupos de bloques que conforman un condado de baja estimación pueden de hecho no ser contadas por debajo. Los datos descargados de la página Obtener los datos contendrán estos indicadores.
+
+Aquí hay una lista de problemas conocidos con la recopilación de datos a nivel estatal, que se han marcado en nuestro mapa:
+
 En Nueva York, los registros a menudo se guardan como "juicios abstractos", lo que significa que solo están en el registro público si el demandante/propietario paga para que se los coloquen allí. Eso, sumado a la cantidad de tribunales de la ciudad y el pueblo en el estado dificulta la recaudación.
 
 En California, muchos casos que terminan en desalojo están sellados y por lo tanto no son accesibles para el público en general. Además, puede ser difícil recopilar datos de California en su conjunto, debido a las restricciones en la cantidad de registros que se pueden recopilar.
