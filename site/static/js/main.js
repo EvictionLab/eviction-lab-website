@@ -247,7 +247,7 @@ function createMediaTable(oneLastUpdated, oneRowCount, lastUpdated, rows) {
   var updatedTwo = Date.parse(lastUpdated.slice(0, 10));
   var dateNum = updatedOne >= updatedTwo ? updatedOne : updatedTwo;
   var updatedDate = new Date(dateNum);
-  var updatedStr = (updatedDate.getMonth() + 1) + '/' + (updatedDate.getDate() + 1) + '/' + updatedDate.getFullYear();
+  var updatedStr = updatedDate.toLocaleDateString("en-US");
 
   $("#lastUpdated").html(updatedStr);
   $("#numLocalStories").html(oneRowCount.toLocaleString());
