@@ -6,7 +6,7 @@ childof: datamerge
 ---
 Eviction records can be merged with other data sources, by name and address, to provide previously unknown information about eviction experiences in other data sources.  All these merges will take place in the Eviction Lab at no cost.
 
-<span class="ak-bold">For your data to be considered for a merge, please apply via email to <a href="mailto:research@evictionlab.org?subject=Data Merge Application" target="_blank">research@evictionlab.org</a> and answer all the following questions:</span>
+<span class="ak-bold">For your data to be considered for a merge, please apply via email to <a href="mailto:data.merge@evictionlab.org?subject=Data Merge Application" target="_blank">data.merge@evictionlab.org</a> and answer all the following questions:</span>
 
 <ol class="list-initial">
 <li>Briefly describe your data.</li>
