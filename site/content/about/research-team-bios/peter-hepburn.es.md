@@ -2,10 +2,10 @@
 childof: research-team-bios
 title: Peter Hepburn
 abbrev: phepburn
-position: Associate Professional Specialist
+position: Especialista profesional asociado
 date: 2017-11-26T03:46:25.603Z
 image: /images/bios/aporton_full.jpg
 thumb: /images/bios/aporton_thumb.jpg
 weight: 15
 ---
-Peter joined the Eviction Lab as an Associate Professional Specialist after completing his doctorate in Sociology and Demography at the University of California, Berkeley. Peter's research examines the ways that employment practices and public policies affect children and low-income families. His dissertation analyzed the relationships between parental working schedules, household structure, and childcare arrangements. He has also studied the effects of mass imprisonment on kin networks, exposure to subfelony criminal justice in New York City, and trajectories of employment and disability among American workers. Generally, he's interested in the possibilities that nontraditional quantitative data sources and new methodologies present for better describing social phenomena and their variability. Peter runs one marathon a year and no, he has not qualified for Boston (thank you for asking). You can read more about him at pshepburn.github.io.
+Peter se unió al Eviction Lab como Especialista Profesional Asociado después de completar su doctorado en Sociología y Demografía en la Universidad de California, Berkeley. La investigación de Peter examina las formas en que las prácticas de empleo y las políticas públicas afectan a los niños y las familias de bajos ingresos. Su tesis doctoral analizó las relaciones entre los horarios de trabajo de los padres, la estructura del hogar y los arreglos para el cuidado de los niños. También ha estudiado los efectos del encarcelamiento masivo en las redes de parentesco, la exposición a la justicia penal subyacente en la ciudad de Nueva York y las trayectorias de empleo y discapacidad entre los trabajadores estadounidenses. Generalmente, le interesan las posibilidades de que las fuentes de datos cuantitativas no tradicionales y las nuevas metodologías se presenten para describir mejor los fenómenos sociales y su variabilidad. Peter corre un maratón al año y no, no calificó para Boston (gracias por preguntar). Se puede leer más sobre él en pshepburn.github.io.
