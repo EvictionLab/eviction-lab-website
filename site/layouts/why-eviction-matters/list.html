@@ -42,18 +42,38 @@
 <div class="alt-page eviction-matters social-side">
 {{ partial "social-share-vert" . }}
 
+<!-- ************ -->
+    <!-- Video section -->
+    <!-- ************ -->
+
+    <div class="alt-bg video-panel">
+      <div class="center-content-post page-list">
+          <a name="video"></a>
+          {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
+            {{ if eq .Params.type "video" }}
+            <h4 class="subhead bordered-header">{{ .Params.header }}</h4>
+
+            {{ partial "videocarousel" . }}
+    
+        
+            {{ end }}
+          {{ end }}      
+        </div>
+    </div>    
+
+
 <div class="center-page-wrapper">
   <div class="center-content-post page-list eviction-facts">
-    <div id="wem-intro">
+    <!--<div id="wem-intro">
         <a name="wem-intro-link"></a>
         {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
         {{ if eq .Params.type "intro" }}
-        <h2 class="bordered-header blue ">{{ .Title }}</h2>
+        <h2 class="bordered-header blue ">{{ .Title }}</h2> -->
         <!-- faq item -->
-          {{ .Content }}
+         <!-- {{ .Content }}
         {{ end }}
         {{ end }}
-    </div>
+    </div>-->
       <a name="eviction-facts"></a>
 
     <!-- ************ -->
@@ -70,7 +90,7 @@
         {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
         {{ if eq .Params.type "faq" }}
         <!-- faq item -->
-          {{ partial "evictionfaqs" . }}
+          {{ partial "faqs" . }}
         {{ end }}
         {{ end }}
 
@@ -78,42 +98,7 @@
 
   </div><!-- End center content post -->
 </div><!-- End center page wrapper -->
-    <!-- ************ -->
-    <!-- Video section -->
-    <!-- ************ -->
-
-<div class="alt-bg video-panel">
-  <div class="center-content-post page-list">
-      <a name="video"></a>
-      {{ range (where .Site.RegularPages "Params.childof" ("evictionMatters")) }}
-        {{ if eq .Params.type "video" }}
-        <h4 class="subhead bordered-header">{{ .Params.header }}</h4>
-
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="video1"> 
-                <div class="video-container"><iframe width="720" height="405" src="https://www.youtube.com/embed/zOsr3AcZAsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
-            </div>
-          <div role="tabpanel" class="tab-pane" id="video2"> 
-              <div class="video-container"><iframe width="720" height="405" src="https://www.youtube.com/embed/KElgG_s1DkE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="video3">  
-              <div class="video-container"><iframe width="720" height="435" src="https://www.youtube.com/embed/2ovyccOXyoQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="video4">  
-              <div class="video-container"><iframe width="720" height="405" src="https://www.youtube.com/embed/NY4Q8XQ0n6E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
-          </div>
-          
-        </div>  
-        <ul class="nav nav-tabs anchor-links" role="tablist">
-            <li role="presentation" class="active"><a href="#video1" aria-controls="home" role="tab" data-toggle="tab">{{ .Params.v1 }}</a> | </li>
-            <li role="presentation"><a href="#video2" aria-controls="home" role="tab" data-toggle="tab">{{ .Params.v2 }}</a> | </li>
-            <li role="presentation"><a href="#video3" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.v3 }}</a> | </li>
-            <li role="presentation"><a href="#video4" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.v4 }}</a></li>
-        </ul>
-        {{ end }}
-      {{ end }}      
-    </div>
-</div>    
+    
     
 
     <!-- ******************* -->
@@ -182,4 +167,3 @@
 </div><!-- end WEM Page ID -->
 
 {{ partial "footer" . }}
-

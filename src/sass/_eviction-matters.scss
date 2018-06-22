@@ -95,7 +95,75 @@
         padding-bottom: 2.4rem;
         @include for-tablet-portrait-up {
             padding-bottom: 4.8rem;
+            padding-left: 8.8rem;
+            padding-right: 8.8rem;
         }
+        .center-content-post.page-list {
+            max-width: 1200px;
+        }
+        .bordered-header {
+            @include for-tablet-landscape-up {
+                width: calc(135vh - 120px);
+                max-width: 850px;
+            }
+            @media (min-width: 1376px) {
+            max-width: calc(135vh - 120px);
+            }
+        }
+        .carousel-indicators {
+            position: relative;
+            bottom: -16px;
+            height: 56px;
+        }
+        iframe {
+            @include for-tablet-landscape-up {
+                max-height: 510px;
+                max-width: 850px;
+                height: calc(90vh - 120px);
+                width: calc(135vh - 120px);
+                }
+            @media (min-width: 1376px) {
+                height: calc(90vh - 120px) !important;
+                width: calc(135vh - 120px)!important;
+                max-width: 100%;
+                max-height: 710px; 
+        }
+        .video-container {
+            @include for-tablet-landscape-up {
+                width: calc(135vh - 120px);
+                height: calc(90vh - 120px);
+                padding-bottom: 0;
+                max-width: 850px;
+                max-height: 510px; 
+                margin: auto;
+                }
+            @media (min-width: 1376px) {
+                width: calc(135vh - 120px);
+                height: calc(90vh - 120px);
+                margin: auto;
+                padding-bottom: 0;
+                max-width: 1200px;
+                max-height: 710px; 
+            }
+        }
+        .carousel-caption {
+            top: 60%;
+            left: 15%;
+            text-align: left;
+        }  
+        .carousel-indicators {
+            li {
+                width: 100px;
+               
+                text-indent: 0;
+                img {
+                    width: 100px;
+            
+                }
+                
+            }
+        }
+        
         li, a {
             color: #fff;
             display: inline;
