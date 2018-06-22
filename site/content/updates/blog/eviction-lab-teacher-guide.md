@@ -14,6 +14,7 @@ subhead: Bring EvictionLab.org into the Classroom
 url: /teacher-guide
 aliases:
     - /updates/blog/teacher-guide
+    - /updates/blog/eviction-lab-teacher-guide/
 ---
  
 <a href="https://evictionlab.org">Evictionlab.org</a> can be a resource for teachers working with students on data analysis, public policy, social studies, and more. Students in service organizations or those who act as representatives to local governing bodies may also benefit from learning about housing issues in their community.
