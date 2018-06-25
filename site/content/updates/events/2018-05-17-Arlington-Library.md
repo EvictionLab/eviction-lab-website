@@ -1,6 +1,6 @@
 ---
-childof: events
-contenttype: events
+childof: events2
+contenttype: events2
 title: 'Arlington Reads - "Evicted" by Matthew Desmond'
 date: 2018-05-17T22:43:04.337Z
 website: 'https://www.milwaukeejewish.org/events/jfs-presents-matthew-desmond-home-and-hope-a-community-call-to-action/'
