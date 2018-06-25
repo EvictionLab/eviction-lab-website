@@ -133,10 +133,12 @@
         .carousel {
             @include for-tablet-landscape-up {
                 max-width: 850px;
+                width: calc(135vh - 120px);
                 margin: auto;
             }
             @media (min-width: 1376px) {
                 max-width: 100%;
+                width: calc(135vh - 120px);
                 margin: auto;
             }
         }
@@ -175,6 +177,7 @@
         .carousel-control-next, .carousel-control-prev {
             top: 41%;
             width: 6%;
+            height: 6%;
         }
         
         li, a {
