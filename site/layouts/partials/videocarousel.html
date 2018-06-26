@@ -120,7 +120,6 @@
     carouselEl.on('slid.bs.carousel', function (e) {
       var newVideo = $(e.relatedTarget).find('iframe').attr('id');
       currentVideoId = newVideo;
-      videos[newVideo].player.playVideo();
     });
     carouselEl.find('.carousel-item')
       .eq(currentVideoIndex)
