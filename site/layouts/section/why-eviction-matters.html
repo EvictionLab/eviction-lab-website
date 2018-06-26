@@ -1,0 +1,137 @@
+{{ partial "header" . }}
+
+<!-- section header -->
+<div class="graphic-header wem-hero center-page-wrapper">
+  <div class="center-page">
+    <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
+<!-- subnav -->
+<div class="shadow-bottom center-page-wrapper subnav">
+  <div class="center-content-post max1200">
+    <ul class="anchor-links mobile-off">
+      <li class="only-larger-screens">{{ .Params.nav.li1 }}</li>
+      <li><a href="#wem-intro-link" class="smoothScroll">{{ .Params.nav.li2 }}</a></li>
+      <li><a href="#eviction-facts" class="smoothScroll">{{ .Params.nav.li3 }}</a></li>
+      <li><a href="#video" class="smoothScroll">{{ .Params.nav.li4 }}</a></li>
+      <li><a href="#evicted-book" class="smoothScroll">{{ .Params.nav.li5 }}</a></li>
+    </ul>
+    <div class="dropdown mobile-on">
+      <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ .Params.nav.li1 }}
+      </button>
+      <ul class="anchor-links dropdown-menu">
+        <li><a class="dropdown-item smoothScroll" href="#wem-intro-link">{{ .Params.nav.li2 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#eviction-facts">{{ .Params.nav.li3 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#video">{{ .Params.nav.li4 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#evicted-book">{{ .Params.nav.li5 }}</a></li>            
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="alt-page eviction-matters social-side">
+
+  {{ partial "social-share-vert" . }}
+
+  <!-- ************ -->
+  <!-- Video section -->
+  <!-- ************ -->
+
+  <div class="alt-bg video-panel">
+    <div class="center-content-post page-list">
+      <a name="video"></a>
+      <h4 class="subhead bordered-header">{{ .Params.videoSection.heading }}</h4>
+        {{ partial "videocarousel" .Params.videoSection.videos }}
+    </div>
+  </div>    
+
+
+  <div class="center-page-wrapper">
+    <div class="center-content-post page-list eviction-facts">
+      <!--<div id="wem-intro">
+          <a name="wem-intro-link"></a>
+          <h2 class="bordered-header blue ">{{ .Params.intro.heading }}</h2>
+          {{ .Params.intro.text }}
+      </div>-->
+      
+      <a name="eviction-facts"></a>
+
+      <!-- ************ -->
+      <!-- Eviction FAQ Section -->
+      <!-- ************ -->
+
+      <h2 class="bordered-header blue ">{{ .Params.faqSection.heading }}</h2>
+      <div class="eviction-qa">
+        <!-- faq item -->
+        {{ range .Params.faqSection.faq }}
+          <div class="facts-section">
+            <p class="ak-bold">{{ .question }}</p>
+            {{ .answer | safeHTML }}
+          </div>
+        {{ end }}
+      </div>
+
+    </div><!-- End center content post -->
+  </div><!-- End center page wrapper -->
+    
+
+    <!-- ******************* -->
+    <!-- Evicted Book Section -->
+    <!-- ******************* -->
+
+  <div class="alt-bg book-panel">
+    <a name="evicted-book"></a>
+    <div class="center-content-post page-list">    
+      <h2 class="page-section-header">{{ .Params.book.heading }}</h2>
+      <div class="evicted-book">
+        <div class="book-img">
+          <img src="/images/assets/evicted-book.jpg" />
+          <p class="subcopy">
+            <span>{{ .Params.book.subcopy }}</span>
+            <br />{{ .Params.book.subcopy2 }}
+          </p>
+        </div>
+        <div class="book-copy">
+          {{ .Params.book.copy | markdownify }}
+          {{ partial "book-modal" . }}
+          <div class="button-wrap">
+            <a class="btn-primary" data-toggle="modal" data-target="#buy-book-modal" href="#">
+              {{ .Params.book.button }}
+            </a>
+          </div>
+        </div> 
+      </div>
+      <!-- end evicted-book -->
+
+      <div class="praise mobile-off">
+        <h4 class="subhead bordered-header blue">{{ .Params.praise.heading }}</h4> 
+        <div class="column-wrap"> 
+          <div class="column-left">
+          {{ range .Params.praise.quotes.left }}
+              <p>{{ .quote | safeHTML }}</p>
+              <p class="attrib">{{ .attrib }}</p> 
+          {{ end }}
+          </div>
+          <div class="column-right">
+            {{ range .Params.praise.quotes.right }}
+                <p>{{ .quote | safeHTML }}</p>
+                <p class="attrib">{{ .attrib }}</p> 
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      <!-- end Praise -->
+
+    </div><!-- end center-content-post -->
+  </div><!-- end alt-bg book-panel -->
+</div><!-- end page-content wrapper -->
+
+
+</div><!-- end center page wrapper -->
+</div><!-- end alt-bg -->
+</div><!-- end WEM Page ID -->
+
+{{ partial "footer" . }}
