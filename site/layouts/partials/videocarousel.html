@@ -17,16 +17,16 @@
   </div>
   <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Previous Video</span>
   </a>
   <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Next Video</span>
   </a>
   <ol class="carousel-indicators">
     {{ range $i, $e := . }}
-      <li id="vt{{ add $i 1 }}" data-target="#videoCarousel" data-slide-to="{{ $i }}" class="{{ if not $i }}active{{ end }}">
-        <img src="{{ $e.thumb }}" />
+      <li id="vt{{ add $i 1 }}" data-target="#videoCarousel" data-slide-to="{{ $i }}" role="button">
+        <img src="{{ $e.thumb }}" alt="{{ $e.title }}" />
       </li>
     {{ end }}
   </ol>

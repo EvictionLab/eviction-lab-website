@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Eviction Lab</title>
+    <link>/updates/blog/</link>
+    <description>Recent content in Blog on Eviction Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Nov 2017 20:43:20 -0900</lastBuildDate>
+    
+	<atom:link href="/updates/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How We Partnered With Mapbox to Visualize Evictions Nationwide</title>
+      <link>/updates/blog/how-we-built-with-mapbox/</link>
+      <pubDate>Tue, 24 Apr 2018 23:15:05 +0000</pubDate>
+      
+      <guid>/updates/blog/how-we-built-with-mapbox/</guid>
+      <description>When Matthew Desmond and his Eviction Lab research team offered us the task of mapping and visualizing their first-of-its-kind database of eviction statistics, we (the web team) were excited, honored, and humbled. And then, when things began to get real and the project took shape, we drew a collective deep breath as we grasped the magnitude of the challenges ahead of us.
+First, for our Map &amp;amp; Data tool, we needed to display eviction rates on a map of the entire country, at scales ranging from US states to Census block groups and everything in between.</description>
+    </item>
+    
+    <item>
+      <title>&#34;Evicted&#34; Takes Form in New Museum Exhibit</title>
+      <link>/updates/blog/evicted-natl-building-museum/</link>
+      <pubDate>Wed, 18 Apr 2018 23:15:05 +0000</pubDate>
+      
+      <guid>/updates/blog/evicted-natl-building-museum/</guid>
+      <description>First there was the book Evicted, with its heartbreaking stories of families and individuals struggling to maintain stable shelter. Next came the release of The Eviction Lab&amp;rsquo;s database, revealing the often-surprising scale and span of the eviction crisis. Now eviction and its consequences are explored in a 3-dimensional, immersive presentation at The National Building Museum&amp;rsquo;s Evicted exhibition.
+ 
+The exhibit offers photographic and video profiles of two families threatened with eviction, along with tactile infographics and artifacts of the process of a forced move, such as belongings piled on a pallet and wrapped in plastic for storage.</description>
+    </item>
+    
+    <item>
+      <title>Welcome to the Eviction Lab.  Let’s Get to Work!</title>
+      <link>/updates/blog/welcome-to-the-eviction-lab/</link>
+      <pubDate>Sat, 07 Apr 2018 23:15:05 +0000</pubDate>
+      
+      <guid>/updates/blog/welcome-to-the-eviction-lab/</guid>
+      <description>Imagine if we didn’t know how many Americans were incarcerated each year or how many dropped out of high school, got divorced, or lost their job. If we don’t know how big a problem something is, where it is happening, or how many families are touched by it, then how can we begin the critical work of finding solutions?
+That’s exactly where we’ve been with the topic of eviction: stumbling in the dark.</description>
+    </item>
+    
+    <item>
+      <title>The Eviction Lab Teacher&#39;s Guide</title>
+      <link>/teacher-guide/</link>
+      <pubDate>Sat, 07 Apr 2018 13:13:05 +0000</pubDate>
+      
+      <guid>/teacher-guide/</guid>
+      <description>Evictionlab.org can be a resource for teachers working with students on data analysis, public policy, social studies, and more. Students in service organizations or those who act as representatives to local governing bodies may also benefit from learning about housing issues in their community.
+We would love to hear from teachers who use evictionlab.org in their classrooms. We hope to design more resources for educators in the future and would value knowing how students engaged with our work.</description>
+    </item>
+    
+  </channel>
+</rss>

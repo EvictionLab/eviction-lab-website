@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Methods | Eviction Lab on Eviction Lab</title>
+    <link>/methods/</link>
+    <description>Recent content in Methods | Eviction Lab on Eviction Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Nov 2017 20:43:49 -0800</lastBuildDate>
+    
+	<atom:link href="/methods/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is the Eviction Lab?</title>
+      <link>/methods/page-content/102-what-is/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/102-what-is/</guid>
+      <description>The Eviction Lab is a research organization dedicated to studying the prevalence, causes, and consequences of eviction. The database it has built represents the largest accumulation of U.S. court records related to eviction ever compiled.</description>
+    </item>
+    
+    <item>
+      <title>What data has the Eviction Lab collected?</title>
+      <link>/methods/page-content/110-what-data/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/110-what-data/</guid>
+      <description>The data we collected is comprised of formal eviction records from 48 states and the District of Columbia. Eviction records include information related to an eviction court case, such as defendant and plaintiff names, the defendant’s address, monetary judgment information, and an outcome for the case. We combined these records with demographic information from the Census to paint a better picture of the areas in which these evictions are happening.</description>
+    </item>
+    
+    <item>
+      <title>Are these all the evictions that have taken place?</title>
+      <link>/methods/page-content/120-all-evictions/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/120-all-evictions/</guid>
+      <description>No. Evictions can happen outside of the courtroom, as when landlords pay renters to leave or execute illegal lockouts. There is some evidence that “informal evictions” are more common than “formal”, court-ordered evictions. Informal evictions are not captured in our dataset. Moreover, while we have tried to collect every recorded court-ordered eviction case, going back to 2000, some records were unavailable. Some courts seal eviction cases; others have not archived data; still others make recording eviction cases time-consuming and difficult.</description>
+    </item>
+    
+    <item>
+      <title>How did you collect the data?</title>
+      <link>/methods/page-content/130-how-collected/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/130-how-collected/</guid>
+      <description>First, we requested a bulk report of cases directly from courts. These reports included all recorded information related to eviction-related cases. Second, we conducted automated record collection from online portals, via web scraping and text parsing protocols. Third, we partnered with companies that carry out manual collection of records, going directly into the courts and extracting the relevant case information by hand.</description>
+    </item>
+    
+    <item>
+      <title>Where do your data come from?</title>
+      <link>/methods/page-content/140-whence-data/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/140-whence-data/</guid>
+      <description>We have accumulated over 80 million records related to eviction. The Eviction Lab directly collected court records from 12 states. But many states either did not centralize their eviction data or were unwilling to release this information. Accordingly, the Eviction Lab then purchased more comprehensive datasets of public eviction records from two companies: LexisNexis Risk Solutions and American Information Research Services Inc.
+We also collected state reported, county-level statistics on landlord-tenant cases filed from 27 states, New York City, and the District of Columbia.</description>
+    </item>
+    
+    <item>
+      <title>What is the difference between a filing rate and an eviction rate?</title>
+      <link>/methods/page-content/150-filing-vs-rate/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/150-filing-vs-rate/</guid>
+      <description>A “filing rate” is the ratio of the number of evictions filed in an area over the number of renter-occupied homes in that area. An “eviction rate” is the subset of those homes that received an eviction judgement in which renters were ordered to leave. The filing rate also counts all eviction cases filed in an area, including multiple cases filed against the same address in the same year. But an eviction rate only counts a single address who received an eviction judgement.</description>
+    </item>
+    
+    <item>
+      <title>How did you calculate the filing/eviction rate?</title>
+      <link>/methods/page-content/160-calculate-rate/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/160-calculate-rate/</guid>
+      <description>For the denominator of our rate, we used the number of occupied renting households in each area. Information on the number of renter homes in an area comes from the U.S. Census and ESRI Business Analyst demographic estimates.</description>
+    </item>
+    
+    <item>
+      <title>How did you clean the data?</title>
+      <link>/methods/page-content/170-cleaning/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/170-cleaning/</guid>
+      <description>To create the best estimates, all data we obtained underwent a rigorous cleaning protocol. This included formatting the data so that each observation represented a household; cleaning and standardizing the names and addresses; and dropping duplicate cases. The details of this process can be found in the Methodology Report (PDF).</description>
+    </item>
+    
+    <item>
+      <title>How were you able to determine the amount of evictions in each neighborhood?</title>
+      <link>/methods/page-content/180-how-number-evictions/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/180-how-number-evictions/</guid>
+      <description>Eviction records contain addresses. We had these addresses geocoded and spatially joined by the Environmental Systems Research Institute (ESRI). This process allowed us to match each address record to a latitude and a longitude. Then, by overlaying the geographic boundaries on top of these points, we can observe how many evictions took place in that area.</description>
+    </item>
+    
+    <item>
+      <title>For regions where you did not have comprehensive data, how did you estimate the eviction rate?</title>
+      <link>/methods/page-content/190-estimate-rate/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/190-estimate-rate/</guid>
+      <description>We used a common practice for missing data called “imputation.” For more information on this, please see the Methodology Report (PDF).</description>
+    </item>
+    
+    <item>
+      <title>How did you validate your estimates?</title>
+      <link>/methods/page-content/200-validate/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/200-validate/</guid>
+      <description>We linked individual records from overlapping data sources. Through this procedure, we determined that the content of the records (e.g., address, name information) had a high rate of validity. In addition, we obtained statistics from 27 states, New York City, and the District of Columbia that gave us numbers of cases filed per year at the county level. These figures allowed us to know what proportion of all cases filed in an area were present in our data.</description>
+    </item>
+    
+    <item>
+      <title>Can I read a more thorough report on your methods?</title>
+      <link>/methods/page-content/210-methods-report/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/210-methods-report/</guid>
+      <description>Yes. You can download the full report (PDF) here.</description>
+    </item>
+    
+    <item>
+      <title>What if I have more questions?</title>
+      <link>/methods/page-content/220-more-questions/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/220-more-questions/</guid>
+      <description>We’re here to help. Please contact us via email at research@evictionlab.org.</description>
+    </item>
+    
+    <item>
+      <title>Methods | Eviction Lab</title>
+      <link>/methods/page-content/meta/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/methods/page-content/meta/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

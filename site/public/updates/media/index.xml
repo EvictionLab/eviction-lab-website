@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Media on Eviction Lab</title>
+    <link>/updates/media/</link>
+    <description>Recent content in Media on Eviction Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Nov 2017 20:43:20 -0800</lastBuildDate>
+    
+	<atom:link href="/updates/media/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Eviction Lab Media Guide</title>
+      <link>/media-guide/</link>
+      <pubDate>Fri, 20 Apr 2018 15:45:09 +0000</pubDate>
+      
+      <guid>/media-guide/</guid>
+      <description>Welcome to the Eviction Lab. We hope you will engage with the data we’ve been able to gather and make public. Here are some considerations to keep in mind as you interpret our numbers.
+On the Map &amp;amp; Data section of our website, we have included a national database of eviction estimates. Toggles allow you to choose years, eviction filings or evictions, demographic characteristics, and the geography at which you would like to view the data.</description>
+    </item>
+    
+    <item>
+      <title>Eviction Lab Media Coverage Roundup</title>
+      <link>/updates/media/first-week-media-roundup/</link>
+      <pubDate>Tue, 17 Apr 2018 15:45:09 +0000</pubDate>
+      
+      <guid>/updates/media/first-week-media-roundup/</guid>
+      <description>During The Eviction Lab&amp;rsquo;s first week online, we were encouraged to see interest in our dataset and website—and the eviction epidemic it reveals—from a number of major national media outlets.
+The New York Times profiled Richmond, VA (#2 in our Eviction Rankings) to demonstrate the effect of its staggering eviction numbers on residents of one city. NPR&amp;rsquo;s Fresh Air interviewed Matthew Desmond about both the Lab&amp;rsquo;s work, and the experience of writing Evicted.</description>
+    </item>
+    
+    <item>
+      <title>Fresh Air: First-Ever Evictions Database Shows &#39;We&#39;re In the Middle Of A Housing Crisis&#39;</title>
+      <link>/updates/media/fresh-air-interview-eviction-lab/</link>
+      <pubDate>Thu, 12 Apr 2018 15:45:09 +0000</pubDate>
+      
+      <guid>/updates/media/fresh-air-interview-eviction-lab/</guid>
+      <description>Today on NPR&amp;rsquo;s Fresh Air, Terry Gross interviews Matthew Desmond, who helps put the eviction crisis in perspective.
+Desmond, on the estimate that 2.3 million people faced eviction in 2016:
+&amp;ldquo;That&amp;rsquo;s twice the number of Americans that die in car accidents every day. That&amp;rsquo;s twice the number of people who get arrested for drug offenses every year. We heard a lot about the opioid crisis last year, and for good reason, it&amp;rsquo;s an incredibly important topic.</description>
+    </item>
+    
+    <item>
+      <title>Marketplace: Millions of Americans are evicted every year — and not just in big cities</title>
+      <link>/updates/media/marketplace-npr-eviction-lab-story/</link>
+      <pubDate>Wed, 11 Apr 2018 15:45:09 +0000</pubDate>
+      
+      <guid>/updates/media/marketplace-npr-eviction-lab-story/</guid>
+      <description>NPR&amp;rsquo;s Marketplace features an interview between host David Brancaccio and Matthew Desmond, detailing the shocking volume of evictions in the US, their deeper causes, and how the hotspots of the eviction crisis are often places you wouldn&amp;rsquo;t expect.
+Desmond: &amp;ldquo;If you read the news, you&amp;rsquo;d think that the housing crisis is basically in Seattle, and New York City, and San Francisco. And that&amp;rsquo;s true. You know, the rents in those cities have really exploded over the last decade.</description>
+    </item>
+    
+    <item>
+      <title>The New York Times Profiles The Eviction Lab</title>
+      <link>/updates/media/nytimes-evictions-richmond/</link>
+      <pubDate>Tue, 10 Apr 2018 15:45:09 +0000</pubDate>
+      
+      <guid>/updates/media/nytimes-evictions-richmond/</guid>
+      <description>The New York Times has chosen Richmond, VA (listed at #2 in our Eviction Rankings) as the focus of a front-page story, which also profiles Matthew Desmond and The Eviction Lab&amp;rsquo;s work in collecting over 83 million eviction records from across the country.
+The article details the &amp;ldquo;churning machine&amp;rdquo; of evictions in Richmond, driven by a court system that is often as inscrutable to tenants as it is unsparingly efficient in rendering judgments.</description>
+    </item>
+    
+    <item>
+      <title>The Eviction Lab Media Guide</title>
+      <link>/updates/media/media-guide_old/</link>
+      <pubDate>Sat, 07 Apr 2018 15:45:09 +0000</pubDate>
+      
+      <guid>/updates/media/media-guide_old/</guid>
+      <description>The Eviction Lab is excited to partner with journalists across the country. One of the central tenets of this lab is to be accessible and useful to those interested in exploring the link between poverty, eviction, and housing in America.
+For those who are new to the issue, Why Eviction Matters is an introduction to both the process and effects of eviction. Before jumping into the findings, we suggest you look at the Help &amp;amp; FAQ section, which answers basic questions about the website and eviction data.</description>
+    </item>
+    
+  </channel>
+</rss>
