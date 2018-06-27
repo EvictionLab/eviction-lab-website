@@ -49,7 +49,7 @@
   </div>    
 
 
-  <div class="center-page-wrapper">
+  <div class="center-page-wrapper eqa">
     <div class="center-content-post page-list eviction-facts">
       <!--<div id="wem-intro">
           <a name="wem-intro-link"></a>
@@ -67,10 +67,7 @@
       <div class="eviction-qa">
         <!-- faq item -->
         {{ range .Params.faqSection.faq }}
-          <div class="facts-section">
-            <p class="ak-bold">{{ .question }}</p>
-            {{ .answer | safeHTML }}
-          </div>
+          {{ partial "faqhr" . }}  
         {{ end }}
       </div>
 
@@ -127,6 +124,13 @@
 
     </div><!-- end center-content-post -->
   </div><!-- end alt-bg book-panel -->
+  <!-- ********************************* -->
+  <!-- ****** Just Shelter Section ***** -->
+  <!-- ********************************* -->
+  <div class="alt-bg js-panel">
+    <img src="/images/icons/just_shelter.svg" />
+    <h3>Get information, take action. Visit Just Shelter for community and nationwide resources.</h3>
+  </div>
 </div><!-- end page-content wrapper -->
 
 

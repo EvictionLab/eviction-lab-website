@@ -36,11 +36,6 @@ faqSection:
       question: What is an eviction?
       answer: >
         <p>An eviction happens when a landlord expels people from property he or she owns. Evictions are landlord-initiated involuntary moves that happen to renters, whereas foreclosures are involuntary moves that happen to homeowners when a bank or other lending agency repossesses a home.</p>
-
-        <p><img src="/images/assets/woman-evicted-from-home.jpg" /></p>
-        
-        <div class="caption"><span class="subcopy ital">Law enforcement and movers evict a tenant from a home.</span> <span class="subcopy credit">(Photo: Sally Ryan)</div>
-
     - qid: why-do-people-get-evicted
       question: Why do people get evicted?
       answer: >
@@ -50,8 +45,6 @@ faqSection:
       question: What is the relationship between the affordable housing crisis and the eviction epidemic?
       answer: >
         <p>Today, most poor renting families spend at least half of their income on housing costs, with one in four of those families spending over 70 percent of their income just on rent and utilities. Incomes for Americans of modest means have flatlined while housing costs have soared. Only one in four families who qualifies for affordable housing programs gets any kind of help. Under those conditions, it has become harder for low-income families to keep up with rent and utility costs, and a growing number are living one misstep or emergency away from eviction.</p>
-        <p><img src="/images/assets/defendants-eviction-court2.jpg" /></p>
-        <div class="caption"><span class="subcopy ital">Defendants in eviction court.</span> <span class="subcopy credit">(Photo: Sasha Israel)</div>
     - qid: what-is-the-eviction-process
       question: What is the eviction process like?
       answer: >
@@ -60,9 +53,6 @@ faqSection:
       question: Who is most at risk of eviction?
       answer: >
         <p>Low-income women, especially poor women of color, have a high risk of eviction. Research has shown domestic violence victims and families with children are also at particularly high risk for eviction.</p>
-        
-        <p><img src="/images/assets/for-rent-sign-family.jpg" /></p>
-        <div class="caption"><span class="subcopy ital">A family searches for housing after being evicted.</span> <span class="subcopy credit">(Photo: Matthew Desmond)</div>
     - qid: eviction-impact
       question: How does an eviction affect someone’s life?
       answer: >
