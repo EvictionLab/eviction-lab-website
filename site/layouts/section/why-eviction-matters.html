@@ -128,8 +128,15 @@
   <!-- ****** Just Shelter Section ***** -->
   <!-- ********************************* -->
   <div class="alt-bg js-panel">
-    <img src="/images/icons/just_shelter.svg" />
-    <h3>Get information, take action. Visit Just Shelter for community and nationwide resources.</h3>
+    <div class="js-txt">
+      <img src="/images/icons/just_shelter.svg" />
+      <h3>{{ .Params.justshelter.blurb }}</h3>
+      <div class="button-wrap">
+          <a class="btn-primary" href="https://justshelter.org" target="_blank">
+            {{ .Params.justshelter.button }}
+          </a>
+        </div>
+    </div>  
   </div>
 </div><!-- end page-content wrapper -->
 

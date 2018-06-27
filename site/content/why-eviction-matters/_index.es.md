@@ -121,6 +121,8 @@ praise:
       - attrib: "—Jason DeParle, New York Review of Books"
         quote: >
           "Gripping and important…[Desmond's] portraits are vivid and unsettling."
-
+justshelter:
+  blurb: Get information. Take action. Visit justshelter.org for community and nationwide resources.
+  button: get resources
 ---
 
