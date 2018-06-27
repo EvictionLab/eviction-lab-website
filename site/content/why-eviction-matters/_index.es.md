@@ -20,13 +20,19 @@ intro:
 videoSection:
   heading: Video
   videos:
-    - videoId: zOsr3AcZAsY
+    - uid: video1
+      thumb: /images/assets/video/eviction-epidemic-thumb.jpg
+      videoId: zOsr3AcZAsY
       title: Video title will go here, courtesy of bootstrap
       description: Lorem ipsum dolor sit amet
-    - videoId: zOsr3AcZAsY
+    - uid: video2
+      thumb: /images/assets/video/eviction-epidemic-thumb.jpg
+      videoId: zOsr3AcZAsY
       title: Video title will go here, courtesy of bootstrap
       description: Lorem ipsum dolor sit amet
-    - videoId: zOsr3AcZAsY
+    - uid: video3
+      thumb: /images/assets/video/eviction-epidemic-thumb.jpg
+      videoId: zOsr3AcZAsY
       title: Video title will go here, courtesy of bootstrap
       description: Lorem ipsum dolor sit amet
 faqSection:
