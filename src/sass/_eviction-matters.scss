@@ -20,6 +20,9 @@
 }
 
 .eviction-matters {
+    iframe {
+        
+    }    
     .caption {
         color: #737373;
         margin-bottom: 2.4rem;
@@ -168,17 +171,41 @@
                 max-width: 1200px;
                 max-height: 710px; 
             }
+            
         }
+  
         .carousel-caption {
-            top: 60%;
-            left: 15%;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
             text-align: left;
+            padding: 8% 15% 0 15%;
+
             pointer-events:none;
+            p, h2 {
+                z-index: 99;
+            }
+            /*&:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: -20%;
+                left: -30%;
+                right: -30%; */
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+            
+            
+            
         }  
+        .ytp-large-play-button {
+            z-index: 999 !important;
+        }
         .carousel-indicators {
             li {
                 width: 100px;
                 text-indent: 0;
+                cursor: pointer;
                 img {
                     width: 100px;
                 } 
@@ -434,7 +461,8 @@
         }
     }
 
-    .page-section-header {
+    .page-section-header, .carousel-inner h2 {
+        font-family: GT-Eesti-Display-Bold, sans-serif;
         text-transform: none;
         font-size: 1.6rem;
         letter-spacing: .04rem;

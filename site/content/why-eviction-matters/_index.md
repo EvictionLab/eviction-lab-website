@@ -9,22 +9,24 @@ description: Learn about eviction, its effects, and why it matters.
 h1: Why Eviction Matters
 nav:
   li1: GO TO SECTION
-  li2: Introduction
+  li2: Video
   li3: Eviction Q&A
-  li4: Video
-  li5: 'Evicted: The Book'
+  li4: 'Evicted: The Book'
+  li5: Resources
 intro:
   heading: Introduction
   text: > 
-    The lack of affordable housing sits at the root of a host of social problems, from poverty and homelessness to educational disparities and health care. That means understanding the eviction crisis is critical to effectively addressing these problems and reducing inequality.  However, before the launch of the Eviction Lab dataset, little was known about the prevalence of eviction in America, so studying its causes and consequences on a national level was impossible. This new dataset gives us the tools to better understand—and fight—America's eviction epidemic.    
+    <p>The lack of affordable housing sits at the root of a host of social problems, from poverty and homelessness to educational disparities and health care. That means understanding the eviction crisis is critical to effectively addressing these problems and reducing inequality. Below you can view videos exploring the plight of Americans caught in the eviction epidemic, read an eviction FAQ, and explore resources for learning more and taking action.</p>
+  text2: >  
+    However, before the launch of the Eviction Lab dataset, little was known about the prevalence of eviction in America, so studying its causes and consequences on a national level was impossible. This new dataset gives us the tools to better understand—and fight—America's eviction epidemic.    
 videoSection:
-  heading: Video
+  heading: 'Video Series: The Eviction Epidemic'
   videos:
     - uid: video1
       thumb: /images/assets/video/eviction-epidemic-thumb.jpg
       videoId: zOsr3AcZAsY
-      title: Video title will go here, courtesy of bootstrap
-      description: Lorem ipsum dolor sit amet
+      title: 'Matthew Desmond on the Eviction Epidemic'
+      description: It’s more widespread than you might think, and its consequences for individuals and families can be both long-lasting and devastating.
     - uid: video2
       thumb: /images/assets/video/eviction-epidemic-thumb.jpg
       videoId: zOsr3AcZAsY
@@ -38,6 +40,10 @@ videoSection:
 faqSection:
   heading: QUESTIONS & ANSWERS ABOUT EVICTION
   faq:
+    - qid: understanding-eviction
+      question: Why is it important to understand eviction?
+      answer: >
+        <p>The lack of affordable housing sits at the root of a host of social problems, from poverty and homelessness to educational disparities and health care. That means understanding the eviction crisis is critical to effectively addressing these problems and reducing inequality.<p>
     - qid: what-is-an-eviction
       question: What is an eviction?
       answer: >
