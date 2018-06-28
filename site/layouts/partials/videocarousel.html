@@ -97,11 +97,13 @@
     }, 500);
   }
 
+  /** Gets the index of the video, or returns 0 if it doesn't exist */
   function getVideoIndex(videoId) {
     if (!videoId) { return 0; }
-    return (Object.keys(videos).findIndex(function (v) {
+    var videoIndex = (Object.keys(videos).findIndex(function (v) {
       return v === videoId;
-    }) || 0);
+    }));
+    return videoIndex === -1 ? 0 : videoIndex;
   }
 
   /** Setup the carousel when jQuery is ready */
