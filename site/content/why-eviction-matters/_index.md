@@ -22,28 +22,34 @@ intro:
 videoSection:
   heading: 'Video Series: The Eviction Epidemic'
   videos:
-    - uid: video1
+    - uid: eviction-epidemic
       thumb: /images/assets/video/eviction-epidemic-thumb.jpg
       videoId: zOsr3AcZAsY
-      title: 'Matthew Desmond on the Eviction Epidemic'
-      description: It’s more widespread than you might think, and its consequences for individuals and families can be both long-lasting and devastating.
-    - uid: video2
-      thumb: /images/assets/video/eviction-epidemic-thumb.jpg
+      title: 'Matthew Desmond: The Eviction Epidemic'
+      description: It’s more widespread than you might think, and its consequences for individuals and families can be long-lasting and devastating.
+    - uid: destiny
+      thumb: /images/assets/video/destiny-thumb.jpg
       videoId: zOsr3AcZAsY
-      title: Video title will go here, courtesy of bootstrap
-      description: Lorem ipsum dolor sit amet
-    - uid: video3
-      thumb: /images/assets/video/eviction-epidemic-thumb.jpg
+      title: "Destiny: A Mother's Story"
+      description: A public servant and working mom faces an uphill battle to make ends meet, even as her hours are cut. Then one day, the notice arrives.
+    - uid: rosemary
+      thumb: /images/assets/video/rosemary-thumb.jpg
       videoId: zOsr3AcZAsY
-      title: Video title will go here, courtesy of bootstrap
-      description: Lorem ipsum dolor sit amet
+      title: "Rosemary: A Life Disrupted"
+      description: An eviction comes without warning, and a young woman finds herself uprooted from her community and struggling in school.
+    - uid: our-stories
+      thumb: /images/assets/video/what-home-means-thumb.jpg
+      videoId: zOsr3AcZAsY
+      title: What Home Means
+      description: Every 15 seconds, a home is shattered by eviction. Hear 5 people describe their experiences and learn what you can do to make a difference.
+  
 faqSection:
   heading: QUESTIONS & ANSWERS ABOUT EVICTION
   faq:
     - qid: understanding-eviction
-      question: Why is it important to understand eviction?
+      question: Why is it important to study and understand eviction?
       answer: >
-        <p>The lack of affordable housing sits at the root of a host of social problems, from poverty and homelessness to educational disparities and health care. That means understanding the eviction crisis is critical to effectively addressing these problems and reducing inequality.<p>
+        <p>The lack of affordable housing sits at the root of a host of social problems, from poverty and homelessness to educational disparities and health care. That means understanding the eviction crisis is critical to effectively addressing these problems and reducing inequality. However, before the launch of the Eviction Lab dataset, little was known about the prevalence of eviction in America, so studying its causes and consequences on a national level was impossible. This new dataset gives us the tools to better understand—and fight—America’s eviction epidemic.<p>
     - qid: what-is-an-eviction
       question: What is an eviction?
       answer: >
@@ -83,7 +89,7 @@ book:
     
     <p>In Evicted, Princeton sociologist and MacArthur “Genius” Matthew Desmond follows eight families in Milwaukee as they struggle to keep a roof over their heads. Hailed as “wrenching and revelatory” (The Nation), “vivid and unsettling” (New York Review of Books), Evicted transforms our understanding of poverty and economic exploitation while providing fresh ideas for solving one of 21st-century America’s most devastating problems. Its unforgettable scenes of hope and loss remind us of the centrality of home, without which nothing else is possible.</p>
     
-    <p>New York Times Bestseller <span class="middot"></span>Winner of the National Book Critics Circle Award for Nonfiction <span class="middot"></span>Winner of The Pen/John Kenneth Galbraith Award for Nonfiction <span class="middot"></span>Winner of the Andrew Carnegie Medal for Excellence in Nonfiction <span class="middot"></span>Finalist for the Los Angeles Times Book Prize <span class="middot"></span>Winner of the 2017 Hillman Prize For Book Journalism <span class="middot"></span>Winner of the Chicago Tribune Heartland Prize</p>
+    <p class="subcopy">New York Times Bestseller <span class="middot"></span>Winner of the National Book Critics Circle Award for Nonfiction <span class="middot"></span>Winner of The Pen/John Kenneth Galbraith Award for Nonfiction <span class="middot"></span>Winner of the Andrew Carnegie Medal for Excellence in Nonfiction <span class="middot"></span>Finalist for the Los Angeles Times Book Prize <span class="middot"></span>Winner of the 2017 Hillman Prize For Book Journalism <span class="middot"></span>Winner of the Chicago Tribune Heartland Prize</p>
   subcopy: "Evicted: Poverty and Profit in The American City"
   subcopy2: by Matthew Desmond
 praise:

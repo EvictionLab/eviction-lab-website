@@ -49,9 +49,9 @@
     /*----- Eviction Facts ----- */
     .eqa {
         background: #F5F6FA;
-        padding-bottom: 4rem;
-        @include for-tablet-portrait-up {
-            padding-bottom: 5.6rem;
+        padding-bottom: 0rem;
+        @include for-tablet-landscape-up {
+            padding-bottom: 1.6rem;
         }
     }
     .eviction-facts .bordered-header {
@@ -64,9 +64,10 @@
         }
     }
     .eviction-facts {
-        margin-bottom: 4rem;
+        margin-bottom: 0rem;
+        padding-bottom: 1.6rem;
         @include for-tablet-portrait-up {
-        margin-bottom: 5.6rem;
+        margin-bottom: 0rem;
         }
         #wem-intro {
             margin-bottom: 3.2rem;
@@ -104,9 +105,9 @@
         /* background: -webkit-linear-gradient(top, #424670 0%, #2F3251 100%); */ /* Chrome10-25,Safari5.1-6 */
         /* background: linear-gradient(to bottom, #424670 0%,#2F3251 100%); */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         color: $color2;
-        padding-bottom: 2.4rem;
+        padding-bottom: 4rem;
         @include for-tablet-portrait-up {
-            padding-bottom: 4.8rem;
+            padding-bottom: 7.2rem;
             padding-left: 8.8rem;
             padding-right: 8.8rem;
         }
@@ -127,6 +128,10 @@
             position: relative;
             bottom: -16px;
             height: 56px;
+            margin-top: 0.8rem;
+            @include for-midsize-desktop-up {
+                margin-top: 1.6rem;
+            }
         }
         iframe {
             @include for-tablet-landscape-up {
@@ -181,20 +186,50 @@
             bottom: 0;
             text-align: left;
             padding: 8% 15% 0 15%;
-
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
             pointer-events:none;
-            p, h2 {
-                z-index: 99;
+            h2 {
+                font-family: GT-Eesti-Display-Bold, sans-serif;
+                text-transform: none;
+                font-size: 1.6rem;
+                letter-spacing: .04rem;
+                line-height: 1.9rem;
+                margin-bottom: 3.2rem;
+                @include for-tablet-portrait-up {
+                    font-size: 2rem;
+                    letter-spacing: .07rem;
+                    line-height: 2.6rem;
+                    margin-bottom: 1rem;
+                }
+                @include for-tablet-landscape-up {
+                    font-size: 3.2rem;
+                    letter-spacing: .1rem;
+                    line-height: 4rem;
+                    margin-bottom: 1.6rem;
+                }
+                @include for-midsize-desktop-up {
+                    font-size: 3.6rem;
+                    letter-spacing: .1rem;
+                    line-height: 4.2rem;
+                    margin-bottom: 1.6rem;
+                }
             }
-            /*&:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                bottom: -20%;
-                left: -30%;
-                right: -30%; */
-                background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
-            
+            p {
+                @include for-tablet-portrait-only  {
+                    font-size: 1.4rem; 
+                }
+            }
+          
+            @media (min-width: 1024px) and (max-width: 1440px) and (max-height: 640px) {
+                h2 {
+                    font-size: 2.4rem;
+                    line-height: 3rem;
+                    margin-bottom: 1.6rem;
+                    }
+                p {
+                    font-size: 1.4rem;
+                    }    
+                }
             
             
         }  
@@ -206,8 +241,21 @@
                 width: 100px;
                 text-indent: 0;
                 cursor: pointer;
+                margin-left: 4px;
+                margin-right: 4px;
                 img {
+                    -webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);
                     width: 100px;
+                    transition: filter .4s;
+                    transition: -webkit-filter .4s;
+                    @include for-phone-only {
+                        width: 76px;
+                    }
+                    &:hover {
+                        filter: none;
+                        -webkit-filter: none;
+                    }
                 } 
             }
         }
@@ -299,6 +347,16 @@
         }
         .book-copy {
           @include for-tablet-portrait-up { width: 66%; }
+          p.subcopy {
+            width: 100%;
+                font-size: 1.4rem;
+                line-height: 2rem;
+            @include for-midsize-desktop-up { 
+                font-size: 1.6rem;
+                letter-spacing: 0;
+                line-height: 2.4rem;
+            }
+          }
         }
         .button-wrap {
             margin: 2.4rem 0 1.6rem;
@@ -461,7 +519,7 @@
         }
     }
 
-    .page-section-header, .carousel-inner h2 {
+    .page-section-header {
         font-family: GT-Eesti-Display-Bold, sans-serif;
         text-transform: none;
         font-size: 1.6rem;

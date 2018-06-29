@@ -279,6 +279,17 @@ table.page-stats td.table-text {
   }
 }
 
+.answer.collapse.show p:last-child {
+  margin-bottom: 2.4rem;
+  @include for-tablet-portrait-up {
+    margin-bottom: 3.2rem;
+  }
+  @include for-midsize-desktop-up {
+    margin-bottom: 4rem;
+  }
+
+}
+
 .subcopy {
   font-size: 1.175rem;
   @include for-tablet-portrait-up {
