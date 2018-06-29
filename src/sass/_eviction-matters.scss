@@ -132,6 +132,12 @@
             @include for-midsize-desktop-up {
                 margin-top: 1.6rem;
             }
+            @include for-phone-only {
+                overflow: scroll;
+                margin-right: 0;
+                margin-left: 0;
+                justify-content: left;
+            }
         }
         iframe {
             @include for-tablet-landscape-up {
@@ -183,6 +189,7 @@
             bottom: -16px;
             text-align: center;
             padding-bottom: 0;
+            color: #212529;
         }
   
         .carousel-caption {
