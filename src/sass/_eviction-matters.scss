@@ -602,7 +602,7 @@
             margin: auto;
             img {
                 @include for-phone-only {
-                    width: 200px;
+                    width: 180px;
                 }
             }
         }
