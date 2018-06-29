@@ -178,6 +178,12 @@
             }
             
         }
+        p.vidsub {
+            position: relative;
+            bottom: -16px;
+            text-align: center;
+            padding-bottom: 0;
+        }
   
         .carousel-caption {
             top: 50%;
@@ -260,9 +266,12 @@
             }
         }
         .carousel-control-next, .carousel-control-prev {
-            top: 41%;
+            top: 31%;
             width: 6%;
             height: 6%;
+            @include for-tablet-portrait-up {
+                top: 41%;
+            }
         }
         
         li, a {
