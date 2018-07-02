@@ -256,6 +256,9 @@
                 cursor: pointer;
                 margin-left: 4px;
                 margin-right: 4px;
+                &.active img {
+                    filter: none;
+                }
                 img {
                     -webkit-filter: grayscale(100%);
                     filter: grayscale(100%);
