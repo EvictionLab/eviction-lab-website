@@ -29,19 +29,19 @@ videoSection:
       description: It’s more widespread than you might think, and its consequences for individuals and families can be long-lasting and devastating.
     - uid: destiny
       thumb: /images/assets/video/destiny-thumb.jpg
-      videoId: zOsr3AcZAsY
+      videoId: Ql9nCwbLVfA
       title: "Destiny: A Mother's Story"
       description: A public servant and working mom faces an uphill battle to make ends meet, even as her hours are cut. Then one day, the notice arrives.
     - uid: rosemary
       thumb: /images/assets/video/rosemary-thumb.jpg
-      videoId: zOsr3AcZAsY
+      videoId: gXqNtHtUa1U
       title: "Rosemary: A Life Disrupted"
       description: An eviction comes without warning, and a young woman finds herself uprooted from her community and struggling in school.
     - uid: our-stories
       thumb: /images/assets/video/what-home-means-thumb.jpg
-      videoId: zOsr3AcZAsY
+      videoId: INcFo3PxFZU
       title: What Home Means
-      description: Every 15 seconds, a home is shattered by eviction. Hear 5 people describe their experiences and learn what you can do to make a difference.
+      description: Every 15 seconds, a home is shattered by eviction. Hear displaced tenants describe their experiences and learn what you can do to make a difference.
   
 faqSection:
   heading: QUESTIONS & ANSWERS ABOUT EVICTION

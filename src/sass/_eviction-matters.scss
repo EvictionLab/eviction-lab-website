@@ -276,12 +276,25 @@
             }
         }
         .carousel-control-next, .carousel-control-prev {
-            top: 31%;
-            width: 6%;
-            height: 6%;
+            top: 27%;
+            width: 9%;
+            height: 14%;
             @include for-tablet-portrait-up {
-                top: 41%;
+                top: 37%;
             }
+        }
+        .carousel-control-next {
+            text-align: right;
+            padding-right: 2%;
+        }
+        .carousel-control-prev {
+            text-align: left;
+            padding-left: 2%;
+        }
+        .carousel-control-next-icon, .carousel-control-prev-icon {
+            vertical-align: bottom;
+            top: 17%;
+            position: relative;
         }
         
         li, a {
