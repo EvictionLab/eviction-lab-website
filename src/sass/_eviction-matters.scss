@@ -193,12 +193,12 @@
         }
   
         .carousel-caption {
-            top: 50%;
+            top: 47%;
             left: 0;
             right: 0;
             bottom: 0;
             text-align: left;
-            padding: 8% 15% 0 15%;
+            padding: 11% 11% 0;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
             pointer-events:none;
             h2 {
@@ -276,11 +276,14 @@
             }
         }
         .carousel-control-next, .carousel-control-prev {
-            top: 27%;
+            top: 29%;
             width: 9%;
             height: 14%;
             @include for-tablet-portrait-up {
-                top: 37%;
+                top: 39%;
+            }
+            @include for-midsize-desktop-up {
+                top: 40%;
             }
         }
         .carousel-control-next {
@@ -295,6 +298,10 @@
             vertical-align: bottom;
             top: 17%;
             position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+            border: 10px solid rgba(0, 0, 0, 0);
         }
         
         li, a {
