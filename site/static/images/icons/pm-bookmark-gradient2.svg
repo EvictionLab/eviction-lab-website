@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="21px" viewBox="0 0 11 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>pm-bookmark</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F27636" offset="0%"></stop>
+            <stop stop-color="#EC632C" offset="35.7121744%"></stop>
+            <stop stop-color="#E04119" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pm-bookmark">
+            <rect id="Path" fill="#AE3100" x="2" y="3" width="7" height="7"></rect>
+            <path d="M0.34902,0.212226 L10.34902,0.212226 L10.34902,20.212226 L5.34902,16.0283975 L0.34902,20.212226 L0.34902,0.212226 Z M3.49491803,9.212226 L5.34901999,8.1873036 L7.20312197,9.212226 L6.84902,7.0414056 L8.34902,5.5040221 L6.27607099,5.1873036 L5.34901999,3.212226 L4.42196901,5.1873036 L2.34902,5.5040221 L3.84902,7.0414056 L3.49491803,9.212226 Z" id="Combined-Shape" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
