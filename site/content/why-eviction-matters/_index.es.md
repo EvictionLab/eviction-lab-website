@@ -9,35 +9,45 @@ description: Learn about eviction, its effects, and why it matters.
 h1: Por qué el desalojo nos importa
 nav:
   li1: IR A LA SECCIÓN
-  li2: Intro
+  li2: Video
   li3: Preguntas y respuestas sobre el desalojo 
-  li4: Vídeo
-  li5: 'El Libro: Evicted'
+  li4: 'El Libro: Evicted'
+  li5: Recursos
 intro:
   heading: Introducción
   text: > 
     La falta de vivienda asequible se encuentra en la raíz de una serie de problemas sociales, desde la pobreza y la falta de vivienda hasta las disparidades educativas y la atención médica. Eso significa que comprender la crisis del desalojo es fundamental para abordar de manera efectiva estos problemas y reducir la desigualdad. Sin embargo, antes del lanzamiento del conjunto de datos de Eviction Lab, se sabía poco sobre la prevalencia del desalojo en Estados Unidos, entonces era imposible estudiar sus causas y consecuencias a nivel nacional. Este nuevo conjunto de datos nos brinda herramientas para comprender mejor y luchar contra la epidemia de desahucios en los Estados Unidos.     
 videoSection:
-  heading: Video
+  heading: 'Video Series: The Eviction Epidemic'
   videos:
-    - uid: video1
-      thumb: /images/assets/video/eviction-epidemic-thumb.jpg
-      videoId: zOsr3AcZAsY
-      title: Video title will go here, courtesy of bootstrap
-      description: Lorem ipsum dolor sit amet
-    - uid: video2
-      thumb: /images/assets/video/eviction-epidemic-thumb.jpg
-      videoId: zOsr3AcZAsY
-      title: Video title will go here, courtesy of bootstrap
-      description: Lorem ipsum dolor sit amet
-    - uid: video3
-      thumb: /images/assets/video/eviction-epidemic-thumb.jpg
-      videoId: zOsr3AcZAsY
-      title: Video title will go here, courtesy of bootstrap
-      description: Lorem ipsum dolor sit amet
+    - uid: eviction-epidemic
+      thumb: /images/assets/video/what-home-means-thumb.jpg
+      videoId: 7f9dqQBYjcA
+      title: 'Matthew Desmond: The Eviction Epidemic'
+      description: It’s more widespread than you might think, and its consequences for individuals and families can be long-lasting and devastating.
+    - uid: destiny
+      thumb: /images/assets/video/destiny2-thumb.jpg
+      videoId: Ql9nCwbLVfA
+      title: "Destiny: A Mother's Story"
+      description: A public servant and working mom faces an uphill battle to make ends meet, even as her hours are cut. Then one day, the notice arrives.
+    - uid: rosemary
+      thumb: /images/assets/video/rosemary2-thumb.jpg
+      videoId: gXqNtHtUa1U
+      title: "Rosemary: A Life Disrupted"
+      description: An eviction comes without warning, and a young woman finds herself uprooted from her community and struggling in school.
+    - uid: our-stories
+      thumb: /images/assets/video/what-home-means2-thumb.jpg
+      videoId: INcFo3PxFZU
+      title: What Home Means
+      description: Every 15 seconds, a home is shattered by eviction. Hear displaced tenants describe their experiences and learn what you can do to make a difference.
+
 faqSection:
   heading: Preguntas y respuestas sobre el desalojo 
   faq:
+    - qid: understanding-eviction
+      question: Why is it important to study and understand eviction?
+      answer: >
+        <p>The lack of affordable housing sits at the root of a host of social problems, from poverty and homelessness to educational disparities and health care. That means understanding the eviction crisis is critical to effectively addressing these problems and reducing inequality. However, before the launch of the Eviction Lab dataset, little was known about the prevalence of eviction in America, so studying its causes and consequences on a national level was impossible. This new dataset gives us the tools to better understand—and fight—America’s eviction epidemic.<p>
     - qid: what-is-an-eviction
       question: "¿Qué es un desalojo?"
       answer: >
@@ -84,7 +94,7 @@ book:
     
     <p>En <span class="ital">Evicted</span>, el sociólogo de Princeton y MacArthur "Genio" Matthew Desmond sigue a ocho familias en Milwaukee mientras luchan por mantener un techo sobre sus cabezas. Aclamado como "desgarrador y revelador" (The Nation), "vívido e inquietante" (New York Review of Books), Evicted transforma nuestra comprensión de la pobreza y la explotación económica mientras ofrece nuevas ideas para resolver uno de los problemas más devastadores de Estados Unidos del siglo XXI. Sus escenas inolvidables de esperanza y pérdida nos recuerdan la centralidad del hogar, sin la cual nada más es posible.</p>
     
-    <p>New York Times Bestseller <span class="middot"></span>Ganador del Premio Del Círculo Crítico Nacional del Libro Para Literatura de No Ficcíon <span class="middot"></span>Ganador del Premio Pen / John Kenneth Galbraith por No Ficcíon <span class="middot"></span>Ganador de la Medalla Andrew Carnegie por la Excelencia en la No Ficción <span class="middot"></span>Finalista del Premio Del Libro de Los Anegeles Times <span class="middot"></span>Ganador del Premio Hillman 2017 para el Periodismo de Libros <span class="middot"></span>Ganador del Premio Chicago Tribune Heartland</p>
+    <p class="subcopy">New York Times Bestseller <span class="middot"></span>Ganador del Premio Del Círculo Crítico Nacional del Libro Para Literatura de No Ficcíon <span class="middot"></span>Ganador del Premio Pen / John Kenneth Galbraith por No Ficcíon <span class="middot"></span>Ganador de la Medalla Andrew Carnegie por la Excelencia en la No Ficción <span class="middot"></span>Finalista del Premio Del Libro de Los Anegeles Times <span class="middot"></span>Ganador del Premio Hillman 2017 para el Periodismo de Libros <span class="middot"></span>Ganador del Premio Chicago Tribune Heartland</p>
   subcopy: "Evicted: Poverty and Profit in The American City"
   subcopy2: by Matthew Desmond
 praise:
