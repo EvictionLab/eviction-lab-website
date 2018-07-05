@@ -21,6 +21,16 @@
 }
 
 @font-face {
+  font-family: "Akkurat-Italic";
+  src:url("./font/Akkurat-Italic/lineto-akkurat-italic.eot");
+  src:url("./font/Akkurat-Italic/lineto-akkurat-italic.eot?#iefix") format("embedded-opentype"),
+      url("./font/Akkurat-Italic/lineto-akkurat-italic.woff2") format("woff2"),
+      url("./font/Akkurat-Italic/lineto-akkurat-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "GT-Eesti-Display-Medium";
   src:url("./font/GT-Eesti/GT-Eesti-Display-Medium.eot");
   src:url("./font/GT-Eesti/GT-Eesti-Display-Medium.eot?#iefix") format("embedded-opentype"),

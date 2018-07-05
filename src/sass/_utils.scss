@@ -117,8 +117,14 @@
   text-transform: capitalize;
 }
 
+i {
+  font-family: $italFontStack;
+}
+b {
+  font-family: $boldFontStack;
+}
 .ital {
-  font-style: italic;
+  font-family: $italFontStack;
 }
 .ak-bold {
   font-family: $boldFontStack;
