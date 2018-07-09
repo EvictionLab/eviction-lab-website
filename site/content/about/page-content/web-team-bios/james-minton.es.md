@@ -2,6 +2,7 @@
 childof: web-team-bios
 title: James Minton
 position: Director Creativo
+abbrev: jminton
 date: 2017-11-26T00:40:16.700Z
 image: /images/bios/jminton_full.jpg
 thumb: /images/bios/jminton_thumb.jpg
