@@ -33,7 +33,11 @@
                             {{ if eq .NextInSection.Params.childof .Params.childof }}
                               {{ $.Scratch.Set "hasNext" true }}
                               <a class="red" data-toggle="modal" data-target="#modal-{{ .NextInSection.Params.abbrev }}" data-dismiss="modal" href="#">
-                                <i class="fa fa-chevron-left">&nbsp;</i>Previous bio
+                                {{ range (where .Site.RegularPages "Params.childof" ("about")) }}
+                                  {{ if eq .Params.type "meta" }} 
+                                    <i class="fa fa-chevron-left">&nbsp;</i>{{ .Params.back }}
+                                  {{ end }}
+                                {{ end }}    
                               </a>
                             {{ end }}
                           {{ end }}
@@ -54,14 +58,24 @@
                       <div class="bio-nav next">
                         {{ if $.Scratch.Get "hasPrev" }}
                           <a class="red" data-toggle="modal" data-target="#modal-{{ .PrevInSection.Params.abbrev }}" data-dismiss="modal" href="#">
-                            Next bio&nbsp;&nbsp;<i class="fa fa-chevron-right"></i>
+                            {{ range (where .Site.RegularPages "Params.childof" ("about")) }}
+                              {{ if eq .Params.type "meta" }} 
+                                {{ .Params.forward }}&nbsp;&nbsp;<i class="fa fa-chevron-right"></i>
+                              {{ end }}
+                            {{ end }}    
                           </a>
                         {{ else if ge (len $sectionPages) 1 }}
                          {{ range first 1 $sectionPages }}
                           <a class="red" data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-dismiss="modal" href="#">
-                            Next bio&nbsp;&nbsp;<i class="fa fa-chevron-right"></i>
+                              {{ end }}
+                          {{ range (where .Site.RegularPages "Params.childof" ("about")) }}
+                            {{ if eq .Params.type "meta" }}         
+                              {{ .Params.forward }}&nbsp;&nbsp;<i class="fa fa-chevron-right"></i>
                           </a>
-                         {{ end }}
+                              {{ end }}
+                            {{ end }}  
+
+                        
                         {{ end }}
                       </div>
                     <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
