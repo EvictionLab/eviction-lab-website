@@ -23,21 +23,25 @@ videoSection:
     - uid: eviction-epidemic
       thumb: /images/assets/video/what-home-means-thumb.jpg
       videoId: 7f9dqQBYjcA
-      title: 'Matthew Desmond: The Eviction Epidemic'
+      captionState: es
+      title: The Eviction Epidemic
       description: It’s more widespread than you might think, and its consequences for individuals and families can be long-lasting and devastating.
     - uid: destiny
       thumb: /images/assets/video/destiny2-thumb.jpg
       videoId: Ql9nCwbLVfA
+      captionState: es
       title: "Destiny: A Mother's Story"
       description: A public servant and working mom faces an uphill battle to make ends meet, even as her hours are cut. Then one day, the notice arrives.
     - uid: rosemary
       thumb: /images/assets/video/rosemary2-thumb.jpg
       videoId: gXqNtHtUa1U
+      captionState: es
       title: "Rosemary: A Life Disrupted"
       description: An eviction comes without warning, and a young woman finds herself uprooted from her community and struggling in school.
     - uid: our-stories
       thumb: /images/assets/video/what-home-means2-thumb.jpg
       videoId: INcFo3PxFZU
+      captionState: es
       title: What Home Means
       description: Every 15 seconds, a home is shattered by eviction. Hear displaced tenants describe their experiences and learn what you can do to make a difference.
 

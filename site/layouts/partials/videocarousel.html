@@ -4,7 +4,7 @@
     <div class="carousel-item">
       <div class="video-container">
         <iframe id="{{ $e.uid }}" 
-                src="https://www.youtube.com/embed/{{ $e.videoId }}?&showinfo=0&rel=0&enablejsapi=1" 
+                src="https://www.youtube.com/embed/{{ $e.videoId }}?&showinfo=0&rel=0&enablejsapi=1&hl={{ $e.captionState }}&cc_lang_pref={{ $e.captionState }}&cc_load_policy=1" 
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
         ></iframe> 
       </div>
