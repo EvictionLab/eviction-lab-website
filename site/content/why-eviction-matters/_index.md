@@ -22,7 +22,7 @@ intro:
 videoSection:
   heading: 'Video Series: The Eviction Epidemic'
   videos:
-    - uid: eviction-epidemic
+    - uid: epidemic
       thumb: /images/assets/video/what-home-means-thumb.jpg
       videoId: 7f9dqQBYjcA
       captionState: en
@@ -40,7 +40,7 @@ videoSection:
       captionState: en
       title: "Rosemary: A Life Disrupted"
       description: An eviction comes without warning, and a young woman finds herself uprooted from her community and struggling in school.
-    - uid: our-stories
+    - uid: what-home-means
       thumb: /images/assets/video/what-home-means2-thumb.jpg
       videoId: INcFo3PxFZU
       captionState: en
