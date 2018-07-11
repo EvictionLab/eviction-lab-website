@@ -31,6 +31,12 @@ other = "el desalojo"
 other = "Métodos"
 [helpHead]
 other = "Ayuda y preguntas frecuentes"
+[wemIntro]
+other = "NEW:"
+[wemAlert]
+other = 'Watch our video series, "The Eviction Epidemic"'
+[wemCTA]
+other = "View videos"
 [shareOne]
 other = "Com-"
 [shareTwo]
