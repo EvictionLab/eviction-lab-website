@@ -1,8 +1,0 @@
----
-title: "¿Cómo es el proceso de desalojo?"
-date: 2017-11-19T20:43:49-08:00
-childof: evictionMatters
-type: faq
-weight: 140
----
-Los propietarios inician el proceso y se notifica a los inquilinos para que se presenten ante el tribunal. Casi en todas partes en los Estados Unidos, los desalojos tienen lugar en un tribunal civil, donde los inquilinos no tienen derecho a un abogado. Por esta razón y otras, la mayoría de los inquilinos no aparecen en el tribunal de desalojo. Cuando esto sucede, reciben un juicio de desalojo por defecto, siempre que el propietario o un representante esté presente. Los inquilinos que comparecen ante el tribunal también pueden recibir una sentencia de desalojo que les ordena abandonar su hogar antes de una fecha específica. Los casos de desalojo se pueden resolver de otras maneras también. Por un lado, el caso puede desestimarse o fallar a favor de los acusados, lo que permite que el inquilino permanezca en su hogar. Además, se puede establecer un acuerdo mediado entre un propietario y un inquilino, a menudo llamado "acuerdo" o "estipulación", que viene con ciertos términos. Si los inquilinos cumplen con los términos, se desestima el desalojo; si no lo hacen, se puede emitir un juicio de desalojo. En el caso de que los inquilinos desalojados no salgan de su hogar antes de la fecha especificada, el propietario puede presentar un "mandato de restitución" que permite a los agentes del orden expulsar por fuerza a una familia y, a menudo, sus pertenencias.

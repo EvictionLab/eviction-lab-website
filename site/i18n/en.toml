@@ -31,6 +31,12 @@ other = "Matters"
 other = "Methods"
 [helpHead]
 other = "Help and FAQ"
+[wemIntro]
+other = "NEW:"
+[wemAlert]
+other = 'Watch our video series "The Eviction Epidemic"'
+[wemCTA]
+other = "View videos"
 [shareOne]
 other = "Share"
 [shareTwo]

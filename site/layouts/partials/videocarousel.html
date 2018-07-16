@@ -1,0 +1,135 @@
+<div id="videoCarousel" class="carousel slide">
+  <div class="carousel-inner">
+    {{ range $i, $e := . }}
+    <div class="carousel-item">
+      <div class="video-container">
+        <iframe id="{{ $e.uid }}" 
+                src="https://www.youtube.com/embed/{{ $e.videoId }}?&showinfo=0&rel=0&enablejsapi=1&hl={{ $e.captionState }}&cc_lang_pref={{ $e.captionState }}&cc_load_policy=1" 
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+        ></iframe> 
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h2>{{ $e.title }}</h2>
+        <p>{{ $e.description }}</p>
+      </div>
+      <p class="vidsub mobile-on ak-bold">{{ $e.title }}</p>
+    </div>
+    {{ end }}
+  </div>
+  <a class="carousel-control-prev mobile-off" href="#videoCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous Video</span>
+  </a>
+  <a class="carousel-control-next mobile-off" href="#videoCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next Video</span>
+  </a>
+  <ol class="carousel-indicators">
+    {{ range $i, $e := . }}
+      <li id="vt{{ add $i 1 }}" data-target="#videoCarousel" data-slide-to="{{ $i }}" role="button">
+        <img src="{{ $e.thumb }}" alt="{{ $e.title }}" />
+      </li>
+    {{ end }}
+  </ol>
+</div>
+<script type="text/javascript">
+
+  // Setup videos array / object
+  var videos = [ {{ range $i, $e := . }}{{ if $i }}, {{ end }}"{{ $e.uid }}|{{ $e.videoId }}"{{ end }} ];
+  videos = videos.reduce(function(acc, cur) {
+    var uid = cur.split("|")[0];
+    var vidId = cur.split("|")[1];
+    var vidObj = {};
+    vidObj[uid] = { videoId: vidId };
+    return Object.assign(acc, vidObj);
+  }, {});
+
+  // Add Youtube JS API
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  /** Defer a function from running until jQuery is ready */
+  function defer(method) {
+    if (window.jQuery) {
+      method();
+    } else {
+      setTimeout(function() { defer(method) }, 50);
+    }
+  }
+
+  /** Setup video players */
+  function onYouTubeIframeAPIReady() {
+    Object.keys(videos).forEach(function(key) {
+      videos[key].player = new YT.Player(key, {
+        events: {
+          'onStateChange': function(e) {
+            return onPlayerStateChange(key, e);
+          }
+        }
+      });
+    });
+  }
+
+  /** Handle video playing state */
+  function onPlayerStateChange(uid, event) {
+    var playerStatus = event.data;
+    if (playerStatus == 0 || playerStatus == 2) {
+      onVideoStopped(uid)
+    } else if (playerStatus == 1) {
+      onVideoPlaying(uid)
+    }
+  }
+  /** Hide controls and title on play */
+  function onVideoPlaying(uid) {
+    var controlElements = $('.carousel-caption, .carousel-control-prev, .carousel-control-next');
+    controlElements.animate({
+      opacity: 0
+    }, 500);
+  }
+
+  /** Show controls and title when stopped */
+  function onVideoStopped(uid) {
+    var controlElements = $('.carousel-caption, .carousel-control-prev, .carousel-control-next');
+    controlElements.animate({
+      opacity: 1
+    }, 500);
+  }
+
+  /** Gets the index of the video, or returns 0 if it doesn't exist */
+  function getVideoIndex(videoId) {
+    if (!videoId) { return 0; }
+    var videoIndex = (Object.keys(videos).findIndex(function (v) {
+      return v === videoId;
+    }));
+    return videoIndex === -1 ? 0 : videoIndex;
+  }
+
+  /** Setup the carousel when jQuery is ready */
+  defer(function() {
+    var carouselEl = $('#videoCarousel');
+    var hash = window.location.hash.substr(1);
+    var currentVideoIndex = getVideoIndex(hash);
+    var currentVideoId = Object.keys(videos)[currentVideoIndex];
+    carouselEl.carousel({ interval: false });
+    
+    // stop video when sliding
+    carouselEl.on('slide.bs.carousel', function (e) {
+      videos[currentVideoId].player.stopVideo();
+    });
+    // play next video when slid
+    carouselEl.on('slid.bs.carousel', function (e) {
+      var newVideo = $(e.relatedTarget).find('iframe').attr('id');
+      currentVideoId = newVideo;
+    });
+    carouselEl.find('.carousel-item')
+      .eq(currentVideoIndex)
+      .addClass('active');
+    carouselEl.find('.carousel-indicators li')
+      .eq(currentVideoIndex)
+      .addClass('active');
+  });
+
+</script>

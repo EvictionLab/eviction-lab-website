@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="50px" viewBox="0 0 25 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Banner</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-2.48949813e-15%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#434878" offset="0%"></stop>
+            <stop stop-color="#363A60" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-1440-Pictorial-Menu" transform="translate(-125.000000, -793.000000)">
+            <g id="Menu" transform="translate(0.000000, 78.000000)">
+                <g id="Tertiary" transform="translate(0.000000, 677.000000)">
+                    <g transform="translate(125.000000, 35.000000)" id="Group-12">
+                        <g transform="translate(0.000000, 3.000000)">
+                            <g id="Banner">
+                                <rect id="Rectangle-5" fill="#5F648C" x="2" y="5" width="22" height="27"></rect>
+                                <path d="M0,0 L25,0 L25,50 L12.5,39.5404287 L0,50 L0,0 Z M6.62867711,26 L12.5,22.9252329 L18.3713229,26 L17.25,19.4875388 L22,14.8753882 L15.4356615,13.9252329 L12.5,8 L9.56433855,13.9252329 L3,14.8753882 L7.75000001,19.4875388 L6.62867711,26 Z" id="Combined-Shape" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
