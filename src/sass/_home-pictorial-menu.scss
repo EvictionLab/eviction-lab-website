@@ -375,7 +375,7 @@
       }
       @include for-tablet-landscape-up {
         @include defaultFont(17px);
-        margin-bottom: 16px;
+        margin-bottom: 8px;
         line-height: 2.7rem;
        /* span {
           @include defaultFontBold(17px);
