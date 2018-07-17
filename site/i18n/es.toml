@@ -32,11 +32,13 @@ other = "Métodos"
 [helpHead]
 other = "Ayuda y preguntas frecuentes"
 [wemIntro]
-other = "NEW:"
+other = "NUEVO:"
 [wemAlert]
-other = 'Watch our video series "The Eviction Epidemic"'
+other = 'Mira nuestra serie de videos "La Epidemia de Desalojo"'
 [wemCTA]
-other = "View videos"
+other = "Mira videos"
+[wemLink]
+other = "/es/video"
 [shareOne]
 other = "Com-"
 [shareTwo]

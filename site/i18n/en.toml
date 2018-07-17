@@ -37,6 +37,8 @@ other = "NEW:"
 other = 'Watch our video series "The Eviction Epidemic"'
 [wemCTA]
 other = "View videos"
+[wemLink]
+other = "/video"
 [shareOne]
 other = "Share"
 [shareTwo]

@@ -18,40 +18,40 @@ intro:
   text: > 
     La falta de vivienda asequible se encuentra en la raíz de una serie de problemas sociales, desde la pobreza y la falta de vivienda hasta las disparidades educativas y la atención médica. Eso significa que comprender la crisis del desalojo es fundamental para abordar de manera efectiva estos problemas y reducir la desigualdad. Sin embargo, antes del lanzamiento del conjunto de datos de Eviction Lab, se sabía poco sobre la prevalencia del desalojo en Estados Unidos, entonces era imposible estudiar sus causas y consecuencias a nivel nacional. Este nuevo conjunto de datos nos brinda herramientas para comprender mejor y luchar contra la epidemia de desahucios en los Estados Unidos.     
 videoSection:
-  heading: 'Video Series: The Eviction Epidemic'
+  heading: 'Serie de videos: La epidemia de desalojo'
   videos:
     - uid: epidemic
       thumb: /images/assets/video/what-home-means-thumb.jpg
       videoId: 7f9dqQBYjcA
       captionState: es
-      title: The Eviction Epidemic
-      description: It’s more widespread than you might think, and its consequences for individuals and families can be long-lasting and devastating.
+      title: La Epidemia de Desalojo
+      description: Está más extendido de lo que se cree, y sus consecuencias para las personas y las familias pueden ser duraderas y devastadoras.
     - uid: destiny
       thumb: /images/assets/video/destiny2-thumb.jpg
       videoId: Ql9nCwbLVfA
       captionState: es
-      title: "Destiny: A Mother's Story"
-      description: A public servant and working mom faces an uphill battle to make ends meet, even as her hours are cut. Then one day, the notice arrives.
+      title: "Destiny: La Historia de Una Madre"
+      description: Un servidor público y una madre trabajadora se enfrentan a una batalla cuesta arriba para llegar a fin de mes, incluso cuando se cortan sus horas. Entonces, un día, llega el aviso.
     - uid: rosemary
       thumb: /images/assets/video/rosemary2-thumb.jpg
       videoId: gXqNtHtUa1U
       captionState: es
-      title: "Rosemary: A Life Disrupted"
-      description: An eviction comes without warning, and a young woman finds herself uprooted from her community and struggling in school.
+      title: "Rosemary: Una Vida Interrumpida"
+      description: Un desalojo llega sin previo aviso, y una mujer joven se encuentra desarraigada de su comunidad y luchando en la escuela.
     - uid: what-home-means
       thumb: /images/assets/video/what-home-means2-thumb.jpg
       videoId: INcFo3PxFZU
       captionState: es
-      title: What Home Means
-      description: Every 15 seconds, a home is shattered by eviction. Hear displaced tenants describe their experiences and learn what you can do to make a difference.
+      title: Qué Significa el Hogar
+      description: Cada 15 segundos, una casa queda destrozada por el desalojo. Escuche a los inquilinos desplazados describir sus experiencias y aprender lo que se puede hacer para hacer una diferencia.
 
 faqSection:
   heading: Preguntas y respuestas sobre el desalojo 
   faq:
     - qid: understanding-eviction
-      question: Why is it important to study and understand eviction?
+      question: ¿Por qué es importante estudiar y comprender el desalojo?
       answer: >
-        <p>The lack of affordable housing sits at the root of a host of social problems, from poverty and homelessness to educational disparities and health care. That means understanding the eviction crisis is critical to effectively addressing these problems and reducing inequality. However, before the launch of the Eviction Lab dataset, little was known about the prevalence of eviction in America, so studying its causes and consequences on a national level was impossible. This new dataset gives us the tools to better understand—and fight—America’s eviction epidemic.<p>
+        <p>La falta de vivienda asequible se encuentra en la raíz de una serie de problemas sociales, desde la pobreza y la falta de vivienda hasta las disparidades educativas y la atención médica. Eso significa que comprender la crisis del desalojo es fundamental para abordar de manera efectiva estos problemas y reducir la desigualdad. Sin embargo, antes del lanzamiento del conjunto de datos de Eviction Lab, se sabía poco sobre la prevalencia del desalojo en Estados Unidos, entonces era imposible estudiar sus causas y consecuencias a nivel nacional. Este nuevo conjunto de datos nos brinda herramientas para comprender mejor y luchar contra la epidemia de desahucios en los Estados Unidos.<p>
     - qid: what-is-an-eviction
       question: "¿Qué es un desalojo?"
       answer: >
