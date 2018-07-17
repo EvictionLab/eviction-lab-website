@@ -128,6 +128,24 @@ input[type=radio] {
         @include for-midsize-desktop-up {
             padding-bottom: 5.6rem;
         }
+    .nav-tabs {
+        border-bottom: none;
+        @include for-tablet-landscape-up {
+            
+        }
+    }
+    .center-content-post {
+        @include for-tablet-landscape-up {
+            max-width: 840px;
+            }
+        }
+    .tab-content {
+        background: #fff;
+        @include for-tablet-landscape-up {
+            padding: 4rem 6rem 3.2rem;
+        }
+        }        
+      
 }
 ol.list-initial, .text-li ol.list-initial li {
     list-style: initial;

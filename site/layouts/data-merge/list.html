@@ -9,17 +9,35 @@
             </div>
           </div>   
     {{ end }}
+    {{ end }}
 <!-- section header -->
 <div class="data-merge">
-{{ if eq .Params.pagename "datamerge" }} 
-    <div class="center-page-wrapper">
-        <div class="center-content-post page-list text-li">
-            <p>{{ .Content }} </p>
+            <div class="center-page-wrapper">
+                <div class="center-content-post page-list text-li">
+<ul class="nav nav-tabs anchor-links" role="tablist">
+        <li class="only-larger-screens" role="presentation">Choose an option</li>
+        <li role="presentation" class="active"><a href="#option1" aria-controls="home" role="tab" data-toggle="tab">Data Merge</a></li>
+        <li role="presentation"><a href="#option2" aria-controls="profile" role="tab" data-toggle="tab">Custom Request</a></li>
+    </ul>
+     
+    <div class="tab-content">
+      <!-- ************* Research Team Bios ***************** -->
+      <div role="tabpanel" class="tab-pane active" id="option1">    
+       
+                
+            Test1
+         
+      
+      </div> <!-- End Research Team tab-pane -->
+      <div role="tabpanel" class="tab-pane" id="option2">    
+          
+               Test 2    
+          
 
-        </div>
-    </div>
-    {{ end }}    
-{{ end }}    
-    
+          </div> <!-- End Research Team tab-pane -->
+    </div>  
+</div>  
 </div>
+</div>  
+
 {{ partial "footer" . }}
