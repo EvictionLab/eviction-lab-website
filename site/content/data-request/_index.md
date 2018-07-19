@@ -5,6 +5,7 @@ type: index
 url: /data-request
 aliases:
     - /data-merge
+    - /es/data-request
 pagename: datamerge
 childof: datamerge
 photoCredit: Sally Ryan
