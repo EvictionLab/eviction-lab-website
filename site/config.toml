@@ -89,7 +89,7 @@ languageName = "English"
 [[Languages.en.menu.footer]]
     name = "Data Request Application"
     weight = 11
-    url = "/data-merge"
+    url = "/data-request"
 [[Languages.en.menu.footer]]
     name = "Media Guide"
     weight = 12
@@ -205,9 +205,9 @@ languageName = "Español"
     weight = 10
     url = "/es/get-the-data"
 [[Languages.es.menu.footer]]
-    name = "Aplicación de combinación de datos"
+    name = "Aplicación de solicitud de datos"
     weight = 11
-    url = "/es/data-merge"
+    url = "/es/data-request"
 [[Languages.es.menu.footer]]
     name = "Guía de medios"
     weight = 12
