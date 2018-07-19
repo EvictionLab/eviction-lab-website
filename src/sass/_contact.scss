@@ -152,11 +152,11 @@ input[type=radio] {
     .anchor-links li.active a:after, .anchor-links li a.highlight:after {
         @include for-phone-only {
         opacity: 1;
-        bottom: -16px;
+        bottom: -22px; 
         }
         @include for-tablet-portrait-only {
             opacity: 1;
-            bottom: -16px;
+          /*  bottom: -16px; */
             }
     }
     .center-content-post {
