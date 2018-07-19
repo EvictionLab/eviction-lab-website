@@ -7,7 +7,7 @@ childof: datamerge
 photoCredit: Sally Ryan
 description: Apply to have your data merged with the Eviction Lab's records.
 socialDescription: We’ve built the first nationwide database of evictions. 
-h1: Data Merge Application
+h1: Data Request Application
 tabs:
   option1: Data Merge
   option2: Custom Request
