@@ -20,8 +20,16 @@
 }
 
 .eviction-matters {
-    iframe {
+    iframe#rosemary:target  {
+        /*
+            
+                content:"";
+                display:block;
+                height:90px; 
+                margin:-90px 0 0; 
+                
         
+        */
     }    
     .caption {
         color: #737373;
@@ -116,11 +124,11 @@
         }
         .bordered-header {
             @include for-tablet-landscape-up {
-                width: calc(135vh - 120px);
+                width: calc(124vh - 120px);
                 max-width: 850px;
             }
             @media (min-width: 1376px) {
-            max-width: calc(135vh - 120px);
+            max-width: calc(124vh - 120px);
             max-width: 1200px;
             }
         }
@@ -142,12 +150,12 @@
             @include for-tablet-landscape-up {
                 max-height: 510px;
                 max-width: 850px;
-                height: calc(90vh - 120px);
-                width: calc(135vh - 120px);
+                height: calc(76vh - 120px);
+                width: calc(124vh - 120px);
                 }
             @media (min-width: 1376px) {
-                height: calc(90vh - 120px) !important;
-                width: calc(135vh - 120px)!important;
+                height: calc(76vh - 120px) !important;
+                width: calc(124vh - 120px)!important;
                 max-width: 100%;
                 max-height: 710px; 
             }
@@ -155,27 +163,27 @@
         .carousel {
             @include for-tablet-landscape-up {
                 max-width: 850px;
-                width: calc(135vh - 120px);
+                width: calc(124vh - 120px);
                 margin: auto;
             }
             @media (min-width: 1376px) {
                 max-width: 100%;
-                width: calc(135vh - 120px);
+                width: calc(124vh - 120px);
                 margin: auto;
             }
         }
         .video-container {
             @include for-tablet-landscape-up {
-                width: calc(135vh - 120px);
-                height: calc(90vh - 120px);
+                width: calc(124vh - 120px);
+                height: calc(76vh - 120px);
                 padding-bottom: 0;
                 max-width: 850px;
                 max-height: 510px; 
                 margin: auto;
                 }
             @media (min-width: 1376px) {
-                width: calc(135vh - 120px);
-                height: calc(90vh - 120px);
+                width: calc(124vh - 120px);
+                height: calc(76vh - 120px);
                 margin: auto;
                 padding-bottom: 0;
                 max-width: 1200px;
