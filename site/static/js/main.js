@@ -145,6 +145,7 @@ function getPageOffset(url) {
   return 0;
 }
 
+
 function smoothScroll(path, cb) {
   if (
     location.pathname.replace(/^\//, '') == path.pathname.replace(/^\//, '') &&
