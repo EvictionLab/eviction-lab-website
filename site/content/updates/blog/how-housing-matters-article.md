@@ -14,7 +14,7 @@ fbImage: 'https://evictionlab.org/images/assets/blog/hhm-eviction-data-map.jpg'
 twImage: 'https://evictionlab.org/images/assets/blog/hhm-eviction-data-map.jpg'
 image: /images/assets/blog/hhm-eviction-data-map.jpg
 ---
-The Urban Institute's <a href="https://howhousingmatters.org/" target="_blank">How Housing Matters website</a> has published <a href="https://howhousingmatters.org/articles/robust-eviction-data-can-keep-cities-designing-policy-dark/" target="_blank">an enlightening piece</a> summarizing the current state of nationwide eviction data-gathering, as well as describing the critical role this data can play in informing public policy. It quotes Eviction Lab Principal Investigator Matthew Desmond as saying:
+The Urban Institute's <a href="https://howhousingmatters.org/" target="_blank">How Housing Matters website</a> has published <a href="https://howhousingmatters.org/articles/robust-eviction-data-can-keep-cities-designing-policy-dark/" target="_blank">an enlightening piece</a> summarizing the current state of nationwide eviction data-gathering, as well as describing the critical role this data can play in informing public policy. As Eviction Lab Principal Investigator Matthew Desmond explains,
 
 <span class="ital">“Eviction is a giant problem that we only know is giant because of being in touch with communities. But we had no national eviction database. That’s akin to not knowing how many car accidents or cancer cases there are each year. It’s important to know what cities have the highest and lowest eviction rates and to learn what’s working. We’ve been designing policy in the dark.”</span>
 
