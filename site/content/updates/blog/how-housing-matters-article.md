@@ -19,7 +19,7 @@ Besides laying out the benefits of the new database, the article also details th
 <a href="https://howhousingmatters.org/articles/robust-eviction-data-can-keep-cities-designing-policy-dark/" target="_blank">The How Housing Matters article</a> provides a helpful series of national maps that depict these areas of missing data. We are hopeful that revealing these gaps will prompt other researchers to help fill the void, as well as to nudge those more-restrictive states to find ways to balance important renter protections with the value of accommodating academic and public interest-driven research.
 
 The article also points to additional areas where increased data access and further research would be helpful. For example, we don't have reliable answers to the questions:
-<ul>
+<ul class="marg8">
 <li>For what reasons are tenants forced to move?</li> 
 <li>What amounts of money do renters tend to owe when evicted?</li> 
 <li>What percentage of tenants have legal representation in court, versus landlords?</li> 
