@@ -40,7 +40,6 @@ collections:
 - name: "blog" # Used in routes, e.g., /admin/collections/blog
   label: "Blog" # Used in the UI
   folder: "/site/content/updates/blog" # The path to the folder where the documents are stored
-  media_folder: "/site/static/images/bios" # Folder where user uploaded files should go
   create: true # Allow users to create new documents in this collection
   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
@@ -111,30 +110,30 @@ collections:
     - {label: "File", name: "file", widget: "file", required: false}
     - {label: "Author Photo", name: "authorpic", widget: "image", default: "/images/uploads/james_hendrickson_thumb.jpg", required: false}  
 
-- name: "research-team-bios" # Used in routes, e.g., /admin/collections/blog
-  label: "Research Team Bios" # Used in the UI
-  folder: "/site/content/about-us/research-team-bios" # The path to the folder where the documents are stored
-  create: true # Allow users to create new documents in this collection
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  fields: # The fields for each document, usually in front matter
-    - {label: "Child Of", name: "childof", widget: "hidden", default: "research-team-bios"}
-    - {label: "Title", name: "title", widget: "string"}
-    - {label: "Position", name: "position", widget: "string"}
-    - {label: "Created Date", name: "date", widget: "datetime"}
-    - {label: "Featured Image", name: "image", widget: "image"}
-    - {label: "Body", name: "body", widget: "markdown"}
+#- name: "research-team-bios" # Used in routes, e.g., /admin/collections/blog
+#  label: "Research Team Bios" # Used in the UI
+#  folder: "/site/content/about-us/research-team-bios" # The path to the folder where the documents are stored
+#  create: true # Allow users to create new documents in this collection
+#  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+#  fields: # The fields for each document, usually in front matter
+#    - {label: "Child Of", name: "childof", widget: "hidden", default: "research-team-bios"}
+#    - {label: "Title", name: "title", widget: "string"}
+#    - {label: "Position", name: "position", widget: "string"}
+#    - {label: "Created Date", name: "date", widget: "datetime"}
+#    - {label: "Featured Image", name: "image", widget: "image"}
+#    - {label: "Body", name: "body", widget: "markdown"}
 
-- name: "web-team-bios" # Used in routes, e.g., /admin/collections/blog
-  label: "Web Team Bios" # Used in the UI
-  folder: "/site/content/about-us/web-team-bios" # The path to the folder where the documents are stored
-  create: true # Allow users to create new documents in this collection
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  fields: # The fields for each document, usually in front matter
-    - {label: "Child Of", name: "childof", widget: "hidden", default: "web-team-bios"}
-    - {label: "Title", name: "title", widget: "string"}
-    - {label: "Position", name: "position", widget: "string"}
-    - {label: "Created Date", name: "date", widget: "datetime"}
-    - {label: "Featured Image", name: "image", widget: "image"}
-    - {label: "Body", name: "body", widget: "markdown"}
+#- name: "web-team-bios" # Used in routes, e.g., /admin/collections/blog
+#  label: "Web Team Bios" # Used in the UI
+#  folder: "/site/content/about-us/web-team-bios" # The path to the folder where the documents are stored
+#  create: true # Allow users to create new documents in this collection
+#  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+#  fields: # The fields for each document, usually in front matter
+#    - {label: "Child Of", name: "childof", widget: "hidden", default: "web-team-bios"}
+#    - {label: "Title", name: "title", widget: "string"}
+#    - {label: "Position", name: "position", widget: "string"}
+#    - {label: "Created Date", name: "date", widget: "datetime"}
+#    - {label: "Featured Image", name: "image", widget: "image"}
+#    - {label: "Body", name: "body", widget: "markdown"}
 
 
