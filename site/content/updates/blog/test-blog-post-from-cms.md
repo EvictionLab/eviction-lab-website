@@ -8,9 +8,9 @@ date: 2018-08-28T18:45:16.030Z
 postauthorname: The Eviction Lab
 authorpic: /images/uploads/elab_thumb_sm.jpg
 ---
-# The Urban Institute’s How Housing Matters website has published [an enlightening piece](https://howhousingmatters.org/articles/robust-eviction-data-can-keep-cities-designing-policy-dark/) summarizing the current state of nationwide eviction data-gathering, as well as describing the critical role this data can play in informing public policy. As Eviction Lab Principal Investigator Matthew Desmond explains,
+The Urban Institute’s How Housing Matters website has published [an enlightening piece](https://howhousingmatters.org/articles/robust-eviction-data-can-keep-cities-designing-policy-dark/) summarizing the current state of nationwide eviction data-gathering, as well as describing the critical role this data can play in informing public policy. As Eviction Lab Principal Investigator Matthew Desmond explains,
 
-## “Eviction is a giant problem that we only know is giant because of being in touch with communities. But we had no national eviction database. That’s akin to not knowing how many car accidents or cancer cases there are each year. It’s important to know what cities have the highest and lowest eviction rates and to learn what’s working. We’ve been designing policy in the dark.”
+“Eviction is a giant problem that we only know is giant because of being in touch with communities. But we had no national eviction database. That’s akin to not knowing how many car accidents or cancer cases there are each year. It’s important to know what cities have the highest and lowest eviction rates and to learn what’s working. We’ve been designing policy in the dark.”
 
 Besides laying out the benefits of the new database, the article also details the challenges and remaining obstacles in acquiring eviction numbers for the entire country. You may have noticed on our eviction map, for example, that some states and localities are flagged with the symbol , denoting what we judge to be an undercount, while some others list eviction numbers as “unavailable.” These are reflective of gaps in data access: some states have missing or incomplete records, while others restrict access in the interest of shielding renters from the stigma of a publicly-accessible eviction judgment.
 
