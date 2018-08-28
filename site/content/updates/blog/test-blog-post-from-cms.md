@@ -14,21 +14,14 @@ The Urban Institute’s How Housing Matters website has published [an enlighteni
 
 Besides laying out the benefits of the new database, the article also details the challenges and remaining obstacles in acquiring eviction numbers for the entire country. You may have noticed on our eviction map, for example, that some states and localities are flagged with the symbol , denoting what we judge to be an undercount, while some others list eviction numbers as “unavailable.” These are reflective of gaps in data access: some states have missing or incomplete records, while others restrict access in the interest of shielding renters from the stigma of a publicly-accessible eviction judgment.
 
-
-
 The How Housing Matters article provides a helpful series of national maps that depict these areas of missing data. We are hopeful that revealing these gaps will prompt other researchers to help fill the void, as well as to nudge those more-restrictive states to find ways to balance important renter protections with the value of accommodating academic and public interest-driven research.
-
-
 
 The article also points to additional areas where increased data access and further research would be helpful. For example, we don’t have reliable answers to the questions:
 
+1. For what reasons are tenants forced to move?
+2. What amounts of money do renters tend to owe when evicted?
+3. What percentage of tenants have legal representation in court, versus landlords?
 
-
-* For what reasons are tenants forced to move?
-* What amounts of money do renters tend to owe when evicted?
-* What percentage of tenants have legal representation in court, versus landlords?
-* Knowing the answers to questions such as these can inform policy proposals that will be better tailored to the problems at hand in each locality.
-
-
+Knowing the answers to questions such as these can inform policy proposals that will be better tailored to the problems at hand in each locality.
 
 READ THE ARTICLE: Robust Eviction Data Can Keep Cities from “Designing Policy in the Dark”
