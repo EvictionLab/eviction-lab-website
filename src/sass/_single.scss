@@ -180,6 +180,18 @@ img.post-thumb {
           color: $color1;
         }  
     }
+    ul {
+      margin-bottom: 1.6rem;
+      @include for-tablet-portrait-up { 
+        margin-bottom: 2.4rem;
+      }
+      @include for-tablet-landscape-up { 
+        margin-bottom: 3.2rem;
+      }
+        li {
+        margin-bottom: 0.8rem;
+        }
+    }
     @include for-phone-only {
       padding: 2.4rem 16px;
       .post-body {
