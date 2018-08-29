@@ -28,7 +28,9 @@
 		{{ if .Params.socialDescription }}
 			{{ $.Scratch.Set "socialDescription" .Params.socialDescription }}
 		{{ end }}
-		
+		{{ if .Params.image }}
+			{{ $.Scratch.Set "image" .Params.image }}
+		{{ end }}
 
 		<!-- General metadata -->
 		<meta name="description" content="{{ $.Scratch.Get "description" }}" />
@@ -40,8 +42,14 @@
 		<meta property="og:description" content="{{ $.Scratch.Get "socialDescription" }}" />
 		<meta property="og:url" content="{{ .Permalink }}" />
 		<meta property="og:site_name" content="Eviction Lab" />
-		<meta property="og:image" content="{{ $.Scratch.Get "fbImage" }}" />
-		<meta property="og:image:secure_url" content="{{ $.Scratch.Get "fbImage" }}" />
+		{{ if .Params.fbImage }}
+		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+		{{ else }}
+		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
+		{{ end }}	
+		
 		<!-- Twitter metadata -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@EvictionLab" />
