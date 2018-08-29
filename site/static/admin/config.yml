@@ -57,7 +57,7 @@ collections:
       valueField: "authorname"
     - {label: "Author Photo", name: "authorpic", widget: "image", default: "images/uploads/james_hendrickson_thumb.jpg", required: false}  
     - {label: "Featured Image", name: "image", widget: "image", required: false}
-    - {label: "Body", name: "body", widget: "markdown", buttons: "bold, italic, link, bulleted-list, numbered-list"}
+    - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"}
     
        
   
