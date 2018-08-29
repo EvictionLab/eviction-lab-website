@@ -55,6 +55,7 @@ collections:
       collection: "authors"
       searchFields: ["authorname", "authortitle", "authorurl"]
       valueField: "authorname"
+    - {label: "Author Title", name: "postauthortitle", widget: "string"}  
     - {label: "Author Photo", name: "authorpic", widget: "image", default: "images/uploads/james_hendrickson_thumb.jpg", required: false}  
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"]}
