@@ -9,8 +9,8 @@ postauthorname: James Minton
 postauthortitle: Creative Director
 authorpic: /images/bios/jminton_thumb_sm.jpg
 image: /images/assets/blog/eviction-lab-southeast-map5.jpg
-fbImage: 'https://evictionlab.org/images/assets/blog/eviction-lab-southeast-map5.jpg'
-twImage: 'https://evictionlab.org/images/assets/blog/eviction-lab-southeast-map5.jpg'
+fbImage: '/images/assets/blog/eviction-lab-southeast-map5.jpg'
+twImage: '/images/assets/blog/eviction-lab-southeast-map5.jpg'
 ---
 When Matthew Desmond and his Eviction Lab research team offered us the task of mapping and visualizing their first-of-its-kind database of eviction statistics, we (the web team) were excited, honored, and humbled. And then, when things began to get real and the project took shape, we drew a collective deep breath as we grasped the magnitude of the challenges ahead of us.
 
