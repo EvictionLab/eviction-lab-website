@@ -48,10 +48,10 @@
 		<meta property="og:site_name" content="Eviction Lab" />
 		{{ if .Params.fbImage }}
 		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
-		<meta property="og:image:secure_url" content="{{ $.Scratch.Get "fbImage" }}" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
 		{{ else if .Params.image }}
 		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
-		<meta property="og:image:secure_url" content="{{ $.Scratch.Get "image" }}" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
 		{{ else }}
 		<meta property="og:image" content="https://evictionlab.org/tool/assets/images/el-facebook-img.jpg" />
 		<meta property="og:image:secure_url" content="https://evictionlab.org/tool/assets/images/el-facebook-img.jpg" />
