@@ -38,6 +38,7 @@ collections:
     - {label: "Author Photo", name: "authorpic", widget: "image", default: "images/uploads/james_hendrickson_thumb.jpg", required: false}  
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Social Media / Search Description", name: "description", widget: "string", required: false}
+    - {label: "Excerpt for Articles List", name: "listSummary", widget: "string", required: false}
     - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"]}
     
        
@@ -60,6 +61,7 @@ collections:
     - {label: "Author Photo", name: "authorpic", widget: "image", default: "images/uploads/james_hendrickson_thumb.jpg", required: false} 
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Social Media / Search Description", name: "description", widget: "string", required: false}
+    - {label: "Excerpt for Articles List", name: "listSummary", widget: "string", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
 
 - name: "elresearch" # Used in routes, e.g., /admin/collections/blog
@@ -80,6 +82,7 @@ collections:
     - {label: "Author Photo", name: "authorpic", widget: "image", default: "images/uploads/james_hendrickson_thumb.jpg", required: false} 
     - {label: "Featured Image", name: "image", widget: "image", required: false}
     - {label: "Social Media / Search Description", name: "description", widget: "string", required: false}
+    - {label: "Excerpt for Articles List", name: "listSummary", widget: "string", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "File", name: "file", widget: "file", required: false}
      
@@ -102,6 +105,7 @@ collections:
     - {label: "Author Title", name: "postauthortitle", widget: "string"}  
     - {label: "Author Photo", name: "authorpic", widget: "image", default: "images/uploads/james_hendrickson_thumb.jpg", required: false}
     - {label: "Social Media / Search Description", name: "description", widget: "string", required: false} 
+    - {label: "Excerpt for Articles List", name: "listSummary", widget: "string", required: false}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "File", name: "file", widget: "file", required: false}
 
