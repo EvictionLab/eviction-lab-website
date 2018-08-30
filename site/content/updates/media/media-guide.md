@@ -62,6 +62,7 @@ Regarding use of our visualizations, feel free to
 + Use screenshots of our data visualizations (from the <a href="/map" target="_blank">map</a> and <a href="/rankings" target="_blank">rankings</a> pages)
 + Create custom visualizations of your own using the data
 
+
 How to credit: the embedded map contains its own credit; any other visuals can be credited as "courtesy of The Eviction Lab at Princeton University."
 
 Photos on the site are licensed via their photographers, and you may reach out to them to inquire about usage; all photographers are credited either within captions or in the footer.

@@ -28,7 +28,9 @@
 		{{ if .Params.socialDescription }}
 			{{ $.Scratch.Set "socialDescription" .Params.socialDescription }}
 		{{ end }}
-		
+		{{ if .Params.image }}
+			{{ $.Scratch.Set "image" .Params.image }}
+		{{ end }}
 
 		<!-- General metadata -->
 		<meta name="description" content="{{ $.Scratch.Get "description" }}" />
@@ -37,17 +39,40 @@
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="{{ .Title }}" />
+		{{ if .Params.socialDescription }}
 		<meta property="og:description" content="{{ $.Scratch.Get "socialDescription" }}" />
+		{{ else }}
+		<meta property="og:description" content="{{ $.Scratch.Get "description" }}" />
+		{{ end }}
 		<meta property="og:url" content="{{ .Permalink }}" />
 		<meta property="og:site_name" content="Eviction Lab" />
-		<meta property="og:image" content="{{ $.Scratch.Get "fbImage" }}" />
-		<meta property="og:image:secure_url" content="{{ $.Scratch.Get "fbImage" }}" />
+		{{ if .Params.fbImage }}
+		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+		{{ else if .Params.image }}
+		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
+		{{ else }}
+		<meta property="og:image" content="https://evictionlab.org/tool/assets/images/el-facebook-img.jpg" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org/tool/assets/images/el-facebook-img.jpg" />
+		{{ end }}	
+		
 		<!-- Twitter metadata -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@EvictionLab" />
 		<meta name="twitter:title" content="{{ .Title }}" />
+		{{ if .Params.socialDescription }}
 		<meta name="twitter:description" content="{{ $.Scratch.Get "socialDescription" }}" />
-		<meta name="twitter:image" content="{{ $.Scratch.Get "twImage" }}" />
+		{{ else }}
+		<meta name="twitter:description" content="{{ $.Scratch.Get "description" }}" />
+		{{ end }}
+		{{ if .Params.twImage }}
+		<meta name="twitter:image" content="https://evictionlab.org{{ $.Scratch.Get "twImage" }}" />
+		{{ else if .Params.image }}
+		<meta name="twitter:image" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
+		{{ else }}
+		<meta name="twitter:image" content="https://evictionlab.org/tool/assets/images/el-twitter-img.jpg" />
+		{{ end }}
 
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

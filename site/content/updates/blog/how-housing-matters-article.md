@@ -10,8 +10,8 @@ postauthortitle: Creative Director
 authorpic: /images/bios/jminton_thumb_sm.jpg
 description: A look at the benefits and challenges of compiling the first-ever nationwide eviction database.
 socialDescription: A look at the benefits and challenges of compiling the first-ever nationwide eviction database.
-fbImage: 'https://evictionlab.org/images/assets/blog/hhm-eviction-data-map.jpg'
-twImage: 'https://evictionlab.org/images/assets/blog/hhm-eviction-data-map.jpg'
+fbImage: '/images/assets/blog/hhm-eviction-data-map.jpg'
+twImage: '/images/assets/blog/hhm-eviction-data-map.jpg'
 image: /images/assets/blog/hhm-eviction-data-map.jpg
 ---
 The Urban Institute's <a href="https://howhousingmatters.org/" target="_blank">How Housing Matters website</a> has published <a href="https://howhousingmatters.org/articles/robust-eviction-data-can-keep-cities-designing-policy-dark/" target="_blank">an enlightening piece</a> summarizing the current state of nationwide eviction data-gathering, as well as describing the critical role this data can play in informing public policy. As Eviction Lab Principal Investigator Matthew Desmond explains,
@@ -23,7 +23,7 @@ Besides laying out the benefits of the new database, the article also details th
 <a href="https://howhousingmatters.org/articles/robust-eviction-data-can-keep-cities-designing-policy-dark/" target="_blank">The How Housing Matters article</a> provides a helpful series of national maps that depict these areas of missing data. We are hopeful that revealing these gaps will prompt other researchers to help fill the void, as well as to nudge those more-restrictive states to find ways to balance important renter protections with the value of accommodating academic and public interest-driven research.
 
 The article also points to additional areas where increased data access and further research would be helpful. For example, we don't have reliable answers to the questions:
-<ul class="marg8">
+<ul class="">
 <li>For what reasons are tenants forced to move?</li> 
 <li>What amounts of money do renters tend to owe when evicted?</li> 
 <li>What percentage of tenants have legal representation in court, versus landlords?</li> 
