@@ -11,6 +11,7 @@ const browserSync = BrowserSync.create();
 
 // Hugo arguments
 const hugoArgsDefault = ["-d", "../dist", "-s", "site", "-v"];
+const hugoArgsPreview = ["--buildDrafts", "--buildFuture"];
 
 /**
  * Build the site using Hugo
@@ -28,6 +29,8 @@ const buildSite = (cb, options, environment = "development") => {
     }
   });
 };
+
+const buildSitePreview = (cb) => buildSite(cb, hugoArgsPreview, "production");
 
 /**
  * Compile SASS styles for website
@@ -56,6 +59,9 @@ const watchStyle = () => {
 const compile = gulp.parallel(buildSite, compileStyle);
 compile.description = "compile all sources";
 
+const compilePreview = gulp.parallel(buildSitePreview, compileStyle);
+compilePreview.description = "compile preview all sources";
+
 // Not exposed to CLI
 const startServer = () => {
   browserSync.init({
@@ -75,6 +81,7 @@ const defaultTasks = gulp.parallel(server);
 
 export {
   compile,
+  compilePreview,
   buildSite,
   compileStyle,
   server,

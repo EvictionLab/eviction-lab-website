@@ -6,6 +6,7 @@
   "scripts": {
     "hugo": "gulp buildSite",
     "build": "gulp compile",
+    "build-preview": "gulp compilePreview",
     "start": "gulp server",
     "lint": "eslint src"
   },
