@@ -65,13 +65,13 @@ const startServer = () => {
   });
 };
 
-const server = gulp.series(compile, startServer);
-server.description = "serve compiled source on local server at port 3000";
-
-const watcher = gulp.parallel(watchMarkup, watchStyle);
+const watcher = gulp.parallel(startServer, watchMarkup, watchStyle);
 watcher.description = "watch for changes to all source";
 
-const defaultTasks = gulp.parallel(server, watcher);
+const server = gulp.series(compile, watcher);
+server.description = "serve compiled source on local server at port 3000";
+
+const defaultTasks = gulp.parallel(server);
 
 export {
   compile,
