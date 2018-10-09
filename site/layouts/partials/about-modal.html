@@ -2,7 +2,12 @@
 <div class="bio-thumb-wrapper">
   <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
     <div class="bio-container">
-      <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
+      <picture>
+        <source media="(max-width: 799px)" srcset='/images/bios/grayscale{{ strings.TrimPrefix "/images/bios" .Params.thumb }}'>
+        <source media="(min-width: 800px)" srcset="{{ .Params.thumb }}">
+        <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
+      </picture>
+      
       <svg class="arrow-bio" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect x="0" y="0" width="40" height="40"></rect>
         <g transform="translate(16.000000, 13.000000)">
