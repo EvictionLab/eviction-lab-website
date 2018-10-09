@@ -369,7 +369,6 @@
       height: 192px;
       margin-bottom: 2.4rem;
       border-radius: 50%;
-      filter: grayscale(100%);
       @include for-midsize-desktop-up {
         width: 216px;
         height: 216px;
@@ -377,6 +376,7 @@
     }
     @media(min-width: $gtMobile) {
       .bio-thumb {
+        filter: grayscale(100%);
         transition: 150ms;
       }
       a:hover .bio-thumb {
