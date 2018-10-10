@@ -304,7 +304,15 @@
     justify-content: center;
     padding-bottom: 3.2rem;
     @include for-tablet-portrait-up {
-        padding-bottom: 1.6rem;
+      padding-bottom: 1.6rem;
+      a {
+        &:focus {
+            outline: 0;
+            img.bio-thumb {
+                filter: none;
+            }    
+        }
+      }
     }
     @include for-tablet-landscape-up {
         padding: 32px;
@@ -312,14 +320,7 @@
     @include for-midsize-desktop-up {
         padding: 40px;
     }
-    a {
-        &:focus {
-            outline: 0;
-            img.bio-thumb {
-                filter: none;
-            }    
-        }
-    }
+
     .bio-thumb-wrapper {
         position: relative;
         width: 100%;
@@ -363,63 +364,53 @@
             }
         }
     }
-    img.bio-thumb {
-        width: 192px;
-        height: 192px;
-        margin-bottom: 2.4rem;
-        border-radius: 50%;
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    .bio-thumb {
+      width: 192px;
+      height: 192px;
+      margin-bottom: 2.4rem;
+      border-radius: 50%;
+      @include for-midsize-desktop-up {
+        width: 216px;
+        height: 216px;
+      }
+    }
+    @media(min-width: $gtMobile) {
+      .bio-thumb {
         filter: grayscale(100%);
-        @include for-midsize-desktop-up {
-            width: 216px;
-            height: 216px;
-        }
-    &:hover {
-        filter: initial;
-        -webkit-filter: initial;
         transition: 150ms;
-        -webkit-transition: 150ms;
-        }  
-    &:hover ~ img.bio-arrow-active {
-        opacity: 1;
-        /* transition: 150ms;
-        -webkit-transition: 150ms; */
-        }       
+      }
+      a:hover .bio-thumb {
+        filter: none;
+      } 
     }
-     
-    img.bio-arrow {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 150px;
-        left: 143px;
-        @include for-midsize-desktop-up {
-            top: 172px;
-            left: 175px;
-        }
-        box-shadow: $boxShadowIcon;
-        &:hover ~ img.bio-thumb {
-            filter: initial;
-            -webkit-filter: initial;
-            transition: 150ms;
-            -webkit-transition: 150ms;
-            }     
+
+    // bio arrows
+    .arrow-bio {
+      rect {
+        fill: #fff;
+      }
+      polyline {
+        stroke-width: 3;
+        stroke: #e24000;
+        fill:none;
+      }
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 150px;
+      left: 143px;
+      box-shadow: $boxShadowIcon;  
+      @include for-midsize-desktop-up {
+        top: 172px;
+        left: 175px;
+      }
     }
-    img.bio-arrow-active {
-        width: 40px;
-        height: 40px;
-        top: 150px;
-        left: 143px;
-        position: absolute;
-        opacity: 0; 
-        @include for-midsize-desktop-up {
-            top: 172px;
-            left: 175px;
-        }
-    &:hover {
-        opacity: 1; 
-        }
-    } 
+    a:focus .arrow-bio, 
+    a:hover .arrow-bio {
+      rect { fill: #e24000; }
+      polyline { stroke: #fff; }
+    }
+
  }
 }
 
