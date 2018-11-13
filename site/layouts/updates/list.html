@@ -496,6 +496,8 @@
       
      
     {{ end }}
+    {{ else }}
+    {{ partial "events-null" . }}
   {{ end }} <!-- end Events listings -->
   <div class="center-page-wrapper">
     {{ partial "pagination" . }}

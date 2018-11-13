@@ -1,6 +1,6 @@
 ---
-childof: events
-contenttype: events
+childof: events2
+contenttype: events2
 title: 'Habitat for Humanity Annual Awards Banquet'
 date: 2018-09-26T22:43:04.337Z
 website: 'https://www.habitatmichigan.org/what-we-do/news-events/annual-awards-banquet'
