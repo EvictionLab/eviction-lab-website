@@ -102,7 +102,8 @@
 // Social share floating box
 // ---
 .social-fixed {
-  height: 206px;
+  height: 256px;
+  padding-top: 24px;
   width: 76px;
   font-size: 1.1rem;
   @include for-1080-up {
@@ -152,25 +153,51 @@
     }
   }
   a#get-resources {
-    
-    #resource-tab {
-      background-color: #434878;
-      padding: 16px 0 16px;
+    background-color: #F4F7F9;
+    color:#919191;
+    padding: 16px 0 24px;
       position: relative;
-      top: 48px;
-      margin-top: -48px;
+    &:hover {
+      background-color: #434878;
+      transition: background-color .3s ease;
       color: #fff;
+      .resource-line {
+        border-bottom: 1px solid #434878;
+      }
+      svg {
+        path#Fill-1 {
+          fill: #fff;
+        }
+        path#Oval-1 {
+          stroke: #fff;
+        }
+        path#Fill-3 {
+          fill: #fff;
+        }
+      }
+    }
+    .resource-line {
+      width: 48px;
+      margin: auto;
+      border-bottom: 1px solid #919191;
+      position: relative;
+      top: -16px;
+  }
+    #resource-tab {
+      
+      svg {
+        top: 7px;
+        position: relative;
+      }
+     
       i.fa.fa-chevron-right {
         margin-top: 6px;
       }
-      &:hover {
-        background-color: $color1;
-        transition: background-color .3s ease;
-      }
+      
     }
   }
 }
 // shift the element after the sticky element up to account for the space
 @include for-tablet-portrait-up {
-  .social-side .social-fixed + * { margin-top: -272px; }
+  .social-side .social-fixed + * { margin-top: -314px; }
 }
