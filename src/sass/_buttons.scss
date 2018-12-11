@@ -102,8 +102,13 @@
 // Social share floating box
 // ---
 .social-fixed {
-  height: 176px;
-  width: 72px;
+  height: 206px;
+  width: 76px;
+  font-size: 1.1rem;
+  @include for-1080-up {
+    width: 88px;
+    font-size: 1.2rem;
+  }
   position: sticky;
   position: -webkit-sticky;
   top: 160px;
@@ -114,7 +119,6 @@
   flex-direction: column;
   justify-content: center;
   font-family: $headerFontStack;
-  font-size: 1.2rem;
   text-transform: uppercase;
   color: #919191;
   line-height: 1.4rem;
@@ -147,8 +151,26 @@
       }
     }
   }
+  a#get-resources {
+    
+    #resource-tab {
+      background-color: #434878;
+      padding: 16px 0 16px;
+      position: relative;
+      top: 48px;
+      margin-top: -48px;
+      color: #fff;
+      i.fa.fa-chevron-right {
+        margin-top: 6px;
+      }
+      &:hover {
+        background-color: $color1;
+        transition: background-color .3s ease;
+      }
+    }
+  }
 }
 // shift the element after the sticky element up to account for the space
 @include for-tablet-portrait-up {
-  .social-side .social-fixed + * { margin-top: -232px; }
+  .social-side .social-fixed + * { margin-top: -272px; }
 }
