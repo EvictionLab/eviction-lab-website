@@ -38,7 +38,7 @@ dmBullets:
   - bullet: I agree to follow data security provisions, articulated to my IRB, to protect the confidentiality of my research subjects and ensure that only approved research team members will have access to their personally identifiable information.
 customRequest:
   - crText: > 
-      The Eviction Lab at Princeton University is the only research institution to collect and clean every eviction record in America. Outside researchers may submit requests for custom aggregate datasets that are not currently available on evictionlab.org. The Eviction Lab will review the requests and approve/deny based on time constraints, project merit, and outside researchers’ ability to meet data security requirements. All requests will take place in the Eviction Lab with no costs.
+      The Eviction Lab at Princeton University has collected and cleaned over 80 million eviction records from across the country. Outside researchers may submit requests for custom aggregate datasets that are not currently available on evictionlab.org. The Eviction Lab will review the requests and approve/deny based on time constraints, project merit, and outside researchers’ ability to meet data security requirements. All requests will take place in the Eviction Lab with no costs.
   - crText: >
       <b>For your data to be considered for a merge, please apply via email to <a href="mailto:data.merge@evictionlab.org">data.merge@evictionlab.org</a> and answer all the following questions:</b>
       <ol class="list-initial"><li>Briefly describe the data you are requesting from the Eviction Lab.</li>
