@@ -155,7 +155,7 @@
   a#get-resources {
     background-color: #F4F7F9;
     color:#919191;
-    padding: 16px 0 24px;
+    padding: 19px 0 30px;
       position: relative;
     &:hover {
       background-color: #434878;
@@ -177,7 +177,7 @@
       }
     }
     .resource-line {
-      width: 48px;
+      width: 32px;
       margin: auto;
       border-bottom: 1px solid #919191;
       position: relative;
@@ -186,8 +186,9 @@
     #resource-tab {
       
       svg {
-        top: 7px;
+        top: 9px;
         position: relative;
+        width: 13px;
       }
      
       i.fa.fa-chevron-right {
