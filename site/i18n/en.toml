@@ -43,6 +43,10 @@ other = "/why-eviction-matters/#video"
 other = "Share"
 [shareTwo]
 other = "via"
+[getResourcesOne]
+other = "Get"
+[getResourcesTwo]
+other ="Resources"
 
 
 
