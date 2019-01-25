@@ -158,12 +158,8 @@
     padding: 19px 0 30px;
       position: relative;
     &:hover {
-      background-color: #434878;
-      transition: background-color .3s ease;
-      color: #fff;
-      .resource-line {
-        border-bottom: 1px solid #434878;
-      }
+      color: #434878;
+      transition: color .3s ease;
       svg {
         path#Fill-1 {
           fill: #fff;
@@ -181,12 +177,12 @@
       margin: auto;
       border-bottom: 1px solid #919191;
       position: relative;
-      top: -16px;
+      top: -17px;
   }
     #resource-tab {
       
       svg {
-        top: 9px;
+        top: 11px;
         position: relative;
         width: 13px;
       }
