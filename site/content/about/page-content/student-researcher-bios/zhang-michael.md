@@ -6,7 +6,7 @@ position: Postdoctoral Research Support
 date: 2017-11-26T03:46:25.603Z
 image: /images/bios/mzhang_full.jpg
 thumb: /images/bios/mzhang_thumb.jpg
-weight: 26
+weight: 27
 ---
 Michael Zhang is currently a post-doctoral researcher in the Department of Computer Science. He earned a PhD in statistics at the University of Texas at Austin in 2018. 
 
