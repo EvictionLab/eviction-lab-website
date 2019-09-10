@@ -1,5 +1,5 @@
 ---
-childof: research-team-bios
+childof: research-team-bios_old
 title: Adam Porton
 abbrev: aporton
 position: Research Specialist
