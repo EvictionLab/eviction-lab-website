@@ -2,10 +2,11 @@
 childof: student-researcher-bios
 title: Lillian Leung
 abbrev: lleung
-position: Research Specialist
+position: Graduate Research Assistant
 date: 2017-11-26T03:48:38.081Z
 image: /images/bios/lleung_full.jpg
 thumb: /images/bios/lleung_thumb.jpg
 weight: 24
 ---
-Lillian is a recent graduate from New York University’s Stern School of Business, where she studied Economics and Global Business and minored in Social Entrepreneurship. She grew up in Hong Kong and has lived in Chicago and New York. Drawing on her experiences living in cities, her undergraduate thesis used General Social Survey data to explore the effect of housing prices on perceptions of inequality. She has also worked with various surveying methods conducting program evaluations for non-profits and customer research at Squarespace. As a Research Specialist at the Eviction Lab, Lillian hopes to investigate the cyclical relationship between housing, poverty, and income inequality. In her free time, she enjoys reading, painting, and playing the ukulele.
+Lillian is a first-year doctoral student in Sociology and Social Policy at Princeton University. She graduated in 2017 from New York University’s Stern School of Business, where she studied Economics and Global Business. Prior to her graduate studies, Lillian was a research specialist at the Eviction Lab, where she helped collect, clean, and analyze eviction records. She has also conducted interviews with landlords and tenants from South Carolina, Alabama, and Ohio to study the phenomenon of serial eviction filings. Broadly, she is interested in understanding the drivers of neighborhood change, economic inequality, and residential segregation. In her free time, she enjoys painting and reading, as well as learning to skateboard.
+
