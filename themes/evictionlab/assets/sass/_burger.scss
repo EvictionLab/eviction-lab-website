@@ -1,0 +1,38 @@
+/* _burger.scss */
+
+/* hamburger menu */
+
+#burger {
+  border: none;
+  background: none;
+  position: relative;
+  top: -6px;
+  @include for-phone-only {
+    right: 0px;
+    top: -16px;
+  }
+}
+
+#burger span {
+  color: $color1;
+  @include smallCapsText(13px);
+  position: relative;
+  top: 0px;
+  @include for-phone-only {
+    font-size: 9px;
+    top: -9px;
+    left: -2px;
+  }
+}
+
+.svg-hamburger {
+  width: 40px;
+  height: 35px;
+  @include for-phone-only {
+    width: 22px;
+  }
+}
+
+.svg-hamburger path {
+  fill: $color1;
+}

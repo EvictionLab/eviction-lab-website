@@ -1,0 +1,529 @@
+// Layout
+// ----
+html {
+  font-size: 62.5%; // sets sitewide font sizes based on user's font size in browser
+}
+// shortcut function for sizing based on grid
+@function grid($n) { @return $n * $gridSize; }
+
+$gridSize: 8px; // base grid value used for margins and element sizing
+$zoneOnePadding: 20px; // page padding for 320+
+$zoneTwoPadding: 28px; // page padding for 768+
+$defaultPadding: grid(2); // default padding for containers
+$defaultPaddingWebsite: grid(3); // default padding for containers
+$pageMargin: grid(2); // page margin on mobile
+$pageMarginLg: grid(3); // page margin on tablet+
+$maxContentWidth: 1200px; // max width for page content
+
+$bottomMarginPhone: grid(6);
+$bottomMarginTablet: grid(7);
+$bottomMarginDesktop: grid(9);
+
+// device breakpoints
+$gtMobilePortrait: 319px; // greater than mobile device breakpoint
+$iphone-8plus-portrait: 414px;
+$sub480: 413px; // small mobile breakpoint
+$above480: 414px; // above small mobile breakpoint
+$mobile: 767px; // mobile device breakpoint
+$gtMobile: 768px; // greater than mobile device breakpoint
+$tabletLimit: 1023px; // max width of tablet landscape
+$gtTablet: 1024px; // greater than tablet device breakpoint
+$tabletLandscapeHeight: 690px; // max tablet landscape height
+$gtSmallDesktop: 1279px; // greater than small desktop device breakpoint
+$smDesktopLimit: 1439px; // 
+$gtMidDesktop: 1440px; // greater than midsize desktop device breakpoint
+$gtLargeDesktop: 1599px; // greater than large desktop device breakpoint
+$gtLaptop: 1439px; // greater than laptop device breakpoint
+
+
+
+// some other breakpoint/range stuff
+@mixin for-mobile-portrait-up {
+  @media (min-width: $gtMobilePortrait) { @content; }
+}
+@mixin for-iphone-8plus-portrait-only {
+  @media (min-width: $iphone-8plus-portrait) { @content; }
+}
+@mixin for-below-414 {
+  @media (max-width: 413px) { @content; }
+}
+@mixin for-414-up {
+  @media (min-width:414px) { @content; }
+}
+@mixin for-414-thru-767 {
+  @media (min-width: 414px) and (max-width: 767px) { @content; }
+}
+@mixin for-480-up {
+  @media (min-width: 480px) { @content; }
+}
+@mixin for-phone-only {
+  @media (max-width: $mobile) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: $gtMobile) { @content; }
+}
+@mixin for-768-thru-1023 {
+  @media (min-width:$above480) and (max-width:$tabletLimit) { @content; }
+}
+@mixin for-tablet-portrait-thru-sm-desktop {
+  @media (min-width: $gtMobile) and (max-width: $smDesktopLimit) { @content; }
+}
+// 768-1023px
+@mixin for-tablet-portrait-and-landscape {
+  @media (min-width: $gtMobile) and (max-width: $tabletLimit) { @content; }
+}  
+@mixin for-tablet-portrait-only {
+  @media (min-width: 768px) and (max-width: 1023px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: $gtTablet) { @content; }
+}
+@mixin for-tablet-landscape-up-w-height {
+  @media (min-width: $gtTablet) and (max-height: $tabletLandscapeHeight) { @content; }
+}
+@mixin up-thru-tablet {
+  @media (max-width: $tabletLimit) { @content; }
+}
+
+// 1024-1439px 
+@mixin sm-thru-med-desktop {
+  @media (min-width: $gtTablet) and (max-width: $smDesktopLimit) { @content; }
+}
+// 1080 up 
+@mixin for-1080-up {
+  @media (min-width: 1080px) { @content; }
+}
+// 1160-1439px 
+@mixin med-desktop {
+  @media (min-width: 1160px) and (max-width: $smDesktopLimit) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: $gtSmallDesktop) { @content; }
+}
+// 1440+ 
+@mixin for-midsize-desktop-up {
+  @media (min-width: $gtMidDesktop) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: $gtLargeDesktop) { @content; }
+}
+@mixin fill-parent() {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;left:0;right:0;bottom:0;
+}
+
+
+// Typography
+// ----
+
+@import 'font-face';
+
+$fontStack: Akkurat-Regular, sans-serif;
+$headerFontStack: GT-Eesti-Display-Medium, sans-serif;
+$boldFontStack: Akkurat-Bold, sans-serif;
+$altFontStack: GT-Eesti-Display-Bold, sans-serif;
+$italFontStack: Akkurat-Italic, sans-serif;
+$numberFontStack:  "Gotham A", "Gotham B", sans-serif;
+
+@mixin defaultFont($size) {
+  font-family: $fontStack;
+  font-size: $size;
+  font-weight: normal;
+}
+
+@mixin defaultFontBold($size) {
+  font-family: $boldFontStack;
+  font-size: $size;
+  font-weight: normal;
+}
+
+@mixin altFont($size) {
+  font-family: $altFontStack;
+  font-size: $size;
+  font-weight: normal;
+}
+
+@mixin numberFont($size) {
+  font-family: $numberFontStack;
+  font-size: $size;
+  font-weight: normal;
+}
+
+@mixin smallCapsText($size) {
+  @include defaultFontBold($size);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+@mixin smallCapsTextThin($size) {
+  @include defaultFont($size);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+@mixin inputText() {
+  @include defaultFont(18px);
+}
+
+$fontSizeExtraSmall: 1rem;
+$fontSizeSmall: 1.4rem;
+$fontSizeSmall1440: 1.5rem;
+$fontSize320H3: 1.6rem;
+$fontSize1024Body: 1.6rem;
+$fontsize1024H3sm: 1.7rem;
+$fontSize1440Body: 1.8rem;
+$fontSizeMedium: 2.1rem;
+$fontSize1024H3: 2.8rem;
+$fontSizeLarge: 3.0rem;
+$fontSizeExtraLarge: 3.6rem;
+
+$subnavFontDesktop: 1.6rem;
+$subnavFontTablet: 1.6rem;
+$subnavFontPhone: 1.2rem;
+
+
+
+// Base Colors
+// ----
+$textColor: #000;
+$textColor2: #060504;
+$textColor3: #333;
+$secondaryTextColor: rgba(0,0,0,0.38);
+$altTextColor: #fff; // text on dark backgrounds
+$secondaryAltTextColor: #919191; // text on dark-ish backgrounds
+$linkColor: #22ABED;
+$defaultBackground: #fff;
+$secondaryBackground: #F4F7F9;
+$shadingColor: #efefef;
+$color1: #e24000;
+$color2: #434878;
+$color3: #2c897f;
+$color4: #4a4238;
+$color5: #b5c2b7;
+$color6: #768693;
+$black: #050403;
+$grey0: #666;
+$grey1: #7F7F7F;
+$grey1a: #919191;
+$grey2: #A3A7A8;
+$grey2a: #B2B5B7;
+$grey3: #C6CCCF;
+$grey4: #efefef; 
+$grey4a: #EEF2F5;
+$grey5: #F4F7F9;
+$grey5a: #F9FAFB;
+$white: #fff;
+$red: #f00;
+$focusBgColor: #FFE8DE;
+$focusBorderWidth: 2px;
+$focusBorder: $focusBorderWidth dotted $grey3;
+
+// Headers & Paragraph 
+// -------
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a:hover {
+  text-decoration: none;
+}
+h2 {
+  &.page-section-header {
+    color: $color2;
+  }
+}
+
+h3 {
+  @include altFont($fontSizeSmall);
+  line-height: 1.7rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: $color2;
+  @include for-tablet-portrait-up {
+    @include altFont($fontsize1024H3sm);
+    letter-spacing: 0.11rem;
+    line-height: 3rem;
+  }
+  @include sm-thru-med-desktop {
+    @include altFont($fontsize1024H3sm); 
+    letter-spacing: 0.11rem;
+  }
+  @include for-midsize-desktop-up {
+    @include altFont($fontSize1440Body); 
+    letter-spacing: 0.1rem;
+  }
+}
+
+p, .center-content-post.page-list li, select, input, textarea, .post-body ol li, .post-body ul li, table.page-stats, 
+table.page-stats td.table-text {
+  @include for-phone-only {
+    @include defaultFont(1.4rem); 
+    line-height: 2rem;
+    letter-spacing: 0px;
+    margin-bottom: 1.6rem;
+  }
+  @include for-tablet-portrait-and-landscape {
+    @include defaultFont(1.6rem); 
+    line-height: 2.2rem;
+    letter-spacing: 0px;
+    margin-bottom: 2.4rem;
+  }
+  @include sm-thru-med-desktop {
+    @include defaultFont(1.6rem); 
+    line-height: 2.2rem;
+    letter-spacing: 0px;
+    margin-bottom: 2.4rem;
+  }
+  @include for-midsize-desktop-up {
+    @include defaultFont(1.8rem); 
+    line-height: 2.8rem;
+    letter-spacing: 0px;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.answer.collapse.show p:last-child {
+  margin-bottom: 2.4rem;
+  @include for-tablet-portrait-up {
+    margin-bottom: 3.2rem;
+  }
+  @include for-midsize-desktop-up {
+    margin-bottom: 4rem;
+  }
+
+}
+
+.subcopy {
+  font-size: 1.175rem;
+  @include for-tablet-portrait-up {
+    font-size: 1.4rem;
+  }
+  @include for-midsize-desktop-up {
+    font-size: 1.5rem;
+  }
+}
+.subcopy.caption {
+  display: block;
+  text-align: center;
+  color: $grey1a;
+  line-height: 2.1rem;
+  @include for-tablet-portrait-up {
+  margin-bottom: 3.2rem;
+  }
+  @include for-tablet-landscape-up {
+      margin-bottom: 3.2rem;
+      }
+  @include for-midsize-desktop-up {
+      margin-bottom: 0;
+      }    
+}
+
+hr {
+  border-top: 2px solid #fff;
+}
+
+// Table
+
+table.page-stats {
+  th {
+    font-family: Akkurat-Bold, sans-serif;
+    padding-bottom: 1.6rem; 
+  }
+  td, th {
+    padding: 1.6rem;
+    border: 1px solid #efefef;
+  }
+  tr:nth-child(even) {
+    background-color: #f4f7f9;
+  }
+  td {
+    font-family: $numberFontStack;
+    font-weight: 500;
+    color: $color2;
+  }
+  td.table-text {
+    color: #212529;
+  }
+  a, a:hover {
+    color: $color1;
+  }
+}
+table#national-media-table {
+  height: 800px;
+  td {
+    font-family: Akkurat-Regular, sans-serif;
+    font-weight: 400;
+    
+  }
+  
+}
+
+// Buttons
+// ----
+// layout
+$buttonHeight: grid(7);
+$buttonHeightSm: grid(5);
+// colors
+$buttonColor: $shadingColor;
+$buttonHoverColor: darken($buttonColor, 5%);
+$primaryButtonColor: $color1;
+$primaryButtonHoverColor: #F9471A;
+$closeButtonColor: rgba(0,0,0,0.5);
+$altCloseButtonColor: #fff;
+// fonts
+$buttonTextSize: 14px;
+
+// Header Bar
+// ----
+$headerHeightSm: grid(7);
+$headerHeightLg: grid(10);
+$headerContentHeight: grid(7); // height form field / buttons on large displays
+$headerButtonColor: $grey0; // color for mobile icon buttons
+$headerActiveButtonColor: $color1; // color for active mobile icon button
+
+// Footer
+// ----
+$footerGradientFrom: #282828;
+$footerGradientTo: #2F2D2B;
+$footerIconBorder: #333;
+$footerHoverIconBorder: $white;
+$footerCopyrightColor: $grey2a;
+
+// Menu
+// ----
+$menuBg: $color2;
+$menuShadow: -2px 0px 5px rgba(0,0,0,0.4);
+$menuWidth: grid(37); // 296px, leaves 24px gutter on 320px device 
+$menuWidthLg: grid(52); // 416px
+$menuGrey: $grey2;
+
+// Shadows
+// ----
+$z1shadow: 0 3px 6px 0 rgba(145,145,145,0.23);
+$z2shadow: 0 6px 6px 0 rgba(145,145,145,0.26);
+$z3shadow: 0 10px 10px 0 rgba(145,145,145,0.26);
+$z4shadow: 0 15px 12px 0 rgba(145,145,145,0.22);
+$insetShadowTop: inset 0px 10px 10px -10px rgba( 0, 0, 0, 0.6 );
+$boxShadowBottom: $z1shadow;
+$boxShadowIcon: $z1shadow;
+$textShadow: 0px 2px 4px rgba( 0, 0, 0, 0.6 );
+$fullShadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.02);
+@mixin full-shadow-animate {
+  &:hover {
+    box-shadow: $fullShadow;
+    -webkit-transition: 0.3s; /* Safari */
+    transition: 0.3s;    
+  }
+}
+
+// Mobile VH fix
+// ----
+$mobileVhTransition: height 3600s steps(1);
+
+// Gradients
+// ----
+@mixin gradient ($deg,$gradColor) {
+  background: linear-gradient($deg, lighten( $gradColor, 20% ) 0%, $gradColor 100%);
+}
+
+// BG Images
+// ----
+@mixin backgroundImage($path) {
+  background: url($path);
+  background-position: center;
+  background-size: cover;
+}
+
+// Hover Bars
+// ----
+@mixin hoverBar($className,$width,$height,$topAndBottomMargin,$leftAndRightMargin) {
+  .#{$className} {
+    width: $width;
+    height: $height;
+    min-height: $height;
+    background: $altTextColor;
+    padding: 0;
+    margin: $topAndBottomMargin $leftAndRightMargin;
+    display: none;
+    opacity:0;
+    @include for-iphone-8plus-portrait-only {
+      display: none;
+    }
+    @include for-tablet-landscape-up {
+      display: block;
+    }
+  }
+  a:hover + .#{$className} {
+    opacity:0;
+  }
+}
+
+// TODO: Re-add alternate state
+@mixin focusState() {
+  outline: 0;
+  box-shadow: 0 0 5px 1px $color1;
+  border-color: $color1;
+}
+
+@mixin focusStateInset() {
+  // outline: 0;
+  // box-shadow: inset 0 0 5px 1px $color1;
+  // border-color: $color1;
+}
+
+@mixin smallCapsText($size) {
+  $letterSpacingRatio: 0.066666666666667;
+  @include defaultFontBold($size);
+  text-transform: uppercase;
+  letter-spacing: $size*$letterSpacingRatio;
+}
+
+@mixin altSmallCapsText($size) {
+  $letterSpacingRatio: 0.057894736842105;
+  @include altFont($size);
+  text-transform: uppercase;
+  letter-spacing: $size*$letterSpacingRatio;
+}
+
+/* ====================== */
+/* ====================== */
+/* ====================== */
+
+
+
+a:focus, input:focus, textarea:focus, select:focus { outline-color: $color1; }
+/*
+p {
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+  @include for-phone-only {
+    font-size: $fontSizeSmall;
+    line-height: 2.2rem;
+  }
+}
+*/
+
+@import 'utils';
+@import 'header';
+@import 'burger';
+@import 'subnav';
+@import 'section-page-header';
+@import 'breadcrumbs';
+@import 'home-splash';
+@import 'home-pictorial-menu';
+@import 'index';
+@import 'lists';
+@import 'single';
+@import 'updates';
+@import 'menu';
+@import 'buttons';
+@import 'inputs';
+@import 'dialogs';
+@import 'about-us';
+@import 'eviction-matters';
+@import 'footer';
+@import 'contact';
+@import 'data-form';
+@import 'media-map';

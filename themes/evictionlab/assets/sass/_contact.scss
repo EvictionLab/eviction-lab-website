@@ -1,0 +1,196 @@
+/* _contact.scss */
+
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.6rem;
+}
+input {
+    width: 100%;
+    padding: 0.8rem 1.6rem;
+}
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: grid(3);
+  height: grid(3);
+  border-radius: grid(1.5);
+  margin:0;
+  background-color: $white;
+  border: 1px solid $grey4;
+  box-shadow: none;
+  display: inline-block;
+  position: relative;
+  // add a checkmark when checked
+  &:checked:after {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 12px;
+    border: solid $color1;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    margin: auto;
+  }
+  &:focus {
+    @include focusState();
+  }
+}
+
+.radio-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: grid(2);
+  label { 
+    font-size: 14px; 
+    margin:0;
+    line-height: 1.42;
+  }
+  input { 
+    margin-right: grid(2);
+    flex-shrink:0;
+  }
+}
+.radio-row + input { margin: grid(3) 0; }
+.contact-us {
+    background: #F4F7F9;
+}
+.contact-us {
+    .center-content-post.page-list {
+        padding-top: 1.6rem;
+        &.form2 {
+            padding-bottom: 2.4rem;
+            @include for-tablet-portrait-up {
+                padding-top: 2.4rem;
+                padding-bottom: 3.2rem;
+            }
+            @include for-tablet-landscape-up {
+                padding-top: 3.2rem;
+                padding-bottom: 4rem;
+            }
+            @include for-midsize-desktop-up {
+                padding-top: 3.2rem;
+                padding-bottom: 4.8rem;
+            }
+        }
+    }
+}
+.contact-us, .data-merge {    
+    .alt-bg {
+
+        padding: 0 16px 3.2rem;
+        @include for-tablet-portrait-up {
+        padding: 0.8rem 24px 3.2rem;
+        }
+        @include for-midsize-desktop-up {
+            padding: 1.6rem 24px 4rem;
+        }
+    }
+    select {
+        max-width: 100%;
+        height: 3.2rem;
+    }
+    .button-wrap {
+        display: flex;
+        justify-content: center;
+        @include for-tablet-portrait-up {
+           display: block;
+        }
+    }
+    a {
+        color: $color1;
+        font-family: $boldFontStack;
+        @include for-phone-only {
+          /* font-size: $fontSizeSmall; */
+        }
+    }
+    .text-li ol.list-initial, .text-li ol.list-initial li {
+        list-style: initial;
+        list-style-type: decimal;
+        } 
+        .text-li ol.list-initial li:before {
+            content: initial;
+        }  
+        .text-li ol.list-initial li {
+            margin-left: 1.6rem;
+        }  
+}
+.data-merge {
+    padding-bottom: 3.2rem;
+        @include for-tablet-portrait-up {
+       
+            padding-bottom: 4rem;
+        }
+        @include for-tablet-landscape-up {
+            padding-bottom: 4.8rem;
+        }
+        @include for-midsize-desktop-up {
+            padding-bottom: 5.6rem;
+        }
+    .shadow-bottom {
+        background-color: #F4F7F9;
+    }    
+    .nav-tabs {
+        border-bottom: none;
+       /* @include for-tablet-landscape-up {
+            margin-bottom: 1.6rem;
+        } */
+    }
+    .anchor-links {
+        @include for-phone-only {
+            height: 56px;
+        }
+    }
+    .anchor-links li.active a {
+        color: $color1;
+    }
+    .anchor-links li.active a:after, .anchor-links li a.highlight:after {
+        @include for-phone-only {
+        opacity: 1;
+        bottom: -22px; 
+        }
+        @include for-tablet-portrait-only {
+            opacity: 1;
+          /*  bottom: -16px; */
+            }
+    }
+    .center-content-post {
+       /* @include for-tablet-portrait-up {
+            max-width: 680px;
+        }
+        @include for-tablet-landscape-up {
+            max-width: 840px;
+            } */
+        }  
+    li.only-larger-screens {
+        @include for-tablet-portrait-up {
+            display: inline-block;
+        }
+    }    
+    .tab-content {
+        background: #fff;
+        /* padding: 3.2rem 2rem 2.4rem; */
+        @include for-tablet-portrait-up {
+           /* padding: 4rem 6rem 3.2rem; */
+        }
+        } 
+    .bordered-header {
+        margin-bottom: 3.2rem;
+        }           
+      
+}
+ol.list-initial, .text-li ol.list-initial li {
+    list-style: initial;
+    list-style-type: decimal;
+    } 
+    .text-li ol.list-initial li:before {
+        content: initial;
+    }  
+    .text-li ol.list-initial li {
+        margin-left: 1.6rem;
+    }  

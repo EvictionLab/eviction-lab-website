@@ -1,0 +1,62 @@
+{{ partial "header" . }}
+
+
+    <div class="graphic-header data-merge-hero center-page-wrapper">
+            <div class="center-page">
+              <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
+              <div class="underbar"></div>
+            </div>
+          </div>   
+   
+<!-- section header -->
+<div class="data-merge">
+    <div class="shadow-bottom center-page-wrapper">
+            <ul class="nav nav-tabs anchor-links" role="tablist">
+                    <li class="only-larger-screens" role="presentation">Choose an option</li>
+                    <li role="presentation" class="active"><a href="#option1" aria-controls="home" role="tab" data-toggle="tab">{{ .Params.tabs.option1 }}</a></li>
+                    <li role="presentation"><a href="#option2" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.tabs.option2 }}</a></li>
+                </ul>
+    </div>    
+    <div class="center-page-wrapper">      
+        <div class="center-content-post page-list text-li">
+
+     
+    <div class="tab-content">
+      <!-- ************* Data Merge Tab ***************** -->
+      <div role="tabpanel" class="tab-pane active" id="option1">  
+          
+        <h2 class="bordered-header blue">Data Merge Application</h2>
+       
+            {{ range .Params.dataMerge }}    
+                <p>{{ .dmText | safeHTML }}</p>
+            {{ end }}
+            <p><ul>
+            {{ range .Params.dmBullets }}    
+                <li>{{ .bullet | safeHTML }}</li>
+            {{ end }}
+            </ul></p>
+         
+      
+      </div> <!-- End Research Team tab-pane -->
+      <!-- ************* Custom Request Tab ***************** -->
+      <div role="tabpanel" class="tab-pane" id="option2">    
+
+        <h2 class="bordered-header blue">Custom Data Request</h2>
+          
+            {{ range .Params.customRequest }}    
+                <p>{{ .crText | safeHTML }}</p>
+            {{ end }}
+            <p><ul>
+            {{ range .Params.crBullets }}    
+                <li>{{ .bullet | safeHTML }}</li>
+            {{ end }}
+            </ul></p>
+          
+
+          </div> <!-- End Research Team tab-pane -->
+    </div>  
+</div>  
+</div>
+</div>  
+
+{{ partial "footer" . }}

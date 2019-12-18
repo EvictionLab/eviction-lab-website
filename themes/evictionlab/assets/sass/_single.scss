@@ -1,0 +1,456 @@
+/* _single.scss */
+
+.alt-bg {
+  clear: both;
+  @include for-tablet-portrait-up {
+    /* margin: 0 -16px; */
+  }
+}
+/* ---- css sprites --- */
+
+.social-sprite {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-sprite li {
+  display: inline-block;
+  margin-left: 7px !important;
+  &:before {
+    display: none;
+  }
+}
+
+.social-sprite a {
+  background-image: url(/images/icons/social/social-icon-sprite.png);
+  display: block;
+  height: 24px;
+  width: 24px;
+   transition: all 10ms ease-out;
+  -webkit-transition: all 10ms ease-out;
+  -o-transition: all 10ms ease-out; 
+  /* zoom: 1; */
+  background-size: 140px 48px;
+  margin-right: 16px;
+}
+
+.social-sprite a:hover {
+  /* background-position-y: 2px; /* Bonus image movement, no support by Firefox and Opera. Requires images with similar y position. */
+  /* filter: alpha(opacity=80);*/ /* Fallback for older versions of IE */
+  /* opacity: 0.8; */
+}
+.facebook {
+  background-position: 0 0;
+}
+a.facebook:hover {
+  background-position: 0 25px;
+}
+.twitter {
+  background-position: -39px 0px;
+}
+a.twitter:hover {
+  background-position: -39px 25px;
+}
+.send-email {
+  background-position: 62px 0px;
+}
+a.send-email:hover {
+  background-position: 62px 25px;
+}
+.copy-link {
+  background-position: 24px 0px;
+}
+a.copy-link:hover {
+  background-position: 24px 25px;
+}
+/* ---- img handling --- */
+.center-content-post figure.article-image img.null-img {
+  position: absolute;
+  @include for-phone-only {
+    position: relative;
+    margin: 0 0 72px;
+
+  }
+}
+/* --- author meta --- */
+img.post-thumb {
+  width: 56px;
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  @include for-phone-only {
+    width: 32px;
+  }
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.6rem;
+}
+
+.updates-post {
+   ol {
+    list-style-type: decimal;
+      li {
+        margin-left: 1.6rem;
+        }
+    }
+    
+  .authorbox {
+    overflow: auto;
+    float: left;
+    @include for-phone-only {
+      margin: 1.6rem 0;
+    }
+    @include for-tablet-portrait-and-landscape {
+      padding-bottom: 2.4rem;
+    }
+    @include for-tablet-landscape-up {
+      padding-bottom: 3.2rem;
+    }
+    ul {
+      display: inline-block;
+      position: relative;
+      top: 4px;
+      @include for-phone-only {
+        top: 0px;
+        line-height: 1.6rem;
+      }
+      li {
+        margin: 0 !important;
+      }
+      li:before {
+        display: none;
+      }
+    }
+  }
+  .social-box {
+    float: right;
+    margin-right: -16px;
+    position: relative;
+    top: 21px;
+     &.event-single {
+      position: relative;
+      top: 62px;
+    } 
+  }
+  .authorname, .authortitle {
+    img {
+      margin-right: 8px;
+    }
+    @include for-phone-only {
+      @include defaultFont($fontSizeExtraSmall);
+      flex-grow: 3;
+    }
+    @include for-tablet-portrait-and-landscape {
+      @include defaultFont(1.3rem);
+      line-height: 2.4rem;
+    }
+    @include for-tablet-portrait-up {
+      flex-grow: 1;
+    }
+    @include sm-thru-med-desktop {
+      @include defaultFont(1.3rem);
+      letter-spacing: 0rem;
+      line-height: 2.4rem;
+    }
+    @include for-midsize-desktop-up {
+      @include defaultFont($fontSizeSmall1440);
+      line-height: 2.4rem;
+    }
+  }
+  .authorname {
+    font-family: $boldFontStack;
+  }
+  span.authortitle {
+    display: block;
+  }
+}
+/* --- Post typography and padding --- */
+.center-content-post.updates-post {
+  .page-content {
+    margin: 0 auto;
+    p:last-child {
+      margin-bottom: 0 !important;
+    }
+    .post-body a {
+        color: $color1;
+        &:hover {
+          color: $color1;
+        }  
+    }
+    ul, ol {
+      margin-bottom: 1.6rem;
+      @include for-tablet-portrait-up { 
+        margin-bottom: 2.4rem;
+      }
+      @include for-tablet-landscape-up { 
+        margin-bottom: 3.2rem;
+      }
+      @include for-midsize-desktop-up { 
+        margin-bottom: 4rem;
+      }
+        li {
+        margin-bottom: 0.8rem;
+        }
+    }
+    @include for-phone-only {
+      padding: 2.4rem 16px;
+      .post-body {
+        padding: 0;
+        
+        img.cat-bookmark {
+          width: 7px;
+          vertical-align: sub;
+          margin-right: 8px;
+        }
+        .btm-meta-cat {
+          margin-bottom: 0rem;
+        }
+      }
+      p, hr {
+          font-size: $fontSizeSmall;
+          line-height: 2rem;
+          margin-bottom: 1.6rem
+      }
+      &.single-title {
+        padding-top: 0rem;
+      }
+    }
+    @include for-tablet-portrait-thru-sm-desktop {
+      max-width: 560px;
+      /*padding-top: 0.8rem; */
+      .post-body {
+        padding: 3.2rem 0 1.6rem;
+      }
+      p, hr {
+        font-size: $fontSize1024Body;
+        line-height: 2.2rem;
+      }
+    }
+    @include for-tablet-portrait-and-landscape {
+      p, hr {
+        margin-bottom: 2.4rem
+      }
+    }
+    @include sm-thru-med-desktop {
+      p, hr {
+        margin-bottom: 3.2rem;
+      }
+    }
+    @include for-midsize-desktop-up{
+      max-width: 720px;
+      padding-top: 0.8rem;
+      .post-body {
+        padding: 4rem 0;
+      }
+      p, hr {
+        font-size: $fontSize1440Body;
+        line-height: 2.8rem;
+        margin-bottom: 4rem
+      }
+    }
+    
+  }
+}
+.center-content-post {
+ &.blog-post {
+   max-width: 720px;
+ }
+figure.article-image {
+    margin-top: 32px;
+    @include for-phone-only {
+      margin-top: 0px;
+    }
+}
+/* --- Top Image box --- */
+.article-image {
+  img {
+    width: 100%;
+    margin: 56px 0 27px 0;
+    @include for-tablet-portrait-up {
+      margin: 0 0 0 0;
+    }
+  }
+  .title, .date {
+    padding: 0 $defaultPadding 0 $defaultPadding;
+    @include for-tablet-portrait-up {
+      padding: 0;
+    }
+  }
+  .title {
+    @include defaultFontBold(34px);
+    margin-bottom: 8px;
+  }
+  .date {
+    @include defaultFont(1.2rem);
+    color: $secondaryAltTextColor;
+  }
+  .bordered-header {
+    font-size: 1.4rem;
+    border-top: 3px solid;
+    margin-top: 24px;
+    padding-top: 0.6rem;
+    @include for-phone-only {
+      margin: 0 16px;
+    }
+  }
+}
+
+
+/* do stuff to things inside a rendered content block */
+
+
+.page-content {
+  padding: 0 $defaultPadding 0 $defaultPadding;
+  @include for-tablet-portrait-up {
+    padding: 0;
+  }
+  p {
+    /* margin: 2em 0; */
+    @include defaultFont(1.3em);
+    line-height: 1.65em;
+  }
+  em {
+    font-style: italic;
+  }
+  .title, .event-title {
+    @include for-phone-only {
+      @include altFont(2.4rem);
+      letter-spacing: 0.04rem;
+      flex-grow: 2;
+      line-height: 3rem;
+    }
+    @include for-tablet-portrait-and-landscape {
+      @include altFont($fontSizeLarge);
+      letter-spacing: 0.07rem;
+      line-height: 3.6rem;
+      padding-bottom: 1.4rem;
+      padding-top: 1.1rem;
+    }
+    @include sm-thru-med-desktop {
+      @include altFont($fontSizeExtraLarge);
+      letter-spacing: 0.1rem;
+      line-height: 4.2rem;
+      margin-bottom: 2.6rem;
+      padding-top: 1.1rem;
+    }
+    @include for-midsize-desktop-up {
+      @include altFont(4rem);
+      letter-spacing: 0.1rem;
+      line-height: 4.8rem;
+      margin-bottom: 2.6rem;
+    }
+  }
+  h2.title.events-type {
+    @include for-phone-only {
+      margin-bottom: 0rem;
+    }
+    @include for-tablet-portrait-and-landscape {
+      margin-bottom: 0rem;
+    }
+    @include sm-thru-med-desktop {
+      margin-bottom: 1.6rem;
+    }
+  }
+  .authorbox.events li {
+    @include for-phone-only {
+    line-height: 2.4rem;
+    }
+    @include for-tablet-portrait-up {
+      line-height: 2.8rem;
+    }
+  }
+}
+
+}
+
+/* Next and Previous Posts / Bottom Meta */
+
+.center-content-post {
+  .btm-meta {
+    text-align: left;
+    margin: 3.2rem 0 5.2rem;
+    @include for-phone-only {
+      margin: 0rem 0 2rem;
+      }  
+    ul {
+      @include for-phone-only {
+        margin-bottom: 0;
+      }
+      li {
+        margin: 0;
+      }
+      li:before {
+        display: none;
+       
+      }
+    }
+    .header {
+      color: $secondaryAltTextColor;
+    }
+    .header, .header a {
+      @include for-phone-only {
+        @include defaultFont(1rem);
+        margin: 0;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include defaultFont(1.3rem);
+        margin: 0;
+      }
+      @include sm-thru-med-desktop {
+        @include defaultFont(1.3rem);
+        margin: 0rem 0 .4rem 0;
+      }
+      @include for-midsize-desktop-up {
+        @include defaultFont(1.5rem);
+        margin: 0rem 0 1.6rem 0;
+      }
+    }
+    .header a {
+      font-family: $boldFontStack;
+    }
+    li {
+      line-height: 1.7rem;
+      letter-spacing: 0.05rem;
+      &.header {
+        padding-bottom: 1.6rem;
+      }
+      &.header.prev-post {
+        padding-top: 1.6rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      @include for-phone-only {
+        @include altFont(1.5rem);
+        letter-spacing: 0.05rem;
+      }
+      @include for-tablet-portrait-and-landscape {
+        @include altFont(2.1rem);
+        line-height: 2.1rem;
+        letter-spacing: 0.06rem;
+      }
+      @include sm-thru-med-desktop {
+        @include altFont(2.1rem);
+        /* color: $color1; */
+        line-height: 2.7rem;
+        letter-spacing: 0.06rem;
+      }
+      @include for-midsize-desktop-up {
+        @include altFont(3rem);
+        line-height: 3.2rem;
+        letter-spacing: 0.09rem;
+      }
+    } 
+    img.cat-bookmark {
+      width: 9px;
+      vertical-align: sub;
+      margin-right: 8px;
+    }
+    .btm-meta-cat {
+      margin-bottom: 3.2rem;
+    }
+  }
+}

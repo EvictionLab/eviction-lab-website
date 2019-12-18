@@ -1,6 +1,0 @@
-{{ partial "header" . }}
-{{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") }}
-{{ range .Paginator.Pages }}
-  <div>{ .Title }} - {{ .Permalink }}</div>
-{{ end }}
-{{ template "_internal/pagination.html" . }}

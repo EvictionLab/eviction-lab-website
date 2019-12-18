@@ -1,0 +1,249 @@
+/* _home-splash.scss */
+
+/* *************** */
+
+//variables
+$maxWidth: 1200px;
+$defaultMargin: $defaultPadding;
+$tabletPlusMargin: 32px;
+$heroMargin: 76px;
+$heroWidth: 300px;
+
+// section styles
+.new-splash {
+  height: calc(100vh - 80px);
+  min-height: 445px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/assets/hero/american-flag-evicted-woman-phone.jpg');
+  background-size: cover;
+  background-position: center center;
+    @media (min-width: 768px) {
+      background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/assets/hero/american-flag-evicted-woman-portrait.jpg');
+      background-size: cover;
+      background-position: center center;
+      }
+
+
+  @include for-iphone-8plus-portrait-only {
+    min-height: 600px;
+  }
+  @include for-tablet-portrait-up {
+    min-height: 930px;
+  }
+  @include for-tablet-landscape-up {
+    background: none;
+   /* box-shadow: $insetShadowTop; */
+    min-height: 590px;
+    margin-left: 32px;
+  }
+  @include for-phone-only {
+    margin-top: 56px;
+    height: calc(100vh - 56px);
+  }
+}
+
+.section {
+  position: relative;
+  height:100%;
+}
+
+.section-content {
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width: 1232px;
+  margin: 0 auto;
+   @include for-phone-only {
+    padding: 0 $defaultMargin;
+  }
+   @include for-tablet-portrait-and-landscape {
+    padding: 0 $tabletPlusMargin;
+  }
+
+
+}
+
+
+.section-split {
+  display:flex;
+  //align-items: center;
+  justify-content: flex-start;
+  .section-image {
+    display: none;
+    overflow: hidden;
+    @include for-tablet-landscape-up {
+      display: block;
+      box-shadow: $insetShadowTop;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - (((100% - #{$maxWidth}) / 2) + (#{$heroWidth} + #{$heroMargin} * 2.3)));
+    @include med-desktop {
+      width: calc(100% - (((100% - #{$maxWidth}) / 2) + (#{$heroWidth} + #{$heroMargin} * 2.3 - 60px )));
+    }
+    @include for-midsize-desktop-up {
+      width: calc(100% - (((100% - #{$maxWidth}) / 2) + (240px + #{$heroMargin} * 2.3)));
+    }
+    height: 100%;
+    @media (min-width: 1024px) and (max-height: 768px) {
+      background-image: url('/images/assets/hero/american-flag-evicted-woman-t-landscape.jpg');
+      }  
+    @media (min-width: 1024px) {
+      background-image: url('/images/assets/hero/american-flag-evicted-woman-portrait.jpg');
+      } 
+    @media (min-width: 1160px) {
+      background-image: url('/images/assets/hero/american-flag-evicted-woman-1024.jpg');
+      } 
+
+    @media (min-width: 1440px) {
+      background-image: url('/images/assets/hero/american-flag-evicted-woman.jpg');
+      }      
+
+    background-position:50% 50%;
+    background-size: cover;
+    .carousel-item:before {
+      box-shadow: $insetShadowTop;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+    }
+  }
+  .hero {
+    max-width: $heroWidth;
+    padding: 40px $defaultPadding 20px 0;
+    color: $altTextColor;
+    @include for-iphone-8plus-portrait-only {
+      padding: 30px $defaultPadding 120px 0;
+    }
+    @include for-tablet-portrait-up {
+      max-width: 478px;
+      padding: 52px $defaultPadding 82px 0;
+    }
+    @include for-tablet-landscape-up {
+      color: $textColor;
+      max-width: 370px;
+      padding: 52px $defaultPadding 10px 0;
+    }
+    @include for-tablet-landscape-up-w-height {
+      padding: 40px 16px 10px 0;
+    }
+    h1 {
+      @include altFont(24px);
+      letter-spacing: 1px;
+      line-height: 28px;
+      width: 75%;
+      @include for-iphone-8plus-portrait-only {
+        @include altFont(30px);
+        letter-spacing: 2px;
+        line-height: 42px;
+        width: 86%;
+      }
+      @include for-tablet-portrait-up {
+        @include altFont(40px);
+        letter-spacing: 2px;
+        line-height: 50px;
+      }
+      @include for-tablet-landscape-up {
+        @include altFont(44px);
+        letter-spacing: 2px;
+        line-height: 50px;
+      }
+    }
+    p {
+      @include defaultFont(14px);
+      margin: 24px 0 32px 0;
+      line-height: 21px;
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFont(15px);
+        margin: 32px 0 40px 0;
+        line-height: 21px;
+      }
+      @include for-tablet-portrait-up {
+        max-width: 440px;
+        @include defaultFont(17px);
+        line-height: 23px;
+      }
+      @include for-tablet-landscape-up {
+        color: $secondaryAltTextColor;
+      }
+      @include for-tablet-landscape-up-w-height {
+        margin: 20px 0 29px 0;
+      }
+    }
+    a {
+      color: $altTextColor;
+      background-color: $color1;
+      border-color: $color1;
+      text-transform: uppercase;
+      @include altFont(1rem);
+      padding: 11px 15px;
+      letter-spacing: .054rem;
+      @include for-tablet-portrait-up {
+        @include altFont(14px);
+        padding: 20px 64px;
+        letter-spacing: 1px;
+      }
+    }
+    a:hover {
+      color: $altTextColor;
+    }
+    .hero-social {
+      @include for-iphone-8plus-portrait-only {
+        position: absolute;
+        bottom: 32px;
+        left: 16px;
+      }
+      @include for-tablet-portrait-up {
+        position: relative;
+        bottom: initial;
+        left: initial;
+      }
+    }
+    div {
+      width: 300px;
+      display: flex;
+      a:hover {
+       /* border: 5px solid $secondaryAltTextColor; */
+        @include for-tablet-landscape-up {
+          color: #666;
+        }
+      }
+      a {
+        background-color: transparent;
+        /* border: 5px solid #fff; */
+        border-radius: 2px;
+        margin: 30px 20px 0 0;
+        //color: $secondaryAltTextColor;
+        font-size: 20px;
+        padding: 5px 10px;
+        width: 32px;
+        height: 45px;
+        text-align: center;
+        @include for-iphone-8plus-portrait-only {
+          /* margin: 205px 20px 0 0; */
+        }
+        @include for-tablet-portrait-up {
+          border-color: #f4f7f9;
+          margin: 50px 20px 50px 0;
+        }
+        @include for-tablet-landscape-up {
+          color: $secondaryAltTextColor;
+          border-color: #f4f7f9;
+          margin: 50px 20px 50px 0;
+        }
+        @include for-tablet-landscape-up-w-height {
+          margin: 29px 20px 50px 0;
+        }
+        i {
+          position: relative;
+          top: -3px;
+        }
+      }
+
+    }
+
+  }
+}

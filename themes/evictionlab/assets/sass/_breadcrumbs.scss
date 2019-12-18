@@ -1,0 +1,58 @@
+/* _breadcrumbs.scss */
+
+.breadcrumbs {
+  box-shadow: 0 1px 4px 0 rgba(109,109,109,0.5);
+  color: $altTextColor;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  @include for-phone-only {
+    min-height: 40px;
+    padding-top: 1.2rem;
+    padding-bottom: 1rem;
+    @include altFont(1.2rem);
+  }
+  @include for-tablet-portrait-up {
+    min-height: 50px;
+    @include altFont(1.4rem);
+    padding-top: 1.5rem;
+    padding-bottom: 1.4rem;
+  }
+  &.bc-blog {
+    background: $color1;
+  }
+  &.bc-media {
+    background: $color2;
+  }
+  &.bc-research {
+    background: $color3;
+  }
+  &.bc-events {
+    background: $color6;
+  }
+
+  i {
+    font-size: .75em;
+    padding: 0 $gridSize;
+    position: relative;
+    top: -2px;
+    color: #ffffff;
+    
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .dim {
+    color: #ffffff;
+  }
+  span.current-crumb {
+    font-family: $headerFontStack;
+  }
+  .fa-chevron-right:before {
+    content: "\f054";
+    top: 2px;
+    position: relative;
+  }
+
+}

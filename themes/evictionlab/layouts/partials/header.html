@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-M955JVB');</script>
+		<!-- End Google Tag Manager -->
+
+		<title>{{ .Title }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		{{ $.Scratch.Set "description" "We’ve built the first nationwide database of evictions. Use our customizable map to find and compare eviction rates in your neighborhood, city, or state." }}
+		{{ $.Scratch.Set "fbImage" "https://evictionlab.org/tool/assets/images/el-facebook-img.jpg" }}
+		{{ $.Scratch.Set "twImage" "https://evictionlab.org/tool/assets/images/el-twitter-img.jpg" }}
+		{{ if .Params.description }}
+			{{ $.Scratch.Set "description" .Params.description }}
+		{{ end }}
+		{{ if .Params.fbImage }}
+			{{ $.Scratch.Set "fbImage" .Params.fbImage }}
+		{{ end }}
+		{{ if .Params.twImage }}
+			{{ $.Scratch.Set "twImage" .Params.twImage }}
+		{{ end }}
+		{{ if .Params.socialDescription }}
+			{{ $.Scratch.Set "socialDescription" .Params.socialDescription }}
+		{{ end }}
+		{{ if .Params.image }}
+			{{ $.Scratch.Set "image" .Params.image }}
+		{{ end }}
+
+		<!-- General metadata -->
+		<meta name="description" content="{{ $.Scratch.Get "description" }}" />
+		<meta name='author' content='Eviction Lab' />
+		<!-- Facebook metadata -->
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{{ .Title }}" />
+		{{ if .Params.socialDescription }}
+		<meta property="og:description" content="{{ $.Scratch.Get "socialDescription" }}" />
+		{{ else }}
+		<meta property="og:description" content="{{ $.Scratch.Get "description" }}" />
+		{{ end }}
+		<meta property="og:url" content="{{ .Permalink }}" />
+		<meta property="og:site_name" content="Eviction Lab" />
+		{{ if .Params.fbImage }}
+		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+		{{ else if .Params.image }}
+		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
+		{{ else }}
+		<meta property="og:image" content="https://evictionlab.org/tool/assets/images/el-facebook-img.jpg" />
+		<meta property="og:image:secure_url" content="https://evictionlab.org/tool/assets/images/el-facebook-img.jpg" />
+		{{ end }}	
+		
+		<!-- Twitter metadata -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@EvictionLab" />
+		<meta name="twitter:title" content="{{ .Title }}" />
+		{{ if .Params.socialDescription }}
+		<meta name="twitter:description" content="{{ $.Scratch.Get "socialDescription" }}" />
+		{{ else }}
+		<meta name="twitter:description" content="{{ $.Scratch.Get "description" }}" />
+		{{ end }}
+		{{ if .Params.twImage }}
+		<meta name="twitter:image" content="https://evictionlab.org{{ $.Scratch.Get "twImage" }}" />
+		{{ else if .Params.image }}
+		<meta name="twitter:image" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
+		{{ else }}
+		<meta name="twitter:image" content="https://evictionlab.org/tool/assets/images/el-twitter-img.jpg" />
+		{{ end }}
+
+		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6135894/6199192/css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="/css/lib.min.css"/>
+
+    {{ if .Site.IsServer }}
+      <!-- If site is being served (ostensibly dev) don't compress and minify -->
+      {{ $options := (dict "targetPath" "style.css" "outputStyle" "expanded" "enableSourceMap" true ) }}
+      {{ $style := resources.Get "sass/main-sass.scss" | resources.ToCSS $options  }}
+      <link rel="stylesheet" href="{{ ($style | fingerprint).RelPermalink }}">
+    {{ else }}
+      <!-- If site is production, compress and minify -->
+      {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" false ) }}
+      {{ $css := resources.Get "sass/main-sass.scss" | resources.ToCSS $options  }}
+      {{ $style := $css | resources.PostCSS }}
+      <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
+    {{ end }}
+
+  </head>
+
+  <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}">
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M955JVB"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+    {{ partial "top" . }}

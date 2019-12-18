@@ -1,0 +1,60 @@
+<div class="fl w-100 pl3 pv3 bg-white" style="box-shadow: inset 0px 1px 1px 1px rgba( 0, 0, 0, 0.1 );">
+  <ul class="ttu tracked f7">
+  <!-- <li class="fl ph3"><a href="{{/* .Site.BaseURL }}/{{ .Section */}}/">{{ .Section }}</a> ></li> -->
+    {{ $currentNode := . }}
+    {{ $currentSection := .Section }}
+
+
+    {{ $currentTitle := .Title }}
+
+    {{ range .Site.Menus.updates }}
+    {{ $currentName := .Name }}
+    <li class="fl pr4 pl1"><a class="no-underline {{ if eq $currentName $currentTitle }} link dim orange {{ else }} link dim black {{ end }}" href="{{.URL}}">{{ .Name }}</a></l1>
+    <br>
+
+    
+    <br>
+    currentnode = {{ $currentNode }}
+    <br>
+    .Name = {{ .Name }}
+    <br>
+    .currentSection = {{ $currentSection }}
+    {{ end }}
+
+    {{ range where .Site.RegularPages "Section" .Section }}
+    {{ $thisNode3 := . }}
+      <li class="fl pr4 pl1"><a class="no-underline {{ if eq $thisNode3 $currentNode }} link dim orange {{ else }} link dim black {{ end }}" href="{{ .Permalink }}">{{ .Title }}xx</a></li>
+    {{ end }}
+
+    {{ if .IsPage }}
+      <!-- this catches on FAQ, City Rankings, About sub pages -->
+      {{ range where .Site.RegularPages "Section" .CurrentSection }}
+        {{ $thisNode := . }}
+        <li class="fl pr4 pl1"><a class="no-underline {{ if eq $thisNode $currentNode }} link dim orange {{ else }} link dim black {{ end }}" href="{{ .Permalink }}">{{ .Title }}1</a></li>
+      {{ end }}
+
+    {{ else }}
+      <!-- this catches on Methods, Read/Share Stories, FAQ, Rankings, About pages -->
+      {{ range where .Data.Pages "Type" .Section }}
+      {{ $thisNode2 := . }}
+        <!-- <li class="fl pr4 pl1"><a class="no-underline {{ if eq $thisNode2 $currentNode }} link dim orange {{ else }} link dim black {{ end }}" href="{{ .Permalink }}">{{ .Title }}2</a></li> -->
+      {{ end }}
+
+      <!-- this catches on the top level Updates, What's New, Read/Share Stories pages -->
+      {{ range .Sections }}
+          <li class="dib pr4 pl1 cr"><a class="no-underline link dim black" href="{{ .Permalink }}">{{ humanize .Title }}3</a></li>
+      {{ end }}
+
+    {{ end }}
+  </ul>
+
+  {{ $currentPage := . }}
+  {{ range .Site.Menus.updates }}
+  <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a>
+  {{ end }}
+  <!--
+  <p>type: {{ .Type }}</p>
+  <p>section: {{ .Section }}</p>
+  <p>the dot: {{ . }}</p>
+  -->
+</div>

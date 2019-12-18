@@ -1,0 +1,54 @@
+{{ partial "header" . }}
+
+<!-- section header -->
+{{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
+        {{ if eq .Params.type "meta" }} 
+<div class="graphic-header methods center-page-wrapper">
+  <div class="center-page">
+    <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
+<!-- subnav -->
+<div class="shadow-bottom center-page-wrapper subnav">
+  <div class="center-content-post">
+    <ul class="anchor-links">
+      <li class="only-larger-screens">{{ .Params.li1 }}</li>
+      <li><a href="#section-name" class="smoothScroll">{{ .Params.li2 }}</a></li>
+      <li><a href="#"><span class="color1"><a href="/docs/Eviction Lab Methodology Report.pdf" target="_blank">{{ .Params.li3 }}</a></span></a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="methods-content social-side">
+    {{ partial "social-share-vert" . }}
+    <div class="center-page-wrapper">
+        <div class="center-content-post page-list">
+      
+          <!-- ************ -->
+          <!-- section name -->
+          <!-- ************ -->
+      
+          <a name="section-name"></a>
+          <h2 class="bordered-header blue">{{ .Params.li2 }}</h2>
+          {{ end }}
+          {{ end }}
+      <!-- *************** Methods loop ************* -->
+          <div class="accordion">
+              {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
+              {{ if eq .Params.type "methods" }}
+            
+              <!-- method item -->
+                {{ partial "faqs" . }}
+         
+              {{ end }}
+              {{ end }}
+           
+          </div> <!-- close accordion -->
+      
+        </div>
+      </div>
+</div>
+
+{{ partial "footer" . }}

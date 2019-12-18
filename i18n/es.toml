@@ -1,0 +1,49 @@
+[head_title]
+other = "Multilingual"
+
+[splashHeader]
+other = "Estamos descifrando la crisis de desalojo de los EE. UU." 
+[splashBody]
+other = "Eviction Lab de la Universidad de Princeton ha construido la primera base de datos nacional de desalojos. Descubra cuántos desalojos suceden en su comunidad. Cree mapas, gráficos e informes personalizados. Comparta los hechos con sus vecinos y funcionarios electos."
+[cta]
+other = "Empezar" 
+[mapData]
+other = "Mapa y datos"
+[mapSub]
+other = "Aprenda sobre la crisis de vivienda en los Estados Unidos por interactuar con un mapa personalizable"
+[mapCTA]
+other = "Ir al mapa"
+[rankingsHead]
+other = "clasificaciones de desalojo"
+[rankingsSubhead]
+other = "Ver qué ciudades se han clasificado más altos en desalojos en los EE. UU."
+[rankingsCTA]
+other = "Ir a las clasificaciones de desalojo"
+[aboutHead1]
+other = "Sobre"
+[aboutHead2]
+other = "Eviction Lab"
+[whyHead1]
+other = "Por qué es importante"
+[whyHead2]
+other = "el desalojo"
+[methodsHead]
+other = "Métodos"
+[helpHead]
+other = "Ayuda y preguntas frecuentes"
+[wemIntro]
+other = "NUEVO:"
+[wemAlert]
+other = 'Mira nuestra serie de videos "La Epidemia de Desalojo"'
+[wemCTA]
+other = "Mira videos"
+[wemLink]
+other = "/es/why-eviction-matters/#video"
+[shareOne]
+other = "Com-"
+[shareTwo]
+other = "parta"
+[getResourcesOne]
+other = "Más"
+[getResourcesTwo]
+other ="recursos"
