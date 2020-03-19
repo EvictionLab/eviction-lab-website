@@ -146,7 +146,7 @@ $(document).ready(function () {
     $('.mobile-vh').each(function () {
       var el = $(this);
       el.css('transition', 'none');
-      el.css('height', el.outerHeight() -24 + 'px');
+      el.css('height', el.outerHeight() + 'px');
 
       setTimeout(function () {
         el.css('height', null)
