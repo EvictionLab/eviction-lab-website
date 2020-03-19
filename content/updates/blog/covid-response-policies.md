@@ -1,5 +1,5 @@
 ---
-childof: research
+childof: blog
 contenttype: updates
 contentcat: blog
 featured: "home"
@@ -40,7 +40,7 @@ Nulla erat nisl, accumsan at nulla eget, placerat aliquam libero. Nulla viverra 
   <th style="width:35%;">Source</th>
  </tr>
 </table>
-<p class="ital" style="text-align: center">(Scroll within table to see all statistics)</p>
+<p class="ital" style="text-align: center">(Scroll within table to see all data)</p>
 </div>
 </div>
 
