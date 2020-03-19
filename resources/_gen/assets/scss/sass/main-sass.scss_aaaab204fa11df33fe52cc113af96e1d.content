@@ -4865,7 +4865,7 @@ a.cat-link {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1064px) {
   .covid-blog-table table.page-stats.table-responsive.natl-est {
     width: 180%;
     margin-left: -40%;
@@ -4874,6 +4874,15 @@ a.cat-link {
 
 .covid-blog-table table.page-stats.table-responsive.natl-est tbody {
   background: #fff;
+}
+
+.covid-blog-table table.page-stats.table-responsive.natl-est tr {
+  vertical-align: middle;
+}
+
+.covid-blog-table table.page-stats.table-responsive.natl-est tr th {
+  vertical-align: middle;
+  text-align: center;
 }
 
 @media (max-width: 1439px) {

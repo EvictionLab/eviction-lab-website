@@ -96,7 +96,7 @@ function initCovidTable() {
       if (String(item.linktosourcenewspressreleaseetc).length > 30) {
         item.linktosourcenewspressreleaseetc = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
       }
-      var rowMarkup = '<tr>' +
+      var rowMarkup = '<tr class="">' +
         '<td>' + item.placename + '</td>' +
         '<td>' + item.levelofgovernmentlocalstatenational + '</td>' +
         '<td>' + item.typeofaction + '</td>' +

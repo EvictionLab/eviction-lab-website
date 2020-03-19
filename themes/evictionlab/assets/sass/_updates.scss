@@ -87,7 +87,7 @@ a.cat-link {
           width: 120%;
           margin-left: -10%;
         }
-        @media (min-width: 1200px) {
+        @media (min-width: 1064px) {
           width: 180%;
           margin-left: -40%;
         }
@@ -95,6 +95,11 @@ a.cat-link {
             background: #fff;
         }
         tr {
+          vertical-align: middle;
+          th {
+            vertical-align: middle;
+            text-align: center;
+          }
         @media (max-width: 1439px) {
              font-size: 90%; 
             }

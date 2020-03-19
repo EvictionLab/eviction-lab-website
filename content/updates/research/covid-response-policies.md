@@ -32,12 +32,12 @@ Nulla erat nisl, accumsan at nulla eget, placerat aliquam libero. Nulla viverra 
 <div id="covid-blog">
 <div class="covid-blog-table">
 <table class="page-stats table-responsive natl-est">
- <tr>
-  <th>Placename</th>
-  <th>Level of Government<br/>(Local, State, or National)</th>
-  <th>Type of Action</th>
-  <th>Dates in Effect</th>
-  <th>Source</th>
+ <tr class="">
+  <th style="width:5%;">Placename</th>
+  <th style="width:5%;">Level of Government<br/>(Local, State, or National)</th>
+  <th style="width:30%;">Type of Action</th>
+  <th style="width:15%;">Dates in Effect</th>
+  <th style="width:35%;">Source</th>
  </tr>
 </table>
 <p class="ital" style="text-align: center">(Scroll within table to see all statistics)</p>
