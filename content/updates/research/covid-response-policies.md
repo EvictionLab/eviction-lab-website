@@ -42,6 +42,7 @@ Nulla erat nisl, accumsan at nulla eget, placerat aliquam libero. Nulla viverra 
 </table>
 <p class="ital" style="text-align: center">(Scroll within table to see all statistics)</p>
 </div>
+</div>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna dolor, tincidunt id ultrices quis, facilisis ac velit. Fusce aliquam luctus orci sit amet facilisis. Vestibulum aliquam mi ut dui pulvinar, ut tempor nulla porta. Aenean in laoreet tellus. Ut fringilla, lectus et cursus feugiat, lorem nibh pharetra dui, a mattis dolor nisi sit amet diam. Etiam faucibus vel tellus malesuada varius. Duis sed libero magna. Nulla scelerisque sapien id sodales gravida. Fusce ac ipsum ex. Duis interdum sed tellus in maximus.
 
