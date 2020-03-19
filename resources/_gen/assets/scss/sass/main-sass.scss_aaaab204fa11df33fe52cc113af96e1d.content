@@ -1035,7 +1035,7 @@ the applied class name based on that.
 /* _home-splash.scss */
 /* *************** */
 .new-splash {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 128px);
   min-height: 445px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/assets/hero/american-flag-evicted-woman-phone.jpg");
   background-size: cover;
@@ -8287,6 +8287,80 @@ ol.list-initial, .text-li ol.list-initial li {
     max-height: 65vh;
     overflow: auto;
   }
+}
+
+/* .header-wrapper {
+    padding: 0 0;
+    height: 88px;
+    @include for-tablet-portrait-up {
+        height: 112px;
+    }
+    .header-content {
+        padding: 0 24px;
+        height: 56px;
+        @include for-tablet-portrait-up {
+        height: 80px;
+        }
+    }
+}
+.condensed .header-wrapper {
+    height: 88px;
+    .header-content {
+        height: 56px;
+        padding: 0 24px;
+    }
+} */
+.superheader {
+  background: #e24000;
+  background: #ca3a02;
+  background: linear-gradient(to top, #b53303 2%, #d43c00 99%);
+  background: #333333;
+  background: #282827;
+  background: linear-gradient(to bottom, #3c3c3c 2%, #282827 99%);
+  background: #3c3c3c;
+  background: #ececec;
+  background: #EEF2F5;
+  background: linear-gradient(to bottom, #EEF2F5 2%, #c8cdd2 99%);
+  color: white;
+  color: #434778;
+}
+
+.superheader .super-content {
+  padding: 10px 16px;
+  font-family: Akkurat-Bold, sans-serif;
+  font-size: 13px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .superheader .super-content {
+    padding: 16px 24px;
+  }
+}
+
+.superheader .super-content .boldface {
+  font-family: GT-Eesti-Display-Bold, sans-serif;
+  color: #e24000;
+}
+
+.superheader .super-content a {
+  font-family: Akkurat-Bold, sans-serif;
+  color: #434778;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .superheader .super-content {
+    font-size: 17px;
+  }
+}
+
+.new-splash {
+  height: calc(100vh - 136px);
 }
 
 /*# sourceMappingURL=style.css.map */

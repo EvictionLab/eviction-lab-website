@@ -1,0 +1,69 @@
+/* .header-wrapper {
+    padding: 0 0;
+    height: 88px;
+    @include for-tablet-portrait-up {
+        height: 112px;
+    }
+    .header-content {
+        padding: 0 24px;
+        height: 56px;
+        @include for-tablet-portrait-up {
+        height: 80px;
+        }
+    }
+}
+.condensed .header-wrapper {
+    height: 88px;
+    .header-content {
+        height: 56px;
+        padding: 0 24px;
+    }
+} */
+.superheader {
+    background: #e24000;
+    background: #ca3a02;
+    background: linear-gradient(to top, #b53303 2%, #d43c00 99%);
+    background: #333333;
+    background: #282827;
+    background: linear-gradient(to bottom, #3c3c3c 2%, #282827 99%);
+   //background: #434878;
+   background: #3c3c3c;
+   background: #ececec;
+   background: #EEF2F5;
+   background: linear-gradient(to bottom, #EEF2F5 2%, #c8cdd2 99%);
+    color: white;
+    color: #434778;
+    //width: 80%;
+    
+    .super-content {
+        padding: 10px 16px;
+        @include for-tablet-portrait-up {
+            padding: 16px 24px;
+        }
+        .boldface {
+            font-family: $altFontStack;
+            color:#e24000
+        }
+        a {
+            font-family: $boldFontStack;
+            color: #434778;
+            text-decoration: underline;
+        }
+        font-family: $boldFontStack;
+        font-size: 13px;
+        @include for-tablet-portrait-up {
+            font-size: 17px; 
+        }
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        
+        //height: 100%;
+       // padding: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}
+.new-splash {
+    height: calc(100vh - 136px);
+}
