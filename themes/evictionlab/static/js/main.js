@@ -94,14 +94,14 @@ function initCovidTable() {
     // console.log('items', items)
     items.forEach((item) => {
       if (String(item.linktosourcenewspressreleaseetc).length > 30) {
-        item.linktosourcenewspressreleaseetc = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
+        item.linktruncated = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
       }
       var rowMarkup = '<tr class="">' +
         '<td>' + item.placename + '</td>' +
         '<td>' + item.levelofgovernmentlocalstatenational + '</td>' +
         '<td>' + item.typeofaction + '</td>' +
         '<td>' + item.datesineffect + '</td>' +
-        '<td>' + (!!item.linktosourcenewspressreleaseetc ? '<a href="' + item.linktosourcenewspressreleaseetc + '" target="_blank">' + item.linktosourcenewspressreleaseetc + '</a>' : '') + '</td>' +
+        '<td>' + (!!item.linktosourcenewspressreleaseetc ? '<a href="' + item.linktosourcenewspressreleaseetc + '" target="_blank">' + item.linktruncated + '</a>' : '') + '</td>' +
       '</tr>';
       $('#covid-blog table tr').last().after(rowMarkup);
     })
