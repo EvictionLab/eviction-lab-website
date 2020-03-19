@@ -64,9 +64,16 @@
         box-sizing: border-box;
     }
 }
-.new-splash {
-    height: calc(100vh - 164px);
+ .new-splash {
+    height: calc(100vh - 124px);
+   // margin-top: 0;
+   .section-split {
+       margin-top: -56px;
+   }
     @include for-tablet-portrait-up {
         height: calc(100vh - 136px);
+        .section-split {
+            margin-top: unset;
+        }
     }
-}
+} 
