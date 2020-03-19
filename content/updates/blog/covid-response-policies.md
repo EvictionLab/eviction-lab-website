@@ -1,10 +1,10 @@
 ---
-childof: research
+childof: blog
 contenttype: updates
-contentcat: research
+contentcat: blog
 featured: "home"
 researchtype: elresearch
-title: 'COVID-19 Response Policies'
+title: 'COVID-19 and Eviction Policies Around the Nation'
 date: 2020-03-19T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
@@ -40,7 +40,8 @@ Nulla erat nisl, accumsan at nulla eget, placerat aliquam libero. Nulla viverra 
   <th style="width:35%;">Source</th>
  </tr>
 </table>
-<p class="ital" style="text-align: center">(Scroll within table to see all statistics)</p>
+<p class="ital" style="text-align: center">(Scroll within table to see all data)</p>
+</div>
 </div>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna dolor, tincidunt id ultrices quis, facilisis ac velit. Fusce aliquam luctus orci sit amet facilisis. Vestibulum aliquam mi ut dui pulvinar, ut tempor nulla porta. Aenean in laoreet tellus. Ut fringilla, lectus et cursus feugiat, lorem nibh pharetra dui, a mattis dolor nisi sit amet diam. Etiam faucibus vel tellus malesuada varius. Duis sed libero magna. Nulla scelerisque sapien id sodales gravida. Fusce ac ipsum ex. Duis interdum sed tellus in maximus.
