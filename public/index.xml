@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Eviction Lab on Eviction Lab</title>
@@ -618,7 +618,7 @@ One feature of this strategy is that some low population areas could have less t
       <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
       
       <guid>/help-faq/page-content/q155-rent-burden/</guid>
-      <description>Rent Burden is the percentage of household income spent on rent in a given area. The U.S. Census Bureau only calculates this statistic up to 50%—any number above that is listed as &amp;ldquo;50% or more.&amp;rdquo;</description>
+      <description>Rent Burden is the percentage of household income spent on rent in a given area. The U.S. Census Bureau only calculates this statistic up to 50%&amp;mdash;any number above that is listed as &amp;ldquo;50% or more.&amp;rdquo;</description>
     </item>
     
     <item>
@@ -691,7 +691,7 @@ One feature of this strategy is that some low population areas could have less t
       <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
       
       <guid>/help-faq/page-content/q168-how-many-places/</guid>
-      <description>Nearly 30,000 places—cities, towns, villages, and unincorporated areas—are included in our database.</description>
+      <description>Nearly 30,000 places&amp;mdash;cities, towns, villages, and unincorporated areas&amp;mdash;are included in our database.</description>
     </item>
     
     <item>
@@ -729,7 +729,7 @@ If you cannot find a place via the search bar, it may not be a place listed in t
       
       <guid>/help-faq/page-content/q175-area-types/</guid>
       <description>We chose to categorize places in our Rankings (as Large Cities, Mid-sized Cities, or Small Cities &amp;amp; Rural Areas) to allow for more meaningful comparisons among places with similar populations.
-  Small Cities &amp;amp; Rural Areas are places with populations under 20,000. We rank 27,403 of these places. Examples: Clarksdale, MS; Fremont, OH</description>
+ Small Cities &amp;amp; Rural Areas are places with populations under 20,000. We rank 27,403 of these places. Examples: Clarksdale, MS; Fremont, OH</description>
     </item>
     
     <item>
@@ -850,15 +850,6 @@ Within our data, case information is recorded as separate actions with dates of 
       
       <guid>/help-faq/page-content/q250-stories/</guid>
       <description>We have developed a Media Guide and Teacher’s Guide. We’ll be highlighting how journalists, teachers, community organizers, policymakers, and engaged citizens have used our data—both on our Facebook and Twitter accounts and our Updates pages. You can also download reading group guides for the book Evicted.</description>
-    </item>
-    
-    <item>
-      <title>COVID-19 Response Policies</title>
-      <link>/covid-response-policies/</link>
-      <pubDate>Thu, 19 Mar 2020 16:46:40 +0000</pubDate>
-      
-      <guid>/covid-response-policies/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna dolor, tincidunt id ultrices quis, facilisis ac velit. Fusce aliquam luctus orci sit amet facilisis. Vestibulum aliquam mi ut dui pulvinar, ut tempor nulla porta. Aenean in laoreet tellus. Ut fringilla, lectus et cursus feugiat, lorem nibh pharetra dui, a mattis dolor nisi sit amet diam.</description>
     </item>
     
     <item>
@@ -1102,7 +1093,8 @@ If you use Eviction Lab data, please let us know! Share your findings with us by
       
       <guid>/contact/page-content/form2/</guid>
       <description>You can also email us directly regarding
- Help requests or site feedback at help@evictionlab.org Research inquiries at research@evictionlab.org Media inquiries at press@evictionlab.org General questions or comments at info@evictionlab.org  If you would like to merge your data with The Eviction Lab&amp;rsquo;s dataset, please use our Data Merge Application.</description>
+ Help requests or site feedback at help@evictionlab.org
+ Research inquiries at research@evictionlab.org Media inquiries at press@evictionlab.org General questions or comments at info@evictionlab.org  If you would like to merge your data with The Eviction Lab&amp;rsquo;s dataset, please use our Data Merge Application.</description>
     </item>
     
     <item>
@@ -1126,7 +1118,7 @@ If you use Eviction Lab data, please let us know! Share your findings with us by
     <item>
       <title>No Upcoming Events</title>
       <link>/updates/events/2018-10-10-neighbor-to-neighbor/</link>
-      <pubDate>Wed, 31 Dec 1969 18:33:38 -0600</pubDate>
+      <pubDate>Wed, 31 Dec 1969 19:33:38 -0500</pubDate>
       
       <guid>/updates/events/2018-10-10-neighbor-to-neighbor/</guid>
       <description></description>

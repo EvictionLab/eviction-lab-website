@@ -1,5 +1,5 @@
 ---
-childof: blog
+childof: research
 contenttype: updates
 contentcat: blog
 featured: "home"
