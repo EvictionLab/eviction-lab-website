@@ -8360,7 +8360,13 @@ ol.list-initial, .text-li ol.list-initial li {
 }
 
 .new-splash {
-  height: calc(100vh - 136px);
+  height: calc(100vh - 152px);
+}
+
+@media (min-width: 768px) {
+  .new-splash {
+    height: calc(100vh - 136px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
