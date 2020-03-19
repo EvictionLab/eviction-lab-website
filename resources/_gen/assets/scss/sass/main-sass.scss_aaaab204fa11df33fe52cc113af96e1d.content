@@ -1035,7 +1035,7 @@ the applied class name based on that.
 /* _home-splash.scss */
 /* *************** */
 .new-splash {
-  height: calc(100vh - 128px);
+  height: calc(100vh - 80px);
   min-height: 445px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/assets/hero/american-flag-evicted-woman-phone.jpg");
   background-size: cover;
@@ -8415,12 +8415,19 @@ ol.list-initial, .text-li ol.list-initial li {
 }
 
 .new-splash {
-  height: calc(100vh - 136px);
+  height: calc(100vh - 124px);
+}
+
+.new-splash .section-split {
+  margin-top: -56px;
 }
 
 @media (min-width: 768px) {
   .new-splash {
     height: calc(100vh - 136px);
+  }
+  .new-splash .section-split {
+    margin-top: unset;
   }
 }
 
