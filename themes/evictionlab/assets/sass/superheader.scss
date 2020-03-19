@@ -65,7 +65,7 @@
     }
 }
 .new-splash {
-    height: calc(100vh - 152px);
+    height: calc(100vh - 136px);
     @include for-tablet-portrait-up {
         height: calc(100vh - 136px);
     }
