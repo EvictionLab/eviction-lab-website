@@ -1,10 +1,10 @@
 ---
 childof: blog
 contenttype: updates
-contentcat: research
+contentcat: blog
 featured: "home"
 researchtype: elresearch
-title: 'COVID-19 Response Policies'
+title: 'COVID-19 and Eviction Policies Around the Nation'
 date: 2020-03-19T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
