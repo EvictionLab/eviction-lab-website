@@ -4841,7 +4841,53 @@ a.cat-link {
   background-color: #f4f4f7;
 }
 
-#natl-blog hr {
+@media (max-width: 767px) {
+  .covid-blog-table {
+    margin: 32px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .covid-blog-table {
+    padding-top: 1.6rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.covid-blog-table table.page-stats.table-responsive.natl-est {
+  height: 50vh;
+}
+
+@media (min-width: 768px) {
+  .covid-blog-table table.page-stats.table-responsive.natl-est {
+    width: 120%;
+    margin-left: -10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .covid-blog-table table.page-stats.table-responsive.natl-est {
+    width: 180%;
+    margin-left: -40%;
+  }
+}
+
+.covid-blog-table table.page-stats.table-responsive.natl-est tbody {
+  background: #fff;
+}
+
+@media (max-width: 1439px) {
+  .covid-blog-table table.page-stats.table-responsive.natl-est tr {
+    font-size: 90%;
+  }
+}
+
+.covid-blog-table table.page-stats.table-responsive.natl-est tr:nth-child(even) {
+  background-color: #f4f4f7;
+}
+
+#natl-blog hr,
+#covid-blog hr {
   margin-top: 0;
 }
 

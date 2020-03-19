@@ -73,7 +73,40 @@ a.cat-link {
     }
 }
 
-#natl-blog {
+.covid-blog-table {
+    @include for-phone-only {
+        margin: 32px 0;
+    }
+    @include for-tablet-portrait-up {
+        padding-top: 1.6rem;
+        padding-bottom: 4rem;
+        }
+    table.page-stats.table-responsive.natl-est {
+        height: 50vh;
+        @media (min-width: 768px) {
+          width: 120%;
+          margin-left: -10%;
+        }
+        @media (min-width: 1200px) {
+          width: 180%;
+          margin-left: -40%;
+        }
+        tbody {
+            background: #fff;
+        }
+        tr {
+        @media (max-width: 1439px) {
+             font-size: 90%; 
+            }
+        }
+        tr:nth-child(even) {
+            background-color: #f4f4f7;
+          }
+    }
+}
+
+#natl-blog,
+#covid-blog {
     hr {
         margin-top: 0;
     }
