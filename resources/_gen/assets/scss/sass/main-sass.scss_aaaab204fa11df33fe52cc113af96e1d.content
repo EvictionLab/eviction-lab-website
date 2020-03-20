@@ -4855,7 +4855,7 @@ a.cat-link {
 }
 
 .covid-blog-table table.page-stats.table-responsive.natl-est {
-  height: 50vh;
+  height: 72vh;
 }
 
 @media (min-width: 768px) {
