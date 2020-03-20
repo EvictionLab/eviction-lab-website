@@ -15,6 +15,7 @@ fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 url: /covid-response-policies
 aliases:
+    - /updates/blog/covid-eviction-policies
     - /updates/blog/covid-response-policies
     - /covid-eviction-policies
 ---
