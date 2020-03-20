@@ -15,7 +15,8 @@ fbImage: '/images/assets/blog/national-estimates-fb.jpg'
 twImage: '/images/assets/blog/national-estimates-twitter.jpg'
 url: /covid-response-policies
 aliases:
-    - /updates/research/covid-response-policies
+    - /updates/blog/covid-response-policies
+    - /covid-eviction-policies
 ---
 
 For three years, the Eviction Lab has set out to measure the prevalence, causes, and consequences of housing insecurity across America. 
