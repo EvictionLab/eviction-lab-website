@@ -13,7 +13,7 @@ description: Tracking federal, state, and local actions in response to COVID-19.
 socialDescription: Tracking federal, state, and local actions in response to COVID-19.  
 fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
-url: /covid-response-policies
+url: /covid-eviction-policies
 aliases:
     - /updates/blog/covid-eviction-policies
     - /updates/blog/covid-response-policies
