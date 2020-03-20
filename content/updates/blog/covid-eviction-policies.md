@@ -11,8 +11,8 @@ postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Tracking federal, state, and local eviction policies in response to COVID-19.
 socialDescription: Tracking federal, state, and local eviction policies in response to COVID-19.  
-fbImage: '/images/assets/blog/national-estimates-fb.jpg'
-twImage: '/images/assets/blog/national-estimates-twitter.jpg'
+fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
+twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 url: /covid-response-policies
 aliases:
     - /updates/blog/covid-response-policies
