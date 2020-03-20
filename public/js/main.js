@@ -66,6 +66,56 @@ function setupModals() {
   });
 }
 
+function initCovidTable() {
+  // Fetches data from google sheets table and generates new
+  // console.log('initCovidTable()')
+
+  // Parse JSON response and insert a table row for each row of data in the sheet.
+  function reqHandler(source, req) {
+    // console.log('reqHandler')
+    // console.log('req', req)
+    var rows = JSON.parse(req.responseText).feed.entry;
+    // console.log('rows', rows);
+    var properties = Object.keys(rows[0])
+        .filter(function (p) { return p.startsWith("gsx$"); })
+        .map(function (p) { return p.substr(4); });
+    // console.log('properties', properties)
+    var items = rows.map(function (r) {
+      var row = {};
+      properties.forEach(function (p) {
+          row[p.replace('.', '')] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
+          if (row[p] === null) {
+              row[p] = '';
+          }
+      });
+      // console.log('row', row)
+      return row;
+    });
+    // console.log('items', items)
+    items.forEach((item) => {
+      if (String(item.linktosourcenewspressreleaseetc).length > 30) {
+        item.linktruncated = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
+      }
+      var rowMarkup = '<tr class="">' +
+        '<td>' + item.placename + '</td>' +
+        '<td>' + item.levelofgovernmentlocalstatenational + '</td>' +
+        '<td>' + item.typeofaction + '</td>' +
+        '<td>' + item.datesineffect + '</td>' +
+        '<td>' + (!!item.linktosourcenewspressreleaseetc ? '<a href="' + item.linktosourcenewspressreleaseetc + '" target="_blank">' + item.linktruncated + '</a>' : '') + '</td>' +
+      '</tr>';
+      $('#covid-blog table tr').last().after(rowMarkup);
+    })
+  }
+
+  // Sheet must be published as public 
+  var SHEET_URL = 'https://spreadsheets.google.com/feeds/list/1XX9bBi_4ERpeqw_WyqHEIkfpShbif1i6HenBfymYv_U/1/public/values?alt=json'
+  // Fetch intervention data
+  var mediaReq = new XMLHttpRequest();
+  mediaReq.addEventListener("load",  function() { reqHandler('media', mediaReq) });
+  mediaReq.open("GET", SHEET_URL);
+  mediaReq.send();
+}
+
 $(document).ready(function () {
   setupMenu();
   setupScrollEnd();
@@ -73,6 +123,10 @@ $(document).ready(function () {
     setupContactForm();
   }
   setupModals();
+  if ($('#covid-blog').length >= 1) {
+    // console.log('covid table is in the page.')
+    initCovidTable();
+  }
 });
 
 /**
@@ -324,5 +378,3 @@ $(document).ready(function () {
     });
   }
 });
-
-
