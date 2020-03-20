@@ -9,8 +9,8 @@ date: 2020-03-19T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Tracking federal, state, and local agencies as they respond to COVID-19.
-socialDescription: Tracking federal, state, and local agencies as they respond to COVID-19.  
+description: Tracking federal, state, and local eviction policies in response to COVID-19.
+socialDescription: Tracking federal, state, and local eviction policies in response to COVID-19.  
 fbImage: '/images/assets/blog/national-estimates-fb.jpg'
 twImage: '/images/assets/blog/national-estimates-twitter.jpg'
 url: /covid-response-policies
