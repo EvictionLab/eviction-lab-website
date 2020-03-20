@@ -177,6 +177,7 @@ You may notice that the numbers of evictions and filings appear to increase over
 </table>
 <p class="ital" style="text-align: center">(Scroll within table to see all statistics)</p>
 </div>
+</div>
 
 As the figures above show, our current data suggest there was roughly 1 eviction filing for every 17 renter households between 2000 and 2016. Approximately 1 in 40 renter households were evicted over this period. To put these numbers into perspective, at the peak of the financial crisis in 2010, <a href="https://www.corelogic.com/research/foreclosure-report/national-foreclosure-report-10-year.pdf" target="_blank">estimates suggest</a> slightly over one million foreclosures were completed nationally. By comparison, we see almost a million evictions against tenants every single year. The narrative on housing often focuses on displacement among homeowners, but our findings suggest that there is an ongoing epidemic of eviction and displacement in the renting market. As you’ll see from the graphs below, the national eviction and filing rates have remained consistent over time, with small declines over the last few years.
 
@@ -194,6 +195,3 @@ As the figures above show, our current data suggest there was roughly 1 eviction
 It is important to note that there are several places where we do not have all eviction records, including New York and California. More information about why can be found in our <a href="https://evictionlab.org/docs/Eviction%20Lab%20Methodology%20Report.pdf" target="_blank">Methodology Report</a>. As a result, our current national estimates of evictions and eviction filings underestimate the overall prevalence of both. Our data collection efforts are ongoing, and we will continue to update our estimates as we learn more. 
 
 If you have any questions or would like to get in touch with the Eviction Lab, please email us at <a href="mailto:info@evictionlab.org" target="_blank">info@evictionlab.org</a>. We also invite you to explore <a href="https://justshelter.org" target="_blank">justshelter.org</a>, a resource built by our team with contact information for housing advocates all across the country.
-
-
-</div>
