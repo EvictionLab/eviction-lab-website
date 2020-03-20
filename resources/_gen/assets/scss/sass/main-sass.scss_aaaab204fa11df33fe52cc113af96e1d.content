@@ -8422,6 +8422,7 @@ ol.list-initial, .text-li ol.list-initial li {
   background: #ececec;
   background: #EEF2F5;
   background: linear-gradient(to bottom, #EEF2F5 2%, #c8cdd2 99%);
+  background: linear-gradient(to bottom, #EEF2F5 2%, #d4d9de 99%);
   color: white;
   color: #434778;
 }
