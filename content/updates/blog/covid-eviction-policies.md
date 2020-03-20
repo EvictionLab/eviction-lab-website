@@ -17,7 +17,7 @@ url: /covid-eviction-policies
 aliases:
     - /updates/blog/covid-eviction-policies
     - /updates/blog/covid-response-policies
-    - /covid-respone-policies
+    - /covid-response-policies
 ---
 
 As the world seeks to contain the COVID-19 pandemic, policymakers across the U.S. are responding to the heightened insecurity so many face.
