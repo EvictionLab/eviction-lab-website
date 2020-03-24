@@ -8431,4 +8431,90 @@ ol.list-initial, .text-li ol.list-initial li {
   }
 }
 
+.map-parent {
+  /* Style for Custom Tooltip */
+  /* Legend Font Style */
+  /* Legend Position Style */
+}
+
+.map-parent #map_container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  margin: 3rem auto 8rem auto;
+}
+
+.map-parent div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: white;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.map-parent body {
+  font: 11px sans-serif;
+}
+
+.map-parent .legend {
+  position: absolute;
+  left: 960px;
+  top: 380px;
+}
+
+.center-page-wrapper .center-content-post {
+  max-width: 80%;
+  line-height: 32px;
+}
+
+.center-page-wrapper .center-content-post h2 {
+  max-width: 100%;
+  font-size: 3.2rem;
+}
+
+.center-page-wrapper .legend .legend-item .icon,
+.center-page-wrapper .legend .legend-item .label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.center-page-wrapper .legend .legend-item .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.center-page-wrapper .legend .legend-item .icon.no {
+  background-color: #F8F8F8;
+}
+
+.center-page-wrapper .legend .legend-item .icon.yes {
+  background-color: #8CD3CD;
+}
+
+.center-page-wrapper .legend .legend-item .icon.local {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-right: 18px;
+  background-color: #2C897F;
+}
+
+.center-page-wrapper .legend .legend-item .label {
+  font-size: 1.6rem;
+  line-height: 142%;
+}
+
+/* On mouse hover, lighten state color */
+path:hover {
+  fill-opacity: .7;
+}
+
 /*# sourceMappingURL=style.css.map */

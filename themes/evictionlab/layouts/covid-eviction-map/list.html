@@ -1,17 +1,32 @@
 {{ partial "header" . }}
+{{ $pagetype := .Params.childof }}
+<!-- {{ partial "subnav" . }} -->
 
-<div class="page-list media-map">
-    <div data-pym-src="https://evictionlab.github.io/media-map/">Loading...</div>
-    <script type="text/javascript" src="https://pym.nprapps.org/pym-loader.v1.min.js"></script>
-
+<!-- <div class="page-list  covid-map"> -->
     <div class="center-page-wrapper">
+        <div class="center-content-post page-list center-content-post research-post updates-post">
+          
+            <h2 class="bordered-header green">Map of eviction moratoriums and other actions</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+
+        </div>
         <div class="center-content-post page-list">
-            <h2 class="bordered-header blue">Eviction Lab Media Coverage</h2>
-            <p></p>
-            <p><i class="fa fa-chevron-up"></i>&nbsp;&nbsp;<span class="ak-bold">Map:</span> <span id="numLocalStories"></span> stories in local outlets<span id="numLMSReferrals"></span> &nbsp;|&nbsp; <i class="fa fa-chevron-down"></i>&nbsp;&nbsp;<span class="ak-bold">Table:</span> <span id="numNationalStories"></span> stories in national outlets &nbsp;|&nbsp; Updated: <span id="lastUpdated"></span></p>
-            <table id="national-media-table" class="page-stats table-responsive"></table>
+            <div class="legend">
+              <div class="legend-item">
+                <div class="icon no"></div><div class="label">No moratoriums</div>
+              </div>
+              <div class="legend-item">
+                <div class="icon yes"></div><div class="label">State-level moratoriums</div>
+              </div>
+              <div class="legend-item">
+                <div class="icon local"></div><div class="label">County or city moratoriums</div>
+              </div>
+            </div>
         </div>
     </div>
+    <div class="map-parent">
+        <div id="map_container"></div>
+    </div>
 </div>
-
+{{ partial "covid-map" . }}
 {{ partial "footer" . }}

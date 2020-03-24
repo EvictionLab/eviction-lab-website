@@ -1,0 +1,92 @@
+$no-action-gray: #F8F8F8;
+$yes-action-green: #8CD3CD;
+$local-action-green: #2C897F;
+
+.map-parent {
+  #map_container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin: 3rem auto 8rem auto;
+    // border: 1px solid gray;
+  }
+  /* Style for Custom Tooltip */
+  div.tooltip {
+   	position: absolute;
+  	text-align: center;
+  	width: 60px;
+  	height: 28px;
+  	padding: 2px;
+  	font: 12px sans-serif;
+  	background: white;
+  	border: 0px;
+  	border-radius: 8px;
+  	pointer-events: none;
+  }
+
+  /* Legend Font Style */
+  body {
+  	font: 11px sans-serif;
+  }
+
+  /* Legend Position Style */
+  .legend {
+  	position:absolute;
+  	left:960px;
+  	top:380px;
+  }
+}
+
+.center-page-wrapper {
+  .center-content-post {
+      max-width: 80%;
+      line-height: 32px;
+      h2 {
+        max-width: 100%;
+        font-size: 3.2rem;
+      }
+  }
+  .legend {
+    .legend-item {
+      .icon,
+      .label {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        &.no {
+          background-color: $no-action-gray;
+        }
+        &.yes {
+          background-color: $yes-action-green;
+        }
+        &.local {
+          width: 6px;
+          height: 6px;
+          border-radius: 3px;
+          margin-left: 10px;
+          margin-right: 18px;
+          background-color: $local-action-green;
+        }
+      }
+      .label {
+        font-size: 1.6rem;
+        line-height: 142%;
+      }
+    }
+  }
+
+}
+
+/* On mouse hover, lighten state color */
+path:hover {
+	fill-opacity: .7;
+}
+
+svg {
+
+}
