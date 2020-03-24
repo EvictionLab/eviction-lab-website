@@ -350,66 +350,32 @@ d3.json("https://spreadsheets.google.com/feeds/list/1XX9bBi_4ERpeqw_WyqHEIkfpShb
 
     // console.log('localLabels', localLabels)
 
-    // Modification of custom tooltip code provided by Malcolm Maclean, "D3 Tips and Tricks"
-    // http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html
-    // .on("mouseover", function(d) {
-    //     console.log('mouseover')
-    //   	div.transition()
-    //     	   .duration(200)
-    //          .style("opacity", .9);
-    //          div.text(d.place)
-    //          .style("left", (d3.event.pageX) + "px")
-    //          .style("top", (d3.event.pageY - 28) + "px");
-    // })
-    // 
-    // .on("click", function(d) {
-    //     console.log('click')
-    //     console.log(d)
-    //     // div.transition()
-    //     //      .duration(200)
-    //     //      .style("opacity", .9);
-    //     //      div.text(d.place)
-    //     //      .style("left", (d3.event.pageX) + "px")
-    //     //      .style("top", (d3.event.pageY - 28) + "px");
-    // })
-    // 
-    // // fade out tooltip on mouse out
-    // .on("mouseout", function(d) {
-    //     div.transition()
-    //        .duration(500)
-    //        .style("opacity", 0);
-    // });
-  });
+    var labelPadding = 2;
+    // the component used to render each label
+    var textLabel = fc.layoutTextLabel()
+      .padding(labelPadding)
+      .value(function(d) { return d.properties.name; });
 
-// Modified Legend Code from Mike Bostock: http://bl.ocks.org/mbostock/3888852
-// var legend = d3.select("#map_container").append("svg")
-//       		.attr("class", "legend")
-//      			.attr("width", 140)
-//     			.attr("height", 200)
-//           // .attr("viewbox", `0 0 140 200`)
-//           // .attr("preserveAspectRatio", "xMidYMid meet")
-//           // .call(responsivefy)
-//    				.selectAll("g")
-//    				.data(color.domain().slice().reverse())
-//    				.enter()
-//           // .call(responsivefy)
-//    				.append("g")
-//      			.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-// 
-//   	legend.append("rect")
-//    		  .attr("width", 18)
-//    		  .attr("height", 18)
-//    		  .style("fill", color);
-// 
-//   	legend.append("text")
-//   		  .data(legendText)
-//       	  .attr("x", 24)
-//       	  .attr("y", 9)
-//       	  .attr("dy", ".35em")
-//       	  .text(function(d) { return d; });
 
-    // legend.call(responsivefy);
-  });
+    // a strategy that combines simulated annealing with removal
+    // of overlapping labels
+    var strategy = fc.layoutRemoveOverlaps(fc.layoutGreedy());
 
-// }
-// );
+    // create the layout that positions the labels
+    var labels = fc.layoutLabel(strategy)
+        .size(function(_, i, g) {
+            // measure the label and add the required padding
+            var textSize = d3.select(g[i])
+                .select('text')
+                .node()
+                .getBBox();
+            return [textSize.width + labelPadding * 2, textSize.height + labelPadding * 2];
+        })
+        .position(function(d) { return projection(d.geometry.coordinates); })
+        .component(textLabel);
+
+    // render!
+    svg.datum(places.features)
+         .call(labels);
+    });
+});
