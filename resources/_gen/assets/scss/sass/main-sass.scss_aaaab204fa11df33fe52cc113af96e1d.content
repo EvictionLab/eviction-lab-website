@@ -8432,6 +8432,8 @@ ol.list-initial, .text-li ol.list-initial li {
 }
 
 .map-parent {
+  position: relative;
+  width: 100%;
   /* Style for Custom Tooltip */
   /* Legend Font Style */
   /* Legend Position Style */
@@ -8441,31 +8443,322 @@ ol.list-initial, .text-li ol.list-initial li {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  height: auto;
-  margin: 3rem auto 8rem auto;
+  height: 100%;
+  margin: 0 auto 0 auto;
 }
 
-.map-parent div.tooltip {
+.map-parent #map_panel {
+  display: block;
   position: absolute;
-  text-align: center;
-  width: 60px;
-  height: 28px;
-  padding: 2px;
-  font: 12px sans-serif;
-  background: white;
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
+  height: 100%;
+  width: 400px;
+  top: 0;
+  left: -400px;
+  background: #fff;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.05);
 }
 
-.map-parent body {
-  font: 11px sans-serif;
+.map-parent #map_panel .close {
+  float: right;
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.map-parent #map_panel .close:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -3px;
+  right: -7px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  margin: auto;
+  border: 2px solid #eef2f5;
+}
+
+.map-parent #map_panel .panel-content {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.map-parent #map_panel .panel-content p {
+  margin-bottom: 0;
+}
+
+.map-parent #map_panel .panel-content h3, .map-parent #map_panel .panel-content h4, .map-parent #map_panel .panel-content h5, .map-parent #map_panel .panel-content p, .map-parent #map_panel .panel-content a, .map-parent #map_panel .panel-content .partial-divider {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.map-parent #map_panel .panel-content h3.state-name {
+  font-family: GT Eesti Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 142%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #2C897F;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.map-parent #map_panel .panel-content .state-eviction-rate {
+  font-family: Akkurat-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 142%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #050403;
+  margin-bottom: 16px;
+}
+
+.map-parent #map_panel .panel-content .full-divider {
+  height: 10px;
+  left: 0px;
+  top: 153px;
+  background: linear-gradient(360deg, #3D978E 0%, #56B7AF 100%);
+  margin-bottom: 20px;
+}
+
+.map-parent #map_panel .panel-content .state-eviction-prose {
+  margin-bottom: 24px;
+}
+
+.map-parent #map_panel .panel-content .state-eviction-prose,
+.map-parent #map_panel .panel-content .locality-eviction-prose {
+  font-family: Akkurat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 142%;
+  letter-spacing: 0.01em;
+  color: #212529;
+}
+
+.map-parent #map_panel .panel-content .oulink-icon {
+  height: 14px;
+  width: 14px;
+  border-radius: 2px;
+  display: inline-block;
+  color: #2C897F;
+  vertical-align: top;
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.map-parent #map_panel .panel-content .partial-divider {
+  width: 348px;
+  height: 3px;
+  left: 18px;
+  top: 295px;
+  background: #2C897F;
+  margin-top: 24px;
+}
+
+.map-parent #map_panel .panel-content h4 {
+  font-family: GT Eesti Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 142%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #2C897F;
+}
+
+.map-parent #map_panel .panel-content .actions-list {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.map-parent #map_panel .panel-content .action {
+  font-family: Akkurat-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 142%;
+  letter-spacing: 0.01em;
+  color: #3C4043;
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+.map-parent #map_panel .panel-content .dates-in-effect {
+  font-family: Akkurat-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 142%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #737373;
+  margin-bottom: 5px;
+}
+
+.map-parent #map_panel .panel-content .dates {
+  font-family: Akkurat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 142%;
+  letter-spacing: 0.01em;
+  color: #212529;
+  margin-bottom: 15px;
+}
+
+.map-parent #map_panel .panel-content .link-to-source {
+  font-family: GT Eesti Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 142%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #737373;
+  margin-top: 5px;
+  margin-bottom: 24px;
+}
+
+.map-parent #map_panel .panel-content .locality {
+  font-family: GT Eesti Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 142%;
+  letter-spacing: 0.01em;
+  color: #2C897F;
+  margin-top: 24px;
+}
+
+.map-parent #map_panel .panel-content .side-panel-contents {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.map-parent #intro_panel_overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-parent #intro_panel_overlay .intro-panel {
+  width: 505px;
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.05);
+  padding: 31px;
+}
+
+.map-parent #intro_panel_overlay .intro-panel h3 {
+  height: 78px;
+  margin-top: 0;
+  text-transform: none;
+  font-family: GT Eesti Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #2C897F;
+  margin-bottom: 16px;
+}
+
+.map-parent #intro_panel_overlay .intro-panel p {
+  font-family: Akkurat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 142%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin-bottom: 2.3rem;
+}
+
+.map-parent #intro_panel_overlay .intro-panel .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  background-color: #e24000;
+  border-color: #e24000;
+  text-transform: uppercase;
+  font-family: GT-Eesti-Display-Bold, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 11px 15px;
+  letter-spacing: .054rem;
+  width: 130px;
+}
+
+.map-parent #legend {
+  width: 268px;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
 }
 
 .map-parent .legend {
-  position: absolute;
-  left: 960px;
-  top: 380px;
+  background: #fff;
+  padding: 1rem;
+}
+
+.map-parent .legend .legend-item {
+  padding: 0.5rem 0 0 0;
+}
+
+.map-parent .legend .legend-item .icon,
+.map-parent .legend .legend-item .label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.map-parent .legend .legend-item .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.map-parent .legend .legend-item .icon.no {
+  background-color: #F8F8F8;
+}
+
+.map-parent .legend .legend-item .icon.yes {
+  background-color: #8CD3CD;
+}
+
+.map-parent .legend .legend-item .icon.local {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-right: 18px;
+  background-color: #2C897F;
+}
+
+.map-parent .legend .legend-item .label {
+  font-size: 1.6rem;
+  line-height: 142%;
+}
+
+.center-page-wrapper {
+  display: block;
 }
 
 .center-page-wrapper .center-content-post {
