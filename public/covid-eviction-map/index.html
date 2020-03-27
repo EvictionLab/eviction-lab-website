@@ -67,7 +67,7 @@
       
       
       
-      <link rel="stylesheet" href="/style.min.36e50c66899b5e042398cd50ef43e6eff242bb6ead618f86b3a7222b1ec488e0.css">
+      <link rel="stylesheet" href="/style.min.0553d0f63961146dbf349056b1d62fe666f5207211191006d2081577913f6e2e.css">
     
 
     
@@ -177,43 +177,26 @@
 
 
     <div class="center-page-wrapper">
-        <div class="center-content-post page-list center-content-post research-post updates-post">
+        <div class="center-content-post page-list center-content-post research-post updates-post covid-map-pretext">
             <h2 class="bordered-header green">Map of eviction moratoriums and other actions</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-        </div>
-        <div class="center-content-post page-list">
+            <h3 class="green">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h3>
+            <div id="legend" class="legend">
+              <div class="legend-item">
+                <div class="icon no"></div><div class="label">No moratoriums</div>
+              </div>
+              <div class="legend-item">
+                <div class="icon yes"></div><div class="label">State-level moratoriums</div>
+              </div>
+              <div class="legend-item">
+                <div class="icon local"></div><div class="label">County or city moratoriums</div>
+              </div>
+            </div>
         </div>
     </div>
     <div class="map-parent">
         <div id="map_container"></div>
-        <div id="legend" class="legend">
-          <div class="legend-item">
-            <div class="icon no"></div><div class="label">No moratoriums</div>
-          </div>
-          <div class="legend-item">
-            <div class="icon yes"></div><div class="label">State-level moratoriums</div>
-          </div>
-          <div class="legend-item">
-            <div class="icon local"></div><div class="label">County or city moratoriums</div>
-          </div>
-        </div>
-        <div id="map_panel">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-          </button>
-          <div class="panel-content">
-
-          </div>
-        </div>
-        <div id="intro_panel_overlay">
-          <div id="intro_panel" class="intro-panel">
-            <div class="panel-content">
-              <h3>Map of eviction moratoriums and other actions </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <a class="btn" id="close_intro_panel">Got It</a>
-          </div>
-        </div>
+        <div id="map_tooltip" class="map-tooltip">Click for details.</div>
+        
     </div>
     <div class="center-page-wrapper">
         <div class="center-content-post page-list center-content-post research-post updates-post">
@@ -223,6 +206,14 @@
             <p>Integer iaculis efficitur eleifend. Morbi aliquet in metus at laoreet. Sed consectetur, quam et cursus faucibus, enim odio rhoncus nibh, eu interdum lectus arcu sed tortor. Etiam dui eros, egestas a justo vitae, vestibulum vehicula quam. Aenean facilisis, lorem a cursus malesuada, orci ex cursus mi, nec eleifend libero velit eget turpis. Quisque nec nulla augue. Donec non cursus urna. Suspendisse dictum vitae urna quis hendrerit. Nunc maximus, quam a rhoncus porttitor, sem libero imperdiet nisl, sed pulvinar dui mi vitae nibh. Integer nunc leo, dignissim a suscipit blandit, sagittis at metus.</p>
         </div>
     </div>
+</div>
+<div id="map_panel">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">×</span>
+  </button>
+  <div class="panel-content">
+    
+  </div>
 </div>
 
 <div class="app-footer">
@@ -373,7 +364,7 @@
 </div>
 
   <script src="/js/lib.min.js"></script>
-  <script src="/js/main.js?1585151763"></script>
+  <script src="/js/main.js?1585278428"></script>
   <script type="text/javascript" src="/js/covid-map/covid-map.js"></script>
 
 

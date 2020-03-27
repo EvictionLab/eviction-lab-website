@@ -30,8 +30,10 @@ function setupScrollEnd() {
   function toggleCondense() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       headerWrapper.addClass('condensed');
+      $('body').addClass('header-condensed');
     } else {
       headerWrapper.removeClass('condensed');
+      $('body').removeClass('header-condensed');
     }
     isScrolling = undefined;
   }

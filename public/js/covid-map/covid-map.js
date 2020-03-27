@@ -85,10 +85,10 @@ var printTemplateErrors = false; // Disable for live.
 
 // Returns an array of actions.
 function getActions(arr) {
-  console.log('getActions()')
+  // console.log('getActions()')
   var markup = '';
   arr.forEach(function(el, i) {
-    console.log(el)
+    // console.log(el)
     if (!!el.typeofaction) {
       markup += '<h5 class="action">' + el.typeofaction + '</h5>' +
        '<p class="dates-in-effect">Dates in Effect</p>' +
@@ -105,7 +105,7 @@ function getActions(arr) {
 }
 
 function getLocalitiesMarkup(feature) {
-  console.log('getLocalitiesMarkup');
+  // console.log('getLocalitiesMarkup');
   var markup = '';
   feature.properties.localities.forEach(function(el, i) {
     // Print locality name
@@ -119,13 +119,20 @@ function getLocalitiesMarkup(feature) {
       }
     }
     if (!!el.rate) {
-      markup += ': <span class="rate">' + el.rate + '</span>';
+      markup += '<p class="locality-eviction-rate">Eviction Rate: ' + feature.properties.rate + '%</p>';
     } else {
-      // If data is missing, return nothing.
       if (printTemplateErrors) {
-        markup += 'MISSING DATA: feature.properties.localities.rate'  ;
+        markup += 'MISSING DATA: feature.properties.rate';
       }
     }
+    // if (!!el.rate) {
+    //   markup += ': <span class="rate">' + el.rate + '</span>';
+    // } else {
+    //   // If data is missing, return nothing.
+    //   if (printTemplateErrors) {
+    //     markup += 'MISSING DATA: feature.properties.localities.rate'  ;
+    //   }
+    // }
     markup += '</h5>';
     // Print locality prose
     if (!!el.xinx && !!el.ranking) {
@@ -144,6 +151,7 @@ function getLocalitiesMarkup(feature) {
 
 function getSlideoutContents(feature) {
   var markup = ''; // `<div class="side-panel-contents">`;
+  markup = '<div class="panel-heading no-scroll">';
   if (feature.properties.name) {
     markup += '<h3 class="state-name">' + feature.properties.name + '</h3>';
   } else {
@@ -159,6 +167,7 @@ function getSlideoutContents(feature) {
     }
   }
   markup += '<hr class="full-divider">';
+  // markup += '<div class="scrolls">'; // Starts scrolling zone
   if (!!feature.properties.xinx && !!feature.properties.name && feature.properties.ranking) {
     markup += '<p class="state-eviction-prose">In 2016, approximately ' + feature.properties.xinx + ' ' + feature.properties.name + ' renting households received an eviction notice. ' + feature.properties.ranking + ' ' + feature.properties.name + ' cities appear in the top 25 evicting areas. <a class="oulink-icon" href="/rankings/" target="_blank"><svg aria-hidden="true" data-prefix="fas" data-icon="external-link-square-alt" class="svg-inline--fa fa-external-link-square-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg></a></p>';
   } else {
@@ -166,6 +175,8 @@ function getSlideoutContents(feature) {
       markup += 'MISSING DATA: '
     }
   }
+  markup += '</div>'; // Close .panel-heading
+  markup += '<div class="scrolls">'; // begin scrolling content
   markup += '<hr class="partial-divider">';
   markup += '<h4 class="actions-list state">Statewide Actions</h4>';
   if (feature.properties.actions) {
@@ -180,23 +191,29 @@ function getSlideoutContents(feature) {
   } else {
     markup += '<p>No local or county actions at this time.</p>';
   }
-  markup += ''; // '</div>';
+  markup += '</div>';
+  // markup += ''; // '</div>';
   return markup;
 }
 
 jQuery(document).ready(function() {
 
-  function openPanel() {
-    $('#map_panel').animate({'left': '0'});
-    $('#map_panel .close').on('click', function() {
-      closePanel();
-      $('#map_panel .close').unbind('click')
-    })
-  }
-
-  function closePanel() {
-    $('#map_panel').animate({'left': '-400px'});
-  }
+  // Track mouse position for state tooltips.
+  var CurrentMouseXPostion;
+  var CurrentMouseYPostion;
+  var doc = document.documentElement;
+  var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+  $(document).mousemove(function(event) {
+      CurrentMouseXPostion = event.pageX;
+      CurrentMouseYPostion = event.pageY - $(window).scrollTop();
+      // console.log('mouse position blah: x:' + CurrentMouseXPostion + ' y: ' + CurrentMouseYPostion + ' scrolltop = ' + $(window).scrollTop());
+      // $('#map_tooltip').css({
+      //   top: CurrentMouseYPostion + 'px',
+      //   left: CurrentMouseXPostion + 'px',
+      //   display: 'block'
+      // })
+      // positionPanel();
+  });
 
   // executes when HTML-Document is loaded and DOM is ready
   // console.log("document is ready");
@@ -271,6 +288,7 @@ jQuery(document).ready(function() {
     .append("svg")
     .attr("width", width)
     .attr("height", height)
+    .attr("title", "An interactive map of the United States. Access more information by selecting a state.")
     .call(d3.behavior.zoom().on("zoom", function () {
       // Scales svg with parent.
       svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
@@ -305,15 +323,9 @@ jQuery(document).ready(function() {
     )
     .append("g");
 
-  // Append Div for tooltip to SVG
-  var div = d3.select("#map_container") // changed from "body"
-    .append("div")
-    .attr("class", "tooltip")
-    .style("opacity", 0);
-
   // Color variables for states and dots
   var hasStateActionsColor = '#8CD3CD';
-  var noStateActionsColor = '#f8f8f8';
+  var noStateActionsColor = '#EFEFEF'; // '#f8f8f8';
   var localActionColor = '#2C897F';
   var localActionLabelColor = '#212529';
 
@@ -468,26 +480,20 @@ jQuery(document).ready(function() {
         }
       }
 
-    function clicked(d) {
-      console.log('clicked()', d);
-      if (d3.event.defaultPrevented) return;
-      // console.log('html = ', getSlideoutContents(d))
-      // if (!isDragging) {
-        if (d.properties.localities) {
-          d.properties.localities = Object.values(d.properties.localities);
-        }
-        $('#map_panel .panel-content').html(getSlideoutContents(d));
-        openPanel();
-      // }
-    }
-
     // Bind the data to the SVG and create one path per GeoJSON feature
     svg.selectAll("path")
       .data(json.features)
       .enter()
+      // .append("a")
+      // .attr("class", "state-link")
+      // .attr("id", function(d) { return d.properties.name })
+      // .attr("aria-label", function(d) { return d.properties.name })
       .append("path")
       .attr("d", path)
       .attr("class", "state")
+      .attr("id", function(d) { return d.properties.name })
+      .attr("aria-label", function(d) { return d.properties.name })
+      // .attr("tabindex", 0)
       .style("stroke", "#fff")
       .style("stroke-width", "1")
       .style("fill", function(d) {
@@ -501,15 +507,29 @@ jQuery(document).ready(function() {
           return noStateActionsColor; // "rgb(213,222,217)";
         }
       })
+      .on("mouseover", function(d) {
+        // console.log('mouseover')
+        if (!$('#map_panel').hasClass('open')) {
+          clickPromptTimer = setTimeout(showTooltip, 3000);
+        }
+      })
+      .on("mousemove", function(d) {
+        // console.log('mouseover')
+        if ($('#map_tooltip').hasClass('displayed') && !$('#map_panel').hasClass('open')) {
+          $('#map_tooltip').css({
+            top: CurrentMouseYPostion + 25 + 'px',
+            left: CurrentMouseXPostion - tooltipWidth/2 + 'px'})
+        }
+      })
+      .on("mouseout", function(d) {
+        // console.log('mouseout')
+        // Hide tooltip
+        hideTooltip();
+        clearTimeout(clickPromptTimer);
+      })
       .on("click", function(d) {
-        console.log('clicked listener', d)
+        // console.log('clicked listener', d)
         clicked(d)
-        
-        // TODO: If panel visible, hide panel
-        // TODO: If panel not visible, show panel
-        // TODO: update panel visible
-        // TODO: If focused state === clicked state, zoom and translate map
-        // TODO: If state already focused, zoom back out
       });
 
     // Map the localities that have actions.
@@ -529,7 +549,7 @@ jQuery(document).ready(function() {
       })
       .style("fill", localActionColor)
       .style("opacity", 0.85)
-  
+
   var labels = svg.selectAll("text")
       .data(localActions)
       .enter()
@@ -537,6 +557,7 @@ jQuery(document).ready(function() {
       .attr("text-anchor", "middle")
       .attr("font-size", 2)
       .attr("font-family", "Akkurat-Regular, sans-serif")
+      .attr("class", "locality-label")
       .attr("dx", function(d){
         return projection([d.lng, d.lat])[0];
       })
@@ -545,11 +566,127 @@ jQuery(document).ready(function() {
       })
       .attr("fill", localActionLabelColor)
       .attr("fill-opacity", 0)
-      .text(function(d){return d.placename})
-  
+      .text(function(d){return d.placename })
+
       // TODO: programmatically space out the text labels
-  
+
+      // Add tooltip
+      // var tooltip = d3.select('svg')            // NEW
+      //   .append('div')                             // NEW
+      //   .attr('id', 'map_tooltip')
+      //   .attr('class', 'map-tooltip')
+      //   .style('opacity', 1)
+      //   .html('<span>Click for details.</span>');
+
       // console.log('localLabels', localLabels)
     });
   });
+
+  function clicked(d) {
+    console.log('clicked()', d);
+    if (d3.event.defaultPrevented) return;
+    // console.log('html = ', getSlideoutContents(d))
+    // if (!isDragging) {
+      if (d.properties.localities) {
+        d.properties.localities = Object.values(d.properties.localities);
+      }
+      $('#map_panel .panel-content').html(getSlideoutContents(d));
+      openPanel(d);
+    // }
+  }
+  var clickPromptTimer = null;
+  var tooltipWidth = 100;
+  var tooltipHeight = 30;
+  function showTooltip() {
+    console.log('showTooltip()');
+    // Put tooltip where cursor is.
+    $('#map_tooltip').css({
+      top: CurrentMouseYPostion + 25 + 'px',
+      left: CurrentMouseXPostion - tooltipWidth/2 + 'px',
+      width: tooltipWidth + 'px',
+      height: tooltipHeight + 'px',
+      display: 'block'
+    }).addClass('displayed');
+  }
+
+  function hideTooltip() {
+    console.log('hideTooltip()');
+    // Put tooltip where cursor is.
+    $('#map_tooltip').css({
+      top: '0px',
+      left: '-100px',
+      display: 'none'
+    }).removeClass('displayed');
+  }
+  $(document).on("resize, scroll", function() {
+    positionPanel();
+  })
+  
+  $(".header-wrapper").bind('change', function(event) {
+      console.log( $(".header-wrapper").css("heighht") );
+   });
+
+  function positionPanel() {
+    console.log('positionPanel()')
+    $windowHeight = $(window).height();
+    $headerHeight = $(window).scrollTop() === 0 ? 80 : $('.header-wrapper').height();
+    console.log('$headerHeight: ', $headerHeight);
+    $spacing = 0;
+    $top = $headerHeight + $spacing;
+    $height = $windowHeight - $headerHeight - ($spacing * 2);
+    var sidebarTouchesFooter =  ($(window).scrollTop() + $(window).height()) >= $('.app-footer').offset().top ? true : false ;
+    // console.log('sidebarTouchesFooter: ', sidebarTouchesFooter);
+    if (!!sidebarTouchesFooter) {
+      // console.log('anchor slideout panel');
+      $('#map_panel').css({
+        position: 'absolute',
+        top: (Number($('.app-footer').offset().top) - $height) + 'px', // header height plus a little bit
+        height: $height + 'px',
+        left: $('#map_panel').hasClass('open') ? '0px' : '-400px'
+      })
+    } else {
+      // console.log('fix slideout panel');
+      $('#map_panel').css({
+        position: 'fixed',
+        top: $top + 'px', // header height plus a little bit
+        height: $height  + 'px',
+        left: $('#map_panel').hasClass('open') ? '0px' : '-400px'
+      })
+    }
+    $panelHeight = $('#map_panel').height();
+    $panelHeaderHeight = $('#map_panel .panel-heading').height();
+    $('#map_panel .scrolls').css({
+      position: 'absolute',
+      left: 0,
+      top: $panelHeaderHeight + 'px',
+      height: ($panelHeight - $panelHeaderHeight) + 'px'
+      // top: // heading height 
+      // height: // map panel height minus heading height (so it can be scrolled)
+    })
+  }
+
+  function openPanel(f) {
+    console.log('openPanel(), ', f)
+    if (!$('#map_panel').hasClass('open')) {
+      positionPanel();
+      $('#map_panel').animate({'left': '0px'}).addClass('open');
+      $('#map_panel button.close').focus();
+      var $stateFrom = f.properties.name;
+      $('#map_panel .close').on('click', function() {
+        closePanel();
+        $('#map_panel .close').unbind('click');
+        $('svg a#Florida').focus();
+      })
+      hideTooltip();
+    } else {
+      positionPanel();
+      hideTooltip();
+    }
+  }
+
+  function closePanel() {
+    $('#map_panel').animate({'left': '-400px'}).removeClass('open');;
+  }
+
+  positionPanel()
 });
