@@ -648,7 +648,7 @@ jQuery(document).ready(function() {
       // console.log('fix slideout panel');
       $('#map_panel').css({
         position: 'fixed',
-        top: $top + 'px', // header height plus a little bit
+        top: $top + 8 + 'px', // header height plus a little bit
         height: $height  + 'px',
         left: $('#map_panel').hasClass('open') ? '0px' : '-400px'
       })
