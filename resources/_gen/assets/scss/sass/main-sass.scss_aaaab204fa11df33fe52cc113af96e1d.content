@@ -8546,7 +8546,7 @@ header {
 }
 
 .map-parent #intro_panel_overlay .intro-panel p {
-  font-family: Akkurat;
+  font-family: Akkurat-Regular, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -8746,7 +8746,7 @@ path:hover {
 
 #map_panel .panel-content .state-eviction-rate,
 #map_panel .panel-content .locality-eviction-rate {
-  font-family: Akkurat-Bold;
+  font-family: Akkurat-Bold, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 13px;
@@ -8771,7 +8771,7 @@ path:hover {
 
 #map_panel .panel-content .state-eviction-prose,
 #map_panel .panel-content .locality-eviction-prose {
-  font-family: Akkurat;
+  font-family: Akkurat-Regular, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -8816,7 +8816,7 @@ path:hover {
 }
 
 #map_panel .panel-content .action {
-  font-family: Akkurat-Bold;
+  font-family: Akkurat-Bold, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -8828,7 +8828,7 @@ path:hover {
 }
 
 #map_panel .panel-content .dates-in-effect {
-  font-family: Akkurat-Bold;
+  font-family: Akkurat-Bold, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -8840,7 +8840,7 @@ path:hover {
 }
 
 #map_panel .panel-content .dates {
-  font-family: Akkurat;
+  font-family: Akkurat-Regular, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
