@@ -8441,6 +8441,10 @@ ol.list-initial, .text-li ol.list-initial li {
   }
 }
 
+header {
+  z-index: 3001;
+}
+
 .map-parent {
   position: relative;
   width: 100%;
