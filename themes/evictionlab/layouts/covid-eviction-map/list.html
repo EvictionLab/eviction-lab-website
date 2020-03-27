@@ -4,35 +4,26 @@
 
 <!-- <div class="page-list  covid-map"> -->
     <div class="center-page-wrapper">
-        <div class="center-content-post page-list center-content-post research-post updates-post">
+        <div class="center-content-post page-list center-content-post research-post updates-post covid-map-pretext">
             <h2 class="bordered-header green">Map of eviction moratoriums and other actions</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-        </div>
-        <div class="center-content-post page-list">
+            <h3 class="green">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h3>
+            <div id="legend" class="legend">
+              <div class="legend-item">
+                <div class="icon no"></div><div class="label">No moratoriums</div>
+              </div>
+              <div class="legend-item">
+                <div class="icon yes"></div><div class="label">State-level moratoriums</div>
+              </div>
+              <div class="legend-item">
+                <div class="icon local"></div><div class="label">County or city moratoriums</div>
+              </div>
+            </div>
         </div>
     </div>
     <div class="map-parent">
         <div id="map_container"></div>
-        <div id="legend" class="legend">
-          <div class="legend-item">
-            <div class="icon no"></div><div class="label">No moratoriums</div>
-          </div>
-          <div class="legend-item">
-            <div class="icon yes"></div><div class="label">State-level moratoriums</div>
-          </div>
-          <div class="legend-item">
-            <div class="icon local"></div><div class="label">County or city moratoriums</div>
-          </div>
-        </div>
-        <div id="map_panel">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-          </button>
-          <div class="panel-content">
-
-          </div>
-        </div>
-        <div id="intro_panel_overlay">
+        <div id="map_tooltip" class="map-tooltip">Click for details.</div>
+        <!-- <div id="intro_panel_overlay">
           <div id="intro_panel" class="intro-panel">
             <div class="panel-content">
               <h3>Map of eviction moratoriums and other actions </h3>
@@ -40,7 +31,7 @@
             </div>
             <a class="btn" id="close_intro_panel">Got It</a>
           </div>
-        </div>
+        </div> -->
     </div>
     <div class="center-page-wrapper">
         <div class="center-content-post page-list center-content-post research-post updates-post">
@@ -50,5 +41,13 @@
             <p>Integer iaculis efficitur eleifend. Morbi aliquet in metus at laoreet. Sed consectetur, quam et cursus faucibus, enim odio rhoncus nibh, eu interdum lectus arcu sed tortor. Etiam dui eros, egestas a justo vitae, vestibulum vehicula quam. Aenean facilisis, lorem a cursus malesuada, orci ex cursus mi, nec eleifend libero velit eget turpis. Quisque nec nulla augue. Donec non cursus urna. Suspendisse dictum vitae urna quis hendrerit. Nunc maximus, quam a rhoncus porttitor, sem libero imperdiet nisl, sed pulvinar dui mi vitae nibh. Integer nunc leo, dignissim a suscipit blandit, sagittis at metus.</p>
         </div>
     </div>
+</div>
+<div id="map_panel">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">×</span>
+  </button>
+  <div class="panel-content">
+    <!-- panel content gets inserted here -->
+  </div>
 </div>
 {{ partial "footer" . }}
