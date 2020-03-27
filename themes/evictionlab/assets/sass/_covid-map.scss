@@ -12,6 +12,10 @@ $eviction-labs-red: #E24000;
   }
 }
 
+header {
+  z-index: 3001;
+}
+
 .map-parent {
   position: relative;
   width: 100%;
