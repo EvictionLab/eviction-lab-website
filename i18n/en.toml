@@ -47,6 +47,8 @@ other = "via"
 other = "Get"
 [getResourcesTwo]
 other ="Resources"
+[superhead]
+other = "<span class='boldface'>COVID-19 UPDATE:</span> &nbsp;Facing eviction? See our <a href='/covid-eviction-policies/'>list of local emergency policies</a>, and <a href='https://justshelter.org/community-resources/' target='_blank'>find organizations that can help</a>."
 
 
 

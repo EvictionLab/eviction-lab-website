@@ -47,3 +47,5 @@ other = "parta"
 other = "Más"
 [getResourcesTwo]
 other ="recursos"
+[superhead]
+other = "<span class='boldface'>ACTUALIZACIÓN DE COVID-19:</span> &nbsp;¿Enfrenta el desalojo? Vea nuestra <a href='/covid-eviction-policies/'>lista de políticas locales de emergencia</a>, y <a href='https://justshelter.org/community-resources/' target='_blank'>encuentre organizaciones que puedan ayudar</a>."
