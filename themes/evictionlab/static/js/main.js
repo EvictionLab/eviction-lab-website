@@ -68,14 +68,14 @@ function setupModals() {
   });
 }
 
+// Container for complete collection of items.
 var covidItemsAll = [];
-var covidItemsFiltered = [];
-
 /**
  * emptyCovidTable: Empties covid table rows (not headings)
  * @return null
  */
 function emptyCovidTable() {
+  // console.log('emptyCovidTable()');
   return $('#covid-blog table tbody tr').hide().remove();
 }
 
@@ -84,6 +84,7 @@ function emptyCovidTable() {
  * @return null
  */
 function populateCovidRows(items) {
+  // console.log('populateCovidRows()');
   items.forEach((item) => {
     if (String(item.linktosourcenewspressreleaseetc).length > 30) {
       item.linktruncated = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
@@ -114,7 +115,28 @@ function populateCovidRows(items) {
  * @return Array          Returns filtered array of objects.
  */
 function filterCovidTable(arr, filter) {
-  return [];
+  // console.log('filterCovidTable()');
+  var filteredArr = null;
+  if (filter === 'all') {
+    // Federal, return all federal action types.
+    filteredArr = arr;
+  } else if (filter === 'allfederal') {
+    // Federal, return all federal action types.
+    filteredArr = arr.filter(function(el) {
+      return el.levelofgovernmentlocalstatenational === 'Federal';
+    })
+  } else if (filter === 'allstate') {
+    // Return all state-level actions.
+    filteredArr = arr.filter(function(el) {
+      return el.levelofgovernmentlocalstatenational === 'State';
+    })
+  } else {
+    // Filter for a particular state.
+    filteredArr = arr.filter(function(el) {
+      return el.state === filter;
+    })
+  }
+  return filteredArr;
 }
 
 
@@ -147,6 +169,14 @@ function initCovidTable() {
     covidItemsAll = items;
     populateCovidRows(covidItemsAll);
     // Listen for select event.
+    $('#filter_covid_table ul li > a').on('select, click', function(e) {
+      // console.log('Clicked or selected filter item.');
+      // console.log($(e.currentTarget).attr('data-value'));
+      var filterBy = $(e.currentTarget).attr('data-value');
+      emptyCovidTable();
+      populateCovidRows(filterCovidTable(covidItemsAll, filterBy));
+      $('span#selected_filter').text($(e.currentTarget).text())
+    })
   }
 
   // Sheet must be published as public 

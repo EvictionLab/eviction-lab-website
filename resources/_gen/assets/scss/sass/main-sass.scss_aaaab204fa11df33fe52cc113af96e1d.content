@@ -4841,6 +4841,10 @@ a.cat-link {
   background-color: #f4f4f7;
 }
 
+.filter-covid-table {
+  width: 250px !important;
+}
+
 @media (max-width: 767px) {
   .covid-blog-table {
     margin: 32px 0;

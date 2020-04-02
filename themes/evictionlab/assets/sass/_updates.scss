@@ -73,6 +73,10 @@ a.cat-link {
     }
 }
 
+.filter-covid-table {
+  width: 250px !important;
+}
+
 .covid-blog-table {
     @include for-phone-only {
         margin: 32px 0;

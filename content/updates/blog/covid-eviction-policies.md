@@ -31,15 +31,18 @@ For additional housing support resources, please visit <a href="https://justshel
 
 <div id="covid-blog">
   <div class="covid-blog-table">
-    <div id="filter_covid_table" class="dropdown language-select show">
-      <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true">All<i class="fa fa-chevron-down"></i>
+    <div id="filter_covid_table" class="dropdown filter-covid-table language-select show">
+      <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true"><span id="selected_filter">All</span><i class="fa fa-chevron-down"></i>
       </button>
       <ul class="dropdown-menu" x-placement="bottom-start">
         <li class="dropdown menu-item">
-          <a data-value="federal">Federal Only</a>
+          <a data-value="all">All</a>
         </li>
         <li class="dropdown menu-item">
-          <a data-value="state">States Only</a>
+          <a data-value="allfederal">Federal Only</a>
+        </li>
+        <li class="dropdown menu-item">
+          <a data-value="allstate">States Only</a>
         </li>
         <li class="dropdown menu-item disabled">
           <a data-value="AL">Alabama</a>
