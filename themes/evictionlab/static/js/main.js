@@ -68,6 +68,56 @@ function setupModals() {
   });
 }
 
+var covidItemsAll = [];
+var covidItemsFiltered = [];
+
+/**
+ * emptyCovidTable: Empties covid table rows (not headings)
+ * @return null
+ */
+function emptyCovidTable() {
+  return $('#covid-blog table tbody tr').hide().remove();
+}
+
+/**
+ * populateCovidRows: Inserts rows into covid table
+ * @return null
+ */
+function populateCovidRows(items) {
+  items.forEach((item) => {
+    if (String(item.linktosourcenewspressreleaseetc).length > 30) {
+      item.linktruncated = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
+    }
+    var rowMarkup = '<tr class="">' +
+      '<td>' +
+        (item.levelofgovernmentlocalstatenational !== 'Local' ?
+        item.placename :
+        item.placenameformap + ', ' + item.state) +
+      '</td>' +
+      '<td>' + item.levelofgovernmentlocalstatenational + '</td>' +
+      '<td>' + item.typeofaction + '</td>' +
+      '<td>' + item.datesineffect + '</td>' +
+      '<td>' + (!!item.linktosourcenewspressreleaseetc ? '<a href="' + item.linktosourcenewspressreleaseetc + '" target="_blank">' + item.linktruncated + '</a>' : '') + '</td>' +
+    '</tr>';
+    if ($('#covid-blog table tbody tr').length <= 0) {
+      $('#covid-blog table tbody').html(rowMarkup);
+    } else {
+      $('#covid-blog table tbody tr').last().after(rowMarkup);
+    }
+  })
+}
+
+/**
+ * filterCovidTable Returns filtered set of items.
+ * @param  Array  arr     Array to filter.
+ * @param  String filter  Select item name for filtering.
+ * @return Array          Returns filtered array of objects.
+ */
+function filterCovidTable(arr, filter) {
+  return [];
+}
+
+
 function initCovidTable() {
   // Fetches data from google sheets table and generates new
   // console.log('initCovidTable()')
@@ -93,20 +143,10 @@ function initCovidTable() {
       // console.log('row', row)
       return row;
     });
-    // console.log('items', items)
-    items.forEach((item) => {
-      if (String(item.linktosourcenewspressreleaseetc).length > 30) {
-        item.linktruncated = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
-      }
-      var rowMarkup = '<tr class="">' +
-        '<td>' + item.placename + '</td>' +
-        '<td>' + item.levelofgovernmentlocalstatenational + '</td>' +
-        '<td>' + item.typeofaction + '</td>' +
-        '<td>' + item.datesineffect + '</td>' +
-        '<td>' + (!!item.linktosourcenewspressreleaseetc ? '<a href="' + item.linktosourcenewspressreleaseetc + '" target="_blank">' + item.linktruncated + '</a>' : '') + '</td>' +
-      '</tr>';
-      $('#covid-blog table tr').last().after(rowMarkup);
-    })
+    // console.log('items', items);
+    covidItemsAll = items;
+    populateCovidRows(covidItemsAll);
+    // Listen for select event.
   }
 
   // Sheet must be published as public 

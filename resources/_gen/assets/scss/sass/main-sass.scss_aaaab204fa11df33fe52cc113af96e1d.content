@@ -4883,6 +4883,9 @@ a.cat-link {
 .covid-blog-table table.page-stats.table-responsive.natl-est tr th {
   vertical-align: middle;
   text-align: center;
+  background: white;
+  position: sticky;
+  top: -1px;
 }
 
 @media (max-width: 1439px) {
@@ -4893,6 +4896,11 @@ a.cat-link {
 
 .covid-blog-table table.page-stats.table-responsive.natl-est tr:nth-child(even) {
   background-color: #f4f4f7;
+}
+
+.covid-blog-table table.page-stats.table-responsive.natl-est tr:first-of-type {
+  background-color: #fff;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
 
 #natl-blog hr,

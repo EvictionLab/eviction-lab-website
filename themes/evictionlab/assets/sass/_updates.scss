@@ -99,14 +99,21 @@ a.cat-link {
           th {
             vertical-align: middle;
             text-align: center;
+            background: white;
+            position: sticky;
+            top: -1px;
           }
         @media (max-width: 1439px) {
              font-size: 90%; 
             }
         }
         tr:nth-child(even) {
-            background-color: #f4f4f7;
-          }
+          background-color: #f4f4f7;
+        }
+        tr:first-of-type {
+          background-color: #fff;
+          box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+        }
     }
 }
 
