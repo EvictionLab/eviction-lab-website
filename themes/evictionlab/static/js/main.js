@@ -70,6 +70,7 @@ function setupModals() {
 
 // Container for complete collection of items.
 var covidItemsAll = [];
+var activeStates = [];
 /**
  * emptyCovidTable: Empties covid table rows (not headings)
  * @return null
@@ -139,11 +140,9 @@ function filterCovidTable(arr, filter) {
   return filteredArr;
 }
 
-
 function initCovidTable() {
   // Fetches data from google sheets table and generates new
   // console.log('initCovidTable()')
-
   // Parse JSON response and insert a table row for each row of data in the sheet.
   function reqHandler(source, req) {
     // console.log('reqHandler')
@@ -162,12 +161,23 @@ function initCovidTable() {
               row[p] = '';
           }
       });
-      // console.log('row', row)
+      console.log('row', row)
+      if (row.levelofgovernmentlocalstatenational === 'State' | row.levelofgovernmentlocalstatenational === 'Local') {
+        if (activeStates.indexOf(row.state) <= -1) {
+          activeStates.push(row.state)
+        }
+      }
       return row;
     });
     // console.log('items', items);
     covidItemsAll = items;
     populateCovidRows(covidItemsAll);
+    // Remove disabled class from select items that should not be disabled.
+    activeStates.forEach(function(el, i) {
+      $('#filter_covid_table ul li > a[data-value="' + el + '"]')
+        .parent('li')
+        .removeClass('disabled');
+    })
     // Listen for select event.
     $('#filter_covid_table ul li > a').on('select, click', function(e) {
       // console.log('Clicked or selected filter item.');
