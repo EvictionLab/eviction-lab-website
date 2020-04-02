@@ -30,18 +30,191 @@ For additional housing support resources, please visit <a href="https://justshel
 
 
 <div id="covid-blog">
-<div class="covid-blog-table">
-<table class="page-stats table-responsive natl-est">
- <tr class="">
-  <th style="width:5%;">Placename</th>
-  <th style="width:5%;">Level of Government<br/>(Local, State, or National)</th>
-  <th style="width:30%;">Type of Action</th>
-  <th style="width:15%;">Dates in Effect</th>
-  <th style="width:35%;">Source</th>
- </tr>
-</table>
-<p class="ital" style="text-align: center">(Scroll within table to see all data)</p>
+  <div class="covid-blog-table">
+    <div class="filter-wrapper w-100 d-flex justify-content-center align-items-center">
+      <div id="filter-label" class=""><p><b>Show: &nbsp;</b></p></div>
+      <div id="filter_covid_table" class="dropdown filter-covid-table language-select show">
+        <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true"><span id="selected_filter">Choose filter</span><i class="fa fa-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu" x-placement="bottom-start">
+          <li class="dropdown menu-item">
+            <a data-value="all">All Levels of Government</a>
+          </li>
+          <li class="dropdown menu-item">
+            <a data-value="allfederal">Federal Only</a>
+          </li>
+          <li class="dropdown menu-item">
+            <a data-value="allstate">States Only</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="AL">Alabama</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="AK">Alaska</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="AZ">Arizona</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="AR">Arkansas</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="CA">California</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="CO">Colorado</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="CT">Connecticut</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="DE">Delaware</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="FL">Florida</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="GA">Georgia</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="HI">Hawaii</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="ID">Idaho</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="IL">Illinois</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="IN">Indiana</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="IA">Iowa</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="KS">Kansas</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="KY">Kentucky</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="LA">Louisiana</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="ME">Maine</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="MD">Maryland</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="MA">Massachusetts</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="MI">Michigan</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="MN">Minnesota</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="MS">Mississippi</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="MO">Missouri</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="MT">Montana</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="NE">Nebraska</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="NV">Nevada</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="NH">New Hampshire</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="NJ">New Jersey</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="NM">New Mexico</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="NY">New York</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="NC">North Carolina</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="ND">North Dakota</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="OH">Ohio</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="OK">Oklahoma</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="OR">Oregon</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="PA">Pennsylvania</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="RI">Rhode Island</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="SC">South Carolina</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="SD">South Dakota</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="TN">Tennessee</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="TX">Texas</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="UT">Utah</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="VT">Vermont</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="VA">Virginia</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="WA">Washington</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="WV">West Virginia</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="WI">Wisconsin</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="WY">Wyoming</a>
+          </li>
+          <li class="dropdown menu-item disabled">
+            <a data-value="DC">District of Columbia</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <table class="page-stats table-responsive natl-est">
+      <thead>
+        <tr class="">
+         <th style="width:5%;">Placename</th>
+         <th style="width:5%;">Level of Government</th>
+         <th style="width:30%;">Type of Action</th>
+         <th style="width:15%;">Dates in Effect</th>
+         <th style="width:35%;">Source</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <p class="ital" style="text-align: center">(Scroll within table to see all data)</p>
+  </div>
 </div>
-</div>
-
-

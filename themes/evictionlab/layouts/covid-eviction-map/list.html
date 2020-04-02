@@ -1,0 +1,53 @@
+{{ partial "header" . }}
+{{ $pagetype := .Params.childof }}
+<!-- {{ partial "subnav" . }} -->
+
+<!-- <div class="page-list  covid-map"> -->
+    <div class="center-page-wrapper">
+        <div class="center-content-post page-list center-content-post research-post updates-post covid-map-pretext">
+            <h2 class="bordered-header green">Map of eviction moratoriums and other actions</h2>
+            <h3 class="green">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h3>
+            <div id="legend" class="legend">
+              <div class="legend-item">
+                <div class="icon no"></div><div class="label">No moratoriums</div>
+              </div>
+              <div class="legend-item">
+                <div class="icon yes"></div><div class="label">State-level moratoriums</div>
+              </div>
+              <div class="legend-item">
+                <div class="icon local"></div><div class="label">County or city moratoriums</div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="map-parent">
+        <div id="map_container"></div>
+        <div id="map_tooltip" class="map-tooltip">Click for details.</div>
+        <!-- <div id="intro_panel_overlay">
+          <div id="intro_panel" class="intro-panel">
+            <div class="panel-content">
+              <h3>Map of eviction moratoriums and other actions </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <a class="btn" id="close_intro_panel">Got It</a>
+          </div>
+        </div> -->
+    </div>
+    <div class="center-page-wrapper">
+        <div class="center-content-post page-list center-content-post research-post updates-post">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper metus leo. Vestibulum at scelerisque sem. Proin convallis sed diam at hendrerit. Praesent lacinia ultricies ante id mollis. Maecenas vitae felis interdum neque hendrerit auctor. Aliquam vel augue aliquam, ornare mauris ac, viverra ligula. Nullam eget orci id felis consequat dictum. Mauris quis porttitor ligula. Aenean ut nunc sed lacus pretium commodo sit amet sit amet tortor. Integer pellentesque faucibus nibh sit amet faucibus. Quisque efficitur rutrum finibus. Aenean rutrum urna tortor, eget malesuada quam accumsan sed.</p>
+            <p>Nam ultricies quis justo vel pellentesque. Donec accumsan dolor in lorem sodales, id cursus mi condimentum. In risus ante, tristique et elit a, pretium convallis dui. Maecenas a consequat mauris, et aliquet diam. Donec leo lorem, rhoncus ac erat ac, porta efficitur sapien. Cras vel luctus justo. Sed quis aliquet risus, ut tincidunt neque. Etiam eu hendrerit erat, aliquam accumsan lacus. Curabitur semper metus quis libero egestas mattis.</p>
+            <p>Integer iaculis efficitur eleifend. Morbi aliquet in metus at laoreet. Sed consectetur, quam et cursus faucibus, enim odio rhoncus nibh, eu interdum lectus arcu sed tortor. Etiam dui eros, egestas a justo vitae, vestibulum vehicula quam. Aenean facilisis, lorem a cursus malesuada, orci ex cursus mi, nec eleifend libero velit eget turpis. Quisque nec nulla augue. Donec non cursus urna. Suspendisse dictum vitae urna quis hendrerit. Nunc maximus, quam a rhoncus porttitor, sem libero imperdiet nisl, sed pulvinar dui mi vitae nibh. Integer nunc leo, dignissim a suscipit blandit, sagittis at metus.</p>
+        </div>
+    </div>
+</div>
+<div id="map_panel">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">×</span>
+  </button>
+  <div class="panel-content">
+    <!-- panel content gets inserted here -->
+  </div>
+</div>
+{{ partial "footer" . }}
