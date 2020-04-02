@@ -4,8 +4,9 @@ This repository is the container web site for https://evictionlab.org.
 
 ## Deploy Branches
 
-* `cms-dev` deploys to https://staging.evictionlab.org
-* `master` deploys to production
+* `working` is a working branch to use before staging. Base new work off of this branch.
+* `cms-dev` deploys to https://staging.evictionlab.org.
+* `master` deploys to https://evictionlab.org.
 
 ## Layouts
 
