@@ -4858,6 +4858,28 @@ a.cat-link {
   }
 }
 
+.covid-blog-table .language-select.dropdown {
+  z-index: 99;
+}
+
+.covid-blog-table .filter-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+.covid-blog-table button.dropdown-toggle {
+  background-color: #fff;
+}
+
+.covid-blog-table ul.dropdown-menu {
+  z-index: 20;
+}
+
+.covid-blog-table ul.dropdown-menu li:before {
+  content: '';
+  position: unset;
+  left: 0;
+}
+
 .covid-blog-table table.page-stats.table-responsive.natl-est {
   height: 72vh;
 }

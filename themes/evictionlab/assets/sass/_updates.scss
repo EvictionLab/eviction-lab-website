@@ -85,6 +85,26 @@ a.cat-link {
         padding-top: 1.6rem;
         padding-bottom: 4rem;
         }
+
+    .language-select.dropdown {
+        z-index: 99;
+    }    
+
+    .filter-wrapper {
+        margin-bottom: 2.4rem;
+    }  
+    button.dropdown-toggle {
+        background-color: #fff;
+    }  
+    ul.dropdown-menu {
+        //margin-bottom: 0 !important;
+        z-index: 20;
+        li:before {
+            content: '';
+            position: unset;
+            left: 0;
+        }
+    }    
     table.page-stats.table-responsive.natl-est {
         height: 72vh;
         @media (min-width: 768px) {
