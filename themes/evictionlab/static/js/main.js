@@ -162,7 +162,8 @@ function initCovidTable() {
           }
       });
       console.log('row', row)
-      if (row.levelofgovernmentlocalstatenational === 'State' | row.levelofgovernmentlocalstatenational === 'Local') {
+      if (row.levelofgovernmentlocalstatenational === 'State' | row.levelofgovernmentlocalstatenational === 'Local' |
+      row.levelofgovernmentlocalstatenational === 'Local/Federal District') {
         if (activeStates.indexOf(row.state) <= -1) {
           activeStates.push(row.state)
         }
@@ -179,7 +180,7 @@ function initCovidTable() {
         .removeClass('disabled');
     })
     // Listen for select event.
-    $('#filter_covid_table ul li > a').on('select, click', function(e) {
+    $('#filter_covid_table ul li:not(.disabled) > a').on('select, click', function(e) {
       // console.log('Clicked or selected filter item.');
       // console.log($(e.currentTarget).attr('data-value'));
       var filterBy = $(e.currentTarget).attr('data-value');

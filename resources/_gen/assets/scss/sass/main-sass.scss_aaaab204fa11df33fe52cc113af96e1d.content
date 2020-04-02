@@ -4874,6 +4874,18 @@ a.cat-link {
   z-index: 20;
 }
 
+.covid-blog-table ul.dropdown-menu li {
+  margin-left: 0;
+}
+
+.covid-blog-table ul.dropdown-menu li.disabled {
+  cursor: default;
+}
+
+.covid-blog-table ul.dropdown-menu li.disabled a {
+  color: #cacaca !important;
+}
+
 .covid-blog-table ul.dropdown-menu li:before {
   content: '';
   position: unset;
