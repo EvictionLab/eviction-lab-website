@@ -4862,6 +4862,18 @@ a.cat-link {
   z-index: 99;
 }
 
+.covid-blog-table span#selected_filter {
+  font-size: 1.4rem;
+  margin-top: -3px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .covid-blog-table span#selected_filter {
+    margin-top: unset;
+  }
+}
+
 .covid-blog-table .filter-wrapper {
   margin-bottom: 2.4rem;
 }
@@ -4871,6 +4883,7 @@ a.cat-link {
 }
 
 .covid-blog-table ul.dropdown-menu {
+  margin-bottom: 0 !important;
   z-index: 20;
 }
 

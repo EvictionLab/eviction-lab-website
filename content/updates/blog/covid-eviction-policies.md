@@ -38,7 +38,7 @@ For additional housing support resources, please visit <a href="https://justshel
         </button>
         <ul class="dropdown-menu" x-placement="bottom-start">
           <li class="dropdown menu-item">
-            <a data-value="all">All Policies</a>
+            <a data-value="all">All Levels of Government</a>
           </li>
           <li class="dropdown menu-item">
             <a data-value="allfederal">Federal Only</a>
