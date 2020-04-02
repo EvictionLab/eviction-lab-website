@@ -73,6 +73,10 @@ a.cat-link {
     }
 }
 
+.filter-covid-table {
+  width: 250px !important;
+}
+
 .covid-blog-table {
     @include for-phone-only {
         margin: 32px 0;
@@ -81,6 +85,33 @@ a.cat-link {
         padding-top: 1.6rem;
         padding-bottom: 4rem;
         }
+
+    .language-select.dropdown {
+        z-index: 99;
+    }    
+    span#selected_filter {
+        font-size: 1.4rem;
+        margin-top: -3px;
+        display: block;
+        @include for-tablet-portrait-up {
+            margin-top: unset;
+        }
+    }
+    .filter-wrapper {
+        margin-bottom: 2.4rem;
+    }  
+    button.dropdown-toggle {
+        background-color: #fff;
+    }  
+    ul.dropdown-menu {
+        margin-bottom: 0 !important;
+        z-index: 20;
+        li:before {
+            content: '';
+            position: unset;
+            left: 0;
+        }
+    }    
     table.page-stats.table-responsive.natl-est {
         height: 72vh;
         @media (min-width: 768px) {
@@ -99,14 +130,21 @@ a.cat-link {
           th {
             vertical-align: middle;
             text-align: center;
+            background: white;
+            position: sticky;
+            top: -1px;
           }
         @media (max-width: 1439px) {
              font-size: 90%; 
             }
         }
         tr:nth-child(even) {
-            background-color: #f4f4f7;
-          }
+          background-color: #f4f4f7;
+        }
+        tr:first-of-type {
+          background-color: #fff;
+          box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+        }
     }
 }
 
