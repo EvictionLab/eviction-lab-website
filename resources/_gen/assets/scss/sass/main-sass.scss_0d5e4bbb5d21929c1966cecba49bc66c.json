@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {"Target":"style.min.804cdeb3d7508bc071d4ed801bdf8e749af29f5571b326e7e507f9398bf6ed64.css","MediaType":"text/css","Data":{"Integrity":"sha256-gEzes9dQi8Bx1O2AG9+OdJryn1Vxsybn5Qf5OYv27WQ="}}
+=======
+{"Target":"style.min.ac3105a263cbe4e7b436b5ec30e2046980475a105a1f601ec5090cc5212e0daa.css","MediaType":"text/css","Data":{"Integrity":"sha256-rDEFomPL5Oe0NrXsMOIEaYBHWhBaH2AexQkMxSEuDao="}}
+>>>>>>> Revert "Production build"
 =======
 {"Target":"style.min.ac3105a263cbe4e7b436b5ec30e2046980475a105a1f601ec5090cc5212e0daa.css","MediaType":"text/css","Data":{"Integrity":"sha256-rDEFomPL5Oe0NrXsMOIEaYBHWhBaH2AexQkMxSEuDao="}}
 >>>>>>> Revert "Production build"
