@@ -4841,6 +4841,10 @@ a.cat-link {
   background-color: #f4f4f7;
 }
 
+.filter-covid-table {
+  width: 250px !important;
+}
+
 @media (max-width: 767px) {
   .covid-blog-table {
     margin: 32px 0;
@@ -4852,6 +4856,28 @@ a.cat-link {
     padding-top: 1.6rem;
     padding-bottom: 4rem;
   }
+}
+
+.covid-blog-table .language-select.dropdown {
+  z-index: 99;
+}
+
+.covid-blog-table .filter-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+.covid-blog-table button.dropdown-toggle {
+  background-color: #fff;
+}
+
+.covid-blog-table ul.dropdown-menu {
+  z-index: 20;
+}
+
+.covid-blog-table ul.dropdown-menu li:before {
+  content: '';
+  position: unset;
+  left: 0;
 }
 
 .covid-blog-table table.page-stats.table-responsive.natl-est {
@@ -4883,6 +4909,9 @@ a.cat-link {
 .covid-blog-table table.page-stats.table-responsive.natl-est tr th {
   vertical-align: middle;
   text-align: center;
+  background: white;
+  position: sticky;
+  top: -1px;
 }
 
 @media (max-width: 1439px) {
@@ -4893,6 +4922,11 @@ a.cat-link {
 
 .covid-blog-table table.page-stats.table-responsive.natl-est tr:nth-child(even) {
   background-color: #f4f4f7;
+}
+
+.covid-blog-table table.page-stats.table-responsive.natl-est tr:first-of-type {
+  background-color: #fff;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
 
 #natl-blog hr,

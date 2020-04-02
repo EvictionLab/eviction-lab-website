@@ -68,10 +68,81 @@ function setupModals() {
   });
 }
 
+// Container for complete collection of items.
+var covidItemsAll = [];
+var activeStates = [];
+/**
+ * emptyCovidTable: Empties covid table rows (not headings)
+ * @return null
+ */
+function emptyCovidTable() {
+  // console.log('emptyCovidTable()');
+  return $('#covid-blog table tbody tr').hide().remove();
+}
+
+/**
+ * populateCovidRows: Inserts rows into covid table
+ * @return null
+ */
+function populateCovidRows(items) {
+  // console.log('populateCovidRows()');
+  items.forEach((item) => {
+    if (String(item.linktosourcenewspressreleaseetc).length > 30) {
+      item.linktruncated = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
+    }
+    var rowMarkup = '<tr class="">' +
+      '<td>' +
+        (item.levelofgovernmentlocalstatenational !== 'Local' ?
+        item.placename :
+        item.placenameformap + ', ' + item.state) +
+      '</td>' +
+      '<td>' + item.levelofgovernmentlocalstatenational + '</td>' +
+      '<td>' + item.typeofaction + '</td>' +
+      '<td>' + item.datesineffect + '</td>' +
+      '<td>' + (!!item.linktosourcenewspressreleaseetc ? '<a href="' + item.linktosourcenewspressreleaseetc + '" target="_blank">' + item.linktruncated + '</a>' : '') + '</td>' +
+    '</tr>';
+    if ($('#covid-blog table tbody tr').length <= 0) {
+      $('#covid-blog table tbody').html(rowMarkup);
+    } else {
+      $('#covid-blog table tbody tr').last().after(rowMarkup);
+    }
+  })
+}
+
+/**
+ * filterCovidTable Returns filtered set of items.
+ * @param  Array  arr     Array to filter.
+ * @param  String filter  Select item name for filtering.
+ * @return Array          Returns filtered array of objects.
+ */
+function filterCovidTable(arr, filter) {
+  // console.log('filterCovidTable()');
+  var filteredArr = null;
+  if (filter === 'all') {
+    // Federal, return all federal action types.
+    filteredArr = arr;
+  } else if (filter === 'allfederal') {
+    // Federal, return all federal action types.
+    filteredArr = arr.filter(function(el) {
+      return el.levelofgovernmentlocalstatenational === 'Federal';
+    })
+  } else if (filter === 'allstate') {
+    // Return all state-level actions.
+    filteredArr = arr.filter(function(el) {
+      return el.levelofgovernmentlocalstatenational === 'State';
+    })
+  } else {
+    // Filter for a particular state.
+    filteredArr = arr.filter(function(el) {
+      return el.state === filter;
+    })
+  }
+  return filteredArr;
+}
+
 function initCovidTable() {
   // Fetches data from google sheets table and generates new
   // console.log('initCovidTable()')
-
   // Parse JSON response and insert a table row for each row of data in the sheet.
   function reqHandler(source, req) {
     // console.log('reqHandler')
@@ -90,22 +161,31 @@ function initCovidTable() {
               row[p] = '';
           }
       });
-      // console.log('row', row)
+      console.log('row', row)
+      if (row.levelofgovernmentlocalstatenational === 'State' | row.levelofgovernmentlocalstatenational === 'Local') {
+        if (activeStates.indexOf(row.state) <= -1) {
+          activeStates.push(row.state)
+        }
+      }
       return row;
     });
-    // console.log('items', items)
-    items.forEach((item) => {
-      if (String(item.linktosourcenewspressreleaseetc).length > 30) {
-        item.linktruncated = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
-      }
-      var rowMarkup = '<tr class="">' +
-        '<td>' + item.placename + '</td>' +
-        '<td>' + item.levelofgovernmentlocalstatenational + '</td>' +
-        '<td>' + item.typeofaction + '</td>' +
-        '<td>' + item.datesineffect + '</td>' +
-        '<td>' + (!!item.linktosourcenewspressreleaseetc ? '<a href="' + item.linktosourcenewspressreleaseetc + '" target="_blank">' + item.linktruncated + '</a>' : '') + '</td>' +
-      '</tr>';
-      $('#covid-blog table tr').last().after(rowMarkup);
+    // console.log('items', items);
+    covidItemsAll = items;
+    populateCovidRows(covidItemsAll);
+    // Remove disabled class from select items that should not be disabled.
+    activeStates.forEach(function(el, i) {
+      $('#filter_covid_table ul li > a[data-value="' + el + '"]')
+        .parent('li')
+        .removeClass('disabled');
+    })
+    // Listen for select event.
+    $('#filter_covid_table ul li > a').on('select, click', function(e) {
+      // console.log('Clicked or selected filter item.');
+      // console.log($(e.currentTarget).attr('data-value'));
+      var filterBy = $(e.currentTarget).attr('data-value');
+      emptyCovidTable();
+      populateCovidRows(filterCovidTable(covidItemsAll, filterBy));
+      $('span#selected_filter').text($(e.currentTarget).text())
     })
   }
 
