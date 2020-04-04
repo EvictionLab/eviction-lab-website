@@ -1,0 +1,86 @@
+{{ partial "header" . }}
+<!-- {{ partial "breadcrumb" . }} -->
+
+<div class="col-10 offset-1 col-lg-8 offset-lg-2">
+  {{ .Content | markdownify }}
+</div>
+
+<div class="row">
+  <div class="mobile-filters col-10 offset-1 d-md-none">
+    <button id="mobile_filter" class="btn">Filter Results</button>
+  </div>
+  <div id="filters_panel" class="inline-panel filters col-10 offset-1 col-lg-2 offset-lg-2 d-none d-sm-none d-md-block">
+    <div class="filters">
+      <h4>Filter:</h4>
+      <div class="filters-list">
+        <label class="filter-label">
+          <input type="checkbox" checked="checked">No nonpayment
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" >No filings
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" checked="">No new evictions
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" checked="">No enforcement
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" checked="">No hearings
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" checked="">Tolled
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" checked="">Late fee
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" checked="">Arrears
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" checked="">No shutoffs
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" checked="">Free reconnect
+        </label>
+      </div>
+    </div>
+    <div class="details"></div>
+  </div>
+  <div id="states_panel" class="inline-panel states col-10 offset-1 col-lg-6 offset-lg-0">
+    <table id="states_table" class="states-table">
+      <thead>
+        <tr>
+          <!-- data-filter changes to asc or desc when selected -->
+          <td id="state_name" class="state-name" data-filter="asc">State</td>
+          <td id="stat_1" class="stat-one" data-filter="null">Stat 1</td>
+          <td id="stat_1" class="stat-two" data-filter="null">Stat 2</td>
+          <td id="stars" class="stars" data-filter="null">Rating</td>
+        </tr>
+      </thead>
+      <tbody class="states-list"></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="mobile_modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "footer" . }}

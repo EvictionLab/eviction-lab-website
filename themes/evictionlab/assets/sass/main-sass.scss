@@ -504,7 +504,7 @@ p {
   }
 }
 */
-
+@import 'bootstrap/bootstrap';
 @import 'utils';
 @import 'header';
 @import 'burger';
@@ -528,3 +528,4 @@ p {
 @import 'data-form';
 @import 'media-map';
 @import 'superheader';
+@import 'covid-policy-rankings';

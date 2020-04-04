@@ -1,0 +1,20 @@
+<!-- Handlebars template for states -->
+{{#each states}}
+  <tr class="state" data-state="{{stabbrev}}" data-stat-1="{{evstat1}}" data-stat-2="{{evstat2}}" data-stars="{{stars}}">
+    <td class="state-name">{{stname}}</td>
+    <td class="state-stat-1">{{evstat1}}</td>
+    <td class="state-stat-2">{{evstat2}}</td>
+    <td class="state-stars stars-{{stars}}">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </td>
+  </tr>
+  <tr class="state-text" data-state="{{stabbrev}}">
+    <td colspan="3">{{sttext}}</td>
+    <td></td>
+  </tr>
+  </div>
+{{/each}}
