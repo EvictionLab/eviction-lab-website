@@ -1,18 +1,19 @@
 <!-- Handlebars template for states -->
 {{#each states}}
-  <tr class="state" data-state="{{stabbrev}}" data-stat-1="{{evstat1}}" data-stat-2="{{evstat2}}" data-stars="{{stars}}">
+  <tr class="state" data-state="{{stabbrev}}" data-stat-1="{{evstat1}}" data-stat-2="{{evstat2}}" data-stars="{{stars}}" style="display:none;">
     <td class="state-name">{{stname}}</td>
     <td class="state-stat-1">{{evstat1}}</td>
     <td class="state-stat-2">{{evstat2}}</td>
-    <td class="state-stars stars-{{stars}}">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
+    <td class="state-stars stars-{{stars_hb}}">
+      <label class="sr-only sr-only-focusable">{{stars}} stars</label>
+      <div class="star" aria-hidden="true"></div>
+      <div class="star" aria-hidden="true"></div>
+      <div class="star" aria-hidden="true"></div>
+      <div class="star" aria-hidden="true"></div>
+      <div class="star" aria-hidden="true"></div>
     </td>
   </tr>
-  <tr class="state-text" data-state="{{stabbrev}}">
+  <tr class="state-text" data-state="{{stabbrev}}" style="display:none;">
     <td colspan="3">{{sttext}}</td>
     <td></td>
   </tr>
