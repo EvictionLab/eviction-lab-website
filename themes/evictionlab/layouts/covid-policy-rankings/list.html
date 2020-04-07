@@ -14,48 +14,49 @@
       <h4>Filter:</h4>
       <div class="filters-list">
         <label class="filter-label">
-          <input type="checkbox" checked="checked">No nonpayment
+          <input id="plcnonpbool" type="checkbox">No nonpayment
         </label>
         <label class="filter-label">
-          <input type="checkbox" >No filings
+          <input id="plcnofilbool" type="checkbox" >No filings
         </label>
         <label class="filter-label">
-          <input type="checkbox" checked="">No new evictions
+          <input id="plcnonewbool" type="checkbox">No new evictions
         </label>
         <label class="filter-label">
-          <input type="checkbox" checked="">No enforcement
+          <input id="plcnoenfbool" type="checkbox">No enforcement
         </label>
         <label class="filter-label">
-          <input type="checkbox" checked="">No hearings
+          <input id="plcnohearbool" type="checkbox">No hearings
         </label>
         <label class="filter-label">
-          <input type="checkbox" checked="">Tolled
+          <input id="plctldbool" type="checkbox">Tolled
         </label>
         <label class="filter-label">
-          <input type="checkbox" checked="">Late fee
+          <input id="plclatfbool" type="checkbox">Late fee
         </label>
         <label class="filter-label">
-          <input type="checkbox" checked="">Arrears
+          <input id="plcarsbool" type="checkbox">Arrears
         </label>
         <label class="filter-label">
-          <input type="checkbox" checked="">No shutoffs
+          <input id="plcnoshbool" type="checkbox">No shutoffs
         </label>
         <label class="filter-label">
-          <input type="checkbox" checked="">Free reconnect
+          <input id="plcfrrcbool" type="checkbox">Free reconnect
         </label>
       </div>
     </div>
     <div class="details"></div>
   </div>
-  <div id="states_panel" class="inline-panel states col-10 offset-1 col-lg-6 offset-lg-0">
+  <div id="states_panel" class="inline-panel states col-12 offset-0 col-lg-6">
     <table id="states_table" class="states-table">
+      <caption class="sr-only">List of states, sortable by state name, TODO, TODO, and ranking</caption>
       <thead>
         <tr>
           <!-- data-filter changes to asc or desc when selected -->
-          <td id="state_name" class="state-name" data-filter="asc">State</td>
-          <td id="stat_1" class="stat-one" data-filter="null">Stat 1</td>
-          <td id="stat_1" class="stat-two" data-filter="null">Stat 2</td>
-          <td id="stars" class="stars" data-filter="null">Rating</td>
+          <td id="stname" class="state-name" data-filter="asc">State</td>
+          <td id="evstat1" class="stat-one" data-filter="false">Stat 1</td>
+          <td id="evstat2" class="stat-two" data-filter="false">Stat 2</td>
+          <td id="stars" class="stars" data-filter="false">Rating</td>
         </tr>
       </thead>
       <tbody class="states-list"></tbody>
