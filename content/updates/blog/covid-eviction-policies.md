@@ -36,11 +36,11 @@ For additional housing support resources, please visit <a href="https://justshel
     <div class="filter-wrapper w-100 d-flex justify-content-center align-items-center">
       <div id="filter-label" class=""><p><b>Show: &nbsp;</b></p></div>
       <div id="filter_covid_table" class="dropdown filter-covid-table language-select show">
-        <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true"><span id="selected_filter">Choose level of government</span><i class="fa fa-chevron-down"></i>
+        <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true"><span id="selected_filter"><span style="color: #6b6b6b">Choose filter</span></span><i class="fa fa-chevron-down"></i>
         </button>
         <ul class="dropdown-menu" x-placement="bottom-start">
           <li class="dropdown menu-item">
-            <a data-value="all">All</a>
+            <a data-value="all">All levels of government</a>
           </li>
           <li class="dropdown menu-item">
             <a data-value="allfederal">Federal Only</a>
