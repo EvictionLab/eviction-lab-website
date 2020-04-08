@@ -1,15 +1,17 @@
 {{ partial "header" . }}
 <!-- {{ partial "breadcrumb" . }} -->
 
-<div class="col-10 offset-1 col-lg-8 offset-lg-2">
-  {{ .Content | markdownify }}
+<div class="row">
+  <div class="col-10 offset-1 col-lg-8 offset-lg-2 rankings-intro">
+    {{ .Content | markdownify }}
+  </div>
 </div>
 
 <div class="row">
   <div class="mobile-filters col-10 offset-1 d-md-none">
-    <button id="mobile_filter" class="btn">Filter Results</button>
+    <button id="mobile_filter" class="btn mobile-filter">Filter Results</button>
   </div>
-  <div id="filters_panel" class="inline-panel filters col-10 offset-1 col-lg-2 offset-lg-2 d-none d-sm-none d-md-block">
+  <div id="filters_panel" class="inline-panel filters col-10 offset-1 col-md-10 offset-md-1 col-lg-2 offset-lg-2 offset-xl-2 col-xl-2 d-none d-sm-none d-md-block">
     <div class="filters">
       <h4>Filter:</h4>
       <div class="filters-list">
@@ -17,7 +19,7 @@
           <input id="plcnonpbool" type="checkbox">No nonpayment
         </label>
         <label class="filter-label">
-          <input id="plcnofilbool" type="checkbox" >No filings
+          <input id="plcnofilbool" type="checkbox" >No new filings
         </label>
         <label class="filter-label">
           <input id="plcnonewbool" type="checkbox">No new evictions
@@ -43,23 +45,28 @@
         <label class="filter-label">
           <input id="plcfrrcbool" type="checkbox">Free reconnect
         </label>
+        <label class="filter-label">
+          <input id="plcnofcbool" type="checkbox">No foreclosure
+        </label>
+        <button id="clear_filters" class="btn d-md-none d-lg-block clear-filters">Clear filters</button>
       </div>
     </div>
     <div class="details"></div>
   </div>
-  <div id="states_panel" class="inline-panel states col-12 offset-0 col-lg-6">
+  <div id="states_panel" class="inline-panel states col-12 offset-0 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-6 offset-lg-0">
     <table id="states_table" class="states-table">
       <caption class="sr-only">List of states, sortable by state name, TODO, TODO, and ranking</caption>
       <thead>
         <tr>
           <!-- data-filter changes to asc or desc when selected -->
           <td id="stname" class="state-name" data-filter="asc">State</td>
-          <td id="evstat1" class="stat-one" data-filter="false">Stat 1</td>
-          <td id="evstat2" class="stat-two" data-filter="false">Stat 2</td>
+          <td id="evstat1" class="stat-one" data-filter="false">Renting pop</td>
+          <td id="evstat2" class="stat-two" data-filter="false">Filings per day*</td>
           <td id="stars" class="stars" data-filter="false">Rating</td>
         </tr>
       </thead>
       <tbody class="states-list"></tbody>
+      <caption>*Filings per day based on data collected before the COVID-19 pandemic.</caption>
     </table>
   </div>
 </div>

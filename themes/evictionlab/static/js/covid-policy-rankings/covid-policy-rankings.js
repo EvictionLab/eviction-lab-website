@@ -6,13 +6,13 @@ $(document).ready(function () {
     statesData: null,
     statesArr: [],
     statesArrFiltered: [],
-    sortConfig: [], // 0 == sort by, 1 = asc, desc, or false
+    sortConfig: ['stname', 'asc'], // [sort by id of col head (string), sort order (asc, desc, or false)]
     filterConfig: [],
     sortStateData: function(callback) {
       console.log('sortStateData()');
       // console.log('sortConfig, ', this.sortConfig);
       var sortArr = rankings.sortConfig;
-      rankings.statesArrFiltered = rankings.statesArr;
+      this.statesArrFiltered = this.statesArr.slice(0);
       if (sortArr.length > 0) {
         console.log('there is a sort criterion');
         if (sortArr[0] === 'stname') {
@@ -47,12 +47,8 @@ $(document).ready(function () {
           }
         }
       } else {
-        // console.log('nothing to sort');
-        rankings.statesArrFiltered.sort(function (a, b) {
-          if (a.stname < b.stname) return -1;
-          else if (a.stname > b.stname) return 1;
-          return 0;
-        });
+        // Revert to order when loaded.
+        this.statesArrFiltered = this.statesArr.slice(0);
       }
       // console.log('done sorting. rankings.statesArrFiltered = ', rankings.statesArrFiltered);
       callback();
@@ -73,6 +69,8 @@ $(document).ready(function () {
       // Daisy-chain sorting and filtering,
       // and call populateStates when complete.
       console.log('sortAndFilter()');
+      console.log('this.statesArr, ', this.statesArr);
+      console.log('this.statesArrFiltered, ', this.statesArrFiltered);
       this.emptyStates(function() {
         rankings.sortStateData(function() {
           rankings.filterStateData(rankings.populateStates)
@@ -152,6 +150,9 @@ $(document).ready(function () {
       console.log('populateStateDetails()');
     },
     emptyStates: function(callback) {
+      console.log('emptyStates()');
+      console.log('this.statesArr, ', this.statesArr);
+      console.log('this.statesArrFiltered, ', this.statesArrFiltered);
       $('#states_table tbody tr').hide('slow').remove();
       callback();
     },
@@ -165,16 +166,22 @@ $(document).ready(function () {
           $('#states_panel tbody').html(template(context)).find('tr').show('slow');
       });
     },
+    sortPolicies: function(row) {
+      // Sorts policies into positive and negative.
+      
+    },
     processData: function() {
       console.log('processData()');
       // console.log('states data: ', this.statesData);
         // Build states array
       var statesProperties = Object.keys(this.statesData[0])
-          .filter(function (p) { return p.startsWith("gsx$"); })
+          .filter(function (p) { return p.startsWith("gsx$") })
           .map(function (p) { return p.substr(4); });
       // console.log('properties', properties)
       this.statesArr = this.statesData.map(function (r) {
         var row = {};
+        var date = new Date(r.updated.$t);
+        row.updated = date.toLocaleTimeString([], {timeStyle: 'short'}) + ', ' + date.toLocaleDateString();
         statesProperties.forEach(function (p) {
           // console.log('in props loop, ', p);
             row[p.replace('.', '')] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
@@ -194,14 +201,16 @@ $(document).ready(function () {
                 row[p] = '';
             }
         });
+        // row = this.sortPolicies(row);
         // console.log('row', row);
         return row;
       });
       this.statesArr.shift();
       this.statesArr.shift();
-      this.statesArrFiltered = this.statesArr;
-      this.populateStates();
-      // console.log('allStatesArr, ', allStatesArr);
+      // this.statesArrFiltered = this.statesArr;
+      this.statesArrFiltered = this.statesArr.slice(0);
+      // this.populateStates();
+      this.sortAndFilter();
     },
     loadStateData: function() {
       console.log('loadStateData()')
@@ -217,6 +226,34 @@ $(document).ready(function () {
     },
     init: function() {
       console.log('init');
+      Handlebars.registerHelper("isfalse", function(context, options) {
+        // console.log('helper context, ', context);
+        if (context === false) {
+          return options.fn(this);
+        }
+      });
+      Handlebars.registerHelper("istrue", function(context, options) {
+        // console.log('helper context, ', context);
+        if (context === true) {
+          return options.fn(this);
+        }
+      });
+      // Handlebars.registerHelper("noactions", function(context, options) {
+      //   // console.log('helper context, ', context);
+      //   if (context === 0) {
+      //     return options.fn(this);
+      //   }
+      // });
+      // Handlebars.registerHelper("getsricon", function(context, options) {
+      //   // console.log('helper context, ', context);
+      //   if (context === false) {
+      //     return 'Icon: State lacks ';
+      //   } else if (context === true) {
+      //     return 'Icon: State has implemented ';
+      //   } else {
+      //     return '';
+      //   }
+      // });
       this.loadStateData();
       this.setUIListeners();
     }
