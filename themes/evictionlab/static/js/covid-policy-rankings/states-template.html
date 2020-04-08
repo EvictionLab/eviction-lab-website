@@ -13,15 +13,20 @@
       <div class="star" aria-hidden="true"></div>
     </td>
   </tr>
-  <tr class="state-text" data-state="{{stabbrev}}" style="display:none;">
+  <tr class="state-text excerpt-only" data-state="{{stabbrev}}" style="display:none;">
     <td colspan="3">
+      {{#if stexcerpt}}
+        <p class="state-excerpt">
+          {{stexcerpt}}
+        </p>
+      {{/if}}
       {{#if sttext}}
-        <p>
+        <p class="state-full">
           {{sttext}}
         </p>
       {{/if}}
       {{#if until}}
-        <p>
+        <p class="expires">
           Protections in effect until {{until}}
         </p>
       {{/if}}
