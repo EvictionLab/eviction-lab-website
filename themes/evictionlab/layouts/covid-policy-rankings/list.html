@@ -34,19 +34,16 @@
           <input id="plctldbool" type="checkbox">Tolled
         </label>
         <label class="filter-label">
-          <input id="plclatfbool" type="checkbox">Late fee
+          <input id="plclatfbool" type="checkbox">No late fees
         </label>
         <label class="filter-label">
           <input id="plcarsbool" type="checkbox">Arrears
         </label>
         <label class="filter-label">
-          <input id="plcnoshbool" type="checkbox">No shutoffs
+          <input id="plcnoshbool" type="checkbox">No shutoffs, free reconnect
         </label>
         <label class="filter-label">
-          <input id="plcfrrcbool" type="checkbox">Free reconnect
-        </label>
-        <label class="filter-label">
-          <input id="plcnofcbool" type="checkbox">No foreclosure
+          <input id="plcnofcbool" type="checkbox">No foreclosures
         </label>
         <button id="clear_filters" class="btn d-md-none d-lg-block clear-filters">Clear filters</button>
       </div>
@@ -59,10 +56,26 @@
       <thead>
         <tr>
           <!-- data-filter changes to asc or desc when selected -->
-          <td id="stname" class="state-name" data-filter="asc">State</td>
-          <td id="evstat1" class="stat-one" data-filter="false">Renting pop</td>
-          <td id="evstat2" class="stat-two" data-filter="false">Filings per day*</td>
-          <td id="stars" class="stars" data-filter="false">Rating</td>
+          <td id="stname" class="state-name" data-filter="asc">
+            <div class="col-title">
+                State
+            </div>
+          </td>
+          <td id="evstat1" class="stat-one" data-filter="false">
+            <div class="col-title">
+                Renting pop.
+            </div>
+          </td>
+          <td id="evstat2" class="stat-two" data-filter="false">
+            <div class="col-title">
+              Filings per day*
+            </div>
+          </td>
+          <td id="stars" class="stars" data-filter="false">
+            <div class="col-title">
+              Rating
+            </div>
+          </td>
         </tr>
       </thead>
       <tbody class="states-list"></tbody>

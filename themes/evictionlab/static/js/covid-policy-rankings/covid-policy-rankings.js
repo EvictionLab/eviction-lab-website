@@ -54,12 +54,12 @@ $(document).ready(function () {
       callback();
     },
     filterStateData: function(callback) {
-      console.log('filterStateData()');
-      console.log('filterConfig, ', this.filterConfig);
+      // console.log('filterStateData()');
+      // console.log('filterConfig, ', this.filterConfig);
       this.filterConfig.forEach(function(val, i) {
-        console.log('filtering for, ', val);
+        // console.log('filtering for, ', val);
         rankings.statesArrFiltered = rankings.statesArrFiltered.filter(function(el) {
-          console.log('el, ', el[val])
+          // console.log('el, ', el[val])
           return el[val] === true;
         })
       });
@@ -69,8 +69,6 @@ $(document).ready(function () {
       // Daisy-chain sorting and filtering,
       // and call populateStates when complete.
       console.log('sortAndFilter()');
-      console.log('this.statesArr, ', this.statesArr);
-      console.log('this.statesArrFiltered, ', this.statesArrFiltered);
       this.emptyStates(function() {
         rankings.sortStateData(function() {
           rankings.filterStateData(rankings.populateStates)
@@ -79,14 +77,34 @@ $(document).ready(function () {
     },
     setStateListeners: function() {
       // Set click event listener for states.
+      // console.log('setStateListeners() ');
+      $('button.expand-state-details').on('click select', function(e) {
+        // console.log('click open, ', e.currentTarget);
+        var $target = $(e.currentTarget);
+        $target.hide();
+        $target
+          // Select and hide panel contents.
+          .next('.state-details-list')
+          .show()
+          // Show and add listeners to collapse button.
+          .next('button.collapse-state-details')
+          .show()
+          .on('click select', function(e) {
+            // console.log('click collapse, ', e.currentTarget);
+            var $ctarget = $(e.currentTarget);
+            $ctarget.prev('.state-details-list').hide();
+            $ctarget.hide().unbind('click select');
+            $target.show();
+        })
+      })
     },
     setUIListeners: function() {
-      console.log('setUIListeners()');
+      // console.log('setUIListeners()');
       // Sets listeners for:
       // Table sort headings
       $table_headings = $('#states_table > thead > tr > td');
       $table_headings.on('click', function(e) {
-        console.log('sort clicked, ', e.currentTarget);
+        // console.log('sort clicked, ', e.currentTarget);
         // Change sort status for clicked element
         // Capture target.
         var $target = $(e.currentTarget);
@@ -131,10 +149,17 @@ $(document).ready(function () {
         rankings.sortAndFilter();
         // console.log('rankings.filterConfig, ', rankings.filterConfig);
       })
+      var $clearfilters = $('button#clear_filters');
+      $clearfilters.on('click select', function() {
+        console.log('clear filters');
+        $filters.prop('checked',false);
+        rankings.filterConfig = [];
+        rankings.sortAndFilter();
+      })
     },
     loadHandlebarsTemplate: function(url, callback) {
       // Load handlebars template via xhr.
-      console.log('loadHandlebarsTemplate()')
+      // console.log('loadHandlebarsTemplate()')
       var xhr = new XMLHttpRequest();
       xhr.open('GET', url, true);
       xhr.onreadystatechange = function() {
@@ -146,42 +171,36 @@ $(document).ready(function () {
       };
       xhr.send();
     },
-    populateStateDetails: function(state) {
-      console.log('populateStateDetails()');
-    },
     emptyStates: function(callback) {
-      console.log('emptyStates()');
-      console.log('this.statesArr, ', this.statesArr);
-      console.log('this.statesArrFiltered, ', this.statesArrFiltered);
+      // Empties table of states.
+      // console.log('emptyStates()');
       $('#states_table tbody tr').hide('slow').remove();
       callback();
     },
     populateStates: function() {
-      console.log('populateStates(), ', rankings.statesArrFiltered)
+      // console.log('populateStates(), ', rankings.statesArrFiltered)
       // Fetch and render handlebars template.
       // Always draws from filtered array.
       var context = { states: rankings.statesArrFiltered };
       var url = '/js/covid-policy-rankings/states-template.html';
       rankings.loadHandlebarsTemplate(url, function(template) {
           $('#states_panel tbody').html(template(context)).find('tr').show('slow');
+          var timer = window.setTimeout(function() { rankings.setStateListeners() }, 500);
       });
     },
-    sortPolicies: function(row) {
-      // Sorts policies into positive and negative.
-      
-    },
+    // sortPolicies: function(row) {
+    //   // Sorts policies into positive and negative.
+    //
+    // },
     processData: function() {
       console.log('processData()');
-      // console.log('states data: ', this.statesData);
-        // Build states array
+      // Build states array
       var statesProperties = Object.keys(this.statesData[0])
           .filter(function (p) { return p.startsWith("gsx$") })
           .map(function (p) { return p.substr(4); });
-      // console.log('properties', properties)
+      // console.log('statesProperties', statesProperties)
       this.statesArr = this.statesData.map(function (r) {
         var row = {};
-        var date = new Date(r.updated.$t);
-        row.updated = date.toLocaleTimeString([], {timeStyle: 'short'}) + ', ' + date.toLocaleDateString();
         statesProperties.forEach(function (p) {
           // console.log('in props loop, ', p);
             row[p.replace('.', '')] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
@@ -197,23 +216,27 @@ $(document).ready(function () {
               row['stars'] = Number(row[p]);
               row['stars_hb'] = String(row[p]).replace('.', '-');
             }
+            if (p === 'intlstupdt') {
+              // console.log('intlstupdt, ', row[p])
+              var date = new Date(row[p]);
+              row.updated = date.toLocaleDateString();
+            }
             if (row[p] === null) {
                 row[p] = '';
             }
         });
-        // row = this.sortPolicies(row);
-        // console.log('row', row);
         return row;
       });
+      // Remove the two rows the EL uses for internal titles and example.
       this.statesArr.shift();
       this.statesArr.shift();
-      // this.statesArrFiltered = this.statesArr;
+      // Put values from statesArr into array to be used for filtering.
       this.statesArrFiltered = this.statesArr.slice(0);
-      // this.populateStates();
+      // Set sort, filter, and population of states in motion.
       this.sortAndFilter();
     },
     loadStateData: function() {
-      console.log('loadStateData()')
+      // console.log('loadStateData()')
       // Fetch states data
       var mediaReq = new XMLHttpRequest();
       mediaReq.addEventListener("load",  function() {
@@ -225,7 +248,7 @@ $(document).ready(function () {
       mediaReq.send();
     },
     init: function() {
-      console.log('init');
+      // console.log('EL policy rankingds table init.');
       Handlebars.registerHelper("isfalse", function(context, options) {
         // console.log('helper context, ', context);
         if (context === false) {
@@ -238,22 +261,6 @@ $(document).ready(function () {
           return options.fn(this);
         }
       });
-      // Handlebars.registerHelper("noactions", function(context, options) {
-      //   // console.log('helper context, ', context);
-      //   if (context === 0) {
-      //     return options.fn(this);
-      //   }
-      // });
-      // Handlebars.registerHelper("getsricon", function(context, options) {
-      //   // console.log('helper context, ', context);
-      //   if (context === false) {
-      //     return 'Icon: State lacks ';
-      //   } else if (context === true) {
-      //     return 'Icon: State has implemented ';
-      //   } else {
-      //     return '';
-      //   }
-      // });
       this.loadStateData();
       this.setUIListeners();
     }
