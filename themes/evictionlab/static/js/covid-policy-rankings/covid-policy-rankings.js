@@ -9,14 +9,14 @@ $(document).ready(function () {
     sortConfig: ['stname', 'asc'], // [sort by id of col head (string), sort order (asc, desc, or false)]
     filterConfig: [],
     sortStateData: function(callback) {
-      console.log('sortStateData()');
+      // console.log('sortStateData()');
       // console.log('sortConfig, ', this.sortConfig);
       var sortArr = rankings.sortConfig;
       this.statesArrFiltered = this.statesArr.slice(0);
       if (sortArr.length > 0) {
-        console.log('there is a sort criterion');
+        // console.log('there is a sort criterion');
         if (sortArr[0] === 'stname') {
-          console.log('sorting by alpha');
+          // console.log('sorting by alpha');
           if (sortArr[1] === 'asc') {
             // console.log('sorting alpha ascending');
             rankings.statesArrFiltered.sort(function (a, b) {
@@ -68,7 +68,7 @@ $(document).ready(function () {
     sortAndFilter: function() {
       // Daisy-chain sorting and filtering,
       // and call populateStates when complete.
-      console.log('sortAndFilter()');
+      // console.log('sortAndFilter()');
       this.emptyStates(function() {
         rankings.sortStateData(function() {
           rankings.filterStateData(rankings.populateStates)
@@ -82,6 +82,7 @@ $(document).ready(function () {
         // console.log('click open, ', e.currentTarget);
         var $target = $(e.currentTarget);
         $target.hide();
+        $target.parent().parent('tr').prev('.state-text').removeClass('excerpt-only');
         $target
           // Select and hide panel contents.
           .next('.state-details-list')
@@ -94,13 +95,41 @@ $(document).ready(function () {
             var $ctarget = $(e.currentTarget);
             $ctarget.prev('.state-details-list').hide();
             $ctarget.hide().unbind('click select');
+            $ctarget.parent().parent('tr').prev('.state-text').addClass('excerpt-only');
             $target.show();
+            var state = $ctarget.data('state');
+            var top = $('tr[data-state="' + state + '"]').offset().top;
+            var fullHeight = window.innerHeight;
+            window.scrollTo({
+              top: top - fullHeight*0.33,
+              behavior: 'smooth',
+            });
+          $('tr[data-state="' + state + '"]').focus();
         })
       })
     },
     setUIListeners: function() {
       // console.log('setUIListeners()');
       // Sets listeners for:
+      // Show and hide of filter for small-screen devices
+      $('#mobile_filter').on('click select', function(e) {
+        var $target = $(e.currentTarget);
+        if ($target.hasClass('show-filters')) {
+          // show the filters
+          $('#filters_panel .filters').animate({'max-height': 400}, 400);
+          // change button text
+          $target.text('Hide filters');
+          // change button class
+          $target.removeClass('show-filters').addClass('hide-filters');
+        } else {
+          // show the filters
+          $('#filters_panel .filters').animate({'max-height': 0}, 400);
+          // change button text
+          $target.text('Show filters');
+          // change button class
+          $target.removeClass('hide-filters').addClass('show-filters');
+        }
+      })
       // Table sort headings
       $table_headings = $('#states_table > thead > tr > td');
       $table_headings.on('click', function(e) {
@@ -193,7 +222,7 @@ $(document).ready(function () {
     //
     // },
     processData: function() {
-      console.log('processData()');
+      // console.log('processData()');
       // Build states array
       var statesProperties = Object.keys(this.statesData[0])
           .filter(function (p) { return p.startsWith("gsx$") })
@@ -213,10 +242,19 @@ $(document).ready(function () {
               }
             }
             if (p === 'stars') {
+              // For a11y
               row['stars'] = Number(row[p]);
+              // For classnames
               row['stars_hb'] = String(row[p]).replace('.', '-');
             }
+            if (p === 'sttext') {
+              // Truncate text to create excerpt.
+              var words = 18;
+              var string = String(row[p]).split(" ").splice(0, words).join(" ") + ' ...';
+              row['stexcerpt'] = string;
+            }
             if (p === 'intlstupdt') {
+              // Create date string for last updated for each state.
               // console.log('intlstupdt, ', row[p])
               var date = new Date(row[p]);
               row.updated = date.toLocaleDateString();
@@ -230,6 +268,7 @@ $(document).ready(function () {
       // Remove the two rows the EL uses for internal titles and example.
       this.statesArr.shift();
       this.statesArr.shift();
+      // console.log('this.statesArr', this.statesArr);
       // Put values from statesArr into array to be used for filtering.
       this.statesArrFiltered = this.statesArr.slice(0);
       // Set sort, filter, and population of states in motion.
