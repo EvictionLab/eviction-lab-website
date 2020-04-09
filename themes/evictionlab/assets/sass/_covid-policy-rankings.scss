@@ -37,6 +37,9 @@ $el-darkgray: #737373;
   // States panel
   .states-table {
     margin-bottom: 6rem;
+    table {
+      min-height: 500px;
+    }
     thead {
       tr {
         vertical-align: center;

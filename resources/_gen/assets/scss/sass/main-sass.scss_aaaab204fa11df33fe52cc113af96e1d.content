@@ -18149,6 +18149,10 @@ ol.list-initial, .text-li ol.list-initial li {
   margin-bottom: 6rem;
 }
 
+.inline-panel .states-table table {
+  min-height: 500px;
+}
+
 .inline-panel .states-table thead tr {
   vertical-align: center;
 }
