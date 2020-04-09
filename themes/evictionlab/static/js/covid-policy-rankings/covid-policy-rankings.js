@@ -87,80 +87,159 @@ $(document).ready(function () {
       $('button.expand-state-details').on('click select', function(e) {
         // console.log('click open, ', e.currentTarget);
         var $target = $(e.currentTarget);
-        $target.hide();
-        $target.parent().parent('tr').prev('.state-text').removeClass('excerpt-only');
+        // Remove excerpt-only class.
+        // $target.parent().parent('tr').prev('.state-text').removeClass('excerpt-only');
         $target
-          // Select and hide panel contents.
-          .next('.state-details-list')
-          .show()
-          // Show and add listeners to collapse button.
-          .next('button.collapse-state-details')
-          .show()
-          .on('click select', function(e) {
-            // console.log('click collapse, ', e.currentTarget);
-            var $ctarget = $(e.currentTarget);
-            $ctarget.prev('.state-details-list').hide();
-            $ctarget.hide().unbind('click select');
-            $ctarget.parent().parent('tr').prev('.state-text').addClass('excerpt-only');
-            $target.show();
-            var state = $ctarget.data('state');
-            var top = $('tr[data-state="' + state + '"]').offset().top;
-            var fullHeight = window.innerHeight;
-            $([document.documentElement, document.body]).animate({
-              scrollTop: top - fullHeight*0.33
-            }, 1600);
-            // window.scrollTo({
-            //   top: top - fullHeight*0.33,
-            //   behavior: 'smooth',
-            // });
-            $('tr[data-state="' + state + '"]').focus();
-        })
-      })
+          .parent()
+          .parent('tr')
+          .prev('.state-text')
+          // Hide excerpt.
+          .find('.state-excerpt')
+          .animate({
+            'max-height': 0
+          }, 400, 'linear', function() {
+            // Now open everything.
+            window.setTimeout(function() {
+              // Hide show button.
+              $target.hide();
+              $target
+                .parent()
+                .parent('tr')
+                .prev('.state-text')
+                .find('.state-full')
+                // Show fill state text.
+                .animate({
+                  'max-height': 500
+                }, 400, 'linear')
+                .next('.expires')
+                // Show expires text.
+                .animate({
+                  'max-height': 500
+                }, 400)
+                .parent()
+                .parent('tr')
+                .next('.state-details')
+                .find('.state-details-list')
+                // Show state details.
+                .animate({
+                  'max-height': 1200,
+                  'padding-top': '2rem',
+                  'padding-bottom': '2rem'
+                }, 800)
+                .next('.collapse-state-details')
+                // Show collapse button.
+                .show()
+                .on('click select', function(e) {
+                  // console.log('click collapse, ', e.currentTarget);
+                  var $ctarget = $(e.currentTarget);
+                  // Unbind click listener.
+                  $ctarget.hide().unbind('click select');
+                  // $ctarget.parent().parent('tr').prev('.state-text').addClass('excerpt-only');
+                  // $target.show();
+                  var state = $ctarget.data('state');
+                  var top = $('tr[data-state="' + state + '"]').offset().top;
+                  var fullHeight = window.innerHeight;
+                  // Scroll state back into view.
+                  $([document.documentElement, document.body]).animate({
+                    scrollTop: top - fullHeight*0.33
+                  }, 800, 'linear', function() {
+                    // Set focus on state title.
+                    $('tr[data-state="' + state + '"]').focus();
+                    // Hide what was shown.
+                    $ctarget
+                    .parent()
+                    .parent('tr')
+                    .prev('.state-text')
+                    .find('.state-full, .expires')
+                    .animate({
+                      'max-height': 0
+                    }, 400)
+                    // Hide state details.
+                    $ctarget
+                    .prev('.state-details-list')
+                    .animate({
+                      'max-height': 0,
+                      'padding-top': 0,
+                      'padding-bottom': 0
+                    }, 400, 'linear', function() {
+                      window.setTimeout(function() {
+                        // After short timer expiry, show excerpt.
+                        $ctarget
+                        .parent()
+                        .parent('tr')
+                        .prev('.state-text')
+                        .find('.state-excerpt')
+                        .animate({
+                          'max-height': 400
+                        }, 400)
+                      }, 200)
+                    })
+                    // Show the expand button.
+                    $ctarget
+                    .prev()
+                    .prev('.expand-state-details')
+                    .show()
+                  });
+                })
+              }, 200)
+            })
+          })
     },
     handleStickyFilters: function() {
-      console.log('handleStickyFilters()');
+      // console.log('handleStickyFilters()');
       var doSticky = false;
       var filterOffset = null;
+      var tableOffset = null;
       var $filters = $('#filters_panel .filters');
+      var $table = $('#states_panel table');
+      // var $theads = $('#states_panel thead th');
       $(window).on('load', function() {
-        console.log('loaded');
+        // console.log('loaded');
         if ($('div.mobile-filters').css('display') !== 'block') {
-          console.log('mobile filters is not shown.')
+          // console.log('mobile filters is not shown.')
           doSticky = true;
           filterOffset = $filters.offset();
+          tableOffset = $table.offset();
         } else {
           doSticky = false;
         }
       })
       $(window).on('resize', function() {
-        console.log('resized');
+        // console.log('resized');
         if ($('div.mobile-filters').css('display') !== 'block') {
-          console.log('mobile filters is not shown.')
+          // console.log('mobile filters is not shown.')
           doSticky = true;
           filterOffset = $filters.offset();
+          tableOffset = $table.offset();
         } else {
           doSticky = false;
-          // $filters.css('max-height', 'unset');
         }
       })
       $(window).on('scroll', function() {
-        console.log('scrolled');
+        // console.log('scrolled');
+        // console.log('tableOffset, ', tableOffset);
         if (!!doSticky) {
-          console.log('doSticky === true, proceeding. filterOffset = ', filterOffset);
+          // console.log('doSticky === true, proceeding. filterOffset = ', filterOffset);
           var wScrollTop = $(window).scrollTop();
-          console.log('wScrollTop, ', wScrollTop);
+          // console.log('wScrollTop, ', wScrollTop);
           var headerHeight = $('header .header-wrapper').height();
-          console.log('headerHeight, ', headerHeight);
+          // console.log('headerHeight, ', headerHeight);
           if (wScrollTop + headerHeight + 50 >= filterOffset.top) {
-            console.log('make the filter sticky');
+            // console.log('make the filter sticky');
             $filters.css({
               position: 'sticky',
               top: headerHeight + 50,
               left: filterOffset.left
             })
-          } else {
-            console.log('make the filter NOT sticky');
           }
+          // if (wScrollTop + headerHeight + 50 >= tableOffset.top) {
+          //   console.log('make the table sticky');
+          //   $table.css({
+          //     position: 'sticky',
+          //     top: headerHeight + 50,
+          //     left: tableOffset.left
+          //   })
+          // }
         }
       })
     },
@@ -187,7 +266,7 @@ $(document).ready(function () {
         }
       })
       // Table sort headings
-      $table_headings = $('#states_table > thead > tr > td');
+      $table_headings = $('#states_table > thead > tr > th');
       $table_headings.on('click', function(e) {
         // console.log('sort clicked, ', e.currentTarget);
         // Change sort status for clicked element

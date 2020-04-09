@@ -13,7 +13,7 @@
       <div class="star" aria-hidden="true"></div>
     </td>
   </tr>
-  <tr class="state-text excerpt-only" data-state="{{stabbrev}}" style="display:none;">
+  <tr class="state-text excerpt-only" data-state="{{stabbrev}}">
     <td colspan="3">
       {{#if stexcerpt}}
         <p class="state-excerpt">
@@ -33,12 +33,12 @@
     </td>
     <td></td>
   </tr>
-  <tr class="state-details" data-state="{{stabbrev}}" style="display:none;">
+  <tr class="state-details excerpt-only" data-state="{{stabbrev}}">
     <td colspan="4">
       <button class="expand-state-details btn" data-state="{{stabbrev}}">
         CLICK TO LEARN MORE
       </button>
-      <div class="state-details-list" style="display:none;">
+      <div class="state-details-list">
         {{! no nonpayment }}
         {{#istrue plcnonpbool}}
           <div class="state-policy">

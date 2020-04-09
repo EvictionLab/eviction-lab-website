@@ -40,13 +40,25 @@ $el-darkgray: #737373;
   // States panel
   .states-table {
     margin-bottom: 6rem;
-    table {
+    @include media-breakpoint-up(lg) {
       min-height: 100vh;
+      // height: 80vh;
+      // overflow-y: scroll;
+      // display: block;
+      // width: 100%;
+      // thead {
+      //   background-color: #fff;
+      //   th {
+      //     background-color: #fff;
+      //     position: sticky;
+      //     top: 0;
+      //   }
+      // }
     }
     thead {
       tr {
         vertical-align: center;
-        td {
+        th {
           text-transform: uppercase;
           color: $el-darkgray;
           font-family: GT-Eesti-Display-Bold, sans-serif;
@@ -452,18 +464,22 @@ $el-darkgray: #737373;
               margin-bottom: 0;
             }
           }
-          p.state-excerpt {
-            display: none;
-          }
-          &.excerpt-only {
+          // p.state-excerpt {
+          //   display: none;
+          // }
+          // &.excerpt-only {
             p.state-excerpt {
-              display: inline;
+              // display: inline;
+              max-height: 400px;
+              overflow-y: hidden;
             }
             p.state-full,
             p.expires {
-              display: none;
+              // display: none;
+              max-height: 0;
+              overflow-y: hidden;
             }
-          }
+          // }
         }
         &.state-details {
           td {
@@ -472,21 +488,14 @@ $el-darkgray: #737373;
               padding: 1rem 1rem 0 2rem;
             }
             .state-details-list {
-              padding-top: 2rem;
-              padding-bottom: 2rem;
+              // padding-top: 2rem;
+              // padding-bottom: 2rem;
+              max-height: 0;
+              overflow-y: hidden;
               .last-updated {
                 font-family: Akkurat-Regular, sans-serif;
               }
-              // display: flex;
-              // flex-wrap: wrap;
-              // flex-direction: column;
-              // max-height: 600px;
               .state-policy {
-                // flex: 0 1 50%;
-                // width: 48%;
-                // display: inline-block;
-                // flex-grow: false;
-                // flex-shrink: false;
                 label {
                   font-size: 1.6rem;
                   font-family: Akkurat-Bold, sans-serif;
@@ -565,6 +574,17 @@ $el-darkgray: #737373;
             }
           }
         }
+        // &.excerpt-only {
+        //   td {
+        //     .state-details-list,
+        //     .collapse-state-details {
+        //       max-height: 0;
+        //       overflow-y: hidden;
+        //       padding-top: 0;
+        //       padding-bottom: 0;
+        //     }
+        //   }
+        // }
       }
     }
   }
