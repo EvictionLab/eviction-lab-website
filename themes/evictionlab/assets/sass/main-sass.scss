@@ -6,6 +6,49 @@ html {
 // shortcut function for sizing based on grid
 @function grid($n) { @return $n * $gridSize; }
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  smm: 374px,
+  mm: 576px, // Added because map in header needs extra refinement.
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1280px
+);
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: .8rem,
+    2: 1.6rem,
+    3: 2.4rem,
+    4: 3.2rem,
+    5: 4rem,
+    6: 4.8rem,
+    7: 5.6rem,
+    8: 6.4rem,
+    9: 7.2rem,
+    10: 8rem,
+    11: 8.8rem,
+    12: 9.6rem,
+    13: 10.4rem,
+    14: 11.2rem,
+    15: 12rem,
+    16: 12.8rem,
+    17: 13.6rem,
+    18: 14.4rem,
+    19: 15.2rem,
+    20: 16rem,
+    21: 16.8rem,
+    22: 17.6rem
+  ),
+  $spacers
+);
+
+
 $gridSize: 8px; // base grid value used for margins and element sizing
 $zoneOnePadding: 20px; // page padding for 320+
 $zoneTwoPadding: 28px; // page padding for 768+
