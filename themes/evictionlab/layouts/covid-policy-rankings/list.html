@@ -1,0 +1,86 @@
+{{ partial "header" . }}
+<!-- {{ partial "breadcrumb" . }} -->
+
+<div class="row ml-0 mr-0">
+  <div class="col-10 offset-1 col-lg-8 offset-lg-2 rankings-intro">
+    {{ .Content | markdownify }}
+  </div>
+</div>
+
+<div class="row ml-0 mr-0">
+  <div class="mobile-filters col-10 offset-1 d-lg-none">
+    <button id="mobile_filter" class="btn mobile-filter show-filters">Show Filters</button>
+  </div>
+  <div id="filters_panel" class="inline-panel filters-panel col-10 offset-1 col-md-10 offset-md-1 col-lg-3 offset-lg-1 offset-xl-2 col-xl-2">
+    <div class="filters">
+      <h4>Filter:</h4>
+      <div class="filters-list">
+        <label class="filter-label">
+          <input id="plcnonpbool" type="checkbox">No nonpayment
+        </label>
+        <label class="filter-label">
+          <input id="plcnofilbool" type="checkbox" >No new filings
+        </label>
+        <label class="filter-label">
+          <input id="plcnonewbool" type="checkbox">No new evictions
+        </label>
+        <label class="filter-label">
+          <input id="plcnoenfbool" type="checkbox">No enforcement
+        </label>
+        <label class="filter-label">
+          <input id="plcnohearbool" type="checkbox">No hearings
+        </label>
+        <label class="filter-label">
+          <input id="plctldbool" type="checkbox">Tolled
+        </label>
+        <label class="filter-label">
+          <input id="plclatfbool" type="checkbox">No late fees
+        </label>
+        <label class="filter-label">
+          <input id="plcarsbool" type="checkbox">Arrears
+        </label>
+        <label class="filter-label">
+          <input id="plcnoshbool" type="checkbox">No shutoffs, free reconnect
+        </label>
+        <label class="filter-label">
+          <input id="plcnofcbool" type="checkbox">No foreclosures
+        </label>
+      </div>
+      <button id="clear_filters" class="btn clear-filters">Clear filters</button>
+    </div>
+  </div>
+  <div id="states_panel" class="inline-panel states col-12 offset-0 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6">
+    <table id="states_table" class="states-table">
+      <caption class="sr-only">List of states, sortable by state name, TODO, TODO, and ranking</caption>
+      <thead>
+        <tr>
+          <!-- data-filter changes to asc or desc when selected -->
+          <td id="stname" class="state-name" data-filter="asc">
+            <div class="col-title">
+                State
+            </div>
+          </td>
+          <td id="evstat1" class="stat-one" data-filter="false">
+            <div class="col-title">
+                Renting pop.
+            </div>
+          </td>
+          <td id="evstat2" class="stat-two" data-filter="false">
+            <div class="col-title">
+              Filings per day*
+            </div>
+          </td>
+          <td id="stars" class="stars" data-filter="false">
+            <div class="col-title">
+              Rating
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <tbody class="states-list"></tbody>
+      <caption>*Filings per day based on data collected before the COVID-19 pandemic.</caption>
+    </table>
+  </div>
+</div>
+
+{{ partial "footer" . }}
