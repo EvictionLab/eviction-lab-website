@@ -250,8 +250,10 @@ $(document).ready(function () {
             if (p === 'sttext') {
               // Truncate text to create excerpt.
               var words = 18;
-              var string = String(row[p]).split(" ").splice(0, words).join(" ") + ' ...';
-              row['stexcerpt'] = string;
+              if (row[p] !== null) {
+                var string = String(row[p]).split(" ").splice(0, words).join(" ") + ' ...';
+                row['stexcerpt'] = string;
+              }
             }
             if (p === 'intlstupdt') {
               // Create date string for last updated for each state.

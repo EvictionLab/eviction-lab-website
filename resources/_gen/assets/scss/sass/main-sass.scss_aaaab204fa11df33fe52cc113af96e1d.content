@@ -18814,12 +18814,15 @@ ol.list-initial, .text-li ol.list-initial li {
 @media (min-width: 992px) {
   .inline-panel.filters-panel .filters {
     margin-left: 0;
+    margin-top: 2.5rem;
   }
 }
 
 .inline-panel.filters-panel .filters h4 {
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem !important;
+  color: #737373;
+  font-family: GT-Eesti-Display-Bold, sans-serif;
 }
 
 .inline-panel.filters-panel .filters .filters-list {
@@ -18828,6 +18831,12 @@ ol.list-initial, .text-li ol.list-initial li {
   height: 280px;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+@media (min-width: 576px) {
+  .inline-panel.filters-panel .filters .filters-list {
+    height: 180px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -18857,6 +18866,7 @@ ol.list-initial, .text-li ol.list-initial li {
   position: relative;
   margin-right: 0.35rem;
   vertical-align: text-top;
+  margin-bottom: 0.5rem;
 }
 
 .inline-panel.filters-panel .filters .filters-list input[type=checkbox]:checked {
@@ -18901,7 +18911,7 @@ ol.list-initial, .text-li ol.list-initial li {
   padding: 11px 15px;
   letter-spacing: .054rem;
   border-radius: 0;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .inline-panel.filters-panel .filters button.clear-filters:focus, .inline-panel.filters-panel .filters button.clear-filters:active {
@@ -18933,8 +18943,9 @@ ol.list-initial, .text-li ol.list-initial li {
   border-radius: 0;
 }
 
-.mobile-filters button.mobile-filter:hover, .mobile-filters button.mobile-filter:active {
+.mobile-filters button.mobile-filter:hover, .mobile-filters button.mobile-filter:active, .mobile-filters button.mobile-filter:focus {
   box-shadow: none;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
