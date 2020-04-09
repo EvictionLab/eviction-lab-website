@@ -566,19 +566,20 @@ $el-darkgray: #737373;
   &.filters-panel {
     .filters {
       // margin-left: 3rem;
+      margin-bottom: 3rem;
       @include media-breakpoint-up(lg) {
         margin-left: 0;
       }
       max-height: 0;
       overflow-y: hidden;
       @include media-breakpoint-up(md) {
-        margin-left: 3rem;
+        // margin-left: 3rem;
         // max-height: inherit;
         // overflow-y: visible;
       }
       @include media-breakpoint-up(lg) {
         margin-left: 0;
-        max-height: inherit;
+        max-height: inherit !important;
         margin-top: 2.5rem;
       }
       h4 {

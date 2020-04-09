@@ -108,6 +108,53 @@ $(document).ready(function () {
         })
       })
     },
+    handleStickyFilters: function() {
+      console.log('handleStickyFilters()');
+      var doSticky = false;
+      var filterOffset = null;
+      var $filters = $('#filters_panel .filters');
+      $(window).on('load', function() {
+        console.log('loaded');
+        if ($('div.mobile-filters').css('display') !== 'block') {
+          console.log('mobile filters is not shown.')
+          doSticky = true;
+          filterOffset = $filters.offset();
+        } else {
+          doSticky = false;
+        }
+      })
+      $(window).on('resize', function() {
+        console.log('resized');
+        if ($('div.mobile-filters').css('display') !== 'block') {
+          console.log('mobile filters is not shown.')
+          doSticky = true;
+          filterOffset = $filters.offset();
+        } else {
+          doSticky = false;
+          // $filters.css('max-height', 'unset');
+        }
+      })
+      $(window).on('scroll', function() {
+        console.log('scrolled');
+        if (!!doSticky) {
+          console.log('doSticky === true, proceeding. filterOffset = ', filterOffset);
+          var wScrollTop = $(window).scrollTop();
+          console.log('wScrollTop, ', wScrollTop);
+          var headerHeight = $('header .header-wrapper').height();
+          console.log('headerHeight, ', headerHeight);
+          if (wScrollTop + headerHeight + 50 >= filterOffset.top) {
+            console.log('make the filter sticky');
+            $filters.css({
+              position: 'sticky',
+              top: headerHeight + 50,
+              left: filterOffset.left
+            })
+          } else {
+            console.log('make the filter NOT sticky');
+          }
+        }
+      })
+    },
     setUIListeners: function() {
       // console.log('setUIListeners()');
       // Sets listeners for:
@@ -184,7 +231,7 @@ $(document).ready(function () {
         $filters.prop('checked',false);
         rankings.filterConfig = [];
         rankings.sortAndFilter();
-      })
+      });
     },
     loadHandlebarsTemplate: function(url, callback) {
       // Load handlebars template via xhr.
@@ -304,6 +351,7 @@ $(document).ready(function () {
       });
       this.loadStateData();
       this.setUIListeners();
+      this.handleStickyFilters();
     }
   }
   rankings.init();
