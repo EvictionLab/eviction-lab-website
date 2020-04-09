@@ -106,11 +106,14 @@ $(document).ready(function () {
             var state = $ctarget.data('state');
             var top = $('tr[data-state="' + state + '"]').offset().top;
             var fullHeight = window.innerHeight;
-            window.scrollTo({
-              top: top - fullHeight*0.33,
-              behavior: 'smooth',
-            });
-          $('tr[data-state="' + state + '"]').focus();
+            $([document.documentElement, document.body]).animate({
+              scrollTop: top - fullHeight*0.33
+            }, 1600);
+            // window.scrollTo({
+            //   top: top - fullHeight*0.33,
+            //   behavior: 'smooth',
+            // });
+            $('tr[data-state="' + state + '"]').focus();
         })
       })
     },
