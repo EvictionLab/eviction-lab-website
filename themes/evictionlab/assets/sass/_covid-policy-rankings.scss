@@ -34,11 +34,14 @@ $el-darkgray: #737373;
 }
 
 .inline-panel {
+  &.states {
+    min-height: 100vh;
+  }
   // States panel
   .states-table {
     margin-bottom: 6rem;
     table {
-      min-height: 500px;
+      min-height: 100vh;
     }
     thead {
       tr {
