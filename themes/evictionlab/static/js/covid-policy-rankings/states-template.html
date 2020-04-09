@@ -25,11 +25,11 @@
           {{sttext}}
         </p>
       {{/if}}
-      {{#if until}}
         <p class="expires">
-          Protections start to expire on {{until}}
+          {{#if until}}
+            Protections start to expire on {{until}}
+          {{/if}}
         </p>
-      {{/if}}
     </td>
     <td></td>
   </tr>
