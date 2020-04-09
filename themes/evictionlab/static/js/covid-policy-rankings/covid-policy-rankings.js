@@ -6,7 +6,7 @@ $(document).ready(function () {
     statesData: null,
     statesArr: [],
     statesArrFiltered: [],
-    sortConfig: ['stname', 'asc'], // [sort by id of col head (string), sort order (asc, desc, or false)]
+    sortConfig: ['stars', 'desc'], // [sort by id of col head (string), sort order (asc, desc, or false)]
     filterConfig: [],
     sortStateData: function(callback) {
       // console.log('sortStateData()');
@@ -36,13 +36,19 @@ $(document).ready(function () {
           // console.log('sorting by numeric');
           if (sortArr[1] === 'asc') {
             // console.log('sorting numeric ascending');
+            // Remove commas before sorting.
             rankings.statesArrFiltered.sort(function(a, b) {
-              return parseFloat(a[sortArr[0]]) - parseFloat(b[sortArr[0]]);
+              var a = parseFloat(String(a[sortArr[0]]).replace(/,/g, ''));
+              var b = parseFloat(String(b[sortArr[0]]).replace(/,/g, ''));
+              return a - b;
             });
           } else {
             // console.log('sorting numeric descending');
+            // Remove commas before sorting.
             rankings.statesArrFiltered.sort(function(a, b) {
-              return parseFloat(b[sortArr[0]]) - parseFloat(a[sortArr[0]]);
+              var a = parseFloat(String(a[sortArr[0]]).replace(/,/g, ''));
+              var b = parseFloat(String(b[sortArr[0]]).replace(/,/g, ''));
+              return b - a;
             });
           }
         }
