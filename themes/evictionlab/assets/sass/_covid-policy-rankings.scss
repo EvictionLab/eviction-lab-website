@@ -578,10 +578,13 @@ $el-darkgray: #737373;
       }
       @include media-breakpoint-up(lg) {
         margin-left: 0;
+        margin-top: 2.5rem;
       }
       h4 {
         text-transform: uppercase;
-        margin-bottom: 1rem;
+        margin-bottom: 1.6rem !important;
+        color: $el-darkgray;
+        font-family: GT-Eesti-Display-Bold, sans-serif;
       }
       .filters-list {
         // padding: 1.65rem;
@@ -592,7 +595,7 @@ $el-darkgray: #737373;
         justify-content: flex-start;
         @include media-breakpoint-up(sm) {
           // flex-direction: column;
-          // height: 100px;
+          height: 180px;
           // justify-content: flex-start;
         }
         @include media-breakpoint-up(md) {
@@ -618,6 +621,7 @@ $el-darkgray: #737373;
           position: relative;
           margin-right: 0.35rem;
           vertical-align: text-top;
+          margin-bottom: 0.5rem;
           &:checked {
             background-color: $el-purple; // #2C897F;
             &:after {
@@ -654,7 +658,7 @@ $el-darkgray: #737373;
         padding: 11px 15px;
         letter-spacing: .054rem;
         border-radius: 0;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         &:focus,
         &:active {
           box-shadow: none;
@@ -686,8 +690,10 @@ $el-darkgray: #737373;
     letter-spacing: .054rem;
     border-radius: 0;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       box-shadow: none;
+      border: none;
     }
   }
 }
