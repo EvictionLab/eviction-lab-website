@@ -18806,14 +18806,13 @@ ol.list-initial, .text-li ol.list-initial li {
 @media (min-width: 768px) {
   .inline-panel.filters-panel .filters {
     margin-left: 3rem;
-    max-height: inherit;
-    overflow-y: visible;
   }
 }
 
 @media (min-width: 992px) {
   .inline-panel.filters-panel .filters {
     margin-left: 0;
+    max-height: inherit;
     margin-top: 2.5rem;
   }
 }
