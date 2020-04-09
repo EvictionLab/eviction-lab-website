@@ -1,12 +1,15 @@
 ---
 title: "COVID-19 Eviction Policy Rankings | Eviction Lab"
-date: 2020-04-02
+date: 2020-04-09T20:43:49-08:00
 type: index
 photoCredit:
 hasSubnav: true
 socialDescription: We’ve built the first nationwide database of eviction policies in response to COVID-19.
 description: We’ve built the first nationwide database of eviction policy in response to COVID-19.
 url: /covid-policy-rankings
+aliases:
+    - /covid-policy-rankings
+    - /es/covid-policy-rankings
 ---
 
 ## COVID-19 Eviction Policy Rankings
