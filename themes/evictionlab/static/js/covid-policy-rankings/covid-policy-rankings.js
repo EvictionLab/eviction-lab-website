@@ -97,7 +97,7 @@ $(document).ready(function () {
           .find('.state-excerpt')
           .animate({
             'max-height': 0
-          }, 400, 'linear', function() {
+          }, 1, 'linear', function() {
             // Now open everything.
             window.setTimeout(function() {
               // Hide show button.
