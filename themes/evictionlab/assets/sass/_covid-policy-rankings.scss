@@ -16,18 +16,24 @@ $el-darkgray: #737373;
 
 .rankings-intro {
   padding-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.6rem;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 4rem;
+  }
   h2 {
     color: $el-purple;
     font-family: GT-Eesti-Display-Bold, sans-serif;
     font-size: 3.2rem;
     border-top: 5px solid $el-purple;
-    padding-top: 0.5rem;
-    padding-bottom: 1rem;
+    padding-top: 1.6rem;
+    padding-bottom: 2.4rem;
   }
   p {
     width: 100%;
     @include media-breakpoint-up(md) {
+      width: 100%;
+    }
+    @include media-breakpoint-up(xl) {
       width: 50%;
     }
   }
@@ -36,6 +42,9 @@ $el-darkgray: #737373;
 .inline-panel {
   &.states {
     min-height: 100vh;
+    @include media-breakpoint-only(md) {
+      margin: auto;
+    }
   }
   // States panel
   .states-table {
@@ -52,11 +61,11 @@ $el-darkgray: #737373;
           font-family: GT-Eesti-Display-Bold, sans-serif;
           font-size: 0.8rem;
           @include media-breakpoint-up(md) {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
           }
           padding: 0.5rem 0.5rem 0 0.5rem;
           @include media-breakpoint-up(md) {
-            padding: 0.5rem 2rem 0 2rem;
+            padding: 0.5rem 2rem 0.8rem 2rem;
           }
           height: 4rem;
           text-align: left;
@@ -78,7 +87,7 @@ $el-darkgray: #737373;
           &.stars {
             min-width: 110px;
             @include media-breakpoint-up(md) {
-              min-width: 140px;
+              min-width: 154px;
             }
           }
           .col-title {
@@ -455,9 +464,14 @@ $el-darkgray: #737373;
           p.state-excerpt {
             display: none;
           }
+          p.state-full {
+            margin-top: 1.6rem;
+          }
           &.excerpt-only {
             p.state-excerpt {
-              display: inline;
+              display: inline-block;
+              margin-top: 1.6rem;
+              margin-bottom: 0;
             }
             p.state-full,
             p.expires {
