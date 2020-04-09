@@ -18145,12 +18145,16 @@ ol.list-initial, .text-li ol.list-initial li {
   }
 }
 
+.inline-panel.states {
+  min-height: 100vh;
+}
+
 .inline-panel .states-table {
   margin-bottom: 6rem;
 }
 
 .inline-panel .states-table table {
-  min-height: 500px;
+  min-height: 100vh;
 }
 
 .inline-panel .states-table thead tr {
