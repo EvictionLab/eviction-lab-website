@@ -6,6 +6,7 @@ photoCredit:
 hasSubnav: true
 socialDescription: We’ve built the first nationwide database of eviction policies in response to COVID-19.
 description: We’ve built the first nationwide database of eviction policy in response to COVID-19.
+url: /covid-eviction-policies
 ---
 
 ## COVID-19 Eviction Policy Rankings
