@@ -18793,6 +18793,7 @@ ol.list-initial, .text-li ol.list-initial li {
 }
 
 .inline-panel.filters-panel .filters {
+  margin-bottom: 3rem;
   max-height: 0;
   overflow-y: hidden;
 }
@@ -18803,16 +18804,10 @@ ol.list-initial, .text-li ol.list-initial li {
   }
 }
 
-@media (min-width: 768px) {
-  .inline-panel.filters-panel .filters {
-    margin-left: 3rem;
-  }
-}
-
 @media (min-width: 992px) {
   .inline-panel.filters-panel .filters {
     margin-left: 0;
-    max-height: inherit;
+    max-height: inherit !important;
     margin-top: 2.5rem;
   }
 }
