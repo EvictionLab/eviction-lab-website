@@ -120,12 +120,14 @@ $(document).ready(function () {
                 .parent('tr')
                 .next('.state-details')
                 .find('.state-details-list')
-                // Show state details.
-                .animate({
-                  'max-height': 1200,
+                .css({
                   'padding-top': '2rem',
                   'padding-bottom': '2rem'
-                }, 800)
+                })
+                // Show state details.
+                .animate({
+                  'max-height': 1200
+                }, 800, 'linear')
                 .next('.collapse-state-details')
                 // Show collapse button.
                 .show()
