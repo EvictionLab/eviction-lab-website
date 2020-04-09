@@ -15,7 +15,7 @@ $el-light-purple: #E7E9FF;
 $el-darkgray: #737373;
 
 .rankings-intro {
-  padding-top: 3rem;
+  padding-top: 4rem;
   margin-bottom: 1.6rem;
   @include media-breakpoint-up(lg) {
     margin-bottom: 4rem;
@@ -481,9 +481,11 @@ $el-darkgray: #737373;
               // display: inline;
               max-height: 400px;
               overflow-y: hidden;
+              margin-top: 1.6rem;
+              margin-bottom: 0;
             }
             p.state-full {
-              margin-top: 1.6rem;
+              margin-top: -0.8rem;
             }
             p.state-full,
             p.expires {
@@ -505,11 +507,17 @@ $el-darkgray: #737373;
               max-height: 0;
               overflow-y: hidden;
               .last-updated {
-                font-family: Akkurat-Regular, sans-serif;
+                font-family: GT-Eesti-Display-Bold, sans-serif;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                color: #949494;
+                margin-top: 2.4rem;
+                margin-bottom: 0rem;
               }
               .state-policy {
                 label {
                   font-size: 1.6rem;
+                  margin-bottom: 0.8rem;
                   font-family: Akkurat-Bold, sans-serif;
                   &:before {
                     content: '';
@@ -533,11 +541,12 @@ $el-darkgray: #737373;
                   }
                 }
                 p {
-                  font-size: 1.4rem; // 1.1rem;
+                  font-size: 1.5rem; // 1.1rem;
                   font-family: Akkurat-regular, sans-serif;
                   width: 100%;
                   @include media-breakpoint-up(md) {
                     width: 90%;
+                    margin-bottom: 1.6rem;
                   }
                 }
               }
