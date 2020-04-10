@@ -207,7 +207,7 @@ $el-darkgray: #737373;
                 background-position: 0 0;
               }
               &.stars-0-5 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($half-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -218,7 +218,7 @@ $el-darkgray: #737373;
                 }
               }
               &.stars-1 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -229,7 +229,7 @@ $el-darkgray: #737373;
                 }
               }
               &.stars-1-5 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -238,7 +238,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(2) {
+                .star:nth-of-type(2) {
                   background: url($half-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -249,7 +249,7 @@ $el-darkgray: #737373;
                 }
               }
               &.stars-2 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -258,7 +258,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(2) {
+                .star:nth-of-type(2) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -269,7 +269,7 @@ $el-darkgray: #737373;
                 }
               }
               &.stars-2-5 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -278,7 +278,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(2) {
+                .star:nth-of-type(2) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -287,7 +287,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(3) {
+                .star:nth-of-type(3) {
                   background: url($half-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -298,7 +298,7 @@ $el-darkgray: #737373;
                 }
               }
               &.stars-3 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -307,7 +307,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(2) {
+                .star:nth-of-type(2) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -316,7 +316,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(3) {
+                .star:nth-of-type(3) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -327,7 +327,7 @@ $el-darkgray: #737373;
                 }
               }
               &.stars-3-5 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -336,7 +336,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(2) {
+                .star:nth-of-type(2) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -345,7 +345,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(3) {
+                .star:nth-of-type(3) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -354,7 +354,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(4) {
+                .star:nth-of-type(4) {
                   background: url($half-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -365,7 +365,7 @@ $el-darkgray: #737373;
                 }
               }
               &.stars-4 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -374,7 +374,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(2) {
+                .star:nth-of-type(2) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -383,7 +383,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(3) {
+                .star:nth-of-type(3) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -392,7 +392,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(4) {
+                .star:nth-of-type(4) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -403,7 +403,7 @@ $el-darkgray: #737373;
                 }
               }
               &.stars-4-5 {
-                .star:nth-child(1) {
+                .star:nth-of-type(1) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -412,7 +412,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(2) {
+                .star:nth-of-type(2) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -421,7 +421,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(3) {
+                .star:nth-of-type(3) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -430,7 +430,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(4) {
+                .star:nth-of-type(4) {
                   background: url($full-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
@@ -439,7 +439,7 @@ $el-darkgray: #737373;
                   }
                   background-position: 0 0;
                 }
-                .star:nth-child(5) {
+                .star:nth-of-type(5) {
                   background: url($half-star);
                   background-repeat: no-repeat;
                   background-size: 12px 12px;
