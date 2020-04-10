@@ -309,10 +309,12 @@ $(document).ready(function () {
               }
             }
             if (p === 'stars') {
+              // Round to nearest 0.5
+              var rounded = Math.round(Number(row[p])*2)/2;
               // For a11y
-              row['stars'] = Number(row[p]);
+              row['stars'] = rounded; // Number(row[p]);
               // For classnames
-              row['stars_hb'] = String(row[p]).replace('.', '-');
+              row['stars_hb'] = String(rounded).replace('.', '-'); // String(row[p]).replace('.', '-');
             }
             if (p === 'sttext') {
               // Truncate text to create excerpt.
