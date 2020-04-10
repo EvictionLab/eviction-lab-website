@@ -1,0 +1,7 @@
+<script type="text/javascript" src="/js/covid-policy-rankings/covid-policy-rankings.js"></script>
+{{ if .Site.IsServer }}
+  <!-- If site is being served (ostensibly dev) don't compress and minify -->
+  <script type="text/javascript" src="/js/covid-policy-rankings/handlebars-v4.7.3.js"></script>
+{{ else }}
+  <script type="text/javascript" src="/js/covid-policy-rankings/handlebars.min-v4.7.3.js"></script>
+{{ end }}

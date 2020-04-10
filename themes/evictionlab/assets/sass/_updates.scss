@@ -89,7 +89,14 @@ a.cat-link {
     .language-select.dropdown {
         z-index: 99;
     }    
-
+    span#selected_filter {
+        font-size: 1.4rem;
+        margin-top: -3px;
+        display: block;
+        @include for-tablet-portrait-up {
+            margin-top: unset;
+        }
+    }
     .filter-wrapper {
         margin-bottom: 2.4rem;
     }  
@@ -97,7 +104,7 @@ a.cat-link {
         background-color: #fff;
     }  
     ul.dropdown-menu {
-        //margin-bottom: 0 !important;
+        margin-bottom: 0 !important;
         z-index: 20;
         li {
           margin-left: 0;

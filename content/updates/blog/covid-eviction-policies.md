@@ -9,8 +9,8 @@ date: 2020-03-19T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Tracking federal, state, and local actions in response to COVID-19.
-socialDescription: Tracking federal, state, and local actions in response to COVID-19.  
+description: Tracking federal, state, and local actions in response to the pandemic.
+socialDescription: Tracking federal, state, and local actions in response to the pandemic.  
 fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 url: /covid-eviction-policies
@@ -38,7 +38,7 @@ For additional housing support resources, please visit <a href="https://justshel
         </button>
         <ul class="dropdown-menu" x-placement="bottom-start">
           <li class="dropdown menu-item">
-            <a data-value="all">All Policies</a>
+            <a data-value="all">All Levels of Government</a>
           </li>
           <li class="dropdown menu-item">
             <a data-value="allfederal">Federal Only</a>

@@ -34,11 +34,11 @@ other = "Help and FAQ"
 [wemIntro]
 other = "NEW:"
 [wemAlert]
-other = 'Watch our video series "The Eviction Epidemic"'
+other = 'COVID-19 and Changing Eviction Policies Around the Nation'
 [wemCTA]
-other = "View videos"
+other = "Read the article"
 [wemLink]
-other = "/why-eviction-matters/#video"
+other = "/covid-eviction-policies/"
 [shareOne]
 other = "Share"
 [shareTwo]
@@ -47,6 +47,8 @@ other = "via"
 other = "Get"
 [getResourcesTwo]
 other ="Resources"
+[superhead]
+other = "<span class='boldface'>COVID-19 UPDATE:</span> &nbsp;Facing eviction? See our <a href='/covid-eviction-policies/'>list of local emergency policies</a>, and <a href='https://justshelter.org/community-resources/' target='_blank'>find organizations that can help</a>."
 
 
 

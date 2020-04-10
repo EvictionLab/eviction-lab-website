@@ -106,5 +106,8 @@
 
   <script src="/js/lib.min.js"></script>
   <script src="/js/main.js?{{ now.Unix }}"></script>
+  {{ if in .Page.Dir "covid-policy-rankings" }}
+    {{ partial "covid-policy-rankings" . }}
+  {{ end }}
 </body>
 </html>

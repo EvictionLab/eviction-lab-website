@@ -32,13 +32,13 @@ other = "Métodos"
 [helpHead]
 other = "Ayuda y preguntas frecuentes"
 [wemIntro]
-other = "NUEVO:"
+other = "NEW:"
 [wemAlert]
-other = 'Mira nuestra serie de videos "La Epidemia de Desalojo"'
+other = 'COVID-19 and Changing Eviction Policies Around the Nation"'
 [wemCTA]
-other = "Mira videos"
+other = "Read the article"
 [wemLink]
-other = "/es/why-eviction-matters/#video"
+other = "/es/covid-eviction-policies/"
 [shareOne]
 other = "Com-"
 [shareTwo]
@@ -47,3 +47,5 @@ other = "parta"
 other = "Más"
 [getResourcesTwo]
 other ="recursos"
+[superhead]
+other = "<span class='boldface'>ACTUALIZACIÓN DE COVID-19:</span> &nbsp;¿Enfrenta el desalojo? Vea nuestra <a href='/covid-eviction-policies/'>lista de políticas locales de emergencia</a>, y <a href='https://justshelter.org/community-resources/' target='_blank'>encuentre organizaciones que puedan ayudar</a>."
