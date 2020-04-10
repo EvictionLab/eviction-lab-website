@@ -28985,20 +28985,43 @@ ol.list-initial, .text-li ol.list-initial li {
 }
 
 .inline-panel .states-table tbody tr.state-text p.state-excerpt {
-  max-height: 400px;
-  overflow-y: hidden;
   margin-top: 1.6rem;
   margin-bottom: 0;
 }
 
 .inline-panel .states-table tbody tr.state-text p.state-full {
-  margin-top: -0.8rem;
+  margin-top: 1.6rem;
 }
 
-.inline-panel .states-table tbody tr.state-text p.state-full,
-.inline-panel .states-table tbody tr.state-text p.expires {
+.inline-panel .states-table tbody tr.state-text.text-excerpt p.state-excerpt {
+  max-height: 400px;
+  overflow-y: hidden;
+  transition: max-height 500ms ease-out 500ms;
+}
+
+.inline-panel .states-table tbody tr.state-text.text-excerpt p.state-full,
+.inline-panel .states-table tbody tr.state-text.text-excerpt p.expires {
+  margin-top: 0;
   max-height: 0;
   overflow-y: hidden;
+  transition: max-height 600ms ease-in;
+}
+
+.inline-panel .states-table tbody tr.state-text.text-full p.state-excerpt {
+  max-height: 0;
+  margin-top: 0;
+  overflow-y: hidden;
+}
+
+.inline-panel .states-table tbody tr.state-text.text-full p.state-full,
+.inline-panel .states-table tbody tr.state-text.text-full p.expires {
+  max-height: 200px;
+  overflow-y: hidden;
+  transition: max-height 600ms ease-out;
+}
+
+.inline-panel .states-table tbody tr.state-text.text-full p.state-full {
+  min-height: 50px;
 }
 
 .inline-panel .states-table tbody tr.state-details td {
@@ -29009,11 +29032,6 @@ ol.list-initial, .text-li ol.list-initial li {
   .inline-panel .states-table tbody tr.state-details td {
     padding: 1rem 1rem 0 2rem;
   }
-}
-
-.inline-panel .states-table tbody tr.state-details td .state-details-list {
-  max-height: 0;
-  overflow-y: hidden;
 }
 
 .inline-panel .states-table tbody tr.state-details td .state-details-list .last-updated {
@@ -29060,6 +29078,7 @@ ol.list-initial, .text-li ol.list-initial li {
   width: 100%;
   max-width: 75%;
   margin-bottom: 1.6rem;
+  color: #8a8a8a;
 }
 
 @media (min-width: 768px) {
@@ -29071,6 +29090,7 @@ ol.list-initial, .text-li ol.list-initial li {
 }
 
 .inline-panel .states-table tbody tr.state-details td button {
+  display: inline-block;
   font-family: GT-Eesti-Display-Bold, sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -29085,8 +29105,18 @@ ol.list-initial, .text-li ol.list-initial li {
   }
 }
 
-.inline-panel .states-table tbody tr.state-details td button.expand-state-details, .inline-panel .states-table tbody tr.state-details td button.collapse-state-details {
+.inline-panel .states-table tbody tr.state-details td button.collapse-state-details {
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.inline-panel .states-table tbody tr.state-details td button.collapse-state-details.bottom {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.inline-panel .states-table tbody tr.state-details td button.expand-state-details {
+  margin-bottom: 0;
 }
 
 .inline-panel .states-table tbody tr.state-details td button:focus, .inline-panel .states-table tbody tr.state-details td button:active {
@@ -29119,6 +29149,50 @@ ol.list-initial, .text-li ol.list-initial li {
   background-position: 0 0;
   background-repeat: no-repeat;
   margin-left: 4px;
+}
+
+.inline-panel .states-table tbody tr.state-details.prompt-only .state-details-list {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 600ms linear;
+}
+
+.inline-panel .states-table tbody tr.state-details.prompt-only button.expand-state-details {
+  max-height: 50px;
+  max-width: 200px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: max-height 5ms linear 660ms, max-width 5ms linear 600ms, padding 5ms linear 600ms;
+}
+
+.inline-panel .states-table tbody tr.state-details.prompt-only button.collapse-state-details {
+  max-height: 0;
+  margin: 0;
+  overflow-y: hidden;
+  transition: max-height 5ms linear 600ms, margin 5ms linear 600ms;
+}
+
+.inline-panel .states-table tbody tr.state-details.prompt-only button.collapse-state-details.bottom {
+  margin: 0;
+}
+
+.inline-panel .states-table tbody tr.state-details.details-full .state-details-list {
+  max-height: 1500px;
+  overflow-y: hidden;
+  transition: max-height 200ms linear;
+}
+
+.inline-panel .states-table tbody tr.state-details.details-full button.expand-state-details {
+  max-height: 0;
+  margin: 0;
+  max-width: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+.inline-panel .states-table tbody tr.state-details.details-full button.collapse-state-details {
+  max-height: 50px;
+  overflow-y: hidden;
 }
 
 .inline-panel.filters-panel .filters {

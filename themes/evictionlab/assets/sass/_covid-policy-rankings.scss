@@ -467,7 +467,7 @@ $el-darkgray: #737373;
           td {
             padding: 0.8rem;
             @include media-breakpoint-up(md) {
-            padding: 0 2rem 0 2rem;
+              padding: 0 2rem 0 2rem;
             }
             font-family: Akkurat-regular, sans-serif;
             color: #8A8A8A;
@@ -476,27 +476,47 @@ $el-darkgray: #737373;
               margin-bottom: 0;
             }
           }
-          // p.state-excerpt {
-          //   display: none;
-          // }
-          // &.excerpt-only {
+          p.state-excerpt {
+            margin-top: 1.6rem;
+            margin-bottom: 0;
+          }
+          p.state-full {
+            // margin-top: -0.8rem;
+            margin-top: 1.6rem;
+          }
+          // Handles animations between display states.
+          // When excerpt only is shown.
+          &.text-excerpt {
             p.state-excerpt {
-              // display: inline;
               max-height: 400px;
               overflow-y: hidden;
-              margin-top: 1.6rem;
-              margin-bottom: 0;
-            }
-            p.state-full {
-              margin-top: -0.8rem;
+              transition: max-height 500ms ease-out 500ms;
             }
             p.state-full,
             p.expires {
-              // display: none;
+              margin-top: 0;
               max-height: 0;
               overflow-y: hidden;
+              transition: max-height 600ms ease-in;
             }
-          // }
+          }
+          // When full text is shown.
+          &.text-full {
+            p.state-excerpt {
+              max-height: 0;
+              margin-top: 0;
+              overflow-y: hidden;
+            }
+            p.state-full,
+            p.expires {
+              max-height: 200px;
+              overflow-y: hidden;
+              transition: max-height 600ms ease-out;
+            }
+            p.state-full {
+              min-height: 50px;
+            }
+          }
         }
         &.state-details {
           td {
@@ -505,10 +525,6 @@ $el-darkgray: #737373;
               padding: 1rem 1rem 0 2rem;
             }
             .state-details-list {
-              // padding-top: 2rem;
-              // padding-bottom: 2rem;
-              max-height: 0;
-              overflow-y: hidden;
               .last-updated {
                 font-family: GT-Eesti-Display-Bold, sans-serif;
                 font-size: 1.5rem;
@@ -549,6 +565,7 @@ $el-darkgray: #737373;
                   width: 100%;
                   max-width: 75%;
                   margin-bottom: 1.6rem;
+                  color: #8a8a8a;
                   @include media-breakpoint-up(md) {
                     font-size: 1.5rem; 
                     width: 90%;
@@ -558,6 +575,7 @@ $el-darkgray: #737373;
               }
             }
             button {
+              display: inline-block;
               font-family: GT-Eesti-Display-Bold, sans-serif;
               font-size: 1.5rem;
               @include media-breakpoint-up(md) {
@@ -567,9 +585,16 @@ $el-darkgray: #737373;
               color: $el-red;
               padding-right: 34px;
               padding-left: 0;
-              &.expand-state-details,
               &.collapse-state-details {
+                margin-top: 1rem;
                 margin-bottom: 1.5rem;
+                &.bottom {
+                  margin-top: 2rem;
+                  margin-bottom: 2.5rem;
+                }
+              }
+              &.expand-state-details {
+                margin-bottom: 0;
               }
               &:focus,
               &:active {
@@ -603,18 +628,50 @@ $el-darkgray: #737373;
               }
             }
           }
+          // Styles for when only the prompt is shown.
+          &.prompt-only {
+            .state-details-list {
+              max-height: 0;
+              overflow-y: hidden;
+              transition: max-height 600ms linear;
+            }
+            button.expand-state-details {
+              max-height: 50px;
+              max-width: 200px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              transition: max-height 5ms linear 660ms, max-width 5ms linear 600ms, padding 5ms linear 600ms;
+            }
+            button.collapse-state-details {
+              max-height: 0;
+              margin: 0;
+              overflow-y: hidden;
+              &.bottom {
+                margin: 0;
+              }
+              transition: max-height 5ms linear 600ms, margin 5ms linear 600ms;
+            }
+          }
+          // Styles for when complete details for state are shown.
+          &.details-full {
+            .state-details-list {
+              max-height: 1500px;
+              overflow-y: hidden;
+              transition: max-height 200ms linear;
+            }
+            button.expand-state-details {
+              max-height: 0;
+              margin: 0;
+              max-width: 0;
+              padding: 0;
+              overflow-y: hidden;
+            }
+            button.collapse-state-details {
+              max-height: 50px;
+              overflow-y: hidden;
+            }
+          }
         }
-        // &.excerpt-only {
-        //   td {
-        //     .state-details-list,
-        //     .collapse-state-details {
-        //       max-height: 0;
-        //       overflow-y: hidden;
-        //       padding-top: 0;
-        //       padding-bottom: 0;
-        //     }
-        //   }
-        // }
       }
     }
   }

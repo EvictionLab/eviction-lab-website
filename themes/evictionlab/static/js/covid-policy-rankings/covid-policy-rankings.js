@@ -87,105 +87,35 @@ $(document).ready(function () {
       $('button.expand-state-details').on('click select', function(e) {
         // console.log('click open, ', e.currentTarget);
         var $target = $(e.currentTarget);
-        // Remove excerpt-only class.
-        // $target.parent().parent('tr').prev('.state-text').removeClass('excerpt-only');
-        $target
-          .parent()
-          .parent('tr')
-          .prev('.state-text')
-          // Hide excerpt.
-          .find('.state-excerpt')
-          .animate({
-            'max-height': 0
-          }, 1, 'linear', function() {
-            // Now open everything.
-            window.setTimeout(function() {
-              // Hide show button.
-              $target.hide();
-              $target
-                .parent()
-                .parent('tr')
-                .prev('.state-text')
-                .find('.state-full')
-                // Show fill state text.
-                .animate({
-                  'max-height': 500
-                }, 400, 'linear')
-                .next('.expires')
-                // Show expires text.
-                .animate({
-                  'max-height': 500
-                }, 400)
-                .parent()
-                .parent('tr')
-                .next('.state-details')
-                .find('.state-details-list')
-                .css({
-                  'padding-top': '2rem',
-                  'padding-bottom': '2rem'
-                })
-                // Show state details.
-                .animate({
-                  'max-height': 1200
-                }, 800, 'linear')
-                .next('.collapse-state-details')
-                // Show collapse button.
-                .show()
-                .on('click select', function(e) {
-                  // console.log('click collapse, ', e.currentTarget);
-                  var $ctarget = $(e.currentTarget);
-                  // Unbind click listener.
-                  $ctarget.hide().unbind('click select');
-                  // $ctarget.parent().parent('tr').prev('.state-text').addClass('excerpt-only');
-                  // $target.show();
-                  var state = $ctarget.data('state');
-                  var top = $('tr[data-state="' + state + '"]').offset().top;
-                  var fullHeight = window.innerHeight;
-                  // Scroll state back into view.
-                  $([document.documentElement, document.body]).animate({
-                    scrollTop: top - fullHeight*0.33
-                  }, 800, 'linear', function() {
-                    // Set focus on state title.
-                    $('tr[data-state="' + state + '"]').focus();
-                    // Hide what was shown.
-                    $ctarget
-                    .parent()
-                    .parent('tr')
-                    .prev('.state-text')
-                    .find('.state-full, .expires')
-                    .animate({
-                      'max-height': 0
-                    }, 400)
-                    // Hide state details.
-                    $ctarget
-                    .prev('.state-details-list')
-                    .animate({
-                      'max-height': 0,
-                      'padding-top': 0,
-                      'padding-bottom': 0
-                    }, 400, 'linear', function() {
-                      window.setTimeout(function() {
-                        // After short timer expiry, show excerpt.
-                        $ctarget
-                        .parent()
-                        .parent('tr')
-                        .prev('.state-text')
-                        .find('.state-excerpt')
-                        .animate({
-                          'max-height': 400
-                        }, 400)
-                      }, 200)
-                    })
-                    // Show the expand button.
-                    $ctarget
-                    .prev()
-                    .prev('.expand-state-details')
-                    .show()
-                  });
-                })
-              }, 200)
-            })
-          })
+        $target.attr('aria-hidden', true);
+        var $textRow = $target.parent().parent('tr').prev('.state-text');
+        var $detailsRow = $target.parent().parent('tr')
+        var $cTargets = $target.siblings('.collapse-state-details');
+
+        $textRow.removeClass('text-excerpt').addClass('text-full');
+        $detailsRow.removeClass('prompt-only').addClass('details-full');
+
+        $cTargets.attr('aria-hidden', false);
+        $cTargets.on('click select', function(e) {
+          // console.log(e);
+          var $el = $(e.currentTarget);
+          var state = $el.data('state');
+          var top = $('tr[data-state="' + state + '"]').offset().top;
+          // console.log('top, ', top);
+          var scrolledTo = $(window).scrollTop();
+          // console.log('scrolledTo, ', scrolledTo);
+          var fullHeight = window.innerHeight;
+          // Scroll state back into view, only if it's out of the view.
+          if (scrolledTo > top) {
+            $([document.documentElement, document.body]).animate({
+              scrollTop: top - fullHeight*0.33
+            }, 800, 'linear');
+          }
+          $textRow.removeClass('text-full').addClass('text-excerpt');
+          $detailsRow.removeClass('details-full').addClass('prompt-only');
+          $cTargets.unbind('click select');
+        });
+      });
     },
     handleStickyFilters: function() {
       // console.log('handleStickyFilters()');
