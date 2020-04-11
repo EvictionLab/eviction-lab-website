@@ -705,17 +705,17 @@ $el-darkgray: #737373;
         // padding: 1.65rem;
         display: flex;
         flex-wrap: wrap;
-        height: 280px;
+        height: 340px;
         flex-direction: column;
         justify-content: flex-start;
         @include media-breakpoint-up(sm) {
           // flex-direction: column;
-          height: 180px;
+          height: 340px;
           // justify-content: flex-start;
         }
         @include media-breakpoint-up(md) {
           // flex-direction: column;
-          height: 100px;
+          height: 120px;
           // justify-content: flex-start;
         }
         @include media-breakpoint-up(lg) {
@@ -748,14 +748,18 @@ $el-darkgray: #737373;
           font-size: 1.4rem;
           font-family: Akkurat-regular, sans-serif;
           margin-right: 2rem;
+          display: flex;
+          cursor: pointer;
           @include media-breakpoint-up(lg) {
             flex: 0 1 content;
           }
           @include media-breakpoint-up(lg) {
             width: 100%;
           }
+          label {
+            padding-left: 0.5rem;
+          }
         }
-        
       }
       button.clear-filters {
         clear: both;
@@ -808,7 +812,7 @@ $el-darkgray: #737373;
     &:active,
     &:focus {
       box-shadow: none;
-      border: none;
+      // border: none;
     }
   }
 }

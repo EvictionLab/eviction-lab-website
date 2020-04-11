@@ -8,6 +8,57 @@ $(document).ready(function () {
     statesArrFiltered: [],
     sortConfig: ['stars', 'desc'], // [sort by id of col head (string), sort order (asc, desc, or false)]
     filterConfig: [],
+    allFilters: [
+      {
+        id: 'plcnonpbool',
+        label: 'No nonpayment'
+      },
+      {
+        id: 'plcnofilbool',
+        label: 'No new filings'
+      },
+      {
+        id: 'plcnonewbool',
+        label: 'No new evictions'
+      },
+      {
+        id: 'plcnoenfbool',
+        label: 'No enforcement'
+      },
+      {
+        id: 'plcnohearbool',
+        label: 'No hearings'
+      },
+      {
+        id: 'plctldbool',
+        label: 'Court deadlines extended'
+      },
+      {
+        id: 'plclatfbool',
+        label: 'No late fees'
+      },
+      {
+        id: 'plcarsbool',
+        label: 'Time to repay arrears'
+      },
+      {
+        id: 'plcnoshbool',
+        label: 'No shutoffs'
+      },
+      {
+        id: 'plcfrrcbool',
+        label: 'Free reconnections'
+      },
+      {
+        id: 'plcnofcbool',
+        label: 'No foreclosures'
+      },
+      {
+        id: 'id_string',
+        label: 'label_string'
+      }
+    ],
+    filtersMobileShown: false,
     sortStateData: function(callback) {
       // console.log('sortStateData()');
       // console.log('sortConfig, ', this.sortConfig);
@@ -117,6 +168,26 @@ $(document).ready(function () {
         });
       });
     },
+    toggleMobileFilters: function($target, action) {
+      console.log('toggleMobileFilters()');
+      // var $target = $('#mobile_filter');
+      if (action==='show') {
+         // if show
+         // show the filters
+         $('#filters_panel .filters').animate({'max-height': 600}, 400);
+         // change button text
+         $target.text('Hide filters');
+         // change button class
+         $target.removeClass('show-filters').addClass('hide-filters');
+      } else {
+        // hide the filters
+        $('#filters_panel .filters').animate({'max-height': 0}, 400);
+        // change button text
+        $target.text('Show filters');
+        // change button class
+        $target.removeClass('hide-filters').addClass('show-filters');
+      }
+    },
     handleStickyFilters: function() {
       // console.log('handleStickyFilters()');
       var doSticky = false;
@@ -137,14 +208,33 @@ $(document).ready(function () {
         }
       })
       $(window).on('resize', function() {
-        // console.log('resized');
+        console.log('resized');
         if ($('div.mobile-filters').css('display') !== 'block') {
           // console.log('mobile filters is not shown.')
           doSticky = true;
           filterOffset = $filters.offset();
           tableOffset = $table.offset();
+          // Reset the filters display if we have no checked inputs.
+          if ($('#filters_panel .filters .filters-list input:checked').length < 1) {
+            console.log('Some filter input is in use. show the inputs.');
+            // rankings.filtersMobileShown = true;
+            rankings.toggleMobileFilters($('#mobile_filter'), 'hide');
+            // $target.click();
+          } else {
+            rankings.toggleMobileFilters($('#mobile_filter'), 'show');
+          }
         } else {
           doSticky = false;
+          // If filters are in use, show them.
+          console.log($('#filters_panel .filters .filters-list input'));
+          if ($('#filters_panel .filters .filters-list input:checked').length >= 1) {
+            console.log('Some filter input is in use. show the inputs.');
+            // rankings.filtersMobileShown = true;
+            rankings.toggleMobileFilters($('#mobile_filter'), 'show');
+            // $target.click();
+          } else {
+            rankings.toggleMobileFilters($('#mobile_filter'), 'hide');
+          }
         }
       })
       $(window).on('scroll', function() {
@@ -182,19 +272,9 @@ $(document).ready(function () {
       $('#mobile_filter').on('click select', function(e) {
         var $target = $(e.currentTarget);
         if ($target.hasClass('show-filters')) {
-          // show the filters
-          $('#filters_panel .filters').animate({'max-height': 400}, 400);
-          // change button text
-          $target.text('Hide filters');
-          // change button class
-          $target.removeClass('show-filters').addClass('hide-filters');
+          rankings.toggleMobileFilters($target, 'show');
         } else {
-          // show the filters
-          $('#filters_panel .filters').animate({'max-height': 0}, 400);
-          // change button text
-          $target.text('Show filters');
-          // change button class
-          $target.removeClass('hide-filters').addClass('show-filters');
+          rankings.toggleMobileFilters($target, 'hide');
         }
       })
       // Table sort headings
@@ -247,7 +327,7 @@ $(document).ready(function () {
       })
       var $clearfilters = $('button#clear_filters');
       $clearfilters.on('click select', function() {
-        console.log('clear filters');
+        // console.log('clear filters');
         $filters.prop('checked',false);
         rankings.filterConfig = [];
         rankings.sortAndFilter();
@@ -274,7 +354,7 @@ $(document).ready(function () {
       callback();
     },
     populateStates: function() {
-      // console.log('populateStates(), ', rankings.statesArrFiltered)
+      // console.log('populateStates(), ');
       // Fetch and render handlebars template.
       // Always draws from filtered array.
       var context = { states: rankings.statesArrFiltered };
@@ -284,10 +364,16 @@ $(document).ready(function () {
           var timer = window.setTimeout(function() { rankings.setStateListeners() }, 500);
       });
     },
-    // sortPolicies: function(row) {
-    //   // Sorts policies into positive and negative.
-    //
-    // },
+    populateFilters: function() {
+      // console.log('populateFilters()')
+      // Fetch and render handlebars template.
+      // Always draws from filtered array.
+      var context = { filters: rankings.allFilters };
+      var url = '/js/covid-policy-rankings/filters-template.html';
+      rankings.loadHandlebarsTemplate(url, function(template) {
+          $('#filters_panel .filters .filters-list').html(template(context))
+      });
+    },
     processData: function() {
       // console.log('processData()');
       // Build states array
@@ -299,40 +385,40 @@ $(document).ready(function () {
         var row = {};
         statesProperties.forEach(function (p) {
           // console.log('in props loop, ', p);
-            row[p.replace('.', '')] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
-            if (String(p).indexOf('bool') >= 0) {
-              if (row[p] === '1') {
-              // console.log('it should be a bool: ', p)
-                row[p] = true;
-              } else {
-                row[p] = false;
-              }
+          row[p.replace('.', '')] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
+          if (String(p).indexOf('bool') >= 0) {
+            if (row[p] === '1') {
+              row[p] = true;
+            } else {
+              row[p] = false;
             }
-            if (p === 'stars') {
-              // Round to nearest 0.5
-              var rounded = Math.round(Number(row[p])*2)/2;
-              // For a11y
-              row['stars'] = rounded; // Number(row[p]);
-              // For classnames
-              row['stars_hb'] = String(rounded).replace('.', '-'); // String(row[p]).replace('.', '-');
+          }
+          if (p === 'stars') {
+            // Round to nearest 0.5
+            var rounded = Math.round(Number(row[p])*2)/2;
+            // For a11y
+            row['stars'] = rounded; // Number(row[p]);
+            // For classnames
+            row['stars_hb'] = String(rounded).replace('.', '-'); // String(row[p]).replace('.', '-');
+          }
+          if (p === 'sttext') {
+            // Truncate text to create excerpt.
+            var words = 18;
+            if (row[p] !== null) {
+              var string = String(row[p]).split(" ").splice(0, words).join(" ") + ' ...';
+              row['stexcerpt'] = string;
             }
-            if (p === 'sttext') {
-              // Truncate text to create excerpt.
-              var words = 18;
-              if (row[p] !== null) {
-                var string = String(row[p]).split(" ").splice(0, words).join(" ") + ' ...';
-                row['stexcerpt'] = string;
-              }
-            }
-            if (p === 'intlstupdt') {
-              // Create date string for last updated for each state.
-              // console.log('intlstupdt, ', row[p])
-              var date = new Date(row[p]);
-              row.updated = date.toLocaleDateString();
-            }
-            if (row[p] === null) {
-                row[p] = '';
-            }
+          }
+          if (p === 'intlstupdt') {
+            // Create date string for last updated for each state.
+            // console.log('intlstupdt, ', row[p])
+            var date = new Date(row[p]);
+            row.updated = date.toLocaleDateString();
+          }
+          // Handle null values.
+          if (row[p] === null) {
+              row[p] = '';
+          }
         });
         return row;
       });
@@ -371,9 +457,10 @@ $(document).ready(function () {
           return options.fn(this);
         }
       });
+      this.populateFilters();
       this.loadStateData();
-      this.setUIListeners();
       this.handleStickyFilters();
+      window.setTimeout(function() {rankings.setUIListeners();}, 1000);
     }
   }
   rankings.init();

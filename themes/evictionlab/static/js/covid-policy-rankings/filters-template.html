@@ -1,0 +1,7 @@
+<!-- Handlebars template for filters list pane -->
+{{#each filters}}
+  <label class="filter-label" data-filter="{{id}}">
+    <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}">
+    <span id="labels_{{id}}">{{label}}</span>
+  </label>
+{{/each}}
