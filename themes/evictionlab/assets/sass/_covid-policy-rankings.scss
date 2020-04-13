@@ -71,7 +71,8 @@ $el-darkgray: #737373;
           text-transform: uppercase;
           color: $el-darkgray;
           font-family: GT-Eesti-Display-Bold, sans-serif;
-          font-size: 0.8rem;
+          // font-size: 0.8rem;
+          font-size: 1rem;
           @include media-breakpoint-up(md) {
             font-size: 1.5rem;
           }
@@ -525,13 +526,27 @@ $el-darkgray: #737373;
               padding: 1rem 1rem 0 2rem;
             }
             .state-details-list {
+              display: flex;
+              flex-wrap: wrap;
               .last-updated {
+                flex: 1 0 100%;
                 font-family: GT-Eesti-Display-Bold, sans-serif;
                 font-size: 1.5rem;
                 text-transform: uppercase;
                 color: #949494;
                 margin-top: 2.4rem;
                 margin-bottom: 0rem;
+              }
+              .col-left,
+              .col-right {
+                flex: 1 0 50%;
+                h3 {
+                  margin-top: 1.4rem;
+                  margin-bottom: 1.1rem;
+                  &:first-of-type {
+                    margin-top: 0;
+                  }
+                }
               }
               .state-policy {
                 label {
@@ -563,7 +578,7 @@ $el-darkgray: #737373;
                   font-size: 1.4rem; // 1.1rem;
                   font-family: Akkurat-regular, sans-serif;
                   width: 100%;
-                  max-width: 75%;
+                  max-width: 80%;
                   margin-bottom: 1.6rem;
                   color: #8a8a8a;
                   @include media-breakpoint-up(md) {
@@ -680,6 +695,7 @@ $el-darkgray: #737373;
     .filters {
       // margin-left: 3rem;
       margin-bottom: 3rem;
+      overflow-x: hidden;
       @include media-breakpoint-up(lg) {
         margin-left: 0;
       }
@@ -705,17 +721,28 @@ $el-darkgray: #737373;
         // padding: 1.65rem;
         display: flex;
         flex-wrap: wrap;
-        height: 340px;
+        height: 400px; // 340px;
+        .filter-label {
+          width: 100%;
+        }
         flex-direction: column;
         justify-content: flex-start;
         @include media-breakpoint-up(sm) {
           // flex-direction: column;
-          height: 340px;
+          height: 230px; // 400px; // 340px;
           // justify-content: flex-start;
+          .filter-label {
+            // flex: 0 0 30%;
+            width: 47%;
+          }
         }
         @include media-breakpoint-up(md) {
           // flex-direction: column;
-          height: 120px;
+          height: 170px;
+          .filter-label {
+            // flex: 0 0 30%;
+            width: 30%;
+          }
           // justify-content: flex-start;
         }
         @include media-breakpoint-up(lg) {
@@ -737,6 +764,7 @@ $el-darkgray: #737373;
           margin-right: 0.35rem;
           vertical-align: text-top;
           margin-bottom: 0.5rem;
+          flex-shrink: 0;
           &:checked {
             background-color: $el-purple; // #2C897F;
             &:after {

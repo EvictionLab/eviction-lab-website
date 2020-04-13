@@ -11,51 +11,59 @@ $(document).ready(function () {
     allFilters: [
       {
         id: 'plcnonpbool',
-        label: 'No nonpayment'
+        label: 'No nonpayment filings'
       },
       {
         id: 'plcnofilbool',
-        label: 'No new filings'
+        label: 'No non-urgent filings'
       },
       {
-        id: 'plcnonewbool',
-        label: 'No new evictions'
-      },
-      {
-        id: 'plcnoenfbool',
-        label: 'No enforcement'
+        id: 'plcnoticebool',
+        label: 'No notices'
       },
       {
         id: 'plcnohearbool',
         label: 'No hearings'
       },
       {
+        id: 'plcnonewbool',
+        label: 'No eviction judgements'
+      },
+      {
         id: 'plctldbool',
-        label: 'Court deadlines extended'
+        label: 'Court deadlines tolled'
+      },
+      {
+        id: 'plcnonewenfbool',
+        label: 'No enforcement of new orders'
+      },
+      {
+        id: 'plcnoenfbool',
+        label: 'No enforcement of any orders'
       },
       {
         id: 'plclatfbool',
-        label: 'No late fees'
+        label: 'Late fees waived'
       },
       {
         id: 'plcarsbool',
-        label: 'Time to repay arrears'
+        label: 'Action on arrears'
       },
       {
-        id: 'plcnoshbool',
-        label: 'No shutoffs'
-      },
-      {
-        id: 'plcfrrcbool',
-        label: 'Free reconnections'
+        id: 'plcextmorbool',
+        label: 'Extends past state of emergency'
       },
       {
         id: 'plcnofcbool',
-        label: 'No foreclosures'
+        label: 'Foreclosures halted'
       },
       {
-        id: 'id_string',
-        label: 'label_string'
+        id: 'plcnoshbool',
+        label: 'Utility shutoffs halted'
+      },
+      {
+        id: 'plcfrrcbool',
+        label: 'Utility reconnections required'
       }
     ],
     filtersMobileShown: false,
