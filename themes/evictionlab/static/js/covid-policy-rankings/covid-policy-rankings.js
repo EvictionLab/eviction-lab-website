@@ -177,7 +177,7 @@ $(document).ready(function () {
       });
     },
     toggleMobileFilters: function($target, action) {
-      console.log('toggleMobileFilters()');
+      // console.log('toggleMobileFilters()');
       // var $target = $('#mobile_filter');
       if (action==='show') {
          // if show
@@ -216,7 +216,7 @@ $(document).ready(function () {
         }
       })
       $(window).on('resize', function() {
-        console.log('resized');
+        // console.log('resized');
         if ($('div.mobile-filters').css('display') !== 'block') {
           // console.log('mobile filters is not shown.')
           doSticky = true;
@@ -224,7 +224,7 @@ $(document).ready(function () {
           tableOffset = $table.offset();
           // Reset the filters display if we have no checked inputs.
           if ($('#filters_panel .filters .filters-list input:checked').length < 1) {
-            console.log('Some filter input is in use. show the inputs.');
+            // console.log('Some filter input is in use. show the inputs.');
             // rankings.filtersMobileShown = true;
             rankings.toggleMobileFilters($('#mobile_filter'), 'hide');
             // $target.click();
@@ -234,9 +234,9 @@ $(document).ready(function () {
         } else {
           doSticky = false;
           // If filters are in use, show them.
-          console.log($('#filters_panel .filters .filters-list input'));
+          // console.log($('#filters_panel .filters .filters-list input'));
           if ($('#filters_panel .filters .filters-list input:checked').length >= 1) {
-            console.log('Some filter input is in use. show the inputs.');
+            // console.log('Some filter input is in use. show the inputs.');
             // rankings.filtersMobileShown = true;
             rankings.toggleMobileFilters($('#mobile_filter'), 'show');
             // $target.click();
