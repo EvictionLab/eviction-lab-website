@@ -729,11 +729,11 @@ $el-darkgray: #737373;
         justify-content: flex-start;
         @include media-breakpoint-up(sm) {
           // flex-direction: column;
-          height: 230px; // 400px; // 340px;
+          height: 400px; // 340px;
           // justify-content: flex-start;
           .filter-label {
             // flex: 0 0 30%;
-            width: 47%;
+            width: 100%;
           }
         }
         @include media-breakpoint-up(md) {

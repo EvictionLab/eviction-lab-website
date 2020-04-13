@@ -28460,7 +28460,7 @@ ol.list-initial, .text-li ol.list-initial li {
   text-transform: uppercase;
   color: #737373;
   font-family: GT-Eesti-Display-Bold, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.5rem 0.5rem 0 0.5rem;
   height: 4rem;
   text-align: left;
@@ -29034,13 +29034,35 @@ ol.list-initial, .text-li ol.list-initial li {
   }
 }
 
+.inline-panel .states-table tbody tr.state-details td .state-details-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .inline-panel .states-table tbody tr.state-details td .state-details-list .last-updated {
+  flex: 1 0 100%;
   font-family: GT-Eesti-Display-Bold, sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #949494;
   margin-top: 2.4rem;
   margin-bottom: 0rem;
+}
+
+.inline-panel .states-table tbody tr.state-details td .state-details-list .col-left,
+.inline-panel .states-table tbody tr.state-details td .state-details-list .col-right {
+  flex: 1 0 50%;
+}
+
+.inline-panel .states-table tbody tr.state-details td .state-details-list .col-left h3,
+.inline-panel .states-table tbody tr.state-details td .state-details-list .col-right h3 {
+  margin-top: 1.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.inline-panel .states-table tbody tr.state-details td .state-details-list .col-left h3:first-of-type,
+.inline-panel .states-table tbody tr.state-details td .state-details-list .col-right h3:first-of-type {
+  margin-top: 0;
 }
 
 .inline-panel .states-table tbody tr.state-details td .state-details-list .state-policy label {
@@ -29076,7 +29098,7 @@ ol.list-initial, .text-li ol.list-initial li {
   font-size: 1.4rem;
   font-family: Akkurat-regular, sans-serif;
   width: 100%;
-  max-width: 75%;
+  max-width: 80%;
   margin-bottom: 1.6rem;
   color: #8a8a8a;
 }
@@ -29197,6 +29219,7 @@ ol.list-initial, .text-li ol.list-initial li {
 
 .inline-panel.filters-panel .filters {
   margin-bottom: 3rem;
+  overflow-x: hidden;
   max-height: 0;
   overflow-y: hidden;
 }
@@ -29225,20 +29248,30 @@ ol.list-initial, .text-li ol.list-initial li {
 .inline-panel.filters-panel .filters .filters-list {
   display: flex;
   flex-wrap: wrap;
-  height: 280px;
+  height: 400px;
   flex-direction: column;
   justify-content: flex-start;
 }
 
+.inline-panel.filters-panel .filters .filters-list .filter-label {
+  width: 100%;
+}
+
 @media (min-width: 320px) {
   .inline-panel.filters-panel .filters .filters-list {
-    height: 180px;
+    height: 400px;
+  }
+  .inline-panel.filters-panel .filters .filters-list .filter-label {
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) {
   .inline-panel.filters-panel .filters .filters-list {
-    height: 100px;
+    height: 170px;
+  }
+  .inline-panel.filters-panel .filters .filters-list .filter-label {
+    width: 30%;
   }
 }
 
@@ -29264,6 +29297,7 @@ ol.list-initial, .text-li ol.list-initial li {
   margin-right: 0.35rem;
   vertical-align: text-top;
   margin-bottom: 0.5rem;
+  flex-shrink: 0;
 }
 
 .inline-panel.filters-panel .filters .filters-list input[type=checkbox]:checked {
@@ -29278,6 +29312,8 @@ ol.list-initial, .text-li ol.list-initial li {
   font-size: 1.4rem;
   font-family: Akkurat-regular, sans-serif;
   margin-right: 2rem;
+  display: flex;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -29290,6 +29326,10 @@ ol.list-initial, .text-li ol.list-initial li {
   .inline-panel.filters-panel .filters .filters-list .filter-label {
     width: 100%;
   }
+}
+
+.inline-panel.filters-panel .filters .filters-list .filter-label label {
+  padding-left: 0.5rem;
 }
 
 .inline-panel.filters-panel .filters button.clear-filters {
@@ -29342,7 +29382,6 @@ ol.list-initial, .text-li ol.list-initial li {
 
 .mobile-filters button.mobile-filter:hover, .mobile-filters button.mobile-filter:active, .mobile-filters button.mobile-filter:focus {
   box-shadow: none;
-  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
