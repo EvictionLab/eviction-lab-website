@@ -10,60 +10,90 @@ $(document).ready(function () {
     filterConfig: [],
     allFilters: [
       {
-        id: 'plcnonpbool',
-        label: 'No nonpayment filings'
+        stage: 1,
+        title: 'Stage 1: Initiation',
+        filters: [
+          {
+            id: 'plcnonpbool',
+            label: 'No nonpayment filings'
+          },
+          {
+            id: 'plcnofilbool',
+            label: 'No non-urgent filings'
+          },
+          {
+            id: 'plcnoticebool',
+            label: 'No notices to tenants'
+          }
+        ]
       },
       {
-        id: 'plcnofilbool',
-        label: 'No non-urgent filings'
+        stage: 2,
+        title: 'Stage 2: Court Actions',
+        filters: [
+          {
+            id: 'plctldbool',
+            label: 'Court deadlines tolled'
+          },
+          {
+            id: 'plcnohearbool',
+            label: 'No hearings'
+          },
+          {
+            id: 'plcnonewbool',
+            label: 'No eviction judgements'
+          }
+        ]
       },
       {
-        id: 'plcnoticebool',
-        label: 'No notices'
+        stage: 3,
+        title: 'Stage 3: Enforcement',
+        filters: [
+          {
+            id: 'plcnonewenfbool',
+            label: 'No enforcement of new orders'
+          },
+          {
+            id: 'plcnoenfbool',
+            label: 'No enforcement of nonpayment evictions'
+          },
+        ]
       },
       {
-        id: 'plcnohearbool',
-        label: 'No hearings'
+        stage: 4,
+        title: 'Supportive Measures',
+        filters: [
+          {
+            id: 'plcnofcbool',
+            label: 'Foreclosures halted'
+          },
+          {
+            id: 'plcnoshbool',
+            label: 'Utility shutoffs halted'
+          },
+          {
+            id: 'plcfrrcbool',
+            label: 'Utility reconnections required'
+          }
+        ]
       },
       {
-        id: 'plcnonewbool',
-        label: 'No eviction judgements'
-      },
-      {
-        id: 'plctldbool',
-        label: 'Court deadlines tolled'
-      },
-      {
-        id: 'plcnonewenfbool',
-        label: 'No enforcement of new orders'
-      },
-      {
-        id: 'plcnoenfbool',
-        label: 'No enforcement of any orders'
-      },
-      {
-        id: 'plclatfbool',
-        label: 'Late fees waived'
-      },
-      {
-        id: 'plcarsbool',
-        label: 'Action on arrears'
-      },
-      {
-        id: 'plcextmorbool',
-        label: 'Extends past state of emergency'
-      },
-      {
-        id: 'plcnofcbool',
-        label: 'Foreclosures halted'
-      },
-      {
-        id: 'plcnoshbool',
-        label: 'Utility shutoffs halted'
-      },
-      {
-        id: 'plcfrrcbool',
-        label: 'Utility reconnections required'
+        stage: 5,
+        title: 'Planning for Post-Pandemic',
+        filters: [
+          {
+            id: 'plclatfbool',
+            label: 'Late fees waived'
+          },
+          {
+            id: 'plcarsbool',
+            label: 'Action on pandemic arrears'
+          },
+          {
+            id: 'plcextmorbool',
+            label: 'Protection past state of emergency'
+          }
+        ]
       }
     ],
     filtersMobileShown: false,
@@ -177,16 +207,18 @@ $(document).ready(function () {
       });
     },
     toggleMobileFilters: function($target, action) {
-      // console.log('toggleMobileFilters()');
+      console.log('toggleMobileFilters(), action = ', action);
       // var $target = $('#mobile_filter');
-      if (action==='show') {
-         // if show
-         // show the filters
-         $('#filters_panel .filters').animate({'max-height': 600}, 400);
-         // change button text
-         $target.text('Hide filters');
-         // change button class
-         $target.removeClass('show-filters').addClass('hide-filters');
+      var $row = $('#filters_panel');
+      if (action === 'show') {
+        // if show
+        // show the filters
+        $('#filters_panel .filters').animate({'max-height': 600}, 400);
+        // change button text
+        $target.text('Hide filters');
+        // change button class
+        $target.removeClass('show-filters').addClass('hide-filters');
+        $row.removeClass('show-filters').addClass('hide-filters');
       } else {
         // hide the filters
         $('#filters_panel .filters').animate({'max-height': 0}, 400);
@@ -194,82 +226,41 @@ $(document).ready(function () {
         $target.text('Show filters');
         // change button class
         $target.removeClass('hide-filters').addClass('show-filters');
+        $row.removeClass('hide-filters').addClass('show-filters');
       }
     },
     handleStickyFilters: function() {
       // console.log('handleStickyFilters()');
-      var doSticky = false;
+      // var doSticky = true;
       var filterOffset = null;
-      var tableOffset = null;
-      var $filters = $('#filters_panel .filters');
-      var $table = $('#states_panel table');
+      var $filtersPanel = $('#filters_panel');
+      var filtersPanelOffset = $filtersPanel.offset();
+      // var $table = $('#states_panel table');
       // var $theads = $('#states_panel thead th');
       $(window).on('load', function() {
         // console.log('loaded');
-        if ($('div.mobile-filters').css('display') !== 'block') {
-          // console.log('mobile filters is not shown.')
-          doSticky = true;
-          filterOffset = $filters.offset();
-          tableOffset = $table.offset();
-        } else {
-          doSticky = false;
-        }
+        // filterOffset = $filters.offset();
+        filtersPanelOffset = $filtersPanel.offset();
       })
       $(window).on('resize', function() {
-        // console.log('resized');
-        if ($('div.mobile-filters').css('display') !== 'block') {
-          // console.log('mobile filters is not shown.')
-          doSticky = true;
-          filterOffset = $filters.offset();
-          tableOffset = $table.offset();
-          // Reset the filters display if we have no checked inputs.
-          if ($('#filters_panel .filters .filters-list input:checked').length < 1) {
-            // console.log('Some filter input is in use. show the inputs.');
-            // rankings.filtersMobileShown = true;
-            rankings.toggleMobileFilters($('#mobile_filter'), 'hide');
-            // $target.click();
-          } else {
-            rankings.toggleMobileFilters($('#mobile_filter'), 'show');
-          }
-        } else {
-          doSticky = false;
-          // If filters are in use, show them.
-          // console.log($('#filters_panel .filters .filters-list input'));
-          if ($('#filters_panel .filters .filters-list input:checked').length >= 1) {
-            // console.log('Some filter input is in use. show the inputs.');
-            // rankings.filtersMobileShown = true;
-            rankings.toggleMobileFilters($('#mobile_filter'), 'show');
-            // $target.click();
-          } else {
-            rankings.toggleMobileFilters($('#mobile_filter'), 'hide');
-          }
-        }
+        // console.log('loaded');
+        // filterOffset = $filters.offset();
+        filtersPanelOffset = $filtersPanel.offset();
       })
       $(window).on('scroll', function() {
         // console.log('scrolled');
-        // console.log('tableOffset, ', tableOffset);
-        if (!!doSticky) {
-          // console.log('doSticky === true, proceeding. filterOffset = ', filterOffset);
-          var wScrollTop = $(window).scrollTop();
-          // console.log('wScrollTop, ', wScrollTop);
-          var headerHeight = $('header .header-wrapper').height();
-          // console.log('headerHeight, ', headerHeight);
-          if (wScrollTop + headerHeight + 50 >= filterOffset.top) {
-            // console.log('make the filter sticky');
-            $filters.css({
-              position: 'sticky',
-              top: headerHeight + 50,
-              left: filterOffset.left
-            })
-          }
-          // if (wScrollTop + headerHeight + 50 >= tableOffset.top) {
-          //   console.log('make the table sticky');
-          //   $table.css({
-          //     position: 'sticky',
-          //     top: headerHeight + 50,
-          //     left: tableOffset.left
-          //   })
-          // }
+        var wScrollTop = $(window).scrollTop();
+        // console.log('wScrollTop, ', wScrollTop);
+        var headerHeight = $('header .header-wrapper').height();
+        if (wScrollTop + headerHeight >= filtersPanelOffset.top) {
+          // console.log('make the filter sticky');
+          $filtersPanel.css({
+            position: 'sticky',
+            top: headerHeight,
+            left: filtersPanelOffset.left
+          }).addClass('filter-sticky');
+        } else {
+          $filtersPanel.removeClass('filter-sticky');
         }
       })
     },
@@ -376,7 +367,7 @@ $(document).ready(function () {
       // console.log('populateFilters()')
       // Fetch and render handlebars template.
       // Always draws from filtered array.
-      var context = { filters: rankings.allFilters };
+      var context = { categories: rankings.allFilters };
       var url = '/js/covid-policy-rankings/filters-template.html';
       rankings.loadHandlebarsTemplate(url, function(template) {
           $('#filters_panel .filters .filters-list').html(template(context))
