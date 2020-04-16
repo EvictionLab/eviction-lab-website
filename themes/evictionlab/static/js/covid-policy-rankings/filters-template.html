@@ -10,7 +10,7 @@
     <h4>{{title}}</h4>
     {{#each filters}}
       <label class="filter-label" data-filter="{{id}}">
-        <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}">
+        <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" tabindex="-1">
         <span id="labels_{{id}}">{{label}}</span>
       </label>
     {{/each}}

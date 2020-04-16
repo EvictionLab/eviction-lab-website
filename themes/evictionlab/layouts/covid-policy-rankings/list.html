@@ -9,11 +9,11 @@
 
 <div id="filters_panel" class="row ml-0 mr-0 filters-panel">
   <div  class="filters-panel col-12 offset-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-3 pb-3">
-    <button id="mobile_filter" class="btn mobile-filter show-filters">Show Filters</button>
+    <button id="mobile_filter" class="btn mobile-filter show-filters" tabindex="0">Show Filters</button>
     <div class="filters" style="max-height:0;">
       <!-- <h4 id="filters_heading">Filter:</h4> -->
       <div class="filters-list hide"></div>
-      <button id="clear_filters" class="btn clear-filters">Clear filters</button>
+      <button id="clear_filters" class="btn clear-filters" tabindex="-1">Clear filters</button>
     </div>
   </div>
 </div>
@@ -38,11 +38,6 @@
           <th id="evstat1" class="stat-one" data-filter="false">
             <div class="col-title">
                 Renting population
-            </div>
-          </th>
-          <th id="evstat2" class="stat-two" data-filter="false">
-            <div class="col-title">
-              Pre-COVID-19 filings/day
             </div>
           </th>
           <th id="stars" class="stars" data-filter="desc">

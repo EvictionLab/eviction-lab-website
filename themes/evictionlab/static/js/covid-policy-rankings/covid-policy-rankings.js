@@ -219,6 +219,7 @@ $(document).ready(function () {
         // change button class
         $target.removeClass('show-filters').addClass('hide-filters');
         $row.removeClass('show-filters').addClass('hide-filters');
+        $row.find('#clear_filters, input').attr('tabindex', '0');
       } else {
         // hide the filters
         $('#filters_panel .filters').animate({'max-height': 0}, 400);
@@ -227,6 +228,7 @@ $(document).ready(function () {
         // change button class
         $target.removeClass('hide-filters').addClass('show-filters');
         $row.removeClass('hide-filters').addClass('show-filters');
+        $row.find('#clear_filters, input').attr('tabindex', '-1');
       }
     },
     handleStickyFilters: function() {
@@ -396,7 +398,8 @@ $(document).ready(function () {
             // Round to nearest 0.5
             var rounded = Math.round(Number(row[p])*2)/2;
             // For a11y
-            row['stars'] = rounded; // Number(row[p]);
+            row['stars_rounded'] = rounded;
+            // row['stars'] = rounded; // Number(row[p]);
             // For classnames
             row['stars_hb'] = String(rounded).replace('.', '-'); // String(row[p]).replace('.', '-');
           }
