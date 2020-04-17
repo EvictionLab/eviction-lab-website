@@ -21,17 +21,17 @@
   </tr>
   <tr class="state-text text-excerpt" data-state="{{stabbrev}}">
     <td colspan="2">
-      {{#if stars}}
-        <p class="score">
-           State score: {{stars}}
-        </p>
-      {{/if}}
       {{#if until}}
         <p class="expires">
-            Protections start to expire on {{until}}
+            Protections start to expire on <strong>{{until}}</strong>.
         </p>
       {{/if}}
-      {{#if stexcerpt}}
+      {{#if stars}}
+        <p class="score">
+           State score: <strong>{{stars}}/5.0</strong>
+        </p>
+      {{/if}}
+      <!-- {{#if stexcerpt}}
         <p class="state-excerpt">
           {{stexcerpt}}
         </p>
@@ -40,17 +40,17 @@
         <p class="state-full">
           {{sttext}}
         </p>
-      {{/if}}
+      {{/if}} -->
     </td>
     <td></td>
   </tr>
   <tr class="state-details prompt-only" data-state="{{stabbrev}}">
     <td colspan="3">
+      <a class="view-full-report btn top" data-state="{{stabbrev}}" aria-hidden="false" href="/covid-policy-rankings/{{#tolowercase stabbrev}}{{/tolowercase}}/">VIEW FULL REPORT <span class="sr-only">{{stname}}</span></a>
       <button class="expand-state-details btn" data-state="{{stabbrev}}">
-        SEE OUTLINE<span class="sr-only">{{stname}}</span>
+        VIEW OUTLINE<span class="sr-only">{{stname}}</span>
       </button>
       <button class="collapse-state-details btn top" data-state="{{stabbrev}}" aria-hidden="true">COLLAPSE OUTLINE <span class="sr-only">{{stname}}</span></button>
-      <a class="view-full-report btn top" data-state="{{stabbrev}}" aria-hidden="false" href="/covid-policy-rankings/{{#tolowercase stabbrev}}{{/tolowercase}}/">VIEW FULL REPORT <span class="sr-only">{{stname}}</span></a>
       <div class="state-details-list">
         <div class="col-left">
           <h3>Filings-Related Measures</h3>

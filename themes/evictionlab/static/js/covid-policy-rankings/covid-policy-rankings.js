@@ -13,19 +13,24 @@ $(document).ready(function () {
     allFilters: [
       {
         stage: 1,
-        title: 'Stage 1: Initiation',
+        title: 'Stage 1: Initiation of Eviction',
         filters: [
           {
+            id: 'plcnoticebool',
+            label: 'No notice of eviction to tenant',
+            tooltip: 'In most states, landlords must post a "notice to quit" before filing for eviction.'
+          },
+          {
+            id: 'plccofilbool',
+            label: 'No eviction filing for COVID-19 hardship only'
+          },
+          {
             id: 'plcnonpbool',
-            label: 'No nonpayment filings'
+            label: 'No eviction filings for nonpayment of rent'
           },
           {
             id: 'plcnofilbool',
-            label: 'No non-urgent filings'
-          },
-          {
-            id: 'plcnoticebool',
-            label: 'No notices to tenants'
+            label: 'No eviction filings for non-emergency reasons'
           }
         ]
       },
@@ -34,66 +39,95 @@ $(document).ready(function () {
         title: 'Stage 2: Court Actions',
         filters: [
           {
-            id: 'plctldbool',
-            label: 'Court deadlines tolled'
-          },
-          {
             id: 'plcnohearbool',
-            label: 'No hearings'
+            label: 'Civil/eviction hearings suspended'
           },
           {
             id: 'plcnonewbool',
-            label: 'No eviction judgements'
+            label: 'Judgements stayed',
+            tooltip: '"Staying" eviction judgements or writs of possession means that the court will not give eviction orders to law enforcement, for the duration of the "stay."'
+          },
+          {
+            id: 'plctldbool',
+            label: 'Extends or tolls court deadlines',
+            tooltip: '"Tolling" or "extending" deadlines means extending the amount of time a landlord or tenant has to respond to a court notice.'
+          },
+          {
+            id: 'plcsealbool',
+            label: 'Eviction records sealed'
           }
         ]
       },
       {
         stage: 3,
-        title: 'Stage 3: Enforcement',
+        title: 'Stage 3: Enforcement of Eviction Order',
         filters: [
           {
-            id: 'plcnonewenfbool',
-            label: 'No enforcement of new orders'
+            id: 'plccovenfbool',
+            label: 'No removal of tenant with COVID-19 hardship'
+          },
+          {
+            id: 'plcpayenfbool',
+            label: 'No removal of tenant for nonpayment'
           },
           {
             id: 'plcnoenfbool',
-            label: 'No enforcement of nonpayment evictions'
+            label: 'No removal of tenant, except emergencies'
           },
         ]
       },
       {
         stage: 4,
-        title: 'Supportive Measures',
+        title: 'Short-Term Supports',
         filters: [
           {
-            id: 'plcnofcbool',
-            label: 'Foreclosures halted'
+            id: 'plcextmorbool',
+            label: 'Moratorium extends past state of emergency'
           },
           {
             id: 'plcnoshbool',
-            label: 'Utility shutoffs halted'
+            label: 'No utility disconnection',
+            tooltip: 'This measure isn\'t scored, because orders may not protect all tenants in the state due to differences in state laws. See Methodology Report for more info.'
           },
           {
             id: 'plcfrrcbool',
-            label: 'Utility reconnections required'
-          }
+            label: 'Free utility reconnection',
+            tooltip: 'This measure isn\'t scored, because orders may not protect all tenants in the state due to differences in state laws. See Methodology Report for more info.'
+          },
+          {
+            id: 'plcarsbool',
+            label: 'Grace period to pay rent'
+          },
+          {
+            id: 'plcnorepbool',
+            label: 'No report to credit bureau',
+            tooltip: 'For this measure, we only look at emergency orders, not existing laws. See Methodology Report for more info.'
+          },
+          {
+            id: 'plcnofcbool',
+            label: 'Foreclosures moratorium'
+          },
         ]
       },
       {
         stage: 5,
-        title: 'Planning for Post-Pandemic',
+        title: 'Tenancy Preservation Measures',
         filters: [
           {
             id: 'plclatfbool',
-            label: 'Late fees waived'
+            label: 'No late fees'
           },
           {
-            id: 'plcarsbool',
-            label: 'Action on pandemic arrears'
+            id: 'plcraisebool',
+            label: 'No raising rent'
           },
           {
-            id: 'plcextmorbool',
-            label: 'Protection past state of emergency'
+            id: 'plcdebtbool',
+            label: 'Rental debt prevention'
+          },
+          {
+            id: 'plccgbool',
+            label: 'Legal counsel for tenants'
           }
         ]
       }
@@ -224,7 +258,7 @@ $(document).ready(function () {
       if (action === 'show') {
         // if show
         // show the filters
-        $('#filters_panel .filters').animate({'max-height': 600}, 400);
+        $('#filters_panel .filters').animate({'max-height': 1200}, 400);
         // change button text
         $target.text('Hide filters');
         // change button class

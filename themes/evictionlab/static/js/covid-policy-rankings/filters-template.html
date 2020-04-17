@@ -9,10 +9,17 @@
   <div class="filter-category category-{{stage}}">
     <h4>{{title}}</h4>
     {{#each filters}}
-      <label class="filter-label" data-filter="{{id}}">
-        <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" tabindex="-1">
-        <span id="labels_{{id}}">{{label}}</span>
-      </label>
+      <div class="label-parent">
+        <label class="filter-label" data-filter="{{id}}">
+          <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" tabindex="-1">
+          <span id="labels_{{id}}">{{label}}</span>
+        </label>
+        {{#if tooltip}}
+          <div class="icon icon-tooltip fa fa-question-circle">
+            <span class="sr-only">Trigger explanatory tooltip</span>
+          </div>
+        {{/if}}
+      </div>
     {{/each}}
   </div>
 {{/each}}
