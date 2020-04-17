@@ -1,6 +1,7 @@
 ---
 title: "COVID-19 Eviction Policy for Alaska"
 date: 2020-04-09T20:43:49-08:00
+layout: single
 type: covid-policy-rankings
 state_abbrev: ak # use state abbreviation.
 state_title: Alaska
