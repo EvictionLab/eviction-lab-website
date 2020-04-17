@@ -1,31 +1,18 @@
 {{ partial "header" . }}
 <!-- {{ partial "breadcrumb" . }} -->
+{{ partial "agnosticbreadcrumb" . }} 
 
 <div class="row alt-bg ml-0 mr-0">
-  <div class="col-10 offset-1 col-lg-8 offset-lg-2 mx-lg-auto col-xl-8 rankings-intro">
-    {{ .Content | markdownify }}
-  </div>
-</div>
-
-<div id="filters_panel" class="row ml-0 mr-0 filters-panel">
-  <div  class="filters-panel col-12 offset-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-3 pb-3">
-    <button id="mobile_filter" class="btn mobile-filter show-filters" tabindex="0">Show Filters</button>
-    <div class="filters" style="max-height:0;">
-      <!-- <h4 id="filters_heading">Filter:</h4> -->
-      <div class="filters-list hide"></div>
-      <button id="clear_filters" class="btn clear-filters" tabindex="-1">Clear filters</button>
-    </div>
+  <div class="col-10 offset-1 col-lg-6 mx-lg-auto col-xl-8 offset-lg-2 rankings-intro">
+    {{ .Title }} for {{ .Params.state_title }}
   </div>
 </div>
 
 <div class="row ml-0 mr-0">
-  <!-- <div class="mobile-filters col-10 offset-1 d-lg-none">
-    <button id="mobile_filter" class="btn mobile-filter show-filters">Show Filters</button>
-  </div> -->
 
-  <div id="states_panel" class="inline-panel states col-12 offset-0 offset-md-1 col-md-10 col-lg-8 offset-lg-2">
+  <div id="state_panel" class="inline-panel states col-12 offset-0 offset-md-1 col-md-10 col-lg-8 offset-lg-2">
     <div class="col-12 d-md-none text-center mb-3"><p><i>Scroll right within table to see ratings.</i></p></div>
-    <table id="states_table" class="states-table table-responsive-sm">
+    <table id="states_table" class="state-table table-responsive-sm">
       <caption class="sr-only">List of states, sortable by state name, renting population, pre-COVID-19 filings, and ranking</caption>
       <thead>
         <tr>
@@ -47,14 +34,13 @@
           </th>
         </tr>
       </thead>
-      <tbody class="states-list"></tbody>
+      <tbody class="state-details"></tbody>
       <!--<caption>*Filings per day based on data collected before the COVID-19 pandemic.</caption>-->
     </table>
   </div>
 </div>
-
 <script type="text/javascript">
-  var page_state_abbrev = null;
+  var page_state_abbrev = {{ .Params.state_abbrev }};
   var page_page_type = {{ .Params.layout }};
 </script>
 

@@ -29,6 +29,12 @@
   &.bc-events {
     background: $color6;
   }
+  &.bc-covid-policy-rankings {
+    a {
+      color: #fff;
+    }
+    background: $color2;
+  }
 
   i {
     font-size: .75em;

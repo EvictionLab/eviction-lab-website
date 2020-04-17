@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 Eviction Policy Rankings | Eviction Lab"
+title: "COVID-19 Eviction Policy Rankings by State"
 date: 2020-04-09T20:43:49-08:00
 type: index
 photoCredit:

@@ -3,6 +3,8 @@ $(document).ready(function () {
   // console.log('document ready');
   var rankings = {
     POLICY_SHEET_URL: 'https://spreadsheets.google.com/feeds/list/1_7NhsPRHMGhysge5SQYjEp8wHkQe0VoRIMYq_nB4a8U/1/public/values?alt=json',
+    pageType: null,
+    singleState: null,
     statesData: null,
     statesArr: [],
     statesArrFiltered: [],
@@ -159,6 +161,15 @@ $(document).ready(function () {
         })
       });
       callback();
+    },
+    filterForSingleState: function(state) {
+      // console.log('filterForSingleState(), ', state);
+      var arr = rankings.statesArr.filter(function(el) {
+        // console.log('el, ', el)
+        return el['stabbrev'] === String(state).toUpperCase();
+      })
+      // console.log(arr);
+      return arr[0];
     },
     sortAndFilter: function() {
       // Daisy-chain sorting and filtering,
@@ -365,6 +376,15 @@ $(document).ready(function () {
           var timer = window.setTimeout(function() { rankings.setStateListeners() }, 500);
       });
     },
+    populateSingleState: function() {
+      console.log('populateSingleState()');
+      var context = { state: this.filterForSingleState(this.singleState) };
+      console.log('context = ', context);
+      var url = '/js/covid-policy-rankings/single-state-template.html';
+      rankings.loadHandlebarsTemplate(url, function(template) {
+          $('#state_panel tbody').html(template(context)).find('tr').show('slow');
+      });
+    },
     populateFilters: function() {
       // console.log('populateFilters()')
       // Fetch and render handlebars template.
@@ -428,10 +448,14 @@ $(document).ready(function () {
       this.statesArr.shift();
       this.statesArr.shift();
       // console.log('this.statesArr', this.statesArr);
-      // Put values from statesArr into array to be used for filtering.
-      this.statesArrFiltered = this.statesArr.slice(0);
-      // Set sort, filter, and population of states in motion.
-      this.sortAndFilter();
+      if (this.pageType === 'single') {
+        this.populateSingleState();
+      } else {
+        // Put values from statesArr into array to be used for filtering.
+        this.statesArrFiltered = this.statesArr.slice(0);
+        // Set sort, filter, and population of states in motion.
+        this.sortAndFilter();
+      }
     },
     loadStateData: function() {
       // console.log('loadStateData()')
@@ -446,6 +470,9 @@ $(document).ready(function () {
       mediaReq.send();
     },
     init: function() {
+      // console.log('page_page_type = ', page_page_type);
+      this.pageType = page_page_type;
+      this.singleState = page_state_abbrev;
       // console.log('EL policy rankingds table init.');
       Handlebars.registerHelper("isfalse", function(context, options) {
         // console.log('helper context, ', context);
@@ -459,10 +486,15 @@ $(document).ready(function () {
           return options.fn(this);
         }
       });
-      this.populateFilters();
-      this.loadStateData();
-      this.handleStickyFilters();
-      window.setTimeout(function() {rankings.setUIListeners();}, 1000);
+      if (this.pageType === 'single') {
+        // console.log('handling single');
+        this.loadStateData();
+      } else {
+        this.populateFilters();
+        this.loadStateData();
+        this.handleStickyFilters();
+        window.setTimeout(function() {rankings.setUIListeners();}, 1000);
+      }
     }
   }
   rankings.init();

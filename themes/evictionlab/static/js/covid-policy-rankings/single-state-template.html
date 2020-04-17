@@ -1,0 +1,187 @@
+<!-- Handlebars template for states -->
+{{#with state}}
+  <tr class="state" data-state="{{stabbrev}}" data-stat-1="{{evstat1}}" data-stat-2="{{evstat2}}" data-stars="{{stars}}">
+    <td class="state-name">
+      {{stname}}
+      {{#if plc_standout_bool}}
+        <div class="icon-standout">
+          <span class="sr-only">Marked for standout status.</span>
+        </div>
+      {{/if}}
+    </td>
+    <td class="state-stat-1">{{evstat1}}</td>
+    <td class="state-stars stars-{{stars_hb}}">
+      <label class="sr-only sr-only-focusable">{{stars_rounded}} stars</label>
+      <div class="star" aria-hidden="true"></div>
+      <div class="star" aria-hidden="true"></div>
+      <div class="star" aria-hidden="true"></div>
+      <div class="star" aria-hidden="true"></div>
+      <div class="star" aria-hidden="true"></div>
+    </td>
+  </tr>
+  <tr class="state-text text-excerpt" data-state="{{stabbrev}}">
+    <td colspan="2">
+      {{#if stars}}
+        <p class="score">
+           State score: {{stars}}
+        </p>
+      {{/if}}
+      {{#if until}}
+        <p class="expires">
+            Protections start to expire on {{until}}
+        </p>
+      {{/if}}
+      {{#if stexcerpt}}
+        <p class="state-excerpt">
+          {{stexcerpt}}
+        </p>
+      {{/if}}
+      {{#if sttext}}
+        <p class="state-full">
+          {{sttext}}
+        </p>
+      {{/if}}
+    </td>
+    <td></td>
+  </tr>
+  <tr class="state-details prompt-only" data-state="{{stabbrev}}">
+    <td colspan="3">
+      <div class="state-details-list">
+        <div class="col-left">
+          <h3>Filings-Related Measures</h3>
+
+            {{! no nonpayment }}
+            <div class="state-policy">
+              <label class="icon-{{plcnonpbool}} plcnonpbool">
+                <span class="sr-only">Icon: state has {{#isfalse plcnonpbool}}not{{/isfalse}} implemented </span>No nonpayment filings
+              </label>
+              {{#if plcnonptext}}
+                <p>{{plcnonptext}}</p>
+              {{/if}}
+            </div>
+
+            {{! no filings }}
+            <div class="state-policy">
+              <label class="icon-{{plcnofilbool}} plcnofilbool">
+                <span class="sr-only">Icon: state has {{#isfalse plcnofilbool}}not{{/isfalse}} implemented </span>No non-urgent filings</label>
+              {{#if plcnofiltext}}
+                <p>{{plcnofiltext}}</p>
+              {{/if}}
+            </div>
+
+            {{! no notices }}
+            <div class="state-policy">
+              <label class="icon-{{plcnoticebool}} plcnoticebool">
+                <span class="sr-only">Icon: state has {{#isfalse plcnoticebool}}not{{/isfalse}} implemented </span>No notices</label>
+              {{#if plcnoticetext}}
+                <p>{{plcnoticetext}}</p>
+              {{/if}}
+            </div>
+
+          <h3>Court Actions</h3>
+            {{! No hearings }}
+            <div class="state-policy">
+              <label class="icon-{{plcnohearbool}} plcnohearbool">
+                <span class="sr-only">Icon: state has {{#isfalse plcnohearbool}}not{{/isfalse}} implemented </span>No hearings</label>
+              {{#if plcnoheartext}}
+                <p>{{plcnoheartext}}</p>
+              {{/if}}
+            </div>
+
+            {{! No eviction judgements }}
+            <div class="state-policy">
+              <label class="icon-{{plcnonewbool}} plcnonewbool">
+                <span class="sr-only">Icon: state has {{#isfalse plcnonewbool}}not{{/isfalse}} implemented </span>No eviction judgements</label>
+              {{#if plcnonewtext}}
+                <p>{{plcnonewtext}}</p>
+              {{/if}}
+            </div>
+
+            {{! Court deadlines tolled }}
+            <div class="state-policy">
+              <label class="icon-{{plctldbool}} plctldbool">
+                <span class="sr-only">Icon: state has {{#isfalse plctldbool}}not{{/isfalse}} implemented </span>Court deadlines tolled</label>
+              {{#if plctldtext}}
+                <p>{{plctldtext}}</p>
+              {{/if}}
+            </div>
+
+          <h3>Enforcement</h3>
+          {{! No enforcement of new orders }}
+          <div class="state-policy">
+            <label class="icon-{{plcnonewenfbool}} plcnonewenfbool">
+              <span class="sr-only">Icon: state has {{#isfalse plcnonewenfbool}}not{{/isfalse}} implemented </span>No enforcement of new orders</label>
+            {{#if plcnonewenftext}}
+              <p>{{plcnonewenftext}}</p>
+            {{/if}}
+          </div>
+
+          {{! No enforcement of any orders }}
+          <div class="state-policy">
+            <label class="icon-{{plcnoenfbool}} plcnoenfbool">
+              <span class="sr-only">Icon: state has {{#isfalse plcnoenfbool}}not{{/isfalse}} implemented </span>No enforcement of any orders</label>
+            {{#if plcnoenftext}}
+              <p>{{plcnoenftext}}</p>
+            {{/if}}
+          </div>
+
+        </div>
+        <div class="col-right">
+          <h3>Supportive Measures</h3>
+          <div class="state-policy">
+            <label class="icon-{{plclatfbool}} plclatfbool">
+              <span class="sr-only">Icon: state has {{#isfalse plclatfbool}}not{{/isfalse}} implemented </span>Late fees waived</label>
+            {{#if plclatftext}}
+              <p>{{plclatftext}}</p>
+            {{/if}}
+          </div>
+
+          <div class="state-policy">
+            <label class="icon-{{plcarsbool}} plcarsbool">
+              <span class="sr-only">Icon: state has {{#isfalse plcarsbool}}not{{/isfalse}} implemented </span>Action on arrears</label>
+            {{#if plcarstext}}
+              <p>{{plcarstext}}</p>
+            {{/if}}
+          </div>
+
+          <div class="state-policy">
+            <label class="icon-{{plcextmorbool}} plcextmorbool">
+              <span class="sr-only">Icon: state has {{#isfalse plcextmorbool}}not{{/isfalse}} implemented </span>Extends past state of emergency</label>
+            {{#if plcextmortext}}
+              <p>{{plcextmortext}}</p>
+            {{/if}}
+          </div>
+
+          <div class="state-policy">
+            <label class="icon-{{plcnofcbool}} plcnofcbool">
+              <span class="sr-only">Icon: state has {{#isfalse plcnofcbool}}not{{/isfalse}} implemented </span>Foreclosures halted</label>
+            {{#if plcnofctext}}
+              <p>{{plcnofctext}}</p>
+            {{/if}}
+          </div>
+
+          <div class="state-policy">
+            <label class="icon-{{plcnoshbool}} plcnoshbool">
+              <span class="sr-only">Icon: state has {{#isfalse plcnoshbool}}not{{/isfalse}} implemented </span>Utility shutoffs halted</label>
+            {{#if plcnoshtext}}
+              <p>{{plcnoshtext}}</p>
+            {{/if}}
+          </div>
+
+          <div class="state-policy">
+            <label class="icon-{{plcfrrcbool}} plcfrrcbool">
+              <span class="sr-only">Icon: state has {{#isfalse plcfrrcbool}}not{{/isfalse}} implemented </span>Utility reconnections required</label>
+            {{#if plcfrrctext}}
+              <p>{{plcfrrctext}}</p>
+            {{/if}}
+          </div>
+
+        </div>
+        <div class="last-updated">
+          Last updated {{updated}}
+        </div>
+      </div>
+    </td>
+  </tr>
+  </div>
+{{/with}}
