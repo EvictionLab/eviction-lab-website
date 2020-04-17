@@ -589,7 +589,8 @@ $el-darkgray: #737373;
                 }
               }
             }
-            button {
+            button,
+            a.btn {
               display: inline-block;
               font-family: GT-Eesti-Display-Bold, sans-serif;
               font-size: 1.5rem;
@@ -601,8 +602,8 @@ $el-darkgray: #737373;
               padding-right: 34px;
               padding-left: 0;
               &.collapse-state-details {
-                margin-top: 1rem;
-                margin-bottom: 1.5rem;
+                // margin-top: 1rem;
+                // margin-bottom: 1.5rem;
                 &.bottom {
                   margin-top: 2rem;
                   margin-bottom: 2.5rem;
@@ -641,6 +642,24 @@ $el-darkgray: #737373;
                 background-repeat: no-repeat;
                 margin-left: 4px;
               }
+              &.view-full-report {
+                float: right;
+                padding-right: 20px;
+                &:after {
+                  content: '';
+                  height: 10px;
+                  width: 20px;
+                  display: inline-block;
+                  background: url($caret-up);
+                  background-size: contain;
+                  background-position: 0 0;
+                  background-repeat: no-repeat;
+                  // margin-left: 4px;
+                  margin-left: -3px;
+                  margin-bottom: -1px;
+                  transform: rotate(90deg);
+                }
+              }
             }
           }
           // Styles for when only the prompt is shown.
@@ -660,11 +679,12 @@ $el-darkgray: #737373;
             button.collapse-state-details {
               max-height: 0;
               margin: 0;
+              max-width: 0;
               overflow-y: hidden;
               &.bottom {
                 margin: 0;
               }
-              transition: max-height 5ms linear 600ms, margin 5ms linear 600ms;
+              transition: max-height 5ms linear 600ms, margin 5ms linear 600ms, max-width 5ms 600ms;
             }
           }
           // Styles for when complete details for state are shown.
@@ -683,6 +703,7 @@ $el-darkgray: #737373;
             }
             button.collapse-state-details {
               max-height: 50px;
+              max-width: 250px;
               overflow-y: hidden;
             }
           }

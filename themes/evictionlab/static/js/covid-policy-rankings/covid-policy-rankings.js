@@ -474,6 +474,10 @@ $(document).ready(function () {
       this.pageType = page_page_type;
       this.singleState = page_state_abbrev;
       // console.log('EL policy rankingds table init.');
+      Handlebars.registerHelper("tolowercase", function(context, options) {
+        console.log('helper context, ', context);
+        return String(context).toLowerCase();
+      });
       Handlebars.registerHelper("isfalse", function(context, options) {
         // console.log('helper context, ', context);
         if (context === false) {
