@@ -15,7 +15,15 @@ $el-light-purple: #E7E9FF;
 $el-darkgray: #737373;
 
 .graphic-header.covid-policy {
-  background-color: #999;
+  background-color: f4f7f9;
+  background-image: url('/images/assets/hero/eviction-notice-hero.jpg');
+  background-size: 155%;
+  @include media-breakpoint-up(mm) {
+    background-size: 130%;
+  }
+  background-repeat: no-repeat;
+  background-position-x: 42%; 
+  background-position-y: 30%;
   h1 {
     padding-top: 0;
   }
@@ -27,7 +35,7 @@ $el-darkgray: #737373;
   padding-bottom: 2.4rem;
   margin-top: 4rem;
   @include media-breakpoint-up(lg) {
-    margin-bottom: 4rem;
+    margin-bottom: 2.4rem;
   }
   border-top: 5px solid $el-purple;
   h2 {
