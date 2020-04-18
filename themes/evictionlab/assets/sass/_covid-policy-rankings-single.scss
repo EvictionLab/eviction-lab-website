@@ -22,6 +22,8 @@ $el-light-purple: #E7E9FF;
 $el-darkgray: #737373;
 $el-lightgray: #828282;
 
+.page-type-covid-policy-rankings.page-layout-single {
+
 .graphic-header.covid-policy {
   background-color: f4f7f9;
   background-image: url('/images/assets/hero/eviction-notice-hero.jpg');
@@ -1252,6 +1254,7 @@ $el-lightgray: #828282;
     }
     .btn {
       clear: both;
+      font-family: GT-Eesti-Display-Bold, sans-serif;
       // display: inline;
       border: solid 3px $el-light-purple;
       line-height: 1;
@@ -1263,13 +1266,22 @@ $el-lightgray: #828282;
       margin-bottom: 0.5rem;
       color: $el-darkgray;
       text-transform: uppercase;
-      font-weight: 800;
+      font-weight: 700;
       font-size: 1.2rem;
       i {
         margin-right: 6px;
       }
-      &:first-of-type {
-        margin-top: 3rem;
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: none;
+        // border: none;
+      }
+      &.btn-justshelter {
+        margin-top: 0.8rem;
+        @include media-breakpoint-up(md) {
+          margin-top: 3rem;
+        }
       }
     }
   }
@@ -1617,6 +1629,34 @@ $el-lightgray: #828282;
           box-shadow: none;
         }
       }
+    }
+  }
+}
+}
+@media print {
+  .page-type-covid-policy-rankings.page-layout-single {
+    // Hide header.
+    header,
+    .breadcrumbs,
+    footer,
+    .app-footer {
+      display: none;
+    }
+    width: 100%; 
+    margin: 0; 
+    float: none;
+    .row.category-2 {
+      page-break-after: always;
+    }
+    .row.category-5 {
+      page-break-after: always;
+    }
+    * {
+      -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+      color-adjust: exact !important;  /*Firefox*/
+    }
+    .row.alt-bg {
+      background-color: transparent;
     }
   }
 }

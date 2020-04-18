@@ -389,7 +389,12 @@ $(document).ready(function () {
         rankings.filterConfig = [];
         rankings.sortAndFilter();
       });
-      rankings.initTooltip();
+      $('#print_page').on('click select', function(e) {
+        console.log('print clicked');
+        window.print();
+      });
+      // rankings.initTooltip();
+      
       // Load tooltips script to init tooltips for filters.
       $.getScript('/js/covid-policy-rankings/tooltips.js', function() {
         console.log('tooltips loaded');
