@@ -13,58 +13,59 @@ $(document).ready(function () {
     allFilters: [
       {
         stage: 1,
-        title: 'Stage 1: Initiation of Eviction',
+        title: 'Initiation of Eviction',
         filters: [
           {
             id: 'plcnoticebool',
-            label: 'No notice of eviction to tenant',
+            label: 'No notice to quit',
             tooltip: 'In most states, landlords must post a "notice to quit" before filing for eviction.'
           },
           {
             id: 'plccofilbool',
-            label: 'No eviction filing for COVID-19 hardship only'
+            label: 'No filing if tenant has COVID-19 hardship'
           },
           {
             id: 'plcnonpbool',
-            label: 'No eviction filings for nonpayment of rent'
+            label: 'No filing for nonpayment'
           },
           {
             id: 'plcnofilbool',
-            label: 'No eviction filings for non-emergency reasons'
+            label: 'No filing, except emergencies'
           }
         ]
       },
       {
         stage: 2,
-        title: 'Stage 2: Court Actions',
+        title: 'Court Process',
         filters: [
           {
             id: 'plcnohearbool',
-            label: 'Civil/eviction hearings suspended'
+            label: 'Hearings suspended'
           },
           {
             id: 'plcnonewbool',
-            label: 'Judgements stayed',
-            tooltip: '"Staying" eviction judgements or writs of possession means that the court will not give eviction orders to law enforcement, for the duration of the "stay."'
+            label: 'Judgements of possession stayed',
+            tooltip: '"Staying" eviction judgements, orders or writs of possession means that the court will not process eviction orders for the duration of the "stay."'
           },
           {
             id: 'plctldbool',
-            label: 'Extends or tolls court deadlines',
+            label: 'Deadlines extended or tolled',
             tooltip: '"Tolling" or "extending" deadlines means extending the amount of time a landlord or tenant has to respond to a court notice.'
           },
           {
             id: 'plcsealbool',
-            label: 'Eviction records sealed'
+            label: 'Eviction records sealed',
+            medal: true
           }
         ]
       },
       {
         stage: 3,
-        title: 'Stage 3: Enforcement of Eviction Order',
+        title: 'Enforcement of Eviction Order',
         filters: [
           {
             id: 'plccovenfbool',
-            label: 'No removal of tenant with COVID-19 hardship'
+            label: 'No removal if tenant has COVID-19 hardship'
           },
           {
             id: 'plcpayenfbool',
@@ -82,7 +83,8 @@ $(document).ready(function () {
         filters: [
           {
             id: 'plcextmorbool',
-            label: 'Moratorium extends past state of emergency'
+            label: 'Moratorium extends past emergency declaration',
+            medal: true
           },
           {
             id: 'plcnoshbool',
@@ -96,16 +98,18 @@ $(document).ready(function () {
           },
           {
             id: 'plcarsbool',
-            label: 'Grace period to pay rent'
+            label: 'Grace period to pay rent',
+            medal: true
           },
           {
             id: 'plcnorepbool',
             label: 'No report to credit bureau',
-            tooltip: 'For this measure, we only look at emergency orders, not existing laws. See Methodology Report for more info.'
+            tooltip: 'For this measure, we only look at emergency orders, not existing laws. See Methodology Report for more info.',
+            medal: true
           },
           {
             id: 'plcnofcbool',
-            label: 'Foreclosures moratorium'
+            label: 'Foreclosure moratorium'
           },
         ]
       },
@@ -115,19 +119,23 @@ $(document).ready(function () {
         filters: [
           {
             id: 'plclatfbool',
-            label: 'No late fees'
+            label: 'No late fees',
+            medal: true
           },
           {
             id: 'plcraisebool',
-            label: 'No raising rent'
+            label: 'No rent raises',
+            medal: true
           },
           {
             id: 'plcdebtbool',
-            label: 'Rental debt prevention'
+            label: 'Housing stabilization',
+            medal: true
           },
           {
             id: 'plccgbool',
-            label: 'Legal counsel for tenants'
+            label: 'Legal counsel for tenants',
+            medal: true
           }
         ]
       }
@@ -311,6 +319,9 @@ $(document).ready(function () {
         }
       })
     },
+    initTooltip: function() {
+      
+    },
     setUIListeners: function() {
       // console.log('setUIListeners()');
       // Sets listeners for:
@@ -370,13 +381,18 @@ $(document).ready(function () {
         })
         rankings.sortAndFilter();
         // console.log('rankings.filterConfig, ', rankings.filterConfig);
-      })
+      });
       var $clearfilters = $('button#clear_filters');
       $clearfilters.on('click select', function() {
         // console.log('clear filters');
         $filters.prop('checked',false);
         rankings.filterConfig = [];
         rankings.sortAndFilter();
+      });
+      rankings.initTooltip();
+      // Load tooltips script to init tooltips for filters.
+      $.getScript('/js/covid-policy-rankings/tooltips.js', function() {
+        console.log('tooltips loaded');
       });
     },
     loadHandlebarsTemplate: function(url, callback) {
@@ -403,7 +419,7 @@ $(document).ready(function () {
       // console.log('populateStates(), ');
       // Fetch and render handlebars template.
       // Always draws from filtered array.
-      var context = { states: rankings.statesArrFiltered };
+      var context = { states: rankings.statesArrFiltered, filters: rankings.allFilters };
       var url = '/js/covid-policy-rankings/states-template.html';
       rankings.loadHandlebarsTemplate(url, function(template) {
           $('#states_panel tbody').html(template(context)).find('tr').show('slow');
@@ -509,8 +525,27 @@ $(document).ready(function () {
       this.singleState = page_state_abbrev;
       // console.log('EL policy rankingds table init.');
       Handlebars.registerHelper("tolowercase", function(context, options) {
-        console.log('helper context, ', context);
+        // console.log('helper context, ', context);
         return String(context).toLowerCase();
+      });
+      Handlebars.registerHelper("getsamedal", function(context, options) {
+        console.log('getsamedal context, ', context);
+        var filters = [];
+        rankings.allFilters.forEach(function(el) {
+          el.filters.forEach(function(item) {
+            filters.push(item);
+          })
+        })
+        console.log('filters: ', filters);
+        var getsmedal = filters.filter(function(el) {
+          return el.id === context;
+        })
+        console.log('getsmedal, ', getsmedal[0].medal);
+        // return getsmedal[0].medal;
+        if (!!getsmedal[0].medal) {
+          console.log('returning context');
+          return options.fn(this);
+        }
       });
       Handlebars.registerHelper("isfalse", function(context, options) {
         // console.log('helper context, ', context);

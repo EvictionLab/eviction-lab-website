@@ -21,7 +21,6 @@
   <!-- <div class="mobile-filters col-10 offset-1 d-lg-none">
     <button id="mobile_filter" class="btn mobile-filter show-filters">Show Filters</button>
   </div> -->
-
   <div id="states_panel" class="inline-panel states col-12 offset-0 offset-md-1 col-md-10 col-xl-8 offset-xl-2">
     <div class="col-12 d-md-none text-center mb-3"><p><i>Scroll right within table to see ratings.</i></p></div>
     <table id="states_table" class="states-table table-responsive-sm">
@@ -51,6 +50,8 @@
     </table>
   </div>
 </div>
+
+{{ partial "covid-acknowledgements" . }}
 
 <script type="text/javascript">
   var page_state_abbrev = null;
