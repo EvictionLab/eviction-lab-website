@@ -97,7 +97,8 @@
 
   </head>
 
-  <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}">
+  <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}
+  page-type-{{.Page.Type}} page-layout-{{.Page.Layout}}">
 
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M955JVB"

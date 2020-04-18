@@ -3,11 +3,144 @@ $(document).ready(function () {
   // console.log('document ready');
   var rankings = {
     POLICY_SHEET_URL: 'https://spreadsheets.google.com/feeds/list/1_7NhsPRHMGhysge5SQYjEp8wHkQe0VoRIMYq_nB4a8U/1/public/values?alt=json',
+    pageType: null,
+    singleState: null,
     statesData: null,
     statesArr: [],
     statesArrFiltered: [],
     sortConfig: ['stars', 'desc'], // [sort by id of col head (string), sort order (asc, desc, or false)]
     filterConfig: [],
+    allFilters: [
+      {
+        stage: 1,
+        title: 'Initiation of Eviction',
+        filters: [
+          {
+            id: 'plcnoticebool',
+            label: 'No notice to quit',
+            tooltip: 'In most states, landlords must post a "notice to quit" before filing for eviction.'
+          },
+          {
+            id: 'plccofilbool',
+            label: 'No filing if tenant has COVID-19 hardship'
+          },
+          {
+            id: 'plcnonpbool',
+            label: 'No filing for nonpayment'
+          },
+          {
+            id: 'plcnofilbool',
+            label: 'No filing, except emergencies'
+          }
+        ]
+      },
+      {
+        stage: 2,
+        title: 'Court Process',
+        filters: [
+          {
+            id: 'plcnohearbool',
+            label: 'Hearings suspended'
+          },
+          {
+            id: 'plcnonewbool',
+            label: 'Judgements of possession stayed',
+            tooltip: '"Staying" eviction judgements, orders or writs of possession means that the court will not process eviction orders for the duration of the "stay."'
+          },
+          {
+            id: 'plctldbool',
+            label: 'Deadlines extended or tolled',
+            tooltip: '"Tolling" or "extending" deadlines means extending the amount of time a landlord or tenant has to respond to a court notice.'
+          },
+          {
+            id: 'plcsealbool',
+            label: 'Eviction records sealed',
+            medal: true
+          }
+        ]
+      },
+      {
+        stage: 3,
+        title: 'Enforcement of Eviction Order',
+        filters: [
+          {
+            id: 'plccovenfbool',
+            label: 'No removal if tenant has COVID-19 hardship'
+          },
+          {
+            id: 'plcpayenfbool',
+            label: 'No removal of tenant for nonpayment'
+          },
+          {
+            id: 'plcnoenfbool',
+            label: 'No removal of tenant, except emergencies'
+          },
+        ]
+      },
+      {
+        stage: 4,
+        title: 'Short-Term Supports',
+        filters: [
+          {
+            id: 'plcextmorbool',
+            label: 'Moratorium extends past emergency declaration',
+            medal: true
+          },
+          {
+            id: 'plcnoshbool',
+            label: 'No utility disconnection',
+            tooltip: 'This measure isn\'t scored, because orders may not protect all tenants in the state due to differences in state laws. See Methodology Report for more info.'
+          },
+          {
+            id: 'plcfrrcbool',
+            label: 'Free utility reconnection',
+            tooltip: 'This measure isn\'t scored, because orders may not protect all tenants in the state due to differences in state laws. See Methodology Report for more info.'
+          },
+          {
+            id: 'plcarsbool',
+            label: 'Grace period to pay rent',
+            medal: true
+          },
+          {
+            id: 'plcnorepbool',
+            label: 'No report to credit bureau',
+            tooltip: 'For this measure, we only look at emergency orders, not existing laws. See Methodology Report for more info.',
+            medal: true
+          },
+          {
+            id: 'plcnofcbool',
+            label: 'Foreclosure moratorium'
+          },
+        ]
+      },
+      {
+        stage: 5,
+        title: 'Tenancy Preservation Measures',
+        filters: [
+          {
+            id: 'plclatfbool',
+            label: 'No late fees',
+            medal: true
+          },
+          {
+            id: 'plcraisebool',
+            label: 'No rent raises',
+            medal: true
+          },
+          {
+            id: 'plcdebtbool',
+            label: 'Housing stabilization',
+            medal: true
+          },
+          {
+            id: 'plccgbool',
+            label: 'Legal counsel for tenants',
+            medal: true
+          }
+        ]
+      }
+    ],
+    filtersMobileShown: false,
     sortStateData: function(callback) {
       // console.log('sortStateData()');
       // console.log('sortConfig, ', this.sortConfig);
@@ -71,6 +204,15 @@ $(document).ready(function () {
       });
       callback();
     },
+    filterForSingleState: function(state) {
+      // console.log('filterForSingleState(), ', state);
+      var arr = rankings.statesArr.filter(function(el) {
+        // console.log('el, ', el)
+        return el['stabbrev'] === String(state).toUpperCase();
+      })
+      // console.log(arr);
+      return arr[0];
+    },
     sortAndFilter: function() {
       // Daisy-chain sorting and filtering,
       // and call populateStates when complete.
@@ -117,84 +259,79 @@ $(document).ready(function () {
         });
       });
     },
+    toggleMobileFilters: function($target, action) {
+      console.log('toggleMobileFilters(), action = ', action);
+      // var $target = $('#mobile_filter');
+      var $row = $('#filters_panel');
+      if (action === 'show') {
+        // if show
+        // show the filters
+        $('#filters_panel .filters').animate({'max-height': 1200}, 400);
+        // change button text
+        $target.text('Hide filters');
+        // change button class
+        $target.removeClass('show-filters').addClass('hide-filters');
+        $row.removeClass('show-filters').addClass('hide-filters');
+        $row.find('#clear_filters, input').attr('tabindex', '0');
+      } else {
+        // hide the filters
+        $('#filters_panel .filters').animate({'max-height': 0}, 400);
+        // change button text
+        $target.text('Show filters');
+        // change button class
+        $target.removeClass('hide-filters').addClass('show-filters');
+        $row.removeClass('hide-filters').addClass('show-filters');
+        $row.find('#clear_filters, input').attr('tabindex', '-1');
+      }
+    },
     handleStickyFilters: function() {
       // console.log('handleStickyFilters()');
-      var doSticky = false;
+      // var doSticky = true;
       var filterOffset = null;
-      var tableOffset = null;
-      var $filters = $('#filters_panel .filters');
-      var $table = $('#states_panel table');
+      var $filtersPanel = $('#filters_panel');
+      var filtersPanelOffset = $filtersPanel.offset();
+      // var $table = $('#states_panel table');
       // var $theads = $('#states_panel thead th');
       $(window).on('load', function() {
         // console.log('loaded');
-        if ($('div.mobile-filters').css('display') !== 'block') {
-          // console.log('mobile filters is not shown.')
-          doSticky = true;
-          filterOffset = $filters.offset();
-          tableOffset = $table.offset();
-        } else {
-          doSticky = false;
-        }
+        // filterOffset = $filters.offset();
+        filtersPanelOffset = $filtersPanel.offset();
       })
       $(window).on('resize', function() {
-        // console.log('resized');
-        if ($('div.mobile-filters').css('display') !== 'block') {
-          // console.log('mobile filters is not shown.')
-          doSticky = true;
-          filterOffset = $filters.offset();
-          tableOffset = $table.offset();
-        } else {
-          doSticky = false;
-        }
+        // console.log('loaded');
+        // filterOffset = $filters.offset();
+        filtersPanelOffset = $filtersPanel.offset();
       })
       $(window).on('scroll', function() {
         // console.log('scrolled');
-        // console.log('tableOffset, ', tableOffset);
-        if (!!doSticky) {
-          // console.log('doSticky === true, proceeding. filterOffset = ', filterOffset);
-          var wScrollTop = $(window).scrollTop();
-          // console.log('wScrollTop, ', wScrollTop);
-          var headerHeight = $('header .header-wrapper').height();
-          // console.log('headerHeight, ', headerHeight);
-          if (wScrollTop + headerHeight + 50 >= filterOffset.top) {
-            // console.log('make the filter sticky');
-            $filters.css({
-              position: 'sticky',
-              top: headerHeight + 50,
-              left: filterOffset.left
-            })
-          }
-          // if (wScrollTop + headerHeight + 50 >= tableOffset.top) {
-          //   console.log('make the table sticky');
-          //   $table.css({
-          //     position: 'sticky',
-          //     top: headerHeight + 50,
-          //     left: tableOffset.left
-          //   })
-          // }
+        var wScrollTop = $(window).scrollTop();
+        // console.log('wScrollTop, ', wScrollTop);
+        var headerHeight = $('header .header-wrapper').height();
+        if (wScrollTop + headerHeight >= filtersPanelOffset.top) {
+          // console.log('make the filter sticky');
+          $filtersPanel.css({
+            position: 'sticky',
+            top: headerHeight,
+            left: filtersPanelOffset.left
+          }).addClass('filter-sticky');
+        } else {
+          $filtersPanel.removeClass('filter-sticky');
         }
       })
     },
+    initTooltip: function() {
+      
+    },
     setUIListeners: function() {
-      // console.log('setUIListeners()');
+      console.log('setUIListeners()');
       // Sets listeners for:
       // Show and hide of filter for small-screen devices
       $('#mobile_filter').on('click select', function(e) {
         var $target = $(e.currentTarget);
         if ($target.hasClass('show-filters')) {
-          // show the filters
-          $('#filters_panel .filters').animate({'max-height': 400}, 400);
-          // change button text
-          $target.text('Hide filters');
-          // change button class
-          $target.removeClass('show-filters').addClass('hide-filters');
+          rankings.toggleMobileFilters($target, 'show');
         } else {
-          // show the filters
-          $('#filters_panel .filters').animate({'max-height': 0}, 400);
-          // change button text
-          $target.text('Show filters');
-          // change button class
-          $target.removeClass('hide-filters').addClass('show-filters');
+          rankings.toggleMobileFilters($target, 'hide');
         }
       })
       // Table sort headings
@@ -244,13 +381,23 @@ $(document).ready(function () {
         })
         rankings.sortAndFilter();
         // console.log('rankings.filterConfig, ', rankings.filterConfig);
-      })
+      });
       var $clearfilters = $('button#clear_filters');
       $clearfilters.on('click select', function() {
-        console.log('clear filters');
+        // console.log('clear filters');
         $filters.prop('checked',false);
         rankings.filterConfig = [];
         rankings.sortAndFilter();
+      });
+      $('#print_page').on('click select', function(e) {
+        console.log('print clicked');
+        window.print();
+      });
+      // rankings.initTooltip();
+      
+      // Load tooltips script to init tooltips for filters.
+      $.getScript('/js/covid-policy-rankings/tooltips.js', function() {
+        console.log('tooltips loaded');
       });
     },
     loadHandlebarsTemplate: function(url, callback) {
@@ -274,20 +421,35 @@ $(document).ready(function () {
       callback();
     },
     populateStates: function() {
-      // console.log('populateStates(), ', rankings.statesArrFiltered)
+      // console.log('populateStates(), ');
       // Fetch and render handlebars template.
       // Always draws from filtered array.
-      var context = { states: rankings.statesArrFiltered };
+      var context = { states: rankings.statesArrFiltered, filters: rankings.allFilters };
       var url = '/js/covid-policy-rankings/states-template.html';
       rankings.loadHandlebarsTemplate(url, function(template) {
           $('#states_panel tbody').html(template(context)).find('tr').show('slow');
           var timer = window.setTimeout(function() { rankings.setStateListeners() }, 500);
       });
     },
-    // sortPolicies: function(row) {
-    //   // Sorts policies into positive and negative.
-    //
-    // },
+    populateSingleState: function() {
+      console.log('populateSingleState()');
+      var context = { state: this.filterForSingleState(this.singleState) };
+      console.log('context = ', context);
+      var url = '/js/covid-policy-rankings/single-state-template.html';
+      rankings.loadHandlebarsTemplate(url, function(template) {
+          $('.insert-after').after(template(context)).show('slow');
+      });
+    },
+    populateFilters: function() {
+      // console.log('populateFilters()')
+      // Fetch and render handlebars template.
+      // Always draws from filtered array.
+      var context = { categories: rankings.allFilters };
+      var url = '/js/covid-policy-rankings/filters-template.html';
+      rankings.loadHandlebarsTemplate(url, function(template) {
+          $('#filters_panel .filters .filters-list').html(template(context))
+      });
+    },
     processData: function() {
       // console.log('processData()');
       // Build states array
@@ -299,40 +461,41 @@ $(document).ready(function () {
         var row = {};
         statesProperties.forEach(function (p) {
           // console.log('in props loop, ', p);
-            row[p.replace('.', '')] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
-            if (String(p).indexOf('bool') >= 0) {
-              if (row[p] === '1') {
-              // console.log('it should be a bool: ', p)
-                row[p] = true;
-              } else {
-                row[p] = false;
-              }
+          row[p.replace('.', '')] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
+          if (String(p).indexOf('bool') >= 0) {
+            if (row[p] === '1') {
+              row[p] = true;
+            } else {
+              row[p] = false;
             }
-            if (p === 'stars') {
-              // Round to nearest 0.5
-              var rounded = Math.round(Number(row[p])*2)/2;
-              // For a11y
-              row['stars'] = rounded; // Number(row[p]);
-              // For classnames
-              row['stars_hb'] = String(rounded).replace('.', '-'); // String(row[p]).replace('.', '-');
+          }
+          if (p === 'stars') {
+            // Round to nearest 0.5
+            var rounded = Math.round(Number(row[p])*2)/2;
+            // For a11y
+            row['stars_rounded'] = rounded;
+            // row['stars'] = rounded; // Number(row[p]);
+            // For classnames
+            row['stars_hb'] = String(rounded).replace('.', '-'); // String(row[p]).replace('.', '-');
+          }
+          if (p === 'sttext') {
+            // Truncate text to create excerpt.
+            var words = 18;
+            if (row[p] !== null) {
+              var string = String(row[p]).split(" ").splice(0, words).join(" ") + ' ...';
+              row['stexcerpt'] = string;
             }
-            if (p === 'sttext') {
-              // Truncate text to create excerpt.
-              var words = 18;
-              if (row[p] !== null) {
-                var string = String(row[p]).split(" ").splice(0, words).join(" ") + ' ...';
-                row['stexcerpt'] = string;
-              }
-            }
-            if (p === 'intlstupdt') {
-              // Create date string for last updated for each state.
-              // console.log('intlstupdt, ', row[p])
-              var date = new Date(row[p]);
-              row.updated = date.toLocaleDateString();
-            }
-            if (row[p] === null) {
-                row[p] = '';
-            }
+          }
+          if (p === 'intlstupdt') {
+            // Create date string for last updated for each state.
+            // console.log('intlstupdt, ', row[p])
+            var date = new Date(row[p]);
+            row.updated = date.toLocaleDateString();
+          }
+          // Handle null values.
+          if (row[p] === null) {
+              row[p] = '';
+          }
         });
         return row;
       });
@@ -340,10 +503,14 @@ $(document).ready(function () {
       this.statesArr.shift();
       this.statesArr.shift();
       // console.log('this.statesArr', this.statesArr);
-      // Put values from statesArr into array to be used for filtering.
-      this.statesArrFiltered = this.statesArr.slice(0);
-      // Set sort, filter, and population of states in motion.
-      this.sortAndFilter();
+      if (this.pageType === 'single') {
+        this.populateSingleState();
+      } else {
+        // Put values from statesArr into array to be used for filtering.
+        this.statesArrFiltered = this.statesArr.slice(0);
+        // Set sort, filter, and population of states in motion.
+        this.sortAndFilter();
+      }
     },
     loadStateData: function() {
       // console.log('loadStateData()')
@@ -358,7 +525,61 @@ $(document).ready(function () {
       mediaReq.send();
     },
     init: function() {
+      // console.log('page_page_type = ', page_page_type);
+      this.pageType = page_page_type;
+      this.singleState = page_state_abbrev;
       // console.log('EL policy rankingds table init.');
+      Handlebars.registerHelper("tolowercase", function(context, options) {
+        // console.log('helper context, ', context);
+        return String(context).toLowerCase();
+      });
+      Handlebars.registerHelper("getsamedal", function(context, options) {
+        // console.log('getsamedal context, ', context);
+        var filters = [];
+        rankings.allFilters.forEach(function(el) {
+          el.filters.forEach(function(item) {
+            filters.push(item);
+          })
+        })
+        // console.log('filters: ', filters);
+        var getsmedal = filters.filter(function(el) {
+          return el.id === context;
+        })
+        // console.log('getsmedal, ', getsmedal[0].medal);
+        if (!!getsmedal[0].medal) {
+          // console.log('returning context');
+          return options.fn(this);
+        }
+      });
+      Handlebars.registerHelper("getsatooltip", function(context, options) {
+        // console.log('getsatooltip context, ', context);
+        var filters = [];
+        rankings.allFilters.forEach(function(el) {
+          el.filters.forEach(function(item) {
+            filters.push(item);
+          })
+        })
+        // console.log('filters: ', filters);
+        var getstip = filters.filter(function(el) {
+          return el.id === context;
+        })
+        // console.log('getstip, ', getstip);
+        // return getsmedal[0].medal;
+        if (getstip[0]) {
+          if (getstip[0].tooltip) {
+            if (getstip[0].tooltip.length > 0) {
+              // console.log('there\'s a tooltip context');
+              // return options.fn(this);
+              return '<span class="a11y-tip">' +
+                '<span class="a11y-tip__trigger icon icon-tooltip fa fa-question-circle --no-delay"></span>' +
+                '<span class="a11y-tip__help a11y-tip__help--top">' +
+                  getstip[0].tooltip +
+                '</span>' +
+              '</span>';
+            }
+          }
+        }
+      });
       Handlebars.registerHelper("isfalse", function(context, options) {
         // console.log('helper context, ', context);
         if (context === false) {
@@ -371,9 +592,16 @@ $(document).ready(function () {
           return options.fn(this);
         }
       });
-      this.loadStateData();
-      this.setUIListeners();
-      this.handleStickyFilters();
+      if (this.pageType === 'single') {
+        // console.log('handling single');
+        this.loadStateData();
+        window.setTimeout(function() {rankings.setUIListeners();}, 1000);
+      } else {
+        this.populateFilters();
+        this.loadStateData();
+        this.handleStickyFilters();
+        window.setTimeout(function() {rankings.setUIListeners();}, 1000);
+      }
     }
   }
   rankings.init();
