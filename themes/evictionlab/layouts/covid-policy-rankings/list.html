@@ -1,8 +1,17 @@
 {{ partial "header" . }}
 <!-- {{ partial "breadcrumb" . }} -->
+
+<div class="graphic-header covid-policy center-page-wrapper align-items-center d-flex">
+  <div class="center-page">
+    <h1 class="graphic-page-header">{{ .Params.h1 | safeHTML }}</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
 <div class="row alt-bg ml-0 mr-0">
-  <div class="col-10 offset-1 col-lg-8 offset-lg-2 mx-lg-auto col-xl-8 rankings-intro">
-    {{ .Content | markdownify }}
+  <div class="col-10 offset-1 col-lg-8 offset-lg-2 mx-lg-auto col-xl-8 rankings-intro d-mm-flex d-mm-block px-0">
+    <div class="col-12 col-mm-6 pl-mm-0 pr-mm-3">{{ .Params.intro1 | safeHTML }}</div>
+    <div class="col-12 col-mm-6 pr-mm-1">{{ .Params.intro2 | safeHTML }}</div>
   </div>
 </div>
 

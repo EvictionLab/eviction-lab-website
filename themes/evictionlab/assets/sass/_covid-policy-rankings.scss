@@ -14,19 +14,26 @@ $el-purple: #434778;
 $el-light-purple: #E7E9FF;
 $el-darkgray: #737373;
 
+.graphic-header.covid-policy {
+  background-color: #999;
+  h1 {
+    padding-top: 0;
+  }
+}
+
 .rankings-intro {
-  padding-top: 4rem;
+  padding-top: 3.2rem;
   margin-bottom: 1.6rem;
+  padding-bottom: 2.4rem;
+  margin-top: 4rem;
   @include media-breakpoint-up(lg) {
     margin-bottom: 4rem;
   }
+  border-top: 5px solid $el-purple;
   h2 {
     color: $el-purple;
     font-family: GT-Eesti-Display-Bold, sans-serif;
     font-size: 3.2rem;
-    border-top: 5px solid $el-purple;
-    padding-top: 1.6rem;
-    padding-bottom: 2.4rem;
   }
   p {
     width: 100%;
@@ -34,8 +41,11 @@ $el-darkgray: #737373;
       width: 100%;
     }
     @include media-breakpoint-up(xl) {
-      width: 50%;
+      //width: 50%;
     }
+  }
+  a, a:hover {
+    color: $el-red;
   }
 }
 
