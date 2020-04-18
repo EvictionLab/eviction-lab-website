@@ -323,7 +323,7 @@ $(document).ready(function () {
       
     },
     setUIListeners: function() {
-      // console.log('setUIListeners()');
+      console.log('setUIListeners()');
       // Sets listeners for:
       // Show and hide of filter for small-screen devices
       $('#mobile_filter').on('click select', function(e) {
@@ -432,7 +432,7 @@ $(document).ready(function () {
       console.log('context = ', context);
       var url = '/js/covid-policy-rankings/single-state-template.html';
       rankings.loadHandlebarsTemplate(url, function(template) {
-          $('#state_panel tbody').html(template(context)).find('tr').show('slow');
+          $('.insert-after').after(template(context)).show('slow');
       });
     },
     populateFilters: function() {
@@ -529,22 +529,50 @@ $(document).ready(function () {
         return String(context).toLowerCase();
       });
       Handlebars.registerHelper("getsamedal", function(context, options) {
-        console.log('getsamedal context, ', context);
+        // console.log('getsamedal context, ', context);
         var filters = [];
         rankings.allFilters.forEach(function(el) {
           el.filters.forEach(function(item) {
             filters.push(item);
           })
         })
-        console.log('filters: ', filters);
+        // console.log('filters: ', filters);
         var getsmedal = filters.filter(function(el) {
           return el.id === context;
         })
-        console.log('getsmedal, ', getsmedal[0].medal);
-        // return getsmedal[0].medal;
+        // console.log('getsmedal, ', getsmedal[0].medal);
         if (!!getsmedal[0].medal) {
-          console.log('returning context');
+          // console.log('returning context');
           return options.fn(this);
+        }
+      });
+      Handlebars.registerHelper("getsatooltip", function(context, options) {
+        // console.log('getsatooltip context, ', context);
+        var filters = [];
+        rankings.allFilters.forEach(function(el) {
+          el.filters.forEach(function(item) {
+            filters.push(item);
+          })
+        })
+        // console.log('filters: ', filters);
+        var getstip = filters.filter(function(el) {
+          return el.id === context;
+        })
+        // console.log('getstip, ', getstip);
+        // return getsmedal[0].medal;
+        if (getstip[0]) {
+          if (getstip[0].tooltip) {
+            if (getstip[0].tooltip.length > 0) {
+              // console.log('there\'s a tooltip context');
+              // return options.fn(this);
+              return '<span class="a11y-tip">' +
+                '<span class="a11y-tip__trigger icon icon-tooltip fa fa-question-circle --no-delay"></span>' +
+                '<span class="a11y-tip__help a11y-tip__help--top">' +
+                  getstip[0].tooltip +
+                '</span>' +
+              '</span>';
+            }
+          }
         }
       });
       Handlebars.registerHelper("isfalse", function(context, options) {
@@ -562,6 +590,7 @@ $(document).ready(function () {
       if (this.pageType === 'single') {
         // console.log('handling single');
         this.loadStateData();
+        window.setTimeout(function() {rankings.setUIListeners();}, 1000);
       } else {
         this.populateFilters();
         this.loadStateData();
