@@ -25,6 +25,7 @@ $el-lightgray: #828282;
 .page-type-covid-policy-rankings.page-layout-single {
  
 
+
 .graphic-header.covid-policy {
   background-color: f4f7f9;
   background-image: url('/images/assets/hero/eviction-notice-hero.jpg');
@@ -42,10 +43,14 @@ $el-lightgray: #828282;
 
 .rankings-intro,
 .acknowledgements {
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
   padding-top: 3.2rem;
-  margin-bottom: 1.6rem;
   padding-bottom: 2.4rem;
-  margin-top: 4rem;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 1.6rem;
+    margin-top: 4rem;
+  }
   @include media-breakpoint-up(lg) {
     margin-bottom: 2.4rem;
   }
@@ -79,7 +84,15 @@ $el-lightgray: #828282;
   }
 }
 
+.a11y-tip {
+  display: inline-block;
+  position: relative;
+  left: 3px;
+  top: 1px;
+}
+
 .inline-panel {
+
   &.state {
     // min-height: 100vh;
     @include media-breakpoint-only(md) {
@@ -463,7 +476,7 @@ $el-lightgray: #828282;
             //   padding: 0 2rem 0 2rem;
             // }
             font-family: Akkurat-regular, sans-serif;
-            color: #8A8A8A;
+            color: $el-darkgray;
             font-size: 1.4rem;
             p:last-of-type {
               margin-bottom: 0;
@@ -648,6 +661,7 @@ $el-lightgray: #828282;
               //   }
               // }
               .state-policy {
+                
                 label {
                   font-size: 1.6rem;
                   margin-bottom: 0.8rem;
@@ -688,7 +702,7 @@ $el-lightgray: #828282;
                   width: 100%;
                   max-width: 80%;
                   margin-bottom: 1.6rem;
-                  color: #8a8a8a;
+                  color: $el-darkgray;
                   @include media-breakpoint-up(md) {
                     font-size: 1.5rem; 
                     width: 90%;
@@ -832,6 +846,9 @@ $el-lightgray: #828282;
 .row {// Filters and state data panel
   &.state-basic {
     margin-top: 3rem;
+    @include media-breakpoint-up(md) {
+      margin-top: 5.6rem;
+    }
     font-family: GT-Eesti-Display-Bold, sans-serif;
     // font-size: 1.2rem;
     font-size: 1.8rem;
@@ -1183,6 +1200,9 @@ $el-lightgray: #828282;
   &.state-details {
     padding-top: 0.8rem;
     padding-bottom: 2rem;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 4rem;
+    }
     p,
     a {
       // padding: 0.8rem;
@@ -1190,7 +1210,7 @@ $el-lightgray: #828282;
       //   padding: 0 2rem 0 2rem;
       // }
       font-family: Akkurat-regular, sans-serif;
-      color: #8A8A8A;
+      color: $el-darkgray;
       // font-size: 1.4rem;
       p:last-of-type {
         margin-bottom: 0;
@@ -1292,7 +1312,11 @@ $el-lightgray: #828282;
   }
   &.category {
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2.4rem;
+    @include media-breakpoint-up(md) {
+      padding-top: 5.6rem;
+      padding-bottom: 4rem;
+    }
     .category-label {
       border-top: solid 4px $el-purple;
       padding-top: 6px;
@@ -1304,7 +1328,7 @@ $el-lightgray: #828282;
         background-position: center;
         width: 20px;
         height: 20px;
-        margin-right: 6px;
+        margin-right: 10px;
         flex: 0 0 20px;
       }
     }
@@ -1351,7 +1375,13 @@ $el-lightgray: #828282;
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
+      margin-top: 1.6rem;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
       .state-policy {
+        p {
+          color: $el-darkgray;
+        }
         padding: 1rem;
         flex: 0 0 100%;
         @include media-breakpoint-up(md) {
@@ -1359,7 +1389,7 @@ $el-lightgray: #828282;
         }
         label {
           font-size: 1.6rem;
-          margin-bottom: 0.8rem;
+         // margin-bottom: 0.8rem;
           font-family: Akkurat-Bold, sans-serif;
           &:before {
             content: '';
@@ -1391,7 +1421,7 @@ $el-lightgray: #828282;
             margin-left: 3px;
           }
           .fa-question-circle {
-            color: #8A8A8A;
+            color: $el-darkgray;
           }
         }
       }

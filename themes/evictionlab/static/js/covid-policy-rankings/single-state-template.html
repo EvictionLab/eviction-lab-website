@@ -2,7 +2,7 @@
 {{#with state}}
 
 <div class="row ml-0 mr-0 state-basic">
-  <div class="col-10 offset-1 col-md-4 offset-md-1 col-xl-3 offset-xl-2 col-state-name">
+  <div class="col-12 col-md-4 offset-md-1 col-xl-3 offset-xl-2 col-state-name">
     <div class="col-title">
         State
     </div>
@@ -15,13 +15,13 @@
       {{/if}}
     </div>
   </div>
-  <div class="col-10 offset-1 col-md-4 offset-md-0 col-xl-3 offset-xl-0 col-renting-pop">
+  <div class="col-12 col-md-4 offset-md-0 col-xl-3 offset-xl-0 col-renting-pop">
     <div class="col-title">
         Renting population
     </div>
     <div class="state-stat-1">{{evstat1}}</div>
   </div>
-  <div class="col-10 offset-1 col-md-2 offset-md-0 col-xl-2 offset-xl-0 col-stars">
+  <div class="col-12 col-md-2 offset-md-0 col-xl-2 offset-xl-0 col-stars">
     <div class="col-title">
       Rating
     </div>
@@ -37,7 +37,7 @@
 </div>
 
 <div class="row ml-0 mr-0 state-details">
-  <div class="col-10 offset-1 col-md-7 offset-md-1 col-xl-5 offset-xl-2">
+  <div class="col-12 col-md-7 offset-md-1 col-xl-5 offset-xl-2">
     {{#if until}}
       <p class="expires">
           Protections start to expire on <strong>{{until}}</strong>.
@@ -55,7 +55,7 @@
     {{/if}}
     <div class="full-list-link">
       <div class="icon" aria-hidden="true"></div>
-      <a href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTH8dUIbfnt3X52TrY3dEHQCAm60e5nqo0Rn1rNCf15dPGeXxM9QN9UdxUfEjxwvfTKzbCbZxJMdR7X/pubhtml">See a full list of executive, legislative, and court orders.</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTH8dUIbfnt3X52TrY3dEHQCAm60e5nqo0Rn1rNCf15dPGeXxM9QN9UdxUfEjxwvfTKzbCbZxJMdR7X/pubhtml">See a full list of executive, legislative, and court orders.</a>
     </div>
     {{#if updated}}
       <p class="last-updated">
@@ -64,19 +64,19 @@
     {{/if}}
   </div>
   <div class="col-10 offset-1 col-md-3 offset-md-0 col-xl-3 offset-xl-0">
-    <a class="btn btn-justshelter" href="https://justshelter.org/community-resources/#{{#tolowercase stabbrev }}{{/tolowercase}}">VIEW STATE RESOURCES</a>
+    <a class="btn btn-justshelter" target="_blank" href="https://justshelter.org/community-resources/#{{#tolowercase stabbrev }}{{/tolowercase}}">RESOURCES FOR TENANTS</a>
     <button id="print_page" class="btn btn-print" href="#"><i class="fa fa-print"></i>PRINT PDF</button>
   </div>
 </div>
   
 <div class="row ml-0 mr-0 alt-bg category category-1">
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
     <div class="category-label">
       <div class="icon" aria-hidden="true"></div>
       <h3>Initiation of Eviction</h3>
     </div>
   </div>
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2 policy-list">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 policy-list">
     {{! plcnoticebool }}
     <div class="state-policy">
       <label class="icon-{{plcnoticebool}} plcnoticebool">
@@ -159,13 +159,13 @@
   </div>
 </div>
 <div class="row ml-0 mr-0 category category-2 page-break-after">
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
     <div class="category-label">
       <div class="icon" aria-hidden="true"></div>
       <h3>Court Process</h3>
     </div>
   </div>
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2 policy-list">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 policy-list">
     {{! plcnohearbool }}
     <div class="state-policy">
       <label class="icon-{{plcnohearbool}} plcnohearbool">
@@ -249,13 +249,13 @@
   </div>
 </div>
 <div class="row ml-0 mr-0 alt-bg category category-3">
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
     <div class="category-label">
       <div class="icon" aria-hidden="true"></div>
       <h3>Enforcement of Eviction Order</h3>
     </div>
   </div>
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2  policy-list">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2  policy-list">
     {{! plccovenfbool }}
     <div class="state-policy">
       <label class="icon-{{plccovenfbool}} plccovenfbool">
@@ -318,13 +318,13 @@
   </div>
 </div>
 <div class="row ml-0 mr-0 category category-4">
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
     <div class="category-label">
       <div class="icon" aria-hidden="true"></div>
       <h3>Short-Term Supports</h3>
     </div>
   </div>
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2  policy-list">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2  policy-list">
     {{! plcextmorbool }}
     <div class="state-policy">
       <label class="icon-{{plcextmorbool}} plcextmorbool">
@@ -447,13 +447,13 @@
   </div>
 </div>
 <div class="row ml-0 mr-0 alt-bg category category-5">
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
     <div class="category-label">
       <div class="icon" aria-hidden="true"></div>
       <h3>Tenancy Preservation Measures</h3>
     </div>
   </div>
-  <div class="col-10 offset-1 col-xl-8 offset-xl-2 policy-list">
+  <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 policy-list">
     {{! plclatfbool }}
     <div class="state-policy">
       <label class="icon-{{plclatfbool}} plclatfbool">

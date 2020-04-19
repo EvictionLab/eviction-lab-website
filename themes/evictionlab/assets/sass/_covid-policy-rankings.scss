@@ -560,7 +560,7 @@ $el-darkgray: #737373;
               padding: 0 2rem 0 2rem;
             }
             font-family: Akkurat-regular, sans-serif;
-            color: #8A8A8A;
+            color: $el-darkgray;
             font-size: 1.4rem;
             p:last-of-type {
               margin-bottom: 0;
@@ -646,6 +646,7 @@ $el-darkgray: #737373;
                   padding-right: 0;
                 }
                 @include media-breakpoint-up(md) {
+                  padding: 3.2rem 3.6rem 0 0;
                   flex: 0 0 50%;
                 }
                 @include media-breakpoint-up(md) {
@@ -732,7 +733,7 @@ $el-darkgray: #737373;
                 label {
                   font-size: 1.6rem;
                   margin-bottom: 0.8rem;
-                  color: #8A8A8A;
+                  color: $el-darkgray;
                   font-family: Akkurat, sans-serif;
                   &:before {
                     content: '';
@@ -1130,7 +1131,7 @@ $el-darkgray: #737373;
           }
         }
         .icon-tooltip {
-          color: #8A8A8A;
+          color: $el-darkgray;
           display: flex;
           align-items: center;
           // line-height: 20px;
