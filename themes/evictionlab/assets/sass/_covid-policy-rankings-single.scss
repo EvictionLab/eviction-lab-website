@@ -21,6 +21,7 @@ $el-purple: #434778;
 $el-light-purple: #E7E9FF;
 $el-darkgray: #737373;
 $el-lightgray: #828282;
+$alt-bg: #F4F7F9;
 
 .page-type-covid-policy-rankings.page-layout-single {
  
@@ -1662,6 +1663,9 @@ $el-lightgray: #828282;
     }
   }
 }
+.disclaimer {
+  background-color: #fff;
+}
 }
 @media print {
   .page-type-covid-policy-rankings.page-layout-single {
@@ -1689,4 +1693,5 @@ $el-lightgray: #828282;
       background-color: transparent;
     }
   }
+  
 }
