@@ -400,7 +400,7 @@ $(document).ready(function () {
         rankings.filterConfig = [];
         rankings.sortAndFilter();
       });
-      rankings.initTooltip();      
+      rankings.initTooltip();
     },
     loadHandlebarsTemplate: function(url, callback) {
       // Load handlebars template via xhr.
@@ -419,7 +419,7 @@ $(document).ready(function () {
     emptyStates: function(callback) {
       // Empties table of states.
       // console.log('emptyStates()');
-      $('#states_table tbody tr').hide('slow').remove();
+      $('#states_table tbody tr').hide().remove();
       callback();
     },
     populateStates: function() {

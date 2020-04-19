@@ -229,6 +229,16 @@ $el-darkgray: #737373;
       tr:nth-child(6n) {
         background: #F5F9FF;
       }
+      .spinner-parent {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        text-align: center;
+        .spinner-border {
+          color: $el-purple;
+          width: 3rem;
+          height: 3rem;
+        }
+      }
       tr {
         &.state {
           td {
