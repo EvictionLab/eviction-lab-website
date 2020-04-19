@@ -45,28 +45,40 @@ $el-darkgray: #737373;
   @include media-breakpoint-up(md) {
     margin-top: 2.4rem;
   }
+  @include media-breakpoint-up(lg) {
+    margin-top: 4rem;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: 4.8rem;
+  }
 }
 .rankings-intro {
   padding-top: 3.2rem;
+  margin-bottom: 1.6rem;
+  padding-bottom: 2.4rem;
   @include media-breakpoint-up(md) {
     margin-top: 0.8rem;
+    margin-bottom: 2.4rem;
   }
 }
 
 .acknowledgements {
+  margin-bottom: 1.6rem;
+  padding-bottom: 2.4rem;
   @include media-breakpoint-up(md) {
-    padding-top: 3.2rem;
-    margin-top: 4rem;
+  //  padding-top: 3.2rem;
+  //  margin-top: 4rem;
+  margin-bottom: 0rem;
+  padding-bottom: 4rem;
     }
 }
 
 .rankings-intro,
 .acknowledgements {
-  margin-bottom: 1.6rem;
-  padding-bottom: 2.4rem;
+ 
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 2.4rem;
+   
   }
   // border-top: 5px solid $el-purple;
   h2 {
