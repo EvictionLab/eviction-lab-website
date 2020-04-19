@@ -4,41 +4,11 @@
 
 <div class="row alt-bg ml-0 mr-0">
   <div class="col-10 offset-1 col-lg-6 mx-lg-auto col-xl-8 offset-lg-2 rankings-intro">
-    {{ .Title }} for {{ .Params.state_title }}
+    <h2>{{ .Title }}</h2>
   </div>
 </div>
 
-<div class="row ml-0 mr-0">
-
-  <div id="state_panel" class="inline-panel states col-12 offset-0 offset-md-1 col-md-10 col-lg-8 offset-lg-2">
-    <div class="col-12 d-md-none text-center mb-3"><p><i>Scroll right within table to see ratings.</i></p></div>
-    <table id="states_table" class="state-table table-responsive-sm">
-      <caption class="sr-only">List of states, sortable by state name, renting population, pre-COVID-19 filings, and ranking</caption>
-      <thead>
-        <tr>
-          <!-- data-filter changes to asc or desc when selected -->
-          <th id="stname" class="state-name" data-filter="false">
-            <div class="col-title">
-                State
-            </div>
-          </th>
-          <th id="evstat1" class="stat-one" data-filter="false">
-            <div class="col-title">
-                Renting population
-            </div>
-          </th>
-          <th id="stars" class="stars" data-filter="desc">
-            <div class="col-title">
-              Rating
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody class="state-details"></tbody>
-      <!--<caption>*Filings per day based on data collected before the COVID-19 pandemic.</caption>-->
-    </table>
-  </div>
-</div>
+<span class="insert-after"></span>
 
 {{ partial "covid-acknowledgements" . }}
 
