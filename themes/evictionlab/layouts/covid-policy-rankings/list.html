@@ -9,14 +9,17 @@
 </div>
 
 <div class="row alt-bg ml-0 mr-0">
-  <div class="col-10 offset-1 col-lg-8 offset-lg-2 mx-lg-auto col-xl-8 rankings-intro d-mm-flex d-mm-block px-0">
+  <div class="col-10 offset-1 col-lg-10 offset-lg-1 mx-lg-auto col-xl-8 px-lg-4">
+    <div class="bordertop"></div>
+  </div>
+  <div class="col-md-10 offset-md-1 mx-xl-auto col-xl-8 rankings-intro d-mm-flex d-mm-block px-md-0 px-lg-4">
     <div class="col-12 col-mm-6 pl-mm-0 pr-mm-3">{{ .Params.intro1 | safeHTML }}</div>
     <div class="col-12 col-mm-6 pr-mm-1">{{ .Params.intro2 | safeHTML }}</div>
   </div>
 </div>
 
 <div id="filters_panel" class="row ml-0 mr-0 filters-panel">
-  <div  class="filters-panel col-12 offset-0 col-md-10 offset-md-1 col-xl-8 offset-xl-2 pt-3 pb-3">
+  <div  class="filters-panel col-12 offset-0 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 pt-3 pb-3 px-md-4">
     <button id="mobile_filter" class="btn mobile-filter show-filters" tabindex="0">Show Filters</button>
     <div class="filters" style="max-height:0;">
       <!-- <h4 id="filters_heading">Filter:</h4> -->
@@ -30,7 +33,7 @@
   <!-- <div class="mobile-filters col-10 offset-1 d-lg-none">
     <button id="mobile_filter" class="btn mobile-filter show-filters">Show Filters</button>
   </div> -->
-  <div id="states_panel" class="inline-panel states col-12 offset-0 offset-md-1 col-md-10 col-xl-8 offset-xl-2">
+  <div id="states_panel" class="inline-panel states col-12 offset-0 offset-lg-1 col-lg-10 col-xl-8 offset-xl-2">
     <div class="col-12 d-smm-none text-center mb-3"><p><i>Scroll right within table to see ratings.</i></p></div>
     <table id="states_table" class="states-table table-responsive-sm">
       <caption class="sr-only">List of states, sortable by state name, renting population, pre-COVID-19 filings, and ranking</caption>
