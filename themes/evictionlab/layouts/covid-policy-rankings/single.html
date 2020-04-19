@@ -3,7 +3,7 @@
 {{ partial "agnosticbreadcrumb" . }} 
 
 <div class="row alt-bg ml-0 mr-0">
-  <div class="col-10 offset-1 col-lg-6 mx-lg-auto col-xl-8 offset-lg-2 rankings-intro">
+  <div class="d-none col-12 col-md-10 offset-md-1 col-lg-6 mx-lg-auto col-xl-8 offset-lg-2 rankings-intro">
     <h2>{{ .Title }}</h2>
   </div>
 </div>
@@ -16,6 +16,7 @@
   </div>
 </div>
 
+{{/* partial "covid-acknowledgements" . */}}
 
 <script type="text/javascript">
   var page_state_abbrev = {{ .Params.state_abbrev }};
