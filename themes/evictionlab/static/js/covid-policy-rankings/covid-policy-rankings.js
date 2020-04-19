@@ -310,19 +310,19 @@ $(document).ready(function () {
         // console.log('scrolled');
         var wScrollTop = $(window).scrollTop();
         // console.log('wScrollTop, ', wScrollTop);
-        var headerHeight = $('header .header-wrapper').height();
-        if (wScrollTop + headerHeight >= filtersPanelOffset.top && viewportWidth >= 768) {
-          // console.log('make the filter sticky');
-          $filtersPanel.css({
-            position: 'sticky',
-            top: headerHeight,
-            left: filtersPanelOffset.left
-          }).addClass('filter-sticky');
-        } else {
-          $filtersPanel.css({
-            position: 'inherit'
-          }).removeClass('filter-sticky');
-        }
+        // var headerHeight = $('header .header-wrapper').height();
+        // if (wScrollTop + headerHeight >= filtersPanelOffset.top && viewportWidth >= 768) {
+        //   // console.log('make the filter sticky');
+        //   $filtersPanel.css({
+        //     position: 'sticky',
+        //     top: headerHeight,
+        //     left: filtersPanelOffset.left
+        //   }).addClass('filter-sticky');
+        // } else {
+        //   $filtersPanel.css({
+        //     position: 'inherit'
+        //   }).removeClass('filter-sticky');
+        // }
       })
     },
     initTooltip: function() {
