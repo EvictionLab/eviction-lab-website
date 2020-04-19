@@ -629,7 +629,6 @@ $el-darkgray: #737373;
               display: flex;
               flex-wrap: wrap;
               clear: both;
-              
               .last-updated {
                 flex: 1 0 100%;
                 font-family: GT-Eesti-Display-Bold, sans-serif;
@@ -638,6 +637,19 @@ $el-darkgray: #737373;
                 color: #949494;
                 margin-top: 2.4rem;
                 margin-bottom: 0rem;
+              }
+              .standout {
+                flex: 1 1 100%;
+                padding-top: 0.6rem;
+                color: #828282;
+                .icon-standout {
+                  display: inline-block;
+                  width: 12px;
+                  height: 12px;
+                  margin-right: 6px;
+                  background-image: url($medallion);
+                  background-size: contain;
+                }
               }
               .category {
                 flex: 0 0 100%;
@@ -901,6 +913,7 @@ $el-darkgray: #737373;
             button.collapse-state-details {
               max-height: 50px;
               max-width: 250px;
+              margin-left: -6px;
               overflow-y: hidden;
             }
           }

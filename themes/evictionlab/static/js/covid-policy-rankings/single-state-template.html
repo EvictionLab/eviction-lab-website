@@ -53,6 +53,13 @@
         {{sttext}}
       </p>
     {{/if}}
+    {{#if plcstandoutbool}}
+      <div class="standout">
+        <p>
+          <span class="icon-standout"></span>{{stname}} has enacted one or more high-impact policies. Details below.
+        </p>
+      </div>
+    {{/if}}
     <div class="full-list-link">
       <div class="icon" aria-hidden="true"></div>
       <a href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTH8dUIbfnt3X52TrY3dEHQCAm60e5nqo0Rn1rNCf15dPGeXxM9QN9UdxUfEjxwvfTKzbCbZxJMdR7X/pubhtml">See a full list of executive, legislative, and court orders.</a>
@@ -92,8 +99,8 @@
         {{/if}}
         {{#getsatooltip 'plcnoticebool'}}{{/getsatooltip}}
       </label>
-      {{#if plcstandouttext}}
-        <p>{{plcstandouttext}}</p>
+      {{#if plcnoticetext}}
+        <p>{{plcnoticetext}}</p>
       {{/if}}
     </div>
 
@@ -111,8 +118,8 @@
         {{/if}}
         {{#getsatooltip 'plccofilbool'}}{{/getsatooltip}}
       </label>
-      {{#if plcstandouttext}}
-        <p>{{plcstandouttext}}</p>
+      {{#if plccofiltext}}
+        <p>{{plccofiltext}}</p>
       {{/if}}
     </div>
 
@@ -130,8 +137,8 @@
         {{/if}}
         {{#getsatooltip 'plcnonpbool'}}{{/getsatooltip}}
       </label>
-      {{#if plcstandouttext}}
-        <p>{{plcstandouttext}}</p>
+      {{#if plcnonptext}}
+        <p>{{plcnonptext}}</p>
       {{/if}}
     </div>
 
@@ -149,13 +156,10 @@
         {{/if}}
         {{#getsatooltip 'plcnofilbool'}}{{/getsatooltip}}
       </label>
-      {{#if plcstandouttext}}
-        <p>{{plcstandouttext}}</p>
+      {{#if plcnofiltext}}
+        <p>{{plcnofiltext}}</p>
       {{/if}}
     </div>
-    {{!-- {{#if plcnonptext}}
-      <p>{{plcnonptext}}</p>
-    {{/if}} --}}
   </div>
 </div>
 <div class="row ml-0 mr-0 category category-2 page-break-after">

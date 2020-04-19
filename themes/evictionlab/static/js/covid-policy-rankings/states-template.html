@@ -52,6 +52,13 @@
       </button>
       <button class="collapse-state-details btn top" data-state="{{stabbrev}}" aria-hidden="true">CLOSE OUTLINE <span class="sr-only">{{stname}}</span></button>
       <div class="state-details-list">
+        {{#if plcstandoutbool}}
+          <div class="standout">
+            <p>
+              <span class="icon-standout"></span>{{stname}} has enacted one or more high-impact policies. Details below.
+            </p>
+          </div>
+        {{/if}}
         <!-- <div class="col-left"> -->
         <div class="category category-1">
           <div class="category-label">

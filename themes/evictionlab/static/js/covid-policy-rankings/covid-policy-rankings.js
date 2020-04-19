@@ -99,7 +99,8 @@ $(document).ready(function () {
           {
             id: 'plcarsbool',
             label: 'Grace period to pay rent',
-            medal: true
+            medal: true,
+            tooltip: 'Measures that require landlords to offer a grace period or payment plan to tenants. See Methodology Report for more info.'
           },
           {
             id: 'plcnorepbool',
@@ -130,7 +131,8 @@ $(document).ready(function () {
           {
             id: 'plcdebtbool',
             label: 'Housing stabilization',
-            medal: true
+            medal: true,
+            tooltip: 'Measures that increase housing or reduce or cancel tenants\' debt. See Methodology Report for more info.'
           },
           {
             id: 'plccgbool',
