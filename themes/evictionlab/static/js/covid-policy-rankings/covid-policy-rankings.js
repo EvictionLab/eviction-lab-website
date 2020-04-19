@@ -290,24 +290,28 @@ $(document).ready(function () {
       var filterOffset = null;
       var $filtersPanel = $('#filters_panel');
       var filtersPanelOffset = $filtersPanel.offset();
+      var viewportWidth = $(window).width(); 
+      var targetWidth = 768;
       // var $table = $('#states_panel table');
       // var $theads = $('#states_panel thead th');
       $(window).on('load', function() {
         // console.log('loaded');
         // filterOffset = $filters.offset();
         filtersPanelOffset = $filtersPanel.offset();
+        viewportWidth = $(window).width();
       })
       $(window).on('resize', function() {
         // console.log('loaded');
         // filterOffset = $filters.offset();
         filtersPanelOffset = $filtersPanel.offset();
+        viewportWidth = $(window).width();
       })
       $(window).on('scroll', function() {
         // console.log('scrolled');
         var wScrollTop = $(window).scrollTop();
         // console.log('wScrollTop, ', wScrollTop);
         var headerHeight = $('header .header-wrapper').height();
-        if (wScrollTop + headerHeight >= filtersPanelOffset.top) {
+        if (wScrollTop + headerHeight >= filtersPanelOffset.top && viewportWidth >= 768) {
           // console.log('make the filter sticky');
           $filtersPanel.css({
             position: 'sticky',
@@ -315,12 +319,17 @@ $(document).ready(function () {
             left: filtersPanelOffset.left
           }).addClass('filter-sticky');
         } else {
-          $filtersPanel.removeClass('filter-sticky');
+          $filtersPanel.css({
+            position: 'inherit'
+          }).removeClass('filter-sticky');
         }
       })
     },
     initTooltip: function() {
-      
+      // Hot-load tooltips script to init tooltips for filters (after markup inserted).
+      $.getScript('/js/covid-policy-rankings/tooltips.js', function() {
+        console.log('tooltips loaded');
+      });
     },
     setUIListeners: function() {
       console.log('setUIListeners()');
@@ -389,16 +398,7 @@ $(document).ready(function () {
         rankings.filterConfig = [];
         rankings.sortAndFilter();
       });
-      $('#print_page').on('click select', function(e) {
-        console.log('print clicked');
-        window.print();
-      });
-      // rankings.initTooltip();
-      
-      // Load tooltips script to init tooltips for filters.
-      $.getScript('/js/covid-policy-rankings/tooltips.js', function() {
-        console.log('tooltips loaded');
-      });
+      rankings.initTooltip();      
     },
     loadHandlebarsTemplate: function(url, callback) {
       // Load handlebars template via xhr.
@@ -437,7 +437,14 @@ $(document).ready(function () {
       console.log('context = ', context);
       var url = '/js/covid-policy-rankings/single-state-template.html';
       rankings.loadHandlebarsTemplate(url, function(template) {
-          $('.insert-after').after(template(context)).show('slow');
+          $('.insert-after').after(template(context)).show('slow', function() {
+            // Load script and add event listeners for single state page.
+            rankings.initTooltip();
+            $('#print_page').on('click select', function(e) {
+              // console.log('print clicked');
+              window.print();
+            });
+          });
       });
     },
     populateFilters: function() {
@@ -595,7 +602,6 @@ $(document).ready(function () {
       if (this.pageType === 'single') {
         // console.log('handling single');
         this.loadStateData();
-        window.setTimeout(function() {rankings.setUIListeners();}, 1000);
       } else {
         this.populateFilters();
         this.loadStateData();
