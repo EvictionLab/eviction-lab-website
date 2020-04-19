@@ -586,6 +586,7 @@ $el-darkgray: #737373;
               display: flex;
               flex-wrap: wrap;
               clear: both;
+              
               .last-updated {
                 flex: 1 0 100%;
                 font-family: GT-Eesti-Display-Bold, sans-serif;
@@ -597,7 +598,10 @@ $el-darkgray: #737373;
               }
               .category {
                 flex: 0 0 100%;
-                padding: 1rem;
+                padding: 2.4rem 3.6rem 0 0;
+                &:nth-of-type(3) {
+                  padding-right: 0;
+                }
                 @include media-breakpoint-up(md) {
                   flex: 0 0 50%;
                 }
@@ -606,6 +610,9 @@ $el-darkgray: #737373;
                 }
                 .category-label {
                   display: flex;
+                  h3 {
+                    margin-bottom: 1.6rem;
+                  }
                   h4 {
                     color: $el-purple;
                     // margin-left: 20px;
@@ -680,7 +687,8 @@ $el-darkgray: #737373;
                 label {
                   font-size: 1.6rem;
                   margin-bottom: 0.8rem;
-                  font-family: Akkurat-Bold, sans-serif;
+                  color: #8A8A8A;
+                  font-family: Akkurat, sans-serif;
                   &:before {
                     content: '';
                     width: 24px;
