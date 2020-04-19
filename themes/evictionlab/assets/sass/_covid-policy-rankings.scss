@@ -19,6 +19,7 @@ $el-green: #2C897F;
 $el-purple: #434778;
 $el-light-purple: #E7E9FF;
 $el-darkgray: #737373;
+$alt-bg: #F4F7F9;
 
 .graphic-header.covid-policy {
   background-color: #f4f7f9;
@@ -122,7 +123,7 @@ $el-darkgray: #737373;
   }
   // States panel
   .states-table {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     width: 100%;
     @include media-breakpoint-up(lg) {
       min-height: 100vh;
@@ -1176,4 +1177,8 @@ $el-darkgray: #737373;
       }
     }
   }
+  
+}
+.disclaimer {
+  background-color: $alt-bg;
 }
