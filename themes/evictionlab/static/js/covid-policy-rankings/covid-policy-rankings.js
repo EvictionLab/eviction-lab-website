@@ -439,14 +439,18 @@ $(document).ready(function () {
       console.log('context = ', context);
       var url = '/js/covid-policy-rankings/single-state-template.html';
       rankings.loadHandlebarsTemplate(url, function(template) {
-          $('.insert-after').after(template(context)).show('slow', function() {
-            // Load script and add event listeners for single state page.
-            rankings.initTooltip();
-            $('#print_page').on('click select', function(e) {
-              // console.log('print clicked');
-              window.print();
-            });
+        // Hide the loading indicator.
+        $('.row.insert-after').css({'max-height': 0, 'min-height': 0});
+        // Insert template data. Do some page setup after that.
+        $('.insert-after').after(template(context)).show('slow', function() {
+          // Load script and add event listeners for single state page.
+          rankings.initTooltip();
+          // Set up listener for print button.
+          $('#print_page').on('click select', function(e) {
+            // console.log('print clicked');
+            window.print();
           });
+        });
       });
     },
     populateFilters: function() {

@@ -23,7 +23,20 @@ $el-darkgray: #737373;
 $el-lightgray: #828282;
 
 .page-type-covid-policy-rankings.page-layout-single {
- 
+
+  .insert-after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    .spinner {
+      .spinner-border {
+        color: $el-purple;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
 
 .graphic-header.covid-policy {
   background-color: f4f7f9;

@@ -126,18 +126,6 @@ $el-darkgray: #737373;
     width: 100%;
     @include media-breakpoint-up(lg) {
       min-height: 100vh;
-      // height: 80vh;
-      // overflow-y: scroll;
-      // display: block;
-      // width: 100%;
-      // thead {
-      //   background-color: #fff;
-      //   th {
-      //     background-color: #fff;
-      //     position: sticky;
-      //     top: 0;
-      //   }
-      // }
     }
     thead {
       tr {
