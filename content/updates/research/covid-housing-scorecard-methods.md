@@ -10,7 +10,7 @@ postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Our methodology for building the Housing Policy Scorecard.
-listSummary: Safe and decent housing have always been central to ensuring health and stability. Today, with the United States focused on containing the COVID-19 pandemic, the broader issue of income and housing insecurity has quickly become paramount to the health of an entire nation. 
+listSummary: To prevent the deleterious health consequences of eviction and an escalating economic crisis during the COVID-19 outbreak, U.S. states are beginning to pursue strategies to ensure safe, decent, and stable housing during and after the pandemic. To evaluate state responses, the Eviction Lab and Columbia Law School’s Professor Emily Benfer have developed a policy scorecard for each state.
 socialDescription: Our methodology for building the Housing Policy Scorecard.
 fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
@@ -155,7 +155,7 @@ Within categories, more weight is given to protections that are more comprehensi
 
 A special thanks is given to Anne Kat Alexander and Alieza Durana at the Eviction Lab and to Amy Groshek, James Minton, and Sasha Zyryaev at Hyperobjekt for their instrumental work in designing and authoring the scorecard; and to Columbia Law School and Mailman School of Public Health students Katherine Donohue, Ruth Hirsch, Jennifer Katz, Michelle Lappen, Jordan Lieberman, Janki Tailor, and Marissa Yochelson Long for their contribution to data analysis and management. 
  
-We are grateful for the outstanding research support provided by the following law and public health students from Columbia Law School, University of Pennsylvania School of Law, and Columbia University Mailman School of Public Health: Dionna Attinson, Katherine Donohue, Harry Frank, Shravya Govindgari, Taylor Hertzler, Ruth Hirsch, Jennifer Katz, Ellen Kim, Robert Koehler, Rani Kulkarni, Michelle Lappen, Nicole Levy, Jordan Lieberman, Nicole Levy, Josh Malkin, Sarah McElwee, Justin Porter, Jacob Roth, Nika Sabasteanski, Janki Tailor, Wendy Xiao, Marissa Yochelson Long, and Nora Zakaria. 
+We are grateful for the outstanding research support provided by the following law and public health students from Columbia Law School, University of Pennsylvania School of Law, University of Michigan School of Law, and Columbia University Mailman School of Public Health: Dionna Attinson, Katherine Donohue, Susan Fleurant, Harry Frank, Shravya Govindgari, Taylor Hertzler, Ruth Hirsch, Jennifer Katz, Ellen Kim, Robert Koehler, Rani Kulkarni, Michelle Lappen, Nicole Levy, Jordan Lieberman, Nicole Levy, Josh Malkin, Sarah McElwee, Justin Porter, Jacob Roth, Nika Sabasteanski, Janki Tailor, Wendy Xiao, Marissa Yochelson Long, and Nora Zakaria. 
 
 We are also grateful for the research support provided by the following members of the Eviction Lab: Lavar Edmonds, Joe Fish, Katie Krywokulski, Lillian Leung, Renee Louis, Matt Mleczko, Helena Najm, Scott Overby, Devin Rutan, Naomi Shiffrin, and Gillian Slee. 
 
@@ -188,6 +188,7 @@ We are grateful for the support of the following partners for their guidance in 
 - Kim Johnson (National Low-Income Housing Coalition) 
 - Sarah Mickelson (National Low-Income Housing Coalition) 
 - Diane Yentel (National Low Income Housing Coalition) 
+- Colleen Healy Boufides (The Network for Public Health Law)
 - Amy Eppler Epstein (New Haven Legal Assistance Association) 
 - Amy Marx (New Haven Legal Assistance Association) 
 - Shelley White (New Haven Legal Assistance Association) 
@@ -201,7 +202,8 @@ We are grateful for the support of the following partners for their guidance in 
 - Spencer Wells (RHINO) 
 - Susanna Blankley (Right to Counsel Coalition) 
 - Norrinda Brown Hayat (Rutgers Law School) 
-- Emily Coffey Shriver (Center on Poverty Law) 
+- Emily Coffey (Shriver Center on Poverty Law) 
+- Allyson Gold (University of Alabama School of Law)
 - Kathryn Sabbeth (University of North Carolina School of Law) 
 - Fred Fuchs (The University of Texas at Austin School of Law)
 - Solomon Green (Urban Institute) 

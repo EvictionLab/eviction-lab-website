@@ -51,7 +51,7 @@
         VIEW OUTLINE<span class="sr-only">{{stname}}</span>
       </button>
       <button class="collapse-state-details btn top" data-state="{{stabbrev}}" aria-hidden="true">CLOSE OUTLINE <span class="sr-only">{{stname}}</span></button>
-      <div class="state-details-list">
+      <div class="state-details-list" aria-live="polite">
         {{#if plcstandoutbool}}
           <div class="standout">
             <p>
