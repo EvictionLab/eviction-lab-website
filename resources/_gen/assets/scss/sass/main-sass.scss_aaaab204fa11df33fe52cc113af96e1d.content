@@ -29885,6 +29885,47 @@ ol.list-initial, .text-li ol.list-initial li {
   box-shadow: none;
 }
 
+#scroll_to_filters {
+  border: none;
+  background: none;
+  background-color: none;
+  background-image: none;
+  transform: rotate(-90deg);
+  font-family: GT-Eesti-Display-Bold, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  padding: 14px 12px;
+  background: #fff;
+  box-shadow: -4px 0 6px -3px rgba(0, 0, 0, 0.75);
+  margin-right: 16px;
+  color: #E24000;
+}
+
+@media (min-width: 992px) {
+  #scroll_to_filters {
+    margin-right: 16px;
+  }
+}
+
+#scroll_to_filters:hover, #scroll_to_filters:focus {
+  border: none;
+  outline: none;
+  background-color: #E24000;
+  color: #fff;
+  transition: background-color .3s ease;
+}
+
+#scroll_to_filters i {
+  display: inline-block;
+  clear: both;
+  vertical-align: bottom;
+}
+
+#scroll_to_filters span {
+  display: inline-block;
+  margin-right: 6px;
+}
+
 .disclaimer {
   background-color: #F4F7F9;
 }
