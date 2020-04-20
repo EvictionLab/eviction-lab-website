@@ -20,21 +20,23 @@ aliases:
     - /covid-response-policies
 ---
 
+
 As the world seeks to contain the COVID-19 pandemic, policymakers across the U.S. are responding to the heightened insecurity so many face.
 
-This new table details where municipalities, states, and the federal government have taken action. We will be continually updating the table as we build a larger map to house this information, and <a href="https://evictionlab.org/contact/">welcome tips</a> regarding what your community is putting into place. 
+This new table details where municipalities, states, and the federal government have taken action. We will be continually updating the table and <a href="https://evictionlab.org/contact/">welcome tips</a> regarding what your community is putting into place. 
 
-Policymakers across America are implementing a wide range of supports, from placing a moratorium on all evictions, to more limited moratoria for residents who can demonstrate lost wages due to coronavirus.
+Policymakers across America are implementing a wide range of supports, from placing a moratorium on all evictions, to more limited moratoria for residents who can demonstrate lost wages due to coronavirus. We will soon release an additional tool to help differentiate between statewide actions. 
 
-For additional housing support resources, please visit <a href="https://justshelter.org" target="_blank">JustShelter.org</a>.
+For additional housing support resources, please visit <a href="https://justshelter.org" target="_blank">JustShelter.org</a>. 
 
+<a href="#external-links" class="smoothScroll">Below the table</a>, we also reference resources other groups have compiled to track different aspects of the shifting housing policy landscape.
 
 <div id="covid-blog">
   <div class="covid-blog-table">
     <div class="filter-wrapper w-100 d-flex justify-content-center align-items-center">
       <div id="filter-label" class=""><p><b>Show: &nbsp;</b></p></div>
       <div id="filter_covid_table" class="dropdown filter-covid-table language-select show">
-        <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true"><span id="selected_filter">Choose filter</span><i class="fa fa-chevron-down"></i>
+        <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true"><span id="selected_filter"><span style="color: #6b6b6b">Choose filter</span></span><i class="fa fa-chevron-down"></i>
         </button>
         <ul class="dropdown-menu" x-placement="bottom-start">
           <li class="dropdown menu-item">
@@ -218,3 +220,10 @@ For additional housing support resources, please visit <a href="https://justshel
     <p class="ital" style="text-align: center">(Scroll within table to see all data)</p>
   </div>
 </div>
+<div id="external-links" class="mb-3"></div> 
+
+The Eviction Lab table only includes utility shutoff moratoria that have been ordered by an executive or legislative order. <a href="https://www.foodandwateraction.org/" target="_blank">Food & Water Action</a> is maintaining a database of all water shutoff policies, including those that are the utility's own policy or are mandated by pre-existing law. 
+
+For activists and tenants looking to organize around housing issues in this troubling time, the <a href="https://www.antievictionmap.com/" target="_blank">Anti-Eviction Mapping Project</a> has created a <a href="https://antievictionmappingproject.github.io/covid-19-map/" target="_blank">map of emergency housing policies</a> and actions in progress. 
+
+A law clinic led by Emily Benfer, Visiting Associate Clinical Professor of Law at Columbia Law School, is also maintaining a detailed <a href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTH8dUIbfnt3X52TrY3dEHQCAm60e5nqo0Rn1rNCf15dPGeXxM9QN9UdxUfEjxwvfTKzbCbZxJMdR7X/pubhtml#" target="_blank">database of legal orders</a> pertaining to the COVID-19 epidemic. Legal aid attorneys are encouraged to reference this resource and to contact <a href="mailto:emily.benfer@law.columbia.edu">emily.benfer@law.columbia.edu</a> with any questions or additions.

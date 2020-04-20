@@ -3,14 +3,21 @@
 {{ partial "agnosticbreadcrumb" . }} 
 
 <div class="row alt-bg ml-0 mr-0">
-  <div class="col-10 offset-1 col-lg-6 mx-lg-auto col-xl-8 offset-lg-2 rankings-intro">
+  <div class="d-none col-12 col-md-10 offset-md-1 col-lg-6 mx-lg-auto col-xl-8 offset-lg-2 rankings-intro">
     <h2>{{ .Title }}</h2>
   </div>
 </div>
 
-<span class="insert-after"></span>
+<div class="row ml-0 mr-0 insert-after" style="min-height: 90vh;">
+  <div class="spinner">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</div>
 
-{{ partial "covid-acknowledgements" . }}
+{{/* partial "covid-acknowledgements" . */}}
+{{ partial "covid-disclaimer" . }}
 
 <script type="text/javascript">
   var page_state_abbrev = {{ .Params.state_abbrev }};
