@@ -36,23 +36,23 @@
   <div id="states_panel" class="inline-panel states col-12 offset-0 offset-lg-1 col-lg-10 col-xl-8 offset-xl-2">
     <div class="col-12 d-smm-none text-center mb-3"><p><i>Scroll right within table to see ratings.</i></p></div>
     <table id="states_table" class="states-table table-responsive-sm">
-      <caption class="sr-only">List of states, sortable by state name, renting population, pre-COVID-19 filings, and ranking</caption>
+      <caption class="sr-only" aria-live="assertive">List of states, sortable by state name, renting population, and ranking. <span class="sorted-by">Sorted by ranking, descending.</span> <span class="filtered-for">Not filtered.</span> Panes for each state can be toggled open for additional details. A link to a full report is also provided for each state.</caption>
       <thead>
         <tr>
           <!-- data-filter changes to asc or desc when selected -->
           <th id="stname" class="state-name" data-filter="false">
-            <div class="col-title">
-                State
+            <div class="col-title" role="button">
+                <span class="name">State</span><span class="sr-only">sort by</span>
             </div>
           </th>
           <th id="evstat1" class="stat-one" data-filter="false">
-            <div class="col-title">
-                Renting population
+            <div class="col-title" role="button">
+                <span class="name">Renting population</span><span class="sr-only">sort by</span>
             </div>
           </th>
           <th id="stars" class="stars" data-filter="desc">
-            <div class="col-title">
-              Rating
+            <div class="col-title" role="button">
+              <span class="name">Rating</span><span class="sr-only">sort by</span>
             </div>
           </th>
         </tr>
