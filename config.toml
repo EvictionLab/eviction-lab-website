@@ -29,24 +29,28 @@ languageName = "English"
     weight = 3
     url = "/rankings/"
 [[Languages.en.menu.main]]
-    name = "About Us"
+    name = "COVID-19 Policy Scorecard"
     weight = 4
+    url = "/covid-policy-scorecard/"    
+[[Languages.en.menu.main]]
+    name = "About Us"
+    weight = 5
     url = "/about/"
 [[Languages.en.menu.main]]
     name = "Why Eviction Matters"
-    weight = 5
+    weight = 6
     url = "/why-eviction-matters"
 [[Languages.en.menu.main]]
     name = "Methods"
-    weight = 6
+    weight = 7
     url = "/methods/"
 [[Languages.en.menu.main]]
     name = "Help & FAQ"
-    weight = 7
+    weight = 8
     url = "/help-faq/"
 [[Languages.en.menu.main]]
     name = "Updates"
-    weight = 8
+    weight = 9
     url = "/updates/"
 
 [[Languages.en.menu.footer]]
@@ -62,40 +66,44 @@ languageName = "English"
     weight = 3
     url = "/rankings/"
 [[Languages.en.menu.footer]]
-    name = "About Us"
+    name = "COVID-19 Policy Scorecard"
     weight = 4
+    url = "/covid-policy-scorecard/"     
+[[Languages.en.menu.footer]]
+    name = "About Us"
+    weight = 5
     url = "/about/"
 [[Languages.en.menu.footer]]
     name = "Why Eviction Matters"
-    weight = 5
+    weight = 6
     url = "/why-eviction-matters"
 [[Languages.en.menu.footer]]
     name = "Methods"
-    weight = 6
+    weight = 7
     url = "/methods/"
 [[Languages.en.menu.footer]]
     name = "Help & FAQ"
-    weight = 7
+    weight = 8
     url = "/help-faq/"
 [[Languages.en.menu.footer]]
     name = "Updates"
-    weight = 8
+    weight = 9
     url = "/updates/"
 [[Languages.en.menu.footer]]
     name = "Contact Us"
-    weight = 9
+    weight = 10
     url = "/contact"
 [[Languages.en.menu.footer]]
     name = "Get the Data"
-    weight = 10
+    weight = 11
     url = "/get-the-data"
 [[Languages.en.menu.footer]]
     name = "Data Request Application"
-    weight = 11
+    weight = 12
     url = "/data-request"
 [[Languages.en.menu.footer]]
     name = "Media Guide"
-    weight = 12
+    weight = 13
     url = "/media-guide/"    
 
 
