@@ -7,6 +7,8 @@ state_abbrev: id # use state abbreviation.
 state_title: Idaho
 photoCredit:
 hasSubnav: true
+fbImage: /images/assets/covid-eviction-policies-social.jpg
+twImage: /images/assets/covid-eviction-policies-social.jpg
 socialDescription: COVID-19 Housing Policy Scorecard for Idaho
 description: See how Idaho ranks in our nationwide scorecard of housing policies in response to COVID-19.
 url: /covid-policy-scorecard/id

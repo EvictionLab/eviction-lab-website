@@ -268,8 +268,9 @@ $(document).ready(function () {
       if (action === 'show') {
         // if show
         // show the filters
+        $('#filters_panel .filters-list').css('display', 'flex');
         $('#filters_panel .filters').animate({'max-height': 1200}, 400, null, function() {
-          $('#filters_panel .filters, #filters_panel .filters-list').css('overflow-y', 'visible');
+          // $('#filters_panel .filters, #filters_panel .filters-list').css('overflow-y', 'visible');
         });
         // change button text
         $target.text('Hide filters');
@@ -280,7 +281,9 @@ $(document).ready(function () {
       } else {
         $('#filters_panel .filters, #filters_panel .filters-list').css('overflow-y', 'hidden');
         // hide the filters
-        $('#filters_panel .filters').animate({'max-height': 0}, 400);
+        $('#filters_panel .filters').animate({'max-height': 0}, 400, null, function() {
+          $('#filters_panel .filters-list').css('display', 'none');
+        });
         // change button text
         $target.text('Show filters');
         // change button class
