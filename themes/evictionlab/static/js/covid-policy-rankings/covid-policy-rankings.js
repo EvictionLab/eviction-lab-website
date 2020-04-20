@@ -453,6 +453,10 @@ $(document).ready(function () {
             // console.log('print clicked');
             window.print();
           });
+          $('[data-toggle="tooltip"]').tooltip({
+            boundary: 'window',
+            delay: { "show": 500, "hide": 100 }
+          });
         });
       });
     },
@@ -463,7 +467,11 @@ $(document).ready(function () {
       var context = { categories: rankings.allFilters };
       var url = '/js/covid-policy-rankings/filters-template.html';
       rankings.loadHandlebarsTemplate(url, function(template) {
-          $('#filters_panel .filters .filters-list').html(template(context))
+          $('#filters_panel .filters .filters-list').html(template(context));
+          $('[data-toggle="tooltip"]').tooltip({
+            boundary: 'window',
+            delay: { "show": 500, "hide": 100 }
+          });
       });
     },
     processData: function() {
@@ -584,14 +592,8 @@ $(document).ready(function () {
         if (getstip[0]) {
           if (getstip[0].tooltip) {
             if (getstip[0].tooltip.length > 0) {
-              // console.log('there\'s a tooltip context');
-              // return options.fn(this);
-              return '<span class="a11y-tip">' +
-                '<span class="a11y-tip__trigger icon icon-tooltip fa fa-question-circle --no-delay"></span>' +
-                '<span class="a11y-tip__help a11y-tip__help--top">' +
-                  getstip[0].tooltip +
-                '</span>' +
-              '</span>';
+              var tooltipParsed = String(getstip[0].tooltip).replace(/"/g, '&quot;')
+              return '<i class="icon icon-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="' + tooltipParsed + '" tabindex="0"></i>';
             }
           }
         }
