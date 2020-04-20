@@ -14,11 +14,13 @@
     {{#each filters}}
       <div class="label-parent">
         <label class="filter-label" data-filter="{{id}}">
-          <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" tabindex="-1">
+          <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" aria-describedby="tooltip_{{id}}" tabindex="-1">
           <span id="labels_{{id}}">{{label}}</span>
         </label>
         {{#if tooltip}}
-          <i class="icon icon-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" tabindex="0"></i>
+          <i class="icon icon-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" tabindex="-1">
+            <span id="tooltip_{{id}}" class="sr-only">{{tooltip}}</span>
+          </i>
         {{/if}}
       </div>
     {{/each}}

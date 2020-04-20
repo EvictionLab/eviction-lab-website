@@ -262,7 +262,7 @@ $(document).ready(function () {
       });
     },
     toggleMobileFilters: function($target, action) {
-      console.log('toggleMobileFilters(), action = ', action);
+      // console.log('toggleMobileFilters(), action = ', action);
       // var $target = $('#mobile_filter');
       var $row = $('#filters_panel');
       if (action === 'show') {
@@ -276,7 +276,7 @@ $(document).ready(function () {
         // change button class
         $target.removeClass('show-filters').addClass('hide-filters');
         $row.removeClass('show-filters').addClass('hide-filters');
-        $row.find('#clear_filters, input').attr('tabindex', '0');
+        $row.find('#clear_filters, input').attr({'tabindex': 0});
       } else {
         $('#filters_panel .filters, #filters_panel .filters-list').css('overflow-y', 'hidden');
         // hide the filters
@@ -286,7 +286,7 @@ $(document).ready(function () {
         // change button class
         $target.removeClass('hide-filters').addClass('show-filters');
         $row.removeClass('hide-filters').addClass('show-filters');
-        $row.find('#clear_filters, input').attr('tabindex', '-1');
+        $row.find('#clear_filters, input').attr({'tabindex': '-1'});
       }
     },
     handleStickyFilters: function() {
