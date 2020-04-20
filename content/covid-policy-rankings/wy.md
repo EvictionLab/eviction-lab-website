@@ -7,6 +7,8 @@ state_abbrev: wy # use state abbreviation.
 state_title: Wyoming
 photoCredit:
 hasSubnav: true
+fbImage: /images/assets/covid-eviction-policies-social.jpg
+twImage: /images/assets/covid-eviction-policies-social.jpg
 socialDescription: COVID-19 Housing Policy Scorecard for Wyoming
 description: See how Wyoming ranks in our nationwide scorecard of housing policies in response to COVID-19.
 url: /covid-policy-scorecard/wy

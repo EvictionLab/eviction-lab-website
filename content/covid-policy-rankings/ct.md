@@ -7,6 +7,8 @@ state_abbrev: ct # use state abbreviation.
 state_title: Connecticut
 photoCredit:
 hasSubnav: true
+fbImage: /images/assets/covid-eviction-policies-social.jpg
+twImage: /images/assets/covid-eviction-policies-social.jpg
 socialDescription: COVID-19 Housing Policy Scorecard for Connecticut
 description: See how Connecticut ranks in our nationwide scorecard of housing policies in response to COVID-19.
 url: /covid-policy-scorecard/ct

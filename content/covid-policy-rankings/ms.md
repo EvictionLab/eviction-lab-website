@@ -7,6 +7,8 @@ state_abbrev: ms # use state abbreviation.
 state_title: Mississippi
 photoCredit:
 hasSubnav: true
+fbImage: /images/assets/covid-eviction-policies-social.jpg
+twImage: /images/assets/covid-eviction-policies-social.jpg
 socialDescription: COVID-19 Housing Policy Scorecard for Mississippi
 description: See how Mississippi ranks in our nationwide scorecard of housing policies in response to COVID-19.
 url: /covid-policy-scorecard/ms
