@@ -7,6 +7,8 @@ state_abbrev: ma # use state abbreviation.
 state_title: Massachusetts
 photoCredit:
 hasSubnav: true
+fbImage: /images/assets/covid-eviction-policies-social.jpg
+twImage: /images/assets/covid-eviction-policies-social.jpg
 socialDescription: COVID-19 Housing Policy Scorecard for Massachusetts
 description: See how Massachusetts ranks in our nationwide scorecard of housing policies in response to COVID-19.
 url: /covid-policy-scorecard/ma

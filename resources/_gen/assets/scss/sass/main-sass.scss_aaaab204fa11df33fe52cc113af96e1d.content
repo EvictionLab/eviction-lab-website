@@ -27769,7 +27769,7 @@ footer p {
 @media (min-width: 1024px) {
   .footer-navigation ul {
     font-size: 14px;
-    height: 176px;
+    height: 208px;
   }
   .footer-navigation ul li {
     width: 240px;
@@ -28641,6 +28641,20 @@ ol.list-initial, .text-li ol.list-initial li {
   .bordertop {
     margin-top: 4.8rem;
   }
+}
+
+[data-toggle="tooltip"],
+.tooltip.show {
+  border-radius: 0;
+}
+
+[data-toggle="tooltip"] .tooltip-inner,
+.tooltip.show .tooltip-inner {
+  padding: 1.2rem 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: left;
+  font-family: Akkurat-regular, sans-serif;
 }
 
 .rankings-intro {
@@ -29875,6 +29889,10 @@ ol.list-initial, .text-li ol.list-initial li {
   background-color: #F4F7F9;
 }
 
+.disclaimer a, .disclaimer a:hover {
+  color: #E24000;
+}
+
 .page-type-covid-policy-rankings.page-layout-single .insert-after {
   display: flex;
   justify-content: center;
@@ -30698,6 +30716,10 @@ ol.list-initial, .text-li ol.list-initial li {
 
 .page-type-covid-policy-rankings.page-layout-single .disclaimer {
   background-color: #fff;
+}
+
+.page-type-covid-policy-rankings.page-layout-single .disclaimer a, .page-type-covid-policy-rankings.page-layout-single .disclaimer a:hover {
+  color: #E24000;
 }
 
 @media print {
