@@ -951,6 +951,9 @@ $alt-bg: #F4F7F9;
 }
 .disclaimer {
   background-color: #fff;
+  a, a:hover {
+    color: $el-red;
+  }
 }
 }
 @media print {
