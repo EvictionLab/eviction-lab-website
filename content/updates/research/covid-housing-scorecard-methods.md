@@ -209,6 +209,8 @@ We are grateful for the support of the following partners for their guidance in 
 The renting population statistic on the tool comes from the United States Census Bureau. 
 *U.S. Census Bureau. Total Population in Renter Occupied Housing Units by Units in Structure, ACS 2018 (5-Year Estimates). Prepared by Social Explorer. (accessed Apr 16 10:37:03 EST 2020).*
 
+<a id="outside-resources"></a>
+
 **For additional COVID-19 housing resources and tools built by other organizations:**
 
 - <a target="_blank" href="https://www.cbpp.org/covid-19-responding-to-the-health-and-economic-crisis">Center on Budget and Policy Priorities COVID-19 Health & Economic Crisis Response</a>
@@ -218,10 +220,10 @@ The renting population statistic on the tool comes from the United States Census
 - <a target="_blank" href="https://www.networkforphl.org/resources/topics/covid-19/">Network for Public Health Law COVID-19 Resources</a>
 - <a target="_blank" href="https://www.urban.org/features/covid-19-policies-protect-people-and-communities#chapter-2">Urban Institute COVID-19 Policies to Protect People and Communities</a>
 - <a target="_blank" href="https://www.antievictionmap.com/">Anti-Eviction Mapping Project</a>
-- - <a target="_blank" href="https://www.americanbar.org/advocacy/the-aba-task-force-on-legal-needs-arising-out-of-the-2020-pandem/">American Bar Association COVID-19 Task Force</a>
+- <a target="_blank" href="https://www.americanbar.org/advocacy/the-aba-task-force-on-legal-needs-arising-out-of-the-2020-pandem/">American Bar Association COVID-19 Task Force</a>
 - <a target="_blank" href="http://ncsc.org/">National Center for State Courts</a>
 - <a target="_blank" href="http://ncsl.org/">National Conference of State Legislatures</a> 
-- - <a target="_blank" href="https://www.nga.org/coronavirus/#states">National Governors Association</a>
+- <a target="_blank" href="https://www.nga.org/coronavirus/#states">National Governors Association</a>
 <a target="_blank" href="https://www.naruc.org/compilation-of-covid-19-news-resources/state-response-tracker/">National Association of Regulatory Utility Commissioners</a>
 
 
