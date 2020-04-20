@@ -1,0 +1,35 @@
+<!-- Handlebars template for filters list pane -->
+<!-- {{#each filters}}
+  <label class="filter-label" data-filter="{{id}}">
+    <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}">
+    <span id="labels_{{id}}">{{label}}</span>
+  </label>
+{{/each}} -->
+{{#each categories}}
+  <div class="filter-category category-{{stage}}">
+    <div class="category-label">
+      <div class="icon" aria-hidden="true"></div>
+      <h4>{{title}}</h4>
+    </div>
+    {{#each filters}}
+      <div class="label-parent">
+        <label class="filter-label" data-filter="{{id}}">
+          <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" tabindex="-1">
+          <span id="labels_{{id}}">{{label}}</span>
+        </label>
+        {{#if tooltip}}
+        <!-- Hover to expose the tooltip -->
+          <span class="a11y-tip">
+            <span class="a11y-tip__trigger icon icon-tooltip fa fa-question-circle --no-delay"></span>
+            <span class="a11y-tip__help a11y-tip__help--top">
+              {{tooltip}}
+            </span>
+          </span><!--/.a11y-tip-->
+          <!-- <div class="icon icon-tooltip fa fa-question-circle">
+            <span class="sr-only">Trigger explanatory tooltip</span>
+          </div> -->
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+{{/each}}

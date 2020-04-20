@@ -3,3 +3,5 @@ dist/
 /npm-debug.log
 yarn-error.log
 .DS_Store
+public/
+resources/_gen/assets/scss/*

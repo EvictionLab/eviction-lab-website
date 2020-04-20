@@ -1,86 +1,81 @@
 {{ partial "header" . }}
 <!-- {{ partial "breadcrumb" . }} -->
 
-<div class="row ml-0 mr-0">
-  <div class="col-10 offset-1 col-lg-8 offset-lg-2 rankings-intro">
-    {{ .Content | markdownify }}
+<div class="graphic-header covid-policy center-page-wrapper align-items-center d-flex">
+  <div class="center-page">
+    <h1 class="graphic-page-header">{{ .Params.h1 | safeHTML }}</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
+<div class="row alt-bg ml-0 mr-0">
+  <div class="col-10 offset-1 col-lg-10 offset-lg-1 mx-lg-auto col-xl-8 px-0 px-lg-4">
+    <div class="bordertop"></div>
+  </div>
+  <div class="col-md-10 offset-md-1 mx-xl-auto col-xl-8 rankings-intro d-mm-flex d-mm-block px-md-0 px-lg-4">
+    <div class="col-12 col-mm-6 pl-mm-0 pr-mm-3">{{ .Params.intro1 | safeHTML }}</div>
+    <div class="col-12 col-mm-6 pr-mm-1">{{ .Params.intro2 | safeHTML }}</div>
+  </div>
+</div>
+
+<div id="filters_panel" class="row ml-0 mr-0 filters-panel">
+  <div  class="filters-panel col-12 offset-0 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 pt-3 pb-3 px-md-4">
+    <button id="mobile_filter" class="btn mobile-filter show-filters" tabindex="0">Show Filters</button>
+    <div class="filters" style="max-height:0;">
+      <!-- <h4 id="filters_heading">Filter:</h4> -->
+      <div class="filters-list hide"></div>
+      <button id="clear_filters" class="btn clear-filters" tabindex="-1">Uncheck all filters</button>
+    </div>
   </div>
 </div>
 
 <div class="row ml-0 mr-0">
-  <div class="mobile-filters col-10 offset-1 d-lg-none">
+  <!-- <div class="mobile-filters col-10 offset-1 d-lg-none">
     <button id="mobile_filter" class="btn mobile-filter show-filters">Show Filters</button>
-  </div>
-  <div id="filters_panel" class="inline-panel filters-panel col-10 offset-1 col-md-10 offset-md-1 col-lg-3 offset-lg-1 offset-xl-2 col-xl-2">
-    <div class="filters">
-      <h4>Filter:</h4>
-      <div class="filters-list">
-        <label class="filter-label">
-          <input id="plcnonpbool" type="checkbox">No nonpayment
-        </label>
-        <label class="filter-label">
-          <input id="plcnofilbool" type="checkbox" >No new filings
-        </label>
-        <label class="filter-label">
-          <input id="plcnonewbool" type="checkbox">No new evictions
-        </label>
-        <label class="filter-label">
-          <input id="plcnoenfbool" type="checkbox">No enforcement
-        </label>
-        <label class="filter-label">
-          <input id="plcnohearbool" type="checkbox">No hearings
-        </label>
-        <label class="filter-label">
-          <input id="plctldbool" type="checkbox">Tolled
-        </label>
-        <label class="filter-label">
-          <input id="plclatfbool" type="checkbox">No late fees
-        </label>
-        <label class="filter-label">
-          <input id="plcarsbool" type="checkbox">Arrears
-        </label>
-        <label class="filter-label">
-          <input id="plcnoshbool" type="checkbox">No shutoffs, free reconnect
-        </label>
-        <label class="filter-label">
-          <input id="plcnofcbool" type="checkbox">No foreclosures
-        </label>
-      </div>
-      <button id="clear_filters" class="btn clear-filters">Clear filters</button>
-    </div>
-  </div>
-  <div id="states_panel" class="inline-panel states col-12 offset-0 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6">
-    <table id="states_table" class="states-table">
-      <caption class="sr-only">List of states, sortable by state name, TODO, TODO, and ranking</caption>
+  </div> -->
+  <div id="states_panel" class="inline-panel states col-12 offset-0 offset-lg-1 col-lg-10 col-xl-8 offset-xl-2">
+    <div class="col-12 d-smm-none text-center mb-3"><p><i>Scroll right within table to see ratings.</i></p></div>
+    <table id="states_table" class="states-table table-responsive-sm">
+      <caption class="sr-only">List of states, sortable by state name, renting population, pre-COVID-19 filings, and ranking</caption>
       <thead>
         <tr>
           <!-- data-filter changes to asc or desc when selected -->
-          <td id="stname" class="state-name" data-filter="asc">
+          <th id="stname" class="state-name" data-filter="false">
             <div class="col-title">
                 State
             </div>
-          </td>
-          <td id="evstat1" class="stat-one" data-filter="false">
+          </th>
+          <th id="evstat1" class="stat-one" data-filter="false">
             <div class="col-title">
-                Renting pop.
+                Renting population
             </div>
-          </td>
-          <td id="evstat2" class="stat-two" data-filter="false">
-            <div class="col-title">
-              Filings per day*
-            </div>
-          </td>
-          <td id="stars" class="stars" data-filter="false">
+          </th>
+          <th id="stars" class="stars" data-filter="desc">
             <div class="col-title">
               Rating
             </div>
-          </td>
+          </th>
         </tr>
       </thead>
-      <tbody class="states-list"></tbody>
-      <caption>*Filings per day based on data collected before the COVID-19 pandemic.</caption>
+      <tbody class="states-list">
+        <tr>
+          <td colspan="3" class="spinner-parent">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>
+
+{{/* partial "covid-acknowledgements" . */}}
+{{ partial "covid-disclaimer" . }}
+
+<script type="text/javascript">
+  var page_state_abbrev = null;
+  var page_page_type = {{ .Params.layout }};
+</script>
 
 {{ partial "footer" . }}
