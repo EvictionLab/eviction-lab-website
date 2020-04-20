@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Minnesota
 description: See how Minnesota ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/mn
+url: /covid-policy-scorecard/mn
 aliases:
-    - /covid-policy-rankings/mn
-    - /covid-policy-rankings/minnesota
-    - /es/covid-policy-rankings/mn
-    - /es/covid-policy-rankings/minnesota
+    - /covid-policy-scorecard/mn
+    - /covid-policy-scorecard/minnesota
+    - /es/covid-policy-scorecard/mn
+    - /es/covid-policy-scorecard/minnesota
 ---

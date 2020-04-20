@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Virginia
 description: See how Virginia ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/va
+url: /covid-policy-scorecard/va
 aliases:
-    - /covid-policy-rankings/va
-    - /covid-policy-rankings/virginia
-    - /es/covid-policy-rankings/va
-    - /es/covid-policy-rankings/virginia
+    - /covid-policy-scorecard/va
+    - /covid-policy-scorecard/virginia
+    - /es/covid-policy-scorecard/va
+    - /es/covid-policy-scorecard/virginia
 ---

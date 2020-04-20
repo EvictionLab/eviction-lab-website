@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Vermont
 description: See how Vermont ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/vt
+url: /covid-policy-scorecard/vt
 aliases:
-    - /covid-policy-rankings/vt
-    - /covid-policy-rankings/vermont
-    - /es/covid-policy-rankings/vt
-    - /es/covid-policy-rankings/vermont
+    - /covid-policy-scorecard/vt
+    - /covid-policy-scorecard/vermont
+    - /es/covid-policy-scorecard/vt
+    - /es/covid-policy-scorecard/vermont
 ---

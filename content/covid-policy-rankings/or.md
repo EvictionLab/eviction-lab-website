@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Oregon
 description: See how Oregon ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/or
+url: /covid-policy-scorecard/or
 aliases:
-    - /covid-policy-rankings/or
-    - /covid-policy-rankings/oregon
-    - /es/covid-policy-rankings/or
-    - /es/covid-policy-rankings/oregon
+    - /covid-policy-scorecard/or
+    - /covid-policy-scorecard/oregon
+    - /es/covid-policy-scorecard/or
+    - /es/covid-policy-scorecard/oregon
 ---

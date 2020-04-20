@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Pennsylvania
 description: See how Pennsylvania ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/pa
+url: /covid-policy-scorecard/pa
 aliases:
-    - /covid-policy-rankings/pa
-    - /covid-policy-rankings/pennsylvania
-    - /es/covid-policy-rankings/pa
-    - /es/covid-policy-rankings/pennsylvania
+    - /covid-policy-scorecard/pa
+    - /covid-policy-scorecard/pennsylvania
+    - /es/covid-policy-scorecard/pa
+    - /es/covid-policy-scorecard/pennsylvania
 ---

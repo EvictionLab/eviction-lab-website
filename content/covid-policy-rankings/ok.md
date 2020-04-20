@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Oklahoma
 description: See how Oklahoma ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ok
+url: /covid-policy-scorecard/ok
 aliases:
-    - /covid-policy-rankings/ok
-    - /covid-policy-rankings/oklahoma
-    - /es/covid-policy-rankings/ok
-    - /es/covid-policy-rankings/oklahoma
+    - /covid-policy-scorecard/ok
+    - /covid-policy-scorecard/oklahoma
+    - /es/covid-policy-scorecard/ok
+    - /es/covid-policy-scorecard/oklahoma
 ---

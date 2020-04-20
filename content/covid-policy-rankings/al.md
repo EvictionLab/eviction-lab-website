@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Alabama
 description: See how Alabama ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/al
+url: /covid-policy-scorecard/al
 aliases:
-    - /covid-policy-rankings/al
-    - /covid-policy-rankings/alabama
-    - /es/covid-policy-rankings/al
-    - /es/covid-policy-rankings/alabama
+    - /covid-policy-scorecard/al
+    - /covid-policy-scorecard/alabama
+    - /es/covid-policy-scorecard/al
+    - /es/covid-policy-scorecard/alabama
 ---

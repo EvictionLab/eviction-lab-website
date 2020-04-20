@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Nebraska
 description: See how Nebraska ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ne
+url: /covid-policy-scorecard/ne
 aliases:
-    - /covid-policy-rankings/ne
-    - /covid-policy-rankings/nebraska
-    - /es/covid-policy-rankings/ne
-    - /es/covid-policy-rankings/nebraska
+    - /covid-policy-scorecard/ne
+    - /covid-policy-scorecard/nebraska
+    - /es/covid-policy-scorecard/ne
+    - /es/covid-policy-scorecard/nebraska
 ---

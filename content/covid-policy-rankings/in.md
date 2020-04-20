@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Indiana
 description: See how Indiana ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/in
+url: /covid-policy-scorecard/in
 aliases:
-    - /covid-policy-rankings/in
-    - /covid-policy-rankings/indiana
-    - /es/covid-policy-rankings/in
-    - /es/covid-policy-rankings/indiana
+    - /covid-policy-scorecard/in
+    - /covid-policy-scorecard/indiana
+    - /es/covid-policy-scorecard/in
+    - /es/covid-policy-scorecard/indiana
 ---

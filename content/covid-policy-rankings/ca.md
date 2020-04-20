@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for California
 description: See how California ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ca
+url: /covid-policy-scorecard/ca
 aliases:
-    - /covid-policy-rankings/ca
-    - /covid-policy-rankings/california
-    - /es/covid-policy-rankings/ca
-    - /es/covid-policy-rankings/california
+    - /covid-policy-scorecard/ca
+    - /covid-policy-scorecard/california
+    - /es/covid-policy-scorecard/ca
+    - /es/covid-policy-scorecard/california
 ---

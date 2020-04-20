@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Connecticut
 description: See how Connecticut ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ct
+url: /covid-policy-scorecard/ct
 aliases:
-    - /covid-policy-rankings/ct
-    - /covid-policy-rankings/connecticut
-    - /es/covid-policy-rankings/ct
-    - /es/covid-policy-rankings/connecticut
+    - /covid-policy-scorecard/ct
+    - /covid-policy-scorecard/connecticut
+    - /es/covid-policy-scorecard/ct
+    - /es/covid-policy-scorecard/connecticut
 ---

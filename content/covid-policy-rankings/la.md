@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Louisiana
 description: See how Louisiana ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/la
+url: /covid-policy-scorecard/la
 aliases:
-    - /covid-policy-rankings/la
-    - /covid-policy-rankings/louisiana
-    - /es/covid-policy-rankings/la
-    - /es/covid-policy-rankings/louisiana
+    - /covid-policy-scorecard/la
+    - /covid-policy-scorecard/louisiana
+    - /es/covid-policy-scorecard/la
+    - /es/covid-policy-scorecard/louisiana
 ---

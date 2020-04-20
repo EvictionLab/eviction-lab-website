@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Nevada
 description: See how Nevada ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/nv
+url: /covid-policy-scorecard/nv
 aliases:
-    - /covid-policy-rankings/nv
-    - /covid-policy-rankings/nevada
-    - /es/covid-policy-rankings/nv
-    - /es/covid-policy-rankings/nevada
+    - /covid-policy-scorecard/nv
+    - /covid-policy-scorecard/nevada
+    - /es/covid-policy-scorecard/nv
+    - /es/covid-policy-scorecard/nevada
 ---

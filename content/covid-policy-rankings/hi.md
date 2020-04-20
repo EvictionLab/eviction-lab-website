@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Hawaii
 description: See how Hawaii ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/hi
+url: /covid-policy-scorecard/hi
 aliases:
-    - /covid-policy-rankings/hi
-    - /covid-policy-rankings/hawaii
-    - /es/covid-policy-rankings/hi
-    - /es/covid-policy-rankings/hawaii
+    - /covid-policy-scorecard/hi
+    - /covid-policy-scorecard/hawaii
+    - /es/covid-policy-scorecard/hi
+    - /es/covid-policy-scorecard/hawaii
 ---

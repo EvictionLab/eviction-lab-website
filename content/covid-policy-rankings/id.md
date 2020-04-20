@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Idaho
 description: See how Idaho ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/id
+url: /covid-policy-scorecard/id
 aliases:
-    - /covid-policy-rankings/id
-    - /covid-policy-rankings/idaho
-    - /es/covid-policy-rankings/id
-    - /es/covid-policy-rankings/idaho
+    - /covid-policy-scorecard/id
+    - /covid-policy-scorecard/idaho
+    - /es/covid-policy-scorecard/id
+    - /es/covid-policy-scorecard/idaho
 ---

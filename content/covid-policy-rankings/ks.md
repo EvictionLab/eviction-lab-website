@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Kansas
 description: See how Kansas ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ks
+url: /covid-policy-scorecard/ks
 aliases:
-    - /covid-policy-rankings/ks
-    - /covid-policy-rankings/kansas
-    - /es/covid-policy-rankings/ks
-    - /es/covid-policy-rankings/kansas
+    - /covid-policy-scorecard/ks
+    - /covid-policy-scorecard/kansas
+    - /es/covid-policy-scorecard/ks
+    - /es/covid-policy-scorecard/kansas
 ---

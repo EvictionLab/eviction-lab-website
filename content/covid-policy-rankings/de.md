@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Delaware
 description: See how Delaware ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/de
+url: /covid-policy-scorecard/de
 aliases:
-    - /covid-policy-rankings/de
-    - /covid-policy-rankings/delaware
-    - /es/covid-policy-rankings/de
-    - /es/covid-policy-rankings/delaware
+    - /covid-policy-scorecard/de
+    - /covid-policy-scorecard/delaware
+    - /es/covid-policy-scorecard/de
+    - /es/covid-policy-scorecard/delaware
 ---
