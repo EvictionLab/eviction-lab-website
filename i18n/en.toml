@@ -48,7 +48,7 @@ other = "Get"
 [getResourcesTwo]
 other ="Resources"
 [superhead]
-other = "<span class='boldface'>COVID-19 UPDATES:</span> &nbsp;See our new <a href='/covid-policy-scorecard'>Housing Policy Scorecard</a>. View our <a href='/covid-eviction-policies/'>list of emergency policies</a>. Find <a href='https://justshelter.org/community-resources/' target='_blank'>resources to help with eviction</a>."
+other = "<span class='boldface'>COVID-19 UPDATES:</span> &nbsp;See our new <a href='/covid-policy-scorecard'>Housing Policy Scorecard</a>, view our <a href='/covid-eviction-policies/'>list of emergency policies</a>, and find <a href='https://justshelter.org/community-resources/' target='_blank'>resources to help with eviction</a>."
 
 
 

@@ -14,20 +14,13 @@
     {{#each filters}}
       <div class="label-parent">
         <label class="filter-label" data-filter="{{id}}">
-          <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" tabindex="-1">
+          <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" aria-describedby="tooltip_{{id}}" tabindex="-1">
           <span id="labels_{{id}}">{{label}}</span>
         </label>
         {{#if tooltip}}
-        <!-- Hover to expose the tooltip -->
-          <span class="a11y-tip">
-            <span class="a11y-tip__trigger icon icon-tooltip fa fa-question-circle --no-delay"></span>
-            <span class="a11y-tip__help a11y-tip__help--top">
-              {{tooltip}}
-            </span>
-          </span><!--/.a11y-tip-->
-          <!-- <div class="icon icon-tooltip fa fa-question-circle">
-            <span class="sr-only">Trigger explanatory tooltip</span>
-          </div> -->
+          <i class="icon icon-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" tabindex="-1">
+            <span id="tooltip_{{id}}" class="sr-only">{{tooltip}}</span>
+          </i>
         {{/if}}
       </div>
     {{/each}}

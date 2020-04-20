@@ -53,6 +53,19 @@ $alt-bg: #F4F7F9;
     margin-top: 4.8rem;
   }
 }
+// Bootstrap tooltip styling
+[data-toggle="tooltip"],
+.tooltip.show {
+  border-radius: 0;
+  .tooltip-inner {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: left;
+    font-family: Akkurat-regular, sans-serif;
+  }
+}
+// Rankings row
 .rankings-intro {
   padding-top: 3.2rem;
   margin-bottom: 1.6rem;
