@@ -4,7 +4,7 @@
   {{ if eq .Params.homepage "updates" }}
   <!-- do nothing -->
   {{ else }}
-    <div class="breadcrumbs bc-{{ .Params.childof }} center-page-wrapper">
+    <div class="breadcrumbs bc-{{ if .Params.childof }}{{.Params.childof}}{{ else }}{{.Params.type}}{{ end }} center-page-wrapper">
       <div class="center-page">
 
           <a href="{{ .Site.BaseURL }}{{ .Section }}">
@@ -39,10 +39,14 @@
           {{ end }}
 
             <i class="fa fa-chevron-right"></i>
-            <span class="current-crumb">{{ .Title }}</span>
-          </a>
-
-    </div>
+            <a>
+              {{ if eq .Params.type "covid-policy-rankings" }}
+                <span class="current-crumb">{{ .Params.state_title }}</span>
+              {{ else }}
+                <span class="current-crumb">{{ .Title }}</span>
+              {{ end }}
+            </a>
+      </div>
     </div>
   {{ end }}
 {{ end }}

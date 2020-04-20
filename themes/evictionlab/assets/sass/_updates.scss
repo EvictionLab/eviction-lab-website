@@ -106,12 +106,21 @@ a.cat-link {
     ul.dropdown-menu {
         margin-bottom: 0 !important;
         z-index: 20;
+        li {
+          margin-left: 0;
+          &.disabled {
+            cursor: default;
+            a {
+              color: #cacaca !important;
+            }
+          }
+        }
         li:before {
             content: '';
             position: unset;
             left: 0;
         }
-    }    
+    }
     table.page-stats.table-responsive.natl-est {
         height: 72vh;
         @media (min-width: 768px) {

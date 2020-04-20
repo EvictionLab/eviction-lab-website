@@ -1,0 +1,18 @@
+<div class="breadcrumbs bc-{{ if .Params.childof }}{{.Params.childof}}{{ else }}{{.Params.type}}{{ end }} center-page-wrapper">
+  <div class="center-page">
+    {{ define "breadcrumb" }}
+      {{ with .Parent }}
+        {{ template "breadcrumb" . }}
+        <a href="{{ .URL }}">{{ if .IsHome }}Home{{ else }}{{.Title}}{{ end }}</a> <i class="fa fa-chevron-right"></i>
+      {{ end }}
+    {{ end }}
+    {{ if not .IsHome }}
+        {{ template "breadcrumb" . }}
+        {{if (eq .Params.type "covid-policy-rankings") and (eq .Params.layout "single")}}
+          {{- .Params.state_title -}}
+        {{ else }}
+          {{- .Title -}}
+        {{ end}}
+    {{ end }}
+  </div>
+</div>

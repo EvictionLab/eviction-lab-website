@@ -95,14 +95,10 @@
       <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
     {{ end }}
 
-    {{/* Loads d3 if we are on the covid eviction map page */}}
-    {{ if eq .Page.Section "covid-eviction-map" }}
-      {{ partial "load-d3" . }}
-    {{ end }}
-
   </head>
 
-  <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}">
+  <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}
+  page-type-{{.Page.Type}} page-layout-{{.Page.Layout}}">
 
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M955JVB"
