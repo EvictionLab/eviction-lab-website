@@ -24,7 +24,7 @@ aliases:
 
 **Introduction**
 
-To prevent the deleterious health consequences of eviction and an escalating economic crisis during the COVID-19 outbreak, U.S. states are beginning to pursue strategies to ensure safe, decent, and stable housing during and after the pandemic. To evaluate state responses, the Eviction Lab and Columbia Law School’s Professor Emily Benfer have developed a policy scorecard for each state, distilling the contents of thousands of newly-released emergency orders, declarations, and legislation into a clear set of critical measures included in, and left out of, state-level pandemic responses related to eviction and housing. As states grapple with how to protect citizens during and in the recovery from the pandemic, this scorecard provides comprehensive information about the varying approaches state-by-state. These short- and long-term supportive measures are not exhaustive. 
+To prevent the deleterious health consequences of eviction and an escalating economic crisis during the COVID-19 outbreak, U.S. states are beginning to pursue strategies to ensure safe, decent, and stable housing during and after the pandemic. To evaluate state responses, the Eviction Lab and Columbia Law School’s Professor Emily Benfer have developed a <a href="/covid-policy-scorecard/">policy scorecard</a> for each state, distilling the contents of thousands of newly-released emergency orders, declarations, and legislation into a clear set of critical measures included in, and left out of, state-level pandemic responses related to eviction and housing. As states grapple with how to protect citizens during and in the recovery from the pandemic, this scorecard provides comprehensive information about the varying approaches state-by-state. These short- and long-term supportive measures are not exhaustive. 
 
 **Scorecard Methodology**
 
@@ -155,7 +155,7 @@ Within categories, more weight is given to protections that are more comprehensi
 
 A special thanks is given to Anne Kat Alexander and Alieza Durana at the Eviction Lab and to Amy Groshek, James Minton, and Sasha Zyryaev at Hyperobjekt for their instrumental work in designing and authoring the scorecard; and to Columbia Law School and Mailman School of Public Health students Katherine Donohue, Ruth Hirsch, Jennifer Katz, Michelle Lappen, Jordan Lieberman, Janki Tailor, and Marissa Yochelson Long for their contribution to data analysis and management. 
  
-We are grateful for the outstanding research support provided by the following law and public health students from Columbia Law School, University of Pennsylvania School of Law, University of Michigan School of Law, and Columbia University Mailman School of Public Health: Dionna Attinson, Katherine Donohue, Susan Fleurant, Harry Frank, Shravya Govindgari, Taylor Hertzler, Ruth Hirsch, Jennifer Katz, Ellen Kim, Robert Koehler, Rani Kulkarni, Michelle Lappen, Nicole Levy, Jordan Lieberman, Nicole Levy, Josh Malkin, Sarah McElwee, Justin Porter, Jacob Roth, Nika Sabasteanski, Janki Tailor, Wendy Xiao, Marissa Yochelson Long, and Nora Zakaria. 
+We are grateful for the outstanding research support provided by the following law and public health students from Columbia Law School, University of Pennsylvania School of Law, University of Michigan School of Law, and Columbia University Mailman School of Public Health: Dionna Attinson, Katherine Donohue, Susan Fleurant, Harry Frank, Shravya Govindgari, Taylor Hertzler, Ruth Hirsch, Jennifer Katz, Ellen Kim, Robert Koehler, Rani Kulkarni, Michelle Lappen, Nicole Levy, Jordan Lieberman, Josh Malkin, Sarah McElwee, Justin Porter, Jacob Roth, Nika Sabasteanski, Janki Tailor, Wendy Xiao, Marissa Yochelson Long, and Nora Zakaria. 
 
 We are also grateful for the research support provided by the following members of the Eviction Lab: Lavar Edmonds, Joe Fish, Katie Krywokulski, Lillian Leung, Renee Louis, Matt Mleczko, Helena Najm, Scott Overby, Devin Rutan, Naomi Shiffrin, and Gillian Slee. 
 
@@ -177,7 +177,10 @@ We are grateful for the support of the following partners for their guidance in 
 - Florence Roisman (Indiana University Robert H. McKinney School of Law) 
 - Mark Swartz (Lawyers’ Committee for Better Housing) 
 - Diane Glauber (Lawyers’ Committee for Civil Rights) 
-- Tom Silverstein (Lawyers’ Committee for Civil Rights) 
+- Tom Silverstein (Lawyers’ Committee for Civil Rights)
+- Sara Rips (Legal Aid of Nebraska’s Housing Justice Project)
+- Caitlin Cedfeldt (Legal Aid of Nebraska’s Housing Justice Project)
+- Scott Mertz (Legal Aid of Nebraska’s Housing Justice Project) 
 - Beth Harrison (Legal Aid Society of the District of Columbia) 
 - David Kagle (Legal Assistance of Western New York) 
 - Greg Payne (Maine Affordable Housing Coalition) 
@@ -185,8 +188,8 @@ We are grateful for the support of the following partners for their guidance in 
 - Eric Dunn (National Housing Law Project) 
 - Deborah Thrope (National Housing Law Project) 
 - Eric Tars (National Law Center on Homelessness and Poverty) 
-- Kim Johnson (National Low-Income Housing Coalition) 
-- Sarah Mickelson (National Low-Income Housing Coalition) 
+- Kim Johnson (National Low Income Housing Coalition) 
+- Sarah Mickelson (National Low Income Housing Coalition) 
 - Diane Yentel (National Low Income Housing Coalition) 
 - Colleen Healy Boufides (The Network for Public Health Law)
 - Amy Eppler Epstein (New Haven Legal Assistance Association) 
@@ -218,6 +221,8 @@ The renting population statistic on the tool comes from the United States Census
 - <a target="_blank" href="https://www.cbpp.org/covid-19-responding-to-the-health-and-economic-crisis">Center on Budget and Policy Priorities COVID-19 Health & Economic Crisis Response</a>
 - <a target="_blank" href="https://nlihc.org/coronavirus-and-housing-homelessness">National Low Income Housing Coalition Housing & Homelessness COVID-19 Resources</a>
 - <a target="_blank" href="https://www.nhlp.org/campaign/protecting-renter-and-homeowner-rights-during-our-national-health-crisis-2/">National Housing Law Project COVID-19 Moratorium Resources & Analysis</a>
+- <a target="_blank" href="https://nlchp.org/coronavirus/">National Law Center on Homelessness Poverty COVID-19 Resources</a>
+- <a target="_blank" href="http://www.publicjustice.org/en/legal_help/housing-and-covid-19/">Public Justice Center COVID-19 Housing Resources</a>
 - <a target="_blank" href="https://www.rhls.org/evictionmoratoriums/">Regional Housing Legal Services Eviction Moratorium by Phase</a>
 - <a target="_blank" href="https://www.networkforphl.org/resources/topics/covid-19/">Network for Public Health Law COVID-19 Resources</a>
 - <a target="_blank" href="https://www.urban.org/features/covid-19-policies-protect-people-and-communities#chapter-2">Urban Institute COVID-19 Policies to Protect People and Communities</a>
@@ -226,7 +231,7 @@ The renting population statistic on the tool comes from the United States Census
 - <a target="_blank" href="http://ncsc.org/">National Center for State Courts</a>
 - <a target="_blank" href="http://ncsl.org/">National Conference of State Legislatures</a> 
 - <a target="_blank" href="https://www.nga.org/coronavirus/#states">National Governors Association</a>
-<a target="_blank" href="https://www.naruc.org/compilation-of-covid-19-news-resources/state-response-tracker/">National Association of Regulatory Utility Commissioners</a>
+- <a target="_blank" href="https://www.naruc.org/compilation-of-covid-19-news-resources/state-response-tracker/">National Association of Regulatory Utility Commissioners</a>
 
 
 

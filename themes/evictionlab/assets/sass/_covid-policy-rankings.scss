@@ -1192,6 +1192,45 @@ $alt-bg: #F4F7F9;
   }
   
 }
+
+#scroll_to_filters {
+  border: none;
+  background: none;
+  background-color: none;
+  background-image: none;
+  transform: rotate(-90deg);
+  font-family: GT-Eesti-Display-Bold, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  padding: 14px 12px;
+  background: #fff;
+  box-shadow: -4px 0 6px -3px rgba(0,0,0,0.75);
+  //box-shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+  //border-radius: 5px;
+  margin-right: 16px;
+  @include media-breakpoint-up(lg) {
+    margin-right: 16px;
+  }
+  &:hover,
+  &:focus {
+    border: none;
+    outline: none;
+    background-color: $el-red;
+    color: #fff;
+    transition: background-color .3s ease;
+  }
+  color: $el-red;
+  i {
+    display: inline-block;
+    clear: both;
+    vertical-align: bottom;
+  }
+  span {
+    display: inline-block;
+    margin-right: 6px;
+  }
+}
+
 .disclaimer {
   background-color: $alt-bg;
   a, a:hover {

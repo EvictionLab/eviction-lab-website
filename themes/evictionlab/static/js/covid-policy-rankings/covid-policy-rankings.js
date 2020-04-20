@@ -294,53 +294,67 @@ $(document).ready(function () {
     },
     handleStickyFilters: function() {
       // console.log('handleStickyFilters()');
-      // var doSticky = true;
+      var $scrollToButton = $('#scroll_to_filters');
       var filterOffset = null;
       var $filtersPanel = $('#filters_panel');
       var filtersPanelOffset = $filtersPanel.offset();
-      var viewportWidth = $(window).width(); 
+      var $footerOffset = $('.disclaimer').offset();
+      var viewportWidth = $(window).width();
+      var viewportHeight = $(window).height();
       var targetWidth = 768;
-      // var $table = $('#states_panel table');
-      // var $theads = $('#states_panel thead th');
       $(window).on('load', function() {
         // console.log('loaded');
-        // filterOffset = $filters.offset();
         filtersPanelOffset = $filtersPanel.offset();
         viewportWidth = $(window).width();
+        $footerOffset = $('.disclaimer').offset();
       })
       $(window).on('resize', function() {
         // console.log('loaded');
-        // filterOffset = $filters.offset();
         filtersPanelOffset = $filtersPanel.offset();
         viewportWidth = $(window).width();
+        $footerOffset = $('.disclaimer').offset();
       })
       $(window).on('scroll', function() {
         // console.log('scrolled');
         var wScrollTop = $(window).scrollTop();
-        // console.log('wScrollTop, ', wScrollTop);
-        // var headerHeight = $('header .header-wrapper').height();
-        // if (wScrollTop + headerHeight >= filtersPanelOffset.top && viewportWidth >= 768) {
-        //   // console.log('make the filter sticky');
-        //   $filtersPanel.css({
-        //     position: 'sticky',
-        //     top: headerHeight,
-        //     left: filtersPanelOffset.left
-        //   }).addClass('filter-sticky');
-        // } else {
-        //   $filtersPanel.css({
-        //     position: 'inherit'
-        //   }).removeClass('filter-sticky');
-        // }
+        $footerOffset = $('.disclaimer').offset();
+        var headerHeight = $('header .header-wrapper').height();
+        // If the bottom matter is in view, absolute position and exit.
+        if (wScrollTop + viewportHeight >= $footerOffset.top) {
+          // console.log('footer is visible');
+          $scrollToButton.css({
+            position: 'absolute',
+            top: $footerOffset.top - 40 - $scrollToButton.width()*0.66,
+            right: 0,
+            display: 'block'
+          }).addClass('filter-bottom').removeClass('filter-sticky');
+          return;
+        }
+        // Otherwise fixed-position the button.
+        if (wScrollTop + headerHeight >= filtersPanelOffset.top + $filtersPanel.height()) {
+          // console.log('make the button sticky');
+          $scrollToButton.css({
+            position: 'fixed',
+            top: viewportHeight - 40 - $scrollToButton.width()*0.66,
+            right: 0,
+            display: 'block'
+          }).addClass('filter-sticky').removeClass('filter-bottom');
+        } else {
+          $scrollToButton.css({
+            position: 'inherit',
+            display: 'none'
+          }).removeClass('filter-sticky').removeClass('filter-bottom');
+        }
       })
     },
     initTooltip: function() {
       // Hot-load tooltips script to init tooltips for filters (after markup inserted).
       $.getScript('/js/covid-policy-rankings/tooltips.js', function() {
-        console.log('tooltips loaded');
+        // console.log('tooltips loaded');
       });
     },
     setUIListeners: function() {
-      console.log('setUIListeners()');
+      // console.log('setUIListeners()');
       // Sets listeners for:
       // Show and hide of filter for small-screen devices
       $('#mobile_filter').on('click select', function(e) {
@@ -407,6 +421,14 @@ $(document).ready(function () {
         rankings.sortAndFilter();
       });
       rankings.initTooltip();
+      $('#scroll_to_filters').on('click select', function() {
+        // console.log('clicked scroll to filters');
+        $filtersOffset = $('#filters_panel').offset();
+        $headerHeight = $('.header-wrapper').height();
+        $([document.documentElement, document.body]).animate({
+          scrollTop: $filtersOffset.top - $headerHeight
+        }, 800, 'linear');
+      });
     },
     loadHandlebarsTemplate: function(url, callback) {
       // Load handlebars template via xhr.
