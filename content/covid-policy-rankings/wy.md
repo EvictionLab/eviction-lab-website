@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Wyoming
 description: See how Wyoming ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/wy
+url: /covid-policy-scorecard/wy
 aliases:
-    - /covid-policy-rankings/wy
-    - /covid-policy-rankings/wyoming
-    - /es/covid-policy-rankings/wy
-    - /es/covid-policy-rankings/wyoming
+    - /covid-policy-scorecard/wy
+    - /covid-policy-scorecard/wyoming
+    - /es/covid-policy-scorecard/wy
+    - /es/covid-policy-scorecard/wyoming
 ---

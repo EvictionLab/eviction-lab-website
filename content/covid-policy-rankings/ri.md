@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Rhode Island
 description: See how Rhode Island ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ri
+url: /covid-policy-scorecard/ri
 aliases:
-    - /covid-policy-rankings/ri
-    - /covid-policy-rankings/rhode-island
-    - /es/covid-policy-rankings/ri
-    - /es/covid-policy-rankings/rhode-island
+    - /covid-policy-scorecard/ri
+    - /covid-policy-scorecard/rhode-island
+    - /es/covid-policy-scorecard/ri
+    - /es/covid-policy-scorecard/rhode-island
 ---

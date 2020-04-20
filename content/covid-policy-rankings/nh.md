@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for New Hampshire
 description: See how New Hampshire ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/nh
+url: /covid-policy-scorecard/nh
 aliases:
-    - /covid-policy-rankings/nh
-    - /covid-policy-rankings/new-hampshire
-    - /es/covid-policy-rankings/nh
-    - /es/covid-policy-rankings/new-hampshire
+    - /covid-policy-scorecard/nh
+    - /covid-policy-scorecard/new-hampshire
+    - /es/covid-policy-scorecard/nh
+    - /es/covid-policy-scorecard/new-hampshire
 ---

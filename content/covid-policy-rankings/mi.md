@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Michigan
 description: See Michigan state ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/mi
+url: /covid-policy-scorecard/mi
 aliases:
-    - /covid-policy-rankings/mi
-    - /covid-policy-rankings/michigan
-    - /es/covid-policy-rankings/mi
-    - /es/covid-policy-rankings/michigan
+    - /covid-policy-scorecard/mi
+    - /covid-policy-scorecard/michigan
+    - /es/covid-policy-scorecard/mi
+    - /es/covid-policy-scorecard/michigan
 ---

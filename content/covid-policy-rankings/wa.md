@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Washington
 description: See how Washington ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/wa
+url: /covid-policy-scorecard/wa
 aliases:
-    - /covid-policy-rankings/wa
-    - /covid-policy-rankings/washington
-    - /es/covid-policy-rankings/wa
-    - /es/covid-policy-rankings/washington
+    - /covid-policy-scorecard/wa
+    - /covid-policy-scorecard/washington
+    - /es/covid-policy-scorecard/wa
+    - /es/covid-policy-scorecard/washington
 ---

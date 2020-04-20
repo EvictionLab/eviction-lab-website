@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Georgia
 description: See how Georgia ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ga
+url: /covid-policy-scorecard/ga
 aliases:
-    - /covid-policy-rankings/ga
-    - /covid-policy-rankings/georgia
-    - /es/covid-policy-rankings/ga
-    - /es/covid-policy-rankings/georgia
+    - /covid-policy-scorecard/ga
+    - /covid-policy-scorecard/georgia
+    - /es/covid-policy-scorecard/ga
+    - /es/covid-policy-scorecard/georgia
 ---

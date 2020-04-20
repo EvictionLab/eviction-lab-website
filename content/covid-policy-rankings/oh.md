@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Ohio
 description: See how Ohio ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/oh
+url: /covid-policy-scorecard/oh
 aliases:
-    - /covid-policy-rankings/oh
-    - /covid-policy-rankings/ohio
-    - /es/covid-policy-rankings/oh
-    - /es/covid-policy-rankings/ohio
+    - /covid-policy-scorecard/oh
+    - /covid-policy-scorecard/ohio
+    - /es/covid-policy-scorecard/oh
+    - /es/covid-policy-scorecard/ohio
 ---

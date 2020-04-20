@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Mississippi
 description: See how Mississippi ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ms
+url: /covid-policy-scorecard/ms
 aliases:
-    - /covid-policy-rankings/ms
-    - /covid-policy-rankings/mississippi
-    - /es/covid-policy-rankings/ms
-    - /es/covid-policy-rankings/mississippi
+    - /covid-policy-scorecard/ms
+    - /covid-policy-scorecard/mississippi
+    - /es/covid-policy-scorecard/ms
+    - /es/covid-policy-scorecard/mississippi
 ---

@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Missouri
 description: See how Missouri ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/mo
+url: /covid-policy-scorecard/mo
 aliases:
-    - /covid-policy-rankings/mo
-    - /covid-policy-rankings/missouri
-    - /es/covid-policy-rankings/mo
-    - /es/covid-policy-rankings/missouri
+    - /covid-policy-scorecard/mo
+    - /covid-policy-scorecard/missouri
+    - /es/covid-policy-scorecard/mo
+    - /es/covid-policy-scorecard/missouri
 ---

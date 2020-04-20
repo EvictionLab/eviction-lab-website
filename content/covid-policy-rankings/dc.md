@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for District of Columbia
 description: See how Washington, DC ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/dc
+url: /covid-policy-scorecard/dc
 aliases:
-    - /covid-policy-rankings/dc
-    - /covid-policy-rankings/district-of-columbia
-    - /es/covid-policy-rankings/dc
-    - /es/covid-policy-rankings/district-of-columbia
+    - /covid-policy-scorecard/dc
+    - /covid-policy-scorecard/district-of-columbia
+    - /es/covid-policy-scorecard/dc
+    - /es/covid-policy-scorecard/district-of-columbia
 ---

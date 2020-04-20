@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Florida
 description: See how Florida ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/fl
+url: /covid-policy-scorecard/fl
 aliases:
-    - /covid-policy-rankings/fl
-    - /covid-policy-rankings/florida
-    - /es/covid-policy-rankings/fl
-    - /es/covid-policy-rankings/florida
+    - /covid-policy-scorecard/fl
+    - /covid-policy-scorecard/florida
+    - /es/covid-policy-scorecard/fl
+    - /es/covid-policy-scorecard/florida
 ---

@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Maryland
 description: See how Maryland ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/md
+url: /covid-policy-scorecard/md
 aliases:
-    - /covid-policy-rankings/md
-    - /covid-policy-rankings/maryland
-    - /es/covid-policy-rankings/md
-    - /es/covid-policy-rankings/maryland
+    - /covid-policy-scorecard/md
+    - /covid-policy-scorecard/maryland
+    - /es/covid-policy-scorecard/md
+    - /es/covid-policy-scorecard/maryland
 ---

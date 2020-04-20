@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for North Carolina
 description: See how North Carolina ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/nc
+url: /covid-policy-scorecard/nc
 aliases:
-    - /covid-policy-rankings/nc
-    - /covid-policy-rankings/north-carolina
-    - /es/covid-policy-rankings/nc
-    - /es/covid-policy-rankings/north-carolina
+    - /covid-policy-scorecard/nc
+    - /covid-policy-scorecard/north-carolina
+    - /es/covid-policy-scorecard/nc
+    - /es/covid-policy-scorecard/north-carolina
 ---

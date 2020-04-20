@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for West Virginia
 description: See how West Virginia ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/wv
+url: /covid-policy-scorecard/wv
 aliases:
-    - /covid-policy-rankings/wv
-    - /covid-policy-rankings/west-virginia
-    - /es/covid-policy-rankings/wv
-    - /es/covid-policy-rankings/west-virginia
+    - /covid-policy-scorecard/wv
+    - /covid-policy-scorecard/west-virginia
+    - /es/covid-policy-scorecard/wv
+    - /es/covid-policy-scorecard/west-virginia
 ---

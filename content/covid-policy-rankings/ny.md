@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for New York
 description: See how New York ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ny
+url: /covid-policy-scorecard/ny
 aliases:
-    - /covid-policy-rankings/ny
-    - /covid-policy-rankings/new-york
-    - /es/covid-policy-rankings/ny
-    - /es/covid-policy-rankings/new-york
+    - /covid-policy-scorecard/ny
+    - /covid-policy-scorecard/new-york
+    - /es/covid-policy-scorecard/ny
+    - /es/covid-policy-scorecard/new-york
 ---

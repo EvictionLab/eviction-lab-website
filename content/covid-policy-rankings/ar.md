@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Arkansas
 description: See how Arkansas ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ar
+url: /covid-policy-scorecard/ar
 aliases:
-    - /covid-policy-rankings/ar
-    - /covid-policy-rankings/arkansas
-    - /es/covid-policy-rankings/ar
-    - /es/covid-policy-rankings/arkansas
+    - /covid-policy-scorecard/ar
+    - /covid-policy-scorecard/arkansas
+    - /es/covid-policy-scorecard/ar
+    - /es/covid-policy-scorecard/arkansas
 ---

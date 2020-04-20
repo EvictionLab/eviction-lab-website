@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Massachusetts
 description: See how Massachusetts ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ma
+url: /covid-policy-scorecard/ma
 aliases:
-    - /covid-policy-rankings/ma
-    - /covid-policy-rankings/massachusetts
-    - /es/covid-policy-rankings/ma
-    - /es/covid-policy-rankings/massachusetts
+    - /covid-policy-scorecard/ma
+    - /covid-policy-scorecard/massachusetts
+    - /es/covid-policy-scorecard/ma
+    - /es/covid-policy-scorecard/massachusetts
 ---

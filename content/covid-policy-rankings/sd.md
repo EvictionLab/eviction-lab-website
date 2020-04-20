@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for South Dakota
 description: See how South Dakota ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/sd
+url: /covid-policy-scorecard/sd
 aliases:
-    - /covid-policy-rankings/sd
-    - /covid-policy-rankings/south-dakota
-    - /es/covid-policy-rankings/sd
-    - /es/covid-policy-rankings/south-dakota
+    - /covid-policy-scorecard/sd
+    - /covid-policy-scorecard/south-dakota
+    - /es/covid-policy-scorecard/sd
+    - /es/covid-policy-scorecard/south-dakota
 ---

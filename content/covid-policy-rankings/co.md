@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Colorado
 description: See how Colorado ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/co
+url: /covid-policy-scorecard/co
 aliases:
-    - /covid-policy-rankings/co
-    - /covid-policy-rankings/colorado
-    - /es/covid-policy-rankings/co
-    - /es/covid-policy-rankings/colorado
+    - /covid-policy-scorecard/co
+    - /covid-policy-scorecard/colorado
+    - /es/covid-policy-scorecard/co
+    - /es/covid-policy-scorecard/colorado
 ---

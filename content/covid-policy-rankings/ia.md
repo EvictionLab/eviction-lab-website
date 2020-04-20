@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Iowa
 description: See how Iowa ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ia
+url: /covid-policy-scorecard/ia
 aliases:
-    - /covid-policy-rankings/ia
-    - /covid-policy-rankings/iowa
-    - /es/covid-policy-rankings/ia
-    - /es/covid-policy-rankings/iowa
+    - /covid-policy-scorecard/ia
+    - /covid-policy-scorecard/iowa
+    - /es/covid-policy-scorecard/ia
+    - /es/covid-policy-scorecard/iowa
 ---

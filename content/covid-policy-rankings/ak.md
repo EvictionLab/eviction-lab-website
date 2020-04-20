@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Alaska
 description: See how Alaska ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ak
+url: /covid-policy-scorecard/ak
 aliases:
-    - /covid-policy-rankings/ak
-    - /covid-policy-rankings/alaska
-    - /es/covid-policy-rankings/ak
-    - /es/covid-policy-rankings/alaska
+    - /covid-policy-scorecard/ak
+    - /covid-policy-scorecard/alaska
+    - /es/covid-policy-scorecard/ak
+    - /es/covid-policy-scorecard/alaska
 ---

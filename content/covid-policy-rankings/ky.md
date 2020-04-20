@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Kentucky
 description: See how Kentucky ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/ky
+url: /covid-policy-scorecard/ky
 aliases:
-    - /covid-policy-rankings/ky
-    - /covid-policy-rankings/kentucky
-    - /es/covid-policy-rankings/ky
-    - /es/covid-policy-rankings/kentucky
+    - /covid-policy-scorecard/ky
+    - /covid-policy-scorecard/kentucky
+    - /es/covid-policy-scorecard/ky
+    - /es/covid-policy-scorecard/kentucky
 ---

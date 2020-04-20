@@ -1181,4 +1181,7 @@ $alt-bg: #F4F7F9;
 }
 .disclaimer {
   background-color: $alt-bg;
+  a, a:hover {
+    color: $el-red;
+  }
 }

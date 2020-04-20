@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Texas
 description: See how Texas ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/tx
+url: /covid-policy-scorecard/tx
 aliases:
-    - /covid-policy-rankings/tx
-    - /covid-policy-rankings/texas
-    - /es/covid-policy-rankings/tx
-    - /es/covid-policy-rankings/texas
+    - /covid-policy-scorecard/tx
+    - /covid-policy-scorecard/texas
+    - /es/covid-policy-scorecard/tx
+    - /es/covid-policy-scorecard/texas
 ---

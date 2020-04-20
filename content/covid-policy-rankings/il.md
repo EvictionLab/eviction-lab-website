@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Illinois
 description: See how Illinois ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/il
+url: /covid-policy-scorecard/il
 aliases:
-    - /covid-policy-rankings/il
-    - /covid-policy-rankings/illinois
-    - /es/covid-policy-rankings/il
-    - /es/covid-policy-rankings/illinois
+    - /covid-policy-scorecard/il
+    - /covid-policy-scorecard/illinois
+    - /es/covid-policy-scorecard/il
+    - /es/covid-policy-scorecard/illinois
 ---

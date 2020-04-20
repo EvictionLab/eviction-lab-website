@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for North Dakota
 description: See how North Dakota ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/nd
+url: /covid-policy-scorecard/nd
 aliases:
-    - /covid-policy-rankings/nd
-    - /covid-policy-rankings/north-dakota
-    - /es/covid-policy-rankings/nd
-    - /es/covid-policy-rankings/north-dakota
+    - /covid-policy-scorecard/nd
+    - /covid-policy-scorecard/north-dakota
+    - /es/covid-policy-scorecard/nd
+    - /es/covid-policy-scorecard/north-dakota
 ---

@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for Maine
 description: See how Maine ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/me
+url: /covid-policy-scorecard/me
 aliases:
-    - /covid-policy-rankings/me
-    - /covid-policy-rankings/maine
-    - /es/covid-policy-rankings/me
-    - /es/covid-policy-rankings/maine
+    - /covid-policy-scorecard/me
+    - /covid-policy-scorecard/maine
+    - /es/covid-policy-scorecard/me
+    - /es/covid-policy-scorecard/maine
 ---

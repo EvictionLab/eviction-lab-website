@@ -9,10 +9,10 @@ photoCredit:
 hasSubnav: true
 socialDescription: COVID-19 Housing Policy Scorecard for New Mexico
 description: See how New Mexico ranks in our nationwide scorecard of housing policies in response to COVID-19.
-url: /covid-policy-rankings/nm
+url: /covid-policy-scorecard/nm
 aliases:
-    - /covid-policy-rankings/nm
-    - /covid-policy-rankings/new-mexico
-    - /es/covid-policy-rankings/nm
-    - /es/covid-policy-rankings/new-mexico
+    - /covid-policy-scorecard/nm
+    - /covid-policy-scorecard/new-mexico
+    - /es/covid-policy-scorecard/nm
+    - /es/covid-policy-scorecard/new-mexico
 ---
