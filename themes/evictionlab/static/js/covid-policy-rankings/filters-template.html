@@ -13,7 +13,7 @@
     </div>
     {{#each filters}}
       <div class="label-parent">
-        <label class="filter-label" data-filter="{{id}}">
+        <label for="{{id}}" class="filter-label" data-filter="{{id}}">
           <input id="{{id}}" type="checkbox" data-filter="{{id}}" aria-labelledby="filters_heading labels_{{id}}" aria-describedby="tooltip_{{id}}" tabindex="-1">
           <span id="labels_{{id}}">{{label}}</span>
         </label>

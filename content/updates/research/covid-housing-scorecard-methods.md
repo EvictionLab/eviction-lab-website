@@ -32,7 +32,7 @@ The state scorecard documents the following categories and measures, which may b
 
 - **Initiation of eviction:** whether a state bars landlords from serving tenants with notice to quit and filing an eviction action for nonpayment related to COVID-19 and other reasons.
 
-- **Court process:** whether a state suspends eviction hearings, stays writs, orders, or judgements of possession, tolls or extends court deadlines, and seals eviction case records.
+- **Court process:** whether a state suspends eviction hearings, stays writs, orders, or judgments of possession, tolls or extends court deadlines, and seals eviction case records.
 
 - **Enforcement of eviction order:** whether a state bars law enforcement from executing an eviction order, including cases of COVID-19-related hardship, nonpayment, or all non-emergency cases.
 
@@ -74,23 +74,23 @@ In the Initiation of Eviction category, we track four measures:
 
 - *No eviction filing, except emergencies*. A state has achieved the measure if landlords are prohibited from filing eviction cases for any non-emergency reason, or if courts are only accepting emergency landlord-tenant cases. Emergency cases during the pandemic typically include when a person poses substantial risk of harm to another person or the property or where there are serious code violations, among others. 
 
-**Court Process:** After a landlord notifies a tenant (if required by the state) and files an eviction case in court, the court process begins. In all states, courts have limited civil proceedings during the pandemic. This should prevent courts from processing eviction cases and issuing eviction orders. Court orders vary, however, in how they address eviction cases. Some states prohibit people who work in the court system from participating in actions that would lead to a tenant’s "ejectment," or removal, from a home; other states expressly suspend eviction hearings; some have stayed all eviction judgements, which temporarily prevents law enforcement officers from removing tenants from homes; still others have done nothing along these lines or permit remote hearings. 
+**Court Process:** After a landlord notifies a tenant (if required by the state) and files an eviction case in court, the court process begins. In all states, courts have limited civil proceedings during the pandemic. This should prevent courts from processing eviction cases and issuing eviction orders. Court orders vary, however, in how they address eviction cases. Some states prohibit people who work in the court system from participating in actions that would lead to a tenant’s "ejectment," or removal, from a home; other states expressly suspend eviction hearings; some have stayed all eviction judgments, which temporarily prevents law enforcement officers from removing tenants from homes; still others have done nothing along these lines or permit remote hearings. 
 
 In the Court Process category, we track four measures:
 
 - *Hearings suspended*. A state has achieved this measure if eviction hearings are suspended in the state. This can take a variety of forms, including suspending all non-essential civil proceedings and preventing court workers from taking actions that would lead to an eviction. Notably, a state has not achieved this measure if cases are permitted to proceed remotely via phone or video conferencing and the state has not issued further guidance on whether eviction cases should proceed. 
 
-- *Judgements of possession stayed*. A state has achieved this measure if the court has stayed eviction judgements (which temporarily prohibits law enforcement from carrying out the eviction order) or if the court is not issuing eviction orders at this time. 
+- *Judgements of possession stayed*. A state has achieved this measure if the court has stayed eviction judgments (which temporarily prohibits law enforcement from carrying out the eviction order) or if the court is not issuing eviction orders at this time. 
 
 - *Deadlines extended or tolled*. This measure refers to requirements for how quickly people need to respond or submit materials at various stages in the course of an eviction. A state has achieved this measure if court deadlines are extended or tolled.
 
-- *Eviction records sealed*. Sealing court eviction records during the pandemic would prevent the negative repercussions of an eviction judgement, such as difficulty finding future housing. A state has achieved this measure if a state required record sealing prior to or during the pandemic. 
+- *Eviction records sealed*. Sealing court eviction records during the pandemic would prevent the negative repercussions of an eviction judgment, such as difficulty finding future housing. A state has achieved this measure if a state required record sealing prior to or during the pandemic. 
 
 **Enforcement of Eviction Order:** This category refers to the final stage of eviction, when a sheriff or other law enforcement officer enforces the court's writ of possession, or order of eviction, by ensuring that the tenant and the tenant's belongings are removed from the property. 
 
 In the Enforcement category, we track three measures:
 
-- *No removal if tenant has COVID-19 hardship*. A state has achieved this measure if law enforcement is prohibited from removing a tenant whose eviction judgement was the result of COVID-19-related hardship.
+- *No removal if tenant has COVID-19 hardship*. A state has achieved this measure if law enforcement is prohibited from removing a tenant whose eviction judgment was the result of COVID-19-related hardship.
 
 - *No removal of tenant for nonpayment of rent*. A state has achieved this measure if law enforcement is prohibited from removing a tenant whose eviction judgment was the result of nonpayment of rent.
 
@@ -166,7 +166,6 @@ We are grateful for the support of the following partners for their guidance in 
 - Peggy Bailey (Center for Budget and Policy Priorities)
 - Alicia Mazzara (Center for Budget and Policy Priorities) 
 - Rebecca Gerrard (Citizens Action of New York) 
-- Graham Bowman (COHIO)
 - Olatunde Johnson (Columbia Law School) 
 - Bruce Western (Columbia University)
 - Alana Greer (Community Justice Project, Inc.)
@@ -198,6 +197,7 @@ We are grateful for the support of the following partners for their guidance in 
 - Christine Appah (New York Lawyers for the Public Interest) 
 - Ruthie Lazenby (New York Lawyers for the Public Interest) 
 - Xavier Briggs (New York University) 
+- Graham Bowman (Ohio Poverty Law Center)
 - Tara Raghuveer (People’s Action) 
 - George Donnelly (Public Interest Law Center) 
 - John Pollock (Public Justice Center)

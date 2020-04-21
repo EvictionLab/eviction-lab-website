@@ -5,8 +5,8 @@ type: index
 h1: "COVID-19 Housing<br>Policy Scorecard"
 photoCredit:
 hasSubnav: true
-fbImage: /images/assets/covid-eviction-policies-social.jpg
-twImage: /images/assets/covid-eviction-policies-social.jpg
+fbImage: /images/assets/el-scorecard-social-000006.png
+twImage: /images/assets/el-scorecard-social-000006.png
 socialDescription: See how your state ranks in our nationwide scorecard of housing policies in response to COVID-19.
 description: See how your state ranks in our nationwide scorecard of housing policies in response to COVID-19.
 intro1: >- 

@@ -7,8 +7,8 @@ state_abbrev: hi # use state abbreviation.
 state_title: Hawaii
 photoCredit:
 hasSubnav: true
-fbImage: /images/assets/covid-eviction-policies-social.jpg
-twImage: /images/assets/covid-eviction-policies-social.jpg
+fbImage: /images/assets/el-scorecard-social-000006.png
+twImage: /images/assets/el-scorecard-social-000006.png
 socialDescription: COVID-19 Housing Policy Scorecard for Hawaii
 description: See how Hawaii ranks in our nationwide scorecard of housing policies in response to COVID-19.
 url: /covid-policy-scorecard/hi
