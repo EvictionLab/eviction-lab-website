@@ -824,6 +824,10 @@ $alt-bg: #F4F7F9;
                 &.bottom {
                   margin-top: 2rem;
                   margin-bottom: 2.5rem;
+                  display: block;
+                  width: 100%;
+                  text-align: left;
+                  margin-left: 0;
                 }
               }
               &.expand-state-details {
