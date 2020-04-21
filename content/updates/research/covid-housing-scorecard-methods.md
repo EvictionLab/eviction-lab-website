@@ -32,7 +32,7 @@ The state scorecard documents the following categories and measures, which may b
 
 - **Initiation of eviction:** whether a state bars landlords from serving tenants with notice to quit and filing an eviction action for nonpayment related to COVID-19 and other reasons.
 
-- **Court process:** whether a state suspends eviction hearings, stays writs, orders, or judgements of possession, tolls or extends court deadlines, and seals eviction case records.
+- **Court process:** whether a state suspends eviction hearings, stays writs, orders, or judgments of possession, tolls or extends court deadlines, and seals eviction case records.
 
 - **Enforcement of eviction order:** whether a state bars law enforcement from executing an eviction order, including cases of COVID-19-related hardship, nonpayment, or all non-emergency cases.
 
@@ -74,23 +74,23 @@ In the Initiation of Eviction category, we track four measures:
 
 - *No eviction filing, except emergencies*. A state has achieved the measure if landlords are prohibited from filing eviction cases for any non-emergency reason, or if courts are only accepting emergency landlord-tenant cases. Emergency cases during the pandemic typically include when a person poses substantial risk of harm to another person or the property or where there are serious code violations, among others. 
 
-**Court Process:** After a landlord notifies a tenant (if required by the state) and files an eviction case in court, the court process begins. In all states, courts have limited civil proceedings during the pandemic. This should prevent courts from processing eviction cases and issuing eviction orders. Court orders vary, however, in how they address eviction cases. Some states prohibit people who work in the court system from participating in actions that would lead to a tenant’s "ejectment," or removal, from a home; other states expressly suspend eviction hearings; some have stayed all eviction judgements, which temporarily prevents law enforcement officers from removing tenants from homes; still others have done nothing along these lines or permit remote hearings. 
+**Court Process:** After a landlord notifies a tenant (if required by the state) and files an eviction case in court, the court process begins. In all states, courts have limited civil proceedings during the pandemic. This should prevent courts from processing eviction cases and issuing eviction orders. Court orders vary, however, in how they address eviction cases. Some states prohibit people who work in the court system from participating in actions that would lead to a tenant’s "ejectment," or removal, from a home; other states expressly suspend eviction hearings; some have stayed all eviction judgments, which temporarily prevents law enforcement officers from removing tenants from homes; still others have done nothing along these lines or permit remote hearings. 
 
 In the Court Process category, we track four measures:
 
 - *Hearings suspended*. A state has achieved this measure if eviction hearings are suspended in the state. This can take a variety of forms, including suspending all non-essential civil proceedings and preventing court workers from taking actions that would lead to an eviction. Notably, a state has not achieved this measure if cases are permitted to proceed remotely via phone or video conferencing and the state has not issued further guidance on whether eviction cases should proceed. 
 
-- *Judgements of possession stayed*. A state has achieved this measure if the court has stayed eviction judgements (which temporarily prohibits law enforcement from carrying out the eviction order) or if the court is not issuing eviction orders at this time. 
+- *Judgments of possession stayed*. A state has achieved this measure if the court has stayed eviction judgments (which temporarily prohibits law enforcement from carrying out the eviction order) or if the court is not issuing eviction orders at this time. 
 
 - *Deadlines extended or tolled*. This measure refers to requirements for how quickly people need to respond or submit materials at various stages in the course of an eviction. A state has achieved this measure if court deadlines are extended or tolled.
 
-- *Eviction records sealed*. Sealing court eviction records during the pandemic would prevent the negative repercussions of an eviction judgement, such as difficulty finding future housing. A state has achieved this measure if a state required record sealing prior to or during the pandemic. 
+- *Eviction records sealed*. Sealing court eviction records during the pandemic would prevent the negative repercussions of an eviction judgment, such as difficulty finding future housing. A state has achieved this measure if a state required record sealing prior to or during the pandemic. 
 
 **Enforcement of Eviction Order:** This category refers to the final stage of eviction, when a sheriff or other law enforcement officer enforces the court's writ of possession, or order of eviction, by ensuring that the tenant and the tenant's belongings are removed from the property. 
 
 In the Enforcement category, we track three measures:
 
-- *No removal if tenant has COVID-19 hardship*. A state has achieved this measure if law enforcement is prohibited from removing a tenant whose eviction judgement was the result of COVID-19-related hardship.
+- *No removal if tenant has COVID-19 hardship*. A state has achieved this measure if law enforcement is prohibited from removing a tenant whose eviction judgment was the result of COVID-19-related hardship.
 
 - *No removal of tenant for nonpayment of rent*. A state has achieved this measure if law enforcement is prohibited from removing a tenant whose eviction judgment was the result of nonpayment of rent.
 
@@ -142,7 +142,7 @@ Within categories, more weight is given to protections that are more comprehensi
 
 - *Initiation of Eviction:* No notice to quit (20%); No filing if tenant has COVID-19 hardship (30%); No filing for nonpayment (30%); No filing, except emergencies (20%). Please note that if the measure for no nonpayment filings is present, the measure related to COVID-19 hardship is also marked as present, so that in effect the no filings for nonpayment of rent measure constitutes 60% of the score in this category. In the same way, if the most comprehensive filings-related measure is present, "No filing, except emergencies," the state receives credit for both of the two narrower filings-related measures. The presence of the "No filing, except emergencies" measure awards the state 80% of the score for this category. 
 
-- *Court Process:* Hearings suspended (40%); Judgements of possession stayed (20%); Deadlines extended or tolled (10%); Eviction records sealed (30%).
+- *Court Process:* Hearings suspended (40%); Judgments of possession stayed (20%); Deadlines extended or tolled (10%); Eviction records sealed (30%).
 
 - *Enforcement of Eviction Order:* No removal if tenant has COVID-19 hardship (30%); No removal of tenant for nonpayment (40%); No removal of tenant, except emergencies (30%). Please note that if the measure for no enforcement of nonpayment-related eviction orders is present, the measure related to COVID-19 hardship is also marked as present. In effect, the no enforcement of evictions for nonpayment of rent measure constitutes 70% of the score in this category. In the same way, if the most comprehensive filings-related measure is present, "No removal of tenant, except emergencies," the state receives credit for both of the two narrower measures in this category. The presence of the "No removal of tenant, except emergencies" measure awards the state 100% of the score for this category. 
 
