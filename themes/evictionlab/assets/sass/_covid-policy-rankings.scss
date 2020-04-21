@@ -653,7 +653,7 @@ $alt-bg: #F4F7F9;
               }
               .standout {
                 flex: 1 1 100%;
-                padding-top: 0.6rem;
+                padding-top: 1.6rem;
                 color: #828282;
                 .icon-standout {
                   display: inline-block;
@@ -824,6 +824,10 @@ $alt-bg: #F4F7F9;
                 &.bottom {
                   margin-top: 2rem;
                   margin-bottom: 2.5rem;
+                  display: block;
+                  width: 100%;
+                  text-align: left;
+                  margin-left: 0;
                 }
               }
               &.expand-state-details {

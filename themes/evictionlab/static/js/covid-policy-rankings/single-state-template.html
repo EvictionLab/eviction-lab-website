@@ -62,7 +62,7 @@
     {{/if}}
     <div class="full-list-link">
       <div class="icon" aria-hidden="true"></div>
-      <a target="_blank" href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTH8dUIbfnt3X52TrY3dEHQCAm60e5nqo0Rn1rNCf15dPGeXxM9QN9UdxUfEjxwvfTKzbCbZxJMdR7X/pubhtml">See a full list of executive, legislative, and court orders.</a>
+      <a target="_blank" href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTH8dUIbfnt3X52TrY3dEHQCAm60e5nqo0Rn1rNCf15dPGeXxM9QN9UdxUfEjxwvfTKzbCbZxJMdR7X/pubhtml" aria-label="See a full list of executive, legislative, and court orders.">See a full list of executive, legislative, and court orders.</a>
     </div>
     {{#if updated}}
       <p class="last-updated">
@@ -87,7 +87,7 @@
     {{! plcnoticebool }}
     <div class="state-policy">
       <label class="icon-{{plcnoticebool}} plcnoticebool">
-        <span class="sr-only">Icon: state has {{#isfalse plcnoticebool}}not{{/isfalse}} implemented </span>No notice to quit
+        <span class="sr-only"">Icon: state has {{#isfalse plcnoticebool}}not{{/isfalse}} implemented </span>No notice to quit {{#getsatooltipstring 'plcnoticebool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnoticebool}}
             {{#getsamedal 'plcnoticebool'}}
@@ -107,6 +107,7 @@
     <div class="state-policy">
       <label class="icon-{{plccofilbool}} plccofilbool">
         <span class="sr-only">Icon: state has {{#isfalse plccofilbool}}not{{/isfalse}} implemented </span>No filing if tenant has COVID-19 hardship
+        {{#getsatooltipstring 'plccofilbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plccofilbool}}
             {{#getsamedal 'plccofilbool'}}
@@ -126,6 +127,7 @@
     <div class="state-policy">
       <label class="icon-{{plcnonpbool}} plcnonpbool">
         <span class="sr-only">Icon: state has {{#isfalse plcnonpbool}}not{{/isfalse}} implemented </span>No filing for nonpayment
+        {{#getsatooltipstring 'plcnonpbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnonpbool}}
             {{#getsamedal 'plcnonpbool'}}
@@ -145,6 +147,7 @@
     <div class="state-policy">
       <label class="icon-{{plcnofilbool}} plcnofilbool">
         <span class="sr-only">Icon: state has {{#isfalse plcnofilbool}}not{{/isfalse}} implemented </span>No filing, except emergencies
+        {{#getsatooltipstring 'plcnofilbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnofilbool}}
             {{#getsamedal 'plcnofilbool'}}
@@ -174,6 +177,7 @@
     <div class="state-policy">
       <label class="icon-{{plcnohearbool}} plcnohearbool">
         <span class="sr-only">Icon: state has {{#isfalse plcnohearbool}}not{{/isfalse}} implemented </span>Hearings suspended
+        {{#getsatooltipstring 'plcnohearbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnohearbool}}
             {{#getsamedal 'plcnohearbool'}}
@@ -194,6 +198,7 @@
     <div class="state-policy">
       <label class="icon-{{plcnonewbool}} plcnonewbool">
         <span class="sr-only">Icon: state has {{#isfalse plcnonewbool}}not{{/isfalse}} implemented </span>Judgments of possession stayed
+        {{#getsatooltipstring 'plcnonewbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnonewbool}}
             {{#getsamedal 'plcnonewbool'}}
@@ -214,6 +219,7 @@
     <div class="state-policy">
       <label class="icon-{{plctldbool}} plctldbool">
         <span class="sr-only">Icon: state has {{#isfalse plctldbool}}not{{/isfalse}} implemented </span>Deadlines extended or tolled
+        {{#getsatooltipstring 'plctldbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plctldbool}}
             {{#getsamedal 'plctldbool'}}
@@ -234,6 +240,7 @@
     <div class="state-policy">
       <label class="icon-{{plcsealbool}} plcsealbool">
         <span class="sr-only">Icon: state has {{#isfalse plcsealbool}}not{{/isfalse}} implemented </span>Eviction records sealed
+        {{#getsatooltipstring 'plcsealbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcsealbool}}
             {{#getsamedal 'plcsealbool'}}
@@ -264,6 +271,7 @@
     <div class="state-policy">
       <label class="icon-{{plccovenfbool}} plccovenfbool">
         <span class="sr-only">Icon: state has {{#isfalse plccovenfbool}}not{{/isfalse}} implemented </span>No removal if tenant has COVID-19 hardship
+        {{#getsatooltipstring 'plccovenfbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plccovenfbool}}
             {{#getsamedal 'plccovenfbool'}}
@@ -284,6 +292,7 @@
     <div class="state-policy">
       <label class="icon-{{plcpayenfbool}} plcpayenfbool">
         <span class="sr-only">Icon: state has {{#isfalse plcpayenfbool}}not{{/isfalse}} implemented </span>No removal of tenant for nonpayment
+        {{#getsatooltipstring 'plcpayenfbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcpayenfbool}}
             {{#getsamedal 'plcpayenfbool'}}
@@ -304,6 +313,7 @@
     <div class="state-policy">
       <label class="icon-{{plcnoenfbool}} plcnoenfbool">
         <span class="sr-only">Icon: state has {{#isfalse plcnoenfbool}}not{{/isfalse}} implemented </span>No removal of tenant, except emergencies
+        {{#getsatooltipstring 'plcnoenfbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnoenfbool}}
             {{#getsamedal 'plcnoenfbool'}}
@@ -333,6 +343,7 @@
     <div class="state-policy">
       <label class="icon-{{plcextmorbool}} plcextmorbool">
         <span class="sr-only">Icon: state has {{#isfalse plcextmorbool}}not{{/isfalse}} implemented </span>Moratorium extends past emergency declaration
+        {{#getsatooltipstring 'plcextmorbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcextmorbool}}
             {{#getsamedal 'plcextmorbool'}}
@@ -353,6 +364,7 @@
     <div class="state-policy">
       <label class="icon-{{plcnoshbool}} plcnoshbool">
         <span class="sr-only">Icon: state has {{#isfalse plcnoshbool}}not{{/isfalse}} implemented </span>No utility disconnection
+        {{#getsatooltipstring 'plcnoshbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnoshbool}}
             {{#getsamedal 'plcnoshbool'}}
@@ -373,6 +385,7 @@
     <div class="state-policy">
       <label class="icon-{{plcfrrcbool}} plcfrrcbool">
         <span class="sr-only">Icon: state has {{#isfalse plcfrrcbool}}not{{/isfalse}} implemented </span>Free utility reconnection
+        {{#getsatooltipstring 'plcfrrcbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcfrrcbool}}
             {{#getsamedal 'plcfrrcbool'}}
@@ -393,6 +406,7 @@
     <div class="state-policy">
       <label class="icon-{{plcarsbool}} plcarsbool">
         <span class="sr-only">Icon: state has {{#isfalse plcarsbool}}not{{/isfalse}} implemented </span>Grace period to pay rent
+        {{#getsatooltipstring 'plcarsbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcarsbool}}
             {{#getsamedal 'plcarsbool'}}
@@ -413,6 +427,7 @@
     <div class="state-policy">
       <label class="icon-{{plcnorepbool}} plcnorepbool">
         <span class="sr-only">Icon: state has {{#isfalse plcnorepbool}}not{{/isfalse}} implemented </span>No report to credit bureau
+        {{#getsatooltipstring 'plcnorepbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnorepbool}}
             {{#getsamedal 'plcnorepbool'}}
@@ -433,6 +448,7 @@
     <div class="state-policy">
       <label class="icon-{{plcnofcbool}} plcnofcbool">
         <span class="sr-only">Icon: state has {{#isfalse plcnofcbool}}not{{/isfalse}} implemented </span>Foreclosure moratorium
+        {{#getsatooltipstring 'plcnofcbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcnofcbool}}
             {{#getsamedal 'plcnofcbool'}}
@@ -462,6 +478,7 @@
     <div class="state-policy">
       <label class="icon-{{plclatfbool}} plclatfbool">
         <span class="sr-only">Icon: state has {{#isfalse plclatfbool}}not{{/isfalse}} implemented </span>No late fees
+        {{#getsatooltipstring 'plclatfbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plclatfbool}}
             {{#getsamedal 'plclatfbool'}}
@@ -482,6 +499,7 @@
     <div class="state-policy">
       <label class="icon-{{plcraisebool}} plcraisebool">
         <span class="sr-only">Icon: state has {{#isfalse plcraisebool}}not{{/isfalse}} implemented </span>No rent raises
+        {{#getsatooltipstring 'plcraisebool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcraisebool}}
             {{#getsamedal 'plcraisebool'}}
@@ -502,6 +520,7 @@
     <div class="state-policy">
       <label class="icon-{{plcdebtbool}} plcdebtbool">
         <span class="sr-only">Icon: state has {{#isfalse plcdebtbool}}not{{/isfalse}} implemented </span>Housing stabilization
+        {{#getsatooltipstring 'plcdebtbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plcdebtbool}}
             {{#getsamedal 'plcdebtbool'}}
@@ -522,6 +541,7 @@
     <div class="state-policy">
       <label class="icon-{{plccgbool}} plccgbool">
         <span class="sr-only">Icon: state has {{#isfalse plccgbool}}not{{/isfalse}} implemented </span>Legal counsel for tenants
+        {{#getsatooltipstring 'plccgbool'}}{{/getsatooltipstring}}
         {{#if plcstandoutbool}}
           {{#if plccgbool}}
             {{#getsamedal 'plccgbool'}}

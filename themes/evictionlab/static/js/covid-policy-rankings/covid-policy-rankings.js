@@ -143,6 +143,35 @@ $(document).ready(function () {
       }
     ],
     filtersMobileShown: false,
+    setSortAndFilterCaption: function() {
+      var sortStr = 'Not sorted.';
+      if (rankings.sortConfig[0] && rankings.sortConfig[1] !== false) {
+        var sortBy = $('#' + rankings.sortConfig[0] + ' span.name').text();
+        // var sortHow = $('#' + rankings.sortConfig[0]).data('filter');
+        var sortHowStr = rankings.sortConfig[1] === 'desc' ? 'descending' : 'ascending';
+        sortStr = 'Sorted by ' + sortBy + ', ' + sortHowStr + '.';
+      }
+      $('table caption .sorted-by').text(sortStr);
+      var filteredStr = 'Not filtered.';
+      // console.log('rankings.filterConfig: ', rankings.filterConfig);
+      var checkAgainstArr = rankings.filterConfig.map(function(el) {
+        return el[0];
+      })
+      if (rankings.filterConfig.length > 0) {
+        filteredStr = 'Filtered for ';
+        var filters = [];
+        rankings.allFilters.forEach(function(el) {
+          el.filters.forEach(function(item) {
+            // console.log('item is ', item);
+            if (checkAgainstArr.indexOf(item.id) >= 0) {
+              // console.log('item is in filterConfig')
+              filteredStr += item.label + ', ';
+            }
+          })
+        })
+      }
+      $('table caption .filtered-for').text(filteredStr);
+    },
     sortStateData: function(callback) {
       // console.log('sortStateData()');
       // console.log('sortConfig, ', this.sortConfig);
@@ -224,6 +253,7 @@ $(document).ready(function () {
           rankings.filterStateData(rankings.populateStates)
         })
       });
+      rankings.setSortAndFilterCaption();
     },
     setStateListeners: function() {
       // Set click event listener for states.
@@ -234,10 +264,13 @@ $(document).ready(function () {
         $target.attr('aria-hidden', true);
         var $textRow = $target.parent().parent('tr').prev('.state-text');
         var $detailsRow = $target.parent().parent('tr')
+        var $setFocus = $detailsRow.find('set-focus');
         var $cTargets = $target.siblings('.collapse-state-details');
 
         $textRow.removeClass('text-excerpt').addClass('text-full');
         $detailsRow.removeClass('prompt-only').addClass('details-full');
+        $detailsRow.find('.state-details-list').css('display', 'flex');
+        $setFocus.focus();
 
         $cTargets.attr('aria-hidden', false);
         $cTargets.on('click select', function(e) {
@@ -257,6 +290,9 @@ $(document).ready(function () {
           }
           $textRow.removeClass('text-full').addClass('text-excerpt');
           $detailsRow.removeClass('details-full').addClass('prompt-only');
+          setTimeout(function() {
+            $detailsRow.find('state-details-list').css('display', 'none');
+          }, 800);
           $cTargets.unbind('click select');
         });
       });
@@ -618,7 +654,30 @@ $(document).ready(function () {
           if (getstip[0].tooltip) {
             if (getstip[0].tooltip.length > 0) {
               var tooltipParsed = String(getstip[0].tooltip).replace(/"/g, '&quot;')
-              return '<i class="icon icon-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="' + tooltipParsed + '" tabindex="0"></i>';
+              return '<i class="icon icon-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="' + tooltipParsed + '"></i>';
+            }
+          }
+        }
+      });
+      Handlebars.registerHelper("getsatooltipstring", function(context, options) {
+        // console.log('getsatooltip context, ', context);
+        var filters = [];
+        rankings.allFilters.forEach(function(el) {
+          el.filters.forEach(function(item) {
+            filters.push(item);
+          })
+        })
+        // console.log('filters: ', filters);
+        var getstip = filters.filter(function(el) {
+          return el.id === context;
+        })
+        // console.log('getstip, ', getstip);
+        // return getsmedal[0].medal;
+        if (getstip[0]) {
+          if (getstip[0].tooltip) {
+            if (getstip[0].tooltip.length > 0) {
+              var tooltipParsed = String(getstip[0].tooltip).replace(/"/g, '&quot;')
+              return '<span class="sr-only"> Tooltip: ' + tooltipParsed + '</span>';
             }
           }
         }
