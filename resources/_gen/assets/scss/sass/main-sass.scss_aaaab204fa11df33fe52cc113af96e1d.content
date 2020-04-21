@@ -29375,7 +29375,7 @@ ol.list-initial, .text-li ol.list-initial li {
 
 .inline-panel .states-table tbody tr.state-details td .state-details-list .standout {
   flex: 1 1 100%;
-  padding-top: 0.6rem;
+  padding-top: 1.6rem;
   color: #828282;
 }
 
@@ -29540,6 +29540,10 @@ ol.list-initial, .text-li ol.list-initial li {
 .inline-panel .states-table tbody tr.state-details td a.btn.collapse-state-details.bottom {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
 }
 
 .inline-panel .states-table tbody tr.state-details td button.expand-state-details,
