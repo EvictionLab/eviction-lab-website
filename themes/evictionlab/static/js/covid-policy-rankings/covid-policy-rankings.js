@@ -45,7 +45,7 @@ $(document).ready(function () {
           {
             id: 'plcnonewbool',
             label: 'Judgements of possession stayed',
-            tooltip: '"Staying" eviction judgements, orders or writs of possession means that the court will not process eviction orders for the duration of the "stay."'
+            tooltip: '"Staying" eviction judgments, orders or writs of possession means that the court will not process eviction orders for the duration of the "stay."'
           },
           {
             id: 'plctldbool',

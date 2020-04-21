@@ -116,7 +116,7 @@ Variables:
 - eviction-filings
     - All eviction cases filed in an area, including multiple cases filed against the same address in the same year
 - eviction-rate
-    - Ratio of the number of renter-occupied households in an area that received an eviction judgement in which renters were ordered to leave
+    - Ratio of the number of renter-occupied households in an area that received an eviction judgment in which renters were ordered to leave
     - Only counts a single address per year which received an eviction judgment
 - eviction-filing-rate
     - Ratio of the number of evictions filed in an area over the number of renter-occupied homes in that area
