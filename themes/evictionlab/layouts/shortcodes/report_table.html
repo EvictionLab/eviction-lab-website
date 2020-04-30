@@ -18,7 +18,7 @@
 </p>
 <script>
   window.addEventListener('load', function() {
-    var dataUrl = {{ .Page.Params.tabledata }}
+    var dataUrl = {{ .Get "data" }}
     var tableEl = document.querySelector('.table--cities')
     if (!dataUrl)
       throw new Error('no tabledata specified in front matter')

@@ -4,13 +4,14 @@
   draft: true
 ---
 
-{{% report_intro fips="55079" data="/data/table.csv" %}}
+{{% report_intro fips="55079" data="/uploads/table.csv" %}}
 
 Milwaukee intro
 
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/data/milwaukee/chart1.csv" %}}
+
+{{% report_chart id="avg" data="/uploads/milwaukee/chart1.csv" %}}
 
 # Changes in eviction filings
 
@@ -22,9 +23,8 @@ Milwaukee chart 1
 
 {{%/ report_chart %}}
 
-{{% report_map 
-      shapes="/data/milwaukee/shapes.json" 
-      data="/data/milwaukee/map.csv"  %}}
+
+{{% report_map shapes="/uploads/milwaukee/shapes.json" data="/uploads/milwaukee/map.csv" %}}
 
 # The geography of changes in eviction filings
 
@@ -35,7 +35,8 @@ Milwaukee map
 
 {{%/ report_map %}}
 
-{{% report_chart id="race" data="/data/milwaukee/chart2.csv" %}}
+
+{{% report_chart id="race" data="/uploads/milwaukee/chart2.csv" %}}
 
 # Eviction filings by neighborhood demographics
 
@@ -43,5 +44,5 @@ Milwaukee chart 2
 
   1. Average eviction filings taken from Eviction Lab data for 2012–2015
   2. Partial filings for April, as of April 25
-
+  
 {{%/ report_chart %}}

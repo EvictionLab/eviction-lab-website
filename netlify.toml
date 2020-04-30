@@ -4,5 +4,9 @@
   HUGO_VERSION = "0.69.2"
 
 [context.deploy-preview]
-  command = "hugo"
+  command = "hugo -D"
+  HUGO_VERSION = "0.69.2"
+
+[context.branch-deploy]
+  command = "hugo -D"
   HUGO_VERSION = "0.69.2"

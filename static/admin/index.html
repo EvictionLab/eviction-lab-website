@@ -11,9 +11,152 @@
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.9.1/dist/cms.js"></script>
+  <script src="https://unpkg.com/netlify-cms@^2.9.1/dist/netlify-cms.js"></script>
   <script>
-    CMS.registerPreviewStyle("/css/main-sass.css");
+    CMS.registerPreviewStyle("/css/lib.min.css");
+
+
+
+    CMS.registerEditorComponent({
+      // Internal id of the component
+      id: "introSection",
+      // Visible label
+      label: "Intro Section",
+      // Fields the user need to fill out when adding an instance of the component
+      fields: [
+        {
+          name: 'fips', 
+          label: 'FIPS Code', 
+          widget: 'string', 
+          hint: 'must match what is in the table.csv file'
+        },
+        {
+          name: 'data', 
+          label: 'Table CSV File', 
+          widget: 'file',
+          hint: 'csv file to pull overview stats from'
+        },
+        {
+          name: 'body',
+          label: 'Section Content',
+          widget: 'markdown'
+        }
+      ],
+      // Pattern to identify a block as being an instance of this component
+      pattern: /{{% report_intro fips="(.*)" data="(.*)" %}}([\S\s]*?){{%\/ report_intro %}}/,
+      // Function to extract data elements from the regexp match
+      fromBlock: function(match) {
+        return {
+          fips: match[1],
+          data: match[2],
+          body: match[3]
+        };
+      },
+      // Function to create a text block from an instance of this component
+      toBlock: function(obj) {
+        return '\n{{% report_intro fips="' + obj.fips + '" data="' + obj.data + '" %}}' + obj.body + '{{%/ report_intro %}}' + '\n';
+      },
+      // Preview output for this component. Can either be a string or a React component
+      // (component gives better render performance)
+      toPreview: function(obj) {
+        return obj.body;
+      }
+    });
+
+    console.log('register map')
+    CMS.registerEditorComponent({
+      // Internal id of the component
+      id: "mapSection",
+      // Visible label
+      label: "Map Section",
+      // Fields the user need to fill out when adding an instance of the component
+      fields: [
+        {
+          name: 'shapes', 
+          label: 'GeoJSON Shapes', 
+          widget: 'file', 
+        },
+        {
+          name: 'data', 
+          label: 'Map CSV File', 
+          widget: 'file'
+        },
+        {
+          name: 'md',
+          label: 'Section Content',
+          widget: 'markdown'
+        }
+      ],
+      // Pattern to identify a block as being an instance of this component
+      pattern: /{{% report_map[\s]*shapes="(\S*)"[\s]*data="(\S*)"[\s]*%}}([\S\s]*?){{%\/ report_map %}}/,
+      // Function to extract data elements from the regexp match
+      fromBlock: function(match) {
+        return {
+          shapes: match[1],
+          data: match[2],
+          md: match[3]
+        };
+      },
+      // Function to create a text block from an instance of this component
+      toBlock: function(obj) {
+        return '{{% report_map shapes="' + obj.shapes + '" data="' + obj.data + '" %}}' + obj.md + '{{%/ report_map %}}';
+      },
+      // Preview output for this component. Can either be a string or a React component
+      // (component gives better render performance)
+      toPreview: function(obj) {
+        return obj.md;
+      }
+    });
+
+    CMS.registerEditorComponent({
+      // Internal id of the component
+      id: "chartSection",
+      // Visible label
+      label: "Chart Section",
+      // Fields the user need to fill out when adding an instance of the component
+      fields: [
+        {
+          name: 'id', 
+          label: 'Chart Type', 
+          widget: 'select', 
+          options: [
+            { label: 'Overall Average', value: 'avg'},
+            { label: 'By Neighborhood Demographics', value: 'race'}
+          ]
+        },
+        {
+          name: 'data', 
+          label: 'CSV File', 
+          widget: 'file'
+        },
+        {
+          name: 'body',
+          label: 'Section Content',
+          widget: 'markdown'
+        }
+      ],
+      // Pattern to identify a block as being an instance of this component
+      pattern: /{{% report_chart id="(.*)" data="(.*)" %}}([\S\s]*?){{%\/ report_chart %}}/,
+      // Function to extract data elements from the regexp match
+      fromBlock: function(match) {
+        return {
+          id: match[1],
+          data: match[2],
+          body: match[3]
+        };
+      },
+      // Function to create a text block from an instance of this component
+      toBlock: function(obj) {
+        return '{{% report_chart id="' + obj.id + '" data="' + obj.data + '" %}}' + obj.body + '{{%/ report_chart %}}';
+      },
+      // Preview output for this component. Can either be a string or a React component
+      // (component gives better render performance)
+      toPreview: function(obj) {
+        return obj.body;
+      }
+    });
+
+    
   </script>
 </body>
 </html>
