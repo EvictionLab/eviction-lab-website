@@ -1,8 +1,7 @@
 {{ partial "header" . }}
 
 <!-- section header -->
-{{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
-        {{ if eq .Params.type "meta" }} 
+
 <div class="graphic-header methods center-page-wrapper">
   <div class="center-page">
     <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
@@ -22,18 +21,15 @@
 </div>
 
 <div class="methods-content social-side">
-    {{ partial "social-share-vert" . }}
-    <div class="center-page-wrapper">
-        <div class="center-content-post page-list">
-      
-          <!-- ************ -->
-          <!-- section name -->
-          <!-- ************ -->
-      
-          <a name="section-name"></a>
-          <h2 class="bordered-header blue">{{ .Params.li2 }}</h2>
-          {{ end }}
-          {{ end }}
+  {{ partial "social-share-vert" . }}
+  <div class="center-page-wrapper">
+    <div class="center-content-post page-list">
+      <!-- ************ -->
+      <!-- section name -->
+      <!-- ************ -->
+      <a name="section-name"></a>
+      <h2 class="bordered-header blue">{{ .Params.li2 }}</h2>
+
       <!-- *************** Methods loop ************* -->
           <div class="accordion">
               {{ range (where .Site.RegularPages "Params.childof" ("methods")) }}
