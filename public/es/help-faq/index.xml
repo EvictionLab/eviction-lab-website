@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ayuda y preguntas frecuentes | Eviction Lab on Eviction Lab</title>
+    <link>/es/help-faq/</link>
+    <description>Recent content in Ayuda y preguntas frecuentes | Eviction Lab on Eviction Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Nov 2017 20:43:49 -0800</lastBuildDate>
+    
+	<atom:link href="/es/help-faq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>¿Qué significan las burbujas rojas?</title>
+      <link>/es/help-faq/page-content/q102-redbubbles/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q102-redbubbles/</guid>
+      <description>Las burbujas rojas representan la tasa de desalojo o la tasa de presentación de desalojo. Las burbujas más grandes son números más grandes. Las burbujas más pequeñas son números más pequeños.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué significa el azul? </title>
+      <link>/es/help-faq/page-content/q110-blue/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q110-blue/</guid>
+      <description>El azul representa la concentración del valor del Censo que seleccionó. Por ejemplo, si seleccionó &amp;ldquo;población&amp;rdquo;, un azul más oscuro significa una población más alta y un azul más claro significa una población más baja.</description>
+    </item>
+    
+    <item>
+      <title>¿Cuántos lugares puedo comparar en el mapa?</title>
+      <link>/es/help-faq/page-content/q120-locations-in-map/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q120-locations-in-map/</guid>
+      <description>Se puede comparar tres lugares a la vez.</description>
+    </item>
+    
+    <item>
+      <title>¿De dónde provienen los datos de desalojo?</title>
+      <link>/es/help-faq/page-content/q140-data-source/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q140-data-source/</guid>
+      <description>Hemos acumulado más de 80 millones de registros relacionados con el desalojo. Eviction Lab recopiló directamente registros judiciales de 13 estados. Pero muchos estados no centralizaron sus datos de desalojo o no estaban dispuestos a divulgar esta información. En consecuencia, Eviction Lab compró conjuntos de datos más completos de registros públicos de desalojo de dos compañías: LexisNexis Risk Solutions y American Information Research Services Inc.</description>
+    </item>
+    
+    <item>
+      <title>¿Por qué hay una burbuja vacía para el lugar elegido?</title>
+      <link>/es/help-faq/page-content/q140-empty-bubble/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q140-empty-bubble/</guid>
+      <description>Para los lugares con una burbuja vacía, no hay datos disponibles para el año seleccionado. Los datos para ese lugar pueden existir para otros años, sin embargo.</description>
+    </item>
+    
+    <item>
+      <title>¿De dónde provienen los datos del Censo?</title>
+      <link>/es/help-faq/page-content/q141.3-census/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q141.3-census/</guid>
+      <description>Utilizamos estimaciones de hogares ocupados por inquilinos de los Censos de los EE. UU. De 2000 y 2010 y ESRI Business Analyst 2016. Para obtener más detalles sobre la variable de hogar ocupada por inquilinos, favor de leer nuestro informe de metodología.
+Utilizamos las siguientes encuestas para otras variables demográficas enumeradas en el sitio web y la descarga de datos:</description>
+    </item>
+    
+    <item>
+      <title>¿Cuantas personas son desalojadas en todo el país?</title>
+      <link>/es/help-faq/page-content/q155-5-us-stats/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q155-5-us-stats/</guid>
+      <description>Aquí están las estadísticas:
+ Año Casas ocupadas por inquilinos Presentaciones Desalojos totales Tasa de presentaciones Tasa de desalojo    2000 19327822 1159168 518873 6 2.68   2001 27438838 1750452 754652 6.38 2.75   2002 29982440 2085491 864918 6.96 2.88   2003 30330222 2134014 910361 7.</description>
+    </item>
+    
+    <item>
+      <title>¿Por qué falta mi área información de desalojo?</title>
+      <link>/es/help-faq/page-content/q142.8-missing-info/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q142.8-missing-info/</guid>
+      <description>Hemos recopilado más de 80 millones de registros de desalojo desde hace varios años, ¡pero todavía no los tenemos todos! Continuaremos nuestro esfuerzo para proporcionar la información más completa sobre los desalojos en los Estados Unidos y lo invitamos a permanecer atento a las actualizaciones de nuestro conjunto de datos suscribiéndose a nuestra lista de correo electrónico.</description>
+    </item>
+    
+    <item>
+      <title>¿Por qué hay una tasa de presentación pero no una tasa de desalojo para mi estado?</title>
+      <link>/es/help-faq/page-content/q143-filing-not-eviction-rate/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q143-filing-not-eviction-rate/</guid>
+      <description>Porque que usted vive en Arkansas, Dakota del Norte, Alaska o Dakota del Sur, los estados para los que no tenemos suficientes registros de desalojo a nivel individual para hacer una estimación. Sin embargo, en estos estados, podemos mostrar las estadísticas informadas sobre las presentaciones de desalojo. Para obtener más detalles sobre cómo manejamos los datos de diferentes fuentes, consulte nuestra página de Método.</description>
+    </item>
+    
+    <item>
+      <title>Mi área muestra una tasa alta de presentación o desalojo. ¿Qué significa esto?</title>
+      <link>/es/help-faq/page-content/q144-high-rate/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q144-high-rate/</guid>
+      <description>En el mapa, hemos indicado con el símbolo Tramos del censo y grupos de bloques con tasas de presentación y desalojo en el 1% superior. Hay áreas con altas tasas porque la inseguridad de la vivienda es especialmente aguda allí. Pero hay otras consideraciones también.
+Recuerde que las tasas de presentación y desalojo se calculan dividiendo la cantidad de presentaciones o desalojos en un área por el número de hogares alquilados.</description>
+    </item>
+    
+    <item>
+      <title>Mi estado muestra una tasa baja de presentación o desalojo. ¿Qué significa esto?</title>
+      <link>/es/help-faq/page-content/q145-low-rate/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q145-low-rate/</guid>
+      <description>En el mapa, hemos indicado con el símbolo estados con recuentos de desalojo subestimados. Por supuesto, algunos lugares tienen bajas tasas de desalojo porque hay pocos inquilinos que viven allí o porque hay muy pocos desalojos. Pero algunos estados y el Distrito de Columbia han subestimado los conteos de desalojo en nuestro conjunto de datos por una variedad de razones.</description>
+    </item>
+    
+    <item>
+      <title>¿Por qué son similares las tasas de presentación y desalojo en mi área?</title>
+      <link>/es/help-faq/page-content/q146-similar-rates/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q146-similar-rates/</guid>
+      <description>Probablemente no sea porque casi todos los casos de desalojo terminan en desalojo, pero debido a nuestra incapacidad para reunir todos los casos de desalojo en su área. Intentamos recopilar todos los registros judiciales relacionados con el desalojo, incluidas las presentaciones que no dieron como resultado el desalojo, pero algunas de nuestras fuentes de datos priorizaron casos que culminaron en un juicio civil.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué significa &#34;auto&#34; en el menú &#34;Nivel de Mapa&#34;?</title>
+      <link>/es/help-faq/page-content/q147-auto-map/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q147-auto-map/</guid>
+      <description>Seleccionar &amp;ldquo;auto&amp;rdquo; le permite ampliar automáticamente los niveles geográficos (estados, condados, ciudades, secciones censales y grupos de bloques) de forma automática. También se puede seleccionar su nivel geográfico deseado desde el mismo menú desplegable.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué tipos de lugares puedo introducir en la barra de búsqueda?</title>
+      <link>/es/help-faq/page-content/q151-how-many-locations/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q151-how-many-locations/</guid>
+      <description>You can compare up to 3 locations. The U.S. average eviction rate is also included by default.</description>
+    </item>
+    
+    <item>
+      <title>¿Cuál es la diferencia entre un desalojo y una presentación de desalojo?</title>
+      <link>/es/help-faq/page-content/q152-filings/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q152-filings/</guid>
+      <description>Una presentación de desalojo es el resultado de que un propietario presente un caso ante un tribunal para que se retire a un inquilino de una propiedad. Un desalojo es una sentencia del tribunal que dice que un inquilino debe ser removido. Como no todas las presentaciones de desalojo resultan en un desalojo, la tasa de presentación siempre será mayor en un área determinada que la tasa de desalojo.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué tipos de lugares puedo introducir en la barra de búsqueda?</title>
+      <link>/es/help-faq/page-content/q153-search-bar/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q153-search-bar/</guid>
+      <description>You can search by state, county, or city. You can also search for any listed address in America.</description>
+    </item>
+    
+    <item>
+      <title>Descargué datos para mi ciudad/lugar, y dice que tengo menos de un desalojo/presentación. ¿Qué significa eso?</title>
+      <link>/es/help-faq/page-content/q154-places-below-one/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q154-places-below-one/</guid>
+      <description>Mientras que otras unidades de geografía están todas conectadas (grupos de bloques, secciones censales, condados, etc.), los límites de los lugares están separados, lo que exige que los desalojos se agreguen y se calculen de manera diferente. En muchos casos, las estimaciones de desalojo son números no enteros (por ejemplo, 0,4, 31,5, 100,6).</description>
+    </item>
+    
+    <item>
+      <title>¿Cuál es la carga del alquiler y por qué está limitado al 50%?</title>
+      <link>/es/help-faq/page-content/q155-rent-burden/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q155-rent-burden/</guid>
+      <description>La carga de alquiler es el porcentaje del ingreso familiar que se gasta en el alquiler en un área determinada. La Oficina del Censo de EE. UU. solo calcula esta estadística hasta en un 50%, cualquier cantidad superior se indica como &amp;ldquo;50% o más.&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>¿Qué comparte el sitio cuando hago clic en Twitter o Facebook?</title>
+      <link>/es/help-faq/page-content/q156-social-share/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q156-social-share/</guid>
+      <description>Se puede compartir enlaces a cualquiera de nuestras páginas a través de los botones de compartir con sus redes sociales. Desde nuestras páginas de Mapa y Rankings de Desalojo, se puede compartir enlaces personalizados preinstalados con los lugares y los datos que ha seleccionado.</description>
+    </item>
+    
+    <item>
+      <title>¿Cómo puedo insertar el mapa en mi blog o sitio web?</title>
+      <link>/es/help-faq/page-content/q157-embed/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q157-embed/</guid>
+      <description>Se puede insertar el mapa en su sitio web o blog utilizando el código de inserción proporcionado. En la sección &amp;ldquo;compartir&amp;rdquo; de la página de mapa y datos, haga clic en el botón de enlace para tomar el código. Luego se puede pegar ese código en su propio sitio. El mapa mostrará los tipos de datos de desalojo y censo que seleccionó.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué informes puedo descargar y qué puedo hacer con ellos?</title>
+      <link>/es/help-faq/page-content/q158-reports/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q158-reports/</guid>
+      <description>Los informes, que están personalizados para mostrar los mismos datos y lugares que ha seleccionado a través del mapa y la búsqueda, están diseñados como herramientas para apoyar la investigación y el activismo. Se puede descargar
+ Una hoja de cálculo de Excel que contiene datos brutos Una presentación de Powerpoint para compartir en su aula, conferencia o reunión Un archivo PDF, que también contiene una hoja informativa sobre desalojos, para compartir ampliamente.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué es &#34;Obtener más datos&#34;?</title>
+      <link>/es/help-faq/page-content/q160-get-more-data/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q160-get-more-data/</guid>
+      <description>Obtener Más Datos lo llevará a una página donde se puede buscar y descargar grandes conjuntos de datos para todo Estados Unidos.</description>
+    </item>
+    
+    <item>
+      <title>Puedo descargar datos imputados o no imputados. ¿Qué significa esto?</title>
+      <link>/es/help-faq/page-content/q162-imputed-non/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q162-imputed-non/</guid>
+      <description>Debido a que estos datos fueron recolectados manualmente de los tribunales de todo el país, algunas áreas carecen de datos a lo largo del tiempo. En otros casos, los modelos estadísticos indicaron que había demasiada variación en la recolección de un año a otro. En estos casos, completamos algunas de esas brechas al &amp;ldquo;imputar&amp;rdquo; datos en función de un conjunto de procedimientos enumerados en nuestro Methodology Report (PDF).</description>
+    </item>
+    
+    <item>
+      <title>¿Qué dispositivos/navegadores son compatibles?</title>
+      <link>/es/help-faq/page-content/q162-browsers/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q162-browsers/</guid>
+      <description>Admitimos las dos últimas versiones principales de Edge, Chrome, Firefox y Safari. También admitimos Internet Explorer 11.</description>
+    </item>
+    
+    <item>
+      <title>¿Cuántos lugares se listan en su ranking de desalojos?</title>
+      <link>/es/help-faq/page-content/q168-how-many-places/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q168-how-many-places/</guid>
+      <description>Cerca de 30.000 lugares&amp;mdash;ciudades, pueblos, aldeas y áreas no incorporadas&amp;mdash;se incluyen en nuestra base de datos.</description>
+    </item>
+    
+    <item>
+      <title>¿Cómo se definen &#34;lugares&#34; en sus rankings?</title>
+      <link>/es/help-faq/page-content/q176-rankings-locations/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q176-rankings-locations/</guid>
+      <description>Los lugares en nuestros rankings provienen de la lista de lugares del censo. No incluyen condados o áreas metropolitanas. Para obtener más información acerca de lugares del censo, visite el sitio web del Censo de EE. UU. (Haga clic aquí o aquí).</description>
+    </item>
+    
+    <item>
+      <title>¿Por qué no puedo encontrar el lugar que busco en Rankings?</title>
+      <link>/es/help-faq/page-content/q172-cant-find/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q172-cant-find/</guid>
+      <description>La visualización de nuestras clasificaciones muestra solo las 100 áreas con más desalojos según sus selecciones. Sin embargo, utilizando la barra de búsqueda, se puede encontrar la clasificación para cualquier lugar de los Estados Unidos.
+Si no se puede encontrar un lugar a través de la barra de búsqueda, puede que no sea un lugar enumerado en el Censo, o puede ser una especie de lugar (como un estado o condado) que no está clasificado en esta herramienta.</description>
+    </item>
+    
+    <item>
+      <title>¿Por qué se dividen los lugares en los Rankings de desalojos en tres tipos de área diferentes? ¿Qué significan?</title>
+      <link>/es/help-faq/page-content/q175-area-types/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q175-area-types/</guid>
+      <description>Elegimos categorizar lugares en nuestros Rankings (como ciudades grandes, ciudades medianas o pequeñas ciudades y áreas rurales) para permitir comparaciones más significativas entre lugares con poblaciones similares.
+ Las ciudades pequeñas y las áreas rurales son lugares con poblaciones menores de 20.000. Clasificamos 27.403 de estos lugares. Ejemplos: Clarksdale, MS; Fremont, OH</description>
+    </item>
+    
+    <item>
+      <title>Why do you report 2015 eviction rankings?</title>
+      <link>/es/help-faq/page-content/q178-2015/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q178-2015/</guid>
+      <description>Because that’s the most recent year with the most comprehensive data. Because data collection efforts are not centralized, it takes some time to collect all the evictions from a single year.</description>
+    </item>
+    
+    <item>
+      <title>How were you able to determine the amount of evictions in each neighborhood?</title>
+      <link>/es/help-faq/page-content/q180-evictions-amount/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q180-evictions-amount/</guid>
+      <description>Eviction records contain addresses. We had these addresses geocoded and spatially joined by the Environmental Systems Research Institute (ESRI). This process allowed us to match each address record to a latitude and a longitude. Then, by overlaying the geographic boundaries on top of these points, we can observe how many evictions took place in that area.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué es un desalojo? </title>
+      <link>/es/help-faq/page-content/q200-what-is-eviction/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q200-what-is-eviction/</guid>
+      <description>Un desalojo ocurre cuando un propietario expulsa a las personas de la propiedad que posee. Los desalojos son movimientos involuntarios iniciados por el propietario que ocurren a los inquilinos, mientras que las ejecuciones hipotecarias son movimientos involuntarios que suceden a los propietarios cuando un banco u otra agencia prestataria recupera un hogar.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué es una tasa de desalojo y cómo se calcula?</title>
+      <link>/es/help-faq/page-content/q210-eviction-rate/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q210-eviction-rate/</guid>
+      <description>Una tasa de desalojo es la cantidad de desalojos por cada 100 viviendas alquiladas en un área. Una tasa de desalojo del 5% significa que 5 de cada 100 viviendas alquiladas enfrentaron el desalojo en el área seleccionada ese año.
+La información sobre el número de viviendas para inquilinos en un área proviene del censo de los EE.</description>
+    </item>
+    
+    <item>
+      <title>How were evictions calculated?</title>
+      <link>/es/help-faq/page-content/q221-evictions-calc/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q221-evictions-calc/</guid>
+      <description>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</description>
+    </item>
+    
+    <item>
+      <title>¿Qué es una presentación de desalojo?</title>
+      <link>/es/help-faq/page-content/q212-eviction-filing/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q212-eviction-filing/</guid>
+      <description>Una presentación de desalojo es el resultado de que un propietario presente un caso ante un tribunal para que se retire a un inquilino de una propiedad.
+Dentro de nuestros datos, la información del caso se registra como acciones separadas con las fechas de cada acción. Nuestra estimación de las presentaciones de desalojo es la cantidad total de casos cada año con la primera acción registrada en ese año.</description>
+    </item>
+    
+    <item>
+      <title>¿Tiene Eviction Lab datos sobre cuántos mujeres, niños, o ancianos son afectados por el desalojo?</title>
+      <link>/es/help-faq/page-content/q240-demographics/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q240-demographics/</guid>
+      <description>Dado que los registros de desalojo no incluyen información demográfica como edad o sexo, no tenemos acceso directo a estos números. Sin embargo, los estudios locales muestran que los hogares con niños son especialmente vulnerables al desplazamiento forzado. Si bien no tenemos la imagen completa ahora, el conjunto de datos de Eviction Lab permite a los usuarios crear estimaciones en una escala que antes era imposible, y preguntas importantes como estas pueden abordarse en futuras investigaciones.</description>
+    </item>
+    
+    <item>
+      <title>Soy periodista, educador o ciudadano/activista. ¿Cómo puedo usar sus herramientas para encontrar historias en los datos y educar a las personas sobre el desalojo?</title>
+      <link>/es/help-faq/page-content/q250-stories/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/q250-stories/</guid>
+      <description>Hemos desarrollado una Guía de medios y una Guía para maestros. Destacaremos cómo los periodistas, maestros, organizadores comunitarios, legisladores y ciudadanos comprometidos han utilizado nuestros datos, tanto en nuestras cuentas de Facebook y Twitter como en nuestras páginas de Actualizaciones. También se puede descargar guías de grupo de lectura para el libro Evicted.</description>
+    </item>
+    
+    <item>
+      <title>Ayuda y preguntas frecuentes | Eviction Lab</title>
+      <link>/es/help-faq/page-content/meta/</link>
+      <pubDate>Sun, 19 Nov 2017 20:43:49 -0800</pubDate>
+      
+      <guid>/es/help-faq/page-content/meta/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

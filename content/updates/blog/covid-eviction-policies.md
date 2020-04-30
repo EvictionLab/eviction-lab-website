@@ -27,8 +27,7 @@ This new table details where municipalities, states, and the federal government 
 
 Policymakers across America are implementing a wide range of supports, from placing a moratorium on all evictions, to more limited moratoria for residents who can demonstrate lost wages due to coronavirus. We will soon release an additional tool to help differentiate between statewide actions. 
 
-For additional housing support resources, please visit <a href="https://justshelter.org" target="_blank">JustShelter.org</a>. For more detailed information about statewide orders, please see the <a href="/covid-policy-scorecard/">COVID-19 Housing Policy Scorecard</a>. Please note that as policies are changing daily, this table may not contain all of the most recently-passed actions."
-
+For additional housing support resources, please visit <a href="https://justshelter.org" target="_blank">JustShelter.org</a>. For more detailed information about statewide orders, please see the <a href="/covid-policy-scorecard/">COVID-19 Housing Policy Scorecard</a>. Please note that as policies are changing daily, this table may not contain all of the most recently-passed actions.
 
 <a href="#external-links" class="smoothScroll">Below the table</a>, we also reference resources other groups have compiled to track different aspects of the shifting housing policy landscape.
 
