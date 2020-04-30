@@ -28593,6 +28593,10 @@ ol.list-initial, .text-li ol.list-initial li {
   content: ")";
 }
 
+footer {
+  overflow: scroll;
+}
+
 .scorecard b {
   font-family: Akkurat-Bold, sans-serif;
   color: #434678;
@@ -28664,6 +28668,12 @@ ol.list-initial, .text-li ol.list-initial li {
 
 @media (min-width: 576px) {
   .graphic-header.covid-policy {
+    background-size: 160%;
+  }
+}
+
+@media (min-width: 992px) {
+  .graphic-header.covid-policy {
     background-size: 130%;
   }
 }
@@ -28681,13 +28691,13 @@ ol.list-initial, .text-li ol.list-initial li {
 
 @media (min-width: 768px) {
   .bordertop {
-    margin-top: 2.4rem;
+    margin-top: 4rem;
   }
 }
 
 @media (min-width: 992px) {
   .bordertop {
-    margin-top: 4rem;
+    margin-top: 4.8rem;
   }
 }
 
@@ -28805,6 +28815,12 @@ ol.list-initial, .text-li ol.list-initial li {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .inline-panel.states {
     margin: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .inline-panel #scorecard-wrapper {
+    overflow: hidden;
   }
 }
 
