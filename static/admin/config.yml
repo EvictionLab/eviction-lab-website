@@ -2,16 +2,16 @@ backend:
   name: github
   repo: EvictionLab/eviction-lab-website
   branch: cms-dev
-media_folder: "site/static/images/uploads" # Folder where user uploaded files should go
+media_folder: "static/uploads" # Folder where user uploaded files should go
 publish_mode: editorial_workflow
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 
 collections:
 
 - name: "weekly-reports" # Used in routes, e.g., /admin/collections/blog
-  label: "Weekly Reports" # Used in the UI
-  folder: "/site/content/weekly-reports" # The path to the folder where the documents are stored
+  label: "WeeklyReports" # Used in the UI
+  folder: "/content/weekly-reports" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
