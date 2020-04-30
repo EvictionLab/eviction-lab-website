@@ -54,7 +54,7 @@
       },
       // Function to create a text block from an instance of this component
       toBlock: function(obj) {
-        return '{{% report_intro fips="' + obj.fips + '" data="' + obj.data + '" %}}' + obj.body + '{{%/ report_intro %}}';
+        return '\n{{% report_intro fips="' + obj.fips + '" data="' + obj.data + '" %}}' + obj.body + '{{%/ report_intro %}}' + '\n';
       },
       // Preview output for this component. Can either be a string or a React component
       // (component gives better render performance)
