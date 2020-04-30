@@ -1,20 +1,20 @@
 ---
-title: "Eviction Watch | Eviction Lab"
-date: 2020-04-28
-type: index
+draft: true
+scripts: weekly
 h1: Weekly Eviction Reports
 h2: Evictions During COVID-19
-scripts: weekly
-description: Weekly eviction reports by city during COVID-19.
+date: 2020-04-29T00:00:00.000Z
 socialDescription: We’ve built the first nationwide database of evictions.
-fbImage: "/images/og/eviction-lab-about-us-fb.jpg"
-twImage: "/images/og/eviction-lab-about-us-tw.jpg"
-tabledata: "/data/table.csv"
-draft: true
 cascade:
   childof: weekly-reports
   scripts: weekly
-  date: 2020-04-28
+  date: 2020-04-28T00:00:00.000Z
+tabledata: /data/table.csv
+twImage: /images/og/eviction-lab-about-us-tw.jpg
+title: Eviction Watch | Eviction Lab
+type: index
+description: Weekly eviction reports by city during COVID-19.
+fbImage: /images/og/eviction-lab-about-us-fb.jpg
 ---
 
 We are tracking evictions on a weekly basis to monitor the impacts of COVID-19. Below is a list of cities where we are able to access eviction data in real time.
