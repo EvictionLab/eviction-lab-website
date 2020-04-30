@@ -1,10 +1,10 @@
 ---
   h1: "Houston, Texas"
-  title: "Houson, Texas | Weekly Eviction Reports | Eviction Lab"
+  title: "Houston, Texas | Weekly Eviction Reports | Eviction Lab"
   draft: true
 ---
 
-{{% report_intro fips="48201" data="/data/table.csv" %}}
+{{% report_intro fips="48201" data="/uploads/table.csv" %}}
 
 Eviction filings in Harris County, TX (Houston) have fallen sharply since eviction proceedings were suspended across Texas on March 19. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March and throughout April. Eviction protections in Texas begin to expire on May 18.
 
@@ -12,7 +12,7 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/data/houston/chart1.csv" %}}
+{{% report_chart id="avg" data="/uploads/houston/chart1.csv" %}}
 
 # Changes in eviction filings
 
@@ -21,12 +21,9 @@ Eviction filings in Houston were higher than average in January and February of 
   1. Average eviction filings taken from Eviction Lab data for 2012–2015  
   2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
   3. Partial filings for April, as of April 25
-
 {{%/ report_chart %}}
 
-{{% report_map 
-      shapes="/data/houston/shapes.json" 
-      data="/data/houston/map.csv"  %}}
+{{% report_map shapes="/uploads/houston/shapes.json" data="/uploads/houston/map.csv" %}}
 
 # The geography of changes in eviction filings
 
@@ -34,10 +31,10 @@ Houston is divided into 783 Census Tracts. Here we map, in each of those Tracts,
 
   1. Average eviction filings taken from Eviction Lab data for 2012–2015
   2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
 {{%/ report_map %}}
 
-{{% report_chart id="race" data="/data/houston/chart2.csv" %}}
+
+{{% report_chart id="race" data="/uploads/houston/chart2.csv" %}}
 
 # Eviction filings by neighborhood demographics
 
@@ -47,5 +44,4 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
   1. Average eviction filings taken from Eviction Lab data for 2012–2015
   2. Partial filings for April, as of April 25
-
 {{%/ report_chart %}}
