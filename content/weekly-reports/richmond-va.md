@@ -4,7 +4,7 @@
   draft: true
 ---
 
-{{% report_intro fips="51760" data="/data/table.csv" %}}
+{{% report_intro fips="51760" data="/uploads/table.csv" %}}
 
 Eviction filings in Harris County, TX (Houston) have fallen sharply since eviction proceedings were suspended across Texas on March 19. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March and throughout April. Eviction protections in Texas begin to expire on May 18.
 
@@ -12,10 +12,10 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/data/richmond/chart1.csv" %}}
+
+{{% report_chart id="avg" data="/uploads/richmond/chart1.csv" %}}
 
 # Changes in eviction filings
-
 Eviction filings in Houston were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April were well below average. In a normal April, more than 3,000 evictions are filed in Houston. This year, fewerthan 500 have been filed.
 
   1. Average eviction filings taken from Eviction Lab data for 2012–2015  
@@ -24,20 +24,18 @@ Eviction filings in Houston were higher than average in January and February of 
 
 {{%/ report_chart %}}
 
-{{% report_map 
-      shapes="/data/richmond/shapes.json" 
-      data="/data/richmond/map.csv"  %}}
+
+{{% report_map shapes="/uploads/richmond/shapes.json" data="/uploads/richmond/map.csv" %}}
 
 # The geography of changes in eviction filings
-
 Houston is divided into 783 Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> As of the end of April, we see steep declines in eviction filings across the city.
 
   1. Average eviction filings taken from Eviction Lab data for 2012–2015
   2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
 {{%/ report_map %}}
 
-{{% report_chart id="race" data="/data/richmond/chart2.csv" %}}
+
+{{% report_chart id="race" data="/uploads/richmond/chart2.csv" %}}
 
 # Eviction filings by neighborhood demographics
 
