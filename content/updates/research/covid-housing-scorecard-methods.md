@@ -80,7 +80,7 @@ In the Court Process category, we track four measures:
 
 - *Hearings suspended*. A state has achieved this measure if eviction hearings are suspended in the state. This can take a variety of forms, including suspending all non-essential civil proceedings and preventing court workers from taking actions that would lead to an eviction. Notably, a state has not achieved this measure if cases are permitted to proceed remotely via phone or video conferencing and the state has not issued further guidance on whether eviction cases should proceed. 
 
-- *Judgements of possession stayed*. A state has achieved this measure if the court has stayed eviction judgments (which temporarily prohibits law enforcement from carrying out the eviction order) or if the court is not issuing eviction orders at this time. 
+- *Judgments of possession stayed*. A state has achieved this measure if the court has stayed eviction judgments (which temporarily prohibits law enforcement from carrying out the eviction order) or if the court is not issuing eviction orders at this time. 
 
 - *Deadlines extended or tolled*. This measure refers to requirements for how quickly people need to respond or submit materials at various stages in the course of an eviction. A state has achieved this measure if court deadlines are extended or tolled.
 
@@ -142,7 +142,7 @@ Within categories, more weight is given to protections that are more comprehensi
 
 - *Initiation of Eviction:* No notice to quit (20%); No filing if tenant has COVID-19 hardship (30%); No filing for nonpayment (30%); No filing, except emergencies (20%). Please note that if the measure for no nonpayment filings is present, the measure related to COVID-19 hardship is also marked as present, so that in effect the no filings for nonpayment of rent measure constitutes 60% of the score in this category. In the same way, if the most comprehensive filings-related measure is present, "No filing, except emergencies," the state receives credit for both of the two narrower filings-related measures. The presence of the "No filing, except emergencies" measure awards the state 80% of the score for this category. 
 
-- *Court Process:* Hearings suspended (40%); Judgements of possession stayed (20%); Deadlines extended or tolled (10%); Eviction records sealed (30%).
+- *Court Process:* Hearings suspended (40%); Judgments of possession stayed (20%); Deadlines extended or tolled (10%); Eviction records sealed (30%).
 
 - *Enforcement of Eviction Order:* No removal if tenant has COVID-19 hardship (30%); No removal of tenant for nonpayment (40%); No removal of tenant, except emergencies (30%). Please note that if the measure for no enforcement of nonpayment-related eviction orders is present, the measure related to COVID-19 hardship is also marked as present. In effect, the no enforcement of evictions for nonpayment of rent measure constitutes 70% of the score in this category. In the same way, if the most comprehensive filings-related measure is present, "No removal of tenant, except emergencies," the state receives credit for both of the two narrower measures in this category. The presence of the "No removal of tenant, except emergencies" measure awards the state 100% of the score for this category. 
 

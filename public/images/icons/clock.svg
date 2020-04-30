@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>clock-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="updates-1440/04-events-container-720" transform="translate(-376.000000, -413.000000)" fill-rule="nonzero" stroke="#919191">
+            <g id="Event" transform="translate(360.000000, 170.000000)">
+                <g id="Group-5" transform="translate(0.000000, 218.000000)">
+                    <g id="clock-1" transform="translate(24.000000, 33.000000) scale(-1, 1) translate(-24.000000, -33.000000) translate(16.000000, 25.000000)">
+                        <path d="M8,0.9 C4.08585627,0.9 0.9,4.08585627 0.9,8 C0.9,11.9141437 4.08585627,15.1 8,15.1 C11.9141437,15.1 15.1,11.9141437 15.1,8 C15.1,4.08585627 11.9141437,0.9 8,0.9 Z" id="Shape" stroke-width="1.8"></path>
+                        <path d="M8.27031587,7.77432765 L8.27031587,4.06694737 L7.73642112,4.06694737 L7.73642112,7.77432765 C7.36296175,7.87149649 7.07065437,8.16380387 6.97348553,8.53726325 L4.06694737,8.53726325 L4.06694737,9.071158 L6.97348553,9.071158 C7.092811,9.53030748 7.50738028,9.87200012 8.0033685,9.87200012 C8.59225441,9.87200012 9.071158,9.39309653 9.071158,8.80421062 C9.071158,8.30795545 8.72946536,7.89365313 8.27031587,7.77432765 Z" id="Shape" stroke-width="0.7" fill="#919191"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

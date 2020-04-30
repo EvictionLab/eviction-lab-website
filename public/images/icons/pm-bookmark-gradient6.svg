@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="50px" viewBox="0 0 25 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape@</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#DF3F00" offset="0%"></stop>
+            <stop stop-color="#A82502" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Path" fill="#9C2201" x="2" y="6" width="22" height="26"></rect>
+        <g id="Tablet" transform="translate(-125.000000, -793.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M125,793 L150,793 L150,843 L137.5,832.540429 L125,843 L125,793 Z M131.908434,819.666667 L137.693069,816.534959 L143.477704,819.666667 L142.372937,813.033604 L147.052805,808.336044 L140.585386,807.368293 L137.693069,801.333333 L134.800752,807.368293 L128.333333,808.336044 L133.013201,813.033604 L131.908434,819.666667 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

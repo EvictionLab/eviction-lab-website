@@ -44,7 +44,7 @@ $(document).ready(function () {
           },
           {
             id: 'plcnonewbool',
-            label: 'Judgements of possession stayed',
+            label: 'Judgments of possession stayed',
             tooltip: '"Staying" eviction judgments, orders or writs of possession means that the court will not process eviction orders for the duration of the "stay."'
           },
           {
