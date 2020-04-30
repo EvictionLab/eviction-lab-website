@@ -279,6 +279,9 @@ function getPageOffset(url) {
   if (url.indexOf('why-eviction-matters') !== -1) {
     return 80;
   }
+  if (url.indexOf('covid-policy-scorecard') !== -1) {
+    return 80;
+  }
   return 0;
 }
 
