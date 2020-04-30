@@ -28658,7 +28658,7 @@ ol.list-initial, .text-li ol.list-initial li {
 }
 
 .rankings-intro {
-  padding-top: 3.2rem;
+  padding-top: 1.6rem;
   margin-bottom: 1.6rem;
   padding-bottom: 2.4rem;
 }
@@ -29375,7 +29375,7 @@ ol.list-initial, .text-li ol.list-initial li {
 
 .inline-panel .states-table tbody tr.state-details td .state-details-list .standout {
   flex: 1 1 100%;
-  padding-top: 0.6rem;
+  padding-top: 1.6rem;
   color: #828282;
 }
 
@@ -29540,6 +29540,10 @@ ol.list-initial, .text-li ol.list-initial li {
 .inline-panel .states-table tbody tr.state-details td a.btn.collapse-state-details.bottom {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
 }
 
 .inline-panel .states-table tbody tr.state-details td button.expand-state-details,
@@ -29883,6 +29887,47 @@ ol.list-initial, .text-li ol.list-initial li {
 
 .row.filters-panel .filters button.clear-filters:focus, .row.filters-panel .filters button.clear-filters:active {
   box-shadow: none;
+}
+
+#scroll_to_filters {
+  border: none;
+  background: none;
+  background-color: none;
+  background-image: none;
+  transform: rotate(-90deg);
+  font-family: GT-Eesti-Display-Bold, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  padding: 14px 12px;
+  background: #fff;
+  box-shadow: -4px 0 6px -3px rgba(0, 0, 0, 0.75);
+  margin-right: 16px;
+  color: #E24000;
+}
+
+@media (min-width: 992px) {
+  #scroll_to_filters {
+    margin-right: 16px;
+  }
+}
+
+#scroll_to_filters:hover, #scroll_to_filters:focus {
+  border: none;
+  outline: none;
+  background-color: #E24000;
+  color: #fff;
+  transition: background-color .3s ease;
+}
+
+#scroll_to_filters i {
+  display: inline-block;
+  clear: both;
+  vertical-align: bottom;
+}
+
+#scroll_to_filters span {
+  display: inline-block;
+  margin-right: 6px;
 }
 
 .disclaimer {
