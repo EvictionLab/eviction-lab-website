@@ -1,0 +1,48 @@
+<div class="intro">
+  <div class="bordered-header primary">
+    <a id="top">{{ .Page.Params.h1 }}</a>
+    <span class="subhead-rt date">{{ .Page.Date.Format "January 2, 2006" }}</span>
+  </div>
+  <div class="layout">
+    <div class="lead">{{ .Inner }}</div>
+    <ul class="stats">
+      <li class="stats-item stats-item--week">
+        <strong class="stats-item__label">Filings Last Week</strong>
+        <span class="stats-item__value">
+          <span class="stats-item__count"></span>
+          <span class="stats-item__diff"></span>
+        </span>
+      </li>
+      <li class="stats-item stats-item--month">
+        <strong class="stats-item__label">Filings Last 4 Weeks</strong>
+        <span class="stats-item__value">
+          <span class="stats-item__count"></span>
+          <span class="stats-item__diff"></span>
+        </span>
+      </li>
+      <li class="stats-item stats-item--moratorium">
+        <strong class="stats-item__label">Eviction Moratorium</strong>
+        <span class="stats-item__value">March 19 - April 30, 2020</span>
+      </li>
+    </ul>
+  </div>
+  <div class="share">
+    <a class="share__link share__link--twitter">
+      <i class="fa fa-twitter"></i> 
+      <span>Share on Twitter</span>
+    </a>
+    <a class="share__link share__link--facebook">
+      <i class="fa fa-facebook"></i> 
+      <span>Share on Facebook</span>
+    </a>
+  </div>
+  <script>
+    var tableUrl = {{ .Get "data" }}
+    var fips = {{ .Get "fips" }}
+    window.addEventListener('load', function() {
+      Elab.Utils.createTwitterLink('.share__link--twitter')
+      Elab.Utils.createFacebookLink('.share__link--facebook')
+      Elab.Table.createIntroTable(fips, tableUrl)
+    })
+  </script>
+</div>

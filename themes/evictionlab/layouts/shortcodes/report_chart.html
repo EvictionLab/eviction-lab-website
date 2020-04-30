@@ -1,0 +1,23 @@
+<section id="{{ .Get `id` }}" class="section section--chart section--avg">
+  <div class="section__content">
+    <div class="details">{{ .Inner }}</div>
+    <div class="visual">
+      <div class="visual__header">
+        <h3 class="visual__title"></h3>
+        <button class="visual__toggle"></button>
+      </div>
+      <svg class="chart"></svg>
+    </div>
+    <div class="legend"></div>
+    <p class="footnote"></p>
+  </div>
+  <script>
+    window.addEventListener('load', function() {
+      var id = {{ .Get "id" }}
+      var csv = {{ .Get "data" }}
+      var rootEl = '#'+id
+      Elab.Section.init('chart', rootEl, { id: id, csv: csv })
+    });
+    </script>
+</section>
+

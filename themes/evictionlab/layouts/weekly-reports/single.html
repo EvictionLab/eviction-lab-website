@@ -1,0 +1,17 @@
+{{ partial "header" . }}
+
+<div class="breadcrumbs bc-blog center-page-wrapper">
+  <div class="center-page">
+    <a href="/weekly-reports">
+      <span class="dim">Weekly Reports</span>
+    </a>
+    <i class="fa fa-chevron-right"></i>
+    <span class="current-crumb">{{ .Params.h1 }}</span>
+  </div>
+</div>
+
+{{ .Content }}
+
+<div id='tooltip' class="tooltip"></div>
+
+{{ partial "footer" . }}

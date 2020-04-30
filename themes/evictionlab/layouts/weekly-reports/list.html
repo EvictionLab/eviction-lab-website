@@ -1,0 +1,27 @@
+{{ partial "header" . }} {{ $pagetype := .Params.childof }}
+<!-- {{ partial "subnav" . }} -->
+
+<div class="graphic-header center-page-wrapper">
+  <div class="center-page">
+    <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
+<div class="layout layout--full">
+  <article class="column column--content">
+    <h2 class="subhead bordered-header primary">
+      <a id="top">{{ .Params.h2 }}</a>
+      <span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span>
+    </h2>
+
+    {{ .Content }}
+
+  </article>
+
+</div>
+
+
+
+
+{{ partial "footer" . }}
