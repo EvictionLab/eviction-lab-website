@@ -21,6 +21,40 @@ $el-light-purple: #E7E9FF;
 $el-darkgray: #737373;
 $alt-bg: #F4F7F9;
 
+.scorecard b {
+    font-family: Akkurat-Bold, sans-serif;
+    color: #434678;
+}
+.scorecard ul li {
+  list-style: disc;
+  margin-left: 1.6rem;
+  @include for-phone-only {
+    @include defaultFont(1.4rem); 
+    line-height: 2rem;
+    letter-spacing: 0px;
+    margin-bottom: 1.6rem;
+  }
+  @include for-tablet-portrait-and-landscape {
+    @include defaultFont(1.6rem); 
+    line-height: 2.2rem;
+    letter-spacing: 0px;
+    margin-bottom: 2.4rem;
+  }
+  @include sm-thru-med-desktop {
+    @include defaultFont(1.6rem); 
+    line-height: 2.2rem;
+    letter-spacing: 0px;
+    margin-bottom: 2.4rem;
+  }
+  @include for-midsize-desktop-up {
+    @include defaultFont(1.8rem); 
+    line-height: 2.8rem;
+    letter-spacing: 0px;
+    margin-bottom: 3.2rem;
+  }
+}
+
+
 .graphic-header.covid-policy {
   background-color: #f4f7f9;
   background-image: url('/images/assets/hero/eviction-notice-hero.jpg');
@@ -51,6 +85,17 @@ $alt-bg: #F4F7F9;
   }
   @include media-breakpoint-up(xl) {
     margin-top: 4.8rem;
+  }
+}
+.disclaimer .bordertop {
+  @include media-breakpoint-up(md) {
+    margin-top: .8rem;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 2.4rem;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: 3.2rem;
   }
 }
 // Bootstrap tooltip styling

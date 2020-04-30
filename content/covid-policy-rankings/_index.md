@@ -15,7 +15,7 @@ intro1: >-
 intro1_2: >-
     <p>To prevent the deleterious health consequences of eviction and an escalating economic crisis, states are beginning to pursue strategies to ensure safe, decent, and stable housing during and after the pandemic.</p>
     <p>To better understand the steps states have taken to prevent homelessness during and after the pandemic, the Eviction Lab and Columbia Law School’s Professor Emily Benfer have developed a policy scorecard for each state, distilling the contents of thousands of newly-released emergency orders, declarations, and legislation into a clear set of critical measures included in, and left out of, state-level pandemic responses related to eviction and housing.</p>
-    <p><a href="#newsletter" class="smoothScroll">Click here (or scroll below scorecard) to view scoring methodology, resources, and more.</a></p>
+    <p><b><a href="#scorecard-resources" class="smoothScroll">Click here</a> (or scroll below scorecard) to view scoring methodology, resources, and more.</b></p>
 intro2: >-
     <li>Our scoring methodology can be found <a href="https://evictionlab.org/covid-housing-scorecard-methods" target="_blank">here</a>.</li>
     <li>We are grateful to the many experts who contributed advice and research assistance to the scorecard. A list of contributing partners can be found <a href="/covid-housing-scorecard-methods/#acknowledgements">here</a>.</li> 
