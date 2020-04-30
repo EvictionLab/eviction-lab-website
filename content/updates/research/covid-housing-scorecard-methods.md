@@ -200,7 +200,7 @@ We are grateful for the support of the following partners for their guidance in 
 - Graham Bowman (Ohio Poverty Law Center)
 - Tara Raghuveer (People’s Action) 
 - George Donnelly (Public Interest Law Center) 
-- John Pollock (Public Justice Center)
+- John Pollock (National Coalition for a Civil Right to Counsel)
 - Rachel Blake (Regional Housing Legal Services)
 - Spencer Wells (RHINO) 
 - Susanna Blankley (Right to Counsel Coalition) 
@@ -222,6 +222,7 @@ The renting population statistic on the tool comes from the United States Census
 - <a target="_blank" href="https://nlihc.org/coronavirus-and-housing-homelessness">National Low Income Housing Coalition Housing & Homelessness COVID-19 Resources</a>
 - <a target="_blank" href="https://www.nhlp.org/campaign/protecting-renter-and-homeowner-rights-during-our-national-health-crisis-2/">National Housing Law Project COVID-19 Moratorium Resources & Analysis</a>
 - <a target="_blank" href="https://nlchp.org/coronavirus/">National Law Center on Homelessness Poverty COVID-19 Resources</a>
+- <a target="_blank" href="http://civilrighttocounsel.org/major_developments/1431">National Coalition for a Civil Right to Counsel: About COVID-19 and the Right to Counsel</a>
 - <a target="_blank" href="http://www.publicjustice.org/en/legal_help/housing-and-covid-19/">Public Justice Center COVID-19 Housing Resources</a>
 - <a target="_blank" href="https://www.rhls.org/evictionmoratoriums/">Regional Housing Legal Services Eviction Moratorium by Phase</a>
 - <a target="_blank" href="https://www.networkforphl.org/resources/topics/covid-19/">Network for Public Health Law COVID-19 Resources</a>
