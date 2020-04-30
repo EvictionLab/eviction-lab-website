@@ -1,0 +1,28 @@
+<table class="table table--cities">
+  <thead class="table__head">
+    <tr class="table__row">
+      <th class="table__cell table__cell--number">City</th>
+      <th class="table__cell table__cell--number">Filings <br />Last Week<sup>1</sup></th>
+      <th class="table__cell table__cell--number">Filings <br />Last 4 Weeks<sup>2</sup></th>
+      <th class="table__cell table__cell--button" data-sorter="false"></th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+    <tr class="table__row">
+      <td colspan="4" class="loading">Loading</td>
+    </tr>
+  </tbody>
+</table>
+<p class="footnote">
+  {{ .Inner }}
+</p>
+<script>
+  window.addEventListener('load', function() {
+    var dataUrl = {{ .Page.Params.tabledata }}
+    var tableEl = document.querySelector('.table--cities')
+    if (!dataUrl)
+      throw new Error('no tabledata specified in front matter')
+    if (tableEl && dataUrl)
+      Elab.Table.createIndexTable(tableEl, dataUrl)
+  })
+</script>

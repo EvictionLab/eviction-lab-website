@@ -106,7 +106,15 @@
 
   <script src="/js/lib.min.js"></script>
   <script src="/js/main.js?{{ now.Unix }}"></script>
-  {{ if in .Page.Dir "covid-policy-rankings" }}
+  {{ if in .File.Dir "weekly-reports" }}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script type="text/javascript" src="https://unpkg.com/deepmerge@4.2.2/dist/umd.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="/js/weekly-reports/Reports.js"></script>
+  {{ end }}
+  {{ if in .File.Dir "covid-policy-rankings" }}
     {{ partial "covid-policy-rankings" . }}
   {{ end }}
 </body>
