@@ -8,17 +8,45 @@
   </div>
 </div>
 
-<div class="row alt-bg ml-0 mr-0">
-  <div class="col-10 offset-1 col-lg-9 mx-lg-auto col-xl-8 px-0 px-lg-3 px-xl-4">
-    <div class="bordertop"></div>
-  </div>
-  <div class="col-md-10 offset-md-1 col-lg-9 mx-lg-auto col-xl-8 rankings-intro d-mm-flex d-mm-block px-md-0 px-lg-3 px-xl-4">
-    <div class="col-12 col-mm-6 pl-mm-0 pr-mm-3">{{ .Params.intro1 | safeHTML }}</div>
-    <div class="col-12 col-mm-6 pr-mm-1">{{ .Params.intro2 | safeHTML }}</div>
+<!-- subnav -->
+<div class="shadow-bottom center-page-wrapper subnav">
+  <div class="center-content-post max1200">
+    <ul class="anchor-links mobile-off">
+      <li class="only-larger-screens">{{ .Params.nav.li1 }}</li>
+      <li><a href="#scorecard-intro" class="smoothScroll">Intro</a></li>
+      <li><a href="#scorecard-app" class="smoothScroll">Scorecard</a></li>
+      <li><a href="#scorecard-resources" class="smoothScroll">Methodology & Resources</a></li>
+      <li><a href="#scorecard-disclaimer" class="smoothScroll">Legal Disclaimer</a></li>
+    </ul>
+    <div class="dropdown mobile-on">
+      <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        GO TO SECTION
+      </button>
+      <ul class="anchor-links dropdown-menu">
+        <li><a class="dropdown-item smoothScroll" href="#scorecard-intro">Intro</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#scorecard-app">Scorecard</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#scorecard-resources">Methodology & Resources</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#scorecard-disclaimer">Legal Disclaimer</a></li>            
+      </ul>
+    </div>
   </div>
 </div>
 
-<div id="filters_panel" class="row ml-0 mr-0 filters-panel">
+<a id="scorecard-intro"></a>
+
+<div  class="row alt-bg ml-0 mr-0 scorecard">
+  <div class="col-12 col-md-10 offset-md-1 col-lg-9 mx-lg-auto col-xl-8 px-2 px-md-0 px-lg-3 px-xl-4">
+    <div class="bordertop">
+    </div>
+    <h3 class="d-block w-100 pt-1">INTRODUCTION</h3>
+  </div>
+  <div class="col-12 col-md-10 offset-md-1 col-lg-9 mx-lg-auto col-xl-8 rankings-intro d-mm-flex d-mm-block px-md-0 px-lg-3 px-xl-4">
+    <div class="col-12 col-mm-6 pl-0 pr-mm-3">{{ .Params.intro1 | safeHTML }}</div>
+    <div class="col-12 col-mm-6 pl-0 pl-mm-2 pr-mm-1">{{ .Params.intro1_2 | safeHTML }}</div>
+  </div>
+</div>
+
+<div id="filters_panel" class="row ml-0 mr-0 filters-panel scorecard">
   <div  class="filters-panel col-12 offset-0 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 pt-3 pb-3 px-md-4">
     <button id="mobile_filter" class="btn mobile-filter show-filters" tabindex="0" aria-live="polite">Show Filters</button>
     <div class="filters" style="max-height:0;">
@@ -28,8 +56,8 @@
     </div>
   </div>
 </div>
-
-<div class="row ml-0 mr-0">
+<a id="scorecard-app"></a>
+<div id="scorecard-wrapper" class="row ml-0 mr-0">
   <!-- <div class="mobile-filters col-10 offset-1 d-lg-none">
     <button id="mobile_filter" class="btn mobile-filter show-filters">Show Filters</button>
   </div> -->
@@ -75,6 +103,9 @@
 </button>
 
 {{/* partial "covid-acknowledgements" . */}}
+<a id="scorecard-resources"></a>
+{{ partial "covid-resources" . }}
+<a id="scorecard-disclaimer"></a>
 {{ partial "covid-disclaimer" . }}
 
 <script type="text/javascript">
