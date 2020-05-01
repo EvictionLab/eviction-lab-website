@@ -82,9 +82,7 @@
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6135894/6199192/css/fonts.css">
 		<link rel="stylesheet" type="text/css" href="/css/lib.min.css"/>
 
-		{{ if in .File.Dir "weekly-reports" }}
-		<link rel="stylesheet" type="text/css" href="/css/weekly-reports.css"/>
-  	{{ end }}
+
 
     {{ if .Site.IsServer }}
       <!-- If site is being served (ostensibly dev) don't compress and minify -->
@@ -97,7 +95,11 @@
       {{ $css := resources.Get "sass/main-sass.scss" | resources.ToCSS $options  }}
       {{ $style := $css | resources.PostCSS }}
       <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
-    {{ end }}
+		{{ end }}
+		
+		{{ if in .File.Dir "weekly-reports" }}
+			<link rel="stylesheet" type="text/css" href="/css/weekly-reports.css"/>
+  	{{ end }}
 
   </head>
 
