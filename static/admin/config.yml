@@ -11,12 +11,16 @@ collections:
   identifier_field: "h1"
   label: "Weekly Reports" # Used in the UI
   folder: "/content/weekly-reports" # The path to the folder where the documents are stored
+  extension: md
   create: true # Allow users to create new documents in this collection
-  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  slug: "{{fields.slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  # filter: {field: "collection", value: false}
   editor:
     preview: false
   preview_path: weekly-reports/{{slug}}
   fields: # The fields for each document, usually in front matter
+    - {label: "Draft", name: "draft", widget: "boolean", hint: "When draft is on, the page will not be published to the live site"}
     - {label: "City Name", name: "h1", widget: "string"}
-    - {label: "Created Date", name: "date", widget: "datetime"}
-    - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"]}
+    - {label: "Slug (URL)", name: "slug", widget: "string", hint: "Should match city name and 2 letter state code (e.g. el-paso-tx)"}
+    - {label: "Updated Date", name: "date", widget: "datetime"}
+    - {label: "Body", name: "body", widget: "markdown"}

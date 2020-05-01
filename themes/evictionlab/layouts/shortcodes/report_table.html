@@ -13,9 +13,7 @@
     </tr>
   </tbody>
 </table>
-<p class="footnote">
-  {{ .Inner }}
-</p>
+<div class="footnote">{{ .Inner }}</div>
 <script>
   window.addEventListener('load', function() {
     var dataUrl = {{ .Get "data" }}

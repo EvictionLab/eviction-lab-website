@@ -88,7 +88,7 @@
         }
       ],
       // Pattern to identify a block as being an instance of this component
-      pattern: /{{% report_map[\s]*shapes="(\S*)"[\s]*data="(\S*)"[\s]*%}}([\S\s]*?){{%\/ report_map %}}/,
+      pattern: /{{%[\s]+report_map[\s]+shapes="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+eport_map[\s]+%}}/,
       // Function to extract data elements from the regexp match
       fromBlock: function(match) {
         return {
@@ -151,6 +151,30 @@
       },
       // Preview output for this component. Can either be a string or a React component
       // (component gives better render performance)
+      toPreview: function(obj) {
+        return obj.body;
+      }
+    });
+
+    CMS.registerEditorComponent({
+      id: "statsTable",
+      label: "City Stats Table",
+      fields: [
+        {
+          name: 'data', 
+          label: 'CSV File', 
+          widget: 'file'
+        }
+      ],
+      pattern: /{{%[\s]+report_table[\s]+data="(.*)"[\s]+%}}/,
+      fromBlock: function(match) {
+        return {
+          data: match[1],
+        };
+      },
+      toBlock: function(obj) {
+        return '{{% report_table data="' + obj.data + '" %}}';
+      },
       toPreview: function(obj) {
         return obj.body;
       }

@@ -49,12 +49,32 @@ Elab.Utils = (function(Elab) {
     $(el).attr('target', '_blank')
   }
 
+  /**
+   * Takes column name and returns an HTML string label
+   * @param {*} id 
+   */
+  var formatLabel = function (id) {
+    switch(id) {
+      case 'avg_filings':
+        return "Average Filings"
+      case 'month_filings':
+        return "Filings This Year"
+      case 'percentage_diff':
+        return "Filings This Year <br /><span>relative to average</span>"
+      case 'Other':
+        return 'Other/None'
+      default:
+        return id
+    }
+  }
+
   return {
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
     slugify: slugify,
     createTwitterLink: createTwitterLink,
-    createFacebookLink: createFacebookLink
+    createFacebookLink: createFacebookLink,
+    formatLabel: formatLabel
   }
 
 })(Elab)
@@ -104,22 +124,7 @@ Elab.Config = (function(Elab) {
     return [extent[0], extent[1] + pad]
   }
 
-  /**
-   * Takes column name and returns an HTML string label
-   * @param {*} id 
-   */
-  var formatLabel = function (id) {
-    switch(id) {
-      case 'avg_filings':
-        return "Average Filings"
-      case 'month_filings':
-        return "Filings This Year"
-      case 'percentage_diff':
-        return "Filings This Year <br /><span>relative to average</span>"
-      default:
-        return id
-    }
-  }
+
 
   /**
    * Helper function for creating configs
@@ -139,7 +144,7 @@ Elab.Config = (function(Elab) {
         xTooltip: d3.timeFormat("%B"),
         yTooltip: d3.format(",d"),
         area: d3.timeFormat("%d/%m/%Y"),
-        label: formatLabel
+        label: Elab.Utils.formatLabel
       },
       view: {
         type: "bar",
@@ -164,7 +169,7 @@ Elab.Config = (function(Elab) {
       },
       {
         selector: '.visual__toggle',
-        text: 'Show relative to average'
+        text: 'Show filings relative to average'
       }
     ],
     markLines: [],
@@ -278,7 +283,7 @@ Elab.Config = (function(Elab) {
       },
       {
         selector: '.visual__toggle',
-        text: 'Show relative to average'
+        text: 'Show filings relative to average'
       }
     ],
     markLines: [],
@@ -527,7 +532,7 @@ Elab.Chart = (function(Elab) {
 
     // options
     config = config || {}
-    var margin = config.margin || { top: 8, right: 24, bottom: 40, left: 40 };
+    var margin = config.margin || { top: 32, right: 24, bottom: 72, left: 40 };
     var parsedData;
     var elements;
     var chartConfig;
@@ -1042,10 +1047,18 @@ Elab.Chart = (function(Elab) {
       config.legend && renderLegend(config.legend, data.items, config)
     }
 
+    /**
+     * Re-renders the chart with the existing configuration
+     * and data.
+     */
     function render() {
       renderGraph(parsedData, elements, chartConfig)
     }
 
+    /**
+     * Updates the chart's configuration
+     * @param {*} newConfig 
+     */
     function update(newConfig) {
       if (!elements)
         elements = initElements(root)
@@ -1056,6 +1069,9 @@ Elab.Chart = (function(Elab) {
     }
 
     update(config)
+
+    // trigger re-render after a second to make sure size is right
+    setTimeout(function() { render(); }, 1000);
 
     return {
       root: root,
@@ -1230,6 +1246,22 @@ Elab.Map = (function(Elab) {
     }, "building");
   }
 
+  /**
+   * adds the date to the map legend
+   * @param {} date 
+   */
+  function renderMapDate(date) {
+    var parsedDate = d3.timeParse("%d/%m/%Y")(date)
+    $('.legend-choropleth__title span')
+      .html('Since ' + d3.timeFormat('%B %e, %Y')(parsedDate))
+  }
+
+  /**
+   * Creates the MapboxGL map
+   * @param {*} el
+   * @param {*} geojsonUrl
+   * @param {*} dataUrl
+   */
   function createMap(el, geojsonUrl, dataUrl) {
 
     var hoveredStateId = null;
@@ -1271,7 +1303,7 @@ Elab.Map = (function(Elab) {
       var description = '<h1>' + placeName + '</h1>' +
         '<div class="map__tooltip-row map__tooltip-row--' + dir + '">' + 
           primary + 
-          '<br /><em>Racial majority: ' + (majority || 'unknown') + '</em>' +
+          '<br /><em>Racial majority: ' + (Elab.Utils.formatLabel(majority) || 'unknown') + '</em>' +
         '</div>';
       return description
     }
@@ -1347,6 +1379,10 @@ Elab.Map = (function(Elab) {
         ]
         map.fitBounds(bounds, {padding: 16});
         d3.csv(dataUrl, function(data) {
+          var mapDate = data[0]["month_date"];
+          if (mapDate) {
+            renderMapDate(mapDate)
+          }
           var mapData = addDataToGeojson(geojson, data)
           addChoroplethLayer(map, mapData, "diff", [0, 2])
           map.on('mousemove', 'choropleth', handleHover);
