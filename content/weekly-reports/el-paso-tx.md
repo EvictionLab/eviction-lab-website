@@ -7,7 +7,7 @@
   draft: true
 ---
 
-{{% report_intro fips="51760" data="/uploads/w17_table.csv" %}}
+{{% report_intro id="51760" data="/uploads/w17_table.csv" %}}
 
 El Paso Intro
 

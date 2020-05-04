@@ -38,7 +38,7 @@
   </div>
   <script>
     var tableUrl = {{ .Get "data" }}
-    var fips = {{ .Get "fips" }}
+    var fips = {{ .Get "id" }}
     window.addEventListener('load', function() {
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
