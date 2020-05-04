@@ -75,6 +75,7 @@ The following external libraries are included in `assets/weekly-reports/lib.min.
   - D3 (v4.13.0): used for charts, date formatting, etc.
   - MapboxGL (v1.9.1): used for maps on report page
   - deepmerge (v4.2.2): used for building chart configurations
+  - [jQuery tablesorter](https://github.com/Mottie/tablesorter): jquery plugin used to sort table on list page
 
 ### Application
 
