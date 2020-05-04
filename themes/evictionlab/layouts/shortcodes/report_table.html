@@ -15,7 +15,7 @@
 </table>
 <div class="footnote">{{ .Inner }}</div>
 <script>
-  window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
     var dataUrl = {{ .Get "data" }}
     var tableEl = document.querySelector('.table--cities')
     if (!dataUrl)

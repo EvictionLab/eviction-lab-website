@@ -7,7 +7,7 @@
   draft: true
 ---
 
-{{% report_intro fips="51760" data="/uploads/w17_table.csv" %}}
+{{% report_intro id="51760" data="/uploads/w17_table.csv" %}}
 
 Eviction filings in Richmond, VA have fallen sharply over the last six weeks. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average over the last two weeks of March and throughout April. Eviction hearings are set to resume in Virginia on May 17.
 
