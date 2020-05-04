@@ -194,7 +194,7 @@ Elab.Config = (function (Elab) {
         text: "Monthly Eviction Filings",
       },
       {
-        selector: ".visual__toggle",
+        selector: ".visual__toggle button",
         text: "Show filings relative to average",
       },
     ],
@@ -217,7 +217,7 @@ Elab.Config = (function (Elab) {
         text: "Monthly Eviction Filings Relative To Average",
       },
       {
-        selector: ".visual__toggle",
+        selector: ".visual__toggle button",
         text: "Show filing count",
       },
     ],
@@ -268,7 +268,7 @@ Elab.Config = (function (Elab) {
           "Filings Relative to Average, by Neighborhood Racial/Ethnic Majority",
       },
       {
-        selector: ".visual__toggle",
+        selector: ".visual__toggle button",
         text: "Show filing count",
       },
     ],
@@ -320,7 +320,7 @@ Elab.Config = (function (Elab) {
         text: "Filings by Neighborhood Racial/Ethnic Majority",
       },
       {
-        selector: ".visual__toggle",
+        selector: ".visual__toggle button",
         text: "Show filings relative to average",
       },
     ],
@@ -1297,12 +1297,21 @@ Elab.Chart = (function (Elab) {
   function init(rootEl, config) {
     var rootEl = $(rootEl);
     var chartEl = rootEl.find(".chart")[0];
-    var toggleEl = rootEl.find(".visual__toggle");
+
+    // add button to toggle state
+    var toggleEl = $('<button/>');
+    rootEl.find(".visual__toggle").append(toggleEl);
+
+    // move footnotes into proper container
     var contentEl = rootEl.find(".details");
     var footnoteEl = rootEl.find(".footnote");
     footnoteEl.append(contentEl.find("ol"));
+
+    // setup default chart config
     var configs = Elab.Config.getConfig(config.id, config.csv);
     var currentConfig = configs[0];
+
+    // create chart and bind click event to toggle state
     createChart(chartEl, currentConfig, function (chart) {
       toggleEl.on("click", function () {
         if (currentConfig.id === configs[0].id) {

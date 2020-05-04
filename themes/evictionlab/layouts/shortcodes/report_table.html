@@ -7,9 +7,15 @@
       <th class="table__cell table__cell--button" data-sorter="false"></th>
     </tr>
   </thead>
-  <tbody class="table__body">
+  <tbody class="table__body" aria-live="polite">
     <tr class="table__row">
-      <td colspan="4" class="loading">Loading</td>
+      <td colspan="4" class="loading" style="text-align:center">
+        <div class="spinner">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>
