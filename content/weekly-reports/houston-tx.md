@@ -7,7 +7,7 @@
   draft: true
 ---
 
-{{% report_intro fips="48201" data="/uploads/w17_table.csv" %}}
+{{% report_intro id="48201" data="/uploads/w17_table.csv" %}}
 
 Eviction filings in Harris County, TX (Houston) have fallen sharply since eviction proceedings were suspended across Texas on March 19. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March and throughout April. Eviction protections in Texas begin to expire on May 18.
 
