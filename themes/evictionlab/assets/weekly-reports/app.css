@@ -22,8 +22,26 @@
     font-family: var(--body-font);
     overflow-x: hidden;
   }
-  .intro a, .section a { color: var(--c1); }
-  .intro p, .section p { margin-bottom: 2.4rem; }
+  .intro a, .section a, .column--content a { color: var(--c1); }
+  .intro p, .section p, .column--content p { margin-bottom: 2.4rem; }
+
+  .column--content > h3 { margin: 3.2rem 0 2.4rem 0;}
+
+  .column--content p,
+  .column--content ul { font-size: 1.8rem; line-height: 1.5; }
+
+  .column--content ul {
+    list-style: disc;
+    padding: 0 0 0 16px;
+  }
+  .column--content ul li {
+    padding: 4px 8px;
+  }
+
+  .column--content > img,
+  .column--content > p img {
+    max-width: 140px;
+  }
 
   .breadcrumbs a { color: #fff; }
   .breadcrumbs a:hover,
