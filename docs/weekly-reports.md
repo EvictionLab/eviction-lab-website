@@ -8,6 +8,10 @@ This document outlines the weekly eviction reports functionality, found at [http
 
   Contains all content for the list page and individual reports.  The content structure relies on using shortcodes for the interactive elements.
 
+- **Page Layouts:** `/themes/evictionlab/layouts/weekly-reports`
+
+  Contains the list page and individual report page wrappers
+
 - **Shortcodes Folder**: `/themes/evictionlab/layouts/shortcodes`
 
   Contains all of the shortcodes used in the reports
