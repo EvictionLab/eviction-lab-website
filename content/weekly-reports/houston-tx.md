@@ -1,10 +1,10 @@
 ---
-  h1: "Houston, Texas"
-  slug: "houston-tx"
-  title: "Houston, Texas | Weekly Eviction Reports | Eviction Lab"
-  date: 2020-04-28
-  collection: true
-  draft: true
+h1: Houston, Texas
+slug: houston-tx
+title: Houston, Texas | Weekly Eviction Reports | Eviction Lab
+collection: true
+draft: true
+date: 2020-05-05T00:00:00.000Z
 ---
 
 {{% report_intro id="48201" data="/uploads/w17_table.csv" %}}
@@ -15,7 +15,8 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/uploads/harris_w17_barchart.csv" %}}
+
+{{% report_chart id="avg" data="/uploads/harris_w18_barchart.csv" %}}
 
 # Changes in eviction filings
 
@@ -27,19 +28,18 @@ Eviction filings in Houston were higher than average in January and February of 
 
 {{%/ report_chart %}}
 
-{{% report_map shapes="/uploads/harris_shapes.json" data="/uploads/harris_w17_map.csv" %}}
+{{% report_map shapes="/uploads/harris_shapes.json" data="/uploads/harris_w18_map.csv" %}}
 
 # The geography of changes in eviction filings
 
 Houston is divided into 783 Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> As of the end of April, we see steep declines in eviction filings across the city.
 
-  1. Average eviction filings taken from Eviction Lab data for 2012–2015
-  2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
+1. Average eviction filings taken from Eviction Lab data for 2012–2015
+2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
 {{%/ report_map %}}
 
-
-{{% report_chart id="race" data="/uploads/harris_w17_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/harris_w18_linechart.csv" %}}
 
 # Eviction filings by neighborhood demographics
 
