@@ -180,6 +180,9 @@ Elab.Config = (function (Elab) {
       extent: {
         xPad: xPadExtent,
         yPad: yPadExtent,
+        min: {
+          y: [0, 1.1],
+        },
       },
     };
     return deepmerge(BASE_CONFIG, config);
@@ -521,7 +524,23 @@ Elab.Chart = (function (Elab) {
       return d.y;
     });
     // x and y [min, max], padded based on config value
-    return [config.extent.xPad(xExtent), config.extent.yPad(yExtent)];
+    var padded = {
+      x: config.extent.xPad(xExtent),
+      y: config.extent.yPad(yExtent),
+    };
+    if (config.extent.min.x) {
+      padded.x = [
+        Math.min(padded.x[0], config.extent.min.x[0]),
+        Math.max(padded.x[1], config.extent.min.x[1]),
+      ];
+    }
+    if (config.extent.min.y) {
+      padded.y = [
+        Math.min(padded.y[0], config.extent.min.y[0]),
+        Math.max(padded.y[1], config.extent.min.y[1]),
+      ];
+    }
+    return [padded.x, padded.y];
   }
 
   /**
@@ -1299,7 +1318,7 @@ Elab.Chart = (function (Elab) {
     var chartEl = rootEl.find(".chart")[0];
 
     // add button to toggle state
-    var toggleEl = $('<button/>');
+    var toggleEl = $("<button/>");
     rootEl.find(".visual__toggle").append(toggleEl);
 
     // move footnotes into proper container
