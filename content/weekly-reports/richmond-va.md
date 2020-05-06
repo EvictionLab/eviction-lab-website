@@ -1,10 +1,10 @@
 ---
-  h1: "Richmond, Virginia"
-  slug: "richmond-va"
-  title: "Richmond, Virginia | Weekly Eviction Reports | Eviction Lab"
-  date: 2020-04-28
-  collection: true
-  draft: true
+h1: Richmond, Virginia
+slug: richmond-va
+title: Richmond, Virginia | Weekly Eviction Reports | Eviction Lab
+collection: true
+draft: true
+date: 2020-04-28T00:00:00.000Z
 ---
 
 {{% report_intro id="51760" data="/uploads/w17_table.csv" %}}
@@ -16,7 +16,7 @@ More detail on eviction protections in Virginia can be found on the [COVID-19 Ho
 {{%/ report_intro %}}
 
 
-{{% report_chart id="avg" data="/uploads/richmond_w17_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/richmond_w18_barchart.csv" %}}
 
 # Changes in eviction filings
 
@@ -28,20 +28,18 @@ Eviction filings in Richmond were higher than average in January and February of
 
 {{%/ report_chart %}}
 
-
-{{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_w17_map.csv" %}}
+{{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_w18_map.csv" %}}
 
 # The geography of changes in eviction filings
 
 Richmond is divided into 34 zip codes. In each of those zip codes, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over the last four weeks, there have been steep declines in eviction filings across the city. 
 
-  1. Average eviction filings taken from Eviction Lab data for 2012–2015
-  2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
+1. Average eviction filings taken from Eviction Lab data for 2012–2015
+2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
 {{%/ report_map %}}
 
-
-{{% report_chart id="race" data="/uploads/richmond_w17_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/richmond_w18_linechart.csv" %}}
 
 # Eviction filings by neighborhood demographics
 
