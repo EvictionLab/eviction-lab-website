@@ -4,7 +4,7 @@ slug: richmond-va
 title: Richmond, Virginia | Weekly Eviction Reports | Eviction Lab
 collection: true
 draft: true
-date: 2020-04-28T00:00:00.000Z
+date: 2020-05-04T06:00:00.000Z
 ---
 
 {{% report_intro id="51760" data="/uploads/w17_table.csv" %}}
