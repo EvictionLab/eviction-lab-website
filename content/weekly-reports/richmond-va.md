@@ -32,7 +32,7 @@ Eviction filings in Richmond were higher than average in January and February of
 
 # The geography of changes in eviction filings
 
-Richmond is divided into 34 zip codes. In each of those zip codes, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over the last four weeks, there have been steep declines in eviction filings across the city. 
+Richmond is divided into 36 zip codes. In each of those zip codes, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over the last four weeks, there have been steep declines in eviction filings across the city. 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
