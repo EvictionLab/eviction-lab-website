@@ -7,36 +7,56 @@ publish_mode: editorial_workflow
 public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-- label: "Pages"
-  name: "pages"
-  editor:
-    preview: false
-  files:
-    - label: "Weekly Reports"
-      name: "weekly-index"
-      file: "content/weekly-reports/_index.md"
-      fields:
-        - {label: "Draft", name: "draft", widget: "boolean", hint: "When draft is on, the page will not be published to the live site"}
-        - {label: "Updated Date", name: "date", widget: "date"}
-        - {label: Heading, name: h1, widget: string}
-        - {label: Subheading, name: h2, widget: string}
-        - {label: "Body", name: "body", widget: "markdown"}
-    
-- name: "weekly-reports"
-  identifier_field: "h1"
-  label: "Weekly Reports"
-  folder: "/content/weekly-reports"
-  extension: md
-  create: true
-  slug: "{{fields.slug}}"
-  filter: {field: "collection", value: true} # only show collection items
-  editor:
-    preview: false
-  preview_path: weekly-reports/{{slug}}
-  fields: # The fields for each document, usually in front matter
-    - {label: "Collection", name: "collection", widget: "hidden", default: true}
-    - {label: "Draft", name: "draft", widget: "boolean", hint: "When draft is on, the page will not be published to the live site", default: true }
-    - {label: "City Name", name: "h1", widget: "string"}
-    - {label: "Slug (URL)", name: "slug", widget: "string", hint: "Should match city name and 2 letter state code (e.g. el-paso-tx)"}
-    - {label: "Updated Date", name: "date", widget: "date"}
-    - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Pages"
+    name: "pages"
+    editor:
+      preview: false
+    files:
+      - label: "Weekly Reports"
+        name: "weekly-index"
+        file: "content/weekly-reports/_index.md"
+        fields:
+          - {
+              label: "Draft",
+              name: "draft",
+              widget: "boolean",
+              hint: "When draft is on, the page will not be published to the live site",
+            }
+          - { label: "Updated Date", name: "date", widget: "date" }
+          - { label: Heading, name: h1, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "weekly-reports"
+    identifier_field: "h1"
+    label: "Weekly Reports"
+    folder: "/content/weekly-reports"
+    extension: md
+    create: true
+    slug: "{{fields.slug}}"
+    filter: { field: "collection", value: true } # only show collection items
+    editor:
+      preview: false
+    preview_path: weekly-reports/{{slug}}
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Collection",
+          name: "collection",
+          widget: "hidden",
+          default: true,
+        }
+      - {
+          label: "Draft",
+          name: "draft",
+          widget: "boolean",
+          hint: "When draft is on, the page will not be published to the live site",
+          default: true,
+        }
+      - { label: "City Name", name: "h1", widget: "string" }
+      - {
+          label: "Slug (URL)",
+          name: "slug",
+          widget: "string",
+          hint: "Should match city name and 2 letter state code (e.g. el-paso-tx)",
+        }
+      - { label: "Updated Date", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
