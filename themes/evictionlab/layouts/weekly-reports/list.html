@@ -7,18 +7,11 @@
     <div class="underbar"></div>
   </div>
 </div>
-
 <div class="layout layout--full">
-  <article class="column column--content">
-    <h2 class="subhead bordered-header primary">
-      <a id="top">{{ .Params.h2 }}</a>
-      <span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span>
-    </h2>
-
+  <div class="column column--content">
+    <p class="date">Last Updated: {{ .Date.Format "January 2, 2006" }}</p>
     {{ .Content }}
-
-  </article>
-
+  </div>
 </div>
 
 {{ partial "footer" . }}
