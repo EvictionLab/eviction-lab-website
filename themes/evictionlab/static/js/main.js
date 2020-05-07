@@ -213,32 +213,22 @@ $(document).ready(function () {
 });
 
 /**
- * Mobile vh fix
+ * Fill height
  * ----
- * On window resize, check if the width has changed, and if so unset transitions
+ * 
  */
 $(document).ready(function () {
-  var width = window.innerWidth;
-  window.addEventListener("resize", function (e) {
-    // Only trigger transition if the width has changed, otherwise exit
-    if (window.innerWidth === width) {
-      return;
-    }
-    width = window.innerWidth;
 
-    $('.mobile-vh').each(function () {
-      var el = $(this);
-      el.css('transition', 'none');
-      el.css('height', el.outerHeight() + 'px');
+  var el = $('.fill-height')
 
-      setTimeout(function () {
-        el.css('height', null)
-        setTimeout(function () {
-          el.css('transition', null);
-        });
-      }, 350);
-    });
-  });
+  var setSplashHeight = function() {
+    var height = window.innerHeight - el.offset().top
+    if (height > 1)
+      el.css('height', height + 'px')
+  }
+
+  window.addEventListener("resize", setSplashHeight);
+  setSplashHeight();
 });
 
 /**

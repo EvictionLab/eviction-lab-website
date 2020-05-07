@@ -11,7 +11,6 @@ $heroWidth: 300px;
 
 // section styles
 .new-splash {
-  height: calc(100vh - 80px);
   min-height: 445px;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/assets/hero/american-flag-evicted-woman-phone.jpg');
   background-size: cover;
@@ -32,12 +31,11 @@ $heroWidth: 300px;
   @include for-tablet-landscape-up {
     background: none;
    /* box-shadow: $insetShadowTop; */
-    min-height: 590px;
+    min-height: 640px;
     margin-left: 32px;
   }
   @include for-phone-only {
     margin-top: 56px;
-    height: calc(100vh - 56px);
   }
 }
 
