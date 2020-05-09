@@ -2,6 +2,8 @@
 
 This document outlines the weekly eviction reports functionality, found at [https://evictionlab.org/weekly-reports](https://evictionlab.org/weekly-reports). Functionality has been developed April / May 2020 to monitor city level eviction filings in response to COVID-19 and associated policies.
 
+This is a technical guide about implementation.  See the [User Guide](./user-guide.md) for details about adding and maintaining reports.
+
 ## Associated Assets
 
 - **Content Folder:** `/content/weekly-reports`
