@@ -4,6 +4,7 @@ This folder serves as living documentation for the Eviction Lab website and its 
 
 ## Features
 
+- [Page Redirects](./redirects.md)
 - [Eviction Tracking System](./eviction-tracking-system)
 - Map: see the [Eviction Maps Repository](https://github.com/EvictionLab/eviction-maps/blob/development/CONTRIBUTING.md)
 - Rankings: see the [Eviction Maps Repository](https://github.com/EvictionLab/eviction-maps/blob/development/CONTRIBUTING.md)

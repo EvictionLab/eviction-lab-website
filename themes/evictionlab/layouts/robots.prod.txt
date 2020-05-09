@@ -12,9 +12,8 @@ Disallow: /es/help-faq/page-content/
 Disallow: /es/contact/page-content/
 Disallow: /es/why-eviction-matters/page-content/
 Disallow: /es/data-merge/page-content/
-
-
-
-
-
-
+Disallow: /ets-media
+Disallow: /rosemary
+Disallow: /destiny
+Disallow: /epidemic
+Disallow: /what-home-means
