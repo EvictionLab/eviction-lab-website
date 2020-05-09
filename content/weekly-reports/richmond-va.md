@@ -4,10 +4,10 @@ slug: richmond-va
 title: Richmond, Virginia | Weekly Eviction Reports | Eviction Lab
 collection: true
 draft: true
-date: 2020-05-04T06:00:00.000Z
+date: 2020-05-08T06:00:00.000Z
 ---
 
-{{% report_intro id="51760" data="/uploads/w17_table.csv" %}}
+{{% report_intro id="51760" data="/uploads/w18_table.csv" %}}
 
 Eviction filings in Richmond, VA have fallen sharply over the last six weeks. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average over the last two weeks of March and throughout April. Eviction hearings are set to resume in Virginia on May 17.
 
