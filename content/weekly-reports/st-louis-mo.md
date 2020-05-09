@@ -28,7 +28,7 @@ St. Louis, Missouri Chart 1
 
 # The geography of changes in eviction filings
 
-St. Louis, Missouri Map
+St. Louis Map
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018 {{%/ report_map %}}
