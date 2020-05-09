@@ -1,17 +1,21 @@
 ---
-title: "Weekly Eviction Reports | Eviction Lab"
-date: 2020-04-28
-type: index
-h1: Eviction Tracking System
-description: Real time eviction tracking by city during COVID-19.
-socialDescription: We’ve built the first nationwide database of evictions.
-fbImage: "/images/og/eviction-lab-about-us-fb.jpg"
-twImage: "/images/og/eviction-lab-about-us-tw.jpg"
 draft: true
+date: 2020-05-09T00:00:00.000Z
+h1: Eviction Tracking System
+h2: None
+socialDescription: We’ve built the first nationwide database of evictions.
 cascade:
   childof: weekly-reports
   scripts: weekly
+twImage: /images/og/eviction-lab-about-us-tw.jpg
+title: Weekly Eviction Reports | Eviction Lab
+type: index
+description: Real time eviction tracking by city during COVID-19.
+fbImage: /images/og/eviction-lab-about-us-fb.jpg
 ---
+The Eviction Tracking System (ETS) is a platform for monitoring and providing weekly updates on the number of eviction cases being filed in a set of cities across the United States. We built this system during the current pandemic out of concern that a growing number of families may face the threat of eviction. The ETS provides a data infrastructure for tracking eviction trends that previously did not exist. Scroll down to see the cities in which we are operating and learn more about the project.
+
+{{% report_table data="/uploads/w18_table.csv" %}}
 
 Over 1.6 million American households are evicted from their homes each year, and the COVID-19 pandemic has the potential to severely worsen this ongoing housing crisis. Unprecedented spikes in unemployment leave an increasing number of households unable to pay rent. As a result, the nation’s most severe public health emergency in a century may cause large spikes in eviction, displacement, and homelessness, which in turn, will only deepen the current public health challenge.
 
@@ -19,21 +23,19 @@ Current policy responses to the pandemic may be insufficient to prevent a surge 
 
 There is currently no data infrastructure that allows policymakers, legal and advocacy organizations, journalists, academics, and community members to track displacement and evictions in real time. The Eviction Lab has built the Eviction Tracking System (ETS) to fill this critical gap and to help monitor and respond to eviction hotspots as they emerge. The ETS is designed as a multi-site, open-source, and expandable system for tracking eviction filings as they happen.
 
-Scroll down to see the list of cities in which we are operating. We welcome feedback, as well as partnerships with states and localities who wish to work with us in monitoring and responding to emerging eviction hotspots. Ensuring housing security is vital to mitigating the spread of COVID-19 and sustaining health, economic security, and family stability.
-
-{{% report_table data="/uploads/w17_table.csv" %}}
+We welcome feedback, as well as partnerships with states and localities who wish to work with us in monitoring and responding to emerging eviction hotspots.
 
 ### Additional Information
 
-- The ETS was made possible by the tireless work of our partners at [January Advisors](https://www.januaryadvisors.com/).
-- A description of the ETS methodology is available here.
-- If you want to see your city or state added to the ETS and can help facilitate access to the necessary data, please contact [info@evictionlab.org](mailto:info@evictionlab.org).
-- To find community organizations focused on housing and eviction in your community, visit [JustShelter.org](https://justshelter.org/).
-- Information on local eviction moratoria and renter legal protections can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/).
-- A list of similar resources developed by other organizations is available here.
-- To receive updates, add your email below.
-- For media inquiries, email [press@evictionlab.org](mailto:press@evictionlab.org)
-- To provide tips and feedback on the ETS, email [info@evictionlab.org](mailto:info@evictionlab.org).
+* The ETS was made possible by the tireless work of our partners at [January Advisors](https://www.januaryadvisors.com/).
+* A description of the ETS methodology is available here.
+* If you want to see your city or state added to the ETS and can help facilitate access to the necessary data, please contact [info@evictionlab.org](mailto:info@evictionlab.org).
+* To find community organizations focused on housing and eviction in your community, visit [JustShelter.org](https://justshelter.org/).
+* Information on local eviction moratoria and renter legal protections can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/).
+* A list of similar resources developed by other organizations is available here.
+* To receive updates, add your email below.
+* For media inquiries, email [press@evictionlab.org](mailto:press@evictionlab.org)
+* To provide tips and feedback on the ETS, email [info@evictionlab.org](mailto:info@evictionlab.org).
 
 ### The Eviction Tracking System is funded by
 
