@@ -39,7 +39,7 @@
           widget: 'markdown'
         }
       ],
-      pattern: /{{%[\s]+report_intro[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_intro[\s]+%}}/,
+      pattern: /^{{%\s?report_intro id="(\S*)" data="(\S*)"\s?%}}([\S\s]*?){{%\/\s?report_intro\s?%}}/,
       fromBlock: function (match) {
         return {
           fips: match[1],
@@ -75,7 +75,7 @@
           widget: 'markdown'
         }
       ],
-      pattern: /{{%[\s]+report_map[\s]+shapes="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+eport_map[\s]+%}}/,
+      pattern: /^{{%\s?report_map[\s]+shapes="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_map[\s]+%}}/,
       fromBlock: function (match) {
         return {
           shapes: match[1],
@@ -115,7 +115,7 @@
           widget: 'markdown'
         }
       ],
-      pattern: /{{%[\s]+report_chart[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_chart[\s]+%}}/,
+      pattern: /^{{%[\s]+report_chart[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_chart[\s]+%}}/,
       fromBlock: function (match) {
         return {
           id: match[1],
@@ -141,7 +141,7 @@
           widget: 'file'
         }
       ],
-      pattern: /{{%[\s]+report_table[\s]+data="(\S*)"[\s]+%}}/,
+      pattern: /^{{%[\s]+report_table[\s]+data="(\S*)"[\s]+%}}/,
       fromBlock: function (match) {
         return {
           data: match[1],
