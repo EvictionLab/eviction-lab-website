@@ -51,6 +51,12 @@ collections:
           hint: "When draft is on, the page will not be published to the live site",
           default: true,
         }
+      - {
+          label: "Browser Title",
+          name: "title",
+          widget: "string",
+          hint: "Browser window title",
+        }
       - { label: "City Name", name: "h1", widget: "string" }
       - {
           label: "Slug (URL)",
