@@ -11,6 +11,7 @@ collections:
     name: "pages"
     editor:
       preview: false
+    preview_path: /{{slug}}
     files:
       - label: "Weekly Reports"
         name: "weekly-index"
@@ -22,8 +23,43 @@ collections:
               widget: "boolean",
               hint: "When draft is on, the page will not be published to the live site",
             }
-          - { label: "Updated Date", name: "date", widget: "date" }
+          - label: "Meta"
+            name: "cascade"
+            widget: "object"
+            fields:
+              - {
+                  label: "Browser Window Title",
+                  name: title,
+                  widget: string,
+                  hint: "Title for the browser window or tab",
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  hint: "Not visible, but used for search engine optimization",
+                }
+              - {
+                  label: "Social Description",
+                  name: "socialDescription",
+                  widget: "string",
+                  hint: "Description for the thumbnail when page is shared on social media",
+                }
+              - {
+                  label: "Facebook Share Image",
+                  name: "fbImage",
+                  widget: "image",
+                  hint: "Image used when page is shared on Facebook",
+                }
+              - {
+                  label: "Twitter Share Image",
+                  name: "twImage",
+                  widget: "image",
+                  hint: "Image used when page is shared on Twitter",
+                }
+
           - { label: Heading, name: h1, widget: string }
+          - { label: "Updated Date", name: "date", widget: "date" }
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "weekly-reports"
