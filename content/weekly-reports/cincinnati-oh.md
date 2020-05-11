@@ -16,7 +16,7 @@ More detail on eviction protections in Ohio can be found on the COVID-19 Housing
 
 # Changes in eviction filings
 
-Eviction filings in __PLACE__ were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April were well below average.
+Eviction filings in PLACE were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April were well below average.
 
   1. Average eviction filings taken from Eviction Lab data for 2012–2015  
   2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
@@ -25,9 +25,10 @@ Eviction filings in __PLACE__ were higher than average in January and February o
 {{%/ report_chart %}}
 
 {{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_w18_map.csv" %}}
+
 # The geography of changes in eviction filings
 
-__PLACE__ is divided into _NUM_ Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> As of the end of April, we see steep declines in eviction filings across the city.
+PLACE is divided into NUM Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> As of the end of April, we see steep declines in eviction filings across the city.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
