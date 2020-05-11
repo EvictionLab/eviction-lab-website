@@ -1,11 +1,16 @@
-# backend:
-#   name: github
-#   repo: EvictionLab/eviction-lab-website
-#   branch: cms-dev
-
 backend:
-  name: git-gateway
-local_backend: true
+  name: github
+  repo: EvictionLab/eviction-lab-website
+  branch: cms-dev
+
+# FOR LOCAL DEVELOPMENT:
+# ---
+# - uncomment the backend below
+# - run `npx netlify-cms-proxy-server` to serve content
+
+# backend:
+#   name: git-gateway
+# local_backend: true
 
 media_folder: "static/uploads" # Folder where user uploaded files should go
 publish_mode: editorial_workflow
