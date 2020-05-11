@@ -39,15 +39,11 @@ PLACE is divided into NUM Census Tracts. Here we map, in each of those Tracts, e
 
 {{%/ report_map %}}
 
-{{% report_chart id="race" data="/uploads/cincinnati_w18_linechart.csv" %}}
-
-# Eviction filings by neighborhood demographics
+{{% report_chart id="race" data="/uploads/cincinnati_w18_linechart.csv" %}}# Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In January and February, eviction filings were concentrated in neighborhoods in the Latinx and Other/None categories. In March and through April, eviction filings have dropped steeply across all neighborhoods.
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2015. This allows us to see, for example, that filings in majority-White neighborhoods were higher than average in the first three months of 2020.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Partial filings for April, as of April 25
-
-{{%/ report_chart %}}
+2. Partial filings for May, as of May 8{{%/ report_chart %}}
