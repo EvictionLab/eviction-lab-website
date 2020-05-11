@@ -7,9 +7,13 @@ slug: cincinnati-oh
 date: 2020-05-11T17:16:32.083Z
 ---
 
-{{% report_intro id="31069" data="/uploads/w18_table.csv" %}}Eviction filings in Hamilton County, OH (Cincinnati) have fallen sharply since eviction proceedings were suspended across Ohio on \_DATE\_. Compared to equivalent periods in previous years (2012–2015), eviction filings were \_OUTCOME\_ over the last two weeks of March and throughout April. Eviction protections in Ohio begin to expire on \_DATE\_.
+{{% report_intro id="31069" data="/uploads/w18_table.csv" %}}
 
-More detail on eviction protections in Ohio can be found on the COVID-19 Housing Policy Scorecard.{{%/ report_intro %}}
+Eviction filings in Hamilton County, OH (Cincinnati) have fallen sharply since eviction proceedings were suspended across Ohio on DATE. Compared to equivalent periods in previous years (2012–2015), eviction filings were OUTCOME over the last two weeks of March and throughout April. Eviction protections in Ohio begin to expire on DATE.
+
+More detail on eviction protections in Ohio can be found on the COVID-19 Housing Policy Scorecard.
+
+{{%/ report_intro %}}
 
 
 {{% report_chart id="avg" data="/uploads/cincinnati_w18_barchart.csv" %}}
