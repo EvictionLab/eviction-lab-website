@@ -1,162 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
+    <!-- Include the styles for the Netlify CMS UI, after your own styles -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/netlify-cms@^2.9.1/dist/cms.css"
+    />
+  </head>
 
-  <!-- Include the styles for the Netlify CMS UI, after your own styles -->
-  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^2.9.1/dist/cms.css" />
+  <body>
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.9.1/dist/netlify-cms.js"></script>
+    <script>
+      CMS.registerPreviewStyle("/css/lib.min.css");
 
-</head>
-
-<body>
-  <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.9.1/dist/netlify-cms.js"></script>
-  <script>
-    CMS.registerPreviewStyle("/css/lib.min.css");
-
-    CMS.registerEditorComponent({
-      id: "introSection",
-      label: "Intro Section",
-      fields: [
-        {
-          name: 'fips',
-          label: 'FIPS Code',
-          widget: 'string',
-          hint: 'must match what is in the table.csv file'
+      CMS.registerEditorComponent({
+        id: "introSection",
+        label: "Intro Section",
+        fields: [
+          {
+            name: "fips",
+            label: "FIPS Code",
+            widget: "string",
+            hint: "must match what is in the table.csv file",
+          },
+          {
+            name: "data",
+            label: "Table CSV File",
+            widget: "file",
+            hint: "csv file to pull overview stats from",
+          },
+          {
+            name: "body",
+            label: "Section Content",
+            widget: "markdown",
+          },
+        ],
+        pattern: /^{{%\s?report_intro id="(\S*)" data="(\S*)"\s?%}}([\S\s]*?){{%\/\s?report_intro\s?%}}/,
+        fromBlock: function (match) {
+          return {
+            fips: match[1],
+            data: match[2],
+            body: match[3],
+          };
         },
-        {
-          name: 'data',
-          label: 'Table CSV File',
-          widget: 'file',
-          hint: 'csv file to pull overview stats from'
+        toBlock: function (obj) {
+          return (
+            '\n{{% report_intro id="' +
+            obj.fips +
+            '" data="' +
+            obj.data +
+            '" %}}\n\n' +
+            obj.body +
+            "\n\n{{%/ report_intro %}}" +
+            "\n"
+          );
         },
-        {
-          name: 'body',
-          label: 'Section Content',
-          widget: 'markdown'
-        }
-      ],
-      pattern: /^{{%\s?report_intro id="(\S*)" data="(\S*)"\s?%}}([\S\s]*?){{%\/\s?report_intro\s?%}}/,
-      fromBlock: function (match) {
-        return {
-          fips: match[1],
-          data: match[2],
-          body: match[3]
-        };
-      },
-      toBlock: function (obj) {
-        return '\n{{% report_intro id="' + obj.fips + '" data="' + obj.data + '" %}}' + obj.body + '{{%/ report_intro %}}' + '\n';
-      },
-      toPreview: function (obj) {
-        return obj.body;
-      }
-    });
-
-    CMS.registerEditorComponent({
-      id: "mapSection",
-      label: "Map Section",
-      fields: [
-        {
-          name: 'shapes',
-          label: 'GeoJSON Shapes',
-          widget: 'file',
+        toPreview: function (obj) {
+          return obj.body;
         },
-        {
-          name: 'data',
-          label: 'Map CSV File',
-          widget: 'file'
+      });
+
+      CMS.registerEditorComponent({
+        id: "mapSection",
+        label: "Map Section",
+        fields: [
+          {
+            name: "shapes",
+            label: "GeoJSON Shapes",
+            widget: "file",
+          },
+          {
+            name: "data",
+            label: "Map CSV File",
+            widget: "file",
+          },
+          {
+            name: "md",
+            label: "Section Content",
+            widget: "markdown",
+          },
+        ],
+        pattern: /^{{%\s?report_map[\s]+shapes="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_map[\s]+%}}/,
+        fromBlock: function (match) {
+          return {
+            shapes: match[1],
+            data: match[2],
+            md: match[3],
+          };
         },
-        {
-          name: 'md',
-          label: 'Section Content',
-          widget: 'markdown'
-        }
-      ],
-      pattern: /^{{%\s?report_map[\s]+shapes="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_map[\s]+%}}/,
-      fromBlock: function (match) {
-        return {
-          shapes: match[1],
-          data: match[2],
-          md: match[3]
-        };
-      },
-      toBlock: function (obj) {
-        return '{{% report_map shapes="' + obj.shapes + '" data="' + obj.data + '" %}}' + obj.md + '{{%/ report_map %}}';
-      },
-      toPreview: function (obj) {
-        return obj.md;
-      }
-    });
-
-    CMS.registerEditorComponent({
-      id: "chartSection",
-      label: "Chart Section",
-      fields: [
-        {
-          name: 'id',
-          label: 'Chart Type',
-          widget: 'select',
-          options: [
-            { label: 'Overall Average', value: 'avg' },
-            { label: 'By Neighborhood Demographics', value: 'race' }
-          ]
+        toBlock: function (obj) {
+          return (
+            '\n{{% report_map shapes="' +
+            obj.shapes +
+            '" data="' +
+            obj.data +
+            '" %}}\n\n' +
+            obj.md +
+            "\n\n{{%/ report_map %}}\n"
+          );
         },
-        {
-          name: 'data',
-          label: 'CSV File',
-          widget: 'file'
+        toPreview: function (obj) {
+          return obj.md;
         },
-        {
-          name: 'body',
-          label: 'Section Content',
-          widget: 'markdown'
-        }
-      ],
-      pattern: /^{{%[\s]+report_chart[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_chart[\s]+%}}/,
-      fromBlock: function (match) {
-        return {
-          id: match[1],
-          data: match[2],
-          body: match[3]
-        };
-      },
-      toBlock: function (obj) {
-        return '{{% report_chart id="' + obj.id + '" data="' + obj.data + '" %}}' + obj.body + '{{%/ report_chart %}}';
-      },
-      toPreview: function (obj) {
-        return obj.body;
-      }
-    });
+      });
 
-    CMS.registerEditorComponent({
-      id: "statsTable",
-      label: "City Stats Table",
-      fields: [
-        {
-          name: 'data',
-          label: 'CSV File',
-          widget: 'file'
-        }
-      ],
-      pattern: /^{{%[\s]+report_table[\s]+data="(\S*)"[\s]+%}}/,
-      fromBlock: function (match) {
-        return {
-          data: match[1],
-        };
-      },
-      toBlock: function (obj) {
-        return '{{% report_table data="' + obj.data + '" %}}';
-      },
-      toPreview: function (obj) {
-        return obj.body;
-      }
-    });
+      CMS.registerEditorComponent({
+        id: "chartSection",
+        label: "Chart Section",
+        fields: [
+          {
+            name: "id",
+            label: "Chart Type",
+            widget: "select",
+            options: [
+              { label: "Overall Average", value: "avg" },
+              { label: "By Neighborhood Demographics", value: "race" },
+            ],
+          },
+          {
+            name: "data",
+            label: "CSV File",
+            widget: "file",
+          },
+          {
+            name: "body",
+            label: "Section Content",
+            widget: "markdown",
+          },
+        ],
+        pattern: /^{{%[\s]+report_chart[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_chart[\s]+%}}/,
+        fromBlock: function (match) {
+          return {
+            id: match[1],
+            data: match[2],
+            body: match[3],
+          };
+        },
+        toBlock: function (obj) {
+          return (
+            '\n{{% report_chart id="' +
+            obj.id +
+            '" data="' +
+            obj.data +
+            '" %}}\n\n' +
+            obj.body +
+            "\n\n{{%/ report_chart %}}\n"
+          );
+        },
+        toPreview: function (obj) {
+          return obj.body;
+        },
+      });
 
-
-  </script>
-</body>
-
+      CMS.registerEditorComponent({
+        id: "statsTable",
+        label: "City Stats Table",
+        fields: [
+          {
+            name: "data",
+            label: "CSV File",
+            widget: "file",
+          },
+        ],
+        pattern: /^{{%[\s]+report_table[\s]+data="(\S*)"[\s]+%}}/,
+        fromBlock: function (match) {
+          return {
+            data: match[1],
+          };
+        },
+        toBlock: function (obj) {
+          return '{{% report_table data="' + obj.data + '" %}}';
+        },
+        toPreview: function (obj) {
+          return obj.body;
+        },
+      });
+    </script>
+  </body>
 </html>
