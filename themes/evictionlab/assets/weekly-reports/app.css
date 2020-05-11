@@ -105,6 +105,7 @@ body {
 
 .links.links--images a {
   margin: 16px;
+  width: 192px;
 }
 
 .links.links--images img {
