@@ -1,13 +1,13 @@
 ---
-h1: Cincinnati, OH
-slug: cincinnati-oh
-title: Albuquerque, New Mexico | Weekly Eviction Reports | Eviction Lab
 collection: true
 draft: true
+title: Cincinnati, OH | Weekly Eviction Reports | Eviction Lab
+h1: Cincinnati, OH
+slug: cincinnati-oh
 date: 2020-05-11T17:16:32.083Z
 ---
 
-{{% report_intro id="39061" data="/uploads/w18_table.csv" %}}Cincinnati intro content{{%/ report_intro %}}
+{{% report_intro id="31069" data="/uploads/w18_table.csv" %}}Cincinnati intro content{{%/ report_intro %}}
 
 
 {{% report_chart id="avg" data="/uploads/cincinnati_w18_barchart.csv" %}}Cincinnati Bar Graph 1{{%/ report_chart %}}
