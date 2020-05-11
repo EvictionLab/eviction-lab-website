@@ -8,6 +8,12 @@ cascade:
   fbImage: /images/og/eviction-lab-about-us-fb.jpg
   twImage: /images/og/eviction-lab-about-us-tw.jpg
   socialDescription: We’ve built the first nationwide database of evictions.
+fundedby:
+  heading: The Eviction Tracking System is funded by
+  links:
+    - url: https://c3dti.ai/
+      logo: /uploads/c3-logo.svg
+      alt: C3.ai Digital Transformation Institute
 ---
 
 The Eviction Tracking System (ETS) is a platform for monitoring and providing weekly updates on the number of eviction cases being filed in a set of cities across the United States. We built this system during the current pandemic out of concern that a growing number of families may face the threat of eviction. The ETS provides a data infrastructure for tracking eviction trends that previously did not exist. Scroll down to see the cities in which we are operating and learn more about the project.
@@ -33,7 +39,3 @@ We welcome feedback, as well as partnerships with states and localities who wish
 - To receive updates, add your email below.
 - For media inquiries, email [press@evictionlab.org](mailto:press@evictionlab.org)
 - To provide tips and feedback on the ETS, email [info@evictionlab.org](mailto:info@evictionlab.org).
-
-### The Eviction Tracking System is funded by
-
-<a href="https://c3dti.ai/" target="_blank">![C3.ai Digital Transformation Institute](/uploads/c3-logo.svg)</a>
