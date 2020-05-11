@@ -1,7 +1,12 @@
+# backend:
+#   name: github
+#   repo: EvictionLab/eviction-lab-website
+#   branch: cms-dev
+
 backend:
-  name: github
-  repo: EvictionLab/eviction-lab-website
-  branch: cms-dev
+  name: git-gateway
+local_backend: true
+
 media_folder: "static/uploads" # Folder where user uploaded files should go
 publish_mode: editorial_workflow
 public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
@@ -26,6 +31,7 @@ collections:
           - label: "Meta"
             name: "cascade"
             widget: "object"
+            collapsed: true
             fields:
               - {
                   label: "Browser Window Title",
@@ -57,10 +63,27 @@ collections:
                   widget: "image",
                   hint: "Image used when page is shared on Twitter",
                 }
-
           - { label: Heading, name: h1, widget: string }
           - { label: "Updated Date", name: "date", widget: "date" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Funded By"
+            name: "fundedby"
+            widget: "object"
+            fields:
+              - { label: Heading, name: heading, widget: string, default: "" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                summary: '{{fields.alt}}'
+                fields:
+                  - {
+                      label: "URL",
+                      name: "url",
+                      widget: "string",
+                      hint: "e.g. https://website.com/",
+                    }
+                  - { label: "Logo", name: "logo", widget: "image" }
+                  - { label: "Alternate Text", name: "alt", widget: "string" }
 
   - name: "weekly-reports"
     identifier_field: "h1"

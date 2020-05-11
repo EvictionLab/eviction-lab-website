@@ -10,7 +10,20 @@
 <div class="layout layout--full">
   <div class="column column--content">
     <p class="date">Last Updated: {{ .Date.Format "January 2, 2006" }}</p>
+    
     {{ .Content }}
+
+    {{ with .Params.fundedby }}
+      <h3>{{ .heading }}</h3>
+      <div class="links links--images">
+        {{ range .links }}
+          {{ $url := (index . "url") }}
+          <a href="{{ .url }}" target="_blank">
+            <img src="{{ .logo }}" alt="{{ .alt }}" />
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
   </div>
 </div>
 
