@@ -1799,7 +1799,7 @@ Elab.Table = (function (Elab) {
         bodyEl.append(html);
       });
       $(el).next().html(getFootnoteHtml(data[0]));
-      $(el).tablesorter();
+      $(el).tablesorter({ sortList: [[0,0]] });
       $(el)
         .find(".table__row")
         .click(function () {
