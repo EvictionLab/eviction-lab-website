@@ -4,10 +4,10 @@ slug: houston-tx
 title: Houston, Texas | Weekly Eviction Reports | Eviction Lab
 collection: true
 draft: true
-date: 2020-05-08T06:00:00.000Z
+date: 2020-05-13
 ---
 
-{{% report_intro id="48201" data="/uploads/w18_table.csv" %}}
+{{% report_intro id="48201" data="/uploads/w19_table.csv" %}}
 
 Eviction filings in Harris County, TX (Houston) have fallen sharply since eviction proceedings were suspended across Texas on March 19. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March and throughout April. Eviction protections in Texas begin to expire on May 18.
 
@@ -15,20 +15,19 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 {{%/ report_intro %}}
 
-
-{{% report_chart id="avg" data="/uploads/harris_w18_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/harris_w19_barchart.csv" %}}
 
 # Changes in eviction filings
 
 Eviction filings in Houston were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April were well below average. In a normal April, more than 3,000 evictions are filed in Houston. This year, fewer than 500 have been filed.
 
-  1. Average eviction filings taken from Eviction Lab data for 2012–2015  
-  2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-  3. Partial filings for April, as of April 25
+1. Average eviction filings taken from Eviction Lab data for 2012–2015
+2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
+3. Partial filings for May, as of May 9
 
 {{%/ report_chart %}}
 
-{{% report_map shapes="/uploads/harris_shapes.json" data="/uploads/harris_w18_map.csv" %}}
+{{% report_map shapes="/uploads/harris_shapes.json" data="/uploads/harris_w19_map.csv" %}}
 
 # The geography of changes in eviction filings
 
@@ -39,7 +38,7 @@ Houston is divided into 786 Census Tracts. Here we map, in each of those Tracts,
 
 {{%/ report_map %}}
 
-{{% report_chart id="race" data="/uploads/harris_w18_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/harris_w19_linechart.csv" %}}
 
 # Eviction filings by neighborhood demographics
 
@@ -47,7 +46,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2015. This allows us to see, for example, that filings in majority-White neighborhoods were higher than average in the first three months of 2020.
 
-  1. Average eviction filings taken from Eviction Lab data for 2012–2015
-  2. Partial filings for April, as of April 25
-  
+1. Average eviction filings taken from Eviction Lab data for 2012–2015
+2. Partial filings for May, as of May 9
+
 {{%/ report_chart %}}

@@ -101,6 +101,8 @@ Elab.Utils = (function (Elab) {
     }
   };
 
+  var formatDate = d3.timeFormat("%B %e");
+
   return {
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
@@ -108,6 +110,7 @@ Elab.Utils = (function (Elab) {
     createTwitterLink: createTwitterLink,
     createFacebookLink: createFacebookLink,
     formatLabel: formatLabel,
+    formatDate: formatDate,
   };
 })(Elab);
 
@@ -1680,6 +1683,11 @@ Elab.Table = (function (Elab) {
           {
             id: d.id,
             name: d.name,
+            start:
+              d["start_moratorium_date"] &&
+              parseDate(d["start_moratorium_date"]),
+            end:
+              d["end_moratorium_date"] && parseDate(d["end_moratorium_date"]),
           },
           stats
         );
@@ -1697,6 +1705,17 @@ Elab.Table = (function (Elab) {
     filingsEl.innerHTML = data[type].filings;
     diffEl.innerHTML = change.value;
     diffEl.className = diffEl.className + " arrow " + change.direction;
+  }
+
+  function renderMoratoriumRow(data) {
+    var parentEl = document.querySelector(".stats-item--moratorium");
+    var valueEl = parentEl.querySelector(".stats-item__value");
+    if (!parentEl || !valueEl) return;
+    var startDate = Elab.Utils.formatDate(data.start);
+    var endDate = data.end
+      ? Elab.Utils.formatDate(data.end)
+      : "End Date Unknown";
+    valueEl.innerHTML = startDate + " - " + endDate;
   }
 
   function getRowHtml(data) {
@@ -1765,6 +1784,7 @@ Elab.Table = (function (Elab) {
       if (locationData) {
         renderStatRow(locationData, "week");
         renderStatRow(locationData, "month");
+        renderMoratoriumRow(locationData);
       }
     });
   }
