@@ -4,7 +4,7 @@ slug: richmond-va
 title: Richmond, Virginia | Weekly Eviction Reports | Eviction Lab
 collection: true
 draft: true
-date: 2020-05-08T06:00:00.000Z
+date: 2020-05-13
 ---
 
 {{% report_intro id="51760" data="/uploads/w19_table.csv" %}}
@@ -23,7 +23,7 @@ Eviction filings in Richmond were higher than average in January and February of
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-3. Partial filings for April, as of April 25
+3. Partial filings for May, as of May 9
 
 {{%/ report_chart %}}
 
@@ -47,6 +47,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Partial filings for April, as of April 25
+2. Partial filings for May, as of May 9
 
 {{%/ report_chart %}}
