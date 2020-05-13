@@ -1,25 +1,25 @@
 ---
+h1: Boston, Massachusetts
+slug: boston-ma
+title: Boston, Massachusetts | Weekly Eviction Reports | Eviction Lab
 collection: true
 draft: true
-title: Cincinnati, OH | Weekly Eviction Reports | Eviction Lab
-h1: Cincinnati, Ohio
-slug: cincinnati-oh
 date: 2020-05-13
 ---
 
-{{% report_intro id="31069" data="/uploads/w19_table.csv" %}}
+{{% report_intro id="25025" data="/uploads/w19_table.csv" %}}
 
-Eviction filings in Hamilton County, OH (Cincinnati) have fallen sharply since eviction proceedings were suspended across Ohio on DATE. Compared to equivalent periods in previous years (2012–2015), eviction filings were OUTCOME over the last two weeks of March and throughout April. Eviction protections in Ohio begin to expire on DATE.
+Eviction filings in Boston, MA have fallen sharply since eviction proceedings were suspended across Massachusetts on March 19. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March and throughout April. Eviction protections in Massachusetts begin to expire on ...
 
-More detail on eviction protections in Ohio can be found on the COVID-19 Housing Policy Scorecard.
+More detail on eviction protections in Massachusetts can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ma/).
 
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/uploads/cincinnati_w19_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/boston_w19_barchart.csv" %}}
 
 # Changes in eviction filings
 
-Eviction filings in PLACE were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April were well below average.
+Eviction filings in Boston were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
@@ -27,18 +27,18 @@ Eviction filings in PLACE were higher than average in January and February of th
 
 {{%/ report_chart %}}
 
-{{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_w19_map.csv" %}}
+{{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_w19_map.csv" %}}
 
 # The geography of changes in eviction filings
 
-PLACE is divided into NUM Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> As of the end of April, we see steep declines in eviction filings across the city.
+Boston is divided into 312 Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> As of the end of April, we see steep declines in eviction filings across the city.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
 {{%/ report_map %}}
 
-{{% report_chart id="race" data="/uploads/cincinnati_w19_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/boston_w19_linechart.csv" %}}
 
 # Eviction filings by neighborhood demographics
 

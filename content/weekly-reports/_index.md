@@ -18,7 +18,7 @@ fundedby:
 
 The Eviction Tracking System (ETS) is a platform for monitoring and providing weekly updates on the number of eviction cases being filed in a set of cities across the United States. We built this system during the current pandemic out of concern that a growing number of families may face the threat of eviction. The ETS provides a data infrastructure for tracking eviction trends that previously did not exist. Scroll down to see the cities in which we are operating and learn more about the project.
 
-{{% report_table data="/uploads/w18_table.csv" %}}
+{{% report_table data="/uploads/w19_table.csv" %}}
 
 Over 1.6 million American households are evicted from their homes each year, and the COVID-19 pandemic has the potential to severely worsen this ongoing housing crisis. Unprecedented spikes in unemployment leave an increasing number of households unable to pay rent. As a result, the nation’s most severe public health emergency in a century may cause large spikes in eviction, displacement, and homelessness, which in turn, will only deepen the current public health challenge.
 

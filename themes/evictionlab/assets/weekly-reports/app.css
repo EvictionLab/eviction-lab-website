@@ -113,7 +113,7 @@ body {
   width: 100%;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .links.links--images {
     flex-direction: row;
     flex-wrap: wrap;
@@ -125,7 +125,6 @@ body {
     margin: 0;
     padding: 16px;
   }
-
 }
 
 .breadcrumbs a {
@@ -179,7 +178,7 @@ body {
   margin-bottom: 64px;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .layout {
     padding: 24px;
   }
@@ -696,7 +695,7 @@ body {
   margin: auto;
   margin-bottom: 16px;
   flex-wrap: wrap;
-  max-width: 252px;
+  max-width: 296px;
 }
 
 .section .section__content {
@@ -882,7 +881,7 @@ body {
 }
 
 .section .legend-item {
-  min-width: 120px;
+  min-width: 140px;
 }
 
 .legend-choropleth {

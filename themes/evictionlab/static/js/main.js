@@ -226,9 +226,10 @@ $(document).ready(function () {
     if (height > 1)
       el.css('height', height + 'px')
   }
-
-  window.addEventListener("resize", setSplashHeight);
-  setSplashHeight();
+  if (el.length) {
+    window.addEventListener("resize", setSplashHeight);
+    setSplashHeight();
+  }
 });
 
 /**
