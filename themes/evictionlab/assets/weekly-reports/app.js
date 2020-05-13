@@ -1792,7 +1792,6 @@ Elab.Table = (function (Elab) {
   function createIndexTable(el, dataUrl) {
     var bodyEl = $(el).find(".table__body");
     loadTableData(dataUrl, function (data) {
-      console.log(data);
       bodyEl.html(""); // clear loading
       var locations = data;
       locations.forEach(function (city) {

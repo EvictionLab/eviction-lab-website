@@ -695,7 +695,7 @@ body {
   margin: auto;
   margin-bottom: 16px;
   flex-wrap: wrap;
-  max-width: 252px;
+  max-width: 296px;
 }
 
 .section .section__content {
@@ -881,7 +881,7 @@ body {
 }
 
 .section .legend-item {
-  min-width: 120px;
+  min-width: 140px;
 }
 
 .legend-choropleth {
