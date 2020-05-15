@@ -1292,27 +1292,32 @@ Elab.Chart = (function (Elab) {
   function createChart(elementId, config, callback) {
     // Load the data and draw a chart
     d3.csv(config.url, function (data) {
-      if (data) {
-        var root;
-
-        (function () {
-          root = d3.select(elementId).append("g");
-
-          // create chart
-
-          var chart = Chart(data, root, config);
-
-          // resize the chart when the window size changes
-          window.addEventListener("resize", function () {
-            chart.render();
-          });
-
-          // send chart to callback
-          if (callback) callback(chart);
-        })();
-      } else {
+      if (!data) {
         if (callback) callback(null, "error loading data");
+        console.error('unable to load chart data from ' + config.url)
+        d3.select(elementId)
+          .attr('style', 'border: 2px solid #f00')
+          .append("text")
+            .attr('x', 24)
+            .attr('y', 32)
+            .attr('style', 'font-size: 16px')
+            .attr('fill', '#f00')
+            .html("unable to load data for chart")
+        return;
       }
+      var root;
+      root = d3.select(elementId).append("g");
+
+      // create chart
+      var chart = Chart(data, root, config);
+
+      // resize the chart when the window size changes
+      window.addEventListener("resize", function () {
+        chart.render();
+      });
+
+      // send chart to callback
+      if (callback) callback(chart);
     });
   }
 
@@ -1594,6 +1599,10 @@ Elab.Map = (function (Elab) {
      */
     function handleLoad() {
       d3.json(geojsonUrl, function (err, json) {
+        if (err) {
+          console.error('unable to load geojson from ' + geojsonUrl)
+          return;
+        }
         var geojson = json;
         var bbox = geojson.bbox;
         var padding = 0;
@@ -1603,6 +1612,10 @@ Elab.Map = (function (Elab) {
         ];
         map.fitBounds(bounds, { padding: 16 });
         d3.csv(dataUrl, function (data) {
+          if (!data) {
+            console.error('unable to load data from ' + dataUrl)
+            return;
+          }
           var mapDate = data[0]["month_date"];
           if (mapDate) {
             renderMapDate(mapDate);
@@ -1646,14 +1659,19 @@ Elab.Map = (function (Elab) {
 /**
  * TABLE MODULE
  * ---
- * Public
- *  - createIntro()
- *  - createTable()
+ * Public Methods
+ *  - createIntroTable()
+ *  - createIndexTable()
  */
 
 Elab.Table = (function (Elab) {
   var formatDiff = d3.format(",.0%");
 
+  /**
+   * Gets the % change of a value relative to 1
+   * (e.g. getPercentChange(1.23) => { direction: "up", value: "23%" })
+   * @param {*} diff 
+   */
   function getPercentChange(diff) {
     var change = diff - 1;
     var dir = change === 0 ? "mid" : change < 0 ? "down" : "up";
@@ -1663,8 +1681,15 @@ Elab.Table = (function (Elab) {
     };
   }
 
+  /**
+   * Loads and parses the CSV table
+   */
   function loadTableData(dataUrl, callback) {
     d3.csv(dataUrl, function (data) {
+      if (!data) {
+        console.error('unable to load data for table from ' + dataUrl)
+        return;
+      }
       var parseDate = d3.timeParse("%m/%d/%Y");
       var parsedData = data.map(function (d) {
         var stats = ["week", "month", "cumulative"].reduce(function (
@@ -1696,21 +1721,39 @@ Elab.Table = (function (Elab) {
     });
   }
 
+  /**
+   * Renders the a stat cell in the intro table
+   * @param {*} data 
+   * @param {*} type 
+   */
   function renderStatRow(data, type) {
+
     var parentEl = document.querySelector(".stats-item--" + type);
     var filingsEl = parentEl.querySelector(".stats-item__count");
     var diffEl = parentEl.querySelector(".stats-item__diff");
     if (!parentEl || !filingsEl || !diffEl) return;
+    if (!data) {
+      filingsEl.innerHTML = 'Unknown';
+      return;
+    }
     var change = getPercentChange(data[type].diff);
     filingsEl.innerHTML = data[type].filings;
     diffEl.innerHTML = change.value;
     diffEl.className = diffEl.className + " arrow " + change.direction;
   }
 
+  /**
+   * Renders the moratorium dates in the intro table
+   * @param {*} data 
+   */
   function renderMoratoriumRow(data) {
     var parentEl = document.querySelector(".stats-item--moratorium");
     var valueEl = parentEl.querySelector(".stats-item__value");
     if (!parentEl || !valueEl) return;
+    if (!data || (!data.start && !data.end)) {
+      valueEl.innerHTML = 'Unknown';
+      return;
+    }
     var startDate = Elab.Utils.formatDate(data.start);
     var endDate = data.end
       ? Elab.Utils.formatDate(data.end)
@@ -1718,6 +1761,10 @@ Elab.Table = (function (Elab) {
     valueEl.innerHTML = startDate + " - " + endDate;
   }
 
+  /**
+   * Returns the HTML for a row in the index table
+   * @param {*} data 
+   */
   function getRowHtml(data) {
     var weekChange = getPercentChange(data.week.diff);
     var monthChange = getPercentChange(data.month.diff);
@@ -1759,6 +1806,10 @@ Elab.Table = (function (Elab) {
     return html;
   }
 
+  /**
+   * Gets the HTML for the footnote on the index table
+   * @param {*} data 
+   */
   function getFootnoteHtml(data) {
     var dateFormat = d3.timeFormat("%B %d, %Y");
     var html = [];
@@ -1776,19 +1827,30 @@ Elab.Table = (function (Elab) {
     return html.join("<br />");
   }
 
+  /**
+   * Creates the intro table
+   * @param {*} fips 
+   * @param {*} dataUrl 
+   */
   function createIntroTable(fips, dataUrl) {
     loadTableData(dataUrl, function (data) {
       var locationData = data.find(function (d) {
         return d.id === fips;
       });
-      if (locationData) {
-        renderStatRow(locationData, "week");
-        renderStatRow(locationData, "month");
-        renderMoratoriumRow(locationData);
+      if (!locationData) {
+        console.error('error retrieving data from ' + dataUrl + ' for id ' + fips)
       }
+      renderStatRow(locationData, "week");
+      renderStatRow(locationData, "month");
+      renderMoratoriumRow(locationData);
     });
   }
 
+  /**
+   * Creates the index table
+   * @param {*} el 
+   * @param {*} dataUrl 
+   */
   function createIndexTable(el, dataUrl) {
     var bodyEl = $(el).find(".table__body");
     loadTableData(dataUrl, function (data) {
