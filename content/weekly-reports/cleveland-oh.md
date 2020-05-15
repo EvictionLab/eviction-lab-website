@@ -1,10 +1,10 @@
 ---
-h1: Cleveland, Texas
-slug: cleveland-oh
-title: Cleveland Florida | Weekly Eviction Reports | Eviction Lab
 collection: true
 draft: true
-date: 2020-05-13
+title: Cleveland Ohio | Weekly Eviction Reports | Eviction Lab
+h1: Cleveland, Ohio
+slug: cleveland-oh
+date: 2020-05-13T00:00:00.000Z
 ---
 
 {{% report_intro id="" data="/uploads/w19_table.csv" %}}
