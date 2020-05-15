@@ -47,6 +47,11 @@ Alternatively, you can also publish a page by:
 
 Once you have published a page it will trigger a build of the staging site. This usually takes a couple minutes to complete, and when finished you will see your changes on https://staging.evictionlab.org/
 
+After this is complete, your pages will go live on th evictionlab.org website by:
+
+- waiting until the next scheduled publish of the site occurs (every 12 hours, 6am / 6pm EST)
+- requesting the Hyperobjekt team force an update
+
 ## Table, Chart, and Map Data
 
 The tables, charts, and maps used on the Eviction Tracking System are built from CSV files. You can upload CSV files in the "Media" section of the content management system and then specify which file to use on the individual pages.
