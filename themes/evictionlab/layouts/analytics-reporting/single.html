@@ -1,0 +1,31 @@
+{{ partial "header" . }}
+
+
+<div class="breadcrumbs center-page-wrapper">
+    <div class="center-page">
+
+        <a href="{{ .Site.BaseURL }}{{ .Section }}">
+          <span class="dim">Analytics Reporting</span>
+        </a>
+
+          <i class="fa fa-chevron-right"></i>
+       
+           
+              <span class="dim">{{ .Title }}</span>
+          
+
+    </div>
+  </div>
+
+
+
+<div class="analytics-reporting">
+
+        <div class="row mx-0">  
+        <div class="col-12 col-md-10 col-xl-8 mx-auto mt-6 mb-8">
+            {{ .Content | safeHTML }}
+        </div>
+    </div>  
+</div>  
+
+{{ partial "footer" . }}

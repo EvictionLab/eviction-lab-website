@@ -1,0 +1,39 @@
+{{ partial "header" . }}
+
+<div class="graphic-header analytics-hero center-page-wrapper">
+    <div class="center-page">
+      <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
+      <div class="underbar"></div>
+    </div>
+  </div>
+
+<div class="analytics-reporting">
+    <div class="row mx-0">      
+        <div class="col-12 col-md-8 col-xl-6  mx-auto mb-8">
+            <div class="bordertop"></div>
+            <h3 class="d-block w-100 pt-1 mb-4">ANALYTICS DASHBOARDS</h3>
+            {{ .Content | safeHTML }}
+            <ul>
+            {{ range (where .Site.RegularPages "Params.childof" ("meta-analytics")) }}
+           
+              <li>  <a class="" href="{{ .Permalink }}">{{ .Title }}</a></li>
+      
+            {{ end }}
+                <li><a href="/media-map">Media Map</a></li>
+            </ul>
+
+            <div class="bordertop"></div>
+            <h3 class="d-block w-100 pt-1 mb-4">MONTHLY REPORTS</h3>
+            {{ .Content | safeHTML }}
+            <ul>
+            {{ range (where .Site.RegularPages "Params.childof" ("analytics")) }}
+           
+              <li>  <a class="" href="{{ .Permalink }}">{{ .Title }}</a></li>
+      
+            {{ end }}
+            </ul>
+        </div>
+    </div>  
+</div>  
+
+{{ partial "footer" . }}

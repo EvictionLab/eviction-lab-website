@@ -21,3 +21,54 @@
         }
     }
 }
+
+
+.analytics-hero {
+    background: $color2;
+    background: rgb(44,48,75);
+    background: linear-gradient(0deg, rgba(44,48,75,1) 0%, rgba(67,72,120,1) 100%);
+}
+.page-type-analytics-reporting {
+    .breadcrumbs {
+        background-color: $color2;
+    }
+    
+}
+.analytics-reporting {
+    iframe {
+        @include media-breakpoint-up(md) {
+            max-width: 100%;
+        }
+    }
+    ul li {
+        a {
+            color: $color1;
+        }
+        list-style: disc;
+        margin-left: 1.6rem;
+        @include for-phone-only {
+          @include defaultFont(1.4rem); 
+          line-height: 2rem;
+          letter-spacing: 0px;
+          margin-bottom: 1.6rem;
+        }
+        @include for-tablet-portrait-and-landscape {
+          @include defaultFont(1.6rem); 
+          line-height: 2.2rem;
+          letter-spacing: 0px;
+          margin-bottom: 1.6rem;
+        }
+        @include sm-thru-med-desktop {
+          @include defaultFont(1.6rem); 
+          line-height: 2.2rem;
+          letter-spacing: 0px;
+          margin-bottom: 1.6rem;  
+        }
+        @include for-midsize-desktop-up {
+          @include defaultFont(1.8rem); 
+          line-height: 2.8rem;
+          letter-spacing: 0px;
+          margin-bottom: 1.6rem;
+        }
+      }
+}
