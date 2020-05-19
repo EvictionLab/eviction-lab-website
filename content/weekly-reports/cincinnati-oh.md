@@ -11,10 +11,9 @@ date: 2020-05-20T00:00:00.000Z
 
 The state of Ohio has not put a general eviction moratorium in place, nor has Hamilton County (Cincinnati) instituted a freeze on filings. Nonetheless, eviction filings have fallen in Cincinnati since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and are well below average in May.
 
-More detail on eviction protections in Ohio can be found on the COVID-19 Housing Policy Scorecard.
+More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
 
 {{%/ report_intro %}}
-
 
 
 {{% report_chart id="avg" data="/uploads/cincinnati_barchart.csv" %}}
