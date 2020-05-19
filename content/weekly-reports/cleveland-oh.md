@@ -7,15 +7,23 @@ slug: cleveland-oh
 date: 2020-05-13T00:00:00.000Z
 ---
 
-{{% report_intro id="" data="/uploads/w19_table.csv" %}}
+{{% report_intro id="39035" data="/uploads/table.csv" %}}
+
+
 
 Eviction filings in ... have fallen sharply since eviction proceedings were suspended. Compared to equivalent periods in previous years (2012–2015), eviction filings were ... over the last two weeks of March and throughout April. Eviction protections in ... begin to expire on ...
 
 More detail on eviction protections in Massachusetts can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
 
+
+
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/uploads/cleveland_chart1.csv" %}}
+
+
+{{% report_chart id="avg" data="/uploads/cleveland_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -25,9 +33,15 @@ Eviction filings in Boston were higher than average in January and February of t
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for May, as of May 9
 
+
+
 {{%/ report_chart %}}
 
+
+
 {{% report_map shapes="/uploads/cleveland_shapes.json" data="/uploads/cleveland_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -36,9 +50,15 @@ Boston is divided into 312 Census Tracts. Here we map, in each of those Tracts, 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
-{{% report_chart id="race" data="/uploads/cleveland_chart2.csv" %}}
+
+
+{{% report_chart id="race" data="/uploads/cleveland_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -48,5 +68,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Partial filings for May, as of May 9
+
+
 
 {{%/ report_chart %}}
