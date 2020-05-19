@@ -17,3 +17,5 @@ Disallow: /rosemary
 Disallow: /destiny
 Disallow: /epidemic
 Disallow: /what-home-means
+Disallow: /analytics-reporting
+Disallow: /analytics-reporting/
