@@ -15,7 +15,7 @@ fundedby:
       logo: /uploads/c3-logo.svg
       alt: C3.ai Digital Transformation Institute
 ---
-The Eviction Tracking System (ETS) is a platform for monitoring and providing weekly updates on the number of eviction cases being filed in a set of cities across the United States. We built this system during the current pandemic out of concern that a growing number of families may face the threat of eviction. The ETS provides a data infrastructure for tracking eviction trends that previously did not exist. Scroll down to see the cities in which we are operating and learn more about the project.
+The Eviction Tracking System (ETS) is a platform for monitoring and providing weekly updates on the number of eviction cases being filed in a set of cities across the United States. We built this system during the current pandemic out of concern that a growing number of families may face the threat of eviction. The ETS provides a data infrastructure for tracking eviction trends that previously did not exist. Scroll down to see the cities in which we are operating and learn more about the project. Testing the preview.
 
 {{% report_table data="/uploads/table.csv" %}}
 
