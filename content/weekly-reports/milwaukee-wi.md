@@ -4,10 +4,12 @@ draft: true
 title: Milwaukee, Wisconsin | Weekly Eviction Reports | Eviction Lab
 h1: Milwaukee, Wisconsin
 slug: milwaukee-wi
-date: 2020-05-13T00:00:00.000Z
+date: 2020-05-20T00:00:00.000Z
 ---
 
 {{% report_intro id="55079" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -21,6 +23,8 @@ More detail on eviction protections in Wisconsin can be found on the [COVID-19 H
 
 
 
+
+
 {{%/ report_intro %}}
 
 
@@ -29,7 +33,7 @@ More detail on eviction protections in Wisconsin can be found on the [COVID-19 H
 
 # Changes in eviction filings
 
-Eviction filings in Milwaukee were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March, and filings dried up in April. In a normal April, roughly 900 evictions are filed in Milwaukee. This year, fewer than 20 have been filed.
+Eviction filings in Milwaukee were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March, and filings by and large ceased in April and so far in May. In a normal April, over 1,000 evictions are filed in Milwaukee. This year, only 15 were filed.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
@@ -43,7 +47,7 @@ Eviction filings in Milwaukee were higher than average in January and February o
 
 # The geography of changes in eviction filings
 
-Milwaukee is made up of 298 Census Tracts. In each of those Tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> As of the end of April, we see steep declines in eviction filings across the city.
+Milwaukee is made up of 298 Census Tracts. In each of those Tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
@@ -56,7 +60,7 @@ Milwaukee is made up of 298 Census Tracts. In each of those Tracts, we map evict
 
 # Eviction filings by neighborhood demographics
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. Most evictions in Milwaukee are filed in majority-Black neighborhoods. In March and through April, eviction filings have dropped steeply across all neighborhoods.
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. Most evictions in Milwaukee are filed in majority-Black neighborhoods. Since March, eviction filings have dropped steeply across all neighborhoods.
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016.
 
