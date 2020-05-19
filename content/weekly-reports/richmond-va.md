@@ -1,21 +1,29 @@
 ---
-h1: Richmond, Virginia
-slug: richmond-va
-title: Richmond, Virginia | Weekly Eviction Reports | Eviction Lab
 collection: true
 draft: true
-date: 2020-05-13
+title: Richmond, Virginia | Weekly Eviction Reports | Eviction Lab
+h1: Richmond, Virginia
+slug: richmond-va
+date: 2020-05-13T00:00:00.000Z
 ---
 
-{{% report_intro id="51760" data="/uploads/w19_table.csv" %}}
+{{% report_intro id="51760" data="/uploads/table.csv" %}}
+
+
 
 Eviction filings in Richmond, VA have fallen sharply over the last six weeks. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average over the last two weeks of March and throughout April. Eviction hearings are set to resume in Virginia on May 17.
 
 More detail on eviction protections in Virginia can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/va/).
 
+
+
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/uploads/richmond_w19_barchart.csv" %}}
+
+
+{{% report_chart id="avg" data="/uploads/richmond_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -25,9 +33,15 @@ Eviction filings in Richmond were higher than average in January and February of
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for May, as of May 9
 
+
+
 {{%/ report_chart %}}
 
-{{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_w19_map.csv" %}}
+
+
+{{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -36,9 +50,15 @@ Richmond is divided into 36 zip codes. In each of those zip codes, we map evicti
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
-{{% report_chart id="race" data="/uploads/richmond_w19_linechart.csv" %}}
+
+
+{{% report_chart id="race" data="/uploads/richmond_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -48,5 +68,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Partial filings for May, as of May 9
+
+
 
 {{%/ report_chart %}}
