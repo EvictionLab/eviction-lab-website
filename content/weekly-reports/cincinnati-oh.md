@@ -9,7 +9,7 @@ date: 2020-05-20T00:00:00.000Z
 
 {{% report_intro id="31069" data="/uploads/table.csv" %}}
 
-The state of Ohio has not instituted a general eviction moratorium, nor has Hamilton County (Cincinnati) instituted a freeze on filings. Nonetheless, eviction filings have fallen in Cincinnati since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and are well below average in May.
+The state of Ohio has not put a general eviction moratorium in place, nor has Hamilton County (Cincinnati) instituted a freeze on filings. Nonetheless, eviction filings have fallen in Cincinnati since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and are well below average in May.
 
 More detail on eviction protections in Ohio can be found on the COVID-19 Housing Policy Scorecard.
 
@@ -19,6 +19,8 @@ More detail on eviction protections in Ohio can be found on the COVID-19 Housing
 
 {{% report_chart id="avg" data="/uploads/cincinnati_barchart.csv" %}}
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Cincinnati were almost exactly at typical levels in January and February of this year.<sup>1</sup> Filings began to fall in March, were well below average in April, and remain lower than expected in May.
@@ -27,11 +29,15 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for May, as of May 16
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -40,11 +46,15 @@ Cincinnati is divided into 222 Census Tracts. Here we map, in each of those Trac
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/cincinnati_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -54,5 +64,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Partial filings for May, as of May 16
+
+
 
 {{%/ report_chart %}}
