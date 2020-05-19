@@ -7,7 +7,9 @@ slug: boston-ma
 date: 2020-05-13T00:00:00.000Z
 ---
 
-{{% report_intro id="25025" data="/uploads/w19_table.csv" %}}
+{{% report_intro id="25025" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -17,11 +19,15 @@ More detail on eviction protections in Massachusetts can be found on the [COVID-
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
-{{% report_chart id="avg" data="/uploads/boston_w19_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
+
+
 
 
 
@@ -35,11 +41,15 @@ Eviction filings in Boston were higher than average in January and February of t
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_w19_map.csv" %}}
+{{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_map.csv" %}}
+
+
 
 
 
@@ -52,11 +62,15 @@ Boston is divided into 312 Census Tracts. Here we map, in each of those Tracts, 
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="/uploads/boston_w19_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/boston_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -66,5 +80,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Partial filings for May, as of May 9
+
+
 
 {{%/ report_chart %}}
