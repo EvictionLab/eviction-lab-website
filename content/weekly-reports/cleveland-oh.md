@@ -9,9 +9,13 @@ date: 2020-05-13T00:00:00.000Z
 
 {{% report_intro id="39035" data="/uploads/table.csv" %}}
 
+
+
 Eviction filings in ... have fallen sharply since eviction proceedings were suspended. Compared to equivalent periods in previous years (2012–2016), eviction filings were ... over the last two weeks of March and throughout April. Eviction protections in ... begin to expire on ...
 
 More detail on eviction protections in Massachusetts can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
+
+
 
 {{%/ report_intro %}}
 
@@ -33,6 +37,8 @@ Eviction filings in Boston were higher than average in January and February of t
 
 {{% report_map shapes="/uploads/cleveland_shapes.json" data="/uploads/cleveland_map.csv" %}}
 
+
+
 # The geography of changes in eviction filings
 
 Boston is divided into 312 Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> As of the end of April, we see steep declines in eviction filings across the city.
@@ -40,11 +46,15 @@ Boston is divided into 312 Census Tracts. Here we map, in each of those Tracts, 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/cleveland_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -54,5 +64,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Partial filings for May, as of May 16
+
+
 
 {{%/ report_chart %}}
