@@ -24,7 +24,7 @@ collections:
     preview_path: /{{slug}}
     files:
       - label: "Weekly Reports"
-        name: "weekly-index"
+        name: "weekly-reports"
         file: "content/weekly-reports/_index.md"
         fields:
           - {
@@ -79,7 +79,7 @@ collections:
               - label: "Links"
                 name: "links"
                 widget: "list"
-                summary: '{{fields.alt}}'
+                summary: "{{fields.alt}}"
                 fields:
                   - {
                       label: "URL",
