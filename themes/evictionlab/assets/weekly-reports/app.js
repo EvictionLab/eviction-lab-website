@@ -1294,15 +1294,15 @@ Elab.Chart = (function (Elab) {
     d3.csv(config.url, function (data) {
       if (!data) {
         if (callback) callback(null, "error loading data");
-        console.error('unable to load chart data from ' + config.url)
+        console.error("unable to load chart data from " + config.url);
         d3.select(elementId)
-          .attr('style', 'border: 2px solid #f00')
+          .attr("style", "border: 2px solid #f00")
           .append("text")
-            .attr('x', 24)
-            .attr('y', 32)
-            .attr('style', 'font-size: 16px')
-            .attr('fill', '#f00')
-            .html("unable to load data for chart")
+          .attr("x", 24)
+          .attr("y", 32)
+          .attr("style", "font-size: 16px")
+          .attr("fill", "#f00")
+          .html("unable to load data for chart");
         return;
       }
       var root;
@@ -1383,15 +1383,18 @@ Elab.Map = (function (Elab) {
       };
       return dict;
     }, {});
-    var newFeatures = geojson.features.map(function (feature, i) {
-      feature.id = parseInt(feature.properties["GEOID"]);
-      if (dataDict[feature.properties["GEOID"]])
+    var newFeatures = geojson.features
+      .filter(function (f) {
+        return dataDict[f.properties["GEOID"]];
+      })
+      .map(function (feature, i) {
+        feature.id = parseInt(feature.properties["GEOID"]);
         Object.assign(
           feature.properties,
           dataDict[feature.properties["GEOID"]]
         );
-      return feature;
-    });
+        return feature;
+      });
     return Object.assign(geojson, { features: newFeatures });
   }
 
@@ -1600,7 +1603,7 @@ Elab.Map = (function (Elab) {
     function handleLoad() {
       d3.json(geojsonUrl, function (err, json) {
         if (err) {
-          console.error('unable to load geojson from ' + geojsonUrl)
+          console.error("unable to load geojson from " + geojsonUrl);
           return;
         }
         var geojson = json;
@@ -1613,7 +1616,7 @@ Elab.Map = (function (Elab) {
         map.fitBounds(bounds, { padding: 16 });
         d3.csv(dataUrl, function (data) {
           if (!data) {
-            console.error('unable to load data from ' + dataUrl)
+            console.error("unable to load data from " + dataUrl);
             return;
           }
           var mapDate = data[0]["month_date"];
@@ -1670,7 +1673,7 @@ Elab.Table = (function (Elab) {
   /**
    * Gets the % change of a value relative to 1
    * (e.g. getPercentChange(1.23) => { direction: "up", value: "23%" })
-   * @param {*} diff 
+   * @param {*} diff
    */
   function getPercentChange(diff) {
     var change = diff - 1;
@@ -1687,7 +1690,7 @@ Elab.Table = (function (Elab) {
   function loadTableData(dataUrl, callback) {
     d3.csv(dataUrl, function (data) {
       if (!data) {
-        console.error('unable to load data for table from ' + dataUrl)
+        console.error("unable to load data for table from " + dataUrl);
         return;
       }
       var parseDate = d3.timeParse("%m/%d/%Y");
@@ -1723,17 +1726,16 @@ Elab.Table = (function (Elab) {
 
   /**
    * Renders the a stat cell in the intro table
-   * @param {*} data 
-   * @param {*} type 
+   * @param {*} data
+   * @param {*} type
    */
   function renderStatRow(data, type) {
-
     var parentEl = document.querySelector(".stats-item--" + type);
     var filingsEl = parentEl.querySelector(".stats-item__count");
     var diffEl = parentEl.querySelector(".stats-item__diff");
     if (!parentEl || !filingsEl || !diffEl) return;
     if (!data) {
-      filingsEl.innerHTML = 'Unknown';
+      filingsEl.innerHTML = "Unknown";
       return;
     }
     var change = getPercentChange(data[type].diff);
@@ -1744,14 +1746,14 @@ Elab.Table = (function (Elab) {
 
   /**
    * Renders the moratorium dates in the intro table
-   * @param {*} data 
+   * @param {*} data
    */
   function renderMoratoriumRow(data) {
     var parentEl = document.querySelector(".stats-item--moratorium");
     var valueEl = parentEl.querySelector(".stats-item__value");
     if (!parentEl || !valueEl) return;
     if (!data || (!data.start && !data.end)) {
-      valueEl.innerHTML = 'Unknown';
+      valueEl.innerHTML = "Unknown";
       return;
     }
     var startDate = Elab.Utils.formatDate(data.start);
@@ -1763,7 +1765,7 @@ Elab.Table = (function (Elab) {
 
   /**
    * Returns the HTML for a row in the index table
-   * @param {*} data 
+   * @param {*} data
    */
   function getRowHtml(data) {
     var weekChange = getPercentChange(data.week.diff);
@@ -1808,7 +1810,7 @@ Elab.Table = (function (Elab) {
 
   /**
    * Gets the HTML for the footnote on the index table
-   * @param {*} data 
+   * @param {*} data
    */
   function getFootnoteHtml(data) {
     var dateFormat = d3.timeFormat("%B %d, %Y");
@@ -1829,8 +1831,8 @@ Elab.Table = (function (Elab) {
 
   /**
    * Creates the intro table
-   * @param {*} fips 
-   * @param {*} dataUrl 
+   * @param {*} fips
+   * @param {*} dataUrl
    */
   function createIntroTable(fips, dataUrl) {
     loadTableData(dataUrl, function (data) {
@@ -1838,7 +1840,9 @@ Elab.Table = (function (Elab) {
         return d.id === fips;
       });
       if (!locationData) {
-        console.error('error retrieving data from ' + dataUrl + ' for id ' + fips)
+        console.error(
+          "error retrieving data from " + dataUrl + " for id " + fips
+        );
       }
       renderStatRow(locationData, "week");
       renderStatRow(locationData, "month");
@@ -1848,8 +1852,8 @@ Elab.Table = (function (Elab) {
 
   /**
    * Creates the index table
-   * @param {*} el 
-   * @param {*} dataUrl 
+   * @param {*} el
+   * @param {*} dataUrl
    */
   function createIndexTable(el, dataUrl) {
     var bodyEl = $(el).find(".table__body");
@@ -1861,7 +1865,7 @@ Elab.Table = (function (Elab) {
         bodyEl.append(html);
       });
       $(el).next().html(getFootnoteHtml(data[0]));
-      $(el).tablesorter({ sortList: [[0,0]] });
+      $(el).tablesorter({ sortList: [[0, 0]] });
       $(el)
         .find(".table__row")
         .click(function () {
