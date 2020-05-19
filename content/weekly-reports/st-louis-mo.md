@@ -9,9 +9,13 @@ date: 2020-05-13T00:00:00.000Z
 
 {{% report_intro id="29510" data="/uploads/table.csv" %}}
 
+
+
 Eviction filings in St. Louis have fallen sharply since eviction proceedings were suspended across Missouri on March 19. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average over the last two weeks of March and throughout April. Eviction protections in Texas begin to expire on May 18.
 
 More detail on eviction protections in Missouri can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mo/).
+
+
 
 {{%/ report_intro %}}
 
@@ -19,11 +23,15 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 
 {{% report_chart id="avg" data="/uploads/stlouis_barchart.csv" %}}
 
+
+
 # Changes in eviction filings
 
 St. Louis eviction filings summary.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
+
+
 
 {{%/ report_chart %}}
 
@@ -33,7 +41,7 @@ St. Louis eviction filings summary.
 
 # The geography of changes in eviction filings
 
-St. Louis tract map summary
+St. Louis is made up of 305 Census Tracts. In each of those Tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
@@ -44,6 +52,8 @@ St. Louis tract map summary
 
 {{% report_chart id="race" data="/uploads/stlouis_linechart.csv" %}}
 
+
+
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In January and February, eviction filings were concentrated in neighborhoods in the Latinx and Other/None categories. In March and through April, eviction filings have dropped steeply across all neighborhoods.
@@ -52,5 +62,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Partial filings for May, as of May 16
+
+
 
 {{%/ report_chart %}}
