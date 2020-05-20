@@ -24,6 +24,8 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 Eviction filings in St. Louis were slightly above average in January and February of this year, but began to fall in March. Filings in April and thus far in May have been significantly below average. For example, nearly 1,200 eviction cases are usually filed in April in St. Louis, but this year there were only 125.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
+2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
+3. Partial filings for May, as of May 16
 
 {{%/ report_chart %}}
 
