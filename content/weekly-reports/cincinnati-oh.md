@@ -9,7 +9,7 @@ date: 2020-05-20T00:00:00.000Z
 
 {{% report_intro id="31069" data="/uploads/table.csv" %}}
 
-The state of Ohio has not put a general eviction moratorium in place, though Hamilton County (Cincinnati) instituted a freeze on eviction filings and proceedings between March 19th and May 4th. Eviction filings have fallen in Cincinnati since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and are well below average in May.
+The state of Ohio has not put a general eviction moratorium in place, but courts in Hamilton County (Cincinnati) have suspended proceedings between March 19th and June 1st. Eviction filings are still being accepted, but have fallen in Cincinnati since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and are well below average in May.
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
 
@@ -29,7 +29,7 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-3. Partial filings for May, as of May 16
+3. Partial filings for May, as of May 23
 
 
 
@@ -45,12 +45,24 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 
 
 
+
+
+
+
+
+
 # The geography of changes in eviction filings
 
 Cincinnati is divided into 222 Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over the last four weeks, we see steep declines in eviction filings across most of the city, though also a handful of neighborhoods with above-average filing rates.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
+
+
+
+
+
+
 
 
 
@@ -73,7 +85,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016. 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
-2. Partial filings for May, as of May 16
+2. Partial filings for May, as of May 23
 
 
 
