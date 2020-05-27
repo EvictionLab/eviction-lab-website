@@ -9,19 +9,17 @@ date: 2020-05-20T00:00:00.000Z
 
 {{% report_intro id="31069" data="/uploads/table.csv" %}}
 
-
-
 The state of Ohio has not put a general eviction moratorium in place, though Hamilton County (Cincinnati) instituted a freeze on eviction filings and proceedings between March 19th and May 4th. Eviction filings have fallen in Cincinnati since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and are well below average in May.
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
-
-
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/cincinnati_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -31,11 +29,15 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for May, as of May 23
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_map.csv" %}}
+
+
 
 
 
@@ -56,11 +58,15 @@ Cincinnati is divided into 222 Census Tracts. Here we map, in each of those Trac
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/cincinnati_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -70,5 +76,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Partial filings for May, as of May 23
+
+
 
 {{%/ report_chart %}}
