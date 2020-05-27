@@ -4,7 +4,7 @@ draft: true
 title: Milwaukee, Wisconsin | Weekly Eviction Reports | Eviction Lab
 h1: Milwaukee, Wisconsin
 slug: milwaukee-wi
-date: 2020-05-20T00:00:00.000Z
+date: 2020-05-28T00:00:00.000Z
 ---
 
 {{% report_intro id="55079" data="/uploads/table.csv" %}}
@@ -15,9 +15,13 @@ date: 2020-05-20T00:00:00.000Z
 
 
 
+
+
 Eviction filings in Milwaukee, WI have fallen sharply since Governor Tony Evers blocked the initiation of non-emergency eviction proceedings on March 27. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average in both March and April. Eviction protections in Wisconsin begin to expire on May 27.
 
 More detail on eviction protections in Wisconsin can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/wi/).
+
+
 
 
 
@@ -37,7 +41,7 @@ Eviction filings in Milwaukee were higher than average in January and February o
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-3. Partial filings for May, as of May 16
+3. Partial filings for May, as of May 23
 
 {{%/ report_chart %}}
 
@@ -45,12 +49,16 @@ Eviction filings in Milwaukee were higher than average in January and February o
 
 {{% report_map shapes="/uploads/milwaukee_shapes.json" data="/uploads/milwaukee_map.csv" %}}
 
+
+
 # The geography of changes in eviction filings
 
 Milwaukee is made up of 298 Census Tracts. In each of those Tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
+
+
 
 {{%/ report_map %}}
 
@@ -65,6 +73,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
-2. Partial filings for May, as of May 16
+2. Partial filings for May, as of May 23
 
 {{%/ report_chart %}}
