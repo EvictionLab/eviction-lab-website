@@ -4,7 +4,7 @@ draft: true
 title: Houston, Texas | Weekly Eviction Reports | Eviction Lab
 h1: Houston, Texas
 slug: houston-tx
-date: 2020-05-20T00:00:00.000Z
+date: 2020-05-28T00:00:00.000Z
 ---
 
 {{% report_intro id="48201" data="/uploads/table.csv" %}}
