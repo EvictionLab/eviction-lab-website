@@ -11,9 +11,13 @@ date: 2020-05-20T00:00:00.000Z
 
 
 
+
+
 Eviction filings in Richmond, VA have fallen sharply since mid-March. Compared to equivalent periods in 2016, eviction filings were far below average over the last two weeks of March, throughout April, and into May. Eviction hearings were set to resume in Virginia under some circumstances as early as May 17.
 
 More detail on eviction protections in Virginia can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/va/).
+
+
 
 
 
@@ -29,13 +33,15 @@ Eviction filings in Richmond were near average in January and February of this y
 
 1. Average eviction filings taken from Eviction Lab data for 2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-3. Partial filings for May, as of May 16
+3. Partial filings for May, as of May 23
 
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_map.csv" %}}
+
+
 
 
 
@@ -48,13 +54,13 @@ Richmond is divided into 36 zip codes. In each of those zip codes, we map evicti
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/richmond_linechart.csv" %}}
-
-
 
 # Eviction filings by neighborhood demographics
 
@@ -63,8 +69,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and  filings in 2016.
 
 1. Average eviction filings taken from Eviction Lab data for 2016
-2. Partial filings for May, as of May 16
-
-
+2. Partial filings for May, as of May 23
 
 {{%/ report_chart %}}
