@@ -4,7 +4,7 @@ draft: true
 title: Milwaukee, Wisconsin | Weekly Eviction Reports | Eviction Lab
 h1: Milwaukee, Wisconsin
 slug: milwaukee-wi
-date: 2020-05-20T00:00:00.000Z
+date: 2020-05-28T00:00:00.000Z
 ---
 
 {{% report_intro id="55079" data="/uploads/table.csv" %}}
