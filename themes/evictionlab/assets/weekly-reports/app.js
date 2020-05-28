@@ -603,6 +603,22 @@ Elab.Chart = (function (Elab) {
     });
   }
 
+  function updatePartialFilingsDate(rootEl, data) {
+    const rawLastDay = data['_raw'][data['_raw'].length-1]['month_last_day']
+    if (!rawLastDay) return;
+    const parseDate = d3.timeParse("%d/%m/%Y")
+    const lastDay = parseDate(rawLastDay)
+    // loop through footnotes and find the partial filings entry
+    rootEl.find('.footnote li').each(function(el) {
+      let text = $(this).text()
+      if (text.indexOf("Partial filings for") > -1) {
+        $(this).html(
+          "Partial filings for " + d3.timeFormat("%B")(lastDay) + 
+          ", as of " + d3.timeFormat("%B %e")(lastDay))
+      }
+    })
+  }
+
   function Chart(source, root, config) {
     // options
     config = config || {};
@@ -1281,6 +1297,7 @@ Elab.Chart = (function (Elab) {
       root: root,
       render: render,
       update: update,
+      data: parsedData
     };
   }
 
@@ -1316,6 +1333,8 @@ Elab.Chart = (function (Elab) {
         chart.render();
       });
 
+      
+
       // send chart to callback
       if (callback) callback(chart);
     });
@@ -1338,6 +1357,9 @@ Elab.Chart = (function (Elab) {
     var configs = Elab.Config.getConfig(config.id, config.csv);
     var currentConfig = configs[0];
 
+    
+
+
     // create chart and bind click event to toggle state
     createChart(chartEl, currentConfig, function (chart) {
       toggleEl.on("click", function () {
@@ -1348,6 +1370,7 @@ Elab.Chart = (function (Elab) {
         }
         chart.update(currentConfig);
       });
+      updatePartialFilingsDate(rootEl, chart.data)
     });
   }
 
@@ -1858,14 +1881,21 @@ Elab.Table = (function (Elab) {
   function createIndexTable(el, dataUrl) {
     var bodyEl = $(el).find(".table__body");
     loadTableData(dataUrl, function (data) {
-      bodyEl.html(""); // clear loading
+      // clear loading
+      bodyEl.html(""); 
+      // create rows
       var locations = data;
       locations.forEach(function (city) {
         var html = getRowHtml(city);
         bodyEl.append(html);
       });
+      // update the "last updated" text
+      $('#lastUpdate span').html('Week of ' + d3.timeFormat("%B %d, %Y")(data[0].week.date))
+      // set the table footnotes
       $(el).next().html(getFootnoteHtml(data[0]));
+      // default sort the table
       $(el).tablesorter({ sortList: [[0, 0]] });
+      // setup click handler
       $(el)
         .find(".table__row")
         .click(function () {

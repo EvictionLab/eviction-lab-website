@@ -9,7 +9,10 @@
 </div>
 <div class="layout layout--full">
   <div class="column column--content">
-    <p class="date">Last Updated: {{ .Date.Format "January 2, 2006" }}</p>
+
+    <p id="lastUpdate" class="date">
+      Last Updated: <span>{{ .Date.Format "January 2, 2006" }}</span>
+    </p>
     
     {{ .Content }}
 
