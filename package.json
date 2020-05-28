@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/EvictionLab/eviction-lab-website#readme",
   "dependencies": {
-    "autoprefixer": "^9.7.3",
+    "autoprefixer": "^9.8.0",
     "postcss-cli": "^6.1.3"
   }
 }
