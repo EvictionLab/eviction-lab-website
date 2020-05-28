@@ -1831,6 +1831,11 @@ Elab.Table = (function (Elab) {
     return html;
   }
 
+  function renderDate(data) {
+    $('#reportDate')
+      .html("Week of " + d3.timeFormat("%B %d, %Y")(data.week.date))
+  }
+
   /**
    * Gets the HTML for the footnote on the index table
    * @param {*} data
@@ -1867,6 +1872,7 @@ Elab.Table = (function (Elab) {
           "error retrieving data from " + dataUrl + " for id " + fips
         );
       }
+      renderDate(locationData);
       renderStatRow(locationData, "week");
       renderStatRow(locationData, "month");
       renderMoratoriumRow(locationData);
