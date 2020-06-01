@@ -21,6 +21,8 @@ More detail on eviction protections in Wisconsin can be found on the [COVID-19 H
 
 
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Milwaukee were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March, and filings by and large ceased in April and so far in May. In a normal April, over 1,000 evictions are filed in Milwaukee. This year, only 15 were filed.
@@ -31,11 +33,15 @@ Eviction filings in Milwaukee were higher than average in January and February o
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/milwaukee_shapes.json" data="/uploads/milwaukee_map.csv" %}}
+
+
 
 
 
@@ -60,11 +66,15 @@ Milwaukee is made up of 298 Census Tracts. In each of those Tracts, we map evict
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/milwaukee_linechart.csv" %}}
+
+
 
 
 
@@ -80,6 +90,8 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Partial filings for May, as of May 23
+
+
 
 
 
