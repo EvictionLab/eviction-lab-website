@@ -9,19 +9,17 @@ date: 2020-05-29T00:00:00.000Z
 
 {{% report_intro id="55079" data="/uploads/table.csv" %}}
 
-
-
 Eviction filings in Milwaukee, WI have fallen sharply since Governor Tony Evers blocked the initiation of non-emergency eviction proceedings on March 27. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average in both March and April. Eviction protections in Wisconsin began to expire on May 26.
 
 More detail on eviction protections in Wisconsin can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/wi/).
-
-
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/milwaukee_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -31,11 +29,15 @@ Eviction filings in Milwaukee were higher than average in January and February o
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for May, as of May 23
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/milwaukee_shapes.json" data="/uploads/milwaukee_map.csv" %}}
+
+
 
 
 
@@ -56,11 +58,15 @@ Milwaukee is made up of 298 Census Tracts. In each of those Tracts, we map evict
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/milwaukee_linechart.csv" %}}
+
+
 
 
 
@@ -74,6 +80,8 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Partial filings for May, as of May 23
+
+
 
 
 
