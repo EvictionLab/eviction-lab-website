@@ -9,7 +9,7 @@ date: 2020-06-03T00:00:00.000Z
 
 {{% report_intro id="31069" data="/uploads/table.csv" %}}
 
-The state of Ohio did not put a general eviction moratorium in place, but courts in Hamilton County (Cincinnati) suspended proceedings between March 19th and June 1st. Eviction filings were accepted throughout this period, but fall since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and 70% in May.
+The state of Ohio did not put a general eviction moratorium in place, but courts in Hamilton County (Cincinnati) suspended proceedings between March 19th and June 1st. Eviction filings were accepted throughout this period, but fell since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and 70% in May.
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
 
@@ -19,6 +19,8 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 {{% report_chart id="avg" data="/uploads/cincinnati_barchart.csv" %}}
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Cincinnati were almost exactly at typical levels in January and February of this year.<sup>1</sup> Filings began to fall in March and were well below average in April and May.
@@ -27,11 +29,15 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for May, as of May 30
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_map.csv" %}}
+
+
 
 
 
@@ -68,11 +74,15 @@ Cincinnati is divided into 222 Census Tracts. Here we map, in each of those Trac
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/cincinnati_linechart.csv" %}}
+
+
 
 
 
@@ -84,6 +94,8 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Partial filings for May, as of May 30
+
+
 
 
 
