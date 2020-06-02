@@ -4,7 +4,7 @@ draft: true
 title: Cleveland Ohio | Weekly Eviction Reports | Eviction Lab
 h1: Cleveland, Ohio
 slug: cleveland-oh
-date: 2020-05-13T00:00:00.000Z
+date: 2020-06-03T00:00:00.000Z
 ---
 
 {{% report_intro id="39035" data="/uploads/table.csv" %}}
