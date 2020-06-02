@@ -4,7 +4,7 @@ draft: true
 title: Jacksonville Florida | Weekly Eviction Reports | Eviction Lab
 h1: Jacksonville, Florida
 slug: jacksonville-fl
-date: 2020-05-29T00:00:00.000Z
+date: 2020-06-03T00:00:00.000Z
 ---
 
 {{% report_intro id="12031" data="/uploads/table.csv" %}}
