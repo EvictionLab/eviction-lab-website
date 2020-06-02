@@ -7,7 +7,7 @@ cascade:
   twImage: /images/og/eviction-lab-about-us-tw.jpg
   socialDescription: We’ve built the first nationwide database of evictions.
 h1: Eviction Tracking System
-date: 2020-05-09T00:00:00.000Z
+date: 2020-06-03T00:00:00.000Z
 fundedby:
   heading: The Eviction Tracking System is funded by
   links:
