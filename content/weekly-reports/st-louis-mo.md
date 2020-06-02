@@ -4,22 +4,14 @@ draft: true
 title: St. Louis, Missouri | Weekly Eviction Reports | Eviction Lab
 h1: St. Louis, Missouri
 slug: st-louis-mo
-date: 2020-05-20T00:00:00.000Z
+date: 2020-06-03T00:00:00.000Z
 ---
 
 {{% report_intro id="29510" data="/uploads/table.csv" %}}
 
-
-
-
-
-While the state of Missouri has not enacted any protections for renters, the 22nd Judicial Circuit (City of St. Louis) did suspend eviction proceedings as of March 19th. Eviction filings in St. Louis have declined precipitously in April and May. 
+While the state of Missouri has not enacted any protections for renters, the 22nd Judicial Circuit (City of St. Louis) did suspend eviction proceedings as of March 19th. Eviction filings in St. Louis  declined precipitously in April and May. 
 
 More detail on eviction protections in Missouri can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mo/).
-
-
-
-
 
 {{%/ report_intro %}}
 
@@ -29,7 +21,7 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 
 # Changes in eviction filings
 
-Eviction filings in St. Louis were slightly above average in January and February of this year, but began to fall in March. Filings in April and thus far in May have been significantly below average. For example, nearly 1,200 eviction cases are usually filed in April in St. Louis, but this year there were only 125.
+Eviction filings in St. Louis were slightly above average in January and February of this year, but began to fall in March. Filings in April and May were significantly below average. For example, nearly 1,200 eviction cases are usually filed in May in St. Louis, but this year there were only 56.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
@@ -40,6 +32,8 @@ Eviction filings in St. Louis were slightly above average in January and Februar
 
 
 {{% report_map shapes="/uploads/stlouis_shapes.json" data="/uploads/stlouis_map.csv" %}}
+
+
 
 
 
@@ -60,11 +54,15 @@ St. Louis is made up of 305 Census Tracts. In each of those Tracts, we map evict
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/stlouis_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -74,5 +72,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Partial filings for May, as of May 30
+
+
 
 {{%/ report_chart %}}
