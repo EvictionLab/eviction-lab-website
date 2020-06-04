@@ -9,19 +9,17 @@ date: 2020-06-03T00:00:00.000Z
 
 {{% report_intro id="12031" data="/uploads/table.csv" %}}
 
-
-
-Eviction filings in Duval County (Jacksonville) have fallen sharply in the last two months. Compared to equivalent periods in previous years (2012–2015), eviction filings were down 95% or more in April and May. 
+Eviction filings in Duval County (Jacksonville) have fallen sharply in the last two months. Compared to equivalent periods in previous years (2012–2015), eviction filings were down 95% or more in April and May.
 
 More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
-
-
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/duval_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -31,11 +29,15 @@ Eviction filings in Jacksonville were higher than average in January and Februar
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for May, as of May 30
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/jacksonville_shapes.json" data="/uploads/duval_map.csv" %}}
+
+
 
 
 
@@ -52,11 +54,15 @@ Jacksonville is divided into 174 Census Tracts. Here we map, in each of those Tr
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/duval_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -66,5 +72,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Partial filings for May, as of May 30
+
+
 
 {{%/ report_chart %}}
