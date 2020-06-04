@@ -30,11 +30,11 @@ We welcome feedback, as well as partnerships with states and localities who wish
 ### Additional Information
 
 * The ETS was made possible by the tireless work of our partners at [January Advisors](https://www.januaryadvisors.com/).
-* A description of the ETS methodology is available here.
+* A description of the ETS methodology is [available here](https://cms-dev--eviction-lab.netlify.app/weekly-reports/methods/).
 * If you want to see your city or state added to the ETS and can help facilitate access to the necessary data, please contact [info@evictionlab.org](mailto:info@evictionlab.org).
 * To find community organizations focused on housing and eviction in your community, visit [JustShelter.org](https://justshelter.org/).
 * Information on local eviction moratoria and renter legal protections can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/).
-* A list of similar resources developed by other organizations is available here.
+* A list of similar resources developed by other organizations is [available here](https://cms-dev--eviction-lab.netlify.app/weekly-reports/similar-resources/).
 * To receive updates, add your email below.
 * For media inquiries, email [press@evictionlab.org](mailto:press@evictionlab.org)
 * To provide tips and feedback on the ETS, email [info@evictionlab.org](mailto:info@evictionlab.org).
