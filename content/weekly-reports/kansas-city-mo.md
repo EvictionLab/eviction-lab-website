@@ -7,7 +7,9 @@ slug: kansas-city-mo
 date: 2020-06-05T00:00:00.000Z
 ---
 
-{{% report_intro id="12031" data="/uploads/table.csv" %}}
+{{% report_intro id="29095" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -17,11 +19,15 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/jackson_barchart.csv" %}}
+
+
 
 
 
@@ -35,11 +41,15 @@ Eviction filings in Kansas City were slightly below average in January and Febru
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/kansas_shapes.json" data="/uploads/jackson_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -48,11 +58,15 @@ Jackson County is divided into 199 Census Tracts. Here we map, in each of those 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/jackson_linechart.csv" %}}
+
+
 
 
 
@@ -64,6 +78,8 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Partial filings for May, as of May 30
+
+
 
 
 
