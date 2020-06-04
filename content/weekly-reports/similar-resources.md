@@ -1,7 +1,7 @@
 ---
 draft: true
 cascade:
-  title: Weekly Eviction Reports | Eviction Lab
+  title: Similar Resources | Weekly Eviction Reports | Eviction Lab
   description: Real time eviction tracking by city during COVID-19.
   fbImage: /images/og/eviction-lab-about-us-fb.jpg
   twImage: /images/og/eviction-lab-about-us-tw.jpg
