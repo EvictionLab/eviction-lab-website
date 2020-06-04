@@ -69,13 +69,22 @@ collections:
                   hint: "Image used when page is shared on Twitter",
                 }
           - { label: Heading, name: h1, widget: string }
-          - { label: "Updated Date", name: "date", widget: "date" }
+          - {
+              label: "Updated Date",
+              name: "date",
+              widget: "date",
+            }
           - { label: "Body", name: "body", widget: "markdown" }
           - label: "Funded By"
             name: "fundedby"
             widget: "object"
             fields:
-              - { label: Heading, name: heading, widget: string, default: "" }
+              - {
+                  label: Heading,
+                  name: heading,
+                  widget: string,
+                  default: "",
+                }
               - label: "Links"
                 name: "links"
                 widget: "list"
@@ -87,9 +96,130 @@ collections:
                       widget: "string",
                       hint: "e.g. https://website.com/",
                     }
-                  - { label: "Logo", name: "logo", widget: "image" }
-                  - { label: "Alternate Text", name: "alt", widget: "string" }
-
+                  - {
+                      label: "Logo",
+                      name: "logo",
+                      widget: "image",
+                    }
+                  - {
+                      label: "Alternate Text",
+                      name: "alt",
+                      widget: "string",
+                    }
+      - label: "Weekly Reports (Methods)"
+        name: "weekly-reports/methods"
+        file: "content/weekly-reports/methods.md"
+        fields:
+          - {
+              label: "Draft",
+              name: "draft",
+              widget: "boolean",
+              hint: "When draft is on, the page will not be published to the live site",
+            }
+          - label: "Meta"
+            name: "cascade"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Browser Window Title",
+                  name: title,
+                  widget: string,
+                  hint: "Title for the browser window or tab",
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  hint: "Not visible, but used for search engine optimization",
+                }
+              - {
+                  label: "Social Description",
+                  name: "socialDescription",
+                  widget: "string",
+                  hint: "Description for the thumbnail when page is shared on social media",
+                }
+              - {
+                  label: "Facebook Share Image",
+                  name: "fbImage",
+                  widget: "image",
+                  hint: "Image used when page is shared on Facebook",
+                }
+              - {
+                  label: "Twitter Share Image",
+                  name: "twImage",
+                  widget: "image",
+                  hint: "Image used when page is shared on Twitter",
+                }
+          - {
+              label: Page Name,
+              name: h1,
+              widget: string,
+              hint: "used in the breadcrumb",
+            }
+          - {
+              label: "Updated Date",
+              name: "date",
+              widget: "date",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Weekly Reports (Similar Resources)"
+        name: "weekly-reports/similar-resources"
+        file: "content/weekly-reports/similar-resources.md"
+        fields:
+          - {
+              label: "Draft",
+              name: "draft",
+              widget: "boolean",
+              hint: "When draft is on, the page will not be published to the live site",
+            }
+          - label: "Meta"
+            name: "cascade"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Browser Window Title",
+                  name: title,
+                  widget: string,
+                  hint: "Title for the browser window or tab",
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  hint: "Not visible, but used for search engine optimization",
+                }
+              - {
+                  label: "Social Description",
+                  name: "socialDescription",
+                  widget: "string",
+                  hint: "Description for the thumbnail when page is shared on social media",
+                }
+              - {
+                  label: "Facebook Share Image",
+                  name: "fbImage",
+                  widget: "image",
+                  hint: "Image used when page is shared on Facebook",
+                }
+              - {
+                  label: "Twitter Share Image",
+                  name: "twImage",
+                  widget: "image",
+                  hint: "Image used when page is shared on Twitter",
+                }
+          - {
+              label: Page Name,
+              name: h1,
+              widget: string,
+              hint: "used in the breadcrumb",
+            }
+          - {
+              label: "Updated Date",
+              name: "date",
+              widget: "date",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
   - name: "weekly-reports"
     identifier_field: "h1"
     label: "Weekly Reports"

@@ -21,7 +21,8 @@ body {
   --body-font-bold: Akkurat-Bold, sans-serif;
   --body-font-italic: Akkurat-Italic, sans-serif;
   --heading-font: GT-Eesti-Display-Bold, sans-serif;
-  --number-font: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
+  --number-font: Gotham A, Gotham B, GT-Eesti-Display-Bold,
+    sans-serif;
   font-family: var(--body-font);
   overflow-x: hidden;
 }
@@ -78,7 +79,14 @@ body {
   margin-top: 2em;
 }
 
-.column--content > h3 {
+.column--content > h1,
+.column--content > h2,
+.column--content > h3,
+.column--content > h4,
+.column--content > h5 {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  color: var(--c1);
   margin: 3.2rem 0 2.4rem 0;
 }
 
@@ -270,12 +278,15 @@ body {
   }
 }
 
-.tablesorter-header.tablesorter-headerAsc .tablesorter-header-inner {
+.tablesorter-header.tablesorter-headerAsc
+  .tablesorter-header-inner {
   position: relative;
 }
 
-.tablesorter-header.tablesorter-headerAsc .tablesorter-header-inner:after,
-.tablesorter-header.tablesorter-headerDesc .tablesorter-header-inner:after {
+.tablesorter-header.tablesorter-headerAsc
+  .tablesorter-header-inner:after,
+.tablesorter-header.tablesorter-headerDesc
+  .tablesorter-header-inner:after {
   content: "";
   position: absolute;
   margin-top: 8px;
@@ -287,7 +298,8 @@ body {
   border-top-color: var(--c1);
 }
 
-.tablesorter-header.tablesorter-headerDesc .tablesorter-header-inner:after {
+.tablesorter-header.tablesorter-headerDesc
+  .tablesorter-header-inner:after {
   border-top-color: transparent;
   border-bottom-color: var(--c1);
   margin-top: 3px;
