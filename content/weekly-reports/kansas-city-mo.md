@@ -13,9 +13,13 @@ date: 2020-06-05T00:00:00.000Z
 
 
 
+
+
 Eviction filings in Jackson County, MO (Kansas City) have fallen sharply in the last two months. Compared to equivalent periods in previous years (2012–2015), eviction filings were down nearly 80% in April and May. 
 
 More detail on eviction protections in Missouri can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mo/).
+
+
 
 
 
@@ -27,27 +31,21 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 
 {{% report_chart id="avg" data="/uploads/jackson_barchart.csv" %}}
 
-
-
-
-
 # Changes in eviction filings
 
 Eviction filings in Kansas City were slightly below average in January and February of this year.<sup>1</sup> That pattern intensified in March. Less than 160 cases were filed in both April and May.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-3. Partial filings for May, as of May 30
-
-
-
-
+3. Partial filings for June, through June 6
 
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/kansas_shapes.json" data="/uploads/jackson_map.csv" %}}
+
+
 
 
 
@@ -60,15 +58,13 @@ Jackson County is divided into 199 Census Tracts. Here we map, in each of those 
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/jackson_linechart.csv" %}}
-
-
-
-
 
 # Eviction filings by neighborhood demographics
 
@@ -77,10 +73,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2015.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Partial filings for May, as of May 30
-
-
-
-
+2. Partial filings for June, through June 6
 
 {{%/ report_chart %}}
