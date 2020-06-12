@@ -15,8 +15,6 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 {{%/ report_intro %}}
 
-
-
 {{% report_chart id="avg" data="/uploads/houston_barchart.csv" %}}
 
 # Changes in eviction filings
@@ -29,9 +27,7 @@ Eviction filings in Houston were higher than average in January and February of 
 
 {{%/ report_chart %}}
 
-
-
-{{% report_map shapes="/uploads/harris_shapes.json" data="/uploads/houston_map.csv" %}}
+{{% report_map shapes="/uploads/houston_shapes.json" data="/uploads/houston_map.csv" %}}
 
 # The geography of changes in eviction filings
 
@@ -42,13 +38,7 @@ Harris and Galveston Counties are divided into 853 Census Tracts. Here we map, i
 
 {{%/ report_map %}}
 
-
-
 {{% report_chart id="race" data="/uploads/houston_linechart.csv" %}}
-
-
-
-
 
 # Eviction filings by neighborhood demographics
 
@@ -58,9 +48,5 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Partial filings for June, through June 6
-
-
-
-
 
 {{%/ report_chart %}}
