@@ -35,7 +35,7 @@ Eviction filings in Austin were higher than average in January and February of t
 
 # The geography of changes in eviction filings
 
-Travis County is divided into __ zip codes. Here we map, in each of those zip codes, eviction filings over the last four weeks compared to the typical number of filings in 2012.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
+Travis County is divided into 64 zip codes. Here we map, in each of those zip codes, eviction filings over the last four weeks compared to the typical number of filings in 2012. Over that period, we see steep declines in eviction filings across the city.
 
 1. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
