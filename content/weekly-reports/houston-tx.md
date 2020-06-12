@@ -11,9 +11,13 @@ date: 2020-06-03T00:00:00.000Z
 
 
 
+
+
 Eviction filings in Harris County, TX (Houston) have fallen sharply since eviction proceedings were suspended across Texas on March 19. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March, and through April and May. Eviction protections in Texas began to expire on May 18.
 
 More detail on eviction protections in Texas can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/tx/).
+
+
 
 
 
@@ -21,7 +25,9 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 
 
-{{% report_chart id="avg" data="/uploads/harris_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/houston_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -31,11 +37,15 @@ Eviction filings in Houston were higher than average in January and February of 
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for June, through June 6
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/harris_shapes.json" data="/uploads/harris_map.csv" %}}
+{{% report_map shapes="/uploads/harris_shapes.json" data="/uploads/houston_map.csv" %}}
+
+
 
 
 
@@ -48,11 +58,15 @@ Harris County is divided into 786 Census Tracts. Here we map, in each of those T
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="/uploads/harris_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/houston_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -62,5 +76,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Partial filings for June, through June 6
+
+
 
 {{%/ report_chart %}}
