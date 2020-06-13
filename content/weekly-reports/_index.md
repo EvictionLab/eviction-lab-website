@@ -35,6 +35,7 @@ We welcome feedback, as well as partnerships with states and localities who wish
 * To find community organizations focused on housing and eviction in your community, visit [JustShelter.org](https://justshelter.org/).
 * Information on local eviction moratoria and renter legal protections can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/).
 * A list of similar resources developed by other organizations is [available here](https://cms-dev--eviction-lab.netlify.app/weekly-reports/similar-resources/).
+* We are grateful to the many experts who contributed advice and research assistance to this project. A list of acknowledgements can be found [here](https://cms-dev--eviction-lab.netlify.app/weekly-reports/acknowledgements/).
 * To receive updates, add your email below.
 * For media inquiries, email [press@evictionlab.org](mailto:press@evictionlab.org)
 * To provide tips and feedback on the ETS, email [info@evictionlab.org](mailto:info@evictionlab.org).
