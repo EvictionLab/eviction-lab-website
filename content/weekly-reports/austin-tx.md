@@ -23,7 +23,7 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 Eviction filings in Austin were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in April and May following the suspension of eviction proceedings.
 
-1. Average eviction filings data for 2014-2019 collected by [BASTA Austin](http://www.bastaaustin.org/)
+1. Eviction filings data for 2014-2019 collected by [BASTA Austin](http://www.bastaaustin.org/)
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 3. Partial filings for June, as of June 9
 
