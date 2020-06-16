@@ -10,10 +10,9 @@ h1: Methods
 layout: content
 date: 2020-06-03T00:00:00.000Z
 ---
-
 # Methods
 
-Initial site selection for the Eviction Tracking System (ETS) was based on (1) the availability of valid baseline data in the given county from the Eviction Lab, and (2) the availability of eviction filing data through public-facing court websites. We briefly explain both criteria.
+Initial site selection for the Eviction Tracking System (ETS) was based on (1) the availability of valid baseline data in the given county from the Eviction Lab, and (2): the availability of eviction filing data through public-facing court websites. We briefly explain both criteria.
 
 ## Valid Baseline Data
 
