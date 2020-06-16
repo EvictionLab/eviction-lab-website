@@ -278,6 +278,64 @@ collections:
               widget: "date",
             }
           - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Weekly Reports (Get the Data)"
+        name: "data"
+        identifier_field: name
+        file: "content/weekly-reports/get-the-data.md"
+        fields:
+          - {
+              label: "Draft",
+              name: "draft",
+              widget: "boolean",
+              hint: "When draft is on, the page will not be published to the live site",
+            }
+          - label: "Meta"
+            name: "cascade"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Browser Window Title",
+                  name: title,
+                  widget: string,
+                  hint: "Title for the browser window or tab",
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  hint: "Not visible, but used for search engine optimization",
+                }
+              - {
+                  label: "Social Description",
+                  name: "socialDescription",
+                  widget: "string",
+                  hint: "Description for the thumbnail when page is shared on social media",
+                }
+              - {
+                  label: "Facebook Share Image",
+                  name: "fbImage",
+                  widget: "image",
+                  hint: "Image used when page is shared on Facebook",
+                }
+              - {
+                  label: "Twitter Share Image",
+                  name: "twImage",
+                  widget: "image",
+                  hint: "Image used when page is shared on Twitter",
+                }
+          - {
+              label: Page Name,
+              name: h1,
+              widget: string,
+              hint: "used in the breadcrumb",
+            }
+          - {
+              label: "Updated Date",
+              name: "date",
+              widget: "date",
+            }
+          - { label: "Body (below table)", name: "body", widget: "markdown" }    
   - name: "weekly-reports"
     identifier_field: "h1"
     label: "Weekly Reports"

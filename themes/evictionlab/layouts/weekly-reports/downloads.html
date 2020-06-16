@@ -12,13 +12,15 @@
 
 <div class="layout layout--full">
   <div class="column column--content">
-    <table class="table-responsive page-stats">
+    <h1>{{ .Params.h1 }}</h1>
+    {{ .Params.intro | markdownify }}
+    <table class="table-responsive page-stats my-5">
       <thead>
         <tr>
-            <th>Site</th>
-            <th>Baseline Years</th>
-            <th>Smallest Geography</th>
-            <th>Data File</th>
+            <th>{{ .Params.siteheader }}</th>
+            <th>{{ .Params.baselineheader }}</th>
+            <th>{{ .Params.geoheader }}</th>
+            <th>{{ .Params.fileheader }}</th>
         </tr>
       </thead>
       <tbody>

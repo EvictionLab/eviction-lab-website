@@ -6,9 +6,23 @@ cascade:
   fbImage: /images/og/eviction-lab-about-us-fb.jpg
   twImage: /images/og/eviction-lab-about-us-tw.jpg
   socialDescription: Get the data for real time eviction tracking by city during COVID-19.
-h1: Data Downloads
+h1: Get the Data
 date: 2020-06-16T00:00:00.000Z
 layout: downloads
+intro: >-
+  Below are data used in the Eviction Tracking System. 
+
+
+  Scroll below the table to find code samples for using the data in your own applications.
+
+
+  Please cite as follows: 
+
+
+siteheader: Site
+baselineheader: Baseline Years
+geoheader: Smallest Geography
+fileheader: Data File  
 data:
   - site: Allegheny
     years: 2012-2016
@@ -28,7 +42,7 @@ data:
     file: /uploads/cincinnati_20200613.csv      
 ---
 Sample code:
-    
+
     tract_week_2020 %>%   
       group_by(week, week_date) %>% 
       summarize(filings_2020 = sum(filings_2020),
