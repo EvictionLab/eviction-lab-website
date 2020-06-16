@@ -221,7 +221,7 @@ collections:
             }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Weekly Reports (Acknowledgements)"
-        name: "weekly-reports/acknowledgements"
+        name: "acknowledgements"
         file: "content/weekly-reports/acknowledgements.md"
         fields:
           - {
