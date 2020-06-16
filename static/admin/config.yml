@@ -21,7 +21,7 @@ collections:
     name: "pages"
     editor:
       preview: false
-    preview_path: /{{slug}}
+    preview_path: /weekly-reports/{{slug}}
     files:
       - label: "Weekly Reports"
         name: "weekly-reports"
