@@ -363,6 +363,17 @@ table.page-stats td.table-text {
       }    
 }
 
+.page-layout-downloads {
+  pre {
+    background-color: #f4f7f9;
+    padding: 2.4rem;
+    code {
+      font-size: 1.5rem;
+      color: #454979;
+    }
+  }
+}
+
 hr {
   border-top: 2px solid #fff;
 }
