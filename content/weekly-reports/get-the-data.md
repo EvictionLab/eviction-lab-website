@@ -9,7 +9,8 @@ cascade:
 h1: Get the Data
 date: 2020-06-16T00:00:00.000Z
 layout: downloads
-intro: Below are data used in the Eviction Tracking System. Scroll below the table to find code samples for using the data in your own applications. Please cite as follows. 
+intro: >
+  Below are data used in the Eviction Tracking System. Scroll below the table to find code samples for using the data in your own applications. Please cite as follows. 
 headers:
   siteheader: Site
   baselineheader: Baseline Years
