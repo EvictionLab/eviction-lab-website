@@ -1,4 +1,5 @@
 ---
+slug: acknowledgements
 draft: true
 cascade:
   title: Weekly Eviction Reports | Eviction Lab

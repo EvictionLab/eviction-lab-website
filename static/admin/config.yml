@@ -225,6 +225,12 @@ collections:
         file: "content/weekly-reports/acknowledgements.md"
         fields:
           - {
+              label: "Slug",
+              name: "slug",
+              widget: "hidden",
+              default: "acknowledgements"
+          }
+          - {
               label: "Draft",
               name: "draft",
               widget: "boolean",
