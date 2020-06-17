@@ -8,19 +8,20 @@ cascade:
   socialDescription: Get the data for real time eviction tracking by city during COVID-19.
 h1: Get the Data
 date: 2020-06-16T00:00:00.000Z
-layout: downloads
 intro: >-
-  
-  
   Below are data used in the Eviction Tracking System. 
-  
-  
-  Scroll below the table to find code samples for using the data in your own applications. Please cite as follows. 
+
+
+  Scroll below the table to find code samples for using the data in your own applications. 
+
+
+  Please cite as follows:
 headers:
   siteheader: Site
   baselineheader: Baseline Years
   geoheader: Smallest Geography
-  fileheader: Data File  
+  fileheader: Data File
+layout: downloads
 data:
   - site: Allegheny
     years: 2012-2016
@@ -29,15 +30,19 @@ data:
   - site: Austin
     years: 2012-2016
     geo: ZIP Code
-    file: /uploads/austin_20200613.csv 
+    file: /uploads/austin_20200613.csv
   - site: Boston
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/boston_20200613.csv 
+    file: /uploads/boston_20200613.csv
   - site: Cincinnati
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/cincinnati_20200613.csv      
+    file: /uploads/cincinnati_20200613.csv
+  - file: /uploads/cleveland_20200613.csv
+    site: Cleveland
+    years: 2012-2016
+    geo: Census Tract
 ---
 Sample code:
 
