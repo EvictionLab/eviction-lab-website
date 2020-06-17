@@ -25,10 +25,10 @@ headers:
   fileheader: Data File
 layout: downloads
 data:
-  - site: Allegheny
-    years: 2012-2019
-    geo: ZIP Code
-    file: /uploads/allegheny_20200613.csv
+  - site: All Sites
+    years: "-"
+    geo: Census Tract / ZIP Code
+    file: /uploads/all_sites_20200613.csv
   - site: Austin
     years: "2012"
     geo: ZIP Code
@@ -49,10 +49,30 @@ data:
     years: 2012-2015
     geo: Census Tract
     file: /uploads/houston_20200613.csv
+  - site: Jacksonville
+    years: 2012-2015
+    geo: Census Tract
+    file: /uploads/duval_20200613.csv
+  - site: Kansas City
+    years: 2012-2015
+    geo: Census Tract
+    file: /uploads/jackson_20200613.csv
   - site: Milwaukee
     years: 2012-2016
     geo: Census Tract
     file: /uploads/milwaukee_20200613.csv
+  - site: Pittsburgh
+    years: 2012-2019
+    geo: ZIP Code
+    file: /uploads/allegheny_20200613.csv
+  - site: Richmond
+    years: "2016"
+    geo: ZIP Code
+    file: /uploads/richmond_20200613.csv
+  - site: St Louis
+    years: 2012, 2013, 2015, 2016
+    geo: Census Tract
+    file: /uploads/stlouis_20200613.csv
 ---
 Sample code:
 
