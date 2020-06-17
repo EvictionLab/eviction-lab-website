@@ -62,7 +62,7 @@ Sample code:
 
 # library(dplyr)
 # library(tidyr)
-# library (ggplot2)
+# library(ggplot2)
 mke_tract_week_2020 %>%   
   group_by(week, week_date) %>% 
   summarize(filings_2020 = sum(filings_2020),
