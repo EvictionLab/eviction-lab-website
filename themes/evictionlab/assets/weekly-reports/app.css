@@ -110,8 +110,14 @@ body {
 
   .layout > .column--content {
     flex: 1;
-    max-width: 640px;
+    max-width: 100%;
     width: 100%;
+  }
+
+  @media(min-width: 680px) {
+    .layout > .column--content {
+      max-width: 640px;
+    }
   }
 
   .layout > .column--content p:last-child {
