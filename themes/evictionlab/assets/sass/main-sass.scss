@@ -363,6 +363,20 @@ table.page-stats td.table-text {
       }    
 }
 
+.page-layout-downloads {
+  pre {
+    background-color: #f4f7f9 !important;
+    padding: 2.4rem;
+    code {
+      font-size: 1.5rem;
+      color: #454979 !important;
+      span {
+        color: #454979 !important;
+      }
+    }
+  }
+}
+
 hr {
   border-top: 2px solid #fff;
 }
@@ -575,3 +589,4 @@ p {
 @import 'covid-policy-rankings';
 @import 'covid-policy-rankings-single';
 @import 'covid-resources';
+@import 'ets-custom';

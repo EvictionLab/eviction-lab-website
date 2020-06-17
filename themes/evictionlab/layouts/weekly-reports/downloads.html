@@ -1,0 +1,47 @@
+{{ partial "header" . }}
+
+<div class="breadcrumbs bc-blog center-page-wrapper">
+  <div class="center-page">
+    <a href="/weekly-reports">
+      <span class="dim">Weekly Reports</span>
+    </a>
+    <i class="fa fa-chevron-right"></i>
+    <span class="current-crumb">{{ .Params.h1 }}</span>
+  </div>
+</div>
+
+<div class="layout layout--full">
+  <div class="column column--content">
+    <h1>{{ .Params.h1 }}</h1>
+    {{ .Params.intro | markdownify }}
+    <table class="data-table table-responsive page-stats my-5">
+      <thead>
+        <tr>
+            <th>{{ .Params.headers.siteheader }}</th>
+            <th>{{ .Params.headers.baselineheader }}</th>
+            <th>{{ .Params.headers.geoheader }}</th>
+            <th>{{ .Params.headers.fileheader }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range .Params.data }}
+        <tr>
+          <td>{{ .site }}</td>
+          <td>{{ .years }}</td>
+          <td>{{ .geo }}</td>
+          <td><a href="https://evictionlab.org{{ .file }}">Download CSV</a></td>
+        </tr>
+        {{ end }}
+      </tbody>
+      
+    </table>
+
+    {{ .Content }}
+    <p id="lastUpdate" class="date">
+      Last Updated:
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+    </p>
+  </div>
+</div>
+
+{{ partial "footer" . }}
