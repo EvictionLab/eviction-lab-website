@@ -1,0 +1,13 @@
+.page-type-weekly-reports {
+    p {
+        img {
+            max-width: 100%;
+        }
+    }
+    table.data-table {
+        @include media-breakpoint-up(md) {
+            width: 120%;
+            margin-left: -8%;
+        }
+    }
+}
