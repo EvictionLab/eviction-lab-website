@@ -228,7 +228,6 @@ collections:
         name: "acknowledgements"
         identifier_field: name
         file: "content/weekly-reports/acknowledgements.md"
-        identifier_field: name
         fields:
           - {
               label: "Draft",
