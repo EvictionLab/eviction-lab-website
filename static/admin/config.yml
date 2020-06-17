@@ -21,11 +21,12 @@ collections:
     name: "pages"
     editor:
       preview: false
-    preview_path: /weekly-reports/{{slug}}
     files:
       - label: "Weekly Reports"
         name: "weekly-reports"
         file: "content/weekly-reports/_index.md"
+        preview_path: /weekly-reports/
+        identifier_field: name
         fields:
           - {
               label: "Draft",
@@ -107,8 +108,10 @@ collections:
                       widget: "string",
                     }
       - label: "Weekly Reports (Methods)"
-        name: "weekly-reports/methods"
+        name: "methods"
         file: "content/weekly-reports/methods.md"
+        preview_path: /weekly-reports/{{slug}}
+        identifier_field: name
         fields:
           - {
               label: "Draft",
@@ -164,8 +167,9 @@ collections:
             }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Weekly Reports (Similar Resources)"
-        name: "weekly-reports/similar-resources"
+        name: "similar-resources"
         file: "content/weekly-reports/similar-resources.md"
+        identifier_field: name
         fields:
           - {
               label: "Draft",
@@ -224,6 +228,7 @@ collections:
         name: "acknowledgements"
         identifier_field: name
         file: "content/weekly-reports/acknowledgements.md"
+        identifier_field: name
         fields:
           - {
               label: "Draft",
@@ -282,6 +287,7 @@ collections:
         name: "get-the-data"
         identifier_field: name
         file: "content/weekly-reports/get-the-data.md"
+        identifier_field: name
         fields:
           - {
               label: "Draft",
