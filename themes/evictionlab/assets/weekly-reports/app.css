@@ -183,6 +183,7 @@ body {
   flex: 1;
   max-width: 640px;
   margin-bottom: 64px;
+  width: 100%;
 }
 
 @media (min-width: 768px) {

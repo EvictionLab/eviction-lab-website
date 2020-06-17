@@ -31,7 +31,12 @@ $(document).ready(function () {
           {
             id: 'plcnofilbool',
             label: 'No filing, except emergencies'
-          }
+          },
+          {
+            id: 'plccaresbool',
+            label: 'CARES certification required',
+            tooltip: 'Whether a landlord must certify that the dwelling is not subject to the federal CARES Act eviction moratorium. This measure isn’t scored.'
+          },
         ]
       },
       {

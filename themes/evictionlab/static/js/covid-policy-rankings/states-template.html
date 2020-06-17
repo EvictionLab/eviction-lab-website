@@ -23,7 +23,7 @@
     <td colspan="2">
       {{#if until}}
         <p class="expires">
-            Protections start to expire on <strong>{{until}}</strong>.
+            Measures in place until <strong>{{until}}</strong>.
         </p>
       {{/if}}
       {{#if stars}}
@@ -42,7 +42,7 @@
         </p>
       {{/if}} -->
     </td>
-    <td></td>
+    <td colspan="1"></td>
   </tr>
   <tr class="state-details prompt-only" data-state="{{stabbrev}}">
     <td colspan="3">
@@ -118,6 +118,21 @@
               {{#if plcstandoutbool}}
                 {{#if plcnofilbool}}
                   {{#getsamedal 'plcnofilbool'}}
+                    <div class="icon-standout">
+                      <span class="sr-only">Marked for standout status.</span>
+                    </div>
+                  {{/getsamedal}}
+                {{/if}}
+              {{/if}}
+            </label>
+          </div>
+
+          <div class="state-policy">
+            <label class="icon-{{plccaresbool}} plccaresbool">
+              <span class="sr-only">Icon: state has {{#isfalse plccaresbool}}not{{/isfalse}} implemented </span>CARES certification required
+              {{#if plcstandoutbool}}
+                {{#if plccaresbool}}
+                  {{#getsamedal 'plccaresbool'}}
                     <div class="icon-standout">
                       <span class="sr-only">Marked for standout status.</span>
                     </div>

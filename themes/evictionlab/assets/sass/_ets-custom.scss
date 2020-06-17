@@ -1,0 +1,19 @@
+.page-type-weekly-reports {
+    p {
+        img {
+            max-width: 100%;
+        }
+    }
+    table.data-table {
+        @include media-breakpoint-up(md) {
+            width: 120%;
+            margin-left: -8%;
+        }
+        &.page-stats {
+            font-size: 1.8rem;
+            td {
+                font-family: Akkurat-Bold,sans-serif;
+            }
+        }
+    }
+}
