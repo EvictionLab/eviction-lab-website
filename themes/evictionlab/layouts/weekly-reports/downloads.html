@@ -14,27 +14,28 @@
   <div class="column column--content">
     <h1>{{ .Params.h1 }}</h1>
     {{ .Params.intro | markdownify }}
-    <table class="data-table table-responsive page-stats my-5">
-      <thead>
-        <tr>
-            <th>{{ .Params.headers.siteheader }}</th>
-            <th>{{ .Params.headers.baselineheader }}</th>
-            <th>{{ .Params.headers.geoheader }}</th>
-            <th>{{ .Params.headers.fileheader }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{ range .Params.data }}
-        <tr>
-          <td>{{ .site }}</td>
-          <td>{{ .years }}</td>
-          <td>{{ .geo }}</td>
-          <td><a href="https://evictionlab.org{{ .file }}">Download CSV</a></td>
-        </tr>
-        {{ end }}
-      </tbody>
-      
-    </table>
+    <div class="table-responsive-sm">
+      <table class="data-table page-stats my-5">
+        <thead>
+          <tr>
+              <th>{{ .Params.headers.siteheader }}</th>
+              <th>{{ .Params.headers.baselineheader }}</th>
+              <th>{{ .Params.headers.geoheader }}</th>
+              <th>{{ .Params.headers.fileheader }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Params.data }}
+          <tr>
+            <td>{{ .site }}</td>
+            <td>{{ .years }}</td>
+            <td>{{ .geo }}</td>
+            <td><a href="https://evictionlab.org{{ .file }}">Download CSV</a></td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
 
     {{ .Content }}
     <p id="lastUpdate" class="date">
