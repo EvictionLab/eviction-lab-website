@@ -45,6 +45,10 @@ data:
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
     file: /uploads/cleveland_20200613.csv
+  - site: Houston
+    years: 2012-2015
+    geo: Census Tract
+    file: /uploads/houston_20200613.csv
   - site: Milwaukee
     years: 2012-2016
     geo: Census Tract
