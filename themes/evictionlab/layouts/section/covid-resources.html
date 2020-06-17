@@ -1,53 +1,78 @@
 {{ partial "header" . }}
 <!-- {{ partial "breadcrumb" . }} -->
 
+<div id="covid-resources">
+    <a id="scorecard-intro"></a>
 
-<a id="scorecard-intro"></a>
-
-<div class="row ml-0 mr-0">
-  <div class="col-12 col-md-10 offset-md-1 col-lg-9 mx-lg-auto col-xl-8 px-2 px-md-2 mt-10">
-    <div class="bordertop">
+    <div class="row ml-0 mr-0">
+    <div class="col-12 col-md-11 col-lg-9 mx-auto mt-md-2 mt-lg-0 col-xl-9 px-4 px-md-2">
+        <div class="bordertop">
+        </div>
+        <h1 class="d-block w-100 pt-1 mb-5">{{ .Params.h1 }}</h1>
     </div>
-    <h3 class="d-block w-100 pt-1">COVID-19 Resources</h3>
-  </div>
-  <div class="w-100"></div>
-  <div class="col-12 col-md-8 offset-md-1 offset-lg-2 col-lg-6 col-xl-5">
-   {{ .Params.intro1 | safeHTML }}
-  </div>
-</div>
+    <div class="w-100"></div>
+    <div class="col-12 col-md-11 col-lg-9 mx-auto col-count-2 mb-2 mb-md-4 mb-lg-8 px-4 px-md-2">
+            
+            {{ .Params.intro1 | safeHTML }}
+            
+         
+        </div>  
+    </div>
 
-<div id="scorecard-gateway" class="row mx-0 mt-5 feature-panel">
-    <div class="col-6 feature d-flex flex-column justify-content-center align-items-center"><h2>Image</h2></div>
-    <div class="col-6 feature d-flex flex-column justify-content-center px-0">
-        <div class="wrapper">
-            <h2>Housing Policy Scorecard</h2>
-            <p>Keeping track of state level policies.</p>
+    <div id="scorecard-gateway" class="row mx-0 mt-5 feature-panel">
+        
+        <div class="col-12 col-md-6 feature px-0">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto d-flex flex-column justify-content-center px-4 px-md-2">
+                <div class="wrapper">
+                    <h2>COVID-19 Housing Policy Scorecard</h2>
+                    <p>See the protections your state provides, and how it ranks nationally.</p>
+                    <a href="/covid-policy-scorecard/">GO TO SCORECARD <i class="fa fa-chevron-right"></i></a>
+                </div>   
+            </div>     
+        </div>
+        <div class="col-12 col-md-6 feature"></div>
+    </div>
+
+    <div id="ets-gateway" class="row mx-0 feature-panel">
+        <div class="col-12 col-md-6 feature"></div>
+        <div class="col-12 col-md-6 feature ">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto d-flex flex-column justify-content-center">
+                <div class="wrapper">
+                    <h2>Eviction Tracking System</h2>
+                    <p>See maps, charts, and data on eviction filings in select U.S. cities</p>
+                    <a href="/eviction-tracking">GO TO ETS <i class="fa fa-chevron-right"></i></a>
+                </div>  
+            </div>      
+        </div>
+    </div>
+
+    <div id="policies-js-gateway" class="row mx-0 subfeature-panel mb-12">
+        <div class="col-12 col-md-8 col-lg-7 col-xl-6 mx-auto my-8 my-md-8 my-lg-10 my-xl-12 px-3 px-md-2">
+            <h2 class="policies-intro">Learn about the policies that affect you, and find organizations that can help.</h2>
+        </div>
+        <div class="col-11 col-md-12 col-lg-11 mx-auto d-md-flex col-2-wrap">
+            <div class="col-12 col-md-5 feature d-flex flex-column justify-content-center px-0 mb-6 mb-md-0">
+                <div class="bg-wrapper-1">
+                    <div class="text-wrapper p-3 mt-20">
+                        <h2>POLICIES</h2>
+                        <p>Use our interactive table to get the latest on local, state, and federal policies.</p>
+                        <a href="/covid-eviction-policies/">GO TO POLICIES <i class="fa fa-chevron-right"></i></a>
+                    </div>  
+                </div>       
+            </div>
+            <div class="col-12 col-md-5 feature d-flex flex-column justify-content-center px-0">
+                <div class="bg-wrapper-2">
+                    <div class="text-wrapper p-3 mt-20">
+                        <h2>RESOURCES</h2>
+                        <p>See our list of over 700 organizations that offer housing assistance, legal aid, and more.</p>
+                        <a href="https://justshelter.org" >GO TO RESOURCES <i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>    
     </div>
+
 </div>
-
-<div id="ets-gateway" class="row mx-0 feature-panel">
-    <div class="col-6 feature d-flex flex-column justify-content-center">
-        <div class="wrapper">
-            <h2>Eviction Tracking System</h2>
-            <p>Weekly updates on select cities' eviction filings.</p>
-        </div>    
-    </div>
-    <div class="col-6 feature d-flex flex-column justify-content-center align-items-center"><h2>Image</h2></div>
-</div>
-
-<div id="policies-js-gateway" class="row mx-0 mt-5 subfeature-panel">
-    <div class="col-6 col-md-4 offset-md-2 p-5 feature d-flex flex-column justify-content-center">
-        <h2>Just Shelter</h2>
-        <p>Find resources to help fight eviction and homelessness.</p>
-    </div>
-    <div class="col-6 col-md-4 p-5 feature d-flex flex-column justify-content-center">
-        <h2>List of emergency polices</h2>
-        <p>Keeping track of local level policies.</p>
-    </div>
-</div>
-
-
 
 
 
