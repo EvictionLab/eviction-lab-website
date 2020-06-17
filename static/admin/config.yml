@@ -286,7 +286,6 @@ collections:
         name: "get-the-data"
         identifier_field: name
         file: "content/weekly-reports/get-the-data.md"
-        identifier_field: name
         fields:
           - {
               label: "Draft",
