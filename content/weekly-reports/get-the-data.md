@@ -45,6 +45,10 @@ data:
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
     file: /uploads/cleveland_20200613.csv
+  - site: Milwaukee
+    years: 2012-2016
+    geo: Census Tract
+    file: /uploads/milwaukee_20200613.csv
 ---
 Sample code:
 
@@ -70,3 +74,5 @@ mke_tract_week_2020 %>%
   geom_line(aes(color = year)) +
   labs(title = "Milwaukee Weekly Eviction Filings")
 ```
+
+![](/uploads/sample_mke_plot.png)
