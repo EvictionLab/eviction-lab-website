@@ -13,7 +13,7 @@ date: 2020-06-12T00:00:00.000Z
 ---
 # Acknowledgements
 
-We would like to thank representatives of the following organizations for speaking with us as we developed the Eviction Tracking System. They were invaluable in providing context around these data.
+We would like to thank representatives of the following organizations for speaking with us as we developed the Eviction Tracking System. They were invaluable in providing context around these data:
 
 * [Arch City Defenders](https://www.archcitydefenders.org/)
 * [BASTA Austin](http://www.bastaaustin.org/)
