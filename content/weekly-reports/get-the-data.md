@@ -25,16 +25,16 @@ headers:
   fileheader: Data File
 layout: downloads
 data:
-  - site: Allegheny
-    years: 2012-2016
-    geo: ZIP Code
-    file: /uploads/allegheny_20200613.csv
+  - site: All Sites
+    years: "-"
+    geo: Census Tract / ZIP Code
+    file: /uploads/all_sites_20200613.csv
   - site: Austin
-    years: 2012-2016
+    years: "2012"
     geo: ZIP Code
     file: /uploads/austin_20200613.csv
   - site: Boston
-    years: 2012-2016
+    years: 2012, 2013, 2015, 2016
     geo: Census Tract
     file: /uploads/boston_20200613.csv
   - site: Cincinnati
@@ -42,22 +42,61 @@ data:
     geo: Census Tract
     file: /uploads/cincinnati_20200613.csv
   - site: Cleveland
-    years: 2012-2016
+    years: 2012, 2013, 2015, 2016
     geo: Census Tract
     file: /uploads/cleveland_20200613.csv
+  - site: Houston
+    years: 2012-2015
+    geo: Census Tract
+    file: /uploads/houston_20200613.csv
+  - site: Jacksonville
+    years: 2012-2015
+    geo: Census Tract
+    file: /uploads/duval_20200613.csv
+  - site: Kansas City
+    years: 2012-2015
+    geo: Census Tract
+    file: /uploads/jackson_20200613.csv
+  - site: Milwaukee
+    years: 2012-2016
+    geo: Census Tract
+    file: /uploads/milwaukee_20200613.csv
+  - site: Pittsburgh
+    years: 2012-2019
+    geo: ZIP Code
+    file: /uploads/allegheny_20200613.csv
+  - site: Richmond
+    years: "2016"
+    geo: ZIP Code
+    file: /uploads/richmond_20200613.csv
+  - site: St Louis
+    years: 2012, 2013, 2015, 2016
+    geo: Census Tract
+    file: /uploads/stlouis_20200613.csv
 ---
 Sample code:
 
-    tract_week_2020 %>%   
-      group_by(week, week_date) %>% 
-      summarize(filings_2020 = sum(filings_2020),
-                filings_avg = sum(filings_avg, na.rm = T)) %>%
-      pivot_longer(cols = filings_2020:filings_avg,
-                  names_to = "year",
-                  values_to = "filings",
-                  names_prefix = "filings_") %>% 
-      mutate(year = recode(year,
-                          avg = "2012-2016")) %>% 
-      ggplot(aes(x = week,
-                y = filings)) +
-        geom_line(aes(color = year))
+```r
+# Sample R code to plot weekly filings
+# For Milwaukee until week 24 (06/13/2020)
+
+# library(dplyr)
+# library(tidyr)
+# library(ggplot2)
+mke_tract_week_2020 %>%   
+  group_by(week, week_date) %>% 
+  summarize(filings_2020 = sum(filings_2020),
+            filings_avg = sum(filings_avg, na.rm = T)) %>%
+  pivot_longer(cols = filings_2020:filings_avg,
+               names_to = "year",
+               values_to = "filings",
+               names_prefix = "filings_") %>% 
+  mutate(year = recode(year,
+                       avg = "2012-2016")) %>% 
+  ggplot(aes(x = week,
+             y = filings)) +
+  geom_line(aes(color = year)) +
+  labs(title = "Milwaukee Weekly Eviction Filings")
+```
+
+![](/uploads/sample_mke_plot.png)
