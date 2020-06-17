@@ -21,11 +21,11 @@ collections:
     name: "pages"
     editor:
       preview: false
+    preview_path: /weekly-reports/{{slug}}  
     files:
       - label: "Weekly Reports"
         name: "weekly-reports"
         file: "content/weekly-reports/_index.md"
-        preview_path: /weekly-reports/
         identifier_field: name
         fields:
           - {
@@ -110,7 +110,6 @@ collections:
       - label: "Weekly Reports (Methods)"
         name: "methods"
         file: "content/weekly-reports/methods.md"
-        preview_path: /weekly-reports/{{slug}}
         identifier_field: name
         fields:
           - {
