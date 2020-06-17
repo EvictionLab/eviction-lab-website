@@ -40,7 +40,7 @@
   <div class="col-12 col-md-7 offset-md-1 col-xl-5 offset-xl-2">
     {{#if until}}
       <p class="expires">
-          Protections start to expire on <strong>{{until}}</strong>.
+          Measures in place until <strong>{{until}}</strong>.
       </p>
     {{/if}}
     {{#if stars}}
@@ -163,8 +163,30 @@
         <p>{{plcnofiltext}}</p>
       {{/if}}
     </div>
+
+    <div class="state-policy">
+      <label class="icon-{{plccaresbool}} plccaresbool">
+        <span class="sr-only">Icon: state has {{#isfalse plccaresbool}}not{{/isfalse}} implemented </span>CARES certification required
+        {{#getsatooltipstring 'plccaresbool'}}{{/getsatooltipstring}}
+        {{#if plcstandoutbool}}
+          {{#if plccaresbool}}
+            {{#getsamedal 'plccaresbool'}}
+              <div class="icon-standout">
+                <span class="sr-only">Marked for standout status.</span>
+              </div>
+            {{/getsamedal}}
+          {{/if}}
+        {{/if}}
+        {{#getsatooltip 'plccaresbool'}}{{/getsatooltip}}
+      </label>
+      {{#if plccarestext}}
+        <p>{{plccarestext}}</p>
+      {{/if}}
+    </div>
+
   </div>
 </div>
+
 <div class="row ml-0 mr-0 category category-2 page-break-after">
   <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
     <div class="category-label">
