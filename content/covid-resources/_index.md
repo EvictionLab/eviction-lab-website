@@ -1,5 +1,6 @@
 ---
 title: "COVID-19 Tools & Resources"
+draft: true
 date: 2020-04-09T20:43:49-08:00
 type: index
 h1: "COVID-19 Tools & Resources"
