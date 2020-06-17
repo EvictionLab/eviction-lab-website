@@ -1,32 +1,39 @@
 {{ partial "header" . }} {{ $pagetype := .Params.childof }}
 <!-- {{ partial "subnav" . }} -->
 
-<div class="graphic-header center-page-wrapper">
-  <div class="center-page">
-    <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
-    <div class="underbar"></div>
+{{ partial "ets/hero" . }}
+<div class="list-intro">
+  <div class="layout">
+    <div class="column column--content">
+      <p id="lastUpdate" class="list-intro__date overline">
+        Last Updated: <span>{{ .Date.Format "January 2, 2006" }}</span>
+      </p>
+      <p>{{ .Params.intro | markdownify }}</p>
+    </div>
   </div>
 </div>
-<div class="layout layout--full">
-  <div class="column column--content">
-
-    <p id="lastUpdate" class="date">
-      Last Updated: <span>{{ .Date.Format "January 2, 2006" }}</span>
-    </p>
-    
-    {{ .Content }}
-
-    {{ with .Params.fundedby }}
-      <h3>{{ .heading }}</h3>
-      <div class="links links--images">
-        {{ range .links }}
-          {{ $url := (index . "url") }}
-          <a href="{{ .url }}" target="_blank">
-            <img src="{{ .logo }}" alt="{{ .alt }}" />
-          </a>
-        {{ end }}
+<div class="list-table">
+  <div class="layout">
+    <div class="column column--content">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+<div class="list-crisis">
+  <div class="layout">
+    <div class="column column--content">
+      {{ .Params.crisis | markdownify }}
+    </div>
+  </div>
+</div>
+<div class="list-additional">
+  <div class="layout">
+    <div class="column column--content">
+      {{ .Params.additional | markdownify }}
+      <div class="callout">
+        {{ .Params.where | markdownify }}
       </div>
-    {{ end }}
+    </div>
   </div>
 </div>
 
