@@ -21,8 +21,7 @@ body {
   --body-font-bold: Akkurat-Bold, sans-serif;
   --body-font-italic: Akkurat-Italic, sans-serif;
   --heading-font: GT-Eesti-Display-Bold, sans-serif;
-  --number-font: Gotham A, Gotham B, GT-Eesti-Display-Bold,
-    sans-serif;
+  --number-font: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
   font-family: var(--body-font);
   overflow-x: hidden;
 }
@@ -278,15 +277,12 @@ body {
   }
 }
 
-.tablesorter-header.tablesorter-headerAsc
-  .tablesorter-header-inner {
+.tablesorter-header.tablesorter-headerAsc .tablesorter-header-inner {
   position: relative;
 }
 
-.tablesorter-header.tablesorter-headerAsc
-  .tablesorter-header-inner:after,
-.tablesorter-header.tablesorter-headerDesc
-  .tablesorter-header-inner:after {
+.tablesorter-header.tablesorter-headerAsc .tablesorter-header-inner:after,
+.tablesorter-header.tablesorter-headerDesc .tablesorter-header-inner:after {
   content: "";
   position: absolute;
   margin-top: 8px;
@@ -298,8 +294,7 @@ body {
   border-top-color: var(--c1);
 }
 
-.tablesorter-header.tablesorter-headerDesc
-  .tablesorter-header-inner:after {
+.tablesorter-header.tablesorter-headerDesc .tablesorter-header-inner:after {
   border-top-color: transparent;
   border-bottom-color: var(--c1);
   margin-top: 3px;
@@ -1222,3 +1217,91 @@ body {
   font-size: 12px;
   font-family: Akkurat-Bold, sans-serif;
 }
+
+.hero.hero--ets {
+  position: relative;
+  background: #25284e;
+  height: auto;
+  min-height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.hero.hero--ets svg {
+  
+}
+
+@media(min-width: 767px) {
+  .hero.hero--ets svg {
+    width: 1440px;
+    height: auto;
+    max-width: 100%;
+    transform: translateX(10%);
+  }
+}
+
+@media(min-width: 960px) {
+  .hero.hero--ets svg {
+    transform: translateX(0);
+  }
+}
+
+
+.hero__content {
+  position: absolute;
+  z-index:10;
+  margin: auto;
+  width: 1072px;
+  top:0;
+  bottom:0;
+  max-width: calc(100% - 96px);
+  display: flex;
+  align-items: center;
+}
+
+.hero__text {
+  width: 58.8em;
+  font-size: 8px;
+}
+
+@media (min-width: 1200px) {
+  .hero__text {
+    font-size: 10px;
+  }
+}
+
+.hero__text h1 {
+  position:relative;
+  font-family: var(--body-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.hero__text h1:before {
+  content:"";
+  display: block;
+  height: 8px;
+  width: 110px;
+  position: absolute;
+  bottom:0;
+  left:0;
+  background: var(--c1);
+}
+
+.hero__text p {
+  font-family: var(--heading-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4em;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+
