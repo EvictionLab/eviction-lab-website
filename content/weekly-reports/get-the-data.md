@@ -77,7 +77,7 @@ data:
 Sample code:
 
 ```r
-# Sample code to plot weekly filings
+# Sample R code to plot weekly filings
 # For Milwaukee until week 24 (06/13/2020)
 
 # library(dplyr)
