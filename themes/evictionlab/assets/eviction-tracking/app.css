@@ -70,7 +70,6 @@ body {
   @media (min-width: 768px) {
     .column--content {
       font-size: 1rem;
-      margin-bottom: 5.6rem;
     }
   }
   .column--content p {
@@ -100,6 +99,9 @@ body {
   }
 
   @media (min-width: 768px) {
+    .page-layout-content .column--content {
+      margin-bottom: 5.6rem;
+    }
     .page-layout-content .column--content p,
     .page-layout-content .column--content ul,
     .page-layout-downloads .column--content p,
