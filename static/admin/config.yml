@@ -23,7 +23,7 @@ collections:
       preview: false
     preview_path: /weekly-reports/{{slug}}  
     files:
-      - label: "Weekly Reports"
+      - label: "Eviction Tracking"
         name: "weekly-reports"
         file: "content/weekly-reports/_index.md"
         identifier_field: name
@@ -107,7 +107,7 @@ collections:
                       name: "alt",
                       widget: "string",
                     }
-      - label: "Weekly Reports (Methods)"
+      - label: "Eviction Tracking (Methods)"
         name: "methods"
         file: "content/weekly-reports/methods.md"
         identifier_field: name
@@ -165,7 +165,7 @@ collections:
               widget: "date",
             }
           - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Weekly Reports (Similar Resources)"
+      - label: "Eviction Tracking (Similar Resources)"
         name: "similar-resources"
         file: "content/weekly-reports/similar-resources.md"
         identifier_field: name
@@ -223,7 +223,7 @@ collections:
               widget: "date",
             }
           - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Weekly Reports (Acknowledgements)"
+      - label: "Eviction Tracking (Acknowledgements)"
         name: "acknowledgements"
         identifier_field: name
         file: "content/weekly-reports/acknowledgements.md"
@@ -281,7 +281,7 @@ collections:
               widget: "date",
             }
           - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Weekly Reports (Get the Data)"
+      - label: "Eviction Tracking (Get the Data)"
         name: "get-the-data"
         identifier_field: name
         file: "content/weekly-reports/get-the-data.md"
@@ -375,7 +375,7 @@ collections:
           - { label: "Body (below table)", name: "body", widget: "markdown" }    
   - name: "weekly-reports"
     identifier_field: "h1"
-    label: "Weekly Reports"
+    label: "Eviction Tracking"
     folder: "/content/weekly-reports"
     extension: md
     create: true

@@ -1,4 +1,4 @@
-# Weekly Reports
+# Eviction Tracking
 
 This document outlines the weekly eviction reports functionality, found at [https://evictionlab.org/weekly-reports](https://evictionlab.org/weekly-reports). Functionality has been developed April / May 2020 to monitor city level eviction filings in response to COVID-19 and associated policies.
 
@@ -32,7 +32,7 @@ This is a technical guide about implementation.  See the [User Guide](./user-gui
 
 - **Map Styles**: https://studio.mapbox.com/
 
-  Using "Weekly Reports" style created in mapbox studio under the `eviction-lab` account.
+  Using "Eviction Tracking" style created in mapbox studio under the `eviction-lab` account.
 
 ## Adding / Editing Reports
 
@@ -47,7 +47,7 @@ Front matter for each report should contain:
     - **Note:** the city list page creates links to individual reports by "slugifying" the city name as it appears on the index page, so **slugs must follow this format** in order for links to resolve correctly.
   - `title`: title that will be used for the browser window 
   - `date`: date the page was last updated
-  - `collection`: set to `true` for this page to show up in the "Weekly Reports" collection in the CMS
+  - `collection`: set to `true` for this page to show up in the "Eviction Tracking" collection in the CMS
   - `draft`: set to `true` to prevent this page from generating in production builds.
 
 ### Shortcodes

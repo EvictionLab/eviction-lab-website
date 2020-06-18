@@ -28,7 +28,7 @@ More detail on eviction protections in Pennsylvania can be found on the [COVID-1
 Eviction filings in Pittsburgh were slightly above average in January and February of this year.<sup>1</sup> Filings began to fall in March and were well below average in April and May.
 
 1. Eviction filing data for Allegheny county were collected by the [CMU CREATE Lab](http://evict-response.earthtime.org/). Historical averages cover 2012-2019. 
-2. Partial filings for June, through June 6.
+.
 
 
 
@@ -70,7 +70,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2019. 
 
 1. Eviction filing data for Allegheny county were collected by the [CMU CREATE Lab](http://evict-response.earthtime.org/). Historical averages cover 2012-2019.
-2. Partial filings for June, through June 6
+
 
 
 
