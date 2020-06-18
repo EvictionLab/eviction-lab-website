@@ -138,11 +138,11 @@
 <script src="/js/lib.min.js"></script>
 <script src="/js/main.js?{{ now.Unix }}"></script>
 
-{{ if in .File.Dir "weekly-reports" }}
-  {{ $lib := resources.Get "weekly-reports/lib.min.js" }}
-  {{ $app := resources.Get "weekly-reports/app.js" }}
+{{ if in .File.Dir "eviction-tracking" }}
+  {{ $lib := resources.Get "eviction-tracking/lib.min.js" }}
+  {{ $app := resources.Get "eviction-tracking/app.js" }}
   {{ $appmin := $app | resources.Minify}}
-  {{ $js := slice $lib $appmin | resources.Concat "js/weekly-reports/bundle.js" }}
+  {{ $js := slice $lib $appmin | resources.Concat "js/eviction-tracking/bundle.js" }}
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 

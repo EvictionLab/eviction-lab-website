@@ -29,7 +29,7 @@ additional: >-
 
   * The ETS was made possible by the tireless work of our partners at [January Advisors](https://www.januaryadvisors.com/).
   
-  * A description of the ETS methodology is [available here](https://cms-dev--eviction-lab.netlify.app/weekly-reports/methods/).
+  * A description of the ETS methodology is [available here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/methods/).
   
   * If you want to see your city or state added to the ETS and can help facilitate access to the necessary data, please contact [info@evictionlab.org](mailto:info@evictionlab.org).
   
@@ -37,9 +37,9 @@ additional: >-
   
   * Information on local eviction moratoria and renter legal protections can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/).
   
-  * A list of similar resources developed by other organizations is [available here](https://cms-dev--eviction-lab.netlify.app/weekly-reports/similar-resources/).
+  * A list of similar resources developed by other organizations is [available here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/similar-resources/).
   
-  * We are grateful to the many experts who contributed advice and research assistance to this project. A list of acknowledgements can be found [here](https://cms-dev--eviction-lab.netlify.app/weekly-reports/acknowledgements/).
+  * We are grateful to the many experts who contributed advice and research assistance to this project. A list of acknowledgements can be found [here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/acknowledgements/).
   
   * To receive updates, add your email below.
   

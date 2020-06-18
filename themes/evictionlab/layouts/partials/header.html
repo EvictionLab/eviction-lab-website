@@ -97,8 +97,8 @@
       <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
 		{{ end }}
 		
-		{{ if in .File.Dir "weekly-reports" }}
-			{{ $reportcss := resources.Get "weekly-reports/app.css" | resources.PostCSS }}
+		{{ if in .File.Dir "eviction-tracking" }}
+			{{ $reportcss := resources.Get "eviction-tracking/app.css" | resources.PostCSS }}
 			<link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
 			<link rel="stylesheet" href="{{ ($reportcss | minify | fingerprint).RelPermalink }}" />
 		{{ end }}

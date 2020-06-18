@@ -1142,7 +1142,7 @@ body {
     top: 50%;
     right: 0;
     margin-top: -50px;
-  }href="../"
+  }
 
   @media (min-width: 1024px) {
     .section.section--map .section__content {
@@ -1807,8 +1807,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  white-space:nowrap;
 }
-
+@media(max-width: 400px) {
+  .breadcrumbs .center-page > a:first-child span {
+    max-width: 80px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow:hidden;
+  }
+}
 
 .bc-dropdown {
   display: inline-block;
@@ -1845,7 +1853,7 @@ body {
 }
 @media(max-width: 480px) {
   .bc-dropdown__menu {
-    left: -124px;
+    left: -104px;
   }
 }
 

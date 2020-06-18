@@ -1,16 +1,16 @@
 # Eviction Tracking
 
-This document outlines the weekly eviction reports functionality, found at [https://evictionlab.org/weekly-reports](https://evictionlab.org/weekly-reports). Functionality has been developed April / May 2020 to monitor city level eviction filings in response to COVID-19 and associated policies.
+This document outlines the weekly eviction reports functionality, found at [https://evictionlab.org/eviction-tracking](https://evictionlab.org/eviction-tracking). Functionality has been developed April / May 2020 to monitor city level eviction filings in response to COVID-19 and associated policies.
 
 This is a technical guide about implementation.  See the [User Guide](./user-guide.md) for details about adding and maintaining reports.
 
 ## Associated Assets
 
-- **Content Folder:** `/content/weekly-reports`
+- **Content Folder:** `/content/eviction-tracking`
 
   Contains all content for the list page and individual reports.  The content structure relies on using shortcodes for the interactive elements.
 
-- **Page Layouts:** `/themes/evictionlab/layouts/weekly-reports`
+- **Page Layouts:** `/themes/evictionlab/layouts/eviction-tracking`
 
   Contains the list page and individual report page wrappers
 
@@ -22,7 +22,7 @@ This is a technical guide about implementation.  See the [User Guide](./user-gui
 
   Contains the custom editor components to allow editing shortcode components  with Netlify CMS.
 
-- **Application Assets**:  `/themes/evictionlab/assets/weekly-reports`
+- **Application Assets**:  `/themes/evictionlab/assets/eviction-tracking`
 
   Contains CSS and Javascript resources for the report list and single pages.
 
@@ -61,7 +61,7 @@ The content for each report should be created using the report shortcodes, which
 
 **Report Chart (`{{% report_chart %}}`)**
   - Attributes:
-    - `id`: the chart configuration ID corresponding to the chart type to show. Configurations are created in `/themes/evictionlab/assets/weekly-reports/app.js`. Current valid values are `avg` for the overall average chart and `race` for the neighborhood demographic chart.
+    - `id`: the chart configuration ID corresponding to the chart type to show. Configurations are created in `/themes/evictionlab/assets/eviction-tracking/app.js`. Current valid values are `avg` for the overall average chart and `race` for the neighborhood demographic chart.
     - `data`: the CSV file containing the chart data
 
 **Report Map (`{{% report_map %}}`)**
@@ -72,11 +72,11 @@ The content for each report should be created using the report shortcodes, which
 
 ## Application Structure
 
-The application assets (Javascript / CSS) are included on any page within the `weekly-reports` folder.
+The application assets (Javascript / CSS) are included on any page within the `eviction-tracking` folder.
 
 ### Libraries
 
-The following external libraries are included in `assets/weekly-reports/lib.min.js`:
+The following external libraries are included in `assets/eviction-tracking/lib.min.js`:
 
   - D3 (v4.13.0): used for charts, date formatting, etc.
   - MapboxGL (v1.9.1): used for maps on report page
@@ -85,7 +85,7 @@ The following external libraries are included in `assets/weekly-reports/lib.min.
 
 ### Application
 
-All other functionality is in `assets/weekly-reports/app.js` and broken into modules inside of the `Elab` namespace:
+All other functionality is in `assets/eviction-tracking/app.js` and broken into modules inside of the `Elab` namespace:
 
   - `Elab.Utils`: provides utility functions used throughout the app
   - `Elab.Config`: provides functions for configurations that determine how data is parsed and how charts render.

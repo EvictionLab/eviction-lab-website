@@ -21,11 +21,11 @@ collections:
     name: "pages"
     editor:
       preview: false
-    preview_path: /weekly-reports/{{slug}}  
+    preview_path: /eviction-tracking/{{slug}}  
     files:
       - label: "Eviction Tracking"
-        name: "weekly-reports"
-        file: "content/weekly-reports/_index.md"
+        name: "eviction-tracking"
+        file: "content/eviction-tracking/_index.md"
         identifier_field: name
         fields:
           - {
@@ -75,41 +75,14 @@ collections:
               name: "date",
               widget: "date",
             }
+          - { label: "Intro", name: "intro", widget: "markdown" }
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Funded By"
-            name: "fundedby"
-            widget: "object"
-            fields:
-              - {
-                  label: Heading,
-                  name: heading,
-                  widget: string,
-                  default: "",
-                }
-              - label: "Links"
-                name: "links"
-                widget: "list"
-                summary: "{{fields.alt}}"
-                fields:
-                  - {
-                      label: "URL",
-                      name: "url",
-                      widget: "string",
-                      hint: "e.g. https://website.com/",
-                    }
-                  - {
-                      label: "Logo",
-                      name: "logo",
-                      widget: "image",
-                    }
-                  - {
-                      label: "Alternate Text",
-                      name: "alt",
-                      widget: "string",
-                    }
+          - { label: "Eviction Crisis", name: "crisis", widget: "markdown" }
+          - { label: "Additional Info", name: "additional", widget: "markdown" }
+          - { label: "Where's my city?", name: "where", widget: "markdown" }
       - label: "Eviction Tracking (Methods)"
         name: "methods"
-        file: "content/weekly-reports/methods.md"
+        file: "content/eviction-tracking/methods.md"
         identifier_field: name
         fields:
           - {
@@ -167,7 +140,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Eviction Tracking (Similar Resources)"
         name: "similar-resources"
-        file: "content/weekly-reports/similar-resources.md"
+        file: "content/eviction-tracking/similar-resources.md"
         identifier_field: name
         fields:
           - {
@@ -226,7 +199,7 @@ collections:
       - label: "Eviction Tracking (Acknowledgements)"
         name: "acknowledgements"
         identifier_field: name
-        file: "content/weekly-reports/acknowledgements.md"
+        file: "content/eviction-tracking/acknowledgements.md"
         fields:
           - {
               label: "Draft",
@@ -284,7 +257,7 @@ collections:
       - label: "Eviction Tracking (Get the Data)"
         name: "get-the-data"
         identifier_field: name
-        file: "content/weekly-reports/get-the-data.md"
+        file: "content/eviction-tracking/get-the-data.md"
         fields:
           - {
               label: "Draft",
@@ -373,17 +346,17 @@ collections:
               - {label: Smallest Geography, name: geo, widget: string}
               - {label: Data File, name: file, widget: file}   
           - { label: "Body (below table)", name: "body", widget: "markdown" }    
-  - name: "weekly-reports"
+  - name: "eviction-tracking"
     identifier_field: "h1"
     label: "Eviction Tracking"
-    folder: "/content/weekly-reports"
+    folder: "/content/eviction-tracking"
     extension: md
     create: true
     slug: "{{fields.slug}}"
     filter: { field: "collection", value: true } # only show collection items
     editor:
       preview: false
-    preview_path: weekly-reports/{{slug}}
+    preview_path: eviction-tracking/{{slug}}
     fields: # The fields for each document, usually in front matter
       - {
           label: "Collection",
