@@ -99,7 +99,8 @@ body {
   }
 
   @media (min-width: 768px) {
-    .page-layout-content .column--content {
+    .page-layout-content .column--content,
+    .page-layout-downloads .column--content {
       margin-bottom: 5.6rem;
     }
     .page-layout-content .column--content p,
@@ -712,6 +713,14 @@ body {
   @media(min-width: 1024px) {
     .list-crisis .column {
       max-width: 95em;
+      column-gap: 5.6rem;
+    }
+  }
+  @media(min-width: 1280px) {
+    .list-crisis .column {
+      max-width: 100rem;
+      column-gap: 8rem;
+      padding-top: 8rem;
     }
   }
 
@@ -738,12 +747,32 @@ body {
 
   /** content */
   .list-crisis .column p {
-    font-size: 2em;
+    font-size: 1.6rem;
     line-height: 1.5;
+  }
+  @media(min-width: 768px) {
+    .list-crisis .column p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+    /** add margin to balance columns */
+    .list-crisis .column p:last-child {
+      margin-bottom: 8.8em;
+    }
   }
   @media(min-width: 1024px) {
     .list-crisis .column p {
-      font-size: 1.6em;
+      font-size: 1.7rem;
+      line-height: 1.5;
+    }
+    /** add margin to balance columns */
+    .list-crisis .column p:last-child {
+      margin-bottom: 8.8em;
+    }
+  }
+  @media(min-width: 1280px) {
+    .list-crisis .column p {
+      font-size: 1.8rem;
       line-height: 1.5;
     }
     /** add margin to balance columns */
@@ -768,6 +797,11 @@ body {
   @media(min-width: 1024px) {
     .list-additional .column {
       max-width: 95em;
+    }
+  }
+  @media(min-width: 1280px) {
+    .list-additional .column {
+      max-width: 100em;
     }
   }
 
@@ -795,16 +829,28 @@ body {
   /** content */
   .list-additional .column p,
   .list-additional .column ul {
-    font-size: 2em;
+    font-size: 1.6em;
     line-height: 1.5;
   }
-  @media(min-width: 1024px) {
+  @media(min-width: 768px) {
     .list-additional .column p,
     .list-additional .column ul {
       font-size: 1.6em;
     }
     .list-additional .column ul {
       width: 445px;
+    }
+  }
+  @media(min-width: 1024px) {
+    .list-additional .column p,
+    .list-additional .column ul {
+      font-size: 1.7em;
+    }
+  }
+  @media(min-width: 1280px) {
+    .list-additional .column p,
+    .list-additional .column ul {
+      font-size: 1.8em;
     }
   }
 

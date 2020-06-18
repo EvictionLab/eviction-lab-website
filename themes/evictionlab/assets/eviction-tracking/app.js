@@ -1925,7 +1925,7 @@ Elab.Table = (function (Elab) {
         "."
     );
     html.push(
-      "percent difference relative to average filings from 2012 - 2016 for the same time period."
+      "Percent differences relative to average filings for the same time period."
     );
     return html.join("<br />");
   }
