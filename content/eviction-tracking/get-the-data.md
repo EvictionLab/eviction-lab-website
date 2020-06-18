@@ -9,13 +9,12 @@ cascade:
 h1: Get the Data
 date: 2020-06-16T00:00:00.000Z
 intro: >-
-  Below are data used in the Eviction Tracking System. 
+  Below are the aggregate data used in the Eviction Tracking System. We hope
+  that you find new and productive ways to make use of them. When you do so,
+  please cite as follows:
 
 
-  Please cite as follows:
-
-
-  Peter Hepburn, Renee Louis, and Matthew Desmond. Eviction Tracking System: Version 1.0. Princeton: Princeton University, 2020. [www.evictionlab.org](http://www.evictionlab.org/).
+  > Peter Hepburn, Renee Louis, and Matthew Desmond. Eviction Tracking System: Version 1.0. Princeton: Princeton University, 2020.[www.evictionlab.org](http://www.evictionlab.org/).
 
 
   Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
