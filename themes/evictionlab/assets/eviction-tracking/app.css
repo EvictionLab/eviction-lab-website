@@ -1270,6 +1270,24 @@ body {
   line-height: 1.25;
   color: var(--text-secondary);
   text-align: center;
+  padding: 0 0px 0 0px;
+  margin-top: -8px;
+  margin-left: -32px;
+  max-width: 360px;
+}
+
+@media(min-width: 768px) {
+  .visual__title {
+    max-width: 420px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .visual__title {
+    max-width: none;
+    margin-left:0;
+    padding: 0 32px 0 8px;
+  }
 }
 
 .visual__note {
@@ -1788,6 +1806,19 @@ body {
   letter-spacing: 0.03em;
   color:#fff;
   text-transform: uppercase;
+}
+.card__link span:after {
+  content: "";
+  display: block;
+  position:absolute;
+  right: -1em;
+  top:0em;
+  background-image:url(/img/arrow--right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 0.5em;
+  height:0.9em;
 }
 
 /** END CARDS **/
