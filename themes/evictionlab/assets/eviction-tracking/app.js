@@ -198,11 +198,7 @@ Elab.Config = (function (Elab) {
       {
         selector: ".visual__title",
         text: "Monthly Eviction Filings",
-      },
-      {
-        selector: ".visual__toggle button",
-        text: "Show filings relative to average",
-      },
+      }
     ],
     markLines: [],
     data: {
@@ -222,12 +218,8 @@ Elab.Config = (function (Elab) {
         selector: ".visual__title",
         text: "Monthly Eviction Filings Relative To Average",
       },
-      {
-        selector: ".visual__toggle button",
-        text: "Show filing count",
-      },
     ],
-    markLines: [{ y: 1, label: "average filings" }],
+    markLines: [{ y: 1, label: "average" }, { y: 1, label: "filings", labelOnly:true }],
     data: {
       x: "month",
       y: {
@@ -266,19 +258,15 @@ Elab.Config = (function (Elab) {
 
   var CHART_2_CONFIG = createConfig({
     groupType: "row",
-    id: "diff",
+    id: "avg",
     content: [
       {
         selector: ".visual__title",
         text:
           "Filings Relative to Average, by Neighborhood Racial/Ethnic Majority",
       },
-      {
-        selector: ".visual__toggle button",
-        text: "Show filing count",
-      },
     ],
-    markLines: [{ y: 1, label: "average filings" }],
+    markLines: [{ y: 1, label: "average" }, { y: 1, label: "filings", labelOnly:true }],
     data: {
       x: "month",
       y: {
@@ -324,11 +312,7 @@ Elab.Config = (function (Elab) {
       {
         selector: ".visual__title",
         text: "Filings by Neighborhood Racial/Ethnic Majority",
-      },
-      {
-        selector: ".visual__toggle button",
-        text: "Show filings relative to average",
-      },
+      }
     ],
     markLines: [],
     data: {
@@ -370,7 +354,7 @@ Elab.Config = (function (Elab) {
   });
 
   var CONFIGS = {
-    avg: [CHART_1_CONFIG, CHART_1A_CONFIG],
+    avg: [CHART_1A_CONFIG, CHART_1_CONFIG],
     race: [CHART_2A_CONFIG, CHART_2_CONFIG],
   };
 
@@ -608,21 +592,16 @@ Elab.Chart = (function (Elab) {
     if (!rawLastDay) return;
     const parseDate = d3.timeParse("%d/%m/%Y")
     const lastDay = parseDate(rawLastDay)
-    // loop through footnotes and find the partial filings entry
-    rootEl.find('.footnote li').each(function(el) {
-      let text = $(this).text()
-      if (text.indexOf("Partial filings for") > -1) {
-        $(this).html(
-          "Partial filings for " + d3.timeFormat("%B")(lastDay) + 
-          ", as of " + d3.timeFormat("%B %e")(lastDay))
-      }
-    })
+    const value = "Partial filings for " + d3.timeFormat("%B")(lastDay) + 
+      ", as of " + d3.timeFormat("%B %e")(lastDay)
+    const partialEl = rootEl.find('.visual__note');
+    partialEl.html(value)
   }
 
   function Chart(source, root, config) {
     // options
     config = config || {};
-    var margin = config.margin || { top: 32, right: 24, bottom: 72, left: 40 };
+    var margin = config.margin || { top: 32, right: 52, bottom: 72, left: 40 };
     var parsedData;
     var elements;
     var chartConfig;
@@ -994,7 +973,7 @@ Elab.Chart = (function (Elab) {
       // y axis mark lines
       var markLine = context.els.markLines
         .selectAll(".chart__mark-line--y")
-        .data(config.markLines);
+        .data(config.markLines.filter(v => v.labelOnly));
 
       markLine
         .enter()
@@ -1044,7 +1023,7 @@ Elab.Chart = (function (Elab) {
           return d.label;
         })
         .attr("x", function (d) {
-          return context.width - 4;
+          return context.width+ 4;
         })
         .attr("y", function (d) {
           return context.height - 4;
@@ -1053,12 +1032,12 @@ Elab.Chart = (function (Elab) {
         .merge(markLabel)
         .transition()
         .duration(1000)
-        .attr("text-anchor", "end")
+        .attr("text-anchor", "start")
         .attr("x", function (d) {
-          return context.width - 4;
+          return context.width + 4;
         })
-        .attr("y", function (d) {
-          return context.y(d.y) - 4;
+        .attr("y", function (d, i) {
+          return context.y(d.y) - 4 + (i*16);
         })
         .attr("fill-opacity", 1);
 
@@ -1345,8 +1324,14 @@ Elab.Chart = (function (Elab) {
     var chartEl = rootEl.find(".chart")[0];
 
     // add button to toggle state
-    var toggleEl = $("<button/>");
-    rootEl.find(".visual__toggle").append(toggleEl);
+    var countToggleEl = rootEl.find('.toggle--count');
+    var avgToggleEl = rootEl.find('.toggle--avg');
+
+    if (config.id === 'avg')
+      avgToggleEl.addClass('toggle--active')
+    
+    if (config.id === 'race')
+      countToggleEl.addClass('toggle--active')
 
     // move footnotes into proper container
     var contentEl = rootEl.find(".details");
@@ -1357,19 +1342,21 @@ Elab.Chart = (function (Elab) {
     var configs = Elab.Config.getConfig(config.id, config.csv);
     var currentConfig = configs[0];
 
-    
-
-
     // create chart and bind click event to toggle state
     createChart(chartEl, currentConfig, function (chart) {
-      toggleEl.on("click", function () {
-        if (currentConfig.id === configs[0].id) {
-          currentConfig = configs[1];
-        } else {
-          currentConfig = configs[0];
-        }
+      countToggleEl.on("click", function () {
+        currentConfig = config.id === 'race' ? configs[0] : configs[1];
+        countToggleEl.addClass('toggle--active')
+        avgToggleEl.removeClass('toggle--active')
         chart.update(currentConfig);
       });
+      avgToggleEl.on("click", function () {
+        currentConfig = config.id === 'race' ? configs[1] : configs[0];
+        avgToggleEl.addClass('toggle--active')
+        countToggleEl.removeClass('toggle--active')
+        chart.update(currentConfig);
+      });
+
       updatePartialFilingsDate(rootEl, chart.data)
     });
   }
@@ -1445,6 +1432,22 @@ Elab.Map = (function (Elab) {
       range[1],
       Elab.Utils.getCssVar("--choro5"),
     ];
+
+    var strokeColor = [
+      "interpolate",
+      ["linear"],
+      ["get", prop],
+      range[0],
+      Elab.Utils.getCssVar("--choroStroke1"),
+      (mid - range[0]) / 2,
+      Elab.Utils.getCssVar("--choroStroke2"),
+      mid,
+      Elab.Utils.getCssVar("--choroStroke3"),
+      mid + (range[1] - mid) / 2,
+      Elab.Utils.getCssVar("--choroStroke4"),
+      range[1],
+      Elab.Utils.getCssVar("--choroStroke5"),
+    ];
     map.addSource("choropleth", {
       type: "geojson",
       data: data,
@@ -1474,7 +1477,7 @@ Elab.Map = (function (Elab) {
         source: "choropleth",
         layout: {},
         paint: {
-          "line-color": "rgba(0, 0, 0, 1)",
+          "line-color": strokeColor,
           "line-width": {
             stops: [
               [10, 2],
@@ -1485,7 +1488,7 @@ Elab.Map = (function (Elab) {
           "line-opacity": [
             "case",
             ["boolean", ["feature-state", "hover"], false],
-            0.5,
+            1,
             0,
           ],
         },
@@ -1806,20 +1809,20 @@ Elab.Table = (function (Elab) {
     html +=
       '<td class="table__cell table__cell--number">' +
       data.week.filings +
-      ' (<span class="arrow ' +
+      ' <span class="arrow ' +
       weekChange.direction +
       '">' +
       weekChange.value +
-      "</span>)" +
+      "</span>" +
       "</td>";
     html +=
       '<td class="table__cell table__cell--number">' +
       data.month.filings +
-      ' (<span class="arrow ' +
+      ' <span class="arrow ' +
       monthChange.direction +
       '">' +
       monthChange.value +
-      "</span>)" +
+      "</span>" +
       "</td>";
     html +=
       '<td class="table__cell table__cell--button">' +

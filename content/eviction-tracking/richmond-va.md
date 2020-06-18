@@ -27,7 +27,6 @@ Eviction filings in Richmond were near average in January and February of this y
 
 1. Average eviction filings taken from Eviction Lab data for 2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-3. Partial filings for June, through June 6
 
 
 
@@ -87,7 +86,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and  filings in 2016.
 
 1. Average eviction filings taken from Eviction Lab data for 2016
-2. Partial filings for June, through June 6
+
 
 
 
