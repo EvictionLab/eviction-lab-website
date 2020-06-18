@@ -18,7 +18,7 @@ crisis: >-
   ## A Looming Eviction Crisis?
 
 
-  Current policy responses to the pandemic aremay be insufficient to prevent a surge in evictions. CARES Act stimulus payments and unemployment insurance--when accessible--will provide families with some support, but in many cases not enough to make ends meet. Some states have passed temporary eviction moratoria, which the Eviction Lab is tracking in the COVID-19 Housing Policy Scorecard, and localities across the country have introduced additional measures. Once these measures expire, however, millions of renters will owe significant amounts of back rent. For many, a displacement and eviction crisis will follow the public health crisis. 
+  Current policy responses to the pandemic may be insufficient to prevent a surge in evictions. CARES Act stimulus payments and unemployment insurance--when accessible--will provide families with some support, but in many cases not enough to make ends meet. Some states have passed temporary eviction moratoria, which the Eviction Lab is tracking in the COVID-19 Housing Policy Scorecard, and localities across the country have introduced additional measures. Once these measures expire, however, millions of renters will owe significant amounts of back rent. For many, a displacement and eviction crisis will follow the public health crisis. 
 
 
   There is currently no data infrastructure that allows policymakers, legal and advocacy organizations, journalists, academics, and community members to track displacement and evictions in real time. The Eviction Lab has built the Eviction Tracking System (ETS) to fill this critical gap and to help monitor and respond to eviction hotspots as they emerge. The ETS is designed as a multi-site, open-source, and expandable system for tracking eviction filings as they happen. 
@@ -53,7 +53,8 @@ additional: >-
 where: >-
   ### Where's my city?
 
-  The U.S. government does not collect eviction data, and most state governments don’t either. Instead, eviction records are housed within county court systems and can be very difficult to access. The cities represented the ETS are cities that have the data infrastructure that allow us to track evictions on a weekly basis. We will continue to add more cities as the project develops. We also welcome opportunities to collaborate with local officials and clerks to make this data available.
+
+  The U.S. government does not collect eviction data, and most state governments don’t either. Instead, eviction records are housed within county court systems and can be very difficult to access. The cities represented in the ETS are cities that have the data infrastructure that allow us to track evictions on a weekly basis. We will continue to add more cities as the project develops. We also welcome opportunities to collaborate with local officials and clerks to make this data available.
 fundedby:
   heading: The Eviction Tracking System is funded by
   links:
