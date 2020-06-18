@@ -13,6 +13,10 @@
 <div class="layout layout--full">
   <div class="column column--content">
     {{ .Content }}
+    {{ if .Params.similar }}
+      <a id="similar-resources"></a>
+      {{ .Params.similar | markdownify }}
+    {{ end }}
     <p id="lastUpdate" class="date">
       Last Updated:
       <span>{{ .Date.Format "January 2, 2006" }}</span>
