@@ -41,7 +41,7 @@ additional: >-
 
   * Information on local eviction moratoria and renter legal protections can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/).
 
-  * A list of similar resources developed by other organizations is [available here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/similar-resources/).
+  * A list of similar resources developed by other organizations is [available here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/acknowledgements/#similar-resources).
 
   * We are grateful to the many experts who contributed advice and research assistance to this project. A list of acknowledgements can be found [here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/acknowledgements/).
 
