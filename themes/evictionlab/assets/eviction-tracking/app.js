@@ -1807,6 +1807,7 @@ Elab.Table = (function (Elab) {
           {
             id: d.id,
             name: d.name,
+            lastUpdate: parseDate(data[0]['data_date']),
             start:
               d["start_moratorium_date"] &&
               parseDate(d["start_moratorium_date"]),
@@ -1917,12 +1918,12 @@ Elab.Table = (function (Elab) {
     var dateFormat = d3.timeFormat("%B %d, %Y");
     var html = [];
     html.push(
-      "<sup>1</sup> filings for the week of " + dateFormat(data.week.date) + "."
+      "<sup>1</sup> filings for the week of " + dateFormat(data.week.date) + " to " + dateFormat(data.lastUpdate) + " ."
     );
     html.push(
-      "<sup>2</sup> filings for the 4 week period starting on " +
+      "<sup>2</sup> filings for the period " +
         dateFormat(data.month.date) +
-        "."
+        " to " + dateFormat(data.lastUpdate) + "."
     );
     html.push(
       "Percent differences relative to average filings for the same time period."
@@ -1969,7 +1970,7 @@ Elab.Table = (function (Elab) {
         bodyEl.append(html);
       });
       // update the "last updated" text
-      $('#lastUpdate span').html('Week of ' + d3.timeFormat("%B %d, %Y")(data[0].week.date))
+      $('#lastUpdate span').html(d3.timeFormat("%B %d, %Y")(data[0].lastUpdate))
       // set the table footnotes
       $(el).next().html(getFootnoteHtml(data[0]));
       // default sort the table

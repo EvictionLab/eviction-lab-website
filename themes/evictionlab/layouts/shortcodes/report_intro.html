@@ -1,32 +1,33 @@
 <div class="intro">
-  <div class="bordered-header primary">
-    <a id="top">{{ .Page.Params.h1 }}</a>
-    <span id="reportDate" class="subhead-rt date"
-      >{{ .Page.Date.Format "January 2, 2006" }}</span
-    >
-  </div>
+
   <div class="layout">
-    <div class="lead">{{ .Inner }}</div>
-    <ul class="stats">
-      <li class="stats-item stats-item--week">
-        <strong class="stats-item__label">Filings Last Week</strong>
-        <span class="stats-item__value">
-          <span class="stats-item__count"></span>
-          <span class="stats-item__diff"></span>
-        </span>
-      </li>
-      <li class="stats-item stats-item--month">
-        <strong class="stats-item__label">Filings Last 4 Weeks</strong>
-        <span class="stats-item__value">
-          <span class="stats-item__count"></span>
-          <span class="stats-item__diff"></span>
-        </span>
-      </li>
-      <li class="stats-item stats-item--moratorium">
-        <strong class="stats-item__label">Eviction Moratorium</strong>
-        <span class="stats-item__value"></span>
-      </li>
-    </ul>
+    <div class="intro__content">
+      <h1 class="intro__heading"><a id="top">{{ .Page.Params.h1 }}</a></h1>
+      <div class="intro__text">{{ .Inner }}</div>
+    </div>
+    <div class="callout">
+      <h2 id="reportDate" class="callout__heading">{{ .Page.Date.Format "January 2, 2006" }}</h2>
+      <ul class="stats">
+        <li class="stats-item stats-item--week">
+          <strong class="stats-item__label">Filings Last Week</strong>
+          <span class="stats-item__value">
+            <span class="stats-item__count"></span>
+            <span class="stats-item__diff"></span>
+          </span>
+        </li>
+        <li class="stats-item stats-item--month">
+          <strong class="stats-item__label">Filings Last 4 Weeks</strong>
+          <span class="stats-item__value">
+            <span class="stats-item__count"></span>
+            <span class="stats-item__diff"></span>
+          </span>
+        </li>
+        <li class="stats-item stats-item--moratorium">
+          <strong class="stats-item__label">Eviction Moratorium</strong>
+          <span class="stats-item__value"></span>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="share">
     <a class="share__link share__link--twitter">
