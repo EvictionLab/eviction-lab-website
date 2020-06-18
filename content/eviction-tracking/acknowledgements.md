@@ -50,6 +50,7 @@ We would like to thank representatives of the following organizations for speaki
 * Milwaukee Rental Housing Stability Coalition
 * [New Covenant Legal Services](https://newcovenantlegalservices.org/)
 * [Ohio Legal Help](https://www.ohiolegalhelp.org/)
+* [Ohio Poverty Law Center](https://www.ohiopovertylawcenter.org/)
 * [Texas Housers](https://texashousers.org/)
 * [Urban Economic Development Association of Wisconsin](http://www.uedawi.org/default.htm)
 * [Wisconsin Policy Forum](https://wispolicyforum.org/)
