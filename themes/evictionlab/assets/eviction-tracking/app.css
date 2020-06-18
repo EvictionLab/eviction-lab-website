@@ -659,6 +659,7 @@ body {
       justify-content: center;
       align-items: flex-end;
       color: #fff;
+      overflow: hidden;
     }
     @media(min-width: 600px) {
       .hero.hero--ets {
