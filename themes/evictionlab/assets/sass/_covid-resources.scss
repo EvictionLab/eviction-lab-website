@@ -66,7 +66,13 @@
         }
     }
     .feature-panel, .subfeature-panel {
-        a {
+        a.wraplink {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+        }
+        a.sublink {
             font-family: "GT-Eesti-Display-Medium";
             font-style: normal;
             font-weight: 400;
@@ -76,6 +82,14 @@
             color: #000000;
             &:hover {
                 text-underline-position: under;
+            }
+            .hoverbar {
+                position: absolute;
+                display: none;
+                height: 3px;
+                width: 56px;
+                margin-top: 12px;
+                background-color: #000;
             }
             i.fa.fa-chevron-right {
                 position: relative;
@@ -126,6 +140,13 @@
                 @include media-breakpoint-up(md) {
                     order: 1;
                 }
+                &:hover {
+                    //background-color: #ebeff3;
+                    .hoverbar {
+                        display: block;
+                        transition: display .8s ease;
+                    }
+                } 
             }
             &:nth-of-type(2) {
                 background-image: url('/images/assets/graphics/scorecard-bg.jpg');
@@ -164,6 +185,13 @@
                     padding-top: 6.4rem;
                     padding-bottom: 6.4rem;
                 }
+                &:hover {
+                    .hoverbar {
+                        display: block;
+                        transition: display .8s ease;
+                    }
+                    
+                }
             }
         }
     }
@@ -174,8 +202,15 @@
         .feature {
             /* Vector */
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+            &:hover {
+                .hoverbar {
+                    display: block;
+                    transition: display .8s ease;
+                }      
+            }
             .bg-wrapper-1 {
                 background-size: 125%;
+                
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
                 } 
@@ -198,6 +233,7 @@
                 }
             
             .text-wrapper {
+                padding: 2.4rem 2.4rem 4rem 2.4rem;
                 background-color: #fff;
             }
             

@@ -644,7 +644,7 @@ body {
     @media(min-width: 767px) {
       .hero__text p {
         font-size: 4em;
-        line-height: 1.05;
+        line-height: 1.18;
       }
     }
   /** END HERO TYPOGRAPHY */
