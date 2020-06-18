@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Richmond, Virginia | Weekly Eviction Reports | Eviction Lab
 h1: Richmond, Virginia
 slug: richmond-va

@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Cleveland Ohio | Weekly Eviction Reports | Eviction Lab
 h1: Cleveland, Ohio
 slug: cleveland-oh

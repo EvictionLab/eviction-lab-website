@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: St. Louis, Missouri | Weekly Eviction Reports | Eviction Lab
 h1: St. Louis, Missouri
 slug: st-louis-mo

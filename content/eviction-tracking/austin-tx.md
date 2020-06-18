@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Austin Texas | Weekly Eviction Reports | Eviction Lab
 h1: Austin, Texas
 slug: austin-tx

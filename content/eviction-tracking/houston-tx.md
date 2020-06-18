@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Houston, Texas | Weekly Eviction Reports | Eviction Lab
 h1: Houston, Texas
 slug: houston-tx

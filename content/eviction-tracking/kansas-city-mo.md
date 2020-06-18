@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Kansas City, Missouri | Weekly Eviction Reports | Eviction Lab
 h1: Kansas City, Missouri
 slug: kansas-city-mo

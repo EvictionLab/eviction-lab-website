@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 cascade:
   title: Weekly Eviction Reports Downloads | Eviction Lab
   description: Get the data for real time eviction tracking by city during COVID-19.

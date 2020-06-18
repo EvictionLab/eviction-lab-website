@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Pittsburgh, Pennsylvania | Weekly Eviction Reports | Eviction Lab
 h1: Pittsburgh, Pennsylvania
 slug: pittsburgh-pa

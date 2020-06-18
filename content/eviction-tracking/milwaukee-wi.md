@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Milwaukee, Wisconsin | Weekly Eviction Reports | Eviction Lab
 h1: Milwaukee, Wisconsin
 slug: milwaukee-wi

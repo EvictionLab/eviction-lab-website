@@ -1,6 +1,6 @@
 ---
 slug: acknowledgements
-draft: true
+draft: false
 cascade:
   title: Weekly Eviction Reports | Eviction Lab
   description: Real time eviction tracking by city during COVID-19.

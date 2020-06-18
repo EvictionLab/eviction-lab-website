@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Jacksonville Florida | Weekly Eviction Reports | Eviction Lab
 h1: Jacksonville, Florida
 slug: jacksonville-fl

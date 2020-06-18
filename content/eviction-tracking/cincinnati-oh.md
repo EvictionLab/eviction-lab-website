@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Cincinnati, OH | Weekly Eviction Reports | Eviction Lab
 h1: Cincinnati, Ohio
 slug: cincinnati-oh

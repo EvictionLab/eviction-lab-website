@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Boston, Massachusetts | Weekly Eviction Reports | Eviction Lab
 h1: Boston, Massachusetts
 slug: boston-ma
