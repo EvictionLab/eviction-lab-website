@@ -7,9 +7,13 @@ cascade:
   twImage: /images/og/eviction-lab-about-us-tw.jpg
   socialDescription: We’ve built the first nationwide database of evictions.
 h1: Eviction Tracking System
-intro: >-
-  The COVID-19 pandemic has deepened America’s housing crisis. The nation’s most severe public health emergency in a century may cause large spikes in eviction and homelessness. In response, we have created the Eviction Tracking System to monitor weekly updates on the number of eviction cases being filed across the United States. Scroll down to view full reports on the cities in which we are operating, and to learn more about the project. 
-
+date: 2020-06-03T00:00:00.000Z
+intro: "The COVID-19 pandemic has deepened America’s housing crisis. The
+  nation’s most severe public health emergency in a century may cause large
+  spikes in eviction and homelessness. In response, we have created the Eviction
+  Tracking System to monitor weekly updates on the number of eviction cases
+  being filed across the United States. Scroll down to view full reports on the
+  cities in which we are operating, and to learn more about the project. "
 crisis: >-
   ## A Looming Eviction Crisis?
 
@@ -21,36 +25,35 @@ crisis: >-
 
 
   We welcome feedback, as well as partnerships with states and localities who wish to work with us in monitoring and responding to emerging eviction hotspots. Ensuring housing security is vital to mitigating the spread of COVID-19 and sustaining health, economic security, and family stability.
-
-
 additional: >-
   ## Additional Information
 
 
   * The ETS was made possible by the tireless work of our partners at [January Advisors](https://www.januaryadvisors.com/).
-  
+
   * A description of the ETS methodology is [available here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/methods/).
-  
+
+  * You can [get the data here](/eviction-tracking/get-the-data).
+
   * If you want to see your city or state added to the ETS and can help facilitate access to the necessary data, please contact [info@evictionlab.org](mailto:info@evictionlab.org).
-  
+
   * To find community organizations focused on housing and eviction in your community, visit [JustShelter.org](https://justshelter.org/).
-  
+
   * Information on local eviction moratoria and renter legal protections can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/).
-  
+
   * A list of similar resources developed by other organizations is [available here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/similar-resources/).
-  
+
   * We are grateful to the many experts who contributed advice and research assistance to this project. A list of acknowledgements can be found [here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/acknowledgements/).
-  
+
   * To receive updates, add your email below.
-  
+
   * For media inquiries, email [press@evictionlab.org](mailto:press@evictionlab.org)
-  
+
   * To provide tips and feedback on the ETS, email [info@evictionlab.org](mailto:info@evictionlab.org).
 where: >-
   ### Where's my city?
 
   The U.S. government does not collect eviction data, and most state governments don’t either. Instead, eviction records are housed within county court systems and can be very difficult to access. The cities represented the ETS are cities that have the data infrastructure that allow us to track evictions on a weekly basis. We will continue to add more cities as the project develops. We also welcome opportunities to collaborate with local officials and clerks to make this data available.
-date: 2020-06-03T00:00:00.000Z
 fundedby:
   heading: The Eviction Tracking System is funded by
   links:
@@ -58,7 +61,7 @@ fundedby:
       logo: /uploads/c3-logo.svg
       alt: C3.ai Digital Transformation Institute
 aliases:
-    - /weekly-reports 
+  - /weekly-reports
 ---
 {{% report_table data="/uploads/table.csv" %}}
 
