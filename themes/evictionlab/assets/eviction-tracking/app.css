@@ -804,20 +804,7 @@ body {
     padding-top: 48px;
     padding-bottom: 48px;
   }
-
   @media(min-width: 768px) {
-    .list-table .layout,
-    .list-crisis .layout,
-    .list-additional .layout {
-      padding-top: 72px;
-      padding-bottom: 72px;
-    }
-    .list-intro .layout {
-      padding-top: 80px;
-      padding-bottom: 72px;
-    }
-  }
-  @media(min-width: 1024px) {
     .list-table .layout,
     .list-crisis .layout,
     .list-additional .layout {
@@ -1081,7 +1068,6 @@ body {
  * - Introduction area styles
  * - Visual base styles
  *   - legend
- *   - button groups 
  * - Section base styles
  * - Chart section styles
  * - Map section styles
