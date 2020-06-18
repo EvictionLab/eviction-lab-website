@@ -35,15 +35,13 @@ additional: >-
 
   * You can [get the data here](/eviction-tracking/get-the-data).
 
+  * We are grateful to the many experts who contributed advice and research assistance to this project. We also want to highlight a number of similar resources developed by other organizations. Information and acknowledgements can be found [here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/acknowledgements/).
+
   * If you want to see your city or state added to the ETS and can help facilitate access to the necessary data, please contact [info@evictionlab.org](mailto:info@evictionlab.org).
 
   * To find community organizations focused on housing and eviction in your community, visit [JustShelter.org](https://justshelter.org/).
 
   * Information on local eviction moratoria and renter legal protections can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/).
-
-  * A list of similar resources developed by other organizations is [available here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/similar-resources/).
-
-  * We are grateful to the many experts who contributed advice and research assistance to this project. A list of acknowledgements can be found [here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/acknowledgements/).
 
   * To receive updates, add your email below.
 
