@@ -13,7 +13,7 @@ intro: "The COVID-19 pandemic has deepened America’s housing crisis. The
   spikes in eviction and homelessness. In response, we have created the Eviction
   Tracking System to monitor weekly updates on the number of eviction cases
   being filed across the United States. Scroll down to view full reports on the
-  cities in which we are operating, and to learn more about the project. "
+  cities in which we are operating, and to learn more about the project ... "
 crisis: >-
   ## A Looming Eviction Crisis?
 
