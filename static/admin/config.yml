@@ -254,6 +254,7 @@ collections:
               widget: "date",
             }
           - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Similar Resources", name: "similar", widget: "markdown" }
       - label: "Eviction Tracking (Get the Data)"
         name: "get-the-data"
         identifier_field: name
