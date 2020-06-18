@@ -57,6 +57,8 @@ fundedby:
     - url: https://c3dti.ai/
       logo: /uploads/c3-logo.svg
       alt: C3.ai Digital Transformation Institute
+aliases:
+    - /weekly-reports 
 ---
 {{% report_table data="/uploads/table.csv" %}}
 
