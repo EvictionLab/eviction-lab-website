@@ -23,7 +23,6 @@ Eviction filings in Houston were higher than average in January and February of 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-3. Partial filings for June, through June 6
 
 {{%/ report_chart %}}
 
@@ -47,6 +46,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2015. This allows us to see, for example, that filings in majority-White neighborhoods were higher than average in the first three months of 2020.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Partial filings for June, through June 6
+
 
 {{%/ report_chart %}}

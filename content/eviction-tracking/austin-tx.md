@@ -25,7 +25,6 @@ Eviction filings in Austin were higher than average in January and February of t
 
 1. Eviction filings data for 2014-2019 collected by [BASTA Austin](http://www.bastaaustin.org/)
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-3. Partial filings for June, as of June 9
 
 {{%/ report_chart %}}
 
@@ -63,7 +62,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and filings in 2012.
 
-1. Partial filings for June, as of June 9
 
 
 

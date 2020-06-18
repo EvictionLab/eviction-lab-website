@@ -40,6 +40,5 @@ Albuquerque Map
 Albuquerque Chart 2
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Partial filings for May, as of May 9
 
 {{%/ report_chart %}}

@@ -13,9 +13,9 @@ To edit content or data on the city list page:
 - Login to the [Content Management System](https://eviction-lab.netlify.app/admin/)
 - To update the ETS city list page:
   - Select "Pages" from the collections menu on the left
-  - Select "Weekly Reports" from the list of pages that loads
+  - Select "Eviction Tracking" from the list of pages that loads
 - To update an individual city report page:
-  - Select "Weekly Reports" from the collections menu on the left
+  - Select "Eviction Tracking" from the collections menu on the left
   - Select the city page from the list of report pages
 - After selecting a page you can modify the published status along with headings and page body content.
 
