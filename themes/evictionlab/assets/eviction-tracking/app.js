@@ -714,6 +714,28 @@ Elab.Chart = (function (Elab) {
         .enter()
         .append("g")
         .attr("class", "chart__bar-group")
+        // .on("mousemove", function (d) {
+        //   var title = chartConfig.format.xTooltip(d.data[0].value.x);
+        //   var items = d.data.map(getHoverItem);
+        //   renderBarTooltip(title, items, context, chartConfig.format.tooltip);
+        // })
+        // .on("mouseout", function () {
+        //   if (context.els.tooltip) context.els.tooltip.style("display", "none");
+        // })
+        .merge(group)
+        .attr("transform", function (d) {
+          return "translate(" + context.x(new Date(2020, d.id, 1)) + ",0)";
+        });
+
+      var groupAreaSelection = context.els.data
+        .selectAll(".chart__bar-area")
+        .data(groupedData)
+
+      var groupAreas = groupAreaSelection
+        .enter()
+        .append('rect')
+        .attr("fill", "transparent")
+        .attr("class", "chart__bar-area")
         .on("mousemove", function (d) {
           var title = chartConfig.format.xTooltip(d.data[0].value.x);
           var items = d.data.map(getHoverItem);
@@ -722,10 +744,12 @@ Elab.Chart = (function (Elab) {
         .on("mouseout", function () {
           if (context.els.tooltip) context.els.tooltip.style("display", "none");
         })
-        .merge(group)
-        .attr("transform", function (d) {
-          return "translate(" + context.x(new Date(2020, d.id, 1)) + ",0)";
-        });
+        .merge(groupAreaSelection)
+        .attr("x", function (d, i) { return context.x(new Date(2020, d.id, 1)) - 4})
+        .attr("y", 0)
+        .attr("height", context.height)
+        .attr("width", context.x.bandwidth() + 8);
+
 
       var groupBars = groupEls.selectAll("rect").data(function (d) {
         return d.data;
@@ -780,6 +804,52 @@ Elab.Chart = (function (Elab) {
           return context.height - context.y(0);
         })
         .remove();
+
+      var groupDots = groupEls.selectAll("circle").data(function (d) {
+        return config.dots ? d.data : [];
+      });
+
+      groupDots
+        .enter()
+        .append("circle") // add bars for new groups
+        .attr("class", function (d, i) {
+          return "chart__dot chart__dot--" + i;
+        })
+        .attr("r", 0)
+        .attr("cx", function (d) {
+          return x1(d.id) + x1.bandwidth() / 2;
+        })
+        .attr("cy", function (d) {
+          return context.y(0);
+        })
+        .merge(groupBars) // merge existing bars for update
+        .transition()
+        .delay(function (d, i) {
+          return i * 100;
+        })
+        .duration(1000)
+        .attr("r", 4)
+        .attr("cx", function (d) {
+          return x1(d.id) + x1.bandwidth() / 2;
+        })
+        .attr("cy", function (d) {
+          return context.y(d.value.extras[config.dots]);
+        });
+
+      // remove dots
+      groupDots
+        .exit()
+        .transition()
+        .duration(1000)
+        .attr("r", 0)
+        .attr("cx", function (d) {
+          return x1(d.id) + x1.bandwidth() / 2;
+        })
+        .attr("cy", function (d) {
+          return context.y(0);
+        })
+        .remove();
+
 
       var groupDots = groupEls.selectAll("circle").data(function (d) {
         return config.dots ? d.data : [];
