@@ -70,21 +70,62 @@ body {
   @media (min-width: 768px) {
     .column--content {
       font-size: 1rem;
+      margin-bottom: 5.6rem;
     }
   }
   .column--content p {
     margin-bottom: 1.5em;
   }
 
+  .column--content > h1 {
+    text-transform: uppercase;
+  }
   .column--content > h1,
   .column--content > h2,
   .column--content > h3,
   .column--content > h4,
   .column--content > h5 {
     font-family: var(--heading-font);
-    text-transform: uppercase;
     color: var(--c1);
     margin: 3.2rem 0 2.4rem 0;
+  }
+
+  .page-layout-content .column--content p,
+  .page-layout-content .column--content ul,
+  .page-layout-downloads .column--content p,
+  .page-layout-downloads .column--content ul {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.006em;
+  }
+
+  @media (min-width: 768px) {
+    .page-layout-content .column--content p,
+    .page-layout-content .column--content ul,
+    .page-layout-downloads .column--content p,
+    .page-layout-downloads .column--content ul {
+      font-size: 1.7rem;
+      line-height: 1.5;
+      letter-spacing: 0.006em;
+    }
+    .column--content h2 {
+      font-size: 2.2rem;
+      margin: 4rem 0 2.4rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .page-layout-content .column--content p,
+    .page-layout-content .column--content ul,
+    .page-layout-downloads .column--content p,
+    .page-layout-downloads .column--content ul {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+    }
+    .column--content h2 {
+      font-size: 2.3rem;
+      margin: 4rem 0 2.4rem;
+    }
   }
   .column--content p,
   .column--content ul {
@@ -95,6 +136,14 @@ body {
   .column--content ul {
     list-style: disc;
     padding: 0 0 0 16px;
+  }
+  .column--content blockquote {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: .006em;
+    margin-bottom: 16px;
+    padding: 0 0 0 16px;
+    border-left: 5px solid #e8e8e8;
   }
   .column--content ul li {
     padding: 4px 8px;
