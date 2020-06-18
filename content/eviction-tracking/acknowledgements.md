@@ -20,6 +20,7 @@ We would like to thank representatives of the following organizations for speaki
 * [CMU CREATE Lab](https://www.cmucreatelab.org/home)
 * [Community Advocates](https://communityadvocates.net/)
 * Elaina Johns-Wolfe
+* [Fair Housing Partnership of Greater Pittsburgh](https://fhp.org/)
 * [Greater Boston Legal Aid](https://www.gbls.org/)
 * [Hamilton County, OH Clerk of Courts](https://www.courtclerk.org/general-information/about-the-clerk/meet-aftab-pureval/)
 * [Harvard Legal Aid Bureau](https://hls.harvard.edu/dept/clinical/clinics/harvard-legal-aid-bureau/)
