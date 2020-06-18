@@ -53,7 +53,8 @@ additional: >-
 where: >-
   ### Where's my city?
 
-  The U.S. government does not collect eviction data, and most state governments don’t either. Instead, eviction records are housed within county court systems and can be very difficult to access. The cities represented the ETS are cities that have the data infrastructure that allow us to track evictions on a weekly basis. We will continue to add more cities as the project develops. We also welcome opportunities to collaborate with local officials and clerks to make this data available.
+
+  The U.S. government does not collect eviction data, and most state governments don’t either. Instead, eviction records are housed within county court systems and can be very difficult to access. The cities represented in the ETS are cities that have the data infrastructure that allow us to track evictions on a weekly basis. We will continue to add more cities as the project develops. We also welcome opportunities to collaborate with local officials and clerks to make this data available.
 fundedby:
   heading: The Eviction Tracking System is funded by
   links:
