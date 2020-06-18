@@ -662,12 +662,39 @@ body {
   }
 
   @media(min-width: 768px) {
-    .list-intro .layout,
     .list-table .layout,
     .list-crisis .layout,
     .list-additional .layout {
+      padding-top: 72px;
+      padding-bottom: 72px;
+    }
+    .list-intro .layout {
+      padding-top: 80px;
+      padding-bottom: 72px;
+    }
+  }
+  @media(min-width: 1024px) {
+    .list-table .layout,
+    .list-crisis .layout,
+    .list-additional .layout {
+      padding-top: 72px;
+      padding-bottom: 72px;
+    }
+    .list-intro .layout {
+      padding-top: 80px;
+      padding-bottom: 72px;
+    }
+  }
+  @media(min-width: 1280px) {
+    .list-table .layout,
+    .list-crisis .layout,
+    .list-additional .layout {
+      padding-top: 88px;
+      padding-bottom: 88px;
+    }
+    .list-intro .layout {
       padding-top: 96px;
-      padding-bottom: 96px;
+      padding-bottom: 88px;
     }
   }
 
@@ -684,6 +711,37 @@ body {
     line-height: 24px;
     letter-spacing: 0.01em;
     color: #434878;
+  }
+  .list-intro .column p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  @media(min-width: 768px) {
+    .list-intro .column p {
+      font-size: 1.65rem;
+      line-height: 1.5;
+    }
+    /** add margin to balance columns */
+    .list-intro .column p:last-child {
+    }
+  }
+  @media(min-width: 1024px) {
+    .list-intro .column p {
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+    /** add margin to balance columns */
+    .list-intro .column p:last-child {
+    }
+  }
+  @media(min-width: 1280px) {
+    .list-intro .column p {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+    /** add margin to balance columns */
+    .list-intro .column p:last-child {
+    }
   }
 
 /** END LIST INTRO */
@@ -757,12 +815,12 @@ body {
     }
     /** add margin to balance columns */
     .list-crisis .column p:last-child {
-      margin-bottom: 8.8em;
+
     }
   }
   @media(min-width: 1024px) {
     .list-crisis .column p {
-      font-size: 1.7rem;
+      font-size: 1.65rem;
       line-height: 1.5;
     }
     /** add margin to balance columns */
@@ -844,7 +902,7 @@ body {
   @media(min-width: 1024px) {
     .list-additional .column p,
     .list-additional .column ul {
-      font-size: 1.7em;
+      font-size: 1.65em;
     }
   }
   @media(min-width: 1280px) {
