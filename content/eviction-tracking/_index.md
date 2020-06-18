@@ -62,6 +62,7 @@ fundedby:
       alt: C3.ai Digital Transformation Institute
 aliases:
   - /weekly-reports
+  - /eviction-tracking/tracker
 ---
 {{% report_table data="/uploads/table.csv" %}}
 
