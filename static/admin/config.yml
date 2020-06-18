@@ -24,7 +24,7 @@ collections:
     preview_path: /eviction-tracking/{{slug}}  
     files:
       - label: "Eviction Tracking"
-        name: "#"
+        name: "tracker"
         file: "content/eviction-tracking/_index.md"
         identifier_field: name
         fields:
