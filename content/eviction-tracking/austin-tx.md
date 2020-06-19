@@ -1,15 +1,17 @@
 ---
 collection: true
 draft: false
-title: Austin Texas | Eviction Tracking System
-fbImage: /images/assets/graphics/ets-bg-social.png
-twImage: /images/assets/graphics/ets-bg-social.png
 h1: Austin, Texas
 slug: austin-tx
 date: 2020-05-13T00:00:00.000Z
+twImage: /images/assets/graphics/ets-bg-social.png
+title: Austin Texas | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="48453" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -19,11 +21,15 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/austin_barchart.csv" %}}
+
+
 
 
 
@@ -36,29 +42,20 @@ Eviction filings in Austin were higher than average in January and February of t
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/austin_shapes.json" data="/uploads/austin_map.csv" %}}
 
-
-
-
-
-
-
 # The geography of changes in eviction filings
 
-Travis County is divided into 64 zip codes. Here we map, in each of those zip codes, eviction filings over the last four weeks compared to the typical number of filings in 2012. Over that period, we see steep declines in eviction filings across the city.
+Travis County is divided into 64 zip codes. Here we map, in each of those zip codes, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
 
-1. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
-
-
-
-
+1. Eviction filings data for Travis county were collected by [BASTA Austin](http://www.bastaaustin.org/) and [Open Austin](https://www.open-austin.org/). Historical averages cover 2014-2019.
+2. Zip code racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
 {{%/ report_map %}}
 
@@ -66,23 +63,12 @@ Travis County is divided into 64 zip codes. Here we map, in each of those zip co
 
 {{% report_chart id="race" data="/uploads/austin_linechart.csv" %}}
 
-
-
-
-
-
-
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Latinx, or Other/None. In January and February, eviction filings were concentrated in neighborhoods in the Latinx and Other/None categories. Since March, eviction filings have dropped steeply across all neighborhoods.
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and filings in 2012.
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2014-2019.
 
-
-
-
-
-
-
+1. Eviction filings data for Travis county were collected by [BASTA Austin](http://www.bastaaustin.org/) and [Open Austin](https://www.open-austin.org/). Historical averages cover 2014-2019.
 
 {{%/ report_chart %}}
