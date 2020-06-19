@@ -169,7 +169,7 @@ body {
   justify-content: center;
   max-width: 1200px;
   margin: auto;
-  padding: 16px;
+  padding: 24px;
   width: 100%;
 }
 
@@ -1019,13 +1019,13 @@ body {
   /** content */
   .list-additional .column p,
   .list-additional .column ul {
-    font-size: 1.6em;
+    font-size: 1.6rem;
     line-height: 1.5;
   }
   @media(min-width: 768px) {
     .list-additional .column p,
     .list-additional .column ul {
-      font-size: 1.6em;
+      font-size: 1.6rem;
     }
     .list-additional .column ul {
       width: 445px;
@@ -1034,13 +1034,13 @@ body {
   @media(min-width: 1024px) {
     .list-additional .column p,
     .list-additional .column ul {
-      font-size: 1.65em;
+      font-size: 1.65rem;
     }
   }
   @media(min-width: 1280px) {
     .list-additional .column p,
     .list-additional .column ul {
-      font-size: 1.8em;
+      font-size: 1.8rem;
     }
   }
 
