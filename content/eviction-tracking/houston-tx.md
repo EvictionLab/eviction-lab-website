@@ -1,7 +1,9 @@
 ---
 collection: true
 draft: false
-title: Houston, Texas | Weekly Eviction Reports | Eviction Lab
+title: Houston, Texas | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
+twImage: /images/assets/graphics/ets-bg-social.png
 h1: Houston, Texas
 slug: houston-tx
 date: 2020-06-03T00:00:00.000Z

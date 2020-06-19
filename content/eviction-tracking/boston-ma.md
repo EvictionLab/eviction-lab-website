@@ -1,7 +1,9 @@
 ---
 collection: true
 draft: false
-title: Boston, Massachusetts | Weekly Eviction Reports | Eviction Lab
+title: Boston, Massachusetts | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
+twImage: /images/assets/graphics/ets-bg-social.png
 h1: Boston, Massachusetts
 slug: boston-ma
 date: 2020-06-03T00:00:00.000Z

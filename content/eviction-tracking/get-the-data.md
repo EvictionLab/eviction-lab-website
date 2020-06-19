@@ -1,10 +1,10 @@
 ---
 draft: false
 cascade:
-  title: Weekly Eviction Reports Downloads | Eviction Lab
+  title: Eviction Tracking System | Get the Data
   description: Get the data for real time eviction tracking by city during COVID-19.
-  fbImage: /images/og/eviction-lab-about-us-fb.jpg
-  twImage: /images/og/eviction-lab-about-us-tw.jpg
+  fbImage: /images/assets/graphics/ets-bg-social.png
+  twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking by city during COVID-19.
 h1: Get the Data
 date: 2020-06-16T00:00:00.000Z

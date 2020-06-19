@@ -1,7 +1,9 @@
 ---
 collection: true
 draft: false
-title: Pittsburgh, Pennsylvania | Weekly Eviction Reports | Eviction Lab
+title: Pittsburgh, Pennsylvania | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
+twImage: /images/assets/graphics/ets-bg-social.png
 h1: Pittsburgh, Pennsylvania
 slug: pittsburgh-pa
 date: 2020-06-12T00:00:00.000Z

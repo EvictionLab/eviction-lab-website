@@ -1,7 +1,9 @@
 ---
 collection: true
 draft: false
-title: Milwaukee, Wisconsin | Weekly Eviction Reports | Eviction Lab
+title: Milwaukee, Wisconsin | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
+twImage: /images/assets/graphics/ets-bg-social.png
 h1: Milwaukee, Wisconsin
 slug: milwaukee-wi
 date: 2020-06-03T00:00:00.000Z

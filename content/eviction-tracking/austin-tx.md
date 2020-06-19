@@ -1,7 +1,9 @@
 ---
 collection: true
 draft: false
-title: Austin Texas | Weekly Eviction Reports | Eviction Lab
+title: Austin Texas | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
+twImage: /images/assets/graphics/ets-bg-social.png
 h1: Austin, Texas
 slug: austin-tx
 date: 2020-05-13T00:00:00.000Z

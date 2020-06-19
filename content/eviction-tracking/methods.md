@@ -1,10 +1,10 @@
 ---
 draft: false
 cascade:
-  title: Weekly Eviction Reports | Eviction Lab
+  title: Eviction Tracking System | Methods
   description: Real time eviction tracking by city during COVID-19.
-  fbImage: /images/og/eviction-lab-about-us-fb.jpg
-  twImage: /images/og/eviction-lab-about-us-tw.jpg
+  fbImage: /images/assets/graphics/ets-bg-social.png
+  twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: We’ve built the first nationwide database of evictions.
 h1: Methods
 layout: content

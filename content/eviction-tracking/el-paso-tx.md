@@ -1,7 +1,9 @@
 ---
 h1: "El Paso, Texas"
 slug: "el-paso-tx"
-title: "El Paso, Texas | Weekly Eviction Reports | Eviction Lab"
+title: "El Paso, Texas | Eviction Tracking System"
+fbImage: /images/assets/graphics/ets-bg-social.png
+twImage: /images/assets/graphics/ets-bg-social.png
 date: 2020-05-13
 collection: true
 draft: true

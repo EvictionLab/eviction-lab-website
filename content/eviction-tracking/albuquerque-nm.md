@@ -2,6 +2,8 @@
 h1: "Albuquerque, New Mexico"
 slug: "albuquerque-nm"
 title: "Albuquerque, New Mexico | Eviction Tracking System"
+fbImage: /images/assets/graphics/ets-bg-social.png
+twImage: /images/assets/graphics/ets-bg-social.png
 date: 2020-05-13
 collection: true
 draft: true
