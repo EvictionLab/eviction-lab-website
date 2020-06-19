@@ -3,10 +3,10 @@ slug: acknowledgements
 draft: false
 cascade:
   title: Eviction Tracking System | Acknowledgements
-  description: Real time eviction tracking by city during COVID-19.
+  description: Real time eviction tracking in U.S. cities during COVID-19.
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
-  socialDescription: Real time eviction tracking by city during COVID-19.
+  socialDescription: Real time eviction tracking in U.S. cities during COVID-19.
 h1: Acknowledgements
 layout: content
 date: 2020-06-12T00:00:00.000Z

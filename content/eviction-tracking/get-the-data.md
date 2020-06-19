@@ -2,10 +2,10 @@
 draft: false
 cascade:
   title: Eviction Tracking System | Get the Data
-  description: Get the data for real time eviction tracking by city during COVID-19.
+  description: Get the data for real time eviction tracking in U.S. cities during COVID-19.
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
-  socialDescription: Get the data for real time eviction tracking by city during COVID-19.
+  socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
 h1: Get the Data
 date: 2020-06-16T00:00:00.000Z
 intro: >-

@@ -2,7 +2,7 @@
 draft: false
 cascade:
   title: Eviction Tracking System
-  description: Real time eviction tracking by city during COVID-19.
+  description: Real time eviction tracking in U.S. cities during COVID-19.
   fbImage: /images/og/eviction-lab-about-us-fb.jpg
   twImage: /images/og/eviction-lab-about-us-tw.jpg
   socialDescription: We’ve built the first nationwide database of evictions.
