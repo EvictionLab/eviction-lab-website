@@ -7,10 +7,10 @@ h1: "COVID-19 Tools & Resources"
 photoCredit:
 layout: covid-resources
 hasSubnav: true
-fbImage: /images/assets/el-scorecard-social-000006.png
-twImage: /images/assets/el-scorecard-social-000006.png
-socialDescription: See how your state ranks in our nationwide scorecard of housing policies in response to COVID-19.
-description: See how your state ranks in our nationwide scorecard of housing policies in response to COVID-19.
+fbImage: /images/assets/graphics/resources-social.png
+twImage: /images/assets/graphics/resources-social.png
+socialDescription: View all our tools and resources developed in response to the pandemic.
+description: View all our tools and resources developed in response to the pandemic.
 intro1: >- 
     <p>The COVID-19 pandemic has brought new urgency to America's affordable housing and eviction crises. Even before the pandemic, millions of families struggled to make rent and were vulnerable to eviction. Now—at a time when stable shelter is critical—spiking unemployment and economic hardship have increased insecurity among America’s renting families.</p>
 
