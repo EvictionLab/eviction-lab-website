@@ -12,12 +12,12 @@ hugo server
 
 Follow this branching flow when adding features or changes to the website:
 
-* create a working branch off of the latest `cms-dev`, named relative to what you're working on.  
+* create a working branch off of the latest `staging`, named relative to what you're working on.  
   * any commits to your branch that are pushed to github will be auto deployed with a preview link at: branch-name--eviction-lab.netlify.app
-* when your work is ready to go live, open pull request to merge your branch into the `cms-dev` branch
+* when your work is ready to go live, open pull request to merge your branch into the `staging` branch
   * confirm there are no conflicts, the build is successful, and reviewed by any team members if needed then merge.
-  * once merged into `cms-dev` it will trigger a build that can be previewed at https://staging.evictionlab.org/
-* if everything looks good on the staging link, merge the `cms-dev` branch into `master`, which will trigger a production build that deploys to https://evictionlab.org/
+  * once merged into `staging` it will trigger a build that can be previewed at https://staging.evictionlab.org/
+* if everything looks good on the staging link, merge the `staging` branch into `production`, which will trigger a production build that deploys to https://evictionlab.org/
 
 ## Layouts
 
