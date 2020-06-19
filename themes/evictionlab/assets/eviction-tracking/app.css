@@ -1921,6 +1921,7 @@ body {
   }
   .chart__axis.chart__axis--y .tick text {
     font-family: var(--number-font);
+    font-size: 12px;
     font-weight: 500;
   }
 
