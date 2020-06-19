@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 Tools & Resources"
+title: "COVID-19 Tools & Resources | Eviction Lab"
 draft: false
 date: 2020-04-09T20:43:49-08:00
 type: index

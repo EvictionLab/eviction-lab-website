@@ -1,7 +1,7 @@
 ---
 draft: false
 cascade:
-  title: The Eviction Tracking System
+  title: "The Eviction Tracking System | Eviction Lab"
   description: Real time eviction tracking in U.S. cities during COVID-19.
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
