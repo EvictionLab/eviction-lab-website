@@ -119,6 +119,7 @@
     }
     
     #scorecard-gateway {
+        overflow: hidden;
         .feature {  
             background-repeat: no-repeat; 
             background-size: cover; 
@@ -160,6 +161,7 @@
         }
     }
     #ets-gateway {
+        overflow: hidden;
         .feature {
             background-repeat: no-repeat; 
             background-size: cover; 
