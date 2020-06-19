@@ -592,8 +592,8 @@ Elab.Chart = (function (Elab) {
     if (!rawLastDay) return;
     const parseDate = d3.timeParse("%d/%m/%Y")
     const lastDay = parseDate(rawLastDay)
-    const value = "Partial filings for " + d3.timeFormat("%B")(lastDay) + 
-      ", as of " + d3.timeFormat("%B %e")(lastDay)
+    const value = "Partial monthly filings as of " + d3.timeFormat("%B %e")(lastDay) + ", relative to average for same period"
+  
     const partialEl = rootEl.find('.visual__note');
     partialEl.html(value)
   }
