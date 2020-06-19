@@ -307,7 +307,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height:74px;
+    height:90px;
     background: #3c3c3c;
     @include hoverBar('hover-bar',50px,5px,8px,0);
     &:hover .hover-bar { visibility: visible; }
@@ -343,13 +343,13 @@
           width: 136px;
         }   
         &.pm-ftr img {
-          width: 10px;
+          width: 20px;
           @include for-tablet-portrait-up {
             width: 48px;
           }
         }
         &.pm-updates img {
-          width: 20px;
+          width: 14px;
           @include for-tablet-portrait-up {
             width: 25px;
           }

@@ -38,8 +38,10 @@
     
     .super-content {
         padding: 10px 16px;
+        line-height: 1.8;
         @include for-tablet-portrait-up {
             padding: 16px 24px;
+            line-height: 1.5;
         }
         .boldface {
             font-family: $altFontStack;
