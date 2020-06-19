@@ -288,6 +288,17 @@
     }
   }
   .bottom-row .br-block {
+   // background: linear-gradient(270deg,#2c304b 0%,#434878 100%);
+  }
+  .bottom-row .left.br-block, .bottom-row .right.br-block {
+   // background: linear-gradient(0deg, #1d4642 0%, #4c7d78 100%);
+   background: #2c304b;
+  // background: linear-gradient(270deg,#2c304b 0%,#434878 100%);
+  // background: linear-gradient(270deg, #2c304b 0%, #373b61 100%);
+   background: linear-gradient(270deg, #2c304b 0%, #3f4473 100%);
+  }
+  
+  .bottom-row .br-block {
     width: 100%;
     text-align: left;
     padding-right: 16px;
@@ -332,13 +343,13 @@
         &.pm-ftr img {
           width: 10px;
           @include for-tablet-portrait-up {
-            width: 25px;
+            width: 48px;
           }
         }
         &.pm-updates img {
           width: 20px;
           @include for-tablet-portrait-up {
-            width: 48px;
+            width: 25px;
           }
         }
       }
