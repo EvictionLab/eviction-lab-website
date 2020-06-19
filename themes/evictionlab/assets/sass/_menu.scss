@@ -70,7 +70,8 @@ $menuMargin: grid(5);
 .site-navigation {
   @include altFont(18px);
   letter-spacing: 0.6px;
-  margin-top: $menuMargin;
+  //margin-top: $menuMargin;
+  margin-top: 60px;
   line-height: 1.42857143;
   ul {
     list-style: none;
@@ -79,6 +80,9 @@ $menuMargin: grid(5);
   }
   li {
     margin-bottom: grid(1.5);
+    &:nth-of-type(5), &:nth-of-type(6) {
+      margin-left: 20px;
+    }
   }
   a {
     display: inline;
@@ -91,14 +95,20 @@ $menuMargin: grid(5);
       box-shadow:none;
       outline:0;
     }
+    
   }
 }
 // boost size on tablet+
 @media(min-width: $gtMobile) and (min-height: 680px) {
   .app-menu .site-navigation {
-    @include altFont(28px);
+    @include altFont(22px);
     letter-spacing: 0.7px;
-    li { margin-bottom: grid(2.5); }
+    li { 
+      margin-bottom: grid(2.5);
+      &:nth-of-type(5), &:nth-of-type(6) {
+        margin-left: 20px;
+      }
+     }
   }
 }
 

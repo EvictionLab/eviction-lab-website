@@ -34,18 +34,18 @@ other = "Ayuda y preguntas frecuentes"
 [wemIntro]
 other = "NEW:"
 [wemAlert]
-other = 'COVID-19 and Changing Eviction Policies Around the Nation"'
+other = "Get weekly updates on select cities' eviction filings"
 [wemCTA]
-other = "Read the article"
+other = "Go to The Eviction Tracking System"
 [wemLink]
-other = "/es/covid-eviction-policies/"
+other = "/eviction-tracking/"
 [shareOne]
-other = "Com-"
+other = "Share"
 [shareTwo]
-other = "parta"
+other = "via"
 [getResourcesOne]
-other = "Más"
+other = "Get"
 [getResourcesTwo]
-other ="recursos"
+other ="Resources"
 [superhead]
-other = "<span class='boldface'>ACTUALIZACIÓN DE COVID-19:</span> &nbsp;¿Enfrenta el desalojo? Vea nuestra <a href='/covid-eviction-policies/'>lista de políticas locales de emergencia</a>, y <a href='https://justshelter.org/community-resources/' target='_blank'>encuentre organizaciones que puedan ayudar</a>."
+other = "<span class='boldface'>COVID-19 UPDATES:</span> &nbsp;Stay informed with weekly reports from our new <a href='/eviction-tracking'>Eviction Tracking System</a>, and see all of our <a href='/covid-resources/'>COVID-19 tools and resources</a>."
