@@ -35,7 +35,7 @@ additional: >-
 
   * You can [get the data here](/eviction-tracking/get-the-data).
 
-  * We are grateful to the many experts who contributed advice and research assistance to this project. We also want to highlight a number of similar resources developed by other organizations. Information and acknowledgements can be found [here](https://cms-dev--eviction-lab.netlify.app/eviction-tracking/acknowledgements/).
+  * We are grateful to the many experts who contributed advice and research assistance to this project. We also want to highlight a number of similar resources developed by other organizations. Information and acknowledgements can be found [here](/eviction-tracking/acknowledgements/).
 
   * If you want to see your city or state added to the ETS and can help facilitate access to the necessary data, please contact [info@evictionlab.org](mailto:info@evictionlab.org).
 
