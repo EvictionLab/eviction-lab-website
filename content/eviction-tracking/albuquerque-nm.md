@@ -1,7 +1,7 @@
 ---
 h1: "Albuquerque, New Mexico"
 slug: "albuquerque-nm"
-title: "Albuquerque, New Mexico | Weekly Eviction Reports | Eviction Lab"
+title: "Albuquerque, New Mexico | Eviction Tracking System"
 date: 2020-05-13
 collection: true
 draft: true

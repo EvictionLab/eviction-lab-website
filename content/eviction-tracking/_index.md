@@ -1,11 +1,11 @@
 ---
 draft: false
 cascade:
-  title: Weekly Eviction Reports | Eviction Lab
+  title: The Eviction Tracking System
   description: Real time eviction tracking by city during COVID-19.
   fbImage: /images/og/eviction-lab-about-us-fb.jpg
   twImage: /images/og/eviction-lab-about-us-tw.jpg
-  socialDescription: We’ve built the first nationwide database of evictions.
+  socialDescription: Real time eviction tracking by city during COVID-19.
 h1: Eviction Tracking System
 date: 2020-06-03T00:00:00.000Z
 intro: "The COVID-19 pandemic has deepened America’s housing crisis. The
