@@ -30,7 +30,7 @@ data:
     geo: Census Tract / ZIP Code
     file: /uploads/all_sites_20200613.csv
   - site: Austin
-    years: "2012"
+    years: 2014-2019
     geo: ZIP Code
     file: /uploads/austin_20200613.csv
   - site: Boston
@@ -83,6 +83,7 @@ Sample code:
 # library(dplyr)
 # library(tidyr)
 # library(ggplot2)
+
 mke_tract_week_2020 %>%   
   group_by(week, week_date) %>% 
   summarize(filings_2020 = sum(filings_2020),
