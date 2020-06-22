@@ -1682,7 +1682,6 @@ body {
 
   .section.section--chart .visual {
     max-width: 600px;
-    max-height: 70vh;
   }
   .section.section--chart .chart {
     min-height: 320px;
