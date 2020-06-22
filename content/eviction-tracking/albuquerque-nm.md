@@ -1,12 +1,12 @@
 ---
-h1: "Albuquerque, New Mexico"
-slug: "albuquerque-nm"
-title: "Albuquerque, New Mexico | Eviction Tracking System"
-fbImage: /images/assets/graphics/ets-bg-social.png
+draft: false
+h1: Albuquerque, New Mexico
+slug: albuquerque-nm
+date: 2020-05-13T00:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
-date: 2020-05-13
 collection: true
-draft: true
+title: Albuquerque, New Mexico | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="51760" data="/uploads/w17_table.csv" %}}
