@@ -1,0 +1,16 @@
+name: Automate Deploy
+on:
+  schedule:
+    - cron: "0 2,14 * * *"
+jobs:
+  productionPromotion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: production
+      - name: Reset promotion branch
+        run: |
+          git fetch origin staging:staging
+          git reset --hard staging
+          git push origin production
