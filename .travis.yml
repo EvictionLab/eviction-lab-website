@@ -7,8 +7,8 @@ node_js:
 # safelist
 branches:
   only:
-    - master
-    - cms-dev
+    - production
+    - staging
 
 install:
   - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
@@ -17,8 +17,8 @@ install:
   - npm install autoprefixer
 
 script:
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then export HUGO_BASEURL=$PROD_URL && cp themes/evictionlab/layouts/robots.prod.txt themes/evictionlab/layouts/robots.txt; fi
-  - if [ "$TRAVIS_BRANCH" = "cms-dev" ]; then export HUGO_BASEURL=$STAGING_URL; fi
+  - if [ "$TRAVIS_BRANCH" = "production" ]; then export HUGO_BASEURL=$PROD_URL && cp themes/evictionlab/layouts/robots.prod.txt themes/evictionlab/layouts/robots.txt; fi
+  - if [ "$TRAVIS_BRANCH" = "staging" ]; then export HUGO_BASEURL=$STAGING_URL; fi
   - hugo version # prints the Hugo version, just in case.
   - hugo # build the website
 
@@ -36,11 +36,11 @@ deploy:
     acl: public_read
     local_dir: public
     on:
-      branch: cms-dev
+      branch: staging
   - provider: script
     script: aws cloudfront create-invalidation --distribution-id=$CLOUDFRONT_ID_DEV --paths="/*"
     on:
-      branch: cms-dev
+      branch: staging
   - skip_cleanup: true
     provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
@@ -50,11 +50,11 @@ deploy:
     acl: public_read
     local_dir: public
     on:
-      branch: master
+      branch: production
   - provider: script
     script: aws cloudfront create-invalidation --distribution-id=$CLOUDFRONT_ID_PROD --paths="/*"
     on:
-      branch: master
+      branch: production
 
 env:
   global:
