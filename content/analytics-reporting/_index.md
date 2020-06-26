@@ -1,6 +1,5 @@
 ---
-title: "Analytics Reporting | Eviction Lab"
-h1: Analytics Reporting
-date: 2017-11-19T20:43:49-08:00
-type: index
+title: "Redirecting... | Eviction Lab"
+type: redirect
+redirectUrl: https://analytics--hyperobjekt.netlify.app/el/
 ---

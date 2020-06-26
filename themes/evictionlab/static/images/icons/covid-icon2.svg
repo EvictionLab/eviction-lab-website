@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="78px" viewBox="0 0 78 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#C73800" offset="0%"></stop>
+            <stop stop-color="#E24000" offset="72.5005279%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-216.000000, -165.000000)" fill="url(#linearGradient-1)">
+            <g id="Group" transform="translate(216.000000, 165.000000)">
+                <circle id="Oval" cx="39" cy="39" r="18"></circle>
+                <circle id="Oval-Copy" cx="39" cy="7" r="7"></circle>
+                <circle id="Oval-Copy-2" cx="39" cy="71" r="7"></circle>
+                <circle id="Oval-Copy-3" cx="71" cy="39" r="7"></circle>
+                <circle id="Oval-Copy-4" cx="7" cy="39" r="7"></circle>
+                <circle id="Oval-Copy-5" cx="16" cy="16" r="7"></circle>
+                <circle id="Oval-Copy-6" cx="16" cy="61" r="7"></circle>
+                <circle id="Oval-Copy-7" cx="62" cy="61" r="7"></circle>
+                <circle id="Oval-Copy-8" cx="62" cy="16" r="7"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
