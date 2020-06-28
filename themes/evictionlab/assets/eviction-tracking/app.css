@@ -1543,7 +1543,18 @@ body {
   .section {
     position: relative;
     display: block;
-    padding: 72px 24px;
+    padding: 56px 24px;
+  }
+  .section p.description {
+    margin-bottom: 0;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding: 72px 24px;
+    }
+    .section p.description {
+      margin-bottom: 1.5em;
+    }
   }
   .section:nth-child(2n-1) {
     background: var(--section-alt);
