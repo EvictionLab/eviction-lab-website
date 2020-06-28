@@ -300,7 +300,7 @@ h3 {
 }
 
 p, .center-content-post.page-list li, select, input, textarea, .post-body ol li, .post-body ul li, table.page-stats, 
-table.page-stats td.table-text {
+table.page-stats td.table-text, .contact-us label {
   @include for-phone-only {
     @include defaultFont(1.4rem); 
     line-height: 2rem;

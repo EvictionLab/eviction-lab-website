@@ -47,7 +47,7 @@ input[type=radio] {
   align-items: center;
   margin-bottom: grid(2);
   label { 
-    font-size: 14px; 
+    font-size: 1.6rem; 
     margin:0;
     line-height: 1.42;
   }
@@ -59,12 +59,36 @@ input[type=radio] {
 .radio-row + input { margin: grid(3) 0; }
 .contact-us {
     background: #F4F7F9;
+    p:nth-of-type(2) {
+        padding-top: 2.4rem;
+    }
+    form#contactform {
+        p {
+            padding-bottom: 1.6rem;
+        }
+    }
 }
 .contact-us {
     .center-content-post.page-list {
         padding-top: 1.6rem;
+        p {
+            margin-bottom: 1.6rem;
+            line-height: 1.5;
+        }
+        form {
+            input.form-control {
+                margin: grid(3) 0;
+            }
+            textarea {
+                margin-bottom: 24px;
+            }
+        }
+        
         &.form2 {
             padding-bottom: 2.4rem;
+            p {
+                margin-bottom: 2.4rem;
+            }
             @include for-tablet-portrait-up {
                 padding-top: 2.4rem;
                 padding-bottom: 3.2rem;
