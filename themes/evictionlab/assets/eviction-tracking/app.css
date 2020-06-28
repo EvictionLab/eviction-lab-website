@@ -1553,7 +1553,7 @@ body {
       padding: 72px 24px;
     }
     .section p.description {
-      margin-bottom: 1.5em;
+     margin-bottom: 0;
     }
   }
   .section:nth-child(2n-1) {
