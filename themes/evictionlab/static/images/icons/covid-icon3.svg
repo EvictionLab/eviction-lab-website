@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="51px" viewBox="0 0 52 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#C73800" offset="0%"></stop>
+            <stop stop-color="#E24000" offset="72.5005279%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="13.7497361%" y2="27.4994721%" id="linearGradient-2">
+            <stop stop-color="#B83400" offset="0%"></stop>
+            <stop stop-color="#E24000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="13.7497361%" y2="27.4994721%" id="linearGradient-3">
+            <stop stop-color="#9D2D01" offset="0%"></stop>
+            <stop stop-color="#E24000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="13.7497361%" y2="27.4994721%" id="linearGradient-4">
+            <stop stop-color="#A73001" offset="0%"></stop>
+            <stop stop-color="#E24000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="13.7497361%" y2="27.4994721%" id="linearGradient-5">
+            <stop stop-color="#AA3000" offset="0%"></stop>
+            <stop stop-color="#E24000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-129.000000, -248.000000)">
+            <g id="Group-Copy" transform="translate(129.000000, 248.000000)">
+                <circle id="Oval-Copy-13" fill="url(#linearGradient-1)" cx="5" cy="26" r="5"></circle>
+                <circle id="Oval-Copy-15" fill="url(#linearGradient-1)" cx="12" cy="39" r="5"></circle>
+                <circle id="Oval-Copy-14" fill="url(#linearGradient-1)" cx="12" cy="12" r="5"></circle>
+                <circle id="Oval-Copy-11" fill="url(#linearGradient-1)" cx="26" cy="46" r="5"></circle>
+                <circle id="Oval-Copy-16" fill="url(#linearGradient-1)" cx="40" cy="40" r="5"></circle>
+                <circle id="Oval-Copy-9" fill="url(#linearGradient-1)" cx="26" cy="26" r="18"></circle>
+                <circle id="Oval-Copy-10" fill="url(#linearGradient-1)" cx="26" cy="5" r="5"></circle>
+                <circle id="Oval-Copy-12" fill="url(#linearGradient-1)" cx="47" cy="26" r="5"></circle>
+                <circle id="Oval-Copy-18" fill="url(#linearGradient-2)" cx="18" cy="19" r="5"></circle>
+                <circle id="Oval-Copy-19" fill="url(#linearGradient-3)" cx="33" cy="34" r="5"></circle>
+                <circle id="Oval-Copy-17" fill="url(#linearGradient-1)" cx="40" cy="12" r="5"></circle>
+                <circle id="Oval-Copy-20" fill="url(#linearGradient-4)" cx="34" cy="18" r="5"></circle>
+                <circle id="Oval-Copy-21" fill="url(#linearGradient-5)" cx="18" cy="34" r="5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

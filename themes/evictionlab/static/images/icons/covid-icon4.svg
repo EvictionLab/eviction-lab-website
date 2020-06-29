@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#C73800" offset="0%"></stop>
+            <stop stop-color="#E24000" offset="72.5005279%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="13.7497361%" y2="27.4994721%" id="linearGradient-2">
+            <stop stop-color="#AD3100" offset="0%"></stop>
+            <stop stop-color="#E24000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-283.000000, -277.000000)">
+            <g id="Group-Copy-3" transform="translate(283.000000, 277.000000)">
+                <circle id="Oval-Copy-43" fill="url(#linearGradient-1)" cx="42" cy="23" r="4"></circle>
+                <circle id="Oval-Copy-42" fill="url(#linearGradient-1)" cx="23" cy="4" r="4"></circle>
+                <circle id="Oval-Copy-35" fill="url(#linearGradient-1)" cx="36" cy="10" r="4"></circle>
+                <circle id="Oval-Copy-36" fill="url(#linearGradient-1)" cx="4" cy="23" r="4"></circle>
+                <circle id="Oval-Copy-37" fill="url(#linearGradient-1)" cx="9" cy="36" r="4"></circle>
+                <circle id="Oval-Copy-38" fill="url(#linearGradient-1)" cx="10" cy="10" r="4"></circle>
+                <circle id="Oval-Copy-39" fill="url(#linearGradient-1)" cx="23" cy="42" r="4"></circle>
+                <circle id="Oval-Copy-40" fill="url(#linearGradient-1)" cx="36" cy="36" r="4"></circle>
+                <line x1="5.5" y1="22.5" x2="44.5" y2="22.5" id="Line-2" stroke="#D63C00" stroke-width="3" stroke-linecap="square"></line>
+                <line x1="2.5" y1="22.5" x2="41.5" y2="22.5" id="Line-2-Copy-2" stroke="#D63C00" stroke-width="3" stroke-linecap="square" transform="translate(22.000000, 22.500000) rotate(45.000000) translate(-22.000000, -22.500000) "></line>
+                <line x1="3.5" y1="22.5" x2="42.5" y2="22.5" id="Line-2-Copy-3" stroke="#D63C00" stroke-width="3" stroke-linecap="square" transform="translate(23.000000, 22.500000) rotate(315.000000) translate(-23.000000, -22.500000) "></line>
+                <line x1="3.5" y1="21.5" x2="42.5" y2="21.5" id="Line-2-Copy" stroke="#D63C00" stroke-width="3" stroke-linecap="square" transform="translate(23.000000, 21.500000) rotate(90.000000) translate(-23.000000, -21.500000) "></line>
+                <circle id="Oval-Copy-41" fill="url(#linearGradient-2)" cx="23" cy="23" r="12"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
