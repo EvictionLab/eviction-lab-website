@@ -13,4 +13,4 @@ jobs:
         run: |
           git fetch origin staging:staging
           git reset --hard staging
-          git push origin production
+          git push --force origin production
