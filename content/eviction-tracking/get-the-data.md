@@ -28,7 +28,7 @@ data:
   - site: All Sites
     years: "-"
     geo: Census Tract / ZIP Code
-    file: /uploads/all_sites_20200620.csv
+    file: /uploads/all_sites_20200627.csv
   - site: Austin
     years: 2014-2019
     geo: ZIP Code
@@ -44,7 +44,7 @@ data:
   - site: Cleveland
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/cleveland_20200620.csv
+    file: /uploads/cleveland_20200627.csv
   - site: Houston
     years: 2012-2015
     geo: Census Tract
