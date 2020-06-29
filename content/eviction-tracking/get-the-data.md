@@ -32,7 +32,7 @@ data:
   - site: Austin
     years: 2014-2019
     geo: ZIP Code
-    file: /uploads/austin_20200620.csv
+    file: /uploads/austin_20200627.csv
   - site: Boston
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
@@ -40,7 +40,7 @@ data:
   - site: Cincinnati
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/cincinnati_20200613.csv
+    file: /uploads/cincinnati_20200620.csv
   - site: Cleveland
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
@@ -60,11 +60,11 @@ data:
   - site: Milwaukee
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/milwaukee_20200620.csv
+    file: /uploads/milwaukee_20200627.csv
   - site: Pittsburgh
     years: 2012-2019
     geo: ZIP Code
-    file: /uploads/allegheny_20200620.csv
+    file: /uploads/allegheny_20200627.csv
   - site: Richmond
     years: "2016"
     geo: ZIP Code
