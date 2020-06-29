@@ -36,7 +36,7 @@ data:
   - site: Boston
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/boston_20200620.csv
+    file: /uploads/boston_20200627.csv
   - site: Cincinnati
     years: 2012-2016
     geo: Census Tract
@@ -48,15 +48,15 @@ data:
   - site: Houston
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/houston_20200620.csv
+    file: /uploads/houston_20200627.csv
   - site: Jacksonville
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/duval_20200620.csv
+    file: /uploads/duval_20200627.csv
   - site: Kansas City
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/jackson_20200620.csv
+    file: /uploads/jackson_20200627.csv
   - site: Milwaukee
     years: 2012-2016
     geo: Census Tract
@@ -68,11 +68,11 @@ data:
   - site: Richmond
     years: "2016"
     geo: ZIP Code
-    file: /uploads/richmond_20200620.csv
+    file: /uploads/richmond_20200627.csv
   - site: St Louis
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/stlouis_20200620.csv
+    file: /uploads/stlouis_20200627.csv
 ---
 Sample code:
 
