@@ -50,7 +50,7 @@ data:
     geo: Census Tract
     file: /uploads/houston_20200627.csv
   - site: Jacksonville
-    years: 2012-2015
+    years: 2012-2016
     geo: Census Tract
     file: /uploads/duval_20200627.csv
   - site: Kansas City
