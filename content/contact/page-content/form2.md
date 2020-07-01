@@ -15,9 +15,10 @@ submit: Submit
 ---
 You can also email us directly regarding
 
-+ Help requests or site feedback at <a href="mailto:help@evictionlab.org">help@evictionlab.org</a>  
++ Issues, troubleshooting or feedback about the site at <a href="mailto:help@evictionlab.org">help@evictionlab.org</a>  
 + Research inquiries at <a href="mailto:research@evictionlab.org">research@evictionlab.org</a>
 + Media inquiries at <a href="mailto:press@evictionlab.org">press@evictionlab.org</a>
-+ General questions or comments at <a href="mailto:info@evictionlab.org">info@evictionlab.org</a>
+
+We are unfortunately unable to offer help directly to tenants facing eviction, but please see <a href="https://justshelter.org/community-resources" target="_blank">our list of organizations in your area that may be able to assist you</a>. 
 
 If you would like to merge your data with The Eviction Lab's dataset, please use our <a href="/data-merge">Data Merge Application.</a>
