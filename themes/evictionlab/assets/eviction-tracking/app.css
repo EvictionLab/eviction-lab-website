@@ -276,6 +276,7 @@ body {
 /** CALLOUT */
 
 .callout {
+  position: relative;
   border-left: 0.5em solid var(--c1);
   background: var(--section-alt);
   padding: 3.6em 2.4em;
@@ -1240,10 +1241,15 @@ body {
 
     .intro .callout {
       padding:3.4em 3.2em 3.2em 3.2em;
-      margin-bottom: 2.4em;
+      margin-bottom: 8em;
     }
     .intro .callout__heading {
       letter-spacing: 0.03em;
+    }
+
+    .intro .stats-item.stats-item--moratorium {
+      margin-bottom:0;
+      padding-bottom: 0;
     }
 
     .intro .stats-item--moratorium .stats-item__value {
@@ -1252,6 +1258,21 @@ body {
       font-size: 2.5em;
       white-space: nowrap;
       font-family: var(--heading-font);
+    }
+
+
+    .intro .callout__footnote {
+      position:absolute;
+      left: 0;
+      right:0;
+      bottom: 0;
+      transform: translateY(calc(100% + 1.6em));
+      margin: auto;
+      padding: 0;
+    }
+    .intro .callout__footnote span {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
     }
   
     @media (min-width: 480px) {
@@ -1263,6 +1284,7 @@ body {
       .intro .callout__heading {
         font-size: 2.1em;
       }
+      
       .intro .stats {
         flex-direction: row;
         justify-content: space-between;
@@ -1275,6 +1297,9 @@ body {
       }
       .intro .stats-item:first-child {
         padding-right: 24px;
+      }
+      .intro .callout__footnote {
+        padding: 0 3.2em;
       }
     }  
 
