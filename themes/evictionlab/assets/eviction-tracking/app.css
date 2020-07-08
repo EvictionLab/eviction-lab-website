@@ -1459,10 +1459,12 @@ body {
     .legend-item--3 .legend-item__color {
       background: var(--c4);
     }
-    .section--count-on .legend-item--0 .legend-item__color {
+
+    /** keep "filings this year" red on first chart */
+    .section--avg.section--count-on .legend-item--0 .legend-item__color {
       background: var(--c2);
     }
-    .section--count-on .legend-item--1 .legend-item__color {
+    .section--avg.section--count-on .legend-item--1 .legend-item__color {
       background: var(--c1);
     }
 
@@ -2005,10 +2007,12 @@ body {
   .chart__bar {
     transition: fill 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
   }
-  .section--count-on .chart__bar--0 {
+
+  /** keep "filings this year" red on first chart */
+  .section--avg.section--count-on .chart__bar--0 {
     fill: var(--c2);
   }
-  .section--count-on .chart__bar--1 {
+  .section--avg.section--count-on .chart__bar--1 {
     fill: var(--c1);
   }
 
