@@ -1243,6 +1243,7 @@ body {
       padding:3.4em 3.2em 3.2em 3.2em;
       margin-bottom: 8em;
     }
+
     .intro .callout__heading {
       letter-spacing: 0.03em;
     }
@@ -1482,6 +1483,14 @@ body {
     }
     .legend-item--3 .legend-item__color {
       background: var(--c4);
+    }
+
+    /** keep "filings this year" red on first chart */
+    .section--avg.section--count-on .legend-item--0 .legend-item__color {
+      background: var(--c2);
+    }
+    .section--avg.section--count-on .legend-item--1 .legend-item__color {
+      background: var(--c1);
     }
 
     /** labels */
@@ -2019,6 +2028,17 @@ body {
   .chart__bar--3,
   .chart__dot--3 {
     fill: var(--c4);
+  }
+  .chart__bar {
+    transition: fill 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  }
+
+  /** keep "filings this year" red on first chart */
+  .section--avg.section--count-on .chart__bar--0 {
+    fill: var(--c2);
+  }
+  .section--avg.section--count-on .chart__bar--1 {
+    fill: var(--c1);
   }
 
   .chart__marker-line {
