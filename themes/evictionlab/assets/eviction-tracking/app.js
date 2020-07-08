@@ -1921,7 +1921,7 @@ Elab.Table = (function (Elab) {
     var dateFormat = d3.timeFormat("%B %d, %Y");
     var html = [];
     html.push(
-      "<sup>1</sup> Filings for the week of " + dateFormat(data.week.date) + " to " + dateFormat(data.lastUpdate) + ". Filings in the last week may be undercounted as a result of processing delays. These counts will be subsequently revised in the following week."
+      "<sup>1</sup> Filings for the week of " + dateFormat(data.week.date) + " to " + dateFormat(data.lastUpdate) + ". Filings in the last week may be undercounted as a result of processing delays. These counts will be revised in the following week."
     );
     html.push(
       "<sup>2</sup> Filings for the period " +
