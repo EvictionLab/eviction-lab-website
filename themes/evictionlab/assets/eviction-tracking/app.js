@@ -1419,12 +1419,14 @@ Elab.Chart = (function (Elab) {
         currentConfig = config.id === 'race' ? configs[0] : configs[1];
         countToggleEl.addClass('toggle--active')
         avgToggleEl.removeClass('toggle--active')
+        rootEl.removeClass('section--avg-on').addClass('section--count-on')
         chart.update(currentConfig);
       });
       avgToggleEl.on("click", function () {
         currentConfig = config.id === 'race' ? configs[1] : configs[0];
         avgToggleEl.addClass('toggle--active')
         countToggleEl.removeClass('toggle--active')
+        rootEl.addClass('section--avg-on').removeClass('section--count-on')
         chart.update(currentConfig);
       });
 
@@ -1919,10 +1921,10 @@ Elab.Table = (function (Elab) {
     var dateFormat = d3.timeFormat("%B %d, %Y");
     var html = [];
     html.push(
-      "<sup>1</sup> filings for the week of " + dateFormat(data.week.date) + " to " + dateFormat(data.lastUpdate) + " ."
+      "<sup>1</sup> Filings for the week of " + dateFormat(data.week.date) + " to " + dateFormat(data.lastUpdate) + ". Filings in the last week may be undercounted as a result of processing delays. These counts will be revised in the following week."
     );
     html.push(
-      "<sup>2</sup> filings for the period " +
+      "<sup>2</sup> Filings for the period " +
         dateFormat(data.month.date) +
         " to " + dateFormat(data.lastUpdate) + "."
     );
