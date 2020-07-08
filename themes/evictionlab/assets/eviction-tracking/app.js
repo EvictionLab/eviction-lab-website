@@ -1419,12 +1419,14 @@ Elab.Chart = (function (Elab) {
         currentConfig = config.id === 'race' ? configs[0] : configs[1];
         countToggleEl.addClass('toggle--active')
         avgToggleEl.removeClass('toggle--active')
+        rootEl.removeClass('section--avg-on').addClass('section--count-on')
         chart.update(currentConfig);
       });
       avgToggleEl.on("click", function () {
         currentConfig = config.id === 'race' ? configs[1] : configs[0];
         avgToggleEl.addClass('toggle--active')
         countToggleEl.removeClass('toggle--active')
+        rootEl.addClass('section--avg-on').removeClass('section--count-on')
         chart.update(currentConfig);
       });
 
