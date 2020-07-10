@@ -624,6 +624,7 @@ body {
     .table + .footnote {
       font-size: 1.2rem;
       color: var(--text-secondary);
+      padding: 8px 24px;
     }
 
     @media (min-width: 768px) {
