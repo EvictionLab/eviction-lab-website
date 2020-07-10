@@ -166,15 +166,35 @@
             label: "CSV File",
             widget: "file",
           },
+          {
+            name: "tooltip",
+            label: "Moratorium Tooltip (with date)",
+            widget: "string",
+            hint: "{{date}} will be replaced with the moratorium end date",
+          },
+          {
+            name: "tooltipNoDate",
+            label: "Moratorium Tooltip (no date)",
+            widget: "string",
+            hint: "this text is used for the tooltip when there is no moratorium end date"
+          },
+          {
+            name: "buttonLabel",
+            label: "Button Label",
+            widget: "string",
+          },
         ],
-        pattern: /^{{%[\s]+report_table[\s]+data="(\S*)"[\s]+%}}/,
+        pattern: /^{{%[\s]+report_table[\s]+data="(\S*)"[\s]+tooltip="([\S\s]*?)"[\s]+tooltipNoDate="([\S\s]*?)"[\s]+buttonLabel="([\S\s]*?)"[\s]+%}}/,
         fromBlock: function (match) {
           return {
             data: match[1],
+            tooltip: match[2],
+            tooltipNoDate: match[3],
+            buttonLabel: match[4]
           };
         },
         toBlock: function (obj) {
-          return '{{% report_table data="' + obj.data + '" %}}';
+          return '{{% report_table data="' + obj.data + '" tooltip="' + obj.tooltip + '" tooltipNoDate="' + obj.tooltipNoDate + '" buttonLabel="' + obj.buttonLabel + '" %}}';
         },
         toPreview: function (obj) {
           return obj.body;
