@@ -715,6 +715,14 @@ Elab.Chart = (function (Elab) {
         .enter()
         .append("g")
         .attr("class", "chart__bar-group")
+        // .on("mousemove", function (d) {
+        //   var title = chartConfig.format.xTooltip(d.data[0].value.x);
+        //   var items = d.data.map(getHoverItem);
+        //   renderBarTooltip(title, items, context, chartConfig.format.tooltip);
+        // })
+        // .on("mouseout", function () {
+        //   if (context.els.tooltip) context.els.tooltip.style("display", "none");
+        // })
         .merge(group)
         .attr("transform", function (d) {
           return "translate(" + context.x(new Date(2020, d.id, 1)) + ",0)";
@@ -1859,38 +1867,45 @@ Elab.Table = (function (Elab) {
    * Returns the HTML for a row in the index table
    * @param {*} data
    */
-  function getRowHtml(data, options) {
-    var rowTemplate = Handlebars.compile(
-      '<tr class="table__row {{class}}" data-name="{{name}}" data-href="{{url}}">' + 
-        '<td class="table__cell table__cell--name">' +
-          '{{name}}' +
-          '<img class="icon icon--moratorium" src="/img/el-moratorium-icon.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
-        '</td>' +
-        '<td class="table__cell table__cell--number">' +
-          '{{weekFilings}} <span class="arrow {{weekChange.direction}}">{{weekChange.value}}</span>' +
-        '</td>' +
-        '<td class="table__cell table__cell--number">' +
-          '{{monthFilings}} <span class="arrow {{monthChange.direction}}">{{monthChange.value}}</span>' +
-        '</td>' +
-        '<td class="table__cell table__cell--button">' +
-          '<a href="{{url}}" class="btn btn-default">{{buttonLabel}} <i class="fa fa-chevron-right"></i></a>' +
-        '</td>' +
-      '</tr>'
-    );
-    var isMoratoriumActive = !data.end || (data.end && +data.end > +Date.now());
-    var tooltipTemplate = data.end ? Handlebars.compile(options.tooltip) : Handlebars.compile(options.tooltipNoDate)
-    var rowData = {
-      name: data.name,
-      class: "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
-      url: Elab.Utils.getCurrentURL() + Elab.Utils.slugify(data.name),
-      weekFilings: data.week.filings,
-      weekChange: getPercentChange(data.week.diff),
-      monthFilings: data.month.filings,
-      monthChange: getPercentChange(data.month.diff),
-      tooltip: tooltipTemplate({ date: Elab.Utils.formatDate(data.end) }),
-      buttonLabel: options.buttonLabel
-    }
-    return rowTemplate(rowData);
+  function getRowHtml(data) {
+    var weekChange = getPercentChange(data.week.diff);
+    var monthChange = getPercentChange(data.month.diff);
+    var slug = Elab.Utils.slugify(data.name);
+    var url = Elab.Utils.getCurrentURL() + slug;
+    var html = "";
+    html +=
+      '<tr class="table__row" data-name="' +
+      data.name +
+      '" data-href="' +
+      url +
+      '">';
+    html += '<td class="table__cell table__cell--name">' + data.name + "</td>";
+    html +=
+      '<td class="table__cell table__cell--number">' +
+      data.week.filings +
+      ' <span class="arrow ' +
+      weekChange.direction +
+      '">' +
+      weekChange.value +
+      "</span>" +
+      "</td>";
+    html +=
+      '<td class="table__cell table__cell--number">' +
+      data.month.filings +
+      ' <span class="arrow ' +
+      monthChange.direction +
+      '">' +
+      monthChange.value +
+      "</span>" +
+      "</td>";
+    html +=
+      '<td class="table__cell table__cell--button">' +
+      '<a href="' +
+      url +
+      '" class="btn btn-default">View Full Report <i class="fa fa-chevron-right"></i></a>' +
+      "</td>";
+    html += "</tr>";
+    return html;
   }
 
   function renderDate(data) {
@@ -1946,13 +1961,7 @@ Elab.Table = (function (Elab) {
    * @param {*} el
    * @param {*} dataUrl
    */
-  function createIndexTable(el, dataUrl, options) {
-    const defaultOptions = { 
-      tooltip: "Eviction moratorium in effect until {{date}}",
-      tooltipNoDate: "Eviction moratorium currently in effect",
-      buttonLabel: "View Report"
-    }
-    options = Object.assign(defaultOptions, options);
+  function createIndexTable(el, dataUrl) {
     var bodyEl = $(el).find(".table__body");
     loadTableData(dataUrl, function (data) {
       // clear loading
@@ -1960,10 +1969,9 @@ Elab.Table = (function (Elab) {
       // create rows
       var locations = data;
       locations.forEach(function (city) {
-        var html = getRowHtml(city, options);
+        var html = getRowHtml(city);
         bodyEl.append(html);
       });
-      $('[data-toggle="tooltip"]').tooltip()
       // update the "last updated" text
       $('#lastUpdate span').html(d3.timeFormat("%B %d, %Y")(data[0].lastUpdate))
       // set the table footnotes

@@ -1,7 +1,7 @@
 ---
 draft: false
 cascade:
-  title: The Eviction Tracking System | Eviction Lab
+  title: "The Eviction Tracking System | Eviction Lab"
   description: Real time eviction tracking in U.S. cities during COVID-19.
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
@@ -63,4 +63,5 @@ aliases:
   - /weekly-reports
   - /eviction-tracking/tracker
 ---
-{{% report_table data="/uploads/table.csv" tooltip="Eviction moratorium in effect until {{date}}" tooltipNoDate="Eviction moratorium active" buttonLabel="View Report" %}}
+{{% report_table data="/uploads/table.csv" %}}
+

@@ -1,15 +1,9 @@
 <div class="breakout breakout--table">
   <div class="breakout__content">
-    <div class="legend legend--table">
-      <div class="legend-item">
-        <img class="icon icon--moratorium" src="/img/el-moratorium-icon.svg" alt="active moratorium icon" />
-        <span> = active moratorium</span>
-      </div>
-    </div>
     <table class="table table--cities">
       <thead class="table__head">
         <tr class="table__row">
-          <th class="table__cell table__cell--name">City</th>
+          <th class="table__cell table__cell--number">City</th>
           <th class="table__cell table__cell--number">
             Filings <br />Last Week<sup>1</sup>
           </th>
@@ -38,18 +32,10 @@
 <script>
   window.addEventListener('load', function () {
     var dataUrl = {{ .Get "data" }}
-    var buttonLabel = {{ .Get "buttonLabel" }}
-    var tooltip = {{ .Get "tooltip" }}
-    var tooltipNoDate = {{ .Get "tooltipNoDate" }}
-    var options = {
-      tooltip: tooltip,
-      tooltipNoDate: tooltipNoDate,
-      buttonLabel: buttonLabel
-    }
     var tableEl = document.querySelector('.table--cities')
     if (!dataUrl)
       throw new Error('no tabledata specified in front matter')
     if (tableEl && dataUrl)
-      Elab.Table.createIndexTable(tableEl, dataUrl, options)
+      Elab.Table.createIndexTable(tableEl, dataUrl)
   })
 </script>

@@ -102,8 +102,8 @@ $alt-bg: #F4F7F9;
   }
 }
 // Bootstrap tooltip styling
-.page-type-covid-policy-rankings [data-toggle="tooltip"],
-.page-type-covid-policy-rankings .tooltip.show {
+[data-toggle="tooltip"],
+.tooltip.show {
   border-radius: 0;
   .tooltip-inner {
     padding: 1.2rem 1.5rem;

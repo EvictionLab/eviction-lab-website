@@ -205,18 +205,14 @@ body {
 *    edges of the viewport.
 */
 
-  .breakout {
-    margin: 0;
-    position: relative;
-    padding: 0;
-    left: calc(-1 * (100vw - 100%) / 2);
-    width: 100vw;
-  }
-
   /** only needs to breakout on tablet+ */
   @media (min-width: 768px) {
     .breakout {
+      margin: 0;
+      position: relative;
       padding: 0 24px;
+      left: calc(-1 * (100vw - 100%) / 2);
+      width: 100vw;
     }
     .breakout.breakout--table .table {
       border: 3px solid var(--table-border);
@@ -247,17 +243,6 @@ body {
   }
 
 /** END OVERLINE */
-
-
-/** TOOLTIP (for table) */
-
-.tooltip .tooltip-inner {
-  font-size: 1.2rem;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
-}
-
-/** END TOOLTIP */
 
 
 /** ARROWS */
@@ -396,24 +381,6 @@ body {
       padding: 8px;
     }
 
-
-    /** Override padding first column */
-    .table .table__head .table__cell--name,
-    .table .table__body .table__cell--name {
-      padding-left: 28px;
-    }
-
-    /** Make room for sort icon */
-    .table .table__head .table__cell--number {
-      padding-right: 20px;
-    }
-
-    /** Override padding last column */
-    .table .table__head .table__cell--number + .table__cell--number,
-    .table .table__body .table__cell--number + .table__cell--number {
-      padding-right: 24px;
-    }
-
     .table .table__head th {
       border-bottom: 2px solid var(--table-border);
       background: #fff;
@@ -454,10 +421,6 @@ body {
       top: 56px;
       z-index: 10;
       background: #fff;
-    }
-
-    .table__head .table__cell--number {
-      text-align: right;
     }
 
     .table__head .table__cell:hover {
@@ -521,8 +484,6 @@ body {
       white-space: nowrap;
     }
 
-    
-
     /** table name column */
 
     .table__body .table__cell--name {
@@ -531,16 +492,6 @@ body {
       color: var(--c2);
       font-size: 1.4em;
     }
-
-    .table__body .table__cell--name .icon {
-      margin: 0 -8px 4px 8px;
-    }
-
-    /** no moratorium, no icon */
-    .table__row--no-moratorium .icon {
-      display: none;
-    }
-
 
     @media (min-width: 768px) {
       .table__body .table__cell--name {
@@ -557,11 +508,10 @@ body {
       color: var(--c2);
       font-size: 1.4em;
       font-weight: 500;
-      text-align: right;
     }
 
     .table__cell--number span {
-      font-size: 0.825em;
+      font-size: 1em;
       padding-left: 0.5em;
       margin-left:8px;
     }
@@ -624,7 +574,6 @@ body {
     .table + .footnote {
       font-size: 1.2rem;
       color: var(--text-secondary);
-      padding: 8px 24px;
     }
 
     @media (min-width: 768px) {
@@ -935,39 +884,6 @@ body {
   .list-table {
     font-size: 1em;
   }
-
-  .list-table .legend {
-    justify-content: center;
-  }
-
-  .list-table .legend-item {
-    font-size: 1.4rem;
-    color: #7c7c7c;
-    justify-content: center;
-    margin-bottom: 16px;
-  }
-  @media(min-width: 768px) {
-    .list-table .legend-item {
-      font-size: 1.8rem;
-      margin-bottom: 24px;
-    }
-
-  }
-
-  .list-table .legend-item .icon {
-    margin-right: 4px;
-  }
-
-  /** icon sizing */
-  .list-table .icon {
-    width: 16px;
-  }
-  @media(min-width: 768px) {
-    .list-table .icon {
-      width: 27px;
-    }
-  }
-  
 
 /** END LIST TABLE SECTION
 
