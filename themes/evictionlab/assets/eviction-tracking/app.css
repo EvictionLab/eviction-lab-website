@@ -394,13 +394,14 @@ body {
     .table .table__body td {
       border: none;
       padding: 8px;
+      vertical-align: middle;
     }
 
 
     /** Override padding first column */
     .table .table__head .table__cell--name,
     .table .table__body .table__cell--name {
-      padding-left: 28px;
+      padding-left: 24px;
     }
 
     /** Make room for sort icon */
