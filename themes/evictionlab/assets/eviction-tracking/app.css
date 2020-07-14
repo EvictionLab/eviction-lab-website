@@ -534,7 +534,7 @@ body {
     }
 
     .table__body .table__cell--name .icon {
-      margin: 0 -8px 0 8px;
+      margin: 0 -8px 4px 8px;
     }
 
     /** no moratorium, no icon */
@@ -943,7 +943,16 @@ body {
 
   .list-table .legend-item {
     font-size: 1.4rem;
+    color: #7c7c7c;
     justify-content: center;
+    margin-bottom: 16px;
+  }
+  @media(min-width: 768px) {
+    .list-table .legend-item {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+
   }
 
   .list-table .legend-item .icon {
@@ -956,7 +965,7 @@ body {
   }
   @media(min-width: 768px) {
     .list-table .icon {
-      width: 24px;
+      width: 27px;
     }
   }
   
