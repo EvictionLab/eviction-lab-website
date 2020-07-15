@@ -533,7 +533,7 @@ body {
     }
 
     .table__body .table__cell--name .icon {
-      margin: 0 -8px 4px 8px;
+      margin: 0 -8px 4px 10px;
     }
 
     /** no moratorium, no icon */
