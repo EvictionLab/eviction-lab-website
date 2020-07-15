@@ -1864,7 +1864,7 @@ Elab.Table = (function (Elab) {
       '<tr class="table__row {{class}}" data-name="{{name}}" data-href="{{url}}">' + 
         '<td class="table__cell table__cell--name">' +
           '{{name}}' +
-          '<img class="icon icon--moratorium" src="/img/el-moratorium-icon4.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
+          '<img class="icon icon--moratorium" src="/img/el-moratorium-icon5.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
         '</td>' +
         '<td class="table__cell table__cell--number">' +
           '{{weekFilings}} <span class="arrow {{weekChange.direction}}">{{weekChange.value}}</span>' +
