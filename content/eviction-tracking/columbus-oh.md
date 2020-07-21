@@ -13,9 +13,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 While the state of Ohio has not instituted a general eviction moratorium, the Cleveland Municipal Housing Court halted the processing of non-emergency eviction filings as of March 16th. This policy has reduced filings to near zero since that date. The current policy is in effect until June 15th. 
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
+
+
 
 
 
@@ -23,7 +27,9 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 
 
-{{% report_chart id="avg" data="/uploads/columbus_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/franklin_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -32,11 +38,15 @@ Eviction filings in Cleveland were slightly below average in January and Februar
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/columbus_map.csv" %}}
+{{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/franklin_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -45,11 +55,15 @@ Cleveland is divided into 177 Census Tracts. Here we map, in each of those Tract
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014â€“2018
 
+
+
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="/uploads/columbus_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/franklin_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -58,5 +72,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawnâ€”within the same set of neighborhoods defined by racial/ethnic majorityâ€”between filings in 2020 and average filings in 2012â€“2016.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
+
+
 
 {{%/ report_chart %}}
