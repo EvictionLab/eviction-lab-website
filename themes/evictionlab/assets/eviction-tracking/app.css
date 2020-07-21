@@ -2273,6 +2273,13 @@ body {
     .chart__tooltip-row--3 .tooltip__item--multi:before {
       background: var(--c4);
     }
+    /** top chart overrides */
+    .chart__tooltip--avg .chart__tooltip-row--0 .tooltip__item--multi:before {
+      background: var(--c2);
+    }
+    .chart__tooltip--avg .chart__tooltip-row--1 .tooltip__item--multi:before {
+      background: var(--c1);
+    }
 
   /** END VISUALIZATION TOOLTIP */
 
