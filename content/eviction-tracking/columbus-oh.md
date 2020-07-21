@@ -11,23 +11,15 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="39049" data="/uploads/table.csv" %}}
 
-
-
-
-
-While the state of Ohio has not instituted a general eviction moratorium, the Cleveland Municipal Housing Court halted the processing of non-emergency eviction filings as of March 16th. This policy has reduced filings to near zero since that date. The current policy is in effect until June 15th. 
+While the state of Ohio has not instituted a general eviction moratorium, the courts in Franklin County (Columbus) halted the processing of non-emergency eviction filings between March 16th and June 1st. To maintain social distancing, [court operations shifted to the Greater Columbus Convention Center since reopening.](https://www.bloomberg.com/news/articles/2020-06-18/how-do-you-hold-housing-court-in-a-pandemic)
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
-
-
-
-
 
 {{%/ report_intro %}}
 
 
 
-{{% report_chart id="avg" data="/uploads/franklin_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/columbus_barchart.csv" %}}
 
 
 
@@ -36,7 +28,7 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 Eviction filings in Cleveland were slightly below average in January and February of this year.<sup>1</sup> Filings dropped dramatically in March and have been near zero since then.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
-2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
+2. Filing data for 2020 provided by the [Franklin County Municipal Court](http://www.fcmcclerk.com/reports/evictions)
 
 
 
@@ -44,24 +36,20 @@ Eviction filings in Cleveland were slightly below average in January and Februar
 
 
 
-{{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/franklin_map.csv" %}}
-
-
+{{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/columbus_map.csv" %}}
 
 # The geography of changes in eviction filings
 
-Cleveland is divided into 177 Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
+Columbus is divided into 284 Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014â€“2018
-
-
 
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="/uploads/franklin_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/columbus_linechart.csv" %}}
 
 
 
