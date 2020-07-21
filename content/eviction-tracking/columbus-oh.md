@@ -1,10 +1,10 @@
 ---
-collection: true
-draft: true
+draft: false
 h1: Columbus, Ohio
 slug: columbus-oh
 date: 2020-06-03T00:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
+collection: true
 title: Columbus Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
