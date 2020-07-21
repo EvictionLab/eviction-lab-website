@@ -198,7 +198,7 @@ Elab.Config = (function (Elab) {
       {
         selector: ".visual__title",
         text: "Monthly Eviction Filings",
-      }
+      },
     ],
     markLines: [],
     data: {
@@ -219,7 +219,10 @@ Elab.Config = (function (Elab) {
         text: "Monthly Eviction Filings Relative To Average",
       },
     ],
-    markLines: [{ y: 1, label: "average" }, { y: 1, label: "filings", labelOnly:true }],
+    markLines: [
+      { y: 1, label: "average" },
+      { y: 1, label: "filings", labelOnly: true },
+    ],
     data: {
       x: "month",
       y: {
@@ -266,7 +269,10 @@ Elab.Config = (function (Elab) {
           "Filings Relative to Average, by Neighborhood Racial/Ethnic Majority",
       },
     ],
-    markLines: [{ y: 1, label: "average" }, { y: 1, label: "filings", labelOnly:true }],
+    markLines: [
+      { y: 1, label: "average" },
+      { y: 1, label: "filings", labelOnly: true },
+    ],
     data: {
       x: "month",
       y: {
@@ -312,7 +318,7 @@ Elab.Config = (function (Elab) {
       {
         selector: ".visual__title",
         text: "Filings by Neighborhood Racial/Ethnic Majority",
-      }
+      },
     ],
     markLines: [],
     data: {
@@ -588,15 +594,18 @@ Elab.Chart = (function (Elab) {
   }
 
   function updatePartialFilingsDate(rootEl, data) {
-    const rawLastDay = data['_raw'][data['_raw'].length-1]['month_last_day']
+    const rawLastDay = data["_raw"][data["_raw"].length - 1]["month_last_day"];
     if (!rawLastDay) return;
-    const parseDate = d3.timeParse("%d/%m/%Y")
-    const lastDay = parseDate(rawLastDay)
-    const value = "Partial " + d3.timeFormat("%B")(lastDay) + 
-      " filings as of " + d3.timeFormat("%-m/%-d")(lastDay) + 
-      ", relative to average for same period"
-    const partialEl = rootEl.find('.visual__note');
-    partialEl.html(value)
+    const parseDate = d3.timeParse("%d/%m/%Y");
+    const lastDay = parseDate(rawLastDay);
+    const value =
+      "Partial " +
+      d3.timeFormat("%B")(lastDay) +
+      " filings as of " +
+      d3.timeFormat("%-m/%-d")(lastDay) +
+      ", relative to average for same period";
+    const partialEl = rootEl.find(".visual__note");
+    partialEl.html(value);
   }
 
   function Chart(source, root, config) {
@@ -653,7 +662,7 @@ Elab.Chart = (function (Elab) {
       var yFlipped = d3.event.clientY > window.innerHeight - 140;
       var space = 32;
       context.els.tooltip
-        .attr("class", "chart__tooltip")
+        .attr("class", "chart__tooltip chart__tooltip--" + config.id)
         .attr(
           "style",
           "transform: translate(" +
@@ -722,11 +731,11 @@ Elab.Chart = (function (Elab) {
 
       var groupAreaSelection = context.els.data
         .selectAll(".chart__bar-area")
-        .data(groupedData)
+        .data(groupedData);
 
       var groupAreas = groupAreaSelection
         .enter()
-        .append('rect')
+        .append("rect")
         .attr("fill", "transparent")
         .attr("class", "chart__bar-area")
         .on("mousemove", function (d) {
@@ -738,11 +747,12 @@ Elab.Chart = (function (Elab) {
           if (context.els.tooltip) context.els.tooltip.style("display", "none");
         })
         .merge(groupAreaSelection)
-        .attr("x", function (d, i) { return context.x(new Date(2020, d.id, 1)) - 4})
+        .attr("x", function (d, i) {
+          return context.x(new Date(2020, d.id, 1)) - 4;
+        })
         .attr("y", 0)
         .attr("height", context.height)
         .attr("width", context.x.bandwidth() + 8);
-
 
       var groupBars = groupEls.selectAll("rect").data(function (d) {
         return d.data;
@@ -842,7 +852,6 @@ Elab.Chart = (function (Elab) {
           return context.y(0);
         })
         .remove();
-
 
       var groupDots = groupEls.selectAll("circle").data(function (d) {
         return config.dots ? d.data : [];
@@ -1036,7 +1045,7 @@ Elab.Chart = (function (Elab) {
       // y axis mark lines
       var markLine = context.els.markLines
         .selectAll(".chart__mark-line--y")
-        .data(config.markLines.filter(v => v.labelOnly));
+        .data(config.markLines.filter((v) => v.labelOnly));
 
       markLine
         .enter()
@@ -1086,7 +1095,7 @@ Elab.Chart = (function (Elab) {
           return d.label;
         })
         .attr("x", function (d) {
-          return context.width+ 4;
+          return context.width + 4;
         })
         .attr("y", function (d) {
           return context.height - 4;
@@ -1100,7 +1109,7 @@ Elab.Chart = (function (Elab) {
           return context.width + 4;
         })
         .attr("y", function (d, i) {
-          return context.y(d.y) - 4 + (i*16);
+          return context.y(d.y) - 4 + i * 16;
         })
         .attr("fill-opacity", 1);
 
@@ -1339,7 +1348,7 @@ Elab.Chart = (function (Elab) {
       root: root,
       render: render,
       update: update,
-      data: parsedData
+      data: parsedData,
     };
   }
 
@@ -1375,8 +1384,6 @@ Elab.Chart = (function (Elab) {
         chart.render();
       });
 
-      
-
       // send chart to callback
       if (callback) callback(chart);
     });
@@ -1387,14 +1394,12 @@ Elab.Chart = (function (Elab) {
     var chartEl = rootEl.find(".chart")[0];
 
     // add button to toggle state
-    var countToggleEl = rootEl.find('.toggle--count');
-    var avgToggleEl = rootEl.find('.toggle--avg');
+    var countToggleEl = rootEl.find(".toggle--count");
+    var avgToggleEl = rootEl.find(".toggle--avg");
 
-    if (config.id === 'avg')
-      avgToggleEl.addClass('toggle--active')
-    
-    if (config.id === 'race')
-      countToggleEl.addClass('toggle--active')
+    if (config.id === "avg") avgToggleEl.addClass("toggle--active");
+
+    if (config.id === "race") countToggleEl.addClass("toggle--active");
 
     // move footnotes into proper container
     var contentEl = rootEl.find(".details");
@@ -1408,21 +1413,21 @@ Elab.Chart = (function (Elab) {
     // create chart and bind click event to toggle state
     createChart(chartEl, currentConfig, function (chart) {
       countToggleEl.on("click", function () {
-        currentConfig = config.id === 'race' ? configs[0] : configs[1];
-        countToggleEl.addClass('toggle--active')
-        avgToggleEl.removeClass('toggle--active')
-        rootEl.removeClass('section--avg-on').addClass('section--count-on')
+        currentConfig = config.id === "race" ? configs[0] : configs[1];
+        countToggleEl.addClass("toggle--active");
+        avgToggleEl.removeClass("toggle--active");
+        rootEl.removeClass("section--avg-on").addClass("section--count-on");
         chart.update(currentConfig);
       });
       avgToggleEl.on("click", function () {
-        currentConfig = config.id === 'race' ? configs[1] : configs[0];
-        avgToggleEl.addClass('toggle--active')
-        countToggleEl.removeClass('toggle--active')
-        rootEl.addClass('section--avg-on').removeClass('section--count-on')
+        currentConfig = config.id === "race" ? configs[1] : configs[0];
+        avgToggleEl.addClass("toggle--active");
+        countToggleEl.removeClass("toggle--active");
+        rootEl.addClass("section--avg-on").removeClass("section--count-on");
         chart.update(currentConfig);
       });
 
-      updatePartialFilingsDate(rootEl, chart.data)
+      updatePartialFilingsDate(rootEl, chart.data);
     });
   }
 
@@ -1802,7 +1807,7 @@ Elab.Table = (function (Elab) {
           {
             id: d.id,
             name: d.name,
-            lastUpdate: parseDate(data[0]['data_date']),
+            lastUpdate: parseDate(data[0]["data_date"]),
             start:
               d["start_moratorium_date"] &&
               parseDate(d["start_moratorium_date"]),
@@ -1861,41 +1866,45 @@ Elab.Table = (function (Elab) {
    */
   function getRowHtml(data, options) {
     var rowTemplate = Handlebars.compile(
-      '<tr class="table__row {{class}}" data-name="{{name}}" data-href="{{url}}">' + 
+      '<tr class="table__row {{class}}" data-name="{{name}}" data-href="{{url}}">' +
         '<td class="table__cell table__cell--name">' +
-          '{{name}}' +
-          '<img class="icon icon--moratorium" src="/img/el-moratorium-icon5.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
-        '</td>' +
+        "{{name}}" +
+        '<img class="icon icon--moratorium" src="/img/el-moratorium-icon5.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
+        "</td>" +
         '<td class="table__cell table__cell--number">' +
-          '{{weekFilings}} <span class="arrow {{weekChange.direction}}">{{weekChange.value}}</span>' +
-        '</td>' +
+        '{{weekFilings}} <span class="arrow {{weekChange.direction}}">{{weekChange.value}}</span>' +
+        "</td>" +
         '<td class="table__cell table__cell--number">' +
-          '{{monthFilings}} <span class="arrow {{monthChange.direction}}">{{monthChange.value}}</span>' +
-        '</td>' +
+        '{{monthFilings}} <span class="arrow {{monthChange.direction}}">{{monthChange.value}}</span>' +
+        "</td>" +
         '<td class="table__cell table__cell--button">' +
-          '<a href="{{url}}" class="btn btn-default">{{buttonLabel}} <i class="fa fa-chevron-right"></i></a>' +
-        '</td>' +
-      '</tr>'
+        '<a href="{{url}}" class="btn btn-default">{{buttonLabel}} <i class="fa fa-chevron-right"></i></a>' +
+        "</td>" +
+        "</tr>"
     );
     var isMoratoriumActive = !data.end || (data.end && +data.end > +Date.now());
-    var tooltipTemplate = data.end ? Handlebars.compile(options.tooltip) : Handlebars.compile(options.tooltipNoDate)
+    var tooltipTemplate = data.end
+      ? Handlebars.compile(options.tooltip)
+      : Handlebars.compile(options.tooltipNoDate);
     var rowData = {
       name: data.name,
-      class: "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
+      class:
+        "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
       url: Elab.Utils.getCurrentURL() + Elab.Utils.slugify(data.name),
       weekFilings: data.week.filings,
       weekChange: getPercentChange(data.week.diff),
       monthFilings: data.month.filings,
       monthChange: getPercentChange(data.month.diff),
       tooltip: tooltipTemplate({ date: Elab.Utils.formatDate(data.end) }),
-      buttonLabel: options.buttonLabel
-    }
+      buttonLabel: options.buttonLabel,
+    };
     return rowTemplate(rowData);
   }
 
   function renderDate(data) {
-    $('#reportDate')
-      .html("Week of " + d3.timeFormat("%B %d, %Y")(data.week.date))
+    $("#reportDate").html(
+      "Week of " + d3.timeFormat("%B %d, %Y")(data.week.date)
+    );
   }
 
   /**
@@ -1906,12 +1915,18 @@ Elab.Table = (function (Elab) {
     var dateFormat = d3.timeFormat("%B %d, %Y");
     var html = [];
     html.push(
-      "<sup>1</sup> Filings for the week of " + dateFormat(data.week.date) + " to " + dateFormat(data.lastUpdate) + ". Filings in the last week may be undercounted as a result of processing delays. These counts will be revised in the following week."
+      "<sup>1</sup> Filings for the week of " +
+        dateFormat(data.week.date) +
+        " to " +
+        dateFormat(data.lastUpdate) +
+        ". Filings in the last week may be undercounted as a result of processing delays. These counts will be revised in the following week."
     );
     html.push(
       "<sup>2</sup> Filings for the period " +
         dateFormat(data.month.date) +
-        " to " + dateFormat(data.lastUpdate) + "."
+        " to " +
+        dateFormat(data.lastUpdate) +
+        "."
     );
     html.push(
       "Percent differences relative to average filings for the same time period."
@@ -1947,25 +1962,27 @@ Elab.Table = (function (Elab) {
    * @param {*} dataUrl
    */
   function createIndexTable(el, dataUrl, options) {
-    const defaultOptions = { 
+    const defaultOptions = {
       tooltip: "Eviction moratorium in effect until {{date}}",
       tooltipNoDate: "Eviction moratorium currently in effect",
-      buttonLabel: "View Report"
-    }
+      buttonLabel: "View Report",
+    };
     options = Object.assign(defaultOptions, options);
     var bodyEl = $(el).find(".table__body");
     loadTableData(dataUrl, function (data) {
       // clear loading
-      bodyEl.html(""); 
+      bodyEl.html("");
       // create rows
       var locations = data;
       locations.forEach(function (city) {
         var html = getRowHtml(city, options);
         bodyEl.append(html);
       });
-      $('[data-toggle="tooltip"]').tooltip()
+      $('[data-toggle="tooltip"]').tooltip();
       // update the "last updated" text
-      $('#lastUpdate span').html(d3.timeFormat("%B %d, %Y")(data[0].lastUpdate))
+      $("#lastUpdate span").html(
+        d3.timeFormat("%B %d, %Y")(data[0].lastUpdate)
+      );
       // set the table footnotes
       $(el).next().html(getFootnoteHtml(data[0]));
       // default sort the table
