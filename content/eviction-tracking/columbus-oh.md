@@ -11,15 +11,21 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="39049" data="/uploads/table.csv" %}}
 
+
+
 While the state of Ohio has not instituted a general eviction moratorium, the courts in Franklin County (Columbus) halted the processing of non-emergency eviction filings between March 16th and June 1st. To maintain social distancing, [court operations shifted to the Greater Columbus Convention Center since reopening.](https://www.bloomberg.com/news/articles/2020-06-18/how-do-you-hold-housing-court-in-a-pandemic)
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
+
+
 
 {{%/ report_intro %}}
 
 
 
-{{% report_chart id="avg" data="/uploads/columbus_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/franklin_barchart.csv" %}}
+
+
 
 
 
@@ -32,11 +38,15 @@ Eviction filings in Cleveland were slightly below average in January and Februar
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/columbus_map.csv" %}}
+{{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/franklin_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -45,11 +55,15 @@ Columbus is divided into 284 Census Tracts. Here we map, in each of those Tracts
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014â€“2018
 
+
+
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="/uploads/columbus_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/franklin_linechart.csv" %}}
+
+
 
 
 
@@ -60,6 +74,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawnâ€”within the same set of neighborhoods defined by racial/ethnic majorityâ€”between filings in 2020 and average filings in 2012â€“2016.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
+
+
 
 
 
