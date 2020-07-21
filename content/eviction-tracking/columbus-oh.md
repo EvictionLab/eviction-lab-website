@@ -11,9 +11,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="39049" data="/uploads/table.csv" %}}
 
+
+
 While the state of Ohio did not institute a general eviction moratorium, the courts in Franklin County (Columbus) halted the processing of non-emergency eviction filings between March 16th and June 1st. To maintain social distancing, [court operations shifted to the Greater Columbus Convention Center since reopening.](https://www.bloomberg.com/news/articles/2020-06-18/how-do-you-hold-housing-court-in-a-pandemic)
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
+
+
 
 {{%/ report_intro %}}
 
@@ -23,12 +27,16 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Cleveland were slightly below average in January and February of this year.<sup>1</sup> Filings dropped dramatically in March and have been near zero since then.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
 2. Filing data for 2020 provided by the [Franklin County Municipal Court](http://www.fcmcclerk.com/reports/evictions)
+
+
 
 
 
@@ -43,7 +51,7 @@ Eviction filings in Cleveland were slightly below average in January and Februar
 Columbus is divided into 284 Census Tracts. Here we map, in each of those Tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014â€“2018
+2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
 {{%/ report_map %}}
 
@@ -51,16 +59,12 @@ Columbus is divided into 284 Census Tracts. Here we map, in each of those Tracts
 
 {{% report_chart id="race" data="/uploads/columbus_linechart.csv" %}}
 
-
-
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In January and February, eviction filings were concentrated in majority-Black neighborhoods. Since March, eviction filings have dropped steeply across all neighborhoods.
 
-When you toggle the figure to see data relative to average, comparisons are being drawnâ€”within the same set of neighborhoods defined by racial/ethnic majorityâ€”between filings in 2020 and average filings in 2012â€“2016.
+When you toggle the figure to see data relative to average, comparisons are being drawn–within the same set of neighborhoods defined by racial/ethnic majority–between filings in 2020 and average filings in 2012–2016.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
-
-
 
 {{%/ report_chart %}}
