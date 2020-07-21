@@ -73,6 +73,10 @@ data:
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
     file: /uploads/stlouis_20200718.csv
+  - site: Columbus
+    years: 2012, 2013, 2015
+    geo: Census Tract
+    file: /uploads/franklin_20200718.csv
 ---
 Sample code:
 
