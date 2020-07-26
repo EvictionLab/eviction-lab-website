@@ -1,0 +1,51 @@
+#sub-splash-gateway {
+    h1 {
+        font-family: "GT-Eesti-Display-Bold";
+        font-style: normal;
+        font-weight: bold;
+        line-height: 142%;
+        /* or 43px */
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #E24000;
+        font-size: 2.6rem;
+        @include media-breakpoint-up(md) {
+            font-size: 3rem;
+        }
+    }
+    .col-count-2 {
+        @include media-breakpoint-up(md) {
+            column-count: 2;
+            column-gap: 3.2rem;
+        }
+        p {
+            color: #212529;
+        }
+    }
+    h2 {
+        font-family: "GT-Eesti-Display-Bold";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.24rem;
+        line-height: 3.8rem;
+        color: #000000;
+        &.policies-intro {
+            /* Learn about the policies that affect you, and find organizations that can help. */
+            font-family: "GT-Eesti-Display-Medium";
+            font-size: 3.2rem;
+            line-height: 3.7rem;
+            color: #000000;
+            font-weight: 400;
+        }
+    }
+// Map and rankings blocks --------------------------------------------
+    #feature-map {
+        background-color: #EAEFF3;
+    }
+    #feature-rankings {
+        background-color: #F4E9E7;
+    }
+    .feature {
+        padding: 28rem 0 3.2rem;
+    }
+}
