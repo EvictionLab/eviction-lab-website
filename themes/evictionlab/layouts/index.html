@@ -61,47 +61,128 @@
 
 <!-- ********** pictorial menu section ********** -->
 
-<div class="row ml-0 mr-0">
-  <div class="col-12 col-md-11 col-lg-9 mx-auto mt-md-2 mt-lg-0 col-xl-9 px-4 px-md-2">
-      <div class="bordertop">
+  <div id="sub-splash-gateway">
+<!--- Main features row ------------------------------------------>    
+    <div id="main-features" class="row mx-0 feature-panel"> 
+      <div class="col-12 col-md-8 col-lg-7 col-xl-6 mx-auto my-5 my-md-6 my-lg-9 my-xl-9 px-3 px-md-2">
+        <h2 class="policies-intro text-center">Interactive Tools</h2>
+        <p class="text-center">Learn about the American housing crisis by interacting with a customizable map.</p>
       </div>
-      <h1 class="d-block w-100 pt-1 mb-5">{{ .Params.h1 }}</h1>
-  </div>
-  <div class="w-100"></div>
-  <div class="col-12 col-md-11 col-lg-9 mx-auto col-count-2 mb-2 mb-md-4 mb-lg-8 px-4 px-md-2">
-          
-          {{ .Params.intro1 | safeHTML }}
-          
-       
-      </div>  
+      <div class="w-100"></div>
+        <div id="feature-map" class="col-12 col-md-6 feature main-feature px-0 d-flex justify-content-end">
+            <a class="wraplink" href="/map/"></a>  
+            <div class="col-12 col-md-10 d-flex flex-column justify-content-center px-4 px-md-0s">
+                <a class="wraplink" href="/map/"></a>  
+                    <div class="wrapper">
+                        <h2>MAP & DATA</h2>
+                        <p>Learn about the American housing crisis by interacting with a customizable map.</p>
+                        <a class="sublink" href="/covid-policy-scorecard/">GO TO SCORECARD <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div> 
+                
+            </div>     
+        </div>
+        <div id="feature-rankings" class="col-12 col-md-6 feature main-feature px-0 d-flex justify-content-start">
+          <a class="wraplink" href="/map/"></a>  
+            <div class="col-12 col-md-10 offset-md-1 d-flex flex-column justify-content-center px-4 px-md-2">
+                <a class="wraplink" href="/map/"></a>  
+                    <div class="wrapper">
+                        <h2>RANKINGS</h2>
+                        <p>Learn about the American housing crisis by interacting with a customizable map.</p>
+                        <a class="sublink" href="/covid-policy-scorecard/">GO TO SCORECARD <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div> 
+                
+            </div>  
+        </div>
+    </div>
+<!--- COVID features rows ------------------------------------------>    
+    <div id="covid-gateway">
+      <div class="row mx-0 subfeature-panel mb-5">
+        <div class="col-12 col-md-8 col-lg-7 col-xl-6 mx-auto my-8 my-md-8 my-lg-10 my-xl-12 px-3 px-md-2">
+            <h2 class="policies-intro">Learn about the policies that affect you, and find organizations that can help.</h2>
+        </div>
+        <div class="col-11 col-md-12 col-lg-11 mx-auto d-md-flex col-2-wrap">
+            <div class="col-12 col-md-5 feature d-flex flex-column justify-content-center px-0 mb-6 mb-md-0">
+                <a class="wraplink" href="/covid-eviction-policies/"></a> 
+                <div class="bg-wrapper-1">
+                    <div class="text-wrapper mt-20">
+                        <h2>POLICIES</h2>
+                        <p>Use our interactive table to get the latest on local, state, and federal policies.</p>
+                        <a class="sublink" href="/covid-eviction-policies/">GO TO POLICIES LIST <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div>  
+                </div>       
+            </div>
+            <div class="col-12 col-md-5 feature d-flex flex-column justify-content-center px-0">
+                <a class="wraplink" href="https://justshelter.org" target="_blank"></a> 
+                <div class="bg-wrapper-2">
+                    <div class="text-wrapper mt-20">
+                        <h2>RESOURCES</h2>
+                        <p>See our list of over 700 organizations that offer housing assistance, legal aid, and more.</p>
+                        <a class="sublink" href="https://justshelter.org" target="_blank">GO TO JUST SHELTER WEBSITE <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </div>
+      <div class="row mx-0 subfeature-panel mb-12">
+        <div class="col-11 col-md-12 col-lg-11 mx-auto d-md-flex col-2-wrap">
+            <div class="col-12 col-md-5 feature d-flex flex-column justify-content-center px-0 mb-6 mb-md-0">
+                <a class="wraplink" href="/covid-eviction-policies/"></a> 
+                <div class="bg-wrapper-1">
+                    <div class="text-wrapper mt-20">
+                        <h2>POLICIES</h2>
+                        <p>Use our interactive table to get the latest on local, state, and federal policies.</p>
+                        <a class="sublink" href="/covid-eviction-policies/">GO TO POLICIES LIST <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div>  
+                </div>       
+            </div>
+            <div class="col-12 col-md-5 feature d-flex flex-column justify-content-center px-0">
+                <a class="wraplink" href="https://justshelter.org" target="_blank"></a> 
+                <div class="bg-wrapper-2">
+                    <div class="text-wrapper mt-20">
+                        <h2>RESOURCES</h2>
+                        <p>See our list of over 700 organizations that offer housing assistance, legal aid, and more.</p>
+                        <a class="sublink" href="https://justshelter.org" target="_blank">GO TO JUST SHELTER WEBSITE <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </div>
+    </div>
+<!-- Other pages links -------------->
+    <div id="other-pages">
+      <div class="row mx-0 subfeature-panel mb-12">
+        <div class="col-11 col-md-12 col-lg-10 mx-auto d-md-flex col-2-wrap">
+          <div class="col-12 col-md-3">
+            <h2>Learn more about us</h2>
+          </div>
+          <div class="col-12 col-md-9">
+            <ul>
+              <li><a href="/about">About the Eviction Lab <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a href="/why-eviction-matters">Why Eviction Matters <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a href="/help-faq">Help and FAQ <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a href="/methods">Methods <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+            </ul>
+              
+          </div>
+        </div>
+      </div>    
+    </div>
+<!-- Update section -->
+  <div id="updates-section">
+    <div class="row mx-0 subfeature-panel py-10">
+      <div class="col-11 col-md-12 col-lg-8 mx-auto d-md-flex col-2-wrap">
+        <div class="col-12 col-md-6">
+          <h2>Follow research, events, and news coverage</h2>
+          <a class="sublink" href="https://justshelter.org" target="_blank">GO TO JUST SHELTER WEBSITE <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+        </div>
+        
+      </div>
+    </div>    
   </div>
 
-  <div id="sub-splash-gateway" class="row mx-0 mt-5 feature-panel">
-      
-      <div id="feature-map" class="col-12 col-md-6 feature px-0 d-flex justify-content-end">
-          <a class="wraplink" href="/map/"></a>  
-          <div class="col-12 col-md-10 d-flex flex-column justify-content-center px-4 px-md-0s">
-              <a class="wraplink" href="/map/"></a>  
-                  <div class="wrapper">
-                      <h2>MAP & DATA</h2>
-                      <p>Learn about the American housing crisis by interacting with a customizable map.</p>
-                      <a class="sublink" href="/covid-policy-scorecard/">GO TO SCORECARD <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                  </div> 
-              
-          </div>     
-      </div>
-      <div id="feature-rankings" class="col-12 col-md-6 feature px-0 d-flex justify-content-start">
-        <a class="wraplink" href="/map/"></a>  
-          <div class="col-12 col-md-10 offset-md-1 d-flex flex-column justify-content-center px-4 px-md-2">
-              <a class="wraplink" href="/map/"></a>  
-                  <div class="wrapper">
-                      <h2>RANKINGS</h2>
-                      <p>Learn about the American housing crisis by interacting with a customizable map.</p>
-                      <a class="sublink" href="/covid-policy-scorecard/">GO TO SCORECARD <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                  </div> 
-              
-          </div>  
-      </div>
-  </div>
+
+<!-- / gateway section ID --> 
+
+  </div>  
 
 {{ partial "footer" . }}

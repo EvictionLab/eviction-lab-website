@@ -39,13 +39,80 @@
         }
     }
 // Map and rankings blocks --------------------------------------------
+    #main-features {
+        background-color: #F4F7F9;
+    }
     #feature-map {
         background-color: #EAEFF3;
+        background-image: url(/images/assets/graphics/map-circles.svg);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: 68% 2rem;
     }
     #feature-rankings {
         background-color: #F4E9E7;
+        background-image: url(/images/assets/graphics/rankings-bars.svg);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: left 1.3rem;
     }
-    .feature {
+    .main-feature {
         padding: 28rem 0 3.2rem;
     }
+
+// subfeatures --------------------------------------------
+
+    #covid-gateway {
+        .col-2-wrap {
+            justify-content: space-evenly;
+        }
+        .feature {
+            /* Vector */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+            &:hover {
+                .hoverbar {
+                    display: block;
+                    transition: display .8s ease;
+                }      
+            }
+            .bg-wrapper-1 {
+                background-size: 125%;
+                
+                @include media-breakpoint-up(md) {
+                    background-size: 175%;
+                } 
+                @include media-breakpoint-up(lg) {
+                    background-size: 100%;
+                }
+                background-repeat: no-repeat; 
+                    background-image: url('/images/assets/graphics/policies-bg.jpg');
+                }
+            .bg-wrapper-2 { 
+                background-size: 125%;
+                @include media-breakpoint-up(md) {
+                    background-size: 175%;
+                }  
+                @include media-breakpoint-up(lg) {
+                    background-size: 110%;
+                }
+                background-repeat: no-repeat;    
+                    background-image: url('/images/assets/graphics/resources-bg.jpg');
+                }
+            
+            .text-wrapper {
+                padding: 2.4rem 2.4rem 4rem 2.4rem;
+                background-color: #fff;
+            } 
+        }
+    }
+
+// subfeatures --------------------------------------------
+    #updates-section {
+        background-color: #F4F7F9;
+        background-size: 50%;
+        background-image: url(/images/assets/graphics/barchart.svg);
+        background-repeat: no-repeat;
+        background-position: 90% bottom;
+    }
+
 }
