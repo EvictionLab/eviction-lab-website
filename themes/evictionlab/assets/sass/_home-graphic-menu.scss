@@ -26,21 +26,52 @@
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
         font-weight: bold;
-        font-size: 3.24rem;
+        font-size: 4.4rem;
         line-height: 3.8rem;
         color: #000000;
-        &.policies-intro {
-            /* Learn about the policies that affect you, and find organizations that can help. */
+        /* &.policies-intro {
             font-family: "GT-Eesti-Display-Medium";
-            font-size: 3.2rem;
+            font-size: 4.4rem;
             line-height: 3.7rem;
             color: #000000;
             font-weight: 400;
+        } */
+    }
+    h3 {
+        font-family: "GT-Eesti-Display-Bold";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.2rem;
+        line-height: 1.5;
+        color: #000000;
+        text-transform: capitalize;
+        /* &.policies-intro {
+            font-family: "GT-Eesti-Display-Medium";
+            font-size: 4.4rem;
+            line-height: 3.7rem;
+            color: #000000;
+            font-weight: 400;
+        } */
+    }
+    p {
+        font-family: "Akkurat-Regular";
+        line-height: 1.5;
+        //color: #6F6F70;
+        color: #000;
+        font-size: 1.6rem;
+        @include media-breakpoint-up(md) {
+            font-size: 1.7rem;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 1.8rem;
         }
     }
 // Map and rankings blocks --------------------------------------------
     #main-features {
         background-color: #F4F7F9;
+        h3 {
+          color: $color2; 
+        }
     }
     #feature-map {
         background-color: #EAEFF3;
@@ -69,6 +100,7 @@
         .feature {
             /* Vector */
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+            width: 50%;
             &:hover {
                 .hoverbar {
                     display: block;
@@ -85,7 +117,8 @@
                     background-size: 100%;
                 }
                 background-repeat: no-repeat; 
-                    background-image: url('/images/assets/graphics/policies-bg.jpg');
+                background-color: 24284E;
+                background-image: url('/images/assets/graphics/ets-bg.jpg');
                 }
             .bg-wrapper-2 { 
                 background-size: 125%;
@@ -96,13 +129,72 @@
                     background-size: 110%;
                 }
                 background-repeat: no-repeat;    
-                    background-image: url('/images/assets/graphics/resources-bg.jpg');
+                    background-image: url('/images/assets/graphics/scorecard-bg.jpg');
                 }
+            .bg-wrapper-3 {
+                background-size: 125%;
+                
+                @include media-breakpoint-up(md) {
+                    background-size: 175%;
+                } 
+                @include media-breakpoint-up(lg) {
+                    background-size: 100%;
+                }
+                background-repeat: no-repeat; 
+                    background-image: url('/images/assets/graphics/policies-bg.jpg');
+                }
+            .bg-wrapper-4 { 
+                background-size: 125%;
+                @include media-breakpoint-up(md) {
+                    background-size: 175%;
+                }  
+                @include media-breakpoint-up(lg) {
+                    background-size: 110%;
+                }
+                background-repeat: no-repeat;    
+                    background-image: url('/images/assets/graphics/resources-bg.jpg');
+                }    
             
             .text-wrapper {
                 padding: 2.4rem 2.4rem 4rem 2.4rem;
                 background-color: #fff;
             } 
+        }
+    }
+
+    .feature-panel, .subfeature-panel {
+        a.wraplink {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+        }
+        a.sublink {
+            font-family: "GT-Eesti-Display-Medium";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.7rem;
+            line-height: 2rem;
+            letter-spacing: 0.08em;
+            color: #000000;
+            &:hover {
+                text-underline-position: under;
+            }
+            .hoverbar {
+                position: absolute;
+                display: none;
+                height: 5px;
+                width: 56px;
+                margin-top: 12px;
+                background-color: #000;
+            }
+            i.fa.fa-chevron-right {
+                position: relative;
+                top: 2px;
+                &:before {
+                    font-size: 1.6rem;
+                }
+            }
         }
     }
 
@@ -113,6 +205,9 @@
         background-image: url(/images/assets/graphics/barchart.svg);
         background-repeat: no-repeat;
         background-position: 90% bottom;
+        h2 {
+            color: $color1;
+        }
     }
 
 }
