@@ -27,7 +27,7 @@
         font-style: normal;
         font-weight: bold;
         font-size: 4.4rem;
-        line-height: 3.8rem;
+        line-height: 1.1;
         color: #000000;
         /* &.policies-intro {
             font-family: "GT-Eesti-Display-Medium";
@@ -66,6 +66,11 @@
             font-size: 1.8rem;
         }
     }
+    .red-underbar {
+        width: 10.2rem;
+        height: 0.4rem;
+        background-color: #e24000;
+    }
 // Map and rankings blocks --------------------------------------------
     #main-features {
         background-color: #F4F7F9;
@@ -79,6 +84,12 @@
         background-repeat: no-repeat;
         background-size: 70%;
         background-position: 68% 2rem;
+        /*background-position: 0 0;
+            background-image: linear-gradient(135deg,transparent,transparent 60%,rgba(0,0,0,0.4));
+            transition: background-position .3s ease-in-out;
+            &:hover {
+                background-position: 100% 0;
+            } */
     }
     #feature-rankings {
         background-color: #F4E9E7;
@@ -178,7 +189,7 @@
             letter-spacing: 0.08em;
             color: #000000;
             &:hover {
-                text-underline-position: under;
+                text-decoration: none;
             }
             .hoverbar {
                 position: absolute;
@@ -194,6 +205,12 @@
                 &:before {
                     font-size: 1.6rem;
                 }
+            }
+            &.aboutus {
+                font-size: 2.6rem;
+                font-weight: 600;
+                margin-bottom: 2.4rem;
+                display: block;
             }
         }
     }
