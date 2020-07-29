@@ -24,6 +24,8 @@ similar: >-
   * The Eviction Solidarity Network in Austin, TX has built a [dashboard to track eviction filings in Travis County](https://trla.maps.arcgis.com/apps/opsdashboard/index.html#/8f5beb8367f44d30aa2ed6eeb2b3b3e4).
 
   * January Advisors has built a [dashboard tracking eviction cases in Harris County, TX](https://www.januaryadvisors.com/evictions/).
+
+  * SLC Renters Together has developed a [map of evictions in Salt Lake City](https://housing.saltlakedsa.org/eviction-map).
 ---
 # Acknowledgements
 
