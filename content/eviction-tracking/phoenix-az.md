@@ -9,7 +9,7 @@ title: Phoenix Arizona | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="48453" data="/uploads/table.csv" %}}
+{{% report_intro id="04013" data="/uploads/table.csv" %}}
 
 Eviction filings in Maricopa County, AZ (Phoenix) have fallen sharply since eviction proceedings were suspended across Arizona on March 19. Compared to equivalent periods in previous years (2014-2019), eviction filings were far below average in April and May. Eviction protections in Arizona began to expire on May 18.
 
