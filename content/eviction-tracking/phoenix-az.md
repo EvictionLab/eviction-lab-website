@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: false
+draft: true
 h1: Phoenix, Arizona
 slug: phoenix-az
 date: 2020-07-28T00:00:00.000Z
