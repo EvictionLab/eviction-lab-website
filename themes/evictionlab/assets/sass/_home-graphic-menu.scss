@@ -26,8 +26,13 @@
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
         font-weight: bold;
-        font-size: 4.4rem;
-        line-height: 1.1;
+        @include media-breakpoint-up(xl) {
+            font-size: 4.4rem;
+            line-height: 1.1;
+        }
+        font-size: 3.8rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.2;
         color: #000000;
         /* &.policies-intro {
             font-family: "GT-Eesti-Display-Medium";
@@ -41,8 +46,12 @@
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
         font-weight: bold;
-        font-size: 3.2rem;
-        line-height: 1.5;
+        @include media-breakpoint-up(xl) {
+            font-size: 3.2rem;
+        }
+        font-size: 2.8rem;
+        letter-spacing: 0.06rem;
+        line-height: 1.2;
         color: #000000;
         text-transform: capitalize;
         /* &.policies-intro {
@@ -58,7 +67,7 @@
         line-height: 1.5;
         //color: #6F6F70;
         color: #000;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         @include media-breakpoint-up(md) {
             font-size: 1.7rem;
         }
@@ -76,6 +85,10 @@
         background-color: #F4F7F9;
         h3 {
           color: $color2; 
+          @include media-breakpoint-up(xl) {
+            font-size: 3.2rem;
+            }
+            font-size: 3rem;
         }
     }
     #feature-map {
@@ -83,7 +96,10 @@
         background-image: url(/images/assets/graphics/map-circles.svg);
         background-repeat: no-repeat;
         background-size: 70%;
-        background-position: 68% 2rem;
+        background-position: 50% 2rem;
+        @include media-breakpoint-up(xl) {
+            background-position: 68% 2rem;
+        }
         /*background-position: 0 0;
             background-image: linear-gradient(135deg,transparent,transparent 60%,rgba(0,0,0,0.4));
             transition: background-position .3s ease-in-out;
@@ -99,7 +115,13 @@
         background-position: left 1.3rem;
     }
     .main-feature {
-        padding: 28rem 0 3.2rem;
+        padding: 21rem 0 3.2rem;
+        @include media-breakpoint-up(lg) {
+            padding: 24rem 0 3.2rem;
+        }
+        @include media-breakpoint-up(xl) {
+            padding: 28rem 0 3.2rem;
+        }
     }
 
 // subfeatures --------------------------------------------
@@ -112,24 +134,52 @@
             /* Vector */
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
             width: 50%;
+            position: relative;
             &:hover {
                 .hoverbar {
                     display: block;
                     transition: display .8s ease;
                 }      
             }
+            
             .bg-wrapper-1 {
                 background-size: 125%;
-                
+                background-color: #24294e;
+                height: 100%;
+                align-self: center;
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
                 } 
                 @include media-breakpoint-up(lg) {
                     background-size: 100%;
                 }
+                @include media-breakpoint-up(xl) {
+                    background-size: 73%;
+                }
                 background-repeat: no-repeat; 
                 background-color: 24284E;
                 background-image: url('/images/assets/graphics/ets-bg.jpg');
+                .gradient-overlay {
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 47%;
+                    z-index: 0;
+                    background-image: linear-gradient(135deg,transparent,transparent 70%,rgba(0,0,0,0.5));;
+                    transition: opacity .3s ease;
+                    opacity: 0;
+                    background-size: 400%;
+                    background-position: 100%;
+                }
+                &:hover {
+                    //background-image: linear-gradient(135deg,transparent,transparent 90%,rgba(0,0,0,1));
+                    .gradient-overlay {
+                        opacity: 1;
+                       // background-image: linear-gradient(135deg,transparent,transparent 70%,rgba(0,0,0,0.5));
+                      //  transition: background-image 1s;
+                        
+                        }
+                    }
                 }
             .bg-wrapper-2 { 
                 background-size: 125%;
@@ -140,7 +190,8 @@
                     background-size: 110%;
                 }
                 background-repeat: no-repeat;    
-                    background-image: url('/images/assets/graphics/scorecard-bg.jpg');
+                background-image: url('/images/assets/graphics/scorecard-bg.jpg');
+              
                 }
             .bg-wrapper-3 {
                 background-size: 125%;
@@ -150,6 +201,9 @@
                 } 
                 @include media-breakpoint-up(lg) {
                     background-size: 100%;
+                }
+                @include media-breakpoint-up(xl) {
+                    background-size: 114%;
                 }
                 background-repeat: no-repeat; 
                     background-image: url('/images/assets/graphics/policies-bg.jpg');
@@ -167,24 +221,51 @@
                 }    
             
             .text-wrapper {
-                padding: 2.4rem 2.4rem 4rem 2.4rem;
+                padding: 2.4rem 2.4rem 3.2rem 2.4rem;
                 background-color: #fff;
+                z-index: 99;
+                &:hover {
+                    z-index: 99;
+                }
             } 
         }
     }
-
+    .feature-panel {
+        a.wraplink {
+            width: 100%;
+            background-size: 400%;
+            background-position: 0 0;
+            background-image: linear-gradient(135deg,transparent,transparent 40%,rgba(0,0,0,0.08));
+            transition: background-position .3s ease-in-out;
+            &:hover {
+                background-position: 100% 0;
+            }
+        }
+    }
+    .subfeature-panel {
+        a.wraplink {
+            width: 100%;
+        }
+    }
     .feature-panel, .subfeature-panel {
         a.wraplink {
             position: absolute;
             height: 100%;
+            top: 0;
+            z-index: 9;
+            align-self: center;
+        }
+        a.subwrap-link {
+            position: absolute;
             width: 100%;
+            height: 100%;
             top: 0;
         }
         a.sublink {
             font-family: "GT-Eesti-Display-Medium";
             font-style: normal;
             font-weight: 400;
-            font-size: 1.7rem;
+            font-size: 1.3rem;
             line-height: 2rem;
             letter-spacing: 0.08em;
             color: #000000;
@@ -207,10 +288,26 @@
                 }
             }
             &.aboutus {
-                font-size: 2.6rem;
+                @include media-breakpoint-up(xl) {
+                    font-size: 2.6rem;
+                }
+                font-size: 2.4rem;
+                letter-spacing: 0.1rem;
                 font-weight: 600;
                 margin-bottom: 2.4rem;
                 display: block;
+            }
+        }
+        
+        .main-feature {
+            .wrapper {
+                p {
+                    font-size: 1.8rem;
+                }
+            }
+            a.sublink {
+                font-size: 1.7rem;
+                font-weight: 600;
             }
         }
     }
@@ -218,7 +315,10 @@
 // subfeatures --------------------------------------------
     #updates-section {
         background-color: #F4F7F9;
-        background-size: 50%;
+        background-size: 64%;
+        @include media-breakpoint-up(lg) {
+            background-size: 50%;
+        }
         background-image: url(/images/assets/graphics/barchart.svg);
         background-repeat: no-repeat;
         background-position: 90% bottom;
