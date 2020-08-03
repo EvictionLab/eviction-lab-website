@@ -512,6 +512,12 @@ body {
       height: 9px;
       background-image: url("/img/icon--sort.svg");
     }
+    @media(min-width: 768px) {
+      .tablesorter-header .tablesorter-header-inner:after,
+      .tablesorter-header .tablesorter-header-inner:after {
+        margin-top: 6px;
+      }
+    }
 
     .tablesorter-header.tablesorter-headerDesc .tablesorter-header-inner:after {
       background-image: url("/img/icon--sort-up.svg");
