@@ -389,31 +389,46 @@ body {
       font-size: 1rem;
       overflow-x: auto;
       overflow-y: visible;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    @media(min-width: 768px) {
+      .table {
+        table-layout: auto;
+      }
+    }
+
+    /** shorter headings on small devices */
+    @media(max-width: 420px) {
+      .table__head .table__cell span:first-child {
+        display:none;
+      }
     }
 
     .table .table__head th,
     .table .table__body td {
       border: none;
       padding: 8px;
+      vertical-align: middle;
     }
 
 
     /** Override padding first column */
     .table .table__head .table__cell--name,
     .table .table__body .table__cell--name {
-      padding-left: 28px;
+      padding-left: 24px;
+      width: 35.8%;
     }
 
     /** Make room for sort icon */
-    .table .table__head .table__cell--number {
+    .table .table__head .table__cell--number,
+    .table .table__body .table__cell--number {
       padding-right: 20px;
+      width: 19.6%;
     }
 
-    /** Override padding last column */
-    .table .table__head .table__cell--number + .table__cell--number,
-    .table .table__body .table__cell--number + .table__cell--number {
-      padding-right: 24px;
-    }
+
 
     .table .table__head th {
       border-bottom: 2px solid var(--table-border);
@@ -490,7 +505,7 @@ body {
     .tablesorter-header .tablesorter-header-inner:after {
       content: "";
       position: absolute;
-      margin-top: 6px;
+      margin-top: 3px;
       margin-left:4px;
       display: inline-block;
       width: 9px;
@@ -561,19 +576,6 @@ body {
       text-align: right;
     }
 
-    .table__cell--number span {
-      font-size: 0.825em;
-      padding-left: 0.5em;
-      margin-left:8px;
-    }
-    .table__cell--number span.down {
-      color: var(--c3);
-    }
-
-    .table__cell--number span.up {
-      color: var(--c1);
-    }
-
     @media (min-width: 768px) {
       .table__body .table__cell--number {
         font-size: 1.8em;
@@ -623,9 +625,11 @@ body {
   /** TABLE FOOTER */
 
     .table + .footnote {
+      max-width: 42em;
       font-size: 1.2rem;
       color: var(--text-secondary);
       padding: 8px 24px;
+      margin:auto;
     }
 
     @media (min-width: 768px) {
@@ -879,6 +883,18 @@ body {
       transform: translateY(0);
     }
   }
+
+  @media (prefers-reduced-motion) {
+    .bars path { 
+      animation: none; 
+      transform: translateY(0%);
+    }
+    .boxes {
+      animation: none;
+      transform: translateY(0%);
+    }
+  }
+  
   
   /** END HERO ANIMATION */
 
@@ -1013,6 +1029,21 @@ body {
       width: 27px;
     }
   }
+
+  /** TABLE TREND LINES */
+
+  .trend-line__path {
+    fill:none;
+    stroke: var(--c1);
+    stroke-width: 2;
+  }
+  .trend-line__area {
+    fill-opacity: 0.2;
+    fill:var(--c1);
+    stroke: none;
+  }
+
+  /** END TABLE TREND LINES */
   
 
 /** END LIST TABLE SECTION

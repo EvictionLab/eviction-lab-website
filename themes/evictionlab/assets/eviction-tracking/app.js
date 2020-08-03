@@ -1790,34 +1790,42 @@ Elab.Table = (function (Elab) {
         return;
       }
       var parseDate = d3.timeParse("%m/%d/%Y");
-      var parsedData = data.map(function (d) {
-        var stats = ["week", "month", "cumulative"].reduce(function (
-          obj,
-          prefix
-        ) {
-          obj[prefix] = {
-            date: parseDate(d[prefix + "_date"]),
-            diff: parseFloat(d[prefix + "_diff"]),
-            filings: parseInt(d[prefix + "_filings"]),
-          };
-          return obj;
-        },
-        {});
-        return Object.assign(
-          {
+      const result = {};
+      data.forEach(function (d) {
+        if (!result[d.id]) {
+          result[d.id] = {
             id: d.id,
             name: d.name,
-            lastUpdate: parseDate(data[0]["data_date"]),
-            start:
-              d["start_moratorium_date"] &&
-              parseDate(d["start_moratorium_date"]),
-            end:
-              d["end_moratorium_date"] && parseDate(d["end_moratorium_date"]),
-          },
-          stats
-        );
+            values: [ 
+              [ 
+                parseDate(d["week_date"]), 
+                parseInt(d["week_filings"]), 
+                parseFloat(d["week_trend"]) 
+              ]
+            ],
+            start: parseDate(d["start_moratorium_date"]),
+            end: parseDate(d["end_moratorium_date"]),
+            updated: parseDate(d["data_date"])
+          }
+        } else {
+          result[d.id].values.push(
+            [ 
+              parseDate(d["week_date"]), 
+              parseInt(d["week_filings"]), 
+              parseFloat(d["week_trend"]) 
+            ]
+          )
+        }
       });
-      callback && callback(parsedData);
+      var result2 = Object.values(result).map(function (d) {
+        d["values"].sort(function(a, b) { return +a[0] > +b[0] ? 1 : -1 })
+        d["cumulative"] = d["values"].reduce(
+          function (sum, v) { return sum + v[1]; }, 0
+        )
+        d["lastWeek"] = d["values"][d["values"].length-1][1]
+        return d
+      })
+      callback && callback(result2);
     });
   }
 
@@ -1872,10 +1880,13 @@ Elab.Table = (function (Elab) {
         '<img class="icon icon--moratorium" src="/img/el-moratorium-icon5.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
         "</td>" +
         '<td class="table__cell table__cell--number">' +
-        '{{weekFilings}} <span class="arrow {{weekChange.direction}}">{{weekChange.value}}</span>' +
+        '{{weekFilings}}' +
         "</td>" +
         '<td class="table__cell table__cell--number">' +
-        '{{monthFilings}} <span class="arrow {{monthChange.direction}}">{{monthChange.value}}</span>' +
+        '{{cumulativeFilings}}' +
+        "</td>" +
+        '<td class="table__cell table__cell--visual">' +
+        '<svg class="trend-line" data-visual="{{id}}"></svg>' +
         "</td>" +
         '<td class="table__cell table__cell--button">' +
         '<a href="{{url}}" class="btn btn-default">{{buttonLabel}} <i class="fa fa-chevron-right"></i></a>' +
@@ -1887,23 +1898,66 @@ Elab.Table = (function (Elab) {
       ? Handlebars.compile(options.tooltip)
       : Handlebars.compile(options.tooltipNoDate);
     var rowData = {
+      id: data.id,
       name: data.name,
       class:
         "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
       url: Elab.Utils.getCurrentURL() + Elab.Utils.slugify(data.name),
-      weekFilings: data.week.filings,
-      weekChange: getPercentChange(data.week.diff),
-      monthFilings: data.month.filings,
-      monthChange: getPercentChange(data.month.diff),
+      weekFilings: data.lastWeek,
+      cumulativeFilings: data.cumulative,
       tooltip: tooltipTemplate({ date: Elab.Utils.formatDate(data.end) }),
       buttonLabel: options.buttonLabel,
     };
     return rowTemplate(rowData);
   }
 
+  function renderTrendLine(el, data) {
+
+    const width = 64;
+    const height = 32;
+    const margin = 4;
+    const values = data.values;
+
+    var xExtent = d3.extent(values, function(v) { return v[0]});
+    var xScale = d3.scaleTime().rangeRound([0, width]).domain(xExtent);
+
+    var yExtent = d3.extent(values, function(v) { return v[2]});
+    var yScale = d3.scaleLinear()
+      .domain(yExtent) // input 
+      .range([height, 0]); // output 
+
+    console.log('redner trend', xExtent, yExtent)
+
+    var area = d3.area()
+      .x(function(d) { return xScale(d[0]); })
+      .y0(height+2)
+      .y1(function(d) { return yScale(d[2]); });
+
+    var line = d3.line()
+      .x(function(d) {  return xScale(d[0]); })
+      .y(function(d) { return yScale(d[2]); })
+      .curve(d3.curveMonotoneX)
+
+    var svg = d3.select(el)
+      .attr("width", width)
+      .attr("height", height + margin*2)
+      .append("g")
+      .attr("transform", "translate(0," + margin + ")");
+      
+    svg.append("path")
+      .datum(values)
+      .attr("class", "trend-line__area")
+      .attr("d", area);
+
+    svg.append("path")
+      .datum(values)
+      .attr("class", "trend-line__path")
+      .attr("d", line);
+  }
+
   function renderDate(data) {
     $("#reportDate").html(
-      "Week of " + d3.timeFormat("%B %d, %Y")(data.week.date)
+      "Week of " + d3.timeFormat("%B %d, %Y")(data.values[data.values.length - 1][0])
     );
   }
 
@@ -1916,22 +1970,12 @@ Elab.Table = (function (Elab) {
     var html = [];
     html.push(
       "<sup>1</sup> Filings for the week of " +
-        dateFormat(data.week.date) +
+        dateFormat(data.values[data.values.length - 1][0]) +
         " to " +
-        dateFormat(data.lastUpdate) +
+        dateFormat(data.updated) +
         ". Filings in the last week may be undercounted as a result of processing delays. These counts will be revised in the following week."
     );
-    html.push(
-      "<sup>2</sup> Filings for the period " +
-        dateFormat(data.month.date) +
-        " to " +
-        dateFormat(data.lastUpdate) +
-        "."
-    );
-    html.push(
-      "Percent differences relative to average filings for the same time period."
-    );
-    return html.join("<br />");
+    return html.join(" ");
   }
 
   /**
@@ -1978,6 +2022,12 @@ Elab.Table = (function (Elab) {
         var html = getRowHtml(city, options);
         bodyEl.append(html);
       });
+      // add trend lines
+      bodyEl.find(".trend-line").each(function(idx) {
+        var id = this.dataset.visual;
+        var cityData = locations.find(function(l) { return l.id === id })
+        renderTrendLine(this, cityData)
+      })
       $('[data-toggle="tooltip"]').tooltip();
       // update the "last updated" text
       $("#lastUpdate span").html(
@@ -1996,6 +2046,21 @@ Elab.Table = (function (Elab) {
             window.location.href = url;
           }
         });
+      // trigger hero counts
+      const counterTotal = locations.reduce(function(sum, loc) {
+        return sum + loc.cumulative
+      }, 0)
+      const counterWeek = locations.reduce(function(sum, loc) {
+        return sum + loc.lastWeek
+      }, 0)
+      var count = new countUp.CountUp('counterTotal', counterTotal, {duration: 3.8 });
+      if (!count.error) {
+        count.start();
+        var count2 = new countUp.CountUp('counterWeek', counterWeek, {duration: 3.8 });
+        !count2.error && count2.start();
+      } else {
+       console.error(count.error);
+      }
     });
   }
 
@@ -2037,14 +2102,5 @@ Elab.Section = (function (Elab) {
 
 
 window.addEventListener('load', function() {
-  var count = new countUp.CountUp('counterTotal', 11692, {duration: 3.8 });
-  
-  if (!count.error) {
-    count.start();
-    var count2 = new countUp.CountUp('counterWeek', 1430, {duration: 3.8 });
-    !count2.error && count2.start();
 
-  } else {
-    console.error(count.error);
-  }
 })
