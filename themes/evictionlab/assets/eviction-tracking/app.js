@@ -2034,3 +2034,18 @@ Elab.Section = (function (Elab) {
     init: init,
   };
 })(Elab);
+
+
+window.addEventListener('load', function() {
+  var count = new countUp.CountUp('counterTotal', 11692, {duration: 3.8 });
+  if (!count.error) {
+    count.start();
+    setTimeout(function () {
+      $(".list-intro").addClass("list-intro--start")
+      var count2 = new countUp.CountUp('counterWeek', 1430, {duration: 3.8 });
+      !count2.error && count2.start();
+    }, 3800)
+  } else {
+    console.error(count.error);
+  }
+})
