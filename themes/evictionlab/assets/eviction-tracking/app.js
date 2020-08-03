@@ -2029,7 +2029,7 @@ Elab.Table = (function (Elab) {
       $('[data-toggle="tooltip"]').tooltip();
       // update the "last updated" text
       $("#lastUpdate span").html(
-        d3.timeFormat("%B %d, %Y")(data[0].lastUpdate)
+        d3.timeFormat("%B %d, %Y")(data[0].updated)
       );
       // set the table footnotes
       $(el).next().html(getFootnoteHtml(data[0]));
