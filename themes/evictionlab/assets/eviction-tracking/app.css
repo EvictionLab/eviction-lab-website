@@ -711,7 +711,7 @@ body {
   }
 
   .counter .counter__label {
-    display: inline-block;
+    display: block;
     font-family: var(--heading-font);
     font-size: 2em;
     color: var(--c1);
