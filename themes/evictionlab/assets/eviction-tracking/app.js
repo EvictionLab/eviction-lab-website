@@ -1926,8 +1926,6 @@ Elab.Table = (function (Elab) {
       .domain(yExtent) // input 
       .range([height, 0]); // output 
 
-    console.log('redner trend', xExtent, yExtent)
-
     var area = d3.area()
       .x(function(d) { return xScale(d[0]); })
       .y0(height+2)
