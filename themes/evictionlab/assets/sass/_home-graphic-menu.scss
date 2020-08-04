@@ -2,7 +2,7 @@
     h1 {
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
-        font-weight: bold;
+        //font-weight: bold;
         line-height: 142%;
         /* or 43px */
         letter-spacing: 0.03em;
@@ -26,7 +26,7 @@
     h2 {
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
-        font-weight: bold;
+        //font-weight: bold;
         font-size: 3rem;
         @include media-breakpoint-up(md) {
             font-size: 3.8rem;
@@ -51,7 +51,7 @@
     h3 {
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
-        font-weight: bold;
+       // font-weight: bold;
         @include media-breakpoint-up(xl) {
             font-size: 3.2rem;
         }
