@@ -382,6 +382,73 @@ Elab.Config = (function (Elab) {
 })(Elab);
 
 /**
+ * DATA LOADING MODULE
+ * ---
+ * Public
+ *  - loadTableData()
+ *  - loadMapData()
+ *  - loadMonthlyData()
+ *  - loadRacialData()
+ */
+
+Elab.Data = (function (Elab) {
+
+  /**
+   * Loads and parses the CSV table
+   */
+  function loadTableData(dataUrl, callback) {
+    d3.csv(dataUrl, function (data) {
+      if (!data) {
+        console.error("unable to load data for table from " + dataUrl);
+        return;
+      }
+      var parseDate = d3.timeParse("%m/%d/%Y");
+      var result = {};
+      data.forEach(function (d) {
+        if (!result[d.id]) {
+          result[d.id] = {
+            id: d.id,
+            name: d.name,
+            values: [ 
+              [ 
+                parseDate(d["week_date"]), 
+                parseInt(d["week_filings"]), 
+                parseFloat(d["week_trend"]) 
+              ]
+            ],
+            start: parseDate(d["start_moratorium_date"]),
+            end: parseDate(d["end_moratorium_date"]),
+            updated: parseDate(d["data_date"])
+          }
+        } else {
+          result[d.id].values.push(
+            [ 
+              parseDate(d["week_date"]), 
+              parseInt(d["week_filings"]), 
+              parseFloat(d["week_trend"]) 
+            ]
+          )
+        }
+      });
+      var result2 = Object.values(result).map(function (d) {
+        d["values"].sort(function(a, b) { return +a[0] > +b[0] ? 1 : -1 })
+        d["cumulative"] = d["values"].reduce(
+          function (sum, v) { return sum + v[1]; }, 0
+        )
+        d["lastWeek"] = d["values"][d["values"].length-1][1]
+        return d
+      })
+      callback && callback(result2);
+    });
+  }
+
+  return {
+    loadTableData: loadTableData
+  }
+
+})(Elab)
+
+/**
  * CHARTS MODULE
  * ---
  * Public
@@ -594,17 +661,17 @@ Elab.Chart = (function (Elab) {
   }
 
   function updatePartialFilingsDate(rootEl, data) {
-    const rawLastDay = data["_raw"][data["_raw"].length - 1]["month_last_day"];
+    var rawLastDay = data["_raw"][data["_raw"].length - 1]["month_last_day"];
     if (!rawLastDay) return;
-    const parseDate = d3.timeParse("%d/%m/%Y");
-    const lastDay = parseDate(rawLastDay);
-    const value =
+    var parseDate = d3.timeParse("%d/%m/%Y");
+    var lastDay = parseDate(rawLastDay);
+    var value =
       "Partial " +
       d3.timeFormat("%B")(lastDay) +
       " filings as of " +
       d3.timeFormat("%-m/%-d")(lastDay) +
       ", relative to average for same period";
-    const partialEl = rootEl.find(".visual__note");
+    var partialEl = rootEl.find(".visual__note");
     partialEl.html(value);
   }
 
@@ -633,7 +700,6 @@ Elab.Chart = (function (Elab) {
       return {
         root: el,
         area: el.append("rect").attr("class", "chart__area"),
-
         yAxis: el.append("g").attr("class", "chart__axis chart__axis--y"),
         xAxis: el.append("g").attr("class", "chart__axis chart__axis--x"),
         markLines: el.append("g").attr("class", "chart__mark-lines"),
@@ -1755,118 +1821,88 @@ Elab.Map = (function (Elab) {
   };
 })(Elab);
 
-/**
- * TABLE MODULE
- * ---
- * Public Methods
- *  - createIntroTable()
- *  - createIndexTable()
- */
+Elab.ChartBuilder = (function (Elab) {
 
-Elab.Table = (function (Elab) {
-  var formatDiff = d3.format(",.0%");
-
-  /**
-   * Gets the % change of a value relative to 1
-   * (e.g. getPercentChange(1.23) => { direction: "up", value: "23%" })
-   * @param {*} diff
-   */
-  function getPercentChange(diff) {
-    var change = diff - 1;
-    var dir = change === 0 ? "mid" : change < 0 ? "down" : "up";
-    return {
-      direction: dir,
-      value: formatDiff(Math.abs(change)),
-    };
+  function Chart(svgEl, data, options) {
+    this.data = data;
+    this.options = options || this.defaultOptions;
+    this.outerWidth = this.options.width + margin[1] + margin[3];
+    this.outerHeight = this.options.height + margin[0] + margin[2]
+    this.svgEl = svgEl;
+    this.updaters = {}
+    this.selections = {}
+    this.addRoot();
   }
 
+  Chart.prototype.defaultOptions = {
+    width: 400,
+    height: 400,
+    margin: [ 8, 8, 8, 8 ]
+  }
+
+  Chart.prototype.addRoot = function () {
+    var _this = this;
+    this.selections["root"] = d3.select(this.svgEl)
+    this.updaters["root"] = function() {
+      _this.selections["root"]
+        .attr("width", _this.options.width + _this.options.margin[1] + _this.options.margin[3])
+        .attr("height", _this.options.height + _this.options.margin[0] + _this.options.margin[2])
+    }
+    this.selections["base"] = this.selections["root"].append("g")
+    this.updaters["base"] = function() {
+      _this.selections["base"]
+      .attr("transform", "translate(" + _this.options.margin[0] + "," + _this.options.margin[3] + ")")
+    }
+  }
+
+  Chart.prototype.addFrame = function () {
+
+  }
+
+  Chart.prototype.addBars = function () {
+
+  }
+
+  Chart.prototype.addAxisY = function () {
+
+  }
+
+  Chart.prototype.addAxisX = function () {
+
+  }
+
+  Chart.prototype.render = function () {
+    Object.values(this.updaters)
+      .forEach(function (r) { r(); })
+  }
+
+  function init() {
+
+  }
+
+})()
+
+Elab.Intro = (function (Elab) {
+
   /**
-   * Loads and parses the CSV table
+   * Creates the intro chart
    */
-  function loadTableData(dataUrl, callback) {
-    d3.csv(dataUrl, function (data) {
-      if (!data) {
-        console.error("unable to load data for table from " + dataUrl);
-        return;
-      }
-      var parseDate = d3.timeParse("%m/%d/%Y");
-      const result = {};
-      data.forEach(function (d) {
-        if (!result[d.id]) {
-          result[d.id] = {
-            id: d.id,
-            name: d.name,
-            values: [ 
-              [ 
-                parseDate(d["week_date"]), 
-                parseInt(d["week_filings"]), 
-                parseFloat(d["week_trend"]) 
-              ]
-            ],
-            start: parseDate(d["start_moratorium_date"]),
-            end: parseDate(d["end_moratorium_date"]),
-            updated: parseDate(d["data_date"])
-          }
-        } else {
-          result[d.id].values.push(
-            [ 
-              parseDate(d["week_date"]), 
-              parseInt(d["week_filings"]), 
-              parseFloat(d["week_trend"]) 
-            ]
-          )
-        }
-      });
-      var result2 = Object.values(result).map(function (d) {
-        d["values"].sort(function(a, b) { return +a[0] > +b[0] ? 1 : -1 })
-        d["cumulative"] = d["values"].reduce(
-          function (sum, v) { return sum + v[1]; }, 0
-        )
-        d["lastWeek"] = d["values"][d["values"].length-1][1]
-        return d
-      })
-      callback && callback(result2);
+  function initIntroChart(geoid, svg) {
+    Elab.Data.loadTableData(dataUrl, function (data) {
+
     });
   }
 
-  /**
-   * Renders the a stat cell in the intro table
-   * @param {*} data
-   * @param {*} type
-   */
-  function renderStatRow(data, type) {
-    var parentEl = document.querySelector(".stats-item--" + type);
-    var filingsEl = parentEl.querySelector(".stats-item__count");
-    var diffEl = parentEl.querySelector(".stats-item__diff");
-    if (!parentEl || !filingsEl || !diffEl) return;
-    if (!data) {
-      filingsEl.innerHTML = "Unknown";
-      return;
-    }
-    var change = getPercentChange(data[type].diff);
-    filingsEl.innerHTML = data[type].filings;
-    diffEl.innerHTML = change.value;
-    diffEl.className = diffEl.className + " arrow " + change.direction;
-  }
+})(Elab)
 
-  /**
-   * Renders the moratorium dates in the intro table
-   * @param {*} data
-   */
-  function renderMoratoriumRow(data) {
-    var parentEl = document.querySelector(".stats-item--moratorium");
-    var valueEl = parentEl.querySelector(".stats-item__value");
-    if (!parentEl || !valueEl) return;
-    if (!data || (!data.start && !data.end)) {
-      valueEl.innerHTML = "Unknown";
-      return;
-    }
-    var startDate = Elab.Utils.formatDate(data.start);
-    var endDate = data.end
-      ? Elab.Utils.formatDate(data.end)
-      : "End Date Unknown";
-    valueEl.innerHTML = startDate + " - " + endDate;
-  }
+/**
+ * LIST PAGE MODULE
+ * ---
+ * Public Methods
+ *  - initListPage()
+ */
+
+Elab.ListPage = (function (Elab) {
 
   /**
    * Returns the HTML for a row in the index table
@@ -1913,10 +1949,13 @@ Elab.Table = (function (Elab) {
 
   function renderTrendLine(el, data) {
 
-    const width = 64;
-    const height = 32;
-    const margin = 4;
-    const values = data.values;
+    var width = 64;
+    var height = 32;
+    var margin = 4;
+    var values = data.values;
+    // remove latest week from values
+    // as it does not reflect the full set of filings
+    values.pop();
 
     var xExtent = d3.extent(values, function(v) { return v[0]});
     var xScale = d3.scaleTime().rangeRound([0, width]).domain(xExtent);
@@ -1977,41 +2016,19 @@ Elab.Table = (function (Elab) {
   }
 
   /**
-   * Creates the intro table
-   * @param {*} fips
-   * @param {*} dataUrl
-   */
-  function createIntroTable(fips, dataUrl) {
-    loadTableData(dataUrl, function (data) {
-      var locationData = data.find(function (d) {
-        return d.id === fips;
-      });
-      if (!locationData) {
-        console.error(
-          "error retrieving data from " + dataUrl + " for id " + fips
-        );
-      }
-      renderDate(locationData);
-      renderStatRow(locationData, "week");
-      renderStatRow(locationData, "month");
-      renderMoratoriumRow(locationData);
-    });
-  }
-
-  /**
    * Creates the index table
    * @param {*} el
    * @param {*} dataUrl
    */
-  function createIndexTable(el, dataUrl, options) {
-    const defaultOptions = {
+  function initListPage(el, dataUrl, options) {
+    var defaultOptions = {
       tooltip: "Eviction moratorium in effect until {{date}}",
       tooltipNoDate: "Eviction moratorium currently in effect",
       buttonLabel: "View Report",
     };
     options = Object.assign(defaultOptions, options);
     var bodyEl = $(el).find(".table__body");
-    loadTableData(dataUrl, function (data) {
+    Elab.Data.loadTableData(dataUrl, function (data) {
       // clear loading
       bodyEl.html("");
       // create rows
@@ -2044,11 +2061,13 @@ Elab.Table = (function (Elab) {
             window.location.href = url;
           }
         });
+      // trigger hero animation
+      $(".hero--ets").addClass("hero--start");
       // trigger hero counts
-      const counterTotal = locations.reduce(function(sum, loc) {
+      var counterTotal = locations.reduce(function(sum, loc) {
         return sum + loc.cumulative
       }, 0)
-      const counterWeek = locations.reduce(function(sum, loc) {
+      var counterWeek = locations.reduce(function(sum, loc) {
         return sum + loc.lastWeek
       }, 0)
       var count = new countUp.CountUp('counterTotal', counterTotal, {duration: 3.8 });
@@ -2063,8 +2082,7 @@ Elab.Table = (function (Elab) {
   }
 
   return {
-    createIntroTable: createIntroTable,
-    createIndexTable: createIndexTable,
+    initListPage: initListPage,
   };
 })(Elab);
 
@@ -2097,8 +2115,3 @@ Elab.Section = (function (Elab) {
     init: init,
   };
 })(Elab);
-
-
-window.addEventListener('load', function() {
-
-})

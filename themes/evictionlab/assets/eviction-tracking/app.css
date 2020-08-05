@@ -851,12 +851,13 @@ body {
   /** HERO ANIMATION */
 
   .bars path { 
+    transform: translateY(100%);
+  }
+  .hero--start .bars path {
     animation: slideInUp; 
     animation-duration: 1.4s;
     animation-timing-function:  cubic-bezier(0.215, 0.610, 0.355, 1);
     animation-fill-mode: forwards;
-    transform: translateY(100%);
-    /* transform: translateY(100%); */
   }
   .bars path:nth-child(13) { animation-delay: 0s;}
   .bars path:nth-child(12) { animation-delay: 0.2s;}
@@ -874,6 +875,9 @@ body {
 
   .boxes {
     transform: translateY(100%);
+
+  }
+  .hero--start .boxes {
     animation: slideInUp; 
     animation-duration: 3.8s;
     animation-delay: 0s;

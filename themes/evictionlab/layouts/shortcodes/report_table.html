@@ -53,6 +53,6 @@
     if (!dataUrl)
       throw new Error('no tabledata specified in front matter')
     if (tableEl && dataUrl)
-      Elab.Table.createIndexTable(tableEl, dataUrl, options)
+      Elab.ListPage.initListPage(tableEl, dataUrl, options)
   })
 </script>

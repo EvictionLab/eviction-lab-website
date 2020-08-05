@@ -91,7 +91,7 @@ All other functionality is in `assets/eviction-tracking/app.js` and broken into 
   - `Elab.Config`: provides functions for configurations that determine how data is parsed and how charts render.
   - `Elab.Chart`: provides functions for creating a chart report section
   - `Elab.Map`: provides functions for creating a map report section
-  - `Elab.Table`: provides functions for creating the tables used on the list page and in the report intro. 
+  - `Elab.ListPage`: provides functions for creating the tables used on the list page and in the report intro. 
   - `Elab.Section`: Helper used to create map and chart sections and place footnotes accordingly.
 
 Hugo handles processing and including the following assets:
