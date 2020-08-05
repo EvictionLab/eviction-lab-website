@@ -133,6 +133,23 @@
         @include media-breakpoint-up(xl) {
             padding: 28rem 0 3.2rem;
         }
+        a.sublink {
+            i.fa.fa-chevron-right {
+                position: relative;
+                top: 2px;
+                transition: transform .3s ease;
+                &:before {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        &:hover {
+            a.sublink {
+                i.fa.fa-chevron-right {
+                    transform: translateX(4px);
+                }
+            }
+        }   
     }
 
 // subfeatures --------------------------------------------
@@ -155,13 +172,51 @@
                     transition: display .8s ease;
                 }      
             }
-            
+            .bg-wrapper-1, .bg-wrapper-2, .bg-wrapper-3, .bg-wrapper-4 {
+                z-index: 99;
+                cursor: pointer;
+                .gradient-overlay {
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1;
+                    background-image: linear-gradient(135deg,transparent,transparent 70%,rgba(0,0,0,0.14));;
+                    transition: opacity .3s ease;
+                    opacity: 0;
+                    background-size: 400%;
+                    background-position: 100%;
+                }
+                &:hover {
+                   // background-image: linear-gradient(135deg,transparent,transparent 90%,rgba(0,0,0,1));
+                    .gradient-overlay {
+                     //   opacity: 1;
+                        }
+                    }
+                a.sublink {
+                    i.fa.fa-chevron-right {
+                        position: relative;
+                        top: 2px;
+                        transition: transform .3s ease;
+                        &:before {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                &:hover {
+                    a.sublink {
+                        i.fa.fa-chevron-right {
+                            transform: translateX(4px);
+                        }
+                    }
+                }
+            }
             .bg-wrapper-1 {
                 background-size: 82%;
                 background-color: #24294e;
                 height: 100%;
                 align-self: center;
-                z-index: 0;
+                //z-index: 0;
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
                 } 
@@ -174,28 +229,6 @@
                 background-repeat: no-repeat; 
                 background-color: 24284E;
                 background-image: url('/images/assets/graphics/ets-bg.jpg');
-                .gradient-overlay {
-                    position: absolute;
-                    top: 0;
-                    height: 100%;
-                    width: 100%;
-                    z-index: 1;
-                    background-image: linear-gradient(135deg,transparent,transparent 70%,rgba(0,0,0,0.5));;
-                    transition: opacity .3s ease;
-                    opacity: 0;
-                    background-size: 400%;
-                    background-position: 100%;
-                }
-                &:hover {
-                   // background-image: linear-gradient(135deg,transparent,transparent 90%,rgba(0,0,0,1));
-                    .gradient-overlay {
-                        opacity: 1;
-                       background-image: linear-gradient(135deg,transparent,transparent 70%,rgba(0,0,0,0.5));
-                      transition: background-image 1s;
-                      //background-position: 0,0;
-                        
-                        }
-                    }
                 }
             .bg-wrapper-2 { 
                 background-size: 125%;
@@ -207,7 +240,6 @@
                 }
                 background-repeat: no-repeat;    
                 background-image: url('/images/assets/graphics/scorecard-bg.jpg');
-              
                 }
             .bg-wrapper-3 {
                 background-size: 125%;
@@ -239,6 +271,7 @@
             .text-wrapper {
                 padding: 2.4rem 2.4rem 3.2rem 2.4rem;
                 background-color: #fff;
+                position: relative;
                 z-index: 99;
                 &:hover {
                     z-index: 99;
@@ -251,10 +284,10 @@
             width: 100%;
             background-size: 400%;
             background-position: 0 0;
-            background-image: linear-gradient(135deg,transparent,transparent 40%,rgba(0,0,0,0.08));
+           // background-image: linear-gradient(135deg,transparent,transparent 40%,rgba(255, 255, 255, 0.3));
             transition: background-position .3s ease-in-out;
             &:hover {
-                background-position: 100% 0;
+            //    background-position: 100% 0;
             }
         }
     }
@@ -288,21 +321,15 @@
             &:hover {
                 text-decoration: none;
             }
-            .hoverbar {
+           /* .hoverbar {
                 position: absolute;
                 display: none;
                 height: 5px;
                 width: 56px;
                 margin-top: 12px;
                 background-color: #000;
-            }
-            i.fa.fa-chevron-right {
-                position: relative;
-                top: 2px;
-                &:before {
-                    font-size: 1.6rem;
-                }
-            }
+            } */
+            
             &.aboutus {
                 @include media-breakpoint-up(xl) {
                     font-size: 2.6rem;
