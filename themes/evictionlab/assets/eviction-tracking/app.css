@@ -38,8 +38,7 @@ body {
   --body-font-italic: Akkurat-Italic, sans-serif;
   --heading-font: GT-Eesti-Display-Bold, sans-serif;
   --heading-font-med: GT-Eesti-Display-Medium, sans-serif;
-  --number-font: Gotham A, Gotham B, GT-Eesti-Display-Bold,
-    sans-serif;
+  --number-font: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
   font-family: var(--body-font);
   overflow-x: hidden;
 }
@@ -511,18 +510,15 @@ body {
   }
 }
 
-.tablesorter-header.tablesorter-headerDesc
-  .tablesorter-header-inner:after {
+.tablesorter-header.tablesorter-headerDesc .tablesorter-header-inner:after {
   background-image: url("/img/icon--sort-up.svg");
 }
 
-.tablesorter-header.tablesorter-headerAsc
-  .tablesorter-header-inner:after {
+.tablesorter-header.tablesorter-headerAsc .tablesorter-header-inner:after {
   background-image: url("/img/icon--sort-down.svg");
 }
 
-.tablesorter-header.sorter-false
-  .tablesorter-header-inner:after {
+.tablesorter-header.sorter-false .tablesorter-header-inner:after {
   background-image: none;
 }
 
@@ -1468,14 +1464,28 @@ body {
 
 .intro__figure .chart__hover-line {
   stroke-width: 1;
-  stroke: rgba(0,0,0,0.2)
+  stroke: rgba(0, 0, 0, 0.2);
+}
+
+.intro__figure .chart__span-path {
+  stroke-width: 3;
+  stroke-linecap: butt;
+  stroke: #cecfdc;
+  fill: none;
+}
+
+.intro__figure .chart__bar-path {
+  stroke-width: 3;
+  stroke-dasharray: 3;
+  stroke: var(--c2);
+  fill: none;
 }
 
 .chart__tooltip--top .tooltip__item--multi:before {
   display: none;
 }
 .chart__tooltip--top .tooltip__item.tooltip__item--multi {
-  margin-left:0;
+  margin-left: 0;
 }
 
 /** END INTRO FIGURE */
@@ -1636,14 +1646,10 @@ body {
 }
 
 /** keep "filings this year" red on first chart */
-.section--avg.section--count-on
-  .legend-item--0
-  .legend-item__color {
+.section--avg.section--count-on .legend-item--0 .legend-item__color {
   background: var(--c2);
 }
-.section--avg.section--count-on
-  .legend-item--1
-  .legend-item__color {
+.section--avg.section--count-on .legend-item--1 .legend-item__color {
   background: var(--c1);
 }
 
@@ -2345,14 +2351,10 @@ body {
   background: var(--c4);
 }
 /** avg chart overrides */
-.chart__tooltip--avg
-  .chart__tooltip-row--0
-  .tooltip__item--multi:before {
+.chart__tooltip--avg .chart__tooltip-row--0 .tooltip__item--multi:before {
   background: var(--c2);
 }
-.chart__tooltip--avg
-  .chart__tooltip-row--1
-  .tooltip__item--multi:before {
+.chart__tooltip--avg .chart__tooltip-row--1 .tooltip__item--multi:before {
   background: var(--c1);
 }
 

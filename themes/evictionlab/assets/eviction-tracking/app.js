@@ -2158,6 +2158,7 @@ Elab.ChartBuilder = (function (Elab) {
       var xAxis = d3
         .axisBottom(_this.xScale)
         .ticks(_this.options.xTicks)
+        .tickSize(8)
         .tickSizeOuter(0)
         .tickFormat(_this.options.xTicksFormat);
       _this.selections["timeAxis"]
@@ -2167,6 +2168,12 @@ Elab.ChartBuilder = (function (Elab) {
         .call(xAxis)
         .call(adjustTextLabels);
     };
+    return this;
+  };
+
+  Chart.prototype.addCustom = function (renderElement) {
+    var _this = this;
+    renderElement(_this);
     return this;
   };
 
@@ -2203,7 +2210,7 @@ Elab.Intro = (function (Elab) {
       var options = {
         width: rect.width,
         height: rect.height,
-        margin: [8, 8, 64, 64],
+        margin: [8, 12, 90, 64],
         xTicks: d3.timeMonth.every(1),
         xTicksFormat: d3.timeFormat("%B"),
         yTicks: 4,
@@ -2238,6 +2245,40 @@ Elab.Intro = (function (Elab) {
           ];
         })
         .addTooltip()
+        .addCustom(function (chart) {
+          chart.selections["span-path"] = chart.selections["overlay"]
+            .append("path")
+            .attr("class", "chart__span-path");
+          chart.selections["bar-path"] = chart.selections["overlay"]
+            .append("path")
+            .attr("class", "chart__bar-path");
+          chart.updaters["span-path"] = function () {
+            function draw() {
+              return (
+                "M 0," +
+                chart.getInnerHeight() +
+                " h " +
+                (chart.getInnerWidth() + 8) +
+                " v 88 h -46"
+              );
+            }
+            chart.selections["span-path"].attr("d", draw());
+          };
+          chart.updaters["bar-path"] = function () {
+            function draw() {
+              const lastDate = chart.data[chart.data.length - 1][0];
+              const barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
+              return (
+                "M " +
+                barPosition +
+                "," +
+                chart.getInnerHeight() +
+                " v 50 h -12"
+              );
+            }
+            chart.selections["bar-path"].attr("d", draw());
+          };
+        })
         .render();
 
       window.addEventListener("resize", function () {
