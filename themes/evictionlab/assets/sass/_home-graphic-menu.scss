@@ -105,15 +105,13 @@
         background-repeat: no-repeat;
         background-size: 70%;
         background-position: 50% 2rem;
+        transition: background-color .3s ease;
         @include media-breakpoint-up(xl) {
             background-position: 68% 2rem;
         }
-        /*background-position: 0 0;
-            background-image: linear-gradient(135deg,transparent,transparent 60%,rgba(0,0,0,0.4));
-            transition: background-position .3s ease-in-out;
             &:hover {
-                background-position: 100% 0;
-            } */
+                background-color: #eef5fb;
+            } 
     }
     #feature-rankings {
         background-color: #F4E9E7;
@@ -121,6 +119,10 @@
         background-repeat: no-repeat;
         background-size: 80%;
         background-position: left 1.3rem;
+        transition: background-color .3s ease;
+        &:hover {
+            background-color: #fdece9;
+        }
     }
     .main-feature {
         padding: 19rem 0 3.2rem;
@@ -175,13 +177,18 @@
             .bg-wrapper-1, .bg-wrapper-2, .bg-wrapper-3, .bg-wrapper-4 {
                 z-index: 99;
                 cursor: pointer;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
                 .gradient-overlay {
                     position: absolute;
                     top: 0;
                     height: 100%;
                     width: 100%;
                     z-index: 1;
-                    background-image: linear-gradient(135deg,transparent,transparent 70%,rgba(0,0,0,0.14));;
+                    background: rgb(30,21,31);
+                    background: linear-gradient(0deg, rgba(30,21,31,0.1) 0%, rgba(255,255,255,0) 100%);
                     transition: opacity .3s ease;
                     opacity: 0;
                     background-size: 400%;
@@ -190,7 +197,7 @@
                 &:hover {
                    // background-image: linear-gradient(135deg,transparent,transparent 90%,rgba(0,0,0,1));
                     .gradient-overlay {
-                     //   opacity: 1;
+                        opacity: 1;
                         }
                     }
                 a.sublink {
@@ -217,18 +224,24 @@
                 height: 100%;
                 align-self: center;
                 //z-index: 0;
+                transition: background-size .3s ease;
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
                 } 
                 @include media-breakpoint-up(lg) {
-                    background-size: 100%;
+                    background-size: 75%;
                 }
                 @include media-breakpoint-up(xl) {
-                    background-size: 73%;
+                    background-size: 65%;
                 }
                 background-repeat: no-repeat; 
                 background-color: 24284E;
-                background-image: url('/images/assets/graphics/ets-bg.jpg');
+                background-image: url('/images/assets/graphics/ets-bg-sm.jpg');
+                background-position: center top;
+                &:hover {
+                   
+                  
+                }
                 }
             .bg-wrapper-2 { 
                 background-size: 125%;
@@ -236,7 +249,7 @@
                     background-size: 175%;
                 }  
                 @include media-breakpoint-up(lg) {
-                    background-size: 110%;
+                    background-size: 100%;
                 }
                 background-repeat: no-repeat;    
                 background-image: url('/images/assets/graphics/scorecard-bg.jpg');
@@ -248,10 +261,10 @@
                     background-size: 175%;
                 } 
                 @include media-breakpoint-up(lg) {
-                    background-size: 100%;
+                    background-size: 166%;
                 }
                 @include media-breakpoint-up(xl) {
-                    background-size: 114%;
+                    background-size: 146%;
                 }
                 background-repeat: no-repeat; 
                     background-image: url('/images/assets/graphics/policies-bg.jpg');
@@ -262,7 +275,7 @@
                     background-size: 175%;
                 }  
                 @include media-breakpoint-up(lg) {
-                    background-size: 110%;
+                    background-size: 140%;
                 }
                 background-repeat: no-repeat;    
                     background-image: url('/images/assets/graphics/resources-bg.jpg');
@@ -335,11 +348,26 @@
                     font-size: 2.6rem;
                 }
                 font-size: 2.4rem;
-                letter-spacing: .01em;
-                letter-spacing: 0px;
+                letter-spacing: 0.01rem;
                 font-weight: 600;
                 margin-bottom: 2.4rem;
                 display: block;
+                transition: color .3s ease;
+                &.sublink {
+                    i.fa.fa-chevron-right {
+                        position: relative;
+                        top: 2px;
+                        transition: transform .3s ease;
+                        font-size: 80%;
+                    }
+                    &:hover {
+                        color: $color1;
+                        i.fa.fa-chevron-right {
+                            transform: translateX(4px);
+                        }
+                    }
+                    
+                }
             }
         }
         
