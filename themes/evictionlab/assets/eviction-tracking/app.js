@@ -50,9 +50,7 @@ Elab.Utils = (function (Elab) {
    * @param {*} varName
    */
   function getCssVar(varName) {
-    return getComputedStyle(document.body).getPropertyValue(
-      varName
-    );
+    return getComputedStyle(document.body).getPropertyValue(varName);
   }
 
   /**
@@ -67,10 +65,7 @@ Elab.Utils = (function (Elab) {
     if (text) params.push("text=" + encodeURIComponent(text));
     if (via) params.push("via=" + encodeURIComponent(via));
     params.push("url=" + encodeURIComponent(url));
-    $(el).attr(
-      "href",
-      "https://twitter.com/intent/tweet?" + params.join("&")
-    );
+    $(el).attr("href", "https://twitter.com/intent/tweet?" + params.join("&"));
     $(el).attr("target", "_blank");
   }
 
@@ -82,8 +77,7 @@ Elab.Utils = (function (Elab) {
     var url = Elab.Utils.getCurrentURL();
     $(el).attr(
       "href",
-      "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(url)
+      "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url)
     );
     $(el).attr("target", "_blank");
   }
@@ -145,10 +139,7 @@ Elab.Config = (function (Elab) {
    * Pads the X extent to cover all months
    */
   var xPadExtent = function xPadExtent(extent) {
-    return [
-      d3.timeMonth.floor(extent[0]),
-      d3.timeMonth.ceil(extent[1]),
-    ];
+    return [d3.timeMonth.floor(extent[0]), d3.timeMonth.ceil(extent[1])];
   };
 
   /**
@@ -246,8 +237,7 @@ Elab.Config = (function (Elab) {
       tooltip: function tooltip(d) {
         var distance = d._raw.y - 1;
         var value = Math.abs(distance);
-        var dir =
-          distance === 0 ? "mid" : distance > 0 ? "up" : "down";
+        var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
         if (dir === "mid") {
           return "Filings about average.";
         }
@@ -298,12 +288,9 @@ Elab.Config = (function (Elab) {
       tooltip: function tooltip(d) {
         var distance = d._raw.y - 1;
         var value = Math.abs(distance);
-        var dir =
-          distance === 0 ? "mid" : distance > 0 ? "up" : "down";
+        var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
         var str =
-          dir === "mid"
-            ? "average"
-            : d3.format(",.0%")(Math.abs(distance));
+          dir === "mid" ? "average" : d3.format(",.0%")(Math.abs(distance));
 
         return (
           '<div class="tooltip__item tooltip__item--multi">' +
@@ -346,12 +333,9 @@ Elab.Config = (function (Elab) {
       tooltip: function tooltip(d) {
         var distance = d._raw.y - d._raw.extras["avg_filings"];
         var value = Math.abs(distance);
-        var dir =
-          distance === 0 ? "mid" : distance > 0 ? "up" : "down";
+        var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
         var str =
-          dir === "mid"
-            ? "average"
-            : d3.format(",d")(Math.abs(distance));
+          dir === "mid" ? "average" : d3.format(",d")(Math.abs(distance));
 
         return (
           '<div class="tooltip__item tooltip__item--multi">' +
@@ -414,9 +398,7 @@ Elab.Data = (function (Elab) {
   function loadTableData(dataUrl, callback) {
     d3.csv(dataUrl, function (data) {
       if (!data) {
-        console.error(
-          "unable to load data for table from " + dataUrl
-        );
+        console.error("unable to load data for table from " + dataUrl);
         return;
       }
       var parseDate = d3.timeParse("%m/%d/%Y");
@@ -542,16 +524,12 @@ Elab.Chart = (function (Elab) {
             x: config.parse.x(d[config.data.x]),
             y: config.parse.y(d[col]),
             // add extra columns to data
-            extras: config.data.extra.reduce(function (
-              obj,
-              colName
-            ) {
+            extras: config.data.extra.reduce(function (obj, colName) {
               obj[colName] = config.parse[colName]
                 ? config.parse[colName](d[colName])
                 : d[colName];
               return obj;
-            },
-            {}),
+            }, {}),
           };
         }),
       };
@@ -566,22 +544,17 @@ Elab.Chart = (function (Elab) {
   function parseRowItems(data, config) {
     var groupCol = config.data.y.groupBy;
     var dataByGroup = data.reduce(function (result, row) {
-      if (!result.hasOwnProperty(row[groupCol]))
-        result[row[groupCol]] = [];
+      if (!result.hasOwnProperty(row[groupCol])) result[row[groupCol]] = [];
       result[row[groupCol]].push({
         x: config.parse.x(row[config.data.x]),
         y: config.parse.y(row[config.data.y.col]),
         // add extra columns to data
-        extras: config.data.extra.reduce(function (
-          obj,
-          colName
-        ) {
+        extras: config.data.extra.reduce(function (obj, colName) {
           obj[colName] = config.parse[colName]
             ? config.parse[colName](row[colName])
             : row[colName];
           return obj;
-        },
-        {}),
+        }, {}),
       });
       return result;
     }, {});
@@ -640,9 +613,7 @@ Elab.Chart = (function (Elab) {
     config = makeParseConfig(config);
     // grab data points for each of the groups
     var itemParser =
-      config.groupType === "col"
-        ? parseColumnItems
-        : parseRowItems;
+      config.groupType === "col" ? parseColumnItems : parseRowItems;
     result["items"] = itemParser(data, config);
     // x and y [min, max], padded based on config value
     result["extents"] = parseExtents(result["items"], config);
@@ -688,8 +659,7 @@ Elab.Chart = (function (Elab) {
   }
 
   function updatePartialFilingsDate(rootEl, data) {
-    var rawLastDay =
-      data["_raw"][data["_raw"].length - 1]["month_last_day"];
+    var rawLastDay = data["_raw"][data["_raw"].length - 1]["month_last_day"];
     if (!rawLastDay) return;
     var parseDate = d3.timeParse("%d/%m/%Y");
     var lastDay = parseDate(rawLastDay);
@@ -703,13 +673,7 @@ Elab.Chart = (function (Elab) {
     partialEl.html(value);
   }
 
-  function renderBarTooltip(
-    title,
-    items,
-    context,
-    render,
-    type
-  ) {
+  function renderBarTooltip(title, items, context, render, type) {
     render =
       render ||
       function (d) {
@@ -737,14 +701,8 @@ Elab.Chart = (function (Elab) {
       )
       .html("<h1>" + title + "</h1>")
       .style("display", "block")
-      .style(
-        "left",
-        d3.event.pageX + (xFlipped ? -1 : 1) * space + "px"
-      )
-      .style(
-        "top",
-        d3.event.pageY + (yFlipped ? -1 : 1) * space + "px"
-      )
+      .style("left", d3.event.pageX + (xFlipped ? -1 : 1) * space + "px")
+      .style("top", d3.event.pageY + (yFlipped ? -1 : 1) * space + "px")
       .selectAll()
       .data(items)
       .enter()
@@ -763,10 +721,7 @@ Elab.Chart = (function (Elab) {
    */
   function renderHoverLine(position, context) {
     context.els.hoverLine
-      .attr(
-        "class",
-        "chart__marker-line chart__marker-line--hover"
-      )
+      .attr("class", "chart__marker-line chart__marker-line--hover")
       .attr("style", "transform: translateX(" + position + "px)")
       .attr("x1", 0)
       .attr("x2", 0)
@@ -804,24 +759,14 @@ Elab.Chart = (function (Elab) {
       return {
         root: el,
         area: el.append("rect").attr("class", "chart__area"),
-        yAxis: el
-          .append("g")
-          .attr("class", "chart__axis chart__axis--y"),
-        xAxis: el
-          .append("g")
-          .attr("class", "chart__axis chart__axis--x"),
-        markLines: el
-          .append("g")
-          .attr("class", "chart__mark-lines"),
+        yAxis: el.append("g").attr("class", "chart__axis chart__axis--y"),
+        xAxis: el.append("g").attr("class", "chart__axis chart__axis--x"),
+        markLines: el.append("g").attr("class", "chart__mark-lines"),
         data: el.append("g").attr("class", "chart__data"),
         frame: el.append("rect").attr("class", "chart__box"),
-        hoverLine: el
-          .append("line")
-          .attr("class", "chart__marker-line"),
+        hoverLine: el.append("line").attr("class", "chart__marker-line"),
         hoverArea: el.append("rect"),
-        tooltip: d3
-          .select("#tooltip")
-          .attr("class", "chart__tooltip"),
+        tooltip: d3.select("#tooltip").attr("class", "chart__tooltip"),
       };
     }
 
@@ -850,11 +795,7 @@ Elab.Chart = (function (Elab) {
         .attr("class", "chart__bar-group")
         .merge(group)
         .attr("transform", function (d) {
-          return (
-            "translate(" +
-            context.x(new Date(2020, d.id, 1)) +
-            ",0)"
-          );
+          return "translate(" + context.x(new Date(2020, d.id, 1)) + ",0)";
         });
 
       var groupAreaSelection = context.els.data
@@ -867,9 +808,7 @@ Elab.Chart = (function (Elab) {
         .attr("fill", "transparent")
         .attr("class", "chart__bar-area")
         .on("mousemove", function (d) {
-          var title = chartConfig.format.xTooltip(
-            d.data[0].value.x
-          );
+          var title = chartConfig.format.xTooltip(d.data[0].value.x);
           var items = d.data.map(getHoverItem);
           renderBarTooltip(
             title,
@@ -880,8 +819,7 @@ Elab.Chart = (function (Elab) {
           );
         })
         .on("mouseout", function () {
-          if (context.els.tooltip)
-            context.els.tooltip.style("display", "none");
+          if (context.els.tooltip) context.els.tooltip.style("display", "none");
         })
         .merge(groupAreaSelection)
         .attr("x", function (d, i) {
@@ -891,11 +829,9 @@ Elab.Chart = (function (Elab) {
         .attr("height", context.height)
         .attr("width", context.x.bandwidth() + 8);
 
-      var groupBars = groupEls
-        .selectAll("rect")
-        .data(function (d) {
-          return d.data;
-        });
+      var groupBars = groupEls.selectAll("rect").data(function (d) {
+        return d.data;
+      });
 
       groupBars
         .enter()
@@ -947,11 +883,9 @@ Elab.Chart = (function (Elab) {
         })
         .remove();
 
-      var groupDots = groupEls
-        .selectAll("circle")
-        .data(function (d) {
-          return config.dots ? d.data : [];
-        });
+      var groupDots = groupEls.selectAll("circle").data(function (d) {
+        return config.dots ? d.data : [];
+      });
 
       groupDots
         .enter()
@@ -994,11 +928,9 @@ Elab.Chart = (function (Elab) {
         })
         .remove();
 
-      var groupDots = groupEls
-        .selectAll("circle")
-        .data(function (d) {
-          return config.dots ? d.data : [];
-        });
+      var groupDots = groupEls.selectAll("circle").data(function (d) {
+        return config.dots ? d.data : [];
+      });
 
       groupDots
         .enter()
@@ -1062,9 +994,7 @@ Elab.Chart = (function (Elab) {
         });
 
       // lines
-      var lines = context.els.data
-        .selectAll(".chart__line")
-        .data(data.items);
+      var lines = context.els.data.selectAll(".chart__line").data(data.items);
 
       lines
         .enter()
@@ -1285,8 +1215,7 @@ Elab.Chart = (function (Elab) {
         .attr("y", 0)
         .attr(
           "width",
-          context.x(data.markArea[1]) -
-            context.x(data.markArea[0])
+          context.x(data.markArea[1]) - context.x(data.markArea[0])
         )
         .attr("height", context.height);
     }
@@ -1329,13 +1258,9 @@ Elab.Chart = (function (Elab) {
       };
 
       var handleHoverOut = function handleHoverOut() {
-        if (context.els.tooltip)
-          context.els.tooltip.style("display", "none");
+        if (context.els.tooltip) context.els.tooltip.style("display", "none");
         if (context.els.hoverLine)
-          context.els.hoverLine.attr(
-            "class",
-            "chart__marker-line"
-          );
+          context.els.hoverLine.attr("class", "chart__marker-line");
       };
 
       context.els.hoverArea
@@ -1352,9 +1277,7 @@ Elab.Chart = (function (Elab) {
           "#" + config.rootId + " " + item.selector
         );
         if (!el)
-          throw new Error(
-            "no element found for selector: " + item.selector
-          );
+          throw new Error("no element found for selector: " + item.selector);
         el.innerHTML = item.text;
       });
     }
@@ -1372,13 +1295,9 @@ Elab.Chart = (function (Elab) {
           "</div>"
         );
       };
-      var el = document.querySelector(
-        "#" + config.rootId + " " + selector
-      );
+      var el = document.querySelector("#" + config.rootId + " " + selector);
       if (!el)
-        throw new Error(
-          "no element found for selector: " + item.selector
-        );
+        throw new Error("no element found for selector: " + item.selector);
       el.innerHTML = items
         .map(function (item) {
           return LegendItem(item);
@@ -1393,9 +1312,7 @@ Elab.Chart = (function (Elab) {
      */
     function renderGraph(data, els, config) {
       // get parent width and height
-      var rect = els.root
-        .node()
-        .parentNode.getBoundingClientRect();
+      var rect = els.root.node().parentNode.getBoundingClientRect();
 
       // position the root
       els.root.attr(
@@ -1417,10 +1334,7 @@ Elab.Chart = (function (Elab) {
         1
       );
 
-      var xTimeScale = d3
-        .scaleTime()
-        .rangeRound([0, width])
-        .domain(xExtent);
+      var xTimeScale = d3.scaleTime().rangeRound([0, width]).domain(xExtent);
       var xBandScale = d3
         .scaleBand()
         .rangeRound([0, width])
@@ -1428,18 +1342,11 @@ Elab.Chart = (function (Elab) {
         .domain(xBands);
 
       // setup scales
-      var x =
-        config.view.type === "line" ? xTimeScale : xBandScale;
+      var x = config.view.type === "line" ? xTimeScale : xBandScale;
       var y =
         config.view.type === "line"
-          ? d3
-              .scaleLinear()
-              .rangeRound([height, 0])
-              .domain(yExtent)
-          : d3
-              .scaleLinear()
-              .rangeRound([height, 0])
-              .domain([0, yExtent[1]]);
+          ? d3.scaleLinear().rangeRound([height, 0]).domain(yExtent)
+          : d3.scaleLinear().rangeRound([height, 0]).domain([0, yExtent[1]]);
 
       // context passed to render functions
       var context = {
@@ -1453,22 +1360,15 @@ Elab.Chart = (function (Elab) {
       };
 
       renderAxis(data, config, context);
-      config.data.markArea &&
-        renderMarkArea(data, config, context);
-      config.data.markArea &&
-        renderAreaLines(data, config, context);
-      config.view.type === "line" &&
-        renderLines(data, config, context);
-      config.view.type === "bar" &&
-        renderBars(data, config, context);
+      config.data.markArea && renderMarkArea(data, config, context);
+      config.data.markArea && renderAreaLines(data, config, context);
+      config.view.type === "line" && renderLines(data, config, context);
+      config.view.type === "bar" && renderBars(data, config, context);
       config.markLines && renderMarkLine(data, config, context);
-      config.view.type === "line" &&
-        renderHoverArea(data, config, context);
+      config.view.type === "line" && renderHoverArea(data, config, context);
       renderFrame(data, config, context);
-      config.content &&
-        renderContentUpdates(config.content, config);
-      config.legend &&
-        renderLegend(config.legend, data.items, config);
+      config.content && renderContentUpdates(config.content, config);
+      config.legend && renderLegend(config.legend, data.items, config);
     }
 
     /**
@@ -1515,9 +1415,7 @@ Elab.Chart = (function (Elab) {
     d3.csv(config.url, function (data) {
       if (!data) {
         if (callback) callback(null, "error loading data");
-        console.error(
-          "unable to load chart data from " + config.url
-        );
+        console.error("unable to load chart data from " + config.url);
         d3.select(elementId)
           .attr("style", "border: 2px solid #f00")
           .append("text")
@@ -1552,11 +1450,9 @@ Elab.Chart = (function (Elab) {
     var countToggleEl = rootEl.find(".toggle--count");
     var avgToggleEl = rootEl.find(".toggle--avg");
 
-    if (config.id === "avg")
-      avgToggleEl.addClass("toggle--active");
+    if (config.id === "avg") avgToggleEl.addClass("toggle--active");
 
-    if (config.id === "race")
-      countToggleEl.addClass("toggle--active");
+    if (config.id === "race") countToggleEl.addClass("toggle--active");
 
     // move footnotes into proper container
     var contentEl = rootEl.find(".details");
@@ -1570,23 +1466,17 @@ Elab.Chart = (function (Elab) {
     // create chart and bind click event to toggle state
     createChart(chartEl, currentConfig, function (chart) {
       countToggleEl.on("click", function () {
-        currentConfig =
-          config.id === "race" ? configs[0] : configs[1];
+        currentConfig = config.id === "race" ? configs[0] : configs[1];
         countToggleEl.addClass("toggle--active");
         avgToggleEl.removeClass("toggle--active");
-        rootEl
-          .removeClass("section--avg-on")
-          .addClass("section--count-on");
+        rootEl.removeClass("section--avg-on").addClass("section--count-on");
         chart.update(currentConfig);
       });
       avgToggleEl.on("click", function () {
-        currentConfig =
-          config.id === "race" ? configs[1] : configs[0];
+        currentConfig = config.id === "race" ? configs[1] : configs[0];
         avgToggleEl.addClass("toggle--active");
         countToggleEl.removeClass("toggle--active");
-        rootEl
-          .addClass("section--avg-on")
-          .removeClass("section--count-on");
+        rootEl.addClass("section--avg-on").removeClass("section--count-on");
         chart.update(currentConfig);
       });
 
@@ -1757,8 +1647,7 @@ Elab.Map = (function (Elab) {
     mapboxgl.accessToken = accessToken;
     var map = new mapboxgl.Map({
       container: el,
-      style:
-        "mapbox://styles/eviction-lab/ck8za8qns07451jpm48xn6tq2",
+      style: "mapbox://styles/eviction-lab/ck8za8qns07451jpm48xn6tq2",
       bounds: usBounds,
       maxBounds: usBounds,
     });
@@ -1775,19 +1664,14 @@ Elab.Map = (function (Elab) {
         : "Unknown";
       var distance = feature.properties.diff - 1;
       var majority = feature.properties.majority;
-      var dir =
-        distance === 0 ? "mid" : distance > 0 ? "up" : "down";
+      var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
       var value = feature.properties.diff
         ? formatPercent(Math.abs(distance))
         : "Not Available";
       var primary = feature.properties.diff
         ? dir === "mid"
           ? "Filings about average."
-          : "Filings <span>" +
-            dir +
-            " " +
-            value +
-            "</span> from average."
+          : "Filings <span>" + dir + " " + value + "</span> from average."
         : "Filing count not available.";
       var description =
         "<h1>" +
@@ -1812,12 +1696,10 @@ Elab.Map = (function (Elab) {
       // Change the cursor style as a UI indicator.
       map.getCanvas().style.cursor = "pointer";
       var description = getTooltipHtml(e.features[0]);
-      var flipped =
-        e.originalEvent.pageX > window.innerWidth - 240;
+      var flipped = e.originalEvent.pageX > window.innerWidth - 240;
       var space = flipped ? -32 : 32;
       tooltip.className =
-        "chart__tooltip" +
-        (flipped ? " chart__tooltip--flip" : "");
+        "chart__tooltip" + (flipped ? " chart__tooltip--flip" : "");
       tooltip.style.display = "block";
       tooltip.style.left = e.originalEvent.pageX + space + "px";
       tooltip.style.top = e.originalEvent.pageY + 32 + "px";
@@ -1856,10 +1738,7 @@ Elab.Map = (function (Elab) {
      * Turn off scroll unless modifier key is pressed
      */
     function handleWheel(event) {
-      if (
-        event.originalEvent.ctrlKey ||
-        event.originalEvent.metaKey
-      ) {
+      if (event.originalEvent.ctrlKey || event.originalEvent.metaKey) {
         // Check if CTRL key is pressed
         event.originalEvent.preventDefault(); // Prevent chrome/firefox default behavior
         if (!map.scrollZoom._enabled) map.scrollZoom.enable(); // Enable zoom only if it's disabled
@@ -1874,9 +1753,7 @@ Elab.Map = (function (Elab) {
     function handleLoad() {
       d3.json(geojsonUrl, function (err, json) {
         if (err) {
-          console.error(
-            "unable to load geojson from " + geojsonUrl
-          );
+          console.error("unable to load geojson from " + geojsonUrl);
           return;
         }
         var geojson = json;
@@ -1937,13 +1814,9 @@ Elab.ChartBuilder = (function (Elab) {
     this.data = data;
     this.options = options || this.defaultOptions;
     this.innerWidth =
-      this.options.width +
-      this.options.margin[1] +
-      this.options.margin[3];
+      this.options.width + this.options.margin[1] + this.options.margin[3];
     this.innerHeight =
-      this.options.height +
-      this.options.margin[0] +
-      this.options.margin[2];
+      this.options.height + this.options.margin[0] + this.options.margin[2];
     this.svgEl = svgEl;
     this.updaters = {};
     this.selections = {};
@@ -1955,18 +1828,12 @@ Elab.ChartBuilder = (function (Elab) {
   }
 
   Chart.prototype.getInnerWidth = function () {
-    return (
-      this.options.width -
-      this.options.margin[1] -
-      this.options.margin[3]
-    );
+    return this.options.width - this.options.margin[1] - this.options.margin[3];
   };
 
   Chart.prototype.getInnerHeight = function () {
     return (
-      this.options.height -
-      this.options.margin[0] -
-      this.options.margin[2]
+      this.options.height - this.options.margin[0] - this.options.margin[2]
     );
   };
 
@@ -1992,26 +1859,57 @@ Elab.ChartBuilder = (function (Elab) {
     this.selections["base"] = this.selections["root"]
       .append("g")
       .attr("class", "chart__base");
+    this.selections["data"] = this.selections["root"]
+      .append("g")
+      .attr("class", "chart__data")
+      .attr("clip-path", "url(#chartArea)");
+    this.selections["overlay"] = this.selections["root"]
+      .append("g")
+      .attr("class", "chart__overlay");
     this.updaters["base"] = function () {
-      _this.selections["base"].attr(
-        "transform",
-        "translate(" +
-          _this.options.margin[3] +
-          " " +
-          _this.options.margin[0] +
-          ")"
-      );
+      [
+        _this.selections["base"],
+        _this.selections["data"],
+        _this.selections["overlay"],
+      ].forEach(function (sel) {
+        sel.attr(
+          "transform",
+          "translate(" +
+            _this.options.margin[3] +
+            " " +
+            _this.options.margin[0] +
+            ")"
+        );
+      });
     };
     return this;
   };
 
   Chart.prototype.addFrame = function () {
     var _this = this;
-    this.selections["frame"] = this.selections["base"]
+    this.selections["frame"] = this.selections["overlay"]
       .append("rect")
       .attr("class", "chart__frame");
+
     this.updaters["frame"] = function () {
       _this.selections["frame"]
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", _this.getInnerWidth())
+        .attr("height", _this.getInnerHeight());
+    };
+    return this;
+  };
+
+  Chart.prototype.addClipPath = function () {
+    var _this = this;
+    this.selections["clipPath"] = this.selections["root"]
+      .append("clipPath")
+      .attr("id", "chartArea")
+      .append("rect");
+
+    this.updaters["clipPath"] = function () {
+      _this.selections["clipPath"]
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", _this.getInnerWidth())
@@ -2034,21 +1932,18 @@ Elab.ChartBuilder = (function (Elab) {
       .html(
         '<rect class="chart__pattern" x="0" y="0" width="6" height="12" />'
       );
-    this.selections["area"] = this.selections["base"]
+    this.selections["area"] = this.selections["data"]
       .append("rect")
       .attr("class", "chart__area");
     this.updaters["area"] = function () {
       var maxDate = _this.xScale.domain()[1];
-      areaData[1] =
-        +areaData[1] > +maxDate ? maxDate : areaData[1];
+      areaData[1] = +areaData[1] > +maxDate ? maxDate : areaData[1];
       _this.selections["area"]
         .attr("x", _this.xScale(areaData[0]))
         .attr("y", 1)
         .attr(
           "width",
-          _this.xScale(areaData[1]) -
-            _this.xScale(areaData[0]) -
-            1
+          _this.xScale(areaData[1]) - _this.xScale(areaData[0]) - 1
         )
         .attr("height", _this.getInnerHeight() - 2)
         .attr("fill", "url(#stripes)");
@@ -2065,24 +1960,20 @@ Elab.ChartBuilder = (function (Elab) {
       var xHovered = _this.xScale.invert(
         d3.mouse(_this.selections["hover"].node())[0]
       );
-      var xPosition = d3.timeDay.offset(
-        d3.timeWeek.floor(xHovered),
-        3.5
-      );
+      var xPosition = d3.timeDay.offset(d3.timeWeek.floor(xHovered), 3.5);
       var dataIndex = bisectX(_this.data, xHovered) - 1;
-      console.log(
-        "tt",
-        xPosition,
-        dataIndex,
-        _this.data[dataIndex]
-      );
+      var weekStart = _this.data[dataIndex];
+      if (!weekStart || +xPosition > _this.xScale.domain()[1])
+        return handleHoverOut();
+      // create tooltip
       var title = "Eviction Filings";
-      var months;
-      var weeks;
-      var items = [
-        { idx: 0, name: "week", value: 10 },
-        { idx: 1, name: "month", value: 20 },
-      ];
+      var dayFormat = d3.timeFormat("%b %e");
+      var weekLabel = [weekStart[0], d3.timeDay.offset(weekStart[0], 7)]
+        .map(function (d) {
+          return dayFormat(d);
+        })
+        .join(" - ");
+      var items = [{ idx: 0, name: weekLabel, value: weekStart[1] }];
       var context = {
         els: { tooltip: _this.selections["tooltip"] },
       };
@@ -2093,32 +1984,34 @@ Elab.ChartBuilder = (function (Elab) {
         undefined,
         "top"
       );
-      // var title = config.format.xTooltip(xSnapped);
-      // // transform items into structure for tooltip
-      // var items = data.items
-      //   .map(function (d, i) {
-      //     return {
-      //       idx: d.idx,
-      //       name: d.name,
-      //       value: config.format.yTooltip(d.data[xIndex].y),
-      //       _raw: d.data[xIndex].y,
-      //     };
-      //   })
-      //   .sort(function (a, b) {
-      //     return b.value - a.value;
-      //   });
-      // var position = context.x(xSnapped);
+      // position hover line
+      var position = _this.xScale(xPosition) + 1.5;
+      _this.selections["hover-line"]
+        .style("display", "block")
+        .transition()
+        .duration(100)
+        .ease(d3.easeLinear)
+        .attr("x1", position)
+        .attr("x2", position)
+        .attr("y1", 0)
+        .attr("y2", _this.getInnerHeight());
     }
 
-    function handleHoverOut() {}
+    function handleHoverOut() {
+      _this.selections["hover-line"].style("display", "none");
+      _this.selections["tooltip"].style("display", "none");
+    }
 
-    this.selections["hover"] = this.selections["base"]
+    this.selections["hover-line"] = this.selections["data"]
+      .append("line")
+      .attr("class", "chart__hover-line");
+    this.selections["hover"] = this.selections["data"]
       .append("rect")
       .attr("class", "chart__hover")
       .attr("x", 0)
       .attr("y", 0)
       .on("mousemove", handleHover)
-      .on("mouseout", function () {});
+      .on("mouseout", handleHoverOut);
     this.updaters["hover"] = function () {
       _this.selections["hover"]
         .attr("width", _this.getInnerWidth())
@@ -2130,7 +2023,7 @@ Elab.ChartBuilder = (function (Elab) {
 
   Chart.prototype.addBars = function (selector) {
     var _this = this;
-    this.selections["bars"] = this.selections["base"]
+    this.selections["bars"] = this.selections["data"]
       .append("g")
       .attr("class", "chart__bars");
 
@@ -2139,9 +2032,7 @@ Elab.ChartBuilder = (function (Elab) {
 
       var spacing = 2;
       var bandWidth =
-        _this.xScale(barData[1][0]) -
-        _this.xScale(barData[0][0]) -
-        spacing * 2;
+        _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
 
       var selection = _this.selections["bars"]
         .selectAll(".chart__bar")
@@ -2176,7 +2067,7 @@ Elab.ChartBuilder = (function (Elab) {
 
   Chart.prototype.addLines = function (selector) {
     var _this = this;
-    this.selections["lines"] = this.selections["base"]
+    this.selections["lines"] = this.selections["data"]
       .append("g")
       .attr("class", "chart__lines");
     this.updaters["lines"] = function () {
@@ -2247,12 +2138,9 @@ Elab.ChartBuilder = (function (Elab) {
     function adjustTextLabels(selection) {
       selection
         .selectAll(".tick text")
-        .attr(
-          "transform",
-          "translate(" + _this.monthToPixels(1) / 2 + ",0)"
-        );
+        .attr("transform", "translate(" + _this.monthToPixels(1) / 2 + ",0)");
     }
-    this.selections["timeAxis"] = this.selections["base"]
+    this.selections["timeAxis"] = this.selections["overlay"]
       .append("g")
       .attr("class", "chart__axis chart__axis--time");
     this.updaters["timeAxis"] = function () {
@@ -2273,10 +2161,7 @@ Elab.ChartBuilder = (function (Elab) {
         .tickSizeOuter(0)
         .tickFormat(_this.options.xTicksFormat);
       _this.selections["timeAxis"]
-        .attr(
-          "transform",
-          "translate(0," + _this.getInnerHeight() + ")"
-        )
+        .attr("transform", "translate(0," + _this.getInnerHeight() + ")")
         .transition()
         .duration(1000)
         .call(xAxis)
@@ -2324,12 +2209,9 @@ Elab.Intro = (function (Elab) {
         yTicks: 4,
         yTicksFormat: d3.format(",d"),
       };
-      var chart = new Elab.ChartBuilder(
-        svg,
-        seriesData,
-        options
-      );
+      var chart = new Elab.ChartBuilder(svg, seriesData, options);
       chart
+        .addClipPath()
         .addFrame()
         .addAxisY(function (d) {
           return d[1];
@@ -2404,8 +2286,7 @@ Elab.ListPage = (function (Elab) {
         "</td>" +
         "</tr>"
     );
-    var isMoratoriumActive =
-      !data.end || (data.end && +data.end > +Date.now());
+    var isMoratoriumActive = !data.end || (data.end && +data.end > +Date.now());
     var tooltipTemplate = data.end
       ? Handlebars.compile(options.tooltip)
       : Handlebars.compile(options.tooltipNoDate);
@@ -2413,11 +2294,8 @@ Elab.ListPage = (function (Elab) {
       id: data.id,
       name: data.name,
       class:
-        "table__row--" +
-        (isMoratoriumActive ? "moratorium" : "no-moratorium"),
-      url:
-        Elab.Utils.getCurrentURL() +
-        Elab.Utils.slugify(data.name),
+        "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
+      url: Elab.Utils.getCurrentURL() + Elab.Utils.slugify(data.name),
       weekFilings: data.lastWeek,
       cumulativeFilings: data.cumulative,
       tooltip: tooltipTemplate({
@@ -2440,10 +2318,7 @@ Elab.ListPage = (function (Elab) {
     var xExtent = d3.extent(values, function (v) {
       return v[0];
     });
-    var xScale = d3
-      .scaleTime()
-      .rangeRound([0, width])
-      .domain(xExtent);
+    var xScale = d3.scaleTime().rangeRound([0, width]).domain(xExtent);
 
     var yExtent = d3.extent(values, function (v) {
       return v[2];
@@ -2496,9 +2371,7 @@ Elab.ListPage = (function (Elab) {
   function renderDate(data) {
     $("#reportDate").html(
       "Week of " +
-        d3.timeFormat("%B %d, %Y")(
-          data.values[data.values.length - 1][0]
-        )
+        d3.timeFormat("%B %d, %Y")(data.values[data.values.length - 1][0])
     );
   }
 
@@ -2551,9 +2424,7 @@ Elab.ListPage = (function (Elab) {
       });
       $('[data-toggle="tooltip"]').tooltip();
       // update the "last updated" text
-      $("#lastUpdate span").html(
-        d3.timeFormat("%B %d, %Y")(data[0].updated)
-      );
+      $("#lastUpdate span").html(d3.timeFormat("%B %d, %Y")(data[0].updated));
       // set the table footnotes
       $(el).next().html(getFootnoteHtml(data[0]));
       // default sort the table
@@ -2576,18 +2447,14 @@ Elab.ListPage = (function (Elab) {
       var counterWeek = locations.reduce(function (sum, loc) {
         return sum + loc.lastWeek;
       }, 0);
-      var count = new countUp.CountUp(
-        "counterTotal",
-        counterTotal,
-        { duration: 3.8 }
-      );
+      var count = new countUp.CountUp("counterTotal", counterTotal, {
+        duration: 3.8,
+      });
       if (!count.error) {
         count.start();
-        var count2 = new countUp.CountUp(
-          "counterWeek",
-          counterWeek,
-          { duration: 3.8 }
-        );
+        var count2 = new countUp.CountUp("counterWeek", counterWeek, {
+          duration: 3.8,
+        });
         !count2.error && count2.start();
       } else {
         console.error(count.error);
