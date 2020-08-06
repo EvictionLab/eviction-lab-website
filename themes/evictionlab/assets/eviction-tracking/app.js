@@ -2139,6 +2139,9 @@ Elab.ChartBuilder = (function (Elab) {
       selection
         .selectAll(".tick text")
         .attr("transform", "translate(" + _this.monthToPixels(1) / 2 + ",0)");
+      selection
+        .selectAll(".tick:last-child text")
+        .attr("opacity", 0);
     }
     this.selections["timeAxis"] = this.selections["overlay"]
       .append("g")
@@ -2194,6 +2197,80 @@ Elab.ChartBuilder = (function (Elab) {
 })();
 
 Elab.Intro = (function (Elab) {
+  function createIntroFigure(root, cityData) {
+    var seriesData = cityData.values;
+    var svg = $(root).find("svg")[0];
+    var rect = root.getBoundingClientRect();
+    var options = {
+      width: rect.width,
+      height: rect.height,
+      margin: [32, 12, 90, 40],
+      xTicks: d3.timeMonth.every(1),
+      xTicksFormat: d3.timeFormat("%B"),
+      yTicks: 4,
+      yTicksFormat: d3.format(",d"),
+    };
+    var chart = new Elab.ChartBuilder(svg, seriesData, options);
+    return chart
+      .addClipPath()
+      .addFrame()
+      .addAxisY(function (d) {
+        return d[1];
+      })
+      .addTimeAxis(function (d) {
+        return d[0];
+      })
+      .addArea([cityData.start, cityData.end])
+      .addBars(function (data) {
+        return data.map(function (d) {
+          return [d[0], d[1]];
+        });
+      })
+      .addLines(function (data) {
+        return [
+          data
+            .map(function (d) {
+              return [d3.timeDay.offset(d[0], 3.5), d[2]];
+            })
+            .filter(function (d, i) {
+              return i !== data.length - 1;
+            }),
+        ];
+      })
+      .addTooltip()
+      .addCustom(function (chart) {
+        chart.selections["span-path"] = chart.selections["overlay"]
+          .append("path")
+          .attr("class", "chart__span-path");
+        chart.selections["bar-path"] = chart.selections["overlay"]
+          .append("path")
+          .attr("class", "chart__bar-path");
+        chart.updaters["span-path"] = function () {
+          function draw() {
+            return (
+              "M 0," +
+              chart.getInnerHeight() +
+              " h " +
+              (chart.getInnerWidth() + 8) +
+              " v 88 h -46"
+            );
+          }
+          chart.selections["span-path"].attr("d", draw());
+        };
+        chart.updaters["bar-path"] = function () {
+          function draw() {
+            const lastDate = chart.data[chart.data.length - 1][0];
+            const barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
+            return (
+              "M " + barPosition + "," + chart.getInnerHeight() + " v 50 h -12"
+            );
+          }
+          chart.selections["bar-path"].attr("d", draw());
+        };
+      })
+      .render();
+  }
+
   /**
    * Creates the intro chart
    */
@@ -2202,90 +2279,26 @@ Elab.Intro = (function (Elab) {
       var cityData = data.find(function (d) {
         return d.id === locationId;
       });
-      var seriesData = cityData.values;
       if (!cityData) throw new Error("no data found for city");
-      console.log(cityData);
-      var svg = $(root).find("svg")[0];
-      var rect = root.getBoundingClientRect();
-      var options = {
-        width: rect.width,
-        height: rect.height,
-        margin: [8, 12, 90, 64],
-        xTicks: d3.timeMonth.every(1),
-        xTicksFormat: d3.timeFormat("%B"),
-        yTicks: 4,
-        yTicksFormat: d3.format(",d"),
-      };
-      var chart = new Elab.ChartBuilder(svg, seriesData, options);
-      chart
-        .addClipPath()
-        .addFrame()
-        .addAxisY(function (d) {
-          return d[1];
-        })
-
-        .addTimeAxis(function (d) {
-          return d[0];
-        })
-        .addArea([cityData.start, cityData.end])
-        .addBars(function (data) {
-          return data.map(function (d) {
-            return [d[0], d[1]];
-          });
-        })
-        .addLines(function (data) {
-          return [
-            data
-              .map(function (d) {
-                return [d3.timeDay.offset(d[0], 3.5), d[2]];
-              })
-              .filter(function (d, i) {
-                return i !== data.length - 1;
-              }),
-          ];
-        })
-        .addTooltip()
-        .addCustom(function (chart) {
-          chart.selections["span-path"] = chart.selections["overlay"]
-            .append("path")
-            .attr("class", "chart__span-path");
-          chart.selections["bar-path"] = chart.selections["overlay"]
-            .append("path")
-            .attr("class", "chart__bar-path");
-          chart.updaters["span-path"] = function () {
-            function draw() {
-              return (
-                "M 0," +
-                chart.getInnerHeight() +
-                " h " +
-                (chart.getInnerWidth() + 8) +
-                " v 88 h -46"
-              );
-            }
-            chart.selections["span-path"].attr("d", draw());
-          };
-          chart.updaters["bar-path"] = function () {
-            function draw() {
-              const lastDate = chart.data[chart.data.length - 1][0];
-              const barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
-              return (
-                "M " +
-                barPosition +
-                "," +
-                chart.getInnerHeight() +
-                " v 50 h -12"
-              );
-            }
-            chart.selections["bar-path"].attr("d", draw());
-          };
-        })
-        .render();
-
+      var figure = createIntroFigure(root, cityData);
+      // resize figure on changes
       window.addEventListener("resize", function () {
         var rect = root.getBoundingClientRect();
-        console.log(rect);
-        chart.update({ width: rect.width, height: rect.height });
+        figure.update({ width: rect.width, height: rect.height });
       });
+      var dateFormat = d3.timeFormat("%B %e");
+      var moratorium = [cityData.start, cityData.end]
+        .map(function (d) {
+          return dateFormat(d);
+        })
+        .join(" - ");
+      $("#evictionMoratorium").html(moratorium);
+      $("#filingsLastWeek").html(
+        "<span>" + cityData.lastWeek + "</span> filings last week*"
+      );
+      $("#filingsCumulative").html(
+        "<span>" + cityData.cumulative + "</span> filings since Mar. 15"
+      );
     });
   }
 
