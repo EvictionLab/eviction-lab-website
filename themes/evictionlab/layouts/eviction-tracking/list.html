@@ -3,13 +3,19 @@
 
 {{ partial "ets/hero" . }}
 <div class="list-intro">
-  <div class="layout">
-    <div class="column column--content">
-      <p id="lastUpdate" class="list-intro__date overline">
-        Data current as of <span>...</span>
-      </p>
-      <p>{{ .Params.intro | markdownify }}</p>
-    </div>
+  <div class="list-intro__count">
+    <p class="counter">
+      <span class="counter__context">They filed for</span>
+      <span id="counterWeek" class="counter__number">0</span>
+      <span class="counter__label">evictions</span>
+      <span class="counter__context">last week.</span>
+    </p>
+  </div>
+  <div class="list-intro__content">
+    <p id="lastUpdate" class="list-intro__date overline">
+      Data current as of <span>...</span>
+    </p>
+    <p class="list-intro__text">{{ .Params.intro | markdownify }}</p>
   </div>
 </div>
 <div class="list-table">

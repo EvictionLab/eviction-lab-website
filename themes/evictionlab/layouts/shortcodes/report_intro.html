@@ -1,54 +1,120 @@
-<div class="intro">
-
+<div class="intro intro--loading">
   <div class="layout">
     <div class="intro__content">
-      <h1 class="intro__heading"><a id="top">{{ .Page.Params.h1 }}</a></h1>
+      <h1 class="intro__heading">
+        <a id="top">{{ .Page.Params.h1 }}</a>
+      </h1>
       <div class="intro__text">{{ .Inner }}</div>
+      <div class="share">
+        <a class="share__link share__link--twitter">
+          <i class="fa fa-twitter"></i>
+          <span>Share on Twitter</span>
+        </a>
+        <a class="share__link share__link--facebook">
+          <i class="fa fa-facebook"></i>
+          <span>Share on Facebook</span>
+        </a>
+      </div>
     </div>
-    <div class="callout">
-      <h2 id="reportDate" class="callout__heading">Loading...</h2>
-      <ul class="stats">
-        <li class="stats-item stats-item--week">
-          <strong class="stats-item__label">Filings Last Week</strong>
-          <span class="stats-item__value">
-            <span class="stats-item__count"></span>
-            <span class="stats-item__diff"></span>
-          </span>
-        </li>
-        <li class="stats-item stats-item--month">
-          <strong class="stats-item__label">Filings Last 4 Weeks</strong>
-          <span class="stats-item__value">
-            <span class="stats-item__count"></span>
-            <span class="stats-item__diff"></span>
-          </span>
-        </li>
-        <li class="stats-item stats-item--moratorium">
-          <strong class="stats-item__label">Eviction Moratorium</strong>
-          <span class="stats-item__value"></span>
-        </li>
-      </ul>
-      <div class="callout__footnote">
-        <span>Filings in the last week may be undercounted as a result of processing delays. These counts will be revised in the following week.</span>
+    <div class="intro__figure">
+      <div class="intro__loading">
+        <div class="spinner">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div id="introChart" class="intro__figure-wrapper">
+        <h2 class="intro__figure-title">
+          Eviction Filings By Week
+        </h2>
+        <svg></svg>
+        <div class="intro__figure-legend legend">
+          <div class="legend-item">
+            <svg
+              class="legend-item__visual"
+              aria-hidden="true"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+            >
+              <rect x="0" y="0" width="16" height="16"></rect>
+            </svg>
+            <p class="legend-item__label">Weekly Filings</p>
+          </div>
+          <div class="legend-item">
+            <svg
+              class="legend-item__visual"
+              aria-hidden="true"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+            >
+              <path d="M 0,8 h 16" fill="none"></path>
+            </svg>
+            <p class="legend-item__label">Filings Trend</p>
+          </div>
+          <div class="legend-item">
+            <svg
+              class="legend-item__visual"
+              aria-hidden="true"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+            >
+              <pattern
+                id="stripesLegend"
+                x="0"
+                y="0"
+                width="8"
+                height="8"
+                patternUnits="userSpaceOnUse"
+                patternTransform="rotate(45)"
+              >
+                <rect
+                  class="legend-item__pattern"
+                  x="0"
+                  y="0"
+                  width="4"
+                  height="8"
+                ></rect>
+              </pattern>
+              <rect
+                x="0"
+                y="0"
+                width="16"
+                height="16"
+                fill="url(#stripesLegend)"
+              ></rect>
+            </svg>
+            <p class="legend-item__label">
+              Eviction Moratorium<span
+                class="legend-item__secondary"
+                id="evictionMoratorium"
+              ></span>
+            </p>
+          </div>
+        </div>
+        <div class="intro__figure-stats">
+          <p id="filingsLastWeek"></p>
+          <p id="filingsCumulative"></p>
+        </div>
+        <p class="intro__figure-footnote">
+          * Filings in the last week may be undercounted as a
+          result of processing delays. These counts will be
+          revised in the following week.
+        </p>
       </div>
     </div>
   </div>
-  <div class="share">
-    <a class="share__link share__link--twitter">
-      <i class="fa fa-twitter"></i>
-      <span>Share on Twitter</span>
-    </a>
-    <a class="share__link share__link--facebook">
-      <i class="fa fa-facebook"></i>
-      <span>Share on Facebook</span>
-    </a>
-  </div>
+
   <script>
     var tableUrl = {{ .Get "data" }}
     var fips = {{ .Get "id" }}
     window.addEventListener('load', function() {
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
-      Elab.Table.createIntroTable(fips, tableUrl)
+      Elab.Intro.initIntroChart(document.getElementById("introChart"), tableUrl, fips)
     })
   </script>
 </div>
