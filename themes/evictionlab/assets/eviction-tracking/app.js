@@ -2795,6 +2795,54 @@ Elab.ListPage = (function (Elab) {
     return html.join(" ");
   }
 
+  function initHeroCount(locations) {
+    var counterTotal = locations.reduce(function (sum, loc) {
+      return sum + loc.cumulative;
+    }, 0);
+
+    var count = new countUp.CountUp(
+      "counterTotal",
+      counterTotal,
+      {
+        duration: 3.8,
+      }
+    );
+    if (!count.error) {
+      count.start();
+    } else {
+      console.error(count.error);
+    }
+  }
+
+  function initWeeklyCount(locations) {
+    var counterWeek = locations.reduce(function (sum, loc) {
+      return sum + loc.lastWeek;
+    }, 0);
+    var count2 = new countUp.CountUp(
+      "counterWeek",
+      counterWeek,
+      {
+        duration: 3.8,
+      }
+    );
+    if (!!window.IntersectionObserver) {
+      let observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              !count2.error && count2.start();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -40px 0px" }
+      );
+      observer.observe(document.getElementById("counterWeek"));
+    } else {
+      !count2.error && count2.start();
+    }
+  }
+
   /**
    * Creates the index table
    * @param {*} el
@@ -2845,33 +2893,8 @@ Elab.ListPage = (function (Elab) {
         });
       // trigger hero animation
       $(".hero--ets").addClass("hero--start");
-      // trigger hero counts
-      var counterTotal = locations.reduce(function (sum, loc) {
-        return sum + loc.cumulative;
-      }, 0);
-      var counterWeek = locations.reduce(function (sum, loc) {
-        return sum + loc.lastWeek;
-      }, 0);
-      var count = new countUp.CountUp(
-        "counterTotal",
-        counterTotal,
-        {
-          duration: 3.8,
-        }
-      );
-      if (!count.error) {
-        count.start();
-        var count2 = new countUp.CountUp(
-          "counterWeek",
-          counterWeek,
-          {
-            duration: 3.8,
-          }
-        );
-        !count2.error && count2.start();
-      } else {
-        console.error(count.error);
-      }
+      initHeroCount(locations);
+      initWeeklyCount(locations);
     });
   }
 
