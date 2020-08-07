@@ -326,7 +326,7 @@ body {
   text-transform: uppercase;
   font-family: var(--heading-font);
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 14px;
   line-height: 142%;
   color: var(--text-secondary);
@@ -1387,7 +1387,7 @@ body {
   font-family: var(--heading-font);
   color: var(--c1);
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 28px;
   line-height: 142%;
   letter-spacing: 0.03em;
@@ -1815,7 +1815,7 @@ body {
   font-family: var(--heading-font);
   margin-bottom: 16px;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: normal;
   letter-spacing: 0.12rem;
   text-transform: uppercase;
 }
@@ -1917,7 +1917,7 @@ body {
 .section .details h1 {
   font-family: GT-Eesti-Display-Bold, sans-serif;
   font-size: 2.6rem;
-  font-weight: 400;
+  font-weight: normal;
   letter-spacing: 0.07rem;
   line-height: 1.25;
   margin-bottom: 24px;
@@ -2420,7 +2420,7 @@ body {
 
 .map__tooltip-row em {
   font-family: Akkurat-Regular, sans-serif;
-  font-weight: 500;
+  font-weight: normal;
   color: rgba(255, 255, 255, 0.7);
   display: block;
   margin-top: 2px;

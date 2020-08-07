@@ -2132,7 +2132,9 @@ Elab.ChartBuilder = (function (Elab) {
       return function () {
         var maxDate = chart.xScale.domain()[1];
         areaData[1] =
-          +areaData[1] > +maxDate ? maxDate : areaData[1];
+          !areaData[1] || +areaData[1] > +maxDate
+            ? maxDate
+            : areaData[1];
         selection
           .attr("x", chart.xScale(areaData[0]))
           .attr("y", 1)
@@ -2622,7 +2624,7 @@ Elab.Intro = (function (Elab) {
     var dateFormat = d3.timeFormat("%B %e");
     var moratorium = [cityData.start, cityData.end]
       .map(function (d) {
-        return dateFormat(d);
+        return d ? dateFormat(d) : "Ongoing";
       })
       .join(" - ");
     $("#evictionMoratorium").html(moratorium);
