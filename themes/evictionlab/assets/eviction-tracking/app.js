@@ -2260,9 +2260,21 @@ Elab.ChartBuilder = (function (Elab) {
         .enter()
         .append("path")
         .attr("class", "chart__line")
+        .attr("d", line)
+        .style("stroke-dasharray", function () {
+          return this.getTotalLength();
+        })
+        .style("stroke-dashoffset", function () {
+          return this.getTotalLength();
+        })
         .merge(selection)
         .transition()
-        .duration(1000)
+        .duration(2000)
+        .delay(400)
+        .style("stroke-dasharray", function () {
+          return this.getTotalLength();
+        })
+        .style("stroke-dashoffset", 0)
         .attr("d", line);
     };
     return this;

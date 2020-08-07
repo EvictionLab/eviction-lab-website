@@ -1487,7 +1487,7 @@ body {
 }
 
 .intro__figure .chart__bar {
-  fill: #cecfdc;
+  fill: #d1d2e0;
 }
 
 .intro__figure .chart__bar:last-child {
@@ -1496,6 +1496,7 @@ body {
 
 .intro__figure .chart__line {
   stroke: var(--c1);
+  stroke-width: 3;
 }
 
 .intro__figure .chart__pattern {
@@ -1562,7 +1563,7 @@ body {
   fill: #cecfdc;
 }
 .intro__figure .legend-item:nth-child(1) rect {
-  fill: #cecfdc;
+  fill: #d1d2e0;
 }
 .intro__figure .legend-item:nth-child(2) path {
   stroke-width: 4;
