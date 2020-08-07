@@ -2810,6 +2810,7 @@ Elab.ListPage = (function (Elab) {
   }
 
   function initHeroCount(locations) {
+    $("#cityCount").html(locations.length);
     var counterTotal = locations.reduce(function (sum, loc) {
       return sum + loc.cumulative;
     }, 0);
