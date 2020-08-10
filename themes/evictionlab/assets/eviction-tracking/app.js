@@ -109,6 +109,34 @@ Elab.Utils = (function (Elab) {
 
   var formatDate = d3.timeFormat("%B %e");
 
+  /**
+   * Executes a function once it enters the viewport
+   * @param {*} el 
+   * @param {*} handler 
+   * @param {*} options 
+   */
+  function callOnEnter(el, handler, options) {
+    options = options || { rootMargin: "0px 0px -40px 0px" };
+    if (!!window.IntersectionObserver) {
+      let observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              handler();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        options
+        
+      );
+      observer.observe(el);
+    } else {
+      // call immediately if IntersectionObserver is unavailable
+      handler();
+    }
+  }
+
   return {
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
@@ -117,6 +145,7 @@ Elab.Utils = (function (Elab) {
     createFacebookLink: createFacebookLink,
     formatLabel: formatLabel,
     formatDate: formatDate,
+    callOnEnter: callOnEnter
   };
 })(Elab);
 
@@ -1191,12 +1220,18 @@ Elab.Chart = (function (Elab) {
       render();
     }
 
-    update(config);
+    function initialRender() {
+      update(config);
+      // trigger re-render after a second to make sure size is right
+      setTimeout(function () {
+        render();
+      }, 500);
+    }
 
-    // trigger re-render after a second to make sure size is right
-    setTimeout(function () {
-      render();
-    }, 1000);
+    if (!elements) elements = initElements(root);
+    if (config) chartConfig = config;
+    parsedData = parseData(source, chartConfig);
+    Elab.Utils.callOnEnter(root.node(), initialRender)
 
     return {
       root: root,
@@ -1587,7 +1622,10 @@ Elab.Map = (function (Elab) {
           [bbox[0] - padding, bbox[1] - padding],
           [bbox[2] + padding, bbox[3] + padding],
         ];
-        map.fitBounds(bounds, { padding: 16 });
+        function zoomToLocation() {
+          map.fitBounds(bounds, { padding: 16 });
+        }
+        Elab.Utils.callOnEnter(map.getCanvasContainer(), zoomToLocation)
         d3.csv(dataUrl, function (data) {
           if (!data) {
             console.error("unable to load data from " + dataUrl);
@@ -2570,22 +2608,10 @@ Elab.ListPage = (function (Elab) {
         duration: 3.8,
       }
     );
-    if (!!window.IntersectionObserver) {
-      let observer = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              !count2.error && count2.start();
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { rootMargin: "0px 0px -40px 0px" }
-      );
-      observer.observe(document.getElementById("counterWeek"));
-    } else {
+    function startCounter() {
       !count2.error && count2.start();
     }
+    Elab.Utils.callOnEnter(document.getElementById("counterWeek"), startCounter)
   }
 
   /**
