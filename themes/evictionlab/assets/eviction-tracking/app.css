@@ -692,7 +692,7 @@ body {
 
 /** COUNTER */
 
-.counter .counter__context {
+.counter__context {
   display: block;
   max-width: 18rem;
   font-family: var(--body-font);
@@ -700,7 +700,7 @@ body {
   line-height: 1.5;
 }
 
-.counter .counter__number {
+.counter__number {
   display: inline-block;
   font-family: var(--number-font);
   font-weight: 600;
@@ -712,7 +712,7 @@ body {
   margin-right: 4px;
 }
 
-.counter .counter__label {
+.counter__label {
   display: block;
   font-family: var(--heading-font);
   font-size: 2em;
@@ -720,12 +720,12 @@ body {
   line-height: 1;
 }
 
-.counter .counter__label + .counter__context {
+.counter__label + .counter__context {
   margin-top: 0.8rem;
 }
 
 @media (min-width: 960px) {
-  .counter .counter__number {
+  .counter__number {
     font-size: 9.6rem;
   }
 }
@@ -780,7 +780,36 @@ body {
     background-size: contain;
   }
 }
+.hero.hero--ets .counter {
+  opacity:1;
+  transition: opacity 0.4s ease-in-out;
+}
+.hero.hero--ets.hero--loading .counter {
+  opacity:0;
+}
+
 /** END HERO WRAPPER */
+
+.hero__loader {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.hero--loading .hero__loader {
+  display: flex;
+}
+
+.hero__loader .spinner .spinner-border {
+  color: var(--c1);
+}
 
 /** HERO BACKGROUND */
 .hero.hero--ets svg {

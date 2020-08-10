@@ -2664,6 +2664,7 @@ Elab.ListPage = (function (Elab) {
         });
       // trigger hero animation
       $(".hero--ets").addClass("hero--start");
+      $(".hero--ets").removeClass("hero--loading");
       initHeroCount(locations);
       initWeeklyCount(locations);
     });
