@@ -137,6 +137,21 @@ Elab.Utils = (function (Elab) {
     }
   }
 
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
   return {
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
@@ -145,7 +160,8 @@ Elab.Utils = (function (Elab) {
     createFacebookLink: createFacebookLink,
     formatLabel: formatLabel,
     formatDate: formatDate,
-    callOnEnter: callOnEnter
+    callOnEnter: callOnEnter,
+    debounce: debounce
   };
 })(Elab);
 
@@ -1142,6 +1158,10 @@ Elab.Chart = (function (Elab) {
      * @param {*} els
      */
     function renderGraph(data, els, config) {
+      // render legend first, as it can add to chart height
+      config.legend &&
+        renderLegend(config.legend, data.items, config);
+
       // get parent width and height
       var rect = els.root
         .node()
@@ -1197,8 +1217,7 @@ Elab.Chart = (function (Elab) {
       renderFrame(data, config, context);
       config.content &&
         renderContentUpdates(config.content, config);
-      config.legend &&
-        renderLegend(config.legend, data.items, config);
+      
     }
 
     /**
@@ -1208,6 +1227,7 @@ Elab.Chart = (function (Elab) {
     function render() {
       renderGraph(parsedData, elements, chartConfig);
     }
+    var debouncedRender = Elab.Utils.debounce(render, 100);
 
     /**
      * Updates the chart's configuration
@@ -1217,15 +1237,16 @@ Elab.Chart = (function (Elab) {
       if (!elements) elements = initElements(root);
       if (newConfig) chartConfig = newConfig;
       parsedData = parseData(source, chartConfig);
-      render();
+      // use debounced render when updating, for performance
+      debouncedRender()
     }
 
     function initialRender() {
       update(config);
       // trigger re-render after a second to make sure size is right
-      setTimeout(function () {
-        render();
-      }, 500);
+      // setTimeout(function () {
+      //   render();
+      // }, 500);
     }
 
     if (!elements) elements = initElements(root);
