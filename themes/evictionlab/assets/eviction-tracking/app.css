@@ -234,11 +234,12 @@ body {
 
 .overline {
   position: relative;
+  padding-top: 16px;
 }
 .overline:before {
   content: "";
   position: absolute;
-  top: -16px;
+  top: 0px;
   height: 5px;
   width: 100%;
   left: 0;
@@ -974,8 +975,10 @@ body {
 .list-intro__count {
   padding: 3.2rem 2.4rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width:50%;
+
 }
 .list-intro__content {
   max-width: 42rem;
@@ -991,7 +994,6 @@ body {
     width: 40rem;
     position: absolute;
     left: 50%;
-    top: 4.8rem;
     margin-left: -44rem;
     justify-content: flex-start;
   }

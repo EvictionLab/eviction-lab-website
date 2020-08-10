@@ -426,6 +426,7 @@ Elab.Data = (function (Elab) {
           result[d.id] = {
             id: d.id,
             name: d.name,
+            city: d.name.split(",")[0],
             values: [
               [
                 parseDate(d["week_date"]),
@@ -436,6 +437,8 @@ Elab.Data = (function (Elab) {
             start: parseDate(d["start_moratorium_date"]),
             end: parseDate(d["end_moratorium_date"]),
             updated: parseDate(d["data_date"]),
+            subgroups: d["subgroups"] ? d["subgroups"].split(";") : null,
+            subgroup_values: d["subgroup_values"] ? d["subgroup_values"].split(";").map(function(d) { return parseInt(d) }) : null
           };
         } else {
           result[d.id].values.push([
@@ -2622,6 +2625,7 @@ Elab.Intro = (function (Elab) {
    */
   function initDataValues(cityData) {
     var dateFormat = d3.timeFormat("%B %e");
+    var numFormat = d3.format(",d");
     var moratorium = [cityData.start, cityData.end]
       .map(function (d) {
         return d ? dateFormat(d) : "Ongoing";
@@ -2629,13 +2633,37 @@ Elab.Intro = (function (Elab) {
       .join(" - ");
     $("#evictionMoratorium").html(moratorium);
     $("#filingsLastWeek").html(
-      "<span>" + cityData.lastWeek + "</span> filings last week*"
+      "<span>" + numFormat(cityData.lastWeek) + "</span> filings last week*"
     );
     $("#filingsCumulative").html(
       "<span>" +
-        cityData.cumulative +
+      numFormat(cityData.cumulative) +
         "</span> filings since Mar. 15"
     );
+    addSubgroupBreakdown(cityData)
+  }
+
+  /**
+   * Prepends a paragraph to the intro with a breakdown
+   * of all of the counties within the dataset.
+   * @param {*} cityData data from table.csv
+   */
+  function addSubgroupBreakdown(cityData) {
+    if (!cityData.subgroups || !cityData.subgroup_values || cityData.subgroups.length === 0) return;
+    var numFormat = d3.format(",d");
+    var templateData = Object.assign({}, cityData, { cumulative: numFormat(cityData.cumulative) })
+    var template = Handlebars.compile(
+      "<p>Of the {{cumulative}} filings in {{city}} since March 15th, " + 
+      "{{#each subgroups}}" +
+      "{{#if @last}}" + 
+      " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
+      "{{else}}" +
+      "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}},{{/if}}" +
+      "{{/if}}" +
+      "{{/each}}</p>"
+    )
+    var html = template(templateData)
+    $('#introText').prepend(html)
   }
 
   /**
@@ -2674,6 +2702,7 @@ Elab.ListPage = (function (Elab) {
    * @param {*} data
    */
   function getRowHtml(data, options) {
+    var numFormat = d3.format(",d");
     var rowTemplate = Handlebars.compile(
       '<tr class="table__row {{class}}" data-name="{{name}}" data-href="{{url}}">' +
         '<td class="table__cell table__cell--name">' +
@@ -2708,8 +2737,8 @@ Elab.ListPage = (function (Elab) {
       url:
         Elab.Utils.getCurrentURL() +
         Elab.Utils.slugify(data.name),
-      weekFilings: data.lastWeek,
-      cumulativeFilings: data.cumulative,
+      weekFilings: numFormat(data.lastWeek),
+      cumulativeFilings: numFormat(data.cumulative),
       tooltip: tooltipTemplate({
         date: Elab.Utils.formatDate(data.end),
       }),
