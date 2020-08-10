@@ -1,3 +1,9 @@
+{{ if eq (.Get `id`) "avg" }}
+{{ $.Scratch.Set "ariaLabel" "Bar chart showing average filings and filing counts by month" }}
+{{ end }}
+{{ if eq (.Get `id`) "race" }}
+{{ $.Scratch.Set "ariaLabel" "Bar chart showing average filings and filing counts by month grouped by neighborhood demographics" }}
+{{ end }}
 <section
   id="{{ .Get `id` }}"
   class="section section--chart section--{{ .Get `id` }}"
@@ -8,14 +14,7 @@
       <div class="visual__header">
         <h3 class="visual__title"></h3>
       </div>
-<svg class="chart" role="img" aria-labelledby="{{ .Get `id` }}FigureTitle">
-{{ if eq (.Get `id`) "avg" }}
-<title id="avgFigureTitle">Bar chart showing average filings and filing counts by month</title>
-{{ end }}
-{{ if eq (.Get `id`) "race" }}
-<title id="raceFigureTitle">Bar chart showing average filings and filing counts by month grouped by neighborhood demographics</title>
-{{ end }}
-</svg>
+      <svg class="chart" role="img" aria-label="{{ $.Scratch.Get `ariaLabel` }}"></svg>
       <div class="visual__note"></div>
       <div class="visual__toggle">
         <div class="button-group">
