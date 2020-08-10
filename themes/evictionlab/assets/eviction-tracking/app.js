@@ -758,25 +758,6 @@ Elab.Chart = (function (Elab) {
       .html(render);
   }
 
-  /**
-   * Renders the tooltip and hoverline
-   * @param {*} items
-   * @param {*} els
-   * @param {*} event
-   */
-  function renderHoverLine(position, context) {
-    context.els.hoverLine
-      .attr(
-        "class",
-        "chart__marker-line chart__marker-line--hover"
-      )
-      .attr("style", "transform: translateX(" + position + "px)")
-      .attr("x1", 0)
-      .attr("x2", 0)
-      .attr("y1", 0)
-      .attr("y2", context.height);
-  }
-
   function Chart(source, root, config) {
     // options
     config = config || {};
@@ -950,138 +931,7 @@ Elab.Chart = (function (Elab) {
         })
         .remove();
 
-      var groupDots = groupEls
-        .selectAll("circle")
-        .data(function (d) {
-          return config.dots ? d.data : [];
-        });
-
-      groupDots
-        .enter()
-        .append("circle") // add bars for new groups
-        .attr("class", function (d, i) {
-          return "chart__dot chart__dot--" + i;
-        })
-        .attr("r", 0)
-        .attr("cx", function (d) {
-          return x1(d.id) + x1.bandwidth() / 2;
-        })
-        .attr("cy", function (d) {
-          return context.y(0);
-        })
-        .merge(groupBars) // merge existing bars for update
-        .transition()
-        .delay(function (d, i) {
-          return i * 100;
-        })
-        .duration(1000)
-        .attr("r", 4)
-        .attr("cx", function (d) {
-          return x1(d.id) + x1.bandwidth() / 2;
-        })
-        .attr("cy", function (d) {
-          return context.y(d.value.extras[config.dots]);
-        });
-
-      // remove dots
-      groupDots
-        .exit()
-        .transition()
-        .duration(1000)
-        .attr("r", 0)
-        .attr("cx", function (d) {
-          return x1(d.id) + x1.bandwidth() / 2;
-        })
-        .attr("cy", function (d) {
-          return context.y(0);
-        })
-        .remove();
-
-      var groupDots = groupEls
-        .selectAll("circle")
-        .data(function (d) {
-          return config.dots ? d.data : [];
-        });
-
-      groupDots
-        .enter()
-        .append("circle") // add bars for new groups
-        .attr("class", function (d, i) {
-          return "chart__dot chart__dot--" + i;
-        })
-        .attr("r", 0)
-        .attr("cx", function (d) {
-          return x1(d.id) + x1.bandwidth() / 2;
-        })
-        .attr("cy", function (d) {
-          return context.y(0);
-        })
-        .merge(groupBars) // merge existing bars for update
-        .transition()
-        .delay(function (d, i) {
-          return i * 100;
-        })
-        .duration(1000)
-        .attr("r", 4)
-        .attr("cx", function (d) {
-          return x1(d.id) + x1.bandwidth() / 2;
-        })
-        .attr("cy", function (d) {
-          return context.y(d.value.extras[config.dots]);
-        });
-
-      // remove dots
-      groupDots
-        .exit()
-        .transition()
-        .duration(1000)
-        .attr("r", 0)
-        .attr("cx", function (d) {
-          return x1(d.id) + x1.bandwidth() / 2;
-        })
-        .attr("cy", function (d) {
-          return context.y(0);
-        })
-        .remove();
-
       group.exit().remove();
-    }
-
-    /**
-     * Renders lines for the data
-     * @param {*} data
-     * @param {*} config
-     * @param {*} context
-     */
-    function renderLines(data, config, context) {
-      // setup line generation function
-      var line = d3
-        .line()
-        .x(function (d) {
-          return context.x(d.x);
-        })
-        .y(function (d) {
-          return context.y(d.y);
-        });
-
-      // lines
-      var lines = context.els.data
-        .selectAll(".chart__line")
-        .data(data.items);
-
-      lines
-        .enter()
-        .append("path")
-        .attr("class", function (d, i) {
-          return "chart__line chart__line--" + d.idx;
-        })
-        .merge(lines)
-        .datum(function (d) {
-          return d.data;
-        })
-        .transition()
-        .duration(1000)
-        .attr("d", line);
     }
 
     /**
@@ -1113,80 +963,6 @@ Elab.Chart = (function (Elab) {
         .transition()
         .duration(1000)
         .call(xAxis);
-    }
-
-    /**
-     * Renders the mark lines
-     * @param {*} data
-     * @param {*} config
-     * @param {*} context
-     */
-    function renderAreaLines(data, config, context) {
-      // setup mark line data
-      var markLineData = [];
-      if (
-        data.area[0] > context.xExtent[0] &&
-        data.area[0] < context.xExtent[1]
-      )
-        markLineData.push({
-          point: data.area[0],
-          lines: ["start of", "moratorium"],
-        });
-      if (
-        data.area[1] > context.xExtent[0] &&
-        data.area[1] < context.xExtent[1]
-      )
-        markLineData.push({
-          point: data.areaEnd,
-          lines: ["end of", "moratorium"],
-        });
-
-      // moratorium lines
-      var markLine = context.els.markLines
-        .selectAll(".chart__mark-line")
-        .data(markLineData);
-      markLine
-        .enter()
-        .append("line")
-        .attr("class", "chart__mark-line")
-        .merge(markLine)
-        .attr("x1", function (d) {
-          return context.x(d.point);
-        })
-        .attr("x2", function (d) {
-          return context.x(d.point);
-        })
-        .attr("y1", 0)
-        .attr("y2", context.height + 32);
-
-      // moratorium labels
-      var markLabel = context.els.markLines
-        .selectAll(".chart__mark-label")
-        .data(markLineData);
-      markLabel
-        .enter()
-        .append("text")
-        .attr("class", "chart__mark-label")
-        .merge(markLabel)
-        .html(function (d) {
-          return d.lines
-            .map(function (l, i) {
-              return (
-                '<tspan text-anchor="middle" dx="0" dy="' +
-                i * 16 +
-                '">' +
-                l +
-                "</tspan>"
-              );
-            })
-            .join("");
-        })
-        .attr("text-anchor", "middle")
-        .attr("alignment-baseline", "middle")
-        .attr("x", function (d) {
-          return context.x(d.point);
-        })
-        .attr("y", context.height + 44);
     }
 
     function renderMarkLine(data, config, context) {
@@ -1275,24 +1051,6 @@ Elab.Chart = (function (Elab) {
         .remove();
     }
 
-    /**
-     * Renders the mark area
-     * @param {*} data
-     * @param {*} config
-     * @param {*} context
-     */
-    function renderMarkArea(data, config, context) {
-      // moratorium area rect
-      context.els.area
-        .attr("x", context.x(data.markArea[0]))
-        .attr("y", 0)
-        .attr(
-          "width",
-          context.x(data.markArea[1]) -
-            context.x(data.markArea[0])
-        )
-        .attr("height", context.height);
-    }
 
     /**
      * Renders the outline of the chart
@@ -1307,46 +1065,6 @@ Elab.Chart = (function (Elab) {
         .attr("y", 0)
         .attr("width", context.width + 1)
         .attr("height", context.height + 1);
-    }
-
-    /**
-     * Renders the hover area and add event handlers for tooltip
-     * @param {*} data
-     * @param {*} config
-     * @param {*} context
-     */
-    function renderHoverArea(data, config, context) {
-      var bisectX = d3.bisector(function (d) {
-        return d.x;
-      }).right;
-
-      var handleHover = function handleHover() {
-        renderHoverLine(position, conext);
-        renderBarTooltip(
-          title,
-          items,
-          context,
-          config.format.tooltip,
-          config.id
-        );
-      };
-
-      var handleHoverOut = function handleHoverOut() {
-        if (context.els.tooltip)
-          context.els.tooltip.style("display", "none");
-        if (context.els.hoverLine)
-          context.els.hoverLine.attr(
-            "class",
-            "chart__marker-line"
-          );
-      };
-
-      context.els.hoverArea
-        .attr("width", context.width)
-        .attr("height", context.height)
-        .attr("opacity", 0)
-        .on("mousemove", handleHover)
-        .on("mouseout", handleHoverOut);
     }
 
     function renderContentUpdates(content, config) {
@@ -1420,10 +1138,6 @@ Elab.Chart = (function (Elab) {
         1
       );
 
-      var xTimeScale = d3
-        .scaleTime()
-        .rangeRound([0, width])
-        .domain(xExtent);
       var xBandScale = d3
         .scaleBand()
         .rangeRound([0, width])
@@ -1431,15 +1145,8 @@ Elab.Chart = (function (Elab) {
         .domain(xBands);
 
       // setup scales
-      var x =
-        config.view.type === "line" ? xTimeScale : xBandScale;
-      var y =
-        config.view.type === "line"
-          ? d3
-              .scaleLinear()
-              .rangeRound([height, 0])
-              .domain(yExtent)
-          : d3
+      var x = xBandScale;
+      var y = d3
               .scaleLinear()
               .rangeRound([height, 0])
               .domain([0, yExtent[1]]);
@@ -1456,17 +1163,8 @@ Elab.Chart = (function (Elab) {
       };
 
       renderAxis(data, config, context);
-      config.data.markArea &&
-        renderMarkArea(data, config, context);
-      config.data.markArea &&
-        renderAreaLines(data, config, context);
-      config.view.type === "line" &&
-        renderLines(data, config, context);
-      config.view.type === "bar" &&
-        renderBars(data, config, context);
+      renderBars(data, config, context);
       config.markLines && renderMarkLine(data, config, context);
-      config.view.type === "line" &&
-        renderHoverArea(data, config, context);
       renderFrame(data, config, context);
       config.content &&
         renderContentUpdates(config.content, config);
@@ -2752,6 +2450,7 @@ Elab.ListPage = (function (Elab) {
     var height = 32;
     var margin = 4;
     var values = data.values;
+    var endLineDate = data.end;
     // remove latest week from values
     // as it does not reflect the full set of filings
     values.pop();
@@ -2810,15 +2509,17 @@ Elab.ListPage = (function (Elab) {
       .datum(values)
       .attr("class", "trend-line__path")
       .attr("d", line);
-  }
 
-  function renderDate(data) {
-    $("#reportDate").html(
-      "Week of " +
-        d3.timeFormat("%B %d, %Y")(
-          data.values[data.values.length - 1][0]
-        )
-    );
+    console.log('endline', endLineDate, xScale(endLineDate), xScale.domain()[1])
+    if (endLineDate && +endLineDate < +xScale.domain()[1]) {
+      svg.append("line")
+        .attr("class", "trend-line__moratorium-end")
+        .attr("x1", xScale(endLineDate))
+        .attr("x2", xScale(endLineDate))
+        .attr("y1", 0)
+        .attr("y2", height)
+    }
+
   }
 
   /**
