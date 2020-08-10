@@ -2208,7 +2208,7 @@ Elab.Intro = (function (Elab) {
           chart.getInnerHeight() +
           " h " +
           (chart.getInnerWidth() + 8) +
-          " v 88 h -46"
+          " v 94 h -46"
         );
       }
       return function () {
@@ -2231,7 +2231,7 @@ Elab.Intro = (function (Elab) {
           barPosition +
           "," +
           chart.getInnerHeight() +
-          " v 50 h -12"
+          " v 61 h -12"
         );
       }
       return function () {

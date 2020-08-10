@@ -707,6 +707,7 @@ body {
   color: var(--c1);
   font-size: 8rem;
   letter-spacing: -0.1em;
+  letter-spacing: -0.07em;
   line-height: 1;
   margin-left: -4px;
   margin-right: 4px;
@@ -1441,7 +1442,7 @@ body {
   width: 100%;
   max-width: 600px;
   padding: 0;
-  margin: 24px auto 208px;
+  margin: 24px auto 224px;
 }
 
 @media (min-width: 600px) {
@@ -1487,6 +1488,11 @@ body {
   fill: none;
   stroke: #f4f7f9;
   stroke-width: 3;
+}
+
+.intro__figure .chart__root {
+  /* increasing svg height to account for extended lines dropping down from graph */
+  height: 326px;
 }
 
 .intro__figure .chart__axis--time .domain,
@@ -1557,10 +1563,12 @@ body {
   position: absolute;
   left: 40px;
   top: calc(100% + 40px);
+  margin-top: 8px;
 }
 @media (min-width: 600px) {
   .intro__figure-legend {
     top: calc(100% - 48px);
+    margin-top: 0;
   }
 }
 .intro__figure .legend-item {
@@ -1574,7 +1582,7 @@ body {
 
 /** LEGEND VISUAL REFERENCE */
 .intro__figure .legend-item__visual {
-  margin-right: 8px;
+  margin-right: 12px;
 }
 .intro__figure .legend-item__pattern {
   fill: #cecfdc;
@@ -1597,7 +1605,7 @@ body {
 .intro__figure-stats {
   position: absolute;
   right: 44px;
-  bottom: -15px;
+  bottom: -24px;
 }
 .intro__figure-stats > p {
   background: #f7f9fb;
@@ -1622,19 +1630,21 @@ body {
 }
 
 .intro__figure-footnote {
-  margin-top: 156px;
+  margin-top: 160px;
   padding: 0 40px;
   color: var(--text-secondary);
   max-width: 532px;
+  /* Aligning this left
   margin-left: auto;
   margin-right: auto;
+  */
   font-size: 1.4rem;
   line-height: 1.5;
 }
 
 @media (min-width: 600px) {
   .intro__figure-footnote {
-    margin-top: 72px;
+    margin-top: 64px;
   }
 }
 
