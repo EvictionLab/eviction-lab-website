@@ -11,13 +11,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="09001" data="/uploads/table.csv" %}}
 
-
-
-Eviction filings in Bridgeport, CT have fallen sharply since .... Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average in March, April, and May. Eviction protections in Connecticut began to expire on ....
+Eviction filings in Bridgeport, CT (Fairfield County) are significantly below average during the COVID-19 pandemic period. Compared to equivalent periods in previous years (2017–2019), eviction filings fell dramatically with the establishment of a state-wide eviction moratorium on April 10. Eviction protections in Connecticut began to expire at the end of August. 
 
 More detail on eviction protections in Connecticut can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ct/).
-
-
 
 {{%/ report_intro %}}
 
@@ -25,15 +21,11 @@ More detail on eviction protections in Connecticut can be found on the [COVID-19
 
 {{% report_chart id="avg" data="/uploads/fairfield_barchart.csv" %}}
 
-
-
 # Changes in eviction filings
 
-Eviction filings in Bridgeport were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March, and filings by and large ceased in April and May. 
+Eviction filings in Bridgeport were slightly below average in January, February, and March of this year.<sup>1</sup> Filings dropped precipitously in April and have remained low since then. 
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2016
-2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-
+1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
 
 
 {{%/ report_chart %}}
@@ -42,16 +34,12 @@ Eviction filings in Bridgeport were higher than average in January and February 
 
 {{% report_map shapes="/uploads/bridgeport_shapes.json" data="/uploads/fairfield_map.csv" %}}
 
-
-
 # The geography of changes in eviction filings
 
-Bridgeport is made up of ... Census Tracts. In each of those Tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
+Bridgeport is made up of 211 Census Tracts. In each of those Tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2016
+1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
 
 {{%/ report_map %}}
 
@@ -61,13 +49,17 @@ Bridgeport is made up of ... Census Tracts. In each of those Tracts, we map evic
 
 
 
+
+
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. Most evictions in Bridgeport are filed in majority-Black neighborhoods. Since March, eviction filings have dropped steeply across all neighborhoods.
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016.
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2017–2019.
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2016
+1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
+
+
 
 
 
