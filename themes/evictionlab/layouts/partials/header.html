@@ -73,7 +73,7 @@
 		{{ else }}
 		<meta name="twitter:image" content="https://evictionlab.org/tool/assets/images/el-twitter-img.jpg" />
 		{{ end }}
-
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=Object.values%2CObject.assign%2CArray.prototype.find%2CArray.prototype.filter%2CArray.prototype.forEach%2CArray.prototype.indexOf%2CArray.prototype.map%2CArray.prototype.reduce"></script>
 		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -81,8 +81,6 @@
 
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6135894/6199192/css/fonts.css">
 		<link rel="stylesheet" type="text/css" href="/css/lib.min.css"/>
-
-
 
     {{ if .Site.IsServer }}
       <!-- If site is being served (ostensibly dev) don't compress and minify -->

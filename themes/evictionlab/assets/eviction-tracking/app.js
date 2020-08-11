@@ -118,9 +118,9 @@ Elab.Utils = (function (Elab) {
   function callOnEnter(el, handler, options) {
     options = options || { rootMargin: "0px 0px -40px 0px" };
     if (!!window.IntersectionObserver) {
-      let observer = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
+      var observer = new IntersectionObserver(
+        function(entries, observer) {
+          entries.forEach(function(entry) {
             if (entry.isIntersecting) {
               handler();
               observer.unobserve(entry.target);
@@ -128,7 +128,6 @@ Elab.Utils = (function (Elab) {
           });
         },
         options
-        
       );
       observer.observe(el);
     } else {
@@ -1014,7 +1013,7 @@ Elab.Chart = (function (Elab) {
       // y axis mark lines
       var markLine = context.els.markLines
         .selectAll(".chart__mark-line--y")
-        .data(config.markLines.filter((v) => v.labelOnly));
+        .data(config.markLines.filter(function(v) { return v.labelOnly }));
 
       markLine
         .enter()
@@ -2277,8 +2276,8 @@ Elab.Intro = (function (Elab) {
     }
     function createBarMarkerRenderFunction(selection, chart) {
       function draw() {
-        const lastDate = chart.data[chart.data.length - 1][0];
-        const barPosition = chart.xScale(
+        var lastDate = chart.data[chart.data.length - 1][0];
+        var barPosition = chart.xScale(
           d3.timeDay.offset(lastDate, 4)
         );
         return (
@@ -2652,7 +2651,7 @@ Elab.ListPage = (function (Elab) {
       });
       // add trend lines
       bodyEl.find(".trend-line").each(function (idx) {
-        var id = this.dataset.visual;
+        var id = this.getAttribute('data-visual');
         var cityData = locations.find(function (l) {
           return l.id === id;
         });

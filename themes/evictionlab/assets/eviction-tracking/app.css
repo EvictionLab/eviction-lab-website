@@ -11,7 +11,7 @@
  */
 
 /** Website overrides */
-body {
+:root {
   --c1: #e24000;
   --c2: #434878;
   --c3: #2c897f;
@@ -175,14 +175,14 @@ body {
 }
 
 .layout > .column--content {
-  flex: 1;
+  /* flex: 1; */
   max-width: 100%;
   width: 100%;
 }
 
 @media (min-width: 680px) {
   .layout > .column--content {
-    max-width: 640px;
+    /* max-width: 640px; */
   }
 }
 
