@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Fort Worth, Texas
 slug: fort-worth-tx
 date: 2020-05-13T00:00:00.000Z
