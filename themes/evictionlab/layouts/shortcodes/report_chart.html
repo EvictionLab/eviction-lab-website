@@ -1,11 +1,20 @@
-<section id="{{ .Get `id` }}" class="section section--chart section--{{ .Get `id` }}">
+{{ if eq (.Get `id`) "avg" }}
+{{ $.Scratch.Set "ariaLabel" "Bar chart showing average filings and filing counts by month" }}
+{{ end }}
+{{ if eq (.Get `id`) "race" }}
+{{ $.Scratch.Set "ariaLabel" "Bar chart showing average filings and filing counts by month grouped by neighborhood demographics" }}
+{{ end }}
+<section
+  id="{{ .Get `id` }}"
+  class="section section--chart section--{{ .Get `id` }}"
+>
   <div class="section__content">
     <div class="details">{{ .Inner }}</div>
     <div class="visual">
       <div class="visual__header">
         <h3 class="visual__title"></h3>
       </div>
-      <svg class="chart"></svg>
+      <svg class="chart" role="img" aria-label="{{ $.Scratch.Get `ariaLabel` }}"></svg>
       <div class="visual__note"></div>
       <div class="visual__toggle">
         <div class="button-group">
@@ -28,6 +37,5 @@
       var rootEl = '#'+id
       Elab.Section.init('chart', rootEl, { id: id, csv: csv })
     });
-    </script>
+  </script>
 </section>
-
