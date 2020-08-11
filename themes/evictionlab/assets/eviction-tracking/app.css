@@ -1376,7 +1376,7 @@ body {
 .intro {
   position: relative;
   margin: auto;
-  padding: 48px 24px;
+  padding: 48px 24px 72px;
   max-width: 1226px;
 }
 .intro .layout {
@@ -1581,8 +1581,14 @@ body {
 }
 
 /** LEGEND VISUAL REFERENCE */
+
 .intro__figure .legend-item__visual {
   margin-right: 12px;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .intro__figure .legend-item__visual {
+    margin-right: 12px;
+  }
 }
 .intro__figure .legend-item__pattern {
   fill: #cecfdc;
@@ -1848,6 +1854,15 @@ body {
 }
 .legend-item__label {
   margin-bottom: 0;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .legend-item__label {
+    max-width: 192px;
+    line-height: 1.14;
+  }
+  .legend-item {
+    margin-bottom: 12px;
+  }
 }
 .legend-choropleth__title span,
 .legend-item__label span {
