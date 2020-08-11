@@ -86,7 +86,7 @@ function emptyCovidTable() {
  */
 function populateCovidRows(items) {
   // console.log('populateCovidRows()');
-  items.forEach((item) => {
+  items.forEach(function(item) {
     if (String(item.linktosourcenewspressreleaseetc).length > 30) {
       item.linktruncated = (item.linktosourcenewspressreleaseetc).trim().substring(0, 30)+ "...";
     }

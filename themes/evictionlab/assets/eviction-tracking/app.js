@@ -50,9 +50,23 @@ Elab.Utils = (function (Elab) {
    * @param {*} varName
    */
   function getCssVar(varName) {
-    return getComputedStyle(document.body).getPropertyValue(
+    var map = {
+      "--choro1": "#434878",
+      "--choro2": "#c1c5ea",
+      "--choro3": "rgba(241, 241, 241, 0.7)",
+      "--choro4": "#e99c7e",
+      "--choro5": "#e24000",
+      "--choroStroke1": "#212656",
+      "--choroStroke2": "#a0a3c8",
+      "--choroStroke3": "rgba(155, 155, 155, 0.7)",
+      "--choroStroke4": "#c77a5c",
+      "--choroStroke5": "#c02000"
+    }
+    var value = getComputedStyle(document.body).getPropertyValue(
       varName
     );
+    // fallback to map value if no CSS var set
+    return value ? value : map[varName]
   }
 
   /**

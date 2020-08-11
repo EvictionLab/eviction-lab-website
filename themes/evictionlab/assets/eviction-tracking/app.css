@@ -180,11 +180,13 @@
   width: 100%;
 }
 
+/** other content pages */
 @media (min-width: 680px) {
   .layout > .column--content {
-    /* max-width: 640px; */
+    max-width: 640px;
   }
 }
+
 
 .layout > .column--content p:last-child {
   margin-bottom: 0;
@@ -1133,13 +1135,13 @@
   padding-top: 7.2em;
 }
 @media (min-width: 1024px) {
-  .list-crisis .column {
+  .list-crisis .layout > .column {
     max-width: 95em;
     column-gap: 5.6rem;
   }
 }
 @media (min-width: 1280px) {
-  .list-crisis .column {
+  .list-crisis .layout > .column {
     max-width: 100rem;
     column-gap: 8rem;
     padding-top: 8rem;
