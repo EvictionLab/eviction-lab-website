@@ -11,19 +11,17 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="09003" data="/uploads/table.csv" %}}
 
-
-
-Eviction filings in Hartford, CT have fallen sharply since .... Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average in March, April, and May. Eviction protections in Connecticut began to expire on ....
+Eviction filings in Hartford, CT (Hartford County) are significantly below average since a state-wide eviction moratorium was instituted in April. Eviction protections in the state began to expire at the end of August. 
 
 More detail on eviction protections in Connecticut can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ct/).
-
-
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/hartford_barchart.csv" %}}
+
+
 
 
 
@@ -36,11 +34,15 @@ Eviction filings in Hartford were higher than average in January and February of
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/hartford_shapes.json" data="/uploads/hartford_map.csv" %}}
+
+
 
 
 
@@ -53,11 +55,15 @@ Hartford is made up of ... Census Tracts. In each of those Tracts, we map evicti
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/hartford_linechart.csv" %}}
+
+
 
 
 
@@ -68,6 +74,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016.
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
+
+
 
 
 
