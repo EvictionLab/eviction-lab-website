@@ -1,23 +1,31 @@
 ---
 collection: true
 draft: true
-title: Gainesville Florida | Eviction Tracking System
-fbImage: /images/assets/graphics/ets-bg-social.png
-twImage: /images/assets/graphics/ets-bg-social.png
 h1: Gainesville, Florida
 slug: gainesville-fl
 date: 2020-06-03T00:00:00.000Z
+twImage: /images/assets/graphics/ets-bg-social.png
+title: Gainesville Florida | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="12001" data="/uploads/table.csv" %}}
+
+
 
 Eviction filings in Gainesville have fallen sharply in the last two months. Compared to equivalent periods in previous years (2012–2015), eviction filings were down 95% or more in April and May. 
 
 More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
 
+
+
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/uploads/gainesville_barchart.csv" %}}
+
+
+{{% report_chart id="avg" data="/uploads/alachua_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -26,10 +34,15 @@ Eviction filings in Gainesville were higher than average in January and February
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 
+
+
 {{%/ report_chart %}}
 
 
-{{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/gainesville_map.csv" %}}
+
+{{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/alachua_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -38,10 +51,15 @@ Gainesville is divided into 174 Census Tracts. Here we map, in each of those Tra
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
 
-{{% report_chart id="race" data="/uploads/gainesville_linechart.csv" %}}
+
+{{% report_chart id="race" data="/uploads/alachua_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -50,5 +68,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2015.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
+
+
 
 {{%/ report_chart %}}
