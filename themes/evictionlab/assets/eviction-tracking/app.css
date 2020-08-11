@@ -711,6 +711,7 @@ body {
   line-height: 1;
   margin-left: -4px;
   margin-right: 4px;
+  margin-bottom: 4px;
 }
 
 .counter .counter__label {
