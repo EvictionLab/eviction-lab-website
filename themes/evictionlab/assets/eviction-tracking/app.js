@@ -2504,12 +2504,10 @@ Elab.ListPage = (function (Elab) {
     var width = 64;
     var height = 32;
     var margin = 4;
-    var values = data.values;
-    var endLineDate = data.end;
     // remove latest week from values
     // as it does not reflect the full set of filings
-    values.pop();
-
+    var values = data.values.filter(function(v,i) { return i !== data.values.length-1; });
+    var endLineDate = data.end;
     var xExtent = d3.extent(values, function (v) {
       return v[0];
     });
@@ -2565,7 +2563,6 @@ Elab.ListPage = (function (Elab) {
       .attr("class", "trend-line__path")
       .attr("d", line);
 
-    console.log('endline', endLineDate, xScale(endLineDate), xScale.domain()[1])
     if (endLineDate && +endLineDate < +xScale.domain()[1]) {
       svg.append("line")
         .attr("class", "trend-line__moratorium-end")
