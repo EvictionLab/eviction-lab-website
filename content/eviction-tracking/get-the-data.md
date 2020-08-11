@@ -28,55 +28,75 @@ data:
   - site: All Sites
     years: "-"
     geo: Census Tract / ZIP Code
-    file: /uploads/all_sites_20200801.csv
+    file: /uploads/all_sites_20200808.csv
   - site: Austin
     years: 2014-2019
     geo: ZIP Code
-    file: /uploads/austin_20200801.csv
+    file: /uploads/austin_20200808.csv
   - site: Boston
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/boston_20200801.csv
+    file: /uploads/boston_20200808.csv
+  - site: Bridgeport
+    years: 2017-2019
+    geo: Census Tract
+    file: /uploads/fairfield_20200808.csv
   - site: Cincinnati
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/cincinnati_20200725.csv
+    file: /uploads/cincinnati_20200801.csv
   - site: Cleveland
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/cleveland_20200801.csv
+    file: /uploads/cleveland_20200808.csv
   - site: Columbus
     years: 2012, 2013, 2015
     geo: Census Tract
-    file: /uploads/franklin_20200801.csv
+    file: /uploads/franklin_20200808.csv
+  - site: Fort Worth
+    years: 2018-2019
+    geo: Census Tract
+    file: /uploads/tarrant_20200808.csv
+  - site: Gainesville
+    years: 2017-2019
+    geo: Census Tract
+    file: /uploads/alachua_20200808.csv
+  - site: Hartford
+    years: 2017-2019
+    geo: Census Tract
+    file: /uploads/hartford_20200808.csv
   - site: Houston
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/houston_20200801.csv
+    file: /uploads/houston_20200808.csv
   - site: Jacksonville
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/duval_20200801.csv
+    file: /uploads/duval_20200808.csv
   - site: Kansas City
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/jackson_20200801.csv
+    file: /uploads/jackson_20200808.csv
   - site: Milwaukee
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/milwaukee_20200801.csv
+    file: /uploads/milwaukee_20200808.csv
+  - site: Phoenix
+    years: 2015-2019
+    geo: Census Tract
+    file: /uploads/maricopa_20200801.csv
   - site: Pittsburgh
     years: 2012-2019
     geo: ZIP Code
-    file: /uploads/allegheny_20200801.csv
+    file: /uploads/allegheny_20200808.csv
   - site: Richmond
     years: "2016"
     geo: ZIP Code
-    file: /uploads/richmond_20200801.csv
+    file: /uploads/richmond_20200808.csv
   - site: St Louis
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/stlouis_20200801.csv
+    file: /uploads/stlouis_20200808.csv
 ---
 Sample code:
 
