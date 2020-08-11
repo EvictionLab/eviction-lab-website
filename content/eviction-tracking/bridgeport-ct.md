@@ -13,9 +13,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 Eviction filings in Bridgeport, CT (Fairfield County) are significantly below average since a state-wide eviction moratorium was instituted in April. Eviction protections in the state began to expire at the end of August. 
 
 More detail on eviction protections in Connecticut can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ct/).
+
+
 
 
 
@@ -24,6 +28,8 @@ More detail on eviction protections in Connecticut can be found on the [COVID-19
 
 
 {{% report_chart id="avg" data="/uploads/fairfield_barchart.csv" %}}
+
+
 
 
 
@@ -44,6 +50,8 @@ Eviction filings in Bridgeport were slightly below average in January, February,
 
 
 
+
+
 {{%/ report_chart %}}
 
 
@@ -52,7 +60,7 @@ Eviction filings in Bridgeport were slightly below average in January, February,
 
 # The geography of changes in eviction filings
 
-Bridgeport is made up of 211 Census Tracts. In each of those tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
+Fairfield county is made up of 211 Census Tracts. In each of those tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
@@ -67,6 +75,8 @@ Bridgeport is made up of 211 Census Tracts. In each of those tracts, we map evic
 
 
 
+
+
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. Under normal circumstances, most evictions in Bridgeport are filed in neighborhoods that have no racial majority. Since March, eviction filings have dropped steeply across all neighborhoods.
@@ -74,6 +84,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2017–2019.
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
+
+
 
 
 
