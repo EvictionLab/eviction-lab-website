@@ -11,9 +11,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="48439" data="/uploads/table.csv" %}}
 
+
+
 Eviction filings in Tarrant County, TX (Fort Worth) fell sharply when eviction proceedings were suspended across Texas on March 19. Eviction protections in Texas began to expire on May 18, and new filings have steadily increased over the summer. 
 
 More detail on eviction protections in Texas can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/tx/).
+
+
 
 {{%/ report_intro %}}
 
@@ -25,7 +29,7 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 Eviction filings in Fort Worth were higher than average in January and February of this year.<sup>1</sup> That pattern reversed in March, and new filings were 96% below average in April. Filings have increased steadily since then. 
 
-1. Eviction filings data for 2014-2019 collected by ...
+1. Eviction filings data for 2018-2019 collected by January 
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 
 {{%/ report_chart %}}
@@ -34,6 +38,8 @@ Eviction filings in Fort Worth were higher than average in January and February 
 
 {{% report_map shapes="/uploads/fort-worth_shapes.json" data="/uploads/tarrant_map.csv" %}}
 
+
+
 # The geography of changes in eviction filings
 
 Travis County is divided into 357 Census tracts. Here we map, in each of those tracts, eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across the city.
@@ -41,11 +47,15 @@ Travis County is divided into 357 Census tracts. Here we map, in each of those t
 1. Eviction filings data for 2014-2019 for Travis county were collected by ... Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/).
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/tarrant_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -54,5 +64,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2014-2019.
 
 1. Eviction filings data for 2014-2019 for Travis county were collected by ... Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/).
+
+
 
 {{%/ report_chart %}}
