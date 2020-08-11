@@ -1238,21 +1238,17 @@ Elab.Chart = (function (Elab) {
       if (newConfig) chartConfig = newConfig;
       parsedData = parseData(source, chartConfig);
       // use debounced render when updating, for performance
-      debouncedRender()
+      render()
     }
 
     function initialRender() {
-      update(config);
-      // trigger re-render after a second to make sure size is right
-      // setTimeout(function () {
-      //   render();
-      // }, 500);
+      update(config)
     }
 
     if (!elements) elements = initElements(root);
     if (config) chartConfig = config;
     parsedData = parseData(source, chartConfig);
-    Elab.Utils.callOnEnter(root.node(), initialRender)
+    Elab.Utils.callOnEnter(root.node().parentNode, initialRender)
 
     return {
       root: root,
