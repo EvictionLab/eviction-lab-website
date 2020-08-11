@@ -26,6 +26,8 @@ similar: >-
   * January Advisors has built a [dashboard tracking eviction cases in Harris County, TX](https://www.januaryadvisors.com/evictions/).
 
   * SLC Renters Together has developed a [map of evictions in Salt Lake City](https://housing.saltlakedsa.org/eviction-map).
+
+  * The Legal Aid Justice Center in Charlottesville, VA has developed a [dashboard and map tracking eviction filings in Virginia](https://www.justice4all.org/virginia-eviction-tracker/)
 ---
 # Acknowledgements
 
