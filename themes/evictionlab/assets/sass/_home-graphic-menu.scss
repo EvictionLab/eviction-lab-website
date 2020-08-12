@@ -122,6 +122,11 @@
         }
         @include media-breakpoint-up(xl) {
             background-position: 68% 2rem;
+            background-size: 70%;
+        }
+        @include media-breakpoint-up(xxxl) {
+            background-position: 68% 2rem;
+            background-size: 55%;
         }
             &:hover {
                 //background-color: #eef5fb;
@@ -149,6 +154,9 @@
         @include media-breakpoint-up(md) {
             background-size: 80%;
         }
+        @include media-breakpoint-up(xxxl) {
+            background-size: 66%;
+        }
     }
     .main-feature {
         padding: 19rem 0 3.2rem;
@@ -162,6 +170,7 @@
             padding: 28rem 0 3.2rem;
         }
         a.sublink {
+            letter-spacing: 0.01rem;
             i.fa.fa-chevron-right {
                 position: relative;
                 top: 2px;
