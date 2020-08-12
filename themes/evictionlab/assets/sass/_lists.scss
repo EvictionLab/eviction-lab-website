@@ -73,7 +73,10 @@
     border-top: 5px solid;
     padding-top: 10px;
     letter-spacing: 0.1rem;
-    } 
+    }
+  @include media-breakpoint-up(xl) {
+    @include altFont(2rem);
+  }   
   .subhead-rt {
     float: right;
     color: inherit;
@@ -248,7 +251,7 @@
         margin-bottom: 0.8rem;
       }
       @include for-phone-only {
-        @include defaultFontBold($fontSizeExtraSmall);
+        @include defaultFontBold(1.2rem);
         letter-spacing: 0rem;
         flex-grow: 3;
       }
@@ -427,27 +430,25 @@
     }     
     .title, .event-title {
       @include for-phone-only {
-        @include altFont($fontSize320H3);
+        @include altFont(2rem);
         letter-spacing: 0.04rem;
         flex-grow: 2;
-        line-height: 1.9rem;
+        line-height: 1.2;
       }
       @include for-tablet-portrait-and-landscape {
-        @include altFont($fontSizeMedium);
+        @include altFont(2.4rem);
         letter-spacing: 0.06rem;
         margin-bottom: 1.6rem;
-        line-height: 2.7rem;
+        line-height: 1.4;
       }
-      @include sm-thru-med-desktop {
+      @include media-breakpoint-up(lg) {
         @include altFont($fontSize1024H3);
-        letter-spacing: 0.07rem;
-        line-height: 3.2rem;
-        margin-bottom: 1.6rem;
+        letter-spacing: 0.07rem;  
+        margin-bottom: 2.4rem;
       }
-      @include for-midsize-desktop-up {
-        @include altFont($fontSizeLarge);
+      @include media-breakpoint-up(xl) {
+        @include altFont(3.2rem);
         letter-spacing: 0.09rem;
-        margin-bottom: 1.6rem;
       }
       a {
         /*color: $textColor;*/
@@ -487,24 +488,24 @@
   }
   .post-summary {
     @include for-phone-only {
-      @include defaultFont($fontSize1024Body);
+      @include defaultFont(1.6rem);
       letter-spacing: 0rem;
       display: none;
     }
     @include for-tablet-portrait-and-landscape {
-      @include defaultFont($fontSize1024Body);
+      @include defaultFont(1.6rem);
       letter-spacing: 0rem;
-      line-height: 2.2rem;
+      line-height: 1.4;
     }
-    @include sm-thru-med-desktop {
-      @include defaultFont($fontSize1024Body);
+    @include media-breakpoint-up(lg) {
+      @include defaultFont(1.65rem);
       letter-spacing: 0rem;
-      line-height: 2.2rem;
+      line-height: 1.4;
     }
-    @include for-midsize-desktop-up {
-      @include defaultFont($fontSize1440Body);
+    @include media-breakpoint-up(xl) {
+      @include defaultFont(1.8rem);
       letter-spacing: 0rem;
-      line-height: 2.8rem;
+      line-height: 1.4;
     }
   }
 }

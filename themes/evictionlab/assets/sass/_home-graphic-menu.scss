@@ -36,8 +36,11 @@
         }
           
         letter-spacing: .01rem;
-        line-height: 1.2;
+        line-height: 1.1;
         color: #000000;
+        &.policies-intro {
+            margin-bottom: 0;
+        }
         /* &.policies-intro {
             font-family: "GT-Eesti-Display-Medium";
             font-size: 4.4rem;
@@ -84,6 +87,14 @@
         height: 0.4rem;
         background-color: #e24000;
     }
+    img.header-icon {
+        width: 28px;
+        height: 28px;
+        @include media-breakpoint-up(md) {
+            width: 40px;
+            height: 40px;
+        }
+    }
 // Map and rankings blocks --------------------------------------------
     #main-features {
         background-color: #F4F7F9;
@@ -103,25 +114,40 @@
         background-color: #EAEFF3;
         background-image: url(/images/assets/graphics/map-circles.svg);
         background-repeat: no-repeat;
-        background-size: 70%;
+        background-size: 80%;
         background-position: 50% 2rem;
         transition: background-color .3s ease;
+        @include media-breakpoint-up(smm) {
+            background-size: 70%;
+        }
         @include media-breakpoint-up(xl) {
             background-position: 68% 2rem;
         }
             &:hover {
-                background-color: #eef5fb;
+                //background-color: #eef5fb;
+                a.sublink {
+                    color: $color1;
+                }  
             } 
     }
     #feature-rankings {
         background-color: #F4E9E7;
         background-image: url(/images/assets/graphics/rankings-bars.svg);
         background-repeat: no-repeat;
-        background-size: 80%;
+        background-size: 97%;
         background-position: left 1.3rem;
         transition: background-color .3s ease;
         &:hover {
-            background-color: #fdece9;
+           // background-color: #fdece9;
+            a.sublink {
+                color: $color1;
+            }  
+        }
+        @include media-breakpoint-up(smm) {
+            background-size: 86%;
+        }
+        @include media-breakpoint-up(md) {
+            background-size: 80%;
         }
     }
     .main-feature {
@@ -160,6 +186,16 @@
         .col-2-wrap {
             justify-content: space-evenly;
         }
+        #covid-intro {
+            margin: auto;
+            width: 80%;
+            @include media-breakpoint-up(smm) {
+                width: 100%;
+            }
+            @include media-breakpoint-up(mm) {
+                width: 100%;
+            }
+        }
         .feature {
             /* Vector */
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
@@ -172,7 +208,7 @@
                 .hoverbar {
                     display: block;
                     transition: display .8s ease;
-                }      
+                }    
             }
             .bg-wrapper-1, .bg-wrapper-2, .bg-wrapper-3, .bg-wrapper-4 {
                 z-index: 99;
@@ -181,14 +217,20 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+                &:hover {
+                    //    background-position: 100% 0;
+                        a.sublink {
+                            color: $color1;
+                        }
+                    }
                 .gradient-overlay {
                     position: absolute;
                     top: 0;
                     height: 100%;
                     width: 100%;
                     z-index: 1;
-                    background: rgb(30,21,31);
-                    background: linear-gradient(0deg, rgba(30,21,31,0.1) 0%, rgba(255,255,255,0) 100%);
+                  //  background: rgb(30,21,31);
+                  //  background: linear-gradient(0deg, rgba(30,21,31,0.1) 0%, rgba(255,255,255,0) 100%);
                     transition: opacity .3s ease;
                     opacity: 0;
                     background-size: 400%;
@@ -197,7 +239,7 @@
                 &:hover {
                    // background-image: linear-gradient(135deg,transparent,transparent 90%,rgba(0,0,0,1));
                     .gradient-overlay {
-                        opacity: 1;
+                     //   opacity: 1;
                         }
                     }
                 a.sublink {
@@ -219,14 +261,20 @@
                 }
             }
             .bg-wrapper-1 {
-                background-size: 82%;
+                background-size: 100%;
                 background-color: #24294e;
                 height: 100%;
                 align-self: center;
                 //z-index: 0;
                 transition: background-size .3s ease;
+                @include media-breakpoint-up(smm) {
+                    background-size: 82%;
+                }
+                @include media-breakpoint-up(smm) {
+                    background-size: 74%;
+                }
                 @include media-breakpoint-up(md) {
-                    background-size: 175%;
+                    background-size: 96%;
                 } 
                 @include media-breakpoint-up(lg) {
                     background-size: 75%;
@@ -255,10 +303,16 @@
                 background-image: url('/images/assets/graphics/scorecard-bg.jpg');
                 }
             .bg-wrapper-3 {
-                background-size: 125%;
+                background-size: 180%;
                 
+                @include media-breakpoint-up(smm) {
+                    background-size: 151%;
+                }
+                @include media-breakpoint-up(mm) {
+                    background-size: 125%;
+                }
                 @include media-breakpoint-up(md) {
-                    background-size: 175%;
+                    background-size: 153%;
                 } 
                 @include media-breakpoint-up(lg) {
                     background-size: 166%;
@@ -270,7 +324,13 @@
                     background-image: url('/images/assets/graphics/policies-bg.jpg');
                 }
             .bg-wrapper-4 { 
-                background-size: 125%;
+                background-size: 178%;
+                @include media-breakpoint-up(smm) {
+                    background-size: 151%;
+                }
+                @include media-breakpoint-up(mm) {
+                    background-size: 125%;
+                }
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
                 }  
@@ -301,6 +361,9 @@
             transition: background-position .3s ease-in-out;
             &:hover {
             //    background-position: 100% 0;
+                a.sublink {
+                    color: $color1;
+                }
             }
         }
     }
@@ -328,9 +391,15 @@
             font-style: normal;
             font-weight: 400;
             font-size: 1.5rem;
-            line-height: 2rem;
+            line-height: 1.5;
+            max-width: 88%;
+            display: block;
+            transition: color .3s ease;
             letter-spacing: 0.08em;
             color: #000000;
+            @include media-breakpoint-up(md) {
+                max-width: 100%;
+            }
             &:hover {
                 text-decoration: none;
             }
@@ -344,10 +413,15 @@
             } */
             
             &.aboutus {
+                max-width: 78%;
+                @include media-breakpoint-up(md) {
+                    max-width: 100%;
+                }
                 @include media-breakpoint-up(xl) {
                     font-size: 2.6rem;
                 }
                 font-size: 2.4rem;
+                line-height: 1.3;
                 letter-spacing: 0.01rem;
                 font-weight: 600;
                 margin-bottom: 2.4rem;
@@ -405,6 +479,22 @@
         background-position: 90% bottom;
         h2 {
             color: $color1;
+        }
+        a.sublink {
+            transition: color .3s ease;
+            i.fa.fa-chevron-right {
+                position: relative;
+                top: 0px;
+                transition: transform .3s ease;
+                font-size: 80%;
+            }
+            &:hover {
+                color: $color1;
+                i.fa.fa-chevron-right {
+                    transform: translateX(4px);
+                }
+            }
+            
         }
     }
 

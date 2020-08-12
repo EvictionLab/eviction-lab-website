@@ -395,10 +395,20 @@
             width: 100%;
                 font-size: 1.4rem;
                 line-height: 2rem;
-            @include for-midsize-desktop-up { 
+            @include media-breakpoint-up(md) { 
                 font-size: 1.6rem;
                 letter-spacing: 0;
-                line-height: 2.4rem;
+                line-height: 1.5;
+            }    
+            @include media-breakpoint-up(lg) { 
+                font-size: 1.65rem;
+                letter-spacing: 0;
+                line-height: 1.5;
+            }
+            @include media-breakpoint-up(xl) { 
+                font-size: 1.7rem;
+                letter-spacing: 0;
+                line-height: 1.5;
             }
           }
         }
@@ -407,8 +417,8 @@
             @include for-tablet-portrait-up {
                 margin: 4rem 0 3.2rem;
             }
-            @include for-midsize-desktop-up {
-                margin: 4.8rem 0 4rem;
+            @include media-breakpoint-up(xl) {
+                margin: 5.4rem 0 4rem;
             }
         }
         .btn-primary {
@@ -478,9 +488,14 @@
                 line-height: 2.2rem;
                /* margin-bottom: 4.8rem; */
             }
-            @include for-midsize-desktop-up {
+            @include media-breakpoint-up(lg) {
+                font-size: 1.65rem;
+                line-height: 1.5;
+               /* margin-bottom: 4.8rem; */
+            }
+            @include media-breakpoint-up(xl) {
                 font-size: 1.8rem;
-                line-height: 2.8rem;
+                line-height: 1.5;
               /*  margin-bottom: 4.8rem; */
             }
         }
@@ -538,9 +553,13 @@
                     color: $grey1a;
                     margin-bottom: 2.4rem;
                 }
-                @include for-midsize-desktop-up {
+                @include media-breakpoint-up(lg) {
                     font-size: 1.5rem;
-                    line-height: 2rem;
+                    line-height: 1.5;
+                }
+                @include media-breakpoint-up(xl) {
+                    font-size: 1.6rem;
+                    line-height: 1.4;
                 }
             }
             .bordered-header {
@@ -591,6 +610,9 @@
             letter-spacing: .09rem;
             margin-top: 2.4rem;
             padding-top: 1.6rem;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 1.8rem;
         }
     }
     .nav {

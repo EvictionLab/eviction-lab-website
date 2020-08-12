@@ -1,0 +1,143 @@
+// Headers & Paragraph 
+// -------
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h2 {
+    &.page-section-header {
+      color: $color2;
+    }
+  }
+  
+  h3 {
+    @include altFont($fontSizeSmall);
+    line-height: 1.7rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: $color2;
+    @include for-tablet-portrait-up {
+      @include altFont($fontsize1024H3sm);
+      letter-spacing: 0.11rem;
+      line-height: 3rem;
+    }
+    @include sm-thru-med-desktop {
+      @include altFont($fontsize1024H3sm); 
+      letter-spacing: 0.11rem;
+    }
+    @include for-midsize-desktop-up {
+      @include altFont($fontSize1440Body); 
+      letter-spacing: 0.1rem;
+    }
+  }
+  
+  p, .center-content-post.page-list li, select, input, textarea, .post-body ol li, .post-body ul li, table.page-stats, 
+  table.page-stats td.table-text, .contact-us label {  
+      font-family: $fontStack;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin-bottom: 1.6rem;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 2.4rem;
+      }
+      @include media-breakpoint-up(lg) {
+          font-size: 1.65rem;
+      }
+      @include media-breakpoint-up(xl) {
+          font-size: 1.8rem;
+          margin-bottom: 3.2rem;
+      }
+  }
+  
+  .answer.collapse.show p:last-child {
+    margin-bottom: 2.4rem;
+    @include for-tablet-portrait-up {
+      margin-bottom: 3.2rem;
+    }
+    @include for-midsize-desktop-up {
+      margin-bottom: 4rem;
+    }
+  
+  }
+  
+  .subcopy {
+    font-size: 1.175rem;
+    @include for-tablet-portrait-up {
+      font-size: 1.4rem;
+    }
+    @include for-midsize-desktop-up {
+      font-size: 1.5rem;
+    }
+  }
+  .subcopy.caption {
+    display: block;
+    text-align: center;
+    color: $grey1a;
+    line-height: 2.1rem;
+    @include for-tablet-portrait-up {
+    margin-bottom: 3.2rem;
+    }
+    @include for-tablet-landscape-up {
+        margin-bottom: 3.2rem;
+        }
+    @include for-midsize-desktop-up {
+        margin-bottom: 0;
+        }    
+  }
+  
+  .page-layout-downloads {
+    pre {
+      background-color: #f4f7f9 !important;
+      padding: 2.4rem;
+      code {
+        font-size: 1.5rem;
+        color: #454979 !important;
+        span {
+          color: #454979 !important;
+        }
+      }
+    }
+  }
+  
+  hr {
+    border-top: 2px solid #fff;
+  }
+  
+  // Table
+  
+  table.page-stats {
+    th {
+      font-family: Akkurat-Bold, sans-serif;
+      padding-bottom: 1.6rem; 
+    }
+    td, th {
+      padding: 1.6rem;
+      border: 1px solid #efefef;
+    }
+    tr:nth-child(even) {
+      background-color: #f4f7f9;
+    }
+    td {
+      font-family: $numberFontStack;
+      font-weight: 500;
+      color: $color2;
+    }
+    td.table-text {
+      color: #212529;
+    }
+    a, a:hover {
+      color: $color1;
+    }
+  }
+  table#national-media-table {
+    height: 800px;
+    td {
+      font-family: Akkurat-Regular, sans-serif;
+      font-weight: 400;
+      
+    }
+    
+  }

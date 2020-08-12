@@ -170,6 +170,9 @@ ul.anchor-links a {
     @include altFont($subnavFontDesktop);
     letter-spacing: 0.04rem;
   }
+  @include media-breakpoint-up(xl) {
+    font-size: 1.8rem;
+  }
   &:hover {
     text-decoration: none;
   }
@@ -347,8 +350,13 @@ ul.anchor-links.dropdown-menu.show {
         font-size: $fontSizeSmall;
         line-height: 2.2rem;
       }
-      @include for-midsize-desktop-up {
+      @include media-breakpoint-up(lg) {
+        font-size: 1.65rem;
+        line-height: 1.5;
+      }
+      @include media-breakpoint-up(xl) {
         font-size: 1.8rem;
+        line-height: 1.5;
       }
       width: auto;
       display:inline-block;
