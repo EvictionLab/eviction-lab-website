@@ -550,7 +550,13 @@
 }
 
 .table__body .table__cell--name .icon {
-  margin: 0 -8px 4px 10px;
+  margin: 0 -8px 4px 4px;
+}
+
+@media(min-width: 420px) {
+  .table__body .table__cell--name .icon {
+    margin-left: 8px;
+  }
 }
 
 /** no moratorium, no icon */
