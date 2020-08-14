@@ -160,13 +160,13 @@
   }  
 }
 .list-item {
-  padding-top: $defaultPadding;
-  padding-bottom: $defaultPadding;
   display: flex;
   min-height: 152px;
   &.updates-list .title a {
     /* color: #333333; */
   }
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
   @include for-below-414 {
     display: block;
     min-height: initial;
@@ -183,8 +183,12 @@
     padding-bottom: 4rem;
   }
   @include for-tablet-landscape-up {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
   }
   &.updates-list .post-date {
     flex-grow: 1;
@@ -211,6 +215,10 @@
     width: 7px;
     height: 10px;
     margin-right: 6px;
+    @include media-breakpoint-up(xxl) {
+      width: 10px;
+      height: 14px;
+    }
     } 
   .postlist-left-col {
     flex-grow: 1;
@@ -268,8 +276,8 @@
         line-height: 1.3rem;
       }
       @include for-midsize-desktop-up {
-        @include defaultFontBold($fontSizeSmall1440);
-        letter-spacing: 0.09rem;
+        @include defaultFontBold(1.8rem);
+        letter-spacing: 0.06rem;
       }
     }
     .list-thumb-container {
@@ -308,7 +316,7 @@
         line-height: 2rem;
       }
       @include for-midsize-desktop-up {
-        @include defaultFont($fontSizeSmall1440);
+        @include defaultFont(1.7rem);
         letter-spacing: 0rem;
         line-height: 2rem;
       }
@@ -332,7 +340,7 @@
           line-height: 2rem;
         }
       @include for-midsize-desktop-up {
-        @include defaultFont($fontSizeSmall1440);
+        @include defaultFont(1.7rem);
           letter-spacing: 0rem;
           line-height: 2rem;
           }
@@ -448,7 +456,7 @@
       }
       @include media-breakpoint-up(xl) {
         @include altFont(3.2rem);
-        letter-spacing: 0.09rem;
+        letter-spacing: 0.08rem;
       }
       a {
         /*color: $textColor;*/
@@ -861,6 +869,10 @@ a.read-more {
 .list-thumb {
     width: 48px;
     height: 48px;
+    @include media-breakpoint-up(xxl) {
+      width: 54px;
+      height: 54px;
+    }
     border-radius: 50%;
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
