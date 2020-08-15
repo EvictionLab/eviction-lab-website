@@ -6,7 +6,7 @@ position: Professional Specialist
 date: 2017-11-26T03:52:04.376Z
 image: /images/bios/cgershenson_full.jpg
 thumb: /images/bios/cgershenson_thumb.jpg
-weight: 65
+weight: 1065
 ---
 Carl Gershenson is broadly interested in how markets and politics structure inequality in the United States. He received his Ph.D. in Sociology from Harvard University, where his dissertation explored the political and cultural origins of the American business corporation. As a graduate student, Carl published on a variety of topics, including corporate democracy and securities law, neighborhood level politics and the distribution of city services, and eviction and urban labor markets (with Matthew Desmond). After graduation, Carl joined the Sociology Department at Washington University in St. Louis as a Postdoctoral Research Fellow, where he collaborated with Professor Tim Bartley on a project exploring how xenophobia and attitudes toward markets structure public opinion regarding immigration and offshoring.
 
