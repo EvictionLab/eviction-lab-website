@@ -75,14 +75,14 @@ a.copy-link:hover {
 }
 /* --- author meta --- */
 img.post-thumb {
-  width: 56px;
+  width: 48px;
   image-rendering: -moz-crisp-edges;         /* Firefox */
   image-rendering:   -o-crisp-edges;         /* Opera */
   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-  @include for-phone-only {
-    width: 48px;
+  @include media-breakpoint-up(xxxl) {
+    width: 56px;
   }
   border-radius: 50%;
   float: left;
@@ -104,9 +104,6 @@ img.post-thumb {
       margin: 1.6rem 0;
     }
     @include media-breakpoint-up(md) {
-      padding-bottom: 1.6rem;
-    }
-    @include media-breakpoint-up(lg) {
       padding-bottom: 0;
     }
     ul {
@@ -140,7 +137,7 @@ img.post-thumb {
       margin-right: 8px;
     }
     @include for-phone-only {
-      @include defaultFont($fontSizeBodySM);
+      @include defaultFont(1.5rem);
       flex-grow: 3;
       line-height: 1.5;
     }
@@ -150,10 +147,10 @@ img.post-thumb {
       flex-grow: 1;
     }
     @include media-breakpoint-up(lg) {
-      @include defaultFont($fontSizeBodyLG);
+      @include defaultFont(1.65rem);
     }
     @include media-breakpoint-up(xl) {
-      @include defaultFont($fontSizeBodyXL);
+      @include defaultFont(1.65rem);
       letter-spacing: 0rem;
     }
   }
@@ -192,7 +189,7 @@ img.post-thumb {
       @include for-tablet-portrait-up { 
         margin-bottom: 2.4rem;
       }
-      @include for-tablet-landscape-up { 
+      @include media-breakpoint-up(xl) { 
         margin-bottom: 3.2rem;
       }
       @include for-midsize-desktop-up { 
@@ -203,7 +200,7 @@ img.post-thumb {
         }
     }
     @include for-phone-only {
-      padding: 2.4rem 2.4rem;
+      padding: 4rem 2.4rem;
       .post-body {
         padding: 0;
         
@@ -232,14 +229,10 @@ img.post-thumb {
         padding-top: 0rem;
       }
     }
-    @include for-tablet-portrait-thru-sm-desktop {
+    @include media-breakpoint-up(md) {
       max-width: 560px;
-      /*padding-top: 0.8rem; */
       .post-body {
         padding: 3.2rem 0 1.6rem;
-      }
-      p, hr {
-    
       }
     }
     @include for-tablet-portrait-and-landscape {
@@ -250,13 +243,20 @@ img.post-thumb {
     @include media-breakpoint-up(lg) {
       font-size: $fontSizeBodyLG;
       line-height: 1.5;
+      .post-body {
+        padding: 4.8rem 0 1.6rem;
+      }
     }
     @include media-breakpoint-up(xl) {
+      max-width: 640px;
       p, hr {
         font-size: $fontSizeBodyXL;
         margin-bottom: 3.2rem;
         line-height: 1.5;
       }
+    }
+    @include media-breakpoint-up(xxl) {
+      max-width: 720px;
     }
     @include for-midsize-desktop-up{
       max-width: 720px;
@@ -412,19 +412,19 @@ figure.article-image {
     }
     .header, .header a {
       @include for-phone-only {
-        @include defaultFont(1rem);
+        @include defaultFont(1.6rem);
         margin: 0;
       }
       @include for-tablet-portrait-and-landscape {
-        @include defaultFont(1.3rem);
+        @include defaultFont(1.6rem);
         margin: 0;
       }
       @include sm-thru-med-desktop {
-        @include defaultFont(1.3rem);
+        @include defaultFont(1.65rem);
         margin: 0rem 0 .4rem 0;
       }
       @include for-midsize-desktop-up {
-        @include defaultFont(1.5rem);
+        @include defaultFont(1.8rem);
         margin: 0rem 0 1.6rem 0;
       }
     }
@@ -444,8 +444,8 @@ figure.article-image {
     a {
       text-decoration: none;
       @include for-phone-only {
-        @include altFont(1.5rem);
-        letter-spacing: 0.05rem;
+        @include altFont(2rem);
+        letter-spacing: 0.02rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont(2.1rem);
@@ -453,15 +453,15 @@ figure.article-image {
         letter-spacing: 0.06rem;
       }
       @include sm-thru-med-desktop {
-        @include altFont(2.1rem);
+        @include altFont(2.4rem);
         /* color: $color1; */
-        line-height: 2.7rem;
-        letter-spacing: 0.06rem;
+        line-height: 1.3;
+        letter-spacing: 0.03rem;
       }
-      @include for-midsize-desktop-up {
-        @include altFont(3rem);
-        line-height: 3.2rem;
-        letter-spacing: 0.09rem;
+      @include media-breakpoint-up(xl) {
+        @include altFont(2.6rem);
+        line-height: 1.3;
+        letter-spacing: 0.05rem;
       }
     } 
     img.cat-bookmark {

@@ -15,7 +15,7 @@
     h1 {
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
-        font-weight: bold;
+       // font-weight: bold;
         line-height: 142%;
         /* or 43px */
         letter-spacing: 0.03em;
@@ -135,8 +135,8 @@
                 background-color: #F6F9FC;
                 order: 2;
                 @include media-breakpoint-down(mm) {
-                    padding-top: 6.4rem;
-                    padding-bottom: 6.4rem;
+                    padding-top: 4rem;
+                    padding-bottom: 4.8rem;
                 }
                 @include media-breakpoint-up(md) {
                     order: 1;
@@ -152,8 +152,9 @@
             &:nth-of-type(2) {
                 background-image: url('/images/assets/graphics/scorecard-bg.jpg');
                 order: 1;
-                height: 32rem;
+                height: 24rem;
                 @include media-breakpoint-up(md) {
+                    height: 32rem;
                     order: 2;
                     height: auto;
                 }
@@ -176,16 +177,17 @@
             &:nth-of-type(1) {
                 background-image: url('/images/assets/graphics/ets-bg.jpg');
                 background-position-x: center;
-                height: 32rem;
+                height: 24rem;
                 @include media-breakpoint-up(md) {
                     height: auto;
+                    height: 32rem;
                 }
             }
             &:nth-of-type(2) {
                 background-color: #F6F9FC;
                 @include media-breakpoint-down(mm) {
-                    padding-top: 6.4rem;
-                    padding-bottom: 6.4rem;
+                    padding-top: 4rem;
+                    padding-bottom: 4.8rem;
                 }
                 &:hover {
                     .hoverbar {
@@ -211,7 +213,7 @@
                 }      
             }
             .bg-wrapper-1 {
-                background-size: 125%;
+                background-size: 150%;
                 
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
@@ -223,7 +225,7 @@
                     background-image: url('/images/assets/graphics/policies-bg.jpg');
                 }
             .bg-wrapper-2 { 
-                background-size: 125%;
+                background-size: 200%;
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
                 }  
