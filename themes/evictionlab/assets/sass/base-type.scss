@@ -14,7 +14,7 @@ body {
   }
   
   h3 {
-    @include altFont($fontSizeSmall);
+    @include altFont(1.6rem);
     line-height: 1.7rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
@@ -64,7 +64,7 @@ body {
   }
   
   .subcopy {
-    font-size: 1.175rem;
+    font-size: 1.4rem;
     @include for-tablet-portrait-up {
       font-size: 1.4rem;
     }

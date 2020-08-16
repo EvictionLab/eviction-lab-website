@@ -156,7 +156,7 @@ ul.anchor-links li {
 ul.anchor-links a {
   position: relative;
   color: $textColor;
-  @include altFont($subnavFontPhone);
+  @include altFont(1.5rem);
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   @include for-tablet-portrait-and-landscape {
@@ -309,7 +309,7 @@ ul.anchor-links.dropdown-menu.show {
 
 .accordion {
   margin-bottom: 4rem;
-  margin-top: 2.4rem;
+  margin-top: 3.2rem;
   @include for-tablet-portrait-up {
     margin-top: 3.2rem;
   }
@@ -346,10 +346,7 @@ ul.anchor-links.dropdown-menu.show {
     }
     span {
       font-size: 1.6rem;
-      @include for-phone-only {
-        font-size: $fontSizeSmall;
-        line-height: 2.2rem;
-      }
+      line-height: 1.5;
       @include media-breakpoint-up(lg) {
         font-size: 1.65rem;
         line-height: 1.5;
