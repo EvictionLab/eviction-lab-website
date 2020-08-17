@@ -135,7 +135,7 @@
             background-size: 55%;
         }
             &:hover {
-                //background-color: #eef5fb;
+                background-color: #e6ecf2;
                 a.sublink {
                     color: $color1;
                 }  
@@ -149,7 +149,7 @@
         background-position: left 1.3rem;
         transition: background-color .3s ease;
         &:hover {
-           // background-color: #fdece9;
+           background-color: #f0e1df;
             a.sublink {
                 color: $color1;
             }  
@@ -219,13 +219,15 @@
         }
         .feature {
             /* Vector */
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.2);
             width: 100%;
             @include media-breakpoint-up(md) {
                 width: 50%;
             }
             position: relative;
+            transition: box-shadow .3s ease;
             &:hover {
+                box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.17);
                 .hoverbar {
                     display: block;
                     transition: display .8s ease;
@@ -285,6 +287,7 @@
                 background-size: 100%;
                 background-color: #24294e;
                 height: 100%;
+                width: 100%;
                 align-self: center;
                 //z-index: 0;
                 transition: background-size .3s ease;
@@ -302,6 +305,9 @@
                 }
                 @include media-breakpoint-up(xl) {
                     background-size: 65%;
+                }
+                @include media-breakpoint-up(x4l) {
+                    background-size: 54%;
                 }
                 background-repeat: no-repeat; 
                 background-color: 24284E;
