@@ -6,7 +6,11 @@ other = "We're unpacking America's eviction crisis."
 [splashBody]
 other = "The Eviction Lab at Princeton University has built the first nationwide database of evictions. Find out how many evictions happen in your community. Create custom maps, charts, and reports. Share facts with your neighbors and elected officials."
 [cta]
-other = "Get Started" 
+other = "Get Started"
+[toolsHeading]
+other = "Interactive Tools"
+[toolsSub]
+other = "Explore nationwide eviction data spanning the years 2000-2016. View maps and charts, download reports, and more."  
 [mapData]
 other = "Map & Data"
 [mapSub]
@@ -19,14 +23,42 @@ other = "Eviction Rankings"
 other = "See which cities rank the highest in evictions in the US"
 [rankingsCTA]
 other = "Go to eviction rankings"
-[aboutHead1]
-other = "About the"
-[aboutHead2]
-other = "Eviction Lab"
-[whyHead1]
-other = "Why Eviction"
-[whyHead2]
-other = "Matters"
+[covidHeading]
+other = "COVID-19 Resources"
+[covidSub]
+other = "Understand changes to landlord-tenant law and how the COVID-19 pandemic has affected renters across the country. Find resources to help if you are facing eviction."
+[etsHead]
+other = "Eviction Tracking System"
+[etsSub]
+other = "See up-to-date maps, charts and data on eviction filings in select cities."
+[etsCTA]
+other = "Go to ETS"
+[scorecardHead]
+other = "Housing Policy Scorecard"
+[scorecardSub]
+other = "See the protections your state provides, and how it ranks nationally."
+[scorecardCTA]
+other = "Go to the scorecard"
+[policiesHead]
+other = "Policies Database"
+[policiesSub]
+other = "Use our interactive table to get the latest on local, state, and federal policies."
+[policiesCTA]
+other = "Go to policies database"
+[jsHead]
+other = "Just Shelter"
+[jsSub]
+other = "See our list of over 700 organizations that offer housing assistance, legal aid, and more."
+[jsCTA]
+other = "Go to Just Shelter website"
+[learnMoreHead1]
+other = "Learn more"
+[learnMoreHead2]
+other = "about us"
+[aboutHead]
+other = "About the Eviction Lab"
+[whyHead]
+other = "Why Eviction Matters"
 [methodsHead]
 other = "Methods"
 [helpHead]

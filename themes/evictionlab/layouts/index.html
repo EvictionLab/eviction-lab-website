@@ -56,17 +56,17 @@
 <!--- Main features row ------------------------------------------>    
     <div id="main-features" class="row mx-0 feature-panel"> 
       <div class="col-12 col-md-8 col-lg-7 col-xl-6 mx-auto my-5 my-md-5 my-lg-8 px-3 px-md-2">
-        <div id="interactive-tools-intro" class="d-flex justify-content-center align-items-center mb-3"><img class="mr-1 mr-md-2 header-icon" alt="Interactive Tools icon" src="/images/icons/pm-research3.svg"><h2 class="policies-intro text-center">Interactive Tools</h2></div>
-        <p class="text-center mb-0">Explore nationwide eviction data spanning the years 2000-2016. View maps and charts, download reports, and more.</p>
+        <div id="interactive-tools-intro" class="d-flex justify-content-center align-items-center mb-3"><img class="mr-1 mr-md-2 header-icon" alt="Interactive Tools icon" src="/images/icons/pm-research3.svg"><h2 class="policies-intro text-center">{{ i18n "toolsHeading" }}</h2></div>
+        <p class="text-center mb-0">{{ i18n "toolsSub" }}</p>
       </div>
       <div class="w-100"></div>
         <div id="feature-map" class="col-12 col-md-6 feature main-feature px-0 d-flex justify-content-end justify-content-mm-center justify-content-md-end">
             <a class="wraplink" href="/map/"></a>  
             <div class="col-12 col-mm-8 col-md-11 col-lg-10 col-xxxl-9 d-flex flex-column justify-content-center px-4 pl-md-0 px-lg-4 pr-md-4">
                     <div class="wrapper">
-                        <h3>MAP & DATA</h3>
-                        <p>Learn about the American housing crisis by interacting with a customizable map.</p>
-                        <a class="sublink" href="/map/">GO TO THE MAP <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                        <h3>{{ i18n "mapData" }}</h3>
+                        <p>{{ i18n "mapSub" }}</p>
+                        <a class="sublink" href="/map/">{{ i18n "mapCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
                     </div> 
                 
             </div>     
@@ -75,9 +75,9 @@
           <a class="wraplink" href="/rankings/"></a>  
             <div class="col-12 col-mm-8 col-md-10 offset-md-1 d-flex flex-column justify-content-center px-4 pl-md-0 pr-md-2 px-lg-2">
                     <div class="wrapper">
-                        <h3>EVICTION RANKINGS</h3>
-                        <p>See which cities rank the highest in evictions in the US.</p>
-                        <a class="sublink" href="/rankings/">GO TO RANKINGS <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                        <h3>{{ i18n "rankingsHead" }}</h3>
+                        <p>{{ i18n "rankingsSubhead" }}</p>
+                        <a class="sublink" href="/rankings/">{{ i18n "rankingsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
                     </div> 
                 
             </div>  
@@ -87,18 +87,18 @@
     <div id="covid-gateway">
       <div class="row mx-0 subfeature-panel mb-5 d-flex">
         <div class="col-12 col-md-8 col-lg-7 col-xl-6 mx-auto my-5 my-md-5 my-lg-8 px-3 px-md-2">
-          <div id="covid-intro" class="d-flex justify-content-center align-items-center mb-3"><img class="mr-1 mr-md-2 header-icon" alt="COVID-19 icon" src="/images/icons/covid-mask.svg"><h2 class="policies-intro mb-0">COVID-19 Resources</h2></div>
+          <div id="covid-intro" class="d-flex justify-content-center align-items-center mb-3"><img class="mr-1 mr-md-2 header-icon" alt="COVID-19 icon" src="/images/icons/covid-mask.svg"><h2 class="policies-intro mb-0">{{ i18n "covidHeading" }}</h2></div>
       
-          <p class="text-center mb-0">Understand changes to landlord-tenant law and how the COVID-19 pandemic has affected renters across the country. Find resources to help if you are facing eviction.</p>
+          <p class="text-center mb-0">{{ i18n "covidSub" }}</p>
         </div>
         <div class="col-11 col-mm-8 col-md-12 col-lg-10 col-xxxl-9 mx-auto d-md-flex col-2-wrap">
             <div class="feature d-flex flex-column justify-content-center px-0 mb-6 mb-md-0 mr-md-1 mr-lg-2">
                 <a class="wraplink" href="/eviction-tracking/"></a>
                 <div class="bg-wrapper-1">
                     <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
-                        <h3>Eviction Tracking System</h3>
-                        <p>See up-to-date maps, charts and data on eviction filings in select cities.</p>
-                        <a class="sublink" href="/eviction-tracking/">GO TO ETS <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                        <h3>{{ i18n "etsHead" }}</h3>
+                        <p>{{ i18n "etsSub" }}</p>
+                        <a class="sublink" href="/eviction-tracking/">{{ i18n "etsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
                     </div>  
                 </div>       
             </div>
@@ -106,9 +106,9 @@
                 <a class="wraplink" href="/covid-policy-scorecard" target="_blank"></a>
                 <div class="bg-wrapper-2">
                     <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
-                        <h3>Housing Policy Scorecard</h3>
-                        <p>See the protections your state provides, and how it ranks nationally.</p>
-                        <a class="sublink" href="/covid-policy-scorecard" target="_blank">GO TO SCORECARD <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                        <h3>{{ i18n "scorecardHead" }}</h3>
+                        <p>{{ i18n "scorecardSub" }}</p>
+                        <a class="sublink" href="/covid-policy-scorecard" target="_blank">{{ i18n "scorecardCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
                     </div>
                 </div>
             </div>
@@ -120,9 +120,9 @@
                 <a class="wraplink" href="/covid-eviction-policies/"></a> 
                 <div class="bg-wrapper-3">
                     <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
-                        <h3>Policies Database</h3>
-                        <p>Use our interactive table to get the latest on local, state, and federal policies.</p>
-                        <a class="sublink" href="/covid-eviction-policies/">GO TO POLICIES DATABASE <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                        <h3>{{ i18n "policiesHead" }}</h3>
+                        <p>{{ i18n "policiesSub" }}</p>
+                        <a class="sublink" href="/covid-eviction-policies/">{{ i18n "policiesCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
                     </div>  
                 </div>       
             </div>
@@ -130,9 +130,9 @@
                 <a class="wraplink" href="https://justshelter.org" target="_blank"></a> 
                 <div class="bg-wrapper-4">
                     <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
-                        <h3>Just Shelter</h3>
-                        <p>See our list of 700+ organizations that offer housing assistance, legal aid, and more.</p>
-                        <a class="sublink" href="https://justshelter.org" target="_blank">GO TO JUST SHELTER WEBSITE <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                        <h3>{{ i18n "jsHead" }}</h3>
+                        <p>{{ i18n "jsSub" }}</p>
+                        <a class="sublink" href="https://justshelter.org" target="_blank">{{ i18n "jsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
                     </div>
                 </div>
             </div>
@@ -144,15 +144,15 @@
       <div class="row mx-0 subfeature-panel mb-4 mb-md-7 mb-lg-9">
         <div class="col-11 col-mm-8 col-md-12 col-lg-10 col-xxxl-9 mx-auto d-md-flex col-2-wrap pl-md-3 pl-lg-3">
           <div class="col-12 col-md-4 mb-5 mb-md-0">
-            <h2>Learn more <br>about us</h2>
+            <h2>{{ i18n "learnMoreHead1" }} <br>{{ i18n "learnMoreHead2" }}</h2>
             <div class="red-underbar mt-3"></div>
           </div>
           <div class="col-12 col-md-8">
             <ul>
-              <li><a class="sublink aboutus" href="/about">About the Eviction Lab <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
-              <li><a class="sublink aboutus" href="/why-eviction-matters">Why Eviction Matters <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
-              <li><a class="sublink aboutus" href="/help-faq">Help and FAQ <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
-              <li><a class="sublink aboutus" href="/methods">Methods <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a class="sublink aboutus" href="/about">{{ i18n "aboutHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a class="sublink aboutus" href="/why-eviction-matters">{{ i18n "whyHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a class="sublink aboutus" href="/help-faq">{{ i18n "helpHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a class="sublink aboutus" href="/methods">{{ i18n "methodsHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
             </ul>
               
           </div>
