@@ -95,12 +95,16 @@
             height: 40px;
         }
     }
+    a.sublink:not(.aboutus) {
+        text-transform: uppercase;
+    }
 // Map and rankings blocks --------------------------------------------
     #main-features {
         background-color: #F4F7F9;
         h3 {
           color: $color2;
           font-size: 2.6rem;
+          text-transform: uppercase;
           @include media-breakpoint-up(md) {
             font-size: 3rem;
             } 

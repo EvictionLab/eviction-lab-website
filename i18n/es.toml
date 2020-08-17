@@ -6,7 +6,11 @@ other = "Estamos descifrando la crisis de desalojo de los EE. UU."
 [splashBody]
 other = "Eviction Lab de la Universidad de Princeton ha construido la primera base de datos nacional de desalojos. Descubra cuántos desalojos suceden en su comunidad. Cree mapas, gráficos e informes personalizados. Comparta los hechos con sus vecinos y funcionarios electos."
 [cta]
-other = "Empezar" 
+other = "Empezar"
+[toolsHeading]
+other = "Herramientas interactivas"
+[toolsSub]
+other = "Explorar datos de desalojo a nivel nacional que abarcan los años 2000-2016. Ver mapas y gráficos, descargar informes y más."  
 [mapData]
 other = "Mapa y datos"
 [mapSub]
@@ -19,14 +23,42 @@ other = "clasificaciones de desalojo"
 other = "Ver qué ciudades se han clasificado más altos en desalojos en los EE. UU."
 [rankingsCTA]
 other = "Ir a las clasificaciones de desalojo"
-[aboutHead1]
-other = "Sobre"
-[aboutHead2]
-other = "Eviction Lab"
-[whyHead1]
-other = "Por qué es importante"
-[whyHead2]
-other = "el desalojo"
+[covidHeading]
+other = "Recursos de COVID-19"
+[covidSub]
+other = "Comprender los cambios a la ley de propietarios e inquilinos y cómo la pandemia de COVID-19 ha afectado a los inquilinos en todo el país. Encontrar recursos para ayudar si se enfrenta a un desalojo."
+[etsHead]
+other = "Sistema de seguimiento de desalojo"
+[etsSub]
+other = "Ver mapas actualizados, gráficos y datos sobre solicitudes de desalojo en ciudades seleccionadas."
+[etsCTA]
+other = "ir a ets"
+[scorecardHead]
+other = "Cuadro de mando de política de vivienda"
+[scorecardSub]
+other = "Ver las protecciones que brinda su estado y cómo se clasifica a nivel nacional."
+[scorecardCTA]
+other = "Ir al cuadro de mando"
+[policiesHead]
+other = "Base de datos de políticas"
+[policiesSub]
+other = "Usar nuestra tabla interactiva para obtener lo último sobre políticas locales, estatales y federales."
+[policiesCTA]
+other = "Ir a políticas"
+[jsHead]
+other = "Just Shelter"
+[jsSub]
+other = "Ver nuestra lista de más de 700 organizaciones que ofrecen asistencia de vivienda, asistencia legal y más."
+[jsCTA]
+other = "Ir al sitio web de Just Shelter"
+[learnMoreHead1]
+other = "Aprenda más acerca"
+[learnMoreHead2]
+other = "de nosotros"
+[aboutHead]
+other = "Sobre Eviction Lab"
+[whyHead]
+other = "Por qué es importante el desalojo"
 [methodsHead]
 other = "Métodos"
 [helpHead]
