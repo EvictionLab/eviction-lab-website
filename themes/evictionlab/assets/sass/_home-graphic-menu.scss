@@ -431,7 +431,7 @@
             font-weight: 400;
             font-size: 1.5rem;
             line-height: 1.5;
-            max-width: 88%;
+            max-width: 70%;
             display: block;
             transition: color .3s ease;
             letter-spacing: 0.08em;
@@ -453,6 +453,10 @@
             
             &.aboutus {
                 max-width: 78%;
+                font-family: $altFontStack;
+                @include media-breakpoint-up(smm) {
+                    max-width: 82%;
+                }
                 @include media-breakpoint-up(md) {
                     max-width: 100%;
                 }
@@ -461,8 +465,8 @@
                 }
                 font-size: 2.4rem;
                 line-height: 1.3;
-                letter-spacing: 0.01rem;
-                font-weight: 600;
+                letter-spacing: 0.005rem;
+                //font-weight: 600;
                 margin-bottom: 2.4rem;
                 display: block;
                 transition: color .3s ease;
@@ -499,7 +503,7 @@
                 font-weight: 500;
                 @include media-breakpoint-up(md) {
                     font-size: 1.7rem;
-                    font-weight: 600;
+                    //font-weight: 600;
                 }
                 
             }
@@ -509,7 +513,10 @@
 // subfeatures --------------------------------------------
     #updates-section {
         background-color: #F4F7F9;
-        background-size: 64%;
+        background-size: 80%;
+        @include media-breakpoint-up(md) {
+            background-size: 64%;
+        }
         @include media-breakpoint-up(lg) {
             background-size: 50%;
         }
