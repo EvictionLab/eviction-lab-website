@@ -738,6 +738,17 @@
   .counter__number {
     font-size: 9.6rem;
   }
+  .counter__context {
+    max-width: 20rem;
+    font-size: 1.65rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .counter__context {
+    max-width: 22rem;
+    font-size: 1.8rem;
+  }
 }
 
 /** END COUNTER */
@@ -1044,15 +1055,26 @@
 }
 
 .list-intro__date {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 24px;
   letter-spacing: 0.01em;
   color: #434878;
   margin-bottom: 1.6rem;
 }
+@media (min-width: 1200px) {
+  .list-intro__date {
+    font-size: 18px;
+    margin-bottom: 2.4rem;
+  }
+}
 .list-intro__text {
   font-size: 1.65rem;
   line-height: 1.5;
+}
+@media (min-width: 1200px) {
+  .list-intro__text {
+    font-size: 1.8rem;
+  }
 }
 
 /** END LIST INTRO */
@@ -1068,6 +1090,7 @@
 }
 
 .list-table .legend-item {
+  font-family: Akkurat-Regular, sans-serif;
   font-size: 1.4rem;
   color: #7c7c7c;
   justify-content: center;
@@ -1260,6 +1283,7 @@
 .list-additional .column ul {
   font-size: 1.6rem;
   line-height: 1.5;
+  font-family: Akkurat-Regular, sans-serif;;
 }
 @media (min-width: 768px) {
   .list-additional .column p,
@@ -1462,7 +1486,7 @@
 }
 .intro .intro__text p {
   font-size: 16px;
-  line-height: 1.42;
+  line-height: 1.5;
 }
 @media (min-width: 1024px) {
   .intro .intro__text {
