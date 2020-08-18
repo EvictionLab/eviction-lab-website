@@ -75,14 +75,14 @@ a.copy-link:hover {
 }
 /* --- author meta --- */
 img.post-thumb {
-  width: 56px;
+  width: 48px;
   image-rendering: -moz-crisp-edges;         /* Firefox */
   image-rendering:   -o-crisp-edges;         /* Opera */
   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-  @include for-phone-only {
-    width: 32px;
+  @include media-breakpoint-up(xxxl) {
+    width: 56px;
   }
   border-radius: 50%;
   float: left;
@@ -100,14 +100,11 @@ img.post-thumb {
   .authorbox {
     overflow: auto;
     float: left;
-    @include for-phone-only {
+    @include media-breakpoint-up(sm) {
       margin: 1.6rem 0;
     }
-    @include for-tablet-portrait-and-landscape {
-      padding-bottom: 2.4rem;
-    }
-    @include for-tablet-landscape-up {
-      padding-bottom: 3.2rem;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 0;
     }
     ul {
       display: inline-block;
@@ -140,24 +137,21 @@ img.post-thumb {
       margin-right: 8px;
     }
     @include for-phone-only {
-      @include defaultFont($fontSizeExtraSmall);
+      @include defaultFont(1.5rem);
       flex-grow: 3;
+      line-height: 1.5;
     }
-    @include for-tablet-portrait-and-landscape {
-      @include defaultFont(1.3rem);
-      line-height: 2.4rem;
-    }
-    @include for-tablet-portrait-up {
+    @include media-breakpoint-up(md) {
+      @include defaultFont($fontSizeBodySM);
+      line-height: 1.5;
       flex-grow: 1;
     }
-    @include sm-thru-med-desktop {
-      @include defaultFont(1.3rem);
-      letter-spacing: 0rem;
-      line-height: 2.4rem;
+    @include media-breakpoint-up(lg) {
+      @include defaultFont(1.65rem);
     }
-    @include for-midsize-desktop-up {
-      @include defaultFont($fontSizeSmall1440);
-      line-height: 2.4rem;
+    @include media-breakpoint-up(xl) {
+      @include defaultFont(1.65rem);
+      letter-spacing: 0rem;
     }
   }
   .authorname {
@@ -171,6 +165,16 @@ img.post-thumb {
 .center-content-post.updates-post {
   .page-content {
     margin: 0 auto;
+    p {
+      font-size: $fontSizeBodySM;
+      line-height: 1.5;
+      @include media-breakpoint-up(lg) {
+        font-size: $fontSizeBodyLG;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: $fontSizeBodyXL;
+      }
+    }
     p:last-child {
       margin-bottom: 0 !important;
     }
@@ -185,7 +189,7 @@ img.post-thumb {
       @include for-tablet-portrait-up { 
         margin-bottom: 2.4rem;
       }
-      @include for-tablet-landscape-up { 
+      @include media-breakpoint-up(xl) { 
         margin-bottom: 3.2rem;
       }
       @include for-midsize-desktop-up { 
@@ -196,48 +200,63 @@ img.post-thumb {
         }
     }
     @include for-phone-only {
-      padding: 2.4rem 16px;
+      padding: 4rem 2.4rem;
       .post-body {
         padding: 0;
         
         img.cat-bookmark {
-          width: 7px;
+          width: 11px;
           vertical-align: sub;
           margin-right: 8px;
         }
         .btm-meta-cat {
           margin-bottom: 0rem;
+          @include defaultFont($fontSizeBodySM);
+          @include media-breakpoint-up(lg) {
+            font-size: $fontSizeBodyLG;
+          }
+          @include media-breakpoint-up(xl) {
+            font-size: $fontSizeBodyXL;
+          }
         }
       }
       p, hr {
-          font-size: $fontSizeSmall;
-          line-height: 2rem;
+          font-size: $fontSizeBodySM;
+          line-height: 1.5;
           margin-bottom: 1.6rem
       }
       &.single-title {
         padding-top: 0rem;
       }
     }
-    @include for-tablet-portrait-thru-sm-desktop {
+    @include media-breakpoint-up(md) {
       max-width: 560px;
-      /*padding-top: 0.8rem; */
       .post-body {
         padding: 3.2rem 0 1.6rem;
-      }
-      p, hr {
-        font-size: $fontSize1024Body;
-        line-height: 2.2rem;
       }
     }
     @include for-tablet-portrait-and-landscape {
       p, hr {
-        margin-bottom: 2.4rem
+        margin-bottom: 2.4rem;
       }
     }
-    @include sm-thru-med-desktop {
-      p, hr {
-        margin-bottom: 3.2rem;
+    @include media-breakpoint-up(lg) {
+      font-size: $fontSizeBodyLG;
+      line-height: 1.5;
+      .post-body {
+        padding: 4.8rem 0 1.6rem;
       }
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 640px;
+      p, hr {
+        font-size: $fontSizeBodyXL;
+        margin-bottom: 3.2rem;
+        line-height: 1.5;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      max-width: 720px;
     }
     @include for-midsize-desktop-up{
       max-width: 720px;
@@ -246,8 +265,6 @@ img.post-thumb {
         padding: 4rem 0;
       }
       p, hr {
-        font-size: $fontSize1440Body;
-        line-height: 2.8rem;
         margin-bottom: 4rem
       }
     }
@@ -286,6 +303,9 @@ figure.article-image {
   .date {
     @include defaultFont(1.2rem);
     color: $secondaryAltTextColor;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.4rem;
+    }
   }
   .bordered-header {
     font-size: 1.4rem;
@@ -294,6 +314,9 @@ figure.article-image {
     padding-top: 0.6rem;
     @include for-phone-only {
       margin: 0 16px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
     }
   }
 }
@@ -316,31 +339,28 @@ figure.article-image {
     font-style: italic;
   }
   .title, .event-title {
-    @include for-phone-only {
-      @include altFont(2.4rem);
+    @include media-breakpoint-up(sm) {
+      @include h2TitleSM;
       letter-spacing: 0.04rem;
       flex-grow: 2;
-      line-height: 3rem;
     }
-    @include for-tablet-portrait-and-landscape {
-      @include altFont($fontSizeLarge);
+    @include media-breakpoint-up(md) {
+      @include h2TitleMD;
       letter-spacing: 0.07rem;
-      line-height: 3.6rem;
       padding-bottom: 1.4rem;
       padding-top: 1.1rem;
     }
-    @include sm-thru-med-desktop {
+    @include media-breakpoint-up(lg) {
       @include altFont($fontSizeExtraLarge);
       letter-spacing: 0.1rem;
-      line-height: 4.2rem;
-      margin-bottom: 2.6rem;
+      @include h2TitleLG;
+      //margin-bottom: 1.6rem;
       padding-top: 1.1rem;
     }
-    @include for-midsize-desktop-up {
-      @include altFont(4rem);
+    @include media-breakpoint-up(xl) {
+      @include h2TitleXL;
       letter-spacing: 0.1rem;
-      line-height: 4.8rem;
-      margin-bottom: 2.6rem;
+     // margin-bottom: 1.6rem;
     }
   }
   h2.title.events-type {
@@ -392,19 +412,19 @@ figure.article-image {
     }
     .header, .header a {
       @include for-phone-only {
-        @include defaultFont(1rem);
+        @include defaultFont(1.6rem);
         margin: 0;
       }
       @include for-tablet-portrait-and-landscape {
-        @include defaultFont(1.3rem);
+        @include defaultFont(1.6rem);
         margin: 0;
       }
       @include sm-thru-med-desktop {
-        @include defaultFont(1.3rem);
+        @include defaultFont(1.65rem);
         margin: 0rem 0 .4rem 0;
       }
       @include for-midsize-desktop-up {
-        @include defaultFont(1.5rem);
+        @include defaultFont(1.8rem);
         margin: 0rem 0 1.6rem 0;
       }
     }
@@ -424,8 +444,8 @@ figure.article-image {
     a {
       text-decoration: none;
       @include for-phone-only {
-        @include altFont(1.5rem);
-        letter-spacing: 0.05rem;
+        @include altFont(2rem);
+        letter-spacing: 0.02rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont(2.1rem);
@@ -433,15 +453,15 @@ figure.article-image {
         letter-spacing: 0.06rem;
       }
       @include sm-thru-med-desktop {
-        @include altFont(2.1rem);
+        @include altFont(2.4rem);
         /* color: $color1; */
-        line-height: 2.7rem;
-        letter-spacing: 0.06rem;
+        line-height: 1.3;
+        letter-spacing: 0.03rem;
       }
-      @include for-midsize-desktop-up {
-        @include altFont(3rem);
-        line-height: 3.2rem;
-        letter-spacing: 0.09rem;
+      @include media-breakpoint-up(xl) {
+        @include altFont(2.6rem);
+        line-height: 1.3;
+        letter-spacing: 0.05rem;
       }
     } 
     img.cat-bookmark {

@@ -156,7 +156,8 @@ ul.anchor-links li {
 ul.anchor-links a {
   position: relative;
   color: $textColor;
-  @include altFont($subnavFontPhone);
+  font-family: $headerFontStack;
+  font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   @include for-tablet-portrait-and-landscape {
@@ -169,6 +170,9 @@ ul.anchor-links a {
   @include for-tablet-landscape-up {
     @include altFont($subnavFontDesktop);
     letter-spacing: 0.04rem;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 1.8rem;
   }
   &:hover {
     text-decoration: none;
@@ -306,7 +310,7 @@ ul.anchor-links.dropdown-menu.show {
 
 .accordion {
   margin-bottom: 4rem;
-  margin-top: 2.4rem;
+  margin-top: 3.2rem;
   @include for-tablet-portrait-up {
     margin-top: 3.2rem;
   }
@@ -343,12 +347,14 @@ ul.anchor-links.dropdown-menu.show {
     }
     span {
       font-size: 1.6rem;
-      @include for-phone-only {
-        font-size: $fontSizeSmall;
-        line-height: 2.2rem;
+      line-height: 1.5;
+      @include media-breakpoint-up(lg) {
+        font-size: 1.65rem;
+        line-height: 1.5;
       }
-      @include for-midsize-desktop-up {
+      @include media-breakpoint-up(xl) {
         font-size: 1.8rem;
+        line-height: 1.5;
       }
       width: auto;
       display:inline-block;

@@ -11,7 +11,7 @@ $heroWidth: 300px;
 
 // section styles
 .new-splash {
-  min-height: 445px;
+  min-height: 640px;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/assets/hero/american-flag-evicted-woman-phone.jpg');
   background-size: cover;
   background-position: center center;
@@ -55,6 +55,9 @@ $heroWidth: 300px;
   }
    @include for-tablet-portrait-and-landscape {
     padding: 0 $tabletPlusMargin;
+  }
+  @include media-breakpoint-up(x4l) {
+    max-width: 1392px;
   }
 
 
@@ -129,35 +132,35 @@ $heroWidth: 300px;
       padding: 40px 16px 10px 0;
     }
     h1 {
-      @include altFont(24px);
+      @include altFont(32px);
       letter-spacing: 1px;
-      line-height: 28px;
+      line-height: 1.2;
       width: 75%;
       @include for-iphone-8plus-portrait-only {
-        @include altFont(30px);
-        letter-spacing: 2px;
-        line-height: 42px;
+        @include altFont(32px);
+        letter-spacing: 1px;
+        line-height: 1.2;
         width: 86%;
       }
       @include for-tablet-portrait-up {
         @include altFont(40px);
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         line-height: 50px;
       }
       @include for-tablet-landscape-up {
         @include altFont(44px);
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         line-height: 50px;
       }
     }
     p {
-      @include defaultFont(14px);
+      @include defaultFont(16px);
       margin: 24px 0 32px 0;
-      line-height: 21px;
+      line-height: 1.5;
       @include for-iphone-8plus-portrait-only {
-        @include defaultFont(15px);
+        @include defaultFont(16px);
         margin: 32px 0 40px 0;
-        line-height: 21px;
+        line-height: 1.5;
       }
       @include for-tablet-portrait-up {
         max-width: 440px;
@@ -176,7 +179,7 @@ $heroWidth: 300px;
       background-color: $color1;
       border-color: $color1;
       text-transform: uppercase;
-      @include altFont(1rem);
+      @include altFont(1.4rem);
       padding: 11px 15px;
       letter-spacing: .054rem;
       @include for-tablet-portrait-up {

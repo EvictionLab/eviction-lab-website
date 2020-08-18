@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="796px" height="198px" viewBox="0 0 796 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>barchart</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#545A98" offset="0%"></stop>
+            <stop stop-color="#24284E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#545A98" offset="0%"></stop>
+            <stop stop-color="#24284E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="HP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="EL-HP-redesign-idea-3-Copy-2" transform="translate(-634.000000, -3077.000000)">
+            <g id="Group-3" transform="translate(0.000000, 2961.000000)">
+                <g id="barchart" transform="translate(634.000000, 113.000000)">
+                    <line x1="0.890380313" y1="3.75" x2="794.956586" y2="3.75" id="Line-3-Copy-2" stroke="#CCD0D3" stroke-width="0.5" stroke-linecap="square"></line>
+                    <line x1="0.890380313" y1="85.75" x2="794.956586" y2="85.75" id="Line-3-Copy-3" stroke="#CCD0D3" stroke-width="0.5" stroke-linecap="square"></line>
+                    <line x1="0.890380313" y1="169.25" x2="794.956586" y2="169.25" id="Line-3-Copy-4" stroke="#CCD0D3" stroke-width="0.5" stroke-linecap="square"></line>
+                    <rect id="Rectangle" fill-opacity="0.12" fill="url(#linearGradient-1)" x="87" y="50" width="168" height="203"></rect>
+                    <rect id="Rectangle-Copy-14" fill-opacity="0.12" fill="url(#linearGradient-2)" x="314" y="98" width="168" height="154"></rect>
+                    <rect id="Rectangle-Copy-15" fill-opacity="0.12" fill="url(#linearGradient-1)" x="541" y="50" width="168" height="203"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -63,9 +63,9 @@
   max-width: 720px;
   margin: auto;
   @include for-phone-only {
-    @include altFont(1.2rem);
+    @include altFont(1.6rem);
     border-top: 3px solid;
-    padding-top: 10px;
+    padding-top: 8px;
     letter-spacing: 0.05rem
     }
   @include for-tablet-portrait-up {
@@ -73,7 +73,10 @@
     border-top: 5px solid;
     padding-top: 10px;
     letter-spacing: 0.1rem;
-    } 
+    }
+  @include media-breakpoint-up(xl) {
+    @include altFont(2rem);
+  }   
   .subhead-rt {
     float: right;
     color: inherit;
@@ -90,13 +93,15 @@
   } 
   &.research-type.el-research, &.research-type.outside-research {
     border-top: none; 
-    margin-top: 40px;
+    margin-top: 0rem;
     border-bottom: 3px solid;
     @include for-phone-only {
       margin-top:1.6rem;
     }
-
-}
+  }
+  &.research-type.el-research {
+    margin-top: 4rem;
+  }
 } 
 .custom-pagination {
   text-align: center;
@@ -157,13 +162,13 @@
   }  
 }
 .list-item {
-  padding-top: $defaultPadding;
-  padding-bottom: $defaultPadding;
   display: flex;
   min-height: 152px;
   &.updates-list .title a {
     /* color: #333333; */
   }
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
   @include for-below-414 {
     display: block;
     min-height: initial;
@@ -180,8 +185,12 @@
     padding-bottom: 4rem;
   }
   @include for-tablet-landscape-up {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
   }
   &.updates-list .post-date {
     flex-grow: 1;
@@ -208,6 +217,10 @@
     width: 7px;
     height: 10px;
     margin-right: 6px;
+    @include media-breakpoint-up(xxl) {
+      width: 10px;
+      height: 14px;
+    }
     } 
   .postlist-left-col {
     flex-grow: 1;
@@ -248,7 +261,7 @@
         margin-bottom: 0.8rem;
       }
       @include for-phone-only {
-        @include defaultFontBold($fontSizeExtraSmall);
+        @include defaultFontBold(1.2rem);
         letter-spacing: 0rem;
         flex-grow: 3;
       }
@@ -259,14 +272,18 @@
       @include for-tablet-portrait-up {
         flex-grow: 1;
       }
-      @include sm-thru-med-desktop {
+      @include media-breakpoint-up(lg) {
         @include defaultFontBold($fontSizeSmall);
         letter-spacing: 0rem;
         line-height: 1.3rem;
       }
-      @include for-midsize-desktop-up {
-        @include defaultFontBold($fontSizeSmall1440);
-        letter-spacing: 0.09rem;
+      @include media-breakpoint-up(xl) {
+        @include defaultFontBold(1.6rem);
+        letter-spacing: 0.06rem;
+      }
+      @include media-breakpoint-up(xxl) {
+        @include defaultFontBold(1.8rem);
+        letter-spacing: 0.06rem;
       }
     }
     .list-thumb-container {
@@ -292,23 +309,29 @@
         vertical-align: bottom;
       }
       @include for-tablet-portrait-and-landscape {
-        @include defaultFont($fontSizeSmall);
+        @include defaultFont(1.5rem);
         letter-spacing: 0rem;
         line-height: 2rem;
       }
       @include for-tablet-portrait-up {
         flex-grow: 4;
       }
-      @include sm-thru-med-desktop {
-        @include defaultFont($fontSizeSmall);
+      @include media-breakpoint-up(lg) {
+        @include defaultFont(1.4rem);
+        letter-spacing: 0rem;
+        line-height: 0rem;
+      }
+      @include media-breakpoint-up(xl) {
+        @include defaultFont(1.6rem);
+        letter-spacing: 0rem;
+        line-height: 0rem;
+      }
+      @include media-breakpoint-up(xxl) {
+        @include defaultFont(1.7rem);
         letter-spacing: 0rem;
         line-height: 2rem;
       }
-      @include for-midsize-desktop-up {
-        @include defaultFont($fontSizeSmall1440);
-        letter-spacing: 0rem;
-        line-height: 2rem;
-      }
+
       }
       
     .post-cat {
@@ -323,13 +346,13 @@
       @include for-tablet-portrait-up {
           flex-grow: 4;
         }  
-      @include sm-thru-med-desktop {
-        @include defaultFont($fontSizeSmall);
+      @include media-breakpoint-up(lg) {
+        @include defaultFont(1.6rem);
           letter-spacing: 0rem;
           line-height: 2rem;
         }
-      @include for-midsize-desktop-up {
-        @include defaultFont($fontSizeSmall1440);
+      @include media-breakpoint-up(xxl) {
+        @include defaultFont(1.7rem);
           letter-spacing: 0rem;
           line-height: 2rem;
           }
@@ -427,27 +450,25 @@
     }     
     .title, .event-title {
       @include for-phone-only {
-        @include altFont($fontSize320H3);
+        @include altFont(2rem);
         letter-spacing: 0.04rem;
         flex-grow: 2;
-        line-height: 1.9rem;
+        line-height: 1.2;
       }
       @include for-tablet-portrait-and-landscape {
-        @include altFont($fontSizeMedium);
+        @include altFont(2.4rem);
         letter-spacing: 0.06rem;
         margin-bottom: 1.6rem;
-        line-height: 2.7rem;
+        line-height: 1.4;
       }
-      @include sm-thru-med-desktop {
+      @include media-breakpoint-up(lg) {
         @include altFont($fontSize1024H3);
-        letter-spacing: 0.07rem;
-        line-height: 3.2rem;
-        margin-bottom: 1.6rem;
+        letter-spacing: 0.07rem;  
+        margin-bottom: 2.4rem;
       }
-      @include for-midsize-desktop-up {
-        @include altFont($fontSizeLarge);
-        letter-spacing: 0.09rem;
-        margin-bottom: 1.6rem;
+      @include media-breakpoint-up(xl) {
+        @include altFont(3.2rem);
+        letter-spacing: 0.08rem;
       }
       a {
         /*color: $textColor;*/
@@ -487,24 +508,24 @@
   }
   .post-summary {
     @include for-phone-only {
-      @include defaultFont($fontSize1024Body);
+      @include defaultFont(1.6rem);
       letter-spacing: 0rem;
       display: none;
     }
     @include for-tablet-portrait-and-landscape {
-      @include defaultFont($fontSize1024Body);
+      @include defaultFont(1.6rem);
       letter-spacing: 0rem;
-      line-height: 2.2rem;
+      line-height: 1.4;
     }
-    @include sm-thru-med-desktop {
-      @include defaultFont($fontSize1024Body);
+    @include media-breakpoint-up(lg) {
+      @include defaultFont(1.65rem);
       letter-spacing: 0rem;
-      line-height: 2.2rem;
+      line-height: 1.4;
     }
-    @include for-midsize-desktop-up {
-      @include defaultFont($fontSize1440Body);
+    @include media-breakpoint-up(xl) {
+      @include defaultFont(1.8rem);
       letter-spacing: 0rem;
-      line-height: 2.8rem;
+      line-height: 1.4;
     }
   }
 }
@@ -860,6 +881,10 @@ a.read-more {
 .list-thumb {
     width: 48px;
     height: 48px;
+    @include media-breakpoint-up(xxl) {
+      width: 54px;
+      height: 54px;
+    }
     border-radius: 50%;
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */

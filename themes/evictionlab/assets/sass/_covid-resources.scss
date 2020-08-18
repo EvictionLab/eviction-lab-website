@@ -15,7 +15,7 @@
     h1 {
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
-        font-weight: bold;
+       // font-weight: bold;
         line-height: 142%;
         /* or 43px */
         letter-spacing: 0.03em;
@@ -38,7 +38,6 @@
     h2 {
         font-family: "GT-Eesti-Display-Bold";
         font-style: normal;
-        font-weight: bold;
         font-size: 3.24rem;
         line-height: 3.8rem;
         color: #000000;
@@ -75,7 +74,7 @@
         a.sublink {
             font-family: "GT-Eesti-Display-Medium";
             font-style: normal;
-            font-weight: 400;
+            //font-weight: 400;
             font-size: 1.7rem;
             line-height: 2rem;
             letter-spacing: 0.08em;
@@ -135,25 +134,35 @@
                 background-color: #F6F9FC;
                 order: 2;
                 @include media-breakpoint-down(mm) {
-                    padding-top: 6.4rem;
-                    padding-bottom: 6.4rem;
+                    padding-top: 4rem;
+                    padding-bottom: 4.8rem;
                 }
                 @include media-breakpoint-up(md) {
                     order: 1;
                 }
+                transition: background-color .3s ease;
+                a.sublink {
+                    transition: color .3s ease;
+                    i.fa.fa-chevron-right {
+                        transition: transform .3s ease;
+                    }
+                }
                 &:hover {
-                    //background-color: #ebeff3;
-                    .hoverbar {
-                        display: block;
-                        transition: display .8s ease;
+                    background-color: #f2f7fa;
+                    a.sublink {
+                        color: $color1;
+                        i.fa.fa-chevron-right {
+                            transform: translateX(4px);
+                        }
                     }
                 } 
             }
             &:nth-of-type(2) {
                 background-image: url('/images/assets/graphics/scorecard-bg.jpg');
                 order: 1;
-                height: 32rem;
+                height: 24rem;
                 @include media-breakpoint-up(md) {
+                    height: 32rem;
                     order: 2;
                     height: auto;
                 }
@@ -174,25 +183,43 @@
                 padding-bottom: 16rem;
             }
             &:nth-of-type(1) {
-                background-image: url('/images/assets/graphics/ets-bg.jpg');
+                background-image: url('/images/assets/graphics/ets-bg-sm.jpg');
                 background-position-x: center;
-                height: 32rem;
+                background-color: #24284e;
+                height: 24rem;
                 @include media-breakpoint-up(md) {
                     height: auto;
+                   // height: 32rem;
+                }
+                @include media-breakpoint-up(lg) {
+                    background-size: 120%;
+                    background-position-y: bottom;
+                }
+                @include media-breakpoint-up(x4l) {
+                    background-size: 96%;
                 }
             }
             &:nth-of-type(2) {
                 background-color: #F6F9FC;
                 @include media-breakpoint-down(mm) {
-                    padding-top: 6.4rem;
-                    padding-bottom: 6.4rem;
+                    padding-top: 4rem;
+                    padding-bottom: 4.8rem;
                 }
-                &:hover {
-                    .hoverbar {
-                        display: block;
-                        transition: display .8s ease;
+                a.sublink {
+                    transition: color .3s ease;
+                    i.fa.fa-chevron-right {
+                        transition: transform .3s ease;
                     }
-                    
+                }
+                transition: background-color .3s ease;
+                &:hover {
+                    background-color: #f2f7fa;
+                    a.sublink {
+                        color: $color1;
+                        i.fa.fa-chevron-right {
+                            transform: translateX(4px);
+                        }
+                    }
                 }
             }
         }
@@ -203,15 +230,29 @@
         }
         .feature {
             /* Vector */
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.2);
+            transition: box-shadow .3s ease;
+            a.sublink {
+                transition: color .3s ease;
+            }
             &:hover {
+                a.sublink {
+                    color: $color1;
+                    i.fa.fa-chevron-right {
+                        transition: transform .3s ease;
+                    }
+                    i.fa.fa-chevron-right {
+                        transform: translateX(4px);
+                    }
+                }
                 .hoverbar {
-                    display: block;
-                    transition: display .8s ease;
-                }      
+                 //   display: block;
+                  //  transition: display .8s ease;
+                }    
+                box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.17); 
             }
             .bg-wrapper-1 {
-                background-size: 125%;
+                background-size: 150%;
                 
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
@@ -223,7 +264,7 @@
                     background-image: url('/images/assets/graphics/policies-bg.jpg');
                 }
             .bg-wrapper-2 { 
-                background-size: 125%;
+                background-size: 200%;
                 @include media-breakpoint-up(md) {
                     background-size: 175%;
                 }  

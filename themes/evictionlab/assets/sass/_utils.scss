@@ -72,6 +72,9 @@
   max-width: 1000px;
   &.list-item {
     max-width: 720px;
+    @include media-breakpoint-up(xxl) {
+      max-width: 800px;
+    }
   }
 }
 

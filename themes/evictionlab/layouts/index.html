@@ -1,7 +1,7 @@
 {{ partial "header" . }}
 
 <!-- ********** splash section ********** -->
-<div class="superheader text-center  d-flex align-items-center justify-content-center" style="">
+<div class="superheader text-md-center  d-flex align-items-center justify-content-center" style="">
   <div class="super-content d-block">{{ i18n "superhead" | safeHTML }}</div>
 </div>
 <div class="new-splash fill-height">
@@ -15,16 +15,7 @@
         <div class="carousel-inner">
 
           <div class="carousel-item active">
-            <!--<img class="d-block w-100" src="/images/assets/hero/american-flag-evicted-woman.jpg" alt="First slide">-->
           </div>
-
-          <!--<div class="carousel-item">
-            <img class="d-block w-100" src="/img/hero-slide-2.jpg" alt="Second slide">
-          </div>
-
-          <div class="carousel-item">
-            <img class="d-block w-100" src="/images/assets/hero/girl-looking-out-window2.jpg" alt="Third slide">
-          </div>-->
 
         </div>
       </div>
@@ -61,122 +52,129 @@
 
 <!-- ********** pictorial menu section ********** -->
 
-<div class="pictorial-wrapper" id="home-menu">
-
-  <div class="top-row">
-
-    <div class="left tr-block">
-      <a href="/map">
-        <div class="menu-wrapper">
-          <h2 class="break-me">{{ i18n "mapData" }}</h2>
-          <p>{{ i18n "mapSub" }}</p>
-          <span>{{ i18n "mapCTA" }}</span>
-          <div class="hover-bar"></div>
+  <div id="sub-splash-gateway"><a id="home-menu"></a>
+<!--- Main features row ------------------------------------------>    
+    <div id="main-features" class="row mx-0 feature-panel"> 
+      <div class="col-12 col-md-8 col-lg-7 col-xl-6 mx-auto my-5 my-md-5 my-lg-8 px-3 px-md-2">
+        <div id="interactive-tools-intro" class="d-flex justify-content-center align-items-center mb-3"><img class="mr-1 mr-md-2 header-icon" alt="Interactive Tools icon" src="/images/icons/pm-research3.svg"><h2 class="policies-intro text-center">{{ i18n "toolsHeading" }}</h2></div>
+        <p class="text-center mb-0">{{ i18n "toolsSub" }}</p>
+      </div>
+      <div class="w-100"></div>
+        <div id="feature-map" class="col-12 col-md-6 feature main-feature px-0 d-flex justify-content-end justify-content-mm-center justify-content-md-end">
+            <a class="wraplink" href="/map/" aria-label="Go to the map"></a>  
+            <div class="col-12 col-mm-8 col-md-11 col-lg-10 col-xxxl-9 d-flex flex-column justify-content-center px-4 pl-md-0 px-lg-4 pr-md-4">
+                    <div class="wrapper">
+                        <h3>{{ i18n "mapData" }}</h3>
+                        <p>{{ i18n "mapSub" }}</p>
+                        <a class="sublink" href="/map/">{{ i18n "mapCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div> 
+                
+            </div>     
         </div>
-      </a>
-    </div>
-   
-    <div class="right tr-block">
-      <a href="/rankings">
-        <div class="menu-wrapper">
-          <h2>{{ i18n "rankingsHead" }}</h2>
-          <p>{{ i18n "rankingsSubhead" }}</p>
-          <span>{{ i18n "rankingsCTA" }}</span>
-          <div class="hover-bar"></div>
-        </div>      
-      </a>
-    </div>
-
-  </div>
-  <!-- ********** middle row ********** -->
-  <div class="middle-row">
-
-    <div class="left mr-block">
-      <a href="{{ "about" | relLangURL }}">
-        <div class="menu-wrapper">
-          <span class="mobile-off">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
-          <span class="mobile-on">{{ i18n "aboutHead1" }}<br />{{ i18n "aboutHead2" }}</span>
-          <div class="hover-bar"></div>
+        <div id="feature-rankings" class="col-12 col-md-6 feature main-feature px-0 d-flex justify-content-start justify-content-mm-center justify-content-md-start">
+          <a class="wraplink" href="/rankings/" aria-label="Go to rankings"></a>  
+            <div class="col-12 col-mm-8 col-md-10 offset-md-1 d-flex flex-column justify-content-center px-4 pl-md-0 pr-md-2 px-lg-2">
+                    <div class="wrapper">
+                        <h3>{{ i18n "rankingsHead" }}</h3>
+                        <p>{{ i18n "rankingsSubhead" }}</p>
+                        <a class="sublink" href="/rankings/">{{ i18n "rankingsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div> 
+                
+            </div>  
         </div>
-      </a>  
+    </div>
+<!--- COVID features rows ------------------------------------------>    
+    <div id="covid-gateway">
+      <div class="row mx-0 subfeature-panel mb-5 d-flex">
+        <div class="col-12 col-md-8 col-lg-7 col-xl-6 mx-auto my-5 my-md-5 my-lg-8 px-3 px-md-2">
+          <div id="covid-intro" class="d-flex justify-content-center align-items-center mb-3"><img class="mr-1 mr-md-2 header-icon" alt="COVID-19 icon" src="/images/icons/covid-mask.svg"><h2 class="policies-intro mb-0">{{ i18n "covidHeading" }}</h2></div>
+      
+          <p class="text-center mb-0">{{ i18n "covidSub" }}</p>
+        </div>
+        <div class="col-11 col-mm-8 col-md-12 col-lg-10 col-xxxl-9 mx-auto d-md-flex col-2-wrap">
+            <div class="feature d-flex flex-column justify-content-center px-0 mb-6 mb-md-0 mr-md-1 mr-lg-2">
+                <div class="bg-wrapper-1">
+                  <a class="wraplink" href="/eviction-tracking/" aria-label="Go to ETS"></a>
+                    <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
+                        <h3>{{ i18n "etsHead" }}</h3>
+                        <p>{{ i18n "etsSub" }}</p>
+                        <a class="sublink" href="/eviction-tracking/">{{ i18n "etsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div>  
+                </div>       
+            </div>
+            <div class="feature d-flex flex-column justify-content-center px-0 ml-md-1 ml-lg-2">
+                <div class="bg-wrapper-2">
+                  <a class="wraplink" href="/covid-policy-scorecard" aria-label="Go to the scorecard"></a>
+                    <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
+                        <h3>{{ i18n "scorecardHead" }}</h3>
+                        <p>{{ i18n "scorecardSub" }}</p>
+                        <a class="sublink" href="/covid-policy-scorecard">{{ i18n "scorecardCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </div>
+      <div class="row mx-0 subfeature-panel mb-7 mb-md-10 mb-lg-14">
+        <div class="col-11 col-mm-8 col-md-12 col-lg-10 col-xxxl-9 mx-auto d-md-flex col-2-wrap">
+            <div class="feature d-flex flex-column justify-content-center px-0 mb-6 mb-md-0 mr-md-1 mr-lg-2">
+                <div class="bg-wrapper-3">
+                  <a class="wraplink" href="/covid-eviction-policies/" aria-label="Go to policies"></a> 
+                    <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
+                        <h3>{{ i18n "policiesHead" }}</h3>
+                        <p>{{ i18n "policiesSub" }}</p>
+                        <a class="sublink" href="/covid-eviction-policies/">{{ i18n "policiesCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div>  
+                </div>       
+            </div>
+            <div class="feature d-flex flex-column justify-content-center px-0 ml-md-1 ml-lg-2">
+                <div class="bg-wrapper-4">
+                  <a class="wraplink" href="https://justshelter.org" target="_blank" aria-label="Go to Just Shelter website"></a> 
+                    <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
+                        <h3>{{ i18n "jsHead" }}</h3>
+                        <p>{{ i18n "jsSub" }}</p>
+                        <a class="sublink" href="https://justshelter.org" target="_blank">{{ i18n "jsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </div>
+    </div>
+<!-- Other pages links -------------->
+    <div id="other-pages">
+      <div class="row mx-0 subfeature-panel mb-4 mb-md-7 mb-lg-9">
+        <div class="col-11 col-mm-8 col-md-12 col-lg-10 col-xxxl-9 mx-auto d-md-flex col-2-wrap pl-md-3 pl-lg-3">
+          <div class="col-12 col-md-4 mb-5 mb-md-0">
+            <h2>{{ i18n "learnMoreHead1" }} <br>{{ i18n "learnMoreHead2" }}</h2>
+            <div class="red-underbar mt-3"></div>
+          </div>
+          <div class="col-12 col-md-8">
+            <ul>
+              <li><a class="sublink aboutus" href="/about">{{ i18n "aboutHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a class="sublink aboutus" href="/why-eviction-matters">{{ i18n "whyHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a class="sublink aboutus" href="/help-faq">{{ i18n "helpHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+              <li><a class="sublink aboutus" href="/methods">{{ i18n "methodsHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
+            </ul>
+              
+          </div>
+        </div>
+      </div>    
+    </div>
+<!-- Update section -->
+  <div id="updates-section">
+    <div class="row mx-0 subfeature-panel py-6 py-md-8 py-lg-10 pl-md-1 pl-lg-0">
+      <div class="col-11 col-lg-8 mx-auto d-md-flex col-2-wrap">
+        <div class="col-12 col-md-7 col-lg-8 col-xl-7">
+          <h2 class="mb-3">Follow research, events, and news coverage</h2>
+          <a class="sublink mb-2 mb-md-0 d-block" href="/updates" target="_blank">GO TO UPDATES <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+        </div>
+        
+      </div>
+    </div>    
   </div>
 
-    <div class="middle-left mr-block">
-      <a href="{{ "why-eviction-matters" | relLangURL }}">
-        <div class="menu-wrapper">
-            <span class="mobile-off">{{ i18n "whyHead1" }}<br />{{ i18n "whyHead2" }}</span>
-            <span class="mobile-on">{{ i18n "whyHead1" }}<br />{{ i18n "whyHead2" }}</span>
-            <div class="hover-bar"></div>
-        </div>  
-      </a>
-    </div>
 
-    <div class="middle-right mr-block">
-      <a href="{{ "methods" | relLangURL }}">
-          <div class="menu-wrapper">
-              <span class="mobile-off">{{ i18n "methodsHead" }}</span>
-              <span class="mobile-on">{{ i18n "methodsHead" }}</span>
-              <div class="hover-bar"></div>
-          </div>
-      </a>
-    </div>
+<!-- / gateway section ID --> 
 
-    <div class="right mr-block">
-      <a href="{{ "help-faq" | relLangURL }}">
-        <div class="menu-wrapper">
-          <span class="mobile-off">{{ i18n "helpHead" }}</span>
-          <span class="mobile-on">{{ i18n "helpHead" }}</span>
-          <div class="hover-bar"></div>
-        </div>  
-      </a>
-    </div>
-
-  </div>
-  <!-- ******************** -->
-  <div class="bottom-row">
-
-    <div class="left br-block ">
-      {{ $blog := where .Site.AllPages "Params.featured" "home" }}
-      {{ $first := index $blog 0 }}
-      <!--<a href="{{ $first.RelPermalink }}">-->
-      <a href="{{ i18n "wemLink" }}"> 
-        <div class="menu-wrapper">
-          <div class="left-column pm-ftr">
-            
-            <img alt="Research icon" src="/images/icons/pm-research2.svg" />
-          </div>
-          <div class="right-column">
-            <p><span class="ak-bold"><!--Featured post:-->{{ i18n "wemIntro" }}</span> <span>
-               
-                <!--{{ if isset $blog 0 }}
-              {{ $first.Title | truncate 60 }}-->
-            {{ i18n "wemAlert" }}
-            </span></p>
-             <!-- {{ end }} -->
-            <span class="br-link"><!--Read the blog post-->{{ i18n "wemCTA" }} <i class="fa fa-chevron-right"></i></span>
-            <div class="hover-bar"></div>
-          </div>  
-        </div>  
-      </a>
-    </div>
-
-    <div class="right br-block ">
-      <a href="/covid-resources">
-        <div class="menu-wrapper">
-          <div class="left-column pm-updates">
-            <img alt="COVID-19 icon" src="/images/icons/covid-mask.svg" />
-          </div>
-          <div class="right-column">
-            <p>View all of our COVID-19 Tools and Resources</p>
-            <span class="br-link">Go to COVID-19 Resources <i class="fa fa-chevron-right"></i></span>
-            <div class="hover-bar"></div>
-          </div>  
-        </div>  
-      </a>  
-    </div>
-
-  </div>
-
-</div>
+  </div>  
 
 {{ partial "footer" . }}

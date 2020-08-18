@@ -23,8 +23,8 @@ $newsletterBg: #333;
     margin: auto;
   }
   p {
-    @include defaultFont(12px);
-    line-height: 15px;
+    @include defaultFont(14px);
+    line-height: 1.5;
     color: $grey3;
     margin-bottom: grid(2);
   }
@@ -39,7 +39,7 @@ $newsletterBg: #333;
   }
   .btn.btn-primary {
     padding: 0 grid(2);
-    font-size:10px;
+    font-size:13px;
     height: grid(5);
     margin-bottom: 0;
     letter-spacing: 0.054rem;
@@ -60,8 +60,8 @@ $newsletterBg: #333;
     p {
       margin: 0 grid(2) 0 0;
       width: grid(26);
-      font-size: 13px;
-      line-height: 19px;
+      font-size: 15px;
+      line-height: 1.5;
       color: $white;
     }
     .form-control {

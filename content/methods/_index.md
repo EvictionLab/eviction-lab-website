@@ -9,6 +9,6 @@ description: Read our Methods FAQ and download our full Methodology Report.
 h1: Methods
 li1: GO TO SECTION
 li2: Methods FAQ
-li3: 'Download Full Report (PDF)'
+li3: 'Download Report (PDF)'
 ---
 

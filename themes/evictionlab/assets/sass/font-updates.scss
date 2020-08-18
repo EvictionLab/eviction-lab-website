@@ -1,0 +1,15 @@
+ 
+ 
+ p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    @include media-breakpoint-up(lg) {
+        font-size: 1.65rem;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 1.8rem;
+    }
+  }
+
+
+

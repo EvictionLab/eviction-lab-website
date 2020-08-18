@@ -64,11 +64,15 @@
     }
     .eviction-facts .bordered-header {
         margin-top: 0rem;
+        margin-bottom: 3.2rem;
         @include for-tablet-portrait-up {
-            margin-bottom: 3.2rem;
-        }
-        @include for-midsize-desktop-up {
             margin-bottom: 4rem;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 4.8rem;
+        }
+        @include media-breakpoint-up(xxl) {
+            margin-bottom: 5.6rem;
         }
     }
     .eviction-facts {
@@ -340,6 +344,12 @@
     .alt-bg.book-panel {
         padding-top: 4rem;
         padding-bottom: 4rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        @include media-breakpoint-up(md) {
+            padding-left: 2.4rem;
+            padding-right: 2.4rem;
+        }
         background: #F0F1F5;
         @include for-tablet-portrait-up {
             padding-top: 5.6rem;
@@ -395,10 +405,20 @@
             width: 100%;
                 font-size: 1.4rem;
                 line-height: 2rem;
-            @include for-midsize-desktop-up { 
+            @include media-breakpoint-up(md) { 
                 font-size: 1.6rem;
                 letter-spacing: 0;
-                line-height: 2.4rem;
+                line-height: 1.5;
+            }    
+            @include media-breakpoint-up(lg) { 
+                font-size: 1.65rem;
+                letter-spacing: 0;
+                line-height: 1.5;
+            }
+            @include media-breakpoint-up(xl) { 
+                font-size: 1.7rem;
+                letter-spacing: 0;
+                line-height: 1.5;
             }
           }
         }
@@ -407,8 +427,8 @@
             @include for-tablet-portrait-up {
                 margin: 4rem 0 3.2rem;
             }
-            @include for-midsize-desktop-up {
-                margin: 4.8rem 0 4rem;
+            @include media-breakpoint-up(xl) {
+                margin: 5.4rem 0 4rem;
             }
         }
         .btn-primary {
@@ -446,26 +466,26 @@
             }
         }
         p.subcopy {
-            @include defaultFont(1rem);
-            line-height: 1.3rem;
+            @include defaultFont(1.6rem);
+            line-height: 1.5;
             color: $grey1a;
             width: 200px;
             margin-bottom: 0;
             span {
-                @include defaultFontBold(1rem);
+                @include defaultFontBold(1.5rem);
             }
             @include for-tablet-portrait-up {
                 width: 180px;
-                font-size: 1.4rem;
-                line-height: 2rem;
+                font-size: 1.6rem;
+                line-height: 1.5;
                 span {
-                    @include defaultFontBold(1.4rem);
+                    @include defaultFontBold(1.5rem);
                 }  
             }
             @include for-midsize-desktop-up {
-                font-size: 1.5rem;
+                font-size: 1.65rem;
                 letter-spacing: 0;
-                line-height: 20px;
+                line-height: 1.5;
                 width: 220px;
                 span {
                     @include defaultFontBold(1.5rem);
@@ -478,9 +498,14 @@
                 line-height: 2.2rem;
                /* margin-bottom: 4.8rem; */
             }
-            @include for-midsize-desktop-up {
+            @include media-breakpoint-up(lg) {
+                font-size: 1.65rem;
+                line-height: 1.5;
+               /* margin-bottom: 4.8rem; */
+            }
+            @include media-breakpoint-up(xl) {
                 font-size: 1.8rem;
-                line-height: 2.8rem;
+                line-height: 1.5;
               /*  margin-bottom: 4.8rem; */
             }
         }
@@ -538,9 +563,13 @@
                     color: $grey1a;
                     margin-bottom: 2.4rem;
                 }
-                @include for-midsize-desktop-up {
+                @include media-breakpoint-up(lg) {
                     font-size: 1.5rem;
-                    line-height: 2rem;
+                    line-height: 1.5;
+                }
+                @include media-breakpoint-up(xl) {
+                    font-size: 1.6rem;
+                    line-height: 1.4;
                 }
             }
             .bordered-header {
@@ -566,7 +595,7 @@
     .page-section-header {
         font-family: GT-Eesti-Display-Bold, sans-serif;
         text-transform: none;
-        font-size: 1.6rem;
+        font-size: 2.4rem;
         letter-spacing: .04rem;
         line-height: 1.9rem;
         margin-bottom: 3.2rem;
@@ -582,7 +611,7 @@
         }
     }
     .bordered-header {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         padding-top: 0.8rem;
         letter-spacing: 0.07rem;
         margin-bottom: 2.4rem;
@@ -591,6 +620,9 @@
             letter-spacing: .09rem;
             margin-top: 2.4rem;
             padding-top: 1.6rem;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 1.8rem;
         }
     }
     .nav {

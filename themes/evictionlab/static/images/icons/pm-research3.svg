@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>pm-research3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E13E00" offset="0%"></stop>
+            <stop stop-color="#B02700" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pm-research3" fill-rule="nonzero">
+            <circle id="Oval-Copy-28" fill="url(#linearGradient-1)" cx="21.24" cy="21.24" r="21.24"></circle>
+            <g id="Bars" transform="translate(10.000000, 10.000000)" fill="#FFFFFF">
+                <rect id="_Rectangle_" x="-4.88498131e-16" y="13.0886935" width="4.98618704" height="6.27915098"></rect>
+                <rect id="_Rectangle_2" x="8.49624039" y="8.25528705" width="4.98618704" height="11.1125574"></rect>
+                <rect id="_Rectangle_3" x="16.9761503" y="0" width="4.98618704" height="19.3592897"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
