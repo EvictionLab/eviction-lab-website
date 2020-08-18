@@ -25,7 +25,14 @@ $alt-bg: #F4F7F9;
 
 .page-type-covid-policy-rankings.page-layout-single {
  
-
+  p {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 1.6rem;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 2.4rem;
+    }
+  }
   .insert-after {
     display: flex;
     justify-content: center;
