@@ -25,7 +25,14 @@ $alt-bg: #F4F7F9;
 
 .page-type-covid-policy-rankings.page-layout-single {
  
-
+  p {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 1.6rem;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 2.4rem;
+    }
+  }
   .insert-after {
     display: flex;
     justify-content: center;
@@ -121,6 +128,7 @@ $alt-bg: #F4F7F9;
     margin-top: 3rem;
     @include media-breakpoint-up(md) {
       margin-top: 5.6rem;
+      margin-bottom: 1.6rem;
     }
     font-family: GT-Eesti-Display-Bold, sans-serif;
     // font-size: 1.2rem;
@@ -503,9 +511,16 @@ $alt-bg: #F4F7F9;
         display: inline-block;
         width: 12px;
         height: 12px;
+        @include media-breakpoint-up(md) {
+          width: 18px;
+          height: 18px;
+          top: 2px;
+          position: relative;
+        }
         margin-right: 6px;
         background-image: url($medallion);
         background-size: contain;
+        
       }
     }
     p.state-excerpt {
@@ -586,9 +601,6 @@ $alt-bg: #F4F7F9;
       }
       &.btn-justshelter {
         margin-top: 0.8rem;
-        @include media-breakpoint-up(md) {
-          margin-top: 3rem;
-        }
       }
     }
   }
@@ -667,6 +679,7 @@ $alt-bg: #F4F7F9;
       .state-policy {
         p {
           color: $el-darkgray;
+          margin-bottom: 1.6rem;
         }
         padding: 1rem;
         flex: 0 0 100%;
