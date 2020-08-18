@@ -159,12 +159,15 @@
             }  
         }
         @include media-breakpoint-up(smm) {
-            background-size: 74%;
+            background-size: 92%;
         }
         @include media-breakpoint-up(mm) {
-            background-size: 66%;
+            background-size: 6%;
         }
         @include media-breakpoint-up(md) {
+            background-size: 96%;
+        }
+        @include media-breakpoint-up(lg) {
             background-size: 80%;
         }
         @include media-breakpoint-up(xxxl) {
@@ -299,7 +302,7 @@
                     background-size: 82%;
                 }
                 @include media-breakpoint-up(smm) {
-                    background-size: 74%;
+                    background-size: 83%;
                 }
                 @include media-breakpoint-up(md) {
                     background-size: 96%;
@@ -455,7 +458,7 @@
                 max-width: 78%;
                 font-family: $altFontStack;
                 @include media-breakpoint-up(smm) {
-                    max-width: 82%;
+                    max-width: 94%;
                 }
                 @include media-breakpoint-up(md) {
                     max-width: 100%;

@@ -156,7 +156,8 @@ ul.anchor-links li {
 ul.anchor-links a {
   position: relative;
   color: $textColor;
-  @include altFont(1.5rem);
+  font-family: $headerFontStack;
+  font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   @include for-tablet-portrait-and-landscape {
