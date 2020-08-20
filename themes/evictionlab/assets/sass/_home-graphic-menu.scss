@@ -232,6 +232,7 @@
             }
             position: relative;
             transition: box-shadow .3s ease, transform .3s ease;
+            will-change: transform;
             &:hover {
                 box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.17);
                 transform: scale(1.03);
