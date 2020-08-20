@@ -232,9 +232,10 @@
                 width: 50%;
             }
             position: relative;
-            transition: box-shadow .3s ease;
+            transition: transform .3s ease, box-shadow .3s ease;
             &:hover {
                 box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.17);
+                transform: scale(1.003);
                 .hoverbar {
                     display: block;
                     transition: display .8s ease;
@@ -272,6 +273,7 @@
                      //   opacity: 1;
                         }
                     }
+                    
                 a.sublink {
                     i.fa.fa-chevron-right {
                         position: relative;
