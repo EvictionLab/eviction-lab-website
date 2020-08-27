@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="651px" height="507px" viewBox="0 0 651 507" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Fig 1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Fig-1" transform="translate(-2.000000, 0.000000)">
+            <g id="fig2_0827">
+                <g id="Group-2" transform="translate(97.320000, 0.480000)" stroke="#E0E0E0" stroke-linejoin="round">
+                    <line x1="-5.68434189e-14" y1="373.15" x2="554.69" y2="373.15" id="Path" stroke-width="0.53"></line>
+                    <line x1="-5.68434189e-14" y1="272.3" x2="554.69" y2="272.3" id="Path" stroke-width="0.53"></line>
+                    <line x1="-5.68434189e-14" y1="171.45" x2="554.69" y2="171.45" id="Path" stroke-width="0.53"></line>
+                    <line x1="-5.68434189e-14" y1="70.6" x2="554.69" y2="70.6" id="Path" stroke-width="0.53"></line>
+                    <line x1="88.25" y1="443.75" x2="88.25" y2="0" id="Path" stroke-width="0.53"></line>
+                    <line x1="214.32" y1="443.75" x2="214.32" y2="0" id="Path" stroke-width="0.53"></line>
+                    <line x1="340.38" y1="443.75" x2="340.38" y2="0" id="Path" stroke-width="0.53"></line>
+                    <line x1="466.45" y1="443.75" x2="466.45" y2="0" id="Path" stroke-width="0.53"></line>
+                    <line x1="-5.68434189e-14" y1="423.58" x2="554.69" y2="423.58" id="Path" stroke-width="1.07"></line>
+                    <line x1="-5.68434189e-14" y1="322.73" x2="554.69" y2="322.73" id="Path" stroke-width="1.07"></line>
+                    <line x1="-5.68434189e-14" y1="221.87" x2="554.69" y2="221.87" id="Path" stroke-width="1.07"></line>
+                    <line x1="-5.68434189e-14" y1="121.02" x2="554.69" y2="121.02" id="Path" stroke-width="1.07"></line>
+                    <line x1="-5.68434189e-14" y1="20.17" x2="554.69" y2="20.17" id="Path" stroke-width="1.07"></line>
+                </g>
+                <polyline id="Path" stroke="#434878" stroke-width="3.07" stroke-linejoin="round" points="122.54 219.33 248.6 182.01 374.67 123.52 500.73 187.68 626.8 138.65"></polyline>
+                <polyline id="Path" stroke="#E24000" stroke-width="3.07" stroke-linejoin="round" points="122.54 242.72 248.6 131.59 374.67 101.33 500.73 112.63 626.8 152.36"></polyline>
+                <g id="y-axis" transform="translate(46.390000, 14.700000)" fill="#4D4D4D" font-family="Gotham-Medium, Gotham" font-size="13" font-weight="400">
+                    <text id="$0">
+                        <tspan x="21" y="413.41">$0</tspan>
+                    </text>
+                    <text id="$500">
+                        <tspan x="9" y="312.56">$500</tspan>
+                    </text>
+                    <text id="$1,000">
+                        <tspan x="0" y="211.71">$1,000</tspan>
+                    </text>
+                    <text id="$1,500">
+                        <tspan x="0" y="110.86">$1,500</tspan>
+                    </text>
+                    <text id="$2,000">
+                        <tspan x="0" y="10">$2,000</tspan>
+                    </text>
+                </g>
+                <g id="Months" transform="translate(114.200000, 446.270000)" fill="#4D4D4D" font-family="Akkurat-Bold" font-size="15" font-weight="bold">
+                    <text id="Apr">
+                        <tspan x="0" y="11">Apr</tspan>
+                    </text>
+                    <text id="May">
+                        <tspan x="120.74" y="11">May</tspan>
+                    </text>
+                    <text id="June">
+                        <tspan x="244.13" y="11">June</tspan>
+                    </text>
+                    <text id="July">
+                        <tspan x="373.53" y="11">July</tspan>
+                    </text>
+                    <text id="Aug">
+                        <tspan x="499.93" y="11">Aug</tspan>
+                    </text>
+                </g>
+                <text id="Median-Claim-Amount" transform="translate(9.500000, 188.500000) rotate(-90.000000) translate(-9.500000, -188.500000) " font-family="GTEestiDisplay-Bold, GT Eesti Display" font-size="17" font-weight="bold" fill="#7D7D7D">
+                    <tspan x="-125" y="194">MEDIAN CLAIM AMOUNT</tspan>
+                </text>
+                <circle id="Oval-Copy-5" fill="#434878" cx="123" cy="219" r="5"></circle>
+                <circle id="Oval-Copy-6" fill="#434878" cx="248" cy="182" r="5"></circle>
+                <circle id="Oval-Copy-7" fill="#434878" cx="374" cy="125" r="5"></circle>
+                <circle id="Oval-Copy-8" fill="#434878" cx="500" cy="186" r="5"></circle>
+                <circle id="Oval-Copy-9" fill="#434878" cx="625" cy="139" r="5"></circle>
+                <g id="red-dots" transform="translate(118.000000, 96.000000)" fill="#E24000">
+                    <circle id="Oval" cx="5" cy="147" r="5"></circle>
+                    <circle id="Oval-Copy" cx="129" cy="37" r="5"></circle>
+                    <circle id="Oval-Copy-2" cx="257" cy="5" r="5"></circle>
+                    <circle id="Oval-Copy-3" cx="381" cy="16" r="5"></circle>
+                    <circle id="Oval-Copy-4" cx="507" cy="56" r="5"></circle>
+                </g>
+            </g>
+            <g id="Group-5" transform="translate(390.500000, 488.000000)">
+                <polyline id="Line-Copy" stroke="#434878" stroke-width="3" stroke-linecap="square" points="2.56739074e-16 9.5 23.5547903 9.5 37 9.5"></polyline>
+                <circle id="Oval-Copy-11" fill="#434878" cx="18.5" cy="10" r="5"></circle>
+                <text id="Houston,-TX" font-family="GTEestiDisplay-Bold, GT Eesti Display" font-size="17" font-weight="bold" fill="#7D7D7D">
+                    <tspan x="48.18" y="15.7">HOUSTON, TX</tspan>
+                </text>
+            </g>
+            <g id="Group-4" transform="translate(188.500000, 488.000000)">
+                <line x1="2.56739074e-16" y1="9.5" x2="37" y2="9.5" id="Line" stroke="#E24000" stroke-width="3" stroke-linecap="square"></line>
+                <circle id="Oval-Copy-10" fill="#E24000" cx="18.5" cy="10" r="5"></circle>
+                <text id="Cincinnati,-OH" font-family="GTEestiDisplay-Bold, GT Eesti Display" font-size="17" font-weight="bold" fill="#7D7D7D">
+                    <tspan x="50.51" y="15.7">CINCINNATI, OH</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
