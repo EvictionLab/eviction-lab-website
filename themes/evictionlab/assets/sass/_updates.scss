@@ -43,7 +43,7 @@ a.cat-link {
     font-weight: 400;
     letter-spacing: .45px;
     text-align: center;
-    margin: 24px auto 24px;
+    margin: 40px auto 24px;
     padding: 0 24px;
     //max-width: 560px;
 }
@@ -59,6 +59,42 @@ a.cat-link {
             font-size: 1.6rem !important;
         } 
     } 
+}
+.footnotes {
+    ol {
+        counter-reset: el-counter;
+        li {
+        font-size: 1.5rem !important;
+        list-style: none;
+        counter-increment: el-counter;
+        margin-left: 0;
+        letter-spacing: 0.015rem;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.6rem !important;
+        }
+        margin-bottom: .8rem !important;
+        /* background-color: white; */
+        color: #6b6b6b;
+            &:before {
+                content: counter(el-counter) "";
+                font-size: 1.2rem;
+                vertical-align: super;
+                margin-right: .4rem;
+                
+            }
+        }
+    }
+    sup {
+        margin-right: .8rem;
+    }
+}
+
+img.upscale124 {
+    max-width: 100%;
+    @include media-breakpoint-up(md) {
+        max-width: 124%;
+        margin-left: -12%;
+    }
 }
 .alt-bg {
     background: #F4F7F9;

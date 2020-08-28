@@ -29,15 +29,15 @@ In Figure 1, we plot the amounts owed in eviction cases filed since April in Cin
 <div class="figheader">Figure 1. Amounts claimed in eviction filings in Cincinnati, Houston, and Phoenix.</div>
 
 
-<img class="mw-100 py-2" src="/images/assets/blog/claims_fig2.svg" />
+<img class="upscale124 py-0" src="/images/assets/blog/claims_fig2.svg" alt="Bar charts depicting the amounts claimed by landlords in 3 cities in their eviction filings." />
 
 <div class="figcaption"><p>Note: Data cover 4/1/2020 - 8/22/2020 in Hamilton County, OH (Cincinnati) and Harris County, TX (Houston). Data cover 7/1/2020 - 7/31/2020 in Maricopa County, AZ (Phoenix)</p></div>
 
-The data show that in Cincinnati, landlords have filed 1,444 cases during this period in which they listed at least some money owed. Of those, 120 (8.3%) were for $500 or less. Half of all cases filed were for $1,200 or less. 
+The data show that in Cincinnati, landlords have filed 1,444 cases during this period in which they listed at least some money owed<sup>1</sup>. Of those, 120 (8.3%) were for $500 or less. Half of all cases filed were for $1,200 or less. 
 
-The story is similar in Houston, though the number of eviction filings is much larger. Here, we see that 612 of the 6,524 cases with a dollar amount claimed (9.4%) were for $500 or less, and that half of all cases were for $1,411 or less. 
+The story is similar in Houston, though the number of eviction filings is much larger. Here, we see that 612 of the 6,524 cases with a dollar amount claimed (9.4%) were for $500 or less<sup>2</sup>, and that half of all cases were for $1,411 or less. 
 
-In Phoenix, 1,759 new cases were filed in July. Of these filings, 319 (18.1%) were for $500 or less. Half of all cases were for less than $1,643. 
+In Phoenix, 1,759 new cases were filed in July. Of these filings, 319 (18.1%) were for $500 or less<sup>3</sup>. Half of all cases were for less than $1,643. 
 
 In all three cities, a nontrivial share of evictions initiated during the Covid-19 pandemic have been for relatively small sums of money. 
 
@@ -45,8 +45,23 @@ Have the amounts being claimed changed over the course of the pandemic? If landl
 
 <div class="figheader">Figure 2. Monthly median amount claimed in Cincinnati and Houston.</div>
 
-<img class="mw-100 py-2" src="/images/assets/blog/claims_fig1.svg" />
+<img class="upscale124 py-0" src="/images/assets/blog/claims_fig1.svg" alt="A line chart showing the amounts claimed by landlords in 3 cities in their eviction filings since April 2020." />
 
 <div class="figcaption"><p>Note: Data cover 4/1/2020 - 8/22/2020 in Hamilton County, OH (Cincinnati) and Harris County, TX (Houston).</p></div>
 
 In both Cincinnati and Houston, the amounts owed in eviction cases increased between April and May. Since then, however, the medians have remained stable, month-to-month variations notwithstanding. It’s striking that, in these two cities, renters threatened with eviction do not appear to be falling further and further behind on rent. This aligns with <a href="https://www.nytimes.com/2020/08/21/business/economy/rent-tenants-evictions.html" target="_blank">recent reporting</a> indicating that during the pandemic renters may be taking extraordinary measures to pay the rent—until they can’t.     
+
+<hr />
+
+<div class="footnotes">
+<ol>
+<li>Not all eviction filings in these cities have a dollar figure claimed. In Figure 1 we show the share of filings without such claims. In calculating medians, we remove these cases.</li>
+
+<li>Of these cases, 480 had a $0 claim amount.</li>
+
+<li>Of these cases, 166 had a $0 claim amount.</li>
+</ol>
+</div>
+
+
+
