@@ -22,7 +22,9 @@ In April, in an effort to understand the effects of the COVID-19 pandemic on ren
 
 In three of the counties we track in the ETS—Hamilton County, OH (<a href="https://evictionlab.org/eviction-tracking/cincinnati-oh/">Cincinnati</a>), Harris County, TX (<a href="https://evictionlab.org/eviction-tracking/houston-tx/">Houston</a>), and Maricopa County, AZ (<a href="https://evictionlab.org/eviction-tracking/phoenix-az/">Phoenix</a>)—we are able to collect an important data point associated with these filings: the amount of money, if any, that the landlord or property manager claims is owed by the tenant. While these dollar figures can include property damage, the vast majority of the amount owed is typically unpaid rent or associated late fees. In <a href="https://www.nytimes.com/2019/12/12/upshot/eviction-prevention-solutions-government.html" target="_blank">previous analyses</a>, we have examined the (often quite small) money judgments levied against tenants who are evicted. Here, we look at the amounts claimed at the initiation of the eviction process. 
 
-These data allow us to provide critical new information about evictions during the pandemic. In recent months, how far behind on rent are tenants when they face eviction? How much rental assistance would be needed to keep them in their homes? 
+<h2 class="pullquote">In all three cities, a nontrivial share of evictions initiated during the Covid-19 pandemic have been for relatively small sums of money.</h2>
+
+These data allow us to provide critical new information about evictions during the pandemic. In recent months, how far behind on rent are tenants when they face eviction? How much rental assistance would be needed to keep them in their homes?
 
 In Figure 1, we plot the amounts owed in eviction cases filed since April in Cincinnati and Houston. Due to data limitations, we only have Phoenix data for July. 
 
