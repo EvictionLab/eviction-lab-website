@@ -274,7 +274,7 @@
       }
       @include for-tablet-portrait-and-landscape {
         @include defaultFontBold($fontSizeSmall);
-        letter-spacing: 0.06rem;
+        letter-spacing: 0.02rem;
       }
       @include for-tablet-portrait-up {
         flex-grow: 1;
@@ -286,11 +286,11 @@
       }
       @include media-breakpoint-up(xl) {
         @include defaultFontBold(1.6rem);
-        letter-spacing: 0.06rem;
+        letter-spacing: 0.02rem;
       }
       @include media-breakpoint-up(xxl) {
         @include defaultFontBold(1.7rem);
-        letter-spacing: 0.06rem;
+        letter-spacing: 0.02rem;
       }
     }
     .list-thumb-container {
