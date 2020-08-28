@@ -29,7 +29,7 @@ In Figure 1, we plot the amounts owed in eviction cases filed since April in Cin
 <div class="figheader">Figure 1. Amounts claimed in eviction filings in Cincinnati, Houston, and Phoenix.</div>
 
 
-<img class="mw-100 py-2" src="/images/assets/blog/claims_fig1.svg" />
+<img class="mw-100 py-2" src="/images/assets/blog/claims_fig2.svg" />
 
 <div class="figcaption"><p>Note: Data cover 4/1/2020 - 8/22/2020 in Hamilton County, OH (Cincinnati) and Harris County, TX (Houston). Data cover 7/1/2020 - 7/31/2020 in Maricopa County, AZ (Phoenix)</p></div>
 
@@ -45,7 +45,7 @@ Have the amounts being claimed changed over the course of the pandemic? If landl
 
 <div class="figheader">Figure 2. Monthly median amount claimed in Cincinnati and Houston.</div>
 
-<img class="mw-100 py-2" src="/images/assets/blog/claims_fig2.svg" />
+<img class="mw-100 py-2" src="/images/assets/blog/claims_fig1.svg" />
 
 <div class="figcaption"><p>Note: Data cover 4/1/2020 - 8/22/2020 in Hamilton County, OH (Cincinnati) and Harris County, TX (Houston).</p></div>
 

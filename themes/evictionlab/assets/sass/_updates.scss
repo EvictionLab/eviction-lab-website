@@ -53,6 +53,12 @@ a.cat-link {
     padding: 0 24px;
     font-style: italic;
     font-family: Akkurat-Italic, sans-serif;
+    p {
+        font-size: 1.5rem !important;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.6rem !important;
+        } 
+    } 
 }
 .alt-bg {
     background: #F4F7F9;
