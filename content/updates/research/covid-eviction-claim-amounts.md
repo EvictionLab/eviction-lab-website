@@ -10,10 +10,10 @@ postauthorname: Renee Louis, Alieza Durana, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Our methodology for building the Housing Policy Scorecard.
-listSummary: To prevent the deleterious health consequences of eviction and an escalating economic crisis during the COVID-19 outbreak, U.S. states are beginning to pursue strategies to ensure safe, decent, and stable housing during and after the pandemic. To evaluate state responses, the Eviction Lab and Columbia Law School’s Professor Emily Benfer have developed a policy scorecard for each state.
-socialDescription: Our methodology for building the Housing Policy Scorecard.
-fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
-twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
+listSummary: 'In three of the counties we track, we are able to collect an important data point: the amount of money, if any, that the landlord or property manager claims is owed by the tenant. Here, we look at the amounts claimed at the initiation of the eviction process.' 
+socialDescription: Examining the amounts landlords claim tenants owe in 3 counties' eviction filings.
+fbImage: '/images/assets/blog/claims_social.png'
+twImage: '/images/assets/blog/claims_social.png'
 url: /covid-eviction-claims
 aliases:
   
@@ -26,12 +26,12 @@ These data allow us to provide critical new information about evictions during t
 
 In Figure 1, we plot the amounts owed in eviction cases filed since April in Cincinnati and Houston. Due to data limitations, we only have Phoenix data for July. 
 
-**Figure 1. Amounts claimed in eviction filings in Cincinnati, Houston, and Phoenix.**
+<div class="figheader">Figure 1. Amounts claimed in eviction filings in Cincinnati, Houston, and Phoenix.</div>
 
 
-<img class="mw-100" src="/images/assets/blog/claims_fig1.svg" />
+<img class="mw-100 py-2" src="/images/assets/blog/claims_fig1.svg" />
 
-Note: Data cover 4/1/2020 - 8/22/2020 in Hamilton County, OH (Cincinnati) and Harris County, TX (Houston). Data cover 7/1/2020 - 7/31/2020 in Maricopa County, AZ (Phoenix)
+<div class="figcaption"><p>Note: Data cover 4/1/2020 - 8/22/2020 in Hamilton County, OH (Cincinnati) and Harris County, TX (Houston). Data cover 7/1/2020 - 7/31/2020 in Maricopa County, AZ (Phoenix)</p></div>
 
 The data show that in Cincinnati, landlords have filed 1,444 cases during this period in which they listed at least some money owed. Of those, 120 (8.3%) were for $500 or less. Half of all cases filed were for $1,200 or less. 
 
@@ -43,11 +43,10 @@ In all three cities, a nontrivial share of evictions initiated during the Covid-
 
 Have the amounts being claimed changed over the course of the pandemic? If landlords are letting renters fall further behind on rent before filing for eviction, we would expect to see these numbers increase over the summer. 
 
-**Figure 2. Monthly median amount claimed in Cincinnati and Houston.**
+<div class="figheader">Figure 2. Monthly median amount claimed in Cincinnati and Houston.</div>
 
+<img class="mw-100 py-2" src="/images/assets/blog/claims_fig2.svg" />
 
-<img class="mw-100" src="/images/assets/blog/claims_fig2.svg" />
-
-Note: Data cover 4/1/2020 - 8/22/2020 in Hamilton County, OH (Cincinnati) and Harris County, TX (Houston). 
+<div class="figcaption"><p>Note: Data cover 4/1/2020 - 8/22/2020 in Hamilton County, OH (Cincinnati) and Harris County, TX (Houston).</p></div>
 
 In both Cincinnati and Houston, the amounts owed in eviction cases increased between April and May. Since then, however, the medians have remained stable, month-to-month variations notwithstanding. It’s striking that, in these two cities, renters threatened with eviction do not appear to be falling further and further behind on rent. This aligns with <a href="https://www.nytimes.com/2020/08/21/business/economy/rent-tenants-evictions.html" target="_blank">recent reporting</a> indicating that during the pandemic renters may be taking extraordinary measures to pay the rent—until they can’t.     

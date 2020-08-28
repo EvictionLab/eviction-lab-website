@@ -257,6 +257,9 @@ img.post-thumb {
     }
     @include media-breakpoint-up(xxl) {
       max-width: 720px;
+      .post-body {
+        padding: 5.6rem 0 1.6rem;
+      }
     }
     @include for-midsize-desktop-up{
       max-width: 720px;
@@ -394,7 +397,13 @@ figure.article-image {
     margin: 3.2rem 0 5.2rem;
     @include for-phone-only {
       margin: 0rem 0 2rem;
-      }  
+      } 
+    @include media-breakpoint-up(lg) {
+      margin: 4.8rem 0 7.2rem;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin: 5.6rem 0 8rem;
+    }    
     ul {
       @include for-phone-only {
         margin-bottom: 0;
@@ -404,7 +413,6 @@ figure.article-image {
       }
       li:before {
         display: none;
-       
       }
     }
     .header {

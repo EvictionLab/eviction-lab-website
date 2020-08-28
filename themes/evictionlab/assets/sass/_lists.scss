@@ -76,7 +76,10 @@
     }
   @include media-breakpoint-up(xl) {
     @include altFont(2rem);
-  }   
+  } 
+  @include media-breakpoint-up(xxl) {
+    max-width: 800px;
+  }  
   .subhead-rt {
     float: right;
     color: inherit;
@@ -226,6 +229,7 @@
     flex-grow: 1;
     max-width: 200px;
     min-width: 200px;
+    margin-right: 1.6rem;
     @include for-below-414 {
       display: block;
       float: left;
@@ -239,6 +243,9 @@
       justify-content: space-between;
       .list-thumb-container {
         flex-grow: 3;
+        @include media-breakpoint-down(mm) {
+          margin: 1.6rem 0;
+        }
         .list-thumb {
           width: 32px;
           height: 32px;
@@ -275,14 +282,14 @@
       @include media-breakpoint-up(lg) {
         @include defaultFontBold($fontSizeSmall);
         letter-spacing: 0rem;
-        line-height: 1.3rem;
+        line-height: 1.3;
       }
       @include media-breakpoint-up(xl) {
         @include defaultFontBold(1.6rem);
         letter-spacing: 0.06rem;
       }
       @include media-breakpoint-up(xxl) {
-        @include defaultFontBold(1.8rem);
+        @include defaultFontBold(1.7rem);
         letter-spacing: 0.06rem;
       }
     }

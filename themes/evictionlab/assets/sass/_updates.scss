@@ -37,6 +37,23 @@ a.cat-link {
         color: #768693;
     }
 }
+.figheader {
+    font-family: GT-Eesti-Display-Medium, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .45px;
+    text-align: center;
+    margin: 24px auto 24px;
+    padding: 0 24px;
+    //max-width: 560px;
+}
+.figcaption {
+    text-align: center;
+    margin: 24px auto 40px;
+    padding: 0 24px;
+    font-style: italic;
+    font-family: Akkurat-Italic, sans-serif;
+}
 .alt-bg {
     background: #F4F7F9;
 }
@@ -162,3 +179,4 @@ a.cat-link {
         margin-top: 0;
     }
 }
+
