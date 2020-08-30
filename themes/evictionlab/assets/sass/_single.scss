@@ -81,6 +81,9 @@ img.post-thumb {
   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  @include media-breakpoint-down(mm) {
+    margin-bottom: 1.6rem;
+  }
   @include media-breakpoint-up(xxxl) {
     width: 56px;
   }
