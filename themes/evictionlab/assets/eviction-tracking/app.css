@@ -1837,6 +1837,7 @@
 }
 
 .visual__note {
+  font-family: Akkurat-Regular,sans-serif;
   position: relative;
   margin-top: -32px;
   margin-bottom: 16px;
