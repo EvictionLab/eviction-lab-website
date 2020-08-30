@@ -1995,7 +1995,7 @@
 .section {
   position: relative;
   display: block;
-  padding: 56px 24px;
+  padding: 40px 24px;
 }
 .section p.description {
   margin-bottom: 0;
