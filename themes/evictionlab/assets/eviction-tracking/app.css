@@ -1837,6 +1837,7 @@
 }
 
 .visual__note {
+  font-family: Akkurat-Regular,sans-serif;
   position: relative;
   margin-top: -32px;
   margin-bottom: 16px;
@@ -1995,7 +1996,7 @@
 .section {
   position: relative;
   display: block;
-  padding: 56px 24px;
+  padding: 48px 24px;
 }
 .section p.description {
   margin-bottom: 0;

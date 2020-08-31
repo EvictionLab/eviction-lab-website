@@ -28,9 +28,9 @@
       </div>
       <div class="social-box mobile-off">
         <ul class="social-sprite">
-            <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a></li>
-            <li><a class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a></li>
-            <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
+          <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://evictionlab.org{{ .RelPermalink }}"></a></li>
+          <li><a class="twitter twittershare" data-text="{{ .Title }}" data-url="https://evictionlab.org{{ .RelPermalink }}" href="#"></a></li>
+          <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
         </ul>
       </div>
       {{ end }}
@@ -46,8 +46,8 @@
         </div>
         <div class="social-box mobile-off event-single">
           <ul class="social-sprite">
-              <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"></a></li>
-              <li><a class="twitter social-share-popup" target="_blank" href="https://twitter.com/intent/tweet?status={{ .Title }}, via @EvictionLab {{ .Permalink }}"></a></li>
+              <li><a class="facebook social-share-popup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://evictionlab.org{{ .Permalink }}"></a></li>
+              <li><a class="twitter twittershare" data-text="{{ .Title }}" data-url="https://evictionlab.org{{ .RelPermalink }}" href="#"></a></li>
               <li><a class="send-email" target="_blank" href="mailto:?subject={{ .Title }} - Eviction Lab&body={{ .Permalink }}"></a></li>
           </ul>
         </div>
@@ -56,7 +56,7 @@
     </div>  
   </div> 
   <div class="alt-bg">
-    <div class="center-content-post {{ .Params.childof }}-post updates-post">
+    <div class="center-content-post {{ .Params.childof }}-post updates-post pb-2">
       <div class="page-content">
         <div class="post-body">
           {{ if eq .Params.hasSubhead "sub" }}

@@ -14,13 +14,13 @@ other = "Explore nationwide eviction data spanning the years 2000-2016. View map
 [mapData]
 other = "Map & Data"
 [mapSub]
-other = "Learn about the American housing crisis by interacting with a customizable map"
+other = "Learn about the American housing crisis by interacting with a customizable map."
 [mapCTA]
 other = "Go to the map"
 [rankingsHead]
 other = "Eviction Rankings"
 [rankingsSubhead]
-other = "See which cities rank the highest in evictions in the US"
+other = "See which cities rank the highest in evictions in the US."
 [rankingsCTA]
 other = "Go to rankings"
 [covidHeading]
