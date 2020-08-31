@@ -28,5 +28,7 @@ The court-reported statistics show that Hawaii, Vermont, Connecticut, Wyoming, a
 
 We also suspect that the numbers in Arizona, Idaho, New Hampshire, and Washington may be too low, based on an estimator we created that factors in things like the number of renter homes and caseloads in other places. 
 
+Lastly, due to a collection anomaly in Orleans Parish, Louisiana, possession-only judgments may be under-reported in this jurisdiction in 2016.
+
 We will continue our effort to provide the most comprehensive data on evictions in America and invite you to stay tuned for updates to our dataset by signing up for our email list.
 
