@@ -460,18 +460,18 @@ figure.article-image {
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont(2.1rem);
-        line-height: 2.1rem;
+        line-height: 1.5;
         letter-spacing: 0.06rem;
       }
       @include sm-thru-med-desktop {
         @include altFont(2.4rem);
         /* color: $color1; */
-        line-height: 1.3;
+        line-height: 1.5;
         letter-spacing: 0.03rem;
       }
       @include media-breakpoint-up(xl) {
         @include altFont(2.6rem);
-        line-height: 1.3;
+        line-height: 1.5;
         letter-spacing: 0.05rem;
       }
     } 
