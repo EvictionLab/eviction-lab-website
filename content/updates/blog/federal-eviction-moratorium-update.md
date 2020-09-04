@@ -5,7 +5,7 @@ contentcat: blog
 featured: "home"
 researchtype: elresearch
 title: "Update on the Federal Eviction Moratorium and the Eviction Lab's COVID-19 Projects"
-date: 2020-09-03T16:46:40.089Z
+date: 2020-09-04T16:46:40.089Z
 postauthorname: Matthew Desmond and Emily Benfer
 postauthortitle: Princeton University & Wake Forest University School of Law
 authorpic: /images/bios/elab_thumb_sm.jpg
@@ -18,17 +18,17 @@ url: /federal-eviction-moratorium-update
 aliases:
 ---
 
-On Monday, the Centers for Disease Control and Prevention located within the U.S. Department of Health and Human Services issued a new order, effective from September 4th, 2020 through December 31st, 2020, that provides protection from eviction for millions of renters who have been unable to afford rent during the COVID-19 pandemic. 
+Today, the Centers for Disease Control and Prevention issued <a href="https://www.federalregister.gov/documents/2020/09/04/2020-19654/temporary-halt-in-residential-evictions-to-prevent-the-further-spread-of-covid-19" target="_blank">a new order</a>, effective from September 4th through December 31st, 2020, that provides protection from eviction to prevent the further spread of COVID-19. 
 
-This emergency action prohibits new and previously filed evictions of tenants who provide their landlords with a signed declaration stating that they meet all of the following criteria: 
+Although many questions about the order remain, to the best of our knowledge, this emergency action prohibits new and previously filed evictions of tenants who provide their landlords with a signed declaration stating that they meet all of the following criteria: 
 
 <ol>
   <li>They have used best efforts to obtain all available government assistance for rent or housing.</li>
-  <li>They meet any one of three income limits:</li>
+  <li>They meet <i>any</i> one of three income limits:</li>
   <ol>
-    <li>They expect to earn no more than $99,000 in 2020 ($198,000 for those filing a joint tax return). According to 2018 American Community Survey estimates, 86% of renter households had total household income below $100,000.</li>
-    <li>They were not required to report any income to the IRS in 2019.</li>
-    <li>They received a CARES stimulus check.</li>
+    <li>They expect to earn no more than $99,000 in 2020 ($198,000 for those filing a joint tax return);</li>
+    <li>They were not required to report any income to the IRS in 2019; or</li>
+    <li>They received a stimulus check pursuant to the CARES Act.</li>
   </ol>
   <li>They are unable to pay full rent because of substantial income loss, loss of work or wages, or extraordinary out-of-pocket medical expenses.</li>
   <li>They are using best efforts to make partial rent payments as they are able.</li>
@@ -37,19 +37,18 @@ This emergency action prohibits new and previously filed evictions of tenants wh
   <li>They understand that any unpaid rent may be required in full at the end of the eviction moratorium and that false or misleading statements may result in criminal and civil fines, penalties, damages, or imprisonment.</li>
 </ol>
 
-Each adult listed on the lease, rental agreement, or housing contract who qualifies for protection under the CDC's moratorium should complete and provide this declaration to the landlord or property manager.
- 
-[again: link to declaration PDF for tenants]
+Each adult listed on the lease, rental agreement, or housing contract who qualifies for protection under the CDC's moratorium should complete and provide <a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/declaration-form.pdf" download target="_blank">this declaration</a> to the landlord or property manager. The order enumerates penalties for anyone who violates it, including fines of $100,000 to $500,000 and civil and criminal penalties.
 
-The order enumerates penalties for anyone who violates it, including fines of $100,000 to $500,000 and civil and criminal penalties. Tenants who are threatened with eviction after providing this declaration should contact a legal services provider. A list of legal aid organizations is available on Just Shelter. 
+<p style="text-align:center;"><strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/declaration-form.pdf" download target="_blank">Click Here for the Tenant Declaration Form</a></strong></p>
 
-The CDC’s emergency action does not provide rent relief to tenants in the form of canceling rent or providing financial assistance to pay rent. Under this order, tenants still must pay what rent they can, and landlords are allowed to continue to charge late fees, penalties, or interest that results from non-payment or partial payment of rent as specified in the lease. At the end of the moratorium period (January 1, 2021), tenants will be responsible for all unpaid rent that accrues during the moratorium. 
+We urge you to share this information widely. By 2018 American Community Survey estimates, this order could apply to up to 86% of renter households that had total household income below $100,000. In the 17 cities we’re tracking, we’ve already seen 43,526 eviction filings. This order could provide meaningful relief to families at risk of eviction and its devastating harms, especially if coupled with rent relief.
 
-The CDC moratorium does not preempt states and local jurisdictions from implementing or adopting more comprehensive eviction moratoriums and eviction prevention measures. That means that if a state, town, city, or county already stopped evictions or adopted other interventions (e.g. no late fees, no reporting to collection agencies, no eviction for any non emergency reason), that order is still in effect. 
+Tenants who are threatened with eviction after providing this declaration or who have questions about eligibility should contact a legal services provider. A list of legal aid organizations is available on <a href="https://justshelter.org/community-resources" target="_blank">Just Shelter</a>. 
 
-The Eviction Lab will continue to update our COVID-19 Housing Policy Scorecard, which tracks statewide housing policies, and COVID-19 Policies Table, which includes information about local orders, to keep renters informed about what policies exist in their states beyond the CDC moratorium. Renters who have questions about federal and local protections can reach out to legal aid attorneys to receive advice, including if they believe their landlord might be violating these policies. We've collected a list of legal aid organizations on our sister site, Just Shelter. 
+The CDC’s emergency action does not provide rent relief to tenants in the form of canceling rent or providing financial assistance to pay rent. Under this order, tenants still must pay what rent they can, and the order does not preclude landlords from charging late fees, penalties, or interest that results from non-payment or partial payment of rent as specified in the lease. At the end of the moratorium period (January 1, 2021), tenants will be responsible for all unpaid rent that accrues during the moratorium. 
 
-The Eviction Lab will also continue to update and expand the Eviction Tracking System, allowing us to monitor the efficacy of the new federal moratorium and observe filings after its expiration. 
+The CDC moratorium does not preempt states and local jurisdictions from implementing or adopting more comprehensive eviction moratoriums and eviction prevention measures. That means that if a state, town, city, or county already stopped evictions or adopted other interventions (e.g., no late fees, no reporting to credit bureaus or collection agencies, no eviction for any non emergency reason), that order is still in effect. 
 
-We welcome property owners in working with us on an additional relief package in the coming weeks that will alleviate the need of tenants and property owners
+The Eviction Lab will continue to update our <a href="/covid-policy-scorecard">COVID-19 Housing Policy Scorecard</a>, which tracks statewide housing policies, and <a href="/covid-eviction-policies">COVID-19 Policies Table</a>, which includes information about local orders, to keep renters informed about what policies exist in their states in addition to the CDC moratorium. <a href="https://nlihc.org/coronavirus-and-housing-homelessness" target="_blank">The National Low Income Housing Coalition</a> and <a href="https://www.nhlp.org/campaign/protecting-renter-and-homeowner-rights-during-our-national-health-crisis-2/" target="_blank">National Housing Law Project</a> will also continue to provide updates on <a href="https://mailchi.mp/nlihc.org/cta_090420-1202466?e=168ba82720" target="_blank">housing amidst the pandemic</a>.
 
+The Eviction Lab will also continue to update and expand the <a href="/eviction-tracking/">Eviction Tracking System</a>, allowing us to monitor the impact of the new federal moratorium and observe filings after its expiration.
