@@ -9,8 +9,8 @@ date: 2020-09-03T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Tracking federal, state, and local actions in response to the pandemic.
-socialDescription: Tracking federal, state, and local actions in response to the pandemic.  
+description: Get the latest news and understand your rights.
+socialDescription: Get the latest news and understand your rights.
 image: '/images/assets/blog/federal-moratorium-update-hero3.jpg'
 fbImage: '/images/assets/blog/federal-moratorium-update-social.png'
 twImage: '/images/assets/blog/federal-moratorium-update-social.png'
