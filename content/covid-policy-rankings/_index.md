@@ -14,9 +14,9 @@ intro1: >-
     <p>The Centers for Disease Control and Prevention (CDC) have announced a federal eviction moratorium in effect from September 4, 2020 to December 31, 2020. This follows the expiration of many state and federal orders, including the CARES Act. The CDC moratorium blocks landlords from evicting tenants who are currently not able to pay rent and do not have another safe housing option if they were to be evicted.</p>
 intro1_2: >-
     <p>
-      More information about eligibility requirements is available <a href="/federal-eviction-moratorium-update"> in our post on the federal moratorium</a>. Under this guidance, states and local jurisdictions are also able to put in place more comprehensive eviction moratoriums. Current state-wide and local emergency measures vary greatly in form and degree of protection.
+      More information about eligibility requirements is available <a href="/federal-eviction-moratorium-update"> in our post on the federal moratorium</a>. Under this guidance, states and local jurisdictions are also able to put in place more comprehensive eviction moratoriums.
     </p>
-    <p>To better understand the steps that states have taken to prevent homelessness during and after the pandemic, the Eviction Lab and Wake Forest University Law School’s Professor Emily Benfer have developed a policy scorecard for each state, distilling the contents of thousands of emergency orders, declarations, and legislation into a clear set of critical measures included in, and left out of, state-level pandemic responses related to eviction and housing.</p>
+    <p>The Eviction Lab and Wake Forest University Law School’s Professor Emily Benfer have developed the COVID-19 Housing Policy Scorecard to distill the contents of thousands of emergency orders, declarations, and legislation into a clear set of critical measures included in, and left out of, state-level pandemic responses related to eviction and housing.</p>
     <p>Scroll down to see the scorecard, or <a href="#scorecard-resources" class="smoothScroll">view the scoring methodology, learn about our partners, get resources, and more</a>.</p>
 intro2: >-
     <li>Our scoring methodology can be found <a href="https://evictionlab.org/covid-housing-scorecard-methods" target="_blank">here</a>.</li>
