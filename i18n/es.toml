@@ -80,4 +80,4 @@ other = "Get"
 [getResourcesTwo]
 other ="Resources"
 [superhead]
-other = "<span class='boldface'>COVID-19 UPDATES:</span> &nbsp;Stay informed with weekly reports from our new <a href='/eviction-tracking'>Eviction Tracking System</a>, and see all of our <a href='/covid-resources/'>COVID-19 tools and resources</a>."
+other = "<span class='boldface'>UPDATE:</span> &nbsp;New federal eviction moratorium in effect 9/4/20-12/31/20. <a href='/federal-eviction-moratorium-update/'>Get the latest news and understand your rights</a>."
