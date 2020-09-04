@@ -6,7 +6,7 @@ featured: "home"
 researchtype: elresearch
 title: "Update on the Federal Eviction Moratorium and the Eviction Lab's COVID-19 Projects"
 date: 2020-09-04T16:46:40.089Z
-postauthorname: Matthew Desmond and Emily Benfer
+postauthorname: The Eviction Lab and Emily Benfer
 postauthortitle: Princeton University & Wake Forest University School of Law
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Get the latest news and understand your rights.
