@@ -7,8 +7,10 @@ This repository is the container web site for https://evictionlab.org.
 Clone this repo and run locally using Hugo v0.73
 
 ```
-hugo server
+hugo server -D
 ```
+
+> Note: use the `-D` flag to ensure that pages marked as "draft" are generated for development purposes.  Draft pages will not be included in the staging / production build, but will be included on any Netlify builds.
 
 ### New Features
 
