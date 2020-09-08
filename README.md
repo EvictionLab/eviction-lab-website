@@ -33,6 +33,7 @@ When making content updates, use the CMS or use the following flow:
 * add your hotfix or update in the branch and then merge back into `staging`
   * review the change at https://staging.evictionlab.org/ and confirm everything is working as expected
 * wait for the automated deploy (daily at 3AM/3PM ET) or manually merge `staging` into `production`
+* for hotfixes, cherry pick the commit containing the hotfix into the `development` branch.
 
 ## Layouts
 
