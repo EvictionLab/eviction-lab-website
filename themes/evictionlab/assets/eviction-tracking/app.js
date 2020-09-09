@@ -2448,6 +2448,10 @@ Elab.ListPage = (function (Elab) {
     return html.join(" ");
   }
 
+  /**
+   * Initializes the hero counter
+   * @param {*} locations 
+   */
   function initHeroCount(locations) {
     $("#cityCount").html(locations.length);
     var counterTotal = locations.reduce(function (sum, loc) {
@@ -2464,9 +2468,25 @@ Elab.ListPage = (function (Elab) {
     }
   }
 
+  /** 
+   * Initializes the weekly eviction filing counter,
+   * only includes maricopa in the sum if the latest
+   * week value is the same as other locations. 
+   */
   function initWeeklyCount(locations) {
-    var counterWeek = locations.reduce(function (sum, loc) {
-      return sum + loc.lastWeek;
+    var lastWeekDate = null;
+    // sort a copy of locations so maricopa is not first
+    var sorted = locations.slice()
+      .sort(function(a,b) { return a.city > b.city ? 1 : -1 })
+    var counterWeek = sorted.reduce(function (sum, loc) {
+      var locLastDate = loc.values[loc.values.length-1][0];
+      // track the last week date
+      if (!lastWeekDate && loc.id !== "04013")
+        lastWeekDate = locLastDate;
+      // only include if the last week matches other rows
+      return +lastWeekDate === +locLastDate 
+        ? sum + loc.lastWeek 
+        : sum;
     }, 0);
     var count2 = new countUp.CountUp("counterWeek", counterWeek, {
       duration: 3.8,
