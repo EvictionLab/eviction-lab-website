@@ -2454,6 +2454,7 @@
   transition: fill 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
+
 /** keep "filings this year" red on first chart */
 .section--avg.section--count-on .chart__bar--0 {
   fill: var(--c2);
@@ -2624,3 +2625,50 @@
 /** END VISUALIZATION TOOLTIP */
 
 /** END VISUALIZATION STYLES */
+
+/** OVERRIDES */
+
+  /** overrides for racial subgroup bars */
+  .chart__bar.chart__bar--white {
+    fill: var(--c1);
+  }
+  .chart__bar.chart__bar--black {
+    fill: var(--c2);
+  }
+  .chart__bar.chart__bar--latinx {
+    fill: var(--c3);
+  }
+  .chart__bar.chart__bar--other {
+    fill: var(--c4);
+  }
+
+  /** overrides for racial subgroup legend */
+  .legend-item.legend-item--white .legend-item__color {
+    background: var(--c1);
+  }
+  .legend-item.legend-item--black .legend-item__color {
+    background: var(--c2);
+  }
+  .legend-item.legend-item--latinx .legend-item__color {
+    background: var(--c3);
+  }
+  .legend-item.legend-item--other .legend-item__color {
+    background: var(--c4);
+  }
+
+  /** overrides for racial subgroup tooltip */
+
+  .chart__tooltip-row.chart__tooltip-row--white .tooltip__item--multi:before {
+    background: var(--c1);
+  }
+  .chart__tooltip-row.chart__tooltip-row--black .tooltip__item--multi:before {
+    background: var(--c2);
+  }
+  .chart__tooltip-row.chart__tooltip-row--latinx .tooltip__item--multi:before {
+    background: var(--c3);
+  }
+  .chart__tooltip-row.chart__tooltip-row--other .tooltip__item--multi:before {
+    background: var(--c4);
+  }
+
+/** END OVERRIDES */
