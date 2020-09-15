@@ -1139,6 +1139,13 @@
   stroke-opacity: 0.87;
 }
 
+.trend-line__cdc-start {
+  stroke: var(--c1);
+  stroke-width: 1;
+  stroke-dasharray: 2 1;
+  stroke-opacity: 0.87;
+}
+
 /** END TABLE TREND LINES */
 
 /** END LIST TABLE SECTION

@@ -2477,6 +2477,7 @@ Elab.ListPage = (function (Elab) {
     var values = data.values.filter(function (v, i) {
       return i !== data.values.length - 1;
     });
+    var startLineDate = data.start;
     var endLineDate = data.end;
     var xExtent = d3.extent(values, function (v) {
       return v[0];
@@ -2518,6 +2519,43 @@ Elab.ListPage = (function (Elab) {
       .append("g")
       .attr("transform", "translate(0," + margin + ")");
 
+    if (endLineDate && +endLineDate < +xScale.domain()[1]) {
+      var startDate =
+        +startLineDate > +xScale.domain()[0]
+          ? startLineDate
+          : xScale.domain()[0];
+      // svg
+      //   .append("rect")
+      //   .attr("class", "trend-line__moratorium-area")
+      //   .attr("x", xScale(startDate))
+      //   .attr("y", 0)
+      //   .attr("width", xScale(endLineDate) - xScale(startDate))
+      //   .attr("height", height)
+      //   .attr("fill", "rgba(0,0,0,0.1)");
+      // svg
+      //   .append("line")
+      //   .attr("class", "trend-line__moratorium-end")
+      //   .attr("x1", xScale(startDate))
+      //   .attr("x2", xScale(startDate))
+      //   .attr("y1", 0)
+      //   .attr("y2", height);
+      svg
+        .append("line")
+        .attr("class", "trend-line__moratorium-end")
+        .attr("x1", xScale(endLineDate))
+        .attr("x2", xScale(endLineDate))
+        .attr("y1", 0)
+        .attr("y2", height);
+    }
+    // cdc guidelines start indicator
+    var CDC_DATE = new Date(2020, 7, 21);
+    svg
+      .append("line")
+      .attr("class", "trend-line__cdc-start")
+      .attr("x1", xScale(CDC_DATE))
+      .attr("x2", xScale(CDC_DATE))
+      .attr("y1", 0)
+      .attr("y2", height);
     svg
       .append("path")
       .datum(values)
@@ -2529,16 +2567,6 @@ Elab.ListPage = (function (Elab) {
       .datum(values)
       .attr("class", "trend-line__path")
       .attr("d", line);
-
-    if (endLineDate && +endLineDate < +xScale.domain()[1]) {
-      svg
-        .append("line")
-        .attr("class", "trend-line__moratorium-end")
-        .attr("x1", xScale(endLineDate))
-        .attr("x2", xScale(endLineDate))
-        .attr("y1", 0)
-        .attr("y2", height);
-    }
   }
 
   /**
