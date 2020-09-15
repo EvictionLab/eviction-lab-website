@@ -107,7 +107,7 @@ Elab.Utils = (function (Elab) {
       case "month_filings":
         return "Filings This Year";
       case "percentage_diff":
-        return "Filings This Year <br /><span>relative to average</span>";
+        return "Filings This Year<span>relative to average</span>";
       case "Other":
         return "Other/None";
       default:
@@ -772,14 +772,14 @@ Elab.Chart = (function (Elab) {
       .append("div")
       .attr("class", function (d) {
         // split the / char for other/none becomes "other"
-        var id = d.name.split("/")[0]
+        var id = d.name.split("/")[0];
         // classnames for the tooltip row
         var clsx = [
-          "chart__tooltip-row", 
-          "chart__tooltip-row--" + d.idx, 
-          "chart__tooltip-row--" + id.toLowerCase()
-        ]
-        return clsx.join(" ")
+          "chart__tooltip-row",
+          "chart__tooltip-row--" + d.idx,
+          "chart__tooltip-row--" + id.toLowerCase(),
+        ];
+        return clsx.join(" ");
       })
       .html(render);
   }
@@ -1438,9 +1438,7 @@ Elab.Map = (function (Elab) {
    */
   function renderMapDate(date) {
     var parsedDate = d3.timeParse("%d/%m/%Y")(date);
-    $(".legend-choropleth__title span").html(
-      "Since " + d3.timeFormat("%B %e, %Y")(parsedDate)
-    );
+    $("#mapDate").html("Since " + d3.timeFormat("%B %e, %Y")(parsedDate));
   }
 
   /**
@@ -1624,6 +1622,12 @@ Elab.Map = (function (Elab) {
 })(Elab);
 
 Elab.ChartBuilder = (function (Elab) {
+  /**
+   * Creates an empty chart with root elements
+   * @param {DOMElement} svgEl a SVG DOM element to render the chart in
+   * @param {Array<Object>} data data to use for the chart
+   * @param {Object} options
+   */
   function Chart(svgEl, data, options) {
     this.data = data;
     this.options = options || this.defaultOptions;
@@ -1641,16 +1645,7 @@ Elab.ChartBuilder = (function (Elab) {
     this.addRoot();
   }
 
-  Chart.prototype.getInnerWidth = function () {
-    return this.options.width - this.options.margin[1] - this.options.margin[3];
-  };
-
-  Chart.prototype.getInnerHeight = function () {
-    return (
-      this.options.height - this.options.margin[0] - this.options.margin[2]
-    );
-  };
-
+  /** Default options for the chart */
   Chart.prototype.defaultOptions = {
     width: 400,
     height: 400,
@@ -1660,20 +1655,57 @@ Elab.ChartBuilder = (function (Elab) {
     yTicksFormat: d3.format(",d"),
   };
 
+  /**
+   * Returns the width of the data area for the chart
+   */
+  Chart.prototype.getInnerWidth = function () {
+    return this.options.width - this.options.margin[1] - this.options.margin[3];
+  };
+
+  /**
+   * Returns the height of the data area for the chart
+   */
+  Chart.prototype.getInnerHeight = function () {
+    return (
+      this.options.height - this.options.margin[0] - this.options.margin[2]
+    );
+  };
+
+  /**
+   * Gets a selection that has been added to the chart
+   * @param {string} id
+   */
   Chart.prototype.getSelection = function (id) {
     return this.selections[id];
   };
-
+  /**
+   * Adds a selection to the chart
+   * @param {string} id identifier for this selection
+   * @param {string} parentId id of the parent selection
+   * @param {function} createSelection function that returns the selection
+   */
   Chart.prototype.addSelection = function (id, parentId, createSelection) {
     this.selections[id] = createSelection(this.selections[parentId], this);
     return this;
   };
 
+  /**
+   * Adds a function that executes on renter
+   * @param {string} id identifier for the render function
+   * @param {function} createRenderFunction a function that returns the render function
+   */
   Chart.prototype.addRenderFunction = function (id, createRenderFunction) {
     this.updaters[id] = createRenderFunction(this.getSelection(id), this);
     return this;
   };
 
+  /**
+   * Adds an element, with a selection and render function to the chart
+   * @param {string} id
+   * @param {string} parentId
+   * @param {function} createSelection returns a selection
+   * @param {function} createRenderFunction returns a render function
+   */
   Chart.prototype.addElement = function (
     id,
     parentId,
@@ -1687,6 +1719,9 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Creates the chart root container
+   */
   Chart.prototype.addRoot = function () {
     var _this = this;
     this.selections["root"] = d3
@@ -1726,6 +1761,9 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds a frame border to the chart
+   */
   Chart.prototype.addFrame = function () {
     function createSelection(parentSelection) {
       return parentSelection.append("rect").attr("class", "chart__frame");
@@ -1743,6 +1781,9 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds a clip path around the frame area for the chart
+   */
   Chart.prototype.addClipPath = function () {
     function createSelection(parentSelection) {
       return parentSelection
@@ -1763,24 +1804,44 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
-  Chart.prototype.addArea = function (areaData) {
+  /**
+   * Adds a pattern fill area to the chart
+   * @param {Array} areaData [start, end]
+   */
+  Chart.prototype.addArea = function (areaData, options) {
+    // set default options
+    options = options || {};
+    options.angle = options.angle || 45;
+    options.areaId = options.areaId || "area";
+    // make sure IDs have not already been assigned
+    if (options.patternId && this.getSelection(options.patternId))
+      throw new Error("patternId already exists: " + options.patternId);
+    if (this.getSelection(options.areaId))
+      throw new Error("areaId already exists: " + options.areaId);
+    // creates SVG pattern
     function createPattern(parentSelection) {
       return parentSelection
         .append("pattern")
-        .attr("id", "stripes")
+        .attr("id", options.patternId)
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", 12)
         .attr("height", 12)
         .attr("patternUnits", "userSpaceOnUse")
-        .attr("patternTransform", "rotate(45)")
+        .attr("patternTransform", "rotate(" + options.angle + ")")
         .html(
-          '<rect class="chart__pattern" x="0" y="0" width="6" height="12" />'
+          '<rect class="chart__pattern chart__pattern--' +
+            options.patternId +
+            '" x="0" y="0" width="6" height="12" />'
         );
     }
+    // creates area element and returns selection
     function createAreaSelection(parentSelection) {
-      return parentSelection.append("rect").attr("class", "chart__area");
+      return parentSelection
+        .append("rect")
+        .attr("class", "chart__area chart__area--" + options.areaId);
     }
+    // renders the area rect in the chart
     function createAreaRenderFunction(selection, chart) {
       return function () {
         var maxDate = chart.xScale.domain()[1];
@@ -1794,15 +1855,22 @@ Elab.ChartBuilder = (function (Elab) {
             chart.xScale(areaData[1]) - chart.xScale(areaData[0]) - 1
           )
           .attr("height", chart.getInnerHeight() - 2)
-          .attr("fill", "url(#stripes)");
+          .attr("fill", "url(#" + options.patternId + ")");
       };
     }
-    this.addSelection("pattern", "root", createPattern);
-    this.addSelection("area", "data", createAreaSelection);
-    this.addRenderFunction("area", createAreaRenderFunction);
+    // add selections and render function to chart
+    options.patternId &&
+      this.addSelection(options.patternId, "root", createPattern);
+    this.addSelection(options.areaId, "data", createAreaSelection);
+    this.addRenderFunction(options.areaId, createAreaRenderFunction);
     return this;
   };
 
+  /**
+   * Adds tooltip functionality to the chart
+   * @param {function} showTooltip function that shows the tooltip
+   * @param {function} hideTooltip function that hides the tooltip
+   */
   Chart.prototype.addTooltip = function (showTooltip, hideTooltip) {
     var _this = this;
     this.selections["hover-line"] = this.selections["data"]
@@ -1836,6 +1904,10 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds bars to the chart
+   * @param {function} selector function that takes the chart data and returns the bar data
+   */
   Chart.prototype.addBars = function (selector) {
     var _this = this;
     this.selections["bars"] = this.selections["data"]
@@ -1880,6 +1952,10 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds lines to the chart
+   * @param {function} selector a function that accepts chart data and returns the line data
+   */
   Chart.prototype.addLines = function (selector) {
     var _this = this;
     this.selections["lines"] = this.selections["data"]
@@ -1926,6 +2002,10 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds a Y axis to the chart
+   * @param {*} selector a function that accepts a data entry and returns the y value
+   */
   Chart.prototype.addAxisY = function (selector) {
     var _this = this;
     this.selections["yAxis"] = this.selections["base"]
@@ -1952,6 +2032,9 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Utility function that calculates the width of a month on the chart in pixels
+   */
   Chart.prototype.monthToPixels = function (num) {
     var now = new Date();
     var start = d3.timeDay.floor(now);
@@ -1960,6 +2043,10 @@ Elab.ChartBuilder = (function (Elab) {
     return width * num;
   };
 
+  /**
+   * Adds a time (X) axis to the chart
+   * @param {*} selector function that accepts a data entry and returns the X time value
+   */
   Chart.prototype.addTimeAxis = function (selector) {
     var _this = this;
     function adjustTextLabels(selection) {
@@ -1998,12 +2085,19 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds a custom element to the chart
+   * @param {function} renderElement accepts the chart object and renders an element
+   */
   Chart.prototype.addCustom = function (renderElement) {
     var _this = this;
     renderElement(_this);
     return this;
   };
 
+  /**
+   * Renders the chart
+   */
   Chart.prototype.render = function () {
     Object.values(this.updaters).forEach(function (r) {
       r();
@@ -2011,6 +2105,10 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Updates the chart options and re-renders
+   * @param {*} options
+   */
   Chart.prototype.update = function (options) {
     Object.assign(this.options, options);
     this.render();
@@ -2195,8 +2293,17 @@ Elab.Intro = (function (Elab) {
         .addTimeAxis(function (d) {
           return d[0];
         })
-        // adds moratorium area
-        .addArea([cityData.start, cityData.end])
+        // adds local moratorium areas
+        .addArea([cityData.start, cityData.end], {
+          areaId: "area",
+          patternId: "stripes",
+        })
+        // adds federal moratorium
+        .addArea([new Date(2020, 8, 4), new Date(2020, 11, 31)], {
+          areaId: "cdcArea",
+          patternId: "cdcStripes",
+          angle: -45,
+        })
         // adds the bars for weekly filings
         .addBars(selectBarsData)
         // adds the trend line
@@ -2358,6 +2465,9 @@ Elab.ListPage = (function (Elab) {
     return rowTemplate(rowData);
   }
 
+  /**
+   * Renders the trend line for the table
+   */
   function renderTrendLine(el, data) {
     var width = 64;
     var height = 32;
@@ -2450,7 +2560,7 @@ Elab.ListPage = (function (Elab) {
 
   /**
    * Initializes the hero counter
-   * @param {*} locations 
+   * @param {*} locations
    */
   function initHeroCount(locations) {
     $("#cityCount").html(locations.length);
@@ -2468,25 +2578,23 @@ Elab.ListPage = (function (Elab) {
     }
   }
 
-  /** 
+  /**
    * Initializes the weekly eviction filing counter,
    * only includes maricopa in the sum if the latest
-   * week value is the same as other locations. 
+   * week value is the same as other locations.
    */
   function initWeeklyCount(locations) {
     var lastWeekDate = null;
     // sort a copy of locations so maricopa is not first
-    var sorted = locations.slice()
-      .sort(function(a,b) { return a.city > b.city ? 1 : -1 })
+    var sorted = locations.slice().sort(function (a, b) {
+      return a.city > b.city ? 1 : -1;
+    });
     var counterWeek = sorted.reduce(function (sum, loc) {
-      var locLastDate = loc.values[loc.values.length-1][0];
+      var locLastDate = loc.values[loc.values.length - 1][0];
       // track the last week date
-      if (!lastWeekDate && loc.id !== "04013")
-        lastWeekDate = locLastDate;
+      if (!lastWeekDate && loc.id !== "04013") lastWeekDate = locLastDate;
       // only include if the last week matches other rows
-      return +lastWeekDate === +locLastDate 
-        ? sum + loc.lastWeek 
-        : sum;
+      return +lastWeekDate === +locLastDate ? sum + loc.lastWeek : sum;
     }, 0);
     var count2 = new countUp.CountUp("counterWeek", counterWeek, {
       duration: 3.8,
