@@ -5,18 +5,24 @@
     </div>
     <div class="visual">
       <div id="map" class="map"></div>
-    </div> 
-    <div class="legend">
-      <div class="legend-choropleth">
-        <span class="legend-choropleth__title">
-          Eviction Filings <span>last 30 days</span>
-        </span>
-        <div class="legend-choropleth__gradient"></div>
-        <div class="legend-choropleth__labels">
-          <span class="legend-choropleth__min">-100%</span>
-          <span class="legend-choropleth__mid">average</span>
-          <span class="legend-choropleth__max">+100%</span>
+    </div>
+    <div class="legend legend--choropleth">
+      <div class="legend-item">
+        <div class="legend-item__label">
+          Eviction Filings <span id="mapDate">last 30 days</span>
         </div>
+      </div>
+      <div class="legend__gradient"></div>
+      <div class="legend__gradient-labels">
+        <span class="legend__gradient-label legend__gradient-label--min"
+          >-100%</span
+        >
+        <span class="legend__gradient-label legend__gradient-label--mid"
+          >average</span
+        >
+        <span class="legend__gradient-label legend__gradient-label--max"
+          >+100%</span
+        >
       </div>
     </div>
     <p class="footnote"></p>

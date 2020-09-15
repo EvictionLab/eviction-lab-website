@@ -107,7 +107,7 @@ Elab.Utils = (function (Elab) {
       case "month_filings":
         return "Filings This Year";
       case "percentage_diff":
-        return "Filings This Year <br /><span>relative to average</span>";
+        return "Filings This Year<span>relative to average</span>";
       case "Other":
         return "Other/None";
       default:
@@ -1438,9 +1438,7 @@ Elab.Map = (function (Elab) {
    */
   function renderMapDate(date) {
     var parsedDate = d3.timeParse("%d/%m/%Y")(date);
-    $(".legend-choropleth__title span").html(
-      "Since " + d3.timeFormat("%B %e, %Y")(parsedDate)
-    );
+    $("#mapDate").html("Since " + d3.timeFormat("%B %e, %Y")(parsedDate));
   }
 
   /**
@@ -1811,6 +1809,16 @@ Elab.ChartBuilder = (function (Elab) {
    * @param {Array} areaData [start, end]
    */
   Chart.prototype.addArea = function (areaData, options) {
+    // set default options
+    options = options || {};
+    options.angle = options.angle || 45;
+    options.areaId = options.areaId || "area";
+    // make sure IDs have not already been assigned
+    if (options.patternId && this.getSelection(options.patternId))
+      throw new Error("patternId already exists: " + options.patternId);
+    if (this.getSelection(options.areaId))
+      throw new Error("areaId already exists: " + options.areaId);
+    // creates SVG pattern
     function createPattern(parentSelection) {
       return parentSelection
         .append("pattern")
@@ -1820,14 +1828,20 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("width", 12)
         .attr("height", 12)
         .attr("patternUnits", "userSpaceOnUse")
-        .attr("patternTransform", "rotate(45)")
+        .attr("patternTransform", "rotate(" + options.angle + ")")
         .html(
-          '<rect class="chart__pattern" x="0" y="0" width="6" height="12" />'
+          '<rect class="chart__pattern chart__pattern--' +
+            options.patternId +
+            '" x="0" y="0" width="6" height="12" />'
         );
     }
+    // creates area element and returns selection
     function createAreaSelection(parentSelection) {
-      return parentSelection.append("rect").attr("class", "chart__area");
+      return parentSelection
+        .append("rect")
+        .attr("class", "chart__area chart__area--" + options.areaId);
     }
+    // renders the area rect in the chart
     function createAreaRenderFunction(selection, chart) {
       return function () {
         var maxDate = chart.xScale.domain()[1];
@@ -1844,6 +1858,7 @@ Elab.ChartBuilder = (function (Elab) {
           .attr("fill", "url(#" + options.patternId + ")");
       };
     }
+    // add selections and render function to chart
     options.patternId &&
       this.addSelection(options.patternId, "root", createPattern);
     this.addSelection(options.areaId, "data", createAreaSelection);
@@ -2278,14 +2293,16 @@ Elab.Intro = (function (Elab) {
         .addTimeAxis(function (d) {
           return d[0];
         })
-        // adds moratorium areas
+        // adds local moratorium areas
         .addArea([cityData.start, cityData.end], {
           areaId: "area",
           patternId: "stripes",
         })
-        .addArea([new Date(2020, 7, 4), new Date(2020, 11, 31)], {
+        // adds federal moratorium
+        .addArea([new Date(2020, 8, 4), new Date(2020, 11, 31)], {
           areaId: "cdcArea",
           patternId: "cdcStripes",
+          angle: -45,
         })
         // adds the bars for weekly filings
         .addBars(selectBarsData)
