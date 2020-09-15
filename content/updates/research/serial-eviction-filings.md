@@ -30,9 +30,9 @@ In assembling the Eviction Lab’s national database of evictions, we observed a
 
 What we initially thought might be errors in the data turned out to be a common and devastating reality for many households. We found that nearly one-third of households facing eviction in 2014 were filed against <i>repeatedly</i> at the same address. In the article, we show that eviction is often a drawn-out process that repeatedly affects households. We also show that these serial eviction filings were more common in mid-range rental markets—areas with rents between $1,200 and $2,000 per month—and in counties that made the legal process of eviction fast and cheap. 
 
-<div class="figheader">Figure: Serial eviction filing rates across a range of median rents</div>
+<div class="figheader" style="max-width: 600px;" >Figure: Predicted serial eviction filing rates by neighborhood median rent</div>
 <img class="upscale124 pb-0 pb-xxl-0" src="/images/assets/blog/rent_margin_display.jpg" alt="Charts depicting the predicted serial filing rates for different rent amounts." />
-<div class="figcaption"><p>This figure shows the distribution of predicted serial filing rates across a range of Census tract median rents. Dots represent point estimates, and red vertical lines represent confidence intervals.</p></div>
+<div class="figcaption"><p>This figure shows the distribution of predicted serial eviction filing rates by neighborhood (Census tract) median rent, controlling for other neighborhood characteristics. Dots represent point estimates, and red vertical lines represent 95% confidence intervals.</p></div>
 
 Court records allow us to look at <i>where</i> and <i>how frequently</i> serial eviction filings took place. To understand why they occurred, we interviewed 43 property managers, attorneys, and court officials in two socio-demographically similar cities with very different serial eviction filing rates: Charleston, South Carolina and Mobile, Alabama. 
 
