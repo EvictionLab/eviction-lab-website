@@ -9,9 +9,9 @@ date: 2020-09-15T16:46:40.089Z
 postauthorname: Lillian Leung, Peter Hepburn, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Our methodology for building the Housing Policy Scorecard.
-listSummary: 'In three of the counties we track, we are able to collect an important data point: the amount of money, if any, that the landlord or property manager claims is owed by the tenant. Here, we look at the amounts claimed at the initiation of the eviction process.' 
-socialDescription: Examining the amounts landlords claim tenants owe in 3 counties' eviction filings.
+description: New findings from the data and policy recommendations to protect renters.
+listSummary: 'We often associate “eviction” with displacement and removal, boxes and furniture thrown to the curb. When a landlord files to evict a tenant—whether for nonpayment of rent or for property damage—we assume they do so to move them out. While some landlords do file intending to remove tenants, others use eviction filings as a way to collect rent and additional fees.' 
+socialDescription: New findings from the data and policy recommendations to protect renters.
 # image: '/images/assets/blog/rent_margin_display.jpg'
 fbImage: '/images/assets/blog/rent_margin_social.png'
 twImage: '/images/assets/blog/rent_margin_social.png'
@@ -30,7 +30,8 @@ In assembling the Eviction Lab’s national database of evictions, we observed a
 
 What we initially thought might be errors in the data turned out to be a common and devastating reality for many households. We found that nearly one-third of households facing eviction in 2014 were filed against <i>repeatedly</i> at the same address. In the article, we show that eviction is often a drawn-out process that repeatedly affects households. We also show that these serial eviction filings were more common in mid-range rental markets—areas with rents between $1,200 and $2,000 per month—and in counties that made the legal process of eviction fast and cheap. 
 
-<img class="upscale124 py-3" src="/images/assets/blog/rent_margin_display.jpg" alt="Charts depicting the predicted serial filing rates for different rent amounts." />
+<div class="figheader">Figure: Predicted serial filing rate by tract median rent</div>
+<img class="upscale124 pb-5 pb-xxl-6" src="/images/assets/blog/rent_margin_display.jpg" alt="Charts depicting the predicted serial filing rates for different rent amounts." />
 
 Court records allow us to look at <i>where</i> and <i>how frequently</i> serial eviction filings took place. To understand why they occurred, we interviewed 43 property managers, attorneys, and court officials in two socio-demographically similar cities with very different serial eviction filing rates: Charleston, South Carolina and Mobile, Alabama. 
 
