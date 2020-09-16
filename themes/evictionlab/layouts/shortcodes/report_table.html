@@ -3,14 +3,23 @@
     <div class="legend legend--table">
       <div class="legend-item">
         <img class="icon icon--moratorium" src="/img/el-moratorium-icon5.svg" alt="active moratorium icon" />
-        <span> = Active eviction moratorium</span>
+        <span> = Local Moratorium</span>
       </div>
       <div class="legend-item">
-        <svg role="img" aria-labelledby="moratoriumEndMarker" width="16" height="16" viewBox="0 0 16 16">
-          <title id="moratoriumEndMarker">Dotted line marker</title>
-          <line x1="8" x2="8" y1="0" y2="16" class="trend-line__moratorium-end"></line>
+        <svg role="img" aria-labelledby="moratoriumEndMarker" width="16" height="16" viewBox="0 0 16 16"  style="margin-right: 4px;">
+          <title id="moratoriumEndMarker">No moratorium area</title>
+          <line x1="0" x2="16" y1="4" y2="2" class="trend-line__path"></line>
+          <path d="M 0 4 L 16 2 L 16 16 L 0 16 Z" class="trend-line__area"></path>
         </svg>
-        <span> = End of moratorium</span>
+        <span> = No Moratorium</span>
+      </div>
+      <div class="legend-item">
+        <svg role="img" aria-labelledby="moratoriumEndMarker" width="16" height="16" viewBox="0 0 16 16" style="margin-right: 4px;">
+          <title id="moratoriumEndMarker">Active moratorium area</title>
+          <line x1="0" x2="16" y1="4" y2="2" class="trend-line__path trend-line__path--moratorium"></line>
+          <path d="M 0 4 L 16 2 L 16 16 L 0 16 Z" class="trend-line__area trend-line__area--moratorium"></path>
+        </svg>
+        <span> = Active Moratorium</span>
       </div>
     </div>
     <table class="table table--cities">

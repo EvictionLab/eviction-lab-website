@@ -2465,6 +2465,15 @@ Elab.ListPage = (function (Elab) {
     return rowTemplate(rowData);
   }
 
+  function inMoratorium(day, ranges) {
+    return ranges.reduce(function(inRange, range) {
+      var endDay = d3.timeDay.offset(day, 6)
+      return inRange 
+        ? true 
+        : +day >= +range[0] && +day <= +range[1] && +endDay >= +range[0] && +endDay <= +range[1]
+    }, false)
+  }
+
   /**
    * Renders the trend line for the table
    */
@@ -2474,10 +2483,33 @@ Elab.ListPage = (function (Elab) {
     var margin = 4;
     // remove latest week from values
     // as it does not reflect the full set of filings
+    var localMoratorium = [ data.start, data.end ]
+    var cdcMoratorium = [ new Date(2020, 8, 4), new Date(2020, 11, 31) ]
+    var moratoriumRanges = +localMoratorium[1] > +cdcMoratorium[0]
+      ? [ [ localMoratorium[0], cdcMoratorium[1] ] ] // overlap in moratoriums
+      : [ localMoratorium, cdcMoratorium ] // no overlap
+    var endLineDate = data.end;
     var values = data.values.filter(function (v, i) {
       return i !== data.values.length - 1;
     });
-    var endLineDate = data.end;
+    console.log(values, moratoriumRanges)
+    var moratoriumValues = values.map(function(v, i) {
+      var lastWeekDay = d3.timeDay.offset(v[0], -7)
+      var startInMoratorium = inMoratorium(v[0], moratoriumRanges)
+      var lastWeekInMoratorium = inMoratorium(lastWeekDay, moratoriumRanges)
+      if (startInMoratorium || lastWeekInMoratorium)
+        return v
+      return [ v[0], "NA", "NA" ]
+    })
+    var noMoratoriumValues = values.map(function(v) { 
+      var lastWeekDay = d3.timeDay.offset(v[0], -7)
+      var startInMoratorium = inMoratorium(v[0], moratoriumRanges)
+      var lastWeekInMoratorium = inMoratorium(lastWeekDay, moratoriumRanges)
+      if (!startInMoratorium || !lastWeekInMoratorium)
+        return v
+      return [ v[0], "NA", "NA" ]
+    })
+    
     var xExtent = d3.extent(values, function (v) {
       return v[0];
     });
@@ -2493,6 +2525,7 @@ Elab.ListPage = (function (Elab) {
 
     var area = d3
       .area()
+      .defined(function(d) { return !isNaN(d[2]); })
       .x(function (d) {
         return xScale(d[0]);
       })
@@ -2503,6 +2536,7 @@ Elab.ListPage = (function (Elab) {
 
     var line = d3
       .line()
+      .defined(function(d) { return !isNaN(d[2]); })
       .x(function (d) {
         return xScale(d[0]);
       })
@@ -2520,25 +2554,27 @@ Elab.ListPage = (function (Elab) {
 
     svg
       .append("path")
-      .datum(values)
-      .attr("class", "trend-line__area")
+      .datum(moratoriumValues)
+      .attr("class", "trend-line__area trend-line__area--moratorium")
       .attr("d", area);
 
     svg
       .append("path")
-      .datum(values)
-      .attr("class", "trend-line__path")
+      .datum(moratoriumValues)
+      .attr("class", "trend-line__path trend-line__path--moratorium")
       .attr("d", line);
 
-    if (endLineDate && +endLineDate < +xScale.domain()[1]) {
-      svg
-        .append("line")
-        .attr("class", "trend-line__moratorium-end")
-        .attr("x1", xScale(endLineDate))
-        .attr("x2", xScale(endLineDate))
-        .attr("y1", 0)
-        .attr("y2", height);
-    }
+    svg
+      .append("path")
+      .datum(noMoratoriumValues)
+      .attr("class", "trend-line__area trend-line__area--noMoratorium")
+      .attr("d", area);
+
+    svg
+      .append("path")
+      .datum(noMoratoriumValues)
+      .attr("class", "trend-line__path trend-line__path--noMoratorium")
+      .attr("d", line);
   }
 
   /**

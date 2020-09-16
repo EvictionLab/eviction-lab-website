@@ -1126,10 +1126,18 @@
   stroke: var(--c1);
   stroke-width: 2;
 }
+.trend-line__path--moratorium {
+  stroke: var(--c2);
+  stroke-opacity: 0.5;
+}
 .trend-line__area {
   fill-opacity: 0.2;
   fill: var(--c1);
   stroke: none;
+}
+.trend-line__area--moratorium {
+  fill-opacity: 0.1;
+  fill: var(--c2);
 }
 
 .trend-line__moratorium-end {
