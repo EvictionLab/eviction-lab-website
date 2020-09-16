@@ -1113,11 +1113,6 @@
 .list-table .icon {
   width: 16px;
 }
-@media (min-width: 768px) {
-  .list-table .icon {
-    width: 27px;
-  }
-}
 
 /** TABLE TREND LINES */
 
