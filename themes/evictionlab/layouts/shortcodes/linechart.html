@@ -1,0 +1,18 @@
+
+<div
+  id="{{ .Get `id` }}"
+  class="lineChart lineChart--{{ .Get `id` }}"
+>
+  <svg></svg>
+  <script>
+    window.addEventListener('load', function() {
+      var id = {{ .Get "id" }}
+      var csv = {{ .Get "data" }}
+      var x = {{ .Get "x" }}
+      var y = {{ .Get "y" }}
+      var groupBy = {{ .Get "groupBy" }}
+      var rootEl = document.getElementById(id);
+      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy })
+    });
+  </script>
+</div>
