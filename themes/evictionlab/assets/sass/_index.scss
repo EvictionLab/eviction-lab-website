@@ -329,20 +329,18 @@ ul.anchor-links.dropdown-menu.show {
   }
 }
 .accordion-section {
-  
+  border-bottom: 2px solid $secondaryBackground;
   & > a {
     position:relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 2rem grid(1);
+    padding: 2rem grid(2);
     width: 100%;
     color: $color1;
     font-family: $boldFontStack;
     font-size: 20px;
-    border-top: 2px solid $secondaryBackground;
-    border-bottom: 2px solid transparent;
-    margin: 0 0 -2px;
+    margin: 0;
     
     span {
       font-size: 1.6rem;
@@ -357,13 +355,13 @@ ul.anchor-links.dropdown-menu.show {
       }
       width: auto;
       margin-right:0;
+      padding-right: grid(1);
     }
     &:hover {
       text-decoration: none;
       z-index:2;
-      background: linear-gradient($secondaryBackground, transparent);
+      background: linear-gradient(transparent, $secondaryBackground);
       background-repeat: no-repeat;
-      border-top-color: darken($secondaryBackground, 3%);;
     }
     &:focus, &:active {
       text-decoration: none;
@@ -403,7 +401,7 @@ ul.anchor-links.dropdown-menu.show {
     }
   }
   .answer {
-    padding: 0 grid(1);
+    padding: 1.6rem grid(2) 0;
     /* @include defaultFont(20px); */
     a {
       display: inline;
