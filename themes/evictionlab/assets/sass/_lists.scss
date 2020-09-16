@@ -91,9 +91,6 @@
       display: none;
     } 
   }
-  a.see-all-events:hover {
-    text-decoration: none;
-  } 
   &.research-type.el-research, &.research-type.outside-research {
     border-top: none; 
     margin-top: 0rem;
@@ -476,10 +473,6 @@
       @include media-breakpoint-up(xl) {
         @include altFont(3.2rem);
         letter-spacing: 0.08rem;
-      }
-      a {
-        /*color: $textColor;*/
-        text-decoration: none;
       }
     }
     .event-address {

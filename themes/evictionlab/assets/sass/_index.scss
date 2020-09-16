@@ -329,22 +329,21 @@ ul.anchor-links.dropdown-menu.show {
   }
 }
 .accordion-section {
-  margin-bottom: 3rem;
-  @include for-phone-only {
-    margin-bottom: 2rem;
-  }
-  border-bottom: 2px solid $secondaryBackground;
-  a {
-    display: block;
+  
+  & > a {
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem grid(1);
     width: 100%;
     color: $color1;
-    margin-bottom: 3rem;
     font-family: $boldFontStack;
     font-size: 20px;
-    @include for-phone-only {
-      /* font-size: $fontSizeSmall; */
-      margin-bottom: 2rem;
-    }
+    border-top: 2px solid $secondaryBackground;
+    border-bottom: 2px solid transparent;
+    margin: 0 0 -2px;
+    
     span {
       font-size: 1.6rem;
       line-height: 1.5;
@@ -357,36 +356,33 @@ ul.anchor-links.dropdown-menu.show {
         line-height: 1.5;
       }
       width: auto;
-      display:inline-block;
-      padding: 0 grid(1);
-      margin: 0 (-1*grid(1));
       margin-right:0;
-      max-width: 90%;
     }
-    div {
-      clear: both;
+    &:hover {
+      text-decoration: none;
+      z-index:2;
+      background: linear-gradient($secondaryBackground, transparent);
+      background-repeat: no-repeat;
+      border-top-color: darken($secondaryBackground, 3%);;
     }
-    &:focus {
-      box-shadow: none;
-      outline:0;
-      span {
-        border: $focusBorder;
-        // offset margins to keep in place
-        margin: -$focusBorderWidth ((-1*grid(1))-$focusBorderWidth);
-        margin-right:0;
-      }
+    &:focus, &:active {
+      text-decoration: none;
+      span { text-decoration: underline; }
+      i { text-decoration: none;}
     }
+    // &.collapsed:hover {
+    //   border-bottom-color: $color1;
+    //   border-top-color: $color1;
+    // }
   }
-  a:hover {
-    color: $color1;
-    text-decoration: none;
+  &:first-child > a {
+    border-top-color: transparent;
   }
   i {
-    float: right;
     display: block;
     color: $color1;
     position: relative;
-    top: 8px;
+    top: grid(0.5);
     font-size: 1rem;
     @include for-tablet-portrait-up {
       font-size: 1.4rem;
@@ -407,6 +403,7 @@ ul.anchor-links.dropdown-menu.show {
     }
   }
   .answer {
+    padding: 0 grid(1);
     /* @include defaultFont(20px); */
     a {
       display: inline;

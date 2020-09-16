@@ -2,7 +2,6 @@
   <a class="collapsed" data-toggle="collapse" href="#{{ .qid }}" aria-expanded="false" aria-controls="collapseExample">
     <span>{{ .question }}</span>
     <i class="fa fa-chevron-up"></i>
-    <div class="clear-float"></div>
   </a>
   <div class="answer collapse" id="{{ .qid }}">
     {{ .answer | safeHTML }}
