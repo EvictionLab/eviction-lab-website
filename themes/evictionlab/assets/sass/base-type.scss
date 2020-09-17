@@ -4,8 +4,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  a:hover {
-    text-decoration: none;
+  a:hover, a:focus {
+    text-decoration: underline;
   }
   h2 {
     &.page-section-header {

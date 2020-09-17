@@ -25,9 +25,7 @@
         </div>
       </div>
       <div id="introChart" class="intro__figure-wrapper">
-        <h2 class="intro__figure-title">
-          Eviction Filings By Week
-        </h2>
+        <h2 class="intro__figure-title">Eviction Filings By Week</h2>
         <svg role="img" aria-label="Chart of eviction filings by week"></svg>
         <div class="intro__figure-legend legend">
           <div class="legend-item">
@@ -39,7 +37,9 @@
               height="16"
               viewBox="0 0 16 16"
             >
-              <title id="filingsBarLegend">Grey rectangle legend indicator</title>
+              <title id="filingsBarLegend">
+                Grey rectangle legend indicator
+              </title>
               <rect x="0" y="0" width="16" height="16"></rect>
             </svg>
             <p class="legend-item__label">Weekly Filings</p>
@@ -78,7 +78,7 @@
                 patternTransform="rotate(45)"
               >
                 <rect
-                  class="legend-item__pattern"
+                  class="legend-item__pattern legend-item__pattern--localLegend"
                   x="0"
                   y="0"
                   width="4"
@@ -94,10 +94,54 @@
               ></rect>
             </svg>
             <p class="legend-item__label">
-              Eviction Moratorium<span
+              Local Moratorium<span
                 class="legend-item__secondary"
                 id="evictionMoratorium"
               ></span>
+            </p>
+          </div>
+          <div class="legend-item">
+            <svg
+              class="legend-item__visual"
+              role="img"
+              aria-labelledby="patternLegend"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+            >
+              <title id="patternLegend">Striped pattern legend indicator</title>
+              <pattern
+                id="cdcLegend"
+                x="0"
+                y="0"
+                width="8"
+                height="8"
+                patternUnits="userSpaceOnUse"
+                patternTransform="rotate(-45)"
+              >
+                <rect
+                  class="legend-item__pattern legend-item__pattern--cdcLegend"
+                  x="0"
+                  y="0"
+                  width="4"
+                  height="8"
+                ></rect>
+              </pattern>
+              <rect
+                x="0"
+                y="0"
+                width="16"
+                height="16"
+                fill="url(#cdcLegend)"
+              ></rect>
+            </svg>
+            <p class="legend-item__label">
+              <a href="https://evictionlab.org/federal-eviction-moratorium-update/">CDC Order</a>
+              <span
+                class="legend-item__secondary"
+                id="cdcGuidelines"
+                >September 4 - December 31</span
+              >
             </p>
           </div>
         </div>
@@ -106,9 +150,8 @@
           <p id="filingsCumulative"></p>
         </div>
         <p class="intro__figure-footnote">
-          * Filings in the last week may be undercounted as a
-          result of processing delays. These counts will be
-          revised in the following week.
+          * Filings in the last week may be undercounted as a result of
+          processing delays. These counts will be revised in the following week.
         </p>
       </div>
     </div>
