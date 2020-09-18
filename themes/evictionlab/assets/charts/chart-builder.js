@@ -337,6 +337,7 @@ Elab.ChartBuilder = (function (Elab) {
           selection
             .transition()
             .duration(200)
+            .ease(d3.easeLinear)
             .attr("stroke-opacity", 1)
             .attr("x1", function (d) {
               return chart.xScale(chart.hovered.x);
@@ -457,6 +458,7 @@ Elab.ChartBuilder = (function (Elab) {
           }),
         ];
       };
+    _this.lineData = options.selector(_this.data);
     if (_this.getSelection(options.linesId))
       throw new Error(
         "addLines: selection already exists for given linesId " +
@@ -466,9 +468,8 @@ Elab.ChartBuilder = (function (Elab) {
       return parentSelection.append("g").attr("class", "chart__lines");
     }
     function createLineRenderer(selection, chart) {
+      console.log(chart.lineData);
       return function () {
-        chart.lineData = options.selector(chart.data);
-
         var line = d3
           .line()
           .x(function (d) {

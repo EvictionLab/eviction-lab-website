@@ -297,10 +297,13 @@ Elab.LineChart = (function (Elab) {
         var aHighlightIndex = hl.indexOf(a[key]);
         var bHighlightIndex = hl.indexOf(b[key]);
         if (aHighlightIndex > -1 && bHighlightIndex > -1) {
+          // both are highlighted, same item
           if (aHighlightIndex === bHighlightIndex) return 0;
+          // both are highlighted, a is higher
           return aHighlightIndex > bHighlightIndex ? -1 : 1;
         }
         if (aHighlightIndex > -1) return 1;
+        if (bHighlightIndex > -1) return -1;
         if (a[key] === b[key]) return 0;
         return a[key] > b[key] ? 1 : -1;
       });
