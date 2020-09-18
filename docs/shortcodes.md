@@ -31,6 +31,8 @@ The line chart short code accepts the following attributes.
 
 ### Example Page
 
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_line-chart-demo) | [demo source](/content/updates/blog/_line-chart-demo.md)
+
 **Page markdown**
 
 ```
