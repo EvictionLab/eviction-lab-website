@@ -102,11 +102,9 @@
 			{{ end }}
 		{{ end }}
 
-		{{ with .File }}
-			{{ if in .Dir "updates" }}
-				{{ $chartcss := resources.Get "charts/line-chart.css" | resources.PostCSS }}
-				<link rel="stylesheet" href="{{ ($chartcss | minify | fingerprint).RelPermalink }}" />
-				{{ end }}
+		{{ if in .Params.scripts "linechart" }}
+			{{ $chartcss := resources.Get "charts/line-chart.css" | resources.PostCSS }}
+			<link rel="stylesheet" href="{{ ($chartcss | minify | fingerprint).RelPermalink }}" />
 		{{ end }}
 
   </head>

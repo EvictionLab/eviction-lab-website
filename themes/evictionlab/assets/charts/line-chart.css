@@ -94,12 +94,10 @@
   stroke: var(--c3);
 }
 
-
 .chart__voronoi path {
   fill: none;
   pointer-events: all;
 }
-
 .chart__tooltip {
   position: absolute;
   background: rgba(0,0,0,0.87);
@@ -204,4 +202,14 @@
     font-size: 1.4rem;
     letter-spacing: 0.08rem;
   }
+}
+
+/** INDIVIDUAL CHART OVERRIDES **/
+@media(max-width: 540px) {
+#summed .chart__axis--time .tick:nth-child(2n+1) {
+  opacity:0;
+}
+#summed .chart__axis--time .tick text {
+  font-size: 12px;
+}
 }

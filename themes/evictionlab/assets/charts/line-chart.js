@@ -369,7 +369,9 @@ Elab.LineChart = (function (Elab) {
           ticks: dataOptions.xTicks ? getXTicks(dataOptions.xTicks) : undefined,
           tickFormat: dataOptions.xFormat
             ? d3.timeFormat(dataOptions.xFormat)
-            : xFormat,
+            : dataOptions.xTicks === "week"
+            ? xFormat
+            : undefined,
         })
         // adds the trend line
         .addLines({
@@ -456,8 +458,6 @@ Elab.LineChart = (function (Elab) {
     options.y = options.y || "y";
     options.groupBy = options.groupBy || "name";
     loadData(options, function (data) {
-      console.log("parsed data", data);
-
       initFigure(rootEl, data, options);
     });
   }

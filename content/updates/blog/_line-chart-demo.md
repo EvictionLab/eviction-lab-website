@@ -14,6 +14,8 @@ description: Tracking federal, state, and local actions in response to the pande
 socialDescription: Tracking federal, state, and local actions in response to the pandemic.
 fbImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
+scripts:
+  - linechart
 ---
 
 Straight lines
@@ -22,4 +24,14 @@ Straight lines
 
 Curved lines
 
-{{% linechart id="summed2" data="/uploads/summed_sites.csv" x="week" y="ratio" groupBy="name" yFormat=".0%" xTicks="week" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX" title="Chart Title" curve="curveMonotoneX" %}}
+{{% linechart
+  id="summed2"
+  data="/uploads/summed_sites.csv"
+  x="week"
+  y="ratio"
+  groupBy="name"
+  yFormat=".0%" xTicks="week"
+  highlight="Hartford, CT;St Louis, MO;Fort Worth, TX"
+  title="Chart Title"
+  curve="curveMonotoneX"
+%}}

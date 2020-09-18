@@ -502,11 +502,13 @@ Elab.ChartBuilder = (function (Elab) {
           .merge(lines)
           .transition()
           .duration(2000)
+          .delay(400)
+          .attr("d", line)
           .style("stroke-dasharray", function () {
-            return this.getTotalLength();
+            // need to increase the dasharray to prevent line from cutting off
+            return this.getTotalLength() + chart.getInnerWidth();
           })
-          .style("stroke-dashoffset", 0)
-          .attr("d", line);
+          .style("stroke-dashoffset", 0);
       };
     }
     this.addSelection(options.linesId, "data", createLineSelection);
@@ -667,6 +669,17 @@ Elab.ChartBuilder = (function (Elab) {
     }
     function createRenderer(selection, chart) {
       return function () {
+        chart.voronoi
+          .x(function (d) {
+            return _this.xScale(options.xSelector(d));
+          })
+          .y(function (d) {
+            return _this.yScale(options.ySelector(d));
+          })
+          .extent([
+            [0, 0],
+            [_this.getInnerWidth(), _this.getInnerHeight()],
+          ]);
         var voronoiData = chart.voronoi.polygons(chart.data);
         var voronoi = selection.selectAll("path").data(voronoiData);
         voronoi
