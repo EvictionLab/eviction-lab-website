@@ -1,9 +1,26 @@
+{{ $title := .Get "title" }}
+{{ $legend := .Get "highlight" }}
+{{ $legendItems := split $legend ";" }}
 
 <div
-  id="{{ .Get `id` }}"
-  class="lineChart lineChart--{{ .Get `id` }}"
+  class="line-chart line-chart--{{ .Get `id` }}"
 >
-  <svg></svg>
+  {{ if $title }}
+  <h3 class="line-chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}" class="line-chart__chart chart">
+    <svg></svg>
+  </div>
+  {{ if $legend }}
+  <div class="line-chart__legend legend">
+  {{ range $index, $element := $legendItems }}
+  <div class="legend-item legend-item--{{ $index }}">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">{{ $element }}</div>
+  </div>
+  {{ end }}
+  </div>
+  {{ end }}
   <script>
     window.addEventListener('load', function() {
       var id = {{ .Get "id" }}
@@ -11,8 +28,14 @@
       var x = {{ .Get "x" }}
       var y = {{ .Get "y" }}
       var groupBy = {{ .Get "groupBy" }}
+      var yTicks = {{ .Get "yTicks" }}
+      var yFormat = {{ .Get "yFormat" }}
+      var xTicks = {{ .Get "xTicks" }}
+      var xFormat = {{ .Get "xFormat" }}
+      var highlight = {{ .Get "highlight" }}
+      var curve = {{ .Get "curve" }}
       var rootEl = document.getElementById(id);
-      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy })
+      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat, highlight: highlight, curve: curve })
     });
   </script>
 </div>

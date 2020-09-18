@@ -10,6 +10,9 @@ Elab.ChartBuilder = (function (Elab) {
    * @param {Object} options
    */
   function Chart(svgEl, data, options) {
+    var tooltipEl = document.createElement("div");
+    tooltipEl.className = "chart__tooltip";
+    document.body.appendChild(tooltipEl);
     this.data = data;
     this.options = options || this.defaultOptions;
     this.innerWidth =
@@ -19,11 +22,35 @@ Elab.ChartBuilder = (function (Elab) {
     this.svgEl = svgEl;
     this.updaters = {};
     this.selections = {};
-    this.selections.tooltip = d3.select("#tooltip");
+    this.selections.tooltip = d3.select(tooltipEl);
     this.xScale = null;
     this.yScale = null;
+    this.hovered = null;
+    this.lineData = null;
     this.xBandScale = d3.scaleBand();
     this.addRoot();
+    var _this = this;
+    this.showTooltip = function (e, render) {
+      if (!_this.hovered) return;
+      var selection = _this.getSelection("tooltip");
+      selection.classed("chart__tooltip--show", true);
+      var topOffset = $(window).scrollTop() + e.clientY;
+      var html = render(_this.hovered);
+      var rect = selection.node().getBoundingClientRect();
+      var xPos = Math.min(
+        window.innerWidth - rect.width / 2 - 12,
+        Math.max(12 + rect.width / 2, e.clientX)
+      );
+      selection
+        .style("top", topOffset + "px")
+        .style("left", xPos + "px")
+        .html(html);
+    };
+    this.hideTooltip = function (e) {
+      var selection = _this.getSelection("tooltip");
+      selection.classed("chart__tooltip--show", false);
+      // selection.style("top")
+    };
   }
 
   /** Default options for the chart */
@@ -53,11 +80,25 @@ Elab.ChartBuilder = (function (Elab) {
   };
 
   /**
+   * Sets the ID of the hovered data
+   */
+  Chart.prototype.setHovered = function (id) {
+    this.hovered = id;
+  };
+
+  /**
    * Gets a selection that has been added to the chart
    * @param {string} id
    */
   Chart.prototype.getSelection = function (id) {
     return this.selections[id];
+  };
+  /**
+   * Gets a renderer that has been added to the chart
+   * @param {string} id
+   */
+  Chart.prototype.getRenderer = function (id) {
+    return this.updaters[id];
   };
   /**
    * Adds a selection to the chart
@@ -285,6 +326,71 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  Chart.prototype.addHoverLine = function () {
+    var _this = this;
+    function createSelection(parentSelection) {
+      return parentSelection.append("line").attr("class", "chart__hover-line");
+    }
+    function createRenderer(selection, chart) {
+      return function () {
+        if (chart.hovered) {
+          selection
+            .transition()
+            .duration(200)
+            .attr("stroke-opacity", 1)
+            .attr("x1", function (d) {
+              return chart.xScale(chart.hovered.x);
+            })
+            .attr("x2", function (d) {
+              return chart.xScale(chart.hovered.x);
+            })
+            .attr("y1", 0)
+            .attr("y2", chart.getInnerHeight());
+        } else {
+          selection.transition().duration(200).attr("stroke-opacity", 0);
+        }
+      };
+    }
+    this.addSelection("hoverLine", "data", createSelection);
+    this.addRenderFunction("hoverLine", createRenderer);
+    return this;
+  };
+
+  Chart.prototype.addHoverDot = function () {
+    var _this = this;
+    function createSelection(parentSelection) {
+      return parentSelection.append("circle").attr("class", "chart__hover-dot");
+    }
+    function createRenderer(selection, chart) {
+      return function () {
+        if (chart.hovered && chart.lineData) {
+          var hoverIndex = chart.lineData.findIndex(function (d) {
+            return d[0][2] === chart.hovered.name;
+          });
+          selection
+            .attr(
+              "class",
+              "chart__hover-dot chart__hover-dot--" +
+                (chart.lineData.length - hoverIndex - 1)
+            )
+            .attr("cx", function (d) {
+              return chart.xScale(chart.hovered.x);
+            })
+            .attr("cy", function (d) {
+              return chart.yScale(chart.hovered.y);
+            })
+            .attr("r", 5)
+            .attr("fill-opacity", 1);
+        } else {
+          selection.attr("r", 0).attr("fill-opacity", 0);
+        }
+      };
+    }
+    this.addSelection("hoverDot", "data", createSelection);
+    this.addRenderFunction("hoverDot", createRenderer);
+    return this;
+  };
+
   /**
    * Adds bars to the chart
    * @param {function} selector function that takes the chart data and returns the bar data
@@ -330,6 +436,7 @@ Elab.ChartBuilder = (function (Elab) {
           return _this.getInnerHeight() - _this.yScale(d[1]);
         });
     };
+
     return this;
   };
 
@@ -337,49 +444,72 @@ Elab.ChartBuilder = (function (Elab) {
    * Adds lines to the chart
    * @param {function} selector a function that accepts chart data and returns the line data
    */
-  Chart.prototype.addLines = function (selector) {
+  Chart.prototype.addLines = function (overrides) {
     var _this = this;
-    this.selections["lines"] = this.selections["data"]
-      .append("g")
-      .attr("class", "chart__lines");
-    this.updaters["lines"] = function () {
-      var lineData = selector(_this.data);
+    var options = overrides || {};
+    options.linesId = overrides.linesId || "lines";
+    options.selector =
+      overrides.selector ||
+      function (data) {
+        return [
+          data.map(function (d) {
+            return [d.x, d.y];
+          }),
+        ];
+      };
+    if (_this.getSelection(options.linesId))
+      throw new Error(
+        "addLines: selection already exists for given linesId " +
+          options.linesId
+      );
+    function createLineSelection(parentSelection) {
+      return parentSelection.append("g").attr("class", "chart__lines");
+    }
+    function createLineRenderer(selection, chart) {
+      return function () {
+        chart.lineData = options.selector(chart.data);
 
-      var line = d3
-        .line()
-        .x(function (d) {
-          return _this.xScale(d[0]);
-        })
-        .y(function (d) {
-          return _this.yScale(d[1]);
-        })
-        .curve(d3.curveMonotoneX);
+        var line = d3
+          .line()
+          .x(function (d) {
+            return chart.xScale(d[0]);
+          })
+          .y(function (d) {
+            return chart.yScale(d[1]);
+          });
+        if (options.curve) line.curve(options.curve);
+        var lines = selection.selectAll(".chart__line").data(chart.lineData);
 
-      var selection = _this.selections["lines"]
-        .selectAll(".chart__line")
-        .data(lineData);
-
-      selection
-        .enter()
-        .append("path")
-        .attr("class", "chart__line")
-        .attr("d", line)
-        .style("stroke-dasharray", function () {
-          return this.getTotalLength();
-        })
-        .style("stroke-dashoffset", function () {
-          return this.getTotalLength();
-        })
-        .merge(selection)
-        .transition()
-        .duration(2000)
-        .delay(400)
-        .style("stroke-dasharray", function () {
-          return this.getTotalLength();
-        })
-        .style("stroke-dashoffset", 0)
-        .attr("d", line);
-    };
+        lines
+          .enter()
+          .append("path")
+          .attr("class", function (d, i) {
+            return (
+              "chart__line chart__line--" + (chart.lineData.length - i - 1)
+            );
+          })
+          .attr("d", line)
+          .attr("data-id", function (d) {
+            return d[0][2];
+          })
+          .style("stroke-dasharray", function () {
+            return this.getTotalLength();
+          })
+          .style("stroke-dashoffset", function () {
+            return this.getTotalLength();
+          })
+          .merge(lines)
+          .transition()
+          .duration(2000)
+          .style("stroke-dasharray", function () {
+            return this.getTotalLength();
+          })
+          .style("stroke-dashoffset", 0)
+          .attr("d", line);
+      };
+    }
+    this.addSelection(options.linesId, "data", createLineSelection);
+    this.addRenderFunction(options.linesId, createLineRenderer);
     return this;
   };
 
@@ -387,23 +517,36 @@ Elab.ChartBuilder = (function (Elab) {
    * Adds a Y axis to the chart
    * @param {*} selector a function that accepts a data entry and returns the y value
    */
-  Chart.prototype.addAxisY = function (selector) {
+  Chart.prototype.addAxisY = function (overrides) {
     var _this = this;
+    var options = overrides || {};
+    // selector for y data value
+    options.selector =
+      overrides.selector ||
+      function (d) {
+        return d.y;
+      };
+    // option to modify extent, do not modify by default
+    options.adjustExtent =
+      overrides.adjustExtent ||
+      function (e) {
+        return e;
+      };
     this.selections["yAxis"] = this.selections["base"]
       .append("g")
       .attr("class", "chart__axis chart__axis--y");
     this.updaters["yAxis"] = function () {
-      var extent = d3.extent(_this.data, selector);
+      var extent = d3.extent(_this.data, options.selector);
+      var yExtent = options.adjustExtent(extent);
       _this.yScale = d3
         .scaleLinear()
         .rangeRound([_this.getInnerHeight(), 0])
-        .domain([0, extent[1] + extent[1] * 0.05]);
+        .domain(yExtent);
       var yAxis = d3
         .axisLeft(_this.yScale)
-        .ticks(_this.options.yTicks)
-        .tickSize(-1 * _this.getInnerWidth())
-        .tickFormat(_this.options.yTicksFormat);
-
+        .tickSize(-1 * _this.getInnerWidth());
+      if (options.ticks) yAxis.ticks(options.ticks);
+      if (options.tickFormat) yAxis.tickFormat(options.tickFormat);
       _this.selections["yAxis"]
         .attr("transform", "translate(0, 0)")
         .transition()
@@ -428,41 +571,138 @@ Elab.ChartBuilder = (function (Elab) {
    * Adds a time (X) axis to the chart
    * @param {*} selector function that accepts a data entry and returns the X time value
    */
-  Chart.prototype.addTimeAxis = function (selector) {
+  Chart.prototype.addTimeAxis = function (overrides) {
     var _this = this;
-    function adjustTextLabels(selection) {
-      selection
-        .selectAll(".tick text")
-        .attr("transform", "translate(" + _this.monthToPixels(1) / 2 + ",0)");
-      selection.selectAll(".tick:last-child text").attr("opacity", 0);
-    }
+    var options = overrides || {};
+    // selector for x data value
+    options.selector =
+      overrides.selector ||
+      function (d) {
+        return d.x;
+      };
+    // option to modify extent, do not modify by default
+    options.adjustExtent =
+      overrides.adjustExtent ||
+      function (e) {
+        return e;
+      };
+    // option to adjust axis labels, do nothing by default
+    options.adjustLabels = overrides.adjustLabels || function () {};
+
     this.selections["timeAxis"] = this.selections["overlay"]
       .append("g")
       .attr("class", "chart__axis chart__axis--time");
     this.updaters["timeAxis"] = function () {
-      var extent = d3.extent(_this.data, selector);
-      var xExtent = [
-        d3.timeDay.offset(extent[0], -2),
-        d3.timeDay.offset(extent[1], 9),
-      ];
-
+      var extent = d3.extent(_this.data, options.selector);
+      var xExtent = options.adjustExtent(extent);
       _this.xScale = d3
         .scaleTime()
         .rangeRound([0, _this.getInnerWidth()])
         .domain(xExtent);
-      var xAxis = d3
-        .axisBottom(_this.xScale)
-        .ticks(_this.options.xTicks)
-        .tickSize(8)
-        .tickSizeOuter(0)
-        .tickFormat(_this.options.xTicksFormat);
+      var xAxis = d3.axisBottom(_this.xScale).tickSize(8).tickSizeOuter(0);
+      if (options.ticks) xAxis.ticks(options.ticks);
+      if (options.tickFormat) xAxis.tickFormat(options.tickFormat);
       _this.selections["timeAxis"]
         .attr("transform", "translate(0," + _this.getInnerHeight() + ")")
         .transition()
         .duration(1000)
         .call(xAxis)
-        .call(adjustTextLabels);
+        .call(options.adjustLabels.bind(_this));
     };
+    return this;
+  };
+
+  Chart.prototype.addLegend = function (items) {
+    var _this = this;
+    if (items) {
+      var children = items.map(function (item, i) {
+        return (
+          "<div class='legend-item legend-item--" +
+          i +
+          "'><div class='legend-item__color'></div><div class='legend-item__label'>" +
+          item +
+          "</div></div>"
+        );
+      });
+      $(_this.svgEl)
+        .parent()
+        .append("<div class='legend'>" + children.join("") + "</div>");
+    }
+    return this;
+  };
+
+  Chart.prototype.addVoronoi = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    options.xSelector =
+      options.xSelector ||
+      function (d) {
+        return d.x;
+      };
+    options.ySelector =
+      options.ySelector ||
+      function (d) {
+        return d.y;
+      };
+    options.renderTooltip =
+      options.renderTooltip ||
+      function (data) {
+        return data;
+      };
+    this.voronoi = d3
+      .voronoi()
+      .x(function (d) {
+        return _this.xScale(options.xSelector(d));
+      })
+      .y(function (d) {
+        return _this.yScale(options.ySelector(d));
+      })
+      .extent([
+        [0, 0],
+        [_this.getInnerWidth(), _this.getInnerHeight()],
+      ]);
+    function createSelection(parentSelection) {
+      return parentSelection.append("g").attr("class", "chart__voronoi");
+    }
+    function createRenderer(selection, chart) {
+      return function () {
+        var voronoiData = chart.voronoi.polygons(chart.data);
+        var voronoi = selection.selectAll("path").data(voronoiData);
+        voronoi
+          .enter()
+          .append("path")
+          .merge(voronoi)
+          .attr("d", function (d) {
+            return d ? "M" + d.join("L") + "Z" : null;
+          })
+          .on("mousemove", function (d) {
+            chart.setHovered(d.data);
+            chart
+              .getSelection("root")
+              .select("path[data-id='" + d.data.name + "']")
+              .classed("chart__line--hovered", true);
+            chart.showTooltip(d3.event, options.renderTooltip);
+            var renderLine = chart.getRenderer("hoverLine");
+            renderLine && renderLine();
+            var renderDot = chart.getRenderer("hoverDot");
+            renderDot && renderDot();
+          })
+          .on("mouseout", function (d) {
+            chart.setHovered(null);
+            chart
+              .getSelection("root")
+              .select("path[data-id='" + d.data.name + "']")
+              .classed("chart__line--hovered", false);
+            chart.hideTooltip();
+            var renderLine = chart.getRenderer("hoverLine");
+            renderLine && renderLine();
+            var renderDot = chart.getRenderer("hoverDot");
+            renderDot && renderDot();
+          });
+      };
+    }
+    this.addSelection("voronoi", "data", createSelection);
+    this.addRenderFunction("voronoi", createRenderer);
     return this;
   };
 

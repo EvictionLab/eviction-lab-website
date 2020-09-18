@@ -1,6 +1,5 @@
 "use strict";
 
-
 function _slicedToArray(arr, i) {
   return (
     _arrayWithHoles(arr) ||
@@ -69,7 +68,7 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
         e: function e(_e2) {
           throw _e2;
         },
-        f: F
+        f: F,
       };
     }
     throw new TypeError(
@@ -98,7 +97,7 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
       } finally {
         if (didErr) throw err;
       }
-    }
+    },
   };
 }
 
@@ -266,40 +265,84 @@ Elab.LineChart = (function (Elab) {
     chart.getSelection("tooltip").style("display", "none");
   };
 
+  function getXTicks(type) {
+    switch (type) {
+      case "day":
+        return d3.timeDay.every(1);
+      case "week":
+        return d3.timeWeek.every(1);
+      case "month":
+        return d3.timeMonth.every(1);
+      case "year":
+        return d3.timeYear.every(1);
+      default:
+        return d3.timeWeek.every(1);
+    }
+  }
+
   /**
    * Creates the chart and renders
    * @param {*} root
    * @param {*} cityData
    */
   function createFigure(root, data, dataOptions) {
-
+    var highlighted = dataOptions.highlight
+      ? dataOptions.highlight.split(";").reverse()
+      : null;
+    // sort data so highlighted items are at the end of the array in the same order as the "highlight" string
+    if (highlighted) {
+      var key = dataOptions.groupBy;
+      var hl = highlighted.slice().reverse();
+      data.sort(function (a, b) {
+        var aHighlightIndex = hl.indexOf(a[key]);
+        var bHighlightIndex = hl.indexOf(b[key]);
+        if (aHighlightIndex > -1 && bHighlightIndex > -1) {
+          if (aHighlightIndex === bHighlightIndex) return 0;
+          return aHighlightIndex > bHighlightIndex ? -1 : 1;
+        }
+        if (aHighlightIndex > -1) return 1;
+        if (a[key] === b[key]) return 0;
+        return a[key] > b[key] ? 1 : -1;
+      });
+    }
     /**
      * Selects the line data set from the chart data
      * @param {*} data
      */
-    var selectLineData = function (data) {
-      var grouped = groups(data, function(d) { return d[dataOptions.groupBy] })
-        .map(function(d) { return d[1] })
-      return [ grouped
-          .map(function (d) {
-            return [d3.timeDay.offset(d.x, 3.5), d.y];
-          })
-        ];
+    var lineSelector = function (data) {
+      // bring highlighted items to the top in proper order
+      var grouped = groups(data, function (d) {
+        return d[dataOptions.groupBy];
+      }).map(function (d) {
+        return d[1];
+      });
+      return grouped.map(function (group) {
+        return group.map(function (d) {
+          return [d.x, d.y, d.name];
+        });
+      });
     };
-
-    var seriesData = data.all;
+    var seriesData = data;
     var svg = $(root).find("svg")[0];
     var rect = root.getBoundingClientRect();
     var options = {
       width: rect.width,
       height: Math.max(rect.height, 320),
-      margin: [32, 12, 90, 40],
-      xTicks: d3.timeMonth.every(1),
-      xTicksFormat: d3.timeFormat("%B"),
-      yTicks: 4,
-      yTicksFormat: d3.format(",d"),
+      margin: [8, 48, 56, 48],
     };
-    console.log('init chart', seriesData)
+    var xFormat = function (d) {
+      var d1 = function (d) {
+        return d3.timeFormat("%m/%e")(d).replace(" ", "");
+      };
+      // var d2 = d3.timeFormat("%e");
+      return d1(d) + " - " + d1(d3.timeDay.offset(d, 6));
+    };
+    var xSelector = function (d) {
+      return d.x;
+    };
+    var ySelector = function (d) {
+      return d.y;
+    };
     var chart = new Elab.ChartBuilder(svg, seriesData, options);
     return (
       chart
@@ -308,14 +351,57 @@ Elab.LineChart = (function (Elab) {
         // adds a border around the chart area
         .addFrame()
         // adds y axis, using max of the trend line value or bar value
-        .addAxisY(function (d) { return d.y; })
+        .addAxisY({
+          selector: ySelector,
+          adjustExtent: function (extent) {
+            var range = extent[1] - extent[0];
+            return [extent[0] - range * 0.05, extent[1] + range * 0.05];
+          },
+          ticks: dataOptions.yTicks || 5,
+          tickFormat: d3.format(dataOptions.yFormat || ",d"),
+        })
         // adds time axis from dates in the dataset
-        .addTimeAxis(function (d) { console.log(d); return d.x; })
+        .addTimeAxis({
+          selector: xSelector,
+          ticks: dataOptions.xTicks ? getXTicks(dataOptions.xTicks) : undefined,
+          tickFormat: dataOptions.xFormat
+            ? d3.timeFormat(dataOptions.xFormat)
+            : xFormat,
+        })
         // adds the trend line
-        .addLines(selectLineData)
+        .addLines({
+          selector: lineSelector,
+          curve: dataOptions.curve ? d3[dataOptions.curve] : null,
+        })
         // adds a tooltip with the provided render function
         // .addTooltip(showTooltip, hideTooltip)
         // renders the chart
+        .addHoverLine()
+        .addHoverDot()
+        .addVoronoi({
+          renderTooltip: function (hoverData) {
+            var dateFormat = d3.timeFormat("%b %d");
+            var numFormat = d3.format(".0%");
+            var start = dateFormat(xSelector(hoverData));
+            var end = dateFormat(d3.timeDay.offset(xSelector(hoverData), 6));
+            return (
+              '<h1 class="tooltip__title">' +
+              hoverData.name +
+              "</h1>" +
+              '<div class="tooltip__item">' +
+              "<span>" +
+              start +
+              " - " +
+              end +
+              ":</span>" +
+              "<span> " +
+              numFormat(ySelector(hoverData)) +
+              "</span>" +
+              "</div>"
+            );
+          },
+        })
+
         .render()
     );
   }
@@ -338,21 +424,21 @@ Elab.LineChart = (function (Elab) {
     });
   }
 
-    /**
+  /**
    * Loads and parses the CSV table
    */
   function loadData(options, callback) {
     var parseDate = d3.timeParse("%m/%d/%Y");
-    d3.csv(options.data, function(data) {
+    d3.csv(options.data, function (data) {
       var result = data.map(function (d) {
         return {
           name: d[options.groupBy],
           x: parseDate(d[options.x]),
-          y: parseFloat(d[options.y])
-        }
-      })
-      callback && callback(result)
-    })
+          y: parseFloat(d[options.y]),
+        };
+      });
+      callback && callback(result);
+    });
   }
 
   /**
@@ -360,17 +446,17 @@ Elab.LineChart = (function (Elab) {
    */
   function init(rootEl, options) {
     if (!options || typeof options !== "object")
-      throw new Error("linechart: no options object provided")
+      throw new Error("linechart: no options object provided");
     if (!options.data)
-      throw new Error("linechart: must provide file URL in options")
-    options.x = options.x || "x"
-    options.y = options.y || "y"
-    options.groupBy = options.groupBy || "name"
-    loadData(options, function(data) {
-      console.log("parsed data", data)
+      throw new Error("linechart: must provide file URL in options");
+    options.x = options.x || "x";
+    options.y = options.y || "y";
+    options.groupBy = options.groupBy || "name";
+    loadData(options, function (data) {
+      console.log("parsed data", data);
 
-      initFigure(rootEl, { all: data }, options)
-    })
+      initFigure(rootEl, data, options);
+    });
   }
 
   return {

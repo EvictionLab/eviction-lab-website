@@ -1776,10 +1776,6 @@ Elab.Intro = (function (Elab) {
       width: rect.width,
       height: rect.height,
       margin: [32, 12, 90, 40],
-      xTicks: d3.timeMonth.every(1),
-      xTicksFormat: d3.timeFormat("%B"),
-      yTicks: 4,
-      yTicksFormat: d3.format(",d"),
     };
     var chart = new Elab.ChartBuilder(svg, seriesData, options);
     return (
@@ -1789,12 +1785,38 @@ Elab.Intro = (function (Elab) {
         // adds a border around the chart area
         .addFrame()
         // adds y axis, using max of the trend line value or bar value
-        .addAxisY(function (d) {
-          return Math.max(d[2], d[1]);
+        .addAxisY({
+          selector: function (d) {
+            return Math.max(d[2], d[1]);
+          },
+          adjustExtent: function (extent) {
+            return [0, extent[1] + extent[1] * 0.05];
+          },
+          ticks: 4,
+          tickFormat: d3.format(",d"),
         })
         // adds time axis from dates in the dataset
-        .addTimeAxis(function (d) {
-          return d[0];
+        .addTimeAxis({
+          selector: function (d) {
+            return d[0];
+          },
+          adjustExtent: function (extent) {
+            return [
+              d3.timeDay.offset(extent[0], -2),
+              d3.timeDay.offset(extent[1], 9),
+            ];
+          },
+          adjustLabels: function (selection) {
+            selection
+              .selectAll(".tick text")
+              .attr(
+                "transform",
+                "translate(" + this.monthToPixels(1) / 2 + ",0)"
+              );
+            selection.selectAll(".tick:last-child text").attr("opacity", 0);
+          },
+          ticks: d3.timeMonth.every(1),
+          tickFormat: d3.timeFormat("%B"),
         })
         // adds local moratorium areas
         .addArea([cityData.start, cityData.end], {
@@ -1810,7 +1832,7 @@ Elab.Intro = (function (Elab) {
         // adds the bars for weekly filings
         .addBars(selectBarsData)
         // adds the trend line
-        .addLines(selectLineData)
+        .addLines({ selector: selectLineData, curve: d3.curveMonotoneX })
         // adds a tooltip with the provided render function
         .addTooltip(showIntroTooltip, hideIntroTooltip)
         // adds a custom element with markers for the last bar and chart span
@@ -1969,12 +1991,15 @@ Elab.ListPage = (function (Elab) {
   }
 
   function inMoratorium(day, ranges) {
-    return ranges.reduce(function(inRange, range) {
-      var endDay = d3.timeDay.offset(day, 6)
-      return inRange 
-        ? true 
-        : +day >= +range[0] && +day <= +range[1] && +endDay >= +range[0] && +endDay <= +range[1]
-    }, false)
+    return ranges.reduce(function (inRange, range) {
+      var endDay = d3.timeDay.offset(day, 6);
+      return inRange
+        ? true
+        : +day >= +range[0] &&
+            +day <= +range[1] &&
+            +endDay >= +range[0] &&
+            +endDay <= +range[1];
+    }, false);
   }
 
   /**
@@ -1986,33 +2011,32 @@ Elab.ListPage = (function (Elab) {
     var margin = 4;
     // remove latest week from values
     // as it does not reflect the full set of filings
-    var localMoratorium = [ data.start, data.end ]
-    var cdcMoratorium = [ new Date(2020, 8, 4), new Date(2020, 11, 31) ]
-    var moratoriumRanges = +localMoratorium[1] > +cdcMoratorium[0]
-      ? [ [ localMoratorium[0], cdcMoratorium[1] ] ] // overlap in moratoriums
-      : [ localMoratorium, cdcMoratorium ] // no overlap
+    var localMoratorium = [data.start, data.end];
+    var cdcMoratorium = [new Date(2020, 8, 4), new Date(2020, 11, 31)];
+    var moratoriumRanges =
+      +localMoratorium[1] > +cdcMoratorium[0]
+        ? [[localMoratorium[0], cdcMoratorium[1]]] // overlap in moratoriums
+        : [localMoratorium, cdcMoratorium]; // no overlap
     var endLineDate = data.end;
     var values = data.values.filter(function (v, i) {
       return i !== data.values.length - 1;
     });
-    console.log(values, moratoriumRanges)
-    var moratoriumValues = values.map(function(v, i) {
-      var lastWeekDay = d3.timeDay.offset(v[0], -7)
-      var startInMoratorium = inMoratorium(v[0], moratoriumRanges)
-      var lastWeekInMoratorium = inMoratorium(lastWeekDay, moratoriumRanges)
-      if (startInMoratorium || lastWeekInMoratorium)
-        return v
-      return [ v[0], "NA", "NA" ]
-    })
-    var noMoratoriumValues = values.map(function(v) { 
-      var lastWeekDay = d3.timeDay.offset(v[0], -7)
-      var startInMoratorium = inMoratorium(v[0], moratoriumRanges)
-      var lastWeekInMoratorium = inMoratorium(lastWeekDay, moratoriumRanges)
-      if (!startInMoratorium || !lastWeekInMoratorium)
-        return v
-      return [ v[0], "NA", "NA" ]
-    })
-    
+    console.log(values, moratoriumRanges);
+    var moratoriumValues = values.map(function (v, i) {
+      var lastWeekDay = d3.timeDay.offset(v[0], -7);
+      var startInMoratorium = inMoratorium(v[0], moratoriumRanges);
+      var lastWeekInMoratorium = inMoratorium(lastWeekDay, moratoriumRanges);
+      if (startInMoratorium || lastWeekInMoratorium) return v;
+      return [v[0], "NA", "NA"];
+    });
+    var noMoratoriumValues = values.map(function (v) {
+      var lastWeekDay = d3.timeDay.offset(v[0], -7);
+      var startInMoratorium = inMoratorium(v[0], moratoriumRanges);
+      var lastWeekInMoratorium = inMoratorium(lastWeekDay, moratoriumRanges);
+      if (!startInMoratorium || !lastWeekInMoratorium) return v;
+      return [v[0], "NA", "NA"];
+    });
+
     var xExtent = d3.extent(values, function (v) {
       return v[0];
     });
@@ -2028,7 +2052,9 @@ Elab.ListPage = (function (Elab) {
 
     var area = d3
       .area()
-      .defined(function(d) { return !isNaN(d[2]); })
+      .defined(function (d) {
+        return !isNaN(d[2]);
+      })
       .x(function (d) {
         return xScale(d[0]);
       })
@@ -2039,7 +2065,9 @@ Elab.ListPage = (function (Elab) {
 
     var line = d3
       .line()
-      .defined(function(d) { return !isNaN(d[2]); })
+      .defined(function (d) {
+        return !isNaN(d[2]);
+      })
       .x(function (d) {
         return xScale(d[0]);
       })
