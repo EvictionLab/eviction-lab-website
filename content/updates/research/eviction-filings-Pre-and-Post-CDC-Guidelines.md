@@ -125,3 +125,11 @@ Neither Cleveland, OH nor St. Louis, MO is under an eviction moratorium, yet evi
 The other ten cities included here saw at least one week during this period—most often the week of August 30th—exceed historical averages. In Fort Worth, TX, for example, the 456 filings in the week of August 30th was 118% above normal. Each of these sites has seen a decline in new filings since the CDC guidelines went into effect. Cincinnati, OH, for instance, saw 95 new filings during the week of September 6th, down from 256 the week before. The next-largest absolute week-to-week drop in new filings—a change of 76 filings—occurred in mid-March after Cincinnati’s eviction moratorium went into effect. There were 536 new eviction filings in Richmond during the two weeks between the end of CARES protections and the enactment of the CDC order. There have been 31 new filings in the subsequent two weeks.
 
 Still, new filings have clearly not stopped altogether, or in all sites. Fort Worth has seen 508 filings in the two weeks since the CDC order was implemented. Houston had 1,053; Pittsburgh saw 337. The CDC order appears to have moved the needle—in some sites more than others—but it has not stopped the flow of new eviction cases.
+
+<hr />
+
+<div class="footnotes">
+<ol>
+<li>Filings in the week of 9/13 may be undercounted as a result of processing delays.</li>
+</ol>
+</div>
