@@ -16,7 +16,7 @@ socialDescription: Surveying the effects of 2 major eviction-related shifts.
 # image: '/images/assets/blog/rent_margin_display.jpg'
 fbImage: "/images/assets/blog/rent_margin_social.png"
 twImage: "/images/assets/blog/rent_margin_social.png"
-url: /eviction-filings-pre-and-post-cdc-guidelines
+url: /shifts-in-eviction-filings-from-cares-act-to-cdc-order
 scripts:
   - linechart
 aliases:
@@ -27,6 +27,8 @@ Two major eviction-related shifts have occurred in the U.S. over the last month.
 First, protections that the CARES Act had provided to renters began to be dismantled at the end of August. The CARES Act expired on July 25th, but it mandated that landlords and property managers of covered properties—<a href="https://www.frbatlanta.org/community-development/publications/partners-update/2020/covid-19-publications/200616-housing-policy-impact-federal-eviction-protection-coverage-and-the-need-for-better-data" target="_blank">those that had federally-backed mortgages or some existing relationship with the federal government</a>—provide tenants with a 30-day notice of intention to evict. That meant that landlords of covered properties were forbidden to begin eviction proceedings until August 24th.
 
 Second, the Centers for Disease Control and Prevention (CDC) announced on September 1st that landlords could not evict qualifying renters <a href="/federal-eviction-moratorium-update/">between September 4th and December 31st</a>. This order potentially affords protections to a much larger share of renter households than the CARES Act moratorium did.
+
+<img class="upscale124 pb-2" src="/images/assets/blog/el-timeline-20.jpg" alt="Charts depicting the predicted serial filing rates for different rent amounts." />
 
 Data from the <a href="/eviction-tracking/">Eviction Tracking System</a> (ETS) allow us to assess what effects those changes have had and where new eviction filings stand in cities across the U.S.
 
