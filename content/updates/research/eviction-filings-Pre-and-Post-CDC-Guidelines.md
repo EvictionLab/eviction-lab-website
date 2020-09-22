@@ -14,8 +14,8 @@ description: Surveying the effects of 2 major eviction-related shifts.
 listSummary: "Two major eviction-related shifts have occurred in the U.S. over the last month. Data from the Eviction Tracking System (ETS) allow us to assess what effects those changes have had and where new eviction filings stand in cities across the U.S."
 socialDescription: Surveying the effects of 2 major eviction-related shifts.
 # image: '/images/assets/blog/rent_margin_display.jpg'
-fbImage: "/images/assets/blog/rent_margin_social.png"
-twImage: "/images/assets/blog/rent_margin_social.png"
+fbImage: "/images/assets/blog/filing-shifts-social.png"
+twImage: "/images/assets/blog/filing-shifts-social.png"
 url: /shifts-in-eviction-filings-from-cares-act-to-cdc-order
 scripts:
   - linechart
@@ -37,7 +37,7 @@ Second, the Centers for Disease Control and Prevention (CDC) announced on Septem
 
 Data from the <a href="/eviction-tracking/">Eviction Tracking System</a> (ETS) allow us to assess what effects those changes have had and where new eviction filings stand in cities across the U.S.
 
-In Figure 1, we plot the total number of new eviction filings for each of the last six weeks in 16 of the 17 sites that we track in the ETS (we do not include Phoenix, AZ because data there are collected monthly). We saw 1,992 new filings the week of August 9th, and then a step up to 2,304 filings the week of August 16th. The next two weeks—following the end of the 30-day notice period on the CARES Act—saw much larger numbers of new filings: 2,930 the week of August 23rd and 3,115 the week of August 30th. In the week of September 6th—the first week in which the CDC order was in place—new filings dropped to 1,324, 57% less than the previous week. Filings rebounded during the week of September 13th, adding 1,920 new cases.
+In Figure 1, we plot the total number of new eviction filings for each of the last six weeks in 16 of the 17 sites that we track in the ETS (we do not include Phoenix, AZ because data there are collected monthly). We saw 1,992 new filings the week of August 9th, and then a step up to 2,304 filings the week of August 16th. The next two weeks—following the end of the 30-day notice period on the CARES Act—saw much larger numbers of new filings: 2,930 the week of August 23rd and 3,131 the week of August 30th. In the week of September 6th—the first week in which the CDC order was in place—new filings dropped to 1,582, half as many as the previous week. Filings rebounded during the week of September 13th, adding 1,975 new cases.
 
 <div class="figheader" style="max-width: 600px;" >Figure 1: Total new filings by week across 16 ETS sites</div>
 <div class="upscale124 bar-chart bar-chart--cdc">
