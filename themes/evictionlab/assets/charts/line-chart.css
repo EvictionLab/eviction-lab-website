@@ -54,8 +54,9 @@
   }
   .line-chart .chart__axis .tick text {
     fill: var(--text-secondary);
-    font-size: 14px;
-    font-family: var(--heading-font);
+    font-family: var(--number-font);
+    font-size: 12px;
+    font-weight: 500;
   }
   .line-chart .chart__axis--time .domain,
   .line-chart .chart__axis--time .tick line {
@@ -68,11 +69,6 @@
   .line-chart .chart__axis--y .tick line {
     stroke-width: 1;
     stroke: #fff;
-  }
-  .line-chart .chart__axis.chart__axis--y .tick text {
-    font-family: var(--number-font);
-    font-size: 12px;
-    font-weight: 500;
   }
 /** End Axis */
 

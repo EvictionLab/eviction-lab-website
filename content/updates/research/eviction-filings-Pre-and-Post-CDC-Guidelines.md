@@ -28,14 +28,91 @@ First, protections that the CARES Act had provided to renters began to be disman
 
 Second, the Centers for Disease Control and Prevention (CDC) announced on September 1st that landlords could not evict qualifying renters <a href="/federal-eviction-moratorium-update/">between September 4th and December 31st</a>. This order potentially affords protections to a much larger share of renter households than the CARES Act moratorium did.
 
-<img class="upscale124 pb-2" src="/images/assets/blog/el-timeline-20.jpg" alt="Charts depicting the predicted serial filing rates for different rent amounts." />
+<div class="upscale124 pb-2">
+  <picture>
+    <source srcset="/images/assets/blog/el-timeline-landscape.svg" media="(min-width: 480px)" />
+    <img src="/images/assets/blog/el-timeline-portrait.svg" alt="Timeline depicting period of analysis, August 9th to September 19th, 2020." />
+  </picture>
+</div>
 
 Data from the <a href="/eviction-tracking/">Eviction Tracking System</a> (ETS) allow us to assess what effects those changes have had and where new eviction filings stand in cities across the U.S.
 
 In Figure 1, we plot the total number of new eviction filings for each of the last six weeks in 16 of the 17 sites that we track in the ETS (we do not include Phoenix, AZ because data there are collected monthly). We saw 1,992 new filings the week of August 9th, and then a step up to 2,304 filings the week of August 16th. The next two weeks—following the end of the 30-day notice period on the CARES Act—saw much larger numbers of new filings: 2,930 the week of August 23rd and 3,115 the week of August 30th. In the week of September 6th—the first week in which the CDC order was in place—new filings dropped to 1,324, 57% less than the previous week. Filings rebounded during the week of September 13th, adding 1,920 new cases.
 
 <div class="figheader" style="max-width: 600px;" >Figure 1: Total new filings by week across 16 ETS sites</div>
-<img class="upscale124 pb-5" src="/images/assets/blog/Fig2-092020-2.png" alt="Charts depicting the predicted serial filing rates for different rent amounts." />
+<div class="upscale124 bar-chart bar-chart--cdc">
+<svg viewBox="0 0 720 413" aria-labelledby="barchartTitle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title id="barchartTitle">Charts depicting the predicted serial filing rates for different rent amounts.</title>
+  <defs>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient">
+      <stop stop-color="#787EB0" offset="0%"></stop>
+      <stop stop-color="#434878" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g id="all_filings_bar-(2)" class="grid-lines" transform="translate(26.000000, 13.000000)">
+    <g transform="translate(50.000000, 0.000000)" stroke="#FFFFFF">
+      <line x1="0" y1="299.5" x2="614" y2="299.5"></line>
+      <line x1="0" y1="192.5" x2="614" y2="192.5"></line>
+      <line x1="0" y1="86.5" x2="614" y2="86.5"></line>
+      <line x1="0" y1="352.5" x2="614" y2="352.5"></line>
+      <line x1="0" y1="246.5" x2="614" y2="246.5"></line>
+      <line x1="0" y1="139.5" x2="614" y2="139.5"></line>
+      <line x1="0" y1="32.5" x2="614" y2="32.5"></line>
+      <g class="grid-lines grid-lines--x">
+      <line x1="58.5" y1="361" x2="59" y2="353"></line>
+      <line x1="157.5" y1="361" x2="158" y2="353"></line>
+      <line x1="257.5" y1="361" x2="258" y2="353"></line>
+      <line x1="356.5" y1="361" x2="357" y2="353"></line>
+      <line x1="455.5" y1="361" x2="456" y2="353"></line>
+      <line x1="554.5" y1="361" x2="555" y2="353"></line>
+      </g>
+      <rect x="0" y="0" width="614" height="353" fill="none" stroke="#fff" stroke-width="2"></rect>
+    </g>
+    <g id="Bars" class="bars" transform="translate(86.000000, 22.000000)" fill-rule="nonzero">
+      <rect id="Rectangle" fill="url(#linearGradient)" x="0" y="118" width="48" height="210"></rect>
+      <rect id="Rectangle" fill="url(#linearGradient)" x="98" y="86" width="48" height="243"></rect>
+      <rect id="Rectangle" fill="url(#linearGradient)" x="197" y="20" width="48" height="309"></rect>
+      <rect id="Rectangle" fill="url(#linearGradient)" x="296" y="0" width="48" height="329"></rect>
+      <rect id="Rectangle" fill="url(#linearGradient)" x="396" y="169" width="48" height="160"></rect>
+      <rect id="Rectangle" fill="url(#linearGradient)" x="495" y="126" width="48" height="203"></rect>
+    </g>
+    <g id="Y-axis" class="axis axis--y" transform="translate(0.000000, 25.000000)">
+      <text x="44" id="0">
+          <tspan y="330.281969">0</tspan>
+      </text>
+      <text x="44" id="1,000">
+          <tspan y="225.913464">1,000</tspan>
+      </text>
+      <text x="44" id="2,000">
+          <tspan y="118.987957">2,000</tspan>
+      </text>
+      <text x="44" id="3,000">
+          <tspan y="10.0624496">3,000</tspan>
+      </text>
+    </g>
+    <g id="X-axis" class="axis axis--x" transform="translate(73.000000, 365.000000)">
+      <text x="40" y="8">
+          <tspan>8/9 - 8/15</tspan>
+      </text>
+      <text x="135" y="8">
+          <tspan>8/16 - 8/22</tspan>
+      </text>
+      <text x="235" y="8">
+          <tspan>8/23 - 8/29</tspan>
+      </text>
+      <text x="330" y="8">
+          <tspan>8/30 - 9/5</tspan>
+      </text>
+      <text x="435" y="8">
+          <tspan>9/6 - 9/12</tspan>
+      </text>
+      <text x="535" y="8">
+          <tspan>9/13 - 9/19</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
+</div>
 
 This aggregate pattern—increasing filings across August and a decline following enactment of the CDC order—masks variation at the city level. Indeed, the stories start to look different when we highlight specific sites. In Figure 2 we plot weekly filings in each of these 16 cities over the last six weeks. Rather than plotting the absolute number of filings, we compare weekly filings to historical averages for the given week.
 
