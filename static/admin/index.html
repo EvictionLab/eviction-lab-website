@@ -200,6 +200,175 @@
           return obj.body;
         },
       });
+
+  CMS.registerEditorComponent({
+    id: "chartSection",
+    label: "Chart Section",
+    fields: [
+      {
+        name: "id",
+        label: "Chart Identifier",
+        widget: "string",
+        default: "lineChart",
+        hint: "must be unique, used to target styling",
+        pattern: ['[a-zA-Z0-9]+', "no spaces or special characters allowed"],
+        required: true
+      }, 
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+        required: true
+      },
+      {
+        name: "data",
+        label: "CSV File",
+        widget: "file",
+        required: true
+      },
+      {
+        name: "x",
+        label: "X Column",
+        widget: "string",
+        default: "x",
+        hint: "column name in CSV file corresponding to X values (must be mm/dd/yy)"
+      },
+      {
+        name: "y",
+        label: "Y Column",
+        widget: "string",
+        default: "y",
+        hint: "column name in CSV file corresponding to Y values"
+      },
+      {
+        name: "groupBy",
+        label: "Group Column",
+        widget: "string",
+        default: "name",
+        hint: "column name in CSV file corresponding to values to group together for lines"
+      },
+      {
+        name: "yTicks",
+        label: "Y Axis Ticks",
+        widget: "number",
+        default: 5,
+        hint: "(optional) number of ticks to show on Y axis"
+      },
+      {
+        name: "yFormat",
+        label: "Y Axis Format",
+        widget: "string",
+        hint: "d3.format string on how to format Y values: https://github.com/d3/d3-format#d3-format"
+      },
+      {
+        name: "xTicks",
+        label: "X Axis Ticks",
+        widget: "select",
+        options: [
+          { label: "Day", value: "day" },
+          { label: "Week", value: "week" },
+          { label: "Month", value: "month" },
+          { label: "Year", value: "year" },
+        ],
+        default: 'week',
+        hint: "frequency of X axis ticks"
+      },
+      {
+        name: "xFormat",
+        label: "X Axis Format",
+        widget: "string",
+        hint: "d3.timeFormat for X axis values: https://github.com/d3/d3-time-format#locale_format"
+      },
+      {
+        name: "highlight",
+        label: "Highlighted Lines",
+        widget: "string",
+        hint: "semi-colon (;) separated identifiers to highlight on the chart"
+      },
+      {
+        name: "curve",
+        label: "Line Curve",
+        default: "curveLinear",
+        widget: "string",
+        hint: "(optional) type of d3.curve to use: https://github.com/d3/d3-shape#curves"
+      },
+    ],
+    pattern: /^{{%[\s]+linechart[\s]+id="(\S*)"[\s]+title="(.*?)"[\s]+data="(\S*)"[\s]+x="(\S*)"[\s]+y="(\S*)"[\s]+groupBy="(\S*)"[\s]+yTicks="(\S*)"[\s]+yFormat="(.+?)"[\s]+xTicks="(\S*)"[\s]+xFormat="(.*?)"[\s]+highlight="(.*?)"[\s]+curve="(.+?)"[\s]+%}}/,
+    fromBlock: function (match) {
+      return {
+        id: match[1],
+        title: match[2],
+        data: match[3],
+        x: match[4],
+        y: match[5],
+        groupBy: match[6],
+        yTicks: match[7],
+        yFormat: match[8],
+        xTicks: match[9],
+        xFormat: match[10],
+        highlight: match[11],
+        curve: match[12]
+      };
+    },
+    toBlock: function (obj) {
+      return (
+        '{{% linechart id="' +
+        obj.id +
+        '" title= "' +
+        obj.title +
+        '" data="' +
+        obj.data +
+        '" x="' +
+        obj.x +
+        '" y="' +
+        obj.y +
+        '" groupBy="' +
+        obj.groupBy +
+        '" yTicks="' +
+        obj.yTicks +
+        '" yFormat="' +
+        obj.yFormat +
+        '" xTicks="' +
+        obj.xTicks +
+        '" xFormat="' +
+        obj.xFormat +
+        '" highlight="' +
+        obj.highlight +
+        '" curve="' +
+        obj.curve +
+        '" %}}'
+      );
+    },
+    toPreview: function (obj) {
+      return (
+        '{{% linechart id="' +
+        obj.id +
+        '" title= "' +
+        obj.title +
+        '" data="' +
+        obj.data +
+        '" x="' +
+        obj.x +
+        '" y="' +
+        obj.y +
+        '" groupBy="' +
+        obj.groupBy +
+        '" yTicks="' +
+        obj.yTicks +
+        '" yFormat="' +
+        obj.yFormat +
+        '" xTicks="' +
+        obj.xTicks +
+        '" xFormat="' +
+        obj.xFormat +
+        '" highlight="' +
+        obj.highlight +
+        '" curve="' +
+        obj.curve +
+        '" %}}'
+      );
+    },
+  });
     </script>
   </body>
 </html>

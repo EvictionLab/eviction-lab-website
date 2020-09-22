@@ -9,19 +9,20 @@ backend:
 # - run `npx netlify-cms-proxy-server` to serve content
 
 # backend:
-#   name: git-gateway
-# local_backend: true
+#   name: proxy
+#   proxy_url: http://localhost:8081/api/v1
+#   branch: blog/cdc-post # optional, defaults to master
 
 media_folder: "static/uploads" # Folder where user uploaded files should go
-publish_mode: editorial_workflow
-public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
+# publish_mode: editorial_workflow
+public_folder: "/uploads" # The src attribute for uploaded media will begin with /uploads
 
 collections:
   - label: "Pages"
     name: "pages"
     editor:
       preview: false
-    preview_path: /eviction-tracking/{{slug}}  
+    preview_path: /eviction-tracking/{{slug}}
     files:
       - label: "Eviction Tracking"
         name: "tracker"
@@ -70,11 +71,7 @@ collections:
                   hint: "Image used when page is shared on Twitter",
                 }
           - { label: Heading, name: h1, widget: string }
-          - {
-              label: "Updated Date",
-              name: "date",
-              widget: "date",
-            }
+          - { label: "Updated Date", name: "date", widget: "date" }
           - { label: "Intro", name: "intro", widget: "markdown" }
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Eviction Crisis", name: "crisis", widget: "markdown" }
@@ -132,11 +129,7 @@ collections:
               widget: string,
               hint: "used in the breadcrumb",
             }
-          - {
-              label: "Updated Date",
-              name: "date",
-              widget: "date",
-            }
+          - { label: "Updated Date", name: "date", widget: "date" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Eviction Tracking (Similar Resources)"
         name: "similar-resources"
@@ -190,11 +183,7 @@ collections:
               widget: string,
               hint: "used in the breadcrumb",
             }
-          - {
-              label: "Updated Date",
-              name: "date",
-              widget: "date",
-            }
+          - { label: "Updated Date", name: "date", widget: "date" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Eviction Tracking (Acknowledgements)"
         name: "acknowledgements"
@@ -248,11 +237,7 @@ collections:
               widget: string,
               hint: "used in the breadcrumb",
             }
-          - {
-              label: "Updated Date",
-              name: "date",
-              widget: "date",
-            }
+          - { label: "Updated Date", name: "date", widget: "date" }
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Similar Resources", name: "similar", widget: "markdown" }
       - label: "Eviction Tracking (Get the Data)"
@@ -307,46 +292,26 @@ collections:
               widget: string,
               hint: "used in the breadcrumb",
             }
-          - {
-              label: "Updated Date",
-              name: "date",
-              widget: "date",
-            }
-          - {label: "Introduction", name: intro, widget: markdown}  
+          - { label: "Updated Date", name: "date", widget: "date" }
+          - { label: "Introduction", name: intro, widget: markdown }
           - label: "Table Column Headers"
             name: "headers"
             widget: "object"
             collapsed: true
             fields:
-              - {
-                  label: "Header 1",
-                  name: "siteheader",
-                  widget: "string",
-                }
-              - {
-                  label: "Header 2",
-                  name: "baselineheader",
-                  widget: "string",
-                }
-              - {
-                  label: "Header 3",
-                  name: "geoheader",
-                  widget: "string",
-                }
-              - {
-                  label: "Header 4",
-                  name: "fileheader",
-                  widget: "string",
-                }
+              - { label: "Header 1", name: "siteheader", widget: "string" }
+              - { label: "Header 2", name: "baselineheader", widget: "string" }
+              - { label: "Header 3", name: "geoheader", widget: "string" }
+              - { label: "Header 4", name: "fileheader", widget: "string" }
           - label: Data Table Rows
             name: data
             widget: list
             fields:
-              - {label: Site, name: site, widget: string}
-              - {label: Baseline Years, name: years, widget: string}
-              - {label: Smallest Geography, name: geo, widget: string}
-              - {label: Data File, name: file, widget: file}   
-          - { label: "Body (below table)", name: "body", widget: "markdown" }    
+              - { label: Site, name: site, widget: string }
+              - { label: Baseline Years, name: years, widget: string }
+              - { label: Smallest Geography, name: geo, widget: string }
+              - { label: Data File, name: file, widget: file }
+          - { label: "Body (below table)", name: "body", widget: "markdown" }
   - name: "eviction-tracking"
     identifier_field: "h1"
     label: "Eviction Tracking"
@@ -387,3 +352,78 @@ collections:
         }
       - { label: "Updated Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "research" # Used in routes, e.g., /admin/collections/blog
+    label: "Research Blog" # Used in the UI
+    folder: "/content/updates/research" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    extension: md
+    editor:
+      preview: false
+    preview_path: "{{fields.url}}"
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Draft",
+          name: "draft",
+          widget: "boolean",
+          hint: "When draft is on, the page will not be published to the live site",
+        }
+      - {
+          label: "Child Of",
+          name: "childof",
+          widget: "hidden",
+          default: "blog",
+        }
+      - { label: "URL", name: "url", widget: "string" }
+      - {
+          label: "Content Type",
+          name: "contenttype",
+          widget: "hidden",
+          default: "updates",
+        }
+      - {
+          label: "Content Category",
+          name: "contentcat",
+          widget: "hidden",
+          default: "blog",
+        }
+      - {
+          label: "Featured on Front Page",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Blog Post Title", name: "title", widget: "string" }
+      - { label: "Created Date", name: "date", widget: "datetime" }
+      - { label: "Author Name", name: "postauthorname", widget: "string" }
+      - { label: "Author Title", name: "postauthortitle", widget: "string" }
+      - {
+          label: "Author Photo",
+          name: "authorpic",
+          widget: "image",
+          default: "images/uploads/james_hendrickson_thumb.jpg",
+          required: false,
+        }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Social Media / Search Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Excerpt for Articles List",
+          name: "listSummary",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
+        }
