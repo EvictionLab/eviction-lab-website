@@ -116,7 +116,7 @@ In Figure 1, we plot the total number of new eviction filings for each of the la
 
 This aggregate pattern—increasing filings across August and a decline following enactment of the CDC order—masks variation at the city level. Indeed, the stories start to look different when we highlight specific sites. In Figure 2 we plot weekly filings in each of these 16 cities over the last six weeks. Rather than plotting the absolute number of filings, we compare weekly filings to historical averages for the given week.
 
-{{% linechart id="summed" title="Figure 2: Weekly Filings Compared to Historical Averages" data="/uploads/summed_sites_20200921.csv" x="week_date" y="ratio" groupBy="name" yTicks="5" yFormat=".0%" xTicks="week" xFormat="" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX"  curve="curveLinear" %}}
+{{% linechart id="summed" title="Figure 2: Weekly Filings Compared to Historical Averages" data="/uploads/summed_sites_20200922.csv" x="week_date" y="ratio" groupBy="name" yTicks="5" yFormat=".0%" xTicks="week" xFormat="" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX"  curve="curveLinear" %}}
 
 Four of the cities included here—Austin, TX, Boston, MA, and Bridgeport and Hartford, CT—are still covered by robust local- or state-level eviction moratoria. In these sites, the number of new eviction filings remain well below historical averages. There was no rise in filings in August, nor any change following implementation of the CDC order. In Hartford, for instance, there have been fewer than fifteen new filings in each of the last six weeks. That is less than 10% of the typical number of filings.
 
