@@ -69,12 +69,12 @@ In Figure 1, we plot the total number of new eviction filings for each of the la
       <rect x="0" y="0" width="614" height="353" fill="none" stroke="#fff" stroke-width="2"></rect>
     </g>
     <g id="Bars" class="bars" transform="translate(86.000000, 22.000000)" fill-rule="nonzero">
-      <rect id="Rectangle" fill="url(#linearGradient)" x="0" y="118" width="48" height="210"></rect>
-      <rect id="Rectangle" fill="url(#linearGradient)" x="98" y="86" width="48" height="243"></rect>
-      <rect id="Rectangle" fill="url(#linearGradient)" x="197" y="20" width="48" height="309"></rect>
-      <rect id="Rectangle" fill="url(#linearGradient)" x="296" y="0" width="48" height="329"></rect>
-      <rect id="Rectangle" fill="url(#linearGradient)" x="396" y="169" width="48" height="160"></rect>
-      <rect id="Rectangle" fill="url(#linearGradient)" x="495" y="126" width="48" height="203"></rect>
+      <rect fill="url(#linearGradient)" x="0" y="118" width="48" height="212"></rect>
+      <rect fill="url(#linearGradient)" x="98" y="86" width="48" height="243"></rect>
+      <rect fill="url(#linearGradient)" x="197" y="20" width="48" height="309"></rect>
+      <rect fill="url(#linearGradient)" x="296" width="48" y="-4" height="333"></rect>
+      <rect fill="url(#linearGradient)" x="396" width="48" y="159" height="170"></rect>
+      <rect fill="url(#linearGradient)" x="495" width="48" y="121" height="208"></rect>
     </g>
     <g id="Y-axis" class="axis axis--y" transform="translate(0.000000, 25.000000)">
       <text x="44" id="0">
