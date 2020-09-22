@@ -9,9 +9,9 @@ date: 2020-09-22T16:46:40.089Z
 postauthorname: Peter Hepburn and Renee Louis
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: New findings from the data and policy recommendations to protect renters.
-listSummary: 'We often associate “eviction” with displacement and removal, boxes and furniture thrown to the curb. When a landlord files to evict a tenant—whether for nonpayment of rent or for property damage—we assume they do so to move them out. While some landlords do file intending to remove tenants, others use eviction filings as a way to collect rent and additional fees.' 
-socialDescription: New findings from the data and policy recommendations to protect renters.
+description: Surveying the effects of 2 major eviction-related shifts.
+listSummary: 'Two major eviction-related shifts have occurred in the U.S. over the last month. Data from the Eviction Tracking System (ETS) allow us to assess what effects those changes have had and where new eviction filings stand in cities across the U.S.' 
+socialDescription: Surveying the effects of 2 major eviction-related shifts.
 # image: '/images/assets/blog/rent_margin_display.jpg'
 fbImage: '/images/assets/blog/rent_margin_social.png'
 twImage: '/images/assets/blog/rent_margin_social.png'
