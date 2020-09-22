@@ -4,7 +4,7 @@ contenttype: updates
 contentcat: research
 featured: "home"
 researchtype: elresearch
-title: 'Preliminary Analysis: Eviction Filings Pre- and Post-CDC Guidelines'
+title: 'Preliminary Analysis: Shifts in Eviction Filings from the CARES Act to the CDC Order'
 date: 2020-09-22T16:46:40.089Z
 postauthorname: Peter Hepburn and Renee Louis
 postauthortitle: The Eviction Lab
