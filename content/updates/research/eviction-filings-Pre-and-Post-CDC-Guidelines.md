@@ -25,6 +25,8 @@ First, protections that the CARES Act had provided to renters began to be disman
 
 Second, the Centers for Disease Control and Prevention (CDC) announced on September 1st that landlords could not evict qualifying renters <a href="/federal-eviction-moratorium-update/">between September 4th and December 31st</a>. This order potentially affords protections to a much larger share of renter households than the CARES Act moratorium did.
 
+<img class="upscale124 pb-2" src="/images/assets/blog/el-timeline-20.jpg" alt="Charts depicting the predicted serial filing rates for different rent amounts." />
+
 Data from the <a href="/eviction-tracking/">Eviction Tracking System</a> (ETS) allow us to assess what effects those changes have had and where new eviction filings stand in cities across the U.S. 
 
 In Figure 1, we plot the total number of new eviction filings for each of the last six weeks in 16 of the 17 sites that we track in the ETS (we do not include Phoenix, AZ because data there are collected monthly). We saw 1,992 new filings the week of August 9th, and then a step up to 2,304 filings the week of August 16th. The next two weeks—following the end of the 30-day notice period on the CARES Act—saw much larger numbers of new filings: 2,930 the week of August 23rd and 3,115 the week of August 30th. In the week of September 6th—the first week in which the CDC order was in place—new filings dropped to 1,324, 57% less than the previous week. Filings rebounded during the week of September 13th, adding 1,920 new cases. 
