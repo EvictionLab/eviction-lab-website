@@ -309,10 +309,10 @@ picture img {
   .bar-chart.bar-chart--cdc {
     margin-bottom: 12px;
   }
-  .bar-chart.bar-chart--cdc .axis.axis--x text:nth-child(2n + 1) {
+  .bar-chart.bar-chart--cdc .axis.axis--x g:nth-child(2n + 1) {
     transform: translate(0, -4px);
   }
-  .bar-chart.bar-chart--cdc .axis.axis--x text:nth-child(2n) {
+  .bar-chart.bar-chart--cdc .axis.axis--x g:nth-child(2n) {
     transform: translate(0, 18px);
   }
 }

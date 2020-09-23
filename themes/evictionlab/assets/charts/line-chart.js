@@ -331,7 +331,7 @@ Elab.LineChart = (function (Elab) {
     var options = {
       width: rect.width,
       height: Math.max(rect.height, 320),
-      margin: [8, 48, 56, 48],
+      margin: [8, 48, 60, 54],
     };
     var xFormat = function (d) {
       var d1 = function (d) {
@@ -372,6 +372,19 @@ Elab.LineChart = (function (Elab) {
             : dataOptions.xTicks === "week"
             ? xFormat
             : undefined,
+          adjustLabels: function (selection) {
+            if (window.innerWidth < 540) {
+              selection
+                .selectAll(".tick text")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-30)");
+            } else {
+              selection
+                .selectAll(".tick text")
+                .attr("text-anchor", null)
+                .attr("transform", null);
+            }
+          },
         })
         // adds the trend line
         .addLines({

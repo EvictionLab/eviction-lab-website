@@ -204,11 +204,8 @@
 
 /** INDIVIDUAL CHART OVERRIDES **/
 @media(max-width: 540px) {
-  #summed .chart__axis--time .tick:nth-child(2n+1) {
-    opacity:0;
-  }
   #summed .chart__axis--time .tick text {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 @media(min-width: 768px) {

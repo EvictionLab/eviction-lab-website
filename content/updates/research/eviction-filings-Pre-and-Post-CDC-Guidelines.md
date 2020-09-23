@@ -91,24 +91,24 @@ In Figure 1, we plot the total number of new eviction filings for each of the la
       </text>
     </g>
     <g id="X-axis" class="axis axis--x" transform="translate(73.000000, 365.000000)">
-      <text x="40" y="8">
+      <g><text x="40" y="8">
           <tspan>8/9 - 8/15</tspan>
-      </text>
-      <text x="135" y="8">
+      </text></g>
+      <g><text x="135" y="8">
           <tspan>8/16 - 8/22</tspan>
-      </text>
-      <text x="235" y="8">
+      </text></g>
+      <g><text x="235" y="8">
           <tspan>8/23 - 8/29</tspan>
-      </text>
-      <text x="330" y="8">
+      </text></g>
+      <g><text x="330" y="8">
           <tspan>8/30 - 9/5</tspan>
-      </text>
-      <text x="435" y="8">
+      </text></g>
+      <g><text x="435" y="8">
           <tspan>9/6 - 9/12</tspan>
-      </text>
-      <text x="535" y="8">
+      </text></g>
+      <g><text x="535" y="8">
           <tspan>9/13 - 9/19</tspan>
-      </text>
+      </text></g>
     </g>
   </g>
 </svg>
