@@ -212,59 +212,9 @@ var Elab = Elab || {};
  */
 Elab.LineChart = (function (Elab) {
   /**
-   * Renders the intro chart tooltip on hover
-   * @param {*} chart ChartBuilder instance
-   * @param {*} xHovered hovered value
+   * Gets X ticks based on type
+   * @param {string} type [day, week, month, year]
    */
-  var showTooltip = function (chart, xHovered) {
-    var bisectX = d3.bisector(function (d) {
-      return d[0];
-    }).left;
-    // midpoint of the current hovered week
-    var xPosition = d3.timeDay.offset(d3.timeWeek.floor(xHovered), 3.5);
-    // index of currently hovered week
-    var dataIndex = bisectX(chart.data, xHovered) - 1;
-    // data point for the hovered week
-    var weekStart = chart.data[dataIndex];
-    // exit early if no data point or if out of range
-    if (!weekStart || +xPosition > chart.xScale.domain()[1]) return;
-    // create tooltip
-    var title = "Eviction Filings";
-    var dayFormat = d3.timeFormat("%b %e");
-    var weekLabel = [weekStart[0], d3.timeDay.offset(weekStart[0], 7)]
-      .map(function (d) {
-        return dayFormat(d);
-      })
-      .join(" - ");
-    var items = [{ idx: 0, name: weekLabel, value: weekStart[1] }];
-    var context = {
-      els: { tooltip: chart.selections["tooltip"] },
-    };
-    // render tooltip
-    // window.Elab.Chart.renderBarTooltip(title, items, context, undefined, "top");
-    // position hover line
-    var position = chart.xScale(xPosition) + 1.5;
-    chart
-      .getSelection("hover-line")
-      .style("display", "block")
-      .transition()
-      .duration(100)
-      .ease(d3.easeLinear)
-      .attr("x1", position)
-      .attr("x2", position)
-      .attr("y1", 0)
-      .attr("y2", chart.getInnerHeight());
-  };
-
-  /**
-   * Handler to hide tooltip on hover out
-   * @param {*} chart
-   */
-  var hideTooltip = function (chart) {
-    chart.getSelection("hover-line").style("display", "none");
-    chart.getSelection("tooltip").style("display", "none");
-  };
-
   function getXTicks(type) {
     switch (type) {
       case "day":
@@ -281,9 +231,54 @@ Elab.LineChart = (function (Elab) {
   }
 
   /**
+   * Default formatter for X axis ( shows week range: "08/15 - 08/21" )
+   * @param {*} d
+   */
+  var xFormat = function (d) {
+    var d1 = function (d) {
+      return d3.timeFormat("%m/%e")(d).replace(" ", "");
+    };
+    return d1(d) + " - " + d1(d3.timeDay.offset(d, 6));
+  };
+
+  /**
+   * Selector for X values from data point
+   * @param {*} d
+   */
+  var xSelector = function (d) {
+    return d.x;
+  };
+
+  /**
+   * Selector for Y values from data point
+   * @param {*} d
+   */
+  var ySelector = function (d) {
+    return d.y;
+  };
+
+  /**
+   * Selects the line data set from the chart data
+   * @param {*} data
+   */
+  var lineSelector = function (data) {
+    var grouped = groups(data, function (d) {
+      return d.name;
+    }).map(function (d) {
+      return d[1];
+    });
+    return grouped.map(function (group) {
+      return group.map(function (d) {
+        return [d.x, d.y, d.name];
+      });
+    });
+  };
+
+  /**
    * Creates the chart and renders
-   * @param {*} root
-   * @param {*} cityData
+   * @param {HTMLElement} root
+   * @param {Array<Object>} data
+   * @param {Object} dataOptions { margin, x, y, groupBy, curve, highlight, xTicks, xFormat, yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
     var highlighted = dataOptions.highlight
@@ -308,45 +303,19 @@ Elab.LineChart = (function (Elab) {
         return a[key] > b[key] ? 1 : -1;
       });
     }
-    /**
-     * Selects the line data set from the chart data
-     * @param {*} data
-     */
-    var lineSelector = function (data) {
-      // bring highlighted items to the top in proper order
-      var grouped = groups(data, function (d) {
-        return d[dataOptions.groupBy];
-      }).map(function (d) {
-        return d[1];
-      });
-      return grouped.map(function (group) {
-        return group.map(function (d) {
-          return [d.x, d.y, d.name];
-        });
-      });
-    };
-    var seriesData = data;
+
     var svg = $(root).find("svg")[0];
     var rect = root.getBoundingClientRect();
-    var options = {
-      width: rect.width,
-      height: Math.max(rect.height, 320),
-      margin: [8, 48, 60, 54],
-    };
-    var xFormat = function (d) {
-      var d1 = function (d) {
-        return d3.timeFormat("%m/%e")(d).replace(" ", "");
-      };
-      // var d2 = d3.timeFormat("%e");
-      return d1(d) + " - " + d1(d3.timeDay.offset(d, 6));
-    };
-    var xSelector = function (d) {
-      return d.x;
-    };
-    var ySelector = function (d) {
-      return d.y;
-    };
-    var chart = new Elab.ChartBuilder(svg, seriesData, options);
+    var options = Object.assign(
+      {
+        width: rect.width,
+        height: Math.max(rect.height, 320),
+        margin: [8, 48, 60, 54],
+      },
+      dataOptions
+    );
+
+    var chart = new Elab.ChartBuilder(svg, data, options);
     return (
       chart
         // clips lines or bars that extend past data area

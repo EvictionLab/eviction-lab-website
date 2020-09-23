@@ -468,7 +468,6 @@ Elab.ChartBuilder = (function (Elab) {
       return parentSelection.append("g").attr("class", "chart__lines");
     }
     function createLineRenderer(selection, chart) {
-      console.log(chart.lineData);
       return function () {
         var line = d3
           .line()
@@ -506,7 +505,7 @@ Elab.ChartBuilder = (function (Elab) {
           .attr("d", line)
           .style("stroke-dasharray", function () {
             // need to increase the dasharray to prevent line from cutting off
-            return this.getTotalLength() + chart.getInnerWidth();
+            return this.getTotalLength() + window.innerWidth;
           })
           .style("stroke-dashoffset", 0);
       };
