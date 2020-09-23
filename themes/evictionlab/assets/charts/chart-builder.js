@@ -505,9 +505,17 @@ Elab.ChartBuilder = (function (Elab) {
           .attr("d", line)
           .style("stroke-dasharray", function () {
             // need to increase the dasharray to prevent line from cutting off
-            return this.getTotalLength() + window.innerWidth;
+            var ratio = chart.lastWidth
+              ? chart.getInnerWidth() / chart.lastWidth
+              : 1;
+            return this.getTotalLength() * ratio + "px";
           })
           .style("stroke-dashoffset", 0);
+
+        // track min width for dash array ratio
+        chart.lastWidth = chart.lastWidth
+          ? Math.min(chart.lastWidth, chart.getInnerWidth())
+          : chart.getInnerWidth();
       };
     }
     this.addSelection(options.linesId, "data", createLineSelection);
