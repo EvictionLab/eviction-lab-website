@@ -28,7 +28,7 @@ First, protections that the CARES Act had provided to renters began to be disman
 
 Second, the Centers for Disease Control and Prevention (CDC) announced on September 1st that landlords could not evict qualifying renters <a href="/federal-eviction-moratorium-update/">between September 4th and December 31st</a>. This order potentially affords protections to a much larger share of renter households than the CARES Act moratorium did.
 
-<div class="upscale124 pb-2">
+<div class="upscale124 pt-2 pb-4 pt-md-2 pb-md-5">
   <picture>
     <source srcset="/images/assets/blog/el-timeline-landscape.svg" media="(min-width: 480px)" />
     <img src="/images/assets/blog/el-timeline-portrait.svg" alt="Timeline depicting period of analysis, August 9th to September 19th, 2020." />
@@ -40,7 +40,7 @@ Data from the <a href="/eviction-tracking/">Eviction Tracking System</a> (ETS) a
 In Figure 1, we plot the total number of new eviction filings for each of the last six weeks in 16 of the 17 sites that we track in the ETS (we do not include Phoenix, AZ because data there are collected monthly). We saw 1,992 new filings the week of August 9th, and then a step up to 2,304 filings the week of August 16th. The next two weeks—following the end of the 30-day notice period on the CARES Act—saw much larger numbers of new filings: 2,930 the week of August 23rd and 3,131 the week of August 30th. In the week of September 6th—the first week in which the CDC order was in place—new filings dropped to 1,582, half as many as the previous week. Filings rebounded during the week of September 13th, adding 1,975 new cases.<sup>1</sup>
 
 <div class="figheader" style="max-width: 600px;" >Figure 1: Total new filings by week across 16 ETS sites</div>
-<div class="upscale124 bar-chart bar-chart--cdc">
+<div class="upscale124 bar-chart bar-chart--cdc pb-2 pb-md-2">
 <svg viewBox="0 0 720 413" aria-labelledby="barchartTitle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title id="barchartTitle">Charts depicting the predicted serial filing rates for different rent amounts.</title>
   <defs>
