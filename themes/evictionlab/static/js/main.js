@@ -161,7 +161,7 @@ function initCovidTable() {
               row[p] = '';
           }
       });
-      console.log('row', row)
+      // console.log('row', row)
       if (row.levelofgovernmentlocalstatenational === 'State' | row.levelofgovernmentlocalstatenational === 'Local' |
       row.levelofgovernmentlocalstatenational === 'Local/Federal District') {
         if (activeStates.indexOf(row.state) <= -1) {
