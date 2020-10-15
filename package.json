@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/EvictionLab/eviction-lab-website#readme",
   "dependencies": {
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.6",
     "postcss-cli": "^6.1.3"
   },
   "devDependencies": {
-    "postcss-custom-properties": "^9.1.1"
+    "postcss-custom-properties": "^9.2.0"
   }
 }
