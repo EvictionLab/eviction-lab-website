@@ -4,7 +4,7 @@ This repository is the container web site for https://evictionlab.org.
 
 ## Contributing
 
-Clone this repo and run locally using Hugo v0.73
+Clone this repo and run locally using Hugo v0.76.5.
 
 ```
 hugo server -D
