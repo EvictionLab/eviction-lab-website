@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Tampa, Florida
 slug: tampa-fl
 date: 2020-06-03T00:00:00.000Z
@@ -17,40 +17,26 @@ More detail on eviction protections in Florida can be found on the [COVID-19 Hou
 
 {{%/ report_intro %}}
 
-
-
 {{% report_chart id="avg" data="/uploads/tampa_barchart.csv" %}}
-
-
-
-
-
-
 
 # Changes in eviction filings
 
-Eviction filings in Tampa ran very close to historical average in January and February of this year.<sup>1</sup> They began to drop in March, and were low—running at or below a quarter of average—from April through July. They have increased markedly since the state eviction moratorium ended in late July. 
+Eviction filings in Tampa ran very close to historical average in January and February of this year.<sup>1</sup> They began to drop in March, and were low—running at or below a quarter of average—from April through July. They have increased markedly since the state eviction moratorium ended in late July.
 
 1. Eviction filing data for Pinellas and Hillsborough Counties were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
-
-
 {{%/ report_chart %}}
-
-
 
 {{% report_map shapes="/uploads/tampa_shapes.json" data="/uploads/tampa_map.csv" %}}
 
 # The geography of changes in eviction filings
 
-Pinellas and Hillsborough counties are divided into 567 Census Tracts. In each of those tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> 
+Pinellas and Hillsborough counties are divided into 567 Census Tracts. In each of those tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup>
 
 1. Eviction filing data for Pinellas and Hillsborough Counties were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018.
 
 {{%/ report_map %}}
-
-
 
 {{% report_chart id="race" data="/uploads/tampa_linechart.csv" %}}
 
@@ -61,6 +47,5 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2016–2019.
 
 1. Eviction filing data for Pinellas and Hillsborough Counties were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
-
 
 {{%/ report_chart %}}

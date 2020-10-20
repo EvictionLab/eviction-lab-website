@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Memphis, Tennessee
 slug: memphis-tn
 date: 2020-06-03T00:00:00.000Z
@@ -11,41 +11,21 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="47157" data="/uploads/table.csv" %}}
 
-
-
 The state of Tennessee implemented an eviction moratorium that ran from March 13 to June 1, and courts in Shelby County (Memphis) were closed until June 15. During this period, new eviction filings were still allowed. The rate of new filings picked up after the moratorium lifted, and continued to increase over the summer.
 
 More detail on eviction protections in Tennessee can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/tn/).
 
-
-
 {{%/ report_intro %}}
-
-
 
 {{% report_chart id="avg" data="/uploads/memphis_barchart.csv" %}}
 
-
-
-
-
-
-
 # Changes in eviction filings
 
-Eviction filings in Memphis ran at historical average in January and February of this year.<sup>1</sup> They began to fall in March and bottomed out at 18% of average in April. Filings have increased steadily since then. 
+Eviction filings in Memphis ran at historical average in January and February of this year.<sup>1</sup> They began to fall in March and bottomed out at 18% of average in April. Filings have increased steadily since then.
 
 1. Eviction filing data for Shelby County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
-
-
-
-
-
-
 {{%/ report_chart %}}
-
-
 
 {{% report_map shapes="/uploads/memphis_shapes.json" data="/uploads/memphis_map.csv" %}}
 
@@ -57,8 +37,6 @@ Shelby county is divided into 221 Census Tracts. In each of those tracts, we map
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
 {{%/ report_map %}}
-
-
 
 {{% report_chart id="race" data="/uploads/memphis_linechart.csv" %}}
 
