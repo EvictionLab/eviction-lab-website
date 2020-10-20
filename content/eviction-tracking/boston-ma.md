@@ -1,17 +1,17 @@
 ---
 collection: true
 draft: false
-title: Boston, Massachusetts | Eviction Tracking System
-fbImage: /images/assets/graphics/ets-bg-social.png
-twImage: /images/assets/graphics/ets-bg-social.png
 h1: Boston, Massachusetts
 slug: boston-ma
 date: 2020-06-03T00:00:00.000Z
+twImage: /images/assets/graphics/ets-bg-social.png
+title: Boston, Massachusetts | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="25025" data="/uploads/table.csv" %}}
 
-Eviction filings in Boston, MA have fallen sharply since eviction proceedings were suspended across Massachusetts on March 17. A subsequent moratorium halts evictions through mid-August. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average over the last two weeks of March and throughout April and May.
+Eviction filings in Boston, MA have fallen sharply since eviction proceedings were suspended across Massachusetts on March 17. A subsequent moratorium halts evictions through mid-October. However, law enforcement cannot carry out eviction orders in Cambridge and Somerville until further notice. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average over the last two weeks of March and throughout April and May.
 
 More detail on eviction protections in Massachusetts can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ma/).
 
@@ -20,6 +20,8 @@ More detail on eviction protections in Massachusetts can be found on the [COVID-
 
 
 {{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
+
+
 
 
 
@@ -32,11 +34,15 @@ Eviction filings in Boston were running very close to historical average in Janu
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_map.csv" %}}
+
+
 
 
 
@@ -69,11 +75,15 @@ Boston is divided into 312 Census Tracts. Here we map, in each of those Tracts, 
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/boston_linechart.csv" %}}
+
+
 
 
 
@@ -84,6 +94,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in previous years. 
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
+
+
 
 
 
