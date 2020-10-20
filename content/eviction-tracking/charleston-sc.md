@@ -11,17 +11,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="45019" data="/uploads/table.csv" %}}
 
+Eviction filings in Charleston County, SC fell sharply in mid-March when 
 
-
-
-
-Charleston intro.
-
-More detail on eviction protections in Indiana can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/sc/).
-
-
-
-
+More detail on eviction protections in South Carolina can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/sc/).
 
 {{%/ report_intro %}}
 
@@ -29,20 +21,12 @@ More detail on eviction protections in Indiana can be found on the [COVID-19 Hou
 
 {{% report_chart id="avg" data="/uploads/charleston_barchart.csv" %}}
 
-
-
-
-
 # Changes in eviction filings
 
 Eviction filings in Charleston were higher than average in January and February of this year.<sup>1</sup>
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
+1. Average eviction filings for 2016–2019 were collected by the [Legal Services Corporation](https://www.lsc.gov/)
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-
-
-
-
 
 {{%/ report_chart %}}
 
@@ -54,7 +38,7 @@ Eviction filings in Charleston were higher than average in January and February 
 
 Charleston county is divided into 86 Census Tracts.
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
+1. Average eviction filings for 2016–2019 were collected by the [Legal Services Corporation](https://www.lsc.gov/)
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
 {{%/ report_map %}}
@@ -63,18 +47,10 @@ Charleston county is divided into 86 Census Tracts.
 
 {{% report_chart id="race" data="/uploads/charleston_linechart.csv" %}}
 
-
-
-
-
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None.
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
-
-
-
-
+1. Average eviction filings for 2016–2019 were collected by the [Legal Services Corporation](https://www.lsc.gov/)
 
 {{%/ report_chart %}}
