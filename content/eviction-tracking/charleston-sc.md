@@ -13,9 +13,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 Charleston intro.
 
 More detail on eviction protections in Indiana can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/sc/).
+
+
 
 
 
@@ -24,6 +28,8 @@ More detail on eviction protections in Indiana can be found on the [COVID-19 Hou
 
 
 {{% report_chart id="avg" data="/uploads/charleston_barchart.csv" %}}
+
+
 
 
 
@@ -36,22 +42,20 @@ Eviction filings in Charleston were higher than average in January and February 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/charleston_shapes.json" data="/uploads/charleston_map.csv" %}}
 
-
-
 # The geography of changes in eviction filings
 
-Saint Joseph county is divided into 75 Census Tracts.
+Charleston county is divided into 86 Census Tracts.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
 
 {{%/ report_map %}}
 
@@ -61,11 +65,15 @@ Saint Joseph county is divided into 75 Census Tracts.
 
 
 
+
+
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
+
+
 
 
 
