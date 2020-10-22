@@ -1816,7 +1816,7 @@ Elab.Intro = (function (Elab) {
             selection.selectAll(".tick:last-child text").attr("opacity", 0);
           },
           ticks: d3.timeMonth.every(1),
-          tickFormat: d3.timeFormat("%B"),
+          tickFormat: d3.timeFormat("%b"),
         })
         // adds local moratorium areas
         .addArea([cityData.start, cityData.end], {
