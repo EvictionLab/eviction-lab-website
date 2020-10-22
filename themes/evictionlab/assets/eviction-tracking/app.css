@@ -2406,6 +2406,7 @@
   font-weight: 500;
 }
 
+
 .chart__line {
   stroke-dasharray: 3 1;
   stroke-dashoffset: 1;
@@ -2679,6 +2680,13 @@
 }
 .chart__tooltip-row.chart__tooltip-row--other .tooltip__item--multi:before {
   background: var(--c4);
+}
+
+/** hide every second label on non-intro chart x axis for small devices to prevent overlap */
+@media(max-width: 400px) {
+  .visual .chart__axis.chart__axis--x .tick:nth-child(2n+1) {
+    display: none;
+  }
 }
 
 /** END OVERRIDES */
