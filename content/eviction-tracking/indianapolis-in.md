@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Indianapolis, Indiana
 slug: indianapolis-in
 date: 2020-06-03T00:00:00.000Z
