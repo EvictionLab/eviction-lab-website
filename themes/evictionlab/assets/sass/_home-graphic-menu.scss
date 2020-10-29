@@ -34,20 +34,30 @@
             font-size: 4.4rem;
             line-height: 1.1;
         }
-          
         letter-spacing: .01rem;
         line-height: 1.1;
         color: #000000;
         &.policies-intro {
             margin-bottom: 0;
         }
-        /* &.policies-intro {
-            font-family: "GT-Eesti-Display-Medium";
-            font-size: 4.4rem;
-            line-height: 3.7rem;
+    }
+    #updates-section {
+        h2 {
+            font-size: 3rem;
+            @include media-breakpoint-up(md) {
+                font-size: 3.2rem;
+            }  
+            @include media-breakpoint-up(xl) {
+                font-size: 3.6rem;
+                line-height: 1.1;
+            }
+            letter-spacing: .01rem;
+            line-height: 1.1;
             color: #000000;
-            font-weight: 400;
-        } */
+            &.policies-intro {
+                margin-bottom: 0;
+            }
+        }
     }
     h3 {
         font-family: "GT-Eesti-Display-Bold";
@@ -162,7 +172,7 @@
             background-size: 92%;
         }
         @include media-breakpoint-up(mm) {
-            background-size: 6%;
+            background-size: 80%;
         }
         @include media-breakpoint-up(md) {
             background-size: 96%;
@@ -505,11 +515,45 @@
         @include media-breakpoint-up(lg) {
             background-size: 50%;
         }
-        background-image: url(/images/assets/graphics/barchart.svg);
+        //background-image: url(/images/assets/graphics/barchart.svg);
         background-repeat: no-repeat;
         background-position: 90% bottom;
         h2 {
-            color: $color1;
+            color: #000;
+        }
+        .post-cat {
+            img {
+                width: 10px;
+                position: relative;
+                top: -1px;
+                @include media-breakpoint-up(lg) {
+                    width: 12px;
+                }
+            }
+            .cat-link {
+                font-family: "Akkurat-Regular";
+                font-size: 1.5rem;
+                @include media-breakpoint-up(lg) {
+                    font-size: 1.6rem;
+                } 
+            }
+        }
+        .title {
+            font-family: "GT-Eesti-Display-Bold";
+            font-style: normal;
+            //font-weight: bold;
+            font-size: 1.8rem;
+            line-height: 1.5 !important;
+            @include media-breakpoint-up(md) {
+                font-size: 2rem;
+                line-height: 1.2;
+            }  
+            @include media-breakpoint-up(lg) {
+                font-size: 2.2rem;
+                line-height: 2.8rem;
+            }
+            letter-spacing: .01rem;
+            line-height: 1.1;
         }
         a.sublink {
             transition: color .3s ease;
