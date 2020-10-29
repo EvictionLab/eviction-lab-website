@@ -27,7 +27,9 @@ similar: >-
 
   * SLC Renters Together has developed a [map of evictions in Salt Lake City](https://housing.saltlakedsa.org/eviction-map).
 
-  * The Legal Aid Justice Center in Charlottesville, VA has developed a [dashboard and map tracking eviction filings in Virginia](https://www.justice4all.org/virginia-eviction-tracker/)
+  * The Legal Aid Justice Center in Charlottesville, VA has developed a [dashboard and map tracking eviction filings in Virginia](https://www.justice4all.org/virginia-eviction-tracker/).
+
+  * A team lead by Elora Raymond (Georgia Tech), Erik Woodworth (Atlanta Regional Commission), and Sarah Stein (Federal Reserve Bank of Atlanta) have constructed the [Atlanta Region Eviction Tracker](https://metroatlhousing.org/atlanta-region-eviction-tracker/).
 ---
 # Acknowledgements
 
@@ -37,7 +39,7 @@ We would like to thank representatives of the following organizations for speaki
 * [BASTA Austin](http://www.bastaaustin.org/)
 * [CMU CREATE Lab](https://www.cmucreatelab.org/home)
 * [Community Advocates](https://communityadvocates.net/)
-* [Community Legal Services of Arizona] (https://clsaz.org/)
+* [Community Legal Services of Arizona](https://clsaz.org/)
 * Elaina Johns-Wolfe
 * [Eviction Defense Project](https://www.legalaction.org/services/eviction-defense-project-milwaukee), Legal Action of Wisconsin
 * [Fair Housing Partnership of Greater Pittsburgh](https://fhp.org/)
@@ -48,7 +50,9 @@ We would like to thank representatives of the following organizations for speaki
 * [Harvard Legal Aid Bureau](https://hls.harvard.edu/dept/clinical/clinics/harvard-legal-aid-bureau/)
 * [Heartland Center for Jobs and Freedom](http://www.jobsandfreedom.org/)
 * [Housing Opportunities Made Equal Cincinnati](https://homecincy.org/)
+* [Indiana Legal Services, Inc.](https://www.indianalegalservices.org/)
 * [Jacksonville Area Legal Aid](https://www.jaxlegalaid.org/)
+* [Katy Ramsey, The University of Memphis School of Law](https://www.memphis.edu/law/faculty-staff/katy_ramsey.php)
 * [Legal Aid Society of Cleveland](https://lasclev.org/)
 * [Legal Aid Society of Columbus](https://www.columbuslegalaid.org/)
 * [Legal Aid Society of Milwaukee](https://lasmilwaukee.com/)
@@ -59,10 +63,12 @@ We would like to thank representatives of the following organizations for speaki
 * [Massachusetts Law Reform Institute](https://www.mlri.org/)
 * [Mediate Milwaukee](http://mediatewisconsin.com/)
 * Milwaukee Rental Housing Stability Coalition
+* [Neighborhood Preservation, Inc.](http://npimemphis.org/)
 * [New Covenant Legal Services](https://newcovenantlegalservices.org/)
 * [Ohio Legal Help](https://www.ohiolegalhelp.org/)
 * [Ohio Poverty Law Center](https://www.ohiopovertylawcenter.org/)
 * [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/)
+* [South Carolina Legal Services](https://sclegal.org/)
 * [Texas Housers](https://texashousers.org/)
 * [Texas Tenants Union](https://txtenants.org/)
 * [Three Rivers Legal Aid](https://www.trls.org/)
