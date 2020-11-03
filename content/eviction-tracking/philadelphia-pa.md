@@ -11,7 +11,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="42101" data="/uploads/table.csv" %}}
 
-The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31st. Eviction filings related to nonpayment of rent were not accepted during that period, and filings in Philadelphia County were down to nearly zero in April, May, and June. Filings increased markedly following the end of the moratorium. 
+The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31st. Eviction filings related to nonpayment of rent were not accepted during that period, and filings in Philadelphia County were down to zero in April, May, and June. Filings increased markedly following the end of the moratorium. 
 
 More detail on eviction protections in Philadelphia can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/pa/).
 
@@ -23,7 +23,7 @@ More detail on eviction protections in Philadelphia can be found on the [COVID-1
 
 # Changes in eviction filings
 
-Eviction filings in Philadelphia were slightly higher than average in January and February of this year.<sup>1</sup> Filings fell in March and held close to zero through June. Following the end of the state eviction moratorium on August 31, new eviction filings increased, though remain well below historical average.
+Eviction filings in Philadelphia were slightly higher than average in January and February of this year.<sup>1</sup> Filings fell in March and held at zero from April through June. Following the end of the state eviction moratorium on August 31, new eviction filings increased, though remain well below historical average.
 
 1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). Historical averages cover the years 2016-2019.
 
