@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Philadelphia, Pennsylvania
 slug: philadelphia-pa
 date: 2020-10-10T00:00:00.000Z
