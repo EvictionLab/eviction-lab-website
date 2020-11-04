@@ -37,6 +37,7 @@
         letter-spacing: .01rem;
         line-height: 1.1;
         color: #000000;
+        color: $color2;
         &.policies-intro {
             margin-bottom: 0;
         }
@@ -138,6 +139,7 @@
             } 
           @include media-breakpoint-up(xl) {
             font-size: 3.2rem;
+            margin-bottom: 1.6rem;
             }
             
         }
@@ -245,11 +247,27 @@
         #covid-intro {
             margin: auto;
             width: 80%;
+            justify-content: center;
+            @include media-breakpoint-up(lg) {
+                justify-content: left;
+            }
+            h2 {
+                color: $color1;
+            }
             @include media-breakpoint-up(smm) {
                 width: 100%;
             }
             @include media-breakpoint-up(mm) {
                 width: 100%;
+            }
+        }
+        #covid-gateway__para {
+            justify-content: center;
+            text-align: center;
+            @include media-breakpoint-up(lg) {
+                max-width: 66%;
+                justify-content: left;
+                text-align: left;
             }
         }
         .feature {
@@ -592,9 +610,7 @@
     }
 
     #other-pages {
-        h2 {
 
-        }
         #hp-eviction-image {
             min-height: 440px;
             @include media-breakpoint-up(md) {
