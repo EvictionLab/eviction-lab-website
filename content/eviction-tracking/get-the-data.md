@@ -28,75 +28,75 @@ data:
   - site: All Sites
     years: "-"
     geo: Census Tract / ZIP Code
-    file: /uploads/all_sites_20201031.csv
+    file: /uploads/all_sites_20201107.csv
   - site: Austin
     years: 2014-2019
     geo: ZIP Code
-    file: /uploads/austin_20201031.csv
+    file: /uploads/austin_20201107.csv
   - site: Boston
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/boston_20201031.csv
+    file: /uploads/boston_20201107.csv
   - site: Bridgeport
     years: 2017-2019
     geo: Census Tract
-    file: /uploads/fairfield_20201031.csv
+    file: /uploads/fairfield_20201107.csv
   - site: Charleston
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/charleston_20201031.csv
+    file: /uploads/charleston_20201107.csv
   - site: Cincinnati
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/cincinnati_20201024.csv
+    file: /uploads/cincinnati_20201031.csv
   - site: Cleveland
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/cleveland_20201031.csv
+    file: /uploads/cleveland_20201107.csv
   - site: Columbus
     years: 2012, 2013, 2015
     geo: Census Tract
-    file: /uploads/franklin_20201024.csv
+    file: /uploads/franklin_20201031.csv
   - site: Fort Worth
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/fwt_20201031.csv
+    file: /uploads/fwt_20201107.csv
   - site: Gainesville
     years: 2017-2019
     geo: Census Tract
-    file: /uploads/alachua_20201031.csv
+    file: /uploads/alachua_20201107.csv
   - site: Greenville
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/greenville_20201031.csv
+    file: /uploads/greenville_20201107.csv
   - site: Hartford
     years: 2017-2019
     geo: Census Tract
-    file: /uploads/hartford_20201031.csv
+    file: /uploads/hartford_20201107.csv
   - site: Houston
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/houston_20201031.csv
+    file: /uploads/houston_20201107.csv
   - site: Indianapolis
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/indianapolis_20201031.csv
+    file: /uploads/indianapolis_20201107.csv
   - site: Jacksonville
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/duval_20201031.csv
+    file: /uploads/duval_20201107.csv
   - site: Kansas City
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/jackson_20201031.csv
+    file: /uploads/jackson_20201107.csv
   - site: Memphis
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/memphis_20201031.csv
+    file: /uploads/memphis_20201107.csv
   - site: Milwaukee
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/milwaukee_20201031.csv
+    file: /uploads/milwaukee_20201107.csv
   - site: Phoenix
     years: 2015-2019
     geo: Census Tract
@@ -104,31 +104,31 @@ data:
   - site: Pittsburgh
     years: 2012-2019
     geo: ZIP Code
-    file: /uploads/allegheny_20201031.csv
+    file: /uploads/allegheny_20201107.csv
   - site: Richmond
     years: "2016"
     geo: ZIP Code
-    file: /uploads/richmond_20201031.csv
+    file: /uploads/richmond_20201107.csv
   - site: South Bend
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/southbend_20201031.csv
+    file: /uploads/southbend_20201107.csv
   - site: St Louis
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/stlouis_20201031.csv
+    file: /uploads/stlouis_20201107.csv
   - site: Tampa
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/tampa_20201031.csv
+    file: /uploads/tampa_20201107.csv
   - site: Wilmington
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/wilmington_20201031.csv
+    file: /uploads/wilmington_20201107.csv
   - site: Philadelphia
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/philadelphia_20201031.csv
+    file: /uploads/philadelphia_20201107.csv
 ---
 Sample code:
 
