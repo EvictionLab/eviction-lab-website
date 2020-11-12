@@ -20,15 +20,13 @@ In most jurisdictions, the eviction process starts with an out-of-court notice d
 
 In New Jersey, while the number of eviction cases was collected reliably, information about the outcomes of those cases were not readily accessible. As a result, we believe our eviction rate is an underestimate.
 
-In Kentucky, Louisiana, Tennessee, and Texas, there is good data coverage in the urban centers, but there are some more rural areas that are missing data, owing to collection difficulties.
+In Kentucky, Louisiana, Tennessee, and Texas, there is good data coverage in the urban centers, but there are some more rural areas that are missing data, owing to collection difficulties. Additionally, due to a collection anomaly in Orleans Parish, Louisiana, possession-only judgments may be under-reported in this jurisdiction in 2016.
 
 You can compare eviction rates from our map and raw data with court-reported statistics on eviction filings from 27 states and the District of Columbia <a href="https://data-downloads.evictionlab.org/court-reported-stats/ExtStatsFull.xlsx">(download court-reported statistics)</a>. These statistics provide annual counts of evictions filed in counties. To keep things consistent, we haven’t included these statistics in our map of evictions, but you can use them to help validate estimates.
 
 The court-reported statistics show that Hawaii, Vermont, Connecticut, Wyoming, and the District of Columbia have low counts in our map and raw data, owing either to the remoteness of some areas or data collection difficulties.
 
 We also suspect that the numbers in Arizona, Idaho, New Hampshire, and Washington may be too low, based on an estimator we created that factors in things like the number of renter homes and caseloads in other places. 
-
-Lastly, due to a collection anomaly in Orleans Parish, Louisiana, possession-only judgments may be under-reported in this jurisdiction in 2016.
 
 We will continue our effort to provide the most comprehensive data on evictions in America and invite you to stay tuned for updates to our dataset by signing up for our email list.
 
