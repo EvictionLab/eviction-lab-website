@@ -557,6 +557,11 @@
         h2 {
             color: #000;
         }
+        .updates-section__entries {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
         .post-cat {
             img {
                 width: 10px;
@@ -612,7 +617,7 @@
     #other-pages {
 
         #hp-eviction-image {
-            min-height: 440px;
+            min-height: 240px;
             @include media-breakpoint-up(md) {
                 min-height: unset;
             }

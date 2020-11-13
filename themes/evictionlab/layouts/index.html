@@ -150,13 +150,12 @@
         <div class="col-12 d-md-flex pl-0 mb-5 mb-md-5 mb-lg-6 mb-xl-8">
           {{ range first 3 (where .Site.RegularPages "Params.contenttype" ("updates")) }}
           
-              <div class="col-12 col-md-4 px-2 px-lg-3">
+              <div class="updates-section__entries col-12 col-md-4 px-2 px-lg-3">
                 <div class="post-cat mb-2">
                   <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" alt="Bookmark icon" />
                   <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
                   &nbsp;{{ .Params.childof }}</a>
                 </div>
-
                 <a class="title {{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Params.title }}</a>
                 <a class="sublink mt-2 mb-3 mb-md-0 mt-md-3" href="{{ .Permalink }}" target="_blank">READ MORE <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
               </div>
@@ -178,7 +177,7 @@
         <div id="hp-eviction-image" class="col-12 col-md-6">
           
         </div>
-        <div class="col-12 col-md-6 pl-md-8 pl-lg-10 pt-7 pt-lg-8 pb-7 pb-md-6 pb-lg-10">
+        <div class="col-11 offset-1 offset-md-0 col-md-6 pl-md-8 pl-lg-10 pt-7 pt-lg-8 pb-7 pb-md-6 pb-lg-10">
           <h2>{{ i18n "learnMoreHead1" }} <br>{{ i18n "learnMoreHead2" }}</h2>
           <div class="red-underbar mt-3 mb-4"></div>
           <ul>
