@@ -332,7 +332,7 @@ By contrast, cities that allowed filings but suspended hearings were less succes
         <text id="Fort-Worth,-TX" fill="#212529" font-family="GT-Eesti-Display-Medium, sans-serif" font-size="12" font-weight="400">
             <tspan x="244" y="60">Fort Worth, TX</tspan>
         </text>
-        <text id="Hearings" fill="#E24000" font-family="GTEestiDisplayBold, GT Eesti Display" font-size="24" font-weight="bold" line-spacing="27">
+        <text id="Hearings" fill="#E24000" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="24" font-weight="bold" line-spacing="27">
             <tspan x="104" y="134">Hearings </tspan>
         </text>
         <line x1="428.5" y1="259" x2="428.5" y2="235" id="Path" stroke="#FFFFFF" stroke-width="0.53" stroke-linejoin="round"></line>
@@ -342,7 +342,7 @@ By contrast, cities that allowed filings but suspended hearings were less succes
         <line x1="597.5" y1="259" x2="597.5" y2="235" id="Path" stroke="#FFFFFF" stroke-width="1.07" stroke-linejoin="round"></line>
         <line x1="413.5" y1="259" x2="413.5" y2="235" id="Path" stroke="#FFFFFF" stroke-width="0.53" stroke-linejoin="round"></line>
         <line x1="535.5" y1="259" x2="535.5" y2="235" id="Path" stroke="#FFFFFF" stroke-width="0.53" stroke-linejoin="round"></line>
-        <text id="Enforcement" fill="#E24000" font-family="GTEestiDisplayBold, GT Eesti Display" font-size="24" font-weight="bold" line-spacing="48">
+        <text id="Enforcement" fill="#E24000" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="24" font-weight="bold" line-spacing="48">
             <tspan x="104" y="254">Enforcement</tspan>
         </text>
         <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" x="352" y="238" width="185" height="18"></rect>
@@ -496,7 +496,7 @@ As these moratoria lift, new filings have increased, in some cases dramatically.
         <line x1="67" y1="130.5" x2="693" y2="130.5" id="Path" stroke="#999FD3" stroke-linejoin="round" stroke-dasharray="2,6"></line>
         <polyline id="Path" stroke="#8B0000" stroke-width="1.07" stroke-linejoin="round" points="95 198.471767 142.415963 197.244905 189.831926 198.139492 237.24789 198.957401 284.663853 199 332.079816 198.207651 379.504221 170.543602 426.920184 157.93418 474.336147 155.855329 521.75211 148 569.168074 153.853157 616.584037 161.48697 664 167.084531"></polyline>
         <rect id="Rectangle" fill="#2C897F" fill-rule="nonzero" x="693" y="38" width="2" height="172"></rect>
-        <text id="Notice" fill="#2C897F" transform="translate(704.500000, 57.500000) rotate(90.000000) translate(-704.500000, -57.500000) " font-family="GT-Eesti-Display-Medium, sans-serif" font-size="14" font-weight="400">
+        <text id="Notice" fill="#2C897F" transform="translate(704.500000, 57.500000) rotate(90.000000) translate(-704.500000, -57.500000) " font-family="GT-Eesti-Display-Bold, sans-serif" font-size="14" font-weight="400">
             <tspan x="684.5" y="62.5">Notice</tspan>
         </text>
         <text id="-100%" fill="#4D4D4D" font-family="Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif" font-size="9.6" font-weight="normal">
@@ -535,7 +535,7 @@ As these moratoria lift, new filings have increased, in some cases dramatically.
         <text id="Percent-Change-Relative-to-Average" fill="#000000" transform="translate(18.500000, 300.500000) rotate(-90.000000) translate(-18.500000, -300.500000) " font-family="GT-Eesti-Display-Medium, sans-serif" font-size="16" font-weight="400" line-spacing="27">
             <tspan x="-123" y="301">Percent Change Relative to Average</tspan>
         </text>
-        <text id="Hearings" fill="#E24000" transform="translate(705.000000, 420.000000) rotate(90.000000) translate(-705.000000, -420.000000) " font-family="GT-Eesti-Display-Medium, sans-serif" font-size="14" font-weight="400">
+        <text id="Hearings" fill="#E24000" transform="translate(705.000000, 420.000000) rotate(90.000000) translate(-705.000000, -420.000000) " font-family="GT-Eesti-Display-Bold, sans-serif" font-size="14" font-weight="400">
             <tspan x="675.5" y="424.5">Hearings</tspan>
         </text>
     </g>
