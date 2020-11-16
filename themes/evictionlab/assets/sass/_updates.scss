@@ -286,6 +286,18 @@ picture img {
 }
 
 /** OVERRIDES FOR INDIVIDUAL ELEMENTS */
+.generic-chart {
+  svg {
+    width: 100%;
+    height: auto;
+    .number tspan{
+      font-family: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+}
+
 .bar-chart.bar-chart--cdc .grid-lines.grid-lines--x {
   stroke-width: 3;
 }
