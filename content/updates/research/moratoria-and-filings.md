@@ -222,7 +222,7 @@ In many cities, state or local moratoria cut eviction filings to zero (or near-z
         <text id="Notice" fill="#2C897F" font-family="GT-Eesti-Display-Medium, sans-serif" font-size="24" font-weight="bold" line-spacing="27">
             <tspan x="104" y="143">Notice</tspan>
         </text>
-        <text id="Filings-Copy" fill="#434878" font-family="GT-Eesti-Display-Medium, sans-serif" font-size="24" font-weight="bold" line-spacing="48">
+        <text id="Filings-Copy" fill="#434878" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="24" font-weight="normal" line-spacing="48">
             <tspan x="104" y="334">Filings</tspan>
         </text>
     </g>
@@ -240,35 +240,35 @@ By contrast, cities that allowed filings but suspended hearings were less succes
     <title>Fig 1.2</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-1">
+        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-17">
             <stop stop-color="#F27636" offset="0%"></stop>
             <stop stop-color="#E04219" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-2">
+        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-18">
             <stop stop-color="#F27636" offset="0%"></stop>
             <stop stop-color="#E04219" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-3">
+        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-19">
             <stop stop-color="#F27636" offset="0%"></stop>
             <stop stop-color="#E04219" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-4">
+        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-20">
             <stop stop-color="#F27636" offset="0%"></stop>
             <stop stop-color="#E04219" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-5">
+        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-21">
             <stop stop-color="#F27636" offset="0%"></stop>
             <stop stop-color="#E04219" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-6">
+        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-22">
             <stop stop-color="#F27636" offset="0%"></stop>
             <stop stop-color="#E04219" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-7">
+        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-23">
             <stop stop-color="#F27636" offset="0%"></stop>
             <stop stop-color="#E04219" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-8">
+        <linearGradient x1="89.7515528%" y1="-237.803819%" x2="0%" y2="-237.803819%" id="linearGradient-24">
             <stop stop-color="#F27636" offset="0%"></stop>
             <stop stop-color="#E04219" offset="100%"></stop>
         </linearGradient>
@@ -300,14 +300,14 @@ By contrast, cities that allowed filings but suspended hearings were less succes
         <line x1="474.5" y1="210" x2="474.5" y2="43" id="Path" stroke="#FFFFFF" stroke-width="1.07" stroke-linejoin="round"></line>
         <line x1="597.5" y1="210" x2="597.5" y2="43" id="Path" stroke="#FFFFFF" stroke-width="1.07" stroke-linejoin="round"></line>
         <line x1="327" y1="55.5" x2="623" y2="55.5" id="Path" stroke="#FFFFFF" stroke-width="1.07" stroke-linejoin="round"></line>
-        <rect id="Rectangle" fill="url(#linearGradient-1)" fill-rule="nonzero" x="352" y="189" width="161" height="18"></rect>
-        <rect id="Rectangle" fill="url(#linearGradient-2)" fill-rule="nonzero" x="352" y="169" width="143" height="18"></rect>
-        <rect id="Rectangle" fill="url(#linearGradient-3)" fill-rule="nonzero" x="352" y="148" width="142" height="18"></rect>
-        <rect id="Rectangle" fill="url(#linearGradient-4)" fill-rule="nonzero" x="352" y="128" width="139" height="18"></rect>
-        <rect id="Rectangle" fill="url(#linearGradient-5)" fill-rule="nonzero" x="352" y="108" width="127" height="18"></rect>
-        <rect id="Rectangle" fill="url(#linearGradient-6)" fill-rule="nonzero" x="352" y="87" width="118" height="18"></rect>
-        <rect id="Rectangle" fill="url(#linearGradient-7)" fill-rule="nonzero" x="352" y="67" width="103" height="18"></rect>
-        <rect id="Rectangle" fill="url(#linearGradient-8)" fill-rule="nonzero" x="352" y="47" width="35" height="18"></rect>
+        <rect id="Rectangle" fill="url(#linearGradient-17)" fill-rule="nonzero" x="352" y="189" width="161" height="18"></rect>
+        <rect id="Rectangle" fill="url(#linearGradient-18)" fill-rule="nonzero" x="352" y="169" width="143" height="18"></rect>
+        <rect id="Rectangle" fill="url(#linearGradient-19)" fill-rule="nonzero" x="352" y="148" width="142" height="18"></rect>
+        <rect id="Rectangle" fill="url(#linearGradient-20)" fill-rule="nonzero" x="352" y="128" width="139" height="18"></rect>
+        <rect id="Rectangle" fill="url(#linearGradient-21)" fill-rule="nonzero" x="352" y="108" width="127" height="18"></rect>
+        <rect id="Rectangle" fill="url(#linearGradient-22)" fill-rule="nonzero" x="352" y="87" width="118" height="18"></rect>
+        <rect id="Rectangle" fill="url(#linearGradient-23)" fill-rule="nonzero" x="352" y="67" width="103" height="18"></rect>
+        <rect id="Rectangle" fill="url(#linearGradient-24)" fill-rule="nonzero" x="352" y="47" width="35" height="18"></rect>
         <text id="Cincinnati,-OH" fill="#212529" font-family="GT-Eesti-Display-Medium, sans-serif" font-size="12" font-weight="400">
             <tspan x="246" y="202">Cincinnati, OH</tspan>
         </text>
@@ -332,7 +332,7 @@ By contrast, cities that allowed filings but suspended hearings were less succes
         <text id="Fort-Worth,-TX" fill="#212529" font-family="GT-Eesti-Display-Medium, sans-serif" font-size="12" font-weight="400">
             <tspan x="244" y="60">Fort Worth, TX</tspan>
         </text>
-        <text id="Hearings" fill="#E24000" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="24" font-weight="bold" line-spacing="27">
+        <text id="Hearings" fill="#E24000" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="24" font-weight="normal" line-spacing="27">
             <tspan x="104" y="134">Hearings </tspan>
         </text>
         <line x1="428.5" y1="259" x2="428.5" y2="235" id="Path" stroke="#FFFFFF" stroke-width="0.53" stroke-linejoin="round"></line>
@@ -342,7 +342,7 @@ By contrast, cities that allowed filings but suspended hearings were less succes
         <line x1="597.5" y1="259" x2="597.5" y2="235" id="Path" stroke="#FFFFFF" stroke-width="1.07" stroke-linejoin="round"></line>
         <line x1="413.5" y1="259" x2="413.5" y2="235" id="Path" stroke="#FFFFFF" stroke-width="0.53" stroke-linejoin="round"></line>
         <line x1="535.5" y1="259" x2="535.5" y2="235" id="Path" stroke="#FFFFFF" stroke-width="0.53" stroke-linejoin="round"></line>
-        <text id="Enforcement" fill="#E24000" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="24" font-weight="bold" line-spacing="48">
+        <text id="Enforcement" fill="#E24000" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="24" font-weight="normal" line-spacing="48">
             <tspan x="104" y="254">Enforcement</tspan>
         </text>
         <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" x="352" y="238" width="185" height="18"></rect>
@@ -444,7 +444,7 @@ As these moratoria lift, new filings have increased, in some cases dramatically.
         <line x1="67" y1="307.5" x2="693" y2="307.5" id="Path" stroke="#999FD3" stroke-linejoin="round" stroke-dasharray="2,6"></line>
         <polyline id="Path" stroke="#8B0000" stroke-width="1.07" stroke-linejoin="round" points="95 370.797935 142.415963 374.224724 189.831926 375.849276 237.24789 372.811702 284.663853 372.786319 332.079816 377 379.504221 354.493188 426.920184 318 474.336147 336.386204 521.75211 338.636885 569.168074 349.103399 616.584037 336.267747 664 336.682346"></polyline>
         <rect id="Rectangle" fill="#434878" fill-rule="nonzero" x="693" y="215" width="2" height="172"></rect>
-        <text id="Filings" fill="#434878" transform="translate(705.000000, 238.500000) rotate(90.000000) translate(-705.000000, -238.500000) " font-family="GT-Eesti-Display-Medium, sans-serif" font-size="14" font-weight="400">
+        <text id="Filings" fill="#434878" transform="translate(705.000000, 238.500000) rotate(90.000000) translate(-705.000000, -238.500000) " font-family="GT-Eesti-Display-Medium, sans-serif" font-size="14"">
             <tspan x="680.5" y="243.5">Filings</tspan>
         </text>
         <g class="number">
