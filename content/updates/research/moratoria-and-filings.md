@@ -12,10 +12,11 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Our methodology for building the Housing Policy Scorecard.
 listSummary: 'In this brief, we examine effects of local moratoria. Specifically, we ask two questions. First, how far below historical average were eviction filings when these local moratoria were in place? Second, what happened when they were lifted?' 
 socialDescription: Examining the effects of local eviction moratoria during the COVID-19 pandemic.
-fbImage: '/images/assets/blog/claims_social.png'
-twImage: '/images/assets/blog/claims_social.png'
+fbImage: 
+twImage: 
 url: /moratoria-and-filings/
-aliases:  
+aliases:
+draft: true  
 ---
 In response to the COVID-19 pandemic, actors at all levels of government enacted policies meant to protect renters from the threat of eviction. The federal government delivered a partial eviction moratorium through the CARES Act, and followed that up with a <a href="https://evictionlab.org/federal-eviction-moratorium-update/">more far-reaching moratorium ordered by the Centers for Disease Control and Prevention (CDC)</a>. 
 
