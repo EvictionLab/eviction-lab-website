@@ -11,7 +11,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="27053" data="/uploads/table.csv" %}}
 
-Eviction filings in Minneapolis-Saint Paul have fallen sharply since mid-march when a statewide-moratorium on evictions was put in place on March 16th. The moratorium has continued to be renewed each month. Although filings were down in the single-digits throughout the summer months, they have begun to rise gradually in recent weeks.
+Eviction filings in Minneapolis-Saint Paul (Hennepin and Ramsey Counties, MN) have fallen sharply since mid-march when a statewide-moratorium on evictions was put in place on March 16th. The moratorium has continued to be renewed each month. Although filings were down in the single-digits throughout the summer months, they have begun to rise gradually in recent weeks.
 
 More detail on eviction protections in Minneapolis–Saint Paul can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mn/).
 
