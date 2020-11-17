@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Minneapolis–Saint Paul, Minnesota
 slug: minneapolis-saint-paul-mn
 date: 2020-10-10T00:00:00.000Z
