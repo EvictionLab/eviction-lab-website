@@ -541,21 +541,17 @@ As these moratoria lift, new filings have increased, in some cases dramatically.
     </g>
 </svg>
 
-
-
-
 </div>
 
 <div class="figcaption"><p>The top panel includes ETS sites in which notice was suspended, the middle panel sites in which filings were suspended, and the bottom panel includes sites in which hearings were suspended.</p></div>
 
-Figure 1 yields two important findings. First, cities saw an increase in eviction filings after moratoria were lifted, and the size of that increase depended on what stage of the eviction process was suspended. In the top two panels of Figure 2, we see that cities in which notice or filings were suspended saw more dramatic jumps in filings when local moratoria were lifted. On average, in cities in which notice was suspended, new filings jumped from 4.7% of historical average two weeks before the end of a moratorium to 64.7% two weeks after. By contrast, in the bottom panel we see that new filings increased much less in cities that had only suspended hearings. 
+Figure 2 yields two important findings. First, cities saw an increase in eviction filings after moratoria were lifted, and the size of that increase depended on what stage of the eviction process was suspended. In the top two panels of Figure 2, we see that cities in which notice or filings were suspended saw more dramatic jumps in filings when local moratoria were lifted. On average, in cities in which notice was suspended, new filings jumped from 4.7% of historical average two weeks before the end of a moratorium to 64.7% two weeks after. By contrast, in the bottom panel we see that new filings increased much less in cities that had only suspended hearings. 
 
 Second, filings typically remained well below historical averages in the six weeks following the lifting of local eviction moratoria. On average, six weeks after a moratorium lifts, new eviction filings were still only 46.1% of the historical average. 
 
 This brief contributes to a growing body evidence demonstrating the efficacy of eviction moratoria in preventing forced displacement of renters amidst the pandemic. When state and local moratoria were in place, eviction filings were well below half of historical average in all ETS sites. This is true especially of those sites that suspended the earliest stages of the eviction process: notice and filing of eviction cases. Under normal circumstances, many tenants facing the threat of eviction never make it to court, leaving their homes when their landlord provides notice or when they receive the court filing. As such, suspending these early stages of the eviction process is particularly important minimizing displacement. 
 
 State and local moratoria were not solely responsible for the reduction in eviction filings: federal moratoria, stimulus payments, unemployment insurance expansion, and uncertainty in the rental housing market also served to reduce filings. Even when these local measures were lifted, eviction filings generally remained below historical average. But they did increase, which speaks to the critical importance of moratoria in reducing eviction and supporting residential stability. Our analysis suggests that moratoria work, and they work best when they halt the first stages of the eviction process.
-
 
 <hr />
 
