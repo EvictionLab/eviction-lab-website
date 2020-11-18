@@ -7,6 +7,21 @@ body {
   a:hover, a:focus {
     text-decoration: underline;
   }
+
+  .data-pages h1 {
+    font-family: GT-Eesti-Display-Bold, sans-serif;
+    font-size: 2.6rem;
+    font-weight: normal;
+    letter-spacing: 0.07rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: $color1;
+    @include media-breakpoint-up(md) {
+        //font-size: 3rem;
+    }
+  }
+
   h2 {
     &.page-section-header {
       color: $color2;
