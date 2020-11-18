@@ -1,0 +1,40 @@
+{{ partial "header" . }}
+
+<div class="row data-pages">
+  <div class="col-11 col-md-10 col-lg-7 mx-auto mt-10">
+    <h1>{{ .Params.h1 }}</h1>
+    {{/* .Params.intro | markdownify */}}
+  </div>
+  <div class="col-11 col-md-10 col-lg-9 mx-auto mb-8"> 
+    <div class="table-responsive-sm">
+      <table class="data-table page-stats my-5">
+        <thead>
+          <tr>
+              <th>{{ .Params.headers.header1 }}</th>
+              <th>{{ .Params.headers.header2 }}</th>
+              <th>{{ .Params.headers.header3 }}</th>
+              <th>{{ .Params.headers.header4 }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Params.data }}
+          <tr>
+            <td>{{ .step }}</td>
+            <td><a href="{{ .script }}" target="_blank">{{ .scriptname }}</a></td>
+            <td>{{ .description }}</td>
+            <td><a href="{{ .file }}" target="_blank">{{ .filename }}</a></td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+
+    {{ .Content }}
+    <!--<p id="lastUpdate" class="date">
+      Last Updated:
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+    </p>-->
+  </div>
+</div>
+
+{{ partial "footer" . }}
