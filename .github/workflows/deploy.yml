@@ -52,7 +52,7 @@ jobs:
       - run: hugo
 
       - name: Deploy
-        uses: jakejarvis/s3-sync-action@master
+        uses: InscribeAI/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks
         env:
@@ -61,4 +61,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
           SOURCE_DIR: "public"
-          DISTRIBUTION_ID: "${{ steps.deploy-bucket.outputs.CLOUDFRONT_ID }}"
+          AWS_CF_DISTRIBUTION_ID: "${{ steps.deploy-bucket.outputs.CLOUDFRONT_ID }}"
