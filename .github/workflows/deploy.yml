@@ -1,4 +1,4 @@
-name: Deploy to AWS
+name: Manual Deploy to AWS
 
 on:
   push:
