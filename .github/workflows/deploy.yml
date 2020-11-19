@@ -20,9 +20,14 @@ jobs:
         run: |
           if [[ $GITHUB_REF == 'refs/heads/production' ]]; then
               echo "::set-output name=S3_BUCKET::eviction-lab-website"
+              echo "::set-output name=CLOUDFRONT_ID::E1A16ES5GX062O"
           else
               echo "::set-output name=S3_BUCKET::eviction-lab-website-staging"
+              echo "::set-output name=CLOUDFRONT_ID::E38VYWEWUWNX26"
           fi
+
+      - run: cp themes/evictionlab/layouts/robots.prod.txt themes/evictionlab/layouts/robots.txt
+        if: github.ref == 'refs/heads/production'
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -56,3 +61,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
           SOURCE_DIR: "public"
+          DISTRIBUTION_ID: "${{ steps.deploy-bucket.outputs.CLOUDFRONT_ID }}"
