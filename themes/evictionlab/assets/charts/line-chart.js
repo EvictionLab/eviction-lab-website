@@ -286,9 +286,9 @@ Elab.LineChart = (function (Elab) {
       : null;
     // sort data so highlighted items are at the end of the array in the same order as the "highlight" string
     if (highlighted) {
-      var key = dataOptions.groupBy;
+      var key = "name";
       var hl = highlighted.slice().reverse();
-      data.sort(function (a, b) {
+      function compare(a, b) {
         var aHighlightIndex = hl.indexOf(a[key]);
         var bHighlightIndex = hl.indexOf(b[key]);
         if (aHighlightIndex > -1 && bHighlightIndex > -1) {
@@ -301,7 +301,8 @@ Elab.LineChart = (function (Elab) {
         if (bHighlightIndex > -1) return -1;
         if (a[key] === b[key]) return 0;
         return a[key] > b[key] ? 1 : -1;
-      });
+      }
+      data.sort(compare);
     }
 
     var svg = $(root).find("svg")[0];
