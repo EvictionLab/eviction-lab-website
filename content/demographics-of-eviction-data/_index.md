@@ -18,29 +18,29 @@ layout: demographics-of-eviction-data
 data:
   - step: Calculating Denominators
     scriptname: get_denominators_20201103.R
-    script: https://drive.google.com/file/d/1KlNMSpe7AhWp2UF9VkFHFiq-hxmG1yOT/view?usp=sharing
+    script: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/get_denominators_20201103.R
     description: IPUMS data
     filename: usa_00005.csv
-    file: https://drive.google.com/file/d/1nXpwqcNbGcorPnwEa4ZAn6zpsAQj2ZZh/view?usp=sharing
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/usa_00005.csv
   - step: 
     script: 
     description: PUMA-tract crosswalk
     filename: state.county.puma.csv
-    file: https://drive.google.com/file/d/1ms7aFk-Eokk34BwloPMxi371DbqaZB5i/view?usp=sharing
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/state.county.puma.csv
   - step: Analysis
     scriptname: demographics_analysis_20201030.R
-    script: https://drive.google.com/file/d/1sjaVwhIiqPo4wW-WWqu6yI7nHp_RZsop/view?usp=sharing
+    script: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/demographics_analysis_20201030.R
     description: county-level denominators
     filename: county_denominators.csv
-    file: https://drive.google.com/file/d/15vq3q3wAIzIKjUKAWd-omPa0cAkbz9ME/view?usp=sharing
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/county_denominators.csv
   - step: 
     script: 
     description: county-level numerators
     filename: county_numerators.csv
-    file: https://drive.google.com/file/d/1Ez679ob3szuaKe71WeWCqK_iE5xiFSjF/view?usp=sharing
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/county_numerators.csv
   - step: 
     script: 
     description: renter-level rates
     filename: expanded_rates_all.rda
-    file: https://drive.google.com/file/d/17Ch7_MLbxT269QRoxXazhMlSr_sH2m9A/view?usp=sharing
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/expanded_rates_all.rda
 ---
