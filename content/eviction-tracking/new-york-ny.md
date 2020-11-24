@@ -2,7 +2,7 @@
 collection: true
 draft: true
 h1: New York, New York
-slug: new-york-sc
+slug: new-york-ny
 date: 2020-10-10T00:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: New York, New York | Eviction Tracking System
