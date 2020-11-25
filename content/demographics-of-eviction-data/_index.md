@@ -28,8 +28,8 @@ data:
     filename: state.county.puma.csv
     file: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/state.county.puma.csv
   - step: Analysis
-    scriptname: demographics_analysis_20201030.R
-    script: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/demographics_analysis_20201030.R
+    scriptname: demographics_analysis_20201123.R
+    script: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/demographics_analysis_20201123.R
     description: county-level denominators
     filename: county_denominators.csv
     file: https://eviction-lab-data-downloads.s3.amazonaws.com/demographics-of-eviction-data/county_denominators.csv
