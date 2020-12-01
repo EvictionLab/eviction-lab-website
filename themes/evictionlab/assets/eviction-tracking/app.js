@@ -1896,6 +1896,9 @@ Elab.Intro = (function (Elab) {
     )
       return;
     var numFormat = d3.format(",d");
+    cityData.subgroup_values = cityData.subgroup_values.map((v) =>
+      numFormat(v)
+    );
     var templateData = Object.assign({}, cityData, {
       cumulative: numFormat(cityData.cumulative),
     });
@@ -1905,7 +1908,7 @@ Elab.Intro = (function (Elab) {
         "{{#if @last}}" +
         " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
         "{{else}}" +
-        "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}},{{/if}}" +
+        "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}}, {{/if}}" +
         "{{/if}}" +
         "{{/each}}</p>"
     );
