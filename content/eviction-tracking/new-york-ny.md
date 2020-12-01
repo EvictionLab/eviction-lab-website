@@ -11,13 +11,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="36061" data="/uploads/table.csv" %}}
 
+New York state has taken a number of steps to prevent a surge in eviction cases. While the state-wide moratorium on eviction filings lifted on June 20th, additional protections—including the [Tenant Safe Harbor Act](https://www.nysenate.gov/legislation/bills/2019/s8192/amendment/b) and the    [automatic suspension of newly-filed eviction cases](http://nycourts.gov/whatsnew/pdf/ao160a20.pdf)—have helped to keep filings below historical average. The execution of writs of eviction has also been [suspended until at least January, 2021](https://www.governor.ny.gov/news/governor-cuomo-announces-moratorium-covid-related-residential-evictions-will-be-extended-until).
 
-
-New York intro.
-
-More detail on eviction protections in New York can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ny/).
-
-
+More detail on eviction protections in New York can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ny/) and from the [Furman Center](https://furmancenter.org/thestoop/entry/data-update-eviction-filings-in-nyc-since-covid-19).
 
 {{%/ report_intro %}}
 
@@ -27,12 +23,15 @@ More detail on eviction protections in New York can be found on the [COVID-19 Ho
 
 
 
+
+
 # Changes in eviction filings
 
-Eviction filings in New York were higher than average in January and February of this year.<sup>1</sup>
+Eviction filings in New York City were significantly below historical average in January and February of this year.<sup>1</sup> Filings dropped to nearly zero in April, May, and June, but have increased over the course of the fall.
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
+1. Eviction filing data for New York City were collected by the [Housing Data Coalition](https://www.housingdatanyc.org//). Historical averages cover the years 2016-2018.
+
+
 
 
 
@@ -42,16 +41,12 @@ Eviction filings in New York were higher than average in January and February of
 
 {{% report_map shapes="/uploads/new-york_shapes.json" data="/uploads/newyork_map.csv" %}}
 
-
-
 # The geography of changes in eviction filings
 
-Saint Joseph county is divided into 75 Census Tracts.
+New York City is divided into 299 zip codes. In each of those zip codes, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see declines in eviction filings across the city, though also a few neighborhoods near downtown with above-average filings.
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
+1. Eviction filing data for New York City were collected by the [Housing Data Coalition](https://www.housingdatanyc.org//). Historical averages cover the years 2016-2018.
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
 
 {{%/ report_map %}}
 
@@ -61,11 +56,17 @@ Saint Joseph county is divided into 75 Census Tracts.
 
 
 
+
+
 # Eviction filings by neighborhood demographics
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None.
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In January and February, evictions in New York City were concentrated in majority-Latinx neighborhoods. Since the end of the state moratorium, those neighborhoods have also seen the largest number of new filings. 
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2016–2018.
+
+1. Eviction filing data for New York City were collected by the [Housing Data Coalition](https://www.housingdatanyc.org//). Historical averages cover the years 2016-2018.
+
+
 
 
 
