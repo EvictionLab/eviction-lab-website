@@ -101,10 +101,14 @@ data:
     years: 2016-2018
     geo: ZIP Code
     file: /uploads/newyork_20201128.csv
+  - site: Philadelphia
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/philadelphia_20201128.csv
   - site: Phoenix
     years: 2015-2019
     geo: Census Tract
-    file: /uploads/maricopa_20201031.csv
+    file: /uploads/maricopa_20201128.csv
   - site: Pittsburgh
     years: 2012-2019
     geo: ZIP Code
@@ -129,10 +133,6 @@ data:
     years: 2016-2019
     geo: Census Tract
     file: /uploads/wilmington_20201128.csv
-  - site: Philadelphia
-    years: 2016-2019
-    geo: Census Tract
-    file: /uploads/philadelphia_20201128.csv
 ---
 Sample code:
 
