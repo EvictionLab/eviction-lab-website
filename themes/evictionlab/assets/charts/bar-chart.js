@@ -322,7 +322,7 @@ Elab.LineChart = (function (Elab) {
    */
   var selectBarsData = function (data) {
     return data.map(function (d) {
-      return [d[0], d[1]];
+      return [d[4], d[5]];
     });
   };
 
