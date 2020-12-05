@@ -168,6 +168,16 @@
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 
+{{ if in .Params.scripts "barchart" }}
+  {{ $d3 := resources.Get "lib/d3.min.js" }}
+  {{ $charts := resources.Get "charts/chart-builder.js" }}
+  {{ $chartsmin := $charts | resources.Minify }}
+  {{ $app := resources.Get "charts/bar-chart.js" }}
+  {{ $appmin := $app | resources.Minify}}
+  {{ $js := slice $d3 $chartsmin $appmin | resources.Concat "js/bar-chart/bundle.js" }}
+  <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
+{{ end }}
+
 {{ if in ($.Scratch.Get "dir") "covid-policy-rankings" }}
   {{ partial "covid-policy-rankings" . }}
 {{ end }}
