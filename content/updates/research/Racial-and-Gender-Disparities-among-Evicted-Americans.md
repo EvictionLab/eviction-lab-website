@@ -19,6 +19,7 @@ twImage: "/images/assets/blog/filing-shifts-social.png"
 url: /racial-and-gender-disparities-among-evicted-americans
 scripts:
   - barchart
+  - linechart
 aliases:
 ---
 
@@ -28,3 +29,4 @@ Documenting populations disproportionately at risk of eviction informs researche
 
 {{% barchart id="summed" title="Figure 2: Weekly Filings Compared to Historical Averages" data="/uploads/summed_sites_20200922a.csv" x="week_date" y="ratio" groupBy="city" yTicks="5" yFormat=".0%" xTicks="week" xFormat="" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX"  curve="curveLinear" %}}
 
+{{% linechart id="summed" title="Figure 2: Weekly Filings Compared to Historical Averages" data="/uploads/summed_sites_20200922a.csv" x="week_date" y="ratio" groupBy="city" yTicks="5" yFormat=".0%" xTicks="week" xFormat="" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX"  curve="curveLinear" %}}

@@ -316,6 +316,16 @@ Elab.LineChart = (function (Elab) {
       dataOptions
     );
 
+    /**
+   * Selects the bar data set from the chart data
+   * @param {*} data
+   */
+  var selectBarsData = function (data) {
+    return data.map(function (d) {
+      return [d[0], d[1]];
+    });
+  };
+
     var chart = new Elab.ChartBuilder(svg, data, options);
     return (
       chart
@@ -356,11 +366,8 @@ Elab.LineChart = (function (Elab) {
             }
           },
         })
-        // adds the trend line
-        .addLines({
-          selector: lineSelector,
-          curve: dataOptions.curve ? d3[dataOptions.curve] : null,
-        })
+        // adds the bars
+        .addBars(selectBarsData)
         // adds a tooltip with the provided render function
         // .addTooltip(showTooltip, hideTooltip)
         // renders the chart
