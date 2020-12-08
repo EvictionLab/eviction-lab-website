@@ -4,7 +4,7 @@ childof: research
 url: /moratoria-and-filings/
 contenttype: updates
 contentcat: research
-featured: home
+featured: true
 title: "Preliminary Analysis: Eviction Filings During and After Local Eviction
   Moratoria"
 date: 2020-11-15T16:46:40.089Z

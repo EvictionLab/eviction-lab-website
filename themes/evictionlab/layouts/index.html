@@ -148,7 +148,7 @@
           <h2 class="mb-3 text-md-center">Follow our updates and research</h2>
         </div>
         <div class="col-12 d-md-flex pl-0 mb-5 mb-md-5 mb-lg-6 mb-xl-8">
-          {{ range first 3 (where .Site.RegularPages "Params.contenttype" ("updates")) }}
+          {{ range first 3 (where (where .Site.RegularPages "Params.contenttype" ("updates")) ".Params.featured" "!=" false ) }}
           
               <div class="updates-section__entries col-12 col-md-4 px-2 px-lg-3">
                 <div class="post-cat mb-2">

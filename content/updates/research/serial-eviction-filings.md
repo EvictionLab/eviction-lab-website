@@ -2,7 +2,7 @@
 childof: research
 contenttype: updates
 contentcat: research
-featured: "home"
+featured: true
 researchtype: elresearch
 title: 'Serial Eviction Filings: How Landlords Use the Courts to Collect Rent'
 date: 2020-09-15T16:46:40.089Z

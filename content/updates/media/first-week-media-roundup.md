@@ -2,7 +2,7 @@
 childof: media
 contenttype: updates
 contentcat: media
-featured: false
+featured: true
 title: 'Eviction Lab Media Coverage Roundup'
 date: 2018-04-17T15:45:09.300Z
 postauthorname: The Eviction Lab

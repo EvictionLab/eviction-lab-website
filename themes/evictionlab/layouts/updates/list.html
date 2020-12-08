@@ -29,7 +29,8 @@
     <div class="alt-rows">
        
 {{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") 5 }}   
-{{ range .Paginator.Pages }}   
+{{ range .Paginator.Pages }} 
+      {{ if ne .Params.in_index false }}
 <!--{{ if eq .Params.contenttype "updates" }}    -->
 
         <div class="center-page-wrapper list-wrapper">
@@ -77,6 +78,7 @@
       <!--{{ end }}-->
     {{ end }}
     </div><!-- end alt-rows -->
+    {{ end }}
   {{ end }} <!-- end Blog listings -->
  
   <div class="center-page-wrapper">
@@ -127,7 +129,7 @@
     <div class="alt-rows blog-list">
       {{ $paginator := .Paginate (where .Site.Pages "Params.contentcat" "blog") 5 }}   
       {{ range .Paginator.Pages }} 
-
+      {{ if ne .Params.in_index false }}
         <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
 
@@ -160,6 +162,7 @@
 
           </div>
         </div>
+        {{ end }}
       {{ end }}
    
    
@@ -183,7 +186,7 @@
     <div class="alt-rows media-list">
       {{ $paginator := .Paginate (where .Site.Pages "Params.contentcat" "media") 5 }}   
       {{ range .Paginator.Pages }}
-      
+      {{ if ne .Params.in_index false }}
       <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
 
@@ -217,6 +220,7 @@
         </div>
       </div>
       {{ end }}
+      {{ end }}
   
     
   {{ end }} <!-- end Media listings -->
@@ -239,8 +243,8 @@
       <span class="center-page-wrapper">
         <div class="bordered-header events-list-header research-type el-research">research from the eviction lab <a class="see-all-events subhead-rt" href="/updates/research/el-research">See all</a></div>
       </span>
-      {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "elresearch" )) }}
-        {{ if eq .Params.researchtype "elresearch" }}
+      {{ range first 1 (where (where .Site.RegularPages "Params.researchtype" ( "elresearch" )) ".Params.in_index" "!=" false) }}
+       <!-- Set range based on the research post type and whether or not the post is set to be indexed via front matter -->
         <div class="alt-rows dual-research">
         <div class="center-page-wrapper list-wrapper">
             <div class="list-item center-content {{ .Params.childof }}-list">
@@ -274,7 +278,8 @@
   
           </div>
         </div>
-        {{ end }}
+       
+     
       {{ end }}
       
   {{ end }} <!-- end EL Research listings -->
@@ -283,10 +288,8 @@
   {{ if isset $outsideresearch 0 }} <!-- if there are Outside Research articles, list them -->
   <div class="center-page-wrapper list-wrapper">          
     <div class="events-list-header bordered-header research-type outside-research">outside research <a class="see-all-events subhead-rt" href="/updates/research/outside-research">See all</a></div>
-      {{ range first 1 (where .Site.RegularPages "Params.researchtype" ( "outside-research" )) }}
-        {{ if eq .Params.researchtype "outside-research" }}
-       
-      
+    {{ range first 1 (where (where .Site.RegularPages "Params.researchtype" ( "outside-research" )) ".Params.in_index" "!=" false) }}
+    <!-- Set range based on the research post type and whether or not the post is set to be indexed via front matter -->    
             <div class="list-item center-content {{ .Params.childof }}-list">
 
             <!--<div class="chevron">
@@ -318,7 +321,7 @@
   
           </div>
         </div>
-        {{ end }}
+       
       {{ end }}
     </div>
   {{ end }} <!-- end Outside Research listings -->
