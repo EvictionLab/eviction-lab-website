@@ -112,7 +112,7 @@ Elab.ChartBuilder = (function (Elab) {
   };
 
   /**
-   * Adds a function that executes on renter
+   * Adds a function that executes on render
    * @param {string} id identifier for the render function
    * @param {function} createRenderFunction a function that returns the render function
    */
@@ -396,6 +396,129 @@ Elab.ChartBuilder = (function (Elab) {
    * Adds bars to the chart
    * @param {function} selector function that takes the chart data and returns the bar data
    */
+  Chart.prototype.addBarGroups = function (selector) {
+    console.log('addBarGroups')
+    var _this = this;
+    console.log("_this, ", _this)
+    this.selections["bargroups"] = this.selections["data"]
+      .append("g")
+      .attr("class", "chart__bargroups")
+
+    this.updaters["bargroups"] = function () {
+      console.log('updater for bargroups')
+      var barData = selector(_this.data, _this.options);
+      console.log('barData,', barData)
+      var spacing = 2;
+      var bandWidth = 10; // _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
+
+      // _this.selections['groups'] = _this.selections["data"]
+      //   .selectAll('.chart__bargroups')
+      //   .enter()
+      //   .append("g")
+      //   .attr("class", "g")
+      //   .attr("class", "bar-group")
+      //   .data(barData)
+
+
+      // var x0 = d3.scaleOrdinal().rangeRoundBands([0, _this.getInnerWidth()], .1);
+      // var x1 = d3.scaleOrdinal();
+      //
+      var groupNames = Object.keys(_this.options.barFormat);
+      var typeNames = barData[0].values.map(function(el) {
+        return el.type
+      }) // data[0].values.map(function(d) { return d.rate; });
+      //
+      // x0.domain(Object.keys(groupNames));
+      // x1.domain(typeNames).rangeRoundBands([0, x0.rangeBand()]);
+      //
+
+      _this.groupScale = d3.scaleBand() // projecting discrete data into the diagram
+        .domain(groupNames)
+        .range([0, _this.getInnerWidth()])
+        .round(0.1)
+        .padding(0.1);
+
+      console.log('_this.groupScale, ', _this.groupScale.bandwidth())
+
+      _this.barScale = d3.scaleBand()
+        .domain(typeNames)
+        .range([0, _this.groupScale.bandwidth()])
+        .round(0.1)
+        .padding(0.1);
+
+        console.log('spacing = ', spacing)
+      // console.log(_this.selections["bargroups"])
+      var groups = _this.selections["bargroups"]
+        .selectAll('.chart__bar-group')
+        .data(barData)
+        .enter()
+        .append('g')
+        .attr('id', function(d){ return 'group_' + d.category })
+        .attr("class", function(d) { return "chart__bar-group " + d.category; } )
+        .attr("transform",function(d) { return "translate(" + _this.groupScale(d.category) + ",0)"; })
+        .selectAll('.chart__bar')
+        .data(function(d) { return d.values; })
+        .enter()
+        .append('rect')
+        .attr("class", function(d) { return "chart__bar " + d.type; } )
+        // .style('fill', 'transparent')
+        .attr("width", function(d){ return _this.barScale.bandwidth() - spacing})
+
+        // .attr("y", function(d) { return y(0); })
+        .attr("x", function (d) {
+            return _this.barScale(d.type);
+          })
+        .attr("height", 0)
+        .attr("y", function(d){ return _this.getInnerHeight() })
+        .transition()
+        .duration(1000)
+        .attr("y", function(d){ return _this.yScale(d.value) })
+        .attr("height", function (d) {
+          return _this.getInnerHeight() - _this.yScale(d.value);
+          // return d.value*100;
+        })
+        // .attr("x", function (d) {
+        //     return _this.xScale(d[0]) + spacing;
+        //   })
+
+        // .attr("class", d)
+
+      // var selection = _this.selections["bars"]
+      //   .selectAll(".chart__bar")
+      //   .data(barData);
+      //
+      // selection
+      //   .enter()
+      //   .append("rect")
+      //   .attr("class", "chart__bar")
+      //   .attr("x", function (d) {
+      //     return _this.xScale(d[0]) + spacing;
+      //   })
+      //   .attr("width", bandWidth)
+      //   .attr("y", _this.getInnerHeight())
+      //   .attr("height", 0)
+      //   .merge(selection)
+      //   .transition()
+      //   .duration(1000)
+      //   .attr("x", function (d) {
+      //     return _this.xScale(d[0]) + spacing;
+      //   })
+      //   .attr("width", bandWidth)
+      //   .attr("y", function (d) {
+      //     return _this.yScale(d[1]);
+      //   })
+      //   .attr("height", function (d) {
+      //     return _this.getInnerHeight() - _this.yScale(d[1]);
+      //   });
+    };
+
+    return this;
+  };
+
+  /**
+   * Adds bars to the chart
+   * @param {function} selector function that takes the chart data and returns the bar data
+   */
   Chart.prototype.addBars = function (selector) {
     var _this = this;
     this.selections["bars"] = this.selections["data"]
@@ -406,8 +529,7 @@ Elab.ChartBuilder = (function (Elab) {
       var barData = selector(_this.data);
 
       var spacing = 2;
-      var bandWidth =
-        _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
+      var bandWidth = _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
 
       var selection = _this.selections["bars"]
         .selectAll(".chart__bar")
@@ -576,6 +698,51 @@ Elab.ChartBuilder = (function (Elab) {
     var width = this.xScale(end) - this.xScale(start);
     return width * num;
   };
+
+  Chart.prototype.addBarGroupAxis = function(overrides) {
+    // console.log('addBarGroupAxis, ', this)
+    var _this = this;
+    var options = overrides || {};
+    // selector for x data value
+    options.selector =
+      overrides.selector ||
+      function (d) {
+        return d.x;
+      };
+    // option to modify extent, do not modify by default
+    options.adjustExtent =
+      overrides.adjustExtent ||
+      function (e) {
+        return e;
+      };
+    // option to adjust axis labels, do nothing by default
+    options.adjustLabels = overrides.adjustLabels || function () {};
+
+    this.selections["barGroup"] = this.selections["overlay"]
+      .append("g")
+      .attr("class", "chart__axis chart__axis--bargroup");
+    this.updaters["barGroup"] = function () {
+      var innerWidth = _this.options.width - _this.options.margin[1] - _this.options.margin[3]
+      _this.xScale = d3.scaleBand() // projecting discrete data into the diagram
+        .domain(_this.options.xTicks.split(';'))
+        .range([0,innerWidth])
+        .round(0.1)
+        .padding(0.1);
+        // .paddingInner(0.05);
+
+        // .range([0, _this.getInnerWidth()])
+        // .round(0.1)
+        // .padding(0.1);
+      var xAxis = d3.axisBottom(_this.xScale).tickSize(8).tickSizeOuter(0);
+      _this.selections["barGroup"]
+        .attr("transform", "translate(0," + _this.getInnerHeight() + ")")
+        .transition()
+        .duration(1000)
+        .call(xAxis)
+        .call(options.adjustLabels.bind(_this));
+    };
+    return this;
+  }
 
   /**
    * Adds a time (X) axis to the chart
