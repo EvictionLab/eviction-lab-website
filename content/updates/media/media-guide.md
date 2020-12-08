@@ -2,7 +2,7 @@
 childof: media
 contenttype: updates
 contentcat: media
-featured: "home"
+featured: true
 title: 'The Eviction Lab Media Guide'
 date: 2018-04-20T15:45:09.300Z
 postauthorname: James Hendrickson

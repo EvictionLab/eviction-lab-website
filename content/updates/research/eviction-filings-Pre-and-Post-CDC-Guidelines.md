@@ -3,7 +3,7 @@ draft: false
 childof: research
 contenttype: updates
 contentcat: research
-featured: "home"
+featured: true
 researchtype: elresearch
 title: "Preliminary Analysis: Shifts in Eviction Filings from the CARES Act to the CDC Order"
 date: 2020-09-22T16:46:40.089Z

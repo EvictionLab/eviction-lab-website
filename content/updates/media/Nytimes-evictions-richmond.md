@@ -2,7 +2,7 @@
 childof: media
 contenttype: updates
 contentcat: media
-featured: false
+featured: true
 title: The New York Times Profiles The Eviction Lab
 date: 2018-04-10T15:45:09.300Z
 postauthorname: The Eviction Lab

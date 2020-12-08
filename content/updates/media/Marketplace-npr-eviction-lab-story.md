@@ -2,7 +2,7 @@
 childof: media
 contenttype: updates
 contentcat: media
-featured: false
+featured: true
 title: "Marketplace: Millions of Americans are evicted every year — and not just in big cities"
 date: 2018-04-11T15:45:09.300Z
 postauthorname: The Eviction Lab

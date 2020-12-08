@@ -2,7 +2,7 @@
 childof: blog
 contenttype: updates
 contentcat: blog
-featured: 
+featured: true
 title: 'Article: Eviction Data Can Keep Cities from “Designing Policy in the Dark”'
 date: 2018-08-16T08:15:05.556Z
 postauthorname: James Minton

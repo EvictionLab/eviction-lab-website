@@ -2,7 +2,7 @@
 childof: research
 contenttype: updates
 contentcat: research
-featured: "home"
+featured: true
 researchtype: elresearch
 title: 'Preliminary Analysis: Eviction Claim Amounts During the COVID-19 Pandemic'
 date: 2020-08-27T16:46:40.089Z

@@ -2,7 +2,7 @@
 childof: blog
 contenttype: updates
 contentcat: blog
-featured: 
+featured: true
 title: 'How We Partnered With Mapbox to Visualize Evictions Nationwide'
 date: 2018-04-24T23:15:05.556Z
 postauthorname: James Minton

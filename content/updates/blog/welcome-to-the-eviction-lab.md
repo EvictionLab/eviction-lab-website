@@ -2,7 +2,7 @@
 childof: blog
 contenttype: updates
 contentcat: blog
-featured: "home"
+featured: true
 title: "Welcome to the Eviction Lab.  Let’s Get to Work!"
 date: 2018-04-07T23:15:05.556Z
 postauthorname: Matthew Desmond
