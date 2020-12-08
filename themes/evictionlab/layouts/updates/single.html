@@ -75,7 +75,7 @@
       <div class="btm-meta">
           <div class="btm-meta-cat mobile-off"><img src="/images/icons/events_bookmark.png" class="cat-bookmark" /><span class="header">Filed under <a class="ak-bold {{ .Params.childof }}-type capitalize" href="/updates/{{ .Params.childof }}">{{ .Params.childof }}</a></span></div>
         <ul>
-          {{ range last 1 (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "=" "updates") }}
+          {{ range last 1 (where (where (where .Site.Pages.ByDate "Date.Unix" "<" $.Date.Unix) "Params.contenttype" "=" "updates") ".Params.in_index" "!=" false ) }}
             {{ if gt $.Date.Unix .Date.Unix }}
               <li class="header">Next Post</li>
               <li><a class="{{ $pagetype }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
@@ -83,18 +83,18 @@
           {{ end }}
         </ul>  
         <ul>
-            {{ range first 1 (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "=" "updates") }}
+            {{ range first 1 (where (where (where .Site.Pages.ByDate "Date.Unix" ">" $.Date.Unix) "Params.contenttype" "=" "updates") ".Params.in_index" "!=" false ) }}
               {{ if lt $.Date.Unix .Date.Unix }}
                 <li class="header prev-post">Previous Post</li>
                 <li><a class="{{ $pagetype }}-type" href="{{ .Permalink }}">{{ .Title }}</a></li>
               {{ end }}
             {{ end }}
             </ul> 
-				<ul>
+			<!--	<ul>
 					{{ range where .Site.RegularPages "Params.featured" true }}
 					  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 					{{ end }}
-				</ul>
+				</ul> -->
       </div>
     {{ end }}
 <!-- //////// END NEXT / PREV FOR UPDATES CONTENT TYPE ///////// -->
@@ -118,11 +118,11 @@
       {{ end }}
     {{ end }}
   </ul>
-  <ul>
+ <!-- <ul>
     {{ range where .Site.RegularPages "Params.featured" true }}
       <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
-  </ul>
+  </ul> -->
 </div>
 {{ end }}
 <!-- //////// END NEXT / PREV FOR EVENTS CONTENT TYPE ///////// -->
