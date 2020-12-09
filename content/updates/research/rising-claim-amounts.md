@@ -11,7 +11,7 @@ postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: From August onwards, landlords have filed eviction cases with unusually large claim amounts.
 listSummary: 'In this brief, we examine trends in claim amounts—the back rent, late fees, and damages that landlords claim when filing an eviction case—over the course of 2020 in a few key cities we are monitoring through the Eviction Tracking System.' 
-socialDescription: Examining the amounts landlords claim tenants owe in 3 counties' eviction filings.
+socialDescription: From August onwards, landlords have filed eviction cases with unusually large claim amounts.
 fbImage: '/images/assets/blog/claim-amount-social.png'
 twImage: '/images/assets/blog/claim-amount-social.png'
 url: /rising-claim-amounts
