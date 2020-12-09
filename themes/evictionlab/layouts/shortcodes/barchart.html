@@ -2,14 +2,21 @@
 {{ $titleSuffix := .Get "titleSuffix" }}
 {{ $legend := .Get "highlight" }}
 {{ $legendItems := split (.Get "legendItems") ";" }}
+{{ $search := .Get "search" }}
 
 <div
   class="bar-chart bar-chart--{{ .Get `id` }}"
 >
   <h3 class="bar-chart__title">
-    <span>{{ $titlePrefix }}</span>
-    <input type="text" id="autoComplete" placeholder="the United States" />
-    <span>{{ $titleSuffix }}</span>
+  {{ if eq $search "true" }}
+  <span>
+  {{ $titlePrefix }} in
+  <input class="bar-chart__search search" type="text" id="autoComplete" value="the United States" />
+  {{ partial "searchbutton" }}{{ $titleSuffix }}
+  </span>
+  {{ else }}
+  <span>{{ (printf "%s%s%s" $titlePrefix " " $titleSuffix) }}</span>
+  {{ end }}
   </h3>
   <div id="{{ .Get `id` }}" class="bar-chart__chart chart">
     <svg></svg>

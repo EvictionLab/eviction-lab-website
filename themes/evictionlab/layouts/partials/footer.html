@@ -169,7 +169,7 @@
 {{ end }}
 
 {{ if in .Params.scripts "barchart" }}
-
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.0.2/dist/js/autoComplete.min.js"></script>
   {{ if .Site.IsServer }}
     {{ $d3 := resources.Get "lib/d3.min.js" }}
     {{ $charts := resources.Get "charts/chart-builder.js" }}
@@ -185,7 +185,6 @@
     {{ $js := slice $d3 $chartsmin $appmin | resources.Concat "js/bar-chart/bundle.js" }}
     <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
   {{ end }}
-
 {{ end }}
 
 {{ if in ($.Scratch.Get "dir") "covid-policy-rankings" }}

@@ -20,7 +20,9 @@
   margin: 24px 0;
 }
 
-.bar-chart__title {
+.bar-chart__title,
+.bar-chart__title span,
+.bar-chart__title input {
   font-family: GT-Eesti-Display-Medium, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -31,6 +33,24 @@
   line-height: 1.5;
   text-transform: none;
   color: #212529;
+}
+
+.bar-chart__title .bar-chart__search {
+  width: auto;
+  display: inline;
+  margin: auto 8px auto 8px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid;
+  padding: 0 24px 0 0;
+}
+
+.bar-chart__title .bi-search {
+  margin-left: -28px;
+  margin-right: 8px;
+  height: 12px;
+  width: 12px;
 }
 
 .bar-chart .chart {
