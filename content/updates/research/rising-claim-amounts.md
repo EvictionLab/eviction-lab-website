@@ -9,12 +9,12 @@ date: 2020-12-09T16:46:40.089Z
 postauthorname: Renee Louis, Joe Fish, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Our methodology for building the Housing Policy Scorecard.
-listSummary: 'In three of the counties we track, we are able to collect an important data point: the amount of money, if any, that the landlord or property manager claims is owed by the tenant. Here, we look at the amounts claimed at the initiation of the eviction process.' 
+description: From August onwards, landlords have filed eviction cases with unusually large claim amounts.
+listSummary: 'In this brief, we examine trends in claim amounts—the back rent, late fees, and damages that landlords claim when filing an eviction case—over the course of 2020 in a few key cities we are monitoring through the Eviction Tracking System.' 
 socialDescription: Examining the amounts landlords claim tenants owe in 3 counties' eviction filings.
-fbImage: '/images/assets/blog/claims_social.png'
-twImage: '/images/assets/blog/claims_social.png'
-url: 
+fbImage: '/images/assets/blog/claim-amount-social.png'
+twImage: '/images/assets/blog/claim-amount-social.png'
+url: /rising-claim-amounts
 aliases:
   
 ---
