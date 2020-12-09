@@ -327,15 +327,22 @@ Elab.BarChart = (function (Elab) {
     return result
   }
 
+  var findDataItem = function(data, options) {
+    console.log('findDataItem, ', data, options)
+    var result = data.find(function(d) {
+      return Number(d.cofips) === Number(options.active);
+    })
+    console.log('result, ', result)
+    return result
+  }
+
     /**
    * Selects the bar data set from the chart data
    * @param {*} data
    */
   var selectBarsData = function (data, options) {
     console.log('selectBarsData, blah, ', data, options)
-    var d = data.find(function(d) {
-      return d.cofips === options.active;
-    })
+    var d = findDataItem(data, options)
     if (!d) {
       d = data[0]
     }
@@ -381,9 +388,11 @@ Elab.BarChart = (function (Elab) {
               })
             })
             console.log('columns, ', columns)
-            var d = data.find(function(el) {
-              return el.cofips === options.active
-            })
+            // var d = data.find(function(el) {
+            //   return el.cofips === options.active
+            // })
+            var d = findDataItem(data, options)
+            console.log('d, ', d)
             // d.forEach(function(el, i) {
             columns.forEach(function(c) {
               newArr.push(parseFloat(d[c]))
@@ -426,33 +435,10 @@ Elab.BarChart = (function (Elab) {
         // adds the bars
         .addBarGroups(selectBarsData)
         // adds a tooltip with the provided render function
-        // .addTooltip(showTooltip, hideTooltip)
+        // .addTooltip(dataOptions.showTooltip, dataOptions.hideTooltip)
         // renders the chart
         // .addHoverLine()
         // .addHoverDot()
-        // .addVoronoi({
-        //   renderTooltip: function (hoverData) {
-        //     var dateFormat = d3.timeFormat("%b %d");
-        //     var numFormat = d3.format(".0%");
-        //     var start = dateFormat(xSelector(hoverData));
-        //     var end = dateFormat(d3.timeDay.offset(xSelector(hoverData), 6));
-        //     return (
-        //       '<h1 class="tooltip__title">' +
-        //       hoverData.name +
-        //       "</h1>" +
-        //       '<div class="tooltip__item">' +
-        //       "<span>" +
-        //       start +
-        //       " - " +
-        //       end +
-        //       ":</span>" +
-        //       "<span> " +
-        //       numFormat(ySelector(hoverData)) +
-        //       "</span>" +
-        //       "</div>"
-        //     );
-        //   },
-        // })
 
         .render()
     );

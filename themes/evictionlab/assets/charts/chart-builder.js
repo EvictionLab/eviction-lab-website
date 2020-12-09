@@ -409,7 +409,7 @@ Elab.ChartBuilder = (function (Elab) {
       var barData = selector(_this.data, _this.options);
       console.log('barData,', barData)
       var spacing = 2;
-      var bandWidth = 10; // _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
+      // var bandWidth = 10; // _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
 
       // _this.selections['groups'] = _this.selections["data"]
       //   .selectAll('.chart__bargroups')

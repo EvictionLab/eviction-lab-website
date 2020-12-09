@@ -39,8 +39,9 @@
       var xFormat = {{ .Get "xFormat" }}
       var highlight = {{ .Get "highlight" }}
       var curve = {{ .Get "curve" }}
+      var active = {{ .Get "active" }}
       var rootEl = document.getElementById(id);
-      Elab.BarChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xBars: xBars, xFormat: xFormat, highlight: highlight, curve: curve, active: 'nat', columns: columns, searchId: searchId, searchLabel: searchLabel })
+      Elab.BarChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xBars: xBars, xFormat: xFormat, highlight: highlight, curve: curve, active: active, columns: columns, searchId: searchId, searchLabel: searchLabel })
     });
   </script>
 </div>
