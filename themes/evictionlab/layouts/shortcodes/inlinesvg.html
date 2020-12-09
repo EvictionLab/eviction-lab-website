@@ -1,0 +1,5 @@
+<div class="figheader" style="max-width: 600px;" >{{ index .Params 1 }}</div>
+<div class="upscale124 pb-0 pb-xxl-0">
+{{ readFile (print "themes/evictionlab/static/images/assets/blog/" (index .Params 0 )) | safeHTML }}
+</div>
+<div class="figcaption"><p>{{ index .Params 2 }}</p></div>
