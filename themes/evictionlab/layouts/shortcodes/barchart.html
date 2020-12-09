@@ -1,13 +1,16 @@
-{{ $title := .Get "title" }}
+{{ $titlePrefix := .Get "titlePrefix" }}
+{{ $titleSuffix := .Get "titleSuffix" }}
 {{ $legend := .Get "highlight" }}
 {{ $legendItems := split (.Get "legendItems") ";" }}
 
 <div
   class="bar-chart bar-chart--{{ .Get `id` }}"
 >
-  {{ if $title }}
-  <h3 class="bar-chart__title">{{ $title }}</h3>
-  {{ end }}
+  <h3 class="bar-chart__title">
+    <span>{{ $titlePrefix }}</span>
+    <input type="text" id="autoComplete" placeholder="the United States" />
+    <span>{{ $titleSuffix }}</span>
+  </h3>
   <div id="{{ .Get `id` }}" class="bar-chart__chart chart">
     <svg></svg>
   </div>
