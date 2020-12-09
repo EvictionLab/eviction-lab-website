@@ -330,7 +330,7 @@ Elab.BarChart = (function (Elab) {
   var findDataItem = function(data, options) {
     console.log('findDataItem, ', data, options)
     var result = data.find(function(d) {
-      return Number(d.cofips) === Number(options.active);
+      return Number(d[options.searchId]) === Number(options.active);
     })
     console.log('result, ', result)
     return result
