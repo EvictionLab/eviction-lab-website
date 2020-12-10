@@ -21,8 +21,8 @@
 }
 
 .bar-chart__title,
-.bar-chart__title span,
-.bar-chart__title input {
+.bar-chart__title > span,
+.bar-chart__title > p {
   font-family: GT-Eesti-Display-Medium, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -35,10 +35,20 @@
   color: #212529;
 }
 
-.bar-chart__title .bar-chart__search {
-  width: auto;
-  display: inline;
-  margin: auto 8px auto 8px;
+.bar-chart #autoComplete_list {
+  top: auto;
+}
+
+.bar-chart__search-group {
+  width: 80%;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.bar-chart__search-group .bar-chart__search {
+  /* width: auto; */
+  display: block;
+  margin: auto 0;
   text-align: left;
   background: transparent;
   border: 0;
@@ -46,11 +56,15 @@
   padding: 0 24px 0 0;
 }
 
-.bar-chart__title .bi-search {
-  margin-left: -28px;
-  margin-right: 8px;
-  height: 12px;
-  width: 12px;
+.bar-chart__search-group #autoComplete_list {
+}
+
+.bar-chart__search-group .bi-search {
+  position: absolute;
+    right: 6px;
+    height: 16px;
+    width: 16px;
+    top: 4px;
 }
 
 .bar-chart .chart {
@@ -176,6 +190,10 @@
 .chart__hover-dot.chart__hover-dot--2 {
   fill: var(--c3);
 }
+
+
+
+
 
 
 
