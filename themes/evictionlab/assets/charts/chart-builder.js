@@ -397,40 +397,21 @@ Elab.ChartBuilder = (function (Elab) {
    * @param {function} selector function that takes the chart data and returns the bar data
    */
   Chart.prototype.addBarGroups = function (selector) {
-    console.log('addBarGroups')
+    // console.log('addBarGroups')
     var _this = this;
-    console.log("_this, ", _this)
     this.selections["bargroups"] = this.selections["data"]
       .append("g")
       .attr("class", "chart__bargroups")
 
     this.updaters["bargroups"] = function () {
-      console.log('updater for bargroups')
+      // console.log('updater for bargroups')
       var barData = selector(_this.data, _this.options);
-      console.log('barData,', barData)
       var spacing = 2;
-      // var bandWidth = 10; // _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
 
-      // _this.selections['groups'] = _this.selections["data"]
-      //   .selectAll('.chart__bargroups')
-      //   .enter()
-      //   .append("g")
-      //   .attr("class", "g")
-      //   .attr("class", "bar-group")
-      //   .data(barData)
-
-
-      // var x0 = d3.scaleOrdinal().rangeRoundBands([0, _this.getInnerWidth()], .1);
-      // var x1 = d3.scaleOrdinal();
-      //
       var groupNames = Object.keys(_this.options.barFormat);
       var typeNames = barData[0].values.map(function(el) {
         return el.type
-      }) // data[0].values.map(function(d) { return d.rate; });
-      //
-      // x0.domain(Object.keys(groupNames));
-      // x1.domain(typeNames).rangeRoundBands([0, x0.rangeBand()]);
-      //
+      })
 
       _this.groupScale = d3.scaleBand() // projecting discrete data into the diagram
         .domain(groupNames)
@@ -438,16 +419,12 @@ Elab.ChartBuilder = (function (Elab) {
         .round(0.1)
         .padding(0.1);
 
-      console.log('_this.groupScale, ', _this.groupScale.bandwidth())
-
       _this.barScale = d3.scaleBand()
         .domain(typeNames)
         .range([0, _this.groupScale.bandwidth()])
         .round(0.1)
         .padding(0.1);
 
-        console.log('spacing = ', spacing)
-      // console.log(_this.selections["bargroups"])
       var groups = _this.selections["bargroups"]
         .selectAll('.chart__bar-group')
         .data(barData)
@@ -461,10 +438,7 @@ Elab.ChartBuilder = (function (Elab) {
         .enter()
         .append('rect')
         .attr("class", function(d) { return "chart__bar " + d.type; } )
-        // .style('fill', 'transparent')
         .attr("width", function(d){ return _this.barScale.bandwidth() - spacing})
-
-        // .attr("y", function(d) { return y(0); })
         .attr("x", function (d) {
             return _this.barScale(d.type);
           })
@@ -475,41 +449,7 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("y", function(d){ return _this.yScale(d.value) })
         .attr("height", function (d) {
           return _this.getInnerHeight() - _this.yScale(d.value);
-          // return d.value*100;
         })
-        // .attr("x", function (d) {
-        //     return _this.xScale(d[0]) + spacing;
-        //   })
-
-        // .attr("class", d)
-
-      // var selection = _this.selections["bars"]
-      //   .selectAll(".chart__bar")
-      //   .data(barData);
-      //
-      // selection
-      //   .enter()
-      //   .append("rect")
-      //   .attr("class", "chart__bar")
-      //   .attr("x", function (d) {
-      //     return _this.xScale(d[0]) + spacing;
-      //   })
-      //   .attr("width", bandWidth)
-      //   .attr("y", _this.getInnerHeight())
-      //   .attr("height", 0)
-      //   .merge(selection)
-      //   .transition()
-      //   .duration(1000)
-      //   .attr("x", function (d) {
-      //     return _this.xScale(d[0]) + spacing;
-      //   })
-      //   .attr("width", bandWidth)
-      //   .attr("y", function (d) {
-      //     return _this.yScale(d[1]);
-      //   })
-      //   .attr("height", function (d) {
-      //     return _this.getInnerHeight() - _this.yScale(d[1]);
-      //   });
     };
 
     return this;

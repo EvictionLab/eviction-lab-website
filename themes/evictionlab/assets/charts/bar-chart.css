@@ -20,9 +20,9 @@
   margin: 24px 0;
 }
 
-.bar-chart__title,
-.bar-chart__title > span,
-.bar-chart__title > p {
+.bar-chart h3.bar-chart__title,
+.bar-chart h3.bar-chart__title > span,
+.bar-chart h3.bar-chart__title > p {
   font-family: GT-Eesti-Display-Medium, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -53,7 +53,11 @@
   background: transparent;
   border: 0;
   border-bottom: 2px solid;
-  padding: 0 24px 0 0;
+  padding: 0 24px 0 12px;
+}
+
+.bar-chart__search-group .bar-chart__search:focus {
+  outline: 0;
 }
 
 .bar-chart__search-group #autoComplete_list {

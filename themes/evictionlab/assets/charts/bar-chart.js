@@ -282,7 +282,7 @@ Elab.BarChart = (function (Elab) {
    * @param {Object} dataOptions { margin, x, y, groupBy, curve, highlight, xTicks, xFormat, yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
-    console.log('createFigure: ', root, data, dataOptions)
+    // console.log('createFigure: ', root, data, dataOptions)
     var highlighted = dataOptions.highlight
       ? dataOptions.highlight.split(";").reverse()
       : null;
@@ -328,11 +328,11 @@ Elab.BarChart = (function (Elab) {
   }
 
   var findDataItem = function(data, options) {
-    console.log('findDataItem, ', data, options)
+    // console.log('findDataItem, ', data, options)
     var result = data.find(function(d) {
       return Number(d[options.searchId]) === Number(options.active);
     })
-    console.log('result, ', result)
+    // console.log('result, ', result)
     return result
   }
 
@@ -341,14 +341,11 @@ Elab.BarChart = (function (Elab) {
    * @param {*} data
    */
   var selectBarsData = function (data, options) {
-    console.log('selectBarsData, blah, ', data, options)
+    // console.log('selectBarsData, blah, ', data, options)
     var d = findDataItem(data, options)
     if (!d) {
       d = data[0]
     }
-    console.log('d, ', d)
-    // var formatKeys = Object.keys(barFormat)
-    // console.log('formatKeys, ', formatKeys)
     result = []
     options.ticksArr.forEach(function(el) {
       var targets = options.barFormat[el]
@@ -387,22 +384,18 @@ Elab.BarChart = (function (Elab) {
                 columns.push(el)
               })
             })
-            console.log('columns, ', columns)
-            // var d = data.find(function(el) {
-            //   return el.cofips === options.active
-            // })
             var d = findDataItem(data, options)
-            console.log('d, ', d)
+            // console.log('d, ', d)
             // d.forEach(function(el, i) {
             columns.forEach(function(c) {
               newArr.push(parseFloat(d[c]))
             })
             // })
-            console.log('newArr, ', newArr)
+            // console.log('newArr, ', newArr)
             var newExtent = d3.extent(newArr)
-            console.log('newExtent, ', newExtent)
+            // console.log('newExtent, ', newExtent)
             var range = newExtent[1] - newExtent[0];
-            console.log('range, ', range)
+            // console.log('range, ', range)
             return [newExtent[0] - range * 0.05, newExtent[1] + range * 0.05];
           },
           ticks: dataOptions.yTicks || 5,
@@ -450,7 +443,7 @@ Elab.BarChart = (function (Elab) {
    * @param {*} cityData
    */
   function initFigure(root, data, options) {
-    console.log('initFigure, ', data, options)
+    // console.log('initFigure, ', data, options)
     // create figure
     var figure = createFigure(root, data, options);
     // resize figure on changes
@@ -467,10 +460,10 @@ Elab.BarChart = (function (Elab) {
    * Loads and parses the CSV table
    */
   function loadData(options, callback) {
-    console.log('loadData, ', options)
+    // console.log('loadData, ', options)
     // var parseDate = d3.timeParse("%m/%d/%Y");
     d3.csv(options.data, function (data) {
-      console.log('d3.csv, ', data, options)
+      // console.log('d3.csv, ', data, options)
       var result = data.map(function (d) {
         var obj = {}
         options.columns.forEach(function(el, i){
@@ -478,15 +471,6 @@ Elab.BarChart = (function (Elab) {
         })
         // console.log('obj, ',obj)
         return obj;
-        // return {
-
-          // name: d[options.groupBy],
-          // x: parseDate(d[options.x]),
-          // y: parseFloat(d[options.y]),
-          // [searchId]: d[options.searchId],
-          // searchLabel: parseFloat(d[options.searchLabel]),
-
-        // };
       });
       callback && callback(result);
     });
@@ -496,7 +480,7 @@ Elab.BarChart = (function (Elab) {
    * Creates the intro chart
    */
   function init(rootEl, options) {
-    console.log('barchart init, ', rootEl, options)
+    // console.log('barchart init, ', rootEl, options)
     if (!options || typeof options !== "object")
       throw new Error("barchart: no options object provided");
     if (!options.data)
@@ -505,12 +489,6 @@ Elab.BarChart = (function (Elab) {
       throw new Error("barchart: must provide columns for CSV processing in options");
     if (!options.columns)
       throw new Error("barchart: must provide columns for CSV processing in options");
-    // options.x = options.x ||  "x";
-    // options.y = options.y || "y";
-    // options.groupBy = options.groupBy || "name";
-    ACTIVE_SEARCH = options.active || '';
-    console.log('ACTIVE_SEARCH, ', ACTIVE_SEARCH)
-    // COLUMNS
     options.cofips = "cofips";
     options.state = "state";
     options.ticksArr = String(options.xTicks)
@@ -522,10 +500,10 @@ Elab.BarChart = (function (Elab) {
       options.barFormat[el.toLowerCase()] = options.barsGroups[i].split(',')
     })
     options.columns = options.columns.split(',')
-    console.log('options')
+    // console.log('options')
 
     loadData(options, function (data) {
-      console.log('loadData')
+      // console.log('loadData')
       initFigure(rootEl, data, options);
     });
   }
