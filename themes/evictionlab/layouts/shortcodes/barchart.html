@@ -90,6 +90,7 @@
     }
     var data = [];
     window.addEventListener('load', function() {
+      console.log('load')
       // Store selector for search input.
       var searchInput = document.getElementById('chart_autocomplete');
       searchInput.addEventListener('click', function() {
@@ -104,6 +105,7 @@
           data[`${row.data.cofips}`] = row.data.state ? `${row.data.county}, ${row.data.state}` : row.data.county;
       	},
       	complete: function() {
+          console.log('papaparse complete')
           // Set value in title.
           setSiteName();
           // Init autocomplete.
@@ -116,15 +118,14 @@
             threshold: 3,
             debounce: 100,
             searchEngine: "strict",
-            // highlight: true,
-            resultsList: {
-              destination: document.querySelector('.bar-chart__title'),
-            },
-            // feedback: function(data) {
-            //   console.log('feedback, ', data)
+            // resultsList: {
+            //   destination: document.querySelector('.bar-chart__title'),
             // },
+            feedback: function(data) {
+              console.log('feedback, ', data)
+            },
             onSelection: function(feedback) {
-              // console.log('onSelection, ', feedback)
+              console.log('onSelection, ', feedback)
               var val = feedback.selection.value;
               // Reset the input,
               searchInput.value = val;
@@ -144,7 +145,7 @@
               console.log('init of autocomplete')
             }
           })
-          // console.log('barChartAutoComplete, ', barChartAutoComplete);
+          console.log('barChartAutoComplete, ', barChartAutoComplete);
       	}
       });
       // Init chart on page load.
