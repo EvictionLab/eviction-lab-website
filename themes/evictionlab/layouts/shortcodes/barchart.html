@@ -34,7 +34,7 @@
   {{ if eq $search "true" }}
   <span>
   {{ $titlePrefix }} in
-  <input class="bar-chart__search search" type="text" id="autoComplete" value="the United States" />
+  <input class="bar-chart__search search" type="text" id="chart_autocomplete" value="the United States" />
   {{ partial "searchbutton" }}{{ $titleSuffix }}
   </span>
   {{ else }}
@@ -55,25 +55,82 @@
   </div>
   {{ end }}
   <script>
-    window.addEventListener('load', function() {
-      var id = {{ .Get "id" }}
-      console.log('id = ', id)
-      var csv = {{ .Get "data" }}
-      var x = {{ .Get "x" }}
-      var y = {{ .Get "y" }}
-      var searchId = {{ .Get "searchId" }} // ID to use to find search candidates.
-      var searchLabel = {{ .Get "searchLabel" }} // Label to show when autosuggesting.
-      var columns = {{ .Get "columns" }} // Columsn to fetch from data csv.
-      var groupBy = {{ .Get "groupBy" }}
-      var yTicks = {{ .Get "yTicks" }}
-      var yFormat = {{ .Get "yFormat" }}
-      var xTicks = {{ .Get "xTicks" }}
-      var xBars = {{ .Get "xBars" }}
-      var xFormat = {{ .Get "xFormat" }}
-      var highlight = {{ .Get "highlight" }}
-      var active = {{ .Get "active" }}
-      var rootEl = document.getElementById(id);
+    var id = {{ .Get "id" }}
+    var csv = {{ .Get "data" }}
+    var x = {{ .Get "x" }}
+    var y = {{ .Get "y" }}
+    var searchId = {{ .Get "searchId" }} // ID to use to find search candidates.
+    var searchLabel = {{ .Get "searchLabel" }} // Label to show when autosuggesting.
+    var columns = {{ .Get "columns" }} // Columsn to fetch from data csv.
+    var groupBy = {{ .Get "groupBy" }}
+    var yTicks = {{ .Get "yTicks" }}
+    var yFormat = {{ .Get "yFormat" }}
+    var xTicks = {{ .Get "xTicks" }}
+    var xBars = {{ .Get "xBars" }}
+    var xFormat = {{ .Get "xFormat" }}
+    var highlight = {{ .Get "highlight" }}
+    var active = {{ .Get "active" }}
+    var rootEl = document.getElementById(id);
+    var initChart = function() {
+      // Init chart with default data.
       Elab.BarChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xBars: xBars, xFormat: xFormat, highlight: highlight, active: active, columns: columns, searchId: searchId, searchLabel: searchLabel })
+    }
+    window.addEventListener('load', function() {
+      // Store selector for search input.
+      var searchInput = document.getElementById('chart_autocomplete');
+      searchInput.addEventListener('click', function() {
+        searchInput.value = '';
+      })
+      // Parse and store csv data for autosuggest.
+      var data = [];
+      Papa.parse(csv, {
+        header: true,
+      	download: true,
+      	step: function(row) {
+          if (row.data.cofips === "") { return; }
+          data[`${row.data.cofips}`] = row.data.state ? `${row.data.county}, ${row.data.state}` : row.data.county;
+      	},
+      	complete: function() {
+          // Init autocomplete.
+          var barChartAutoComplete = new autoComplete({
+            data: {
+              src: Object.values(data),
+              cache: false,
+            },
+            selector: '#chart_autocomplete',
+            threshold: 2,
+            debounce: 100,
+            sort: (a, b) => {
+          		if (a.match < b.match) return -1;
+          		if (a.match > b.match) return 1;
+          		return 0;
+          	},
+            // feedback: function(data) {
+            //   console.log('feedback, ', data)
+            // },
+            onSelection: function(feedback) {
+              // console.log('onSelection, ', feedback)
+              var val = feedback.selection.value;
+              // Reset the input,
+              searchInput.value = val;
+              // reset the active item,
+              var ind = Object.values(data).indexOf(val);
+              active = String(Number(Object.keys(data)[ind]));
+              // reset the chart,
+              var svg = document.querySelector('svg.chart__root');
+              svg.innerHTML = '';
+              // re-init the chart.
+              initChart()
+            }
+          })
+      	}
+      });
+      // Init chart on page load.
+      initChart()
     });
+
+
+
+
   </script>
 </div>
