@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="684px" height="793px" viewBox="0 0 684 793" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>figure_2A_20201204</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 684 0 684 791.94 0 791.94"></polygon>
+        <polygon id="path-3" points="0.47 0.68 543.52 0.68 543.52 691.26 0.47 691.26"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-115.000000, -61.000000)">
+            <g id="figure_2A_20201204" transform="translate(115.000000, 61.500000)">
+                <g id="Group-4">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <polygon id="Fill-1" fill="#F4F7F9" mask="url(#mask-2)" points="0 792 684 792 684 0 0 0"></polygon>
+                    <polygon id="Stroke-3" mask="url(#mask-2)" points="0 792 684 792 684 0 0 0"></polygon>
+                </g>
+                <g id="Group-8" transform="translate(135.000000, 44.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-6"></g>
+                    <polygon id="Fill-5" fill="#F4F7F9" mask="url(#mask-4)" points="0.47 691.26 543.52 691.26 543.52 0.67 0.47 0.67"></polygon>
+                    <polygon id="Stroke-7" mask="url(#mask-4)" points="0.47 691.26 543.52 691.26 543.52 0.67 0.47 0.67"></polygon>
+                </g>
+                <polygon id="Fill-9" fill="#434878" points="160.15 725.78 439.15 725.78 439.15 699.22 160.15 699.22"></polygon>
+                <polygon id="Fill-10" fill="#E24000" points="439.16 725.78 653.84 725.78 653.84 699.22 439.16 699.22"></polygon>
+                <polygon id="Fill-11" fill="#434878" points="160.15 687.83 426.93 687.83 426.93 661.27 160.15 661.27"></polygon>
+                <polygon id="Fill-12" fill="#E24000" points="426.94 687.83 653.84 687.83 653.84 661.27 426.94 661.27"></polygon>
+                <polygon id="Fill-13" fill="#434878" points="160.15 649.89 416.27 649.89 416.27 623.33 160.15 623.33"></polygon>
+                <polygon id="Fill-14" fill="#E24000" points="416.27 649.89 653.84 649.89 653.84 623.33 416.27 623.33"></polygon>
+                <polygon id="Fill-15" fill="#434878" points="160.15 611.94 416.19 611.94 416.19 585.38 160.15 585.38"></polygon>
+                <polygon id="Fill-16" fill="#E24000" points="416.19 611.94 653.83 611.94 653.83 585.38 416.19 585.38"></polygon>
+                <polygon id="Fill-17" fill="#434878" points="160.15 574 415.95 574 415.95 547.44 160.15 547.44"></polygon>
+                <polygon id="Fill-18" fill="#E24000" points="415.95 574 653.84 574 653.84 547.44 415.95 547.44"></polygon>
+                <polygon id="Fill-19" fill="#434878" points="160.15 536.06 405.33 536.06 405.33 509.5 160.15 509.5"></polygon>
+                <polygon id="Fill-20" fill="#E24000" points="405.33 536.06 653.84 536.06 653.84 509.5 405.33 509.5"></polygon>
+                <polygon id="Fill-21" fill="#434878" points="160.15 498.11 392.72 498.11 392.72 471.55 160.15 471.55"></polygon>
+                <polygon id="Fill-22" fill="#E24000" points="392.72 498.11 653.83 498.11 653.83 471.55 392.72 471.55"></polygon>
+                <polygon id="Fill-23" fill="#434878" points="160.15 460.17 373.35 460.17 373.35 433.61 160.15 433.61"></polygon>
+                <polygon id="Fill-24" fill="#E24000" points="373.35 460.17 653.83 460.17 653.83 433.61 373.35 433.61"></polygon>
+                <polygon id="Fill-25" fill="#434878" points="160.15 422.22 366.18 422.22 366.18 395.66 160.15 395.66"></polygon>
+                <polygon id="Fill-26" fill="#E24000" points="366.18 422.22 653.83 422.22 653.83 395.66 366.18 395.66"></polygon>
+                <polygon id="Fill-27" fill="#434878" points="160.15 384.28 349.69 384.28 349.69 357.72 160.15 357.72"></polygon>
+                <polygon id="Fill-28" fill="#E24000" points="349.69 384.28 653.83 384.28 653.83 357.72 349.69 357.72"></polygon>
+                <polygon id="Fill-29" fill="#434878" points="160.15 346.33 335.21 346.33 335.21 319.77 160.15 319.77"></polygon>
+                <polygon id="Fill-30" fill="#E24000" points="335.22 346.33 653.84 346.33 653.84 319.77 335.22 319.77"></polygon>
+                <polygon id="Fill-31" fill="#434878" points="160.15 308.39 329.03 308.39 329.03 281.83 160.15 281.83"></polygon>
+                <polygon id="Fill-32" fill="#E24000" points="329.03 308.39 653.84 308.39 653.84 281.83 329.03 281.83"></polygon>
+                <polygon id="Fill-33" fill="#434878" points="160.15 270.45 302.98 270.45 302.98 243.89 160.15 243.89"></polygon>
+                <polygon id="Fill-34" fill="#E24000" points="302.98 270.45 653.84 270.45 653.84 243.89 302.98 243.89"></polygon>
+                <polygon id="Fill-35" fill="#434878" points="160.15 232.5 263.45 232.5 263.45 205.94 160.15 205.94"></polygon>
+                <polygon id="Fill-36" fill="#E24000" points="263.45 232.5 653.83 232.5 653.83 205.94 263.45 205.94"></polygon>
+                <polygon id="Fill-37" fill="#434878" points="160.15 194.56 256.56 194.56 256.56 168 160.15 168"></polygon>
+                <polygon id="Fill-38" fill="#E24000" points="256.56 194.56 653.84 194.56 653.84 168 256.56 168"></polygon>
+                <polygon id="Fill-39" fill="#434878" points="160.15 156.61 240.74 156.61 240.74 130.05 160.15 130.05"></polygon>
+                <polygon id="Fill-40" fill="#E24000" points="240.74 156.61 653.84 156.61 653.84 130.05 240.74 130.05"></polygon>
+                <polygon id="Fill-41" fill="#434878" points="160.15 118.67 209.52 118.67 209.52 92.11 160.15 92.11"></polygon>
+                <polygon id="Fill-42" fill="#E24000" points="209.52 118.67 653.83 118.67 653.83 92.11 209.52 92.11"></polygon>
+                <polygon id="Fill-43" fill="#434878" points="160.15 80.72 191.3 80.72 191.3 54.16 160.15 54.16"></polygon>
+                <polygon id="Fill-44" fill="#E24000" points="191.31 80.72 653.84 80.72 653.84 54.16 191.31 54.16"></polygon>
+                <g id="Group-2" transform="translate(587.665100, 61.481600)" fill="#FFFFFF" font-family="Gotham-Bold, Gotham" font-size="14" font-weight="bold">
+                    <text id="15,739">
+                        <tspan x="8.2286" y="655.1784">15,739</tspan>
+                    </text>
+                    <text id="6,150">
+                        <tspan x="15.4572" y="617.2286">6,150</tspan>
+                    </text>
+                    <text id="7,946">
+                        <tspan x="13.4572" y="579.2886">7,946</tspan>
+                    </text>
+                    <text id="6,084">
+                        <tspan x="11.4572" y="541.3388">6,084</tspan>
+                    </text>
+                    <text id="536">
+                        <tspan x="26.798" y="503.3988">536</tspan>
+                    </text>
+                    <text id="5,108">
+                        <tspan x="15.4572" y="465.4588">5,108</tspan>
+                    </text>
+                    <text id="10,324">
+                        <tspan x="7.2286" y="427.509">10,324</tspan>
+                    </text>
+                    <text id="5,366">
+                        <tspan x="13.4572" y="389.569">5,366</tspan>
+                    </text>
+                    <text id="23,629">
+                        <tspan x="4.2286" y="351.6192">23,629</tspan>
+                    </text>
+                    <text id="6,402">
+                        <tspan x="11.4572" y="313.6792">6,402</tspan>
+                    </text>
+                    <text id="9,102">
+                        <tspan x="15.4572" y="275.7294">9,102</tspan>
+                    </text>
+                    <text id="6,726">
+                        <tspan x="13.4572" y="237.7894">6,726</tspan>
+                    </text>
+                    <text id="5,908">
+                        <tspan x="11.4572" y="199.7294">5,908</tspan>
+                    </text>
+                    <text id="7,502">
+                        <tspan x="13.4572" y="162.7796">7,502</tspan>
+                    </text>
+                    <text id="125,887">
+                        <tspan x="0" y="124.8396">125,887</tspan>
+                    </text>
+                    <text id="12,708">
+                        <tspan x="7.2286" y="86.8898">12,708</tspan>
+                    </text>
+                    <text id="6,399">
+                        <tspan x="12.4572" y="48.9498">6,399</tspan>
+                    </text>
+                    <text id="4,632">
+                        <tspan x="12.4572" y="11">4,632</tspan>
+                    </text>
+                </g>
+                <g id="Group" transform="translate(24.801300, 60.483000)" fill="#4D4D4D" font-family="Gotham A, Gotham B" font-weight="500" font-size="14" font-weight="400">
+                    <text id="Phoenix,-AZ">
+                        <tspan x="29.4768" y="656.0584">Phoenix, AZ</tspan>
+                    </text>
+                    <text id="Columbus,-OH">
+                        <tspan x="13.9312" y="618.1086">Columbus, OH</tspan>
+                    </text>
+                    <text id="Fort-Worth,-TX">
+                        <tspan x="8.9522" y="580.1686">Fort Worth, TX</tspan>
+                    </text>
+                    <text id="Tampa,-FL">
+                        <tspan x="43.049" y="542.2188">Tampa, FL</tspan>
+                    </text>
+                    <text id="Gainesville,-FL">
+                        <tspan x="13.1458" y="504.2788">Gainesville, FL</tspan>
+                    </text>
+                    <text id="Greenville,-SC">
+                        <tspan x="15.4838" y="466.3388">Greenville, SC</tspan>
+                    </text>
+                    <text id="Memphis,-TN">
+                        <tspan x="22.5048" y="428.389">Memphis, TN</tspan>
+                    </text>
+                    <text id="Cincinnati,-OH">
+                        <tspan x="13.4838" y="390.449">Cincinnati, OH</tspan>
+                    </text>
+                    <text id="Houston,-TX">
+                        <tspan x="27.9256" y="352.4992">Houston, TX</tspan>
+                    </text>
+                    <text id="Jacksonville,-FL">
+                        <tspan x="2.1458" y="314.5592">Jacksonville, FL</tspan>
+                    </text>
+                    <text id="Richmond,-VA">
+                        <tspan x="16.2566" y="276.6094">Richmond, VA</tspan>
+                    </text>
+                    <text id="Charleston,-SC">
+                        <tspan x="10.8078" y="238.6694">Charleston, SC</tspan>
+                    </text>
+                    <text id="Cleveland,-OH">
+                        <tspan x="14.697" y="200.7294">Cleveland, OH</tspan>
+                    </text>
+                    <text id="Pittsburgh,-PA">
+                        <tspan x="13.2482" y="162.7796">Pittsburgh, PA</tspan>
+                    </text>
+                    <text id="New-York,-NY">
+                        <tspan x="17.8274" y="124.8396">New York, NY</tspan>
+                    </text>
+                    <text id="Philadelphia,-PA">
+                        <tspan x="0" y="86.8898">Philadelphia, PA</tspan>
+                    </text>
+                    <text id="Austin,-TX">
+                        <tspan x="41.1584" y="48.9498">Austin, TX</tspan>
+                    </text>
+                    <text id="Boston,-MA">
+                        <tspan x="33.3716" y="11">Boston, MA</tspan>
+                    </text>
+                </g>
+                <text id="FILINGS--SINCE--MARCH--15" font-family="GT-Eesti-Display-Bold" font-size="16" font-weight="bold" fill="#333333">
+                    <tspan x="299.8571" y="785.52">FILINGS  SINCE  MARCH  15</tspan>
+                </text>
+                <polygon id="Fill-45" fill="#F4F7F9" points="249.28 33.72 564.72 33.72 564.72 5.48 249.28 5.48"></polygon>
+                <polygon id="Fill-46" fill="#EEF2F5" points="260.24 28.24 277.52 28.24 277.52 10.96 260.24 10.96"></polygon>
+                <polygon id="Stroke-47" stroke="#EEF2F5" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" points="260.24 28.24 277.52 28.24 277.52 10.96 260.24 10.96"></polygon>
+                <polygon id="Fill-48" fill="#434878" points="260.94 27.53 276.8 27.53 276.8 11.67 260.94 11.67"></polygon>
+                <polygon id="Fill-49" fill="#EEF2F5" points="416.47 28.24 433.75 28.24 433.75 10.96 416.47 10.96"></polygon>
+                <polygon id="Stroke-50" stroke="#EEF2F5" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" points="416.47 28.24 433.75 28.24 433.75 10.96 416.47 10.96"></polygon>
+                <polygon id="Fill-51" fill="#E24000" points="417.18 27.53 433.04 27.53 433.04 11.67 417.18 11.67"></polygon>
+                <text id="Observed-Filings" font-family="GTEestiDisplay-Medium, GT Eesti Display" font-size="16" font-weight="400" letter-spacing="0.5" fill="#333333">
+                    <tspan x="282.99" y="25.64">Observed Filings      </tspan>
+                </text>
+                <text id="Missing-Filings" font-family="GTEestiDisplay-Medium, GT Eesti Display" font-size="16" font-weight="400" letter-spacing="0.5" fill="#333333">
+                    <tspan x="440" y="25.64"> Missing Filings</tspan>
+                </text>
+                <g id="Group" transform="translate(140.640000, 743.310000)" fill="#4D4D4D" font-family="Gotham A, Gotham B" font-weight="500" font-size="14" font-weight="400">
+                    <text id="0%">
+                        <tspan x="0" y="11">0%</tspan>
+                    </text>
+                    <text id="25%">
+                        <tspan x="115.67" y="11">25%</tspan>
+                    </text>
+                    <text id="50%">
+                        <tspan x="236.94" y="11">50%</tspan>
+                    </text>
+                    <text id="75%">
+                        <tspan x="361.37" y="11">75%</tspan>
+                    </text>
+                    <text id="100%">
+                        <tspan x="475.61" y="11">100%</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
