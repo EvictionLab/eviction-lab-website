@@ -14,6 +14,27 @@ intro: "The COVID-19 pandemic has deepened America’s housing crisis. The
   Tracking System to monitor weekly updates on the number of eviction cases
   being filed across the United States. Scroll down to view full reports on the
   cities in which we are operating, and to learn more about the project. "
+tooltip: Eviction moratorium in effect until {{date}}
+tooltipNoDate: Eviction moratorium active
+buttonLabel: View Report
+legend:
+  starLabel: Additional Protections
+  redAreaLabel: No Moratorium
+  greyAreaLabel: Active Moratorium
+cities:
+  data: /uploads/table.csv
+  nameHeading: City
+  filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
+  filingsTotalHeading: <span>Filings</span> Since <br/>03/15
+  trendHeading: Trend <br />Since 03/15
+states:
+  data: /uploads/state_table.csv
+  nameHeading: State
+  filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
+  filingsTotalHeading: <span>Filings</span> Since <br/>03/15
+  trendHeading: Trend <br />Since 03/15
+footnotes:
+  - Filings for the week of {{start}} to {{end}}. Filings in the last week may be undercounted as a result of processing delays. These counts will be revised in the following week.
 crisis: >-
   ## A Looming Eviction Crisis?
 
@@ -63,4 +84,3 @@ aliases:
   - /weekly-reports
   - /eviction-tracking/tracker
 ---
-{{% report_table data="/uploads/table.csv" tooltip="Eviction moratorium in effect until {{date}}" tooltipNoDate="Eviction moratorium active" buttonLabel="View Report" %}}

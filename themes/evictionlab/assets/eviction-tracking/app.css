@@ -391,7 +391,7 @@
 
 @media (min-width: 768px) {
   .table {
-    table-layout: auto;
+    table-layout: fixed;
   }
 }
 
@@ -414,6 +414,8 @@
 .table .table__body .table__cell--name {
   padding-left: 24px;
   width: 35.8%;
+  overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /** Make room for sort icon */
@@ -421,6 +423,38 @@
 .table .table__body .table__cell--number {
   padding-right: 20px;
   width: 19.6%;
+}
+
+@media(min-width: 768px) {
+
+  .table .table__head .table__cell--name,
+  .table .table__body .table__cell--name {
+    width: 50%;
+  }
+
+  .table .table__body .table__cell--name img {
+    position: absolute;
+    left:-16px;
+    margin-top: 6px;
+  }
+
+  /** Make room for sort icon */
+  .table .table__head .table__cell--number,
+  .table .table__body .table__cell--number {
+    width: 14rem;
+  }
+
+  .table .table__head  .table__cell--visual, 
+  .table .table__body .table__cell--visual {
+    width: 9rem;
+    overflow:visible;
+    z-index:11;
+  }
+
+  .table .table__head .table__cell--button, 
+  .table .table__body .table__cell--button {
+    width: 14rem;
+  }
 }
 
 .table .table__head th {

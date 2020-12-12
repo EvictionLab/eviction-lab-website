@@ -1,0 +1,5 @@
+<ol id="tableFootnotes" class="footnote">
+  {{range $index, $element := .}}
+    <li><sup>{{ add $index 1 }}</sup> {{ $element }} </li>
+  {{ end }}
+</ol>
