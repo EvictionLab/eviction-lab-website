@@ -2,7 +2,7 @@
 childof: blog
 contenttype: updates
 contentcat: blog
-featured: 
+featured: true
 title: '"Evicted" Takes Form in New Museum Exhibit'
 date: 2018-04-18T23:15:05.556Z
 postauthorname: The Eviction Lab

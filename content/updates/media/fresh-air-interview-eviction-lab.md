@@ -2,7 +2,7 @@
 childof: media
 contenttype: updates
 contentcat: media
-featured: false
+featured: true
 title: "Fresh Air: First-Ever Evictions Database Shows 'We're In the Middle Of A Housing Crisis'"
 date: 2018-04-12T15:45:09.300Z
 postauthorname: The Eviction Lab

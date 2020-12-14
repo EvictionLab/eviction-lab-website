@@ -390,8 +390,14 @@ collections:
           label: "Featured on Front Page",
           name: "featured",
           widget: "boolean",
-          default: false,
+          default: true,
         }
+      - {
+          label: "Featured In Updates index pages",
+          name: "in_index",
+          widget: "boolean",
+          default: true,
+        }  
       - { label: "Blog Post Title", name: "title", widget: "string" }
       - { label: "Created Date", name: "date", widget: "datetime" }
       - { label: "Author Name", name: "postauthorname", widget: "string" }

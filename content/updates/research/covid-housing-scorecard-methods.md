@@ -2,7 +2,7 @@
 childof: research
 contenttype: updates
 contentcat: research
-featured: "home"
+featured: true
 researchtype: elresearch
 title: 'COVID-19 Housing Policy Scorecard Methodology'
 date: 2020-04-20T16:46:40.089Z

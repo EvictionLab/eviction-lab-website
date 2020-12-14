@@ -2,7 +2,7 @@
 childof: blog
 contenttype: updates
 contentcat: blog
-featured: false
+featured: true
 title: "The Eviction Lab Teacher's Guide"
 date: 2018-04-07T13:13:05.556Z
 postauthorname: Katie Krywokulski

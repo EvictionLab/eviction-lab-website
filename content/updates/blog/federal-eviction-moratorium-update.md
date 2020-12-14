@@ -2,7 +2,7 @@
 childof: blog
 contenttype: updates
 contentcat: blog
-featured: "home"
+featured: true
 researchtype: elresearch
 title: "Update on the Federal Eviction Moratorium and the Eviction Lab's COVID-19 Projects"
 date: 2020-09-04T16:46:40.089Z
