@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="540" height="" viewBox="0 0 648 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>agg_fig (1)</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 648 0 648 287.94 0 287.94"></polygon>
+        <polygon id="path-3" points="0.2 0.2 603.6 0.2 603.6 194.22 0.2 194.22"></polygon>
+        <polygon id="path-5" points="0.68 0 347.12 0 347.12 287.94 0.68 287.94"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-62.000000, -48.000000)">
+            <g id="agg_fig-(1)" transform="translate(62.000000, 48.000000)">
+                <g id="Group-4">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <polygon id="Fill-1" fill="#F4F7F9" mask="url(#mask-2)" points="0 288 648 288 648 0 0 0"></polygon>
+                </g>
+                <g id="Group-8" transform="translate(30.000000, 39.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-6"></g>
+                    <polygon id="Fill-5" fill="#F4F7F9" mask="url(#mask-4)" points="0.2 194.22 603.6 194.22 603.6 0.19 0.2 0.19"></polygon>
+                </g>
+                <polygon id="Fill-9" fill="#434878" points="57.62 192.8 239.06 192.8 239.06 79.62 57.62 79.62"></polygon>
+                <polygon id="Fill-10" fill="#E24000" points="239.07 192.8 606.18 192.8 606.18 79.62 239.07 79.62"></polygon>
+                <text id="172,000" font-family="Gotham A, Gotham B" font-size="23" font-weight="600" fill="#FFFFFF">
+                    <tspan x="100.8186" y="146.33">172,000</tspan>
+                </text>
+                <text id="0%25%50%75%100%" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400" fill="#4D4D4D">
+                    <tspan x="34.495" y="251.23">0</tspan>
+                    <tspan x="46.079" y="251.23" letter-spacing="105.1168">%</tspan>
+                    <tspan x="164.7798" y="251.23">25</tspan>
+                    <tspan x="184.5398" y="251.23" letter-spacing="105.1168">%</tspan>
+                    <tspan x="303.2406" y="251.23">50</tspan>
+                    <tspan x="324.7766" y="251.23" letter-spacing="105.1168">%</tspan>
+                    <tspan x="443.4774" y="251.23">75</tspan>
+                    <tspan x="462.7734" y="251.23" letter-spacing="96.208">%</tspan>
+                    <tspan x="572.5654" y="251.23">100%</tspan>
+                </text>
+                <g id="Group-13" transform="translate(158.000000, 0.000000)">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <g id="Clip-11"></g>
+                    <text id="FILINGSSINCEMARCH15" mask="url(#mask-6)" font-family="GT-EestiDisplay-Bold" font-size="18" font-weight="600" fill="#333333">
+                        <tspan x="53.3756" y="288">FILING</tspan>
+                        <tspan x="107.9156" y="288" letter-spacing="10.0026">S</tspan>
+                        <tspan x="127.7102" y="288">SINC</tspan>
+                        <tspan x="167.8862" y="288" letter-spacing="10.0026">E</tspan>
+                        <tspan x="187.4288" y="288">MARC</tspan>
+                        <tspan x="239.1248" y="288" letter-spacing="10.0026">H</tspan>
+                        <tspan x="262.1414" y="288">15</tspan>
+                    </text>
+                    <polygon id="Fill-12" fill="#F4F7F9" mask="url(#mask-6)" points="0.68 28.24 347.12 28.24 347.12 0 0.68 0"></polygon>
+                </g>
+                <polygon id="Fill-14" fill="#EEF2F5" points="169.64 22.76 186.92 22.76 186.92 5.48 169.64 5.48"></polygon>
+                <polygon id="Stroke-15" stroke="#EEF2F5" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" points="169.64 22.76 186.92 22.76 186.92 5.48 169.64 5.48"></polygon>
+                <polygon id="Fill-16" fill="#434878" points="170.35 22.05 186.21 22.05 186.21 6.19 170.35 6.19"></polygon>
+                <polygon id="Fill-17" fill="#EEF2F5" points="341.88 22.76 359.16 22.76 359.16 5.48 341.88 5.48"></polygon>
+                <polygon id="Stroke-18" stroke="#EEF2F5" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" points="341.88 22.76 359.16 22.76 359.16 5.48 341.88 5.48"></polygon>
+                <polygon id="Fill-19" fill="#E24000" points="342.59 23.05 358.45 23.05 358.45 7.19 342.59 7.19"></polygon>
+                <text id="Observed-Filings" font-family="GT-EestiDisplay-Bold, GT Eesti Display" font-size="18" font-weight="600" letter-spacing="0.1" fill="#333333">
+                    <tspan x="192.4" y="21.04">Observed Filings</tspan>
+                </text>
+                <text id="348,000" font-family="Gotham A, Gotham B" font-size="23" font-weight="600" fill="#FFFFFF">
+                    <tspan x="470" y="148">348,000</tspan>
+                </text>
+                <text id="Missing-Filings" font-family="GT-EestiDisplay-Bold, GT Eesti Display" font-size="18" font-weight="600" letter-spacing="0.1" fill="#333333">
+                    <tspan x="367" y="22">Missing Filings</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

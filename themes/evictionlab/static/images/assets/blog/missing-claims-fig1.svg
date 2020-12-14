@@ -107,58 +107,42 @@
                     <line x1="0.68" y1="256.51" x2="806.52" y2="256.51" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-8)"></line>
                 </g>
                 <g id="Clipped" transform="translate(82.000000, 5.000000)">
-                    <mask id="mask-10" fill="white">
-                        <use xlink:href="#path-9"></use>
-                    </mask>
+                
                     <g id="Rectangle"></g>
                     <line x1="0.68" y1="146.49" x2="806.52" y2="146.49" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-10)"></line>
                 </g>
                 <g id="Clipped" transform="translate(82.000000, 5.000000)">
-                    <mask id="mask-12" fill="white">
-                        <use xlink:href="#path-11"></use>
-                    </mask>
+                   
                     <g id="Rectangle"></g>
                     <line x1="0.68" y1="36.48" x2="806.52" y2="36.48" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-12)"></line>
                 </g>
                 <g id="Clipped" transform="translate(82.000000, 5.000000)">
-                    <mask id="mask-14" fill="white">
-                        <use xlink:href="#path-13"></use>
-                    </mask>
+                  
                     <g id="Rectangle"></g>
                     <line x1="0.68" y1="531.56" x2="806.52" y2="531.56" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-14)"></line>
                 </g>
                 <g id="Clipped" transform="translate(82.000000, 5.000000)">
-                    <mask id="mask-16" fill="white">
-                        <use xlink:href="#path-15"></use>
-                    </mask>
+                  
                     <g id="Rectangle"></g>
                     <line x1="0.68" y1="421.54" x2="806.52" y2="421.54" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-16)"></line>
                 </g>
                 <g id="Clipped" transform="translate(82.000000, 5.000000)">
-                    <mask id="mask-18" fill="white">
-                        <use xlink:href="#path-17"></use>
-                    </mask>
+                  
                     <g id="Rectangle"></g>
                     <line x1="0.68" y1="311.52" x2="806.52" y2="311.52" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-18)"></line>
                 </g>
                 <g id="Clipped" transform="translate(82.000000, 5.000000)">
-                    <mask id="mask-20" fill="white">
-                        <use xlink:href="#path-19"></use>
-                    </mask>
+                 
                     <g id="Rectangle"></g>
                     <line x1="0.68" y1="201.5" x2="806.52" y2="201.5" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-20)"></line>
                 </g>
                 <g id="Clipped" transform="translate(82.000000, 5.000000)">
-                    <mask id="mask-22" fill="white">
-                        <use xlink:href="#path-21"></use>
-                    </mask>
+                  
                     <g id="Rectangle"></g>
                     <line x1="0.68" y1="91.49" x2="806.52" y2="91.49" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-22)"></line>
                 </g>
                 <g id="Clipped" transform="translate(82.000000, 5.000000)">
-                    <mask id="mask-24" fill="white">
-                        <use xlink:href="#path-23"></use>
-                    </mask>
+                  
                     <g id="Rectangle"></g>
                     <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-24)" x="37.31" y="154.26" width="12.26" height="377.3"></rect>
                 </g>

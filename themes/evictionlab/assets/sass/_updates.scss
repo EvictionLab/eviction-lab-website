@@ -149,6 +149,8 @@ img.upscale124 {
 div.upscale124,
 picture.upscale124 {
   width: 100%;
+  display: flex;
+  justify-content: center;
   @include media-breakpoint-up(md) {
     width: 124%;
     margin-left: -12%;

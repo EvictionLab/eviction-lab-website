@@ -35,6 +35,8 @@ aliases:
 
 {{< pullquote "Landlords are filing evictions in the same buildings and neighborhoods as prior to the pandemic—but for much more money." >}}
 
+{{< inlinesvg "agg_fig.svg" "Figure 2. Monthly median amount claimed in Houston and New York City" >}}
+
 
 
 
