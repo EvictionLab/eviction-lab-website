@@ -166,7 +166,7 @@ Elab.Utils = (function (Elab) {
     formatLabel: formatLabel,
     formatDate: formatDate,
     callOnEnter: callOnEnter,
-    debounce: debounce,
+    debounce: debounce
   };
 })(Elab);
 
@@ -1391,17 +1391,107 @@ Elab.Map = (function (Elab) {
   var accessToken =
     "pk.eyJ1IjoiZXZpY3Rpb24tbGFiIiwiYSI6ImNqYzJoMzhkbjBncGkyeW4yNGlkbjRkcTQifQ.IQNWME_jYqxTH7wmFrFX-g";
 
+  var formatPercent = d3.format(",.0%");
+  var formatSmallPercent = d3.format(",.2%")
+  var formatCount = d3.format(",d");
+  var parseDate = d3.timeParse("%d/%m/%Y")
+
+  
+  function isRate(key) { return key.indexOf("rate") > -1 }
+  function isAvgDiff(key) { return key.indexOf("diff") > -1 }
+  function isDate(key) { return key.indexOf("date") > -1 }
+  function isCount(key) { return key.indexOf("count") > -1 || key.indexOf("filings") > -1 }
+
+  function getFormatter(prop) {
+    if (isRate(prop)) return formatSmallPercent
+    if (isAvgDiff(prop)) return formatPercent
+    return formatCount
+  }
+
+  var ToggleTemplate = Handlebars.compile(
+    "<div class='button-group'>" +
+      "{{#each metrics}}" +
+      "<button class='toggle toggle--{{@key}}' data-key='{{@key}}'>{{this}}</button>" +
+      "{{/each}}" +
+      "</div>"
+  );
+
+  var LegendLabelTemplate = Handlebars.compile(
+    "{{#each labels}}" +
+    "<span class='legend__gradient-label'>{{this}}</span>" +
+    "{{/each}}"
+  )
+
+  var TooltipTemplate = Handlebars.compile(
+    "<h1>{{name}}</h1>" +
+    '<div class="map__tooltip-row">' +
+    "{{#if value}}" +
+    "{{{value}}}" +
+    "{{else}}" +
+    "Data not available." +
+    "{{/if}}" +
+    "<br /><em>Racial majority: " +
+    "{{#if majority}}" +
+    "{{majority}}" +
+    "{{else}}" +
+    "unknown" +
+    "{{/if}}" +
+    "</em>" +
+    "</div>"
+  )
+
+  function getTooltipValue(feature, prop) {
+    if (!feature.properties[prop] && feature.properties[prop] !== 0) return null
+    var formatter = getFormatter(prop)
+    var value = formatter(feature.properties[prop])
+    if (isAvgDiff(prop)) {
+      var distance = feature.properties[prop] - 1;
+      value = formatter(Math.abs(distance))
+      var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
+      return dir === "mid"
+        ? "Filings about average."
+        : "Filings <span class='value--" + dir + "'>" + dir + " " + value + "</span> from average."
+    }
+    if (isRate(prop))
+      return "filings against " + value + " of renters"
+    if (isCount(prop))
+      return value + " eviction filings"
+    return value
+  }
+
+
+  /**
+   * Parses map data values
+   * @param {*} data 
+   */
+  function parseValues(data) {
+    return data.map(function(d) {
+      return Object.keys(d).reduce(function (result, key) {
+        // float cols
+        if (isRate(key) || isAvgDiff(key))
+          result[key] = parseFloat(d[key])
+        // int cols
+        else if (isCount(key))
+          result[key] = parseInt(d[key])
+        // no parsing by default
+        else if (isDate(key))
+          result[key] = parseDate(d[key])
+        else
+          result[key] = d[key]
+        return result
+      }, {})
+    })
+  }
+
   /**
    * Adds data from the data rows to the GeoJSON properties
    * @param {*} geojson
    * @param {*} data
    */
-  function addDataToGeojson(geojson, data) {
+  function addDataToGeojson(geojson, data, config) {
+    // create an object wth keys for each GEOID that has corresponding data points
     var dataDict = data.reduce(function (dict, item) {
-      dict[item.id] = {
-        diff: parseFloat(item["month_diff"]),
-        majority: item["racial_majority"],
-      };
+      dict[item.id] = item
       return dict;
     }, {});
     var newFeatures = geojson.features
@@ -1420,49 +1510,83 @@ Elab.Map = (function (Elab) {
   }
 
   /**
-   * Adds a choropleth layer to the map
-   * @param {*} map
-   * @param {*} data
-   * @param {*} prop
-   * @param {*} range
+   * Pulls color values from CSS variables
+   * @param {*} prefix variable prefix (e.g. "--choro")
+   * @param {*} start color start number (e.g. 3 = "--choro3")
+   * @param {*} end color end number
    */
-  function addChoroplethLayer(map, data, prop, range) {
+  function getColorsFromCss(prefix, start, end) {
+    start = start || 1
+    end = end || 5
+    var result = []
+    for (var i = start; i <= end; i++) {
+      result.push(Elab.Utils.getCssVar(prefix+i))
+    }
+    return result
+  }
+
+  /**
+   * Gets an array of colors to use as ranges in a map style
+   * @param {*} prop 
+   * @param {*} range 
+   * @param {*} prefix 
+   */
+  function getLayerColors(prop, range, prefix) {
     var mid = (range[1] - range[0]) / 2;
+    var colors = getColorsFromCss(prefix);
+    // diverging
+    if (isAvgDiff(prop)) {
+      return [
+        range[0],
+        colors[0],
+        (mid - range[0]) / 2,
+        colors[1],
+        mid,
+        colors[2],
+        mid + (range[1] - mid) / 2,
+        colors[3],
+        range[1],
+        colors[4],
+      ]
+    }
+    // continuous
+    return [
+      range[0],
+      colors[2],
+      mid,
+      colors[3],
+      range[1],
+      colors[4],
+    ]
+  }
+
+  /**
+   * Gets a CSS gradient for the given prop
+   */
+  function getCssGradient(prop) {
+    var colors = getColorsFromCss("--choro");
+    if (isAvgDiff(prop)) {
+      return "linear-gradient(to right," + colors[0] + ", " + colors[1] + " 25%, " + colors[2] + " 50%, " + colors[3] + " 75%, " + colors[4] + ")"
+    }
+    return "linear-gradient(to right," + colors[2] + ", " + colors[3] + " 50%," + colors[4] + ")"
+  }
+
+  function getGradientLabels(prop, range) {
+    if (isAvgDiff(prop)) {
+      return ["-100%", "average", "100%"]
+    }
+    if (isRate(prop)) {
+      return ["0%", formatPercent(range[1])]
+    }
+    return [ formatCount(range[0]), formatCount(range[1]) ]
+  }
+
+  function addChoroplethFillLayer(map, prop, range) {
     var fillColor = [
       "interpolate",
       ["linear"],
-      ["get", prop],
-      range[0],
-      Elab.Utils.getCssVar("--choro1"),
-      (mid - range[0]) / 2,
-      Elab.Utils.getCssVar("--choro2"),
-      mid,
-      Elab.Utils.getCssVar("--choro3"),
-      mid + (range[1] - mid) / 2,
-      Elab.Utils.getCssVar("--choro4"),
-      range[1],
-      Elab.Utils.getCssVar("--choro5"),
-    ];
-
-    var strokeColor = [
-      "interpolate",
-      ["linear"],
-      ["get", prop],
-      range[0],
-      Elab.Utils.getCssVar("--choroStroke1"),
-      (mid - range[0]) / 2,
-      Elab.Utils.getCssVar("--choroStroke2"),
-      mid,
-      Elab.Utils.getCssVar("--choroStroke3"),
-      mid + (range[1] - mid) / 2,
-      Elab.Utils.getCssVar("--choroStroke4"),
-      range[1],
-      Elab.Utils.getCssVar("--choroStroke5"),
-    ];
-    map.addSource("choropleth", {
-      type: "geojson",
-      data: data,
-    });
+      ["get", prop]
+    ].concat(getLayerColors(prop, range, "--choro"));
     map.addLayer(
       {
         id: "choropleth",
@@ -1481,6 +1605,14 @@ Elab.Map = (function (Elab) {
       },
       "building"
     );
+  }
+
+  function addChoroplethStrokeLayer(map, prop, range) {
+    var strokeColor = [
+      "interpolate",
+      ["linear"],
+      ["get", prop]
+    ].concat(getLayerColors(prop, range, "--choroStroke"));;
     map.addLayer(
       {
         id: "choropleth-stroke",
@@ -1509,70 +1641,34 @@ Elab.Map = (function (Elab) {
   }
 
   /**
-   * adds the date to the map legend
-   * @param {} date
-   */
-  function renderMapDate(date) {
-    var parsedDate = d3.timeParse("%d/%m/%Y")(date);
-    $("#mapDate").html("Since " + d3.timeFormat("%B %e, %Y")(parsedDate));
-  }
-
-  /**
    * Creates the MapboxGL map
    * @param {*} el
    * @param {*} geojsonUrl
    * @param {*} dataUrl
    */
-  function createMap(el, geojsonUrl, dataUrl) {
+  function createMap(el, config) {
+    var rootEl = $(el);
+    var mapEl = rootEl.find(".map")[0];
+    var geojsonUrl = config.geojson
+    var dataUrl = config.csv
     var hoveredStateId = null;
+    var allData = null;
+    var geojsonData = null;
+    var currentProp = null
+    var allProps = config.metrics
+    var layersAdded = false
     var usBounds = [
       [-129.54443, 18.235058],
       [-63.802242, 52.886017],
     ];
     mapboxgl.accessToken = accessToken;
     var map = new mapboxgl.Map({
-      container: el,
+      container: mapEl,
       style: "mapbox://styles/eviction-lab/ck8za8qns07451jpm48xn6tq2",
       bounds: usBounds,
       maxBounds: usBounds,
     });
-    var formatPercent = d3.format(",.0%");
-
-    /**
-     * Get html for tooltip
-     * @param {*} dir
-     * @param {*} value
-     */
-    var getTooltipHtml = function getTooltipHtml(feature) {
-      var placeName = feature.properties.NAME
-        ? feature.properties.NAME.split(",")[0]
-        : "Unknown";
-      var distance = feature.properties.diff - 1;
-      var majority = feature.properties.majority;
-      var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
-      var value = feature.properties.diff
-        ? formatPercent(Math.abs(distance))
-        : "Not Available";
-      var primary = feature.properties.diff
-        ? dir === "mid"
-          ? "Filings about average."
-          : "Filings <span>" + dir + " " + value + "</span> from average."
-        : "Filing count not available.";
-      var description =
-        "<h1>" +
-        placeName +
-        "</h1>" +
-        '<div class="map__tooltip-row map__tooltip-row--' +
-        dir +
-        '">' +
-        primary +
-        "<br /><em>Racial majority: " +
-        (Elab.Utils.formatLabel(majority) || "unknown") +
-        "</em>" +
-        "</div>";
-      return description;
-    };
-
+  
     /**
      * Show tooltip and set outline of feature when hovering
      * @param {*} e
@@ -1580,15 +1676,7 @@ Elab.Map = (function (Elab) {
     function handleHover(e) {
       // Change the cursor style as a UI indicator.
       map.getCanvas().style.cursor = "pointer";
-      var description = getTooltipHtml(e.features[0]);
-      var flipped = e.originalEvent.pageX > window.innerWidth - 240;
-      var space = flipped ? -32 : 32;
-      tooltip.className =
-        "chart__tooltip" + (flipped ? " chart__tooltip--flip" : "");
-      tooltip.style.display = "block";
-      tooltip.style.left = e.originalEvent.pageX + space + "px";
-      tooltip.style.top = e.originalEvent.pageY + 32 + "px";
-      tooltip.innerHTML = description;
+      renderTooltip(e.features[0], e)
       if (e.features.length > 0) {
         if (hoveredStateId) {
           map.setFeatureState(
@@ -1657,17 +1745,127 @@ Elab.Map = (function (Elab) {
             console.error("unable to load data from " + dataUrl);
             return;
           }
-          var mapDate = data[0]["month_date"];
-          if (mapDate) {
-            renderMapDate(mapDate);
-          }
-          var mapData = addDataToGeojson(geojson, data);
-          addChoroplethLayer(map, mapData, "diff", [0, 2]);
+          allData = parseValues(data)
+          // check available data metrics
+          allProps = Object.keys(allProps).filter(function(key) {
+            return data[0].hasOwnProperty(key)
+          }).reduce(function(result, current) {
+            result[current] = allProps[current]
+            return result
+          }, {})
+          currentProp = Object.keys(allProps)[0]
+          geojsonData = addDataToGeojson(geojson, allData, config);
+          map.addSource("choropleth", {
+            type: "geojson",
+            data: geojsonData,
+          });
           map.on("mousemove", "choropleth", handleHover);
           map.on("mouseleave", "choropleth", handleHoverOut);
+          renderToggles()
+          update()
         });
       });
     }
+
+
+    function getRange(prop) {
+      if (!allData) return [0, 1]
+      if (isAvgDiff(prop)) return [0, 2]
+      var extent = d3.extent(allData, function(d) { return d[prop] })
+      if (isRate(prop)) return [0, Math.max(extent[1], 0.01)]
+      return [0, Math.max(extent[1], 1)]
+    }
+  
+    function update() {
+      var range = getRange(currentProp)
+      if (layersAdded) {
+        map.removeLayer("choropleth")
+        map.removeLayer("choropleth-stroke")
+      }
+      addChoroplethFillLayer(map, currentProp, range)
+      addChoroplethStrokeLayer(map, currentProp, range)
+      layersAdded = true
+      renderLegend()
+    }
+  
+    function renderToggles() {
+      var container = rootEl.find(".section__toggle")
+      if (Object.keys(allProps).length < 2) {
+        // only one option, no need to toggle
+        container.remove()
+        return
+      }
+      var html = ToggleTemplate({metrics: allProps });
+      container.html(html)
+      var buttons = container.find('button')
+
+      function setButtonClasses() {
+        buttons.each(function() {
+          var button = $(this)
+          var key = button.data("key")
+          var active = key === currentProp
+          button
+            .toggleClass("toggle--active", active)
+        })
+      }
+
+      buttons.click(function() {
+        var key = $(this).data("key")
+        currentProp = key
+        update()
+        setButtonClasses()
+      })
+
+      setButtonClasses()
+    }
+
+    function renderLegendLabel() {
+      if (!allData) return
+      var mapDate = allData[0][config.dateCol];
+      var date = d3.timeFormat("%B %e, %Y")(mapDate)
+      var label = "since " + date
+      if (isRate(currentProp))
+        label = "% of rentals with eviction filings, since " + date
+      if (isAvgDiff(currentProp))
+        label = "% of filings compared to average, since " + date
+      if (isCount(currentProp))
+        label = "Number of eviction filings, since " + date
+      if (mapDate) {
+        rootEl.find(".legend__date").html(label);
+      }
+    }
+
+    function renderLegend() {
+      renderLegendLabel()
+      var gradientContainer = rootEl.find(".legend__gradient")
+      var labelContainer = rootEl.find(".legend__gradient-labels")
+      gradientContainer.css("background-image", getCssGradient(currentProp))
+      var range = getRange(currentProp)
+      var html = LegendLabelTemplate({ labels: getGradientLabels(currentProp, range)}) 
+      labelContainer.html(html)
+    }
+
+    function renderTooltip(feature, e) {
+      var tooltipContainer = $(tooltip)
+      var html = TooltipTemplate({
+        name: feature.properties.NAME
+        ? feature.properties.NAME.split(",")[0]
+        : "Unknown",
+        value: getTooltipValue(feature, currentProp),
+        majority: feature.properties["racial_majority"]
+      })
+      var flipped = e.originalEvent.pageX > window.innerWidth - 240;
+      var space = flipped ? -32 : 32;
+      tooltipContainer
+        .toggleClass("chart__tooltip--flip", flipped)
+        .css({
+          display: "block",
+          left: e.originalEvent.pageX + space + "px",
+          top: e.originalEvent.pageY + 32 + "px"
+        })
+        .html(html)
+    }
+
 
     // disable map zoom when using scroll
     map.scrollZoom.disable();
@@ -1682,11 +1880,10 @@ Elab.Map = (function (Elab) {
     return map;
   }
 
+
   function init(el, config) {
     if (el && config.geojson && config.csv) {
-      var rootEl = $(el);
-      var mapEl = rootEl.find(".map")[0];
-      return createMap(mapEl, config.geojson, config.csv);
+      return createMap(el, config);
     }
     throw new Error("could not initialize map section");
   }
