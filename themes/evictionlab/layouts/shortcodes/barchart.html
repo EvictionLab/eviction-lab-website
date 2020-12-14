@@ -7,6 +7,7 @@
   id: id to be assigned to chart element
   titlePrefix: first half of the chart title (when search is enabled an input is placed in between)
   titleSuffix: second half of the chart title (when search is enabled an input is placed in between)
+  searchPrompt: prompts users to use the search
   data: path to data csv, ex: "/uploads/county_prop_lookup.csv"
   yTicks: number of ticks for y-axis
   yFormat: d3 format, ex: ".0%"
@@ -26,6 +27,7 @@
 {{ $legend := .Get "highlight" }}
 {{ $legendItems := split (.Get "legendItems") ";" }}
 {{ $search := .Get "search" }}
+{{ $searchPrompt := .Get "searchPrompt" }}
 
 <div
   class="bar-chart bar-chart--{{ .Get `id` }}"
@@ -41,6 +43,11 @@
   </h3>
   <div class="bar-chart__search-group">
   <input class="bar-chart__search search" type="text" id="chart_autocomplete" value="Search by county... " />{{ partial "searchbutton" }}
+  {{ if gt ( len $searchPrompt ) 0 }}
+  <p>
+    {{ $searchPrompt | safeHTML }}
+  </p>
+  {{ end }}
   </div>
   <div id="{{ .Get `id` }}" class="bar-chart__chart chart">
     <svg></svg>
@@ -88,9 +95,17 @@
       var str = data[active];
       target.innerHTML = str;
     }
+    // Sets total count of counties in search prompt.
+    var setCountyCount = function() {
+      // console.log('setCountyCount');
+      var target = document.getElementById('countyCount');
+      // Remove US entry (first entry).
+      var countData = data.slice(1);
+      target.innerHTML = countData.length.toLocaleString();
+    }
     var data = [];
     window.addEventListener('load', function() {
-      console.log('load')
+      // console.log('load')
       // Store selector for search input.
       var searchInput = document.getElementById('chart_autocomplete');
       searchInput.addEventListener('click', function() {
@@ -106,8 +121,10 @@
       	},
       	complete: function() {
           console.log('papaparse complete')
+          console.log('data: ', data)
           // Set value in title.
           setSiteName();
+          setCountyCount();
           // Init autocomplete.
           var barChartAutoComplete = new autoComplete({
             data: {
@@ -122,10 +139,10 @@
             //   destination: document.querySelector('.bar-chart__title'),
             // },
             feedback: function(data) {
-              console.log('feedback, ', data)
+              // console.log('feedback, ', data)
             },
             onSelection: function(feedback) {
-              console.log('onSelection, ', feedback)
+              // console.log('onSelection, ', feedback)
               var val = feedback.selection.value;
               // Reset the input,
               searchInput.value = val;
@@ -142,10 +159,10 @@
               initChart()
             },
             onInit: function() {
-              console.log('init of autocomplete')
+              // console.log('init of autocomplete')
             }
           })
-          console.log('barChartAutoComplete, ', barChartAutoComplete);
+          // console.log('barChartAutoComplete, ', barChartAutoComplete);
       	}
       });
       // Init chart on page load.
