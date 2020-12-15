@@ -737,7 +737,7 @@ id,name,week_date,week_filings,week_trend,end_moratorium_date,start_moratorium_d
 29095,"Kansas City, MO",11/15/2020,64,67.75,05/31/2020,03/19/2020,,,12/12/2020
 29095,"Kansas City, MO",11/22/2020,50,58.75,05/31/2020,03/19/2020,,,12/12/2020
 29095,"Kansas City, MO",11/29/2020,121,72.5,05/31/2020,03/19/2020,,,12/12/2020
-29095,"Kansas City, MO",12/06/2020,5,72.5,05/31/2020,03/19/2020,,,12/12/2020
+29095,"Kansas City, MO",12/06/2020,69,72.5,05/31/2020,03/19/2020,,,12/12/2020
 39035,"Cleveland, OH",03/15/2020,18,96,06/15/2020,03/16/2020,,,12/12/2020
 39035,"Cleveland, OH",03/22/2020,1,55.75,06/15/2020,03/16/2020,,,12/12/2020
 39035,"Cleveland, OH",03/29/2020,0,34.25,06/15/2020,03/16/2020,,,12/12/2020
@@ -894,45 +894,45 @@ id,name,week_date,week_filings,week_trend,end_moratorium_date,start_moratorium_d
 31069,"Cincinnati, OH",11/22/2020,158,157.25,06/01/2020,03/16/2020,,,12/12/2020
 31069,"Cincinnati, OH",11/29/2020,187,170.75,06/01/2020,03/16/2020,,,12/12/2020
 31069,"Cincinnati, OH",12/06/2020,162,170.75,06/01/2020,03/16/2020,,,12/12/2020
-29510,"St Louis, MO",03/15/2020,204,242.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",03/22/2020,90,196.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",03/29/2020,37,140.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",04/05/2020,75,101.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",04/12/2020,13,53.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",04/19/2020,20,36.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",04/26/2020,33,35.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",05/03/2020,40,26.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",05/10/2020,31,31,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",05/17/2020,21,31.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",05/24/2020,41,33.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",05/31/2020,68,40.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",06/07/2020,32,40.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",06/14/2020,33,43.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",06/21/2020,33,41.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",06/28/2020,18,29,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",07/05/2020,123,51.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",07/12/2020,122,74,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",07/19/2020,133,99,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",07/26/2020,131,127.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",08/02/2020,89,118.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",08/09/2020,127,120,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",08/16/2020,124,117.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",08/23/2020,286,156.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",08/30/2020,119,164,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",09/06/2020,59,147,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",09/13/2020,165,157.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",09/20/2020,181,131,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",09/27/2020,101,126.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",10/04/2020,98,136.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",10/11/2020,75,113.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",10/18/2020,163,109.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",10/25/2020,92,107,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",11/01/2020,102,108,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",11/08/2020,135,123,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",11/15/2020,147,119,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",11/22/2020,120,126,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",11/29/2020,149,137.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
-29510,"St Louis, MO",12/06/2020,3,137.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2075;1558,12/12/2020
+29510,"St Louis, MO",03/15/2020,204,242.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",03/22/2020,90,196.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",03/29/2020,37,140.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",04/05/2020,75,101.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",04/12/2020,13,53.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",04/19/2020,20,36.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",04/26/2020,33,35.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",05/03/2020,40,26.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",05/10/2020,31,31,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",05/17/2020,21,31.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",05/24/2020,41,33.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",05/31/2020,68,40.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",06/07/2020,32,40.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",06/14/2020,33,43.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",06/21/2020,33,41.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",06/28/2020,18,29,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",07/05/2020,123,51.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",07/12/2020,122,74,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",07/19/2020,133,99,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",07/26/2020,131,127.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",08/02/2020,89,118.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",08/09/2020,127,120,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",08/16/2020,124,117.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",08/23/2020,286,156.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",08/30/2020,119,164,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",09/06/2020,59,147,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",09/13/2020,165,157.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",09/20/2020,181,131,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",09/27/2020,101,126.5,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",10/04/2020,98,136.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",10/11/2020,75,113.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",10/18/2020,163,109.25,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",10/25/2020,92,107,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",11/01/2020,102,108,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",11/08/2020,135,123,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",11/15/2020,147,119,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",11/22/2020,120,126,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",11/29/2020,149,137.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
+29510,"St Louis, MO",12/06/2020,132,137.75,07/22/2020,03/19/2020,St. Louis County;the City of St. Louis,2164;1598,12/12/2020
 51760,"Richmond, VA",03/15/2020,291,271.75,09/07/2020,03/24/2020,,,12/12/2020
 51760,"Richmond, VA",03/22/2020,184,209.5,09/07/2020,03/24/2020,,,12/12/2020
 51760,"Richmond, VA",03/29/2020,35,177.5,09/07/2020,03/24/2020,,,12/12/2020
