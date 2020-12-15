@@ -9,11 +9,11 @@ date: 2020-12-09T16:46:40.089Z
 postauthorname: Joe Fish, Emily Lemmerman, Renee Louis, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: From August onwards, landlords have filed eviction cases with unusually large claim amounts.
-listSummary: 'In this brief, we examine trends in claim amounts—the back rent, late fees, and damages that landlords claim when filing an eviction case—over the course of 2020 in a few key cities we are monitoring through the Eviction Tracking System.' 
-socialDescription: From August onwards, landlords have filed eviction cases with unusually large claim amounts.
-fbImage: '/images/assets/blog/claim-amount-social.png'
-twImage: '/images/assets/blog/claim-amount-social.png'
+description: Absent further protections, these cases may be pushed into 2021.
+listSummary: 'America faced a rental housing crisis long before the onset of the COVID-19 pandemic. In a typical, non-pandemic year, landlords would file 3.7 million eviction cases across the United States. As a result of eviction moratoria, court closures, and temporary expansions to the social safety net, far fewer eviction cases have been filed in 2020. How many fewer? And what does that tell us about the potential for a surge in eviction filings in early 2021?' 
+socialDescription: Absent further protections, these cases may be pushed into 2021.
+fbImage:
+twImage: 
 url: /missing-eviction-filings
 aliases:
   
@@ -22,10 +22,9 @@ America faced a rental housing crisis long before the onset of the COVID-19 pand
 
 Leveraging data drawn from the <a href="/eviction-tracking">Eviction Tracking System (ETS)</a>, we quantify “missing” eviction filings as the difference between the number of cases that likely would have been filed in a typical year and the number that were actually filed during the pandemic. All told, we estimate that protections rolled-out during the pandemic have prevented at least 1.6 million eviction filings across the United States, cases that—in the absence of further eviction protections—may be pushed into 2021. This would create a surge in housing courts and putting an untold number of families at risk of displacement. 
 
+{{< pullquote "We estimate that protections rolled-out during the pandemic have prevented at least 1.6 million eviction filings across the United States, cases that—in the absence of further eviction protections—may be pushed into 2021." >}}
+
 Focusing on the 18 cities and six states we observed in the ETS, in Figure 1 we plot total weekly eviction filings as a percentage of historical average.{{< sup 1>}} For nearly every week since the pandemic began, filings have been far below average. 
-
-
-{{< pullquote "Claim amounts are quickly increasing as government assistance runs out." >}}
 
 
 {{< inlinesvg "missing-claims-fig1.svg" "Figure 1. Weekly Eviction Filings in Eviction Tracking System Sites Relative to Historical Average" >}}
@@ -54,55 +53,50 @@ The differences in states’ success in reducing eviction filings is even more s
 
 ETS data collection covers 18 cities and six full states, home to one in every four renter households in the United States. Housing markets and socio-demographic composition of ETS areas resemble those of the United States as a whole (see Appendix Table). The majority of renting households are, however, absent from our calculations of missing eviction filings. To provide a national estimate of the total number of missing eviction filings during the COVID-19, pandemic we turn to regression analysis, extrapolating what we observed in the ETS to all other counties for which we have historical eviction filing data.{{< sup 2 >}} This allows us to cover an additional 27.5 million renter households, bringing overall coverage to 38.5 million out of 43 million renter households (89.5%). 
 
+{{< pullquote "Strict moratoria reduced eviction filings dramatically. As protections have been weakened, more cases have been filed." >}}
+
 Extrapolating to the rest of the nation from the 18 cities and 6 states in our sample requires significant assumptions. We estimate that there have been 800,000 eviction filings across all non-ETS counties between March 15th and November 30th.{{< sup 3 >}} In a typical year over this period, these counties would have experienced over 2.1 million eviction filings, thus leaving 1.3 million missing filings. Across the country, as many as 1.6 million eviction cases may be missing from 2020—and potentially pushed to early 2021. 
 
 On January 1, 2021, when the CDC eviction moratorium expires, renters will have the fewest protections available to them since the start of the COVID-19 pandemic. Only six states have moratoria that are scheduled to extend into the new year.  Eviction moratoriums were effective at lowering the rate of eviction filings during the pandemic. However, eviction filings are rising as we approach the end of the year, and tenants facing the threat of eviction appear to be <a href="/rising-claim-amounts/">falling further behind on rent</a>. 
 
 
-{{< pullquote "As state-level eviction protections lifted—in May in Houston and June in New York City—claim amounts rose dramatically." >}}
-
-
-
-
-
-{{< pullquote "Landlords are filing evictions in the same buildings and neighborhoods as prior to the pandemic—but for much more money." >}}
-
-
-<div dir="ltr">
-<table class="data-table page-stats my-5" cellspacing="0" cellpadding="0">
+<div class="figheader" style="max-width: 600px;" >Representativeness of ETS: 
+</div>
+<div class="upscale124 pb-0 pb-xxl-0">
+<table class="blog-table table-responsive my-3" cellspacing="0" cellpadding="0">
 <thead>
 <tr>
-<td></td>
-<td dir="ltr" colspan="2">ETS</td>
-<td dir="ltr" colspan="2">U.S.</td>
+<td style="border: none;"></td>
+<td dir="ltr" style="background-color: #e24000; color: #fff;" colspan="2">ETS</td>
+<td dir="ltr" style="background-color: #5a5e88; color: #fff;" colspan="2">U.S.</td>
 </tr>
 </thead>
 <tbody>
 
 <tr>
-<td></td>
-<td dir="ltr">Estimate</td>
-<td dir="ltr">SD</td>
-<td dir="ltr">Estimate</td>
-<td dir="ltr">SD</td>
+<td style="border: none; background-color: none;"></td>
+<td style="background-color: #fbf6f3;" class="blog-table__text subhead" dir="ltr">Estimate</td>
+<td style="background-color: #fbf6f3;" class="blog-table__text subhead" dir="ltr">SD</td>
+<td style="background-color: #eeeeef;" class="blog-table__text subhead" dir="ltr">Estimate</td>
+<td style="background-color: #eeeeef;" class="blog-table__text subhead" dir="ltr">SD</td>
 </tr>
 <tr>
 
-<td dir="ltr">Number of Renter HHs</td>
+<td class="blog-table__text" dir="ltr">Number of Renter HHs</td>
 <td dir="ltr">11,076,250</td>
 <td dir="ltr">17,124</td>
 <td dir="ltr">43,669,988</td>
 <td dir="ltr">21,378</td>
 </tr>
 <tr>
-<td dir="ltr">Median Rental Housing Age</td>
+<td class="blog-table__text" dir="ltr">Median Rental Housing Age</td>
 <td dir="ltr">64.5</td>
 <td dir="ltr">167</td>
 <td dir="ltr">49.6</td>
 <td dir="ltr">86.1</td>
 </tr>
 <tr>
-<td dir="ltr">Median Rent ($)</td>
+<td  class="blog-table__text"dir="ltr">Median Rent ($)</td>
 <td dir="ltr">1105</td>
 <td dir="ltr">293</td>
 <td dir="ltr">1,076</td>
@@ -111,7 +105,7 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 
 
 <tr>
-<td dir="ltr">Percent Children Renting HH</td>
+<td class="blog-table__text" dir="ltr">Percent Children Renting HH</td>
 <td dir="ltr">30.20%</td>
 <td dir="ltr">0.09%</td>
 <td dir="ltr">32.80%</td>
@@ -119,7 +113,7 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 </tr>
 <tr>
 
-<td dir="ltr">Percent Female Renting HH</td>
+<td class="blog-table__text" dir="ltr">Percent Female Renting HH</td>
 <td dir="ltr">18.80%</td>
 <td dir="ltr">0.05%</td>
 <td dir="ltr">19.00%</td>
@@ -127,7 +121,7 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 </tr>
 <tr>
 
-<td dir="ltr">Poverty Rate</td>
+<td class="blog-table__text" dir="ltr">Poverty Rate</td>
 <td dir="ltr">24.50%</td>
 <td dir="ltr">0.01%</td>
 <td dir="ltr">25.60%</td>
@@ -135,7 +129,7 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 </tr>
 <tr>
 
-<td dir="ltr">Vacancy Rate</td>
+<td class="blog-table__text" dir="ltr">Vacancy Rate</td>
 <td dir="ltr">10.80%</td>
 <td dir="ltr">0.03%</td>
 <td dir="ltr">11.10%</td>
@@ -143,11 +137,15 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 </tr>
 <tr>
 
-<td dir="ltr">Renting Householder Head Race</td>
+<td class="blog-table__text" dir="ltr">Renting Householder Head Race</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 
-<td dir="ltr">Black</td>
+<td class="blog-table__text" dir="ltr">Black</td>
 <td dir="ltr">22.30%</td>
 <td dir="ltr">0.05%</td>
 <td dir="ltr">19.70%</td>
@@ -155,7 +153,7 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 </tr>
 <tr>
 
-<td dir="ltr">Latinx</td>
+<td class="blog-table__text" dir="ltr">Latinx</td>
 <td dir="ltr">14.80%</td>
 <td dir="ltr">0.04%</td>
 <td dir="ltr">19.80%</td>
@@ -163,7 +161,7 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 </tr>
 <tr>
 
-<td dir="ltr">Other</td>
+<td class="blog-table__text" dir="ltr">Other</td>
 <td dir="ltr">6.70%</td>
 <td dir="ltr">0.00%</td>
 <td dir="ltr">7.80%</td>
@@ -171,7 +169,7 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 </tr>
 <tr>
 
-<td dir="ltr">White</td>
+<td class="blog-table__text" dir="ltr">White</td>
 <td dir="ltr">56.10%</td>
 <td dir="ltr">0.06%</td>
 <td dir="ltr">52.60%</td>
@@ -181,7 +179,7 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 </table>
 </div>
 
-
+<div class="figcaption"><p>Note: With the exception of the first row, all estimates are means. Means for median rent and rental housing age were calculated using a weighted mean, weighted by number of renting households for the county level. Standard deviations were calculated using the margin of error provided by the Census Bureau for the American Community Survey.</p></div>
 
 
 

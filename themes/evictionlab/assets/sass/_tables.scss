@@ -1,0 +1,40 @@
+.blog-table {
+    @include media-breakpoint-up(md) {
+        display: inline-table;
+    }
+    
+    td {
+        border: 2px solid #efefef;
+        font-size: 1.6rem;
+    }
+    thead td {
+        font-family: $altFontStack;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .blog-table__text {
+        font-family: $headerFontStack;
+        color: $color2;
+        &.subhead {
+            color: $color2;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+        }
+    }
+    
+    td {
+        font-family: $numberFontStack;
+        font-weight: 500;
+        padding: 0.8rem 1.6rem;
+        color: $color2;
+        
+    }
+    tr {
+        background-color: #f4f4f7;
+        &:nth-of-type(even) {
+            background-color: #fff;
+        }
+    }
+}
