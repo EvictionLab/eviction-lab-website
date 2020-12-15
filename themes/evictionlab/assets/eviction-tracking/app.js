@@ -166,7 +166,7 @@ Elab.Utils = (function (Elab) {
     formatLabel: formatLabel,
     formatDate: formatDate,
     callOnEnter: callOnEnter,
-    debounce: debounce
+    debounce: debounce,
   };
 })(Elab);
 
@@ -450,19 +450,19 @@ Elab.Data = (function (Elab) {
   var parseDate = d3.timeParse("%m/%d/%Y");
 
   // parse week values from the row
-  var parseWeekValues = function(row) {
+  var parseWeekValues = function (row) {
     return [
       parseDate(row["week_date"]),
       parseInt(row["week_filings"]),
       parseFloat(row["week_trend"]),
-    ]
-  }
+    ];
+  };
 
   /**
    * adds additional metrics and outputs data as an array
-   * @param {*} data 
+   * @param {*} data
    */
-  var shapeResult = function(data) {
+  var shapeResult = function (data) {
     return Object.values(data).map(function (d) {
       // make sure values are sorted from oldest to newest
       d["values"].sort(function (a, b) {
@@ -474,14 +474,14 @@ Elab.Data = (function (Elab) {
       d["lastWeek"] = d["values"][d["values"].length - 1][1];
       return d;
     });
-  }
+  };
 
   /**
-   * takes the fetched CSV data, returns an array of cities with parsed data 
+   * takes the fetched CSV data, returns an array of cities with parsed data
    * and required data attributes
-   * @param {*} data 
+   * @param {*} data
    */
-  var shapeCityData = function(data) {
+  var shapeCityData = function (data) {
     var result = {};
     // create an object containing data by identifier
     data.forEach(function (d) {
@@ -491,7 +491,7 @@ Elab.Data = (function (Elab) {
           id: d.id,
           name: d.name,
           city: d.name.split(",")[0],
-          values: [ parseWeekValues(d) ],
+          values: [parseWeekValues(d)],
           start: parseDate(d["start_moratorium_date"]),
           end: parseDate(d["end_moratorium_date"]),
           updated: parseDate(d["data_date"]),
@@ -507,15 +507,15 @@ Elab.Data = (function (Elab) {
         result[d.id].values.push(parseWeekValues(d));
       }
     });
-    return shapeResult(result)
-  }
+    return shapeResult(result);
+  };
 
   /**
-   * Takes the state level CSV data and parses / shapes it into 
+   * Takes the state level CSV data and parses / shapes it into
    * an array for the ETS pages
-   * @param {*} data 
+   * @param {*} data
    */
-  var shapeStateData = function(data) {
+  var shapeStateData = function (data) {
     var result = {};
     // create an object containing data by identifier
     data.forEach(function (d) {
@@ -526,21 +526,21 @@ Elab.Data = (function (Elab) {
           name: d.name,
           values: [parseWeekValues(d)],
           start: parseDate(d["start_moratorium_date"]),
-          end: parseDate(d["end_moratorium_date"])
+          end: parseDate(d["end_moratorium_date"]),
         };
       } else {
         // key already exists, push values for the given week
         result[d.id].values.push(parseWeekValues(d));
       }
     });
-    return shapeResult(result)
-  }
+    return shapeResult(result);
+  };
 
   /**
    * Generic function to load data, shape it, then fire a callback
-   * @param {*} dataUrl 
-   * @param {*} shaper 
-   * @param {*} callback 
+   * @param {*} dataUrl
+   * @param {*} shaper
+   * @param {*} callback
    */
   function loadData(dataUrl, shaper, callback) {
     d3.csv(dataUrl, function (data) {
@@ -548,7 +548,7 @@ Elab.Data = (function (Elab) {
         console.error("unable to load data from " + dataUrl);
         return;
       }
-      var result = shaper(data)
+      var result = shaper(data);
       callback && callback(result);
     });
   }
@@ -557,25 +557,25 @@ Elab.Data = (function (Elab) {
    * Loads and parses the CSV for the city table
    */
   function loadCityTable(dataUrl, callback) {
-    return loadData(dataUrl, shapeCityData, callback)
+    return loadData(dataUrl, shapeCityData, callback);
   }
 
   /**
    * Loads and parses the CSV for the state table
    */
   function loadStateTable(dataUrl, callback) {
-    return loadData(dataUrl, shapeStateData, callback)
+    return loadData(dataUrl, shapeStateData, callback);
   }
 
   /**
    * Loads and parses the CSV for the city table
    */
   function loadAllTables(cityTableUrl, stateTableUrl, callback) {
-    loadCityTable(cityTableUrl, function(cityData) {
-      loadStateTable(stateTableUrl, function(stateData) {
-        callback([cityData, stateData])
-      })
-    })
+    loadCityTable(cityTableUrl, function (cityData) {
+      loadStateTable(stateTableUrl, function (stateData) {
+        callback([cityData, stateData]);
+      });
+    });
   }
 
   return {
@@ -1392,20 +1392,27 @@ Elab.Map = (function (Elab) {
     "pk.eyJ1IjoiZXZpY3Rpb24tbGFiIiwiYSI6ImNqYzJoMzhkbjBncGkyeW4yNGlkbjRkcTQifQ.IQNWME_jYqxTH7wmFrFX-g";
 
   var formatPercent = d3.format(",.0%");
-  var formatSmallPercent = d3.format(",.2%")
+  var formatSmallPercent = d3.format(",.2%");
   var formatCount = d3.format(",d");
-  var parseDate = d3.timeParse("%d/%m/%Y")
+  var parseDate = d3.timeParse("%d/%m/%Y");
 
-  
-  function isRate(key) { return key.indexOf("rate") > -1 }
-  function isAvgDiff(key) { return key.indexOf("diff") > -1 }
-  function isDate(key) { return key.indexOf("date") > -1 }
-  function isCount(key) { return key.indexOf("count") > -1 || key.indexOf("filings") > -1 }
+  function isRate(key) {
+    return key.indexOf("rate") > -1;
+  }
+  function isAvgDiff(key) {
+    return key.indexOf("diff") > -1;
+  }
+  function isDate(key) {
+    return key.indexOf("date") > -1;
+  }
+  function isCount(key) {
+    return key.indexOf("count") > -1 || key.indexOf("filings") > -1;
+  }
 
   function getFormatter(prop) {
-    if (isRate(prop)) return formatSmallPercent
-    if (isAvgDiff(prop)) return formatPercent
-    return formatCount
+    if (isRate(prop)) return formatSmallPercent;
+    if (isAvgDiff(prop)) return formatPercent;
+    return formatCount;
   }
 
   var ToggleTemplate = Handlebars.compile(
@@ -1418,69 +1425,69 @@ Elab.Map = (function (Elab) {
 
   var LegendLabelTemplate = Handlebars.compile(
     "{{#each labels}}" +
-    "<span class='legend__gradient-label'>{{this}}</span>" +
-    "{{/each}}"
-  )
+      "<span class='legend__gradient-label'>{{this}}</span>" +
+      "{{/each}}"
+  );
 
   var TooltipTemplate = Handlebars.compile(
     "<h1>{{name}}</h1>" +
-    '<div class="map__tooltip-row">' +
-    "{{#if value}}" +
-    "{{{value}}}" +
-    "{{else}}" +
-    "Data not available." +
-    "{{/if}}" +
-    "<br /><em>Racial majority: " +
-    "{{#if majority}}" +
-    "{{majority}}" +
-    "{{else}}" +
-    "unknown" +
-    "{{/if}}" +
-    "</em>" +
-    "</div>"
-  )
+      '<div class="map__tooltip-row">' +
+      "{{#if value}}" +
+      "{{{value}}}" +
+      "{{else}}" +
+      "Data not available." +
+      "{{/if}}" +
+      "<br /><em>Racial majority: " +
+      "{{#if majority}}" +
+      "{{majority}}" +
+      "{{else}}" +
+      "unknown" +
+      "{{/if}}" +
+      "</em>" +
+      "</div>"
+  );
 
   function getTooltipValue(feature, prop) {
-    if (!feature.properties[prop] && feature.properties[prop] !== 0) return null
-    var formatter = getFormatter(prop)
-    var value = formatter(feature.properties[prop])
+    if (!feature.properties[prop] && feature.properties[prop] !== 0)
+      return null;
+    var formatter = getFormatter(prop);
+    var value = formatter(feature.properties[prop]);
     if (isAvgDiff(prop)) {
       var distance = feature.properties[prop] - 1;
-      value = formatter(Math.abs(distance))
+      value = formatter(Math.abs(distance));
       var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
       return dir === "mid"
         ? "Filings about average."
-        : "Filings <span class='value--" + dir + "'>" + dir + " " + value + "</span> from average."
+        : "Filings <span class='value--" +
+            dir +
+            "'>" +
+            dir +
+            " " +
+            value +
+            "</span> from average.";
     }
-    if (isRate(prop))
-      return "filings against " + value + " of renters"
-    if (isCount(prop))
-      return value + " eviction filings"
-    return value
+    if (isRate(prop)) return "filings against " + value + " of renters";
+    if (isCount(prop)) return value + " eviction filings";
+    return value;
   }
-
 
   /**
    * Parses map data values
-   * @param {*} data 
+   * @param {*} data
    */
   function parseValues(data) {
-    return data.map(function(d) {
+    return data.map(function (d) {
       return Object.keys(d).reduce(function (result, key) {
         // float cols
-        if (isRate(key) || isAvgDiff(key))
-          result[key] = parseFloat(d[key])
+        if (isRate(key) || isAvgDiff(key)) result[key] = parseFloat(d[key]);
         // int cols
-        else if (isCount(key))
-          result[key] = parseInt(d[key])
+        else if (isCount(key)) result[key] = parseInt(d[key]);
         // no parsing by default
-        else if (isDate(key))
-          result[key] = parseDate(d[key])
-        else
-          result[key] = d[key]
-        return result
-      }, {})
-    })
+        else if (isDate(key)) result[key] = parseDate(d[key]);
+        else result[key] = d[key];
+        return result;
+      }, {});
+    });
   }
 
   /**
@@ -1491,7 +1498,7 @@ Elab.Map = (function (Elab) {
   function addDataToGeojson(geojson, data, config) {
     // create an object wth keys for each GEOID that has corresponding data points
     var dataDict = data.reduce(function (dict, item) {
-      dict[item.id] = item
+      dict[item.id] = item;
       return dict;
     }, {});
     var newFeatures = geojson.features
@@ -1516,20 +1523,20 @@ Elab.Map = (function (Elab) {
    * @param {*} end color end number
    */
   function getColorsFromCss(prefix, start, end) {
-    start = start || 1
-    end = end || 5
-    var result = []
+    start = start || 1;
+    end = end || 5;
+    var result = [];
     for (var i = start; i <= end; i++) {
-      result.push(Elab.Utils.getCssVar(prefix+i))
+      result.push(Elab.Utils.getCssVar(prefix + i));
     }
-    return result
+    return result;
   }
 
   /**
    * Gets an array of colors to use as ranges in a map style
-   * @param {*} prop 
-   * @param {*} range 
-   * @param {*} prefix 
+   * @param {*} prop
+   * @param {*} range
+   * @param {*} prefix
    */
   function getLayerColors(prop, range, prefix) {
     var mid = (range[1] - range[0]) / 2;
@@ -1547,17 +1554,10 @@ Elab.Map = (function (Elab) {
         colors[3],
         range[1],
         colors[4],
-      ]
+      ];
     }
     // continuous
-    return [
-      range[0],
-      colors[2],
-      mid,
-      colors[3],
-      range[1],
-      colors[4],
-    ]
+    return [range[0], colors[2], mid, colors[3], range[1], colors[4]];
   }
 
   /**
@@ -1566,27 +1566,45 @@ Elab.Map = (function (Elab) {
   function getCssGradient(prop) {
     var colors = getColorsFromCss("--choro");
     if (isAvgDiff(prop)) {
-      return "linear-gradient(to right," + colors[0] + ", " + colors[1] + " 25%, " + colors[2] + " 50%, " + colors[3] + " 75%, " + colors[4] + ")"
+      return (
+        "linear-gradient(to right," +
+        colors[0] +
+        ", " +
+        colors[1] +
+        " 25%, " +
+        colors[2] +
+        " 50%, " +
+        colors[3] +
+        " 75%, " +
+        colors[4] +
+        ")"
+      );
     }
-    return "linear-gradient(to right," + colors[2] + ", " + colors[3] + " 50%," + colors[4] + ")"
+    return (
+      "linear-gradient(to right," +
+      colors[2] +
+      ", " +
+      colors[3] +
+      " 50%," +
+      colors[4] +
+      ")"
+    );
   }
 
   function getGradientLabels(prop, range) {
     if (isAvgDiff(prop)) {
-      return ["-100%", "average", "100%"]
+      return ["-100%", "average", "100%"];
     }
     if (isRate(prop)) {
-      return ["0%", formatPercent(range[1])]
+      return ["0%", formatPercent(range[1])];
     }
-    return [ formatCount(range[0]), formatCount(range[1]) ]
+    return [formatCount(range[0]), formatCount(range[1])];
   }
 
   function addChoroplethFillLayer(map, prop, range) {
-    var fillColor = [
-      "interpolate",
-      ["linear"],
-      ["get", prop]
-    ].concat(getLayerColors(prop, range, "--choro"));
+    var fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
+      getLayerColors(prop, range, "--choro")
+    );
     map.addLayer(
       {
         id: "choropleth",
@@ -1608,11 +1626,9 @@ Elab.Map = (function (Elab) {
   }
 
   function addChoroplethStrokeLayer(map, prop, range) {
-    var strokeColor = [
-      "interpolate",
-      ["linear"],
-      ["get", prop]
-    ].concat(getLayerColors(prop, range, "--choroStroke"));;
+    var strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
+      getLayerColors(prop, range, "--choroStroke")
+    );
     map.addLayer(
       {
         id: "choropleth-stroke",
@@ -1649,14 +1665,14 @@ Elab.Map = (function (Elab) {
   function createMap(el, config) {
     var rootEl = $(el);
     var mapEl = rootEl.find(".map")[0];
-    var geojsonUrl = config.geojson
-    var dataUrl = config.csv
+    var geojsonUrl = config.geojson;
+    var dataUrl = config.csv;
     var hoveredStateId = null;
     var allData = null;
     var geojsonData = null;
-    var currentProp = null
-    var allProps = config.metrics
-    var layersAdded = false
+    var currentProp = null;
+    var allProps = config.metrics;
+    var layersAdded = false;
     var usBounds = [
       [-129.54443, 18.235058],
       [-63.802242, 52.886017],
@@ -1668,7 +1684,7 @@ Elab.Map = (function (Elab) {
       bounds: usBounds,
       maxBounds: usBounds,
     });
-  
+
     /**
      * Show tooltip and set outline of feature when hovering
      * @param {*} e
@@ -1676,7 +1692,7 @@ Elab.Map = (function (Elab) {
     function handleHover(e) {
       // Change the cursor style as a UI indicator.
       map.getCanvas().style.cursor = "pointer";
-      renderTooltip(e.features[0], e)
+      renderTooltip(e.features[0], e);
       if (e.features.length > 0) {
         if (hoveredStateId) {
           map.setFeatureState(
@@ -1745,15 +1761,17 @@ Elab.Map = (function (Elab) {
             console.error("unable to load data from " + dataUrl);
             return;
           }
-          allData = parseValues(data)
+          allData = parseValues(data);
           // check available data metrics
-          allProps = Object.keys(allProps).filter(function(key) {
-            return data[0].hasOwnProperty(key)
-          }).reduce(function(result, current) {
-            result[current] = allProps[current]
-            return result
-          }, {})
-          currentProp = Object.keys(allProps)[0]
+          allProps = Object.keys(allProps)
+            .filter(function (key) {
+              return data[0].hasOwnProperty(key);
+            })
+            .reduce(function (result, current) {
+              result[current] = allProps[current];
+              return result;
+            }, {});
+          currentProp = Object.keys(allProps)[0];
           geojsonData = addDataToGeojson(geojson, allData, config);
           map.addSource("choropleth", {
             type: "geojson",
@@ -1761,99 +1779,101 @@ Elab.Map = (function (Elab) {
           });
           map.on("mousemove", "choropleth", handleHover);
           map.on("mouseleave", "choropleth", handleHoverOut);
-          renderToggles()
-          update()
+          renderToggles();
+          update();
         });
       });
     }
 
-
     function getRange(prop) {
-      if (!allData) return [0, 1]
-      if (isAvgDiff(prop)) return [0, 2]
-      var extent = d3.extent(allData, function(d) { return d[prop] })
-      if (isRate(prop)) return [0, Math.max(extent[1], 0.01)]
-      return [0, Math.max(extent[1], 1)]
+      if (!allData) return [0, 1];
+      if (isAvgDiff(prop)) return [0, 2];
+      var extent = d3.extent(allData, function (d) {
+        return d[prop];
+      });
+      if (isRate(prop)) return [0, Math.max(extent[1], 0.01)];
+      return [0, Math.max(extent[1], 1)];
     }
-  
+
     function update() {
-      var range = getRange(currentProp)
+      var range = getRange(currentProp);
       if (layersAdded) {
-        map.removeLayer("choropleth")
-        map.removeLayer("choropleth-stroke")
+        map.removeLayer("choropleth");
+        map.removeLayer("choropleth-stroke");
       }
-      addChoroplethFillLayer(map, currentProp, range)
-      addChoroplethStrokeLayer(map, currentProp, range)
-      layersAdded = true
-      renderLegend()
+      addChoroplethFillLayer(map, currentProp, range);
+      addChoroplethStrokeLayer(map, currentProp, range);
+      layersAdded = true;
+      renderLegend();
     }
-  
+
     function renderToggles() {
-      var container = rootEl.find(".section__toggle")
+      var container = rootEl.find(".section__toggle");
       if (Object.keys(allProps).length < 2) {
         // only one option, no need to toggle
-        container.remove()
-        return
+        container.remove();
+        return;
       }
-      var html = ToggleTemplate({metrics: allProps });
-      container.html(html)
-      var buttons = container.find('button')
+      var html = ToggleTemplate({ metrics: allProps });
+      container.html(html);
+      var buttons = container.find("button");
 
       function setButtonClasses() {
-        buttons.each(function() {
-          var button = $(this)
-          var key = button.data("key")
-          var active = key === currentProp
-          button
-            .toggleClass("toggle--active", active)
-        })
+        buttons.each(function () {
+          var button = $(this);
+          var key = button.data("key");
+          var active = key === currentProp;
+          button.toggleClass("toggle--active", active);
+        });
       }
 
-      buttons.click(function() {
-        var key = $(this).data("key")
-        currentProp = key
-        update()
-        setButtonClasses()
-      })
+      buttons.click(function () {
+        var key = $(this).data("key");
+        currentProp = key;
+        update();
+        setButtonClasses();
+      });
 
-      setButtonClasses()
+      setButtonClasses();
     }
 
     function renderLegendLabel() {
-      if (!allData) return
+      if (!allData) return;
       var mapDate = allData[0][config.dateCol];
-      var date = d3.timeFormat("%B %e, %Y")(mapDate)
-      var label = "since " + date
+      var date = d3.timeFormat("%B %e, %Y")(mapDate);
+      var label = "since " + date;
       if (isRate(currentProp))
-        label = "% of rentals with eviction filings, since " + date
+        label = "% of rentals with eviction filings, since " + date;
       if (isAvgDiff(currentProp))
-        label = "% of filings compared to average, since " + date
+        label = "% of filings compared to average, since " + date;
       if (isCount(currentProp))
-        label = "Number of eviction filings, since " + date
+        label = "Number of eviction filings, since " + date;
       if (mapDate) {
         rootEl.find(".legend__date").html(label);
       }
     }
 
     function renderLegend() {
-      renderLegendLabel()
-      var gradientContainer = rootEl.find(".legend__gradient")
-      var labelContainer = rootEl.find(".legend__gradient-labels")
-      gradientContainer.css("background-image", getCssGradient(currentProp))
-      var range = getRange(currentProp)
-      var html = LegendLabelTemplate({ labels: getGradientLabels(currentProp, range)}) 
-      labelContainer.html(html)
+      renderLegendLabel();
+      var gradientContainer = rootEl.find(".legend__gradient");
+      var labelContainer = rootEl.find(".legend__gradient-labels");
+      gradientContainer.css("background-image", getCssGradient(currentProp));
+      var range = getRange(currentProp);
+      var html = LegendLabelTemplate({
+        labels: getGradientLabels(currentProp, range),
+      });
+      labelContainer.html(html);
     }
 
     function renderTooltip(feature, e) {
-      var tooltipContainer = $(tooltip)
+      var tooltipContainer = $(tooltip);
       var html = TooltipTemplate({
         name: feature.properties.NAME
-        ? feature.properties.NAME.split(",")[0]
-        : "Unknown",
+          ? feature.properties.NAME.split(",")[0]
+          : "Unknown",
         value: getTooltipValue(feature, currentProp),
-        majority: feature.properties["racial_majority"]
-      })
+        majority: feature.properties["racial_majority"],
+      });
       var flipped = e.originalEvent.pageX > window.innerWidth - 240;
       var space = flipped ? -32 : 32;
       tooltipContainer
@@ -1861,11 +1881,10 @@ Elab.Map = (function (Elab) {
         .css({
           display: "block",
           left: e.originalEvent.pageX + space + "px",
-          top: e.originalEvent.pageY + 32 + "px"
+          top: e.originalEvent.pageY + 32 + "px",
         })
-        .html(html)
+        .html(html);
     }
-
 
     // disable map zoom when using scroll
     map.scrollZoom.disable();
@@ -1879,7 +1898,6 @@ Elab.Map = (function (Elab) {
     map.addControl(new mapboxgl.NavigationControl());
     return map;
   }
-
 
   function init(el, config) {
     if (el && config.geojson && config.csv) {
@@ -2220,8 +2238,6 @@ Elab.Intro = (function (Elab) {
  */
 
 Elab.ListPage = (function (Elab) {
-
-
   var dateFormat = d3.timeFormat("%B %d, %Y");
 
   /**
@@ -2230,12 +2246,14 @@ Elab.ListPage = (function (Elab) {
    */
   function getRowHtml(data, options) {
     var numFormat = d3.format(",d");
+    var rowTemplate = $("#rowTemplate").html();
     var rowTemplate = Handlebars.compile(
       '<tr class="table__row {{class}}" data-name="{{name}}" data-href="{{url}}">' +
         '<td class="table__cell table__cell--name" title="{{name}}">' +
-        "{{name}}" +
+        "<div>" +
+        "<span>{{name}}</span>" +
         '<img class="icon icon--moratorium" src="/img/el-medallion.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
-        "</td>" +
+        "</div></td>" +
         '<td class="table__cell table__cell--number">' +
         "{{weekFilings}}" +
         "</td>" +
@@ -2397,20 +2415,18 @@ Elab.ListPage = (function (Elab) {
     $(".hero--ets").removeClass("hero--loading");
     $("#cityCount").html(cities.length);
     $("#stateCount").html(states.length);
-    var stateIds = states.map(s => s.id)
+    var stateIds = states.map((s) => s.id);
     // filter out cities that have state totals
-    var noStateCities = cities
-      .filter(function(c) {
-        return stateIds.indexOf(c.id.substring(0,2)) === -1
-      })
-    var cityTotal = noStateCities
-      .reduce(function (sum, loc) {
-        return sum + loc.cumulative;
-      }, 0);
+    var noStateCities = cities.filter(function (c) {
+      return stateIds.indexOf(c.id.substring(0, 2)) === -1;
+    });
+    var cityTotal = noStateCities.reduce(function (sum, loc) {
+      return sum + loc.cumulative;
+    }, 0);
     var stateTotal = states.reduce(function (sum, loc) {
       return sum + loc.cumulative;
     }, 0);
-    var counterTotal = cityTotal + stateTotal
+    var counterTotal = cityTotal + stateTotal;
     var count = new countUp.CountUp("counterTotal", counterTotal, {
       duration: 3.8,
     });
@@ -2428,13 +2444,12 @@ Elab.ListPage = (function (Elab) {
    */
   function initWeeklyCount(cities, states) {
     var lastWeekDate = null;
-    var lastWeekDateStates = null
+    var lastWeekDateStates = null;
     // array of state IDs
-    var stateIds = states.map(s => s.id)
-    var noStateCities = cities
-      .filter(function(c) {
-        return stateIds.indexOf(c.id.substring(0,2)) === -1
-      })
+    var stateIds = states.map((s) => s.id);
+    var noStateCities = cities.filter(function (c) {
+      return stateIds.indexOf(c.id.substring(0, 2)) === -1;
+    });
     // sort a copy of cities so maricopa is not first
     var sorted = noStateCities.slice().sort(function (a, b) {
       return a.city > b.city ? 1 : -1;
@@ -2453,7 +2468,7 @@ Elab.ListPage = (function (Elab) {
       // only include if the last week matches other rows
       return +lastWeekDate === +locLastDate ? sum + loc.lastWeek : sum;
     }, 0);
-    var countTotal = counterCities + counterStates
+    var countTotal = counterCities + counterStates;
     var count2 = new countUp.CountUp("counterWeek", countTotal, {
       duration: 3.8,
     });
@@ -2467,7 +2482,7 @@ Elab.ListPage = (function (Elab) {
   }
 
   function initCityTable(cities, options) {
-    var tableEl = document.querySelector('.table--cities')
+    var tableEl = document.querySelector(".table--cities");
     var bodyEl = $(tableEl).find(".table__body");
 
     // clear loading
@@ -2502,9 +2517,8 @@ Elab.ListPage = (function (Elab) {
       });
   }
 
-
   function initStateTable(states, options) {
-    var tableEl = document.querySelector('.table--states')
+    var tableEl = document.querySelector(".table--states");
     var bodyEl = $(tableEl).find(".table__body");
 
     // clear loading
@@ -2551,10 +2565,9 @@ Elab.ListPage = (function (Elab) {
       buttonLabel: "View Report",
     };
     options = Object.assign(defaultOptions, options);
-    var cityData = options.cityData
-    var stateData = options.stateData
+    var cityData = options.cityData;
+    var stateData = options.stateData;
     Elab.Data.loadAllTables(cityData, stateData, function (data) {
-
       var cities = data[0];
       var states = data[1];
       initHeroCount(cities, states);
@@ -2563,19 +2576,22 @@ Elab.ListPage = (function (Elab) {
       // update the "last updated" text
       $("#lastUpdate span").html(d3.timeFormat("%B %d, %Y")(cities[0].updated));
       initCityTable(cities, options);
-      initStateTable(states, options)
+      initStateTable(states, options);
 
       // populate table footnotes
-      var footnoteEl = $("#tableFootnotes")
-      var row = cities[0] // all rows should be the same as far as dates go, so grab first row
-      var startDate = dateFormat(row.values[row.values.length - 1][0])
-      var endDate = dateFormat(row.updated)
-      footnoteEl.html(footnoteEl.html().replace("{{start}}", startDate).replace("{{end}}", endDate))
-  
+      var footnoteEl = $("#tableFootnotes");
+      var row = cities[0]; // all rows should be the same as far as dates go, so grab first row
+      var startDate = dateFormat(row.values[row.values.length - 1][0]);
+      var endDate = dateFormat(row.updated);
+      footnoteEl.html(
+        footnoteEl
+          .html()
+          .replace("{{start}}", startDate)
+          .replace("{{end}}", endDate)
+      );
 
       // initialize any tooltips
       $('[data-toggle="tooltip"]').tooltip();
-
     });
   }
 

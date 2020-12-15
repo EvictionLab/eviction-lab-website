@@ -415,8 +415,22 @@
 .table .table__body .table__cell--name {
   padding-left: 24px;
   width: 35.8%;
+}
+
+.table .table__body .table__cell--name {
+  padding-right: 0;
+}
+
+.table .table__body .table__cell--name > div {
+  display: flex;
+  align-items: center;
+  flex-wrap:nowrap
+}
+
+.table .table__body .table__cell--name span {
   overflow: hidden;
-    text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-size: 1.8rem;
 }
 
 /** Make room for sort icon */
@@ -430,14 +444,14 @@
 
   .table .table__head .table__cell--name,
   .table .table__body .table__cell--name {
-    width: 50%;
+    width: 36%;
   }
 
-  .table .table__body .table__cell--name img {
+  /* .table .table__body .table__cell--name img {
     position: absolute;
-    left:-16px;
+    right:10px;
     margin-top: 6px;
-  }
+  } */
 
   /** Make room for sort icon */
   .table .table__head .table__cell--number,
@@ -577,6 +591,7 @@
   text-transform: uppercase;
   color: var(--c2);
   font-size: 1.4em;
+  position: relative;
 }
 
 .table__body .table__cell--name .icon {
