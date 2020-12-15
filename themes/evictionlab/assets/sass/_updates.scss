@@ -353,30 +353,32 @@ picture img {
 }
 
 svg {
-  &#fig1 {
-    width: 720px;
+  &#fig1, &#agg, &#fig3, &#fig2a {
+    width: 100%;
+    height:100%;
+    min-height: 60px;
   }
-  &#agg {
-    width: 720px;
-  }
-  &#fig3 {
-    width: 720px;
-  }
-  &#fig2a {
-    width: 720px;
-  }
+
   @include media-breakpoint-up(md) {
     &#fig1 {
       width: 100%;
+      height:100%;
+      min-height: 60px;
     }
     &#agg {
       width: 80%;
+      height:100%;
+      min-height: 60px;
     }
     &#fig3 {
       width: 80%;
+      height:100%;
+      min-height: 60px;
     }
     &#fig2a {
       width: 90%;
+      height:100%;
+      min-height: 60px;
     }
   }
 }
