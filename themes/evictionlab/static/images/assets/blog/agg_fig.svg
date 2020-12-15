@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="540" height="" viewBox="0 0 648 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="540" viewBox="0 0 648 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
     <title>agg_fig (1)</title>
     <desc>Created with Sketch.</desc>
@@ -58,13 +58,13 @@
                 <polygon id="Fill-17" fill="#EEF2F5" points="341.88 22.76 359.16 22.76 359.16 5.48 341.88 5.48"></polygon>
                 <polygon id="Stroke-18" stroke="#EEF2F5" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" points="341.88 22.76 359.16 22.76 359.16 5.48 341.88 5.48"></polygon>
                 <polygon id="Fill-19" fill="#E24000" points="342.59 23.05 358.45 23.05 358.45 7.19 342.59 7.19"></polygon>
-                <text id="Observed-Filings" font-family="GT-Eesti-Display-Bold, GT Eesti Display" font-size="18" font-weight="600" letter-spacing="0.1" fill="#333333">
+                <text id="Observed-Filings" font-family="GT-Eesti-Display-Bold, GT Eesti Display" font-size="18" letter-spacing="0.1" fill="#333333">
                     <tspan x="192.4" y="21.04">Observed Filings</tspan>
                 </text>
                 <text id="348,000" font-family="Gotham A, Gotham B" font-size="23" font-weight="600" fill="#FFFFFF">
                     <tspan x="470" y="148">348,000</tspan>
                 </text>
-                <text id="Missing-Filings" font-family="GT-Eesti-Display-Bold, GT Eesti Display" font-size="18" font-weight="600" letter-spacing="0.1" fill="#333333">
+                <text id="Missing-Filings" font-family="GT-Eesti-Display-Bold, GT Eesti Display" font-size="18"  letter-spacing="0.1" fill="#333333">
                     <tspan x="367" y="22">Missing Filings</tspan>
                 </text>
             </g>

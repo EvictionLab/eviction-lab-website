@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="640px" height="505px" viewBox="0 0 649 505" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="640px" viewBox="0 0 649 505" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
     <title>figure_3_20201204</title>
     <desc>Created with Sketch.</desc>
@@ -82,7 +82,7 @@
                         <tspan x="0" y="11">600,000</tspan>
                     </text>
                 </g>
-                <text id="CUMULATIVE--NUMBER--OF--FILINGS" transform="translate(12.560000, 203.203000) rotate(-90.000000) translate(-12.560000, -203.203000) " font-family="GTEestiDisplay-Bold, GT Eesti Display" font-size="16" font-weight="bold" fill="#333333">
+                <text id="CUMULATIVE--NUMBER--OF--FILINGS" transform="translate(12.560000, 203.203000) rotate(-90.000000) translate(-12.560000, -203.203000) " font-family="GT-Eesti-Display-Bold" font-size="16" fill="#333333">
                     <tspan x="-120.44" y="208.203">CUMULATIVE  NUMBER  OF  FILINGS</tspan>
                 </text>
                 <path d="M215.09,475.04 L243.89,475.04 M215.09,475.04 L243.89,475.04" id="Stroke-17" stroke="#434878" stroke-width="3.2" stroke-linejoin="round"></path>
@@ -91,7 +91,7 @@
                 <text id="2020" font-family="Gotham-Bold, Gotham" font-size="16" font-weight="bold" letter-spacing="0.6" fill="#333333">
                     <tspan x="254.97" y="480.08">2020</tspan>
                 </text>
-                <text id="HISTORICAL-AVERAGE" font-family="GTEestiDisplay-Bold, GT Eesti Display" font-size="16" font-weight="bold" letter-spacing="1" fill="#333333">
+                <text id="HISTORICAL-AVERAGE" font-family="GT-Eesti-Display-Bold" font-size="16" letter-spacing="1" fill="#333333">
                     <tspan x="354.5" y="480.5">HISTORICAL AVERAGE</tspan>
                 </text>
             </g>

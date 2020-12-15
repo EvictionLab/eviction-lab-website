@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="684px" height="793px" viewBox="0 0 684 793" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="684px" viewBox="0 0 684 793" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
     <title>figure_2A_20201204</title>
     <desc>Created with Sketch.</desc>
@@ -62,7 +62,7 @@
                 <polygon id="Fill-42" fill="#E24000" points="209.52 118.67 653.83 118.67 653.83 92.11 209.52 92.11"></polygon>
                 <polygon id="Fill-43" fill="#434878" points="160.15 80.72 191.3 80.72 191.3 54.16 160.15 54.16"></polygon>
                 <polygon id="Fill-44" fill="#E24000" points="191.31 80.72 653.84 80.72 653.84 54.16 191.31 54.16"></polygon>
-                <g id="Group-2" transform="translate(587.665100, 61.481600)" fill="#FFFFFF" font-family="Gotham-Bold, Gotham" font-size="14" font-weight="bold">
+                <g id="Group-2" transform="translate(587.665100, 61.481600)" fill="#FFFFFF" font-family="Gotham A, Gotham B" font-size="14" font-weight="bold">
                     <text id="15,739">
                         <tspan x="8.2286" y="655.1784">15,739</tspan>
                     </text>
@@ -174,7 +174,7 @@
                         <tspan x="33.3716" y="11">Boston, MA</tspan>
                     </text>
                 </g>
-                <text id="FILINGS--SINCE--MARCH--15" font-family="GT-Eesti-Display-Bold" font-size="16" font-weight="bold" fill="#333333">
+                <text id="FILINGS--SINCE--MARCH--15" font-family="GT-Eesti-Display-Bold" font-size="16" fill="#333333">
                     <tspan x="299.8571" y="785.52">FILINGS  SINCE  MARCH  15</tspan>
                 </text>
                 <polygon id="Fill-45" fill="#F4F7F9" points="249.28 33.72 564.72 33.72 564.72 5.48 249.28 5.48"></polygon>
@@ -184,10 +184,10 @@
                 <polygon id="Fill-49" fill="#EEF2F5" points="416.47 28.24 433.75 28.24 433.75 10.96 416.47 10.96"></polygon>
                 <polygon id="Stroke-50" stroke="#EEF2F5" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" points="416.47 28.24 433.75 28.24 433.75 10.96 416.47 10.96"></polygon>
                 <polygon id="Fill-51" fill="#E24000" points="417.18 27.53 433.04 27.53 433.04 11.67 417.18 11.67"></polygon>
-                <text id="Observed-Filings" font-family="GTEestiDisplay-Medium, GT Eesti Display" font-size="16" font-weight="400" letter-spacing="0.5" fill="#333333">
+                <text id="Observed-Filings" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0.5" fill="#333333">
                     <tspan x="282.99" y="25.64">Observed Filings      </tspan>
                 </text>
-                <text id="Missing-Filings" font-family="GTEestiDisplay-Medium, GT Eesti Display" font-size="16" font-weight="400" letter-spacing="0.5" fill="#333333">
+                <text id="Missing-Filings" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0.5" fill="#333333">
                     <tspan x="440" y="25.64"> Missing Filings</tspan>
                 </text>
                 <g id="Group" transform="translate(140.640000, 743.310000)" fill="#4D4D4D" font-family="Gotham A, Gotham B" font-weight="500" font-size="14" font-weight="400">

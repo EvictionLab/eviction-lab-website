@@ -5,7 +5,7 @@ contentcat: research
 featured: true
 researchtype: elresearch
 title: 'Eviction Moratoriums have Prevented Over a Million Evictions in the U.S. during the COVID-19 Pandemic'
-date: 2020-12-09T16:46:40.089Z
+date: 2020-12-15T00:46:40.089Z
 postauthorname: Joe Fish, Emily Lemmerman, Renee Louis, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
