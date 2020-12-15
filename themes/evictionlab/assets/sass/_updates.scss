@@ -351,3 +351,32 @@ picture img {
     font-size: 13px;
   }
 }
+
+svg {
+  &#fig1 {
+    width: 100%;
+  }
+  &#agg {
+    width: 100%;
+  }
+  &#fig3 {
+    width: 100%;
+  }
+  &#fig2a {
+    width: 100%;
+  }
+  @include media-breakpoint-up(md) {
+    &#fig1 {
+      width: 100%;
+    }
+    &#agg {
+      width: 80%;
+    }
+    &#fig3 {
+      width: 80%;
+    }
+    &#fig2a {
+      width: 90%;
+    }
+  }
+}
