@@ -4,7 +4,7 @@ contenttype: updates
 contentcat: research
 featured: true
 researchtype: elresearch
-title: 'Eviction Moratoriums have Prevented Over a Million Evictions in the U.S. during the COVID-19 Pandemic'
+title: 'Eviction Moratoria have Prevented Over a Million Evictions in the U.S. during the COVID-19 Pandemic'
 date: 2020-12-15T00:46:40.089Z
 postauthorname: Joe Fish, Emily Lemmerman, Renee Louis, and Peter Hepburn
 postauthortitle: The Eviction Lab
@@ -45,7 +45,7 @@ Since the start of September—with the CDC eviction moratorium in place, but wi
 
 The share of missing eviction filings varies considerably across cities and states covered by the ETS. We explore this variation in Figure 4, plotting the percentage of expected cases that have been filed (the blue bar) and the percentage of missing filings (the red bar). The number in white is the absolute number of missing filings. 
 
-{{< inlinesvg "missing-claims-fig2A.svg" "Figure 4. Distribution of Missing Filings across ETS Sites" >}}
+<div class="figheader" style="max-width: 600px;" >Figure 4. Distribution of Missing Filings across ETS Sites</div>
 <div class="upscale124 pb-4 pb-xxl-5">
 <img id="fig2b" src="/images/assets/blog/missing-claims-fig2B.svg" />
 </div>
