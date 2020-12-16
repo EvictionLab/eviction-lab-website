@@ -151,6 +151,7 @@ picture.upscale124 {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   @include media-breakpoint-up(md) {
     width: 124%;
     margin-left: -12%;
@@ -388,6 +389,4 @@ svg {
   @include media-breakpoint-up(xl) {
    max-width: 110%;
   }
-  //height:100%;
-  //min-height: 60px;
 }
