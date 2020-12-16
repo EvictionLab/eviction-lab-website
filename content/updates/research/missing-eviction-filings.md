@@ -55,7 +55,7 @@ The share of missing eviction filings varies considerably across cities and stat
 
 <div class="figheader" style="max-width: 600px;" >Figure 4. Distribution of Missing Filings across ETS Sites</div>
 <div class="upscale124 pb-4 pb-xxl-5">
-<img id="fig2b" src="/images/assets/blog/missing-claims-fig2B.svg" />
+<img id="fig2b" src="/images/assets/blog/missing-claims-fig2B.png" />
 </div>
 
 Some cities and states have far more successfully reduced eviction filings than others. Jurisdictions in the cities in our sample have enacted a wide variety of protections for renters during the pandemic. Some of these measures were <a href="https://evictionlab.org/moratoria-and-filings/">extremely effective in reducing eviction filings</a>. For example, in Boston—subject to <a href="https://evictionlab.org/covid-policy-scorecard/ma/">Massachusetts’s statewide eviction moratorium between April 20th and October 17th</a>—eviction filings since March 15th were at less than 10% of historical average. Houston, by contrast, was subject to a much shorter eviction moratorium that did allow for new filings. In that city, we observed nearly half the number of normal filings. 

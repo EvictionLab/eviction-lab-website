@@ -30,7 +30,7 @@
                 <text id="172,000" font-family="Gotham A, Gotham B" font-size="23" font-weight="600" fill="#FFFFFF">
                     <tspan x="100.8186" y="146.33">172,000</tspan>
                 </text>
-                <text id="0%25%50%75%100%" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400" fill="#4D4D4D">
+                <text id="0%25%50%75%100%" font-family="Gotham A, Gotham B" font-size="16" font-weight="400" fill="#4D4D4D">
                     <tspan x="34.495" y="251.23">0</tspan>
                     <tspan x="46.079" y="251.23" letter-spacing="105.1168">%</tspan>
                     <tspan x="164.7798" y="251.23">25</tspan>
