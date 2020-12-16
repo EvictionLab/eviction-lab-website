@@ -5,7 +5,7 @@ url: /missing-eviction-filings
 contenttype: updates
 contentcat: research
 featured: true
-in_index: false
+in_index: true
 title: Eviction Moratoria have Prevented Over a Million Eviction Filings in the
   U.S. during the COVID-19 Pandemic
 date: 2020-12-15T00:46:40.089Z
