@@ -12,8 +12,8 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Absent further protections, these cases may be pushed into 2021.
 listSummary: 'America faced a rental housing crisis long before the onset of the COVID-19 pandemic. In a typical, non-pandemic year, landlords would file 3.7 million eviction cases across the United States. As a result of eviction moratoria, court closures, and temporary expansions to the social safety net, far fewer eviction cases have been filed in 2020. How many fewer? And what does that tell us about the potential for a surge in eviction filings in early 2021?' 
 socialDescription: Absent further protections, these cases may be pushed into 2021.
-fbImage:
-twImage: 
+fbImage: /images/assets/blog/missing-evictions-social.png
+twImage: /images/assets/blog/missing-evictions-social.png
 url: /missing-eviction-filings
 aliases:
   
@@ -46,6 +46,9 @@ Since the start of September—with the CDC eviction moratorium in place, but wi
 The share of missing eviction filings varies considerably across cities and states covered by the ETS. We explore this variation in Figure 4, plotting the percentage of expected cases that have been filed (the blue bar) and the percentage of missing filings (the red bar). The number in white is the absolute number of missing filings. 
 
 {{< inlinesvg "missing-claims-fig2A.svg" "Figure 4. Distribution of Missing Filings across ETS Sites" >}}
+<div class="upscale124 pb-4 pb-xxl-5">
+<img id="fig2b" src="/images/assets/blog/missing-claims-fig2B.svg" />
+</div>
 
 Some cities and states have far more successfully reduced eviction filings than others. Jurisdictions in the cities in our sample have enacted a wide variety of protections for renters during the pandemic. Some of these measures were <a href="https://evictionlab.org/moratoria-and-filings/">extremely effective in reducing eviction filings</a>. For example, in Boston—subject to Massachusetts’s statewide moratorium on eviction notice between April 20th and October 17th—eviction filings since March 15th were at less than 10% of historical average. Houston, by contrast, was subject to a much shorter eviction moratorium that did allow for new filings. In that city, we observed nearly half the number of normal filings. 
 

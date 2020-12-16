@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="920" viewBox="0 0 1044 886" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>missing-claims-fig2B</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-3" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-5" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-7" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-9" x="0" y="0.24" width="522" height="844.77"></rect>
+        <rect id="path-11" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-13" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-15" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-17" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-19" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-21" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-23" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-25" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-27" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-29" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-31" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-33" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-35" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-37" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-39" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-41" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-43" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-45" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-47" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-49" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-51" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-53" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-55" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-57" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-59" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-61" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-63" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-65" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-67" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-69" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-71" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-73" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-75" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-77" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-79" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-81" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-83" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-85" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-87" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-89" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-91" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-93" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-95" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-97" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-99" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-101" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-103" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-105" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-107" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-109" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-111" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-113" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-115" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-117" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-119" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+        <rect id="path-121" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-123" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-125" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-127" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-129" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-131" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-133" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-135" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-137" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-139" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-141" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-143" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-145" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-147" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-149" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-151" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-153" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-155" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-157" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-159" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-161" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-163" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-165" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-167" x="0" y="0.24" width="522" height="844.77"></rect>
+        <rect id="path-169" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-171" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-173" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-175" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-177" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-179" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-181" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-183" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-185" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-187" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-189" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-191" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-193" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-195" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-197" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-199" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-201" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-203" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-205" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+        <rect id="path-207" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-209" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-211" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-213" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-215" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-217" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-219" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-221" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-223" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-225" x="0" y="0" width="1044" height="892.8"></rect>
+        <rect id="path-227" x="0" y="0" width="1044" height="914.795073"></rect>
+    </defs>
+    <g id="Missing-eviction-filings" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-108.000000, -28.000000)">
+            <g id="missing-claims-fig2B" transform="translate(108.000000, 10.000000)">
+                <rect id="Rectangle" x="0" y="22" width="1044" height="892.8"></rect>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" stroke="#F4F7F9" stroke-width="1.71" fill="#F4F7F9" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" x="0" y="0" width="1044" height="873.01"></rect>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#F4F7F9" fill-rule="nonzero" mask="url(#mask-4)" x="343.89" y="3.6e-15" width="356.23" height="28.24"></rect>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 50.000000)">
+                    <mask id="mask-10" fill="white">
+                        <use xlink:href="#path-9"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" stroke="#F4F7F9" stroke-width="1.07" fill="#F4F7F9" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-10)" x="-6.4e-14" y="0.24" width="522" height="844.77"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-12" fill="white">
+                        <use xlink:href="#path-11"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" stroke="#F4F7F9" stroke-width="3.2" fill="#F4F7F9" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-12)" x="0.52" y="0.24" width="344.08" height="796.11"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-14" fill="white">
+                        <use xlink:href="#path-13"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-14)" x="16.16" y="754.8" width="176.78" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-16" fill="white">
+                        <use xlink:href="#path-15"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-16)" x="192.94" y="754.8" width="136.02" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-18" fill="white">
+                        <use xlink:href="#path-17"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-18)" x="16.16" y="711.05" width="169.04" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-20" fill="white">
+                        <use xlink:href="#path-19"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-20)" x="185.19" y="711.05" width="143.77" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-22" fill="white">
+                        <use xlink:href="#path-21"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-22)" x="16.16" y="667.31" width="162.28" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-24" fill="white">
+                        <use xlink:href="#path-23"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-24)" x="178.44" y="667.31" width="150.52" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-26" fill="white">
+                        <use xlink:href="#path-25"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-26)" x="16.16" y="623.57" width="162.23" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-28" fill="white">
+                        <use xlink:href="#path-27"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-28)" x="178.39" y="623.57" width="150.57" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-30" fill="white">
+                        <use xlink:href="#path-29"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-30)" x="16.16" y="579.83" width="162.08" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-32" fill="white">
+                        <use xlink:href="#path-31"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-32)" x="178.23" y="579.83" width="150.73" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-34" fill="white">
+                        <use xlink:href="#path-33"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-34)" x="16.16" y="536.08" width="155.34" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-36" fill="white">
+                        <use xlink:href="#path-35"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-36)" x="171.5" y="536.08" width="157.46" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-38" fill="white">
+                        <use xlink:href="#path-37"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-38)" x="16.16" y="492.34" width="147.36" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-40" fill="white">
+                        <use xlink:href="#path-39"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-40)" x="163.52" y="492.34" width="165.44" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-42" fill="white">
+                        <use xlink:href="#path-41"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-42)" x="16.16" y="448.6" width="135.09" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-44" fill="white">
+                        <use xlink:href="#path-43"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-44)" x="151.24" y="448.6" width="177.72" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-46" fill="white">
+                        <use xlink:href="#path-45"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-46)" x="16.16" y="404.86" width="130.54" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-48" fill="white">
+                        <use xlink:href="#path-47"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-48)" x="146.7" y="404.86" width="182.26" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-50" fill="white">
+                        <use xlink:href="#path-49"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-50)" x="16.16" y="361.11" width="120.09" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-52" fill="white">
+                        <use xlink:href="#path-51"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-52)" x="136.25" y="361.11" width="192.71" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-54" fill="white">
+                        <use xlink:href="#path-53"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-54)" x="16.16" y="317.37" width="110.92" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-56" fill="white">
+                        <use xlink:href="#path-55"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-56)" x="127.08" y="317.37" width="201.88" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-58" fill="white">
+                        <use xlink:href="#path-57"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-58)" x="16.16" y="273.63" width="107" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-60" fill="white">
+                        <use xlink:href="#path-59"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-60)" x="123.16" y="273.63" width="205.8" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-62" fill="white">
+                        <use xlink:href="#path-61"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-62)" x="16.16" y="229.89" width="90.5" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-64" fill="white">
+                        <use xlink:href="#path-63"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-64)" x="106.65" y="229.89" width="222.31" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-66" fill="white">
+                        <use xlink:href="#path-65"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-66)" x="16.16" y="186.14" width="65.45" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-68" fill="white">
+                        <use xlink:href="#path-67"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-68)" x="81.61" y="186.14" width="247.35" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-70" fill="white">
+                        <use xlink:href="#path-69"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-70)" x="16.16" y="142.4" width="61.08" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-72" fill="white">
+                        <use xlink:href="#path-71"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-72)" x="77.24" y="142.4" width="251.72" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-74" fill="white">
+                        <use xlink:href="#path-73"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-74)" x="16.16" y="98.66" width="51.06" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-76" fill="white">
+                        <use xlink:href="#path-75"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-76)" x="67.22" y="98.66" width="261.74" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-78" fill="white">
+                        <use xlink:href="#path-77"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-78)" x="16.16" y="54.92" width="31.28" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-80" fill="white">
+                        <use xlink:href="#path-79"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-80)" x="47.44" y="54.92" width="281.52" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-82" fill="white">
+                        <use xlink:href="#path-81"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-82)" x="16.16" y="11.17" width="19.74" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-84" fill="white">
+                        <use xlink:href="#path-83"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-84)" x="35.9" y="11.17" width="293.06" height="30.62"></rect>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-86" fill="white">
+                        <use xlink:href="#path-85"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="15,739" fill="#FFFFFF" mask="url(#mask-86)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="265.37" y="776.58">15,739</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-88" fill="white">
+                        <use xlink:href="#path-87"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="6,150" fill="#FFFFFF" mask="url(#mask-88)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="272.92" y="732.84">6,150</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-90" fill="white">
+                        <use xlink:href="#path-89"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="7,946" fill="#FFFFFF" mask="url(#mask-90)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="270.13" y="689.1">7,946</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-92" fill="white">
+                        <use xlink:href="#path-91"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="6,084" fill="#FFFFFF" mask="url(#mask-92)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="268.96" y="645.36">6,084</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-94" fill="white">
+                        <use xlink:href="#path-93"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="536" fill="#FFFFFF" mask="url(#mask-94)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="285.01" y="601.61">536</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-96" fill="white">
+                        <use xlink:href="#path-95"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="5,108" fill="#FFFFFF" mask="url(#mask-96)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="273.39" y="557.87">5,108</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-98" fill="white">
+                        <use xlink:href="#path-97"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="10,324" fill="#FFFFFF" mask="url(#mask-98)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="263.43" y="514.13">10,324</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-100" fill="white">
+                        <use xlink:href="#path-99"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="5,366" fill="#FFFFFF" mask="url(#mask-100)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="270.98" y="470.39">5,366</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-102" fill="white">
+                        <use xlink:href="#path-101"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="23,629" fill="#FFFFFF" mask="url(#mask-102)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="261.86" y="426.64">23,629</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-104" fill="white">
+                        <use xlink:href="#path-103"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="6,402" fill="#FFFFFF" mask="url(#mask-104)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="269.07" y="382.9">6,402</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-106" fill="white">
+                        <use xlink:href="#path-105"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="9,102" fill="#FFFFFF" mask="url(#mask-106)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="273.02" y="339.16">9,102</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-108" fill="white">
+                        <use xlink:href="#path-107"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="6,726" fill="#FFFFFF" mask="url(#mask-108)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="271.11" y="295.42">6,726</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-110" fill="white">
+                        <use xlink:href="#path-109"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="5,908" fill="#FFFFFF" mask="url(#mask-110)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="269.84" y="251.67">5,908</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-112" fill="white">
+                        <use xlink:href="#path-111"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="7,502" fill="#FFFFFF" mask="url(#mask-112)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="270.58" y="207.93">7,502</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-114" fill="white">
+                        <use xlink:href="#path-113"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="125,887" fill="#FFFFFF" mask="url(#mask-114)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="256.49" y="164.19">125,887</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-116" fill="white">
+                        <use xlink:href="#path-115"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="12,708" fill="#FFFFFF" mask="url(#mask-116)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="264.33" y="120.45">12,708</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-118" fill="white">
+                        <use xlink:href="#path-117"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="6,399" fill="#FFFFFF" mask="url(#mask-118)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="270.5" y="76.7">6,399</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(163.000000, 50.000000)">
+                    <mask id="mask-120" fill="white">
+                        <use xlink:href="#path-119"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="4,632" fill="#FFFFFF" mask="url(#mask-120)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="270.68" y="32.96">4,632</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-122" fill="white">
+                        <use xlink:href="#path-121"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Phoenix,-AZ" fill="#4D4D4D" mask="url(#mask-122)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="61.05" y="803.71">Phoenix, AZ</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-124" fill="white">
+                        <use xlink:href="#path-123"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Columbus,-OH" fill="#4D4D4D" mask="url(#mask-124)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="43.07" y="759.97">Columbus, OH</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-126" fill="white">
+                        <use xlink:href="#path-125"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Fort-Worth,-TX" fill="#4D4D4D" mask="url(#mask-126)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="37.02" y="716.22">Fort Worth, TX</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-128" fill="white">
+                        <use xlink:href="#path-127"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Tampa,-FL" fill="#4D4D4D" mask="url(#mask-128)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="74.01" y="672.48">Tampa, FL</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-130" fill="white">
+                        <use xlink:href="#path-129"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Gainesville,-FL" fill="#4D4D4D" mask="url(#mask-130)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="42.07" y="628.74">Gainesville, FL</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-132" fill="white">
+                        <use xlink:href="#path-131"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Greenville,-SC" fill="#4D4D4D" mask="url(#mask-132)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="46.12" y="585">Greenville, SC</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-134" fill="white">
+                        <use xlink:href="#path-133"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Memphis,-TN" fill="#4D4D4D" mask="url(#mask-134)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="54.51" y="541.25">Memphis, TN</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-136" fill="white">
+                        <use xlink:href="#path-135"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Cincinnati,-OH" fill="#4D4D4D" mask="url(#mask-136)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="43.34" y="497.51">Cincinnati, OH</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-138" fill="white">
+                        <use xlink:href="#path-137"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Houston,-TX" fill="#4D4D4D" mask="url(#mask-138)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="59.87" y="453.77">Houston, TX</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-140" fill="white">
+                        <use xlink:href="#path-139"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Jacksonville,-FL" fill="#4D4D4D" mask="url(#mask-140)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="30.95" y="410.03">Jacksonville, FL</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-142" fill="white">
+                        <use xlink:href="#path-141"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Richmond,-VA" fill="#4D4D4D" mask="url(#mask-142)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="43.29" y="366.28">Richmond, VA</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-144" fill="white">
+                        <use xlink:href="#path-143"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Charleston,-SC" fill="#4D4D4D" mask="url(#mask-144)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="40.47" y="322.54">Charleston, SC</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-146" fill="white">
+                        <use xlink:href="#path-145"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Cleveland,-OH" fill="#4D4D4D" mask="url(#mask-146)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="43.88" y="278.8">Cleveland, OH</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-148" fill="white">
+                        <use xlink:href="#path-147"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Pittsburgh,-PA" fill="#4D4D4D" mask="url(#mask-148)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="41.88" y="235.06">Pittsburgh, PA</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-150" fill="white">
+                        <use xlink:href="#path-149"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="New-York,-NY" fill="#4D4D4D" mask="url(#mask-150)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="46.62" y="191.31">New York, NY</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-152" fill="white">
+                        <use xlink:href="#path-151"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Philadelphia,-PA" fill="#4D4D4D" mask="url(#mask-152)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="27.43" y="147.57">Philadelphia, PA</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-154" fill="white">
+                        <use xlink:href="#path-153"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Austin,-TX" fill="#4D4D4D" mask="url(#mask-154)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="75.83" y="103.83">Austin, TX</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-156" fill="white">
+                        <use xlink:href="#path-155"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Boston,-MA" fill="#4D4D4D" mask="url(#mask-156)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="65.9" y="60.09">Boston, MA</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-158" fill="white">
+                        <use xlink:href="#path-157"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="0%" fill="#4D4D4D" mask="url(#mask-158)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="153.99" y="840.49">0%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-160" fill="white">
+                        <use xlink:href="#path-159"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="25%" fill="#4D4D4D" mask="url(#mask-160)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="224.01" y="840.49">25%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-162" fill="white">
+                        <use xlink:href="#path-161"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="50%" fill="#4D4D4D" mask="url(#mask-162)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="300.44" y="840.49">50%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-164" fill="white">
+                        <use xlink:href="#path-163"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="75%" fill="#4D4D4D" mask="url(#mask-164)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="380.48" y="840.49">75%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-166" fill="white">
+                        <use xlink:href="#path-165"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="100%" fill="#4D4D4D" mask="url(#mask-166)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="448.87" y="840.49">100%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(522.000000, 50.000000)">
+                    <mask id="mask-168" fill="white">
+                        <use xlink:href="#path-167"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" stroke="#F4F7F9" stroke-width="1.07" fill="#F4F7F9" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-168)" x="0" y="0.24" width="522" height="844.77"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-170" fill="white">
+                        <use xlink:href="#path-169"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" stroke="#F4F7F9" stroke-width="3.2" fill="#F4F7F9" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-170)" x="0.08" y="0.24" width="377.52" height="796.11"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-172" fill="white">
+                        <use xlink:href="#path-171"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-172)" x="17.24" y="674.37" width="227.24" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-174" fill="white">
+                        <use xlink:href="#path-173"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-174)" x="244.48" y="674.37" width="115.96" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-176" fill="white">
+                        <use xlink:href="#path-175"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-176)" x="17.24" y="545.96" width="144.87" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-178" fill="white">
+                        <use xlink:href="#path-177"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-178)" x="162.1" y="545.96" width="198.34" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-180" fill="white">
+                        <use xlink:href="#path-179"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-180)" x="17.24" y="417.56" width="115.16" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-182" fill="white">
+                        <use xlink:href="#path-181"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-182)" x="132.4" y="417.56" width="228.04" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-184" fill="white">
+                        <use xlink:href="#path-183"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-184)" x="17.24" y="289.15" width="91.29" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-186" fill="white">
+                        <use xlink:href="#path-185"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-186)" x="108.53" y="289.15" width="251.91" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-188" fill="white">
+                        <use xlink:href="#path-187"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-188)" x="17.24" y="160.75" width="44.98" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-190" fill="white">
+                        <use xlink:href="#path-189"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-190)" x="62.22" y="160.75" width="298.22" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-192" fill="white">
+                        <use xlink:href="#path-191"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" mask="url(#mask-192)" x="17.24" y="32.34" width="24.89" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-194" fill="white">
+                        <use xlink:href="#path-193"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" mask="url(#mask-194)" x="42.13" y="32.34" width="318.31" height="89.88"></rect>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-196" fill="white">
+                        <use xlink:href="#path-195"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="3,212" fill="#FFFFFF" mask="url(#mask-196)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="305.17" y="725.79">3,212</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-198" fill="white">
+                        <use xlink:href="#path-197"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="17,956" fill="#FFFFFF" mask="url(#mask-198)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="294.72" y="597.38">17,956</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-200" fill="white">
+                        <use xlink:href="#path-199"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="34,869" fill="#FFFFFF" mask="url(#mask-200)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="290.74" y="468.98">34,869</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-202" fill="white">
+                        <use xlink:href="#path-201"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="9,348" fill="#FFFFFF" mask="url(#mask-202)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="300.54" y="340.57">9,348</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-204" fill="white">
+                        <use xlink:href="#path-203"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="12,218" fill="#FFFFFF" mask="url(#mask-204)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="298.79" y="212.16">12,218</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(652.000000, 50.000000)">
+                    <mask id="mask-206" fill="white">
+                        <use xlink:href="#path-205"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="10,319" fill="#FFFFFF" mask="url(#mask-206)" font-family="Gotham-Bold, Gotham" font-size="18.49" font-weight="bold">
+                        <tspan x="296.76" y="83.76">10,319</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-208" fill="white">
+                        <use xlink:href="#path-207"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Wisconsin" fill="#4D4D4D" mask="url(#mask-208)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="564.65" y="752.91">Wisconsin</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-210" fill="white">
+                        <use xlink:href="#path-209"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Missouri" fill="#4D4D4D" mask="url(#mask-210)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="581.07" y="624.51">Missouri</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-212" fill="white">
+                        <use xlink:href="#path-211"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Indiana" fill="#4D4D4D" mask="url(#mask-212)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="588.15" y="496.1">Indiana</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-214" fill="white">
+                        <use xlink:href="#path-213"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Delaware" fill="#4D4D4D" mask="url(#mask-214)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="571.56" y="367.69">Delaware</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-216" fill="white">
+                        <use xlink:href="#path-215"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Connecticut" fill="#4D4D4D" mask="url(#mask-216)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="549.43" y="239.29">Connecticut</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-218" fill="white">
+                        <use xlink:href="#path-217"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="Minnesota" fill="#4D4D4D" mask="url(#mask-218)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="564.71" y="110.88">Minnesota</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-220" fill="white">
+                        <use xlink:href="#path-219"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="0%" fill="#4D4D4D" mask="url(#mask-220)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="644.07" y="840.49">0%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-222" fill="white">
+                        <use xlink:href="#path-221"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="25%" fill="#4D4D4D" mask="url(#mask-222)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="721.69" y="840.49">25%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-224" fill="white">
+                        <use xlink:href="#path-223"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="50%" fill="#4D4D4D" mask="url(#mask-224)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="805.72" y="840.49">50%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 22.000000)">
+                    <mask id="mask-226" fill="white">
+                        <use xlink:href="#path-225"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="75%" fill="#4D4D4D" mask="url(#mask-226)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="893.36" y="840.49">75%</tspan>
+                    </text>
+                </g>
+                <g id="Clipped">
+                    <mask id="mask-228" fill="white">
+                        <use xlink:href="#path-227"></use>
+                    </mask>
+                    <g id="Rectangle"></g>
+                    <text id="100%" fill="#4D4D4D" mask="url(#mask-228)" font-family="Gotham-Medium, Gotham" font-size="16" font-weight="400">
+                        <tspan x="969.35" y="861.07318">100%</tspan>
+                    </text>
+                </g>
+                <text id="FILINGS-SINCE-MARCH-15" fill="#333333" font-family="GTEestiDisplay-Bold, GT Eesti Display" font-size="18" font-weight="bold">
+                    <tspan x="410.04" y="902.53">FILINGS SINCE MARCH 15</tspan>
+                </text>
+                <g id="Group" transform="translate(354.600000, 17.480000)">
+                    <rect id="Rectangle" fill="#E24000" fill-rule="nonzero" x="190.14" y="0.71" width="15.86" height="15.86"></rect>
+                    <rect id="Rectangle" fill="#434878" fill-rule="nonzero" x="0.95" y="0.71" width="15.86" height="15.86"></rect>
+                    <text id="Observed-Filings" fill="#484848" font-family="Gotham-Bold, Gotham" font-size="18" font-weight="bold">
+                        <tspan x="23" y="14.94">Observed Filings</tspan>
+                    </text>
+                    <text id="Missing-Filings" fill="#484848" font-family="Gotham-Bold, Gotham" font-size="18" font-weight="bold">
+                        <tspan x="212.19" y="14.94">Missing Filings</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
