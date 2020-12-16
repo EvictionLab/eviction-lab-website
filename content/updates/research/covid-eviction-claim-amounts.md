@@ -9,7 +9,7 @@ date: 2020-08-27T16:46:40.089Z
 postauthorname: Renee Louis, Alieza Durana, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Our methodology for building the Housing Policy Scorecard.
+description: Examining the amounts landlords claim tenants owe in 3 counties' eviction filings.
 listSummary: 'In three of the counties we track, we are able to collect an important data point: the amount of money, if any, that the landlord or property manager claims is owed by the tenant. Here, we look at the amounts claimed at the initiation of the eviction process.' 
 socialDescription: Examining the amounts landlords claim tenants owe in 3 counties' eviction filings.
 fbImage: '/images/assets/blog/claims_social.png'
