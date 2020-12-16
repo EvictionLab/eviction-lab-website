@@ -1,22 +1,30 @@
 ---
+draft: false
 childof: research
+url: /missing-eviction-filings
 contenttype: updates
 contentcat: research
 featured: true
-researchtype: elresearch
-title: 'Eviction Moratoria have Prevented Over a Million Evictions in the U.S. during the COVID-19 Pandemic'
+in_index: false
+title: Eviction Moratoria have Prevented Over a Million Evictions in the U.S.
+  during the COVID-19 Pandemic
 date: 2020-12-15T00:46:40.089Z
-postauthorname: Joe Fish, Emily Lemmerman, Renee Louis, and Peter Hepburn
 postauthortitle: The Eviction Lab
+listSummary: America faced a rental housing crisis long before the onset of the
+  COVID-19 pandemic. In a typical, non-pandemic year, landlords would file 3.7
+  million eviction cases across the United States. As a result of eviction
+  moratoria, court closures, and temporary expansions to the social safety net,
+  far fewer eviction cases have been filed in 2020. How many fewer? And what
+  does that tell us about the potential for a surge in eviction filings in early
+  2021?
+socialDescription: Absent further protections, these cases may be pushed into 2021.
+researchtype: elresearch
+postauthorname: Joe Fish, Emily Lemmerman, Renee Louis, and Peter Hepburn
+twImage: /images/assets/blog/missing-evictions-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Absent further protections, these cases may be pushed into 2021.
-listSummary: 'America faced a rental housing crisis long before the onset of the COVID-19 pandemic. In a typical, non-pandemic year, landlords would file 3.7 million eviction cases across the United States. As a result of eviction moratoria, court closures, and temporary expansions to the social safety net, far fewer eviction cases have been filed in 2020. How many fewer? And what does that tell us about the potential for a surge in eviction filings in early 2021?' 
-socialDescription: Absent further protections, these cases may be pushed into 2021.
+aliases: null
 fbImage: /images/assets/blog/missing-evictions-social.png
-twImage: /images/assets/blog/missing-evictions-social.png
-url: /missing-eviction-filings
-aliases:
-  
 ---
 America faced a rental housing crisis long before the onset of the COVID-19 pandemic. In a typical, non-pandemic year, landlords would file <a href="https://www.congress.gov/116/meeting/house/110362/witnesses/HHRG-116-BA00-Wstate-DesmondM-20200114.pdf" target="_blank">3.7 million eviction cases across the United States</a>. As a result of eviction moratoria, court closures, and temporary expansions to the social safety net, far fewer eviction cases have been filed in 2020. How many fewer? And what does that tell us about the potential for a surge in eviction filings in early 2021? 
 
@@ -26,8 +34,8 @@ Leveraging data drawn from the <a href="/eviction-tracking">Eviction Tracking Sy
 
 Focusing on the 18 cities and six states we observed in the ETS, in Figure 1 we plot total weekly eviction filings as a percentage of historical average.{{< sup 1>}} For nearly every week since the pandemic began, filings have been far below average. 
 
-
 {{< inlinesvg "missing-claims-fig1.svg" "Figure 1. Weekly Eviction Filings in Eviction Tracking System Sites Relative to Historical Average" >}}
+
 <div class="figcaption"><p>Weekly eviction filings are aggregated across sites tracked by the Eviction Tracking System (ETS) as of 11/30/2020. Historical averages are calculated for the same seven-day periods in previous years. The vertical red dashed line in mid-March marks the start of the COVID-19 pandemic. The bars in orange are the <a href="/shifts-in-eviction-filings-from-cares-act-to-cdc-order/">two weeks between the CARES Act eviction moratorium and the CDC eviction moratorium when no federal moratorium was in effect</a>. 
 </p></div>
 
@@ -50,7 +58,7 @@ The share of missing eviction filings varies considerably across cities and stat
 <img id="fig2b" src="/images/assets/blog/missing-claims-fig2B.svg" />
 </div>
 
-Some cities and states have far more successfully reduced eviction filings than others. Jurisdictions in the cities in our sample have enacted a wide variety of protections for renters during the pandemic. Some of these measures were <a href="https://evictionlab.org/moratoria-and-filings/">extremely effective in reducing eviction filings</a>. For example, in Boston—subject to Massachusetts’s statewide moratorium on eviction notice between April 20th and October 17th—eviction filings since March 15th were at less than 10% of historical average. Houston, by contrast, was subject to a much shorter eviction moratorium that did allow for new filings. In that city, we observed nearly half the number of normal filings. 
+Some cities and states have far more successfully reduced eviction filings than others. Jurisdictions in the cities in our sample have enacted a wide variety of protections for renters during the pandemic. Some of these measures were <a href="https://evictionlab.org/moratoria-and-filings/">extremely effective in reducing eviction filings</a>. For example, in Boston—subject to <a href="https://evictionlab.org/covid-policy-scorecard/ma/">Massachusetts’s statewide eviction moratorium between April 20th and October 17th</a>—eviction filings since March 15th were at less than 10% of historical average. Houston, by contrast, was subject to a much shorter eviction moratorium that did allow for new filings. In that city, we observed nearly half the number of normal filings. 
 
 The differences in states’ success in reducing eviction filings is even more striking. Minnesota has had a statewide eviction moratorium in place since March 16th; only 10% of normal cases have been filed. Neighboring Wisconsin ended their moratorium on May 26th and has seen almost 60% of normal filings since the start of the pandemic. 
 
@@ -60,8 +68,7 @@ ETS data collection covers 18 cities and six full states, home to one in every f
 
 Extrapolating to the rest of the nation from the 18 cities and 6 states in our sample requires significant assumptions. We estimate that there have been 800,000 eviction filings across all non-ETS counties between March 15th and November 30th.{{< sup 3 >}} In a typical year over this period, these counties would have experienced over 2.1 million eviction filings, thus leaving 1.3 million missing filings. Across the country, as many as 1.6 million eviction cases may be missing from 2020—and potentially pushed to early 2021. 
 
-On January 1, 2021, when the CDC eviction moratorium expires, renters will have the fewest protections available to them since the start of the COVID-19 pandemic. Only six states have moratoria that are scheduled to extend into the new year.  Eviction moratoriums were effective at lowering the rate of eviction filings during the pandemic. However, eviction filings are rising as we approach the end of the year, and tenants facing the threat of eviction appear to be <a href="/rising-claim-amounts/">falling further behind on rent</a>. 
-
+On January 1, 2021, when the CDC eviction moratorium expires, renters will have the fewest protections available to them since the start of the COVID-19 pandemic. At the time of writing, only eight states have moratoria that are scheduled to extend into the new year.{{< sup  4>}}  Eviction moratoriums were effective at lowering the rate of eviction filings during the pandemic. However, eviction filings are rising as we approach the end of the year, and tenants facing the threat of eviction appear to be <a href="/rising-claim-amounts/">falling further behind on rent</a>. 
 
 <div class="figheader" style="max-width: 600px;" >Representativeness of ETS: 
 </div>
@@ -105,7 +112,6 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 <td dir="ltr">1,076</td>
 <td dir="ltr">317</td>
 </tr>
-
 
 <tr>
 <td class="blog-table__text" dir="ltr">Percent Children Renting HH</td>
@@ -184,8 +190,6 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 
 <div class="figcaption"><p>Note: With the exception of the first row, all estimates are means. Means for median rent and rental housing age were calculated using a weighted mean, weighted by number of renting households for the county level. Standard deviations were calculated using the margin of error provided by the Census Bureau for the American Community Survey.</p></div>
 
-
-
 <br>
 <hr />
 
@@ -193,12 +197,10 @@ On January 1, 2021, when the CDC eviction moratorium expires, renters will have 
 <ol>
 <li>Historical averages vary between sites. A full listing of baseline years <a href="/eviction-tracking/get-the-data/">can be found here</a>. Please also see the <a href="/eviction-tracking/methods/">ETS methodology report</a>.</li>
 
-<li> Data collected from ETS sites can be used to predict eviction filing patterns in the rest of the U.S. To do so, we fit a Poisson regression model in areas covered by the ETS predicting county-week eviction filings in 2020 as a function of historical eviction filing patterns, socio-demographic factors, and pandemic-related policy interventions. Specifically, the predictors were poverty rate; number of renter households; historical eviction filing numbers for the county-week; an indicator of whether or not the state was under a moratorium during that week; and an interaction between the final two variables. We use statewide indicators for eviction moratoria and make no distinction between different types of moratoria. We use robust standard errors and cluster at the county level.</li> 
-
-<li>We utilized the trained model to  predict out of sample the number of filings that occurred in each county for which we had valid baseline data. Once we generated these predictions, we aggregated by county and compared the cumulative number of predicted filings with the historical baseline. We take this difference to be the number of “missing” filings within each county. Finally, we aggregate by county to create the total number of missing filings across all counties. </li> 
+<li> Data collected from ETS sites can be used to predict eviction filing patterns in the rest of the U.S. To do so, we fit a Poisson regression model in areas covered by the ETS predicting county-week eviction filings in 2020 as a function of historical eviction filing patterns, socio-demographic factors, and pandemic-related policy interventions. Specifically, the predictors were poverty rate; number of renter households; historical eviction filing numbers for the county-week; an indicator of whether or not the state was under a moratorium during that week; and an interaction between the final two variables. We use statewide indicators for eviction moratoria and make no distinction between different types of moratoria. We use robust standard errors and cluster at the county level. We utilized the trained model to  predict out of sample the number of filings that occurred in each county for which we had valid baseline data. Once we generated these predictions, we aggregated by county and compared the cumulative number of predicted filings with the historical baseline. We take this difference to be the number of “missing” filings within each county. Finally, we aggregate by county to create the total number of missing filings across all counties. </li> 
 
 <li> The 95% confidence interval for this prediction is (762,000, 853,000) and is based on robust standard errors, clustered at the county level</li>
 
-<li> These states are California, Connecticut, New York, Vermont, Kansas, Montana, New Jersey, and New Mexico. This number may rise, however, if other states such as Hawaii, Minnesota, and Illinois continue their moratoria, which are set to expire on December 31st. </li>
+<li> These states are California, Illinois, Kansas, Minnesota, Nevada, New Jersey, Vermont, and the District of Columbia. This number may rise, however, if other states such as Connecticut, Hawaii, Montana, New Mexico, New York, Oregon, and Washington continue their moratoria, which are either set to expire by January 1 or have no clearly stated expiration date.</li>
 </ol>
 </div>
