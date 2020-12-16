@@ -6,8 +6,8 @@ contenttype: updates
 contentcat: research
 featured: true
 in_index: false
-title: Eviction Moratoria have Prevented Over a Million Evictions in the U.S.
-  during the COVID-19 Pandemic
+title: Eviction Moratoria have Prevented Over a Million Eviction Filings in the
+  U.S. during the COVID-19 Pandemic
 date: 2020-12-15T00:46:40.089Z
 postauthortitle: The Eviction Lab
 listSummary: America faced a rental housing crisis long before the onset of the
