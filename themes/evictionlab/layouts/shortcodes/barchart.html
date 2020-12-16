@@ -43,11 +43,6 @@
   </h3>
   <div class="bar-chart__search-group">
   <input class="bar-chart__search search" type="text" id="chart_autocomplete" value="Search by county... " />{{ partial "searchbutton" }}
-  {{ if gt ( len $searchPrompt ) 0 }}
-  <p>
-    {{ $searchPrompt | safeHTML }}
-  </p>
-  {{ end }}
   </div>
   <div id="{{ .Get `id` }}" class="bar-chart__chart chart">
     <svg></svg>
@@ -95,14 +90,14 @@
       var str = data[active];
       target.innerHTML = str;
     }
-    // Sets total count of counties in search prompt.
-    var setCountyCount = function() {
+    // Sets total count of counties in search prompt. Commenting out in favor of hardcoded number for now.
+   /* var setCountyCount = function() { 
       // console.log('setCountyCount');
       var target = document.getElementById('countyCount');
       // Remove US entry (first entry).
       var countData = data.slice(1);
       target.innerHTML = countData.length.toLocaleString();
-    }
+    } */
     var data = [];
     window.addEventListener('load', function() {
       // console.log('load')
@@ -124,7 +119,7 @@
           console.log('data: ', data)
           // Set value in title.
           setSiteName();
-          setCountyCount();
+        //  setCountyCount(); // Commenting out in favor of hardcoded number for now.
           // Init autocomplete.
           var barChartAutoComplete = new autoComplete({
             data: {
