@@ -145,6 +145,13 @@ img.upscale124 {
     margin-left: -12%;
   }
 }
+img.upscale108 {
+  max-width: 100%;
+  @include media-breakpoint-up(md) {
+    max-width: 108%;
+    margin-left: -4%;
+  }
+}
 
 div.upscale124,
 picture.upscale124 {
@@ -152,6 +159,9 @@ picture.upscale124 {
   @include media-breakpoint-up(md) {
     width: 124%;
     margin-left: -12%;
+    img {
+      max-width: 100%;
+    }
   }
 }
 
@@ -161,6 +171,41 @@ picture img {
 }
 .alt-bg {
   background: #f4f7f9;
+}
+
+.link-button {
+  position: relative;
+  display: block;
+  //width: 100%;
+ // height: 100%;
+  color: #fff;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+  p, span {
+    padding: 1.6rem 2.4rem;
+    display: block;
+    text-align:center; 
+    max-width: 360px; 
+    margin: auto; 
+    background: linear-gradient(0deg, rgba(67,72,120,1) 0%, rgba(120,126,176,1)  100%);
+    font-family: 'GT-Eesti-Display-Bold' !important; 
+    font-size: 1.8rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+    }
+  }
+  i {
+    position: relative;
+    font-size: 1.6rem;
+    top: 2px;
+    transition: transform .3s ease;
+  }
+  &:hover {
+    text-decoration: none;
+    i {
+      transform: translateX(4px);
+    }
+  }
 }
 
 .natl-blog-table {
