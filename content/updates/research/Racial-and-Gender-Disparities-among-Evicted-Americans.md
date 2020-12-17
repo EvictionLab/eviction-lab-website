@@ -3,7 +3,7 @@ draft: false
 childof: research
 contenttype: updates
 contentcat: research
-featured: "home"
+featured: true
 researchtype: elresearch
 title: "Racial and Gender Disparities among Evicted Americans"
 date: 2020-12-16T00:46:40.089Z
@@ -11,7 +11,7 @@ postauthorname: Peter Hepburn and Alieza Durana
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Documenting populations disproportionately at risk of eviction.
-listSummary: Documenting populations disproportionately at risk of eviction informs researchers, advocates, and policymakers striving to better understand and address long-standing disparities in access to stable housing. The lack of data on defendant gender, race, and ethnicity limit our ability to address some of the most pressing questions in the field. Are Black and Latinx renters evicted at higher rates than their white counterparts? Are women renters evicted at higher rates than men? Is this true for all racial and ethnic groups? Answering these questions is central to addressing the long history of excluding women and communities of color from housing, banking, and credit opportunities in the U.S. 
+listSummary: Are Black and Latinx renters evicted at higher rates than their white counterparts? Are women renters evicted at higher rates than men? Is this true for all racial and ethnic groups? Answering these questions is central to addressing the long history of excluding women and communities of color from housing, banking, and credit opportunities in the U.S. 
 socialDescription: Documenting populations disproportionately at risk of eviction.
 # image: '/images/assets/blog/rent_margin_display.jpg'
 fbImage: "/images/assets/blog/historical-demographics-social.png"
