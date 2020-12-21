@@ -152,6 +152,12 @@ img.upscale108 {
     margin-left: -4%;
   }
 }
+img.scaleimg {
+  @include media-breakpoint-down(mm) {
+    max-width: 100% !important;
+    margin-left: 0% !important;
+  }
+}
 
 div.upscale124,
 picture.upscale124 {
