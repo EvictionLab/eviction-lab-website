@@ -5,7 +5,7 @@ url: /pandemic-filing-demographics
 contenttype: updates
 contentcat: research
 featured: true
-in_index: false
+in_index: true
 title: "Preliminary Analysis: Who is being filed against during the pandemic? "
 date: 2020-12-21T00:46:40.089Z
 postauthortitle: The Eviction Lab
