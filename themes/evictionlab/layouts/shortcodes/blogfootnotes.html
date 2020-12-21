@@ -1,0 +1,12 @@
+<br>
+<hr />
+<div class="footnotes">
+<ol>
+    {{ range (seq 0 (sub (len .Params) 1) ) }}
+    <li>
+        {{ $myArg := $.Get . }}
+        {{ print $myArg | markdownify }}
+      </li>
+      {{ end }}
+</ol>
+</div>
