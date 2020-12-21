@@ -15,13 +15,13 @@ socialDescription: The threat of eviction is concentrated among those for whom
   displacement was already an all-too-common risk before the pandemic began.
 researchtype: elresearch
 postauthorname: Emily Lemmerman, Renee Louis, Joe Fish, and Peter Hepburn
-twImage: /images/assets/blog/pandemic-demographics-social.png
+twImage: /images/assets/blog/pandemic_demographics_social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: The threat of eviction is concentrated among those for whom
   displacement was already an all-too-common risk before the pandemic began.
 aliases:
   - /pandemic-demographics/
-fbImage: /images/assets/blog/pandemic-demographics-social.png
+fbImage: /images/assets/blog/pandemic_demographics_social.png
 ---
 Women and people of color have been severely affected by the COVID-19 pandemic and associated economic fallout. The pandemic is exacerbating existing inequalities—particularly racial inequalities—in terms of {{< extlink "employment" "https://www.clasp.org/publications/report/brief/dual-crisis-how-covid-19-recession-deepens-racial-and-economic-inequality" >}}, {{< extlink "financial security" "https://www.urban.org/urban-wire/how-covid-19-affecting-black-and-latino-families-employment-and-financial-well-being" >}}, and {{< extlink "health access" "https://www.vox.com/identities/2020/4/7/21211849/coronavirus-black-americans" >}} and {{< extlink "outcomes" "https://www.nytimes.com/interactive/2020/07/05/us/coronavirus-latinos-african-americans-cdc-data.html" >}}. Economic repercussions have fallen disproportionately on women. Sectors that employ large shares of women have been hit especially hard by the pandemic, and disruptions to daycares and schools have left mothers shouldering greater childcare responsibilities—at the expense of their careers.
 
