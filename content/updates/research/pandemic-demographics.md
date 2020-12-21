@@ -14,8 +14,8 @@ description: The threat of eviction is concentrated among those for whom displac
 listSummary: In this brief, we analyze whether this deepening of racial and gender inequalities holds true of eviction risk as well.
 socialDescription: The threat of eviction is concentrated among those for whom displacement was already an all-too-common risk before the pandemic began.
 # image: '/images/assets/blog/rent_margin_display.jpg'
-fbImage: "/images/assets/blog/historical-demographics-social.png"
-twImage: "/images/assets/blog/historical-demographics-social.png"
+fbImage: "/images/assets/blog/pandemic-demographics-social.png"
+twImage: "/images/assets/blog/pandemic-demographics-social.png"
 url: /pandemic-filing-demographics
 aliases:
   - /pandemic-demographics/
@@ -49,6 +49,7 @@ Figure 2 shows a narrowing of gender disparities in filing patterns during the p
 - **Black renters**: Under normal circumstances, between March 15th and November 30th we would expect to observe approximately 56,400 eviction filings against Black women in our sample. That amounts to over 50% more filings than the expected 37,400 against Black men. Since the start of the pandemic, that gap has narrowed, but remains large: we have observed 25% more filings against Black women than against Black men
 - **Latinx renters**: Among Latinx renters, we would expect to see 8% more filings against women than men. The pattern has inverted for this group, and we have seen 2% more filings against men than women since March 15th.
 White renters: Normally, we see 11% more filings against white female renters than against white male renters. Since March 15th, filings are nearly equal, with only 1% more filings against women than men in this group.
+- **White renters**: Normally, we see 11% more filings against white female renters than against white male renters. Since March 15th, filings are nearly equal, with only 1% more filings against women than men in this group.
 
 Understanding the demographics of those currently facing eviction filings is critical in a complete analysis of the broad social harms of the COVID-19 pandemic. It also provides policymakers with a roadmap for interventions designed to ensure that eviction protections serve not only to protect renters, but to reduce inequalities that are introduced or exacerbated by the pandemic. 
 
