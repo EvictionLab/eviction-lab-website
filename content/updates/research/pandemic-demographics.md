@@ -60,9 +60,7 @@ Our analyses suggest that eviction filings over the last eight months have, by a
 
 "Historical baseline data is pulled from varying years across ETS sites. A listing of baseline years for each ETS site [can be found here](/eviction-tracking/get-the-data/)." 
 "We refer to &quot;gender&quot; while acknowledging that our imputation process is necessarily imprecise and cannot capture important subtleties in individuals’ gender identification. Identification of ethnicity is similarly limited to broad categories."
-"Details of the imputation process [can be found here](/demographics-of-eviction/). Note that the sample analyzed in the original study differs from the ETS sample, which serves to account for differences in findings." 
-
->}}
+"Details of the imputation process [can be found here](/demographics-of-eviction/). Note that the sample analyzed in the original study differs from the ETS sample, which serves to account for differences in findings." >}}
 
 
 
