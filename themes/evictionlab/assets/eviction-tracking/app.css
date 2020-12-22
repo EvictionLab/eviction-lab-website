@@ -227,6 +227,13 @@
     margin: auto;
   }
 }
+/* Adding some width on larger devices to help keep the table centered */
+@media (min-width: 1024px) {
+  .breakout__content {
+    max-width: 890px;
+    margin: auto;
+  }
+}
 
 /** END BREAKOUT SECTION */
 
