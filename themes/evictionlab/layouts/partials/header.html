@@ -107,6 +107,11 @@
 			<link rel="stylesheet" href="{{ ($chartcss | minify | fingerprint).RelPermalink }}" />
 		{{ end }}
 
+		{{ if in .Params.scripts "barchart" }}
+			{{ $chartcss := resources.Get "charts/bar-chart.css" | resources.PostCSS }}
+			<link rel="stylesheet" href="{{ ($chartcss | minify | fingerprint).RelPermalink }}" />
+		{{ end }}
+
   </head>
 
   <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}

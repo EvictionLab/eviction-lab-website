@@ -1,0 +1,5 @@
+<div class="figheader" style="max-width: 600px;" >{{ index .Params 2 }}</div>
+<!-- Allows an image to upscale beyond the width of the text column while remaining centered. -->
+<img class="scaleimg" src="/images/assets/blog/{{ index .Params 0 }}" style="max-width: {{  index .Params 1 }}%; margin-left: -{{ div ( sub ( index .Params 1 ) 100 ) 2 }}%;" />
+<!-- Takes a numerical parameter from the shortcode in the post's markdown, sets that as the max-width percentage, then subtracts 100 and divides by 2 to assign a negative percentage to margin-left. -->
+<div class="figcaption"><p>{{ index .Params 3 }}</p></div>

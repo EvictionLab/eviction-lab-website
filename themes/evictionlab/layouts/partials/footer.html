@@ -168,6 +168,28 @@
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 
+{{ if in .Params.scripts "barchart" }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.0.2/dist/css/autoComplete.min.css">
+    <script src="https://unpkg.com/papaparse@5.3.0/papaparse.min.js"></script>
+  {{ if .Site.IsServer }}
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.1/dist/js/autoComplete.js"></script>
+    {{ $d3 := resources.Get "lib/d3.min.js" }}
+    {{ $charts := resources.Get "charts/chart-builder.js" }}
+    {{ $app := resources.Get "charts/bar-chart.js" }}
+    {{ $js := slice $d3 $charts $app | resources.Concat "js/bar-chart/bundle.js" }}
+    <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
+  {{ else }}
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.1/dist/js/autoComplete.js"></script>
+    {{ $d3 := resources.Get "lib/d3.min.js" }}
+    {{ $charts := resources.Get "charts/chart-builder.js" }}
+    {{ $chartsmin := $charts | resources.Minify }}
+    {{ $app := resources.Get "charts/bar-chart.js" }}
+    {{ $appmin := $app | resources.Minify}}
+    {{ $js := slice $d3 $chartsmin $appmin | resources.Concat "js/bar-chart/bundle.js" }}
+    <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
+  {{ end }}
+{{ end }}
+
 {{ if in ($.Scratch.Get "dir") "covid-policy-rankings" }}
   {{ partial "covid-policy-rankings" . }}
 {{ end }}

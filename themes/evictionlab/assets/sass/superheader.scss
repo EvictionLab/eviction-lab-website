@@ -20,19 +20,9 @@
     }
 } */
 .superheader {
-    background: #e24000;
-    background: #ca3a02;
-    background: linear-gradient(to top, #b53303 2%, #d43c00 99%);
-    background: #333333;
-    background: #282827;
-    background: linear-gradient(to bottom, #3c3c3c 2%, #282827 99%);
-   //background: #434878;
-   background: #3c3c3c;
-   background: #ececec;
    background: #EEF2F5;
    background: linear-gradient(to bottom, #EEF2F5 2%, #c8cdd2 99%);
    background: linear-gradient(to bottom, #EEF2F5 2%, #d4d9de 99%);
-    color: white;
     color: #434778;
     //width: 80%;
     
@@ -77,3 +67,28 @@
         }
     }
 } 
+
+/* Temp away msg for ETS */
+
+.away-msg {
+    background-color: #33376A;
+    background-color: $color2;
+    color: white;
+    /* height: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.6rem;
+    p {
+        font-family: $altFontStack;
+        font-size: 17px;
+        max-width: 600px;
+        margin-bottom: 0;
+        @include media-breakpoint-up(lg) {
+            max-width: 100%;
+            font-size: 2rem;
+        }
+    }
+
+}
