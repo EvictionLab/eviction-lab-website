@@ -1,0 +1,22 @@
+<div class="legend legend--table">
+  <div class="legend-item">
+    <img class="icon icon--moratorium" src="/img/el-medallion.svg" alt="{{ .starLabel }} indicator" />
+    <span> = {{ .starLabel }}</span>
+  </div>
+  <div class="legend-item">
+    <svg role="img" aria-labelledby="moratoriumEndMarker" width="16" height="16" viewBox="0 0 16 16"  style="margin-right: 4px;">
+      <title id="moratoriumEndMarker">{{ .redAreaLabel }} indicator</title>
+      <line x1="0" x2="16" y1="4" y2="2" class="trend-line__path"></line>
+      <path d="M 0 4 L 16 2 L 16 16 L 0 16 Z" class="trend-line__area"></path>
+    </svg>
+    <span> = {{ .redAreaLabel }}</span>
+  </div>
+  <div class="legend-item">
+    <svg role="img" aria-labelledby="moratoriumEndMarker" width="16" height="16" viewBox="0 0 16 16" style="margin-right: 4px;">
+      <title id="moratoriumEndMarker">{{ .greyAreaLabel }} indicator</title>
+      <line x1="0" x2="16" y1="4" y2="2" class="trend-line__path trend-line__path--moratorium"></line>
+      <path d="M 0 4 L 16 2 L 16 16 L 0 16 Z" class="trend-line__area trend-line__area--moratorium"></path>
+    </svg>
+    <span> = {{ .greyAreaLabel }}</span>
+  </div>
+</div>

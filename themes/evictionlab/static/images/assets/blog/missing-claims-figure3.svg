@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="fig3" viewBox="0 0 649 505" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>figure_3_20201204</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 648 0 648 503.94 0 503.94"></polygon>
+        <polygon id="path-3" points="0.42 0.48 549.52 0.48 549.52 384.35 0.42 384.35"></polygon>
+    </defs>
+    <g id="Missing-eviction-filings" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="a" transform="translate(-100.000000, -37.000000)">
+            <g id="figure_3_20201204" transform="translate(100.500000, 37.500000)">
+                <g id="Group-4">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <polygon id="Fill-1" fill="#F4F7F9" mask="url(#mask-2)" points="0 504 648 504 648 0 0 0"></polygon>
+                    <polygon id="Stroke-3" stroke="#EEF2F5" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="0 504 648 504 648 0 0 0"></polygon>
+                </g>
+                <g id="Group" transform="translate(100.358200, 395.599800)" fill="#4D4D4D" font-family="Gotham A, Gotham B" font-size="14" font-weight="500">
+                    <text id="Jun">
+                        <tspan x="230.0918" y="11">Jun</tspan>
+                    </text>
+                    <text id="May">
+                        <tspan x="179.2836" y="11">May</tspan>
+                    </text>
+                    <text id="Apr">
+                        <tspan x="138.6418" y="11">Apr</tspan>
+                    </text>
+                    <text id="Mar">
+                        <tspan x="89.6418" y="11">Mar</tspan>
+                    </text>
+                    <text id="Feb">
+                        <tspan x="46" y="11">Feb</tspan>
+                    </text>
+                    <text id="Jan">
+                        <tspan x="0" y="11">Ja</tspan>
+                        <tspan x="16.044" y="11" letter-spacing="22.9054">n</tspan>
+                    </text>
+                    <text id="Dec">
+                        <tspan x="505.1418" y="11.9002">Dec</tspan>
+                    </text>
+                    <text id="Nov">
+                        <tspan x="460.1418" y="11.9002">Nov</tspan>
+                    </text>
+                    <text id="Oct">
+                        <tspan x="415.1418" y="11.9002">Oct</tspan>
+                    </text>
+                    <text id="Sep">
+                        <tspan x="370.1418" y="11.9002">Sep</tspan>
+                    </text>
+                    <text id="Aug">
+                        <tspan x="322.1418" y="11.9002">Aug</tspan>
+                    </text>
+                    <text id="Jul">
+                        <tspan x="281.1418" y="11.9002">Jul</tspan>
+                    </text>
+                </g>
+                <g id="Group-11" transform="translate(93.000000, 5.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-6"></g>
+                    <path d="M0.42,317.1 L549.52,317.1 M0.42,213.23 L549.52,213.23 M0.42,109.35 L549.52,109.35 M0.42,5.47 L549.52,5.47" id="Stroke-8" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-4)"></path>
+                    <path d="M0.42,369.04 L549.52,369.04 M0.42,265.16 L549.52,265.16 M0.42,161.29 L549.52,161.29 M0.42,57.41 L549.52,57.41" id="Stroke-9" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-4)"></path>
+                    <path d="M29.93,384.35 L29.93,0.48 M76.96,384.35 L76.96,0.48 M120.96,384.35 L120.96,0.48 M168,384.35 L168,0.48 M213.52,384.35 L213.52,0.48 M260.55,384.35 L260.55,0.48 M306.07,384.35 L306.07,0.48 M353.11,384.35 L353.11,0.48 M400.14,384.35 L400.14,0.48 M445.66,384.35 L445.66,0.48 M492.7,384.35 L492.7,0.48 M538.22,384.35 L538.22,0.48" id="Stroke-10" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" mask="url(#mask-4)"></path>
+                </g>
+                <polyline id="Stroke-12" stroke="#434878" stroke-width="3.2" stroke-linejoin="round" points="118.38 371.9 129 365.09 139.62 354.73 150.24 346.1 160.86 340.09 171.48 334.83 182.1 326.41 192.72 316.96 203.34 310.3 213.96 305.49 224.59 299.14 235.21 293.91 245.83 292.67 256.45 292.14 267.07 291.74 277.69 290.99 288.31 290.26 298.93 289.66 309.55 289.07 320.17 288.13 330.79 286.9 341.42 285.95 352.04 284.91 362.66 283.58 373.28 281.94 383.9 280.47 394.52 279.53 405.14 278.12 415.76 275.97 426.38 273.76 437 271.23 447.63 269.3 458.25 266.37 468.87 261.76 479.49 257.04 490.11 252.31 500.73 249.23 511.35 244.99 521.97 240.71 532.59 237.38 543.21 234.1 553.84 230.26 564.46 225.56 575.08 221.87 585.7 218.46 596.32 214.73 606.94 210.98 617.56 209.49"></polyline>
+                <polyline id="Stroke-13" stroke="#E24000" stroke-width="3.2" stroke-linejoin="round" points="118.38 371.54 129 363.85 139.62 354.64 150.24 345.15 160.86 338.41 171.48 331.9 182.1 323.64 192.72 315.42 203.34 309.44 213.96 303.79 224.59 296.47 235.21 288.8 245.83 282.86 256.45 278.29 267.07 272.09 277.69 264.04 288.31 256.77 298.93 251.37 309.55 245.26 320.17 236.74 330.79 228.32 341.42 222.88 352.04 217.16 362.66 209.05 373.28 199.65 383.9 191.62 394.52 186.73 405.14 179.49 415.76 169.63 426.38 160.55 437 153.66 447.63 146.98 458.25 137.75 468.87 128.12 479.49 120.42 490.11 115.71 500.73 107.89 511.35 97.91 521.97 89.37 532.59 82.9 543.21 76.48 553.84 66.94 564.46 58.24 575.08 51.63 585.7 45.48 596.32 37.74 606.94 27.96 617.56 22.93"></polyline>
+                <text id="0" font-family="Helvetica" font-size="14" font-weight="normal" fill="#4D4D4D">
+                    <tspan x="80.6938" y="380.2">0</tspan>
+                </text>
+                <g id="Group-2" transform="translate(36.873400, 55.569800)" fill="#4D4D4D" font-family="Gotham A, Gotham B" font-size="14" font-weight="500">
+                    <text id="200,000">
+                        <tspan x="0" y="218.7502">200,000</tspan>
+                    </text>
+                    <text id="400,000">
+                        <tspan x="0" y="114.88">400,000</tspan>
+                    </text>
+                    <text id="600,000">
+                        <tspan x="0" y="11">600,000</tspan>
+                    </text>
+                </g>
+                <text id="CUMULATIVE--NUMBER--OF--FILINGS" transform="translate(12.560000, 203.203000) rotate(-90.000000) translate(-12.560000, -203.203000) " font-family="GT-Eesti-Display-Bold" font-size="16" fill="#333333">
+                    <tspan x="-120.44" y="208.203">CUMULATIVE  NUMBER  OF  FILINGS</tspan>
+                </text>
+                <path d="M215.09,475.04 L243.89,475.04 M215.09,475.04 L243.89,475.04" id="Stroke-17" stroke="#434878" stroke-width="3.2" stroke-linejoin="round"></path>
+                <polygon id="Stroke-19" stroke="#EEF2F5" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" points="317.45 493.04 353.45 493.04 353.45 457.04 317.45 457.04"></polygon>
+                <path d="M313.05,475.04 L341.85,475.04 M313.05,475.04 L341.85,475.04" id="Stroke-20" stroke="#E24000" stroke-width="3.2" stroke-linejoin="round"></path>
+                <text id="2020" font-family="Gotham A, Gotham B" font-size="16" font-weight="bold" letter-spacing="0.6" fill="#333333">
+                    <tspan x="254.97" y="480.08">2020</tspan>
+                </text>
+                <text id="HISTORICAL-AVERAGE" font-family="GT-Eesti-Display-Bold" font-size="16" letter-spacing="1" fill="#333333">
+                    <tspan x="354.5" y="480.5">HISTORICAL AVERAGE</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

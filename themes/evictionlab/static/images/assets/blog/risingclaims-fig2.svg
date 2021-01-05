@@ -1,5 +1,5 @@
 
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 894.00 706.00'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width="894" viewBox='0 0 894.00 706.00'>
 <defs>
   <style type='text/css'>
     #fig2 line, #fig2 polyline, #fig2 polygon, #fig2 path, #fig2 rect, circle {
@@ -225,9 +225,9 @@
 <rect x='524.11' y='659.04' width='36.00' height='36.00' style='stroke-width: 1.07; stroke: #f4f7f9; fill: #f4f7f9;' clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)' />
 <line x1='527.71' y1='677.04' x2='556.51' y2='677.04' style='stroke-width: 3.20; stroke: #2C897F; stroke-linecap: butt;' clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)' />
 <circle cx='542.11' cy='677.04' r='3.56' style='stroke-width: 0.71; stroke: #2C897F; fill: #2C897F;' clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)' />
-<g clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)'><text x='308.94' y='682.64' style='font-size: 16.00px; fill: #333333; font-family: Gotham Bold;' textLength='38.99px' lengthAdjust='spacingAndGlyphs'>2016</text></g>
-<g clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)'><text x='394.89' y='682.64' style='font-size: 16.00px; fill: #333333; font-family: Gotham Bold;' textLength='38.30px' lengthAdjust='spacingAndGlyphs'>2017</text></g>
-<g clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)'><text x='480.16' y='682.64' style='font-size: 16.00px; fill: #333333; font-family: Gotham Bold;' textLength='38.48px' lengthAdjust='spacingAndGlyphs'>2018</text></g>
-<g clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)'><text x='565.59' y='682.64' style='font-size: 16.00px; fill: #333333; font-family: Gotham Bold;' textLength='43.30px' lengthAdjust='spacingAndGlyphs'>2020</text></g>
+<g clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)'><text x='308.94' y='682.64' style='font-size: 16.00px; fill: #333333; font-family: Gotham A, Gotham B; font-weight: 500;' textLength='38.99px' lengthAdjust='spacingAndGlyphs'>2016</text></g>
+<g clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)'><text x='394.89' y='682.64' style='font-size: 16.00px; fill: #333333; font-family: Gotham A, Gotham B; font-weight: 500;' textLength='38.30px' lengthAdjust='spacingAndGlyphs'>2017</text></g>
+<g clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)'><text x='480.16' y='682.64' style='font-size: 16.00px; fill: #333333; font-family: Gotham A, Gotham B; font-weight: 500;' textLength='38.48px' lengthAdjust='spacingAndGlyphs'>2018</text></g>
+<g clip-path='url(#cpMC4wMHw4OTQuMDB8NzA2LjAwfDAuMDA=)'><text x='565.59' y='682.64' style='font-size: 16.00px; fill: #333333; font-family: Gotham A, Gotham B; font-weight: 500;' textLength='43.30px' lengthAdjust='spacingAndGlyphs'>2020</text></g>
 </g>
 </svg>

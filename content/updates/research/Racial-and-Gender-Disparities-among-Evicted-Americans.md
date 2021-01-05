@@ -7,7 +7,7 @@ featured: true
 researchtype: elresearch
 title: "Racial and Gender Disparities among Evicted Americans"
 date: 2020-12-16T00:46:40.089Z
-postauthorname: Peter Hepburn and Alieza Durana
+postauthorname: Peter Hepburn, Renee Louis, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Documenting populations disproportionately at risk of eviction.
@@ -16,10 +16,11 @@ socialDescription: Documenting populations disproportionately at risk of evictio
 # image: '/images/assets/blog/rent_margin_display.jpg'
 fbImage: "/images/assets/blog/historical-demographics-social.png"
 twImage: "/images/assets/blog/historical-demographics-social.png"
-url: /racial-and-gender-disparities-among-evicted-americans
+url: /demographics-of-eviction/
 scripts:
   - barchart
 aliases:
+  - /racial-and-gender-disparities-among-evicted-americans/
 ---
 
 The Eviction Lab aims to better understand the causes and consequences of eviction in the United States. To do so, we have compiled court records from across the country into a national database. These court records provide a unique opportunity to examine the prevalence of eviction across time and space. But these records contain limited information about each case: case numbers, names of plaintiffs (e.g., landlords, property managers) and defendants (tenants), defendant addresses, filing dates, and case outcomes. Defendant gender and race/ethnicity are not included in eviction records.
@@ -30,7 +31,7 @@ Documenting populations disproportionately at risk of eviction informs researche
 
 In a new study published in _Sociological Science_, we develop strategies to overcome limitations in the data and begin to answer these questions. Despite progress the U.S. made in legislating the Fair Housing Act and Equal Credit Opportunity Act, which banned discrimination by race, gender, and marital status, we found that property owners disproportionately threaten Black and Latinx renters—particularly women—with eviction. 
 
-<a class="link-button" href="/demographics-of-eviction-data" style="color: #fff;" target="_blank"><span>Read the study <i class="fa fa-chevron-right"></i></span></a>
+<a class="link-button" href="https://sociologicalscience.com/articles-v7-27-649/" target="_blank" style="color: #fff;" target="_blank"><span>Read the study <i class="fa fa-chevron-right"></i></span></a>
 
 In the study, we used a set of statistical techniques to impute—to predict based on available information—the gender and race/ethnicity of individuals facing eviction on the basis of names and addresses. The intuition is straightforward: Joseph Smith living in the predominantly-white Lincoln Park neighborhood of Chicago is likely to be a man and white, while Maura Smitts in the majority-Black Bronzeville neighborhood is likely to be a woman and Black.{{< sup 1 >}} Given Census and Social Security data about the distribution of names by gender and race/ethnicity, we assigned every defendant in our data a probability of being a member of a given gender-by-race/ethnicity category.{{< sup 2 >}} We used these probabilities to produce annual estimates of the number of individuals filed against and evicted in each group within each included county. 
 

@@ -1,0 +1,47 @@
+{{ partial "header" . }}
+
+<div class="breadcrumbs bc-blog center-page-wrapper">
+  <div class="center-page">
+    <a href="/eviction-tracking">
+      <span class="dim">Eviction Tracking</span>
+    </a>
+    <i class="fa fa-chevron-right"></i>
+    <div tabindex="0" class="bc-dropdown">
+      <span class="current-crumb">{{ .Params.h1 }}</span>
+      <ul class="bc-dropdown__menu">
+        {{range (.Parent.Pages.ByParam "h1")}}
+          {{ if eq .Params.collection true }}
+            <li><a href="{{.Permalink}}">{{.Params.h1}}</a></li>
+          {{ end }}
+        {{end}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{{ .Content }}
+
+<section class="section section--links">
+  <div class="ets-cards">
+    <div class="ets-card ets-card--index">
+      <img class="card__background" src="/img/cities-card-bg.svg" />
+      <div class="card__content">
+        <h1 class="card__title">See eviction data for other places</h1>
+      </div>
+      <a class="card__link" href="../"><span>Go to ETS Overview</span></a>
+    </div>
+    <div class="ets-card ets-card--data">
+      <img class="card__background" src="/img/data-card-bg.svg" />
+      <div class="card__content">
+        <h1 class="card__title">Get the data</h1>
+        <p class="card__description">Download files in CSV format for every city we track.</p>
+      </div>
+      <a class="card__link" href="../get-the-data/"><span>Get the data</span></a>
+    </div>
+  </div>
+</section>
+
+<div id='tooltip' class="tooltip"></div>
+
+{{ partial "footer" . }}
