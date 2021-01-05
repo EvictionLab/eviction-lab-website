@@ -1,17 +1,17 @@
-# backend:
-#   name: github
-#   repo: EvictionLab/eviction-lab-website
-#   branch: staging
+backend:
+  name: github
+  repo: EvictionLab/eviction-lab-website
+  branch: staging
 
 # FOR LOCAL DEVELOPMENT:
 # ---
 # - uncomment the backend below
 # - run `npx netlify-cms-proxy-server` to serve content
 
-backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
-  branch: ets/state-data # optional, defaults to master
+# backend:
+#   name: proxy
+#   proxy_url: http://localhost:8081/api/v1
+#   branch: ets/state-data # optional, defaults to master
 
 media_folder: "static/uploads" # Folder where user uploaded files should go
 # publish_mode: editorial_workflow
@@ -397,7 +397,7 @@ collections:
           name: "in_index",
           widget: "boolean",
           default: true,
-        }  
+        }
       - { label: "Blog Post Title", name: "title", widget: "string" }
       - { label: "Created Date", name: "date", widget: "datetime" }
       - { label: "Author Name", name: "postauthorname", widget: "string" }
