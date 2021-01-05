@@ -1,5 +1,6 @@
 ---
 statePage: true
+collection: true
 layout: state
 draft: true
 h1: Indiana
@@ -29,7 +30,7 @@ Eviction filings in Boston were running very close to historical average in Janu
 
 {{%/ report_chart %}}
 
-{{% report_map id="map1" shapes="/uploads/indiana_shapes.json" data="/uploads/indiana_map.csv" %}}
+{{% report_map shapes="/uploads/indiana_shapes.json" data="/uploads/indiana_map.csv" %}}
 
 # The geography of changes in eviction filings
 

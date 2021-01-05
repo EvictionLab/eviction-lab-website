@@ -1,5 +1,6 @@
 ---
 statePage: true
+collection: true
 layout: state
 draft: true
 h1: Delaware
@@ -29,7 +30,7 @@ Eviction filings in Boston were running very close to historical average in Janu
 
 {{%/ report_chart %}}
 
-{{% report_map id="map1" shapes="/uploads/delaware_shapes.json" data="/uploads/delaware_map.csv" %}}
+{{% report_map shapes="/uploads/delaware_shapes.json" data="/uploads/delaware_map.csv" %}}
 
 # The geography of changes in eviction filings
 
