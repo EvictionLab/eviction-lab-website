@@ -10,7 +10,7 @@ title: Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="09" data="/uploads/state_table.csv" %}}
+{{% report_intro id="09" data="/uploads/states_table.csv" %}}
 
 Connecticut intro
 

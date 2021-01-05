@@ -186,8 +186,7 @@ Elab.Config = (function (Elab) {
    * the current year
    */
   var monthParser = function monthParser(d) {
-    d = d + " 2020"; // TODO: don't hardcode 2020
-    var parser = d3.timeParse("%B %Y");
+    var parser = d3.timeParse("%m/%Y");
     return parser(d);
   };
 
@@ -902,13 +901,16 @@ Elab.Chart = (function (Elab) {
     }
 
     function renderBars(data, config, context) {
+      const monthFormat = d3.timeFormat("%m/%Y");
+      const monthParse = d3.timeParse("%m/%Y")
       // get data grouped by x value
       var groupedData = groupItems(data.items, function (d) {
-        return d.x.getMonth();
+        return monthFormat(d.x)
       });
       var groupNames = data.items.map(function (d) {
         return d.id;
       });
+      console.log(groupedData)      
 
       var x1 = d3
         .scaleBand()
@@ -926,7 +928,8 @@ Elab.Chart = (function (Elab) {
         .attr("class", "chart__bar-group")
         .merge(group)
         .attr("transform", function (d) {
-          return "translate(" + context.x(new Date(2020, d.id, 1)) + ",0)";
+          var date = monthParse(d.id)
+          return "translate(" + context.x(date) + ",0)";
         });
 
       var groupAreaSelection = context.els.data
@@ -954,7 +957,8 @@ Elab.Chart = (function (Elab) {
         })
         .merge(groupAreaSelection)
         .attr("x", function (d, i) {
-          return context.x(new Date(2020, d.id, 1)) - 4;
+          var date = monthParse(d.id)
+          return context.x(date) - 4;
         })
         .attr("y", 0)
         .attr("height", context.height)
@@ -2115,7 +2119,7 @@ Elab.Intro = (function (Elab) {
           patternId: "stripes",
         })
         // adds federal moratorium
-        .addArea([new Date(2020, 8, 4), new Date(2020, 11, 31)], {
+        .addArea([new Date(2020, 8, 4), new Date(2021, 0, 31)], {
           areaId: "cdcArea",
           patternId: "cdcStripes",
           angle: -45,
@@ -2310,7 +2314,7 @@ Elab.ListPage = (function (Elab) {
     // remove latest week from values
     // as it does not reflect the full set of filings
     var localMoratorium = [data.start, data.end];
-    var cdcMoratorium = [new Date(2020, 8, 4), new Date(2020, 11, 31)];
+    var cdcMoratorium = [new Date(2020, 8, 4), new Date(2021, 0, 31)];
     var moratoriumRanges =
       +localMoratorium[1] > +cdcMoratorium[0]
         ? [[localMoratorium[0], cdcMoratorium[1]]] // overlap in moratoriums

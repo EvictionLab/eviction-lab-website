@@ -28,7 +28,7 @@ cities:
   filingsTotalHeading: <span>Filings</span> Since <br/>03/15
   trendHeading: Trend <br />Since 03/15
 states:
-  data: /uploads/state_table.csv
+  data: /uploads/states_table.csv
   nameHeading: State
   filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
   filingsTotalHeading: <span>Filings</span> Since <br/>03/15
