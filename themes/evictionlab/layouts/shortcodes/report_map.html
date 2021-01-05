@@ -6,24 +6,15 @@
     <div class="visual">
       <div id="map" class="map"></div>
     </div>
+    <div class="section__toggle"></div>
     <div class="legend legend--choropleth">
       <div class="legend-item">
         <div class="legend-item__label">
-          Eviction Filings <span id="mapDate">last 30 days</span>
+          <span class="legend__date"></span>
         </div>
       </div>
       <div class="legend__gradient"></div>
-      <div class="legend__gradient-labels">
-        <span class="legend__gradient-label legend__gradient-label--min"
-          >-100%</span
-        >
-        <span class="legend__gradient-label legend__gradient-label--mid"
-          >average</span
-        >
-        <span class="legend__gradient-label legend__gradient-label--max"
-          >+100%</span
-        >
-      </div>
+      <div class="legend__gradient-labels"></div>
     </div>
     <p class="footnote"></p>
   </div>
@@ -32,7 +23,16 @@
       var geojson = {{ .Get "shapes" }};
       var csv = {{ .Get "data" }};
       var rootEl = '.section--map'
-      Elab.Section.init('map', rootEl, { geojson: geojson, csv: csv })
+      Elab.Section.init('map', rootEl, { 
+        geojson: geojson, 
+        csv: csv,  
+        metrics: {
+          "month_filings": "Filings", 
+          "month_rate": "Filing Rate", 
+          "month_diff": "Relative To Average"
+        }, 
+        dateCol: "month_date"
+      })
     })
   </script>
 </div>

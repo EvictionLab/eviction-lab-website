@@ -361,10 +361,11 @@
   }
   .button-group .toggle:first-child {
     border-radius: 2.5px 0 0 2.5px;
-    margin-right: 0;
+    margin-right: -1px;
   }
   .button-group .toggle:last-child {
     border-radius: 0 2.5px 2.5px 0;
+    margin-right: 0;
   }
 }
 .button-group .toggle:hover,
@@ -398,7 +399,7 @@
 
 @media (min-width: 768px) {
   .table {
-    table-layout: auto;
+    table-layout: fixed;
   }
 }
 
@@ -423,11 +424,59 @@
   width: 35.8%;
 }
 
+.table .table__body .table__cell--name {
+  padding-right: 0;
+}
+
+.table .table__body .table__cell--name > div {
+  display: flex;
+  align-items: center;
+  flex-wrap:nowrap
+}
+
+.table .table__body .table__cell--name span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.8rem;
+}
+
 /** Make room for sort icon */
 .table .table__head .table__cell--number,
 .table .table__body .table__cell--number {
   padding-right: 20px;
   width: 19.6%;
+}
+
+@media(min-width: 768px) {
+
+  .table .table__head .table__cell--name,
+  .table .table__body .table__cell--name {
+    width: 36%;
+  }
+
+  /* .table .table__body .table__cell--name img {
+    position: absolute;
+    right:10px;
+    margin-top: 6px;
+  } */
+
+  /** Make room for sort icon */
+  .table .table__head .table__cell--number,
+  .table .table__body .table__cell--number {
+    width: 14rem;
+  }
+
+  .table .table__head  .table__cell--visual, 
+  .table .table__body .table__cell--visual {
+    width: 9rem;
+    overflow:visible;
+    z-index:11;
+  }
+
+  .table .table__head .table__cell--button, 
+  .table .table__body .table__cell--button {
+    width: 14rem;
+  }
 }
 
 .table .table__head th {
@@ -549,6 +598,7 @@
   text-transform: uppercase;
   color: var(--c2);
   font-size: 1.4em;
+  position: relative;
 }
 
 .table__body .table__cell--name .icon {
@@ -1976,14 +2026,6 @@
 .legend__gradient {
   width: 100%;
   height: 16px;
-  background: linear-gradient(
-    to right,
-    var(--choro1),
-    var(--choro2) 25%,
-    var(--choro3) 50%,
-    var(--choro4) 75%,
-    var(--choro5)
-  );
 }
 .legend__gradient-labels {
   width: 100%;
@@ -1998,13 +2040,15 @@
   width: 48px;
   text-align: center;
 }
-.legend__gradient-label--min {
+.legend__gradient-labels .legend__gradient-label:first-child {
   position: relative;
   left: -4px;
+  text-align: left;
 }
-.legend-gradent-label--max {
+.legend__gradient-labels .legend__gradient-label:last-child {
   position: relative;
   left: 4px;
+  text-align: right;
 }
 
 /** END CHOROPLETH LEGEND */
@@ -2076,6 +2120,17 @@
   height: 100%;
   margin: 0 auto;
   flex: 1;
+}
+
+.section .section__toggle {
+  margin-bottom: 8px;
+}
+
+/** map section toggles, stay left */
+@media (min-width: 600px) {
+  .section__toggle .button-group {
+    justify-content: flex-start;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2559,12 +2614,14 @@
 }
 
 .map__tooltip-row--down span,
-.tooltip__item--down span {
+.tooltip__item--down span,
+span.value--down {
   font-weight: 700;
   color: rgb(67, 202, 189);
 }
 .map__tooltip-row--up span,
-.tooltip__item--up span {
+.tooltip__item--up span,
+span.value--up {
   font-weight: 700;
   color: #ff8150;
 }

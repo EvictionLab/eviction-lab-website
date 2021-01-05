@@ -18,19 +18,21 @@
     <p class="list-intro__text">{{ .Params.intro | markdownify }}</p>
   </div>
 </div>
-<div class="away-msg d-none">
-  <p>
-  Please note: the ETS is taking a brief winter holiday; updates will resume on Tuesday, 1/5/2021.
-  </p>
-</div>
 <div class="list-table">
   <div class="layout">
     <div class="column column--content">
-      {{ .Content }}
+      <div class="breakout breakout--table">
+        <div class="breakout__content">
+          {{ partial "ets/table-legend" .Params.legend }}
+          {{ partial "ets/state-table" .Params.states }}
+          {{ partial "ets/city-table" .Params.cities }}
+          {{ partial "ets/table-footnotes" .Params.footnotes }}
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<div class="list-crisis">
+<div class="list-crisis"> 
   <div class="layout">
     <div class="column column--content">
       {{ .Params.crisis | markdownify }}
@@ -47,5 +49,24 @@
     </div>
   </div>
 </div>
+
+<script>
+  window.addEventListener('load', function () {
+    var buttonLabel = {{ .Params.buttonLabel }}
+    var tooltip = {{ .Params.tooltip }}
+    var tooltipNoDate = {{ .Params.tooltipNoDate }}
+    var cityData = {{ .Params.cities.data }}
+    var stateData = {{ .Params.states.data }}
+    var options = {
+      tooltip: tooltip,
+      tooltipNoDate: tooltipNoDate,
+      buttonLabel: buttonLabel,
+      cityData: cityData,
+      stateData: stateData
+    }
+    Elab.ListPage.initListPage(options)
+  })
+</script>
+
 
 {{ partial "footer" . }}
