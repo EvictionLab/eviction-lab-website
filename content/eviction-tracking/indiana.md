@@ -1,9 +1,9 @@
 ---
 statePage: true
 collection: true
-layout: state
 draft: true
 h1: Indiana
+layout: state
 slug: indiana
 date: 2020-12-10T00:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
@@ -13,30 +13,33 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="18" data="/uploads/states_table.csv" %}}
 
-Indiana intro
+The state of Indiana implemented an eviction moratorium that ran from March 19 to August 14. Filings spiked immediately after that moratorium lifted, but fell as CDC protections were enacted. 
 
 More detail on eviction protections in Indiana can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/in/).
 
 {{%/ report_intro %}}
 
+
+
 {{% report_chart id="avg" data="/uploads/indiana_barchart.csv" %}}
 
 # Changes in eviction filings
 
-Eviction filings in Boston were running very close to historical average in January and February of this year.<sup>1</sup> Filings fell in March following the suspension of eviction proceedings. Eviction filings were down 90% in April and only four eviction filings were processed in May.<sup>3</sup> 
+Eviction filings in Indiana were significantly above historical average in January and February of 2020.<sup>1</sup> Filings began to drop in March, and remained well below average between April and July. Filings have increased since then, though remain below historical average.
 
-1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
-2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
+1. Eviction filing data for Indiana were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
 {{%/ report_chart %}}
+
+
 
 {{% report_map shapes="/uploads/indiana_shapes.json" data="/uploads/indiana_map.csv" %}}
 
 # The geography of changes in eviction filings
 
-Indiana is divided into 8 counties.
+Indiana is divided into 92 counties. In each of those counties, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> 
 
-1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
+1. Eviction filing data for Indiana were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
+2. Tract racial characteristics determined using American Community Survey (ACS) estimates for 2014–2018.
 
 {{%/ report_map %}}
