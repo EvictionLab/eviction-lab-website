@@ -73,7 +73,6 @@ collections:
           - { label: Heading, name: h1, widget: string }
           - { label: "Updated Date", name: "date", widget: "date" }
           - { label: "Intro", name: "intro", widget: "markdown" }
-          - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Eviction Crisis", name: "crisis", widget: "markdown" }
           - { label: "Additional Info", name: "additional", widget: "markdown" }
           - { label: "Where's my city?", name: "where", widget: "markdown" }
