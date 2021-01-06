@@ -2189,6 +2189,7 @@ Elab.Intro = (function (Elab) {
   }
 
   function getMoratoriumRange(data) {
+    var dateFormat = d3.timeFormat("%B %e");
     if (!data.start && !data.end) return ''
     return [data.start, data.end]
       .map(function (d) {
@@ -2201,7 +2202,7 @@ Elab.Intro = (function (Elab) {
    * Inserts the data for the location into the placeholders
    */
   function initDataValues(cityData) {
-    var dateFormat = d3.timeFormat("%B %e");
+    
     var numFormat = d3.format(",d");
     var moratorium = getMoratoriumRange(cityData);
     $("#evictionMoratorium").html(moratorium);
