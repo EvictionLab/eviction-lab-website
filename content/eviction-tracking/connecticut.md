@@ -1,7 +1,7 @@
 ---
 statePage: true
 collection: true
-draft: true
+draft: false
 h1: Connecticut
 layout: state
 slug: connecticut
@@ -19,44 +19,23 @@ More detail on eviction protections in Connecticut can be found on the [COVID-19
 
 {{%/ report_intro %}}
 
-
-
 {{% report_chart id="avg" data="/uploads/connecticut_barchart.csv" %}}
-
-
-
-
 
 # Changes in eviction filings
 
-Eviction filings in Connecticut were close to historical average in January, February, and March of 2020.<sup>1</sup> Filings fell sharply in April and have remained low since then. 
+Eviction filings in Connecticut were close to historical average in January, February, and March of 2020.<sup>1</sup> Filings fell sharply in April and have remained low since then.
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
-
-
-
-
-
 
 {{%/ report_chart %}}
 
-
-
 {{% report_map shapes="/uploads/connecticut_shapes.json" data="/uploads/connecticut_map.csv" %}}
-
-
-
-
 
 # The geography of changes in eviction filings
 
-Connecticut is divided into eight counties. In each of those counties, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> 
+Connecticut is divided into eight counties. In each of those counties, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup>
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
 2. Tract racial characteristics determined using American Community Survey (ACS) estimates for 2014–2018.
-
-
-
-
 
 {{%/ report_map %}}
