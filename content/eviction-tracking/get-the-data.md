@@ -25,10 +25,14 @@ headers:
   fileheader: Data File
 layout: downloads
 data:
-  - site: All Sites
+  - site: All Cities
     years: "-"
     geo: Census Tract / ZIP Code
     file: /uploads/all_sites_20210102.csv
+  - site: All States
+    years: "-"
+    geo: Census Tract
+    file: /uploads/allstates_weekly_2020_2021.csv
   - site: Austin
     years: 2014-2019
     geo: ZIP Code
@@ -57,6 +61,14 @@ data:
     years: 2012, 2013, 2015
     geo: Census Tract
     file: /uploads/franklin_20201226.csv
+  - site: Connecticut
+    years: 2017-2019
+    geo: Census Tract
+    file: /uploads/connecticut_weekly_2020_2021.csv
+  - site: Delaware
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/delaware_weekly_2020_2021.csv
   - site: Fort Worth
     years: 2016-2019
     geo: Census Tract
@@ -77,6 +89,10 @@ data:
     years: 2012-2015
     geo: Census Tract
     file: /uploads/houston_20210102.csv
+  - site: Indiana
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/indiana_weekly_2020_2021.csv
   - site: Indianapolis
     years: 2016-2019
     geo: Census Tract
@@ -101,6 +117,14 @@ data:
     years: 2012-2019
     geo: Census Tract
     file: /uploads/minneapolis_20210102.csv
+  - site: Minnesota
+    years: 2012-2019
+    geo: Census Tract
+    file: /uploads/minnesota_weekly_2020_2021.csv
+  - site: Missouri
+    years: 2012-2019
+    geo: Census Tract
+    file: /uploads/missouri_weekly_2020_2021.csv
   - site: New York
     years: 2016-2018
     geo: ZIP Code
