@@ -2595,10 +2595,18 @@
 
 .map__tooltip-row {
   font-size: 12px;
-  height: 32px;
+  height: auto;
   margin-top: -4px;
   margin-bottom: 4px;
   white-space: nowrap;
+}
+
+.map__tooltip-row hr {
+  margin:8px -4px;
+  background: transparent;
+  height: 0;
+  border: none;
+  border-bottom: 1px solid #444;
 }
 
 .map__tooltip-row em {
@@ -2607,6 +2615,10 @@
   color: rgba(255, 255, 255, 0.7);
   display: block;
   margin-top: 2px;
+}
+
+.map__tooltip-row .percent {
+  float: right;
 }
 
 .map__tooltip-row span {

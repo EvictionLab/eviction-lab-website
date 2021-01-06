@@ -1401,7 +1401,7 @@ Elab.Map = (function (Elab) {
   var parseDate = d3.timeParse("%d/%m/%Y");
 
   function isRate(key) {
-    return key.indexOf("rate") > -1;
+    return key.indexOf("rate") > -1 || key.indexOf("pct") > -1;
   }
   function isAvgDiff(key) {
     return key.indexOf("diff") > -1;
@@ -1417,6 +1417,26 @@ Elab.Map = (function (Elab) {
     if (isRate(prop)) return formatSmallPercent;
     if (isAvgDiff(prop)) return formatPercent;
     return formatCount;
+  }
+
+  /**
+   * Returns an object of % racial demographics, sorted from largest to smallest
+   * @param {*} data 
+   */
+  function getPercentBreakdown(data) {
+    function sortValue(a,b) {
+      var key_a = 'pct_'+a.toLowerCase()
+      var key_b = 'pct_'+b.toLowerCase()
+      if (data[key_a] > data[key_b]) return -1
+      if (data[key_a] < data[key_b]) return 1
+      return 0
+    }
+    var result = {};
+    ['White', 'Black', 'Latinx'].sort(sortValue).forEach(function (race, i) {
+      var key = 'pct_'+race.toLowerCase()
+      result[race] = data[key] || data[key] === 0 ? formatSmallPercent(data[key]) : 'unknown'
+    })
+    return result
   }
 
   var ToggleTemplate = Handlebars.compile(
@@ -1441,13 +1461,20 @@ Elab.Map = (function (Elab) {
       "{{else}}" +
       "Data not available." +
       "{{/if}}" +
+      "{{#if hasPercents}}" +
+      "<hr />" +
+      "{{#each percents}}" +
+      "<div>{{@key}}: <span class='percent'>{{this}}</span></div>" +
+      "{{/each}}" +
+      "{{else}}" +
       "<br /><em>Racial majority: " +
       "{{#if majority}}" +
       "{{majority}}" +
       "{{else}}" +
       "unknown" +
-      "{{/if}}" +
       "</em>" +
+      "{{/if}}" +
+      "{{/if}}" +
       "</div>"
   );
 
@@ -1869,14 +1896,20 @@ Elab.Map = (function (Elab) {
       labelContainer.html(html);
     }
 
+
     function renderTooltip(feature, e) {
       var tooltipContainer = $(tooltip);
+      var hasPercents = feature.properties.hasOwnProperty('pct_white')
+        || feature.properties.hasOwnProperty('pct_black')
+        || feature.properties.hasOwnProperty('pct_latinx')
       var html = TooltipTemplate({
         name: feature.properties.NAME
           ? feature.properties.NAME.split(",")[0]
           : "Unknown",
         value: getTooltipValue(feature, currentProp),
         majority: feature.properties["racial_majority"],
+        percents: getPercentBreakdown(feature.properties),
+        hasPercents: hasPercents
       });
       var flipped = e.originalEvent.pageX > window.innerWidth - 240;
       var space = flipped ? -32 : 32;
@@ -2272,7 +2305,7 @@ Elab.ListPage = (function (Elab) {
         "</td>" +
         "</tr>"
     );
-    var isMoratoriumActive = !data.end || (data.end && +data.end > +Date.now());
+    var isMoratoriumActive = (data.start && !data.end) || (data.end && +data.end > +Date.now());
     var tooltipTemplate = data.end
       ? Handlebars.compile(options.tooltip)
       : Handlebars.compile(options.tooltipNoDate);
