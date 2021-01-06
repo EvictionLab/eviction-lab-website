@@ -1,5 +1,13 @@
 ---
 draft: false
+states:
+  data: /uploads/states_table.csv
+  nameHeading: State
+  filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
+  filingsTotalHeading: <span>Filings</span> Since <br/>03/15
+  trendHeading: Trend <br />Since 03/15
+buttonLabel: View Report
+tooltip: Eviction moratorium in effect until {{date}}
 cascade:
   title: The Eviction Tracking System | Eviction Lab
   description: Real time eviction tracking in U.S. cities during COVID-19.
@@ -14,29 +22,8 @@ intro: "The COVID-19 pandemic has deepened America’s housing crisis. The
   Tracking System to monitor weekly updates on the number of eviction cases
   being filed across the United States. Scroll down to view full reports on the
   cities in which we are operating, and to learn more about the project. "
-tooltip: Eviction moratorium in effect until {{date}}
-tooltipNoDate: Eviction moratorium active
-buttonLabel: View Report
-legend:
-  starLabel: Additional Protections
-  redAreaLabel: No Moratorium
-  greyAreaLabel: Active Moratorium
-cities:
-  data: /uploads/table.csv
-  nameHeading: City
-  filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
-  filingsTotalHeading: <span>Filings</span> Since <br/>03/15
-  trendHeading: Trend <br />Since 03/15
-states:
-  data: /uploads/states_table.csv
-  nameHeading: State
-  filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
-  filingsTotalHeading: <span>Filings</span> Since <br/>03/15
-  trendHeading: Trend <br />Since 03/15
-footnotes:
-  - Filings for the week of {{start}} to {{end}}. Filings in the last week may be undercounted as a result of processing delays. These counts will be revised in the following week.
 crisis: >-
-  ## A Looming Eviction Crisis?
+  ## A Looming Eviction Crisis
 
 
   Current policy responses to the pandemic may be insufficient to prevent a surge in evictions. CARES Act stimulus payments and unemployment insurance--when accessible--will provide families with some support, but in many cases not enough to make ends meet. Some states have passed temporary eviction moratoria, which the Eviction Lab is tracking in the COVID-19 Housing Policy Scorecard, and localities across the country have introduced additional measures. Once these measures expire, however, millions of renters will owe significant amounts of back rent. For many, a displacement and eviction crisis will follow the public health crisis. 
@@ -74,6 +61,21 @@ where: >-
 
 
   The U.S. government does not collect eviction data, and most state governments don’t either. Instead, eviction records are housed within county court systems and can be very difficult to access. The cities represented in the ETS are cities that have the data infrastructure that allow us to track evictions on a weekly basis. We will continue to add more cities as the project develops. We also welcome opportunities to collaborate with local officials and clerks to make this data available.
+cities:
+  data: /uploads/table.csv
+  nameHeading: City
+  filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
+  filingsTotalHeading: <span>Filings</span> Since <br/>03/15
+  trendHeading: Trend <br />Since 03/15
+legend:
+  starLabel: Additional Protections
+  redAreaLabel: No Moratorium
+  greyAreaLabel: Active Moratorium
+tooltipNoDate: Eviction moratorium active
+footnotes:
+  - Filings for the week of {{start}} to {{end}}. Filings in the last week may
+    be undercounted as a result of processing delays. These counts will be
+    revised in the following week.
 fundedby:
   heading: The Eviction Tracking System is funded by
   links:
@@ -84,3 +86,4 @@ aliases:
   - /weekly-reports
   - /eviction-tracking/tracker
 ---
+not used
