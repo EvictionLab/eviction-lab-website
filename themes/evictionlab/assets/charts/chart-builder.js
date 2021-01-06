@@ -231,6 +231,8 @@ Elab.ChartBuilder = (function (Elab) {
    * @param {Array} areaData [start, end]
    */
   Chart.prototype.addArea = function (areaData, options) {
+    // if not start / end areaData then return
+    if (!areaData[0] && !areaData[1]) return this;
     // set default options
     options = options || {};
     options.angle = options.angle || 45;
