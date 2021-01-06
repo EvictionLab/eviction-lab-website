@@ -2188,17 +2188,22 @@ Elab.Intro = (function (Elab) {
     });
   }
 
+  function getMoratoriumRange(data) {
+    if (!data.start && !data.end) return ''
+    return [data.start, data.end]
+      .map(function (d) {
+        return d ? dateFormat(d) : "Ongoing";
+      })
+      .join(" - ");
+  }
+
   /**
    * Inserts the data for the location into the placeholders
    */
   function initDataValues(cityData) {
     var dateFormat = d3.timeFormat("%B %e");
     var numFormat = d3.format(",d");
-    var moratorium = [cityData.start, cityData.end]
-      .map(function (d) {
-        return d ? dateFormat(d) : "Ongoing";
-      })
-      .join(" - ");
+    var moratorium = getMoratoriumRange(cityData);
     $("#evictionMoratorium").html(moratorium);
     $("#filingsLastWeek").html(
       "<span>" + numFormat(cityData.lastWeek) + "</span> filings last week*"
