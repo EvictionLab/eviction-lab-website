@@ -26,6 +26,16 @@ aliases:
 
 To prevent the deleterious health consequences of eviction and an escalating economic crisis during the COVID-19 outbreak, U.S. states are beginning to pursue strategies to ensure safe, decent, and stable housing during and after the pandemic. To evaluate state responses, the Eviction Lab and Columbia Law School’s Professor Emily Benfer have developed a <a href="/covid-policy-scorecard/">policy scorecard</a> for each state, distilling the contents of thousands of newly-released emergency orders, declarations, and legislation into a clear set of critical measures included in, and left out of, state-level pandemic responses related to eviction and housing. As states grapple with how to protect citizens during and in the recovery from the pandemic, this scorecard provides comprehensive information about the varying approaches state-by-state. These short- and long-term supportive measures are not exhaustive. 
 
+**How to Cite the Scorecard**
+
+_Citation for academic publications and research reports:_
+
+Emily A. Benfer, Anne Kat Alexander, Alieza Durana, Robert Koehler, and Matthew Desmond. COVID-19 Housing Policy Scorecard. Princeton: Princeton University, 2020, https://evictionlab.org/covid-policy-scorecard/. 
+
+_Citation for media outlets, policy briefs, and online resources:_  
+
+Eviction Lab and Emily A. Benfer, COVID-19 Housing Policy Scorecard, https://evictionlab.org/covid-policy-scorecard/. 
+
 **Scorecard Methodology**
 
 The state scorecard documents the following categories and measures, which may be controlled by courts, governors, or legislatures (“state”):
