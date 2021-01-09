@@ -37,7 +37,7 @@ additional: >-
   ## Additional Information
 
 
-  * The ETS was made possible by the tireless work of our partners at [January Advisors](https://www.januaryadvisors.com/) (data collection) and [Hyperobjekt](https://www.hyperobjekt.com/) (UI design and development).
+  * The ETS was made possible by the tireless work of our partners at [January Advisors](https://www.januaryadvisors.com/) (data collection), Legal Services Corporation (data provision), and [Hyperobjekt](https://www.hyperobjekt.com/) (UI design and development).
 
   * A description of the ETS methodology is [available here](/eviction-tracking/methods/).
 
