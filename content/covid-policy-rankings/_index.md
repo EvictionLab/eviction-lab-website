@@ -11,7 +11,7 @@ socialDescription: See how your state ranks in our nationwide scorecard of housi
 description: See how your state ranks in our nationwide scorecard of housing policies in response to COVID-19.
 intro1: >- 
     <p>Safe, stable, and decent housing has always been central to ensuring health and stability. Today, with the United States focused on containing the COVID-19 pandemic, the broader and longstanding issue of income and housing insecurity has quickly become paramount to the health of an entire nation.</p> 
-    <p>The Centers for Disease Control and Prevention (CDC) have announced a federal eviction moratorium in effect from September 4, 2020 to January 31, 2021. This follows the expiration of many state and federal orders, including the CARES Act. The CDC moratorium blocks landlords from evicting tenants who are currently not able to pay rent and do not have another safe housing option if they were to be evicted.</p>
+    <p>The Centers for Disease Control and Prevention (CDC) have announced a federal eviction moratorium in effect from September 4, 2020 and recently extended to March 31, 2020. This follows the expiration of many state and federal orders, including the CARES Act. The CDC moratorium blocks landlords from evicting tenants who are currently not able to pay rent and do not have another safe housing option if they were to be evicted.</p>
 intro1_2: >-
     <p>
       More information about eligibility requirements is available <a href="/federal-eviction-moratorium-update"> in our post on the federal moratorium</a>. Under this guidance, states and local jurisdictions are also able to put in place more comprehensive eviction moratoriums.

@@ -18,7 +18,7 @@ url: /federal-eviction-moratorium-update
 aliases:
 ---
 
-The Centers for Disease Control and Prevention has issued <a href="https://www.federalregister.gov/documents/2020/09/04/2020-19654/temporary-halt-in-residential-evictions-to-prevent-the-further-spread-of-covid-19" target="_blank">an order</a>, effective from September 4th **and recently extended to January 31st, 2021**, that provides protection from eviction to prevent the further spread of COVID-19. 
+The Centers for Disease Control and Prevention has issued <a href="https://www.federalregister.gov/documents/2020/09/04/2020-19654/temporary-halt-in-residential-evictions-to-prevent-the-further-spread-of-covid-19" target="_blank">an order</a>, effective from September 4th **and recently extended to March 31st, 2021**, that provides protection from eviction to prevent the further spread of COVID-19. 
 
 Although many questions about the order remain, to the best of our knowledge, this emergency action prohibits new and previously filed evictions of tenants who provide their landlords with a signed declaration stating that they meet all of the following criteria: 
 
