@@ -173,10 +173,10 @@ Elab.ChartBuilder = (function (Elab) {
         sel.attr(
           "transform",
           "translate(" +
-            _this.options.margin[3] +
-            " " +
-            _this.options.margin[0] +
-            ")"
+          _this.options.margin[3] +
+          " " +
+          _this.options.margin[0] +
+          ")"
         );
       });
     };
@@ -237,8 +237,9 @@ Elab.ChartBuilder = (function (Elab) {
     options = options || {};
     options.angle = options.angle || 45;
     options.areaId = options.areaId || "area";
+    options.addPattern = options.addPattern === false ? false : true
     // make sure IDs have not already been assigned
-    if (options.patternId && this.getSelection(options.patternId))
+    if (options.patternId && this.getSelection(options.patternId) && options.addPattern)
       throw new Error("patternId already exists: " + options.patternId);
     if (this.getSelection(options.areaId))
       throw new Error("areaId already exists: " + options.areaId);
@@ -255,8 +256,8 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("patternTransform", "rotate(" + options.angle + ")")
         .html(
           '<rect class="chart__pattern chart__pattern--' +
-            options.patternId +
-            '" x="0" y="0" width="6" height="12" />'
+          options.patternId +
+          '" x="0" y="0" width="6" height="12" />'
         );
     }
     // creates area element and returns selection
@@ -283,7 +284,7 @@ Elab.ChartBuilder = (function (Elab) {
       };
     }
     // add selections and render function to chart
-    options.patternId &&
+    options.patternId && options.addPattern &&
       this.addSelection(options.patternId, "root", createPattern);
     this.addSelection(options.areaId, "data", createAreaSelection);
     this.addRenderFunction(options.areaId, createAreaRenderFunction);
@@ -374,7 +375,7 @@ Elab.ChartBuilder = (function (Elab) {
             .attr(
               "class",
               "chart__hover-dot chart__hover-dot--" +
-                (chart.lineData.length - hoverIndex - 1)
+              (chart.lineData.length - hoverIndex - 1)
             )
             .attr("cx", function (d) {
               return chart.xScale(chart.hovered.x);
@@ -411,7 +412,7 @@ Elab.ChartBuilder = (function (Elab) {
       var spacing = 2;
 
       var groupNames = Object.keys(_this.options.barFormat);
-      var typeNames = barData[0].values.map(function(el) {
+      var typeNames = barData[0].values.map(function (el) {
         return el.type
       })
 
@@ -432,23 +433,23 @@ Elab.ChartBuilder = (function (Elab) {
         .data(barData)
         .enter()
         .append('g')
-        .attr('id', function(d){ return 'group_' + d.category })
-        .attr("class", function(d) { return "chart__bar-group " + d.category; } )
-        .attr("transform",function(d) { return "translate(" + _this.groupScale(d.category) + ",0)"; })
+        .attr('id', function (d) { return 'group_' + d.category })
+        .attr("class", function (d) { return "chart__bar-group " + d.category; })
+        .attr("transform", function (d) { return "translate(" + _this.groupScale(d.category) + ",0)"; })
         .selectAll('.chart__bar')
-        .data(function(d) { return d.values; })
+        .data(function (d) { return d.values; })
         .enter()
         .append('rect')
-        .attr("class", function(d) { return "chart__bar " + d.type; } )
-        .attr("width", function(d){ return _this.barScale.bandwidth() - spacing})
+        .attr("class", function (d) { return "chart__bar " + d.type; })
+        .attr("width", function (d) { return _this.barScale.bandwidth() - spacing })
         .attr("x", function (d) {
-            return _this.barScale(d.type);
-          })
+          return _this.barScale(d.type);
+        })
         .attr("height", 0)
-        .attr("y", function(d){ return _this.getInnerHeight() })
+        .attr("y", function (d) { return _this.getInnerHeight() })
         .transition()
         .duration(1000)
-        .attr("y", function(d){ return _this.yScale(d.value) })
+        .attr("y", function (d) { return _this.yScale(d.value) })
         .attr("height", function (d) {
           return _this.getInnerHeight() - _this.yScale(d.value);
         })
@@ -526,7 +527,7 @@ Elab.ChartBuilder = (function (Elab) {
     if (_this.getSelection(options.linesId))
       throw new Error(
         "addLines: selection already exists for given linesId " +
-          options.linesId
+        options.linesId
       );
     function createLineSelection(parentSelection) {
       return parentSelection.append("g").attr("class", "chart__lines");
@@ -641,7 +642,7 @@ Elab.ChartBuilder = (function (Elab) {
     return width * num;
   };
 
-  Chart.prototype.addBarGroupAxis = function(overrides) {
+  Chart.prototype.addBarGroupAxis = function (overrides) {
     // console.log('addBarGroupAxis, ', this)
     var _this = this;
     var options = overrides || {};
@@ -658,7 +659,7 @@ Elab.ChartBuilder = (function (Elab) {
         return e;
       };
     // option to adjust axis labels, do nothing by default
-    options.adjustLabels = overrides.adjustLabels || function () {};
+    options.adjustLabels = overrides.adjustLabels || function () { };
 
     this.selections["barGroup"] = this.selections["overlay"]
       .append("g")
@@ -667,14 +668,14 @@ Elab.ChartBuilder = (function (Elab) {
       var innerWidth = _this.options.width - _this.options.margin[1] - _this.options.margin[3]
       _this.xScale = d3.scaleBand() // projecting discrete data into the diagram
         .domain(_this.options.xTicks.split(';'))
-        .range([0,innerWidth])
+        .range([0, innerWidth])
         .round(0.1)
         .padding(0.1);
-        // .paddingInner(0.05);
+      // .paddingInner(0.05);
 
-        // .range([0, _this.getInnerWidth()])
-        // .round(0.1)
-        // .padding(0.1);
+      // .range([0, _this.getInnerWidth()])
+      // .round(0.1)
+      // .padding(0.1);
       var xAxis = d3.axisBottom(_this.xScale).tickSize(8).tickSizeOuter(0);
       _this.selections["barGroup"]
         .attr("transform", "translate(0," + _this.getInnerHeight() + ")")
@@ -706,7 +707,7 @@ Elab.ChartBuilder = (function (Elab) {
         return e;
       };
     // option to adjust axis labels, do nothing by default
-    options.adjustLabels = overrides.adjustLabels || function () {};
+    options.adjustLabels = overrides.adjustLabels || function () { };
 
     this.selections["timeAxis"] = this.selections["overlay"]
       .append("g")

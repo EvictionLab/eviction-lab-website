@@ -25,90 +25,114 @@ headers:
   fileheader: Data File
 layout: downloads
 data:
-  - site: All Sites
+  - site: All Cities
     years: "-"
     geo: Census Tract / ZIP Code
-    file: /uploads/all_sites_20210102.csv
+    file: /uploads/all_sites_weekly_2020_2021.csv
+  - site: All States
+    years: "-"
+    geo: Census Tract
+    file: /uploads/allstates_weekly_2020_2021.csv
   - site: Austin
     years: 2014-2019
     geo: ZIP Code
-    file: /uploads/austin_20210102.csv
+    file: /uploads/austin_weekly_2020_2021.csv
   - site: Boston
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/boston_20210102.csv
+    file: /uploads/boston_weekly_2020_2021.csv
   - site: Bridgeport
     years: 2017-2019
     geo: Census Tract
-    file: /uploads/fairfield_20210102.csv
+    file: /uploads/fairfield_weekly_2020_2021.csv
   - site: Charleston
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/charleston_20210102.csv
+    file: /uploads/charleston_weekly_2020_2021.csv
   - site: Cincinnati
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/cincinnati_20201226.csv
+    file: /uploads/cincinnati_weekly_2020_2021.csv
   - site: Cleveland
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/cleveland_20210102.csv
+    file: /uploads/cleveland_weekly_2020_2021.csv
   - site: Columbus
     years: 2012, 2013, 2015
     geo: Census Tract
-    file: /uploads/franklin_20201226.csv
+    file: /uploads/franklin_weekly_2020_2021.csv
+  - site: Connecticut
+    years: 2017-2019
+    geo: Census Tract
+    file: /uploads/connecticut_weekly_2020_2021.csv
+  - site: Delaware
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/delaware_weekly_2020_2021.csv
   - site: Fort Worth
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/fwt_20210102.csv
+    file: /uploads/fwt_weekly_2020_2021.csv
   - site: Gainesville
     years: 2017-2019
     geo: Census Tract
-    file: /uploads/alachua_20210102.csv
+    file: /uploads/alachua_weekly_2020_2021.csv
   - site: Greenville
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/greenville_20210102.csv
+    file: /uploads/greenville_weekly_2020_2021.csv
   - site: Hartford
     years: 2017-2019
     geo: Census Tract
-    file: /uploads/hartford_20210102.csv
+    file: /uploads/hartford_weekly_2020_2021.csv
   - site: Houston
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/houston_20210102.csv
+    file: /uploads/houston_weekly_2020_2021.csv
+  - site: Indiana
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/indiana_weekly_2020_2021.csv
   - site: Indianapolis
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/indianapolis_20210102.csv
+    file: /uploads/indianapolis_weekly_2020_2021.csv
   - site: Jacksonville
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/duval_20210102.csv
+    file: /uploads/duval_weekly_2020_2021.csv
   - site: Kansas City
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/jackson_20210102.csv
+    file: /uploads/jackson_weekly_2020_2021.csv
   - site: Memphis
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/memphis_20210102.csv
+    file: /uploads/memphis_weekly_2020_2021.csv
   - site: Milwaukee
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/milwaukee_20210102.csv
+    file: /uploads/milwaukee_weekly_2020_2021.csv
   - site: Minneapolis-Saint Paul
     years: 2012-2019
     geo: Census Tract
-    file: /uploads/minneapolis_20210102.csv
+    file: /uploads/minneapolis_weekly_2020_2021.csv
+  - site: Minnesota
+    years: 2012-2019
+    geo: Census Tract
+    file: /uploads/minnesota_weekly_2020_2021.csv
+  - site: Missouri
+    years: 2012-2019
+    geo: Census Tract
+    file: /uploads/missouri_weekly_2020_2021.csv
   - site: New York
     years: 2016-2018
     geo: ZIP Code
-    file: /uploads/newyork_20210102.csv
+    file: /uploads/newyork_weekly_2020_2021.csv
   - site: Philadelphia
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/philadelphia_20210102.csv
+    file: /uploads/philadelphia_weekly_2020_2021.csv
   - site: Phoenix
     years: 2015-2019
     geo: Census Tract
@@ -116,27 +140,27 @@ data:
   - site: Pittsburgh
     years: 2012-2019
     geo: ZIP Code
-    file: /uploads/allegheny_20210102.csv
+    file: /uploads/allegheny_weekly_2020_2021.csv
   - site: Richmond
     years: "2016"
     geo: ZIP Code
-    file: /uploads/richmond_20210102.csv
+    file: /uploads/richmond_weekly_2020_2021.csv
   - site: South Bend
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/southbend_20210102.csv
+    file: /uploads/southbend_weekly_2020_2021.csv
   - site: St Louis
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
-    file: /uploads/stlouis_20210102.csv
+    file: /uploads/stlouis_weekly_2020_2021.csv
   - site: Tampa
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/tampa_20210102.csv
+    file: /uploads/tampa_weekly_2020_2021.csv
   - site: Wilmington
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/wilmington_20210102.csv
+    file: /uploads/wilmington_weekly_2020_2021.csv
 ---
 Sample code:
 
