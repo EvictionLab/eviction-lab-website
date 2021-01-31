@@ -24,7 +24,7 @@ As the world seeks to contain the COVID-19 pandemic, policymakers across the U.S
 
 This table details where local governments, states, and the federal government have taken action. We continually update this table and <a href="https://evictionlab.org/contact/">welcome tips</a> regarding what your community is putting into place. Please note that as policies are changing daily, this table may not be comprehensive of all orders that are in effect in towns, cities, and counties. 
 
-For more information about the Centers for Disease Control and Prevention (CDC) eviction moratorium, in effect 9/4/2020 through 1/31/2021 (and expected to be extended through 3/31/2021), please see <a href="/federal-eviction-moratorium-update/">our post on the federal moratorium</a>. For additional housing support resources, please visit <a href="https://justshelter.org/" target="_blank">JustShelter.org</a>. For more detailed information about statewide orders, please see the <a href="/covid-policy-scorecard">COVID-19 Housing Policy Scorecard</a>. 
+For more information about the Centers for Disease Control and Prevention (CDC) eviction moratorium, in effect 9/4/2020 through 3/31/2021, please see <a href="/federal-eviction-moratorium-update/">our post on the federal moratorium</a>. For additional housing support resources, please visit <a href="https://justshelter.org/" target="_blank">JustShelter.org</a>. For more detailed information about statewide orders, please see the <a href="/covid-policy-scorecard">COVID-19 Housing Policy Scorecard</a>. 
 
 <a href="#external-links" class="smoothScroll">Below the table</a>, we also reference resources other groups have compiled to track different aspects of the shifting housing policy landscape.
 
