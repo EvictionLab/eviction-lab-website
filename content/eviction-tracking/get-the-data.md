@@ -60,7 +60,7 @@ data:
   - site: Columbus
     years: 2012, 2013, 2015
     geo: Census Tract
-    file: /uploads/franklin_weekly_2020_2021.csv
+    file: /uploads/columbus_weekly_2020_2021.csv
   - site: Connecticut
     years: 2017-2019
     geo: Census Tract
@@ -72,11 +72,11 @@ data:
   - site: Fort Worth
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/fwt_weekly_2020_2021.csv
+    file: /uploads/fortworth_weekly_2020_2021.csv
   - site: Gainesville
     years: 2017-2019
     geo: Census Tract
-    file: /uploads/alachua_weekly_2020_2021.csv
+    file: /uploads/gainesville_weekly_2020_2021.csv
   - site: Greenville
     years: 2016-2019
     geo: Census Tract
@@ -100,11 +100,11 @@ data:
   - site: Jacksonville
     years: 2012-2016
     geo: Census Tract
-    file: /uploads/duval_weekly_2020_2021.csv
+    file: /uploads/jacksonville_weekly_2020_2021.csv
   - site: Kansas City
     years: 2012-2015
     geo: Census Tract
-    file: /uploads/jackson_weekly_2020_2021.csv
+    file: /uploads/kansascity_weekly_2020_2021.csv
   - site: Memphis
     years: 2016-2019
     geo: Census Tract
@@ -136,11 +136,11 @@ data:
   - site: Phoenix
     years: 2015-2019
     geo: Census Tract
-    file: /uploads/maricopa_20210102.csv
+    file: /uploads/phoenix_weekly_2020_2021.csv
   - site: Pittsburgh
     years: 2012-2019
     geo: ZIP Code
-    file: /uploads/allegheny_weekly_2020_2021.csv
+    file: /uploads/pittsburgh_weekly_2020_2021.csv
   - site: Richmond
     years: "2016"
     geo: ZIP Code
