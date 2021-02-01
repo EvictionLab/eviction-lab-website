@@ -1,15 +1,17 @@
 ---
 collection: true
 draft: false
-title: Cincinnati, OH | Eviction Tracking System
-fbImage: /images/assets/graphics/ets-bg-social.png
-twImage: /images/assets/graphics/ets-bg-social.png
 h1: Cincinnati, Ohio
 slug: cincinnati-oh
 date: 2020-06-03T00:00:00.000Z
+twImage: /images/assets/graphics/ets-bg-social.png
+title: Cincinnati, OH | Eviction Tracking System
+fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="31069" data="/uploads/table.csv" %}}
+{{% report_intro id="39061" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -19,11 +21,15 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/cincinnati_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -32,11 +38,15 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_map.csv" %}}
+
+
 
 
 
@@ -81,11 +91,15 @@ Cincinnati is divided into 222 Census Tracts. Here we map, in each of those Trac
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/cincinnati_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -94,6 +108,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016. 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
+
+
 
 
 {{%/ report_chart %}}
