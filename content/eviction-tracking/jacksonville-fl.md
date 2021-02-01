@@ -11,17 +11,23 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="12031" data="/uploads/table.csv" %}}
 
+
+
 Eviction filings in Duval County (Jacksonville) have fallen sharply in the last two months. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 95% or more in April and May. 
 
 Florida instituted a state-wide eviction moratorium which expired at the end of July. After the moratorium expired, execution of eviction orders was also delayed until no earlier than October 1st.
 
 More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
 
+
+
 {{%/ report_intro %}}
 
 
 
-{{% report_chart id="avg" data="/uploads/duval_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/jacksonville_barchart.csv" %}}
+
+
 
 
 
@@ -38,11 +44,15 @@ Eviction filings in Jacksonville were higher than average in January and Februar
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/jacksonville_shapes.json" data="/uploads/duval_map.csv" %}}
+{{% report_map shapes="/uploads/jacksonville_shapes.json" data="/uploads/jacksonville_map.csv" %}}
+
+
 
 
 
@@ -59,11 +69,15 @@ Jacksonville is divided into 174 Census Tracts. Here we map, in each of those Tr
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="/uploads/duval_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/jacksonville_linechart.csv" %}}
+
+
 
 
 
@@ -76,6 +90,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
+
+
 
 
 
