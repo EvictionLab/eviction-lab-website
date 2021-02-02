@@ -159,8 +159,8 @@ Elab.Utils = (function (Elab) {
 
   function getMoratoriumRanges(data) {
     return data.start.map(function (d, i) {
-      return [data.start[i], data.end[i]]
-    })
+      return [data.start[i], data.end[i]];
+    });
   }
 
   return {
@@ -173,7 +173,7 @@ Elab.Utils = (function (Elab) {
     formatDate: formatDate,
     callOnEnter: callOnEnter,
     debounce: debounce,
-    getMoratoriumRanges: getMoratoriumRanges
+    getMoratoriumRanges: getMoratoriumRanges,
   };
 })(Elab);
 
@@ -504,8 +504,8 @@ Elab.Data = (function (Elab) {
           subgroups: d["subgroups"] ? d["subgroups"].split(";") : null,
           subgroup_values: d["subgroup_values"]
             ? d["subgroup_values"].split(";").map(function (d) {
-              return parseInt(d);
-            })
+                return parseInt(d);
+              })
             : null,
         };
       } else {
@@ -839,10 +839,10 @@ Elab.Chart = (function (Elab) {
       .attr(
         "style",
         "transform: translate(" +
-        (xFlipped ? "-100%" : "0") +
-        ", " +
-        (yFlipped ? "-100%" : "0") +
-        ")"
+          (xFlipped ? "-100%" : "0") +
+          ", " +
+          (yFlipped ? "-100%" : "0") +
+          ")"
       )
       .html("<h1>" + title + "</h1>")
       .style("display", "block")
@@ -909,15 +909,14 @@ Elab.Chart = (function (Elab) {
 
     function renderBars(data, config, context) {
       const monthFormat = d3.timeFormat("%m/%Y");
-      const monthParse = d3.timeParse("%m/%Y")
+      const monthParse = d3.timeParse("%m/%Y");
       // get data grouped by x value
       var groupedData = groupItems(data.items, function (d) {
-        return monthFormat(d.x)
+        return monthFormat(d.x);
       });
       var groupNames = data.items.map(function (d) {
         return d.id;
       });
-      console.log(groupedData)
 
       var x1 = d3
         .scaleBand()
@@ -935,7 +934,7 @@ Elab.Chart = (function (Elab) {
         .attr("class", "chart__bar-group")
         .merge(group)
         .attr("transform", function (d) {
-          var date = monthParse(d.id)
+          var date = monthParse(d.id);
           return "translate(" + context.x(date) + ",0)";
         });
 
@@ -964,7 +963,7 @@ Elab.Chart = (function (Elab) {
         })
         .merge(groupAreaSelection)
         .attr("x", function (d, i) {
-          var date = monthParse(d.id)
+          var date = monthParse(d.id);
           return context.x(date) - 4;
         })
         .attr("y", 0)
@@ -1428,61 +1427,64 @@ Elab.Map = (function (Elab) {
 
   /**
    * Returns an object of % racial demographics, sorted from largest to smallest
-   * @param {*} data 
+   * @param {*} data
    */
   function getPercentBreakdown(data) {
     function sortValue(a, b) {
-      var key_a = 'pct_' + a.toLowerCase()
-      var key_b = 'pct_' + b.toLowerCase()
-      if (data[key_a] > data[key_b]) return -1
-      if (data[key_a] < data[key_b]) return 1
-      return 0
+      var key_a = "pct_" + a.toLowerCase();
+      var key_b = "pct_" + b.toLowerCase();
+      if (data[key_a] > data[key_b]) return -1;
+      if (data[key_a] < data[key_b]) return 1;
+      return 0;
     }
     var result = {};
-    ['White', 'Black', 'Latinx'].sort(sortValue).forEach(function (race, i) {
-      var key = 'pct_' + race.toLowerCase()
-      result[race] = data[key] || data[key] === 0 ? formatSmallPercent(data[key]) : 'unknown'
-    })
-    return result
+    ["White", "Black", "Latinx"].sort(sortValue).forEach(function (race, i) {
+      var key = "pct_" + race.toLowerCase();
+      result[race] =
+        (data[key] || data[key] === 0) && data[key] !== "null"
+          ? formatSmallPercent(data[key])
+          : "unknown";
+    });
+    return result;
   }
 
   var ToggleTemplate = Handlebars.compile(
     "<div class='button-group'>" +
-    "{{#each metrics}}" +
-    "<button class='toggle toggle--{{@key}}' data-key='{{@key}}'>{{this}}</button>" +
-    "{{/each}}" +
-    "</div>"
+      "{{#each metrics}}" +
+      "<button class='toggle toggle--{{@key}}' data-key='{{@key}}'>{{this}}</button>" +
+      "{{/each}}" +
+      "</div>"
   );
 
   var LegendLabelTemplate = Handlebars.compile(
     "{{#each labels}}" +
-    "<span class='legend__gradient-label'>{{this}}</span>" +
-    "{{/each}}"
+      "<span class='legend__gradient-label'>{{this}}</span>" +
+      "{{/each}}"
   );
 
   var TooltipTemplate = Handlebars.compile(
     "<h1>{{name}}</h1>" +
-    '<div class="map__tooltip-row">' +
-    "{{#if value}}" +
-    "{{{value}}}" +
-    "{{else}}" +
-    "Data not available." +
-    "{{/if}}" +
-    "{{#if hasPercents}}" +
-    "<hr />" +
-    "{{#each percents}}" +
-    "<div>{{@key}}: <span class='percent'>{{this}}</span></div>" +
-    "{{/each}}" +
-    "{{else}}" +
-    "<br /><em>Racial majority: " +
-    "{{#if majority}}" +
-    "{{majority}}" +
-    "{{else}}" +
-    "unknown" +
-    "</em>" +
-    "{{/if}}" +
-    "{{/if}}" +
-    "</div>"
+      '<div class="map__tooltip-row">' +
+      "{{#if value}}" +
+      "{{{value}}}" +
+      "{{else}}" +
+      "Data not available." +
+      "{{/if}}" +
+      "{{#if hasPercents}}" +
+      "<hr />" +
+      "{{#each percents}}" +
+      "<div>{{@key}}: <span class='percent'>{{this}}</span></div>" +
+      "{{/each}}" +
+      "{{else}}" +
+      "<br /><em>Racial majority: " +
+      "{{#if majority}}" +
+      "{{majority}}" +
+      "{{else}}" +
+      "unknown" +
+      "</em>" +
+      "{{/if}}" +
+      "{{/if}}" +
+      "</div>"
   );
 
   function getTooltipValue(feature, prop) {
@@ -1497,12 +1499,12 @@ Elab.Map = (function (Elab) {
       return dir === "mid"
         ? "Filings about average."
         : "Filings <span class='value--" +
-        dir +
-        "'>" +
-        dir +
-        " " +
-        value +
-        "</span> from average.";
+            dir +
+            "'>" +
+            dir +
+            " " +
+            value +
+            "</span> from average.";
     }
     if (isRate(prop)) return "filings against " + value + " of renters";
     if (isCount(prop)) return value + " eviction filings";
@@ -1649,6 +1651,11 @@ Elab.Map = (function (Elab) {
         type: "fill",
         source: "choropleth",
         layout: {},
+        filter: [
+          "any",
+          ["to-boolean", ["get", prop]],
+          ["==", 0, ["get", prop]],
+        ],
         paint: {
           "fill-color": fillColor,
           "fill-opacity": [
@@ -1903,12 +1910,12 @@ Elab.Map = (function (Elab) {
       labelContainer.html(html);
     }
 
-
     function renderTooltip(feature, e) {
       var tooltipContainer = $(tooltip);
-      var hasPercents = feature.properties.hasOwnProperty('pct_white')
-        || feature.properties.hasOwnProperty('pct_black')
-        || feature.properties.hasOwnProperty('pct_latinx')
+      var hasPercents =
+        feature.properties.hasOwnProperty("pct_white") ||
+        feature.properties.hasOwnProperty("pct_black") ||
+        feature.properties.hasOwnProperty("pct_latinx");
       var html = TooltipTemplate({
         name: feature.properties.NAME
           ? feature.properties.NAME.split(",")[0]
@@ -1916,7 +1923,7 @@ Elab.Map = (function (Elab) {
         value: getTooltipValue(feature, currentProp),
         majority: feature.properties["racial_majority"],
         percents: getPercentBreakdown(feature.properties),
-        hasPercents: hasPercents
+        hasPercents: hasPercents,
       });
       var flipped = e.originalEvent.pageX > window.innerWidth - 240;
       var space = flipped ? -32 : 32;
@@ -2152,33 +2159,34 @@ Elab.Intro = (function (Elab) {
         },
         ticks: d3.timeMonth.every(1),
         tickFormat: d3.timeFormat("%b"),
-      })
+      });
     // adds local moratorium areas
     cityData.start.forEach(function (d, i) {
-      chart = chart
-        .addArea([cityData.start[i], cityData.end[i]], {
-          areaId: "area" + i,
-          patternId: "stripes",
-          addPattern: i === 0
-        })
-    })
+      chart = chart.addArea([cityData.start[i], cityData.end[i]], {
+        areaId: "area" + i,
+        patternId: "stripes",
+        addPattern: i === 0,
+      });
+    });
 
     // adds federal moratorium
-    return (chart.addArea([new Date(2020, 8, 4), new Date(2021, 0, 31)], {
-      areaId: "cdcArea",
-      patternId: "cdcStripes",
-      angle: -45,
-    })
-      // adds the bars for weekly filings
-      .addBars(selectBarsData)
-      // adds the trend line
-      .addLines({ selector: selectLineData, curve: d3.curveMonotoneX })
-      // adds a tooltip with the provided render function
-      .addTooltip(showIntroTooltip, hideIntroTooltip)
-      // adds a custom element with markers for the last bar and chart span
-      .addCustom(createLabelMarkers)
-      // renders the chart
-      .render()
+    return (
+      chart
+        .addArea([new Date(2020, 8, 4), new Date(2021, 0, 31)], {
+          areaId: "cdcArea",
+          patternId: "cdcStripes",
+          angle: -45,
+        })
+        // adds the bars for weekly filings
+        .addBars(selectBarsData)
+        // adds the trend line
+        .addLines({ selector: selectLineData, curve: d3.curveMonotoneX })
+        // adds a tooltip with the provided render function
+        .addTooltip(showIntroTooltip, hideIntroTooltip)
+        // adds a custom element with markers for the last bar and chart span
+        .addCustom(createLabelMarkers)
+        // renders the chart
+        .render()
     );
   }
 
@@ -2202,21 +2210,23 @@ Elab.Intro = (function (Elab) {
 
   function getMoratoriumRange(data) {
     var dateFormat = d3.timeFormat("%B %e");
-    var ranges = Elab.Utils.getMoratoriumRanges(data)
-    if (!ranges || ranges.length === 0) return ''
-    return ranges.map(function (dates) {
-      return dates.map(function (d) {
-        return d ? dateFormat(d) : "Ongoing";
+    var ranges = Elab.Utils.getMoratoriumRanges(data);
+    if (!ranges || ranges.length === 0) return "";
+    return ranges
+      .map(function (dates) {
+        return dates
+          .map(function (d) {
+            return d ? dateFormat(d) : "Ongoing";
+          })
+          .join(" - ");
       })
-        .join(" - ")
-    }).join("<br />")
+      .join("<br />");
   }
 
   /**
    * Inserts the data for the location into the placeholders
    */
   function initDataValues(cityData) {
-
     var numFormat = d3.format(",d");
     var moratorium = getMoratoriumRange(cityData);
     $("#evictionMoratorium").html(moratorium);
@@ -2225,8 +2235,8 @@ Elab.Intro = (function (Elab) {
     );
     $("#filingsCumulative").html(
       "<span>" +
-      numFormat(cityData.cumulative) +
-      "</span> filings since Mar. 15"
+        numFormat(cityData.cumulative) +
+        "</span> filings since Mar. 15"
     );
     addSubgroupBreakdown(cityData);
   }
@@ -2252,13 +2262,13 @@ Elab.Intro = (function (Elab) {
     });
     var template = Handlebars.compile(
       "<p>Of the {{cumulative}} filings in {{city}} since March 15th, " +
-      "{{#each subgroups}}" +
-      "{{#if @last}}" +
-      " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
-      "{{else}}" +
-      "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}}, {{/if}}" +
-      "{{/if}}" +
-      "{{/each}}</p>"
+        "{{#each subgroups}}" +
+        "{{#if @last}}" +
+        " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
+        "{{else}}" +
+        "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}}, {{/if}}" +
+        "{{/if}}" +
+        "{{/each}}</p>"
     );
     var html = template(templateData);
     $("#introText").prepend(html);
@@ -2306,26 +2316,26 @@ Elab.ListPage = (function (Elab) {
     var rowTemplate = $("#rowTemplate").html();
     var rowTemplate = Handlebars.compile(
       '<tr class="table__row {{class}}" data-name="{{name}}" data-href="{{url}}">' +
-      '<td class="table__cell table__cell--name" title="{{name}}">' +
-      "<div>" +
-      "<span>{{name}}</span>" +
-      '<img class="icon icon--moratorium" src="/img/el-medallion.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
-      "</div></td>" +
-      '<td class="table__cell table__cell--number">' +
-      "{{weekFilings}}" +
-      "</td>" +
-      '<td class="table__cell table__cell--number">' +
-      "{{cumulativeFilings}}" +
-      "</td>" +
-      '<td class="table__cell table__cell--visual">' +
-      '<svg class="trend-line" data-visual="{{id}}"></svg>' +
-      "</td>" +
-      '<td class="table__cell table__cell--button">' +
-      '<a href="{{url}}" class="btn btn-default">{{buttonLabel}} <i class="fa fa-chevron-right"></i></a>' +
-      "</td>" +
-      "</tr>"
+        '<td class="table__cell table__cell--name" title="{{name}}">' +
+        "<div>" +
+        "<span>{{name}}</span>" +
+        '<img class="icon icon--moratorium" src="/img/el-medallion.svg" data-toggle="tooltip" data-placement="right" title="{{tooltip}}" />' +
+        "</div></td>" +
+        '<td class="table__cell table__cell--number">' +
+        "{{weekFilings}}" +
+        "</td>" +
+        '<td class="table__cell table__cell--number">' +
+        "{{cumulativeFilings}}" +
+        "</td>" +
+        '<td class="table__cell table__cell--visual">' +
+        '<svg class="trend-line" data-visual="{{id}}"></svg>' +
+        "</td>" +
+        '<td class="table__cell table__cell--button">' +
+        '<a href="{{url}}" class="btn btn-default">{{buttonLabel}} <i class="fa fa-chevron-right"></i></a>' +
+        "</td>" +
+        "</tr>"
     );
-    var moratoriumRanges = Elab.Utils.getMoratoriumRanges(data)
+    var moratoriumRanges = Elab.Utils.getMoratoriumRanges(data);
     var isMoratoriumActive = inMoratorium(Date.now(), moratoriumRanges);
     var tooltipTemplate = data.end
       ? Handlebars.compile(options.tooltip)
@@ -2352,12 +2362,11 @@ Elab.ListPage = (function (Elab) {
       return inRange
         ? true
         : +day >= +range[0] &&
-        +day <= +range[1] &&
-        +endDay >= +range[0] &&
-        +endDay <= +range[1];
+            +day <= +range[1] &&
+            +endDay >= +range[0] &&
+            +endDay <= +range[1];
     }, false);
   }
-
 
   function mergeRanges(ranges) {
     if (!(ranges && ranges.length)) {
@@ -2379,18 +2388,16 @@ Elab.ListPage = (function (Elab) {
       var top = stack[stack.length - 1];
 
       if (top[1] < range[0]) {
-
         // No overlap, push range onto stack
         stack.push(range);
       } else if (top[1] < range[1]) {
-
         // Update previous range
         top[1] = range[1];
       }
     });
 
     return stack;
-  };
+  }
 
   /**
    * Renders the trend line for the table
@@ -2403,7 +2410,9 @@ Elab.ListPage = (function (Elab) {
     // as it does not reflect the full set of filings
     var localMoratoriums = Elab.Utils.getMoratoriumRanges(data);
     var cdcMoratorium = [new Date(2020, 8, 4), new Date(2021, 0, 31)];
-    var moratoriumRanges = mergeRanges(localMoratoriums.concat([cdcMoratorium]))
+    var moratoriumRanges = mergeRanges(
+      localMoratoriums.concat([cdcMoratorium])
+    );
     var values = data.values.filter(function (v, i) {
       return i !== data.values.length - 1;
     });
