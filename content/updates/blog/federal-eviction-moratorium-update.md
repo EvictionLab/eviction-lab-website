@@ -37,9 +37,9 @@ Although many questions about the order remain, to the best of our knowledge, th
   <li>They understand that any unpaid rent may be required in full at the end of the eviction moratorium and that false or misleading statements may result in criminal and civil fines, penalties, damages, or imprisonment.</li>
 </ol>
 
-Each adult listed on the lease, rental agreement, or housing contract who qualifies for protection under the CDC's moratorium should complete and provide <a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/declaration-form.pdf" download target="_blank">this declaration</a> to the landlord or property manager. The order enumerates penalties for anyone who violates it, including fines of $100,000 to $500,000 and civil and criminal penalties.
+Each adult listed on the lease, rental agreement, or housing contract who qualifies for protection under the CDC's moratorium should complete and provide <a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/EvictionDeclare_d508.pdf" download target="_blank">this declaration</a> (updated to reflect the moratorium's extension through March 2021) to the landlord or property manager. The order enumerates penalties for anyone who violates it, including fines of $100,000 to $500,000 and civil and criminal penalties.
 
-<p style="text-align:center;"><strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/declaration-form.pdf" download target="_blank">Click Here for the Tenant Declaration Form</a></strong></p>
+<p style="text-align:center;"><strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/EvictionDeclare_d508.pdf" download target="_blank">Click Here for the Tenant Declaration Form (updated 2/01/2021)</a></strong></p>
 
 We urge you to share this information widely. By 2018 American Community Survey estimates, this order could apply to up to 86% of renter households that had total household income below $100,000. In the 17 cities we’re tracking, we’ve already seen 43,526 eviction filings. This order could provide meaningful relief to families at risk of eviction and its devastating harms, especially if coupled with rent relief.
 
