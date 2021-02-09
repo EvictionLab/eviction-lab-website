@@ -30,7 +30,7 @@ body {
   
   h3 {
     @include altFont(1.6rem);
-    line-height: 1.7rem;
+    line-height: 1.5;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     color: $color2;

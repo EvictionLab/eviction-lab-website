@@ -37,7 +37,7 @@ But this declaration only prevents evictions where the tenant is behind on rent.
 
 <br/>
 
-### Why are evictions and eviction filings still happening <br/>during the moratorium?
+### Why are evictions and eviction filings still <br class="d-none d-lg-block" />happening during the moratorium?
 <br/>
 
 Local housing courts have interpreted the CDC order differently across the country. In October, the CDC issued nonbinding {{< extlink "guidance" "https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf" >}} that landlords could _file_ to evict tenants, as long as other stages of the eviction process, for example issuing a _writ of eviction_ at the end of the case, are halted. 
