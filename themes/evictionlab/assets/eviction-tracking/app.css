@@ -945,7 +945,8 @@
 /** HERO ANIMATION */
 
 .bars path {
-  transform: translateY(100%);
+  transform: translate3d(0, 0, 0);
+  opacity:0;
 }
 .hero--start .bars path {
   animation: slideInUp;
@@ -1006,21 +1007,23 @@
 
 @keyframes slideInUp {
   from {
-    transform: translateY(100%);
+    transform: translate3d(0, 100%, 0);
+    opacity:0;
   }
   to {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+    opacity:1;
   }
 }
 
 @media (prefers-reduced-motion) {
   .bars path {
     animation: none;
-    transform: translateY(0%);
+    transform: translate3d(0, 0, 0);
   }
   .boxes {
     animation: none;
-    transform: translateY(0%);
+    transform: translate3d(0, 0, 0);
   }
 }
 
