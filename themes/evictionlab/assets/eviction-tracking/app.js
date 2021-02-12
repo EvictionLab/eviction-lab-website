@@ -163,6 +163,10 @@ Elab.Utils = (function (Elab) {
     });
   }
 
+  function getCdcMoratoriumRange() {
+    return [new Date(2020, 8, 4), new Date(2021, 2, 31)]; // ends march 31
+  }
+
   return {
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
@@ -174,6 +178,7 @@ Elab.Utils = (function (Elab) {
     callOnEnter: callOnEnter,
     debounce: debounce,
     getMoratoriumRanges: getMoratoriumRanges,
+    getCdcMoratoriumRange: getCdcMoratoriumRange,
   };
 })(Elab);
 
@@ -2172,7 +2177,7 @@ Elab.Intro = (function (Elab) {
     // adds federal moratorium
     return (
       chart
-        .addArea([new Date(2020, 8, 4), new Date(2021, 0, 31)], {
+        .addArea(Elab.Utils.getCdcMoratoriumRange(), {
           areaId: "cdcArea",
           patternId: "cdcStripes",
           angle: -45,
@@ -2409,7 +2414,7 @@ Elab.ListPage = (function (Elab) {
     // remove latest week from values
     // as it does not reflect the full set of filings
     var localMoratoriums = Elab.Utils.getMoratoriumRanges(data);
-    var cdcMoratorium = [new Date(2020, 8, 4), new Date(2021, 0, 31)];
+    var cdcMoratorium = Elab.Utils.getCdcMoratoriumRange();
     var moratoriumRanges = mergeRanges(
       localMoratoriums.concat([cdcMoratorium])
     );
