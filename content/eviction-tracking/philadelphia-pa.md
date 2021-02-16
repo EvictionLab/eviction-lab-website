@@ -11,7 +11,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="42101" data="/uploads/table.csv" %}}
 
-The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31st. Eviction filings related to nonpayment of rent were not accepted during that period, and filings in Philadelphia County were down to zero in April, May, and June. Filings increased markedly following the end of the moratorium. 
+The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31st. Eviction filings related to nonpayment of rent were not accepted during that period, and filings in Philadelphia County were down to zero in April, May, and June. Filings increased markedly following the end of the moratorium. Execution of eviction orders are banned until at least March 31st, 2021. 
 
 More detail on eviction protections in Philadelphia can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/pa/).
 
@@ -21,6 +21,8 @@ More detail on eviction protections in Philadelphia can be found on the [COVID-1
 
 {{% report_chart id="avg" data="/uploads/philadelphia_barchart.csv" %}}
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Philadelphia were slightly higher than average in January and February of this year.<sup>1</sup> Filings fell in March and held at zero from April through June. Following the end of the state eviction moratorium on August 31, new eviction filings increased, though remain well below historical average.
@@ -28,11 +30,15 @@ Eviction filings in Philadelphia were slightly higher than average in January an
 1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). Historical averages cover the years 2016-2019.
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/philadelphia_shapes.json" data="/uploads/philadelphia_map.csv" %}}
+
+
 
 
 
@@ -45,11 +51,15 @@ Philadelphia County is divided into 384 Census tracts. Here we map, in each of t
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/philadelphia_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -58,6 +68,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2019. 
 
 1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). Historical averages cover the years 2016-2019.
+
+
 
 
 {{%/ report_chart %}}
