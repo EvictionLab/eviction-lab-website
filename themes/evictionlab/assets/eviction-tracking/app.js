@@ -2342,7 +2342,8 @@ Elab.ListPage = (function (Elab) {
     );
     var moratoriumRanges = Elab.Utils.getMoratoriumRanges(data);
     var isMoratoriumActive = inMoratorium(Date.now(), moratoriumRanges);
-    var tooltipTemplate = data.end
+    var endDate = data.end && data.end[data.end.length - 1]; // grab the last date for moratorium protections
+    var tooltipTemplate = endDate
       ? Handlebars.compile(options.tooltip)
       : Handlebars.compile(options.tooltipNoDate);
     var rowData = {
@@ -2354,7 +2355,7 @@ Elab.ListPage = (function (Elab) {
       weekFilings: numFormat(data.lastWeek),
       cumulativeFilings: numFormat(data.cumulative),
       tooltip: tooltipTemplate({
-        date: Elab.Utils.formatDate(data.end),
+        date: Elab.Utils.formatDate(endDate),
       }),
       buttonLabel: options.buttonLabel,
     };
