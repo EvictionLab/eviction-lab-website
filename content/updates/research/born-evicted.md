@@ -14,10 +14,11 @@ listSummary: >-
 socialDescription: Disparities in health at birth expose fissures in the American dream. In a March 1st JAMA Pediatrics journal article, we examine how evictions impact birth weight, prematurity, and infant mortality.
 researchtype: elresearch
 postauthorname: Gracie Himmelstein and Matthew Desmond
-twImage: /images/assets/blog/born-evicted-social.png
+twImage: /images/assets/blog/314A0573.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Disparities in health at birth expose fissures in the American dream. In a March 1st JAMA Pediatrics journal article, we examine how evictions impact birth weight, prematurity, and infant mortality.
-fbImage: /images/assets/blog/born-evicted-social.png
+fbImage: /images/assets/blog/314A0573.png
+image: /images/assets/blog/314A0573-sm.jpg
 ---
 Disparities in health at birth expose fissures in the American dream. The conditions of a child’s gestation and birth—social and environmental conditions over which they have no control—help or hinder a child’s ability to grow and flourish. Birth outcomes impact a person’s health and wellbeing across their lifetime, as well as multiple generations within families and communities. 
 
