@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: /born-evicted/
 contenttype: updates
@@ -21,7 +21,7 @@ fbImage: /images/assets/blog/born-evicted-social.png
 ---
 Disparities in health at birth expose fissures in the American dream. The conditions of a child’s gestation and birth—social and environmental conditions over which they have no control—help or hinder a child’s ability to grow and flourish. Birth outcomes impact a person’s health and wellbeing across their lifetime, as well as multiple generations within families and communities. 
 
-In <mark>a March 1st JAMA Pediatrics journal article</mark>, we examine how evictions impact birth weight, prematurity, and infant mortality. We find that infants born to mothers who have an eviction filed against them during their pregnancy are more likely to be born prematurely or low birth weight, and may also have higher mortality compared to infants born to mothers evicted at times other than pregnancy. In other words, in utero subjection to eviction harms infant health and development.
+In {{< extlink "a March 1st JAMA Pediatrics journal article" "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2776776" >}}, we examine how evictions impact birth weight, prematurity, and infant mortality. We find that infants born to mothers who have an eviction filed against them during their pregnancy are more likely to be born prematurely or low birth weight, and may also have higher mortality compared to infants born to mothers evicted at times other than pregnancy. In other words, in utero subjection to eviction harms infant health and development.
 
 Public health researchers have long investigated how {{< extlink "adversity" "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4578153/" >}} such as stress and poverty {{< extlink "during pregnancy" "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4578153/" >}} affects infant and child well being, including via:
  
