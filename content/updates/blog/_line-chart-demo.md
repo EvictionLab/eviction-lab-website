@@ -20,7 +20,9 @@ scripts:
 
 Straight lines
 
-{{% linechart id="summed" data="/uploads/summed_sites.csv" x="week" y="ratio" groupBy="name" yFormat=".0%" xTicks="week" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX" title="Chart Title" %}}
+{{% linechart id="cdcavg" data="/uploads/cdc_linechart.csv" x="xfilemonth" y="filings_ratio" groupBy="site_name_full" yFormat=".0%" xTicks="month" xFormat="%b" xTooltipFormat="%B" highlight="Average;Philadelphia, PA;Tampa, FL" title="Filings Relative to Historical Average" %}}
+
+{{% linechart id="summed1" data="/uploads/summed_sites.csv" x="week" y="ratio" groupBy="name" yFormat=".0%" xTicks="week" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX" title="Chart Title" %}}
 
 Curved lines
 

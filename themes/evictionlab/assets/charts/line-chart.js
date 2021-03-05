@@ -368,23 +368,53 @@ Elab.LineChart = (function (Elab) {
         .addHoverDot()
         .addVoronoi({
           renderTooltip: function (hoverData) {
-            var dateFormat = d3.timeFormat("%b %d");
+            
             var numFormat = d3.format(".0%");
-            var start = dateFormat(xSelector(hoverData));
-            var end = dateFormat(d3.timeDay.offset(xSelector(hoverData), 6));
+
+            function getWeekTooltip() {
+              var weekFormat = d3.timeFormat("%b %d");
+              var start = weekFormat(xSelector(hoverData));
+              var end = weekFormat(
+                d3.timeDay.offset(xSelector(hoverData), 6)
+              );
+              return {
+                title: hoverData.name,
+                xValue: start + " - " + end,
+                yValue: numFormat(ySelector(hoverData)),
+              };
+            }
+
+            function getMonthTooltip() {
+              console.log("month tooltip", dataOptions)
+              const monthFormat = d3.timeFormat(dataOptions.xTooltipFormat || dataOptions.xFormat || "%B")
+              return {
+                title: hoverData.name,
+                xValue: monthFormat(xSelector(hoverData)),
+                yValue: numFormat(ySelector(hoverData)),
+              };
+            }
+
+            function getDefaultTooltip() {
+              const dateFormat = d3.timeFormat(dataOptions.xFormat || "%B %d, %Y")
+              return {
+                title: hoverData.name,
+                xValue: dateFormat(xSelector(hoverData)),
+                yValue: numFormat(ySelector(hoverData)),
+              };
+            }
+
+            const tooltip = dataOptions.xTicks === "week"
+              ? getWeekTooltip()
+              : dataOptions.xTicks === "month"
+              ? getMonthTooltip()
+              : getDefaultTooltip()
+
+
             return (
-              '<h1 class="tooltip__title">' +
-              hoverData.name +
-              "</h1>" +
+              '<h1 class="tooltip__title">' + tooltip.title + "</h1>" +
               '<div class="tooltip__item">' +
-              "<span>" +
-              start +
-              " - " +
-              end +
-              ":</span>" +
-              "<span> " +
-              numFormat(ySelector(hoverData)) +
-              "</span>" +
+              "<span>" + tooltip.xValue + ":</span>" +
+              "<span> " + tooltip.yValue + "</span>" +
               "</div>"
             );
           },
@@ -418,13 +448,16 @@ Elab.LineChart = (function (Elab) {
   function loadData(options, callback) {
     var parseDate = d3.timeParse("%m/%d/%Y");
     d3.csv(options.data, function (data) {
-      var result = data.map(function (d) {
-        return {
-          name: d[options.groupBy],
-          x: parseDate(d[options.x]),
-          y: parseFloat(d[options.y]),
-        };
-      });
+      var result = data
+        .map(function (d) {
+          return {
+            name: d[options.groupBy],
+            x: parseDate(d[options.x]),
+            y: parseFloat(d[options.y]),
+          };
+        })
+        .sort((a, b) => +a.x - +b.x);
+      console.log("got data", options, result);
       callback && callback(result);
     });
   }
