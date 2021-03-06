@@ -49,8 +49,10 @@ You may then use the `{{% linechart %}}` shortcode.
 
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
-
-**Example Data (`sites.csv`)**
+Data should have:
+  - a column to group by (provided by `groupBy` prop). for this sample, the `name` column is used.
+  - a column that contains dates to used for the x axis.  for this example, `week` column is used.
+  - a column that contains the corresponding y value.  for this example, `ratio` is used.
 
 ```csv
 name,ratio,week
@@ -113,12 +115,12 @@ Than include the shortcode in the body of the `.md` file.
 
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
+Data file should have: 
 
-**Example data:**
+- a column present for bar labels (x values), e.g. `site_name_full`
+- a column for corresponding values (y valus), e.g. `filings_ratio`
 
-CSV file should have one column present for bar labels (x), and another column for corresponding values (y)
-
-```
+```csv
 site_name_full,filings_ratio
 "Richmond, VA",0.300698622161847
 "Philadelphia, PA",0.347500592276712
