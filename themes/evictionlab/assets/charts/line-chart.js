@@ -303,6 +303,8 @@ Elab.LineChart = (function (Elab) {
         return a[key] > b[key] ? 1 : -1;
       }
       data.sort(compare);
+      // add number to highlight class to root
+      $(root).addClass("chart--highlight" + highlighted.length)
     }
 
     var svg = $(root).find("svg")[0];
@@ -385,7 +387,6 @@ Elab.LineChart = (function (Elab) {
             }
 
             function getMonthTooltip() {
-              console.log("month tooltip", dataOptions)
               const monthFormat = d3.timeFormat(dataOptions.xTooltipFormat || dataOptions.xFormat || "%B")
               return {
                 title: hoverData.name,

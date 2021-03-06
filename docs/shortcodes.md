@@ -15,36 +15,7 @@ scripts:
 
 You may then use the `{{% linechart %}}` shortcode.
 
-The line chart short code accepts the following attributes.
-
-- **`id` (required)**: unique identifier for the chart
-- **`data` (required)**: URL to the CSV file
-- `x`: name of the column to use for X values, must be date formatted as `mm/dd/yyyy`. (default "x")
-- `y`: name of the column to use for Y values (default "y")
-- `groupBy`: name of the column to group data by (default "name")
-- `yTicks`: number of ticks to show on the Y axis (default 5)
-- `yFormat`: [d3.format](https://github.com/d3/d3-format#d3-format) string on how to format Y values
-- `xTicks`: increment amount for ticks on x axis ("day", "week", "month", "year")
-- `xFormat`: [d3.timeFormat](https://github.com/d3/d3-time-format#locale_format) for X axis values
-- `highlight`: semi-colon separated identifiers to highlight on the chart
-- `curve`: type of [d3.curve](https://github.com/d3/d3-shape#curves) to use
-
-### Example Page
-
-[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
-
-**Page markdown**
-
 ```
----
-title: "Line chart sample"
-date: 2020-09-14T16:46:40.089Z
-scripts:
-  - linechart
----
-
-Sample Chart
-
 {{% linechart
   id="summed"
   data="/uploads/sites.csv"
@@ -59,7 +30,27 @@ Sample Chart
 %}}
 ```
 
-**Data file (`sites.csv`)**
+### Props
+
+- **`id` (required)**: unique identifier for the chart
+- **`data` (required)**: URL to the CSV file
+- `x`: name of the column to use for X values, must be date formatted as `mm/dd/yyyy`. (default "x")
+- `y`: name of the column to use for Y values (default "y")
+- `groupBy`: name of the column to group data by (default "name")
+- `yTicks`: number of ticks to show on the Y axis (default 5)
+- `yFormat`: [d3.format](https://github.com/d3/d3-format#d3-format) string on how to format Y values
+- `xTicks`: increment amount for ticks on x axis ("day", "week", "month", "year")
+- `xFormat`: [d3.timeFormat](https://github.com/d3/d3-time-format#locale_format) for X axis values
+- `xTooltipFormat`: how dates should be formatted in the tooltip using [d3.timeFormat](https://github.com/d3/d3-time-format#locale_format)
+- `highlight`: semi-colon separated identifiers to highlight on the chart
+- `curve`: type of [d3.curve](https://github.com/d3/d3-shape#curves) to use
+
+### Example Page
+
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
+
+
+**Example Data (`sites.csv`)**
 
 ```csv
 name,ratio,week
@@ -109,7 +100,7 @@ Than include the shortcode in the body of the `.md` file.
 - id: unique identifier for this bar chart instance
 - title: title for the chart
 - csv: url to CSV data File
-- x: name of column in CSV to use for x values
+- x: name of column in CSV to use for x values (bar labels)
 - y: name of column in CSV to use for y values
 - yTicks: number of y ticks to display
 - yMin: y axis minimum value
@@ -121,3 +112,35 @@ Than include the shortcode in the body of the `.md` file.
 ### Demo
 
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
+
+
+**Example data:**
+
+CSV file should have one column present for bar labels (x), and another column for corresponding values (y)
+
+```
+site_name_full,filings_ratio
+"Richmond, VA",0.300698622161847
+"Philadelphia, PA",0.347500592276712
+"Pittsburgh, PA",0.369296668833901
+"Kansas City, MO",0.377884615384615
+"New York, NY",0.389338851031024
+"Charleston, SC",0.397964145621941
+"Wilmington, DE",0.429265706459309
+"St Louis, MO",0.443879258416438
+"Fort Worth, TX",0.446214309882616
+"Cleveland, OH",0.448827143256074
+"Houston, TX",0.505166235057156
+"Boston, MA",0.506843533313235
+"Memphis, TN",0.513360078722277
+"South Bend, IN",0.538305335056304
+"Milwaukee, WI",0.572111422449316
+"Greenville, SC",0.622160130392842
+"Phoenix, AZ",0.643703531045899
+"Indianapolis, IN",0.651728907330567
+"Cincinnati, OH",0.696064732070321
+"Columbus, OH",0.756969101760218
+"Gainesville, FL",0.842584921292461
+"Jacksonville, FL",0.896321298285091
+"Tampa, FL",0.900901929444001
+```

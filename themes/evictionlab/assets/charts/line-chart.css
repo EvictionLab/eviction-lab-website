@@ -82,13 +82,20 @@
   stroke: var(--c4);
   stroke-width: 5;
 }
-.line-chart .chart__line--0 {
+
+.line-chart .chart--highlight1 .chart__line--0,
+.line-chart .chart--highlight2 .chart__line--0,
+.line-chart .chart--highlight3 .chart__line--0 {
   stroke: var(--c1);
 }
-.line-chart .chart__line--1 {
+
+.line-chart .chart--highlight2 .chart__line--1,
+.line-chart .chart--highlight3 .chart__line--1 {
   stroke: var(--c2);
 }
-.line-chart .chart__line--2 {
+
+.line-chart .chart--highlight2 .chart__line--2,
+.line-chart .chart--highlight3 .chart__line--2 {
   stroke: var(--c3);
 }
 
