@@ -31,7 +31,7 @@ The line chart short code accepts the following attributes.
 
 ### Example Page
 
-[View Example](https://development--eviction-lab.netlify.app/updates/blog/_line-chart-demo) | [demo source](/content/updates/blog/_line-chart-demo.md)
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
 **Page markdown**
 
@@ -74,3 +74,50 @@ name,ratio,week
 "Boston, MA",0.00886917960088692,08/30/2020
 "Boston, MA",0.0186917960088692,09/06/2020
 ```
+
+## Bar Chart
+
+Shortcode for rendering basic bar graphs
+
+### Usage
+
+Must include the following frontmatter in the `.md` file to use:
+
+```yaml
+scripts:
+  - bar-chart
+```
+
+Than include the shortcode in the body of the `.md` file.
+
+```
+{{% bar-chart
+  id="cdcavgbar"
+  data="/uploads/cdc_sites_ratio.csv"
+  x="site_name_full"
+  y="filings_ratio"
+  yMin="0"
+  yMax="1"
+  yTooltipFormat=".1%"
+  yFormat=".0%"
+  title="Filings Relative to Historical Average"
+%}}
+```
+
+### Props
+
+- id: unique identifier for this bar chart instance
+- title: title for the chart
+- csv: url to CSV data File
+- x: name of column in CSV to use for x values
+- y: name of column in CSV to use for y values
+- yTicks: number of y ticks to display
+- yMin: y axis minimum value
+- yMax: y axis maximum value
+- yFormat: formatting for y axis values
+- yTickFormat: formatting for y values in the tooltip
+- margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
+
+### Demo
+
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)

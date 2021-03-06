@@ -21,13 +21,46 @@ scripts:
 
 Basic bars
 
-{{% bar-chart id="cdcavgbar" data="/uploads/cdc_sites_ratio.csv" x="site_name_full" y="filings_ratio" yMin="0" yMax="1" yTooltipFormat=".1%" yFormat=".0%"  title="Filings Relative to Historical Average" %}}
+{{% bar-chart
+  id="cdcavgbar"
+  data="/uploads/cdc_sites_ratio.csv"
+  x="site_name_full"
+  y="filings_ratio"
+  yMin="0"
+  yMax="1"
+  yTooltipFormat=".1%"
+  yFormat=".0%"
+  title="Filings Relative to Historical Average"
+%}}
 
 Straight lines
 
-{{% linechart id="cdcavg" data="/uploads/cdc_linechart.csv" x="xfilemonth" y="filings_ratio" groupBy="site_name_full" yFormat=".1s" xTicks="month" xFormat="%b" xTooltipFormat="%B" yFormat=".0%" highlight="Average" title="Filings Relative to Historical Average" %}}
+{{% linechart
+  id="cdcavg"
+  data="/uploads/cdc_linechart.csv"
+  x="xfilemonth"
+  y="filings_ratio"
+  groupBy="site_name_full"
+  yFormat=".1s"
+  xTicks="month"
+  xFormat="%b"
+  xTooltipFormat="%B"
+  yFormat=".0%"
+  highlight="Average"
+  title="Filings Relative to Historical Average"
+%}}
 
-{{% linechart id="summed1" data="/uploads/summed_sites.csv" x="week" y="ratio" groupBy="name" yFormat=".0%" xTicks="week" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX" title="Chart Title" %}}
+{{% linechart 
+  id="summed1"
+  data="/uploads/summed_sites.csv"
+  x="week"
+  y="ratio"
+  groupBy="name"
+  yFormat=".0%"
+  xTicks="week"
+  highlight="Hartford, CT;St Louis, MO;Fort Worth, TX"
+  title="Chart Title"
+%}}
 
 Curved lines
 
