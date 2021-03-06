@@ -43,27 +43,28 @@
   </div>
   {{ end }}
   <script>
-    var id = {{ .Get "id" }}
-    var csv = {{ .Get "data" }}
-    var x = {{ .Get "x" }}
-    var y = {{ .Get "y" }}
-    var yTicks = {{ .Get "yTicks" }}
-    var yMin = {{ .Get "yMin" }}
-    var yMax = {{ .Get "yMax" }}
-    var yFormat = {{ .Get "yFormat" }}
-    var xTicks = {{ .Get "xTicks" }}
-    var xFormat = {{ .Get "xFormat" }}
-    var highlight = {{ .Get "highlight" }}
-    var active = {{ .Get "active" }}
-    var rootEl = document.getElementById(id);
-    /**
-     * Initializes chart with whatever values currently are set to.
-     */
+      var id = {{ .Get "id" }}
+      var csv = {{ .Get "data" }}
+      var x = {{ .Get "x" }}
+      var y = {{ .Get "y" }}
+      var yTicks = {{ .Get "yTicks" }}
+      var yMin = {{ .Get "yMin" }}
+      var yMax = {{ .Get "yMax" }}
+      var yFormat = {{ .Get "yFormat" }}
+      var xTicks = {{ .Get "xTicks" }}
+      var xFormat = {{ .Get "xFormat" }}
+      var highlight = {{ .Get "highlight" }}
+      var active = {{ .Get "active" }}
+      var rootEl = document.getElementById(id);
+      /**
+       * Initializes chart with whatever values currently are set to.
+       */
 
-    var data = [];
+      var data = [];
     window.addEventListener('load', function() {
+
       // Init chart on page load.
-      Elab.BasicBarChart.init(rootEl, { data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat })
+      Elab.BasicBarChart.init(rootEl, { id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat })
     });
   </script>
 </div>

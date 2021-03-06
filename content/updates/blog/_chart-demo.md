@@ -16,7 +16,12 @@ fbImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 scripts:
   - linechart
+  - bar-chart
 ---
+
+Basic bars
+
+{{% bar-chart id="cdcavgbar" data="/uploads/cdc_sites_ratio.csv" x="site_name_full" y="filings_ratio" yMin="0" yMax="1" yFormat=".0%"  title="Filings Relative to Historical Average" %}}
 
 Straight lines
 

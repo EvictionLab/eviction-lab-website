@@ -12,6 +12,11 @@ function getAxisFunction(position) {
   }
 }
 
+/** Makes a unique identifier */
+function makeId() {
+  return '_' + Math.random().toString(36).substr(2, 9);
+}
+
 Elab.ChartBuilder = (function (Elab) {
   /**
    * Creates an empty chart with root elements
@@ -220,7 +225,7 @@ Elab.ChartBuilder = (function (Elab) {
     function createSelection(parentSelection) {
       return parentSelection
         .append("clipPath")
-        .attr("id", "chartArea")
+        .attr("id", makeId())
         .append("rect");
     }
     function createRenderFunction(selection, chart) {
