@@ -5,7 +5,7 @@ contenttype: updates
 contentcat: blog
 featured: "home"
 researchtype: elresearch
-title: "Line chart sample"
+title: "Chart sample"
 date: 2019-09-14T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University

@@ -280,6 +280,11 @@
 }
 
 /** BANDED BAR CHART OVERRIDES **/
+
+.bar-chart.bar-chart--banded .chart,
+.bar-chart.bar-chart--banded .chart__root {
+  height: 480px
+}
 .bar-chart.bar-chart--banded .chart__bar {
   fill: #434878
 }
