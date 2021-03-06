@@ -20,6 +20,14 @@
   margin: 24px 0;
 }
 
+@media(max-width: 480px) {
+  .bar-chart {
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
+  }
+}
+
 .bar-chart h3.bar-chart__title,
 .bar-chart h3.bar-chart__title > span,
 .bar-chart h3.bar-chart__title > p {
@@ -268,5 +276,18 @@
   .bar-chart.bar-chart--summed {
     width: 124%;
     margin-left: -12%;
+  }
+}
+
+/** BANDED BAR CHART OVERRIDES **/
+.bar-chart.bar-chart--banded .chart__bar {
+  fill: #434878
+}
+.bar-chart.bar-chart--banded .chart__bar:hover {
+  fill: #e24000
+}
+@media(max-width: 480px) {
+  .bar-chart.bar-chart--banded .tick text {
+    font-size: 10px
   }
 }

@@ -18,7 +18,7 @@ fbImage: "/images/assets/blog/historical-demographics-social.png"
 twImage: "/images/assets/blog/historical-demographics-social.png"
 url: /demographics-of-eviction/
 scripts:
-  - barchart
+  - grouped-bar-chart
 aliases:
   - /racial-and-gender-disparities-among-evicted-americans/
 ---
@@ -63,7 +63,7 @@ First, **filing and eviction rates were, on average, significantly higher for Bl
 
 This resulted in a striking racial disparity. There were just under 40 Black renters for every 100 white renters in these counties. Yet for every 100 eviction filings to white renters, we estimated that there were nearly 80 eviction filings to Black renters.
 
-{{% barchartsearch id="county_rd_disp" titlePrefix="Figure 1: Share of all renters, eviction filings, and eviction judgments, by race/ethnicity" titleSuffix=" by race/ethnicity." data="/uploads/county_prop_lookup.csv" x="countyfips" y="renters_prop_w" yTicks="5" yFormat=".0%" xTicks="Asian;Black;Latinx;White" columns="cofips,state,county,year_string,renters_prop_a,defendant_prop_a,judgment_prop_a,renters_prop_b,defendant_prop_b,judgment_prop_b,renters_prop_l,defendant_prop_l,judgment_prop_l,renters_prop_w,defendant_prop_w,judgment_prop_w" xBars="renters_prop_a,defendant_prop_a,judgment_prop_a;renters_prop_b,defendant_prop_b,judgment_prop_b;renters_prop_l,defendant_prop_l,judgment_prop_l;renters_prop_w,defendant_prop_w,judgment_prop_w" xFormat="" highlight="renters;defendant;judgment" active="0" searchId="cofips" searchLabel="county" type="barGroup" legendItems="Share of renters;Share of defendants;Share of judgments" search="true" searchPrompt="" %}}
+{{% grouped-bar-chart id="county_rd_disp" titlePrefix="Figure 1: Share of all renters, eviction filings, and eviction judgments, by race/ethnicity" titleSuffix=" by race/ethnicity." data="/uploads/county_prop_lookup.csv" x="countyfips" y="renters_prop_w" yTicks="5" yFormat=".0%" xTicks="Asian;Black;Latinx;White" columns="cofips,state,county,year_string,renters_prop_a,defendant_prop_a,judgment_prop_a,renters_prop_b,defendant_prop_b,judgment_prop_b,renters_prop_l,defendant_prop_l,judgment_prop_l,renters_prop_w,defendant_prop_w,judgment_prop_w" xBars="renters_prop_a,defendant_prop_a,judgment_prop_a;renters_prop_b,defendant_prop_b,judgment_prop_b;renters_prop_l,defendant_prop_l,judgment_prop_l;renters_prop_w,defendant_prop_w,judgment_prop_w" xFormat="" highlight="renters;defendant;judgment" active="0" searchId="cofips" searchLabel="county" type="barGroup" legendItems="Share of renters;Share of defendants;Share of judgments" search="true" searchPrompt="" %}}
 
 <div class="figcaption">
   <p>

@@ -2183,7 +2183,7 @@ Elab.Intro = (function (Elab) {
           angle: -45,
         })
         // adds the bars for weekly filings
-        .addBars(selectBarsData)
+        .addBars({ selector: selectBarsData })
         // adds the trend line
         .addLines({ selector: selectLineData, curve: d3.curveMonotoneX })
         // adds a tooltip with the provided render function
