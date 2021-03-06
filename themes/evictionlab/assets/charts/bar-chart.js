@@ -2,6 +2,23 @@
 
 var Elab = Elab || {};
 
+
+/**
+ * Parses a margin string into an array of pixel values
+ * @param {*} marginString 
+ * @returns {Array<Integer>} [top, right, bottom, left]
+ */
+function getMarginFromString(marginString) {
+  if (!marginString || typeof marginString !== "string") 
+    return [8, 8, 104, 40]
+  const parts = marginString.split(" ").map(m => Math.round(Number(m)))
+  if (parts.length === 4) return parts
+  if (parts.length === 3) return [ parts[0], parts[1], parts[2], parts[1] ]
+  if (parts.length === 2) return [ parts[0], parts[1], parts[0], parts[1] ]
+  if (parts.length === 1) return [parts[0], parts[0], parts[0], parts[0]]
+  return [8, 8, 104, 40]
+}
+
 /**
  * BAR CHART MODULE
  * ----
@@ -12,12 +29,6 @@ var Elab = Elab || {};
  *
  */
 Elab.BasicBarChart = (function (Elab) {
-
-  /**
-   * Default formatter for X axis ( shows value )
-   * @param {*} d
-   */
-  var xFormat = function (d) { return d };
 
   /**
    * Selector for X values from data point
@@ -49,7 +60,7 @@ Elab.BasicBarChart = (function (Elab) {
    * Creates the chart and renders
    * @param {HTMLElement} root
    * @param {Array<Object>} data
-   * @param {Object} dataOptions { margin, x, y, groupBy, curve, highlight, xTicks, xFormat, yTicks, yFormat, title }
+   * @param {Object} dataOptions { margin, x, y, , yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
     
@@ -59,11 +70,12 @@ Elab.BasicBarChart = (function (Elab) {
       {
         width: rect.width,
         height: Math.max(rect.height, 320),
-        margin: [8, 8, 104, 38], // TODO: set via options
+        margin: getMarginFromString(dataOptions.margin),
       },
       dataOptions
     );
     const yFormat = d3.format(dataOptions.yFormat || ",d")
+    const yTooltipFormat = d3.format(dataOptions.yTooltipFormat || dataOptions.yFormat || ",d")
 
     var chart = new Elab.ChartBuilder(svg, data, options);
     return (
@@ -72,11 +84,10 @@ Elab.BasicBarChart = (function (Elab) {
         .addClipPath()
         // adds a border around the chart area
         .addFrame()
-        // adds y axis, using max of the trend line value or bar value
+        // adds y axis, pads it if no extend is passed
         .addAxisY({
           selector: ySelector,
           adjustExtent: function (extent) {
-            
             var range = extent[1] - extent[0];
             const paddedExtent = [extent[0] - range * 0.05, extent[1] + range * 0.05];
             if (dataOptions.yMin) paddedExtent[0] = parseFloat(yMin)
@@ -86,7 +97,7 @@ Elab.BasicBarChart = (function (Elab) {
           ticks: dataOptions.yTicks || 5,
           tickFormat: yFormat,
         })
-        // adds time axis from dates in the dataset
+        // adds band axis from the x data
         .addBarAxis({
           selector: xSelector,
           adjustLabels: function (selection) {
@@ -96,26 +107,15 @@ Elab.BasicBarChart = (function (Elab) {
                 .attr("transform", "rotate(-66)")
                 .attr("dx", "-1em")
                 .attr("dy", "0em");
-            // if (window.innerWidth < 540) {
-            //   selection
-            //     .selectAll(".tick text")
-            //     .attr("text-anchor", "end")
-            //     .attr("transform", "rotate(-30)");
-            // } else {
-            //   selection
-            //     .selectAll(".tick text")
-            //     .attr("text-anchor", null)
-            //     .attr("transform", null);
-            // }
           },
         })
-        // adds the trend line
+        // adds the bars
         .addBandedBars({
           selector: barSelector,
           renderTooltip: function (hoverData) {
             const tooltip = {
               title: hoverData[0],
-              value:  yFormat(hoverData[1])
+              value: yTooltipFormat(hoverData[1])
             }
             return (
               '<h1 class="tooltip__title">' + tooltip.title + "</h1>" +
