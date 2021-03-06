@@ -1,0 +1,62 @@
+{{/**
+
+  Shortcode for rendering basic bar graphs
+
+  **Must include the following frontmatter in the `.md` file to use**:
+
+  ```
+  scripts:
+    - bar-chart
+  ```
+  
+  See: _chart-demo.md for usage
+
+  Props:
+    - id: unique identifier for this bar chart instance
+    - title: title for the chart
+    - csv: url to CSV data File
+    - x: name of column in CSV to use for x values
+    - y: name of column in CSV to use for y values
+    - yTicks: number of y ticks to display
+    - yMin: y axis minimum value
+    - yMax: y axis maximum value
+    - yFormat: formatting for y axis values
+    - yTickFormat: formatting for y values in the tooltip
+    - margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
+*/}}
+
+{{ $title := .Get "title" }}
+
+<div
+  class="bar-chart bar-chart--banded bar-chart--{{ .Get `id` }}"
+>
+  {{ if $title }}
+  <h3 class="bar-chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}" class="bar-chart__chart chart">
+    <svg></svg>
+  </div>
+
+  <script>
+      var id = {{ .Get "id" }}
+      var csv = {{ .Get "data" }}
+      var x = {{ .Get "x" }}
+      var y = {{ .Get "y" }}
+      var yTicks = {{ .Get "yTicks" }}
+      var yMin = {{ .Get "yMin" }}
+      var yMax = {{ .Get "yMax" }}
+      var yFormat = {{ .Get "yFormat" }}
+      var yTooltipFormat = {{ .Get "yTooltipFormat" }}
+      var rootEl = document.getElementById(id);
+      /**
+       * Initializes chart with whatever values currently are set to.
+       */
+
+      var data = [];
+    window.addEventListener('load', function() {
+
+      // Init chart on page load.
+      Elab.BasicBarChart.init(rootEl, { id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat })
+    });
+  </script>
+</div>

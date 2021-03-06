@@ -2,6 +2,21 @@
 
 var Elab = Elab || {};
 
+function getAxisFunction(position) {
+  switch (position) {
+    case "left":
+      return d3.axisLeft
+    case "bottom":
+    default:
+      return d3.axisBottom
+  }
+}
+
+/** Makes a unique identifier */
+function makeId() {
+  return '_' + Math.random().toString(36).substr(2, 9);
+}
+
 Elab.ChartBuilder = (function (Elab) {
   /**
    * Creates an empty chart with root elements
@@ -210,7 +225,7 @@ Elab.ChartBuilder = (function (Elab) {
     function createSelection(parentSelection) {
       return parentSelection
         .append("clipPath")
-        .attr("id", "chartArea")
+        .attr("id", makeId())
         .append("rect");
     }
     function createRenderFunction(selection, chart) {
@@ -395,6 +410,8 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+
+
   /**
    * Adds bars to the chart
    * @param {function} selector function that takes the chart data and returns the bar data
@@ -462,14 +479,24 @@ Elab.ChartBuilder = (function (Elab) {
    * Adds bars to the chart
    * @param {function} selector function that takes the chart data and returns the bar data
    */
-  Chart.prototype.addBars = function (selector) {
+  Chart.prototype.addBars = function (overrides) {
     var _this = this;
+    var options = overrides || {};
+    options.selector =
+      overrides.selector ||
+      function (data) {
+        return [
+          data.map(function (d) {
+            return [d.x, d.y, d.name];
+          }),
+        ];
+      };
     this.selections["bars"] = this.selections["data"]
       .append("g")
       .attr("class", "chart__bars");
 
     this.updaters["bars"] = function () {
-      var barData = selector(_this.data);
+      var barData = options.selector(_this.data)
 
       var spacing = 2;
       var bandWidth = _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
@@ -503,6 +530,75 @@ Elab.ChartBuilder = (function (Elab) {
         });
     };
 
+    return this;
+  };
+
+  /**
+   * Adds bars to the chart
+   * @param {function} selector function that takes the chart data and returns the bar data
+   */
+   Chart.prototype.addBandedBars = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    options.renderTooltip = overrides.renderTooltip
+    options.selector =
+      overrides.selector ||
+      function (data) {
+        return [
+          data.map(function (d) {
+            return [d.x, d.y, d.name];
+          }),
+        ];
+      };
+
+    function createSelection(parentSelection) {
+      return parentSelection
+        .append("g")
+        .attr("class", "chart__bars");
+    }
+    function createRenderer(currentSelection, chart) {
+      return function () {
+        var barData = options.selector(_this.data)
+        var bandWidth = _this.xScale.bandwidth();
+        var selection = currentSelection
+          .selectAll(".chart__bar")
+          .data(barData);
+        selection
+          .enter()
+          .append("rect")
+          .attr("class", "chart__bar")
+          .attr("x", function (d) {
+            return _this.xScale(d[0]);
+          })
+          .attr("width", bandWidth)
+          .attr("y", _this.getInnerHeight())
+          .attr("height", 0)
+          .on("mousemove", function (d) {
+            chart.setHovered(d);
+            options.renderTooltip && chart.showTooltip(d3.event, options.renderTooltip);
+          })
+          .on("mouseout", function (d) {
+            chart.setHovered(null);
+            options.renderTooltip && chart.hideTooltip();
+          })
+          .merge(selection)
+          .transition()
+          .duration(1000)
+          .attr("x", function (d) {
+            return _this.xScale(d[0]);
+          })
+          .attr("width", bandWidth)
+          .attr("y", function (d) {
+            return _this.yScale(d[1]);
+          })
+          .attr("height", function (d) {
+            return _this.getInnerHeight() - _this.yScale(d[1]);
+          });
+      };
+    }
+
+    this.addSelection("bandedBars", "data", createSelection);
+    this.addRenderFunction("bandedBars", createRenderer);
     return this;
   };
 
@@ -627,6 +723,45 @@ Elab.ChartBuilder = (function (Elab) {
         .transition()
         .duration(1000)
         .call(yAxis);
+    };
+    return this;
+  };
+
+
+  /**
+   * Adds a Y axis to the chart
+   * @param {*} selector a function that accepts a data entry and returns the y value
+   */
+  Chart.prototype.addBarAxis = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    options.position = overrides.position || "bottom"
+    // selector for bar value
+    options.selector =
+      overrides.selector ||
+      function (d) {
+        return d.x;
+      };
+    // option to adjust axis labels, do nothing by default
+    options.adjustLabels = overrides.adjustLabels || function () { };
+    this.selections["barAxis"] = this.selections["base"]
+      .append("g")
+      .attr("class", "chart__axis chart__axis--bar");
+    this.updaters["barAxis"] = function () {
+      _this.xScale = d3
+        .scaleBand()
+        .domain(_this.data.map(options.selector))
+        .range([0, _this.getInnerWidth()])
+        .round(0.1)
+        .padding(0.2)
+      var axis = getAxisFunction(options.position)
+      var barAxis = axis(_this.xScale)
+      _this.selections["barAxis"]
+        .attr("transform", "translate(0," + _this.getInnerHeight() + ")")
+        .transition()
+        .duration(1000)
+        .call(barAxis)
+        .call(options.adjustLabels.bind(_this));
     };
     return this;
   };

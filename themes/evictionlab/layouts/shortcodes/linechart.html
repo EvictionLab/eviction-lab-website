@@ -23,19 +23,32 @@
   {{ end }}
   <script>
     window.addEventListener('load', function() {
+      // identifier for chart (must be unique on page)
       var id = {{ .Get "id" }}
+      // url to csv file
       var csv = {{ .Get "data" }}
+      // column name to use for x values
       var x = {{ .Get "x" }}
+      // column name to use for y values
       var y = {{ .Get "y" }}
+      // column name to group entries by
       var groupBy = {{ .Get "groupBy" }}
+      // number of y ticks to show
       var yTicks = {{ .Get "yTicks" }}
+      // d3 formatting string for y values
       var yFormat = {{ .Get "yFormat" }}
+      // frequency of x ticks (e.g. week, month)
       var xTicks = {{ .Get "xTicks" }}
+      // d3 formatting string for x values
       var xFormat = {{ .Get "xFormat" }}
+      // semi-colon separated string of data groups to highlight
       var highlight = {{ .Get "highlight" }}
+      // true if lines should be curved
       var curve = {{ .Get "curve" }}
+      // formatter for x values on tooltip
+      var xTooltipFormat = {{ .Get "xTooltipFormat" }}
       var rootEl = document.getElementById(id);
-      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat, highlight: highlight, curve: curve })
+      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat, highlight: highlight, curve: curve, xTooltipFormat: xTooltipFormat })
     });
   </script>
 </div>
