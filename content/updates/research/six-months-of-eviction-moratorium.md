@@ -21,6 +21,7 @@ fbImage: /images/assets/blog/ready-tenant-sasha-israel.jpg
 scripts:
   - linechart
   - bar-chart
+photoCredit: Sasha Israel  
 ---
 On September 4, 2020, the Centers for Disease Control and Prevention (CDC) ordered a [nationwide eviction moratorium](/moratorium-extended-evictions-continue/). This policy limited evictions when tenants provided a declaration attesting that they qualified for protections. But housing courts interpreted the CDC's order differently across the country and, in October, the CDC clarified that the order was {{< extlink "intended to halt the execution of eviction cases" "https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf" >}}, but not any court operations—including receiving eviction filings.
 
@@ -49,7 +50,7 @@ In Figure 1 we plot eviction filings relative to historical average over the las
   yMax="1"
   yTooltipFormat=".1%"
   yFormat=".0%"
-  title="Filings Relative to Historical Average"
+  title="Figure 1: Filings Relative to Historical Average"
 %}}
 
 
@@ -75,7 +76,7 @@ We again exclude any periods when additional protections were in place in a give
   xTooltipFormat="%B"
   yFormat=".0%"
   highlight="Average"
-  title="Filings Relative to Historical Average"
+  title="Figure 2: Filings Relative to Historical Average"
 %}}
 
 Eviction filings increased over the first four months of the CDC moratorium, but declined in early 2021. In September 2020, CDC protections kept eviction filings at 48.7% of average across cities analyzed here. By December 2020, when the moratorium was originally scheduled to expire, that number was up to 65.7%. In the final days of 2020, the moratorium was extended and Congress passed the Consolidated Appropriations Act, which included $25 Billion in emergency rental assistance. Since then, eviction filings have decreased relative to historical average, but still remain above 50% of normal.
