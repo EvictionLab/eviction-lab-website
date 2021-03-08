@@ -442,3 +442,12 @@ svg {
    max-width: 110%;
   }
 }
+
+// 6 months of CDC moratorium blog post
+
+@include media-breakpoint-up(md) {
+  .bar-chart.bar-chart--banded.bar-chart--cdcavgbar2, .line-chart.line-chart--cdcavg {
+    width: 124%;
+    margin-left: -12%;
+  }
+}
