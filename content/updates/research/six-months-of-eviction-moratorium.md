@@ -1,5 +1,8 @@
 ---
 draft: true
+scripts:
+  - linechart
+  - bar-chart
 childof: research
 url: /six-months-cdc
 contenttype: updates
@@ -8,20 +11,23 @@ featured: true
 in_index: true
 title: "Preliminary Analysis: Six Months of the CDC Eviction Moratorium"
 date: 2021-03-08T00:00:40.089Z
-postauthortitle: The Eviction Lab
-listSummary: Now that the CDC moratorium has been in place for six months—and given that it is set to expire at the end of March—we conducted a preliminary analysis of how effective it has been.
-socialDescription: Now that the CDC moratorium has been in place for six months—and given that it is set to expire at the end of March—we conducted a preliminary analysis of how effective it has been.
-researchtype: elresearch
+listSummary: Now that the CDC moratorium has been in place for six months—and
+  given that it is set to expire at the end of March—we conducted a preliminary
+  analysis of how effective it has been.
+photoCredit: Sasha Israel
 postauthorname: Peter Hepburn and Renee Louis
+postauthortitle: The Eviction Lab
+socialDescription: Now that the CDC moratorium has been in place for six
+  months—and given that it is set to expire at the end of March—we conducted a
+  preliminary analysis of how effective it has been.
+researchtype: elresearch
 twImage: /images/assets/blog/ready-tenant-sasha-israel.jpg
 authorpic: /images/bios/elab_thumb_sm.jpg
 image: /images/assets/blog/ready-tenant-sasha-israel.jpg
-description: TNow that the CDC moratorium has been in place for six months—and given that it is set to expire at the end of March—we conducted a preliminary analysis of how effective it has been.
+description: TNow that the CDC moratorium has been in place for six months—and
+  given that it is set to expire at the end of March—we conducted a preliminary
+  analysis of how effective it has been.
 fbImage: /images/assets/blog/ready-tenant-sasha-israel.jpg
-scripts:
-  - linechart
-  - bar-chart
-photoCredit: Sasha Israel  
 ---
 On September 4, 2020, the Centers for Disease Control and Prevention (CDC) ordered a [nationwide eviction moratorium](/moratorium-extended-evictions-continue/). This policy limited evictions when tenants provided a declaration attesting that they qualified for protections. But housing courts interpreted the CDC's order differently across the country and, in October, the CDC clarified that the order was {{< extlink "intended to halt the execution of eviction cases" "https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf" >}}, but not any court operations—including receiving eviction filings.
 
@@ -29,9 +35,7 @@ Now that the CDC moratorium has been in place for six months—and given that it
 
 {{< pullquote "Focusing on just those cities that had no additional protections—or just those times when no such protections were in place in a given city—we find that eviction filings were at 50.1% of historical average." >}}
 
-
 **We observed 163,716 eviction filings between September 4, 2020 and February 27, 2021 across all ETS sites.** This is 44% as many filings as we would expect over the same period in a typical year (369,292). This number, however, is skewed downward: it includes a number of cities and states that maintained stronger local eviction moratoria for some or all of this period. For example, Minnesota’s eviction moratorium has kept filings in the [Twin Cities](/eviction-tracking/minneapolis-saint-paul-mn/) over 90% below historical average over the last six months, and filings in [Boston](/eviction-tracking/boston-ma/) were quite low until Massachusetts’ eviction moratorium {{< extlink "expired on October 17, 2020" "https://www.mass.gov/info-details/expiration-of-moratorium-on-evictions-and-foreclosures" >}}. 
-
 
 When we remove cities and states with stronger tenant protections, a slightly different picture emerges. Focusing on just those cities that had no additional protections—or just those times when no such protections were in place in a given city—we find that eviction filings were at 50.1% of historical average. This is a much smaller effect than we observed when [analyzing the effectiveness of state and local eviction moratoria](/moratoria-and-filings/), even those that, like the CDC moratorium, permitted case filings. Various factors might account for this difference, including the requirement under the CDC moratorium that tenants proactively declare eligibility. 
 
@@ -53,10 +57,9 @@ In Figure 1 we plot eviction filings relative to historical average over the las
   title="Figure 1: Filings Relative to Historical Average"
 %}}
 
+Where you live plays a major role in determining how well the CDC moratorium protects you. Since early September of last year, eviction filings in [Richmond, VA](/eviction-tracking/richmond-va/) have been at only 30.1% of historical average. This is followed closely by [Philadelphia](/eviction-tracking/philadelphia-pa/) (34.8%), [Pittsburgh](/eviction-tracking/pittsburgh-pa/) (36.9%), and [Kansas City, MO](/eviction-tracking/kansas-city-mo/) (37.%8). [New York City](/eviction-tracking/new-york-ny/) had no local protections between September 4 and December 28; eviction filings were at 38.9% of average for that period. During the subsequent {{< extlink "statewide eviction moratorium" "https://www.nycourts.gov/covid-eefpa.shtml" >}}, which ran from December 28 to February 26, filings in the city dropped to 4.18% of average. 
 
-Where you live plays a major role in determining how well the CDC moratorium protects you. Since early September of last year, eviction filings in [Richmond, VA](/eviction-tracking/richmond-va/) have been at only 30% of historical average. This is followed closely by [Philadelphia](/eviction-tracking/philadelphia-pa/) (34.7%), [Pittsburgh](/eviction-tracking/pittsburgh-pa/) (36.7%), and [Kansas City, MO](/eviction-tracking/kansas-city-mo/) (37.3%). [New York City](/eviction-tracking/new-york-ny/) had no local protections between September 4 and December 28; eviction filings were at 38.9% of average for that period. During the subsequent {{< extlink "statewide eviction moratorium" "https://www.nycourts.gov/covid-eefpa.shtml" >}}, which ran from December 28 to February 26, filings in the city dropped to 4.18% of average. 
-
-By contrast, the CDC moratorium appears to have little appreciable effect in reducing filings in any of the cities we monitor in Florida. Filings are at nearly 90% of average in [Tampa](/eviction-tracking/tampa-fl/) and [Jacksonville](/eviction-tracking/jacksonville-fl/), and aren’t far behind in [Gainesville](/eviction-tracking/gainesville-fl/) (83.7%). In Ohio, both [Columbus](/eviction-tracking/columbus-oh/) and [Cincinnati](/eviction-tracking/cincinnati-oh/) have had filings above 70% of normal, which stands in contrast to the experience of [Cleveland](/eviction-tracking/cleveland-oh/) (44.7% of average). 
+By contrast, the CDC moratorium appears to have little appreciable effect in reducing filings in any of the cities we monitor in Florida. Filings are near 90% of average in [Tampa](/eviction-tracking/tampa-fl/) and [Jacksonville](/eviction-tracking/jacksonville-fl/), and aren’t far behind in [Gainesville](/eviction-tracking/gainesville-fl/) (84.3%). In Ohio, both [Columbus](/eviction-tracking/columbus-oh/) and [Cincinnati](/eviction-tracking/cincinnati-oh/) have had filings above 69% of normal, which stands in contrast to the experience of [Cleveland](/eviction-tracking/cleveland-oh/) (44.9% of average). 
 
 The rate at which cases have been filed has also changed over the last six months. In Figure 2 we again plot eviction filings relative to historical average, but here split the data by city and month. 
 
