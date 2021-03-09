@@ -87,11 +87,13 @@
 .line-chart .chart--highlight2 .chart__line--0,
 .line-chart .chart--highlight3 .chart__line--0 {
   stroke: var(--c1);
+  stroke: #e24000
 }
 
 .line-chart .chart--highlight2 .chart__line--1,
 .line-chart .chart--highlight3 .chart__line--1 {
   stroke: var(--c2);
+  stroke: #434878
 }
 
 .line-chart .chart--highlight2 .chart__line--2,
@@ -142,12 +144,15 @@
 }
 .chart__hover-dot.chart__hover-dot--0 {
   fill: var(--c1);
+  fill: #e24000
 }
 .chart__hover-dot.chart__hover-dot--1 {
   fill: var(--c2);
+  fill: #434878;
 }
 .chart__hover-dot.chart__hover-dot--2 {
   fill: var(--c3);
+  fill: #2c897f
 }
 
 
@@ -179,12 +184,15 @@
 }
 .legend-item--0 .legend-item__color {
   background: var(--c1);
+  background: #e24000
 }
 .legend-item--1 .legend-item__color {
   background: var(--c2);
+  background: #434878
 }
 .legend-item--2 .legend-item__color {
   background: var(--c3);
+  background: #2c897f
 }
 .legend-item--3 .legend-item__color {
   background: var(--c4);
