@@ -71,9 +71,9 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
         f: F,
       };
     }
-    throw new TypeError(
-      "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
-    );
+    // throw new TypeError(
+    //   "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+    // );
   }
   var normalCompletion = true,
     didErr = false,
@@ -123,21 +123,8 @@ function identity(x) {
   return x;
 }
 
-function group(values) {
-  for (
-    var _len = arguments.length,
-      keys = new Array(_len > 1 ? _len - 1 : 0),
-      _key = 1;
-    _key < _len;
-    _key++
-  ) {
-    keys[_key - 1] = arguments[_key];
-  }
-
-  return nest(values, identity, identity, keys);
-}
-
 function groups(values) {
+  console.log("groups", values);
   for (
     var _len2 = arguments.length,
       keys = new Array(_len2 > 1 ? _len2 - 1 : 0),
@@ -304,7 +291,7 @@ Elab.LineChart = (function (Elab) {
       }
       data.sort(compare);
       // add number to highlight class to root
-      $(root).addClass("chart--highlight" + highlighted.length)
+      $(root).addClass("chart--highlight" + highlighted.length);
     }
 
     var svg = $(root).find("svg")[0];
@@ -370,15 +357,12 @@ Elab.LineChart = (function (Elab) {
         .addHoverDot()
         .addVoronoi({
           renderTooltip: function (hoverData) {
-            
             var numFormat = d3.format(".0%");
 
             function getWeekTooltip() {
               var weekFormat = d3.timeFormat("%b %d");
               var start = weekFormat(xSelector(hoverData));
-              var end = weekFormat(
-                d3.timeDay.offset(xSelector(hoverData), 6)
-              );
+              var end = weekFormat(d3.timeDay.offset(xSelector(hoverData), 6));
               return {
                 title: hoverData.name,
                 xValue: start + " - " + end,
@@ -387,7 +371,9 @@ Elab.LineChart = (function (Elab) {
             }
 
             function getMonthTooltip() {
-              const monthFormat = d3.timeFormat(dataOptions.xTooltipFormat || dataOptions.xFormat || "%B")
+              const monthFormat = d3.timeFormat(
+                dataOptions.xTooltipFormat || dataOptions.xFormat || "%B"
+              );
               return {
                 title: hoverData.name,
                 xValue: monthFormat(xSelector(hoverData)),
@@ -396,7 +382,9 @@ Elab.LineChart = (function (Elab) {
             }
 
             function getDefaultTooltip() {
-              const dateFormat = d3.timeFormat(dataOptions.xFormat || "%B %d, %Y")
+              const dateFormat = d3.timeFormat(
+                dataOptions.xFormat || "%B %d, %Y"
+              );
               return {
                 title: hoverData.name,
                 xValue: dateFormat(xSelector(hoverData)),
@@ -404,18 +392,24 @@ Elab.LineChart = (function (Elab) {
               };
             }
 
-            const tooltip = dataOptions.xTicks === "week"
-              ? getWeekTooltip()
-              : dataOptions.xTicks === "month"
-              ? getMonthTooltip()
-              : getDefaultTooltip()
-
+            const tooltip =
+              dataOptions.xTicks === "week"
+                ? getWeekTooltip()
+                : dataOptions.xTicks === "month"
+                ? getMonthTooltip()
+                : getDefaultTooltip();
 
             return (
-              '<h1 class="tooltip__title">' + tooltip.title + "</h1>" +
+              '<h1 class="tooltip__title">' +
+              tooltip.title +
+              "</h1>" +
               '<div class="tooltip__item">' +
-              "<span>" + tooltip.xValue + ":</span>" +
-              "<span> " + tooltip.yValue + "</span>" +
+              "<span>" +
+              tooltip.xValue +
+              ":</span>" +
+              "<span> " +
+              tooltip.yValue +
+              "</span>" +
               "</div>"
             );
           },
@@ -457,7 +451,9 @@ Elab.LineChart = (function (Elab) {
             y: parseFloat(d[options.y]),
           };
         })
-        .sort((a, b) => +a.x - +b.x);
+        .sort(function (a, b) {
+          return +a.x - +b.x;
+        });
       console.log("got data", options, result);
       callback && callback(result);
     });
