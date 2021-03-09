@@ -57,6 +57,8 @@ In Figure 1 we plot eviction filings relative to historical average over the las
   title="Figure 1: Filings Relative to Historical Average"
 %}}
 
+<p class="figcaption">Hover or tap to interact with the chart.</p>
+
 Where you live plays a major role in determining how well the CDC moratorium protects you. Since early September of last year, eviction filings in [Richmond, VA](/eviction-tracking/richmond-va/) have been at only 30.1% of historical average. This is followed closely by [Philadelphia](/eviction-tracking/philadelphia-pa/) (34.8%), [Pittsburgh](/eviction-tracking/pittsburgh-pa/) (36.9%), and [Kansas City, MO](/eviction-tracking/kansas-city-mo/) (37.%8). [New York City](/eviction-tracking/new-york-ny/) had no local protections between September 4 and December 28; eviction filings were at 38.9% of average for that period. During the subsequent {{< extlink "statewide eviction moratorium" "https://www.nycourts.gov/covid-eefpa.shtml" >}}, which ran from December 28 to February 26, filings in the city dropped to 4.18% of average. 
 
 By contrast, the CDC moratorium appears to have little appreciable effect in reducing filings in any of the cities we monitor in Florida. Filings are near 90% of average in [Tampa](/eviction-tracking/tampa-fl/) and [Jacksonville](/eviction-tracking/jacksonville-fl/), and aren’t far behind in [Gainesville](/eviction-tracking/gainesville-fl/) (84.3%). In Ohio, both [Columbus](/eviction-tracking/columbus-oh/) and [Cincinnati](/eviction-tracking/cincinnati-oh/) have had filings above 69% of normal, which stands in contrast to the experience of [Cleveland](/eviction-tracking/cleveland-oh/) (44.9% of average). 
@@ -81,6 +83,8 @@ We again exclude any periods when additional protections were in place in a give
   highlight="Average"
   title="Figure 2: Filings Relative to Historical Average"
 %}}
+
+<p class="figcaption">Hover or tap to interact with the chart.</p>
 
 Eviction filings increased over the first four months of the CDC moratorium, but declined in early 2021. In September 2020, CDC protections kept eviction filings at 48.7% of average across cities analyzed here. By December 2020, when the moratorium was originally scheduled to expire, that number was up to 65.7%. In the final days of 2020, the moratorium was extended and Congress passed the Consolidated Appropriations Act, which included $25 Billion in emergency rental assistance. Since then, eviction filings have decreased relative to historical average, but still remain above 50% of normal.
 
