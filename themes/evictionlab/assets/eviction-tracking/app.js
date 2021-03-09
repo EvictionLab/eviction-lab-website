@@ -2259,9 +2259,9 @@ Elab.Intro = (function (Elab) {
     )
       return;
     var numFormat = d3.format(",d");
-    cityData.subgroup_values = cityData.subgroup_values.map((v) =>
-      numFormat(v)
-    );
+    cityData.subgroup_values = cityData.subgroup_values.map(function (v) {
+      return numFormat(v);
+    });
     var templateData = Object.assign({}, cityData, {
       cumulative: numFormat(cityData.cumulative),
     });
@@ -2518,7 +2518,9 @@ Elab.ListPage = (function (Elab) {
     $(".hero--ets").removeClass("hero--loading");
     $("#cityCount").html(cities.length);
     $("#stateCount").html(states.length);
-    var stateIds = states.map((s) => s.id);
+    var stateIds = states.map(function (s) {
+      return s.id;
+    });
     // filter out cities that have state totals
     var noStateCities = cities.filter(function (c) {
       return stateIds.indexOf(c.id.substring(0, 2)) === -1;
@@ -2549,7 +2551,9 @@ Elab.ListPage = (function (Elab) {
     var lastWeekDate = null;
     var lastWeekDateStates = null;
     // array of state IDs
-    var stateIds = states.map((s) => s.id);
+    var stateIds = states.map(function (s) {
+      s.id;
+    });
     var noStateCities = cities.filter(function (c) {
       return stateIds.indexOf(c.id.substring(0, 2)) === -1;
     });
