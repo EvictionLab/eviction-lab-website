@@ -105,6 +105,12 @@ a.cat-link {
       }
     }
   }
+  .post-body {
+    strong, b {
+      font-family: Akkurat-Bold, sans-serif;
+      font-weight: 400;
+    }
+  }
 
   h2.pullquote {
     border-top: 4px $color1 solid;
@@ -440,5 +446,14 @@ svg {
   max-width: 100%;
   @include media-breakpoint-up(xl) {
    max-width: 110%;
+  }
+}
+
+// 6 months of CDC moratorium blog post
+
+@include media-breakpoint-up(md) {
+  .bar-chart.bar-chart--banded.bar-chart--cdcavgbar2, .line-chart.line-chart--cdcavg {
+    width: 124%;
+    margin-left: -12%;
   }
 }
