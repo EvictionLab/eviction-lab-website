@@ -2127,10 +2127,6 @@ Elab.Intro = (function (Elab) {
     var chart = new Elab.ChartBuilder(svg, seriesData, options);
 
     chart
-      // clips lines or bars that extend past data area
-      .addClipPath()
-      // adds a border around the chart area
-      .addFrame()
       // adds y axis, using max of the trend line value or bar value
       .addAxisY({
         selector: function (d) {

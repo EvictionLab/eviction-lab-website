@@ -28,12 +28,12 @@
 {{ $title := .Get "title" }}
 
 <div
-  class="bar-chart bar-chart--banded bar-chart--{{ .Get `id` }}"
+  class="chart chart--bar chart--{{ .Get `id` }}"
 >
   {{ if $title }}
-  <h3 class="bar-chart__title">{{ $title }}</h3>
+  <h3 class="chart__title">{{ $title }}</h3>
   {{ end }}
-  <div id="{{ .Get `id` }}" class="bar-chart__chart chart">
+  <div id="{{ .Get `id` }}" class="chart__body">
     <svg></svg>
   </div>
 
@@ -56,7 +56,7 @@
     window.addEventListener('load', function() {
 
       // Init chart on page load.
-      Elab.BasicBarChart.init(rootEl, { id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat })
+      Elab.BarChart.init(rootEl, { id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat })
     });
   </script>
 </div>

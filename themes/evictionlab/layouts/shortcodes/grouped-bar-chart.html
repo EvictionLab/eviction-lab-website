@@ -30,9 +30,9 @@
 {{ $searchPrompt := .Get "searchPrompt" }}
 
 <div
-  class="bar-chart bar-chart--{{ .Get `id` }}"
+  class="chart chart--grouped-bar chart--{{ .Get `id` }}"
 >
-  <h3 class="bar-chart__title">
+  <h3 class="chart__title">
   {{ if eq $search "true" }}
   {{ $titlePrefix }} in
   <span id="searchLocation"></span>
@@ -41,14 +41,14 @@
   <span>{{ (printf "%s%s%s" $titlePrefix " " $titleSuffix) }}</span>
   {{ end }}
   </h3>
-  <div class="bar-chart__search-group">
-  <input class="bar-chart__search search" type="text" id="chart_autocomplete" value="Search by county... " />{{ partial "searchbutton" }}
+  <div class="chart__search-group">
+  <input class="chart__search search" type="text" id="chart_autocomplete" value="Search by county... " />{{ partial "searchbutton" }}
   </div>
-  <div id="{{ .Get `id` }}" class="bar-chart__chart chart">
+  <div id="{{ .Get `id` }}" class="chart__body">
     <svg></svg>
   </div>
   {{ if $legend }}
-  <div class="bar-chart__legend legend">
+  <div class="legend">
   {{ range $index, $element := $legendItems }}
   <div class="legend-item legend-item--{{ $index }}">
   <div class="legend-item__color"></div>
@@ -79,7 +79,7 @@
      */
     var initChart = function() {
       // Init chart with default data.
-      Elab.BarChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xBars: xBars, xFormat: xFormat, highlight: highlight, active: active, columns: columns, searchId: searchId, searchLabel: searchLabel })
+      Elab.GroupedBarChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xBars: xBars, xFormat: xFormat, highlight: highlight, active: active, columns: columns, searchId: searchId, searchLabel: searchLabel })
     }
     /**
      * Sets site name in title
@@ -115,8 +115,8 @@
           data[`${row.data.cofips}`] = row.data.state ? `${row.data.county}, ${row.data.state}` : row.data.county;
       	},
       	complete: function() {
-          console.log('papaparse complete')
-          console.log('data: ', data)
+          // console.log('papaparse complete')
+          // console.log('data: ', data)
           // Set value in title.
           setSiteName();
         //  setCountyCount(); // Commenting out in favor of hardcoded number for now.
@@ -148,7 +148,7 @@
               setSiteName();
               // console.log(`From ${val}, active reset to ${active}.`)
               // reset the chart,
-              var svg = document.querySelector('svg.chart__root');
+              var svg = document.querySelector('#' + id + ' .chart__root');
               svg.innerHTML = '';
               // re-init the chart.
               initChart()

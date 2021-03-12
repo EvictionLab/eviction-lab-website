@@ -1,5 +1,9 @@
 # Eviction Tracking System
 
+This documentation is for those making data or content updates within the ETS.
+
+For those looking to contribute to development, see the [developer documentation](../themes/evictionlab/assets/eviction-tracking).
+
 ## Getting Started
 
 In order to add or edit pages in the eviction tracking system you will need a [Github account](https://github.com/join). If you do not have one, sign up and request access by providing your Github username to one of the Hyperobjekt team members. Once given access, you can login to the content management system using your Github account.

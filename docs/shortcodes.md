@@ -1,6 +1,6 @@
 # Shortcodes
 
-## `{{% linechart }}`
+## Line Charts
 
 Renders a chart with multiple lines and highlights up to 3 lines.
 
@@ -10,13 +10,13 @@ To use the line chart shortcode, you must first include the necessary scripts by
 
 ```yaml
 scripts:
-  - linechart
+  - line-chart
 ```
 
-You may then use the `{{% linechart %}}` shortcode.
+You may then use the `{{% line-chart %}}` shortcode.
 
 ```
-{{% linechart
+{{% line-chart
   id="summed"
   data="/uploads/sites.csv"
   x="week"
@@ -50,9 +50,10 @@ You may then use the `{{% linechart %}}` shortcode.
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
 Data should have:
-  - a column to group by (provided by `groupBy` prop). for this sample, the `name` column is used.
-  - a column that contains dates to used for the x axis.  for this example, `week` column is used.
-  - a column that contains the corresponding y value.  for this example, `ratio` is used.
+
+- a column to group by (provided by `groupBy` prop). for this sample, the `name` column is used.
+- a column that contains dates to used for the x axis. for this example, `week` column is used.
+- a column that contains the corresponding y value. for this example, `ratio` is used.
 
 ```csv
 name,ratio,week
@@ -115,7 +116,7 @@ Than include the shortcode in the body of the `.md` file.
 
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
-Data file should have: 
+Data file should have:
 
 - a column present for bar labels (x values), e.g. `site_name_full`
 - a column for corresponding values (y valus), e.g. `filings_ratio`

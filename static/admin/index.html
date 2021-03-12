@@ -293,7 +293,7 @@
         hint: "(optional) type of d3.curve to use: https://github.com/d3/d3-shape#curves"
       },
     ],
-    pattern: /^{{%[\s]+linechart[\s]+id="(\S*)"[\s]+title="(.*?)"[\s]+data="(\S*)"[\s]+x="(\S*)"[\s]+y="(\S*)"[\s]+groupBy="(\S*)"[\s]+yTicks="(\S*)"[\s]+yFormat="(.+?)"[\s]+xTicks="(\S*)"[\s]+xFormat="(.*?)"[\s]+highlight="(.*?)"[\s]+curve="(.+?)"[\s]+%}}/,
+    pattern: /^{{%[\s]+line-chart[\s]+id="(\S*)"[\s]+title="(.*?)"[\s]+data="(\S*)"[\s]+x="(\S*)"[\s]+y="(\S*)"[\s]+groupBy="(\S*)"[\s]+yTicks="(\S*)"[\s]+yFormat="(.+?)"[\s]+xTicks="(\S*)"[\s]+xFormat="(.*?)"[\s]+highlight="(.*?)"[\s]+curve="(.+?)"[\s]+%}}/,
     fromBlock: function (match) {
       return {
         id: match[1],

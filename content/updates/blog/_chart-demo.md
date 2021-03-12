@@ -15,8 +15,7 @@ socialDescription: Tracking federal, state, and local actions in response to the
 fbImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 scripts:
-  - linechart
-  - bar-chart
+  - charts
 ---
 
 Basic bars
@@ -35,7 +34,7 @@ Basic bars
 
 Straight lines
 
-{{% linechart
+{{% line-chart
   id="cdcavg"
   data="/uploads/cdc_linechart.csv"
   x="xfilemonth"
@@ -50,7 +49,7 @@ Straight lines
   title="Filings Relative to Historical Average"
 %}}
 
-{{% linechart 
+{{% line-chart
   id="summed1"
   data="/uploads/summed_sites.csv"
   x="week"
@@ -64,7 +63,7 @@ Straight lines
 
 Curved lines
 
-{{% linechart
+{{% line-chart
   id="summed2"
   data="/uploads/summed_sites.csv"
   x="week"

@@ -3,16 +3,16 @@
 {{ $legendItems := split $legend ";" }}
 
 <div
-  class="line-chart line-chart--{{ .Get `id` }}"
+  class="chart chart--line chart--{{ .Get `id` }}"
 >
   {{ if $title }}
-  <h3 class="line-chart__title">{{ $title }}</h3>
+  <h3 class="chart__title">{{ $title }}</h3>
   {{ end }}
-  <div id="{{ .Get `id` }}" class="line-chart__chart chart">
+  <div id="{{ .Get `id` }}" class="chart__body">
     <svg></svg>
   </div>
   {{ if $legend }}
-  <div class="line-chart__legend legend">
+  <div class="legend">
   {{ range $index, $element := $legendItems }}
   <div class="legend-item legend-item--{{ $index }}">
   <div class="legend-item__color"></div>

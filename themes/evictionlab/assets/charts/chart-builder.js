@@ -45,6 +45,11 @@ Elab.ChartBuilder = (function (Elab) {
     this.lineData = null;
     this.xBandScale = d3.scaleBand();
     this.addRoot();
+    this.addBaseGroup();
+    this.addDataGroup();
+    this.addOverlayGroup();
+    this.addClipPath();
+    this.addFrame();
     var _this = this;
     this.showTooltip = function (e, render) {
       if (!_this.hovered) return;
@@ -67,6 +72,14 @@ Elab.ChartBuilder = (function (Elab) {
       selection.classed("chart__tooltip--show", false);
       // selection.style("top")
     };
+
+    window.addEventListener("resize", function () {
+      var rect = _this.svgEl.parentNode.getBoundingClientRect();
+      _this.update({
+        width: rect.width,
+        height: rect.height,
+      });
+    });
   }
 
   /** Default options for the chart */
@@ -123,7 +136,11 @@ Elab.ChartBuilder = (function (Elab) {
    * @param {function} createSelection function that returns the selection
    */
   Chart.prototype.addSelection = function (id, parentId, createSelection) {
-    this.selections[id] = createSelection(this.selections[parentId], this);
+    if (id === "root") {
+      this.selections["root"] = createSelection(null, this);
+    } else {
+      this.selections[id] = createSelection(this.selections[parentId], this);
+    }
     return this;
   };
 
@@ -161,44 +178,98 @@ Elab.ChartBuilder = (function (Elab) {
    * Creates the chart root container
    */
   Chart.prototype.addRoot = function () {
-    var _this = this;
-    this.selections["root"] = d3
-      .select(this.svgEl)
-      .attr("class", "chart__root");
-    this.updaters["root"] = function () {
-      _this.selections["root"]
-        .attr("width", _this.options.width)
-        .attr("height", _this.options.height);
-    };
-    this.selections["base"] = this.selections["root"]
-      .append("g")
-      .attr("class", "chart__base");
-    this.selections["data"] = this.selections["root"]
-      .append("g")
-      .attr("class", "chart__data")
-      .attr("clip-path", "url(#" + _this.uid + "_clip)");
-    this.selections["overlay"] = this.selections["root"]
-      .append("g")
-      .attr("class", "chart__overlay");
-    this.updaters["base"] = function () {
-      [
-        _this.selections["base"],
-        _this.selections["data"],
-        _this.selections["overlay"],
-      ].forEach(function (sel) {
-        sel.attr(
-          "transform",
-          "translate(" +
-            _this.options.margin[3] +
-            " " +
-            _this.options.margin[0] +
-            ")"
-        );
-      });
-    };
+    function createRootSelection(parent, chart) {
+      return d3.select(chart.svgEl).attr("class", "chart__root");
+    }
+    function createRootRenderer(selection, chart) {
+      return function () {
+        selection
+          .attr("width", chart.options.width)
+          .attr("height", chart.options.height);
+      };
+    }
+    this.addElement("root", null, createRootSelection, createRootRenderer);
     return this;
   };
 
+  /**
+   * Adds a group for chart axis elements
+   */
+  Chart.prototype.addBaseGroup = function () {
+    // function that returns the selection
+    function createBaseSelection(parent) {
+      return parent.append("g").attr("class", "chart__base");
+    }
+    // function that updates the selection on re-renders
+    function createRenderer(selection, chart) {
+      return function () {
+        selection.attr(
+          "transform",
+          "translate(" +
+            chart.options.margin[3] +
+            " " +
+            chart.options.margin[0] +
+            ")"
+        );
+      };
+    }
+    this.addElement("base", "root", createBaseSelection, createRenderer);
+    return this;
+  };
+
+  /**
+   * Adds a clipped group for chart data (bars, lines, etc)
+   */
+  Chart.prototype.addDataGroup = function () {
+    // function that returns the selection
+    function createDataSelection(parent, chart) {
+      return parent
+        .append("g")
+        .attr("class", "chart__data")
+        .attr("clip-path", "url(#" + chart.uid + "_clip)");
+    }
+    // function that updates the selection on re-renders
+    function createRenderer(selection, chart) {
+      return function () {
+        selection.attr(
+          "transform",
+          "translate(" +
+            chart.options.margin[3] +
+            " " +
+            chart.options.margin[0] +
+            ")"
+        );
+      };
+    }
+    this.addElement("data", "root", createDataSelection, createRenderer);
+    return this;
+  };
+
+  /**
+   * Adds a clipped group for chart data (bars, lines, etc)
+   */
+  Chart.prototype.addOverlayGroup = function () {
+    var _this = this;
+    // function that returns the selection of the group element
+    function createOverlaySelection(parent) {
+      return parent.append("g").attr("class", "chart__overlay");
+    }
+    // function that updates the selection on re-renders
+    function createRenderer(selection, chart) {
+      return function () {
+        selection.attr(
+          "transform",
+          "translate(" +
+            chart.options.margin[3] +
+            " " +
+            chart.options.margin[0] +
+            ")"
+        );
+      };
+    }
+    this.addElement("overlay", "root", createOverlaySelection, createRenderer);
+    return this;
+  };
   /**
    * Adds a frame border to the chart
    */
@@ -351,6 +422,10 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds a vertical line on hover to show currently hovered X position on line charts
+   * @returns
+   */
   Chart.prototype.addHoverLine = function () {
     var _this = this;
     function createSelection(parentSelection) {
@@ -377,13 +452,15 @@ Elab.ChartBuilder = (function (Elab) {
         }
       };
     }
-    this.addSelection("hoverLine", "data", createSelection);
-    this.addRenderFunction("hoverLine", createRenderer);
+    this.addElement("hoverLine", "data", createSelection, createRenderer);
     return this;
   };
 
+  /**
+   * Adds a hover dot to the nearest hovered point on line charts
+   * @returns
+   */
   Chart.prototype.addHoverDot = function () {
-    var _this = this;
     function createSelection(parentSelection) {
       return parentSelection.append("circle").attr("class", "chart__hover-dot");
     }
@@ -412,13 +489,12 @@ Elab.ChartBuilder = (function (Elab) {
         }
       };
     }
-    this.addSelection("hoverDot", "data", createSelection);
-    this.addRenderFunction("hoverDot", createRenderer);
+    this.addElement("hoverDot", "data", createSelection, createRenderer);
     return this;
   };
 
   /**
-   * Adds bars to the chart
+   * Adds groups of bars to the chart
    * @param {function} selector function that takes the chart data and returns the bar data
    */
   Chart.prototype.addBarGroups = function (selector) {
@@ -452,9 +528,12 @@ Elab.ChartBuilder = (function (Elab) {
         .round(0.1)
         .padding(0.1);
 
-      var groups = _this.selections["bargroups"]
+      var parentSelection = _this.selections["bargroups"]
         .selectAll(".chart__bar-group")
-        .data(barData)
+        .data(barData);
+
+      // groups enter render
+      var groupSelection = parentSelection
         .enter()
         .append("g")
         .attr("id", function (d) {
@@ -466,10 +545,18 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("transform", function (d) {
           return "translate(" + _this.groupScale(d.category) + ",0)";
         })
+        .merge(parentSelection)
+        .attr("transform", function (d) {
+          return "translate(" + _this.groupScale(d.category) + ",0)";
+        });
+
+      var barDataSelection = groupSelection
         .selectAll(".chart__bar")
         .data(function (d) {
           return d.values;
-        })
+        });
+
+      var barsSelection = barDataSelection
         .enter()
         .append("rect")
         .attr("class", function (d) {
@@ -484,9 +571,19 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("height", 0)
         .attr("y", function (d) {
           return _this.getInnerHeight();
-        })
+        });
+
+      // bar updates render
+      barsSelection
+        .merge(barDataSelection)
         .transition()
         .duration(1000)
+        .attr("width", function (d) {
+          return _this.barScale.bandwidth() - spacing;
+        })
+        .attr("x", function (d) {
+          return _this.barScale(d.type);
+        })
         .attr("y", function (d) {
           return _this.yScale(d.value);
         })
@@ -499,7 +596,7 @@ Elab.ChartBuilder = (function (Elab) {
   };
 
   /**
-   * Adds bars to the chart
+   * Adds bars to the chart for time based axis
    * @param {function} selector function that takes the chart data and returns the bar data
    */
   Chart.prototype.addBars = function (overrides) {
@@ -558,7 +655,7 @@ Elab.ChartBuilder = (function (Elab) {
   };
 
   /**
-   * Adds bars to the chart
+   * Adds bars to the chart for category or location based axis
    * @param {function} selector function that takes the chart data and returns the bar data
    */
   Chart.prototype.addBandedBars = function (overrides) {
@@ -749,7 +846,7 @@ Elab.ChartBuilder = (function (Elab) {
   };
 
   /**
-   * Adds a Y axis to the chart
+   * Adds an axis for bar charts
    * @param {*} selector a function that accepts a data entry and returns the y value
    */
   Chart.prototype.addBarAxis = function (overrides) {
@@ -787,16 +884,10 @@ Elab.ChartBuilder = (function (Elab) {
   };
 
   /**
-   * Utility function that calculates the width of a month on the chart in pixels
+   * Adds an axis used for grouped bar charts
+   * @param {*} overrides
+   * @returns
    */
-  Chart.prototype.monthToPixels = function (num) {
-    var now = new Date();
-    var start = d3.timeDay.floor(now);
-    var end = d3.timeDay.offset(start, 30);
-    var width = this.xScale(end) - this.xScale(start);
-    return width * num;
-  };
-
   Chart.prototype.addBarGroupAxis = function (overrides) {
     // console.log('addBarGroupAxis, ', this)
     var _this = this;
@@ -828,11 +919,6 @@ Elab.ChartBuilder = (function (Elab) {
         .range([0, innerWidth])
         .round(0.1)
         .padding(0.1);
-      // .paddingInner(0.05);
-
-      // .range([0, _this.getInnerWidth()])
-      // .round(0.1)
-      // .padding(0.1);
       var xAxis = d3.axisBottom(_this.xScale).tickSize(8).tickSizeOuter(0);
       _this.selections["barGroup"]
         .attr("transform", "translate(0," + _this.getInnerHeight() + ")")
@@ -889,6 +975,11 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds a legend to the chart
+   * @param {*} items
+   * @returns
+   */
   Chart.prototype.addLegend = function (items) {
     var _this = this;
     if (items) {
@@ -908,6 +999,12 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  /**
+   * Adds a voronoi layer to the data group
+   * Used for showing tooltips for the nearest hover point
+   * @param {*} overrides
+   * @returns
+   */
   Chart.prototype.addVoronoi = function (overrides) {
     var _this = this;
     var options = overrides || {};
@@ -989,8 +1086,7 @@ Elab.ChartBuilder = (function (Elab) {
           });
       };
     }
-    this.addSelection("voronoi", "data", createSelection);
-    this.addRenderFunction("voronoi", createRenderer);
+    this.addElement("voronoi", "data", createSelection, createRenderer);
     return this;
   };
 
@@ -1002,6 +1098,17 @@ Elab.ChartBuilder = (function (Elab) {
     var _this = this;
     renderElement(_this);
     return this;
+  };
+
+  /**
+   * Utility function that calculates the width of a month on the chart in pixels
+   */
+  Chart.prototype.monthToPixels = function (num) {
+    var now = new Date();
+    var start = d3.timeDay.floor(now);
+    var end = d3.timeDay.offset(start, 30);
+    var width = this.xScale(end) - this.xScale(start);
+    return width * num;
   };
 
   /**
