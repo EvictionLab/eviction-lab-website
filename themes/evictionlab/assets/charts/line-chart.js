@@ -14,6 +14,33 @@ var Elab = Elab || {};
  */
 Elab.LineChart = (function (Elab) {
   /**
+   * Creates a comparator that brings values provided in `highlighted`
+   * to the front of the array
+   * @param {*} highlighted
+   * @param {*} key
+   * @returns {Array}
+   */
+  function createHighlightComparator(highlighted, key) {
+    key = key || "name";
+    var hl =
+      highlighted && highlighted.length ? highlighted.slice().reverse() : [];
+    return function (a, b) {
+      var aHighlightIndex = hl.indexOf(a[key]);
+      var bHighlightIndex = hl.indexOf(b[key]);
+      if (aHighlightIndex > -1 && bHighlightIndex > -1) {
+        // both are highlighted, same item
+        if (aHighlightIndex === bHighlightIndex) return 0;
+        // both are highlighted, a is higher
+        return aHighlightIndex > bHighlightIndex ? -1 : 1;
+      }
+      if (aHighlightIndex > -1) return 1;
+      if (bHighlightIndex > -1) return -1;
+      if (a[key] === b[key]) return 0;
+      return a[key] > b[key] ? 1 : -1;
+    };
+  }
+
+  /**
    * Gets X ticks based on type
    * @param {string} type [day, week, month, year]
    */
@@ -88,39 +115,12 @@ Elab.LineChart = (function (Elab) {
       : null;
     // sort data so highlighted items are at the end of the array in the same order as the "highlight" string
     if (highlighted) {
-      var key = "name";
-      var hl = highlighted.slice().reverse();
-      function compare(a, b) {
-        var aHighlightIndex = hl.indexOf(a[key]);
-        var bHighlightIndex = hl.indexOf(b[key]);
-        if (aHighlightIndex > -1 && bHighlightIndex > -1) {
-          // both are highlighted, same item
-          if (aHighlightIndex === bHighlightIndex) return 0;
-          // both are highlighted, a is higher
-          return aHighlightIndex > bHighlightIndex ? -1 : 1;
-        }
-        if (aHighlightIndex > -1) return 1;
-        if (bHighlightIndex > -1) return -1;
-        if (a[key] === b[key]) return 0;
-        return a[key] > b[key] ? 1 : -1;
-      }
+      var compare = createHighlightComparator(highlighted, "name");
       data.sort(compare);
       // add number to highlight class to root
       $(root).addClass("chart__body--highlight" + highlighted.length);
     }
-
-    var svg = $(root).find("svg")[0];
-    var rect = root.getBoundingClientRect();
-    var options = Object.assign(
-      {
-        width: rect.width,
-        height: Math.max(rect.height, 320),
-        margin: [8, 48, 60, 54],
-      },
-      dataOptions
-    );
-
-    var chart = new Elab.ChartBuilder(svg, data, options);
+    var chart = new Elab.ChartBuilder(root, data, dataOptions);
     return (
       chart
         // adds y axis, using max of the trend line value or bar value

@@ -24,13 +24,22 @@ Elab.ChartBuilder = (function (Elab) {
    * @param {Array<Object>} data data to use for the chart
    * @param {Object} options
    */
-  function Chart(svgEl, data, options) {
+  function Chart(rootEl, data, options) {
+    var svgEl = rootEl.querySelector("svg");
+    var rect = rootEl.getBoundingClientRect();
     var tooltipEl = document.createElement("div");
     tooltipEl.className = "chart__tooltip";
     document.body.appendChild(tooltipEl);
     this.uid = makeId(); // unique id for the chart
     this.data = data;
-    this.options = options || this.defaultOptions;
+    this.options = Object.assign(
+      {
+        width: Math.max(rect.width, 320),
+        height: Math.max(rect.height, 320),
+      },
+      this.defaultOptions,
+      options || {}
+    );
     this.innerWidth =
       this.options.width + this.options.margin[1] + this.options.margin[3];
     this.innerHeight =
@@ -74,7 +83,7 @@ Elab.ChartBuilder = (function (Elab) {
     };
 
     window.addEventListener("resize", function () {
-      var rect = _this.svgEl.parentNode.getBoundingClientRect();
+      var rect = rootEl.getBoundingClientRect();
       _this.update({
         width: rect.width,
         height: rect.height,
@@ -84,9 +93,7 @@ Elab.ChartBuilder = (function (Elab) {
 
   /** Default options for the chart */
   Chart.prototype.defaultOptions = {
-    width: 400,
-    height: 400,
-    margin: [8, 8, 8, 8],
+    margin: [8, 48, 60, 54],
     xTicks: 4,
     xTicksFormat: d3.timeFormat("%b"),
     yTicksFormat: d3.format(",d"),
@@ -802,6 +809,48 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  Chart.prototype.addStackArea = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    options.stackId = overrides.stackId || "stacks";
+    _this.stackData = options.series;
+    function createAreaSelection(parentSelection) {
+      return parentSelection.append("g").attr("class", "chart__stacks");
+    }
+    function createAreaRenderer(selection, chart) {
+      return function () {
+        var area = d3
+          .area()
+          .x((d) => _this.xScale(d.data.x))
+          .y0((d) => _this.yScale(d[0]))
+          .y1((d) => _this.yScale(d[1]));
+
+        var color = d3
+          .scaleOrdinal()
+          .domain(options.groups)
+          .range(["#e24000", "#434878", "#2c897f", "#94aabd"]);
+
+        selection
+          .selectAll("path")
+          .data(_this.stackData)
+          .enter()
+          .append("path")
+          .attr("class", "chart__area")
+          .attr("fill", ({ key }) => color(key))
+          .attr("stroke", ({ key }) => color(key))
+          .attr("d", area);
+      };
+    }
+
+    this.addElement(
+      options.stackId,
+      "data",
+      createAreaSelection,
+      createAreaRenderer
+    );
+    return this;
+  };
+
   /**
    * Adds a Y axis to the chart
    * @param {*} selector a function that accepts a data entry and returns the y value
@@ -825,12 +874,13 @@ Elab.ChartBuilder = (function (Elab) {
       .append("g")
       .attr("class", "chart__axis chart__axis--y");
     this.updaters["yAxis"] = function () {
-      var extent = d3.extent(_this.data, options.selector);
+      var extent = options.selector && d3.extent(_this.data, options.selector);
       var yExtent = options.adjustExtent(extent);
       _this.yScale = d3
         .scaleLinear()
         .rangeRound([_this.getInnerHeight(), 0])
-        .domain(yExtent);
+        .domain(yExtent)
+        .nice();
       var yAxis = d3
         .axisLeft(_this.yScale)
         .tickSize(-1 * _this.getInnerWidth());

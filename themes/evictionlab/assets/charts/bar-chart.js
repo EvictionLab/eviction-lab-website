@@ -61,22 +61,12 @@ Elab.BarChart = (function (Elab) {
    * @param {Object} dataOptions { margin, x, y, , yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
-    var svg = $(root).find("svg")[0];
-    var rect = root.getBoundingClientRect();
-    var options = Object.assign(
-      {
-        width: rect.width,
-        height: Math.max(rect.height, 320),
-        margin: getMarginFromString(dataOptions.margin),
-      },
-      dataOptions
-    );
     const yFormat = d3.format(dataOptions.yFormat || ",d");
     const yTooltipFormat = d3.format(
       dataOptions.yTooltipFormat || dataOptions.yFormat || ",d"
     );
 
-    var chart = new Elab.ChartBuilder(svg, data, options);
+    var chart = new Elab.ChartBuilder(root, data, dataOptions);
     return (
       chart
         // adds y axis, pads it if no extend is passed

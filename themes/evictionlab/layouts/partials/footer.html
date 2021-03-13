@@ -164,7 +164,8 @@
   {{ $utils := resources.Get "charts/utils.js" }}
   {{ $linechart := resources.Get "charts/line-chart.js" }}
   {{ $barchart := resources.Get "charts/bar-chart.js" }}
-  {{ $js := slice $d3 $builder $utils $linechart $barchart | resources.Concat "js/charts/bundle.js" | resources.Minify }}
+  {{ $stackchart := resources.Get "charts/stack-area-chart.js" }}
+  {{ $js := slice $d3 $builder $utils $linechart $barchart $stackchart | resources.Concat "js/charts/bundle.js" | resources.Minify }}
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 

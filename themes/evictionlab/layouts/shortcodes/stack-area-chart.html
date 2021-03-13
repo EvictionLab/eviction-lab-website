@@ -1,0 +1,48 @@
+{{ $title := .Get "title" }}
+{{ $legend := .Get "stackLabels" }}
+{{ $legendItems := split $legend ";" }}
+
+<div
+  class="chart chart--stack chart--{{ .Get `id` }}"
+>
+  {{ if $title }}
+  <h3 class="chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}" class="chart__body">
+    <svg></svg>
+  </div>
+  {{ if $legend }}
+  <div class="legend">
+  {{ range $index, $element := $legendItems }}
+  <div class="legend-item legend-item--{{ $index }}">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">{{ $element }}</div>
+  </div>
+  {{ end }}
+  </div>
+  {{ end }}
+  <script>
+    window.addEventListener('load', function() {
+      // identifier for chart (must be unique on page)
+      var id = {{ .Get "id" }}
+      // url to csv file
+      var csv = {{ .Get "data" }}
+      // column name to use for x values
+      var x = {{ .Get "x" }}
+      // column name to group entries by
+      var groups = {{ .Get "stacks" }}
+      // number of y ticks to show
+      var yTicks = {{ .Get "yTicks" }}
+      // d3 formatting string for y values
+      var yFormat = {{ .Get "yFormat" }}
+      // frequency of x ticks (e.g. week, month)
+      var xTicks = {{ .Get "xTicks" }}
+      // d3 formatting string for x values
+      var xFormat = {{ .Get "xFormat" }}
+      // formatter for x values on tooltip
+      var xTooltipFormat = {{ .Get "xTooltipFormat" }}
+      var rootEl = document.getElementById(id);
+      Elab.StackAreaChart.init(rootEl, { data: csv, groups: groups, x: x, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat, xTooltipFormat: xTooltipFormat })
+    });
+  </script>
+</div>

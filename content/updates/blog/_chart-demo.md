@@ -18,6 +18,21 @@ scripts:
   - charts
 ---
 
+Stack Area Chart
+
+{{% stack-area-chart
+  id="stackarea1"
+  data="/uploads/blogpost_data_cle.csv"
+  x="date"
+  stacks="group1;group2"
+  stackLabels="Routine Evictors;Infrequent Evictors"
+  title="Stack Chart Example"
+  xTicks="year"
+  xFormat="%Y"
+  yFormat=".0%"
+  title="Observed Eviction Rate for Cleveland, OH"
+%}}
+
 Basic bars
 
 {{% bar-chart

@@ -2117,14 +2117,10 @@ Elab.Intro = (function (Elab) {
    */
   function createIntroFigure(root, cityData) {
     var seriesData = cityData.values;
-    var svg = $(root).find("svg")[0];
-    var rect = root.getBoundingClientRect();
     var options = {
-      width: rect.width,
-      height: rect.height,
       margin: [32, 12, 90, 40],
     };
-    var chart = new Elab.ChartBuilder(svg, seriesData, options);
+    var chart = new Elab.ChartBuilder(root, seriesData, options);
 
     chart
       // adds y axis, using max of the trend line value or bar value
@@ -2189,24 +2185,6 @@ Elab.Intro = (function (Elab) {
         // renders the chart
         .render()
     );
-  }
-
-  /**
-   * Initializes the chart figure and handles resizing
-   * @param {*} root
-   * @param {*} cityData
-   */
-  function initFigure(root, cityData) {
-    // create figure
-    var figure = createIntroFigure(root, cityData);
-    // resize figure on changes
-    window.addEventListener("resize", function () {
-      var rect = root.getBoundingClientRect();
-      figure.update({
-        width: rect.width,
-        height: rect.height,
-      });
-    });
   }
 
   function getMoratoriumRange(data) {
@@ -2288,7 +2266,7 @@ Elab.Intro = (function (Elab) {
         throw new Error("no data found for city");
       }
       $(".intro").removeClass("intro--loading");
-      initFigure(root, cityData);
+      createIntroFigure(root, cityData);
       initDataValues(cityData);
     });
   }

@@ -67,16 +67,7 @@ Elab.GroupedBarChart = (function (Elab) {
    */
   function createFigure(root, data, dataOptions) {
     // console.log('createFigure: ', root, data, dataOptions)
-    var svg = $(root).find("svg")[0];
-    var rect = root.getBoundingClientRect();
-    var options = Object.assign(
-      {
-        width: rect.width,
-        height: Math.max(rect.height, 320),
-        margin: [8, 48, 60, 54],
-      },
-      dataOptions
-    );
+    var options = dataOptions;
 
     var getBarType = function (str, options) {
       var type = "";
@@ -125,7 +116,7 @@ Elab.GroupedBarChart = (function (Elab) {
       return result;
     };
 
-    var chart = new Elab.ChartBuilder(svg, data, options);
+    var chart = new Elab.ChartBuilder(root, data, options);
     return (
       chart
         // adds y axis, using max of the trend line value or bar value

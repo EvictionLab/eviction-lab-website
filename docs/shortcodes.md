@@ -10,7 +10,7 @@ To use the line chart shortcode, you must first include the necessary scripts by
 
 ```yaml
 scripts:
-  - line-chart
+  - charts
 ```
 
 You may then use the `{{% line-chart %}}` shortcode.
@@ -79,7 +79,7 @@ Must include the following frontmatter in the `.md` file to use:
 
 ```yaml
 scripts:
-  - bar-chart
+  - charts
 ```
 
 Than include the shortcode in the body of the `.md` file.
@@ -146,4 +146,72 @@ site_name_full,filings_ratio
 "Gainesville, FL",0.842584921292461
 "Jacksonville, FL",0.896321298285091
 "Tampa, FL",0.900901929444001
+```
+
+## Stacked Area Chart
+
+Shortcode for rendering stacked area charts
+
+### Usage
+
+Must include the following frontmatter in the `.md` file to use:
+
+```yaml
+scripts:
+  - charts
+```
+
+Than include the shortcode in the body of the `.md` file.
+
+```
+{{% stack-area-chart
+  id="stackarea1"
+  data="/uploads/blogpost_data_cle.csv"
+  x="date"
+  stacks="group1;group2"
+  stackLabels="Routine Evictors;Infrequent Evictors"
+  title="Stack Chart Example"
+  xTicks="year"
+  xFormat="%Y"
+  yFormat=".0%"
+  title="Observed Eviction Rate for Cleveland, OH"
+%}}
+```
+
+### Props
+
+- id: unique identifier for this bar chart instance
+- title: title for the chart
+- csv: url to CSV data File
+- x: name of column with dates (mm/dd/yyyy)
+- stacks: semi-colon separated list of column names to use for stacks
+- stackLabels: semi-colon separated list of labels for stacks (for legend)
+- yTicks: number of y ticks to display
+- yMin: y axis minimum value
+- yMax: y axis maximum value
+- yFormat: formatting for y axis values
+- yTickFormat: formatting for y values in the tooltip
+- margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
+
+### Demo
+
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
+
+Data file should have:
+
+- a column for x values (dates), e.g. `date`
+- a column for each stack value, e.g. `group1` and `group2`
+
+```csv
+date,group1,group2
+01/01/2004,80.3,19.7
+01/01/2005,80.9,19.1
+01/01/2006,80.6,19.4
+01/01/2007,82,18
+01/01/2008,79.9,20.1
+01/01/2009,79.6,20.4
+01/01/2010,80.3,19.7
+01/01/2011,79.8,20.2
+01/01/2012,80.3,19.7
+01/01/2013,80.9,19.1
 ```

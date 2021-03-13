@@ -317,3 +317,11 @@ body .chart .chart__title, body .chart .chart__title > * {
 .chart .chart__bar.judgment {
   fill: var(--c3);
 }
+
+
+/* .chart--stack .chart__area {
+  fill-opacity:0.25;
+  stroke-width: 2;
+} */
+
+
