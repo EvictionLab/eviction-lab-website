@@ -231,7 +231,8 @@ Include the shortcode in the body of the markdown file or within the CMS body se
 img="born-evicted-chart.jpg" 
 scale="135" 
 title="Figure. Estimates of Association of Eviction With Infant Birth Weight Overall and by Subgroup" 
-caption="Data are from court records and birth certificates in Georgia from 2000 to 2016. GED indicates General Educational Development." alt="Chart showing association of eviction birth weights by subgroup" 
+caption="Data are from court records and birth certificates in Georgia from 2000 to 2016. GED indicates General Educational Development.
+alt="Chart showing association of eviction birth weights by subgroup" 
 
 >}}
 ```
