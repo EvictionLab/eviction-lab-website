@@ -352,8 +352,90 @@ collections:
       - { label: "Updated Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "research" # Used in routes, e.g., /admin/collections/blog
-    label: "Research Blog" # Used in the UI
+    label: "Research posts" # Used in the UI
     folder: "/content/updates/research" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    extension: md
+    editor:
+      preview: false
+    preview_path: "{{fields.url}}"
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Draft",
+          name: "draft",
+          widget: "boolean",
+          hint: "When draft is on, the page will not be published to the live site",
+        }
+      - {
+          label: "Child Of",
+          name: "childof",
+          widget: "hidden",
+          default: "research",
+        }
+      - { label: "URL", name: "url", widget: "string" }
+      - {
+          label: "Content Type",
+          name: "contenttype",
+          widget: "hidden",
+          default: "updates",
+        }
+      - {
+          label: "Content Category",
+          name: "contentcat",
+          widget: "hidden",
+          default: "blog",
+        }
+      - {
+          label: "Featured on Front Page",
+          name: "featured",
+          widget: "boolean",
+          default: true,
+        }
+      - {
+          label: "Featured In Updates index pages",
+          name: "in_index",
+          widget: "boolean",
+          default: true,
+        }
+      - { label: "Blog Post Title", name: "title", widget: "string" }
+      - { label: "Created Date", name: "date", widget: "datetime" }
+      - { label: "Author Name", name: "postauthorname", widget: "string" }
+      - { label: "Author Title", name: "postauthortitle", widget: "string" }
+      - {
+          label: "Author Photo",
+          name: "authorpic",
+          widget: "image",
+          default: "images/uploads/james_hendrickson_thumb.jpg",
+          required: false,
+        }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Social Media / Search Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Excerpt for Articles List",
+          name: "listSummary",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
+        }
+
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog posts" # Used in the UI
+    folder: "/content/updates/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     extension: md
     editor:
@@ -432,3 +514,4 @@ collections:
           widget: "markdown",
           buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
         }
+      
