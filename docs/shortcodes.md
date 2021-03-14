@@ -149,7 +149,25 @@ site_name_full,filings_ratio
 
 ## Common blog/updates shortcodes
 
+### Superscript numbers
+
+`{{< sup >}}`
+
+Used to link to footnotes in body copy.
+
+#### Usage
+
+Include the shortcode in the body of the markdown file or within the CMS body section. Append to relevant sentences _after_ the period.
+
+#### Example
+
+```
+{{< sup 1 >}} 
+```
+
 ### Footnotes
+
+`{{< blogfootnotes >}}`
 
 Shortcode for rendering footnotes within Updates posts
 
@@ -163,8 +181,78 @@ Include the shortcode in the body of the markdown file or within the CMS body se
 {{< blogfootnotes 
 
 "Historical baseline data is pulled from varying years across ETS sites. A listing of baseline years for each ETS site [can be found here](/eviction-tracking/get-the-data/)." 
+
 "We refer to &quot;gender&quot; while acknowledging that our imputation process is necessarily imprecise and cannot capture important subtleties in individuals’ gender identification. Identification of ethnicity is similarly limited to broad categories."
+
 "Details of the imputation process [can be found here](/demographics-of-eviction/). Note that the sample analyzed in the original study differs from the ETS sample, which serves to account for differences in findings." 
+
+>}}
+```
+
+### Pullquotes
+
+`{{< pullquote >}}`
+
+Shortcode for rendering pullquotes within Updates posts.
+
+#### Usage
+
+Include the shortcode in the body of the markdown file or within the CMS body section. 
+
+#### Example
+
+```
+{{< pullquote "We estimate that protections rolled-out during the pandemic have prevented at least 1.6 million eviction filings across the United States, cases that—in the absence of further eviction protections—may be pushed into 2021." >}}
+```
+
+### Flexibly-scaled images within post body
+
+`{{< scaleimg >}}`
+
+Shortcode for rendering images (whose width can exceed that of the body copy) within Updates posts.
+
+#### Usage
+
+Include the shortcode in the body of the markdown file or within the CMS body section. If the image is intended to be the same width as the column that contains the post content, feel free to use the CMS' standard image component instead—this shortcode is intended for images that should exceed the column width.
+
+#### Props
+
+- image: the image 
+- scale: sets width of image as a percent relative to the column width. For instance, a value of 135 would make the image 135% the wdith of the text column. (Do not include the "%" sign in the property.)
+- title: the image's title or figure name (appears above the image).
+- caption: italicized caption below the image
+- alt: alt text for accessibility. Write a short description of the image here.
+
+#### Example
+
+```
+{{< scaleimg 
+
+img="born-evicted-chart.jpg" 
+scale="135" 
+title="Figure. Estimates of Association of Eviction With Infant Birth Weight Overall and by Subgroup" 
+caption="Data are from court records and birth certificates in Georgia from 2000 to 2016. GED indicates General Educational Development." alt="Chart showing association of eviction birth weights by subgroup" 
+
+>}}
+```
+
+### External links
+
+`{{< extlink >}}`
+
+Shortcode for rendering external links within Updates posts, which open in new tabs. (Links in markdown/the CMS open in the same tab by default, but our rule is to trigger opening of _offsite_ links in new tabs.)
+
+#### Usage
+
+Include the shortcode in the body of the markdown file or within the CMS body section. Include the linked text in the first set of quotations. Include the URL in the second set of quotations.
+
+#### Example
+
+```
+{{< extlink 
+
+"intended to halt the execution of eviction cases" 
+"https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf" 
 
 >}}
 ```

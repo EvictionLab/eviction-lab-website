@@ -35,7 +35,7 @@ Eviction filings do not identify the race or gender of tenants who are facing re
 
 In Figure 1 we plot the share of eviction filings against Asian, Black, Latinx, and white individuals before and during the pandemic, as well as the share of all renters in those racial/ethnic groups. Prior to the pandemic, Black renters received a disproportionate share of all eviction filings: they made up 21% of all renters in ETS sites, but received 36% of eviction filings. They continue to be over-represented during the pandemic, receiving 35% of filings since March 15th. Asian, Latinx, and white renters were under-represented in eviction filings relative to their share of the renting population in pre-pandemic times. This remains true during the pandemic as well, although the share of filings against Latinx and white renters has increased slightly. For example, the share of filings against white individuals has increased from 43.3% to 43.9%, still well below their share of the renting population in this sample (54.1%).
 
-{{< scaleimg "pandemic_demographics_fig1.jpg" 124 "Figure 1. Share of all renters and eviction filing defendants, pre-and during-pandemic, by race/ethnicity." "Note: Share of renters by race drawn from the American Community Survey" >}}
+{{< scaleimg img="pandemic_demographics_fig1.jpg" scale="124" title="Figure 1. Share of all renters and eviction filing defendants, pre-and during-pandemic, by race/ethnicity." caption="Note: Share of renters by race drawn from the American Community Survey" >}}
 
 The changes we observe in Figure 1 between the pre-pandemic and pandemic periods represent a weighted average across all ETS sites. What’s true of Houston, however, may not hold in Cincinnati. When we examined these patterns in each of the sites separately, a few stood out. 
 
@@ -44,7 +44,7 @@ The changes we observe in Figure 1 between the pre-pandemic and pandemic periods
 
 The majority of eviction filings are against women. In a typical pre-pandemic year, 54.7% of individuals filed against for eviction in our sample were women. Since the pandemic began, much the same has held true: 51.7% of individuals filed against for eviction since March 15th have been women (see Figure 2). 
 
-{{< scaleimg "pandemic_demographics_fig2.jpg" 104 "Figure 2. Share of all renters and eviction filing defendants, pre-and during-pandemic, by gender." >}}
+{{< scaleimg img="pandemic_demographics_fig2.jpg" scale="104" title="Figure 2. Share of all renters and eviction filing defendants, pre-and during-pandemic, by gender." >}}
 
 Figure 2 shows a narrowing of gender disparities in filing patterns during the pandemic. This has played out to a greater degree for some racial/ethnic groups than for others. 
 
