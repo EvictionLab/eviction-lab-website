@@ -1,10 +1,12 @@
 # Shortcodes
 
-## `{{% linechart }}`
+## Data visualization
+
+### `{{% linechart }}`
 
 Renders a chart with multiple lines and highlights up to 3 lines.
 
-### Usage
+#### Usage
 
 To use the line chart shortcode, you must first include the necessary scripts by adding the following front matter to the page:
 
@@ -30,7 +32,7 @@ You may then use the `{{% linechart %}}` shortcode.
 %}}
 ```
 
-### Props
+#### Props
 
 - **`id` (required)**: unique identifier for the chart
 - **`data` (required)**: URL to the CSV file
@@ -45,7 +47,7 @@ You may then use the `{{% linechart %}}` shortcode.
 - `highlight`: semi-colon separated identifiers to highlight on the chart
 - `curve`: type of [d3.curve](https://github.com/d3/d3-shape#curves) to use
 
-### Example Page
+#### Example Page
 
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
@@ -68,11 +70,11 @@ name,ratio,week
 "Boston, MA",0.0186917960088692,09/06/2020
 ```
 
-## Bar Chart
+### Bar Chart
 
 Shortcode for rendering basic bar graphs
 
-### Usage
+#### Usage
 
 Must include the following frontmatter in the `.md` file to use:
 
@@ -97,7 +99,7 @@ Than include the shortcode in the body of the `.md` file.
 %}}
 ```
 
-### Props
+#### Props
 
 - id: unique identifier for this bar chart instance
 - title: title for the chart
@@ -111,7 +113,7 @@ Than include the shortcode in the body of the `.md` file.
 - yTickFormat: formatting for y values in the tooltip
 - margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
 
-### Demo
+#### Demo
 
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
