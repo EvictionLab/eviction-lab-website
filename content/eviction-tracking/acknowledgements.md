@@ -30,6 +30,10 @@ similar: >-
   * The Legal Aid Justice Center in Charlottesville, VA has developed a [dashboard and map tracking eviction filings in Virginia](https://www.justice4all.org/virginia-eviction-tracker/).
 
   * A team lead by Elora Raymond (Georgia Tech), Erik Woodworth (Atlanta Regional Commission), and Sarah Stein (Federal Reserve Bank of Atlanta) have constructed the [Atlanta Region Eviction Tracker](https://metroatlhousing.org/atlanta-region-eviction-tracker/).
+
+  * Sam Taub has built an [eviction tracker for the state of New Mexico](https://www.nmevictions.org/). 
+
+  * The Right to Counsel NYC Coalition maintains the [Eviction Crisis Monitor](https://www.righttocounselnyc.org/evictioncrisismonitor) in New York City.
 ---
 # Acknowledgements
 
@@ -56,7 +60,7 @@ We would like to thank representatives of the following organizations for speaki
 * [Legal Aid Society of Cleveland](https://lasclev.org/)
 * [Legal Aid Society of Columbus](https://www.columbuslegalaid.org/)
 * [Legal Aid Society of Milwaukee](https://lasmilwaukee.com/)
-* [Legal Aid of Northwest Texas] (http://www.lanwt.org/)
+* [Legal Aid of Northwest Texas](http://www.lanwt.org/)
 * [Legal Aid of Southwest Ohio](http://www.lasswo.org/)
 * [Legal Services of Eastern Missouri](https://lsem.org/)
 * [Lone Star Legal Aid](https://lonestarlegal.blog/)
