@@ -11,24 +11,6 @@
  */
 Elab.BarChart = (function (Elab) {
   /**
-   * Parses a margin string into an array of pixel values
-   * @param {*} marginString
-   * @returns {Array<Integer>} [top, right, bottom, left]
-   */
-  function getMarginFromString(marginString) {
-    if (!marginString || typeof marginString !== "string")
-      return [8, 8, 104, 40];
-    const parts = marginString.split(" ").map(function (m) {
-      return Math.round(Number(m));
-    });
-    if (parts.length === 4) return parts;
-    if (parts.length === 3) return [parts[0], parts[1], parts[2], parts[1]];
-    if (parts.length === 2) return [parts[0], parts[1], parts[0], parts[1]];
-    if (parts.length === 1) return [parts[0], parts[0], parts[0], parts[0]];
-    return [8, 8, 104, 40];
-  }
-
-  /**
    * Selector for X values from data point
    * @param {*} d
    */

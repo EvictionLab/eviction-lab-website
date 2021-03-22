@@ -47,6 +47,7 @@
       var yMax = {{ .Get "yMax" }}
       var yFormat = {{ .Get "yFormat" }}
       var yTooltipFormat = {{ .Get "yTooltipFormat" }}
+      var margin = {{ .Get "margin" }}
       var rootEl = document.getElementById(id);
       /**
        * Initializes chart with whatever values currently are set to.
@@ -56,7 +57,7 @@
     window.addEventListener('load', function() {
 
       // Init chart on page load.
-      Elab.BarChart.init(rootEl, { id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat })
+      Elab.BarChart.init(rootEl, { id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, margin: margin })
     });
   </script>
 </div>

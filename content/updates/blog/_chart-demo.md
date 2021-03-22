@@ -30,6 +30,7 @@ Stack Area Chart
   xTicks="year"
   xFormat="%Y"
   yFormat=".0%"
+  yTooltipFormat=".1%"
   title="Observed Eviction Rate for Cleveland, OH"
 %}}
 
@@ -45,6 +46,7 @@ Basic bars
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Filings Relative to Historical Average"
+  margin="8 8 104 40"
 %}}
 
 Straight lines

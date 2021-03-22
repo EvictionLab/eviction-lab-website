@@ -319,9 +319,22 @@ body .chart .chart__title, body .chart .chart__title > * {
 }
 
 
-/* .chart--stack .chart__area {
+.chart--stack .chart__area {
   fill-opacity:0.25;
-  stroke-width: 2;
-} */
+  stroke: none;
+}
 
+.chart--stack .chart__line--0 {
+  stroke: var(--c1);
+  stroke: #e24000
+}
 
+.chart--stack .chart__line--1 {
+  stroke: var(--c2);
+  stroke: #434878
+}
+
+.chart--stack .chart__line--2 {
+  stroke: var(--c3);
+  stroke: #2c897f;
+}

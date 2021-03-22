@@ -31,6 +31,8 @@
       var x = {{ .Get "x" }}
       // column name to group entries by
       var groups = {{ .Get "stacks" }}
+      // group labels
+      var groupLabels = {{ .Get "stackLabels" }}
       // number of y ticks to show
       var yTicks = {{ .Get "yTicks" }}
       // d3 formatting string for y values
@@ -41,8 +43,14 @@
       var xFormat = {{ .Get "xFormat" }}
       // formatter for x values on tooltip
       var xTooltipFormat = {{ .Get "xTooltipFormat" }}
+      // formatter for x values on tooltip
+      var yTooltipFormat = {{ .Get "yTooltipFormat" }}
+      // override y extent
+      var yMin = {{ .Get "yMin" }}
+      // override x extent
+      var yMax = {{ .Get "yMax" }}
       var rootEl = document.getElementById(id);
-      Elab.StackAreaChart.init(rootEl, { data: csv, groups: groups, x: x, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat, xTooltipFormat: xTooltipFormat })
+      Elab.StackAreaChart.init(rootEl, { data: csv, groups: groups, groupLabels: groupLabels.split(";"), x: x, yTooltipFormat: yTooltipFormat, yTicks: yTicks, yFormat: yFormat,  yMin: yMin, yMax: yMax, xTicks: xTicks, xFormat: xFormat, xTooltipFormat: xTooltipFormat })
     });
   </script>
 </div>

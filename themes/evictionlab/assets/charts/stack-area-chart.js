@@ -53,6 +53,24 @@ Elab.StackAreaChart = (function (Elab) {
   };
 
   /**
+   * Returns a function that takes the chart data and returns a line series
+   * @param {*} data
+   */
+  var getLineSelector = function (options) {
+    var sum = []; // track totals
+    return function (data) {
+      var result = options.groups.map(function (group) {
+        return data.map(function (d, i) {
+          var base = sum[i] || 0;
+          sum[i] = base + d[group];
+          return [d.x, sum[i], group];
+        });
+      });
+      return result.reverse();
+    };
+  };
+
+  /**
    * Creates the chart and renders
    * @param {HTMLElement} root
    * @param {Array<Object>} data
@@ -65,9 +83,13 @@ Elab.StackAreaChart = (function (Elab) {
         // adds y axis, using max of the trend line value or bar value
         .addAxisY({
           adjustExtent: function () {
-            const series = getSeries(data, dataOptions);
-            console.log("series", series, series[0].data, dataOptions.groups);
-            return [0, d3.max(series, (d) => d3.max(d, (d) => d[1]))];
+            var series = getSeries(data, dataOptions);
+            var yDataMax = d3.max(series, (d) => d3.max(d, (d) => d[1]));
+            var extent = [];
+            if (dataOptions.yMin) extent[0] = parseFloat(dataOptions.yMin);
+            if (dataOptions.yMax) extent[1] = parseFloat(dataOptions.yMax);
+            var result = [extent[0] || 0, extent[1] || yDataMax];
+            return result;
           },
           ticks: dataOptions.yTicks || 5,
           tickFormat: d3.format(dataOptions.yFormat || ",d"),
@@ -84,6 +106,41 @@ Elab.StackAreaChart = (function (Elab) {
           series: getSeries(data, dataOptions),
           groups: dataOptions.groups,
         })
+        // adds the trend line
+        .addLines({
+          selector: getLineSelector(dataOptions),
+          curve: false,
+          delay: 1,
+          duration: 1,
+        })
+        .addHoverLine()
+        .addHoverRect({
+          renderTooltip: function (hoverData) {
+            var xFormat = dataOptions.xFormat
+              ? d3.timeFormat(dataOptions.xFormat)
+              : d3.timeFormat("%m/%d/%Y");
+            var yFormat = dataOptions.yTooltipFormat
+              ? d3.format(dataOptions.yTooltipFormat)
+              : dataOptions.yFormat
+              ? d3.format(dataOptions.yFormat)
+              : d3.format(".1f");
+            const title = xFormat(hoverData.x);
+            const values = dataOptions.groups
+              .map(function (group, i) {
+                return (
+                  '<div class="tooltip__item">' +
+                  dataOptions.groupLabels[i] +
+                  ": " +
+                  yFormat(hoverData[group]) +
+                  "</div>"
+                );
+              })
+              .reverse()
+              .join(" ");
+            return '<h1 class="tooltip__title">' + title + "</h1>" + values;
+          },
+        })
+
         .render()
     );
   }
@@ -96,10 +153,9 @@ Elab.StackAreaChart = (function (Elab) {
     d3.csv(options.data, function (data) {
       var result = data
         .map(function (d) {
-          const total = Math.max(Math.random(), 0.5) * 0.25;
           return options.groups.reduce(
             function (obj, groupCol) {
-              obj[groupCol] = (parseFloat(d[groupCol] || 0) / 100) * total;
+              obj[groupCol] = parseFloat(d[groupCol] || 0);
               return obj;
             },
             {

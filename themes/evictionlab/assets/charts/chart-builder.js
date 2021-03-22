@@ -17,6 +17,26 @@ function makeId() {
   return "_" + Math.random().toString(36).substr(2, 9);
 }
 
+/**
+ * Parses a margin string into an array of pixel values
+ * @param {*} marginString
+ * @returns {Array<Integer>} [top, right, bottom, left]
+ */
+function getMargin(margin) {
+  if (Array.isArray(margin) && margin.length === 4) return margin;
+  if (!margin || typeof margin !== "string") return [8, 48, 60, 54];
+  // parse margin string
+  const parts = margin.split(" ").map(function (m) {
+    return Math.round(Number(m));
+  });
+  if (parts.length === 4) return parts;
+  if (parts.length === 3) return [parts[0], parts[1], parts[2], parts[1]];
+  if (parts.length === 2) return [parts[0], parts[1], parts[0], parts[1]];
+  if (parts.length === 1) return [parts[0], parts[0], parts[0], parts[0]];
+  console.warn("invalid margin provided for chart");
+  return [8, 48, 60, 54];
+}
+
 Elab.ChartBuilder = (function (Elab) {
   /**
    * Creates an empty chart with root elements
@@ -32,13 +52,15 @@ Elab.ChartBuilder = (function (Elab) {
     document.body.appendChild(tooltipEl);
     this.uid = makeId(); // unique id for the chart
     this.data = data;
+    options = options || {};
+    options.margin = getMargin(options.margin);
     this.options = Object.assign(
       {
         width: Math.max(rect.width, 320),
         height: Math.max(rect.height, 320),
       },
       this.defaultOptions,
-      options || {}
+      options
     );
     this.innerWidth =
       this.options.width + this.options.margin[1] + this.options.margin[3];
@@ -93,7 +115,6 @@ Elab.ChartBuilder = (function (Elab) {
 
   /** Default options for the chart */
   Chart.prototype.defaultOptions = {
-    margin: [8, 48, 60, 54],
     xTicks: 4,
     xTicksFormat: d3.timeFormat("%b"),
     yTicksFormat: d3.format(",d"),
@@ -430,6 +451,56 @@ Elab.ChartBuilder = (function (Elab) {
   };
 
   /**
+   * Adds a rect in the data area that sets the hovered data
+   */
+  Chart.prototype.addHoverRect = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    function getClosestIndex(vals, val) {
+      var index = d3.bisect(vals, val);
+      var left = vals[index - 1];
+      var right = vals[index];
+      var leftDiff = Math.abs(+left - +val);
+      var rightDiff = Math.abs(+right - +val);
+      return leftDiff < rightDiff ? index - 1 : index;
+    }
+    function createSelection(parentSelection) {
+      return parentSelection.append("rect").attr("class", "chart__hover-rect");
+    }
+    function createRenderer(selection, chart) {
+      return function () {
+        selection
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", chart.getInnerWidth())
+          .attr("height", chart.getInnerHeight())
+          .attr("fill", "transparent")
+          .on("mousemove", function () {
+            var xPos = d3.event.offsetX - chart.options.margin[3];
+            var xVal = chart.xScale.invert(xPos);
+            var xVals = chart.data.map(function (d) {
+              return d.x;
+            });
+            var closestIndex = getClosestIndex(xVals, xVal);
+            chart.setHovered(chart.data[closestIndex]);
+            var renderLine = chart.getRenderer("hoverLine");
+            renderLine && renderLine();
+            options.renderTooltip &&
+              chart.showTooltip(d3.event, options.renderTooltip);
+          })
+          .on("mouseout", function (d) {
+            chart.setHovered(null);
+            options.renderTooltip && chart.hideTooltip();
+            var renderLine = chart.getRenderer("hoverLine");
+            renderLine && renderLine();
+          });
+      };
+    }
+    this.addElement("hoverRect", "data", createSelection, createRenderer);
+    return this;
+  };
+
+  /**
    * Adds a vertical line on hover to show currently hovered X position on line charts
    * @returns
    */
@@ -734,6 +805,8 @@ Elab.ChartBuilder = (function (Elab) {
   Chart.prototype.addLines = function (overrides) {
     var _this = this;
     var options = overrides || {};
+    options.delay = overrides.delay || 0;
+    options.duration = overrides.duration || 2000;
     options.linesId = overrides.linesId || "lines";
     options.selector =
       overrides.selector ||
@@ -786,8 +859,8 @@ Elab.ChartBuilder = (function (Elab) {
           })
           .merge(lines)
           .transition()
-          .duration(2000)
-          .delay(400)
+          .duration(options.duration)
+          .delay(options.delay)
           .attr("d", line)
           .style("stroke-dasharray", function () {
             // need to increase the dasharray to prevent line from cutting off
