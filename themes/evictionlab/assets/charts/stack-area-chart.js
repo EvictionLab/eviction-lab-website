@@ -101,6 +101,23 @@ Elab.StackAreaChart = (function (Elab) {
           tickFormat: dataOptions.xFormat
             ? d3.timeFormat(dataOptions.xFormat)
             : undefined,
+          adjustLabels: function (selection) {
+            if (window.innerWidth < 600) {
+              selection
+                .selectAll(".tick text")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-66)")
+                .attr("dx", "-1em")
+                .attr("dy", "0em");
+            } else {
+              selection
+                .selectAll(".tick text")
+                .attr("text-anchor", "middle")
+                .attr("transform", "rotate(0)")
+                .attr("dx", "0")
+                .attr("dy", "1em");
+            }
+          },
         })
         .addStackArea({
           series: getSeries(data, dataOptions),
@@ -124,8 +141,8 @@ Elab.StackAreaChart = (function (Elab) {
               : dataOptions.yFormat
               ? d3.format(dataOptions.yFormat)
               : d3.format(".1f");
-            const title = xFormat(hoverData.x);
-            const values = dataOptions.groups
+            var title = xFormat(hoverData.x);
+            var values = dataOptions.groups
               .map(function (group, i) {
                 return (
                   '<div class="tooltip__item">' +

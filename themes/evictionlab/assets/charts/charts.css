@@ -324,6 +324,21 @@ body .chart .chart__title, body .chart .chart__title > * {
   stroke: none;
 }
 
+.chart--stack .chart__area--0 {
+  fill: var(--c1);
+  fill: #e24000
+}
+
+.chart--stack .chart__area--1 {
+  fill: var(--c2);
+  fill: #434878
+}
+
+.chart--stack .chart__area--2 {
+  fill: var(--c3);
+  fill: #2c897f;
+}
+
 .chart--stack .chart__line--0 {
   stroke: var(--c1);
   stroke: #e24000

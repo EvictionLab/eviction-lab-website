@@ -894,23 +894,19 @@ Elab.ChartBuilder = (function (Elab) {
       return function () {
         var area = d3
           .area()
-          .x((d) => _this.xScale(d.data.x))
-          .y0((d) => _this.yScale(d[0]))
-          .y1((d) => _this.yScale(d[1]));
+          .x((d) => chart.xScale(d.data.x))
+          .y0((d) => chart.yScale(d[0]))
+          .y1((d) => chart.yScale(d[1]));
 
-        var color = d3
-          .scaleOrdinal()
-          .domain(options.groups)
-          .range(["#e24000", "#434878", "#2c897f", "#94aabd"]);
+        var areaSelection = selection.selectAll("path").data(chart.stackData);
 
-        selection
-          .selectAll("path")
-          .data(_this.stackData)
+        areaSelection
           .enter()
           .append("path")
-          .attr("class", "chart__area")
-          .attr("fill", ({ key }) => color(key))
-          .attr("stroke", ({ key }) => color(key))
+          .attr("class", function (d, i) {
+            return "chart__area chart__area--" + i;
+          })
+          .merge(areaSelection)
           .attr("d", area);
       };
     }
