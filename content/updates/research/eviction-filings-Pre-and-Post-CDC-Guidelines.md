@@ -18,7 +18,7 @@ fbImage: "/images/assets/blog/filing-shifts-social.png"
 twImage: "/images/assets/blog/filing-shifts-social.png"
 url: /shifts-in-eviction-filings-from-cares-act-to-cdc-order
 scripts:
-  - line-chart
+  - charts
 aliases:
 ---
 

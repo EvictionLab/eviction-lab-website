@@ -1,8 +1,7 @@
 ---
 draft: false
 scripts:
-  - line-chart
-  - bar-chart
+  - charts
 childof: research
 url: /six-months-cdc
 contenttype: updates
@@ -56,6 +55,7 @@ In Figure 1 we plot eviction filings relative to historical average over the las
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Figure 1: Filings Relative to Historical Average"
+  margin="8 8 104 40"
 %}}
 
 <p class="figcaption">Hover or tap to interact with the chart.</p>
