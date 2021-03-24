@@ -1,12 +1,12 @@
 [build]
   publish = "public"
   command = "hugo"
-  HUGO_VERSION = "0.73"
+  HUGO_VERSION = "0.80"
 
 [context.deploy-preview]
   command = "hugo -D"
-  HUGO_VERSION = "0.73"
+  HUGO_VERSION = "0.80"
 
 [context.branch-deploy]
   command = "hugo -D"
-  HUGO_VERSION = "0.73"
+  HUGO_VERSION = "0.80"
