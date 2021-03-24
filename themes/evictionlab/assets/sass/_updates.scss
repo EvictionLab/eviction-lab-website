@@ -365,57 +365,57 @@ picture img {
   }
 }
 
-// .bar-chart.bar-chart--cdc .grid-lines.grid-lines--x {
-//   stroke-width: 3;
-// }
-// .bar-chart.bar-chart--cdc .grid-lines rect {
-//   stroke-width: 3;
-// }
-// .bar-chart.bar-chart--cdc .axis {
-//   font-family: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
-//   font-weight: 500;
-//   font-size: 20px;
-//   fill: #7d7d7d;
-// }
-// .bar-chart.bar-chart--cdc .axis.axis--y text {
-//   text-anchor: end;
-// }
-// .bar-chart.bar-chart--cdc .axis.axis--x text {
-//   text-anchor: middle;
-// }
-// /** shift labels on small screens*/
-// @media (max-width: 650px) {
-//   .bar-chart.bar-chart--cdc {
-//     margin-bottom: 12px;
-//   }
-//   .bar-chart.bar-chart--cdc .axis.axis--x g:nth-child(2n + 1) {
-//     transform: translate(0, -4px);
-//   }
-//   .bar-chart.bar-chart--cdc .axis.axis--x g:nth-child(2n) {
-//     transform: translate(0, 18px);
-//   }
-// }
-// @media (min-width: 450px) {
-//   .bar-chart.bar-chart--cdc .axis {
-//     font-size: 18px;
-//   }
-// }
-// @media (min-width: 600px) {
-//   .bar-chart.bar-chart--cdc .axis {
-//     font-size: 16px;
-//   }
-// }
-// @media (min-width: 650px) {
-//   .bar-chart.bar-chart--cdc .axis {
-//     font-size: 15px;
-//   }
-// }
+.bar-chart.bar-chart--cdc .grid-lines.grid-lines--x {
+  stroke-width: 3;
+}
+.bar-chart.bar-chart--cdc .grid-lines rect {
+  stroke-width: 3;
+}
+.bar-chart.bar-chart--cdc .axis {
+  font-family: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  fill: #7d7d7d;
+}
+.bar-chart.bar-chart--cdc .axis.axis--y text {
+  text-anchor: end;
+}
+.bar-chart.bar-chart--cdc .axis.axis--x text {
+  text-anchor: middle;
+}
+/** shift labels on small screens*/
+@media (max-width: 650px) {
+  .bar-chart.bar-chart--cdc {
+    margin-bottom: 12px;
+  }
+  .bar-chart.bar-chart--cdc .axis.axis--x g:nth-child(2n + 1) {
+    transform: translate(0, -4px);
+  }
+  .bar-chart.bar-chart--cdc .axis.axis--x g:nth-child(2n) {
+    transform: translate(0, 18px);
+  }
+}
+@media (min-width: 450px) {
+  .bar-chart.bar-chart--cdc .axis {
+    font-size: 18px;
+  }
+}
+@media (min-width: 600px) {
+  .bar-chart.bar-chart--cdc .axis {
+    font-size: 16px;
+  }
+}
+@media (min-width: 650px) {
+  .bar-chart.bar-chart--cdc .axis {
+    font-size: 15px;
+  }
+}
 
-// @media (min-width: 768px) {
-//   .bar-chart.bar-chart--cdc .axis {
-//     font-size: 13px;
-//   }
-// }
+@media (min-width: 768px) {
+  .bar-chart.bar-chart--cdc .axis {
+    font-size: 13px;
+  }
+}
 
 svg {
   &#fig1,
