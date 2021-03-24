@@ -1,24 +1,5 @@
 "use strict";
 
-var Elab = Elab || {};
-
-/**
- * Parses a margin string into an array of pixel values
- * @param {*} marginString
- * @returns {Array<Integer>} [top, right, bottom, left]
- */
-function getMarginFromString(marginString) {
-  if (!marginString || typeof marginString !== "string") return [8, 8, 104, 40];
-  const parts = marginString.split(" ").map(function (m) {
-    return Math.round(Number(m));
-  });
-  if (parts.length === 4) return parts;
-  if (parts.length === 3) return [parts[0], parts[1], parts[2], parts[1]];
-  if (parts.length === 2) return [parts[0], parts[1], parts[0], parts[1]];
-  if (parts.length === 1) return [parts[0], parts[0], parts[0], parts[0]];
-  return [8, 8, 104, 40];
-}
-
 /**
  * BAR CHART MODULE
  * ----
@@ -28,7 +9,7 @@ function getMarginFromString(marginString) {
  * - init(root, options)
  *
  */
-Elab.BasicBarChart = (function (Elab) {
+Elab.BarChart = (function (Elab) {
   /**
    * Selector for X values from data point
    * @param {*} d
@@ -62,28 +43,14 @@ Elab.BasicBarChart = (function (Elab) {
    * @param {Object} dataOptions { margin, x, y, , yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
-    var svg = $(root).find("svg")[0];
-    var rect = root.getBoundingClientRect();
-    var options = Object.assign(
-      {
-        width: rect.width,
-        height: Math.max(rect.height, 320),
-        margin: getMarginFromString(dataOptions.margin),
-      },
-      dataOptions
-    );
     const yFormat = d3.format(dataOptions.yFormat || ",d");
     const yTooltipFormat = d3.format(
       dataOptions.yTooltipFormat || dataOptions.yFormat || ",d"
     );
 
-    var chart = new Elab.ChartBuilder(svg, data, options);
+    var chart = new Elab.ChartBuilder(root, data, dataOptions);
     return (
       chart
-        // clips lines or bars that extend past data area
-        .addClipPath()
-        // adds a border around the chart area
-        .addFrame()
         // adds y axis, pads it if no extend is passed
         .addAxisY({
           selector: ySelector,
@@ -137,24 +104,6 @@ Elab.BasicBarChart = (function (Elab) {
   }
 
   /**
-   * Initializes the chart figure and handles resizing
-   * @param {*} root
-   * @param {*} cityData
-   */
-  function initFigure(root, data, options) {
-    // create figure
-    var figure = createFigure(root, data, options);
-    // resize figure on changes
-    window.addEventListener("resize", function () {
-      var rect = root.getBoundingClientRect();
-      figure.update({
-        width: rect.width,
-        height: rect.height,
-      });
-    });
-  }
-
-  /**
    * Loads and parses the CSV table
    */
   function loadData(options, callback) {
@@ -186,7 +135,7 @@ Elab.BasicBarChart = (function (Elab) {
     options.x = options.x || "x";
     options.y = options.y || "y";
     loadData(options, function (data) {
-      initFigure(rootEl, data, options);
+      createFigure(rootEl, data, options);
     });
   }
 

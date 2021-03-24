@@ -1,4 +1,4 @@
-.line-chart {
+.chart {
   --c1: #e24000;
   --c2: #434878;
   --c3: #2c897f;
@@ -20,7 +20,29 @@
   margin: 24px 0;
 }
 
-.line-chart__title {
+@media(max-width: 480px) {
+  .chart {
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
+  }
+}
+
+/** Breakout of margin when space is available */
+@media(min-width: 768px) {
+  .chart {
+    width: 124%;
+    margin-left: -12%;
+  }
+}
+
+/** 
+  Need a high level of specificity here, 
+  as several of the page level CSS definitions
+  override this
+*/
+
+body .chart .chart__title, body .chart .chart__title > * {
   font-family: GT-Eesti-Display-Medium, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -33,72 +55,73 @@
   color: #212529;
 }
 
-.line-chart .chart {
+.chart__body {
   height: 326px;
 }
-.line-chart .chart__frame {
+.chart__frame {
   fill: none;
   stroke: #fff;
   stroke: var(--chart-frame);
   stroke-width: 3;
 }
-.line-chart .chart__root {
+.chart__root {
   /* increasing svg height to account for extended lines dropping down from graph */
   height: 326px;
 }
 
 /** Axis */
-  .line-chart .chart__axis .domain,
-  .line-chart .chart__axis .tick line {
+  .chart__axis .domain,
+  .chart__axis .tick line {
     stroke: #fff;
   }
-  .line-chart .chart__axis .tick text {
+  .chart__axis .tick text {
     fill: var(--text-secondary);
     font-family: var(--number-font);
     font-size: 12px;
     font-weight: 500;
   }
-  .line-chart .chart__axis--time .domain,
-  .line-chart .chart__axis--time .tick line {
+  .chart__axis--time .domain,
+  .chart__axis--time .tick line {
     stroke-width: 3;
     stroke: #fff;
   }
-  .line-chart .chart__axis--y .domain {
+  .chart__axis--y .domain {
     stroke: none;
   }
-  .line-chart .chart__axis--y .tick line {
+  .chart__axis--y .tick line {
     stroke-width: 1;
     stroke: #fff;
   }
 /** End Axis */
 
-.line-chart .chart__line {
+.chart__line {
   fill: none;
   stroke-width: 2;
   stroke-dasharray: 0;
   stroke: rgba(0,0,0,0.075);
 }
-.line-chart .chart__line--hovered {
+.chart__line--hovered {
   stroke: var(--c4);
   stroke-width: 5;
 }
 
-.line-chart .chart--highlight1 .chart__line--0,
-.line-chart .chart--highlight2 .chart__line--0,
-.line-chart .chart--highlight3 .chart__line--0 {
+.chart__body--highlight1 .chart__line--0,
+.chart__body--highlight2 .chart__line--0,
+.chart__body--highlight3 .chart__line--0 {
   stroke: var(--c1);
   stroke: #e24000
 }
 
-.line-chart .chart--highlight2 .chart__line--1,
-.line-chart .chart--highlight3 .chart__line--1 {
+.chart__body--highlight2 .chart__line--1,
+.chart__body--highlight3 .chart__line--1 {
   stroke: var(--c2);
   stroke: #434878
 }
 
-.line-chart .chart--highlight2 .chart__line--2,
-.line-chart .chart--highlight3 .chart__line--2 {
+.chart__body--highlight2 .chart__line--2,
+.chart__body--highlight3 .chart__line--2 {
   stroke: var(--c3);
+  stroke: #2c897f;
 }
 
 .chart__voronoi path {
@@ -154,8 +177,6 @@
   fill: var(--c3);
   fill: #2c897f
 }
-
-
 
 .legend {
   width: 100%;
@@ -217,15 +238,118 @@
   }
 }
 
-/** INDIVIDUAL CHART OVERRIDES **/
+
+/** INDIVIDUAL LINE CHART OVERRIDES **/
 @media(max-width: 540px) {
-  #summed .chart__axis--time .tick text {
+  .chart--summed .chart__axis--time .tick text {
     font-size: 11px;
   }
 }
 @media(min-width: 768px) {
-  .line-chart.line-chart--summed {
+  .chart--summed.chart--line {
     width: 124%;
     margin-left: -12%;
   }
+}
+
+
+/** BANDED BAR CHART OVERRIDES **/
+
+.chart.chart--bar .chart__body,
+.chart.chart--bar .chart__root {
+  height: 480px
+}
+.chart.chart--bar .chart__bar {
+  fill: #434878
+}
+.chart.chart--bar .chart__bar:hover {
+  fill: #e24000
+}
+@media(max-width: 480px) {
+  .chart.chart--bar .tick text {
+    font-size: 10px
+  }
+}
+
+
+
+/** GROUPED BAR CHART + SEARCH OVERRIDES */
+
+.chart #autoComplete_list {
+  top: auto;
+}
+
+.chart__search-group {
+  width: 80%;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.chart__search {
+  /* width: auto; */
+  display: block;
+  margin: auto 0;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid;
+  padding: 0 24px 0 12px;
+}
+
+.chart__search:focus {
+  outline: 0;
+}
+
+.chart__search-group .bi-search {
+  position: absolute;
+    right: 6px;
+    height: 16px;
+    width: 16px;
+    top: 4px;
+}
+
+.chart .chart__bar.renters {
+  fill: var(--c1);
+}
+.chart .chart__bar.defendant {
+  fill: var(--c2);
+}
+.chart .chart__bar.judgment {
+  fill: var(--c3);
+}
+
+
+.chart--stack .chart__area {
+  fill-opacity:0.25;
+  stroke: none;
+}
+
+.chart--stack .chart__area--0 {
+  fill: var(--c1);
+  fill: #e24000
+}
+
+.chart--stack .chart__area--1 {
+  fill: var(--c2);
+  fill: #434878
+}
+
+.chart--stack .chart__area--2 {
+  fill: var(--c3);
+  fill: #2c897f;
+}
+
+.chart--stack .chart__line--0 {
+  stroke: var(--c1);
+  stroke: #e24000
+}
+
+.chart--stack .chart__line--1 {
+  stroke: var(--c2);
+  stroke: #434878
+}
+
+.chart--stack .chart__line--2 {
+  stroke: var(--c3);
+  stroke: #2c897f;
 }

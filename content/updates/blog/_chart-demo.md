@@ -15,9 +15,24 @@ socialDescription: Tracking federal, state, and local actions in response to the
 fbImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 scripts:
-  - linechart
-  - bar-chart
+  - charts
 ---
+
+Stack Area Chart
+
+{{% stack-area-chart
+  id="stackarea1"
+  data="/uploads/blogpost_data_cle.csv"
+  x="date"
+  stacks="group1;group2"
+  stackLabels="Routine Evictors;Infrequent Evictors"
+  title="Stack Chart Example"
+  xTicks="year"
+  xFormat="%Y"
+  yFormat=".0%"
+  yTooltipFormat=".1%"
+  title="Observed Eviction Rate for Cleveland, OH"
+%}}
 
 Basic bars
 
@@ -31,11 +46,12 @@ Basic bars
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Filings Relative to Historical Average"
+  margin="8 8 104 40"
 %}}
 
 Straight lines
 
-{{% linechart
+{{% line-chart
   id="cdcavg"
   data="/uploads/cdc_linechart.csv"
   x="xfilemonth"
@@ -50,7 +66,7 @@ Straight lines
   title="Filings Relative to Historical Average"
 %}}
 
-{{% linechart 
+{{% line-chart
   id="summed1"
   data="/uploads/summed_sites.csv"
   x="week"
@@ -64,7 +80,7 @@ Straight lines
 
 Curved lines
 
-{{% linechart
+{{% line-chart
   id="summed2"
   data="/uploads/summed_sites.csv"
   x="week"

@@ -102,13 +102,8 @@
 			{{ end }}
 		{{ end }}
 
-		{{ if in .Params.scripts "linechart" }}
-			{{ $chartcss := resources.Get "charts/line-chart.css" | resources.PostCSS }}
-			<link rel="stylesheet" href="{{ ($chartcss | minify | fingerprint).RelPermalink }}" />
-		{{ end }}
-
-		{{ if or (in .Params.scripts "grouped-bar-chart") (in .Params.scripts "bar-chart") }}
-			{{ $chartcss := resources.Get "charts/bar-chart.css" | resources.PostCSS }}
+		{{ if or (in .Params.scripts "grouped-bar-chart") (in .Params.scripts "charts") }}
+			{{ $chartcss := resources.Get "charts/charts.css" | resources.PostCSS }}
 			<link rel="stylesheet" href="{{ ($chartcss | minify | fingerprint).RelPermalink }}" />
 		{{ end }}
 
