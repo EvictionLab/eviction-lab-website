@@ -1,0 +1,26 @@
+{{/**
+  Shortcode for rendering basic state maps, see shortcode docs for usage
+*/}}
+
+{{ $title := .Get "title" }}
+
+<div
+  class="svg-map svg-map--states svg-map--{{ .Get `id` }}"
+>
+  {{ if $title }}
+  <h3 class="svg-map__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}" class="svg-map__body"></div>
+  
+  <script>
+    window.addEventListener('load', function() {
+      var id = {{ .Get "id" }}
+      var csv = {{ .Get "data" }}
+      var idColumn = {{ .Get "idColumn" }}
+      var valueColumn = {{ .Get "valueColumn" }}
+      var colors = {{ .Get "colors" }}
+      var rootEl = document.getElementById(id)
+      Elab.StateMap.init(rootEl, { id:id, data: csv, colors: colors, idColumn: idColumn, valueColumn: valueColumn })
+    });
+  </script>
+</div>

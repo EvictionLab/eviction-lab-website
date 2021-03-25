@@ -1,0 +1,88 @@
+.svg-map {
+  margin: 2em auto;
+}
+
+.svg-map__tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: rgba(0,0,0,0.87);
+  color: #fff;
+  padding: 12px;
+  opacity:0;
+  font-size: 14px;
+  transition: opacity 0.2s ease-in-out;
+  transform: translate(-50%, calc(-100% - 12px));
+}
+.svg-map__tooltip--show {
+  opacity: 1;
+}
+.svg-map__tooltip span {
+  display: block;
+  line-height: 1.5;
+}
+.svg-map__tooltip span:first-child {
+  font-family: GT-Eesti-Display-Medium,sans-serif;
+}
+.svg-map__tooltip span:nth-child(2) {
+  font-size: 12px;
+}
+
+.svg-map__title {
+  font-family: GT-Eesti-Display-Medium,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .45px;
+    text-align: center;
+    margin: 40px auto 24px;
+    padding: 0 24px;
+    line-height: 1.5;
+    text-transform: none;
+    color: #212529;
+}
+
+.svg-map__body {
+  position: relative;
+  height: 1px;
+  padding-top: 66.666%
+}
+
+.svg-map__map {
+  position: absolute;
+  top: 0;
+}
+
+
+.svg-map__body > svg path {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.svg-map__body > svg path:hover {
+  stroke-width: 2;
+}
+
+.svg-map__legend {
+  position: absolute;
+  pointer-events: none;
+  left: -64px;
+  top: 56px;
+}
+
+.svg-map__legend path,
+.svg-map__legend line {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.svg-map__legend rect {
+  stroke-width: 2;
+  stroke: #fff;
+}
+
+.svg-map__legend text {
+  fill: #7d7d7d;
+  font-family: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+

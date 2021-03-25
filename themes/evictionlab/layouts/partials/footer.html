@@ -158,7 +158,7 @@
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 
-{{ if or (in .Params.scripts "charts") (in .Params.scripts "charts") }}
+{{ if in .Params.scripts "charts" }}
   {{ $d3 := resources.Get "lib/d3.js" }}
   {{ $builder := resources.Get "charts/chart-builder.js" }}
   {{ $utils := resources.Get "charts/utils.js" }}
@@ -166,6 +166,13 @@
   {{ $barchart := resources.Get "charts/bar-chart.js" }}
   {{ $stackchart := resources.Get "charts/stack-area-chart.js" }}
   {{ $js := slice $d3 $builder $utils $linechart $barchart $stackchart | resources.Concat "js/charts/bundle.js" | resources.Minify }}
+  <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
+{{ end }}
+
+{{ if in .Params.scripts "maps" }}
+  {{ $d3 := resources.Get "lib/d3.js" }}
+  {{ $statemap := resources.Get "maps/state-map.js" }}
+  {{ $js := slice $d3 $statemap | resources.Concat "js/maps/bundle.js" | resources.Minify }}
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 
