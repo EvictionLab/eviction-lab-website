@@ -10,12 +10,11 @@ date: 2021-03-29T00:00:40.089Z
 postauthorname: Anne Kat Alexander and Sarah Lee
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Surveying the effects of 2 major eviction-related shifts.
+description: Looking back and evaluating twelve months of emergency government measures designed to keep people in their homes.
 listSummary: "March 26, 2021 marks the one year anniversary since the Coronavirus Aid, Relief, and Economic Security Act (CARES Act) was signed into law. As we cross this pandemic anniversary, the Eviction Lab looked back and evaluated twelve months of emergency government measures designed to keep people in their homes."
-socialDescription: Surveying the effects of 2 major eviction-related shifts.
-# image: '/images/assets/blog/rent_margin_display.jpg'
-fbImage: "/images/assets/blog/filing-shifts-social.png"
-twImage: "/images/assets/blog/filing-shifts-social.png"
+socialDescription: Looking back and evaluating twelve months of emergency government measures designed to keep people in their homes.
+fbImage: "/images/assets/blog/one-year-moratoria-social.png"
+twImage: "/images/assets/blog/one-year-moratoria-social.png"
 url: /one-year-of-eviction-moratoria
 scripts:
   - charts
@@ -27,11 +26,13 @@ March 26, 2021 marks the one year anniversary since the Coronavirus Aid, Relief,
 
 As we cross this pandemic anniversary, the Eviction Lab looked back and evaluated twelve months of emergency government measures designed to keep people in their homes. In the first two weeks of May 2020, when protections were greatest, more than 24 million renters lived in states with strong eviction moratoria. Even more renters in states with weaker protections, or without any eviction-blocking orders, were protected by local eviction-prevention orders and the CARES Act. But as the pandemic wears on, policymakers across the country have declined to keep protections for renters in place.
 
+{{< pullquote "In the first two weeks of May 2020, when protections were greatest, more than 24 million renters lived in states with strong eviction moratoria." >}}
+
 In analyzing what happened with eviction moratoria in the last year, we can see the lifesaving options available to policymakers—as well as what happens when policymakers don't enact housing stability policies, or opt for weaker protections instead of more inclusive anti-eviction measures.
 
 The Eviction Lab began tracking [federal, state, and local moratoria on March 19, 2020](https://evictionlab.org/covid-eviction-policies/). We soon found that not all moratoria offered the same protections to renters. Some moratoria, like the CARES Act, only stopped evictions for certain tenants—often those who could prove they couldn't pay rent because of the COVID-19 pandemic. Others only stopped parts of the eviction process: for example, an order might stop the final enforcement of an eviction order, but still allow landlords to file eviction court cases. In still other places, governors, courts, and state legislatures declined to implement any pause on evictions during the pandemic. 
 
-<div class="figheader" style="max-width: 600px;" >Figure: The Five Stages of Eviction</div>
+<div class="figheader">The Five Stages of Eviction</div>
 <div class="upscale124 pb-4 pb-xxl-5">
 <picture>
   <source media="(max-width: 799px)" srcset="/img/stages-of-eviction-portrait.png">
@@ -62,7 +63,7 @@ Thirty states and the District of Columbia already had at least one anti-evictio
 
 As states began to issue stay at home orders—requiring people to stay in their homes, socially distance from others, and wear masks, and closing schools and businesses—the urgency of these questions ramped up. Many governors included eviction moratoria among the public safety measures that they ordered during the pandemic. These orders were often more protective than the court orders, in that they would stop more parts of the process than only court hearings. 
 
-In Minnesota, for example, the governor's executive order stopped landlords from issuing a notice to quit or filing to evict a tenant, paused hearings, and stopped law enforcement from carrying out evictions. This order applied to all tenants and all eviction cases except limited emergency situations. This strong moratorium was first ordered by Minnesota's governor on March 16, 2020 and is still in place as of March 29, 2021. The Eviction Lab estimated that the Minnesota moratorium, alongside financial rental assistance, [prevented more than 10,000 eviction cases from being filed](https://evictionlab.org/missing-eviction-filings/) in Minnesota during the pandemic.
+In Minnesota, for example, the governor's executive order stopped landlords from issuing a notice to quit or filing to evict a tenant, paused hearings, and stopped law enforcement from carrying out evictions. This order applied to all tenants and all eviction cases except limited emergency situations. Minnesota's governor first ordered this strong moratorium on March 16, 2020, and it is still in place as of March 29, 2021. The Eviction Lab estimated that the Minnesota moratorium, alongside financial rental assistance, [prevented more than 10,000 eviction cases from being filed](https://evictionlab.org/missing-eviction-filings/) in Minnesota during the pandemic.
 
 {{% state-map
   id="statemap2"
@@ -183,6 +184,8 @@ As the crisis wore on, however, policymakers declined to continue extending the 
   </tbody>
 </table>
 
-Congress has funded billions of dollars of rental assistance payments, which will make their way to renters and landlords soon. But eviction moratoria and rental assistance are two sides of the same coin: the moratorium stabilizes the crisis by keeping tenants from being removed from their homes before help can arrive, and rental assistance—or other financial aid, like cash assistance—permanently resolves the shortfall. Rental assistance offered alone fails to reach all tenants—some won't apply, or won't have the necessary documentation to prove they're eligible for help—and even qualifying tenants can be evicted while waiting for aid to work its way through all the red tape. Eviction moratoria on their own are temporary and fail to cancel or pay the debt that tenants accrue during the pandemic, leaving them stuck with that debt—and probable eviction—when the moratoria end. 
+Congress has funded billions of dollars of rental assistance payments, which will make their way to renters and landlords soon. But eviction moratoria and rental assistance are two sides of the same coin: the moratorium stabilizes the crisis by keeping tenants from being removed from their homes before help can arrive, and rental assistance—or other financial aid, like cash assistance—permanently resolves the shortfall. Rental assistance offered alone fails to reach all tenants—some won't apply, or won't have the necessary documentation to prove they're eligible for help—and even qualifying tenants can be evicted while waiting for aid to work its way through all the red tape. Eviction moratoria on their own are temporary and fail to cancel or pay the debt that tenants accrue during the pandemic, leaving them stuck with that debt—and probable eviction—when the moratoria end.
+
+{{< pullquote "But eviction moratoria and rental assistance are two sides of the same coin: the moratorium stabilizes the crisis by keeping tenants from being removed from their homes before help can arrive, and rental assistance—or other financial aid, like cash assistance—permanently resolves the shortfall." >}}
 
 For months, the United States had a federal eviction moratorium—the CDC moratorium—without financial aid, as the initial influx of rental assistance cash from the CARES Act had already been spent. Hundreds of thousands of eviction cases were filed during the CDC moratorium in the places we track on the ETS. As the United States now faces having rental assistance with no eviction moratorium, we can expect filings to spike even higher, [as we did in August](https://evictionlab.org/shifts-in-eviction-filings-from-cares-act-to-cdc-order/). The Eviction Lab will continue to catalogue the choices that American policymakers pick, and the eviction filings that are the consequence of those choices.
