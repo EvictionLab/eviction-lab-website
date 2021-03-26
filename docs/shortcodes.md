@@ -218,6 +218,78 @@ date,group1,group2
 01/01/2013,80.9,19.1
 ```
 
+### State Maps
+
+Shortcode for rendering US state maps
+
+#### Usage
+
+Must include the following frontmatter in the `.md` file to use:
+
+```yaml
+scripts:
+  - maps
+```
+
+Than include the shortcode in the body of the `.md` file.
+
+```
+{{% state-map
+  id="statemap1"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on March 23, 2020"
+  idColumn="fips"
+  valueColumn="score1"
+  minVal="0"
+  maxVal="4.5"
+  valueTemplate="{{value}} / 4.5"
+  valueFormat=".2f"
+  colors="#dfefed;#7bcac1;#2c897f"
+  caption="sample caption for figure"
+%}}
+```
+
+#### Props
+
+- id: unique identifier for this map instance
+- title: title for the map
+- data: url to CSV data File
+- idColumn: name of column in CSV that has state FIPS codes
+- valueColumn: name of column in CSV to use for choropleth values
+- yTicks: number of y ticks to display
+- minVal: (optional) low end of the choropleth scale
+- maxVal: (optional) high end of the choropleth scale
+- valueFormat: formatting for values in the tooltip
+- valueTemplate: template string for tooltip
+- colors: colors to use for the choropleths, separated by semi colon
+- caption: caption text below the map
+
+#### Demo
+
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
+
+Data file should have:
+
+- a column present for state IDs, e.g. `fips`
+- a column for choropleth values,  e.g. `values`
+
+```csv
+name,fips,score1,score2,score3,score4
+Alabama,1,0.08,0.53,0.00,0.00
+Alaska,2,0.38,0.93,0.00,0.00
+Arizona,4,0.08,0.30,0.00,0.00
+Arkansas,5,0.00,0.00,0.00,0.00
+California,6,0.56,1.20,0.83,0.83
+Colorado,8,0.00,2.88,0.13,0.13
+Connecticut,9,3.78,3.78,2.80,2.80
+Delaware,10,1.85,3.88,2.58,0.88
+Florida,12,1.08,1.08,0.00,0.00
+Georgia,13,0.08,0.08,0.00,0.00
+Hawaii,15,2.65,2.65,2.35,2.35
+Idaho,16,0.00,0.00,0.00,0.00
+...
+```
+
 ## Common blog/updates shortcodes
 
 ### Superscript numbers

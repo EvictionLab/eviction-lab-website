@@ -894,9 +894,9 @@ Elab.ChartBuilder = (function (Elab) {
       return function () {
         var area = d3
           .area()
-          .x((d) => chart.xScale(d.data.x))
-          .y0((d) => chart.yScale(d[0]))
-          .y1((d) => chart.yScale(d[1]));
+          .x(function(d) { return chart.xScale(d.data.x) })
+          .y0(function(d) { return chart.yScale(d[0]) })
+          .y1(function(d) { return chart.yScale(d[1]) });
 
         var areaSelection = selection.selectAll("path").data(chart.stackData);
 

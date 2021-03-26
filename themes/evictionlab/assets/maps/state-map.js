@@ -261,7 +261,7 @@ Elab.StateMap = (function (Elab) {
       valueTemplate = dataOptions.valueTemplate || "{{value}}"
 
       // create elements and selections
-      svg = d3.select(root).append("svg").attr("class", "svg-map__map");
+      svg = d3.select(root).append("svg").attr("class", "svg-map__map svg-map__map--" + dataOptions.id);
       tooltip = d3.select(root).append("div").attr("class", "svg-map__tooltip")
       legend = d3.select(root).append("svg").attr("class", "svg-map__legend");
       legendGradient = legend.append("defs").append("svg:linearGradient").attr("id", gradientId)
