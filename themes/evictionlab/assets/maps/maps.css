@@ -2,6 +2,15 @@
   margin: 2em auto;
 }
 
+/** break out from margins */
+@media (min-width: 960px) {
+  .svg-map {
+    margin-left: -12%;
+    margin-right: -12%;
+    width: calc(100% + 24%);
+  }
+}
+
 .svg-map__tooltip {
   position: fixed;
   pointer-events: none;
@@ -21,7 +30,12 @@
   line-height: 1.5;
 }
 .svg-map__tooltip span:first-child {
-  font-family: GT-Eesti-Display-Medium,sans-serif;
+  font-size: 14px;
+  font-family: GT-Eesti-Display-Bold, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
 }
 .svg-map__tooltip span:nth-child(2) {
   font-size: 12px;
@@ -43,7 +57,14 @@
 .svg-map__body {
   position: relative;
   height: 1px;
-  padding-top: 66.666%
+  padding-top: 66.666%;
+}
+
+/** add margin when scale is below map */
+@media(max-width: 768px) {
+  .svg-map__body {
+    margin-bottom: 64px;
+  }
 }
 
 .svg-map__map {
@@ -52,20 +73,32 @@
 }
 
 
-.svg-map__body > svg path {
+.svg-map__shape {
   stroke: #fff;
   stroke-width: 1;
 }
 
-.svg-map__body > svg path:hover {
+.svg-map__shape--hovered {
+  stroke: #2c897f;
+  fill: none;
   stroke-width: 2;
 }
 
 .svg-map__legend {
   position: absolute;
   pointer-events: none;
+  top: 64px;
   left: -64px;
-  top: 56px;
+
+}
+
+.svg-map__legend--horizontal {
+  top: auto;
+  bottom: -50px;
+  width: 300px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .svg-map__legend path,
@@ -84,5 +117,14 @@
   font-family: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
   font-size: 12px;
   font-weight: 500;
+}
+
+/** need high specificity here due to other styles in single.scss */
+.center-content-post.updates-post .page-content .svg-map .svg-map__caption {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin: 2em;
+  color: #7d7d7d;
 }
 

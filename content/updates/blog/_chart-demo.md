@@ -27,9 +27,10 @@ scripts:
   valueColumn="score1"
   minVal="0"
   maxVal="4.5"
-  ticks="5"
+  valueTemplate="{{value}} / 4.5 stars"
+  valueFormat=".2f"
   colors="#dfefed;#7bcac1;#2c897f"
-  footnote="Colors represent state eviction policy scores from our COVID-19 housing policy scorecard"
+  caption="Colors represent state eviction policy scores from our <a href='#'>COVID-19 housing policy scorecard</a>"
 %}}
 
 {{% state-map

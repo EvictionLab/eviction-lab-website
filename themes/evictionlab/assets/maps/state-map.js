@@ -12,29 +12,59 @@
 Elab.StateMap = (function (Elab) {
 
   function shapeStateId(value) {
-    console.log(value);
     if (value.length === 2) return value;
     if (value.length === 1) return "0" + value;
     throw new Error("state-map: invalid ID provided for state");
   }
 
+  /** Makes a unique identifier */
+  function makeId() {
+    return "_" + Math.random().toString(36).substr(2, 9);
+  }
+      
+
   function StateMap(root, data, dataOptions) {
 
+    // stores width of the root DOM element (.svg-map__body)
+    var containerWidth;
+    // svg selection for map
     var svg;
-    var path;
-    var projection;
-    var features;
-    var tooltip;
+    // svg selection for legend
     var legend;
+    // path function for drawing geojson
+    var path;
+    // projection for geojson
+    var projection;
+    // geojson features
+    var features;
+    // tooltip selection
+    var tooltip;
+    // linear scale for colors
+    var ramp;
+    // array of colors for the choropleths
+    var colors;
+    // minimum value for scale
+    var minVal;
+    // maximum value for scale
+    var maxVal;
+    // format string for values (passed to d3.format)
+    var valueFormat;
+    // template for rendering tooltip value
+    var valueTemplate;
+    // number of ticks for scale
+    var ticks;
+    // hovered featue
+    var hovered;
+    var legendGradient;
+    var legendColorScale;
+    var legendAxis;
 
-    /** Makes a unique identifier */
-    function makeId() {
-      return "_" + Math.random().toString(36).substr(2, 9);
-    }
-
-
-
-    function showTooltip(e, html) {
+    /**
+     * Displays the tooltip for the given data
+     * @param {*} e 
+     * @param {*} data 
+     */
+    function showTooltip(e, data) {
       tooltip.classed("svg-map__tooltip--show", true);
       var topOffset = e.clientY;
       var rect = tooltip.node().getBoundingClientRect();
@@ -42,77 +72,134 @@ Elab.StateMap = (function (Elab) {
         window.innerWidth - rect.width / 2 - 12,
         Math.max(12 + rect.width / 2, e.clientX)
       );
+      var valueString = valueTemplate.replace("{{value}}", valueFormat(data.value))
+      var html = "<span>" + data.name + "</span><span>" + valueString + "</span>"
       tooltip
         .style("top", topOffset + "px")
         .style("left", xPos + "px")
         .html(html);
     };
-    function hideTooltip(e, selection) {
+
+    /** Hides the tooltip */
+    function hideTooltip() {
       tooltip.classed("svg-map__tooltip--show", false);
     };
 
-    function renderTooltip(name, value) {
-      var html = "<span>" + name + "</span><span>" + value + "</span>"
-      return html
+    function renderLegend() {
+      window.innerWidth > 768 ? renderVerticalLegend() : renderHorizontalLegend()
     }
 
-    function renderLegend(colors, minVal, maxVal, ramp, ticks) {
-      var gradientId = makeId();
-
-        var w = 116,
+    /** Renders the legend */
+    function renderVerticalLegend() {
+      var w = 50,
           h = 200;
 
       legend
         .attr("width", w)
         .attr("height", h)
-        .attr("class", "svg-map__legend");
+        .classed("svg-map__legend--horizontal", false)
 
-        var legendGradient = legend
-          .append("defs")
-          .append("svg:linearGradient")
-          .attr("id", gradientId)
-          .attr("x1", "100%")
-          .attr("y1", "0%")
-          .attr("x2", "100%")
-          .attr("y2", "100%")
-          .attr("spreadMethod", "pad");
+      // create color gradient
+      legendGradient
+        .attr("x1", "100%")
+        .attr("y1", "0%")
+        .attr("x2", "100%")
+        .attr("y2", "100%")
+        .attr("spreadMethod", "pad");
 
-        var stepSize = 100 / (colors.length - 1);
+      legendGradient.html('')
 
-        for (var i = 0; i < colors.length; i++) {
-          var percent = (stepSize * i);
-          var position = maxVal - ((i / (colors.length - 1)) * (maxVal - minVal))
-          console.log('ramp', percent)
-          legendGradient
-            .append("stop")
-            .attr("offset", percent + "%")
-            .attr("stop-color", ramp(position))
-            .attr("stop-opacity", 1);
-        }
+      var stepSize = 100 / (colors.length - 1);
+      for (var i = 0; i < colors.length; i++) {
+        var percent = (stepSize * i);
+        var position = maxVal - ((i / (colors.length - 1)) * (maxVal - minVal))
+        legendGradient
+          .append("stop")
+          .attr("offset", percent + "%")
+          .attr("stop-color", ramp(position))
+          .attr("stop-opacity", 1);
+      }
 
-        legend
-          .append("rect")
-          .attr("width", w - 100)
-          .attr("height", h - 19)
-          .style("fill", "url(#" + gradientId + ")")
-          .attr("transform", "translate(0,10)");
+      // render color gradient
+      legendColorScale
+        .attr("width", 16)
+        .attr("height", h - 19)
+        .attr("x", 0)
+        .attr("transform", "translate(0,10)");
 
-        var y = d3.scaleLinear().range([h-20, 0]).domain([minVal, maxVal]).nice();
-
-        var yAxis = d3.axisRight(y).ticks(ticks);
-
-        legend
-          .append("g")
-          .attr("class", "y axis")
-          .attr("transform", "translate(16,10)")
-          .call(yAxis);
-
+      // render axis
+      legendAxis.html('')
+      var y = d3.scaleLinear().range([h-20, 0]).domain([minVal, maxVal]).nice();
+      var yAxis = d3.axisRight(y).ticks(ticks);
+      legendAxis
+        .attr("transform", "translate(16,10)")
+        .call(yAxis);
     }
 
-    function render(containerWidth, containerHeight, ramp) {
+    /** Renders the legend */
+    function renderHorizontalLegend() {
+      var w = 300,
+          h = 50;
+
+      legend
+        .attr("width", w)
+        .attr("height", h)
+        .classed("svg-map__legend--horizontal", true)
+
+      legendGradient.html('')
+
+      // create color gradient
+      legendGradient
+        .attr("x1", "0%")
+        .attr("y1", "100%")
+        .attr("x2", "100%")
+        .attr("y2", "100%")
+        .attr("spreadMethod", "pad");
+
+      var stepSize = 100 / (colors.length - 1);
+      for (var i = 0; i < colors.length; i++) {
+        var percent = (stepSize * i);
+        var position = ((i / (colors.length - 1)) * (maxVal - minVal))
+        legendGradient
+          .append("stop")
+          .attr("offset", percent + "%")
+          .attr("stop-color", ramp(position))
+          .attr("stop-opacity", 1);
+      }
+
+      // render color gradient
+      legendColorScale
+        .attr("width", w - 31)
+        .attr("height", 16)
+        .attr("x", 16)
+        .attr("transform", "translate(0,10)");
+
+      // render axis
+      legendAxis.html('')
+      var x = d3.scaleLinear().range([0, w-32]).domain([minVal, maxVal]).nice();
+      var xAxis = d3.axisBottom(x).ticks(ticks);
+      legendAxis
+        .attr("transform", "translate(16,26)")
+        .call(xAxis);
+    }
+
+    function renderOutline() {
+      var hoverData = svg.selectAll(".svg-map__shape--hovered").data([hovered]);
+      hoverData
+        .enter()
+        .append("path")
+        .attr("class", "svg-map__shape--hovered")
+        .merge(hoverData)
+        .attr("d", path)
+        .style("pointer-events", "none")
+      hoverData.exit().remove()
+    }
+
+    function render() {
+      var rect = root.getBoundingClientRect();
+      containerWidth = rect.width
       var width = 720;
       var height = 480;
-      var ratio = height / width;
       var scaleFactor = containerWidth / width;
       projection = d3
         .geoAlbersUsa()
@@ -126,13 +213,12 @@ Elab.StateMap = (function (Elab) {
 
       //Create SVG element and append map to the SVG
       svg
-        .attr("class", "svg-map__map")
         .attr("width", width)
         .attr("height", height)
         .style("transform-origin", "top left")
         .style("transform", "scale(" + scaleFactor + ")");
 
-      var svgData = svg.selectAll("path").data(features, function(d) { return d.id });
+      var svgData = svg.selectAll("path").data(features);
 
       svgData
         .enter()
@@ -144,73 +230,81 @@ Elab.StateMap = (function (Elab) {
           return ramp(d.properties.value);
         })
         .on("mousemove", function(d) {
-          var html = renderTooltip(d.properties.name, d.properties.value)
-          showTooltip(d3.event, html)
+          hovered = d
+          showTooltip(d3.event, d.properties)
+          renderOutline()
+
         })
         .on("mouseout", function(d) {
+          hovered = null
           hideTooltip()
+          renderOutline()
+
         });
 
       svgData.exit().remove()
     }
 
     function create() {
-      var colors = (dataOptions.colors && dataOptions.colors.split(";")) || [
+      var gradientId = makeId();
+
+      // configure based on data options
+      var shapes = dataOptions.shapesUrl || "/uploads/us-states.json";
+      colors = (dataOptions.colors && dataOptions.colors.split(";")) || [
         "#f9f9f9",
         "#bc2a66",
       ];
-      var shapes = dataOptions.shapesUrl || "/uploads/us-states.json";
-      var minVal = dataOptions.minVal || 0;
-      var maxVal = dataOptions.maxVal || 4.5;
-      var ticks = dataOptions.ticks || 5
+      minVal = dataOptions.minVal && parseFloat(dataOptions.minVal);
+      maxVal = dataOptions.maxVal && parseFloat(dataOptions.maxVal);
+      ticks = (dataOptions.ticks && parseInt(dataOptions.ticks)) || 5
+      valueFormat = (dataOptions.valueFormat && d3.format(dataOptions.valueFormat)) || d3.format(".1f")
+      valueTemplate = dataOptions.valueTemplate || "{{value}}"
 
-      // Create SVG element and append map to the SVG
-      svg = d3.select(root).append("svg");
+      // create elements and selections
+      svg = d3.select(root).append("svg").attr("class", "svg-map__map");
       tooltip = d3.select(root).append("div").attr("class", "svg-map__tooltip")
-      legend = d3.select(root).append("svg")
+      legend = d3.select(root).append("svg").attr("class", "svg-map__legend");
+      legendGradient = legend.append("defs").append("svg:linearGradient").attr("id", gradientId)
+      legendColorScale = legend.append("rect").style("fill", "url(#" + gradientId + ")")
+      legendAxis = legend.append("g")
 
-      var dataArray = [];
-      for (var d = 0; d < data.length; d++) {
-        dataArray.push(parseFloat(data[d].value));
+      // set min / max vals based on data
+      if (!minVal || !maxVal) {
+        var extent = d3.extent(data, function (d) { return parseFloat(d.value) })
+        minVal = minVal || extent[0]
+        maxVal = maxVal || extent[1]
       }
-      // var minVal = d3.min(dataArray);
-      // var maxVal = d3.max(dataArray);
 
-      var ramp = d3.scaleLinear().domain([minVal, 2.25,  maxVal]).range(colors);
+      // calculate domain for color scale, based on number of colors
+      var steps = d3.range(minVal,  maxVal, (maxVal - minVal) / (colors.length-1))
+      steps[colors.length - 1] = maxVal
+
+      // create color ramp
+      ramp = d3.scaleLinear().domain(steps).range(colors);
 
       // Load GeoJSON data and merge with states data
       d3.json(shapes, function (json) {
-        // Loop through each state data value in the .csv file
+        // add CSV data to json features
         for (var i = 0; i < data.length; i++) {
-          // Grab State Name
           var dataState = data[i].state;
-          // Grab data value
           var dataValue = data[i].value;
-          // Find the corresponding state inside the GeoJSON
           for (var j = 0; j < json.features.length; j++) {
             var jsonState = json.features[j].id;
             if (dataState === jsonState) {
-              // Copy the data value into the JSON
               json.features[j].properties.value = dataValue;
-
-              // Stop looking through the JSON
               break;
             }
           }
         }
-
-        // set features
         features = json.features
 
-        var rect = root.getBoundingClientRect();
-        render(rect.width, Math.max(rect.height, 400), ramp);
-        renderLegend(colors, minVal, maxVal, ramp, ticks)
+        render();
+        renderLegend()
 
         window.addEventListener('resize', function () {
-          var rect = root.getBoundingClientRect();
-          render(rect.width, Math.max(rect.height, 400), ramp);
+          render();
+          renderLegend()
         })
-        // render(960, 500, ramp);
       });
     }
 
@@ -227,7 +321,6 @@ Elab.StateMap = (function (Elab) {
     };
     d3.csv(options.data, function (data) {
       var result = data.map(function (d) {
-        console.log(options.data, d);
         return {
           state: shapeStateId(d[options.idColumn]),
           value: yParse(d[options.valueColumn]),
@@ -238,7 +331,7 @@ Elab.StateMap = (function (Elab) {
   }
 
   /**
-   * Creates the intro chart
+   * Creates the state map
    */
   function init(rootEl, options) {
     if (!options || typeof options !== "object")
