@@ -38,3 +38,45 @@
         }
     }
 }
+
+
+.table.table--text {
+    margin: 2em 0;
+    td {
+        border-bottom: 1px solid #dfdfdf;
+        font-size: 1.6rem;
+        font-family: $fontStack;
+        font-weight: 500;
+        padding: 0.8rem 1.6rem;
+        line-height: 1.5;
+        width: 25%;
+    }
+    tr {
+        background-color: #fff;
+        &:nth-of-type(even) {
+            background-color: #F9FAFB;
+        }
+    }
+    thead th {
+        border-bottom: 1px solid #dfdfdf;
+        font-family: $altFontStack;
+        font-size: 1.6rem;
+        text-align: left!important;
+        padding: 0.8rem 1.6rem;
+        background-color: #F9FAFB;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #434878;
+    }
+    tbody td:first-child {
+        font-family: $boldFontStack;
+    }
+}
+
+@media(min-width: 820px) {
+    .table.table--text {
+        margin-left: -96px;
+        margin-right: -96px;
+        min-width: calc(100% + 192px);
+    }
+}
