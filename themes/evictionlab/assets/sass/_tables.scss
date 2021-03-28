@@ -67,6 +67,7 @@
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: #434878;
+        min-width: 160px;
     }
     tbody td:first-child {
         font-family: $boldFontStack;

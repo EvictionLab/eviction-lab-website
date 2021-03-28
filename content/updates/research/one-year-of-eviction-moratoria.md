@@ -86,7 +86,7 @@ Data from the [Eviction Tracking System](https://evictionlab.org/eviction-tracki
 As spring turned to summer, some state and local policymakers opted not to extend eviction moratoria. The CARES Act expired on July 25, 2020, and the extra $600 a week for unemployment benefits ended less than a week later. The first eviction cases against tenants living in properties covered by the CARES Act could be filed on August 25, 2020. Eviction Lab researchers found [eviction filings skyrocketed after the CARES Act protections ended](https://evictionlab.org/shifts-in-eviction-filings-from-cares-act-to-cdc-order/), and in the absence of strong state and local eviction moratoria.
 
 {{% line-chart
-  id="cdcavg"
+  id="oneyear"
   data="/uploads/figure4_summary.csv"
   x="date"
   y="percentage_diff"
