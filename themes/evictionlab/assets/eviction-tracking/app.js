@@ -253,7 +253,7 @@ Elab.Config = (function (Elab) {
         min: {
           y: [0, 1.1],
         },
-      },
+      }
     };
     return deepmerge(BASE_CONFIG, config);
   }
@@ -878,7 +878,7 @@ Elab.Chart = (function (Elab) {
       top: 32,
       right: 52,
       bottom: 72,
-      left: 40,
+      left: 48,
     };
     var parsedData;
     var elements;
