@@ -6,15 +6,24 @@
 
 <div class="center-page-wrapper-content alt-margin">
 	<div class="center-content-post {{ .Params.childof }}-post updates-post">
-
+    {{ if .Param "image" }}
     <figure class="article-image">
       <img src="{{ .Param "image" }}" onError="this.onerror=null;this.classList.add('null-img');" />
       <figcaption>
-          <div class="bordered-header {{ .Params.childof }}-type"><a href="/updates"><span class="mobile-off">Eviction Lab</span> {{ .Params.contenttype }}</a><span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span></div>
-        
+        <div class="bordered-header {{ .Params.childof }}-type">
+          <a href="/updates"><span class="mobile-off">Eviction Lab</span> {{ .Params.contenttype }}</a>
+          <span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span>
+        </div>
       </figcaption>
     </figure>
-
+    {{ else }}
+    <div class="article-image">
+      <div class="bordered-header {{ .Params.childof }}-type">
+        <a href="/updates"><span class="mobile-off">Eviction Lab</span> {{ .Params.contenttype }}</a>
+        <span class="subhead-rt date">{{ .Date.Format "January 2, 2006" }}</span>
+      </div>
+    </div>
+    {{ end }}
     <div class="page-content single-title">
       <h2 class="title {{ .Params.childof }}-type ">{{ .Title }}</h2>
 <!-- /// UPDATES META SECTION /// -->       
