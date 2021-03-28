@@ -18,7 +18,7 @@ fbImage: "/images/assets/blog/filing-shifts-social.png"
 twImage: "/images/assets/blog/filing-shifts-social.png"
 url: /shifts-in-eviction-filings-from-cares-act-to-cdc-order
 scripts:
-  - linechart
+  - charts
 aliases:
 ---
 
@@ -116,7 +116,7 @@ In Figure 1, we plot the total number of new eviction filings for each of the la
 
 This aggregate pattern—increasing filings across August and a decline following enactment of the CDC order—masks variation at the city level. Indeed, the stories start to look different when we highlight specific sites. In Figure 2 we plot weekly filings in each of these 16 cities over the last six weeks. Rather than plotting the absolute number of filings, we compare weekly filings to historical averages for the given week.
 
-{{% linechart id="summed" title="Figure 2: Weekly Filings Compared to Historical Averages" data="/uploads/summed_sites_20200922a.csv" x="week_date" y="ratio" groupBy="city" yTicks="5" yFormat=".0%" xTicks="week" xFormat="" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX"  curve="curveLinear" %}}
+{{% line-chart id="summed" title="Figure 2: Weekly Filings Compared to Historical Averages" data="/uploads/summed_sites_20200922a.csv" x="week_date" y="ratio" groupBy="city" yTicks="5" yFormat=".0%" xTicks="week" xFormat="" highlight="Hartford, CT;St Louis, MO;Fort Worth, TX"  curve="curveLinear" %}}
 
 <p class="figcaption">Hover or tap to interact with this chart</p>
 

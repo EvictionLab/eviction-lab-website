@@ -15,9 +15,78 @@ socialDescription: Tracking federal, state, and local actions in response to the
 fbImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 scripts:
-  - linechart
-  - bar-chart
+  - charts
+  - maps
 ---
+
+{{% state-map
+  id="statemap1"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on March 23, 2020"
+  idColumn="fips"
+  valueColumn="score1"
+  minVal="0"
+  maxVal="4.5"
+  valueTemplate="{{value}} / 4.5 stars"
+  valueFormat=".2f"
+  colors="#dfefed;#7bcac1;#2c897f"
+  caption="Colors represent state eviction policy scores from our <a href='#'>COVID-19 housing policy scorecard</a>"
+%}}
+
+{{% state-map
+  id="statemap2"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on May 11, 2020"
+  idColumn="fips"
+  valueColumn="score2"
+  minVal="0"
+  maxVal="4.5"
+  ticks="5"
+  colors="#dfefed;#7bcac1;#2c897f"
+  footnote="Colors represent state eviction policy scores from our COVID-19 housing policy scorecard"
+%}}
+
+{{% state-map
+  id="statemap3"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on November 23, 2020"
+  idColumn="fips"
+  valueColumn="score3"
+  minVal="0"
+  maxVal="4.5"
+  ticks="5"
+  colors="#dfefed;#7bcac1;#2c897f"
+  footnote="Colors represent state eviction policy scores from our COVID-19 housing policy scorecard"
+%}}
+
+{{% state-map
+  id="statemap4"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on March 22, 2021"
+  idColumn="fips"
+  valueColumn="score4"
+  minVal="0"
+  maxVal="4.5"
+  ticks="5"
+  colors="#dfefed;#7bcac1;#2c897f"
+  footnote="Colors represent state eviction policy scores from our COVID-19 housing policy scorecard"
+%}}
+
+Stack Area Chart
+
+{{% stack-area-chart
+  id="stackarea1"
+  data="/uploads/blogpost_data_cle.csv"
+  x="date"
+  stacks="group1;group2"
+  stackLabels="Routine Evictors;Infrequent Evictors"
+  title="Stack Chart Example"
+  xTicks="year"
+  xFormat="%Y"
+  yFormat=".0%"
+  yTooltipFormat=".1%"
+  title="Observed Eviction Rate for Cleveland, OH"
+%}}
 
 Basic bars
 
@@ -31,11 +100,12 @@ Basic bars
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Filings Relative to Historical Average"
+  margin="8 8 104 40"
 %}}
 
 Straight lines
 
-{{% linechart
+{{% line-chart
   id="cdcavg"
   data="/uploads/cdc_linechart.csv"
   x="xfilemonth"
@@ -50,7 +120,7 @@ Straight lines
   title="Filings Relative to Historical Average"
 %}}
 
-{{% linechart 
+{{% line-chart
   id="summed1"
   data="/uploads/summed_sites.csv"
   x="week"
@@ -64,7 +134,7 @@ Straight lines
 
 Curved lines
 
-{{% linechart
+{{% line-chart
   id="summed2"
   data="/uploads/summed_sites.csv"
   x="week"

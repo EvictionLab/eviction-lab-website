@@ -1,22 +1,24 @@
 # Shortcodes
 
-## `{{% linechart }}`
+## Data Visualization
+
+### Line Charts
 
 Renders a chart with multiple lines and highlights up to 3 lines.
 
-### Usage
+#### Usage
 
 To use the line chart shortcode, you must first include the necessary scripts by adding the following front matter to the page:
 
 ```yaml
 scripts:
-  - linechart
+  - charts
 ```
 
-You may then use the `{{% linechart %}}` shortcode.
+You may then use the `{{% line-chart %}}` shortcode.
 
 ```
-{{% linechart
+{{% line-chart
   id="summed"
   data="/uploads/sites.csv"
   x="week"
@@ -30,7 +32,7 @@ You may then use the `{{% linechart %}}` shortcode.
 %}}
 ```
 
-### Props
+#### Props
 
 - **`id` (required)**: unique identifier for the chart
 - **`data` (required)**: URL to the CSV file
@@ -45,14 +47,15 @@ You may then use the `{{% linechart %}}` shortcode.
 - `highlight`: semi-colon separated identifiers to highlight on the chart
 - `curve`: type of [d3.curve](https://github.com/d3/d3-shape#curves) to use
 
-### Example Page
+#### Example Page
 
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
 Data should have:
-  - a column to group by (provided by `groupBy` prop). for this sample, the `name` column is used.
-  - a column that contains dates to used for the x axis.  for this example, `week` column is used.
-  - a column that contains the corresponding y value.  for this example, `ratio` is used.
+
+- a column to group by (provided by `groupBy` prop). for this sample, the `name` column is used.
+- a column that contains dates to used for the x axis. for this example, `week` column is used.
+- a column that contains the corresponding y value. for this example, `ratio` is used.
 
 ```csv
 name,ratio,week
@@ -68,17 +71,17 @@ name,ratio,week
 "Boston, MA",0.0186917960088692,09/06/2020
 ```
 
-## Bar Chart
+### Bar Chart
 
 Shortcode for rendering basic bar graphs
 
-### Usage
+#### Usage
 
 Must include the following frontmatter in the `.md` file to use:
 
 ```yaml
 scripts:
-  - bar-chart
+  - charts
 ```
 
 Than include the shortcode in the body of the `.md` file.
@@ -97,7 +100,7 @@ Than include the shortcode in the body of the `.md` file.
 %}}
 ```
 
-### Props
+#### Props
 
 - id: unique identifier for this bar chart instance
 - title: title for the chart
@@ -111,11 +114,11 @@ Than include the shortcode in the body of the `.md` file.
 - yTickFormat: formatting for y values in the tooltip
 - margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
 
-### Demo
+#### Demo
 
 [View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
 
-Data file should have: 
+Data file should have:
 
 - a column present for bar labels (x values), e.g. `site_name_full`
 - a column for corresponding values (y valus), e.g. `filings_ratio`
@@ -147,6 +150,146 @@ site_name_full,filings_ratio
 "Tampa, FL",0.900901929444001
 ```
 
+## Stacked Area Chart
+
+Shortcode for rendering stacked area charts
+
+### Usage
+
+Must include the following frontmatter in the `.md` file to use:
+
+```yaml
+scripts:
+  - charts
+```
+
+Than include the shortcode in the body of the `.md` file.
+
+```
+{{% stack-area-chart
+  id="stackarea1"
+  data="/uploads/blogpost_data_cle.csv"
+  x="date"
+  stacks="group1;group2"
+  stackLabels="Routine Evictors;Infrequent Evictors"
+  title="Stack Chart Example"
+  xTicks="year"
+  xFormat="%Y"
+  yFormat=".0%"
+  title="Observed Eviction Rate for Cleveland, OH"
+%}}
+```
+
+### Props
+
+- id: unique identifier for this bar chart instance
+- title: title for the chart
+- csv: url to CSV data File
+- x: name of column with dates (mm/dd/yyyy)
+- stacks: semi-colon separated list of column names to use for stacks
+- stackLabels: semi-colon separated list of labels for stacks (for legend)
+- yTicks: number of y ticks to display
+- yMin: y axis minimum value
+- yMax: y axis maximum value
+- yFormat: formatting for y axis values
+- yTickFormat: formatting for y values in the tooltip
+- margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
+
+### Demo
+
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
+
+Data file should have:
+
+- a column for x values (dates), e.g. `date`
+- a column for each stack value, e.g. `group1` and `group2`
+
+```csv
+date,group1,group2
+01/01/2004,80.3,19.7
+01/01/2005,80.9,19.1
+01/01/2006,80.6,19.4
+01/01/2007,82,18
+01/01/2008,79.9,20.1
+01/01/2009,79.6,20.4
+01/01/2010,80.3,19.7
+01/01/2011,79.8,20.2
+01/01/2012,80.3,19.7
+01/01/2013,80.9,19.1
+```
+
+### State Maps
+
+Shortcode for rendering US state maps
+
+#### Usage
+
+Must include the following frontmatter in the `.md` file to use:
+
+```yaml
+scripts:
+  - maps
+```
+
+Than include the shortcode in the body of the `.md` file.
+
+```
+{{% state-map
+  id="statemap1"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on March 23, 2020"
+  idColumn="fips"
+  valueColumn="score1"
+  minVal="0"
+  maxVal="4.5"
+  valueTemplate="{{value}} / 4.5"
+  valueFormat=".2f"
+  colors="#dfefed;#7bcac1;#2c897f"
+  caption="sample caption for figure"
+%}}
+```
+
+#### Props
+
+- id: unique identifier for this map instance
+- title: title for the map
+- data: url to CSV data File
+- idColumn: name of column in CSV that has state FIPS codes
+- valueColumn: name of column in CSV to use for choropleth values
+- yTicks: number of y ticks to display
+- minVal: (optional) low end of the choropleth scale
+- maxVal: (optional) high end of the choropleth scale
+- valueFormat: formatting for values in the tooltip
+- valueTemplate: template string for tooltip
+- colors: colors to use for the choropleths, separated by semi colon
+- caption: caption text below the map
+
+#### Demo
+
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
+
+Data file should have:
+
+- a column present for state IDs, e.g. `fips`
+- a column for choropleth values,  e.g. `values`
+
+```csv
+name,fips,score1,score2,score3,score4
+Alabama,1,0.08,0.53,0.00,0.00
+Alaska,2,0.38,0.93,0.00,0.00
+Arizona,4,0.08,0.30,0.00,0.00
+Arkansas,5,0.00,0.00,0.00,0.00
+California,6,0.56,1.20,0.83,0.83
+Colorado,8,0.00,2.88,0.13,0.13
+Connecticut,9,3.78,3.78,2.80,2.80
+Delaware,10,1.85,3.88,2.58,0.88
+Florida,12,1.08,1.08,0.00,0.00
+Georgia,13,0.08,0.08,0.00,0.00
+Hawaii,15,2.65,2.65,2.35,2.35
+Idaho,16,0.00,0.00,0.00,0.00
+...
+```
+
 ## Common blog/updates shortcodes
 
 ### Superscript numbers
@@ -162,12 +305,14 @@ Include the shortcode in the body of the markdown file or within the CMS body se
 #### Example
 
 ```
-{{< sup 1 >}} 
+{{< sup 1 >}}
 ```
 
 ### Footnotes
 
-`{{< blogfootnotes >}}`
+```
+{{< blogfootnotes >}}
+```
 
 Shortcode for rendering footnotes within Updates posts
 
@@ -178,13 +323,13 @@ Include the shortcode in the body of the markdown file or within the CMS body se
 #### Example
 
 ```
-{{< blogfootnotes 
+{{< blogfootnotes
 
-"Historical baseline data is pulled from varying years across ETS sites. A listing of baseline years for each ETS site [can be found here](/eviction-tracking/get-the-data/)." 
+"Historical baseline data is pulled from varying years across ETS sites. A listing of baseline years for each ETS site [can be found here](/eviction-tracking/get-the-data/)."
 
 "We refer to &quot;gender&quot; while acknowledging that our imputation process is necessarily imprecise and cannot capture important subtleties in individuals’ gender identification. Identification of ethnicity is similarly limited to broad categories."
 
-"Details of the imputation process [can be found here](/demographics-of-eviction/). Note that the sample analyzed in the original study differs from the ETS sample, which serves to account for differences in findings." 
+"Details of the imputation process [can be found here](/demographics-of-eviction/). Note that the sample analyzed in the original study differs from the ETS sample, which serves to account for differences in findings."
 
 >}}
 ```
@@ -197,7 +342,7 @@ Shortcode for rendering pullquotes within Updates posts.
 
 #### Usage
 
-Include the shortcode in the body of the markdown file or within the CMS body section. 
+Include the shortcode in the body of the markdown file or within the CMS body section.
 
 #### Example
 
@@ -217,7 +362,7 @@ Include the shortcode in the body of the markdown file or within the CMS body se
 
 #### Props
 
-- image: the image 
+- image: the image
 - scale: sets width of image as a percent relative to the column width. For instance, a value of 135 would make the image 135% the wdith of the text column. (Do not include the "%" sign in the property.)
 - title: the image's title or figure name (appears above the image).
 - caption: italicized caption below the image
@@ -226,13 +371,13 @@ Include the shortcode in the body of the markdown file or within the CMS body se
 #### Example
 
 ```
-{{< scaleimg 
+{{< scaleimg
 
-img="born-evicted-chart.jpg" 
-scale="135" 
-title="Figure. Estimates of Association of Eviction With Infant Birth Weight Overall and by Subgroup" 
+img="born-evicted-chart.jpg"
+scale="135"
+title="Figure. Estimates of Association of Eviction With Infant Birth Weight Overall and by Subgroup"
 caption="Data are from court records and birth certificates in Georgia from 2000 to 2016. GED indicates General Educational Development.
-alt="Chart showing association of eviction birth weights by subgroup" 
+alt="Chart showing association of eviction birth weights by subgroup"
 
 >}}
 ```
@@ -250,10 +395,10 @@ Include the shortcode in the body of the markdown file or within the CMS body se
 #### Example
 
 ```
-{{< extlink 
+{{< extlink
 
-"intended to halt the execution of eviction cases" 
-"https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf" 
+"intended to halt the execution of eviction cases"
+"https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf"
 
 >}}
 ```

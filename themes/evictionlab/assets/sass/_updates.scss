@@ -50,6 +50,8 @@ a.cat-link {
   margin: 40px auto 24px;
   padding: 0 24px;
   line-height: 1.5;
+  text-transform: none;
+  color: #212529;
   //max-width: 560px;
 }
 .figcaption {
@@ -106,7 +108,8 @@ a.cat-link {
     }
   }
   .post-body {
-    strong, b {
+    strong,
+    b {
       font-family: Akkurat-Bold, sans-serif;
       font-weight: 400;
     }
@@ -193,18 +196,23 @@ picture img {
   position: relative;
   display: block;
   //width: 100%;
- // height: 100%;
+  // height: 100%;
   color: #fff;
   margin-top: 3.2rem;
   margin-bottom: 3.2rem;
-  p, span {
+  p,
+  span {
     padding: 1.6rem 2.4rem;
     display: block;
-    text-align:center; 
-    max-width: 360px; 
-    margin: auto; 
-    background: linear-gradient(0deg, rgba(67,72,120,1) 0%, rgba(120,126,176,1)  100%);
-    font-family: 'GT-Eesti-Display-Bold' !important; 
+    text-align: center;
+    max-width: 360px;
+    margin: auto;
+    background: linear-gradient(
+      0deg,
+      rgba(67, 72, 120, 1) 0%,
+      rgba(120, 126, 176, 1) 100%
+    );
+    font-family: "GT-Eesti-Display-Bold" !important;
     font-size: 1.8rem;
     @include media-breakpoint-up(lg) {
       font-size: 2rem;
@@ -214,7 +222,7 @@ picture img {
     position: relative;
     font-size: 1.6rem;
     top: 2px;
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
   }
   &:hover {
     text-decoration: none;
@@ -351,7 +359,7 @@ picture img {
   svg {
     width: 100%;
     height: auto;
-    .number tspan{
+    .number tspan {
       font-family: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
       font-weight: 500;
       font-style: italic;
@@ -412,48 +420,44 @@ picture img {
 }
 
 svg {
-  &#fig1, &#agg, &#fig3, &#fig2a, &#fig2b {
+  &#fig1,
+  &#agg,
+  &#fig3,
+  &#fig2a,
+  &#fig2b {
     width: 100%;
-    height:100%;
+    height: 100%;
     min-height: 60px;
   }
 
   @include media-breakpoint-up(md) {
     &#fig1 {
       width: 100%;
-      height:100%;
+      height: 100%;
       min-height: 60px;
     }
     &#agg {
       width: 80%;
-      height:100%;
+      height: 100%;
       min-height: 60px;
     }
     &#fig3 {
       width: 80%;
-      height:100%;
+      height: 100%;
       min-height: 60px;
     }
     &#fig2a {
       width: 90%;
-      height:100%;
+      height: 100%;
       min-height: 60px;
     }
-    
   }
 }
 #fig2b {
   max-width: 100%;
   @include media-breakpoint-up(xl) {
-   max-width: 110%;
+    max-width: 110%;
   }
 }
 
-// 6 months of CDC moratorium blog post
 
-@include media-breakpoint-up(md) {
-  .bar-chart.bar-chart--banded.bar-chart--cdcavgbar2, .line-chart.line-chart--cdcavg {
-    width: 124%;
-    margin-left: -12%;
-  }
-}

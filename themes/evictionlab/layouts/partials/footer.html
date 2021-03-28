@@ -158,23 +158,21 @@
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 
-{{ if in .Params.scripts "linechart" }}
-  {{ $d3 := resources.Get "lib/d3.min.js" }}
-  {{ $charts := resources.Get "charts/chart-builder.js" }}
-  {{ $chartsmin := $charts | resources.Minify }}
-  {{ $app := resources.Get "charts/line-chart.js" }}
-  {{ $appmin := $app | resources.Minify}}
-  {{ $js := slice $d3 $chartsmin $appmin | resources.Concat "js/line-chart/bundle.js" }}
+{{ if in .Params.scripts "charts" }}
+  {{ $d3 := resources.Get "lib/d3.js" }}
+  {{ $builder := resources.Get "charts/chart-builder.js" }}
+  {{ $utils := resources.Get "charts/utils.js" }}
+  {{ $linechart := resources.Get "charts/line-chart.js" }}
+  {{ $barchart := resources.Get "charts/bar-chart.js" }}
+  {{ $stackchart := resources.Get "charts/stack-area-chart.js" }}
+  {{ $js := slice $d3 $builder $utils $linechart $barchart $stackchart | resources.Concat "js/charts/bundle.js" | resources.Minify }}
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 
-{{ if in .Params.scripts "bar-chart" }}
-  {{ $d3 := resources.Get "lib/d3.min.js" }}
-  {{ $charts := resources.Get "charts/chart-builder.js" }}
-  {{ $chartsmin := $charts | resources.Minify }}
-  {{ $app := resources.Get "charts/bar-chart.js" }}
-  {{ $appmin := $app | resources.Minify}}
-  {{ $js := slice $d3 $chartsmin $appmin | resources.Concat "js/bar-chart/bundle.js" }}
+{{ if in .Params.scripts "maps" }}
+  {{ $d3 := resources.Get "lib/d3.js" }}
+  {{ $statemap := resources.Get "maps/state-map.js" }}
+  {{ $js := slice $d3 $statemap | resources.Concat "js/maps/bundle.js" | resources.Minify }}
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 

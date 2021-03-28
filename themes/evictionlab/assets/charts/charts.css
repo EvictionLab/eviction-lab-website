@@ -1,0 +1,389 @@
+.chart {
+  --c1: #e24000;
+  --c2: #434878;
+  --c3: #2c897f;
+  --c4: #94aabd;
+  --chart-frame: #fff;
+  --grid-lines: #fff;
+  --text-secondary: #7d7d7d;
+  --primary: var(--c1);
+  --secondary: var(--c2);
+  --font-family-sans-serif: Akkurat-Regular, sans-serif;
+  --body-font: var(--font-family-sans-serif);
+  --body-font-bold: Akkurat-Bold, sans-serif;
+  --body-font-italic: Akkurat-Italic, sans-serif;
+  --heading-font: GT-Eesti-Display-Bold, sans-serif;
+  --heading-font-med: GT-Eesti-Display-Medium, sans-serif;
+  --number-font: Gotham A, Gotham B, GT-Eesti-Display-Bold, sans-serif;
+  font-family: var(--body-font);
+  position: relative;
+  margin: 24px 0;
+}
+
+
+
+@media(max-width: 480px) {
+  .chart {
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
+  }
+}
+
+/** Breakout of margin when space is available */
+@media(min-width: 768px) {
+  .chart {
+    width: 124%;
+    margin-left: -12%;
+  }
+}
+
+/** 
+  Need a high level of specificity here, 
+  as several of the page level CSS definitions
+  override this
+*/
+
+body .chart .chart__title, body .chart .chart__title > * {
+  font-family: GT-Eesti-Display-Medium, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: .45px;
+  text-align: center;
+  margin: 40px auto 24px;
+  padding: 0 24px;
+  line-height: 1.5;
+  text-transform: none;
+  color: #212529;
+}
+
+.chart__body {
+  height: 326px;
+}
+.chart__frame {
+  fill: none;
+  stroke: #fff;
+  stroke: var(--chart-frame);
+  stroke-width: 3;
+}
+.chart__root {
+  /* increasing svg height to account for extended lines dropping down from graph */
+  height: 326px;
+}
+
+/** Axis */
+  .chart__axis .domain,
+  .chart__axis .tick line {
+    stroke: #fff;
+  }
+  .chart__axis .tick text {
+    fill: var(--text-secondary);
+    font-family: var(--number-font);
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .chart__axis--time .domain,
+  .chart__axis--time .tick line {
+    stroke-width: 3;
+    stroke: #fff;
+  }
+  .chart__axis--y .domain {
+    stroke: none;
+  }
+  .chart__axis--y .tick line {
+    stroke-width: 1;
+    stroke: #fff;
+  }
+/** End Axis */
+
+.chart__line {
+  fill: none;
+  stroke-width: 2;
+  stroke-dasharray: 0;
+  stroke: rgba(0,0,0,0.075);
+}
+.chart__line--hovered {
+  stroke: var(--c4);
+  stroke-width: 5;
+}
+
+.chart__body--highlight1 .chart__line--0,
+.chart__body--highlight2 .chart__line--0,
+.chart__body--highlight3 .chart__line--0 {
+  stroke: var(--c1);
+  stroke: #e24000
+}
+
+.chart__body--highlight2 .chart__line--1,
+.chart__body--highlight3 .chart__line--1 {
+  stroke: var(--c2);
+  stroke: #434878
+}
+
+.chart__body--highlight2 .chart__line--2,
+.chart__body--highlight3 .chart__line--2 {
+  stroke: var(--c3);
+  stroke: #2c897f;
+}
+
+.chart__voronoi path {
+  fill: none;
+  pointer-events: all;
+}
+.chart__tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.87);
+  color: #fff;
+  padding: 12px;
+  pointer-events: none;
+  opacity:0;
+  transition: opacity 0.2s ease-in-out;
+  transform: translate(-50%, calc(-100% - 12px));
+}
+.chart__tooltip.chart__tooltip--show {
+  opacity:1;
+}
+
+.chart__tooltip .tooltip__title {
+  font-size: 14px;
+  font-family: GT-Eesti-Display-Bold, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+.chart__tooltip .tooltip__item {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.chart__tooltip .tooltip__item span:first-child {
+  font-weight: bold;
+}
+
+.chart__hover-line {
+  stroke-width: 1;
+  stroke: rgba(0,0,0,0.1)
+}
+.chart__hover-dot {
+  fill: var(--c4);
+}
+.chart__hover-dot.chart__hover-dot--0 {
+  fill: var(--c1);
+  fill: #e24000
+}
+.chart__hover-dot.chart__hover-dot--1 {
+  fill: var(--c2);
+  fill: #434878;
+}
+.chart__hover-dot.chart__hover-dot--2 {
+  fill: var(--c3);
+  fill: #2c897f
+}
+
+.legend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend > * + * {
+  margin-left: 16px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+/** colors */
+.legend-item__color {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background: #999;
+}
+.legend-item--0 .legend-item__color {
+  background: var(--c1);
+  background: #e24000
+}
+.legend-item--1 .legend-item__color {
+  background: var(--c2);
+  background: #434878
+}
+.legend-item--2 .legend-item__color {
+  background: var(--c3);
+  background: #2c897f
+}
+.legend-item--3 .legend-item__color {
+  background: var(--c4);
+}
+
+.legend-item__label {
+  line-height: 1;
+  font-family: var(--heading-font);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+}
+.legend-item__label {
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  .legend-item__label {
+    font-size: 1.4rem;
+    letter-spacing: 0.08rem;
+  }
+}
+
+
+/** INDIVIDUAL LINE CHART OVERRIDES **/
+@media(max-width: 540px) {
+  .chart--summed .chart__axis--time .tick text {
+    font-size: 11px;
+  }
+}
+@media(min-width: 768px) {
+  .chart--summed.chart--line {
+    width: 124%;
+    margin-left: -12%;
+  }
+}
+
+/** ONE YEAR OF MORATORIA LINE CHART OVERRIDES **/
+.chart--oneyear .chart__line { stroke-opacity: 0.9;}
+.chart--oneyear .chart__line.chart__line--hovered { stroke-opacity: 1;}
+.chart--oneyear .chart__line--0 { stroke: #e24000 }
+.chart--oneyear .chart__line--1 { stroke: #434878 }
+.chart--oneyear .chart__line--2 { stroke: #2c897f }
+.chart--oneyear .chart__line--3 { stroke: #94aabd }
+.chart--oneyear .chart__line--4 { stroke: #ff7f00 }
+.chart--oneyear .chart__line--5 { stroke: #9c9c1f }
+.chart--oneyear .chart__line--6 { stroke: #a65628 }
+.chart--oneyear .chart__line--7 { stroke: #f781bf }
+.chart--oneyear .chart__line--8 { stroke: #984ea3 }
+
+.chart--oneyear .chart__hover-dot--0 { fill: #e24000 }
+.chart--oneyear .chart__hover-dot--1 { fill: #434878 }
+.chart--oneyear .chart__hover-dot--2 { fill: #2c897f }
+.chart--oneyear .chart__hover-dot--3 { fill: #94aabd }
+.chart--oneyear .chart__hover-dot--4 { fill: #ff7f00 }
+.chart--oneyear .chart__hover-dot--5 { fill: #9c9c1f }
+.chart--oneyear .chart__hover-dot--6 { fill: #a65628 }
+.chart--oneyear .chart__hover-dot--7 { fill: #f781bf }
+.chart--oneyear .chart__hover-dot--8 { fill: #984ea3 }
+
+.chart--oneyear .legend-item--0 .legend-item__color { background: #e24000 }
+.chart--oneyear .legend-item--1 .legend-item__color { background: #434878 }
+.chart--oneyear .legend-item--2 .legend-item__color { background: #2c897f }
+.chart--oneyear .legend-item--3 .legend-item__color { background: #94aabd }
+.chart--oneyear .legend-item--4 .legend-item__color { background: #ff7f00 }
+.chart--oneyear .legend-item--5 .legend-item__color { background: #9c9c1f }
+.chart--oneyear .legend-item--6 .legend-item__color { background: #a65628 }
+.chart--oneyear .legend-item--7 .legend-item__color { background: #f781bf }
+.chart--oneyear .legend-item--8 .legend-item__color { background: #984ea3 }
+
+/** BANDED BAR CHART OVERRIDES **/
+
+.chart.chart--bar .chart__body,
+.chart.chart--bar .chart__root {
+  height: 480px
+}
+.chart.chart--bar .chart__bar {
+  fill: #434878
+}
+.chart.chart--bar .chart__bar:hover {
+  fill: #e24000
+}
+@media(max-width: 480px) {
+  .chart.chart--bar .tick text {
+    font-size: 10px
+  }
+}
+
+
+
+/** GROUPED BAR CHART + SEARCH OVERRIDES */
+
+.chart #autoComplete_list {
+  top: auto;
+}
+
+.chart__search-group {
+  width: 80%;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.chart__search {
+  /* width: auto; */
+  display: block;
+  margin: auto 0;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid;
+  padding: 0 24px 0 12px;
+}
+
+.chart__search:focus {
+  outline: 0;
+}
+
+.chart__search-group .bi-search {
+  position: absolute;
+    right: 6px;
+    height: 16px;
+    width: 16px;
+    top: 4px;
+}
+
+.chart .chart__bar.renters {
+  fill: var(--c1);
+}
+.chart .chart__bar.defendant {
+  fill: var(--c2);
+}
+.chart .chart__bar.judgment {
+  fill: var(--c3);
+}
+
+
+.chart--stack .chart__area {
+  fill-opacity:0.25;
+  stroke: none;
+}
+
+.chart--stack .chart__area--0 {
+  fill: var(--c1);
+  fill: #e24000
+}
+
+.chart--stack .chart__area--1 {
+  fill: var(--c2);
+  fill: #434878
+}
+
+.chart--stack .chart__area--2 {
+  fill: var(--c3);
+  fill: #2c897f;
+}
+
+.chart--stack .chart__line--0 {
+  stroke: var(--c1);
+  stroke: #e24000
+}
+
+.chart--stack .chart__line--1 {
+  stroke: var(--c2);
+  stroke: #434878
+}
+
+.chart--stack .chart__line--2 {
+  stroke: var(--c3);
+  stroke: #2c897f;
+}
