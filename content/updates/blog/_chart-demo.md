@@ -16,7 +16,61 @@ fbImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 scripts:
   - charts
+  - maps
 ---
+
+{{% state-map
+  id="statemap1"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on March 23, 2020"
+  idColumn="fips"
+  valueColumn="score1"
+  minVal="0"
+  maxVal="4.5"
+  valueTemplate="{{value}} / 4.5 stars"
+  valueFormat=".2f"
+  colors="#dfefed;#7bcac1;#2c897f"
+  caption="Colors represent state eviction policy scores from our <a href='#'>COVID-19 housing policy scorecard</a>"
+%}}
+
+{{% state-map
+  id="statemap2"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on May 11, 2020"
+  idColumn="fips"
+  valueColumn="score2"
+  minVal="0"
+  maxVal="4.5"
+  ticks="5"
+  colors="#dfefed;#7bcac1;#2c897f"
+  footnote="Colors represent state eviction policy scores from our COVID-19 housing policy scorecard"
+%}}
+
+{{% state-map
+  id="statemap3"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on November 23, 2020"
+  idColumn="fips"
+  valueColumn="score3"
+  minVal="0"
+  maxVal="4.5"
+  ticks="5"
+  colors="#dfefed;#7bcac1;#2c897f"
+  footnote="Colors represent state eviction policy scores from our COVID-19 housing policy scorecard"
+%}}
+
+{{% state-map
+  id="statemap4"
+  data="/uploads/score_map_uncorrected_20210322.csv"
+  title="State Eviction Protections on March 22, 2021"
+  idColumn="fips"
+  valueColumn="score4"
+  minVal="0"
+  maxVal="4.5"
+  ticks="5"
+  colors="#dfefed;#7bcac1;#2c897f"
+  footnote="Colors represent state eviction policy scores from our COVID-19 housing policy scorecard"
+%}}
 
 Stack Area Chart
 

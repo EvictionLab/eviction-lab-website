@@ -84,7 +84,7 @@ Elab.StackAreaChart = (function (Elab) {
         .addAxisY({
           adjustExtent: function () {
             var series = getSeries(data, dataOptions);
-            var yDataMax = d3.max(series, (d) => d3.max(d, (d) => d[1]));
+            var yDataMax = d3.max(series, function(d) { return d3.max(d, function (d) { return d[1] }) });
             var extent = [];
             if (dataOptions.yMin) extent[0] = parseFloat(dataOptions.yMin);
             if (dataOptions.yMax) extent[1] = parseFloat(dataOptions.yMax);

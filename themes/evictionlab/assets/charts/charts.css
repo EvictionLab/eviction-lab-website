@@ -20,6 +20,8 @@
   margin: 24px 0;
 }
 
+
+
 @media(max-width: 480px) {
   .chart {
     margin-left: -24px;
@@ -252,6 +254,38 @@ body .chart .chart__title, body .chart .chart__title > * {
   }
 }
 
+/** ONE YEAR OF MORATORIA LINE CHART OVERRIDES **/
+.chart--oneyear .chart__line { stroke-opacity: 0.9;}
+.chart--oneyear .chart__line.chart__line--hovered { stroke-opacity: 1;}
+.chart--oneyear .chart__line--0 { stroke: #e24000 }
+.chart--oneyear .chart__line--1 { stroke: #434878 }
+.chart--oneyear .chart__line--2 { stroke: #2c897f }
+.chart--oneyear .chart__line--3 { stroke: #94aabd }
+.chart--oneyear .chart__line--4 { stroke: #ff7f00 }
+.chart--oneyear .chart__line--5 { stroke: #9c9c1f }
+.chart--oneyear .chart__line--6 { stroke: #a65628 }
+.chart--oneyear .chart__line--7 { stroke: #f781bf }
+.chart--oneyear .chart__line--8 { stroke: #984ea3 }
+
+.chart--oneyear .chart__hover-dot--0 { fill: #e24000 }
+.chart--oneyear .chart__hover-dot--1 { fill: #434878 }
+.chart--oneyear .chart__hover-dot--2 { fill: #2c897f }
+.chart--oneyear .chart__hover-dot--3 { fill: #94aabd }
+.chart--oneyear .chart__hover-dot--4 { fill: #ff7f00 }
+.chart--oneyear .chart__hover-dot--5 { fill: #9c9c1f }
+.chart--oneyear .chart__hover-dot--6 { fill: #a65628 }
+.chart--oneyear .chart__hover-dot--7 { fill: #f781bf }
+.chart--oneyear .chart__hover-dot--8 { fill: #984ea3 }
+
+.chart--oneyear .legend-item--0 .legend-item__color { background: #e24000 }
+.chart--oneyear .legend-item--1 .legend-item__color { background: #434878 }
+.chart--oneyear .legend-item--2 .legend-item__color { background: #2c897f }
+.chart--oneyear .legend-item--3 .legend-item__color { background: #94aabd }
+.chart--oneyear .legend-item--4 .legend-item__color { background: #ff7f00 }
+.chart--oneyear .legend-item--5 .legend-item__color { background: #9c9c1f }
+.chart--oneyear .legend-item--6 .legend-item__color { background: #a65628 }
+.chart--oneyear .legend-item--7 .legend-item__color { background: #f781bf }
+.chart--oneyear .legend-item--8 .legend-item__color { background: #984ea3 }
 
 /** BANDED BAR CHART OVERRIDES **/
 

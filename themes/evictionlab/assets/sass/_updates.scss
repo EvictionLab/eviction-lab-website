@@ -50,6 +50,8 @@ a.cat-link {
   margin: 40px auto 24px;
   padding: 0 24px;
   line-height: 1.5;
+  text-transform: none;
+  color: #212529;
   //max-width: 560px;
 }
 .figcaption {
@@ -457,3 +459,5 @@ svg {
     max-width: 110%;
   }
 }
+
+
