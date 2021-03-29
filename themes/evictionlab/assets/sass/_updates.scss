@@ -96,6 +96,14 @@ a.cat-link {
 }
 
 .page-type-updates {
+
+  figure.article-image img {
+    @include media-breakpoint-up(xl) {
+      width: 114%;
+      margin-left: -7%;
+    }
+  }
+
   ol {
     list-style-type: decimal;
     ol {
