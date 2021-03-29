@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 contenttype: updates
 contentcat: research
@@ -19,7 +19,8 @@ url: /one-year-of-eviction-moratoria
 scripts:
   - charts
   - maps
-aliases:
+aliases: 
+image: /images/assets/blog/moratoria-animation-sm2.gif
 ---
 
 March 26, 2021 marks the one year anniversary since the Coronavirus Aid, Relief, and Economic Security Act (CARES Act) was signed into law. The large spending bill instituted a [historic pause on evictions](https://www.nhlp.org/wp-content/uploads/2020.03.27-NHLP-CARES-Act-Eviction-Moratorium-Summary.pdf), or eviction moratorium, from March 26 until August 25, 2020. The CARES Act temporarily prevented landlords from beginning the eviction process against tenants who live in several types of federally-financed housing, though [problems with enforcement](https://www.cnbc.com/2020/08/29/how-the-cares-act-failed-to-protect-tenants-from-eviction.html) allowed an unknown number of tenants who should have been protected to be evicted anyway.
