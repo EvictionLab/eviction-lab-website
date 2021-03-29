@@ -1,26 +1,33 @@
 ---
-draft: false
+draft: true
+scripts:
+  - charts
+  - maps
 childof: research
+url: /one-year-of-eviction-moratoria
 contenttype: updates
 contentcat: research
 featured: true
-researchtype: elresearch
+in_index: true
 title: "Preliminary Analysis: A Year of Eviction Moratoria"
 date: 2021-03-29T00:00:40.089Z
 postauthorname: Anne Kat Alexander and Sarah Lee
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Looking back and evaluating twelve months of emergency government measures designed to keep people in their homes.
-listSummary: "March 26, 2021 marks the one year anniversary since the Coronavirus Aid, Relief, and Economic Security Act (CARES Act) was signed into law. As we cross this pandemic anniversary, the Eviction Lab looked back and evaluated twelve months of emergency government measures designed to keep people in their homes."
-socialDescription: Looking back and evaluating twelve months of emergency government measures designed to keep people in their homes.
-fbImage: "/images/assets/blog/one-year-moratoria-social.png"
-twImage: "/images/assets/blog/one-year-moratoria-social.png"
-url: /one-year-of-eviction-moratoria
-scripts:
-  - charts
-  - maps
-aliases: 
 image: /images/assets/blog/moratoria-animation-sm2.gif
+description: Looking back and evaluating twelve months of emergency government
+  measures designed to keep people in their homes.
+listSummary: March 26, 2021 marks the one year anniversary since the Coronavirus
+  Aid, Relief, and Economic Security Act (CARES Act) was signed into law. As we
+  cross this pandemic anniversary, the Eviction Lab looked back and evaluated
+  twelve months of emergency government measures designed to keep people in
+  their homes.
+socialDescription: Looking back and evaluating twelve months of emergency
+  government measures designed to keep people in their homes.
+researchtype: elresearch
+twImage: /images/assets/blog/one-year-moratoria-social.png
+aliases: null
+fbImage: /images/assets/blog/one-year-moratoria-social.png
 ---
 
 March 26, 2021 marks the one year anniversary since the Coronavirus Aid, Relief, and Economic Security Act (CARES Act) was signed into law. The large spending bill instituted a [historic pause on evictions](https://www.nhlp.org/wp-content/uploads/2020.03.27-NHLP-CARES-Act-Eviction-Moratorium-Summary.pdf), or eviction moratorium, from March 26 until August 25, 2020. The CARES Act temporarily prevented landlords from beginning the eviction process against tenants who live in several types of federally-financed housing, though [problems with enforcement](https://www.cnbc.com/2020/08/29/how-the-cares-act-failed-to-protect-tenants-from-eviction.html) allowed an unknown number of tenants who should have been protected to be evicted anyway.
