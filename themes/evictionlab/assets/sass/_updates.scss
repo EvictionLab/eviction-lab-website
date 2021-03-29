@@ -101,6 +101,7 @@ a.cat-link {
     @include media-breakpoint-up(xl) {
       width: 114%;
       margin-left: -7%;
+      image-rendering: -webkit-optimize-contrast;
     }
   }
 
