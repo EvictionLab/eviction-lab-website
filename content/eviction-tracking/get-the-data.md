@@ -44,7 +44,7 @@ data:
   - site: Bridgeport
     years: 2017-2019
     geo: Census Tract
-    file: /uploads/fairfield_weekly_2020_2021.csv
+    file: /uploads/bridgeport_weekly_2020_2021.csv
   - site: Charleston
     years: 2016-2019
     geo: Census Tract
