@@ -16,7 +16,7 @@
   {{ range $index, $element := $legendItems }}
   <div class="legend-item legend-item--{{ $index }}">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">{{ $element }}</div>
+  <div class="legend-item__label">{{ $element | safeHTML }}</div>
   </div>
   {{ end }}
   </div>

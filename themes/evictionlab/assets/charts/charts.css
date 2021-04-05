@@ -287,6 +287,27 @@ body .chart .chart__title, body .chart .chart__title > * {
 .chart--oneyear .legend-item--7 .legend-item__color { background: #f781bf }
 .chart--oneyear .legend-item--8 .legend-item__color { background: #984ea3 }
 
+/** ROUTINE VS INFREQUENT OVERRIDES */
+
+/** legend items */
+.chart--routine1 .legend-item__label span + span,
+.chart--routine2 .legend-item__label span + span,
+.chart--routine3 .legend-item__label span + span {
+  font-family: Akkurat-Regular, sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 4px;
+  color: #7d7d7d;
+  display: block;
+}
+
+.chart__tooltip--routine1 .tooltip__item span + span,
+.chart__tooltip--routine2 .tooltip__item span + span,
+.chart__tooltip--routine3 .tooltip__item span + span {
+  display: none;
+}
+
 /** BANDED BAR CHART OVERRIDES **/
 
 .chart.chart--bar .chart__body,

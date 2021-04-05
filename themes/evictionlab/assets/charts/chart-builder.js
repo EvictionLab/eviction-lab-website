@@ -48,7 +48,7 @@ Elab.ChartBuilder = (function (Elab) {
     var svgEl = rootEl.querySelector("svg");
     var rect = rootEl.getBoundingClientRect();
     var tooltipEl = document.createElement("div");
-    tooltipEl.className = "chart__tooltip";
+    tooltipEl.className = "chart__tooltip chart__tooltip--" + rootEl.id;
     document.body.appendChild(tooltipEl);
     this.uid = makeId(); // unique id for the chart
     this.data = data;
@@ -894,9 +894,15 @@ Elab.ChartBuilder = (function (Elab) {
       return function () {
         var area = d3
           .area()
-          .x(function(d) { return chart.xScale(d.data.x) })
-          .y0(function(d) { return chart.yScale(d[0]) })
-          .y1(function(d) { return chart.yScale(d[1]) });
+          .x(function (d) {
+            return chart.xScale(d.data.x);
+          })
+          .y0(function (d) {
+            return chart.yScale(d[0]);
+          })
+          .y1(function (d) {
+            return chart.yScale(d[1]);
+          });
 
         var areaSelection = selection.selectAll("path").data(chart.stackData);
 
