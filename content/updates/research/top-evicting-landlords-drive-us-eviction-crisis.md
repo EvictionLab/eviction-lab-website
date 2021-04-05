@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 scripts:
   - charts
 childof: research
@@ -10,7 +10,7 @@ featured: true
 in_index: true
 title: "Top Evicting Landlords Drive U.S. Eviction Crisis"
 date: 2021-04-05T00:00:40.089Z
-postauthorname: Devin Rutan
+postauthorname: Devin Rutan and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: In order to design policies that could anticipate and prevent tenants from being evicted, the Eviction Lab analyzed the locations of evictions over time, hoping to detect a meaningful pattern.
@@ -19,12 +19,15 @@ socialDescription: In order to design policies that could anticipate and prevent
 researchtype: elresearch
 twImage: /images/assets/blog/one-year-moratoria-social.png
 aliases: null
-fbImage: /images/assets/blog/one-year-moratoria-social.png
+fbImage: /images/assets/blog/top-evicting-landlords-social.png
+image: /images/assets/blog/top-evicting-landlords-social.png
 ---
 
 In 2015, an apartment complex in Fayetteville, NC evicted 156 tenants. One might think perhaps the neighborhood was gentrifying, and this landlord was emptying their complex of all the low-income tenants: a one-time turnover. Yet, the complex evicted 137 tenants, on average, in each of the prior eight years. This one building evicted nearly five percent of all tenants who were removed from their homes in the city of Fayetteville during a ten-year span.
 
 In order to design policies that could anticipate and prevent tenants from being evicted, the Eviction Lab analyzed the locations of evictions over time, hoping to detect a meaningful pattern. Based on our analysis of 17 cities, evictions occur in the same neighborhoods and even the same street blocks year after year. Rather than occurring when neighborhoods are destabilized, through gentrification or other types of neighborhood change, eviction remains the status quo in pockets of American cities.
+
+{{< pullquote "Most landlords evict tenants rarely,  if they ever  do—even in neighborhoods that have high overall eviction rates. Yet, a small set of landlords displace large numbers of tenants, year after year." >}}
 
 In order to understand why evictions occur in the same places again and again, we zoomed in on three cities—Cleveland, Ohio, Fayetteville, North Carolina, and Tucson, Arizona. We identified the buildings driving evictions over a ten-year period and found that displacement is common in some neighborhoods because a handful of landlords (and therefore buildings) evict large numbers of tenants every year. We located evictions, not just at the neighborhood level, but at the building level. As few as 100 buildings drove one in six evictions in Cleveland and two out of every five evictions in Fayetteville and Tucson. Most landlords evict tenants rarely, if they ever do—even in neighborhoods that have high overall eviction rates. Yet, a small set of landlords displace large numbers of tenants, year after year.
 
