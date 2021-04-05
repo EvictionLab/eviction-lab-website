@@ -84,7 +84,11 @@ Elab.StackAreaChart = (function (Elab) {
         .addAxisY({
           adjustExtent: function () {
             var series = getSeries(data, dataOptions);
-            var yDataMax = d3.max(series, function(d) { return d3.max(d, function (d) { return d[1] }) });
+            var yDataMax = d3.max(series, function (d) {
+              return d3.max(d, function (d) {
+                return d[1];
+              });
+            });
             var extent = [];
             if (dataOptions.yMin) extent[0] = parseFloat(dataOptions.yMin);
             if (dataOptions.yMax) extent[1] = parseFloat(dataOptions.yMax);
@@ -142,13 +146,18 @@ Elab.StackAreaChart = (function (Elab) {
               ? d3.format(dataOptions.yFormat)
               : d3.format(".1f");
             var title = xFormat(hoverData.x);
+            var templateStr = dataOptions.tooltipTemplate || "{{label}}: {{value}}";
             var values = dataOptions.groups
               .map(function (group, i) {
+                var label = dataOptions.groupLabels[i]
+                var value = yFormat(hoverData[group])
+                var html = templateStr
+                  .replace("{{label}}", label)
+                  .replace("{{value}}", value)
+                  .replace("{{_percent}}", hoverData[group+'_percent'])
                 return (
                   '<div class="tooltip__item">' +
-                  dataOptions.groupLabels[i] +
-                  ": " +
-                  yFormat(hoverData[group]) +
+                  html +
                   "</div>"
                 );
               })
@@ -175,9 +184,9 @@ Elab.StackAreaChart = (function (Elab) {
               obj[groupCol] = parseFloat(d[groupCol] || 0);
               return obj;
             },
-            {
+            Object.assign(d, {
               x: parseDate(d[options.x]),
-            }
+            })
           );
         })
         .sort(function (a, b) {

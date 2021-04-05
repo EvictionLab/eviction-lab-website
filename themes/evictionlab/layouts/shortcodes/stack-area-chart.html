@@ -49,8 +49,10 @@
       var yMin = {{ .Get "yMin" }}
       // override x extent
       var yMax = {{ .Get "yMax" }}
+      // template for tooltip items
+      var tooltipTemplate = {{ .Get "tooltipTemplate" }}
       var rootEl = document.getElementById(id);
-      Elab.StackAreaChart.init(rootEl, { data: csv, groups: groups, groupLabels: groupLabels.split(";"), x: x, yTooltipFormat: yTooltipFormat, yTicks: yTicks, yFormat: yFormat,  yMin: yMin, yMax: yMax, xTicks: xTicks, xFormat: xFormat, xTooltipFormat: xTooltipFormat })
+      Elab.StackAreaChart.init(rootEl, { tooltipTemplate: tooltipTemplate, data: csv, groups: groups, groupLabels: groupLabels.split(";"), x: x, yTooltipFormat: yTooltipFormat, yTicks: yTicks, yFormat: yFormat,  yMin: yMin, yMax: yMax, xTicks: xTicks, xFormat: xFormat, xTooltipFormat: xTooltipFormat })
     });
   </script>
 </div>

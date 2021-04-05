@@ -308,6 +308,20 @@ body .chart .chart__title, body .chart .chart__title > * {
   display: none;
 }
 
+.chart__tooltip--routine1 .tooltip__item span,
+.chart__tooltip--routine2 .tooltip__item span,
+.chart__tooltip--routine3 .tooltip__item span {
+  color: #fff
+}
+
+.chart__tooltip--routine1 .tooltip__item,
+.chart__tooltip--routine2 .tooltip__item,
+.chart__tooltip--routine3 .tooltip__item {
+  margin-top: 8px;
+  color: #ccc
+}
+
+
 /** BANDED BAR CHART OVERRIDES **/
 
 .chart.chart--bar .chart__body,

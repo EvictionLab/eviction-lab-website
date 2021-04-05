@@ -46,7 +46,8 @@ Curious how these landlords might drive the overall level of evictions citywide,
   yFormat=".0%"
   yMax="0.07"
   yTooltipFormat=".1%"
-  title="Observed Eviction Rate By Year In Cleveland, OH"
+  tooltipTemplate="{{label}} <br />{{value}} of renters evicted <br />{{_percent}} of total evictions"
+  title="Contribution to Eviction Rate By Year In Cleveland, OH"
 %}}
 
 {{% stack-area-chart
@@ -60,7 +61,8 @@ Curious how these landlords might drive the overall level of evictions citywide,
   xFormat="%Y"
   yFormat=".0%"
   yTooltipFormat=".1%"
-  title="Observed Eviction Rate By Year In Fayetteville, NC"
+  tooltipTemplate="{{label}} <br />{{value}} of renters evicted <br />{{_percent}} of total evictions"
+  title="Contribution to Eviction Rate By Year In Fayetteville, NC"
 %}}
 
 {{% stack-area-chart
@@ -74,7 +76,8 @@ Curious how these landlords might drive the overall level of evictions citywide,
   xFormat="%Y"
   yFormat=".0%"
   yTooltipFormat=".1%"
-  title="Observed Eviction Rate By Year In Tucson, AZ"
+  tooltipTemplate="{{label}} <br />{{value}} of renters evicted <br />{{_percent}} of total evictions"
+  title="Contribution to Eviction Rate By Year In Tucson, AZ"
 %}}
 
 These findings yield two key insights into the eviction crisis that cities and service providers can use to design effective interventions. First, our research suggests cities and states can anticipate evictions because they are produced by the same landlords year after year. Second, because just a few landlords account for large numbers of all evictions, nonprofit organizations and local governments can make outsized progress toward addressing the eviction epidemic by targeting the landlords who drive the eviction crisis.
