@@ -302,6 +302,7 @@ Elab.Config = (function (Elab) {
       xTooltip: d3.timeFormat("%B %Y"),
       yTooltip: d3.format(",.0%"),
       tooltip: function tooltip(d) {
+        var rawParse = d3.timeParse("%d/%m/%Y")
         var distance = d._raw.y - 1;
         var value = Math.abs(distance);
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
@@ -318,7 +319,7 @@ Elab.Config = (function (Elab) {
           d3.format(",.0%")(value) +
           "</span>&nbsp;from average" +
           (d._raw.extras["month_last_day"]
-            ? ", <br />as of " + d._raw.extras["month_last_day"]
+            ? ", <br />as of " + d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
             : "") +
           ".</div>"
         );
@@ -1044,12 +1045,22 @@ Elab.Chart = (function (Elab) {
      * @param {*} context
      */
     function renderAxis(data, config, context) {
+
+      var rotateLabels = function (selection) {
+        selection
+          .selectAll(".tick text")
+          .attr("text-anchor", "end")
+          .attr("transform", "rotate(-50)")
+          .attr("dx", "-0.5em")
+          .attr("dy", "0em");
+      }
+
       // setup x axis
       var xAxis = d3
         .axisBottom(context.x)
         .ticks(config.view.xTicks)
-        .tickFormat(config.format.x);
-
+        .tickFormat(config.format.x)
+        
       // setup y axis
       var yAxis = d3
         .axisLeft(context.y)
@@ -1065,7 +1076,8 @@ Elab.Chart = (function (Elab) {
         .attr("transform", "translate(0," + context.height + ")")
         .transition()
         .duration(1000)
-        .call(xAxis);
+        .call(xAxis)
+        .call(rotateLabels.bind(context.els.xAxis));
     }
 
     function renderMarkLine(data, config, context) {
@@ -2148,10 +2160,10 @@ Elab.Intro = (function (Elab) {
         adjustLabels: function (selection) {
           selection
             .selectAll(".tick text")
-            .attr(
-              "transform",
-              "translate(" + this.monthToPixels(1) / 2 + ",0)"
-            );
+            .attr("text-anchor", "end")
+            .attr("transform", "translate(" + this.monthToPixels(1) / 2 + ",0) rotate(-50)")
+            .attr("dx", "-0.25em")
+            .attr("dy", "0.333em");
           selection.selectAll(".tick:last-child text").attr("opacity", 0);
         },
         ticks: d3.timeMonth.every(1),
