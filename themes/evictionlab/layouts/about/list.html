@@ -113,7 +113,7 @@
           <li class="only-larger-screens" role="presentation">Choose a team</li>
           <li role="presentation" class="active"><a href="#team1" aria-controls="home" role="tab" data-toggle="tab">{{ .Params.Bios1 }}</a></li>
           <li role="presentation"><a href="#team2" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios2 }}</a></li>
-          <!--<li role="presentation"><a href="#team3" aria-controls="profile" role="tab" data-toggle="tab">{{/* .Params.Bios3 */}}</a></li>-->
+          <li role="presentation"><a href="#team3" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios3 }}</a></li>
           <li role="presentation"><a href="#team4" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios4 }}</a></li>
       </ul>
         {{ end }}
@@ -149,6 +149,16 @@
                 {{/* end */}}
             </div>
           </div>--> <!-- End Web Team tab-pane -->  
+        <!-- *************** Alumni Bios ******************** -->
+          <div role="tabpanel" class="tab-pane" id="team3">
+            <div class="bio-thumbs">
+                {{ range (where .Site.RegularPages "Params.childof" ("alumni-bios")) }}
+                {{ if eq .Params.childof "alumni-bios" }} 
+                  {{ partial "about-modal" . }}
+                {{ end }}
+                {{ end }}
+            </div>
+          </div> 
          <!-- *************** Citizen Researcher Bios ******************** -->  
             <div role="tabpanel" class="tab-pane" id="team4">
               {{ range (where .Site.RegularPages "Params.childof" ("about")) }}

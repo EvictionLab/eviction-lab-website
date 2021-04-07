@@ -1,8 +1,9 @@
 ---
-childof: research-team-bios_old
+childof: alumni-bios
 title: Adam Porton
 abbrev: aporton
-position: Research Specialist
+position: Research Specialist, 2017-2020;
+newposition: Stanford University, PhD Student (Economics of Education)
 date: 2017-11-26T03:46:25.603Z
 image: /images/bios/aporton_full.jpg
 thumb: /images/bios/aporton_thumb.jpg

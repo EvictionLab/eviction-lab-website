@@ -16,6 +16,11 @@
       </svg>
       <h3>{{ .Params.title }}</h3>
       <p class="bio-position">{{ .Params.position }}</p>
+      {{ if .Params.newposition }}
+        <hr style="border-top: 2px solid #434878;"/>
+        <p class="bio-position">{{ .Params.newposition }}</p> 
+      {{ end }} 
+      
     </div>
   </a> 
 </div>

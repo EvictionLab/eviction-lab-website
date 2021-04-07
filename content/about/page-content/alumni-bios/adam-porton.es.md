@@ -1,5 +1,5 @@
 ---
-childof: research-team-bios_old
+childof: alumni-bios
 title: Adam Porton
 abbrev: aporton
 position: Especialista de Investigación

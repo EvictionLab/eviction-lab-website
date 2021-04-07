@@ -1,5 +1,5 @@
 ---
-childof: research-team-bios
+childof: alumni-bios
 title: LAVAR EDMONDS
 abbrev: ledmonds
 position: 'Especialista de Investigación'

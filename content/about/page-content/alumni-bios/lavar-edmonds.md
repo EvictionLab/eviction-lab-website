@@ -1,8 +1,9 @@
 ---
-childof: research-team-bios
+childof: alumni-bios
 title: LAVAR EDMONDS
 abbrev: ledmonds
-position: Research Specialist
+position: "Research Specialist, 2017-2019;"
+newposition: "University of Washington, MPA ‘21"
 date: 2017-11-26T03:53:19.900Z
 image: /images/bios/ledmonds_full.jpg
 thumb: /images/bios/ledmonds_thumb.jpg
