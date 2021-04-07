@@ -13,9 +13,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 Eviction filings in Boston, MA have fallen sharply since eviction proceedings were suspended across Massachusetts on March 17. A subsequent moratorium halted evictions through mid-October. However, law enforcement cannot carry out eviction orders in Cambridge and Somerville until further notice. Compared to equivalent periods in previous years (2012–2013, 2015–2016), eviction filings fell far below average beginning in April 2020, though filings rose modestly in November after the state moratorium expired.
 
 More detail on eviction protections in Massachusetts can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ma/).
+
+
 
 
 
@@ -25,6 +29,8 @@ More detail on eviction protections in Massachusetts can be found on the [COVID-
 
 {{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Boston were running close to historical averages in January and February of 2020.<sup>1</sup> Filings fell in March following the suspension of eviction proceedings. Eviction filings were down almost 90% in April and only four eviction filings were processed in May.<sup>2</sup> Filings increased in November following the expiration of the state-wide moratorium, but have remained below historical averages.
@@ -32,28 +38,28 @@ Eviction filings in Boston were running close to historical averages in January 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_map.csv" %}}
 
-
-
 # The geography of changes in eviction filings
 
-Boston is divided into 312 Census Tracts. In each of those Tracts, we map the number of eviction filings over the last four weeks.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>2</sup>
+Boston is divided into 312 Census Tracts. In each of those Tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
 
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/boston_linechart.csv" %}}
+
+
 
 
 
@@ -70,6 +76,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in previous years. 
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
+
+
 
 
 
