@@ -13,9 +13,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 The state of Ohio did not put a general eviction moratorium in place, but courts in Hamilton County (Cincinnati) suspended proceedings between March 19 and June 1, 2020. Eviction filings were accepted throughout this period, but fell since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and 70% in May, but since then have slowly risen closer to historical averages.
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
+
+
 
 
 
@@ -24,6 +28,8 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 
 {{% report_chart id="avg" data="/uploads/cincinnati_barchart.csv" %}}
+
+
 
 
 
@@ -36,6 +42,8 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
@@ -44,7 +52,7 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 
 # The geography of changes in eviction filings
 
-Cincinnati is divided into 222 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Cincinnati is divided into 222 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
@@ -61,6 +69,8 @@ Cincinnati is divided into 222 census tracts. In each of those tracts, we map th
 
 
 
+
+
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. In January and February, eviction filings were concentrated in neighborhoods in the White and Black categories. From March onwards, eviction filings have dropped steeply across all neighborhoods.
@@ -68,6 +78,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016. 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
+
+
 
 
 
