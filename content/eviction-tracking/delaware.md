@@ -13,13 +13,17 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="10" data="/uploads/states_table.csv" %}}
 
-Delaware implemented a state-wide eviction moratorium between March 17 and July 1. Almost no new eviction cases were filed in the state during this period. Since the moratorium lifted, new case filings have been increasing, but remain below normal levels.
+Delaware implemented a state-wide eviction moratorium between March 17 and July 1, 2020. Almost no new eviction cases were filed in the state during this period. Since the moratorium lifted, new case filings have increased, but remain below normal levels.
 
 More detail on eviction protections in Delaware can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/de/). A closer look at eviction filing patterns in Wilmington and the surrounding area is [available here](https://evictionlab.org/eviction-tracking/wilmington-de/).
 
 {{%/ report_intro %}}
 
+
+
 {{% report_chart id="avg" data="/uploads/delaware_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -27,9 +31,15 @@ Eviction filings in Delaware were very close to historical average in January an
 
 1. Eviction filing data for Delaware were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
+
+
 {{%/ report_chart %}}
 
+
+
 {{% report_map shapes="/uploads/delaware_shapes.json" data="/uploads/delaware_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -37,5 +47,7 @@ Delaware is divided into three counties. In each of those counties, we map the n
 
 1. Eviction filing data for Delaware were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 2. Tract racial characteristics determined using American Community Survey (ACS) estimates for 2014–2018.
+
+
 
 {{%/ report_map %}}
