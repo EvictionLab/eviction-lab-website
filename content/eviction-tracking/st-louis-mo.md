@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: St. Louis, Missouri
 slug: st-louis-mo
-date: 2020-06-03T00:00:00.000Z
+date: 2021-04-07T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: St. Louis, Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,7 +11,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="29510" data="/uploads/table.csv" %}}
 
-While the state of Missouri has not enacted any protections for renters, the 22nd Judicial Circuit (City of St. Louis) did suspend eviction proceedings in mid-March through July 22nd. Eviction filings in St. Louis declined precipitously in April, May and June before picking up again in July. Since early August, the execution of eviction orders have been suspended until at least April 5. 
+While the state of Missouri has not enacted any protections for renters, the 22nd Judicial Circuit (City of St. Louis) did suspend eviction proceedings in mid-March through July 22, 2020. Eviction filings in St. Louis declined precipitously in April, May and June before picking up again in July. Since early August, the execution of eviction orders in St. Louis City have been suspended until at least May 3, 2021. Execution of eviction orders has resumed in St. Louis County, as of April 5, 2021. 
 
 More detail on eviction protections in Missouri can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mo/).
 
@@ -21,24 +21,12 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 
 {{% report_chart id="avg" data="/uploads/stlouis_barchart.csv" %}}
 
-
-
-
-
-
-
 # Changes in eviction filings
 
-Eviction filings in St. Louis were slightly above average in January and February of this year, but began to fall in March. Filings in April and May were significantly below average. For example, nearly 1,200 eviction cases are usually filed in May in St. Louis, but this year there were only 56.
+Eviction filings in St. Louis were slightly above average in January and February of 2020, but began to fall in March.<sup>1</sup> Filings in April, May, and June were significantly below average. Eviction filings increased by July but have remained below historical averages.<sup>2</sup> 
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-
-
-
-
-
-
 
 {{%/ report_chart %}}
 
@@ -46,50 +34,20 @@ Eviction filings in St. Louis were slightly above average in January and Februar
 
 {{% report_map shapes="/uploads/stlouis_shapes.json" data="/uploads/stlouis_map.csv" %}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # The geography of changes in eviction filings
 
-St. Louis is made up of 305 Census Tracts. In each of those Tracts, we map eviction filings over the last four weeks compared to the typical number of filings in the average year.<sup>1</sup> Over that period, we see steep declines in eviction filings across nearly the entire city.
+St. Louis is made up of 305 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/stlouis_linechart.csv" %}}
+
+
 
 
 
@@ -104,6 +62,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2012–2016. This allows us to see, for example, that filings in majority-Black neighborhoods were higher than average in the first three months of 2020.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
+
+
 
 
 
