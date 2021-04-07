@@ -11,9 +11,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="09003" data="/uploads/table.csv" %}}
 
+
+
 Eviction filings in Hartford, CT (Hartford County) have been below average since a state-wide eviction moratorium was instituted in April 2020. Eviction protections remained in effect through the remainder of the year and were extended into 2021, though some protections expired at the end of August 2020.
 
 More detail on eviction protections in Connecticut can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ct/).
+
+
 
 {{%/ report_intro %}}
 
@@ -21,11 +25,15 @@ More detail on eviction protections in Connecticut can be found on the [COVID-19
 
 {{% report_chart id="avg" data="/uploads/hartford_barchart.csv" %}}
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Hartford were near historical averages in January, February, and March of 2020.<sup>1</sup> Filings dropped precipitously in April and have remained below historical averages since then, but have slowly increased from their lows in May and June.
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
+
+
 
 {{%/ report_chart %}}
 
@@ -35,7 +43,7 @@ Eviction filings in Hartford were near historical averages in January, February,
 
 # The geography of changes in eviction filings
 
-Hartford is made up of 223 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Hartford is made up of 223 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
@@ -50,6 +58,8 @@ Hartford is made up of 223 census tracts. In each of those tracts, we map the nu
 
 
 
+
+
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. Most evictions in Hartford are filed in majority-Latinx neighborhoods. Since March, eviction filings have dropped steeply across all neighborhoods.
@@ -57,6 +67,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in 2017–2019.
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
+
+
 
 
 
