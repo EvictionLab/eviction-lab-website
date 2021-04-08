@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 scripts:
   - charts
 childof: research
@@ -25,7 +25,7 @@ image: /images/assets/blog/top-evicting-landlords-social.png
 
 In 2015, an apartment complex in Fayetteville, NC evicted 156 tenants. One might think perhaps the neighborhood was gentrifying, and this landlord was emptying their complex of all the low-income tenants: a one-time turnover. Yet, the complex evicted 137 tenants, on average, in each of the prior eight years. This one building evicted nearly five percent of all tenants who were removed from their homes in the city of Fayetteville during a ten-year span.
 
-In order to design policies that could anticipate and prevent tenants from being evicted, the Eviction Lab analyzed the locations of evictions over time, hoping to detect a meaningful pattern. Based on our analysis of 17 cities, evictions occur in the same neighborhoods and even the same street blocks year after year. Rather than occurring when neighborhoods are destabilized, through gentrification or other types of neighborhood change, eviction remains the status quo in pockets of American cities.
+In order to design policies that could anticipate and prevent tenants from being evicted, the Eviction Lab analyzed the locations of evictions over time, hoping to detect a meaningful pattern. {{< extlink "Based on our analysis of 17 cities" "https://journals.sagepub.com/doi/full/10.1177/0002716221991458" >}}, evictions occur in the same neighborhoods and even the same street blocks year after year. Rather than occurring when neighborhoods are destabilized, through gentrification or other types of neighborhood change, eviction remains the status quo in pockets of American cities.
 
 {{< pullquote "Most landlords evict tenants rarely,  if they ever  do—even in neighborhoods that have high overall eviction rates. Yet, a small set of landlords displace large numbers of tenants, year after year." >}}
 
