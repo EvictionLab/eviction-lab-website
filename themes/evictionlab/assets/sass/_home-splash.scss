@@ -248,3 +248,34 @@ $heroWidth: 300px;
 
   }
 }
+
+#hp-hero {
+  &.hp-hero {
+    .hp-hero__img {
+      background-image: url('/images/assets/hero/hp-hero__image_1760.jpg');
+    }
+    h1 {
+      @include altFont(32px);
+      letter-spacing: 1px;
+      line-height: 1.2;
+      width: 75%;
+      @include for-iphone-8plus-portrait-only {
+        @include altFont(32px);
+        letter-spacing: 1px;
+        line-height: 1.2;
+        width: 86%;
+      }
+      @include for-tablet-portrait-up {
+        @include altFont(40px);
+        letter-spacing: 1px;
+        line-height: 50px;
+      }
+      @include for-tablet-landscape-up {
+        @include altFont(44px);
+        letter-spacing: 1px;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
