@@ -17,7 +17,7 @@ description: In order to design policies that could anticipate and prevent tenan
 listSummary: In order to design policies that could anticipate and prevent tenants from being evicted, the Eviction Lab analyzed the locations of evictions over time, hoping to detect a meaningful pattern. Based on our analysis of 17 cities, evictions occur in the same neighborhoods and even the same street blocks year after year.
 socialDescription: In order to design policies that could anticipate and prevent tenants from being evicted, the Eviction Lab analyzed the locations of evictions over time, hoping to detect a meaningful pattern.
 researchtype: elresearch
-twImage: /images/assets/blog/one-year-moratoria-social.png
+twImage: /images/assets/blog/top-evicting-landlords-social.png
 aliases: null
 fbImage: /images/assets/blog/top-evicting-landlords-social.png
 image: /images/assets/blog/top-evicting-landlords-social.png
