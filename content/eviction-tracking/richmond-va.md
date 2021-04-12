@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Richmond, Virginia
 slug: richmond-va
-date: 2021-04-07T04:00:00.000Z
+date: 2021-04-12T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Richmond, Virginia | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,15 +11,21 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="51760" data="/uploads/table.csv" %}}
 
+
+
 Eviction filings in Richmond, VA fell sharply in mid-March of 2020. Compared to equivalent periods in 2016, eviction filings were far below average over the last two weeks of March and  throughout April and May. Eviction hearings were halted from late-March to May 18, and again for most of June. Eviction judgments were also stayed from August 10 to September 7, 2020.
 
 More detail on eviction protections in Virginia can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/va/).
+
+
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/richmond_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -28,11 +34,15 @@ Eviction filings in Richmond were near average in January and February of 2020.<
 1. Average eviction filings taken from Eviction Lab data for 2016
 2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -41,27 +51,20 @@ Richmond is divided into 36 zip codes. In each of those zip codes, we map the nu
 1. Average eviction filings taken from Eviction Lab data for 2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/richmond_linechart.csv" %}}
 
-
-
-
-
 # Eviction filings by neighborhood demographics
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. In January and February, eviction filings were highest in majority-Black neighborhoods. Since March, eviction filings have dropped steeply across all neighborhoods.
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. In January and February 2020, eviction filings were highest in majority-Black neighborhoods. Since March, eviction filings have dropped across all neighborhoods.
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and  filings in 2016.
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and filings in 2016.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2016
-
-
-
-
-
 
 {{%/ report_chart %}}
