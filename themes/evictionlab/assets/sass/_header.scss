@@ -30,9 +30,9 @@ header {
   .header-content {
     position:relative;
     width: 100%;
-    max-width: $maxContentWidth;
+    //max-width: $maxContentWidth;
     @include media-breakpoint-up(x4l) {
-      max-width: 1360px;
+      // max-width: 1360px;
     }    
     height:100%;
     padding:0;

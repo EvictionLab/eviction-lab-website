@@ -253,6 +253,9 @@ $heroWidth: 300px;
   &.hp-hero {
     .hp-hero__img {
       background-image: url('/images/assets/hero/hp-hero__image_1760.jpg');
+      background-size: 120%;
+      background-repeat: no-repeat;
+      background-position-x: 10%;
     }
     h1 {
       @include altFont(32px);
@@ -274,6 +277,41 @@ $heroWidth: 300px;
         @include altFont(44px);
         letter-spacing: 1px;
         line-height: 50px;
+      }
+    }
+    p {
+      @include defaultFont(16px);
+      margin: 24px 0 32px 0;
+      line-height: 1.5;
+      @include for-iphone-8plus-portrait-only {
+        @include defaultFont(16px);
+        margin: 32px 0 40px 0;
+        line-height: 1.5;
+      }
+      @include for-tablet-portrait-up {
+        max-width: 440px;
+        @include defaultFont(17px);
+        line-height: 23px;
+      }
+      @include for-tablet-landscape-up {
+        color: $secondaryAltTextColor;
+      }
+      @include for-tablet-landscape-up-w-height {
+        margin: 20px 0 29px 0;
+      }
+    }
+    a {
+      color: $altTextColor;
+      background-color: $color1;
+      border-color: $color1;
+      text-transform: uppercase;
+      @include altFont(1.4rem);
+      padding: 11px 15px;
+      letter-spacing: .054rem;
+      @include for-tablet-portrait-up {
+        @include altFont(14px);
+        padding: 20px 40px;
+        letter-spacing: 1px;
       }
     }
   }

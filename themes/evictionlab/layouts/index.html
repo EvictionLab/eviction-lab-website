@@ -5,80 +5,33 @@
   <div class="super-content d-block">{{ i18n "superhead" | safeHTML }}</div>
 </div>
 
-<div id="hp-hero" class="row mx-5 mt-5 hp-hero">
-
-  <div class="col-12 col-lg-6 pr-5 hp-hero__img"></div>
-  <div class="col-12 col-lg-5 pl-5 hp-hero__copy">
-    <h1 class="mt-5 mb-6">
-      {{ i18n "splashHeader" }}
-    </h1>
-    <p>{{ i18n "splashBody" }}</p>
-    <a class="btn smoothScroll " href="#home-menu">{{ i18n "cta" }}</a>
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="new-splash fill-height">
-  <div class="section section-split">
-
-    <!-- ********* slider *********** -->
-
-    <div class="section-image">
-
-      <div id="hero-slider" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ********* copy *********** -->
-
-    <div class="section-content">
-      <div class="hero">
-
-      <h1>
+<div id="hp-hero" class="row mx-auto mt-5 mb-7 hp-hero">
+  <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
+      <div class="col-12 col-lg-7 hp-hero__img"></div>
+      <div class="col-12 col-lg-5 pl-5 hp-hero__copy">
+        <h1 class="mt-5 mb-6">
           {{ i18n "splashHeader" }}
-      </h1>
-
-      <p>{{ i18n "splashBody" }}</p>
-
-      <a class="btn smoothScroll " href="#home-menu">{{ i18n "cta" }}</a>
-
-      <div class="hero-social">
-          <a href="https://www.facebook.com/evictionlab/" aria-label="Eviction Lab on Facebook"><i class="fa fa-facebook"></i></a>
-          <a href="https://twitter.com/evictionlab" aria-label="Eviction Lab on Twitter"><i class="fa fa-twitter"></i></a>
+        </h1>
+        <p>{{ i18n "splashBody" }}</p>
+        <a class="btn smoothScroll mr-2" href="#home-menu">{{ i18n "cta" }}</a>
+        <a class="btn smoothScroll " href="#home-menu">{{ i18n "cta" }}</a>
       </div>
-
-      </div>
-    </div>
-
-    <!-- ******************** -->
-
   </div>
 </div>
+<div id="hp-latest" class="row mx-auto mt-5 mb-7 hp-latest">
+  <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
+    {{ range first 4 (where .Site.RegularPages "Params.childof" ("research")) }}
+    <div class="col-12 col-md-3">
+      <div style="height: 140px; background-size: cover; background-image: url('{{ .Params.image }}');"></div>
+      <h3>{{ .Params.title }}</h3>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+
+
+
 
 <!-- ********** end splash section ******************************** -->
 
