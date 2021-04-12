@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: Boston, Massachusetts
 slug: boston-ma
-date: 2021-04-07T04:00:00.000Z
+date: 2021-04-12T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Boston, Massachusetts | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="25025" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -31,11 +33,15 @@ More detail on eviction protections in Massachusetts can be found on the [COVID-
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
+
+
 
 
 
@@ -56,11 +62,15 @@ Eviction filings in Boston were running close to historical averages in January 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -69,46 +79,20 @@ Boston is divided into 312 census tracts. In each of those tracts, we map the nu
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/boston_linechart.csv" %}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Eviction filings by neighborhood demographics
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In January and February, eviction filings were concentrated in non-Latinx neighborhoods. In April and May, eviction filings dropped steeply across all neighborhoods.
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In January and February 2020, eviction filings were concentrated in non-Latinx neighborhoods. In April and May, eviction filings dropped steeply across all neighborhoods.
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020 and average filings in previous years. 
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in previous years.<sup>1</sup> 
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {{%/ report_chart %}}
