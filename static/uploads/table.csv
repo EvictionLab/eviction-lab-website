@@ -1007,62 +1007,62 @@ id,name,week_date,week_filings,week_trend,end_moratorium_date,start_moratorium_d
 27053,"Minneapolis-Saint Paul, MN",03/21/2021,15,16,04/14/2021,03/16/2020,Hennepin County;Ramsey County,440;225,04/10/2021
 27053,"Minneapolis-Saint Paul, MN",03/28/2021,19,16.75,04/14/2021,03/16/2020,Hennepin County;Ramsey County,440;225,04/10/2021
 27053,"Minneapolis-Saint Paul, MN",04/04/2021,18,16.75,04/14/2021,03/16/2020,Hennepin County;Ramsey County,440;225,04/10/2021
-36061,"New York, NY",03/15/2020,2327,3070.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",03/22/2020,1,2239.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",03/29/2020,0,1329.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",04/05/2020,0,582,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",04/12/2020,3,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",04/19/2020,0,0.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",04/26/2020,0,0.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",05/03/2020,0,0.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",05/10/2020,4,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",05/17/2020,0,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",05/24/2020,0,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",05/31/2020,0,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",06/07/2020,0,0,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",06/14/2020,1,0.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",06/21/2020,5,1.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",06/28/2020,22,7,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",07/05/2020,74,25.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",07/12/2020,248,87.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",07/19/2020,393,184.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",07/26/2020,1172,471.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",08/02/2020,583,599,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",08/09/2020,1125,818.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",08/16/2020,1424,1076,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",08/23/2020,2225,1339.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",08/30/2020,1793,1641.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",09/06/2020,1403,1711.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",09/13/2020,1670,1772.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",09/20/2020,1860,1681.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",09/27/2020,1506,1609.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",10/04/2020,1832,1717,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",10/11/2020,1576,1693.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",10/18/2020,2069,1745.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",10/25/2020,1915,1848,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",11/01/2020,2090,1912.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",11/08/2020,1804,1969.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",11/15/2020,2072,1970.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",11/22/2020,1388,1838.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",11/29/2020,1669,1733.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",12/06/2020,1687,1704,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",12/13/2020,1829,1643.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",12/20/2020,1949,1783.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",12/27/2020,687,1538,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",01/03/2021,72,1134.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",01/10/2021,122,707.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",01/17/2021,93,243.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",01/24/2021,132,104.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",01/31/2021,149,124,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",02/07/2021,330,176,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",02/14/2021,321,233,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",02/21/2021,536,334,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",02/28/2021,679,466.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",03/07/2021,581,529.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",03/14/2021,538,583.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",03/21/2021,868,666.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",03/28/2021,233,555,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
-36061,"New York, NY",04/04/2021,0,555,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,15482;12368;8272;8119;819,04/10/2021
+36061,"New York, NY",03/15/2020,2350,3085.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",03/22/2020,1,2254.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",03/29/2020,0,1344.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",04/05/2020,0,587.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",04/12/2020,3,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",04/19/2020,0,0.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",04/26/2020,0,0.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",05/03/2020,0,0.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",05/10/2020,4,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",05/17/2020,0,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",05/24/2020,0,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",05/31/2020,0,1,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",06/07/2020,0,0,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",06/14/2020,1,0.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",06/21/2020,5,1.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",06/28/2020,22,7,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",07/05/2020,74,25.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",07/12/2020,248,87.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",07/19/2020,393,184.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",07/26/2020,1172,471.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",08/02/2020,583,599,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",08/09/2020,1125,818.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",08/16/2020,1424,1076,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",08/23/2020,2225,1339.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",08/30/2020,1793,1641.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",09/06/2020,1403,1711.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",09/13/2020,1670,1772.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",09/20/2020,1860,1681.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",09/27/2020,1506,1609.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",10/04/2020,1832,1717,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",10/11/2020,1576,1693.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",10/18/2020,2069,1745.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",10/25/2020,1915,1848,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",11/01/2020,2090,1912.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",11/08/2020,1804,1969.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",11/15/2020,2072,1970.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",11/22/2020,1388,1838.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",11/29/2020,1671,1733.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",12/06/2020,1687,1704.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",12/13/2020,1829,1643.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",12/20/2020,1950,1784.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",12/27/2020,687,1538.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",01/03/2021,73,1134.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",01/10/2021,123,708.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",01/17/2021,93,244,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",01/24/2021,136,106.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",01/31/2021,151,125.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",02/07/2021,332,178,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",02/14/2021,323,235.5,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",02/21/2021,538,336,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",02/28/2021,683,469,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",03/07/2021,599,535.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",03/14/2021,549,592.25,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",03/21/2021,912,685.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",03/28/2021,963,755.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
+36061,"New York, NY",04/04/2021,768,755.75,06/20/2020;02/26/2021,03/20/2020;12/28/2020,Bronx County;Kings County;New York County;Queens County;Richmond County,16077;12781;8558;8422;837,04/10/2021
 42101,"Philadelphia, PA",03/15/2020,44,315.75,08/31/2020,03/18/2020,,,04/10/2021
 42101,"Philadelphia, PA",03/22/2020,0,203,08/31/2020,03/18/2020,,,04/10/2021
 42101,"Philadelphia, PA",03/29/2020,0,104.75,08/31/2020,03/18/2020,,,04/10/2021
@@ -1285,7 +1285,7 @@ id,name,week_date,week_filings,week_trend,end_moratorium_date,start_moratorium_d
 51760,"Richmond, VA",03/14/2021,55,83,09/07/2020,03/24/2020,,,04/10/2021
 51760,"Richmond, VA",03/21/2021,80,91.25,09/07/2020,03/24/2020,,,04/10/2021
 51760,"Richmond, VA",03/28/2021,115,82.5,09/07/2020,03/24/2020,,,04/10/2021
-51760,"Richmond, VA",04/04/2021,13,82.5,09/07/2020,03/24/2020,,,04/10/2021
+51760,"Richmond, VA",04/04/2021,28,82.5,09/07/2020,03/24/2020,,,04/10/2021
 18141,"South Bend, IN",03/15/2020,12,25.75,08/14/2020,03/19/2020,,,04/10/2021
 18141,"South Bend, IN",03/22/2020,0,17.5,08/14/2020,03/19/2020,,,04/10/2021
 18141,"South Bend, IN",03/29/2020,1,8,08/14/2020,03/19/2020,,,04/10/2021
