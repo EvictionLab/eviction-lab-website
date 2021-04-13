@@ -164,7 +164,7 @@ Elab.Utils = (function (Elab) {
   }
 
   function getCdcMoratoriumRange() {
-    return [new Date(2020, 8, 4), new Date(2021, 2, 31)]; // ends march 31
+    return [new Date(2020, 8, 4), new Date(2021, 5, 30)]; // ends june 6
   }
 
   return {
