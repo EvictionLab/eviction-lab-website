@@ -8,13 +8,16 @@
 <div id="hp-hero" class="row mx-auto mt-15 mb-7 hp-hero">
   <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
       <div class="col-12 col-lg-7 hp-hero__img"></div>
-      <div class="col-12 col-lg-5 pl-5 hp-hero__copy">
-        <h1 class="mt-5 mb-6">
-          {{ i18n "splashHeader" }}
+      <div class="col-12 col-lg-5 pl-5 hp-hero__copy d-flex flex-column justify-content-end">
+        <h1 class="mt-5 mb-5">
+          {{/* i18n "splashHeader" */}}
+          Every year, 2,350,000 evictions are filed in America.
         </h1>
-        <p>{{ i18n "splashBody" }}</p>
-        <a class="btn smoothScroll mr-2" href="#home-menu">{{ i18n "cta" }}</a>
-        <a class="btn smoothScroll " href="#home-menu">{{ i18n "cta" }}</a>
+        <p class="mb-6">{{/* i18n "splashBody" */}}The Eviction Lab at Princeton University is working to understand the eviction crisis across the country, by researching its prevalence and consequences, and offering our data and interactive tools to the public.</p>
+        <div>   
+          <a class="btn smoothScroll mr-2" href="#home-menu">Explore our datasets{{/* i18n "cta" */}}</a>
+          <a class="btn smoothScroll " href="/updates">View recent analysis {{/* i18n "cta" */}}</a>
+        </div>       
       </div>
   </div>
 </div>
@@ -76,7 +79,7 @@
                 <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
               </a>  
               <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-              <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 90 }}</a>
+              <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 80 }}</a>
             </div>  
           </div>
          {{ end }}
@@ -99,7 +102,9 @@
 
 <script>
 
-jQuery('.carousel .carousel-item').each(function(){
+
+
+$('.carousel .carousel-item').each(function(){
     var next = $(this).next();
     if (!next.length) {
     next = $(this).siblings(':first');

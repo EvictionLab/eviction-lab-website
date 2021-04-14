@@ -15,7 +15,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1280px,
-  xxxl: 1440px,
+  xxxl: 1441px,
   x4l: 1720px
 );
 
@@ -189,6 +189,12 @@ $numberFontStack:  "Gotham A", "Gotham B", sans-serif;
 
 @mixin altFont($size) {
   font-family: $altFontStack;
+  font-size: $size;
+  font-weight: normal;
+}
+
+@mixin headerFont($size) {
+  font-family: $headerFontStack;
   font-size: $size;
   font-weight: normal;
 }

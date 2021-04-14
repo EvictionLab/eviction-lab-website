@@ -5,6 +5,8 @@
       background-size: 120%;
       background-repeat: no-repeat;
       background-position-x: 10%;
+      background-position-y: 28%;
+      min-height: 460px;
     }
     h1 {
       @include altFont(32px);
@@ -30,11 +32,11 @@
     }
     p {
       @include defaultFont(16px);
-      margin: 24px 0 32px 0;
+      //margin: 24px 0 32px 0;
       line-height: 1.5;
       @include for-iphone-8plus-portrait-only {
         @include defaultFont(16px);
-        margin: 32px 0 40px 0;
+      //  margin: 32px 0 40px 0;
         line-height: 1.5;
       }
       @include for-tablet-portrait-up {
@@ -46,21 +48,21 @@
         color: $secondaryAltTextColor;
       }
       @include for-tablet-landscape-up-w-height {
-        margin: 20px 0 29px 0;
+     //   margin: 20px 0 29px 0;
       }
     }
     a {
       color: $altTextColor;
       background-color: $color1;
       border-color: $color1;
-      text-transform: uppercase;
-      @include altFont(1.4rem);
+      //text-transform: uppercase;
+      @include defaultFont(1.4rem);
       padding: 11px 15px;
-      letter-spacing: .054rem;
+      //letter-spacing: .054rem;
       @include for-tablet-portrait-up {
-        @include altFont(14px);
-        padding: 20px 40px;
-        letter-spacing: 1px;
+        @include defaultFont(15px);
+        padding: 20px 26px;
+        letter-spacing: 0.02rem;
       }
     }
   }
@@ -120,13 +122,21 @@
     background-position: 50% 50% !important;
   }
   .carousel-control-prev-icon {
-    right: -16px;
-    top: -16%;
+    right: 54px;
+    top: -21%;
+    @include media-breakpoint-up(xxxl) {
+      right: -16px;
+      top: -16%;
+    }
     transform: rotate(180deg);
   }
   .carousel-control-next-icon {
-    right: 16px;
-    top: -16%;
+    right: -54px;
+    top: -21%;
+    @include media-breakpoint-up(xxxl) {
+      right: 16px;
+      top: -16%;
+    }
   }
   .carousel-inner .carousel-item.active,
   .carousel-inner .carousel-item-next,
