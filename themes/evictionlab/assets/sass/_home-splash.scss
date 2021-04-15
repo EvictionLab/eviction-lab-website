@@ -194,6 +194,7 @@
       top: -16%;
     }
   }
+  /*
   .carousel-inner .carousel-item.active,
   .carousel-inner .carousel-item-next,
   .carousel-inner .carousel-item-prev {
@@ -216,15 +217,16 @@
   .carousel-inner .carousel-item-left{ 
     will-change: transform;
     transform: translateX(0);
-  }
+  } */
   .carousel-indicators {
     bottom: 16px;
     li {
       background-color: $color4;
-      width: 16px;
-      height: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
       &.active {
-        background-color: $color1;
+        background-color: $color2;
         }
       }
     }
