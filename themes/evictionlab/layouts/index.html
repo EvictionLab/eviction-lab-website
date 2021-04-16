@@ -10,29 +10,24 @@
       <div class="col-12 col-lg-7 hp-hero__img"></div>
       <div class="col-12 col-lg-5 pl-5 hp-hero__copy d-flex flex-column justify-content-end">
         <h1 class="mt-5 mb-5">
-          {{/* i18n "splashHeader" */}}
           Every year, 2,350,000 evictions are filed in America.
         </h1>
         <p class="mb-6">{{/* i18n "splashBody" */}}The Eviction Lab at Princeton University is working to understand the eviction crisis across the country, by researching its prevalence and consequences, and offering our data and interactive tools to the public.</p>
         <div>   
-          <a class="btn smoothScroll mr-2" href="#home-menu">Explore our datasets{{/* i18n "cta" */}}</a>
-          <a class="btn smoothScroll " href="/updates">View recent analysis {{/* i18n "cta" */}}</a>
+          <a class="btn smoothScroll mr-2" href="#home-menu">Explore our datasets</a>
+          <a class="btn" href="/updates">View recent analysis</a>
         </div>       
       </div>
   </div>
 </div>
+
+<!-- ********** carousel menu section ********** -->
 
 
 <div id="hp-carousel-4slide" class="hp-carousel carousel slide" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
   <div class="carousel-inner">
     <ol class="carousel-indicators">
       <li data-target="#hp-carousel-4slide" data-slide-to="0" class="active"></li>
-      <li data-target="#hp-carousel-4slide" data-slide-to="0" class="active"></li>
-      <li data-target="#hp-carousel-4slide" data-slide-to="0" class="active"></li>
-      <li data-target="#hp-carousel-4slide" data-slide-to="0" class="active"></li>
-      <li data-target="#hp-carousel-4slide" data-slide-to="1" class=""></li>
-      <li data-target="#hp-carousel-4slide" data-slide-to="1" class=""></li>
-      <li data-target="#hp-carousel-4slide" data-slide-to="1" class=""></li>
       <li data-target="#hp-carousel-4slide" data-slide-to="1" class=""></li>
     </ol>
     <div class="carousel-item active">
@@ -81,93 +76,6 @@
   </div>
 </div>
 
-
-  <!--<div id="hp-carousel" class="carousel slide w-100 row mb-2" data-interval="5000" data-touch="true" data-ride="carousel">
-      <div class="carousel-inner col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex" role="listbox">
-        <ol class="carousel-indicators">
-          <li data-target="#hp-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#hp-carousel" data-slide-to="1" class=""></li>
-          <li data-target="#hp-carousel" data-slide-to="2" class=""></li>
-          <li data-target="#hp-carousel" data-slide-to="3" class=""></li>
-          <li data-target="#hp-carousel" data-slide-to="4"></li>
-          <li data-target="#hp-carousel" data-slide-to="5"></li>
-          <li data-target="#hp-carousel" data-slide-to="6"></li>
-          <li data-target="#hp-carousel" data-slide-to="7"></li>
-        </ol>
-        {{ range first 1 (where .Site.RegularPages "Params.childof" ("research")) }}
-          <div class="carousel-item active align-items-start">
-            <div class="col-3 align-items-start">
-              <a href="{{ .RelPermalink }}">
-                <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
-              </a>
-              <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-              <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
-          </div>
-          </div>
-          {{ end }}
-          {{ range first 6 (after 1 (where .Site.RegularPages "Params.childof" ("research")) ) }}
-          <div class="carousel-item align-items-start">
-            <div class="col-3">
-              <a href="{{ .RelPermalink }}">
-                <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
-              </a>  
-              <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-              <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
-            </div>  
-          </div>
-         {{ end }}
-         <div class="carousel-item align-items-start">
-          <div class="col-3">
-              <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
-                <a class="viewmore" href="/updates"> </a> 
-                  <div class="viewmore__text">
-                    <div>VIEW MORE <br> RECENT ANALYSIS</div>
-                    <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                  </div>  
-              </div>
-          </div>  
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#hp-carousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#hp-carousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-      </a>
-  </div>-->
-
-
-<!--<script
-  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-  crossorigin="anonymous"></script>
-
-<script>
-
-
-
-  $('.carousel .carousel-item').each(function(){
-    var next = $(this).next();
-    if (!next.length) {
-    next = $(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-    
-    for (var i=0;i<2;i++) {
-        next=next.next();
-        if (!next.length) {
-        	next = $(this).siblings(':first');
-      	}
-        
-        next.children(':first-child').clone().appendTo($(this));
-      }
-}); */
-</script>
-
-
-<!-- ********** end splash section ******************************** -->
 
 <!-- ********** pictorial menu section ********** -->
 
