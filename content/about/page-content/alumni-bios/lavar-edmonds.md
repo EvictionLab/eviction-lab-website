@@ -1,8 +1,9 @@
 ---
-childof: research-team-bios
+childof: alumni-bios
 title: LAVAR EDMONDS
 abbrev: ledmonds
-position: Research Specialist
+position: "Research Specialist, 2017-2019"
+newposition: Stanford University, PhD Student (Economics of Education)
 date: 2017-11-26T03:53:19.900Z
 image: /images/bios/ledmonds_full.jpg
 thumb: /images/bios/ledmonds_thumb.jpg
