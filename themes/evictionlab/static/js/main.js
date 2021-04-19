@@ -466,3 +466,36 @@ $(document).ready(function () {
     });
   }
 });
+
+$('.carousel').on('touchstart', function(event){
+  const xClick = event.originalEvent.touches[0].pageX;
+  $(this).one('touchmove', function(event){
+      const xMove = event.originalEvent.touches[0].pageX;
+      const sensitivityInPx = 5;
+
+      if( Math.floor(xClick - xMove) > sensitivityInPx ){
+          $(this).carousel('next');
+      }
+      else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+          $(this).carousel('prev');
+      }
+  });
+  $(this).on('touchend', function(){
+      $(this).off('touchmove');
+  });
+});
+
+$('.carousel').on('slide.bs.carousel', function(event){
+  const numElements = $(this).find(".carousel-item").length
+  if(event.to === numElements - 1) {
+    $(this).find(".carousel-control-next").addClass("inactive")
+  }else {
+    $(this).find(".carousel-control-next").removeClass("inactive")
+  }
+
+  if(event.to === 0) {
+    $(this).find(".carousel-control-prev").addClass("inactive")
+  }else {
+    $(this).find(".carousel-control-prev").removeClass("inactive")
+  }
+});

@@ -68,7 +68,21 @@
   }
 }
 
-#hp-carousel, #hp-carousel-4slide {
+#hp-carousel-4slide {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: initial;
+  }
+}
+
+#hp-carousel-mobile {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+#hp-carousel, #hp-carousel-4slide, #hp-carousel-mobile {
   will-change: transform;
   .viewmore {
     width: 100%;
@@ -162,6 +176,13 @@
   
   .carousel-control-prev, .carousel-control-next {
     opacity: 1;
+    transition: opacity 0.3s ease-out;
+
+    &.inactive {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
     &:hover {
       .carousel-control-prev-icon, .carousel-control-next-icon {
         background: url("/images/icons/bio-arrow-active.svg");
@@ -178,6 +199,7 @@
     border-radius: 2px;
     background-position: 50% 50% !important;
   }
+
   .carousel-control-prev-icon {
     right: 54px;
     top: -21%;
