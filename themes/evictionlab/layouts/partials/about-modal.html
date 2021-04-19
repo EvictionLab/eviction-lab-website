@@ -1,7 +1,7 @@
 <!-- Modal setup for bios -->
 
 {{ if .Params.newposition }} 
-{{/* trigger if alumni image */}}
+{{/* trigger if person is alumni  */}}
 
 <div class="bio-thumb-wrapper">
 
@@ -13,9 +13,7 @@
       </picture>
       <h3>{{ .Params.title }}</h3>
       <p class="bio-position pb-1">{{ .Params.position }}</p>
-      {{ if .Params.newposition }}
-        <p class="bio-position mt-1">{{ .Params.newposition }}</p> 
-      {{ end }} 
+      <p class="bio-position mt-1">{{ .Params.newposition }}</p> 
     </div>
 
 </div>
