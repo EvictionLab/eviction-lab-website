@@ -420,7 +420,14 @@
     }
 
  }
+ .alumni {
+     p.bio-position:first-of-type {
+        border-bottom: 2px solid #434878;
+     }
+ }
 }
+
+
 
 // Modal CSS overrides
 .el-bios {

@@ -1,4 +1,25 @@
 <!-- Modal setup for bios -->
+
+{{ if .Params.newposition }} 
+{{/* trigger if person is alumni  */}}
+
+<div class="bio-thumb-wrapper">
+
+    <div class="bio-container alumni d-flex flex-column align-items-center">
+      <picture>
+        <source media="(max-width: 799px)" srcset='/images/bios/grayscale{{ strings.TrimPrefix "/images/bios" .Params.thumb }}'>
+        <source media="(min-width: 800px)" srcset="{{ .Params.thumb }}">
+        <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
+      </picture>
+      <h3>{{ .Params.title }}</h3>
+      <p class="bio-position pb-1">{{ .Params.position }}</p>
+      <p class="bio-position mt-1">{{ .Params.newposition }}</p> 
+    </div>
+
+</div>
+
+{{ else }}
+
 <div class="bio-thumb-wrapper">
   <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
     <div class="bio-container">
@@ -19,6 +40,9 @@
     </div>
   </a> 
 </div>
+
+{{ end }}
+
 <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
