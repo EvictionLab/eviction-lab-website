@@ -2,7 +2,8 @@
 childof: alumni-bios
 title: Adam Porton
 abbrev: aporton
-position: Especialista de Investigación
+position: Especialista de Investigación, 2017-2020
+newposition: University of Washington, MPA ‘21
 date: 2017-11-26T03:46:25.603Z
 image: /images/bios/aporton_full.jpg
 thumb: /images/bios/aporton_thumb.jpg
