@@ -29,19 +29,12 @@ header {
   z-index:999;
   .header-content {
     position:relative;
-    width: 100%;
-    max-width: $maxContentWidth;
-    @include media-breakpoint-up(x4l) {
-      max-width: 1360px;
-    }    
+    width: 100%;   
     height:100%;
     padding:0;
     margin:0 auto;
     box-sizing:border-box;
     display:flex;
-    justify-content: flex-end;
-    align-content: center;
-    align-items: center;
   }
 }
 .page-subnav .header-wrapper {

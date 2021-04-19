@@ -1,54 +1,81 @@
 {{ partial "header" . }}
 
 <!-- ********** splash section ********** -->
-<div class="superheader text-md-center  d-flex align-items-center justify-content-center" style="">
+<div class="superheader text-md-center  d-none align-items-center justify-content-center">
   <div class="super-content d-block">{{ i18n "superhead" | safeHTML }}</div>
 </div>
-<div class="new-splash fill-height">
-  <div class="section section-split">
 
-    <!-- ********* slider *********** -->
-
-    <div class="section-image">
-
-      <div id="hero-slider" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-          </div>
-
-        </div>
+<div id="hp-hero" class="row mx-auto mt-15 mb-7 hp-hero">
+  <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
+      <div class="col-12 col-lg-6 col-xl-7 hp-hero__img"></div>
+      <div class="col-12 col-lg-6 col-xl-5 pl-5 hp-hero__copy d-flex flex-column justify-content-lg-center justify-content-xl-end">
+        <h1 class="mt-lg-2 mt-xl-5 mb-lg-2 mb-xl-5">
+          Every year, 2,350,000 evictions are filed in America.
+        </h1>
+        <p class="mb-lg-3 mb-xl-6">{{/* i18n "splashBody" */}}The Eviction Lab at Princeton University is working to understand the eviction crisis across the country, by researching its prevalence and consequences, and offering our data and interactive tools to the public.</p>
+        <div>   
+          <a class="btn smoothScroll mr-2" href="#home-menu">Explore our datasets</a>
+          <a class="btn" href="/updates">View recent analysis</a>
+        </div>       
       </div>
-
-    </div>
-
-    <!-- ********* copy *********** -->
-
-    <div class="section-content">
-      <div class="hero">
-
-      <h1>
-          {{ i18n "splashHeader" }}
-      </h1>
-
-      <p>{{ i18n "splashBody" }}</p>
-
-      <a class="btn smoothScroll " href="#home-menu">{{ i18n "cta" }}</a>
-
-      <div class="hero-social">
-          <a href="https://www.facebook.com/evictionlab/" aria-label="Eviction Lab on Facebook"><i class="fa fa-facebook"></i></a>
-          <a href="https://twitter.com/evictionlab" aria-label="Eviction Lab on Twitter"><i class="fa fa-twitter"></i></a>
-      </div>
-
-      </div>
-    </div>
-
-    <!-- ******************** -->
-
   </div>
 </div>
 
-<!-- ********** end splash section ******************************** -->
+<!-- ********** carousel menu section ********** -->
+
+
+<div id="hp-carousel-4slide" class="hp-carousel carousel slide" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
+  <div class="carousel-inner">
+    <ol class="carousel-indicators">
+      <li data-target="#hp-carousel-4slide" data-slide-to="0" class="active"></li>
+      <li data-target="#hp-carousel-4slide" data-slide-to="1" class=""></li>
+    </ol>
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
+          {{ range first 4 (where .Site.RegularPages "Params.childof" ("research")) }}
+            <div class="col-3">
+              <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
+              <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
+              <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+            </div>
+          {{ end }}
+        </div>  
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
+          {{ range first 3 (after 4 (where .Site.RegularPages "Params.childof" ("research")) ) }}
+            <div class="col-3">
+              <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
+              <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
+              <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+            </div>
+          {{ end }}
+          <div class="col-3">
+            <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
+              <a class="viewmore" href="/updates"> </a> 
+                <div class="viewmore__text">
+                  <div>VIEW MORE <br> RECENT ANALYSIS</div>
+                  <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                </div>  
+            </div>
+        </div>  
+        </div>  
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#hp-carousel-4slide" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#hp-carousel-4slide" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
 
 <!-- ********** pictorial menu section ********** -->
 
