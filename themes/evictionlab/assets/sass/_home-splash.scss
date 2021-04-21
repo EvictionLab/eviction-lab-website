@@ -7,6 +7,11 @@
       background-position-x: 10%;
       background-position-y: 28%;
       min-height: 460px;
+      @include media-breakpoint-only(lg) {
+        background-size: 160%;
+        background-position-x: 48%;
+        background-position-y: 28%;
+      }
     }
     h1 {
       @include altFont(32px);
@@ -61,7 +66,7 @@
       //letter-spacing: .054rem;
       @include for-tablet-portrait-up {
         @include defaultFont(15px);
-        padding: 20px 26px;
+        padding: 20px 24px;
         letter-spacing: 0.02rem;
       }
     }
