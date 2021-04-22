@@ -74,15 +74,15 @@
   </div>
 </div>
 <div id="hp-carousel-mobile" class="hp-carousel-mobile row">
- <div class="col-12 px-md-5 d-md-flex">
+ <div class="col-12 px-md-5 d-flex">
   {{ range first 7 (where .Site.RegularPages "Params.childof" ("research"))  }}
-  <div class="col-md-5 hp-carousel-mobile__slide">
+  <div class="col-8 col-md-5 hp-carousel-mobile__slide">
     <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
     <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
     <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
   </div>
 {{ end }}
-  <div class="col-md-5">
+  <div class="col-8 col-md-5">
     <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
       <a class="viewmore" href="/updates"> </a> 
         <div class="viewmore__text mx-2">
