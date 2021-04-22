@@ -3,16 +3,16 @@
 <!-- ********** splash section ********** -->
 
 
-<div id="hp-hero" class="row mx-auto mt-15 mb-7 hp-hero">
+<div id="hp-hero" class="row mx-auto mt-15 mb-md-6 mb-lg-7 hp-hero">
   <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex flex-column flex-lg-row">
       <div class="col-12 col-lg-6 col-xl-7 hp-hero__img"></div>
-      <div class="col-12 col-lg-6 col-xl-5 pl-lg-4 pl-xl-5 hp-hero__copy d-flex flex-column justify-content-lg-center justify-content-xl-end">
-        <h1 class="mt-lg-2 mt-xl-5 mb-lg-2 mb-xl-5">
+      <div class="col-12 col-lg-6 col-xl-5 pl-0 pl-lg-4 pl-xl-5 hp-hero__copy d-flex flex-column justify-content-lg-center justify-content-xl-end">
+        <h1 class="mt-md-3 mt-lg-2 mt-xl-5 mb-md-2 mb-lg-2 mb-xl-5">
           Every year, 2,350,000 evictions are filed in America.
         </h1>
-        <p class="mb-lg-3 mb-xl-6">{{/* i18n "splashBody" */}}The Eviction Lab works to shed light on the U.S. housing crisis. Find out how many evictions happen in your community and explore the latest eviction trends. Create custom maps, charts, and reports. Share facts with your neighbors and elected officials.</p>
+        <p class="mb-md-4 mb-lg-3 mb-xl-6">{{/* i18n "splashBody" */}}The Eviction Lab works to shed light on the U.S. housing crisis. Find out how many evictions happen in your community and explore the latest eviction trends. Create custom maps, charts, and reports. Share facts with your neighbors and elected officials.</p>
         <div>   
-          <a class="btn smoothScroll mr-lg-1 mr-xl-2" href="#home-menu">Explore our datasets</a>
+          <a class="btn smoothScroll mr-md-2 mr-lg-1 mr-xl-2" href="#home-menu">Explore our datasets</a>
           <a class="btn" href="/updates">View recent analysis</a>
         </div>       
       </div>
@@ -21,7 +21,8 @@
 
 <!-- ********** carousel menu section ********** -->
 
-<div id="hp-carousel-4slide" class="hp-carousel carousel slide" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
+<!-- Tablet landscape and up -->
+<div id="hp-carousel-4slide" class="hp-carousel carousel slide d-none d-lg-block" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
   <div class="carousel-inner">
     <ol class="carousel-indicators">
       <li data-target="#hp-carousel-4slide" data-slide-to="0" class="active"></li>
@@ -72,8 +73,28 @@
     </a>
   </div>
 </div>
+<div id="hp-carousel-mobile" class="hp-carousel-mobile row">
+ <div class="col-12 px-md-5 d-md-flex">
+  {{ range first 7 (where .Site.RegularPages "Params.childof" ("research"))  }}
+  <div class="col-md-5 hp-carousel-mobile__slide">
+    <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
+    <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
+    <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+  </div>
+{{ end }}
+  <div class="col-md-5">
+    <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
+      <a class="viewmore" href="/updates"> </a> 
+        <div class="viewmore__text mx-2">
+          <div>VIEW MORE <br> RECENT ANALYSIS</div>
+          <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+        </div>  
+    </div>
+</div>  
+ </div>
+</div>
 
-<div id="hp-carousel-mobile" class="hp-carousel hp-carousel-mobile carousel slide" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
+<!--<div id="hp-carousel-mobile" class="hp-carousel hp-carousel-mobile carousel slide" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
   <div class="carousel-inner">
     <ol class="carousel-indicators">
       {{ range $index, $element := first 7 (where .Site.RegularPages "Params.childof" ("research")) }}
@@ -126,7 +147,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
+</div> -->
 
 
 <!-- ********** pictorial menu section ********** -->
