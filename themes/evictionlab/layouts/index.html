@@ -33,7 +33,11 @@
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
           {{ range first 4 (where .Site.RegularPages "Params.childof" ("research")) }}
             <div class="col-3">
-              <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
+              {{ $img := .Params.fbImage }}
+              {{ with .Resources.GetMatch $img }}
+              {{ $processed := .Fit "600x400 q20" }}
+              <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+              {{ end }}
               <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
               <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
             </div>
@@ -73,7 +77,8 @@
     </a>
   </div>
 </div>
-<div id="hp-carousel-mobile" class="hp-carousel-mobile row mb-2 mb-lg-0">
+<!-- Mobile carousel -->
+<div id="hp-carousel-mobile" class="hp-carousel-mobile row mb-2 mb-md-5 mb-lg-0">
  <div class="col-12 px-md-5 d-flex">
   {{ range first 7 (where .Site.RegularPages "Params.childof" ("research"))  }}
   <div class="col-8 col-md-5 hp-carousel-mobile__slide">

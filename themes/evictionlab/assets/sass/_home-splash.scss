@@ -1,4 +1,9 @@
 #hp-hero {
+  @at-root {
+    html {
+      overflow-x: hidden;
+    }
+  }
   &.hp-hero {
     .hp-hero__img {
       background-image: url('/images/assets/hero/hp-hero__image_1760.jpg');
@@ -90,7 +95,7 @@
 }
 
 #hp-carousel-mobile {
-  overflow: scroll;
+  overflow-x: scroll;
   @include media-breakpoint-up(md) {
     .hp-carousel-mobile__slide {
       width: 33%;
@@ -98,6 +103,12 @@
   }
   @include media-breakpoint-up(lg) {
     display: none;
+  }
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
   }
 }
 
