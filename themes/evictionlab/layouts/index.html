@@ -3,16 +3,16 @@
 <!-- ********** splash section ********** -->
 
 
-<div id="hp-hero" class="row mx-auto mt-15 mb-md-6 mb-lg-7 hp-hero">
-  <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex flex-column flex-lg-row">
+<div id="hp-hero" class="row mx-auto mt-6 mt-md-15 mb-md-6 mb-lg-7 hp-hero">
+  <div class="col-12 col-md-11 col-mm-8 col-md-12 px-0 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-block d-lg-flex flex-column flex-lg-row">
       <div class="col-12 col-lg-6 col-xl-7 hp-hero__img"></div>
-      <div class="col-12 col-lg-6 col-xl-5 pl-0 pl-lg-4 pl-xl-5 hp-hero__copy d-flex flex-column justify-content-lg-center justify-content-xl-end">
-        <h1 class="mt-md-3 mt-lg-2 mt-xl-5 mb-md-2 mb-lg-2 mb-xl-5">
+      <div class="col-12 col-lg-6 col-xl-5 px-2 px-md-0 pl-lg-4 pl-xl-5 hp-hero__copy d-flex flex-column justify-content-lg-center justify-content-xl-end">
+        <h1 class="mt-3 mb-3 mt-md-3 mb-md-0 mt-lg-2 mt-xl-5 mb-md-2 mb-lg-2 mb-xl-5">
           Every year, 2,350,000 evictions are filed in America.
         </h1>
-        <p class="mb-md-4 mb-lg-3 mb-xl-6">{{/* i18n "splashBody" */}}The Eviction Lab works to shed light on the U.S. housing crisis. Find out how many evictions happen in your community and explore the latest eviction trends. Create custom maps, charts, and reports. Share facts with your neighbors and elected officials.</p>
-        <div>   
-          <a class="btn smoothScroll mr-md-2 mr-lg-1 mr-xl-2" href="#home-menu">Explore our datasets</a>
+        <p class="mb-3 mb-md-4 mb-lg-3 mb-xl-6">{{/* i18n "splashBody" */}}The Eviction Lab works to shed light on the U.S. housing crisis. Find out how many evictions happen in your community and explore the latest eviction trends. Create custom maps, charts, and reports. Share facts with your neighbors and elected officials.</p>
+        <div class="mb-4 mb-md-0">   
+          <a class="btn smoothScroll mb-2 mb-smm-0 mr-1 mr-md-2 mr-lg-1 mr-xl-2" href="#home-menu">Explore our datasets</a>
           <a class="btn" href="/updates">View recent analysis</a>
         </div>       
       </div>
@@ -54,7 +54,7 @@
           <div class="col-3">
             <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
               <a class="viewmore" href="/updates"> </a> 
-                <div class="viewmore__text">
+                <div class="viewmore__text mx-2">
                   <div>VIEW MORE <br> RECENT ANALYSIS</div>
                   <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
                 </div>  
@@ -73,7 +73,7 @@
     </a>
   </div>
 </div>
-<div id="hp-carousel-mobile" class="hp-carousel-mobile row">
+<div id="hp-carousel-mobile" class="hp-carousel-mobile row mb-2 mb-lg-0">
  <div class="col-12 px-md-5 d-flex">
   {{ range first 7 (where .Site.RegularPages "Params.childof" ("research"))  }}
   <div class="col-8 col-md-5 hp-carousel-mobile__slide">

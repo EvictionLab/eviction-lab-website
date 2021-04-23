@@ -6,8 +6,15 @@
       background-repeat: no-repeat;
       background-position-x: 10%;
       background-position-y: 28%;
-      min-height: 460px;
+      min-height: 240px;
+      @include media-breakpoint-up(smm) {
+        min-height: 300px;
+      }
+      @include media-breakpoint-only(md) {
+        min-height: 400px;
+      }
       @include media-breakpoint-only(lg) {
+        min-height: 460px;
         background-size: 160%;
         background-position-x: 48%;
         background-position-y: 28%;
@@ -178,11 +185,14 @@
     line-height: 1.4;
     color: #000;
     transition: color .3s ease;
-    min-height: 144px;
+    
     display: inline-block;
     will-change: transform;
     &:hover {
       color: $color1;
+    }
+    @include media-breakpoint-up(lg) {
+      min-height: 144px;
     }
   }
   

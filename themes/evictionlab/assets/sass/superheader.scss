@@ -30,10 +30,15 @@
     
     .super-content {
         padding: 10px 16px;
-        line-height: 1.8;
+        font-family: $fontStack;
+        font-size: 14px;
+        line-height: 1.5;
         @include for-tablet-portrait-up {
-           line-height: 1.5;
+            font-size: 16px; 
         }
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
         .boldface {
             font-family: $altFontStack;
             color:#e24000
@@ -44,15 +49,6 @@
             color: #484958;
             text-decoration: underline;
         }
-        font-family: $fontStack;
-        font-size: 16px;
-        @include for-tablet-portrait-up {
-            font-size: 16px; 
-        }
-        position: relative;
-        width: 100%;
-        max-width: 1200px;
-        
         //height: 100%;
        // padding: 0;
         margin: 0 auto;
