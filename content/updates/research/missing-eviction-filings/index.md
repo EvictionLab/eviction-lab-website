@@ -20,11 +20,11 @@ listSummary: America faced a rental housing crisis long before the onset of the
 socialDescription: Absent further protections, these cases may be pushed into 2021.
 researchtype: elresearch
 postauthorname: Joe Fish, Emily Lemmerman, Renee Louis, and Peter Hepburn
-twImage: /images/assets/blog/missing-evictions-social.png
+twImage: missing-evictions-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Absent further protections, these cases may be pushed into 2021.
 aliases: null
-fbImage: /images/assets/blog/missing-evictions-social.png
+fbImage: missing-evictions-social.png
 ---
 America faced a rental housing crisis long before the onset of the COVID-19 pandemic. In a typical, non-pandemic year, landlords would file <a href="https://www.congress.gov/116/meeting/house/110362/witnesses/HHRG-116-BA00-Wstate-DesmondM-20200114.pdf" target="_blank">3.7 million eviction cases across the United States</a>. As a result of eviction moratoria, court closures, and temporary expansions to the social safety net, far fewer eviction cases have been filed in 2020. How many fewer? And what does that tell us about the potential for a surge in eviction filings in early 2021? 
 
