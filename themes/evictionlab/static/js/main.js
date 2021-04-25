@@ -499,3 +499,16 @@ $('.carousel').on('slide.bs.carousel', function(event){
     $(this).find(".carousel-control-prev").removeClass("inactive")
   }
 });
+
+
+// Homepage counter
+
+var count3 = new countUp.CountUp("homeCounter", 3656428, {
+  duration: 3.8,
+}); 
+if (!count3.error) {
+  count3.start();
+} else {
+  console.error(count3.error);
+}
+

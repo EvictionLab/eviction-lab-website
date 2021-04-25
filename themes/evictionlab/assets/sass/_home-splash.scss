@@ -72,7 +72,11 @@
     a {
       color: $altTextColor;
       background-color: $color1;
-      border-color: $color1;
+      border-color: none;
+      transition: background-color .3s ease;
+      &:hover {
+        background-color: #d23c01;
+      }
       //text-transform: uppercase;
       @include defaultFont(1.4rem);
       padding: 11px 15px;
@@ -81,6 +85,15 @@
         @include defaultFont(15px);
         padding: 20px 24px;
         letter-spacing: 0.02rem;
+      }
+    }
+    #homeCounter {
+      width: 152px;
+      @include media-breakpoint-up(md) {
+        width: 208px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: auto;
       }
     }
   }
@@ -114,14 +127,15 @@
 
 #hp-carousel, #hp-carousel-4slide, #hp-carousel-mobile {
   will-change: transform;
+  margin-right: 0;
   .viewmore {
     width: 100%;
-    height: 100%;
+    height: 240px;
     position: absolute;
   }
   
   .hp-carousel__slide--image {
-    height: 150px;
+    height: 130px;
     background-size: cover;
     @include altFont(1.8rem);
     line-height: 1.4;
@@ -133,15 +147,14 @@
     background-position: center center;
     transition: filter .3s ease;
     &:hover {
-      filter: brightness(0.97);
+      filter: opacity(0.92);
     }
     &.viewmore__background {
       background-color: #f4f7f9;
       height: 240px;
       transition: background-color .3s ease;
-    
         &:hover {
-        background-color: #f1f2f3;
+        background-color: #f4f8fd;
         }
       
       .viewmore__text {
