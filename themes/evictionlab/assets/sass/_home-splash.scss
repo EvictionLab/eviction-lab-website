@@ -25,6 +25,11 @@
         background-position-y: 28%;
       }
     }
+    .hp-hero__copy {
+      @include media-breakpoint-up(xl) {
+        max-width: 548px;
+      }
+    }
     h1 {
       @include altFont(32px);
       letter-spacing: 1px;
@@ -93,7 +98,7 @@
         width: 208px;
       }
       @include media-breakpoint-up(lg) {
-        width: auto;
+        width: 226px;
       }
     }
   }
