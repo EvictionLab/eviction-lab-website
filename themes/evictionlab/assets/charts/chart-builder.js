@@ -744,7 +744,6 @@ Elab.ChartBuilder = (function (Elab) {
   Chart.prototype.addMarkLine = function (overrides) {
     var _this = this;
     var options = overrides || {};
-    console.log("marks", options.marks);
     if (!options.marks) return this;
     this.selections["marks"] = this.selections["data"]
       .append("g")
@@ -870,7 +869,6 @@ Elab.ChartBuilder = (function (Elab) {
         ];
       };
     _this.lineData = options.selector(_this.data);
-    console.log("line data", _this.lineData);
     if (_this.getSelection(options.linesId))
       throw new Error(
         "addLines: selection already exists for given linesId " +

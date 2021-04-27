@@ -141,7 +141,6 @@ Elab.BarChart = (function (Elab) {
               title: weekLabel,
               value: yTooltipFormat(hoverData[1]),
             };
-            console.log("hovered", hoverData, tooltip);
             return renderTooltip(tooltip);
           },
         })
@@ -172,7 +171,6 @@ Elab.BarChart = (function (Elab) {
           y: yParse(d[options.y]),
         };
       });
-      console.log("bar chart data", result);
       callback && callback(result);
     });
   }
@@ -188,7 +186,6 @@ Elab.BarChart = (function (Elab) {
     options.x = options.x || "x";
     options.y = options.y || "y";
     loadData(options, function (data) {
-      console.log("bar chart init", rootEl, options);
       createFigure(rootEl, data, options);
     });
   }
