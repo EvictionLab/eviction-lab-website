@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 childof: research
 url: /us-eviction-filing-patterns-2020/
 contenttype: updates
@@ -11,7 +11,7 @@ date: 2021-04-27T00:46:40.089Z
 postauthortitle: The Eviction Lab
 listSummary: >-
   We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were.
-socialDescription: we provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were.
+socialDescription: We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were.
 researchtype: elresearch
 postauthorname: Peter Hepburn, Renee Louis, Joe Fish, Emily Lemmerman, Anne Kat Alexander, Timothy A. Thomas, Robert Koehler, Emily Benfer, and Matthew Desmond
 twImage:
