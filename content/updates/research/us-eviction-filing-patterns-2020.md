@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 childof: research
 url: /us-eviction-filing-patterns-2020/
 contenttype: updates
