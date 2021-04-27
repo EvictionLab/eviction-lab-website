@@ -47,7 +47,7 @@ Elab.BarChart = (function (Elab) {
     const yTooltipFormat = d3.format(
       dataOptions.yTooltipFormat || dataOptions.yFormat || ",d"
     );
-
+    console.log("bar", root, data, dataOptions);
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
     return (
       chart
@@ -60,8 +60,10 @@ Elab.BarChart = (function (Elab) {
               extent[0] - range * 0.05,
               extent[1] + range * 0.05,
             ];
-            if (dataOptions.yMin) paddedExtent[0] = parseFloat(yMin);
-            if (dataOptions.yMax) paddedExtent[1] = parseFloat(yMax);
+            if (dataOptions.yMin)
+              paddedExtent[0] = parseFloat(dataOptions.yMin);
+            if (dataOptions.yMax)
+              paddedExtent[1] = parseFloat(dataOptions.yMax);
             return paddedExtent;
           },
           ticks: dataOptions.yTicks || 5,
@@ -120,6 +122,7 @@ Elab.BarChart = (function (Elab) {
           y: yParse(d[options.y]),
         };
       });
+      console.log("bar chart data", result);
       callback && callback(result);
     });
   }
@@ -135,6 +138,7 @@ Elab.BarChart = (function (Elab) {
     options.x = options.x || "x";
     options.y = options.y || "y";
     loadData(options, function (data) {
+      console.log("bar chart init", rootEl, options);
       createFigure(rootEl, data, options);
     });
   }

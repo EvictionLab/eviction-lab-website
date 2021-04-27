@@ -818,6 +818,7 @@ Elab.ChartBuilder = (function (Elab) {
         ];
       };
     _this.lineData = options.selector(_this.data);
+    console.log("line data", _this.lineData);
     if (_this.getSelection(options.linesId))
       throw new Error(
         "addLines: selection already exists for given linesId " +
@@ -835,6 +836,9 @@ Elab.ChartBuilder = (function (Elab) {
           })
           .y(function (d) {
             return chart.yScale(d[1]);
+          })
+          .defined(function (d) {
+            return d[1] || d[1] === 0;
           });
         if (options.curve) line.curve(options.curve);
         var lines = selection.selectAll(".chart__line").data(chart.lineData);
@@ -1176,7 +1180,9 @@ Elab.ChartBuilder = (function (Elab) {
             [0, 0],
             [_this.getInnerWidth(), _this.getInnerHeight()],
           ]);
-        var voronoiData = chart.voronoi.polygons(chart.data);
+        var voronoiData = chart.voronoi.polygons(
+          chart.data.filter((d) => !!d.y)
+        );
         var voronoi = selection.selectAll("path").data(voronoiData);
         voronoi
           .enter()

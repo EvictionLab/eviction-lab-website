@@ -38,24 +38,20 @@
   </div>
 
   <script>
+
+    window.addEventListener('load', function() {
       var id = {{ .Get "id" }}
+      var rootEl = document.getElementById(id);
       var csv = {{ .Get "data" }}
       var x = {{ .Get "x" }}
       var y = {{ .Get "y" }}
       var yTicks = {{ .Get "yTicks" }}
+      var margin = {{ .Get "margin" }}
+      var yTooltipFormat = {{ .Get "yTooltipFormat" }}
+      var yFormat = {{ .Get "yFormat" }}
       var yMin = {{ .Get "yMin" }}
       var yMax = {{ .Get "yMax" }}
-      var yFormat = {{ .Get "yFormat" }}
-      var yTooltipFormat = {{ .Get "yTooltipFormat" }}
-      var margin = {{ .Get "margin" }}
-      var rootEl = document.getElementById(id);
-      /**
-       * Initializes chart with whatever values currently are set to.
-       */
-
-      var data = [];
-    window.addEventListener('load', function() {
-
+      
       // Init chart on page load.
       Elab.BarChart.init(rootEl, { id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, margin: margin })
     });

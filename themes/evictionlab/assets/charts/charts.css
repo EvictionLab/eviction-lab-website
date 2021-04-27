@@ -109,21 +109,37 @@ body .chart .chart__title, body .chart .chart__title > * {
 
 .chart__body--highlight1 .chart__line--0,
 .chart__body--highlight2 .chart__line--0,
-.chart__body--highlight3 .chart__line--0 {
+.chart__body--highlight3 .chart__line--0,
+.chart__body--highlight4 .chart__line--0,
+.chart__body--highlight5 .chart__line--0 {
   stroke: var(--c1);
   stroke: #e24000
 }
 
 .chart__body--highlight2 .chart__line--1,
-.chart__body--highlight3 .chart__line--1 {
+.chart__body--highlight3 .chart__line--1,
+.chart__body--highlight4 .chart__line--1,
+.chart__body--highlight5 .chart__line--1 {
   stroke: var(--c2);
   stroke: #434878
 }
 
 .chart__body--highlight2 .chart__line--2,
-.chart__body--highlight3 .chart__line--2 {
+.chart__body--highlight3 .chart__line--2,
+.chart__body--highlight4 .chart__line--2,
+.chart__body--highlight5 .chart__line--2 {
   stroke: var(--c3);
   stroke: #2c897f;
+}
+
+.chart__body--highlight4 .chart__line--3,
+.chart__body--highlight5 .chart__line--3 {
+  stroke: var(--c4);
+  stroke: #94aabd;
+}
+
+.chart__body--highlight5 .chart__line--4 {
+  stroke: #f781bf;
 }
 
 .chart__voronoi path {
@@ -219,6 +235,9 @@ body .chart .chart__title, body .chart .chart__title > * {
 }
 .legend-item--3 .legend-item__color {
   background: var(--c4);
+}
+.legend-item--4 .legend-item__color {
+  background: #f781bf
 }
 
 .legend-item__label {
