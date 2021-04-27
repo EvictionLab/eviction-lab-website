@@ -7,6 +7,28 @@
 a.cat-link {
   text-transform: capitalize;
 }
+a.btn.buttonlink {
+    width: 256px;
+    display: block;
+    margin: auto;
+    color: #fff !important;
+    background-color: $color1;
+    border-color: $color1;
+    text-transform: uppercase;
+    text-align: center;
+    @include altFont(1.4rem);
+    padding: 11px 15px;
+    letter-spacing: .054rem;
+    @include for-tablet-portrait-up {
+      @include altFont(14px);
+      padding: 20px 64px;
+      letter-spacing: 1px;
+    }
+  
+  &:hover {
+    color: $altTextColor;
+  }
+}
 .blog-type,
 .blog-type a {
   color: #e04119;
