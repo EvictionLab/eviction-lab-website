@@ -87,7 +87,7 @@ Elab.ChartBuilder = (function (Elab) {
       var selection = _this.getSelection("tooltip");
       selection.classed("chart__tooltip--show", true);
       var topOffset = $(window).scrollTop() + e.clientY;
-      var html = render(_this.hovered);
+      var html = render(_this.hovered, _this);
       var rect = selection.node().getBoundingClientRect();
       var xPos = Math.min(
         window.innerWidth - rect.width / 2 - 12,
@@ -714,6 +714,15 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("width", bandWidth)
         .attr("y", _this.getInnerHeight())
         .attr("height", 0)
+        .on("mousemove", function (d) {
+          _this.setHovered(d);
+          options.renderTooltip &&
+            _this.showTooltip(d3.event, options.renderTooltip);
+        })
+        .on("mouseout", function (d) {
+          _this.setHovered(null);
+          options.renderTooltip && _this.hideTooltip();
+        })
         .merge(selection)
         .transition()
         .duration(1000)
@@ -727,6 +736,49 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("height", function (d) {
           return _this.getInnerHeight() - _this.yScale(d[1]);
         });
+    };
+
+    return this;
+  };
+
+  Chart.prototype.addMarkLine = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    console.log("marks", options.marks);
+    if (!options.marks) return this;
+    this.selections["marks"] = this.selections["data"]
+      .append("g")
+      .attr("class", "chart__marks");
+
+    this.updaters["marks"] = function () {
+      var selection = _this.selections["marks"]
+        .selectAll(".chart__mark")
+        .data(options.marks);
+
+      selection
+        .enter()
+        .append("line")
+        .attr("class", "chart__mark")
+        .attr("x1", function (d) {
+          return _this.xScale(d);
+        })
+        .attr("x2", function (d) {
+          return _this.xScale(d);
+        })
+        .attr("y1", 0)
+        .attr("y2", _this.getInnerHeight())
+        .merge(selection)
+        .transition()
+        .duration(1000)
+        .attr("x1", function (d) {
+          return _this.xScale(d);
+        })
+        .attr("x2", function (d) {
+          return _this.xScale(d);
+        })
+        .attr("y1", 0)
+        .attr("y2", _this.getInnerHeight())
+        .attr("stroke-width", 1);
     };
 
     return this;

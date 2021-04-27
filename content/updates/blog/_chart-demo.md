@@ -20,7 +20,22 @@ scripts:
 ---
 
 {{% bar-chart
-  id="figbar"
+  id="fig1"
+  data="/uploads/figure_1_20210422.csv"
+  x="week_date"
+  y="ratio"
+  yMin="0"
+  yMax="1.2"
+  yTooltipFormat=".1%"
+  yFormat=".0%"
+  title="Figure 1"
+  margin="8 8 104 40"
+  axis="time"
+  mark="03/18/2020"
+%}}
+
+{{% bar-chart
+  id="fig2"
   data="/uploads/figure_2_20210422.csv"
   x="site_factor"
   y="filings_ratio"
@@ -29,7 +44,7 @@ scripts:
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Figure 2"
-  margin="8 8 104 40"
+  margin="8 8 134 40"
 %}}
 
 {{% line-chart

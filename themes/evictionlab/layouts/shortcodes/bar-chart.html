@@ -51,9 +51,11 @@
       var yFormat = {{ .Get "yFormat" }}
       var yMin = {{ .Get "yMin" }}
       var yMax = {{ .Get "yMax" }}
+      var axis = {{ .Get "axis" }}
+      var mark = {{ .Get "mark" }}
       
       // Init chart on page load.
-      Elab.BarChart.init(rootEl, { id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, margin: margin })
+      Elab.BarChart.init(rootEl, { mark:mark, axis:axis, id:id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, margin: margin })
     });
   </script>
 </div>
