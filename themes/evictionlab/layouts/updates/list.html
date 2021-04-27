@@ -41,7 +41,7 @@
             </div>-->
 
             <div class="postlist-left-col">
-                <div class="authorname">{{ .Params.postauthorname }}</div>
+                <div class="authorname">{{ .Params.postauthorname | truncate 40 }}</div>
                 <div class="list-thumb-container">
                   <img class="list-thumb" alt="{{ .Params.postauthorname }} photo" src="{{ .Params.authorpic }}">
                 </div>  

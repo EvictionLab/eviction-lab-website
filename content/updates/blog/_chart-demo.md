@@ -19,6 +19,49 @@ scripts:
   - maps
 ---
 
+{{% bar-chart
+  id="fig1"
+  data="/uploads/figure_1_20210422.csv"
+  x="week_date"
+  y="ratio"
+  yMin="0"
+  yMax="1.2"
+  yTooltipFormat=".1%"
+  yFormat=".0%"
+  title="Figure 1"
+  margin="8 8 104 40"
+  axis="time"
+  mark="03/18/2020"
+%}}
+
+{{% bar-chart
+  id="fig2"
+  data="/uploads/figure_2_20210422.csv"
+  x="site_factor"
+  y="filings_ratio"
+  yMin="0"
+  yMax="1"
+  yTooltipFormat=".1%"
+  yFormat=".0%"
+  title="Figure 2"
+  margin="8 8 134 40"
+%}}
+
+{{% line-chart
+  id="fig6"
+  data="/uploads/figure_6_20210422.csv"
+  x="xfilemonth"
+  y="ratio"
+  groupBy="jurisdiction"
+  yFormat=".1s"
+  xTicks="month"
+  xFormat="%b"
+  xTooltipFormat="%B"
+  yFormat=".0%"
+  highlight="Cincinnati;Houston;New York;Philadelphia;Phoenix"
+  title="Figure 6"
+%}}
+
 {{% state-map
   id="statemap1"
   data="/uploads/score_map_uncorrected_20210322.csv"
@@ -28,9 +71,9 @@ scripts:
   minVal="0"
   maxVal="4.5"
   valueTemplate="{{value}} / 4.5 stars"
-  valueFormat=".2f"
-  colors="#dfefed;#7bcac1;#2c897f"
-  caption="Colors represent state eviction policy scores from our <a href='#'>COVID-19 housing policy scorecard</a>"
+valueFormat=".2f"
+colors="#dfefed;#7bcac1;#2c897f"
+caption="Colors represent state eviction policy scores from our <a href='#'>COVID-19 housing policy scorecard</a>"
 %}}
 
 {{% state-map
@@ -75,17 +118,19 @@ scripts:
 Stack Area Chart
 
 {{% stack-area-chart
-  id="stackarea1"
+  id="routine1"
   data="/uploads/blogpost_data_cle.csv"
   x="date"
-  stacks="group1;group2"
-  stackLabels="Routine Evictors;Infrequent Evictors"
+  stacks="routine;infrequent"
+  stackLabels="<span>Routine Evictors</span><span>116 Buildings</span>;<span>Infrequent Evictors</span><span>18,889 Buildings</span>"
   title="Stack Chart Example"
   xTicks="year"
   xFormat="%Y"
   yFormat=".0%"
+  yMax="0.07"
   yTooltipFormat=".1%"
-  title="Observed Eviction Rate for Cleveland, OH"
+  tooltipTemplate="{{label}} <br />{{value}} of renters evicted <br />{{_percent}} of total evictions"
+title="Contribution to Eviction Rate By Year In Cleveland, OH"
 %}}
 
 Basic bars
