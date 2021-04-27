@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: /us-eviction-filing-patterns-2020/
 contenttype: updates
@@ -10,14 +10,14 @@ title: "U.S. Eviction Filing Patterns in 2020"
 date: 2021-04-27T00:46:40.089Z
 postauthortitle: The Eviction Lab
 listSummary: >-
-  We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were.
-socialDescription: We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were.
+  We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were. In a year that was unprecedented in many respects, we aim to show how renters fared, and what they may be facing in 2021.
+socialDescription: We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were. In a year that was unprecedented in many respects, we aim to show how renters fared, and what they may be facing in 2021.
 researchtype: elresearch
 postauthorname: Peter Hepburn, Renee Louis, Joe Fish, Emily Lemmerman, Anne Kat Alexander, Timothy A. Thomas, Robert Koehler, Emily Benfer, and Matthew Desmond
-twImage:
+twImage: us-eviction-filing-patterns-2020-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were.
-fbImage:
+description: We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were. In a year that was unprecedented in many respects, we aim to show how renters fared, and what they may be facing in 2021.
+fbImage: us-eviction-filing-patterns-2020-social.png
 image:
 scripts:
   - charts
@@ -27,7 +27,7 @@ The COVID-19 pandemic set off a series of social, economic, and political change
 
 In a paper published in the journal _Socius_, we provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were. In a year that was unprecedented in many respects, we aim to show how renters fared, and what they may be facing in 2021.
 
-<a class="btn buttonlink" href="/">READ THE PAPER</a>
+<a class="btn buttonlink" href="https://journals.sagepub.com/doi/full/10.1177/23780231211009983" target="_blank" rel="noreferrer noopener">READ THE PAPER</a>
 
 In the paper, we analyzed eviction filings collected through the <a href="/eviction-tracking">Eviction Tracking System</a>, as well as data collected by Emily Benfer, Robert Koehler, and colleagues about eviction moratoria at the state, county, and municipal levels. This work builds on a series of preliminary analyses that we published to the Eviction Lab website over the course of 2020.
 
@@ -54,8 +54,6 @@ We present seven main findings:
 
 _Note: Weekly eviction filings are aggregated across sites tracked by the Eviction Tracking System (ETS) in 2020. Historical averages are calculated for the same seven-day periods in previous years. The vertical red dashed line in mid-March marks the start of the COVID-19 pandemic. The bars in orange mark the two weeks between the CARES Act eviction moratorium and the CDC eviction moratorium when no federal moratorium was in effect._
 
-Note: Weekly eviction filings are aggregated across sites tracked by the Eviction Tracking System (ETS) in 2020. Historical averages are calculated for the same seven-day periods in previous years. The vertical red dashed line in mid-March marks the start of the COVID-19 pandemic. The bars in orange mark the two weeks between the CARES Act eviction moratorium and the CDC eviction moratorium when no federal moratorium was in effect.
-
 **Second**, when federal moratoria were not in effect, eviction filings rose dramatically. In Figure 1, we see this in the two bars marked in orange: the two weeks between the end of CARES Act coverage and the start of the CDC eviction moratorium. In no other week since the start of the pandemic did we observe filings above 68% of historical average. For the week of August 30, case filings returned to pre-pandemic levels. This increase suggests that many landlords were acutely aware of moratoria and ready to file for eviction as soon as was permitted.
 
 **Third**, state and local moratoria also reduced filings. Cities, counties, and states across the country adopted moratoria, but these policies varied in which tenants were protected and what steps of the eviction process were halted, under what conditions, and for how long. In many cities, state or local moratoria temporarily cut eviction filings dramatically. This is especially true of sites that suspended the earliest stages of the eviction process, preventing landlords from issuing notices to quit or filing cases in court. In these cities, new eviction filings were at or below 12.6% of historical average while their moratoria were in place. By contrast, cities that allowed cases to be filed but suspended hearings were less successful in reducing new eviction filings. And in Phoenix, which allowed eviction filings and hearings but froze enforcement of eviction orders, total filings rose to 47.8% of average.
@@ -66,7 +64,7 @@ Note: Weekly eviction filings are aggregated across sites tracked by the Evictio
 
 {{% bar-chart
   id="fig2"
-  data="/uploads/figure_2_20210422.csv"
+  data="/uploads/figure_2_20210422-asc.csv"
   x="site_factor"
   y="filings_ratio"
   yMin="0"
