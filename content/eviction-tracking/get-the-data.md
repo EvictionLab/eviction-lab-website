@@ -65,14 +65,14 @@ data:
     years: 2017-2019
     geo: Census Tract
     file: /uploads/connecticut_weekly_2020_2021.csv
+  - site: Dallas-Fort Worth
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/fortworth_weekly_2020_2021.csv
   - site: Delaware
     years: 2016-2019
     geo: Census Tract
     file: /uploads/delaware_weekly_2020_2021.csv
-  - site: Fort Worth
-    years: 2016-2019
-    geo: Census Tract
-    file: /uploads/fortworth_weekly_2020_2021.csv
   - site: Gainesville
     years: 2017-2019
     geo: Census Tract
