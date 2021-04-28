@@ -512,3 +512,23 @@ if (!count3.error) {
   console.error(count3.error);
 }
 
+/**
+ * Check for banner cookie
+ */
+$(function() {
+
+  if(localStorage && localStorage.getItem("el-banner") == $(".superheader").html()) {
+    $(".superheader").addClass("inactive");
+  }else {
+    console.log($(".superheader").html())
+  }
+});
+
+$(".superheader .close").click(function () {
+  $(".superheader").addClass("inactive");
+
+  if(localStorage) {
+    localStorage.setItem("el-banner", $(".superheader").html())
+  }
+});
+

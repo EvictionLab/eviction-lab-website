@@ -26,6 +26,7 @@
    background-color: #F4F7F9;
     color: #434778;
     color: #484958;
+    position: relative;
     //width: 80%;
     
     .super-content {
@@ -53,6 +54,18 @@
        // padding: 0;
         margin: 0 auto;
         box-sizing: border-box;
+    }
+
+    .close {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+    }
+
+    &.inactive {
+        position: absolute;
+        visibility: hidden;
     }
 }
  .new-splash {
