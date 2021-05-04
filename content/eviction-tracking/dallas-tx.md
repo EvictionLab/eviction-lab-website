@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Dallas, Texas
 slug: dallas-tx
 date: 2021-05-04T04:00:00.000Z
