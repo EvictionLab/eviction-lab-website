@@ -17,7 +17,10 @@ intro: >-
   > Peter Hepburn, Renee Louis, and Matthew Desmond. Eviction Tracking System: Version 1.0. Princeton: Princeton University, 2020.[www.evictionlab.org](http://www.evictionlab.org/).
 
 
-  Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
+  Scroll below the data table to find code samples for using the data in your own applications.<sup>1</sup> Please submit additional examples!
+
+
+  1. Boston eviction filing data has a disproportionate number of sealed/missing-tract cases in recent months. Values of filings by tract may be underestimates.
 headers:
   siteheader: Site
   baselineheader: Baseline Years
@@ -37,7 +40,7 @@ data:
     years: 2014-2019
     geo: ZIP Code
     file: /uploads/austin_weekly_2020_2021.csv
-  - site: Boston<sup>1</sup>
+  - site: Boston
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
     file: /uploads/boston_weekly_2020_2021.csv
@@ -166,10 +169,6 @@ data:
     geo: Census Tract
     file: /uploads/wilmington_weekly_2020_2021.csv
 ---
-1. Boston eviction filing data has a disproportionate number of sealed/missing-tract cases in recent months. Values of filings by tract may be underestimates. 
-
-
-
 Sample code:
 
 ```r
