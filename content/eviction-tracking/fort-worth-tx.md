@@ -3,7 +3,7 @@ collection: true
 draft: true
 h1: Fort Worth, Texas
 slug: fort-worth-tx
-date: 2021-04-13T04:00:00.000Z
+date: 2021-05-04T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Fort Worth, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
