@@ -13,8 +13,8 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Get the latest news and understand your rights.
 socialDescription: Get the latest news and understand your rights.
 image: '/images/assets/blog/moratorium-extension-6-30.jpeg'
-fbImage: '/images/assets/blog/moratorium-extension-6-30.jpg'
-twImage: '/images/assets/blog/moratorium-extension-6-30.jpg'
+fbImage: moratorium-extension-6-30.jpeg
+twImage: moratorium-extension-6-30.jpeg
 url: '/moratorium-extended-evictions-continue/'
 aliases:
 ---

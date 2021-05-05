@@ -31,17 +31,27 @@
     <div class="carousel-item active">
       <div class="row">
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 4 (where .Site.RegularPages "Params.childof" ("research")) }}
+          {{ range first 4 (where .Site.Pages "Params.contenttype" ("updates")) }}
             <div class="col-3">
+              {{ if .Params.listSummary }}
+                <a href="{{ .RelPermalink }}">
+                  {{ $img := .Params.fbImage }}
+                  {{ with .Resources.GetMatch $img }}
+                    {{ $processed := .Fit "600x400 q50 jpg" }}
+                      <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                  {{ end }}
+                </a>
+              {{ else }}
               <a href="{{ .RelPermalink }}">
-                {{ $img := .Params.fbImage }}
-                {{ with .Resources.GetMatch $img }}
-                  {{ $processed := .Fit "600x400 q50 jpg" }}
-                    <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                {{ end }}
+                    <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
               </a>
+              {{ end }}
               <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-              <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+              {{ if eq .Params.contentcat "data" }}
+                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
+              {{ else }}
+                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+              {{ end }}
             </div>
           {{ end }}
         </div>  
@@ -50,17 +60,27 @@
     <div class="carousel-item">
       <div class="row">
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 3 (after 4 (where .Site.RegularPages "Params.childof" ("research")) ) }}
+          {{ range first 3 (after 4 (where .Site.RegularPages "Params.contenttype" ("updates")) ) }}
             <div class="col-3">
+              {{ if .Params.listSummary }}
+                <a href="{{ .RelPermalink }}">
+                  {{ $img := .Params.fbImage }}
+                  {{ with .Resources.GetMatch $img }}
+                    {{ $processed := .Fit "600x400 q50 jpg" }}
+                      <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                  {{ end }}
+                </a>
+              {{ else }}
               <a href="{{ .RelPermalink }}">
-                {{ $img := .Params.fbImage }}
-                {{ with .Resources.GetMatch $img }}
-                  {{ $processed := .Fit "600x400 q50 jpg" }}
-                    <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                {{ end }}
+                    <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
               </a>
+              {{ end }}
               <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-              <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+              {{ if eq .Params.contentcat "data" }}
+                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
+              {{ else }}
+                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+              {{ end }}
             </div>
           {{ end }}
           <div class="col-3">
@@ -88,17 +108,27 @@
 <!-- Mobile carousel -->
 <div id="hp-carousel-mobile" class="hp-carousel-mobile row mb-2 mb-md-5 mb-lg-0">
  <div class="col-12 px-md-5 d-flex">
-  {{ range first 7 (where .Site.RegularPages "Params.childof" ("research"))  }}
+  {{ range first 7 (where .Site.Pages "Params.contenttype" ("updates"))  }}
   <div class="col-8 col-md-5 hp-carousel-mobile__slide">
-    <a href="{{ .RelPermalink }}">
-      {{ $img := .Params.fbImage }}
-        {{ with .Resources.GetMatch $img }}
-          {{ $processed := .Fit "600x400 q50 jpg" }}
-          <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-        {{ end }}
-    </a>    
+    {{ if .Params.listSummary }}
+        <a href="{{ .RelPermalink }}">
+          {{ $img := .Params.fbImage }}
+          {{ with .Resources.GetMatch $img }}
+            {{ $processed := .Fit "600x400 q50 jpg" }}
+              <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+          {{ end }}
+        </a>
+      {{ else }}
+      <a href="{{ .RelPermalink }}">
+            <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
+      </a>
+    {{ end }}    
     <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-    <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+    {{ if eq .Params.contentcat "data" }}
+      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
+    {{ else }}
+      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+    {{ end }}
   </div>
 {{ end }}
   <div class="col-8 col-md-5">

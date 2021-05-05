@@ -151,6 +151,9 @@
     text-align: left;
     background-position: center center;
     transition: filter .3s ease;
+    @include media-breakpoint-up(xxxl) {
+      height: 150px;
+    }
     &:hover {
       filter: opacity(0.92);
     }
@@ -206,16 +209,34 @@
   .hp-carousel__slide--category {
     font-family: $fontStack;
     font-size: 1.4rem;
+    &::before {
+      display: inline-block;
+      margin-right: 5px;
+      position: relative;
+      top: 1px;
+    }
     &.research-category {
       color: $color3;
       &::before {
         content: url('images/icons/research-icon.svg');
         height: 14px;
         width: 14px;
-        display: inline-block;
-        margin-right: 5px;
-        position: relative;
-        top: 1px;
+      }
+    }
+    &.data-category {
+      color: $color2;
+      &::before {
+        content: url('images/icons/data-icon.svg');
+        height: 15px;
+        width: 15px;
+      }
+    }
+    &.blog-category {
+      color: $color1;
+      &::before {
+        content: url('images/icons/blog-icon.svg');
+        height: 15px;
+        width: 15px;
       }
     }
   }
