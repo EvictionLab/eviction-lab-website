@@ -246,7 +246,6 @@ Elab.LineChart = (function (Elab) {
         .sort(function (a, b) {
           return +a.x - +b.x;
         });
-      console.log("got data", options, result);
       callback && callback(result);
     });
   }
