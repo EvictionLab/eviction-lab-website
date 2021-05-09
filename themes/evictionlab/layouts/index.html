@@ -31,7 +31,7 @@
     <div class="carousel-item active">
       <div class="row">
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 4 (where .Site.Pages "Params.contenttype" ("updates")) }}
+          {{ range first 4 (where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) }}
             <div class="col-3">
               {{ if .Params.listSummary }}
                 <a href="{{ .RelPermalink }}">
@@ -290,7 +290,7 @@
     </div>
 
 <!-- Update section -->
-  <div id="updates-section">
+  <div class="d-none" id="updates-section">
     <div class="row mx-0 subfeature-panel pt-6 pb-4 py-md-8 py-xl-9 pl-md-1 pl-lg-0">
       <div class="col-11 col-md-12 col-lg-11 col-xxl-11 col-xxxl-10 mx-auto col-2-wrap">
         <div class="col-12 pl-md-0 mb-4 mb-md-5 mb-lg-7 mb-xl-9">

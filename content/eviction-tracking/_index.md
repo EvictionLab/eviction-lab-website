@@ -1,6 +1,6 @@
 ---
 draft: false
-contenttype: updates
+contenttype: data
 contentcat: data
 states:
   data: /uploads/states_table.csv
