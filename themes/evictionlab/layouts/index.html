@@ -31,7 +31,7 @@
     <div class="carousel-item active">
       <div class="row">
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 4 (where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) }}
+          {{ range first 4 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) ) }}
             <div class="col-3">
               {{ if .Params.listSummary }}
                 <a href="{{ .RelPermalink }}">
@@ -60,7 +60,7 @@
     <div class="carousel-item">
       <div class="row">
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 3 (after 4 (where .Site.RegularPages "Params.contenttype" ("updates")) ) }}
+          {{ range first 3 (after 4 ((where .Site.RegularPages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) ) ) }}
             <div class="col-3">
               {{ if .Params.listSummary }}
                 <a href="{{ .RelPermalink }}">
@@ -108,7 +108,7 @@
 <!-- Mobile carousel -->
 <div id="hp-carousel-mobile" class="hp-carousel-mobile row mb-2 mb-md-5 mb-lg-0">
  <div class="col-12 px-md-5 d-flex">
-  {{ range first 7 (where .Site.Pages "Params.contenttype" ("updates"))  }}
+  {{ range first 7 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data"))) }}
   <div class="col-8 col-md-5 hp-carousel-mobile__slide">
     {{ if .Params.listSummary }}
         <a href="{{ .RelPermalink }}">
