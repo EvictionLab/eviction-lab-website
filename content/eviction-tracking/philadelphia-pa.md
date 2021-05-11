@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Philadelphia, Pennsylvania
 slug: philadelphia-pa
-date: 2021-04-12T04:00:00.000Z
+date: 2021-05-11T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Philadelphia, Pennsylvania | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
