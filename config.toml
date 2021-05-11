@@ -126,7 +126,7 @@ languageName = "English"
     url = "/updates/events/"
 [[Languages.en.menu.updates]]
     name = "Research"
-    weight = -90
+    weight = -110
     url = "/updates/research/"
 [[Languages.en.menu.updates]]
     name = "EL Research"
@@ -140,11 +140,11 @@ languageName = "English"
     url = "/updates/research/outside-research"        
 [[Languages.en.menu.updates]]
     name = "Media"
-    weight = -100
+    weight = -90
     url = "/updates/media/"
 [[Languages.en.menu.updates]]
     name = "Blog"
-    weight = -110
+    weight = -100
     url = "/updates/blog/"
 
 
@@ -264,7 +264,7 @@ languageName = "Español"
     url = "/updates/events/"
 [[Languages.es.menu.updates]]
     name = "Research"
-    weight = -90
+    weight = -110
     url = "/updates/research/"
 [[Languages.es.menu.updates]]
     name = "EL Research"
@@ -278,9 +278,9 @@ languageName = "Español"
     url = "/updates/research/outside-research"        
 [[Languages.es.menu.updates]]
     name = "Media"
-    weight = -100
+    weight = -90
     url = "/updates/media/"
 [[Languages.es.menu.updates]]
     name = "Blog"
-    weight = -110
+    weight = -100
     url = "/updates/blog/"
