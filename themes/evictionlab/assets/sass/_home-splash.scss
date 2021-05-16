@@ -51,6 +51,13 @@
         letter-spacing: 1px;
         line-height: 1.2;
       }
+      .hp-hero__h1--intro {
+        font-family: $headerFontStack;
+        font-size: 3.1rem;
+        display: block;
+        margin-bottom: 0.8rem;
+        letter-spacing: 0;
+      }
     }
     p {
       @include defaultFont(16px);
@@ -93,12 +100,12 @@
       }
     }
     #homeCounter {
-      width: 152px;
+      width: 156px;
       @include media-breakpoint-up(md) {
-        width: 208px;
+        width: 222px;
       }
       @include media-breakpoint-up(lg) {
-        width: 226px;
+        width: 240px;
       }
     }
   }

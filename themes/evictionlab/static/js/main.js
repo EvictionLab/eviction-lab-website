@@ -503,7 +503,7 @@ $('.carousel').on('slide.bs.carousel', function(event){
 
 // Homepage counter
 
-var count3 = new countUp.CountUp("homeCounter", 3656428, {
+var count3 = new countUp.CountUp("homeCounter", 3600000, {
   duration: 3.8,
 }); 
 if (!count3.error) {
