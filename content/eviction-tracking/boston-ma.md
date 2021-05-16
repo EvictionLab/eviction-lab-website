@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Boston, Massachusetts
 slug: boston-ma
-date: 2021-04-12T04:00:00.000Z
+date: 2021-05-04T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Boston, Massachusetts | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,35 +11,25 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="25025" data="/uploads/table.csv" %}}
 
-
-
-
-
-
-
-
-
-
-
 Eviction filings in Boston, MA have fallen sharply since eviction proceedings were suspended across Massachusetts on March 17. A subsequent moratorium halted evictions through mid-October. However, law enforcement cannot carry out eviction orders in Cambridge and Somerville until further notice. Compared to equivalent periods in previous years (2012–2013, 2015–2016), eviction filings fell far below average beginning in April 2020, though filings rose modestly in November after the state moratorium expired.
 
 More detail on eviction protections in Massachusetts can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ma/).
 
 
 
-
-
-
-
-
-
-
+1. Boston eviction filing data has a disproportionate number of cases with missing census tract information in recent months. We have temporarily pulled our tract-level analyses as a result.
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
+
+
+
+
+
+
 
 
 
@@ -64,35 +54,10 @@ Eviction filings in Boston were running close to historical averages in January 
 
 
 
-{{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_map.csv" %}}
 
 
-
-# The geography of changes in eviction filings
-
-Boston is divided into 312 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
-
-1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
-
-{{%/ report_map %}}
-
-
-
-{{% report_chart id="race" data="/uploads/boston_linechart.csv" %}}
-
-# Eviction filings by neighborhood demographics
-
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In January and February 2020, eviction filings were concentrated in non-Latinx neighborhoods. In April and May, eviction filings dropped steeply across all neighborhoods.
-
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in previous years.<sup>1</sup> 
-
-1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 
 {{%/ report_chart %}}
