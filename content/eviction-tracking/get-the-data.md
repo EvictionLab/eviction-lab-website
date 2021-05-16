@@ -18,6 +18,11 @@ intro: >-
 
 
   Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
+
+
+
+
+  1. Boston eviction filing data has a disproportionate number of sealed/missing-tract cases in recent months. Values of filings by tract in Boston may be underestimates as a result.
 headers:
   siteheader: Site
   baselineheader: Baseline Years
@@ -65,14 +70,18 @@ data:
     years: 2017-2019
     geo: Census Tract
     file: /uploads/connecticut_weekly_2020_2021.csv
-  - site: Dallas-Fort Worth
-    years: 2016-2019
+  - site: Dallas
+    years: 2017-2019
     geo: Census Tract
-    file: /uploads/fortworth_weekly_2020_2021.csv
+    file: /uploads/dallas_weekly_2020_2021.csv
   - site: Delaware
     years: 2016-2019
     geo: Census Tract
     file: /uploads/delaware_weekly_2020_2021.csv
+  - site: Fort Worth
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/fortworth_weekly_2020_2021.csv
   - site: Gainesville
     years: 2017-2019
     geo: Census Tract
