@@ -51,7 +51,7 @@
         letter-spacing: 1px;
         line-height: 1.2;
       }
-      .hp-hero__h1--intro {
+      /*.hp-hero__h1--intro {
         @include media-breakpoint-up(md) {
           font-family: $headerFontStack;
           font-size: 3.1rem;
@@ -59,7 +59,7 @@
           margin-bottom: 0.8rem;
           letter-spacing: 0;
         }
-      }
+      } */
     }
     p {
       @include defaultFont(16px);
