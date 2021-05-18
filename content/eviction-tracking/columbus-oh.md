@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Columbus, Ohio
 slug: columbus-oh
-date: 2021-04-12T04:00:00.000Z
+date: 2021-05-18T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Columbus Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,25 +11,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="39049" data="/uploads/table.csv" %}}
 
-
-
-
-
-
-
-
-
-While the state of Ohio did not institute a general eviction moratorium, the courts in Franklin County (Columbus) halted the processing of non-emergency eviction filings between March 16 and June 1, 2020. To maintain social distancing, [court operations shifted to the Greater Columbus Convention Center since reopening.](https://www.bloomberg.com/news/articles/2020-06-18/how-do-you-hold-housing-court-in-a-pandemic)
+While the state of Ohio did not institute a general eviction moratorium, the courts in Franklin County (Columbus) halted the processing of non-emergency eviction filings between March 16 and June 1, 2020. To maintain social distancing, [court operations shifted to the Greater Columbus Convention Center after reopening.](https://www.bloomberg.com/news/articles/2020-06-18/how-do-you-hold-housing-court-in-a-pandemic)
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
-
-
-
-
-
-
-
-
 
 {{%/ report_intro %}}
 
@@ -37,22 +21,20 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 {{% report_chart id="avg" data="/uploads/columbus_barchart.csv" %}}
 
-
-
 # Changes in eviction filings
 
 Eviction filings in Columbus were very close to historical averages in January and February of 2020.<sup>1</sup> Filings dropped dramatically in March and have mostly remained below average as eviction processing resumed.<sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
-2. Filing data for 2020 provided by the [Franklin County Municipal Court](http://www.fcmcclerk.com/reports/evictions)
-
-
+2. Filing data for 2020-2021 provided by the [Franklin County Municipal Court](http://www.fcmcclerk.com/reports/evictions)
 
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/columbus_map.csv" %}}
+
+
 
 
 
@@ -69,11 +51,15 @@ Columbus is divided into 284 census tracts. In each of those tracts, we map the 
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/columbus_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -82,5 +68,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn–within the same set of neighborhoods defined by racial/ethnic majority–between filings in 2020-2021 and average filings in previous years.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
+
+
 
 {{%/ report_chart %}}
