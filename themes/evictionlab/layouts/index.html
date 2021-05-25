@@ -8,7 +8,7 @@
       <div class="col-12 col-lg-6 col-xl-7 hp-hero__img"></div>
       <div class="col-12 col-lg-6 col-xl-5 px-2 px-md-0 pl-lg-4 pl-xl-5 hp-hero__copy d-flex flex-column justify-content-lg-center justify-content-xl-end">
         <h1 class="mt-3 mb-3 mt-md-3 mb-md-0 mt-lg-2 mt-xl-5 mb-md-2 mb-lg-2 mb-xl-3">
-         In a typical year, landlords file <br class="d-none d-lg-block"/> <!--<div id="homeCounter" class="d-inline-block d-lg-block"></div>--> 3.6 million <br class="d-none d-lg-block"/>eviction cases.
+         {{ i18n "splashHeader1" }} <br class="d-none d-lg-block"/> {{ i18n "splashHeader2" }} <br class="d-none d-lg-block"/> {{ i18n "splashHeader3" }}
         </h1>
         <p class="mb-3 mb-md-4 mb-lg-3 mb-xl-6">{{/* i18n "splashBody" */}}The Eviction Lab at Princeton University creates data, interactive tools, and research to help neighbors and policymakers understand the eviction crisis.</p>
         <div class="d-block d-smm-flex align-items-start mb-5 mb-lg-0">   
@@ -31,7 +31,7 @@
     <div class="carousel-item active">
       <div class="row">
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 4 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) ) }}
+          {{ range first 4 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data") ) ) }}
             <div class="col-3">
               {{ if .Params.listSummary }}
                 <a href="{{ .RelPermalink }}">
@@ -143,60 +143,6 @@
  </div>
 </div>
 
-<!--<div id="hp-carousel-mobile" class="hp-carousel hp-carousel-mobile carousel slide" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
-  <div class="carousel-inner">
-    <ol class="carousel-indicators">
-      {{ range $index, $element := first 7 (where .Site.RegularPages "Params.childof" ("research")) }}
-        <li data-target="#hp-carousel-mobile" data-slide-to={{ $index }} class="{{ if (eq $index 0) }}active{{ end }}"></li>
-      {{ end }}
-      <li data-target="#hp-carousel-mobile" data-slide-to="7" class=""></li>
-    </ol>
-
-    {{ range first 1 (where .Site.RegularPages "Params.childof" ("research")) }}
-    <div class="carousel-item active">
-      <div class="row">
-        <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
-          <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-          <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
-        </div>  
-      </div>
-    </div>
-    {{ end }}
-    {{ range first 6 (after 1 (where .Site.RegularPages "Params.childof" ("research")) ) }}
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          <div class="hp-carousel__slide--image" style="background-image: url('{{ .Params.fbImage }}');"></div>
-          <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-          <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
-        </div>  
-      </div>
-    </div>
-    {{ end }}
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
-            <a class="viewmore" href="/updates"> </a> 
-            <div class="viewmore__text">
-              <div>VIEW MORE <br> RECENT ANALYSIS</div>
-              <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-            </div>  
-          </div>
-        </div>  
-      </div>
-    </div>
-    <a class="carousel-control-prev inactive" href="#hp-carousel-mobile" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#hp-carousel-mobile" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div> -->
 
 
 <!-- ********** pictorial menu section ********** -->

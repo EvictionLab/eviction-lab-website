@@ -503,7 +503,7 @@ $('.carousel').on('slide.bs.carousel', function(event){
 
 // Homepage counter
 
-var count3 = new countUp.CountUp("homeCounter", 3600000, {
+/* var count3 = new countUp.CountUp("homeCounter", 3600000, {
   duration: 3.8,
 }); 
 if (!count3.error) {
@@ -511,6 +511,7 @@ if (!count3.error) {
 } else {
   console.error(count3.error);
 }
+*/
 
 /**
  * Check for banner cookie

@@ -1,8 +1,12 @@
 [head_title]
 other = "Multilingual"
 
-[splashHeader]
-other = "Estamos descifrando la crisis de desalojo de los EE. UU." 
+[splashHeader1]
+other = "En un año normal, los arrendadores inician" 
+[splashHeader2]
+other = "3,7 millones de" 
+[splashHeader3]
+other = "procesos de desalojo." 
 [splashBody]
 other = "Eviction Lab de la Universidad de Princeton ha construido la primera base de datos nacional de desalojos. Descubra cuántos desalojos suceden en su comunidad. Cree mapas, gráficos e informes personalizados. Comparta los hechos con sus vecinos y funcionarios electos."
 [cta]
