@@ -8,9 +8,11 @@ other = "3.6 million"
 [splashHeader3]
 other = "eviction cases." 
 [splashBody]
-other = "The Eviction Lab at Princeton University has built the first nationwide database of evictions. Find out how many evictions happen in your community. Create custom maps, charts, and reports. Share facts with your neighbors and elected officials."
+other = "The Eviction Lab at Princeton University creates data, interactive tools, and research to help neighbors and policymakers understand the eviction crisis."
 [cta]
-other = "Get Started"
+other = "Engage with the data"
+[cta2]
+other = "Explore our research"
 [toolsHeading]
 other = "Interactive Tools"
 [toolsSub]

@@ -8,9 +8,11 @@ other = "3,7 millones de"
 [splashHeader3]
 other = "procesos de desalojo." 
 [splashBody]
-other = "Eviction Lab de la Universidad de Princeton ha construido la primera base de datos nacional de desalojos. Descubra cuántos desalojos suceden en su comunidad. Cree mapas, gráficos e informes personalizados. Comparta los hechos con sus vecinos y funcionarios electos."
+other = "Eviction Lab de la Universidad de Princeton genera datos, herramientas interactivas e investigaciones  para ayudar a los vecinos y a los legisladores a entender la crisis de desalojo."
 [cta]
-other = "Empezar"
+other = "Consultar los datos"
+[cta2]
+other = "Explorar nuestras investigaciones"
 [toolsHeading]
 other = "Herramientas interactivas"
 [toolsSub]
