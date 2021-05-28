@@ -433,16 +433,18 @@ $mobileVhTransition: height 3600s steps(1);
 
 
 a:focus, input:focus, textarea:focus, select:focus { outline-color: $color1; }
-/*
-p {
-  font-size: 2.1rem;
-  line-height: 3.2rem;
-  @include for-phone-only {
-    font-size: $fontSizeSmall;
-    line-height: 2.2rem;
+
+
+// Overrides for language menu -- remove when language display fixes are in
+
+.page-type-eviction-tracking {
+  .dropdown.language-select {
+    display: none;
   }
 }
-*/
+
+
+
 @import 'bootstrap/bootstrap';
 @import 'utils';
 @import 'header';
