@@ -144,7 +144,7 @@
   {{ $.Scratch.Set "dir" .Dir }}
 {{ end }}
 
-{{ if or (in ($.Scratch.Get "dir") "eviction-tracking") (eq .Title "The Eviction Lab") }}
+{{ if in ($.Scratch.Get "dir") "eviction-tracking" }}
   {{ $countup := resources.Get "lib/countup.min.js" }}
   {{ $mapboxgl := resources.Get "lib/mapboxgl.min.js" }}
   {{ $deepmerge := resources.Get "lib/deepmerge.min.js" }}
