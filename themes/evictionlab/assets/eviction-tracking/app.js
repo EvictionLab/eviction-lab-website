@@ -253,7 +253,7 @@ Elab.Config = (function (Elab) {
         min: {
           y: [0, 1.1],
         },
-      }
+      },
     };
     return deepmerge(BASE_CONFIG, config);
   }
@@ -302,7 +302,7 @@ Elab.Config = (function (Elab) {
       xTooltip: d3.timeFormat("%B %Y"),
       yTooltip: d3.format(",.0%"),
       tooltip: function tooltip(d) {
-        var rawParse = d3.timeParse("%d/%m/%Y")
+        var rawParse = d3.timeParse("%d/%m/%Y");
         var distance = d._raw.y - 1;
         var value = Math.abs(distance);
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
@@ -319,7 +319,8 @@ Elab.Config = (function (Elab) {
           d3.format(",.0%")(value) +
           "</span>&nbsp;from average" +
           (d._raw.extras["month_last_day"]
-            ? ", <br />as of " + d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
+            ? ", <br />as of " +
+              d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
             : "") +
           ".</div>"
         );
@@ -333,8 +334,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text:
-          "Filings Relative to Average, by Neighborhood Racial/Ethnic Majority",
+        text: "Filings Relative to Average, by Neighborhood Racial/Ethnic Majority",
       },
     ],
     markLines: [
@@ -1045,7 +1045,6 @@ Elab.Chart = (function (Elab) {
      * @param {*} context
      */
     function renderAxis(data, config, context) {
-
       var rotateLabels = function (selection) {
         selection
           .selectAll(".tick text")
@@ -1053,14 +1052,14 @@ Elab.Chart = (function (Elab) {
           .attr("transform", "rotate(-50)")
           .attr("dx", "-0.5em")
           .attr("dy", "0em");
-      }
+      };
 
       // setup x axis
       var xAxis = d3
         .axisBottom(context.x)
         .ticks(config.view.xTicks)
-        .tickFormat(config.format.x)
-        
+        .tickFormat(config.format.x);
+
       // setup y axis
       var yAxis = d3
         .axisLeft(context.y)
@@ -2161,7 +2160,10 @@ Elab.Intro = (function (Elab) {
           selection
             .selectAll(".tick text")
             .attr("text-anchor", "end")
-            .attr("transform", "translate(" + this.monthToPixels(1) / 2 + ",0) rotate(-50)")
+            .attr(
+              "transform",
+              "translate(" + this.monthToPixels(1) / 2 + ",0) rotate(-50)"
+            )
             .attr("dx", "-0.25em")
             .attr("dy", "0.333em");
           selection.selectAll(".tick:last-child text").attr("opacity", 0);
@@ -2205,6 +2207,7 @@ Elab.Intro = (function (Elab) {
     if (!ranges || ranges.length === 0) return "";
     return ranges
       .map(function (dates) {
+        if (!dates[0]) return "No local moratorium";
         return dates
           .map(function (d) {
             return d ? dateFormat(d) : "Ongoing";
@@ -2663,6 +2666,7 @@ Elab.ListPage = (function (Elab) {
     Elab.Data.loadAllTables(cityData, stateData, function (data) {
       var cities = data[0];
       var states = data[1];
+
       initHeroCount(cities, states);
       initWeeklyCount(cities, states);
 
