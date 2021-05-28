@@ -264,11 +264,23 @@
       min-height: 144px;
     }
   }
-  
+  .carousel-control-prev {
+    left: 23px;
+    @include media-breakpoint-up(xxxl) {
+      left: 7.45%;
+    }
+  }
+  .carousel-control-next {
+    right: 24px;
+    @include media-breakpoint-up(xxxl) {
+      right: 7.45%;
+    }
+  }
   .carousel-control-prev, .carousel-control-next {
     opacity: 1;
     transition: opacity 0.3s ease-out;
-
+    width: 65px;
+  
     &.inactive {
       opacity: 0.2;
       pointer-events: none;
@@ -292,7 +304,7 @@
   }
 
   .carousel-control-prev-icon {
-    right: 54px;
+    //right: 54px;
     top: -21%;
     @include media-breakpoint-up(xxxl) {
       right: -16px;
@@ -301,7 +313,7 @@
     transform: rotate(180deg);
   }
   .carousel-control-next-icon {
-    right: -54px;
+    //right: -54px;
     top: -21%;
     @include media-breakpoint-up(xxxl) {
       right: 16px;
