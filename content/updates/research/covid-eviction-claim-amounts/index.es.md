@@ -12,8 +12,8 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Examining the amounts landlords claim tenants owe in 3 counties' eviction filings.
 listSummary: 'In three of the counties we track, we are able to collect an important data point: the amount of money, if any, that the landlord or property manager claims is owed by the tenant. Here, we look at the amounts claimed at the initiation of the eviction process.' 
 socialDescription: Examining the amounts landlords claim tenants owe in 3 counties' eviction filings.
-fbImage: '/images/assets/blog/claims_social.png'
-twImage: '/images/assets/blog/claims_social.png'
+fbImage: claims_social.png
+twImage: claims_social.png
 url: /covid-eviction-claims
 aliases:
   

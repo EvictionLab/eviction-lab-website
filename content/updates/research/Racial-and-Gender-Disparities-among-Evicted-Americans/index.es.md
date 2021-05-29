@@ -14,8 +14,8 @@ description: Documenting populations disproportionately at risk of eviction.
 listSummary: Are Black and Latinx renters evicted at higher rates than their white counterparts? Are women renters evicted at higher rates than men? Is this true for all racial and ethnic groups? Answering these questions is central to addressing the long history of excluding women and communities of color from housing, banking, and credit opportunities in the U.S.
 socialDescription: Documenting populations disproportionately at risk of eviction.
 # image: '/images/assets/blog/rent_margin_display.jpg'
-fbImage: "/images/assets/blog/historical-demographics-social.png"
-twImage: "/images/assets/blog/historical-demographics-social.png"
+fbImage: historical-demographics-social.png
+twImage: historical-demographics-social.png
 url: /demographics-of-eviction/
 scripts:
   - grouped-bar-chart

@@ -104,13 +104,14 @@ img.post-thumb {
   .authorbox {
     overflow: hidden;
     float: left;
-    max-width: 76%;
+    max-width: 98%;
     display: flex;
     @include media-breakpoint-up(sm) {
       margin: 1.6rem 0;
     }
     @include media-breakpoint-up(md) {
       padding-bottom: 0;
+      max-width: 76%;
     }
     ul {
       display: inline-block;
@@ -294,7 +295,7 @@ figure.article-image {
 .article-image {
   img {
     width: 100%;
-    margin: 56px 0 27px 0;
+    margin: 0 0 27px 0;
     @include for-tablet-portrait-up {
       margin: 0 0 0 0;
     }
@@ -322,7 +323,7 @@ figure.article-image {
     margin-top: 24px;
     padding-top: 0.6rem;
     @include for-phone-only {
-      margin: 0 16px;
+      margin: 0 24px;
     }
     @include media-breakpoint-up(lg) {
       font-size: 1.5rem;
@@ -456,24 +457,22 @@ figure.article-image {
       }
     }
     a {
+      line-height: 1.5;
       @include for-phone-only {
         @include altFont(2rem);
         letter-spacing: 0.02rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont(2.1rem);
-        line-height: 1.5;
         letter-spacing: 0.06rem;
       }
       @include sm-thru-med-desktop {
         @include altFont(2.4rem);
         /* color: $color1; */
-        line-height: 1.5;
         letter-spacing: 0.03rem;
       }
       @include media-breakpoint-up(xl) {
         @include altFont(2.6rem);
-        line-height: 1.5;
         letter-spacing: 0.05rem;
       }
     } 

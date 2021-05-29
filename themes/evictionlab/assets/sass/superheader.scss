@@ -20,19 +20,26 @@
     }
 } */
 .superheader {
-   background: #EEF2F5;
+   /*background: #EEF2F5;
    background: linear-gradient(to bottom, #EEF2F5 2%, #c8cdd2 99%);
-   background: linear-gradient(to bottom, #EEF2F5 2%, #d4d9de 99%);
+   background: linear-gradient(to bottom, #EEF2F5 2%, #d4d9de 99%);*/
+   background-color: #F4F7F9;
     color: #434778;
+    color: #484958;
+    position: relative;
     //width: 80%;
     
     .super-content {
         padding: 10px 16px;
-        line-height: 1.8;
+        font-family: $fontStack;
+        font-size: 14px;
+        line-height: 1.5;
         @include for-tablet-portrait-up {
-            padding: 16px 24px;
-            line-height: 1.5;
+            font-size: 16px; 
         }
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
         .boldface {
             font-family: $altFontStack;
             color:#e24000
@@ -40,21 +47,26 @@
         a {
             font-family: $boldFontStack;
             color: #434778;
+            color: #484958;
             text-decoration: underline;
         }
-        font-family: $boldFontStack;
-        font-size: 16px;
-        @include for-tablet-portrait-up {
-            font-size: 17px; 
-        }
-        position: relative;
-        width: 100%;
-        max-width: 1200px;
-        
         //height: 100%;
        // padding: 0;
         margin: 0 auto;
         box-sizing: border-box;
+    }
+
+    .close {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+        opacity: 1 !important;
+    }
+
+    &.inactive {
+        position: absolute;
+        visibility: hidden;
     }
 }
  .new-splash {

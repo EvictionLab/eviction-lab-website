@@ -15,7 +15,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1280px,
-  xxxl: 1440px,
+  xxxl: 1441px,
   x4l: 1720px
 );
 
@@ -189,6 +189,12 @@ $numberFontStack:  "Gotham A", "Gotham B", sans-serif;
 
 @mixin altFont($size) {
   font-family: $altFontStack;
+  font-size: $size;
+  font-weight: normal;
+}
+
+@mixin headerFont($size) {
+  font-family: $headerFontStack;
   font-size: $size;
   font-weight: normal;
 }
@@ -427,16 +433,19 @@ $mobileVhTransition: height 3600s steps(1);
 
 
 a:focus, input:focus, textarea:focus, select:focus { outline-color: $color1; }
-/*
-p {
-  font-size: 2.1rem;
-  line-height: 3.2rem;
-  @include for-phone-only {
-    font-size: $fontSizeSmall;
-    line-height: 2.2rem;
+
+
+// Overrides for language menu -- remove when language display fixes are in
+
+.page-type-eviction-tracking, .translation-false, .page-type-updates  {
+  .dropdown.language-select {
+    display: none;
   }
 }
-*/
+
+
+
+
 @import 'bootstrap/bootstrap';
 @import 'utils';
 @import 'header';

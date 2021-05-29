@@ -466,3 +466,70 @@ $(document).ready(function () {
     });
   }
 });
+
+$('.carousel').on('touchstart', function(event){
+  const xClick = event.originalEvent.touches[0].pageX;
+  $(this).one('touchmove', function(event){
+      const xMove = event.originalEvent.touches[0].pageX;
+      const sensitivityInPx = 5;
+
+      if( Math.floor(xClick - xMove) > sensitivityInPx ){
+          $(this).carousel('next');
+      }
+      else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+          $(this).carousel('prev');
+      }
+  });
+  $(this).on('touchend', function(){
+      $(this).off('touchmove');
+  });
+});
+
+$('.carousel').on('slide.bs.carousel', function(event){
+  const numElements = $(this).find(".carousel-item").length
+  if(event.to === numElements - 1) {
+    $(this).find(".carousel-control-next").addClass("inactive")
+  }else {
+    $(this).find(".carousel-control-next").removeClass("inactive")
+  }
+
+  if(event.to === 0) {
+    $(this).find(".carousel-control-prev").addClass("inactive")
+  }else {
+    $(this).find(".carousel-control-prev").removeClass("inactive")
+  }
+});
+
+
+// Homepage counter
+
+/* var count3 = new countUp.CountUp("homeCounter", 3600000, {
+  duration: 3.8,
+}); 
+if (!count3.error) {
+  count3.start();
+} else {
+  console.error(count3.error);
+}
+*/
+
+/**
+ * Check for banner cookie
+ */
+$(function() {
+
+  if(localStorage && localStorage.getItem("el-banner") == $(".superheader").html()) {
+    $(".superheader").addClass("inactive");
+  }else {
+    console.log($(".superheader").html())
+  }
+});
+
+$(".superheader .close").click(function () {
+  $(".superheader").addClass("inactive");
+
+  if(localStorage) {
+    localStorage.setItem("el-banner", $(".superheader").html())
+  }
+});
+

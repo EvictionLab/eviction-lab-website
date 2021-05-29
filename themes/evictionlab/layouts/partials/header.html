@@ -47,8 +47,13 @@
 		<meta property="og:url" content="{{ .Permalink }}" />
 		<meta property="og:site_name" content="Eviction Lab" />
 		{{ if .Params.fbImage }}
-		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
-		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+			{{ if eq .Params.contenttype "updates"  }}
+				<meta property="og:image" content="https://evictionlab.org{{ .RelPermalink }}{{ $.Scratch.Get "fbImage" }}" />
+				<meta property="og:image:secure_url" content="https://evictionlab.org{{ .RelPermalink }}{{ $.Scratch.Get "fbImage" }}" />		
+			{{ else }}
+			<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+			<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "fbImage" }}" />
+			{{ end }}
 		{{ else if .Params.image }}
 		<meta property="og:image" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
 		<meta property="og:image:secure_url" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
@@ -67,7 +72,11 @@
 		<meta name="twitter:description" content="{{ $.Scratch.Get "description" }}" />
 		{{ end }}
 		{{ if .Params.twImage }}
-		<meta name="twitter:image" content="https://evictionlab.org{{ $.Scratch.Get "twImage" }}" />
+			{{ if eq .Params.contenttype "updates"  }}
+			<meta name="twitter:image" content="https://evictionlab.org{{ .RelPermalink }}{{ $.Scratch.Get "twImage" }}" />	
+			{{ else }}
+			<meta name="twitter:image" content="https://evictionlab.org{{ $.Scratch.Get "twImage" }}" />
+			{{ end }}
 		{{ else if .Params.image }}
 		<meta name="twitter:image" content="https://evictionlab.org{{ $.Scratch.Get "image" }}" />
 		{{ else }}
@@ -110,7 +119,7 @@
   </head>
 
   <body class="debug-grid-16x helvetica tracked {{ if .Params.hasSubnav }}page-subnav{{ end }}
-  page-type-{{.Page.Type}} page-layout-{{.Page.Layout}}">
+  page-type-{{.Page.Type}} page-layout-{{.Page.Layout}} {{ if eq .Params.translation false }}translation-{{.Page.Params.translation}}{{end}}">
 
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M955JVB"

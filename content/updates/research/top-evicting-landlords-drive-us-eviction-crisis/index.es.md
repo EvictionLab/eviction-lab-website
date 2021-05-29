@@ -17,10 +17,10 @@ description: In order to design policies that could anticipate and prevent tenan
 listSummary: In order to design policies that could anticipate and prevent tenants from being evicted, the Eviction Lab analyzed the locations of evictions over time, hoping to detect a meaningful pattern. Based on our analysis of 17 cities, evictions occur in the same neighborhoods and even the same street blocks year after year.
 socialDescription: In order to design policies that could anticipate and prevent tenants from being evicted, the Eviction Lab analyzed the locations of evictions over time, hoping to detect a meaningful pattern.
 researchtype: elresearch
-twImage: /images/assets/blog/top-evicting-landlords-social.png
+twImage: top-evicting-landlords-social.png
 aliases: null
-fbImage: /images/assets/blog/top-evicting-landlords-social.png
-image: /images/assets/blog/top-evicting-landlords-social.png
+fbImage: top-evicting-landlords-social.png
+image: top-evicting-landlords-social.png
 ---
 
 In 2015, an apartment complex in Fayetteville, NC evicted 156 tenants. One might think perhaps the neighborhood was gentrifying, and this landlord was emptying their complex of all the low-income tenants: a one-time turnover. Yet, the complex evicted 137 tenants, on average, in each of the prior eight years. This one building evicted nearly five percent of all tenants who were removed from their homes in the city of Fayetteville during a ten-year span.
