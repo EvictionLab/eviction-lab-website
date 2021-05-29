@@ -457,24 +457,22 @@ figure.article-image {
       }
     }
     a {
+      line-height: 1.5;
       @include for-phone-only {
         @include altFont(2rem);
         letter-spacing: 0.02rem;
       }
       @include for-tablet-portrait-and-landscape {
         @include altFont(2.1rem);
-        line-height: 1.5;
         letter-spacing: 0.06rem;
       }
       @include sm-thru-med-desktop {
         @include altFont(2.4rem);
         /* color: $color1; */
-        line-height: 1.5;
         letter-spacing: 0.03rem;
       }
       @include media-breakpoint-up(xl) {
         @include altFont(2.6rem);
-        line-height: 1.5;
         letter-spacing: 0.05rem;
       }
     } 
