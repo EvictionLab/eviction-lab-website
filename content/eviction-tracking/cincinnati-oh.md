@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Cincinnati, Ohio
 slug: cincinnati-oh
-date: 2021-04-12T04:00:00.000Z
+date: 2021-05-18T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Cincinnati, OH | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,25 +11,11 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="39061" data="/uploads/table.csv" %}}
 
+The state of Ohio did not put a general eviction moratorium in place, but courts in Hamilton County (Cincinnati) suspended proceedings between March 19 and June 1, 2020. Eviction filings were accepted throughout this period, but fell in mid-March and April. Filings have since slowly risen closer to historical averages. 
 
-
-
-
-
-
-
-
-The state of Ohio did not put a general eviction moratorium in place, but courts in Hamilton County (Cincinnati) suspended proceedings between March 19 and June 1, 2020. Eviction filings were accepted throughout this period, but fell since mid-March. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 75% in April and 70% in May, but since then have slowly risen closer to historical averages.
+On April 1, 2021, The Hamilton County Municipal Court stopped enforcing the national CDC moratorium, allowing for evictions for nonpayment of rent that may have been previously stayed.
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
-
-
-
-
-
-
-
-
 
 {{%/ report_intro %}}
 
@@ -37,22 +23,20 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 {{% report_chart id="avg" data="/uploads/cincinnati_barchart.csv" %}}
 
-
-
 # Changes in eviction filings
 
 Eviction filings in Cincinnati were almost exactly at typical levels in January and February of 2020.<sup>1</sup> Filings began to fall in March and were well below average in April and May, but have since risen closer to historical averages.<sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
-2. Filing data for 2020 collected by [January Advisors](https://www.januaryadvisors.com/)
-
-
+2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
 
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_map.csv" %}}
+
+
 
 
 
@@ -69,11 +53,15 @@ Cincinnati is divided into 222 census tracts. In each of those tracts, we map th
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/cincinnati_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -82,5 +70,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2012–2016.<sup>1</sup> 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
+
+
 
 {{%/ report_chart %}}
