@@ -48,7 +48,7 @@ New Orleans is divided into 177 census tracts. In most of those tracts, we map t
 
 # Eviction filings by neighborhood demographics
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. Eviction filings have been concentrated in majority-Black neighborhoods. 
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. In Orleans Parish, eviction filings have been concentrated in majority-Black neighborhoods. 
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2017–2019.<sup>1</sup>
 
