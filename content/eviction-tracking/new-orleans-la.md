@@ -23,7 +23,7 @@ More detail on eviction protections in Louisiana can be found on the [COVID-19 H
 
 # Changes in eviction filings
 
-Eviction filings in New Orleans were were near typical levels in January and February of 2020. Filings began to fall in March and were at zero in April and May, but have since risen closer to historical averages.<sup>1</sup>
+Eviction filings in New Orleans were near typical levels in January and February of 2020. Filings began to fall in March and were at zero in April and May, but have since risen closer to historical averages.<sup>1</sup>
 
 1. Eviction filing data were collected by Davida Finger (Loyola University New Orleans) and [Jane’s Place Neighborhood Sustainability Initiative](https://www.jpnsi.org/). Historical averages are taken from 2019 data.
 
