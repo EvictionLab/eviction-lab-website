@@ -134,6 +134,10 @@ data:
     years: 2012-2019
     geo: Census Tract
     file: /uploads/missouri_weekly_2020_2021.csv
+  - site: New Orleans
+    years: "2019"
+    geo: Census Tract
+    file: /uploads/neworleans_weekly_2020_2021.csv
   - site: New York
     years: 2016-2018
     geo: ZIP Code
