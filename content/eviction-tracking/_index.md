@@ -18,7 +18,7 @@ cascade:
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Real time eviction tracking in U.S. cities during COVID-19.
 h1: Eviction Tracking System
-date: 2021-05-22T00:00:00.000Z
+date: 2021-05-29T00:00:00.000Z
 intro: "The COVID-19 pandemic has deepened America’s housing crisis. The
   nation’s most severe public health emergency in a century may cause large
   spikes in eviction and homelessness. In response, we have created the Eviction
