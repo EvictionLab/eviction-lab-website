@@ -225,6 +225,18 @@ body .chart .chart__title, body .chart .chart__title > * {
     stroke-width: 1;
     stroke: #fff;
   }
+
+  .chart__axis-label {
+    /* font-family: var(--heading-font); */
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .chart__axis-label--x {
+    
+  }
+  .chart__axis-label--y {
+    
+  }
 /** End Axis */
 
 .chart__line {
@@ -528,6 +540,19 @@ body .chart .chart__title, body .chart .chart__title > * {
   .chart.chart--bar .tick text {
     font-size: 10px
   }
+}
+
+/** HISTOGRAM CHART OVERRIDES **/
+
+.chart.chart--histogram .chart__body,
+.chart.chart--histogram .chart__root {
+  height: 480px
+}
+.chart.chart--histogram .chart__bar {
+  fill: #434878
+}
+.chart.chart--histogram .chart__bar:hover {
+  fill: #e24000
 }
 
 

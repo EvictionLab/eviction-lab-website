@@ -19,6 +19,20 @@ scripts:
   - maps
 ---
 
+{{% histogram
+  id="hist1"
+  data="/uploads/hisd_data.csv"
+  x="totalfilings"
+  thresholds="40"
+  title="Distribution of eviction filings within school zones, 2017-2018"
+  xLabel="Number of Filings"
+  yLabel="Number of School Zones"
+  tooltipTemplate="{total} school zones with {range} eviction filings."
+  xMin="-25"
+  yMax="45"
+  margin="8 8 104 56"
+%}}
+
 {{% bar-chart
   id="fig1"
   data="/uploads/figure_1_20210422.csv"

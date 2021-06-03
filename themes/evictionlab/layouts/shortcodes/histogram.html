@@ -1,0 +1,62 @@
+{{/**
+
+  Shortcode for rendering histograms 
+
+  **Must include the following frontmatter in the `.md` file to use**:
+
+  ```
+  scripts:
+    - charts
+  ```
+  
+  See: _chart-demo.md for usage
+
+  Props:
+    - id: unique identifier for this bar chart instance
+    - title: title for the chart
+    - csv: url to CSV data File
+    - x: name of column in CSV to use for x values
+    - y: name of column in CSV to use for y values
+    - yTicks: number of y ticks to display
+    - yMin: y axis minimum value
+    - yMax: y axis maximum value
+    - yFormat: formatting for y axis values
+    - yTickFormat: formatting for y values in the tooltip
+    - margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
+*/}}
+
+{{ $title := .Get "title" }}
+
+<div
+  class="chart chart--histogram chart--{{ .Get `id` }}"
+>
+  {{ if $title }}
+  <h3 class="chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}" class="chart__body">
+    <svg></svg>
+  </div>
+
+  <script>
+
+    window.addEventListener('load', function() {
+      var id = {{ .Get "id" }}
+      var rootEl = document.getElementById(id);
+      var csv = {{ .Get "data" }}
+      var x = {{ .Get "x" }}
+      var yTicks = {{ .Get "yTicks" }}
+      var margin = {{ .Get "margin" }}
+      var yFormat = {{ .Get "yFormat" }}
+      var yMin = {{ .Get "yMin" }}
+      var yMax = {{ .Get "yMax" }}
+      var xMin = {{ .Get "xMin" }}
+      var xMax = {{ .Get "xMax" }}
+      var xLabel = {{ .Get "xLabel" }}
+      var yLabel = {{ .Get "yLabel" }}
+      var tooltipTemplate = {{ .Get "tooltipTemplate" }}
+      
+      // Init chart on page load.
+      Elab.Histogram.init(rootEl, {  tooltipTemplate: tooltipTemplate, xLabel: xLabel, yLabel: yLabel, id:id, data: csv, x: x, yMin: yMin, yMax: yMax, xMin: xMin, xMax: xMax, yTicks: yTicks, yFormat: yFormat, margin: margin })
+    });
+  </script>
+</div>

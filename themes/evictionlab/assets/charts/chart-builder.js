@@ -980,6 +980,143 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  Chart.prototype.addHistogram = function (overrides) {
+    var _this = this;
+    overrides = overrides || {};
+    _this.binThreshold = overrides.threshold || 40;
+
+    function createGenerator(data, thresholds) {
+      return d3
+        .histogram()
+        .value(function (d) {
+          return d.x;
+        })
+        .domain(
+          d3.extent(data, function (d) {
+            return d.x;
+          })
+        )
+        .thresholds(thresholds || 40);
+    }
+
+    function createSelection(parentSelection) {
+      return parentSelection.append("g").attr("class", "chart__histogram");
+    }
+
+    function createRenderer(selection, chart) {
+      return function renderHistogram() {
+        var histogram = createGenerator(chart.data, chart.binThreshold);
+        var bins = histogram(chart.data);
+        var barSelection = selection.selectAll("rect").data(bins);
+
+        barSelection
+          .enter()
+          .append("rect")
+          .attr("class", "chart__bar chart__bar--histogram")
+          .attr("x", function (d) {
+            return chart.xScale(d.x0);
+          })
+          .attr("y", function (d) {
+            return chart.getInnerHeight();
+          })
+          .attr("width", function (d) {
+            return chart.xScale(d.x1) - chart.xScale(d.x0) - 1;
+          })
+          .attr("height", function (d) {
+            return 0;
+          })
+          .on("mousemove", function (d) {
+            if (overrides.renderTooltip) {
+              chart.setHovered(d);
+              chart.showTooltip(d3.event, overrides.renderTooltip);
+            }
+          })
+          .on("mouseleave", function (d) {
+            chart.setHovered(null);
+            chart.hideTooltip();
+          })
+          .merge(barSelection)
+          .transition()
+          .duration(chart.duration || 1000)
+          .attr("x", function (d) {
+            return chart.xScale(d.x0);
+          })
+          .attr("y", function (d) {
+            return chart.yScale(d.length);
+          })
+          .attr("width", function (d) {
+            return chart.xScale(d.x1) - chart.xScale(d.x0) - 1;
+          })
+          .attr("height", function (d) {
+            return chart.getInnerHeight() - chart.yScale(d.length);
+          });
+      };
+    }
+
+    this.addElement("histogram", "data", createSelection, createRenderer);
+    return this;
+  };
+
+  /**
+   * Adds an X axis to the chart
+   * @param {*} selector a function that accepts a data entry and returns the y value
+   */
+  Chart.prototype.addAxisX = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    // selector for y data value
+    options.selector =
+      options.selector ||
+      function (d) {
+        return d.x;
+      };
+
+    this.selections["xAxis"] = this.selections["base"]
+      .append("g")
+      .attr("class", "chart__axis chart__axis--x");
+    this.updaters["xAxis"] = function () {
+      var extent = options.extent
+        ? options.extent
+        : d3.extent(_this.data, options.selector);
+      var xExtent =
+        typeof options.adjustExtent === "function"
+          ? options.adjustExtent(extent)
+          : extent;
+      _this.xScale = d3
+        .scaleLinear()
+        .rangeRound([0, _this.getInnerWidth()])
+        .domain(xExtent);
+      if (options.nice) {
+        _this.xScale.nice();
+      }
+      var xAxis = d3
+        .axisBottom(_this.xScale)
+        .tickSize(-1 * _this.getInnerHeight());
+      if (options.ticks) xAxis.ticks(options.ticks);
+      if (options.tickFormat) xAxis.tickFormat(options.tickFormat);
+      _this.selections["xAxis"]
+        .attr("transform", "translate(0, " + _this.getInnerHeight() + ")")
+        .transition()
+        .duration(1000)
+        .call(xAxis);
+      if (options.adjustLabels)
+        _this.selections["xAxis"].call(options.adjustLabels.bind(_this));
+      // text label for the x axis
+      if (options.xLabel) {
+        _this.selections["base"].selectAll(".chart__axis-label--x").remove();
+        _this.selections["base"]
+          .append("text")
+          .attr("class", "chart__axis-label chart__axis-label--x")
+          .attr("x", _this.getInnerWidth() / 2)
+          .attr("y", _this.getInnerHeight())
+          .style("text-anchor", "middle")
+          .attr("dy", options.labelMargin || "3em")
+          .text(options.xLabel);
+      }
+    };
+    return this;
+  };
+
   /**
    * Adds a Y axis to the chart
    * @param {*} selector a function that accepts a data entry and returns the y value
@@ -993,18 +1130,17 @@ Elab.ChartBuilder = (function (Elab) {
       function (d) {
         return d.y;
       };
-    // option to modify extent, do not modify by default
-    options.adjustExtent =
-      overrides.adjustExtent ||
-      function (e) {
-        return e;
-      };
     this.selections["yAxis"] = this.selections["base"]
       .append("g")
       .attr("class", "chart__axis chart__axis--y");
     this.updaters["yAxis"] = function () {
-      var extent = options.selector && d3.extent(_this.data, options.selector);
-      var yExtent = options.adjustExtent(extent);
+      var extent = options.extent
+        ? options.extent
+        : d3.extent(_this.data, options.selector);
+      var yExtent =
+        typeof options.adjustExtent === "function"
+          ? options.adjustExtent(extent)
+          : extent;
       _this.yScale = d3
         .scaleLinear()
         .rangeRound([_this.getInnerHeight(), 0])
@@ -1020,6 +1156,19 @@ Elab.ChartBuilder = (function (Elab) {
         .transition()
         .duration(1000)
         .call(yAxis);
+      // text label for the x axis
+      if (options.yLabel) {
+        _this.selections["base"].selectAll(".chart__axis-label--y").remove();
+        _this.selections["base"]
+          .append("text")
+          .attr("class", "chart__axis-label chart__axis-label--y")
+          .attr("transform", "rotate(-90)")
+          .attr("x", 0 - _this.getInnerHeight() / 2)
+          .attr("y", 0)
+          .attr("dy", options.labelMargin || "-3em")
+          .style("text-anchor", "middle")
+          .text(options.yLabel);
+      }
     };
     return this;
   };
