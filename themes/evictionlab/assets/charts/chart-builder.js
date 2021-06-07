@@ -1380,7 +1380,7 @@ Elab.ChartBuilder = (function (Elab) {
             [_this.getInnerWidth(), _this.getInnerHeight()],
           ]);
         var voronoiData = chart.voronoi.polygons(
-          chart.data.filter((d) => !!d.y)
+          chart.data.filter(function (d) { return !!d.y })
         );
         var voronoi = selection.selectAll("path").data(voronoiData);
         voronoi

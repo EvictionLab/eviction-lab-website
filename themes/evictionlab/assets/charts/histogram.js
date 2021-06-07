@@ -92,10 +92,10 @@ Elab.Histogram = (function (Elab) {
   function loadData(options, callback) {
     d3.csv(options.data, function (data) {
       var result = data.map(function (d) {
-        return {
-          x: Number(d[options.x]),
-          ...d,
-        };
+        return Object.assign({
+          x: Number(d[options.x])
+        }, d
+        );
       });
       callback && callback(result);
     });

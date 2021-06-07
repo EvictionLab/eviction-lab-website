@@ -32,7 +32,10 @@
 }
 
 .visual--mapbox .legend {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
   margin-top: 16px;
   max-width: 280px;
 }
@@ -55,6 +58,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 0px;
+  min-height: 24px;
 }
 .visual--mapbox .legend__gradient-labels span {
   font-size: 1.2rem;
@@ -683,10 +688,12 @@ body .visual .visual__title, body .visual .visual__title > * {
 /** Highlight bars */
 .chart--fig1 .chart__bars .chart__bar:nth-child(35),
 .chart--fig1 .chart__bars .chart__bar:nth-child(36) {
+  fill: #e24000;
   fill: var(--c1);
 }
 
 .chart--fig1 .chart__mark {
+  stroke: #e24000;
   stroke: var(--c1);
   stroke-dasharray: 2 2;
   transform: translateX(1px);
