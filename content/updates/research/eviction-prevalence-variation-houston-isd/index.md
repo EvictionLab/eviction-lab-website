@@ -7,7 +7,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "Eviction Prevalence and Spatial Variation Within the Houston Independent School District"
-date: 2021-06-07T00:46:40.089Z
+date: 2021-06-06T00:46:40.089Z
 postauthortitle: The Eviction Lab
 listSummary: >-
   Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
@@ -15,10 +15,10 @@ socialDescription: Residential mobility affects children’s education, generall
 researchtype: elresearch
 postauthorname: Lavar Edmonds, Peter Hepburn, Olivia Jin, and Matthew Desmond
 
-twImage: us-eviction-filing-patterns-2020-social.png
+twImage: eviction-filings-houston-isd2.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
-fbImage: us-eviction-filing-patterns-2020-social.png
+fbImage: eviction-filings-houston-isd2.png
 image:
 scripts:
   - charts
@@ -148,6 +148,9 @@ Eviction filings are common in Harris County: 35,208 eviction cases were filed w
   </tbody>
 </table>
 
+<br/>
+<br/>
+
 Table 1 presents the top 10 elementary school zones by the total number of filings in the two-year period (left panel) and by eviction filing rate (right panel){{< sup 7 >}}.  While households in every school zone experienced eviction filings, the problem was especially acute in a select few zones. Of the 163 elementary school zones in the HISD, 29.4% of all eviction cases originated in the 10 zones in the left panel of Table 1, just six percent of all school zones. 
 
 In the right panel of the table, we rank school zones by filing rates. Eviction filing rates allow us to account for the number of renter households in the zone, creating a metric for comparing filing prevalence across zones. The Shadydale school zone had the highest recorded eviction filing rate in Houston: the 12.6% eviction filing rate in this zone means that one in every eight renters was filed against for eviction each year. This high eviction filing rate in the Shadydale zone was particularly striking because only a third of households in the zone were renters, relative to an average of 53% across all zones. Relatively few students at Shadydale elementary school were likely to be renters, but they were at higher-than-normal risk of displacement.   
@@ -168,6 +171,7 @@ Mapping the spatial variation in filings allows us to observe whether evictions 
 %}}
 
 <br/>
+<br/>
 
 Figure 3 shows the spatial variation of eviction filing rates, which allows us to control for variations in renter population density. Similar to Figure 2, we observed that school zones with high eviction filing rates were not clustered together. Interestingly, we found that areas with high filing rates did not necessarily line up with the areas with high filing counts. For example, the Dogan elementary school zone had the second highest eviction filing rate (9.3%) within HISD despite having a relatively low number of filings (454) over the two-year period. In contrast, the Daily elementary school zone had a relatively low eviction filing rate (4.3%) despite having the highest number of eviction filings (1,630) in the district. Eviction filing rates, in addition to eviction filing counts, may be important in better understanding the eviction risk experienced by students in respective school zones.
 
@@ -184,6 +188,7 @@ Figure 3 shows the spatial variation of eviction filing rates, which allows us t
   legendTitle="Filing Rate (2017 - 2018)"
 %}}
 
+<br/>
 <br/>
 
 Eviction is a destabilizing event that can profoundly affect children and families. School zones with high numbers of evictions and high eviction rates are likely to have more students living through the repercussions of displacement. There are no existing “best practices” for schools and local governments attempting to support children experiencing eviction, but several possibilities are promising:
