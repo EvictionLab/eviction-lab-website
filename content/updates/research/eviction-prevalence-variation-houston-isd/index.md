@@ -22,6 +22,7 @@ fbImage: us-eviction-filing-patterns-2020-social.png
 image:
 scripts:
   - charts
+  - mapbox
 ---
 
 ### INTRODUCTION AND OVERVIEW 
@@ -153,9 +154,37 @@ In the right panel of the table, we rank school zones by filing rates. Eviction 
 
 Mapping the spatial variation in filings allows us to observe whether evictions clustered in certain regions of the district (Figure 2). In general, we found this not to be the case: the hardest hit areas were not necessarily adjacent to each other. The far western portion of the district illuminates this feature. Households zoned to Bush elementary school, the farthest west school zone in light blue shading, saw relatively few filings over this two-year period (145), while those zoned to Daily elementary school, just to the east of the Bush zone in dark blue shading, were inundated with eviction filings (1,630). Over ten times as many eviction cases were filed in the Daily zone as in the Bush zone, despite being adjacent to each other.
 
-FIGURE 2. SPATIAL DISTRIBUTION OF EVICTION FILINGS IN HISD, 2017-2018
+{{% mapbox
+  id="mapbox1"
+  data="/uploads/hisd_data.csv"
+  shapes="/uploads/hisd_shapes.json"
+  column="totalfilings"
+  join="Code"
+  name="school"
+  format="integer"
+  title="Figure 2: Distribution of eviction filings within school zones, 2017-2018"
+  legendTitle="Eviction Filings (2017 - 2018)"
+  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+%}}
+
+<br/>
 
 Figure 3 shows the spatial variation of eviction filing rates, which allows us to control for variations in renter population density. Similar to Figure 2, we observed that school zones with high eviction filing rates were not clustered together. Interestingly, we found that areas with high filing rates did not necessarily line up with the areas with high filing counts. For example, the Dogan elementary school zone had the second highest eviction filing rate (9.3%) within HISD despite having a relatively low number of filings (454) over the two-year period. In contrast, the Daily elementary school zone had a relatively low eviction filing rate (4.3%) despite having the highest number of eviction filings (1,630) in the district. Eviction filing rates, in addition to eviction filing counts, may be important in better understanding the eviction risk experienced by students in respective school zones.
+
+{{% mapbox
+  id="mapbox2"
+  data="/uploads/hisd_data.csv"
+  shapes="/uploads/hisd_shapes.json"
+  column="filingrate"
+  join="Code"
+  format="percent"
+  name="school"
+  colors="#dfefed;#7bcac1;#2c897f"
+  title="Figure 3: Distribution of eviction filings within school zones, 2017-2018"
+  legendTitle="Filing Rate (2017 - 2018)"
+%}}
+
+<br/>
 
 Eviction is a destabilizing event that can profoundly affect children and families. School zones with high numbers of evictions and high eviction rates are likely to have more students living through the repercussions of displacement. There are no existing “best practices” for schools and local governments attempting to support children experiencing eviction, but several possibilities are promising:
 
