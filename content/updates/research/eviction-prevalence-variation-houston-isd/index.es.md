@@ -26,7 +26,7 @@ scripts:
 
 ### INTRODUCTION AND OVERVIEW 
 <br />
-Residential mobility affects children’s education, generally for the worse. Moving can adversely af-fect standardized test performance, academic achievement growth, and students’ social ties.1 Not all residential moves are equal, however. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.2 Households with children are at height-ened risk of eviction3, an especially disruptive form of forced mobility. 
+Residential mobility affects children’s education, generally for the worse. Moving can adversely af-fect standardized test performance, academic achievement growth, and students’ social ties.{{< sup 1 >}}   Not all residential moves are equal, however. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.{{< sup 2 >}} Households with children are at heightened risk of eviction3, an especially disruptive form of forced mobility. 
 
 This research brief examines the distribution of eviction filings across the Houston Independent School District (HISD) in 2017 and 2018. The analysis aims to inform HISD of hot spots within the district: school zones in which students may be at particularly high risk of forced mobility. We find that eviction is a common occurrence throughout HISD, though a few zones were especially hard hit.
 
