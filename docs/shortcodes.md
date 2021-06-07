@@ -206,7 +206,6 @@ Then include the shortcode in the body of the `.md` file.
 Data file should have:
 
 - a column to use for binning
-- a column for corresponding values (y valus), e.g. `filings_ratio`
 
 ## Stacked Area Chart
 
