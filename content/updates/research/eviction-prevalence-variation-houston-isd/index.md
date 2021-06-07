@@ -152,7 +152,7 @@ Table 1 presents the top 10 elementary school zones by the total number of filin
 
 In the right panel of the table, we rank school zones by filing rates. Eviction filing rates allow us to account for the number of renter households in the zone, creating a metric for comparing filing prevalence across zones. The Shadydale school zone had the highest recorded eviction filing rate in Houston: the 12.6% eviction filing rate in this zone means that one in every eight renters was filed against for eviction each year. This high eviction filing rate in the Shadydale zone was particularly striking because only a third of households in the zone were renters, relative to an average of 53% across all zones. Relatively few students at Shadydale elementary school were likely to be renters, but they were at higher-than-normal risk of displacement.   
 
-Mapping the spatial variation in filings allows us to observe whether evictions clustered in certain regions of the district (Figure 2). In general, we found this not to be the case: the hardest hit areas were not necessarily adjacent to each other. The far western portion of the district illuminates this feature. Households zoned to Bush elementary school, the farthest west school zone in light blue shading, saw relatively few filings over this two-year period (145), while those zoned to Daily elementary school, just to the east of the Bush zone in dark blue shading, were inundated with eviction filings (1,630). Over ten times as many eviction cases were filed in the Daily zone as in the Bush zone, despite being adjacent to each other.
+Mapping the spatial variation in filings allows us to observe whether evictions clustered in certain regions of the district (Figure 2). In general, we found this not to be the case: the hardest hit areas were not necessarily adjacent to each other. The far western portion of the district illuminates this feature. Households zoned to Bush elementary school, the farthest west school zone in light red shading, saw relatively few filings over this two-year period (145), while those zoned to Daily elementary school, just to the east of the Bush zone in dark red shading, were inundated with eviction filings (1,630). Over ten times as many eviction cases were filed in the Daily zone as in the Bush zone, despite being adjacent to each other.
 
 {{% mapbox
   id="mapbox1"
@@ -162,7 +162,7 @@ Mapping the spatial variation in filings allows us to observe whether evictions 
   join="Code"
   name="school"
   format="integer"
-  title="Figure 2: Distribution of eviction filings within school zones, 2017-2018"
+  title="Figure 2: Spatial Distribution of eviction filings within school zones, 2017-2018"
   legendTitle="Eviction Filings (2017 - 2018)"
   colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
 %}}
@@ -180,7 +180,7 @@ Figure 3 shows the spatial variation of eviction filing rates, which allows us t
   format="percent"
   name="school"
   colors="#dfefed;#7bcac1;#2c897f"
-  title="Figure 3: Distribution of eviction filings within school zones, 2017-2018"
+  title="Figure 3: Spatial Distribution of eviction filing rates within school zones, 2017-2018"
   legendTitle="Filing Rate (2017 - 2018)"
 %}}
 
