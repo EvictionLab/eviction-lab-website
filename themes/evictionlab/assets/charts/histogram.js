@@ -37,19 +37,6 @@ Elab.Histogram = (function (Elab) {
       .thresholds(thresholds || 40);
   }
 
-  function renderTooltip(tooltip) {
-    return (
-      '<h1 class="tooltip__title">' +
-      tooltip.title +
-      "</h1>" +
-      '<div class="tooltip__item">' +
-      "<span> " +
-      tooltip.value +
-      "</span>" +
-      "</div>"
-    );
-  }
-
   /**
    * Creates the chart and renders
    * @param {HTMLElement} root

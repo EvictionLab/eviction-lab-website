@@ -17,7 +17,36 @@ twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 scripts:
   - charts
   - maps
+  - mapbox
 ---
+
+{{% mapbox
+  id="mapbox1"
+  data="/uploads/hisd_data.csv"
+  shapes="/uploads/hisd_shapes.json"
+  column="totalfilings"
+  join="Code"
+  name="school"
+  format="integer"
+  title="Distribution of eviction filings within school zones, 2017-2018"
+  legendTitle="Eviction Filings (2017 - 2018)"
+  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+  tooltipTemplate="{total} school zones with {range} eviction filings."
+%}}
+
+{{% mapbox
+  id="mapbox2"
+  data="/uploads/hisd_data.csv"
+  shapes="/uploads/hisd_shapes.json"
+  column="filingrate"
+  join="Code"
+  format="percent"
+  name="school"
+  colors="#dfefed;#7bcac1;#2c897f"
+  title="Distribution of eviction filings within school zones, 2017-2018"
+  legendTitle="Filing Rate (2017 - 2018)"
+  tooltipTemplate="{total} school zones with {range} eviction filings."
+%}}
 
 {{% histogram
   id="hist1"

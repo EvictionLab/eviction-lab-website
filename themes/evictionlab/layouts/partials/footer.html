@@ -161,7 +161,7 @@
 
 
 {{ if in .Params.scripts "charts" }}
-  {{ $d3 := resources.Get "lib/d3.js" }}
+  {{ $d3 := resources.Get "lib/d3.min.js" }}
   {{ $builder := resources.Get "charts/chart-builder.js" }}
   {{ $utils := resources.Get "charts/utils.js" }}
   {{ $linechart := resources.Get "charts/line-chart.js" }}
@@ -172,8 +172,18 @@
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 
+{{ if in .Params.scripts "mapbox" }}
+  {{ $mapboxgl := resources.Get "lib/mapboxgl.min.js" }}
+  {{ $handlebars := resources.Get "lib/handlebars.min.js" }}
+  {{ $d3 := resources.Get "lib/d3.min.js" }}
+  {{ $mapbox := resources.Get "mapbox/mapbox.js" }}
+  {{ $js := slice $mapboxgl $handlebars $d3 $mapbox | resources.Concat "js/mapbox/bundle.js" | resources.Minify }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mapbox-gl@1.13.1/dist/mapbox-gl.css">
+  <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
+{{ end }}
+
 {{ if in .Params.scripts "maps" }}
-  {{ $d3 := resources.Get "lib/d3.js" }}
+  {{ $d3 := resources.Get "lib/d3.min.js" }}
   {{ $statemap := resources.Get "maps/state-map.js" }}
   {{ $js := slice $d3 $statemap | resources.Concat "js/maps/bundle.js" | resources.Minify }}
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>

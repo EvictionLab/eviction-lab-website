@@ -1,0 +1,45 @@
+<style>
+
+
+</style>
+
+{{ $title := .Get "title" }}
+
+<div
+  id="{{ .Get `id` }}"
+  class="visual visual--mapbox visual--{{ .Get `id` }}"
+>
+{{ if $title }}
+<h3 class="visual__title">{{ $title }}</h3>
+{{ end }}
+<div class="visual__mapbox">
+  <div class="visual__map map"></div>
+  <div id="tooltip" class="visual__tooltip"></div>
+</div>
+</div>
+
+  <script>
+    window.addEventListener("load", function () {
+      var id = {{ .Get "id" }}
+      var geojson = {{ .Get "shapes" }};
+      var csv = {{ .Get "data" }};
+      var join = {{ .Get "join" }};
+      var column = {{ .Get "column" }};
+      var legendTitle = {{ .Get "legendTitle" }}
+      var name = {{ .Get "name" }}
+      var format = {{ .Get "format" }}
+      var rootEl = document.getElementById(id)
+      var colors = {{ .Get "colors" }}
+      Elab.Mapbox.init(rootEl, { 
+        geojson: geojson, 
+        csv: csv,
+        join: join,
+        column: column,
+        name: name,
+        colors: colors,
+        legendTitle: legendTitle,
+        format: format
+      })
+    })
+  </script>
+</div>
