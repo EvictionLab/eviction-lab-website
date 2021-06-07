@@ -31,7 +31,6 @@ scripts:
   title="Distribution of eviction filings within school zones, 2017-2018"
   legendTitle="Eviction Filings (2017 - 2018)"
   colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
-  tooltipTemplate="{total} school zones with {range} eviction filings."
 %}}
 
 {{% mapbox
@@ -45,7 +44,6 @@ scripts:
   colors="#dfefed;#7bcac1;#2c897f"
   title="Distribution of eviction filings within school zones, 2017-2018"
   legendTitle="Filing Rate (2017 - 2018)"
-  tooltipTemplate="{total} school zones with {range} eviction filings."
 %}}
 
 {{% histogram
