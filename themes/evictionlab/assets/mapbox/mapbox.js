@@ -119,7 +119,6 @@ Elab.Mapbox = (function (Elab) {
     var colorSteps = []
     for (var i = 0; i < positions.length; i++) {
       const percent = positions[i]
-      console.log(percent, dataScale(percent), colorScale(percent))
       colorSteps.push(dataScale(percent))
       colorSteps.push(colorScale(percent))
     }
@@ -155,7 +154,6 @@ Elab.Mapbox = (function (Elab) {
     var fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
       getLayerColors(range, colors)
     );
-    console.log({fillColor})
     map.addLayer(
       {
         id: "choropleth",
@@ -324,7 +322,6 @@ Elab.Mapbox = (function (Elab) {
           [bbox[2] + padding, bbox[3] + padding],
         ];
         function zoomToLocation() {
-          console.log(bounds);
           map.fitBounds(bounds, { padding: 16 });
         }
 
@@ -355,7 +352,7 @@ Elab.Mapbox = (function (Elab) {
       var extent = d3.extent(allData, function (d) {
         return d[prop];
       });
-      return [0, Math.max(extent[1], 1)];
+      return [0, extent[1]];
     }
     
     /** Updates the map layers and legend */
@@ -392,7 +389,6 @@ Elab.Mapbox = (function (Elab) {
       });
       labelContainer.html(html);
       titleContainer.html(legendTitle)
-      console.log(gradientContainer, labelContainer)
     }
 
     function renderTooltip(feature, e) {

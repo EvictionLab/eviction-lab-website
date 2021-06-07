@@ -10,18 +10,6 @@
  *
  */
 Elab.Histogram = (function (Elab) {
-  function renderTooltip(tooltip) {
-    return (
-      '<h1 class="tooltip__title">' +
-      tooltip.title +
-      "</h1>" +
-      '<div class="tooltip__item">' +
-      "<span> " +
-      tooltip.value +
-      "</span>" +
-      "</div>"
-    );
-  }
 
   function createHistogram(data, thresholds) {
     return d3
@@ -56,7 +44,6 @@ Elab.Histogram = (function (Elab) {
     });
     if (dataOptions.xMin) xExtent[0] = Number(dataOptions.xMin);
     if (dataOptions.xMax) xExtent[1] = Number(dataOptions.xMax);
-    console.log({ dataOptions, xExtent });
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
     chart
       // adds y axis, pads it if no extend is passed
