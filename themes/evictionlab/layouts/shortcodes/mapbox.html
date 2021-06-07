@@ -5,13 +5,13 @@
   id="{{ .Get `id` }}"
   class="visual visual--mapbox visual--{{ .Get `id` }}"
 >
-{{ if $title }}
-<h3 class="visual__title">{{ $title }}</h3>
-{{ end }}
-<div class="visual__mapbox">
-  <div class="visual__map map"></div>
-  <div id="tooltip" class="visual__tooltip"></div>
-</div>
+  {{ if $title }}
+  <h3 class="visual__title">{{ $title }}</h3>
+  {{ end }}
+  <div class="visual__mapbox">
+    <div class="visual__map map"></div>
+    <div id="tooltip" class="visual__tooltip"></div>
+  </div>
 </div>
 
   <script>
@@ -38,4 +38,3 @@
       })
     })
   </script>
-</div>

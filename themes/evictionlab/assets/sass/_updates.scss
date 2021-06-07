@@ -93,6 +93,7 @@ a.btn.buttonlink {
   ol {
     counter-reset: el-counter;
     li {
+      font-family: $fontStack;
       font-size: 1.5rem !important;
       list-style: none;
       counter-increment: el-counter;
