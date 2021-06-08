@@ -72,6 +72,15 @@
     tbody td:first-child {
         font-family: $boldFontStack;
     }
+    &.table--filings {
+        tbody td:first-child {
+            width: 13%;
+            font-family: $fontStack;
+        }
+        tbody tr:first-child td {
+            font-family: $boldFontStack;
+        }
+    }
 }
 
 @media(min-width: 820px) {

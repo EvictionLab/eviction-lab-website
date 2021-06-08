@@ -150,6 +150,63 @@ site_name_full,filings_ratio
 "Tampa, FL",0.900901929444001
 ```
 
+### Histogram
+
+Shortcode for rendering histograms
+
+#### Usage
+
+Must include the following frontmatter in the `.md` file to use:
+
+```yaml
+scripts:
+  - charts
+```
+
+Then include the shortcode in the body of the `.md` file.
+
+```
+{{% histogram
+  id="hist1"
+  data="/uploads/hisd_data.csv"
+  x="totalfilings"
+  thresholds="40"
+  title="Distribution of eviction filings within school zones, 2017-2018"
+  xLabel="Number of Filings"
+  yLabel="Number of School Zones"
+  tooltipTemplate="{total} school zones with {range} eviction filings."
+  xMin="-25"
+  yMax="45"
+  margin="8 8 104 56"
+%}}
+```
+
+#### Props
+
+- id: unique identifier for this histogram instance
+- title: title for the chart
+- data: url to CSV data File
+- x: name of column in CSV to use for binning
+- thresholds: the target number of bins for the histogram
+- yTicks: number of y ticks to display
+- yFormat: formatting for y axis values
+- yLabel: y axis label
+- yMin: y axis minimum value
+- yMax: y axis maximum value
+- xMin: x axis minimum value
+- xMax: x axis maximum value
+- xLabel: x axis label
+- margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
+- tooltipTemplate: a template string for the tooltip.  `{total}` and `{range}` will be replaced with their corresponding values.
+
+#### Demo
+
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
+
+Data file should have:
+
+- a column to use for binning
+
 ## Stacked Area Chart
 
 Shortcode for rendering stacked area charts
@@ -289,6 +346,64 @@ Hawaii,15,2.65,2.65,2.35,2.35
 Idaho,16,0.00,0.00,0.00,0.00
 ...
 ```
+
+### Mapbox Maps
+
+Shortcode for rendering mapbox choropleth maps
+
+#### Usage
+
+Must include the following frontmatter in the `.md` file to use:
+
+```yaml
+scripts:
+  - mapbox
+```
+
+Than include the shortcode in the body of the `.md` file.
+
+```
+{{% mapbox
+  id="mapbox1"
+  title="Distribution of eviction filings within school zones, 2017-2018"
+  data="/uploads/hisd_data.csv"
+  shapes="/uploads/hisd_shapes.json"
+  column="totalfilings"
+  join="Code"
+  name="school"
+  format="integer"
+  legendTitle="Eviction Filings (2017 - 2018)"
+  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+%}}
+```
+
+#### Props
+
+- id: unique identifier for this mapbox instance
+- title: title for the map
+- data: url to CSV data File
+- shapes: url to the GeoJSON shapes
+- column: name of column in CSV to use for choropleth values
+- join: the name of the CSV column / GeoJSON feature property used to join the CSV data to the GeoJSON features.
+- name: a column to use as a "name" identifier for each choropleth (displayed in the tooltip)
+- format: how to format the values ("integer", "percent", or "decimal")
+- legendTitle: title to use for the legend
+- colors: colors to use for the choropleths, separated by semi colon
+
+#### Demo
+
+[View Example](https://development--eviction-lab.netlify.app/updates/blog/_chart-demo) | [demo source](/content/updates/blog/_chart-demo.md)
+
+Data file should have:
+
+- an identifier column, used to join the data to the GeoJSON features, e.g. `GEOID`
+- a numeric column to use choropleth values
+
+GeoJSON file should have:
+
+- wsg84 projection
+- simplified geometry (use mapshaper.org, aim for less than 1MB in size)
+- each feature should have an identifier property that is used to join CSV data to the feature.
 
 ## Common blog/updates shortcodes
 

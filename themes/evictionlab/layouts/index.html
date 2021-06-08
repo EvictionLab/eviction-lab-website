@@ -31,7 +31,8 @@
     <div class="carousel-item active">
       <div class="row">
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 4 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data") ) ) }}
+          {{/* range first 4 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) ) */}}
+          {{ range first 4 (where .Site.Pages "Params.featured" true ) }}
             <div class="col-3">
               {{ if .Params.listSummary }}
                 <a href="{{ .RelPermalink }}">
@@ -60,7 +61,7 @@
     <div class="carousel-item">
       <div class="row">
         <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 3 (after 4 ((where .Site.RegularPages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) ) ) }}
+          {{ range first 3 (after 4 (where .Site.Pages "Params.featured" true ) ) }}
             <div class="col-3">
               {{ if .Params.listSummary }}
                 <a href="{{ .RelPermalink }}">

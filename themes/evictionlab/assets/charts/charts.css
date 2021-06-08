@@ -1,4 +1,90 @@
 
+/** MAPBOX SHORTCODE STYLES */
+
+.visual__mapbox {
+  position: relative;
+  min-height: 400px;
+}
+.visual__mapbox .map {
+  position: absolute;
+  height:100%;
+  width: 100%;
+}
+
+.visual__tooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.visual__tooltip h1 {
+  font-size: 12px;
+  margin: 0;
+}
+
+.visual__tooltip p {
+  margin: 0;
+}
+
+.visual--mapbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.visual--mapbox .legend {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 16px;
+  max-width: 280px;
+  align-self: center;
+}
+.visual--mapbox .legend > * + * {
+  margin-left:0;
+}
+/** need high specificity here in order to override high specificity rules in single.scss */
+.center-content-post.updates-post .page-content .visual--mapbox .legend__title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.visual--mapbox .legend__gradient {
+  width: 100%;
+  height: 16px;
+}
+.visual--mapbox .legend__gradient-labels {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+  min-height: 24px;
+}
+.visual--mapbox .legend__gradient-labels span {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  width: 48px;
+  text-align: center;
+}
+.visual--mapbox .legend__gradient-labels .legend__gradient-label:first-child {
+  position: relative;
+  left: -4px;
+  text-align: left;
+}
+.visual--mapbox .legend__gradient-labels .legend__gradient-label:last-child {
+  position: relative;
+  left: 4px;
+  text-align: right;
+}
+
+/** SVG MAP SHORTCODE STYLES */
 .svg-map {
   margin: 2em auto;
 }
@@ -154,7 +240,7 @@
 
 
 @media(max-width: 480px) {
-  .chart {
+  .chart, .visual {
     margin-left: -24px;
     margin-right: -24px;
     width: calc(100% + 48px);
@@ -163,7 +249,7 @@
 
 /** Breakout of margin when space is available */
 @media(min-width: 768px) {
-  .chart {
+  .chart, .visual {
     width: 124%;
     margin-left: -12%;
   }
@@ -175,7 +261,8 @@
   override this
 */
 
-body .chart .chart__title, body .chart .chart__title > * {
+body .chart .chart__title, body .chart .chart__title > *,
+body .visual .visual__title, body .visual .visual__title > * {
   font-family: GT-Eesti-Display-Medium, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -224,6 +311,18 @@ body .chart .chart__title, body .chart .chart__title > * {
   .chart__axis--y .tick line {
     stroke-width: 1;
     stroke: #fff;
+  }
+
+  .chart__axis-label {
+    /* font-family: var(--heading-font); */
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .chart__axis-label--x {
+    
+  }
+  .chart__axis-label--y {
+    
   }
 /** End Axis */
 
@@ -530,6 +629,19 @@ body .chart .chart__title, body .chart .chart__title > * {
   }
 }
 
+/** HISTOGRAM CHART OVERRIDES **/
+
+.chart.chart--histogram .chart__body,
+.chart.chart--histogram .chart__root {
+  height: 480px
+}
+.chart.chart--histogram .chart__bar {
+  fill: #434878
+}
+.chart.chart--histogram .chart__bar:hover {
+  fill: #e24000
+}
+
 
 
 /** GROUPED BAR CHART + SEARCH OVERRIDES */
@@ -582,10 +694,12 @@ body .chart .chart__title, body .chart .chart__title > * {
 /** Highlight bars */
 .chart--fig1 .chart__bars .chart__bar:nth-child(35),
 .chart--fig1 .chart__bars .chart__bar:nth-child(36) {
+  fill: #e24000;
   fill: var(--c1);
 }
 
 .chart--fig1 .chart__mark {
+  stroke: #e24000;
   stroke: var(--c1);
   stroke-dasharray: 2 2;
   transform: translateX(1px);
