@@ -109,7 +109,7 @@
 <!-- Mobile carousel -->
 <div id="hp-carousel-mobile" class="hp-carousel-mobile row mb-2 mb-md-5 mb-lg-0">
  <div class="col-12 px-md-5 d-flex">
-  {{ range first 7 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data"))) }}
+  {{ range first 7 (where .Site.Pages "Params.featured" true ) }}
   <div class="col-8 col-md-5 hp-carousel-mobile__slide">
     {{ if .Params.listSummary }}
         <a href="{{ .RelPermalink }}">
