@@ -7,7 +7,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "Eviction Prevalence and Spatial Variation Within the Houston Independent School District"
-date: 2021-06-06T00:46:40.089Z
+date: 2021-06-08T00:46:40.089Z
 postauthortitle: The Eviction Lab
 listSummary: >-
   Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
@@ -200,6 +200,10 @@ Eviction is a destabilizing event that can profoundly affect children and famili
 * Establish a district-wide mechanism so that parents can alert schools that they are facing eviction or have been evicted. This alert system can be used to disseminate information to school counselors and teachers at a student’s current school and—in the event that eviction necessitates school change—in their next school, thereby easing the transition. It could also be used to prompt parents to update contact information and mailing addresses as needed, thereby facilitating parent-school communication.
 
 * Collect more data at the court level, requiring landlords to report if they are filing an eviction against a household that includes children age 18 or under. Data sharing between the courts and the schools could allow for targeted interventions.
+
+<div class="text-center">
+<p><a href="Eviction Lab Research Brief-Eviction Prevalence and Spatial Variation Within the Houston Independent School District.pdf">Download this post as a research brief (PDF)</a></p>
+</div>
 
 {{< blogfootnotes 
 
