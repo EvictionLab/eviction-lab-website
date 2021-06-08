@@ -1,7 +1,7 @@
 ---
 draft: false
 childof: research
-url: /eviction-prevalence-variation-houston-isd/
+url: /eviction-prevalence-hisd/
 contenttype: updates
 contentcat: research
 featured: true

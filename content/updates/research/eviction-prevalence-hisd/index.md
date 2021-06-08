@@ -1,7 +1,7 @@
 ---
 draft: false
 childof: research
-url: /eviction-prevalence-variation-houston-isd/
+url: /eviction-prevalence-hisd/
 contenttype: updates
 contentcat: research
 featured: true
@@ -14,7 +14,6 @@ listSummary: >-
 socialDescription: Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
 researchtype: elresearch
 postauthorname: Lavar Edmonds, Peter Hepburn, Olivia Jin, and Matthew Desmond
-
 twImage: eviction-filings-houston-isd2.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
