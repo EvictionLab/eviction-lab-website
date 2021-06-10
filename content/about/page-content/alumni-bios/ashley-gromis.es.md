@@ -3,7 +3,7 @@ childof: alumni-bios
 title: Ashley Gromis
 abbrev: agromis
 position: Postdoctoral Research Associate, 2017-2020
-newposition: 
+newposition: Postdoctoral Fellow at University of California, Los Angeles
 date: 2017-11-26T03:52:04.376Z
 image: /images/bios/agromis_full.jpg
 thumb: /images/bios/agromis_thumb.jpg
