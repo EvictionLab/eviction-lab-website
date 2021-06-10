@@ -2,7 +2,7 @@
 childof: research-team-bios
 title: Carl Gershenson
 abbrev: cgershenson
-position: Professional Specialist
+position: Project Director
 date: 2017-11-26T03:52:04.376Z
 image: /images/bios/cgershenson_full.jpg
 thumb: /images/bios/cgershenson_thumb.jpg

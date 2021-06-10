@@ -2,10 +2,10 @@
 childof: research-team-bios
 title: Anne Kat Alexander
 abbrev: aalexander
-position: Faculty Assistant
+position: Program Coordinator/Research Staff
 date: 2017-11-26T03:46:25.603Z
 image: /images/bios/aalexander_full.jpg
 thumb: /images/bios/aalexander_thumb.jpg
 weight: 1030
 ---
-Anne Kat is a recent graduate of Brandeis University, where she received a BA in English and Creative Writing. She is the Faculty Assistant in the Eviction Lab. Her bachelor's thesis considered issues of chronic low mood and hopelessness in early modern poetry, which may be why she sticks to reading murder mysteries and YA these days. Since arriving in the Northeast from Austin, Texas, she has discovered the season of fall. Four years later, it continues to surprise and impress her.
+Anne Kat Alexander is a researcher and project manager at the Eviction Lab and an incoming evening JD student at the University of Maryland Carey School of Law. Her recent work focuses on eviction policy during the COVID-19 pandemic, and has appeared in Indiana Health Law Review and the Washington Post. She earned her B.A. at Brandeis University in 2018.
