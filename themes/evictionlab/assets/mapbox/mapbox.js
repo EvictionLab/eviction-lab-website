@@ -30,7 +30,7 @@ Elab.Mapbox = (function (Elab) {
       case "integer":
         return d3.format(",d");
       case "percent":
-        return d3.format(".1%");
+        return d3.format(".01%");
       default:
         return d3.format(".1f")
     }
