@@ -46,7 +46,7 @@ In all cities we find that zip codes with higher eviction filing rates were more
 
 Patterns displayed in Figure 1 reflect racial disparities in both eviction risk and vaccine access. Black renters [routinely face higher risk of being evicted](/demographics-of-eviction/), a pattern that has [been maintained during the pandemic](https://evictionlab.org/pandemic-filing-demographics/). Black and Latinx people are also {{< extlink "much less likely to be vaccinated against COVID-19" "https://www.kff.org/coronavirus-covid-19/issue-brief/latest-data-on-covid-19-vaccinations-race-ethnicity/" >}}. {{< extlink "The racial gap in vaccinations is decreasing" "https://www.nytimes.com/interactive/2021/05/14/us/vaccine-race-gap.html?action=click&module=Spotlight&pgtype=Homepage" >}}, but Black and Latinx people still face challenges in getting access to vaccines. Figure 1 shows that the highest evicting zip codes in each city tend to be in communities of color, while most neighborhoods in the top-left of each panel—those with high vaccination rates and low eviction filing rates—tend to be majority-white. 
 
-
+{{< pullquote "Those most at risk of being evicted are still at high risk of contracting and passing the virus." >}}
 
 Figure 2 puts these disparities into spatial perspective, showing two maps of Houston: a side-by-side comparison of eviction filing rates and vaccination rates across the city. Eviction filing rates were around 10% in two zip codes near Greenspoint, but vaccination rates were below 30% (compared to the mean of 48% for all zip codes in Houston). The neighborhood is made up of around 9% white, 30% Black, and 56% Latinx residents. By contrast, relatively few evictions have been filed during the pandemic in and around Downtown Houston, an area with some of the highest vaccination rates in the city. Although not all neighborhoods with low vaccination rates have high eviction rates, there is a strong correlation between the two rates.
 
@@ -56,7 +56,7 @@ Figure 2 puts these disparities into spatial perspective, showing two maps of Ho
 
 <div class="row mx-4">
 <div class="col-12">
-<div class="figheader mt-0 mt-md-2 mb-1">Figure 2: Maps of Houston with eviction filing rates and fully vaccinated rates{{< sup 2 >}}</div>
+<div class="figheader mt-0 mt-md-2 mb-1">Figure 2: Maps of Houston with eviction filing rates and unvaccinated rates{{< sup 2 >}}</div>
 </div>
 <div class="col-12 col-lg-6 px-0 px-md-2">
 
@@ -70,7 +70,7 @@ Figure 2 puts these disparities into spatial perspective, showing two maps of Ho
   format="percent"
   title="Eviction filing rates in Houston ZIP codes since 3/15/2020"
   legendTitle="Eviction filing rate (%)"
-  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+  colors="rgba(241, 241, 241, 0.5);rgba(234, 187, 169, 0.51);#e99c7e;#e24000"
 %}}
 </div>
 <div class="col-12 col-lg-6 px-0 px-md-2">
@@ -84,7 +84,7 @@ Figure 2 puts these disparities into spatial perspective, showing two maps of Ho
   format="percent"
   title="Proportion of those not fully vaccinated in Houston"
   legendTitle="Unvaccinated rate (%)"
-  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+  colors="rgba(241, 241, 241, 0.5);rgba(234, 187, 169, 0.51);#e99c7e;#e24000"
 %}}
 </div>
 </div>
@@ -105,7 +105,7 @@ The COVID-19 pandemic is far from over, and while vaccination access is improvin
 
 "We used vaccination data from the <a href='https://www.azdhs.gov/covid19/data/index.php#zipcode-vaccinations' target='_blank' rel='noreferrer noopener'>Arizona Department of Health Services</a>, the <a href='https://www.opendataphilly.org/dataset/covid-vaccinations' target='_blank' rel='noreferrer noopener'>City of Philadelphia</a>, the <a href='https://hub.mph.in.gov/dataset/covid-19-vaccinations-by-zip' target='_blank' rel='noreferrer noopener'>Indiana Department of Health</a>, the <a href='https://www1.nyc.gov/site/doh/covid/covid-19-data-vaccines.page' target='_blank' rel='noreferrer noopener'>New York City Department of Health and Mental Hygiene</a>, and the <a href='https://dshs.texas.gov/coronavirus/AdditionalData.aspx' target='_blank' rel='noreferrer noopener'>Texas Department of State Health Services</a>."
 
-"One zip code area in Houston (77030) has a fully-vaccinated rate of 134%: the number of those fully vaccinated in that zip code reported by the Texas Department of State Health Services exceeds the 5-year estimate of the population for the zip code from the 2019 ACS data."
+"Three zip code areas in Houston (77030, 77046, 77056) reported fully-vaccinated numbers that exceed the 5-year estimates of the population over the age of 15 from the 2019 ACS data. The unvaccinated rates for those zip code areas have been reported as 0% on the map."
 
 >}}
 
