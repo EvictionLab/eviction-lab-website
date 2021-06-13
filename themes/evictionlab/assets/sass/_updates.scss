@@ -70,7 +70,7 @@ a.btn.buttonlink {
   letter-spacing: 0.45px;
   text-align: center;
   margin: 16px auto 24px;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     margin: 40px auto 24px;
   }
   padding: 0 24px;
@@ -83,10 +83,9 @@ a.btn.buttonlink {
   text-align: center;
   margin: 24px auto 40px;
   padding: 0 24px;
-  font-style: italic;
-  font-family: Akkurat-Italic, sans-serif;
   p {
     font-size: 1.5rem !important;
+    font-family: 'Akkurat-Italic', sans-serif !important;
     @include media-breakpoint-up(lg) {
       font-size: 1.6rem !important;
     }
@@ -502,15 +501,17 @@ svg {
     width: 100% !important;
     margin-left: 0% !important;
     &.visual--mapbox .legend__title {
-      
       margin-bottom: 8px;
       font-size: 14px;
       font-weight: 700;
+      letter-spacing: .1px;
+      color: #5a5a5a;
     }
     h3.visual__title {
       font-family: 'Akkurat-Bold';
       font-size: 15px;
       letter-spacing: .1px;
+      color: #5a5a5a;
       //text-transform: uppercase;
       //color: #424242;
     }
