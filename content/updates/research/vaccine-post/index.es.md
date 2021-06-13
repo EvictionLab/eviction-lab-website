@@ -1,223 +1,113 @@
 ---
 draft: false
 childof: research
-url: /eviction-prevalence-hisd/
+url: /filing-and-vaccination-rates/
 contenttype: updates
 contentcat: research
 featured: true
 in_index: true
-title: "Eviction Prevalence and Spatial Variation Within the Houston Independent School District"
-date: 2021-06-08T00:46:40.089Z
+title: "Neighborhoods with Highest Eviction Filing Rates have Lowest Levels of COVID-19 Vaccination"
+date: 2021-06-11T00:46:40.089Z
 postauthortitle: The Eviction Lab
 listSummary: >-
-  Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
-socialDescription: Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
+  Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic? We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
+socialDescription: We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
 researchtype: elresearch
-postauthorname: Lavar Edmonds, Peter Hepburn, Olivia Jin, and Matthew Desmond
+postauthorname: Olivia Jin, Emily Lemmerman, Peter Hepburn, and Matthew Desmond
 twImage: eviction-filings-houston-isd2.png
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
+description: Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic? We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
 fbImage: eviction-filings-houston-isd2.png
 image:
 scripts:
-  - charts
   - mapbox
 ---
 
-### INTRODUCTION AND OVERVIEW 
-<br />
-Residential mobility affects children’s education, generally for the worse. Moving can adversely affect standardized test performance, academic achievement growth, and students’ social ties.{{< sup 1 >}}   Not all residential moves are equal, however. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.{{< sup 2 >}} Households with children are at heightened risk of eviction {{< sup 3 >}}, an especially disruptive form of forced mobility. 
+In the Lower Manhattan zip code 10006—home to One World Trade Center, the historic Trinity Church, and several luxury apartment buildings—almost 9 in 10 adults were fully vaccinated against COVID-19 by the start of June. Twelve miles north in the West Bronx (zip code 10457), a far different story played out, with just over 4 in 10 adults fully vaccinated. By contrast, those residents of the Bronx were far more likely to have received an eviction filing. Landlords filed 1,521 eviction cases in the West Bronx since March 15, 2020, compared to just 23 in the Financial District. Put differently: one in every 16 renter households in the West Bronx has received an eviction filing during the pandemic, compared to one in 58 in the Financial District. And the New York experience is not unique.
 
-This research brief examines the distribution of eviction filings across the Houston Independent School District (HISD) in 2017 and 2018. The analysis aims to inform HISD of hot spots within the district: school zones in which students may be at particularly high risk of forced mobility. We find that eviction is a common occurrence throughout HISD, though a few zones were especially hard hit.
+{{< scaleimg img="ny-photo-quadrants.jpg" scale="124" title="" caption="Left: Lower Manhattan. Right: The West Bronx." >}}
 
-### DATA AND METHODS
-<br />
-This analysis makes use of individual-level Harris County eviction court data from 2017 and 2018. These data were collected by January Advisors and cleaned, deduplicated, and geocoded by the Eviction Lab. Our analysis focuses on eviction filings, rather than eviction judgments, in order to assess the extent of eviction risk within HISD. An eviction filing refers to any non-commercial eviction (i.e., residential housing not occupied by a business) case for which we observe a court record. 
+The COVID-19 pandemic caused widespread unemployment, putting millions of U.S. families at risk of losing their homes. Fearing that a spike in eviction and homelessness would accelerate disease spread, the CDC issued [a federal eviction moratorium](/six-months-cdc/). With that moratorium set to expire on June 30, we wanted to assess whether those at greatest risk of displacement were now protected against COVID-19 infection due to widespread vaccination. Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic?
 
-Using elementary school zone shapefiles provided by HISD, we aggregated cases to obtain counts of eviction filings within a given school zone. We incorporated data from the Houston Education Research Consortium (HERC) linking school zones to Census Block Groups, thereby allowing us to incorporate data from the American Community Survey (ACS){{< sup 4 >}}. We calculated two-year filing rates in each school zone by dividing the number of filings in 2017 and 2018 by the number of renter-occupied households in that area according to ACS estimates for 2014–2018.
+We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data. COVID-19 vaccines do not seem to be reaching those in high-eviction neighborhoods. Our findings suggest that those most at risk of being evicted are still at high risk of contracting and passing the virus. 
 
-These estimates provided a measure of eviction filings within each of HISD’s 163 elementary school zones.{{< sup 5 >}} Not all of these cases were filed against families of HISD students, but this analysis nonetheless allows us to highlight areas where students are relatively more likely to face the threat of eviction. High levels of housing insecurity also erode a community’s collective efficacy, social control, and cohesion.{{< sup 6 >}} Even when not personally affected by an eviction, high levels of eviction with a neighborhood may adversely impact students’ social networks, collective comfort, and sense of belonging in the neighborhood.
+To analyze the relationship between vaccination rates and eviction risk, we brought together vaccine distribution data collected from state and local governments{{< sup 1 >}} and eviction filing data from the [Eviction Tracking System](/eviction-tracking). We identified nine cities with sufficient data: Austin, Dallas, Fort Worth, Houston, Indianapolis, Philadelphia, Phoenix, New York, and South Bend. Figure 1 depicts the relationship between eviction filing rates and the rate of fully vaccinated adult residents, by zip code, in each city. Each zip code is shaded according to its racial majority. We superimpose trend lines for each city, showing the linear relationship between the two rates.
 
-### RESULTS
-<br /> 
-Eviction filings are common in Harris County: 35,208 eviction cases were filed within HISD bounds over this two-year time period. We observed evictions cases filed in all but one school zone in both 2017 and 2018. The median elementary zone experienced 121 eviction filings across the two years. Figure 1 reveals several outliers: multiple zones containing over 500 filings.
-
-
-{{% histogram
-  id="hist1"
-  data="/uploads/hisd_data.csv"
-  x="totalfilings"
-  thresholds="40"
-  title="Figure 1: Distribution of eviction filings within school zones, 2017-2018"
-  xLabel="Number of Filings"
-  yLabel="Number of School Zones"
-  tooltipTemplate="{total} school zones with {range} eviction filings."
-  xMin="-25"
-  yMax="45"
-  margin="8 8 104 56"
-%}}
-
-<div class="figheader">Table 1: Top Elementary School Zones by Filing Counts and Filing Rates, 2017-2018</div>
-
-<table class="table table--text table--filings table-responsive" cellspacing="0" cellpadding="0">
-  <thead>
-    <tr>
-      <th style="text-align: center !important" colspan="3">FILING COUNTS</th>
-      <th style="text-align: center !important" colspan="2">FILING RATES</th>
-    </tr>
-  </thead>
-  <tbody>
-   <tr>
-      <td></td>
-      <td>Zone</td>
-      <td>Filings</td>
-      <td>Zone</td>
-      <td>Rate (%)</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Daily</td>
-      <td>1,630</td>
-      <td>Shadydale</td>
-      <td>12.6</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Piney Point</td>
-      <td>1,510</td>
-      <td>Dogan</td>
-      <td>9.3</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Briargrove</td>
-      <td>1,220</td>
-      <td>Lewis</td>
-      <td>7.9</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Pilgrim</td>
-      <td>998</td>
-      <td>Isaacs</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Lewis</td>
-      <td>973</td>
-      <td>Askew</td>
-      <td>6.1</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Askew</td>
-      <td>865</td>
-      <td>Kashmere Gardens</td>
-      <td>5.9</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Shadydale</td>
-      <td>854</td>
-      <td>Elrod</td>
-      <td>5.9</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Shadowbriar</td>
-      <td>801</td>
-      <td>Cook</td>
-      <td>5.9</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>St. George</td>
-      <td>760</td>
-      <td>Hilliard</td>
-      <td>5.5</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>Emerson</td>
-      <td>723</td>
-      <td>Lovett</td>
-      <td>5.3</td>
-    </tr>
-  </tbody>
-</table>
-
-<br/>
-<br/>
-
-Table 1 presents the top 10 elementary school zones by the total number of filings in the two-year period (left panel) and by eviction filing rate (right panel){{< sup 7 >}}.  While households in every school zone experienced eviction filings, the problem was especially acute in a select few zones. Of the 163 elementary school zones in the HISD, 29.4% of all eviction cases originated in the 10 zones in the left panel of Table 1, just six percent of all school zones. 
-
-In the right panel of the table, we rank school zones by filing rates. Eviction filing rates allow us to account for the number of renter households in the zone, creating a metric for comparing filing prevalence across zones. The Shadydale school zone had the highest recorded eviction filing rate in Houston: the 12.6% eviction filing rate in this zone means that one in every eight renters was filed against for eviction each year. This high eviction filing rate in the Shadydale zone was particularly striking because only a third of households in the zone were renters, relative to an average of 53% across all zones. Relatively few students at Shadydale elementary school were likely to be renters, but they were at higher-than-normal risk of displacement.   
-
-Mapping the spatial variation in filings allows us to observe whether evictions clustered in certain regions of the district (Figure 2). In general, we found this not to be the case: the hardest hit areas were not necessarily adjacent to each other. The far western portion of the district illuminates this feature. Households zoned to Bush elementary school, the farthest west school zone in light orange shading, saw relatively few filings over this two-year period (145), while those zoned to Daily elementary school, just to the east of the Bush zone in dark orange shading, were inundated with eviction filings (1,630). Over ten times as many eviction cases were filed in the Daily zone as in the Bush zone, despite being adjacent to each other.
-
-{{% mapbox
-  id="mapbox1"
-  data="/uploads/hisd_data.csv"
-  shapes="/uploads/hisd_shapes.json"
-  column="totalfilings"
-  join="Code"
-  name="school"
-  format="integer"
-  title="Figure 2: Spatial Distribution of eviction filings within school zones, 2017-2018"
-  legendTitle="Eviction Filings (2017 - 2018)"
-  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
-%}}
-
-<br/>
-<br/>
-
-Figure 3 shows the spatial variation of eviction filing rates, which allows us to control for variations in renter population density. Similar to Figure 2, we observed that school zones with high eviction filing rates were not clustered together. Interestingly, we found that areas with high filing rates did not necessarily line up with the areas with high filing counts. For example, the Dogan elementary school zone had the second highest eviction filing rate (9.3%) within HISD despite having a relatively low number of filings (454) over the two-year period. In contrast, the Daily elementary school zone had a relatively low eviction filing rate (4.3%) despite having the highest number of eviction filings (1,630) in the district. Eviction filing rates, in addition to eviction filing counts, may be important in better understanding the eviction risk experienced by students in respective school zones.
-
-{{% mapbox
-  id="mapbox2"
-  data="/uploads/hisd_data.csv"
-  shapes="/uploads/hisd_shapes.json"
-  column="filingrate"
-  join="Code"
-  format="percent"
-  name="school"
-  colors="#dfefed;#7bcac1;#2c897f"
-  title="Figure 3: Spatial Distribution of eviction filing rates within school zones, 2017-2018"
-  legendTitle="Filing Rate (2017 - 2018)"
-%}}
-
-<br/>
-<br/>
-
-Eviction is a destabilizing event that can profoundly affect children and families. School zones with high numbers of evictions and high eviction rates are likely to have more students living through the repercussions of displacement. There are no existing “best practices” for schools and local governments attempting to support children experiencing eviction, but several possibilities are promising:
-
-* Target additional counseling services in schools in which displacement is common. This should take into account absolute eviction filing numbers as well as rates (i.e., both panels of Table 1). 
-
-* Provide school counselors and administrators with resources related to local legal aid and housing assistance programs in Harris County, such as those provided by Lone Star Legal Aid and Texas Housers. These could be included in the resources already provided by wraparound services specialists. 
-
-* Establish a district-wide mechanism so that parents can alert schools that they are facing eviction or have been evicted. This alert system can be used to disseminate information to school counselors and teachers at a student’s current school and—in the event that eviction necessitates school change—in their next school, thereby easing the transition. It could also be used to prompt parents to update contact information and mailing addresses as needed, thereby facilitating parent-school communication.
-
-* Collect more data at the court level, requiring landlords to report if they are filing an eviction against a household that includes children age 18 or under. Data sharing between the courts and the schools could allow for targeted interventions.
-
-<div class="text-center">
-<p><a href="Eviction Lab Research Brief-Eviction Prevalence and Spatial Variation Within the Houston Independent School District.pdf">Download this post as a research brief (PDF)</a></p>
+<div class="d-none d-md-block">
+{{< scaleimg img="vax-filings-charts-lg2.svg" scale="135" title="Figure 1: Eviction Filings vs. Vaccination by Zip Code" caption="" >}}
 </div>
 
-{{< blogfootnotes 
+<div class="d-block d-md-none">
+{{< scaleimg img="vax-filings-charts-sm2.svg" scale="100" title="Figure 1: Eviction Filings vs. Vaccination by Zip Code" caption="" >}}
+</div>
 
-"Grigg, Jeffrey. 2012. “School Enrollment Changes and Student Achievement Growth: A Case Study in Educational Disruption and Continuity.” _Sociology of Education_ 85(4). <br/><br/>Schwartz, Amy Ellen, Leanna Stiefel, and Sarah A. Cordes. 2017. “Moving Matters: The Causal Effect of Moving Schools on Student Performance.” Journal of Education Finance and Policy 12(4):419–46."
+In all cities we find that zip codes with higher eviction filing rates were more likely to have lower vaccination rates. The differences between neighborhoods were not small. In Phoenix, for instance, the average neighborhood with a low eviction filing rate since the start of the pandemic (under 5%), had a vaccination rate of 56%. By contrast, the average zip code with a high eviction filing rate (above 15%) had a vaccination rate of just 35%.  
 
-"Metzger, Molly W., Patrick J. Fowler, and Todd Swanstrom. 2016. “Hypermobility and Educational Outcomes: The Case of St. Louis.” Urban Education 53(6):774–805."
+Patterns displayed in Figure 1 reflect racial disparities in both eviction risk and vaccine access. Black renters [routinely face higher risk of being evicted](/demographics-of-eviction/), a pattern that has [been maintained during the pandemic](https://evictionlab.org/pandemic-filing-demographics/). Black and Latinx people are also {{< extlink "much less likely to be vaccinated against COVID-19" "https://www.kff.org/coronavirus-covid-19/issue-brief/latest-data-on-covid-19-vaccinations-race-ethnicity/" >}}. {{< extlink "The racial gap in vaccinations is decreasing" "https://www.nytimes.com/interactive/2021/05/14/us/vaccine-race-gap.html?action=click&module=Spotlight&pgtype=Homepage" >}}, but Black and Latinx people still face challenges in getting access to vaccines. Figure 1 shows that the highest evicting zip codes in each city tend to be in communities of color, while most neighborhoods in the top-left of each panel—those with high vaccination rates and low eviction filing rates—tend to be majority-white. 
 
-"Desmond, Matthew, Weihua An, Richelle Winkler, and, Thomas Ferriss. 2013. “Evicting Children,” Social Forces 92: 303-27."
 
-"Census Block groups do not perfectly align with school zones. School zones contain between 4 and 41 Block groups, with an average of 14. One Block group may feed into more than one zone. 18 Block groups from the school data that did not merge to the ACS data block groups data set. These were clustered in seven of the 163 school zones: Two of the 10 Block groups reported to feed into the Almeda Elementary school zone; 2/17 for Bell; 3/13 for Fondren; 1/15 for Frost; 3/13 for Law; 3/11 for Mitchell; 4/11 for Windsor Village."
 
-"There were 21 additional HISD elementary schools that did not have an associated attendance zone."
+Figure 2 puts these disparities into spatial perspective, showing two maps of Houston: a side-by-side comparison of eviction filing rates and vaccination rates across the city. Eviction filing rates were around 10% in two zip codes near Greenspoint, but vaccination rates were below 30% (compared to the mean of 48% for all zip codes in Houston). The neighborhood is made up of around 9% white, 30% Black, and 56% Latinx residents. By contrast, relatively few evictions have been filed during the pandemic in and around Downtown Houston, an area with some of the highest vaccination rates in the city. Although not all neighborhoods with low vaccination rates have high eviction rates, there is a strong correlation between the two rates.
 
-"Sampson, Robert J., Stephen W. Raudenbush, and Felton Earls. 1997. “Neighborhoods and Violent Crime: A Multilevel Study of Collective Efficacy.” Science 277(5328):918–24. Sampson, Robert J. and William Julius Wilson. 1995. “Toward a Theory of Race, Crime, and Urban Inequality.” P. 13 in Crime and Inequality. Stanford University Press."
+</div>
+</div>
+</div>
 
-"When estimating eviction filing rates we employ a conservative approach that includes all renter households in all Block groups that link to a particular school zone when establishing the denominator. By thereby inflating the denominators, we systematically underestimate filing rates by school zones."
+<div class="row mx-4">
+<div class="col-12">
+<div class="figheader mt-0 mt-md-2 mb-1">Figure 2: Maps of Houston with eviction filing rates and fully vaccinated rates{{< sup 2 >}}</div>
+</div>
+<div class="col-12 col-lg-6">
+
+{{% mapbox
+  id="houston_vax_1"
+  data="/uploads/houston_vaccine_map2.csv"
+  shapes="/uploads/houston-zips.json"
+  column="evict_pct"
+  join="ZCTA5CE10"
+  name="ZCTA5CE10"
+  format="percent"
+  title="Eviction filing rates in Houston ZIP codes since 3/15/2020"
+  legendTitle="Eviction filing rate (%)"
+  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+%}}
+</div>
+<div class="col-12 col-lg-6">
+{{% mapbox
+  id="houston_vax_2"
+  data="/uploads/houston_vaccine_map2.csv"
+  shapes="/uploads/houston-zips.json"
+  column="unvax_pct"
+  join="ZCTA5CE10"
+  name="ZCTA5CE10"
+  format="percent"
+  title="Proportion of those not fully vaccinated in Houston"
+  legendTitle="Unvaccinated rate (%)"
+  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+%}}
+</div>
+</div>
+
+<div class="center-content-post updates-post pb-2">
+<div class="page-content">
+<div class="post-body">
+
+In New York City, neighborhoods that are predominantly Black and Latinx have experienced not only {{< extlink "higher rates of COVID-19, but also higher eviction rates" "https://anhd.org/blog/220000-tenants-brink-and-counting" >}}. Our analysis suggests that the relationship between eviction filings and vaccination rates is just as strong, if not more so, and just as deeply linked with race.
+
+A {{< extlink "combination of lack of access and vaccine hesitancy" "https://www.nytimes.com/2021/05/12/us/covid-vaccines-vulnerable.html" >}} drive disparities in vaccination rate. An estimated 30 million Americans who are willing to be vaccinated have not been; 28 million more say they probably or definitely will not be vaccinated for COVID-19. We also found geographic disparities both between and within cities. In the most vulnerable quarter of counties—defined by poverty rate, access to transit, and crowded housing—vaccination rates are as much as 7% lower than in the least vulnerable quarter of counties. These are the very same counties where previous Eviction Lab research has found a higher prevalence of eviction filings. 
+
+This strong correlation between high eviction filing rates and low vaccination rates presents a case for intervention. {{<  extlink "Areas with low levels of immunization may be at particular risk for COVID-19 resurgence" "https://www.nytimes.com/live/2021/06/09/world/covid-vaccine-coronavirus-mask/covid-vaccine-rates-hospitalizations-cases" >}}, especially given the spread of more-contagious variants. A surge in eviction—which has been associated with COVID-19 {{< extlink "transmission" "https://www.medrxiv.org/content/10.1101/2020.10.27.20220897v2" >}}, {{< extlink "infection" "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3739576" >}}, and {{< extlink "mortality" "https://www.nber.org/papers/w28394" >}}—would only increase that risk. From a public health perspective, improving access to vaccination in these high-eviction neighborhoods should be a priority, especially in light of the looming end of the CDC eviction moratorium. Simultaneously, legal aid groups and housing advocacy organizations should be targeting their efforts to these spaces. Increasing access to legal aid, emergency rental assistance, and vaccines in these neighborhoods may be critical in heading off an upturn in COVID-19 infections.
+
+The COVID-19 pandemic is far from over, and while vaccination access is improving, it’s still limited in disadvantaged communities that are at greatest risk for eviction. The CDC eviction moratorium is, for many tenants behind on rent, the last remaining protection from the threat of displacement. As its expiration nears, few protections stand in the way of a family losing their home, and potentially contracting a life-threatening virus. 
+
+{{< blogfootnotes
+
+"We used vaccination data from the <a href='https://www.azdhs.gov/covid19/data/index.php#zipcode-vaccinations' target='_blank' rel='noreferrer noopener'>Arizona Department of Health Services</a>, the <a href='https://www.opendataphilly.org/dataset/covid-vaccinations' target='_blank' rel='noreferrer noopener'>City of Philadelphia</a>, the <a href='https://hub.mph.in.gov/dataset/covid-19-vaccinations-by-zip' target='_blank' rel='noreferrer noopener'>Indiana Department of Health</a>, the <a href='https://www1.nyc.gov/site/doh/covid/covid-19-data-vaccines.page' target='_blank' rel='noreferrer noopener'>New York City Department of Health and Mental Hygiene</a>, and the <a href='https://dshs.texas.gov/coronavirus/AdditionalData.aspx' target='_blank' rel='noreferrer noopener'>Texas Department of State Health Services</a>."
+
+"One zip code area in Houston (77030) has a fully-vaccinated rate of 134%: the number of those fully vaccinated in that zip code reported by the Texas Department of State Health Services exceeds the 5-year estimate of the population for the zip code from the 2019 ACS data."
 
 >}}
+
+
+
+

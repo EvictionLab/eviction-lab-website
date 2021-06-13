@@ -69,7 +69,10 @@ a.btn.buttonlink {
   font-weight: 400;
   letter-spacing: 0.45px;
   text-align: center;
-  margin: 40px auto 24px;
+  margin: 16px auto 24px;
+  @include media-breakpoint-up(md) {
+    margin: 40px auto 24px;
+  }
   padding: 0 24px;
   line-height: 1.5;
   text-transform: none;
@@ -494,8 +497,23 @@ svg {
 
 // Vaccination + Rates Post
 
-#houston_vax_1, #houston_vax_2 {
-  width: 100% !important;
-  margin-left: 0% !important;
-}
+//.center-content-post.updates-post .page-content {
+  #houston_vax_1, #houston_vax_2 {
+    width: 100% !important;
+    margin-left: 0% !important;
+    &.visual--mapbox .legend__title {
+      
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    h3.visual__title {
+      font-family: 'Akkurat-Bold';
+      font-size: 15px;
+      letter-spacing: .1px;
+      //text-transform: uppercase;
+      //color: #424242;
+    }
+  }
+// } 
 
