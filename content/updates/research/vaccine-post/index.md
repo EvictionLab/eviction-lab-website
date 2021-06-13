@@ -10,13 +10,13 @@ title: "Neighborhoods with Highest Eviction Filing Rates have Lowest Levels of C
 date: 2021-06-11T00:46:40.089Z
 postauthortitle: The Eviction Lab
 listSummary: >-
-  Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
-socialDescription: Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
+  Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic? We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
+socialDescription: We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
 researchtype: elresearch
 postauthorname: Olivia Jin, Emily Lemmerman, Peter Hepburn, and Matthew Desmond
-twImage: eviction-filings-houston-isd2.png
+twImage: vaccine-filing-rates-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
+description: Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic? We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
 fbImage: vaccine-filing-rates-social.png
 image:
 scripts:
