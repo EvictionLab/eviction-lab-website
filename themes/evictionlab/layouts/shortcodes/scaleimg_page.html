@@ -1,0 +1,6 @@
+{{ $number := (int (.Get "scale") ) }}
+<div class="figheader" style="max-width: 600px;" >{{ .Get "title" }}</div>
+<!-- Allows an image to upscale beyond the width of the text column while remaining centered. -->
+<img class="scaleimg" src="{{ .Get "img" }}" style="max-width: {{  .Get "scale" }}%; margin-left: -{{ div ( sub ( $number ) 100 ) 2 }}%;" alt="{{ .Get "alt" }}" />
+<!-- Takes a numerical parameter from the shortcode in the post's markdown, sets that as the max-width percentage, then subtracts 100 and divides by 2 to assign a negative percentage to margin-left. -->
+<div class="figcaption"><p>{{ .Get "caption" }}</p></div>
