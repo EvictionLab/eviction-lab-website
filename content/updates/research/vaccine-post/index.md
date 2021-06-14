@@ -26,7 +26,7 @@ scripts:
 
 In the Lower Manhattan zip code 10006—home to One World Trade Center, the historic Trinity Church, and several luxury apartment buildings—almost 9 in 10 adults were fully vaccinated against COVID-19 by the start of June. Twelve miles north in the West Bronx (zip code 10457), a far different story played out, with just over 4 in 10 adults fully vaccinated. By contrast, those residents of the Bronx were far more likely to have received an eviction filing. Landlords filed 1,521 eviction cases in the West Bronx since March 15, 2020, compared to just 23 in the Financial District. Put differently: one in every 16 renter households in the West Bronx has received an eviction filing during the pandemic, compared to one in 58 in the Financial District. And the New York experience is not unique.
 
-{{< scaleimg img="ny-photo-quadrants.jpg" scale="124" title="" caption="Left: Lower Manhattan. Right: The West Bronx." >}}
+{{< scaleimg_page img="ny-photo-quadrants.jpg" scale="124" title="" caption="Left: Lower Manhattan. Right: The West Bronx." alt="Skylines of Lower Manhattan and the West Bronx" >}}
 
 The COVID-19 pandemic caused widespread unemployment, putting millions of U.S. families at risk of losing their homes. Fearing that a spike in eviction and homelessness would accelerate disease spread, the CDC issued [a federal eviction moratorium](/six-months-cdc/). With that moratorium set to expire on June 30, we wanted to assess whether those at greatest risk of displacement were now protected against COVID-19 infection due to widespread vaccination. Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic?
 
@@ -35,11 +35,11 @@ We found a pattern of higher eviction filing rates in neighborhoods with lower v
 To analyze the relationship between vaccination rates and eviction risk, we brought together vaccine distribution data collected from state and local governments{{< sup 1 >}} and eviction filing data from the [Eviction Tracking System](/eviction-tracking). We identified nine cities with sufficient data: Austin, Dallas, Fort Worth, Houston, Indianapolis, Philadelphia, Phoenix, New York, and South Bend. Figure 1 depicts the relationship between eviction filing rates and the rate of fully vaccinated adult residents, by zip code, in each city. Each zip code is shaded according to its racial majority. We superimpose trend lines for each city, showing the linear relationship between the two rates.
 
 <div class="d-none d-md-block">
-{{< scaleimg img="vax-filings-charts-lg2.svg" scale="135" title="Figure 1: Eviction Filings vs. Vaccination by Zip Code" caption="" >}}
+{{< scaleimg_page img="vax-filings-charts-lg2.svg" scale="135" title="Figure 1: Eviction Filings vs. Vaccination by Zip Code" caption="" alt="Charts showing relationship of eviction filings and vaccinations in nine U.S. cities"  >}}
 </div>
 
 <div class="d-block d-md-none">
-{{< scaleimg img="vax-filings-charts-sm2.svg" scale="100" title="Figure 1: Eviction Filings vs. Vaccination by Zip Code" caption="" >}}
+{{< scaleimg_page img="vax-filings-charts-sm2.svg" scale="100" title="Figure 1: Eviction Filings vs. Vaccination by Zip Code" caption="" alt="Charts showing relationship of eviction filings and vaccinations in nine U.S. cities" >}}
 </div>
 
 In all cities we find that zip codes with higher eviction filing rates were more likely to have lower vaccination rates. The differences between neighborhoods were not small. In Phoenix, for instance, the average neighborhood with a low eviction filing rate since the start of the pandemic (under 5%), had a vaccination rate of 56%. By contrast, the average zip code with a high eviction filing rate (above 15%) had a vaccination rate of just 35%.  
@@ -109,6 +109,6 @@ The COVID-19 pandemic is far from over, and while vaccination access is improvin
 
 >}}
 
-
+<div class="text-center" style="color:#6b6b6b"><i>Manhattan photo: {{< extlink "Marcus Lenk on Unsplash" "https://unsplash.com/@marcuslenk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" >}} </i></div>
 
 
