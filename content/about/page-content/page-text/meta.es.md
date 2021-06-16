@@ -14,7 +14,7 @@ li7: Equipo
 BiosH2: Equipo de Eviction Lab
 Bios1: Personal de Investigación
 Bios2: Estudiantes Investigadores 
-Bios3: Equipo Web
+Bios3: Alumn@s
 Bios4: Investigadores Ciudadanos
 forward: Próximo bio
 back: Anterior bio
