@@ -158,14 +158,15 @@
       {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "media") 5 }}   
       {{ range .Paginator.Pages }}
       {{ if ne .Params.in_index false }}
+      {{ $fp := .Site.GetPage "/media" }} 
+      {{ $fparam := .Params.featuredPost }}
+      {{ $fp.Params.featuredPost }}
+      {{ if eq .Params.featured "The Eviction Lab Media Guide" }}
+      HEY
+      {{ end }}
       <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
-
-          <!--<div class="chevron">
-            <i class="fa fa-chevron-right"></i>
-          </div>-->
-
-          <div class="postlist-left-col">
+           <div class="postlist-left-col">
               <div class="authorname">{{ .Params.postauthorname }}</div>
               <div class="list-thumb-container">
                 <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
