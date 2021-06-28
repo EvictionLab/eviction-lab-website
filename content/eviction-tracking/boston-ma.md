@@ -50,14 +50,25 @@ Eviction filings in Boston were running close to historical averages in January 
 
 {{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_map.csv" %}}
 
-Boston map content
+# The geography of changes in eviction filings
+
+Boston is made up of ... census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+
+1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
+2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
 
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="/uploads/boston_w19_barchart.csv" %}}
+{{% report_chart id="race" data="/uploads/boston_linechart.csv" %}}
 
-Boston bar chart content
+# Eviction filings by neighborhood demographics
+
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. Under normal circumstances, most evictions in Bridgeport are filed in neighborhoods that have no racial majority. Since March 2020, eviction filings have dropped steeply across all neighborhoods.
+
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2017–2019.<sup>1</sup>
+
+1. Eviction filing data were collected by ...
 
 {{%/ report_chart %}}
