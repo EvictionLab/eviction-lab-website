@@ -10,6 +10,7 @@ postauthortitle: Senior Research Specialist
 authorpic: /images/bios/jhendrickson_thumb_sm.jpg
 image: 
 url: /media-guide
+thumb: image1.jpg
 aliases:
     - /updates/media/media-guide
 ---

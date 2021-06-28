@@ -892,6 +892,28 @@ a.read-more {
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 }
+.media-list {
+  .list-thumb {
+    border-radius: 0;
+    width: 90px;
+    height: 60px;
+    @include media-breakpoint-up(lg) {
+      width: 180px;
+      height: auto;
+    }
+  }
+  &.list-item .postlist-left-col {
+    display: block;
+    flex-direction: unset;
+    justify-content: unset;
+    .list-thumb-container {
+      flex-grow: unset;
+    }
+    .authorname, .post-date {
+      flex-grow: unset;
+    }
+  }
+}
 
 /* team bio lists */
 .bio-item {

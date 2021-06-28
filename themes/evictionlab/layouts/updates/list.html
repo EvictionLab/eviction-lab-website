@@ -160,17 +160,22 @@
       {{ if ne .Params.in_index false }}
       {{ $fp := .Site.GetPage "/media" }} 
       {{ $fparam := .Params.featuredPost }}
-      {{ $fp.Params.featuredPost }}
-      {{ if eq .Params.featured "The Eviction Lab Media Guide" }}
-      HEY
+      {{ if eq $fp.Params.featuredPost .Title }}
       {{ end }}
+
       <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
            <div class="postlist-left-col">
-              <div class="authorname">{{ .Params.postauthorname }}</div>
-              <div class="list-thumb-container">
-                <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
+              <div class="list-thumb-container d-block mb-2">
+                {{ if .Params.thumb }}
+                  {{ $img := .Params.thumb }}
+                  {{ with .Resources.GetMatch $img }}
+                  {{ $processed := .Fit "360x240 q70 jpg" }}
+                  <img class="list-thumb" src=" {{ $processed.RelPermalink }} ">
+                  {{ end }}
+                {{ end }}  
               </div>  
+              <div class="authorname d-block mb-2">{{ .Params.postauthorname | truncate 40 }}</div>
               <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
             </div>
 
@@ -180,11 +185,11 @@
               </h2>
               {{ if .Params.listSummary }}
                 <div class="post-summary">
-                    {{ .Params.listSummary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
+                    {{ .Params.listSummary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
                 </div>
                 {{ else }}
               <div class="post-summary">
-                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
+                  {{ .Summary }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
               {{ end }}
                 </div>
             </div>
