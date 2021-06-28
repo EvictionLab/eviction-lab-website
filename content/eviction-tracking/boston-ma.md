@@ -13,6 +13,8 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 Eviction filings in Boston, MA have fallen sharply since eviction proceedings were suspended across Massachusetts on March 17. A subsequent moratorium halted evictions through mid-October. However, law enforcement cannot carry out eviction orders in Cambridge and Somerville until further notice. Compared to equivalent periods in previous years (2012–2013, 2015–2016), eviction filings fell far below average beginning in April 2020, though filings rose modestly in November after the state moratorium expired.
 
 More detail on eviction protections in Massachusetts can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ma/).
@@ -23,11 +25,15 @@ More detail on eviction protections in Massachusetts can be found on the [COVID-
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -35,5 +41,23 @@ Eviction filings in Boston were running close to historical averages in January 
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
+
+
+
+{{%/ report_chart %}}
+
+
+
+{{% report_map shapes="/uploads/boston_shapes.json" data="/uploads/boston_map.csv" %}}
+
+Boston map content
+
+{{%/ report_map %}}
+
+
+
+{{% report_chart id="race" data="/uploads/boston_w19_barchart.csv" %}}
+
+Boston bar chart content
 
 {{%/ report_chart %}}
