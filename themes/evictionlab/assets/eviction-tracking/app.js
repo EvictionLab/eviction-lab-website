@@ -2353,7 +2353,7 @@ Elab.ListPage = (function (Elab) {
 
   function inMoratorium(day, ranges) {
     return ranges.reduce(function (inRange, range) {
-      var endDay = d3.timeDay.offset(day, 6);
+      var endDay = new Date();
       return inRange
         ? true
         : +day >= +range[0] &&
