@@ -294,6 +294,9 @@ $alt-bg: #F4F7F9;
       // tr:nth-child(4n) {
       //   background: #F5F9FF;
       // }
+      p {
+        color: #565656;
+      }
       tr:nth-child(6n-1),
       tr:nth-child(6n-2),
       tr:nth-child(6n) {
@@ -817,7 +820,8 @@ $alt-bg: #F4F7F9;
                 label {
                   font-size: 1.6rem;
                   margin-bottom: 0.8rem;
-                  color: #8A8A8A;
+                  //color: #8A8A8A;
+                  color: #565656;
                   font-family: Akkurat-Regular, sans-serif;
                   &:before {
                     content: '';

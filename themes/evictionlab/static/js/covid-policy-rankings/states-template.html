@@ -35,11 +35,6 @@
         <p class="state-excerpt">
           {{stexcerpt}}
         </p>
-      {{/if}}
-      {{#if sttext}}
-        <p class="state-full">
-          {{sttext}}
-        </p>
       {{/if}} -->
     </td>
     <td colspan="1"></td>
@@ -56,10 +51,15 @@
         {{#if plcstandoutbool}}
           <div class="standout">
             <p>
-              <span class="icon-standout"></span><i>{{stname}} has enacted one or more high-impact policies. Details below.</i>
+              <span class="icon-standout"></span><i>{{stname}} has enacted one or more high-impact policies. Details below!!!</i>
             </p>
           </div>
         {{/if}}
+        {{#if sttext}}
+        <p class="state-full mt-3">
+          {{sttext}}
+        </p>
+      {{/if}}
         <!-- <div class="col-left"> -->
         <div class="category category-1">
           <div class="category-label">
