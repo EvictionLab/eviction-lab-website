@@ -690,6 +690,9 @@ $alt-bg: #F4F7F9;
           }
         }
         &.state-details {
+          p.state-full {
+           max-width: 656px;
+          }
           td {
             padding: 0 0 0 0.5rem;
             @include media-breakpoint-up(md) {
