@@ -23,7 +23,7 @@
     <td colspan="2">
       {{#if until}}
         <p class="expires">
-            Measures in place until <strong>{{until}}</strong>.
+          These policies started to end after <strong>{{until}}</strong>.
         </p>
       {{/if}}
       {{#if stars}}
@@ -34,11 +34,6 @@
       <!-- {{#if stexcerpt}}
         <p class="state-excerpt">
           {{stexcerpt}}
-        </p>
-      {{/if}}
-      {{#if sttext}}
-        <p class="state-full">
-          {{sttext}}
         </p>
       {{/if}} -->
     </td>
@@ -60,6 +55,12 @@
             </p>
           </div>
         {{/if}}
+        {{#if sttext}}
+        <p class="state-full mt-2">
+          {{sttext}}
+        </p>
+      {{/if}}
+      <div class="w-100"></div>
         <!-- <div class="col-left"> -->
         <div class="category category-1">
           <div class="category-label">
