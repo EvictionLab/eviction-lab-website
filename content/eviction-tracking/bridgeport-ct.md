@@ -17,9 +17,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 Eviction filings in Bridgeport, CT (Fairfield County) have been significantly below average since a state-wide eviction moratorium was instituted in April 2020. Eviction protections remained in effect through the remainder of the year and were extended into 2021, though some protections expired at the end of August 2020.
 
 More detail on eviction protections in Connecticut can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ct/).
+
+
 
 
 
@@ -31,7 +35,9 @@ More detail on eviction protections in Connecticut can be found on the [COVID-19
 
 
 
-{{% report_chart id="avg" data="/uploads/fairfield_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/bridgeport_barchart.csv" %}}
+
+
 
 
 
@@ -55,11 +61,15 @@ Eviction filings in Bridgeport were slightly below average in January, February,
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/bridgeport_shapes.json" data="/uploads/fairfield_map.csv" %}}
+{{% report_map shapes="/uploads/bridgeport_shapes.json" data="/uploads/bridgeport_map.csv" %}}
+
+
 
 
 
@@ -72,11 +82,15 @@ Fairfield County is made up of 211 census tracts. In each of those tracts, we ma
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="/uploads/fairfield_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/bridgeport_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -85,5 +99,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
+
+
 
 {{%/ report_chart %}}
