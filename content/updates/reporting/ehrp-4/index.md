@@ -1,12 +1,12 @@
 ---
-childof: media
+childof: reporting
 contenttype: updates
 contentcat: media
 title: 'They Planned to Grow Old Together'
 date: 2021-04-22T15:45:09.300Z
 postauthorname: Greta Moran
 postauthortitle: Princeton University
-authorpic: /images/bios/elab_thumb_sm.jpg
+authorpic: 
 outlet: AutoStraddle
 link: https://www.autostraddle.com/they-planned-to-grow-old-together-nursing-home-eviction-harms-gay-elders/
 thumb: image1.jpg

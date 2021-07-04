@@ -139,9 +139,9 @@ languageName = "English"
     weight = -96
     url = "/updates/research/outside-research"        
 [[Languages.en.menu.updates]]
-    name = "Media"
+    name = "Reporting"
     weight = -90
-    url = "/updates/media/"
+    url = "/updates/reporting/"
 [[Languages.en.menu.updates]]
     name = "Blog"
     weight = -100

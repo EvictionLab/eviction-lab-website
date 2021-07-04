@@ -1,5 +1,5 @@
 ---
-childof: media
+childof: reporting
 contenttype: updates
 contentcat: media
 title: 'San Francisco Supervisors Put Corporate Responsibility to the Test'

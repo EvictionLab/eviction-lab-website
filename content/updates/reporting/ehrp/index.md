@@ -1,5 +1,5 @@
 ---
-childof: media
+childof: reporting
 contenttype: updates
 contentcat: media
 title: 'Struggling Renters Need More Federal Aid'

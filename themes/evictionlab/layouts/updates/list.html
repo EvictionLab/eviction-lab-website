@@ -152,16 +152,16 @@
 <!-- ********************* -->
 <!-- ******* MEDIA ******* -->
 
-{{ if eq .Title "Media"}} <!-- if we are on the Media page, do stuff -->
+{{ if eq .Title "Reporting"}} <!-- if we are on the Media page, do stuff -->
 
     <div class="alt-rows media-list">
-      {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "media") 5 }}   
+      {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "reporting") 10 }}   
       {{ range .Paginator.Pages }}
       {{ if ne .Params.in_index false }}
-      {{ $fp := .Site.GetPage "/media" }} 
+      {{ $fp := .Site.GetPage "/reporting" }} 
       {{ $fparam := .Params.featuredPost }}
-      {{ if eq $fp.Params.featuredPost .Title }}
-      {{ end }}
+          {{/* if eq $fp.Params.featuredPost .Title */}}
+          {{/* end */}}
 
       <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
@@ -181,7 +181,7 @@
 
             <div class="postlist-right-col">
               <h2 class="title">
-                <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+                <a href="{{ .Params.link }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </h2>
               {{ if .Params.listSummary }}
                 <div class="post-summary">
@@ -193,18 +193,18 @@
               {{ end }}
                 </div>
             </div>
-
         </div>
-      </div>
+    
       {{ end }}
+   
   {{ end }} <!-- end Media listings -->
-</div>
+
    <!-- PAGINATION -->  
 
 <div class="center-page-wrapper media-list">
   {{ partial "pagination" . }}
 </div>
-
+</div>
 {{ end }} <!-- end Media page stuff -->
 
 <!-- ************************ -->
