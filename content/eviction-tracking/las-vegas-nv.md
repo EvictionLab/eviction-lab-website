@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Las Vegas, Nevada
 slug: las-vegas-nv
 date: 2021-07-08T04:00:00.000Z
