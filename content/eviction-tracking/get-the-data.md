@@ -174,6 +174,10 @@ data:
     years: 2016-2019
     geo: Census Tract
     file: /uploads/wilmington_weekly_2020_2021.csv
+  - site: Las Vegas
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/lasvegas_weekly_2020_2021.csv
 ---
 Sample code:
 
