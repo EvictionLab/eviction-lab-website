@@ -22,11 +22,13 @@ aliases:
     - /covid-housing-scorecard-methodology
 ---
 
-**Introduction**
+### Introduction
+<br/>
 
 To prevent the deleterious health consequences of eviction and an escalating economic crisis during the COVID-19 outbreak, U.S. states are beginning to pursue strategies to ensure safe, decent, and stable housing during and after the pandemic. To evaluate state responses, the Eviction Lab and Columbia Law School’s Professor Emily Benfer have developed a <a href="/covid-policy-scorecard/">policy scorecard</a> for each state, distilling the contents of thousands of newly-released emergency orders, declarations, and legislation into a clear set of critical measures included in, and left out of, state-level pandemic responses related to eviction and housing. As states grapple with how to protect citizens during and in the recovery from the pandemic, this scorecard provides comprehensive information about the varying approaches state-by-state. These short- and long-term supportive measures are not exhaustive. 
 
-**How to Cite the Scorecard**
+ ### How to Cite the Scorecard
+<br/>
 
 _Citation for academic publications and research reports:_
 
@@ -36,7 +38,8 @@ _Citation for media outlets, policy briefs, and online resources:_
 
 Eviction Lab and Emily A. Benfer, COVID-19 Housing Policy Scorecard, https://evictionlab.org/covid-policy-scorecard/. 
 
-**Scorecard Methodology**
+### Scorecard Methodology
+<br/>
 
 The state scorecard documents the following categories and measures, which may be controlled by courts, governors, or legislatures (“state”):
 
@@ -56,7 +59,8 @@ We consulted with housing and homelessness lawyers and advocates, tenant groups,
 
 The scorecard also includes figures for the number of renters in each state who could be affected by the housing crisis, and links to other COVID-19 housing resources.
 
-**Measures**
+### Measures
+<br/>
 
 The COVID-19 Housing Policy Scorecard addresses five stages of the eviction process, including the initial notice to the tenant, filing the eviction, the evidentiary hearing, a ruling on the eviction, and enforcement of the order of eviction. For the purpose of state comparison, we have attempted to create broad categories at the state level. Whether the eviction moratoriums described herein apply to hotels, motels, mobile homes, and homeless shelters is dependent upon on state law. 
 
@@ -134,7 +138,8 @@ In the Tenancy Preservation Measures category, we track four measures:
 
 - *Legal counsel for tenants.* With widespread confusion about what protections are and are not available to tenants, it is important that tenants have access to legal counsel when facing eviction. A state has achieved this measure if it guarantees free legal counsel to tenants in eviction cases. 
 
-**Scoring**
+### Scoring
+<br/>
 
 To calculate each state's Eviction Moratorium Score, we consider eviction-prevention measures in five stages: Initiation, Court Actions, Enforcement, Supportive Measures, and Measures to Preserve Tenancy. Our five star scores are derived from a formula that groups measures by stage in the process or type of support, awarding points based on which measures states have enacted. Because some interventions have a greater impact on housing stability, the formula weights certain categories heavier than others. 
 
@@ -161,7 +166,9 @@ Within categories, more weight is given to protections that are more comprehensi
 - *Tenancy Preservation Measures:* No late fees (12.5%); No rent raises (12.5%); Housing stabilization (50%); Legal counsel for tenants (25%).
 
 <a id="acknowledgements"></a>
-**Acknowledgements** 
+
+### Acknowledgements
+<br/>
 
 A special thanks is given to Anne Kat Alexander and Alieza Durana at the Eviction Lab and to Amy Groshek, James Minton, and Sasha Zyryaev at Hyperobjekt for their instrumental work in designing and authoring the scorecard; and to Columbia Law School and Mailman School of Public Health students Katherine Donohue, Ruth Hirsch, Jennifer Katz, Michelle Lappen, Jordan Lieberman, Janki Tailor, and Marissa Yochelson Long for their contribution to data analysis and management. 
  
@@ -226,7 +233,8 @@ The renting population statistic on the tool comes from the United States Census
 
 <a id="outside-resources"></a>
 
-**For additional COVID-19 housing resources and tools built by other organizations:**
+### For additional COVID-19 housing resources and tools built by other organizations:
+<br/>
 
 - <a target="_blank" href="https://www.cbpp.org/covid-19-responding-to-the-health-and-economic-crisis">Center on Budget and Policy Priorities COVID-19 Health & Economic Crisis Response</a>
 - <a target="_blank" href="https://nlihc.org/coronavirus-and-housing-homelessness">National Low Income Housing Coalition Housing & Homelessness COVID-19 Resources</a>
@@ -244,6 +252,22 @@ The renting population statistic on the tool comes from the United States Census
 - <a target="_blank" href="https://www.nga.org/coronavirus/#states">National Governors Association</a>
 - <a target="_blank" href="https://www.naruc.org/compilation-of-covid-19-news-resources/state-response-tracker/">National Association of Regulatory Utility Commissioners</a>
 
+### Archival Scorecard Data Notes
+<br/>
+
+Hundreds of millions of dollars of federal funding dedicated to rental assistance became available in every state in 2021 through the Consolidated Appropriations Act of 2020 and the American Rescue Plan Act. The Archival Scorecard considers rental assistance to be "present" if new funding was made available for rental assistance during the eviction moratorium. If a state implemented rental assistance later than the expiration of the state's eviction moratorium, the moratorium is counted for the Scorecard rather than the 0.5 star score for rental assistance alone.
+
+If a state did not implement an eviction moratorium that paused at least one stage of the eviction process (notice, filing, hearing, judgment, enforcement), the state's score is set to 0.00 stars. In practice, this means that states that tolled court deadlines or funded rental assistance programs, without any other measures, are rated as 0.00 stars for this archival document.
+
+**State notes:**
+<br/>
+
+- **Arizona**. Arizona tolled deadlines at the beginning of the pandemic, but because the policy change removing tolling deadlines did not substantially alter the Arizona emergency housing policy as a whole, the archival scorecard reflects the policy regime that remained in place following the expiration of tolling.
+- **Hawaii**. The statewide order explicitly banning eviction hearings in Hawaii expired in April 2020. However in practice, all eviction case filings and enforcement of eviction orders was stopped continuously from March 2020 until June 2021 (the end of the study period), and Circuit Courts have implemented individual eviction hearing bans in support of the order. Therefore, the hearings measure has been calculated as present for Hawaii for the full time period.
+- **Kansas**. Kansas had two eviction moratoria, nearly identical, in spring 2020 and in fall-winter 2020-2021. In March and April 2020, eviction hearings were stopped for a period of about two weeks. Because the fall-winter 2020 eviction moratorium was significantly longer than the March-April 2020 hearings ban, the winter moratorium is reflected here as the "strongest" eviction moratorium.
+- **Maine**. Orders in Maine originally were set to expire 30 days after the state of emergency in Maine ended. The protections were then ended before the emergency declaration, however, so this measure was not counted as present for this archival version of the scorecard. 
+- **Massachusetts**. The eviction moratorium law in Massachusetts originally were set to expire 45 days after the state of emergency in Massachusetts ended, or a certain number of days after the law was signed (originally 120 days, later extended). The protections were ended before the emergency declaration, however, so this measure was not counted as present for this archival version of the scorecard. 
+- **New Jersey**. New Jersey tolled deadlines at the beginning of the pandemic, but because the policy change removing tolling deadlines did not substantially alter the New Jersey emergency housing policy as a whole, the archival scorecard reflects the policy regime that remained in place following the expiration of tolling.
 
 
 
