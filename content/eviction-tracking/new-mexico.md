@@ -11,7 +11,7 @@ title: New Mexico | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="29" data="/uploads/states_table.csv" %}}
+{{% report_intro id="35" data="/uploads/states_table.csv" %}}
 
 New Mexico never implemented a state-wide eviction moratorium, though a number of counties did establish protections for renters. Filings fell early in the pandemic, but increased steadily over the course of 2020.
 
@@ -19,7 +19,7 @@ More detail on eviction protections in New Mexico can be found on the [COVID-19 
 
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/uploads/missouri_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/new-mexico_barchart.csv" %}}
 
 # Changes in eviction filings
 
@@ -30,7 +30,7 @@ Eviction filings in New Mexico were were near their historical averages in Janua
 
 {{%/ report_chart %}}
 
-{{% report_map shapes="/uploads/new-mexico_shapes.json" data="/uploads/new-mexico.csv" %}}
+{{% report_map shapes="/uploads/new-mexico_shapes.json" data="/uploads/new-mexico_map.csv" %}}
 
 # The geography of changes in eviction filings
 
