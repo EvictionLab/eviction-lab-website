@@ -114,6 +114,10 @@ data:
     years: 2012-2015
     geo: Census Tract
     file: /uploads/kansascity_weekly_2020_2021.csv
+  - site: Las Vegas
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/lasvegas_weekly_2020_2021.csv
   - site: Memphis
     years: 2016-2019
     geo: Census Tract
