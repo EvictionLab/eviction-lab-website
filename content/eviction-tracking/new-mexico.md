@@ -1,7 +1,7 @@
 ---
 statePage: true
 collection: true
-draft: false
+draft: true
 h1: New Mexico
 layout: state
 slug: new-mexico
