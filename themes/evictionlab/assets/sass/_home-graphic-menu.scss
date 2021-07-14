@@ -555,7 +555,7 @@
         background-repeat: no-repeat;
         background-position: 90% bottom;
         h2 {
-            color: #000;
+            color: $color2;
         }
         .updates-section__entries {
             display: flex;
@@ -580,21 +580,32 @@
             }
         }
         .title {
-            font-family: "GT-Eesti-Display-Bold";
-            font-style: normal;
-            //font-weight: bold;
-            font-size: 1.8rem;
-            line-height: 1.5 !important;
-            @include media-breakpoint-up(md) {
-                font-size: 2rem;
-                line-height: 1.2;
-            }  
-            @include media-breakpoint-up(lg) {
-                font-size: 2.2rem;
-                line-height: 2.8rem;
+            @include altFont(1.8rem);
+            line-height: 1.4;
+            color: #000;
+            transition: color .3s ease;
+            display: inline-block;
+            will-change: transform;
+            &:hover {
+                color: $color1;
             }
-            letter-spacing: .01rem;
-            line-height: 1.1;
+        }
+        .cat-link {
+            color: $color2;
+        }
+        .updates-section__entry1-top .title {
+            @include altFont(3.2rem);
+            line-height: 1.4;
+            color: #000;
+            transition: color .3s ease;
+            display: inline-block;
+            will-change: transform;
+            &:hover {
+                color: $color1;
+            }
+        }
+        .updates-section__wrapper2 div.updates-section__entries:nth-of-type(1) {
+            display: none;
         }
         a.sublink {
             transition: color .3s ease;
@@ -615,7 +626,6 @@
     }
 
     #other-pages {
-        background-color: #F4F7F9;
         #hp-eviction-image {
             min-height: 240px;
             @include media-breakpoint-up(md) {

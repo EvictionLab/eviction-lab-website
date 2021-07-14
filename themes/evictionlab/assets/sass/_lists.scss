@@ -222,6 +222,18 @@
       height: 14px;
     }
     } 
+  @include for-phone-only {  
+    .list-thumb {
+        width: 32px;
+        height: 32px;
+    }  
+  .list-thumb-container {
+    flex-grow: 3;
+      @include media-breakpoint-down(mm) {
+        margin: 1.6rem 0;
+      }
+    }  
+  }
   .postlist-left-col {
     flex-grow: 1;
     max-width: 200px;
@@ -238,22 +250,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      .list-thumb-container {
-        flex-grow: 3;
-        @include media-breakpoint-down(mm) {
-          margin: 1.6rem 0;
-        }
-        .list-thumb {
-          width: 32px;
-          height: 32px;
-          }
-        }  
     }
-    @include for-tablet-portrait-up {
+   /* @include for-tablet-portrait-up {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
+    } */
     @include for-tablet-portrait-up {
       padding-top: 2px;
     }
@@ -872,7 +874,12 @@ a.read-more {
 .alt-rows > div:nth-of-type(even) {
     background: $secondaryBackground;
 }
-
+.alt-rows.media-list .center-page-wrapper:nth-of-type(odd) {
+  background: $secondaryBackground;
+}
+.alt-rows.media-list .center-page-wrapper:nth-of-type(even) {
+  background: #fff;
+}
 .alt-rows-research > div:nth-of-type(odd) {
     background: $secondaryBackground;
 }
@@ -891,23 +898,33 @@ a.read-more {
     image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+    &.reporting__thumb {
+      width: 90px;
+      height: 60px;
+      border-radius: 0;
+    }
 }
 .media-list {
   .list-thumb {
     border-radius: 0;
     width: 90px;
     height: 60px;
+    @include media-breakpoint-up(md) {
+      width: 120px;
+      height: 90px;
+    }
     @include media-breakpoint-up(lg) {
       width: 180px;
       height: auto;
     }
   }
-  &.list-item .postlist-left-col {
+  .list-item .postlist-left-col {
     display: block;
     flex-direction: unset;
     justify-content: unset;
     .list-thumb-container {
       flex-grow: unset;
+      margin: 0;
     }
     .authorname, .post-date {
       flex-grow: unset;

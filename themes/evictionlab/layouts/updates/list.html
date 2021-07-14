@@ -20,7 +20,7 @@
 
     <div class="alt-rows">
        
-    {{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") 5 }}   
+    {{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") 10 }}   
     {{ range .Paginator.Pages }} 
       {{ if ne .Params.in_index false }}
 <!--{{ if eq .Params.contenttype "updates" }}    -->
@@ -33,11 +33,21 @@
             </div>-->
 
             <div class="postlist-left-col">
-                <div class="authorname">{{ .Params.postauthorname | truncate 40 }}</div>
-                <div class="list-thumb-container">
-                  <img class="list-thumb" alt="{{ .Params.postauthorname }} photo" src="{{ .Params.authorpic }}">
+                <div class="authorname mb-md-2">{{ .Params.postauthorname | truncate 40 }}</div>
+                <div class="list-thumb-container mb-md-3 mb-xxl-2">
+                  {{ if eq .Params.childof "reporting"}}
+                    {{ if .Params.thumb }}
+                      {{ $img := .Params.thumb }}
+                        {{ with .Resources.GetMatch $img }}
+                          {{ $processed := .Fit "360x240 q70 jpg" }}
+                            <img class="list-thumb reporting__thumb" src=" {{ $processed.RelPermalink }} ">
+                        {{ end }}
+                    {{ end }}  
+                  {{ else }}
+                    <img class="list-thumb" alt="{{ .Params.postauthorname }} photo" src="{{ .Params.authorpic }}">
+                  {{ end }}
                 </div>  
-                <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+                <div class="post-date mb-md-2 mb-xxl-1">{{ .Date.Format "January 2, 2006" }}</div>
                 <div class="post-cat">
                   <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" alt="Bookmark icon" />
                   <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
@@ -49,15 +59,27 @@
                 <h2 class="title">
                   <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
                 </h2>
-                {{ if .Params.listSummary }}
-                <div class="post-summary">
-                    {{ .Params.listSummary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
-                </div>
-                {{ else }}
-                <div class="post-summary">
-                    {{ .Summary }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
-                </div>
-                {{ end }}
+                  {{ if eq .Params.childof "reporting" }}
+                    {{ if .Params.listSummary }} 
+                      <div class="post-summary">
+                          {{ .Params.listSummary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
+                      </div>
+                    {{ else }}
+                      <div class="post-summary">
+                          {{ .Summary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
+                      </div>
+                    {{ end }}
+                  {{ else }}
+                    {{ if .Params.listSummary }}
+                    <div class="post-summary">
+                        {{ .Params.listSummary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
+                    </div>
+                    {{ else }}
+                    <div class="post-summary">
+                        {{ .Summary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
+                    </div>
+                    {{ end }}
+                  {{ end }}  
                 <div class="post-cat">
                   <img src="/images/icons/{{ .Params.childof }}_bookmark.png" alt="Bookmark icon" class="cat-bookmark" />
                   <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
@@ -88,7 +110,7 @@
 
     <div class="alt-rows">
        
-  {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "blog") 5 }}   
+  {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "blog") 10 }}   
   {{ range .Paginator.Pages }} 
       {{ if ne .Params.in_index false }}
 <!--{{ if eq .Params.contenttype "updates" }}    -->
@@ -101,11 +123,11 @@
             </div>-->
 
             <div class="postlist-left-col">
-                <div class="authorname">{{ .Params.postauthorname | truncate 40 }}</div>
-                <div class="list-thumb-container">
+                <div class="authorname mb-md-2">{{ .Params.postauthorname | truncate 40 }}</div>
+                <div class="list-thumb-container mb-md-3 mb-xxl-2">
                   <img class="list-thumb" alt="{{ .Params.postauthorname }} photo" src="{{ .Params.authorpic }}">
                 </div>  
-                <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+                <div class="post-date mb-md-2 mb-xxl-1">{{ .Date.Format "January 2, 2006" }}</div>
                 <div class="post-cat">
                   <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" alt="Bookmark icon" />
                   <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
@@ -153,7 +175,14 @@
 <!-- ******* MEDIA ******* -->
 
 {{ if eq .Title "Reporting"}} <!-- if we are on the Media page, do stuff -->
-
+    
+    <div class="center-page-wrapper">
+      <div class="center-content list-intro mb-5 mb-md-8">
+        <h4 class="subhead bordered-header mt-4 mb-3 mt-md-7 mb-md-5 blue">Reporting from Our Partners</h4>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>For tips on reporting about eviction, please see our Media Guide.</p>
+      </div>
+    </div>
     <div class="alt-rows media-list">
       {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "reporting") 10 }}   
       {{ range .Paginator.Pages }}
@@ -184,7 +213,10 @@
                 <a href="{{ .Params.link }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </h2>
               {{ if .Params.listSummary }}
-                <div class="post-summary">
+                <div class="post-summary d-block d-md-none">
+                  {{ .Params.listSummary | truncate 90 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div class="post-summary d-none d-md-block">
                     {{ .Params.listSummary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
                 </div>
                 {{ else }}
@@ -215,17 +247,17 @@
 
  <!-- if there are Research articles, list them -->
     <div class="alt-rows research-list">
-      {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "research") 5 }}   
+      {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "research") 10 }}   
       {{ range .Paginator.Pages }}
       {{ if ne .Params.in_index false }}
       <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list">
             <div class="postlist-left-col">
-              <div class="authorname">{{ .Params.postauthorname | truncate 40 }}</div>
-              <div class="list-thumb-container">
+              <div class="authorname mb-md-2">{{ .Params.postauthorname | truncate 40 }}</div>
+              <div class="list-thumb-container mb-md-3 mb-xxl-2">
                 <img class="list-thumb" src="{{ .Params.authorpic }}" alt="{{ .Params.postauthorname }} photo">
               </div>  
-              <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+              <div class="post-date mb-md-2 mb-xxl-1">{{ .Date.Format "January 2, 2006" }}</div>
             </div>
             <div class="postlist-right-col">
               <h2 class="title">
@@ -264,7 +296,7 @@
 <div class="page-id-events-list">
   {{ $events := where .Site.RegularPages "Params.childof" "events" }}
   {{ if isset $events 0 }} <!-- if there are Events articles, list them -->
-  {{ $paginator := .Paginate (where .Site.RegularPages.Reverse "Params.childof" "events") 5 }}   
+  {{ $paginator := .Paginate (where .Site.RegularPages.Reverse "Params.childof" "events") 10 }}   
   {{ range .Paginator.Pages }}
       <div class="center-page-wrapper list-wrapper">
           <div class="list-item center-content {{ .Params.childof }}-list-main events-list list-head">
@@ -273,7 +305,7 @@
             </div>-->
             <div class="postlist-left-col"> 
               <!--<div class="date-bg">-->
-                <div class="post-date"><span class="date-number">{{ dateFormat "2" (.Params.date) }}</span><br />
+                <div class="post-date mb-md-2 mb-xxl-1"><span class="date-number">{{ dateFormat "2" (.Params.date) }}</span><br />
                   <span class="date-month">{{ dateFormat "Jan" (.Params.date) }}</span>
                 </div>
               <!--</div>-->
