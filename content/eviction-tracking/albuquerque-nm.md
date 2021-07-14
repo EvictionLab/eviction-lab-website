@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Albuquerque, New Mexico
 slug: albuquerque-nm
 date: 2021-07-13T04:00:00.000Z
