@@ -11,23 +11,19 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="32003" data="/uploads/table.csv" %}}
 
-
-
-
-
 Eviction filings in the Las Vegas area (Clark County, NV) fell sharply by March 2020. The state of Nevada put in place a moratorium on eviction proceedings from late-March until mid-October 2020. After the expiration of these protections, eviction filings rose. The state then implemented a second moratorium in December 2020 for tenants who affirmed that they had been financially affected by COVID-19 or would be made homeless by eviction. Those protections expired at the end of May 2021. 
 
+This data, unlike most of the Eviction Tracking System, will only be updated on a monthly basis for Clark County. [New Orleans (Orleans Parish, LA) ](https://evictionlab.org/eviction-tracking/new-orleans-la/)and [](https://evictionlab.org/eviction-tracking/las-vegas-nv/)[Phoenix (Maricopa County, AZ)](https://evictionlab.org/eviction-tracking/phoenix-az/) are the other areas with monthly-only updates. 
+
 More detail on eviction protections in Nevada can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/nv/).
-
-
-
-
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/lasvegas_barchart.csv" %}}
+
+
 
 
 
@@ -43,11 +39,15 @@ Eviction filings in Las Vegas were slightly below typical levels in January and 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/las-vegas-shapes.json" data="/uploads/lasvegas_map.csv" %}}
+
+
 
 
 
@@ -60,11 +60,15 @@ Clark County is divided into 487 census tracts. In these tracts, we map the numb
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/lasvegas_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -73,5 +77,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2016-2019.<sup>1</sup>
 
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019.
+
+
 
 {{%/ report_chart %}}
