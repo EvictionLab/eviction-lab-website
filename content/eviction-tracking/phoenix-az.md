@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Maricopa County, AZ (Phoenix) fell sharply in April 2020 and have remained below historical averages. The state of Arizona instituted an eviction moratorium in late-March, but this policy only suspended enforcement of COVID-19-related nonpayment evictions, and new filings were being accepted. These eviction protections in the state expired at the end of October.
 
-This data, unlike the rest of the Eviction Tracking System, will only be updated on a monthly basis for Maricopa County. [New Orleans (Orleans Parish, LA) ](https://evictionlab.org/eviction-tracking/new-orleans-la/)is the only other area with monthly-only updates. 
+This data, unlike most of the Eviction Tracking System, will only be updated on a monthly basis for Maricopa County. [New Orleans (Orleans Parish, LA) ](https://evictionlab.org/eviction-tracking/new-orleans-la/)and [Las Vegas (Clark County, NV)](https://evictionlab.org/eviction-tracking/las-vegas-nv/) are the other areas with monthly-only updates. 
 
 More detail on eviction protections in Arizona can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/az/).
 
@@ -22,6 +22,8 @@ More detail on eviction protections in Arizona can be found on the [COVID-19 Hou
 
 
 {{% report_chart id="avg" data="/uploads/phoenix_barchart.csv" %}}
+
+
 
 
 
@@ -37,11 +39,15 @@ Eviction filings in Phoenix were near or above historical averages in January, F
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/phoenix_shapes.json" data="/uploads/phoenix_map.csv" %}}
+
+
 
 
 
@@ -58,11 +64,15 @@ Maricopa County is divided into 916 census tracts. In each of those tracts, we m
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/phoenix_linechart.csv" %}}
+
+
 
 
 
@@ -73,6 +83,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2015-2019.<sup>1</sup>
 
 1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). Historical averages are taken over the years 2015-2019.
+
+
 
 
 
