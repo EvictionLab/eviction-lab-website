@@ -589,19 +589,24 @@
             &:hover {
                 color: $color1;
             }
+            @include media-breakpoint-only(md) {
+                font-size: 2.4rem;
+            }
         }
         .cat-link {
             color: $color2;
         }
         .updates-section__entry1-top .title {
-            @include altFont(3.2rem);
-            line-height: 1.4;
-            color: #000;
-            transition: color .3s ease;
-            display: inline-block;
-            will-change: transform;
-            &:hover {
-                color: $color1;
+            @include media-breakpoint-up(lg) {
+                @include altFont(3.2rem);
+                line-height: 1.4;
+                color: #000;
+                transition: color .3s ease;
+                display: inline-block;
+                will-change: transform;
+                &:hover {
+                    color: $color1;
+                }
             }
         }
         .updates-section__wrapper2 div.updates-section__entries:nth-of-type(1) {
