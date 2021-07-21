@@ -179,6 +179,21 @@ a.btn.buttonlink {
       margin-bottom: 4rem;
     }
   }
+  .center-content-post .accordion-section {
+    margin: 0 -16px;
+    p {
+      margin-bottom: 2.4rem;
+    }
+    .answer {
+      margin-bottom: 2.4rem;
+      p {
+        img {
+          margin: 2.4rem 0;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 img.upscale124 {
@@ -264,6 +279,7 @@ picture img {
       transform: translateX(4px);
     }
   }
+  
 }
 
 .natl-blog-table {
@@ -517,4 +533,20 @@ svg {
     }
   }
 // } 
+
+// Questions & Answers About Eviction Post
+
+.page-type-updates.questions-and-answers-about-evictions-as-the-cdc-moratorium-ends {
+  .dropdown.language-select {
+  display: block;
+  }
+  h3 {
+    margin-bottom: 1.6rem;
+  }
+  hr {
+    margin-bottom: 0.8rem !important;
+  }
+}
+
+
 
