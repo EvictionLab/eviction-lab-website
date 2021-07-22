@@ -4,7 +4,7 @@ contenttype: updates
 contentcat: blog
 featured: true
 researchtype: elresearch
-title: 'Preguntas y respuestas sobre desalojos cuando finaliza la moratoria de los CDC'
+title: 'Preguntas y respuestas sobre desalojos y el final de la moratoria de los CDC'
 date: 2021-07-20T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
