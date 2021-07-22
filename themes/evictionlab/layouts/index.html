@@ -51,7 +51,7 @@
               {{ if eq .Params.contentcat "data" }}
                 <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
               {{ else }}
-                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
               {{ end }}
             </div>
           {{ end }}
@@ -80,7 +80,7 @@
               {{ if eq .Params.contentcat "data" }}
                 <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
               {{ else }}
-                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
               {{ end }}
             </div>
           {{ end }}
@@ -128,7 +128,7 @@
     {{ if eq .Params.contentcat "data" }}
       <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
     {{ else }}
-      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 60 }}</a>
+      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
     {{ end }}
   </div>
 {{ end }}
