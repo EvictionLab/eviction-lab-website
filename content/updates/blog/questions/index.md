@@ -17,6 +17,13 @@ url: /questions
 aliases:
 ---
 
+The COVID-19 pandemic has made it difficult for hundreds of thousands of people to pay rent and stay housed. At the Eviction Lab, we believe that everyone deserves a place to call home, especially during an emergency like this. 
+
+The following is a guide with some of the most relevant questions that tenants could have as the eviction protections lapse. We are encouraging everyone to learn about your rights in court, apply to rental assistance and search for legal counsel.
+
+<br/>
+
+
 ### What to Expect from the Eviction Process
 
 
