@@ -3,6 +3,7 @@ childof: blog
 contenttype: updates
 contentcat: blog
 featured: true
+in_index: true
 researchtype: elresearch
 title: 'Questions and answers about evictions as the CDC moratorium ends'
 date: 2021-07-20T16:46:40.089Z
@@ -11,9 +12,10 @@ postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: What to know if you are facing eviction, or want to help.
 socialDescription: What to know if you are facing eviction, or want to help. 
-fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
-twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
+fbImage: 'eviction-notice-door.jpg'
+twImage: 'eviction-notice-door.jpg'
 url: /questions
+image: eviction-notice-door-crop.jpg
 aliases:
 ---
 
