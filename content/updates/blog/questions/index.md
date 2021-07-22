@@ -76,14 +76,13 @@ The following is a guide with some of the most relevant questions that tenants c
 
 {{< faq 
 
-"find-a-lawyer" 
+"how-to-find-a-lawyer" 
 
-"How can I find a lawyer to help me understand my rights and defend against an eviction? "
+"How can I find a lawyer to help me understand my rights and defend against an eviction?"
 
 "Renters may bring an attorney to represent them. Working with a housing attorney could strengthen a renter’s case. There are free legal services across the country. To apply, contact a <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>local legal aid office</a>. The following resources can help you find legal answers or legal representation in court:"
 
-
-"<ul><li><a href='https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help' target='_blank' rel='noreferrer noopener'>Legal Services Corporation - List of legal aid offices</a></li><li><a href='https://www.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> - Interactive forms and list of legal aid offices</li><li><a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>National Association of IOLTA Programs - Find legal aid offices</a></li><li><a href='' target='_blank' rel='noreferrer noopener'>Free Legal Answers - Email-based legal answers from volunteer attorneys</a></li></ul>"
+"<ul><li><a href='https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help' target='_blank' rel='noreferrer noopener'>Legal Services Corporation - List of legal aid offices</a></li><li><a href='https://www.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> - Interactive forms and list of legal aid offices</li><li><a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>National Association of IOLTA Programs - Find legal aid offices</a></li><li><a href='https://www.abafreelegalanswers.org/' target='_blank' rel='noreferrer noopener'>Free Legal Answers - Email-based legal answers from volunteer attorneys</a></li></ul>"
 
 "Attorneys can help tenants raise defenses or ask the judge for more time (called requesting a continuance), or have the case sealed or dismissed. Renters should mention, regardless of whether they have an attorney, if they have a <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>CDC declaration form</a> or have applied for rental assistance."
 
