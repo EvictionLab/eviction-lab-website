@@ -197,7 +197,7 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 <br/>
 
-### How to make a difference
+### CÓMO MARCAR UNA DIFERENCIA
 
 {{< faq 
 
