@@ -13,7 +13,7 @@ description: What to know if you are facing eviction, or want to help.
 socialDescription: What to know if you are facing eviction, or want to help. 
 fbImage: 'eviction-notice-door.jpg'
 twImage: 'eviction-notice-door.jpg'
-url: /es/questions
+url: /preguntas
 image: eviction-notice-door-crop.jpg
 aliases:
 ---
@@ -33,7 +33,7 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 "¿Existen protecciones para los inquilinos que enfrentan un desalojo en la actualidad?"
 
-"La moratoria de los CDC se extendió hasta el 31 de julio y ha protegido a inquilinos de desalojos en casi todo el país (una excepción ha sido del Distrito Oeste de Tennessee, que incluye a la ciudad de Memphis). Para utilizar este beneficio, los inquilinos deben proveer una <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/Eviction-Declare-esp-508.pdf' target='_blank' rel='noreferrer noopener'>copia de este formulario</a> a su casero y en cada audiencia de desalojo. Puedes encontrar <a href='https://evictionlab.org/moratorium-extended-evictions-continue/'>más información sobre el desalojo federal y quién está cubierto aquí</a>."
+"La moratoria de los CDC se extendió hasta el 31 de julio y ha protegido a inquilinos de desalojos en casi todo el país (una excepción ha sido del Distrito Oeste de Tennessee, que incluye a la ciudad de Memphis). Para utilizar este beneficio, los inquilinos deben proveer una <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/Eviction-Declare-esp-508.pdf' target='_blank' rel='noreferrer noopener'>copia de este formulario</a> a su casero y en cada audiencia de desalojo. Puedes encontrar <a href='/es/moratorium-extended-evictions-continue/'>más información sobre el desalojo federal y quién está cubierto aquí</a>."
 
 "A través de todo el país, los inquilinos también tienen derecho otorgado por la constitución al _debido proceso_, lo que significa que tienen derecho a ser escuchados y disputar un desalojo en la corte. En algunos lugares específicos, los inquilinos tienen que pagar un depósito --pagar la renta que deben en una cuenta administrada por el sistema de cortes-- para tener una audiencia, sin embargo esto no es muy común."
 
@@ -100,7 +100,7 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 "Recibí un papel o un documento de mi casero diciendo que debo dejar la vivienda. ¿Qué significa esto en realidad?"
 
-"<img src='vacate_notice.jpg' alt='A notice to vacate letter' />"
+"<img class='d-none' src='vacate_notice.jpg' alt='A notice to vacate letter' />"
 
 "Una notificación de desalojo o “notice to vacate” en inglés es el primer paso de un proceso que puede durar semanas o incluso meses. La mayoría de los estados requieren que los caseros le entreguen un aviso de su intención de comenzar el proceso de desalojo en la corte. Dependiendo de las leyes estatales o locales, usted podría tener derecho a resolver los problemas planteados en la notificación y evitar un desalojo. Esto se le llama “right to cure” en inglés."
 

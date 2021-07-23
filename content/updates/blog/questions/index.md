@@ -101,7 +101,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "I got a paper from my landlord saying that I have to leave. What does this actually mean?"
 
-"<img src='vacate_notice.jpg' alt='A notice to vacate letter' />"
+"<img class='d-none' src='vacate_notice.jpg' alt='A notice to vacate letter' />"
 
 "A “notice to vacate” is the first step in a process that can last weeks or even months. Most states require landlords to give you a notice of their intent to file an eviction. Depending on your state and local law, you may have a right to address any issues cited in the notice and avoid an eviction case. This is called the “right to cure.” "
 
