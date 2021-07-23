@@ -1,8 +1,10 @@
 ---
+draft: false
 childof: blog
 contenttype: updates
 contentcat: blog
 featured: true
+in_index: true
 researchtype: elresearch
 title: 'Preguntas y respuestas sobre desalojos y el final de la moratoria de los CDC'
 date: 2021-07-20T16:46:40.089Z
@@ -10,12 +12,12 @@ postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: What to know if you are facing eviction, or want to help.
+listSummary: What to know if you are facing eviction, or want to help.
 socialDescription: What to know if you are facing eviction, or want to help. 
-fbImage: 'eviction-notice-door.jpg'
-twImage: 'eviction-notice-door.jpg'
+fbImage: 'GettyImages-1279347616.jpg'
+twImage: 'GettyImages-1279347616.jpg'
 url: /preguntas
-image: eviction-notice-door-crop.jpg
-aliases:
+image: GettyImages-1279347616.jpg
 ---
 
 La pandemia del COVID-19 ha generado tremendas dificultades para cientos de miles de personas a la hora de pagar la renta y mantener su vivienda. En el Eviction Lab, creemos que todos se merecen un hogar, especialmente durante una emergencia como esta. 

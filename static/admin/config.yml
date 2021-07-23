@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: EvictionLab/eviction-lab-website
-  branch: staging
+  branch: end-of-moratorium-faq
 
 # FOR LOCAL DEVELOPMENT:
 # ---
@@ -435,7 +435,8 @@ collections:
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog posts" # Used in the UI
-    folder: "/content/updates/blog" # The path to the folder where the documents are stored
+    folder: "/content/updates/blog/" # The path to the folder where the documents are stored
+    path: '{{slug}}/index.md'
     create: true # Allow users to create new documents in this collection
     extension: md
     editor:

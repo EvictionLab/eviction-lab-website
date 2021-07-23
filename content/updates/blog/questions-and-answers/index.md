@@ -1,4 +1,5 @@
 ---
+draft: false
 childof: blog
 contenttype: updates
 contentcat: blog
@@ -11,12 +12,12 @@ postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: What to know if you are facing eviction, or want to help.
+description: What to know if you are facing eviction, or want to help.
 socialDescription: What to know if you are facing eviction, or want to help. 
-fbImage: 'eviction-notice-door.jpg'
-twImage: 'eviction-notice-door.jpg'
+fbImage: 'GettyImages-1279347616.jpg'
+twImage: 'GettyImages-1279347616.jpg'
 url: /questions
-image: eviction-notice-door-crop.jpg
-aliases:
+image: GettyImages-1279347616.jpg
 ---
 
 The COVID-19 pandemic has made it difficult for hundreds of thousands of people to pay rent and stay housed. At the Eviction Lab, we believe that everyone deserves a place to call home, especially during an emergency like this. 
