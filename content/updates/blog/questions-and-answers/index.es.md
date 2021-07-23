@@ -11,9 +11,9 @@ date: 2021-07-20T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: What to know if you are facing eviction, or want to help.
-listSummary: What to know if you are facing eviction, or want to help.
-socialDescription: What to know if you are facing eviction, or want to help. 
+description: Lo que necesitas saber si estás enfrentando un desalojo o si quieres ayudar.
+listSummary: Lo que necesitas saber si estás enfrentando un desalojo o si quieres ayudar.
+socialDescription: Lo que necesitas saber si estás enfrentando un desalojo o si quieres ayudar.
 fbImage: 'GettyImages-1279347616.jpg'
 twImage: 'GettyImages-1279347616.jpg'
 url: /preguntas
