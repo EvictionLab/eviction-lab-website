@@ -12,7 +12,6 @@ postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: What to know if you are facing eviction, or want to help.
-description: What to know if you are facing eviction, or want to help.
 socialDescription: What to know if you are facing eviction, or want to help. 
 fbImage: 'GettyImages-1279347616.jpg'
 twImage: 'GettyImages-1279347616.jpg'
