@@ -1,0 +1,31 @@
+{{ partial "header" . }}
+<div class="row pt-6">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto">
+        <h1 class="mb-2">{{ .Params.h1 }}</h1>
+        <p>{{ .Params.intro }}</p>
+    </div>
+</div>
+{{ range .Params.galleries }}
+    <div class="row alt-bg"> 
+        {{ range .gallery }}
+            <h2 class="w-100 mx-2 mt-6 mb-0  text-center">{{ .h2 }}</h2>
+            <div class="col-12 col-md-10 col-xxxl-8 mx-auto d-flex flex-wrap">
+                {{ range .images }}
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                        <a href="{{ .img }}">
+                            <img src="{{ .img }}" alt="" style="width:100%">
+                            <div class="caption">
+                            <p class="text-center">{{ .caption }}</p>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                {{ end }}    
+            </div>    
+        {{ end }}
+    </div>
+{{ end }}
+
+
+{{ partial "footer" . }}
