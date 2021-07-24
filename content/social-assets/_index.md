@@ -1,8 +1,8 @@
 ---
 draft: false
 cascade:
-  title: Code and Data for Demographics of Eviction
-  description: Get the data for demographics of eviction.
+  title: Social Media Assets
+  description: A gallery of shareable images from the Eviction Lab.
   fbImage: 
   twImage: 
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
