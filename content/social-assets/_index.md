@@ -12,7 +12,7 @@ h1: Eviction Lab Social Media Assets
 intro: Please feel free to use the assets below to spread the word on social media.
 galleries:
   - gallery: 
-    - h2: Questions and Answers About Eviction as the CDC Moratorium ends
+    - h2: End of CDC Moratorium FAQ
     - images:
       - img: messaging_whatsapp_esp.png
         caption: Whatsapp Messenger (Espanol)
