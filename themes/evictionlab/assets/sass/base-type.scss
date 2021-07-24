@@ -23,10 +23,13 @@ body {
   }
 
   h2 {
+    font-family: GT-Eesti-Display-Bold, sans-serif;
+    font-size: 3.2rem;
     &.page-section-header {
       color: $color2;
     }
   }
+
   
   h3 {
     @include altFont(1.6rem);

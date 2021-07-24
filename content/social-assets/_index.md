@@ -9,7 +9,7 @@ cascade:
 date: 2020-11-17T00:00:00.000Z
 layout: social
 h1: Eviction Lab Social Media Assets
-intro: Please feel free to use these assets to spread the word on social media.
+intro: Please feel free to use the assets below to spread the word on social media.
 galleries:
   - gallery: 
     - h2: Questions and Answers About Eviction as the CDC Moratorium ends
