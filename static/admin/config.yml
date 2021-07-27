@@ -1,7 +1,7 @@
 backend:
  name: github
  repo: EvictionLab/eviction-lab-website
- branch: end-of-moratorium-faq
+ branch: staging
  
 # FOR LOCAL DEVELOPMENT:
 # ---

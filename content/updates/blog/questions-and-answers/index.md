@@ -23,6 +23,8 @@ The COVID-19 pandemic has made it difficult for hundreds of thousands of people 
 
 The following is a guide with some of the most relevant questions that tenants could have as the eviction protections lapse. We are encouraging everyone to learn about your rights in court, apply to rental assistance and search for legal counsel.
 
+_Note: this page is intended to provide general information and does not constitute legal advice. Please consult an attorney barred in your state for advice about a specific legal matter._
+
 <br/>
 
 
@@ -103,15 +105,15 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "<img class='d-none' src='vacate_notice.jpg' alt='A notice to vacate letter' />"
 
-"A “notice to vacate” is the first step in a process that can last weeks or even months. Most states require landlords to give you a notice of their intent to file an eviction. Depending on your state and local law, you may have a right to address any issues cited in the notice and avoid an eviction case. This is called the “right to cure.” "
+"A “notice to vacate” is the first step in a process that can last weeks or even months. Most states require landlords to give you a notice of their intent to file an eviction. States have different requirements for what a notice to vacate looks like: it might be a piece of paper taped on the door or sent by certified mail, or your landlord might contact you in person or over the phone to let you know that they intend to file an eviction case against you. Depending on your state and local law, you may have a right to address any issues cited in the notice and avoid an eviction case. This is called the “right to cure.” "
 
 "<img class='d-none d-md-block my-5' src='/img/stages-of-eviction-landscape.png' alt='The stages of eviction' />"
 
 "<img class='d-block d-md-none' src='/img/stages-of-eviction-portrait.png' alt='The stages of eviction' />"
 
-"After delivering the notice of eviction and waiting a certain period of time, which varies by state, the landlord typically files an eviction case in court and the court serves the renter with a summons for a hearing. During the hearing, renters can raise defenses to the eviction. Depending on the state or municipality, defenses might include:"
+"After delivering the notice of eviction and waiting a certain period of time, which varies by state, the landlord typically files an eviction case in court and the court serves the renter with a summons for a hearing. During the hearing, renters can raise defenses to the eviction. Defenses vary based on where you live, so it's important to talk to a legal aid provider to find out what defenses exist in your city."
 
-"<ul><li>Problems with the notice or summons. If the notice or summons were served incorrectly--for example if the landlord did not wait for the whole notice period before filing to evict the renter--the case might be dismissed.</li><li>Uninhabitable conditions. In some states and cities, tenants have a right to withhold rent if their home has major problems, like not having heat.</li><li>Retaliation. In some states, landlords are legally prohibited from evicting a tenant after the tenant reports problems with the unit to the city or town.</li><li>Coverage under a moratorium.</li><li>The landlord has received rental assistance or a late rental payment, so the tenant no longer owes late rent.</li></ul>"
+"<ul class='d-none'><li>Problems with the notice or summons. If the notice or summons were served incorrectly--for example if the landlord did not wait for the whole notice period before filing to evict the renter--the case might be dismissed.</li><li>Uninhabitable conditions. In some states and cities, tenants have a right to withhold rent if their home has major problems, like not having heat.</li><li>Retaliation. In some states, landlords are legally prohibited from evicting a tenant after the tenant reports problems with the unit to the city or town.</li><li>Coverage under a moratorium.</li><li>The landlord has received rental assistance or a late rental payment, so the tenant no longer owes late rent.</li></ul>"
 
 "If the judge decides in favor of the landlord, the judge may issue a writ of possession. Renters can appeal the decision, leave the property, or wait until the sheriff or other party executes the writ by removing the renters’ possessions out of the unit. "
 
