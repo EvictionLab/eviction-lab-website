@@ -115,7 +115,7 @@ _Note: this page is intended to provide general information and does not constit
 
 "<ul class='d-none'><li>Problems with the notice or summons. If the notice or summons were served incorrectly--for example if the landlord did not wait for the whole notice period before filing to evict the renter--the case might be dismissed.</li><li>Uninhabitable conditions. In some states and cities, tenants have a right to withhold rent if their home has major problems, like not having heat.</li><li>Retaliation. In some states, landlords are legally prohibited from evicting a tenant after the tenant reports problems with the unit to the city or town.</li><li>Coverage under a moratorium.</li><li>The landlord has received rental assistance or a late rental payment, so the tenant no longer owes late rent.</li></ul>"
 
-"If the judge decides in favor of the landlord, the judge may issue a writ of possession. Renters can appeal the decision, leave the property, or wait until the sheriff or other party executes the writ by removing the renters’ possessions out of the unit. "
+"If the judge decides in favor of the landlord, the judge may issue a writ of possession. Renters can appeal the decision, leave the property, or wait until the sheriff or other party executes the writ by removing the renters’ possessions out of the unit."
 
 
 >}} 

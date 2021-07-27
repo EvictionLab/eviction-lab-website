@@ -24,6 +24,8 @@ La pandemia del COVID-19 ha generado tremendas dificultades para cientos de mile
 
 La siguiente es una guía con algunas de las más relevantes preguntas que los inquilinos podrían tener en el momento que las protecciones contra el desalojo empiezan a expirar. Llamamos a todos a aprender sobre sus derechos en la corte, postular a asistencia de renta y buscar apoyo legal. 
 
+_Este sitio web tiene como intención entregar información general sobre políticas de desalojos y no constituye ayuda legal. Por favor consulte con un abogado en su estado para consejos sobre materias legales específicas._
+
 <br/>
 
 ### ¿Qué esperar de un proceso de desalojo?
@@ -104,17 +106,21 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 "<img class='d-none' src='vacate_notice.jpg' alt='A notice to vacate letter' />"
 
-"Una notificación de desalojo o “notice to vacate” en inglés es el primer paso de un proceso que puede durar semanas o incluso meses. La mayoría de los estados requieren que los caseros le entreguen un aviso de su intención de comenzar el proceso de desalojo en la corte. Dependiendo de las leyes estatales o locales, usted podría tener derecho a resolver los problemas planteados en la notificación y evitar un desalojo. Esto se le llama “right to cure” en inglés."
+"Una notificación de desalojo o “notice to vacate” en inglés es el primer paso de un proceso que puede durar semanas o incluso meses. La mayoría de los estados requieren que los caseros le entreguen un aviso de su intención de comenzar el proceso de desalojo en la corte."
 
 "<img class='d-none d-md-block my-5' src='five-stages-eviction-esp-landscape.png' alt='The stages of eviction' />"
 
 "<img class='d-block d-md-none' src='five-stages-eviction-esp-portrait.png' alt='The stages of eviction' />"
 
-"Luego de entregar esta notificación y esperar un periodo de tiempo, el que varía en cada estado, el casero normalmente debe presentar el caso en la corte y la corte le entregará una citación al inquilino para una audiencia. Durante la audiencia, los inquilinos pueden explicar su defensa. Dependiendo del estado o la localidad, estas son algunas posibles defensas:"
+"Cada estado tiene diferentes requerimientos sobre lo cómo se hace una notificación de desalojo: puede ser un papel pegado en su puerta; puede ser una carta enviada por correo certificado; puede que su casero tenga que contactarlo en persona; o puede que lo contacte por teléfono para notificarlo que intentará comenzar un caso de desalojo en su contra."
 
-"<ul><li>Problemas con la notificación o las citaciones. Si la notificación o las citaciones fueron presentadas incorrectamente --por ejemplo, el casero esperó el periodo de tiempo requerido por la ley-- el caso podría ser desestimado.</li><li>Condiciones inhabitables de la vivienda. En algunos estados y ciudades, los inquilinos tienen derecho a suspender el pago de su renta si es que la vivienda tiene problemas importantes, como no tener calefacción.</li><li>Represalias. En algunos estados está prohibido por ley que los caseros desalojen a alguien luego de que el inquilino reporte problemas con su vivienda a la ciudad o municipalidad.</li><li>Ciertas protecciones de una moratoria.</li><li>El casero ya ha recibido asistencia de renta, por lo que el inquilino ya no debe la renta.</li></ul>"
+"<ul class='d-none'><li>Problemas con la notificación o las citaciones. Si la notificación o las citaciones fueron presentadas incorrectamente --por ejemplo, el casero esperó el periodo de tiempo requerido por la ley-- el caso podría ser desestimado.</li><li>Condiciones inhabitables de la vivienda. En algunos estados y ciudades, los inquilinos tienen derecho a suspender el pago de su renta si es que la vivienda tiene problemas importantes, como no tener calefacción.</li><li>Represalias. En algunos estados está prohibido por ley que los caseros desalojen a alguien luego de que el inquilino reporte problemas con su vivienda a la ciudad o municipalidad.</li><li>Ciertas protecciones de una moratoria.</li><li>El casero ya ha recibido asistencia de renta, por lo que el inquilino ya no debe la renta.</li></ul>"
 
-"Si el juez decide el caso a favor del casero, el juez puede emitir una orden de desalojo o “writ of possession” en inglés.  Los inquilinos pueden apelar a la decisión, dejar la propiedad o esperar hasta que un alguacil u otro funcionario ejecute el desalojo, retirando las posesiones del inquilino de la vivienda. "
+"Dependiendo de las leyes estatales o locales, usted podría tener derecho a resolver los problemas planteados en la notificación y evitar un desalojo. Esto se le llama “right to cure en inglés."
+
+"Luego de entregar esta notificación y esperar un periodo de tiempo, el que varía en cada estado, el casero normalmente debe presentar el caso en la corte y la corte le entregará una citación al inquilino para una audiencia. Durante la audiencia, los inquilinos pueden explicar su defensa. Sus argumentos para la defensa dependen de donde usted viva, por lo que es importante hablar con un proveedor de apoyo legal para encontrar qué argumentos sirven en su ciudad."
+
+"Si el juez decide el caso a favor del casero, el juez puede emitir una orden de desalojo o “writ of possession” en inglés.  Los inquilinos pueden apelar a la decisión, dejar la propiedad o esperar hasta que un alguacil u otro funcionario ejecute el desalojo, retirando las posesiones del inquilino de la vivienda."
 
 
 >}} 
