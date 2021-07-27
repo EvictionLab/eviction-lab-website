@@ -41,7 +41,7 @@ _Note: this page is intended to provide general information and does not constit
 
 "Across the country, renters also have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond--pay the rent that they owe to an account held by the court system--to get a hearing."
 
-"There are at least four states—New Jersey, New York, Hawaii, Vermont and, also the District of Columbia among them—that have their own moratoria in place."
+"There are at least three states—New Jersey, New York, Hawaii, and also the District of Columbia among them—that have their own moratoria in place."
 
 "Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up to date information. More legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. More legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>our sister website Just Shelter</a>."
 
