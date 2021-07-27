@@ -19,3 +19,4 @@ Disallow: /epidemic
 Disallow: /what-home-means
 Disallow: /analytics-reporting
 Disallow: /analytics-reporting/
+Disallow: /social-assets/
