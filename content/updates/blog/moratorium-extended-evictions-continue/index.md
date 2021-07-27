@@ -3,7 +3,6 @@ childof: blog
 contenttype: updates
 contentcat: blog
 featured: true
-researchtype: elresearch
 title: "Federal Moratorium Extended, but Eviction Filings Continue"
 date: 2021-02-09T16:46:40.089Z
 postauthorname: Anne Kat Alexander and Alieza Durana 

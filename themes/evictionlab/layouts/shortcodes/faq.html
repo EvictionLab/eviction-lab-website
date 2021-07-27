@@ -1,0 +1,16 @@
+<div class="accordion-section">
+    <a class="collapsed" data-toggle="collapse" href="#{{ index .Params 0 }}" aria-expanded="false" aria-controls="collapseExample">
+       <span>{{ index .Params 1 }}</span>
+       <i class="fa fa-chevron-up"></i>
+     </a>
+  <div class="answer collapse" id="{{ index .Params 0 }}">
+    {{ range (seq 2 (sub (len .Params) 1) ) }}
+    <p>
+        {{ $myArg := $.Get . }}
+        {{ print $myArg | safeHTML | markdownify }}
+    </p>    
+      {{ end }}
+    
+</div>
+</div>
+<hr />
