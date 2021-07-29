@@ -240,8 +240,9 @@
   <div class="d-block" id="updates-section">
     <div class="row mx-0 subfeature-panel pt-6 pb-4 py-md-8 py-xl-9 pl-md-1 pl-lg-0">
       <div class="col-12 col-md-10  col-lg-12 px-lg-5 col-xl-10 px-xl-2 col-xxxl-9 mx-auto mx-auto d-flex flex-wrap">
-        <div class="col-12 pl-0 mb-4 mb-lg-6 d-flex">
-          <img class="mr-1 mr-lg-2 mt-1 mt-md-0 header-icon" alt="" src="/images/icons/reporting-icon.svg"><h2 class="">Reporting From Our Partners</h2>
+        <div class="col-12 px-0 mb-4 mb-lg-6 d-flex flex-column flex-md-row align-items-center">
+          <img class="mr-1 mr-md-2 mt-1 mt-md-0 header-icon mb-2 mb-md-0" alt="" src="/images/icons/reporting-icon.svg">
+          <h2 class="text-center text-md-left">Reporting From Our Partners</h2>
         </div>
         <div class="updates-section__entry1 col-12 col-lg-7 d-block px-0 mb-2 mb-lg-6 mb-xl-8">
           {{ range first 1 (where (where .Site.RegularPages "Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
@@ -317,7 +318,7 @@
               </div>
           {{ end }}
           <div class="col-12 px-0 px-lg-2">
-            <a class="sublink mw-100 mb-2 mb-md-0 mt-3 d-block px-0 px-lg-2" href="/updates/reporting">SEE ALL ARTICLES <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+            <a class="sublink mw-100 d-block text-center text-md-left mb-2 mb-md-0 mt-4 mt-lg-3  px-0 px-lg-2" href="/updates/reporting">SEE ALL ARTICLES <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
           </div> 
         </div>         
       </div>
