@@ -294,6 +294,9 @@ $alt-bg: #F4F7F9;
       // tr:nth-child(4n) {
       //   background: #F5F9FF;
       // }
+      p {
+        color: #565656;
+      }
       tr:nth-child(6n-1),
       tr:nth-child(6n-2),
       tr:nth-child(6n) {
@@ -687,6 +690,9 @@ $alt-bg: #F4F7F9;
           }
         }
         &.state-details {
+          p.state-full {
+           max-width: 656px;
+          }
           td {
             padding: 0 0 0 0.5rem;
             @include media-breakpoint-up(md) {
@@ -817,7 +823,8 @@ $alt-bg: #F4F7F9;
                 label {
                   font-size: 1.6rem;
                   margin-bottom: 0.8rem;
-                  color: #8A8A8A;
+                  //color: #8A8A8A;
+                  color: #565656;
                   font-family: Akkurat-Regular, sans-serif;
                   &:before {
                     content: '';
@@ -976,7 +983,7 @@ $alt-bg: #F4F7F9;
           // Styles for when complete details for state are shown.
           &.details-full {
             .state-details-list {
-              max-height: 1500px;
+              max-height: 1670px;
               overflow-y: hidden;
               transition: max-height 200ms linear;
             }

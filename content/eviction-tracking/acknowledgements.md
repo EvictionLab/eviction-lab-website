@@ -9,13 +9,15 @@ cascade:
   socialDescription: Real time eviction tracking in U.S. cities during COVID-19.
 h1: Acknowledgements
 layout: content
-date: 2020-06-12T00:00:00.000Z
+date: 2021-07-07T00:00:00.000Z
 similar: >-
   # Similar Resources
 
 
   A number of other groups and organizations have, in response to the COVID-19 pandemic, produced systems to track eviction filings in real-time. 
 
+
+  * Legal Services Corporation (LSC) has built an [eviction tracker with filing data on several states and hundreds of counties](https://www.lsctracker.org/summary). 
 
   * The Open Justice Oklahoma has developed the [Oklahoma Court Tracker](https://openjusticeok.shinyapps.io/ok-court-tracker/#section-tool-by-open-justice-oklahoma), which counts evictions and foreclosures filed across the state of Oklahoma since March 15th, 2020.
 
@@ -37,13 +39,17 @@ similar: >-
 ---
 # Acknowledgements
 
-We would like to thank representatives of the following organizations for speaking with us as we developed the Eviction Tracking System. They were invaluable in providing context around these data.
+We would like to thank representatives of the following organizations, many of whom spoke with us as we developed the Eviction Tracking System. They were invaluable in collecting and providing context around these data. 
 
 * [Arch City Defenders](https://www.archcitydefenders.org/)
 * [BASTA Austin](http://www.bastaaustin.org/)
+* [Child Poverty Action Lab](https://childpovertyactionlab.org/)
 * [CMU CREATE Lab](https://www.cmucreatelab.org/home)
 * [Community Advocates](https://communityadvocates.net/)
 * [Community Legal Services of Arizona](https://clsaz.org/)
+* [Connecticut Fair Housing Center](https://www.ctfairhousing.org/)
+* [Davida Finger](https://law.loyno.edu/academics/faculty-and-staff-directory/davida-finger), Loyola University New Orleans College of Law
+* Drew Nolan, [Alachua County Labor Coalition](https://laborcoalition.org/)
 * Elaina Johns-Wolfe
 * [Eviction Defense Project](https://www.legalaction.org/services/eviction-defense-project-milwaukee), Legal Action of Wisconsin
 * [Fair Housing Partnership of Greater Pittsburgh](https://fhp.org/)
@@ -53,9 +59,11 @@ We would like to thank representatives of the following organizations for speaki
 * [Hamilton County, OH Clerk of Courts](https://www.courtclerk.org/general-information/about-the-clerk/meet-aftab-pureval/)
 * [Harvard Legal Aid Bureau](https://hls.harvard.edu/dept/clinical/clinics/harvard-legal-aid-bureau/)
 * [Heartland Center for Jobs and Freedom](http://www.jobsandfreedom.org/)
+* [Housing Data Coalition](https://www.housingdatanyc.org/)
 * [Housing Opportunities Made Equal Cincinnati](https://homecincy.org/)
 * [Indiana Legal Services, Inc.](https://www.indianalegalservices.org/)
 * [Jacksonville Area Legal Aid](https://www.jaxlegalaid.org/)
+* Jonathan Pyle, [Philadelphia Legal Assistance](https://philalegal.org/)
 * [Katy Ramsey, The University of Memphis School of Law](https://www.memphis.edu/law/faculty-staff/katy_ramsey.php)
 * [Legal Aid Society of Cleveland](https://lasclev.org/)
 * [Legal Aid Society of Columbus](https://www.columbuslegalaid.org/)
@@ -64,6 +72,7 @@ We would like to thank representatives of the following organizations for speaki
 * [Legal Aid of Southwest Ohio](http://www.lasswo.org/)
 * [Legal Services of Eastern Missouri](https://lsem.org/)
 * [Lone Star Legal Aid](https://lonestarlegal.blog/)
+* [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/)
 * [Massachusetts Law Reform Institute](https://www.mlri.org/)
 * [Mediate Milwaukee](http://mediatewisconsin.com/)
 * Milwaukee Rental Housing Stability Coalition

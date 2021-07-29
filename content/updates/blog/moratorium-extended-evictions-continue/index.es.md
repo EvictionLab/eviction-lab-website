@@ -4,67 +4,69 @@ contenttype: updates
 contentcat: blog
 featured: true
 researchtype: elresearch
-title: "Federal Moratorium Extended, but Eviction Filings Continue"
+title: "Se extendió la moratoria federal, pero continúan las presentaciones de desalojo"
 date: 2021-02-09T16:46:40.089Z
 postauthorname: Anne Kat Alexander and Alieza Durana 
-postauthortitle: The Eviction Lab
-listSummary: In September 2020, the Centers for Disease Control and Prevention issued an order that temporarily halts some evictions as a public health strategy to stop the spread of COVID-19. Because eviction and the threat of eviction lead to overcrowded living environments as families “double up” in rental units or enter shelters, eviction is associated with an increased risk of COVID-19 infection, transmission, and death. This order halting some evictions is currently in effect until June 30, 2021.
+postauthortitle: El Laboratorio de Desalojos
+listSummary: En septiembre de 2020, los Centros para el Control y la Prevención de Enfermedades emitieron una orden que detiene temporalmente algunos desalojos como estrategia de salud pública para detener la propagación del COVID-19. Debido a que el desalojo y la amenaza de desalojo conducen a entornos de vida superpoblados cuando las familias se “duplican” en las unidades de alquiler o ingresan a los refugios, el desalojo se asocia con un mayor riesgo de infección, transmisión y muerte de COVID-19. Esta orden que detiene algunos desalojos está actualmente en vigor hasta el 31 de julio de 2021.
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Get the latest news and understand your rights.
-socialDescription: Get the latest news and understand your rights.
-image: moratorium-extension-6-30.jpeg
-fbImage: moratorium-extension-6-30.jpeg
-twImage: moratorium-extension-6-30.jpeg
-url: '/moratorium-extended-evictions-continue/'
+description: Reciba las últimas noticias y comprenda sus derechos.
+socialDescription: Reciba las últimas noticias y comprenda sus derechos.
+image: moratorium-extension-7-31.jpg
+fbImage: moratorium-extension-7-31.jpg
+twImage: moratorium-extension-7-31.jpg
+url: '/es/moratorium-extended-evictions-continue/'
 aliases:
 ---
 
-<h3>What is the CDC temporary eviction moratorium? </h3>
+<h3>¿QUÉ ES LA MORATORIA DE DESALOJO TEMPORAL DE LOS CDC?</h3>
 
 <br />
-In September 2020, the Centers for Disease Control and Prevention issued {{< extlink "an order" "https://www.federalregister.gov/documents/2020/09/04/2020-19654/temporary-halt-in-residential-evictions-to-prevent-the-further-spread-of-covid-19" >}} that temporarily halts some evictions as a public health strategy to stop the spread of COVID-19. Because eviction and the threat of eviction lead to overcrowded living environments as families "double up" in rental units or enter shelters, eviction is {{< extlink "associated with an increased risk of COVID-19" "https://link.springer.com/article/10.1007/s11524-020-00502-1" >}} infection, transmission, and death. This order halting some evictions is currently in effect until <strong>June 30, 2021</strong>.
+En septiembre de 2020, los Centros para el Control y la Prevención de Enfermedades emitieron {{< extlink "una orden" "https://www.federalregister.gov/documents/2020/09/04/2020-19654/temporary-halt-in-residential-evictions-to-prevent-the-further-spread-of-covid-19" >}} que detiene temporalmente algunos desalojos como estrategia de salud pública para detener la propagación del COVID-19. Debido a que el desalojo y la amenaza de desalojo conducen a entornos de vida superpoblados cuando las familias se “duplican” en las unidades de alquiler o ingresan a los refugios, {{< extlink "el desalojo se asocia con un mayor riesgo de infección, transmisión y muerte de COVID-19" "https://link.springer.com/article/10.1007/s11524-020-00502-1" >}}. Esta orden que detiene algunos desalojos está actualmente en vigor hasta el 31 de julio de 2021.
 
-The Eviction Lab last provided an <a href="https://evictionlab.org/federal-eviction-moratorium-update/">overview about the CDC order</a> in September 2020. The CDC order went into effect on September 4th, 2020, and originally was set to expire on December 31st, 2020. The CDC moratorium has been extended three times, once by Congress to January 31st, 2021, and again by the CDC to {{< extlink "March 31st, 2021" "https://www.cdc.gov/coronavirus/2019-ncov/covid-eviction-declaration.html" >}}, and most recently until June 30, 2021. 
+El Laboratorio de Desalojo proporcionó por <a href="https://evictionlab.org/federal-eviction-moratorium-update/">última vez una descripción general sobre la orden de los CDC</a> en septiembre de 2020. La orden de los CDC entró en vigencia el 4 de septiembre de 2020 y originalmente estaba programada para expirar el 31 de diciembre de 2020. La moratoria de los CDC se ha extendido cuatro veces, una por Congreso hasta el 31 de enero de 2021, y nuevamente por los CDC hasta el 31 de marzo de 2021, luego el 30 de junio y, más recientemente, hasta el 31 de julio de 2021.
 
-To be protected from eviction, renters must complete {{< extlink "this declaration" "https://www.cdc.gov/coronavirus/2019-ncov/downloads/EvictionDeclare_d508.pdf" >}} and provide it to their landlord or property manager. Each adult listed on the lease, rental agreement, or housing contract should complete the declaration. 
+Para estar protegido contra el desalojo, los inquilinos deben completar <a href="https://www.cdc.gov/coronavirus/2019-ncov/covid-eviction-declaration.html" target="_blank">esta declaración y proporcionársela al propietario o administrador de la propiedad. Cada adulto que figura en el contrato de arrendamiento, contrato de alquiler o contrato de vivienda debe completar la declaración.</p>
 
 
-<p style="text-align:center;"><strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/EvictionDeclare_d508.pdf" download target="_blank">Get the Tenant Declaration Form (PDF)</a></strong></p>
 
-Renters must meet certain requirements to be protected from eviction, which are listed on the declaration form. 
+<p style="text-align:center;"><strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/covid-eviction-declaration.html" download target="_blank">Obtenga el formulario de declaración del inquilino (PDF)</a></strong></p>
 
-But this declaration only prevents evictions where the tenant is behind on rent. The order includes multiple exceptions where eviction is permitted. 
+Los inquilinos deben cumplir con ciertos requisitos para estar protegidos contra el desalojo, que se enumeran en el formulario de declaración.
 
-<br/>
-
-### Why are evictions and eviction filings still <br class="d-none d-lg-block" />happening during the moratorium?
-<br/>
-
-Local housing courts have interpreted the CDC order differently across the country. In October, the CDC issued nonbinding {{< extlink "guidance" "https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf" >}} that landlords could _file_ to evict tenants, as long as other stages of the eviction process, for example issuing a _writ of eviction_ at the end of the case, are halted. 
-
-As a result, since September we have seen that various courts are implementing the CDC order differently: 
-
-* {{< extlink "In some places" "https://www.in.gov/courts/files/lttf-faqs-cdc-order.pdf" >}}, courts are not holding hearings for tenants who have provided a CDC declaration until after the CDC moratorium expires. 
-* Some states, {{< extlink "like Texas" "https://www.txcourts.gov/media/1450204/209161.pdf" >}}, require landlords to include a blank copy of the CDC moratorium declaration form when they give a tenant a notice to quit. 
-* {{< extlink "Elsewhere" "https://www.txcourts.gov/media/1450204/209161.pdf" >}}, judges have questioned the validity of CDC declaration forms provided by renters. 
-
-Preventing the final execution of an eviction order is important. However, allowing the full eviction court process to play out during the eviction moratorium will cause avoidable harm to tenants. Many tenants {{< extlink "may move out before the eviction case concludes" "https://www.usatoday.com/story/news/nation/2021/02/02/bidens-federal-eviction-moratorium-may-not-protect-all-renters/4300051001/" >}}, even if they would qualify for protection under the eviction moratorium. Data from before the pandemic show that {{< extlink "many tenants leave without the case going to court" "https://twitter.com/just_shelter/status/1354925182499102722" >}}, perhaps aware that the vast majority of cases end with decisions in the landlord's favor. At the same time, just the presence of a filing on a tenant's record {{< extlink "can prevent that tenant from accessing safe and healthy rental housing" "https://www.nytimes.com/2021/01/07/opinion/eviction-records-crisis.html" >}} in the future.
-
-Allowing the full case to play out during the moratorium does not benefit landlords, either. The landlord is not able to rent out the unit to a new tenant during the moratorium, and an eviction judgment could prevent tenants and landlords from accessing financial assistance that could address or clear the tenant's debt, like rental assistance grants. 
-
-Despite the fact that this moratorium is federal law and applies to all parts of the country that do not have more comprehensive eviction moratoria in place already, not all renters are equally protected from the harms of eviction filings and eviction. 
+Pero esta declaración solo evita los desalojos cuando el inquilino está atrasado en el alquiler. La orden incluye múltiples excepciones donde se permite el desalojo.
 
 <br/>
 
-### How could the moratorium be more effective?
+### ¿POR QUÉ SE SIGUEN PRODUCIENDO DESALOJOS Y SOLICITUDES DE DESALOJO DURANTE LA MORATORIA?
+<br/>
+
+Los tribunales de vivienda locales han interpretado la orden de los CDC de manera diferente en todo el país. En octubre, el CDC emitió una <a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf" target="_blank">guía</a> no vinculante que los propietarios podían presentar para desalojar a los inquilinos, siempre y cuando se detuvieran otras etapas del proceso de desalojo, por ejemplo, emitir una orden de desalojo al final del caso.
+
+Como resultado, desde septiembre hemos visto que varios tribunales están implementando la orden de los CDC de manera diferente:
+
+* {{< extlink "En algunos lugares" "https://www.in.gov/courts/files/lttf-faqs-cdc-order.pdf" >}}, los tribunales no celebran audiencias para los inquilinos que han proporcionado una declaración de los CDC hasta después de que expire la moratoria de los CDC.
+* Algunos estados, {{< extlink "como Texas" "https://www.txcourts.gov/media/1450204/209161.pdf" >}}, requieren que los propietarios incluyan una copia en blanco del formulario de declaración de moratoria de los CDC cuando le dan a un inquilino un aviso para que renuncie. 
+* {{< extlink "En otros lugares" "https://www.txcourts.gov/media/1450204/209161.pdf" >}}, los jueces han cuestionado la validez de los formularios de declaración de los CDC proporcionados por los inquilinos.
+
+Es importante prevenir la ejecución final de una orden de desalojo. Sin embargo, permitir que se desarrolle todo el proceso judicial de desalojo durante la moratoria de desalojo causará daños evitables a los inquilinos. Muchos inquilinos {{< extlink "pueden mudarse antes de que concluya el caso de desalojo" "https://www.usatoday.com/story/news/nation/2021/02/02/bidens-federal-eviction-moratorium-may-not-protect-all-renters/4300051001/" >}}, incluso si califican para la protección bajo la moratoria de desalojo. Los datos anteriores a la pandemia muestran que {{< extlink " muchos inquilinos se van sin que el caso llegue a los tribunales" "https://twitter.com/just_shelter/status/1354925182499102722" >}}, tal vez conscientes de que la gran mayoría de los casos terminan con decisiones a favor del propietario. Al mismo tiempo, la mera presencia de una presentación en el registro de un inquilino {{< extlink "puede evitar que ese inquilino acceda a viviendas de alquiler seguras y saludables" "https://www.nytimes.com/2021/01/07/opinion/eviction-records-crisis.html" >}} en el futuro.
+
+Permitir que el caso completo se desarrolle durante la moratoria tampoco beneficia a los propietarios. El arrendador no puede alquilar la unidad a un nuevo inquilino durante la moratoria, y una sentencia de desalojo podría evitar que los inquilinos y los propietarios accedan a asistencia financiera que podría abordar o eliminar la deuda del inquilino, como subvenciones de asistencia para el alquiler.
+
+A pesar de que esta moratoria es una ley federal y se aplica a todas las partes del país que aún no tienen una moratoria de desalojo más completa, no todos los inquilinos están igualmente protegidos de los daños de las solicitudes de desalojo y el desalojo.
+
+<br/>
+
+### ¿CÓMO PODRÍA SER MÁS EFICAZ LA MORATORIA?
+
 <br />
-To be more effective at preventing renters from getting kicked out of their homes during the pandemic, a federal eviction moratorium must:
+Para ser más eficaz en evitar que los inquilinos sean expulsados ​​de sus hogares durante la pandemia, una moratoria federal de desalojo debe:
 
-* <strong>Prevent all stages of the eviction process</strong>, including filing an eviction case. <a href="https://evictionlab.org/moratoria-and-filings/">Eviction Lab research</a> has shown that local moratoria are more effective at preventing eviction cases when they block earlier stages of the eviction process.
-* <strong>Apply to all eviction cases</strong>, not just nonpayment of rent. In some courts, landlords can still evict tenants by refusing to renew a tenant's lease. Because the pandemic response in the U.S. has been ongoing for nearly a year, many leases are expiring. Landlords should not have the option of allowing a lease to lapse in order to evict a tenant who would otherwise qualify for protection under the CDC eviction moratorium.
-* <strong>Provide financial assistance</strong>—for example, rental assistance—that ensures landlords receive the rent money that their tenants cannot pay during this crisis, and that renters are not stuck with an unpayable bill at the end of the eviction moratorium. Research from groups like the {{< extlink "National Low Income Housing Coalition" "https://nlihc.org/sites/default/files/response-to-corona_2021.pdf" >}} and the {{< extlink "Urban Institute" "https://www.urban.org/urban-wire/price-tag-keeping-29-million-families-their-homes-162-billion" >}} indicates that the $25 billion that Congress recently passed for rental assistance will be far too little to keep families housed as this crisis continues. 
+* <strong>Evitar todas las etapas del proceso de desalojo</strong>, incluida la presentación de un caso de desalojo. <a href="https://evictionlab.org/moratoria-and-filings/">La investigación de Eviction Lab</a> ha demostrado que las moratorias locales son más efectivas para prevenir casos de desalojo cuando bloquean las etapas anteriores del proceso de desalojo.
+* <strong>Aplicar a todos los casos de desalojo</strong>, no solo a la falta de pago del alquiler. En algunos tribunales, los propietarios aún pueden desalojar a los inquilinos negándose a renovar el contrato de arrendamiento. Debido a que la respuesta a la pandemia en los EE. UU. Ha estado en curso durante casi un año, muchos contratos de arrendamiento están venciendo. Los propietarios no deben tener la opción de permitir que un contrato de arrendamiento caduque para desalojar a un inquilino que de otra manera calificaría para protección bajo la moratoria de desalojo de los CDC.
+* <strong>Brindar asistencia financiera</strong>—fpor ejemplo, asistencia para el alquiler, que garantice que los propietarios reciban el dinero del alquiler que sus inquilinos no pueden pagar durante esta crisis y que los inquilinos no se queden con una factura impagable al final de la moratoria de desalojo. La investigación de grupos como la {{< extlink "Coalición Nacional de Vivienda para Personas de Bajos Ingresos" "https://nlihc.org/sites/default/files/response-to-corona_2021.pdf" >}} y el {{< extlink "Instituto Urbano" "https://www.urban.org/urban-wire/price-tag-keeping-29-million-families-their-homes-162-billion" >}} indica que los $ 25 mil millones que el Congreso aprobó recientemente para asistencia de alquiler serán demasiado poco para mantener a las familias alojadas mientras esta crisis continúa.
 
-The Eviction Lab will continue to update our <a href="https://evictionlab.org/covid-policy-scorecard/">COVID-19 Housing Policy Scorecard</a>, which tracks statewide housing policies, and <a href="https://evictionlab.org/covid-eviction-policies/">COVID-19 Policies Table</a>, which includes information about local orders, to keep renters informed about what policies exist in their states in addition to the CDC moratorium. {{< extlink "The National Low Income Housing Coalition" "https://nlihc.org/coronavirus-and-housing-homelessness" >}} and {{< extlink "National Housing Law Project" "https://www.nhlp.org/campaign/protecting-renter-and-homeowner-rights-during-our-national-health-crisis-2/" >}} will also continue to provide updates on housing amidst the pandemic.
+El Laboratorio de Desalojos continuará actualizando nuestra <a href="https://evictionlab.org/covid-policy-scorecard/">Tarjeta de puntuación de políticas de vivienda COVID-19</a>, que rastrea las políticas de vivienda en todo el estado, y la <a href="https://evictionlab.org/covid-eviction-policies/">Tabla de políticas COVID-19</a>, que incluye información sobre las órdenes locales, para mantener informados a los inquilinos sobre las políticas que existen en sus estados, además de la Moratoria de los CDC. {{< extlink "La Coalición Nacional de Vivienda para Personas de Bajos Ingresos" "https://nlihc.org/coronavirus-and-housing-homelessness" >}} and {{< extlink " el Proyecto de Ley Nacional de Vivienda" "https://www.nhlp.org/campaign/protecting-renter-and-homeowner-rights-during-our-national-health-crisis-2/" >}} también continuarán proporcionando actualizaciones sobre viviendas en medio de la pandemia.
 
-The Eviction Lab will also continue to update and expand the <a href="https://evictionlab.org/eviction-tracking/">Eviction Tracking System</a>, allowing us to monitor the impact of the new federal moratorium, as well as state and local protections, and observe filings after its expiration. 
+El Laboratorio de Desalojos también continuará actualizando y expandiendo el <a href="https://evictionlab.org/eviction-tracking/">Sistema de Seguimiento de Desalojos</a>, lo que nos permitirá monitorear el impacto de la nueva moratoria federal, así como las protecciones estatales y locales, y observar las presentaciones después de su vencimiento.
 
