@@ -12,10 +12,10 @@ description: See how your state ranks in our nationwide scorecard of housing pol
 intro1: >-
   <p>Safe, stable, and decent housing has always been central to ensuring health and stability. Today, with the United States focused on containing the COVID-19 pandemic, the broader and longstanding issue of income and housing insecurity has quickly become paramount to the health of an entire nation.</p> 
   <p>The Centers for Disease Control and Prevention (CDC) have announced a federal eviction moratorium in effect starting 9/4/2020 and recently extended through 7/31/21. This follows the expiration of many state and federal orders, including the CARES Act. The CDC moratorium blocks landlords from evicting tenants who are currently not able to pay rent and do not have another safe housing option if they were to be evicted.</p>
-intro1_2: >-
   <p>
     The federal government also implemented two eviction moratoria: the CARES Act, which expired in summer 2020, and the CDC's "Temporary Halt in Residential Evictions To Prevent the Further Spread of COVID-19," which ended on June 30, 2021. More information about eligibility requirements is available <a href="/federal-eviction-moratorium-update"> in our post on the federal moratorium</a>.
   </p>
+intro1_2: >-
   <p>Rental assistance, including upwards of $46 billion in federally-funded aid, became available in all 50 states and the District of Columbia by the middle of 2021 at the latest. Most states were accepting rental assistance applications at the end of the Scorecard study period. The rental assistance measure on the Scorecard is counted as present if rental assistance was available to renters throughout the state during a statewide eviction moratorium.</p>
   <p>Scroll down to see the scorecard, or <a href="#scorecard-resources" class="smoothScroll">view the scoring methodology, learn about our partners, get resources, and more</a>.</p>
 intro2: >-

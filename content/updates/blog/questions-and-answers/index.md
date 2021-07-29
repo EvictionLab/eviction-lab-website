@@ -7,7 +7,7 @@ featured: true
 in_index: true
 researchtype: elresearch
 title: 'Questions and answers about evictions as the CDC moratorium ends'
-date: 2021-07-20T16:46:40.089Z
+date: 2021-07-26T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg

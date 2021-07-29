@@ -7,7 +7,7 @@ featured: true
 in_index: true
 researchtype: elresearch
 title: 'Preguntas y respuestas sobre desalojos y el final de la moratoria de los CDC'
-date: 2021-07-20T16:46:40.089Z
+date: 2021-07-26T16:46:40.089Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
