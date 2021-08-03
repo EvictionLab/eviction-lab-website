@@ -37,9 +37,9 @@ _Note: this page is intended to provide general information and does not constit
 
 "Are renters protected from eviction right now?"
 
-"The CDC moratorium was extended until July 31st and protects eligible renters from eviction in nearly every part of the country (one exception is the <a href='https://www.cbsnews.com/news/eviction-memphis-crisis-court-cdc-ban/' target='_blank' rel='noreferrer noopener'>Western District of Tennessee</a>, which includes Memphis). Renters should provide a copy of the <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>declaration form</a> to their landlord and in any eviction hearing. <a href='https://evictionlab.org/moratorium-extended-evictions-continue/'>More information about the federal moratorium, including who is covered by the moratorium, is available here</a>."
+"The CDC moratorium expired on July 31st. Before its expiration, it protected eligible renters from eviction in nearly every part of the country."
 
-"Across the country, renters also have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond--pay the rent that they owe to an account held by the court system--to get a hearing."
+"Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond–pay the rent that they owe to an account held by the court system–to get a hearing."
 
 "There are at least four states—New Jersey, New York, Hawaii, Vermont and, also the District of Columbia among them—that have their own moratoria in place."
 
@@ -54,6 +54,8 @@ _Note: this page is intended to provide general information and does not constit
 "I have been unable to afford the rent, what can I do?"
 
 "Billions of dollars in rental assistance funds are now available nationwide. Call 2-1-1 to learn more about how to apply for the rental assistance available in your area. Depending on where you live, these programs might be managed by a city, a county, a state or a non-profit. You can find hundreds of <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance programs available in this list</a>."
+
+"The Consumer Financial Protection Bureau has created a tool where tenants and landlords can search for the available programs by locality: <a href='https://www.consumerfinance.gov/renthelp' target='_blank' rel='noreferrer noopener'>www.consumerfinance.gov/renthelp</a>."
 
 "Apply for rental assistance as quickly as you can, since the process of getting the money may take weeks or months. If your landlord files to evict you while you are waiting to hear back about your application, be sure to let the court know that you have an application pending."
 

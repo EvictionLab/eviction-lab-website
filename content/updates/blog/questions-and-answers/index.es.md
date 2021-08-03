@@ -37,9 +37,9 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "¿Existen protecciones para los inquilinos que enfrentan un desalojo en la actualidad?"
 
-"La moratoria de los CDC se extendió hasta el 31 de julio y ha protegido a inquilinos de desalojos en casi todo el país (una excepción ha sido del Distrito Oeste de Tennessee, que incluye a la ciudad de Memphis). Para utilizar este beneficio, los inquilinos deben proveer una <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/Eviction-Declare-esp-508.pdf' target='_blank' rel='noreferrer noopener'>copia de este formulario</a> a su casero y en cada audiencia de desalojo. Puedes encontrar <a href='/es/moratorium-extended-evictions-continue/'>más información sobre el desalojo federal y quién está cubierto aquí</a>."
+"La moratoria de los CDC venció el 31 de julio. Antes de su vencimiento, protegió contra desalojos a los inquilinos que cumplían con ciertos requisitos en casi todo el país."
 
-"A través de todo el país, los inquilinos también tienen derecho otorgado por la constitución al _debido proceso_, lo que significa que tienen derecho a ser escuchados y disputar un desalojo en la corte. En algunos lugares específicos, los inquilinos tienen que pagar un depósito --pagar la renta que deben en una cuenta administrada por el sistema de cortes-- para tener una audiencia, sin embargo esto no es muy común."
+"A través de todo el país, los inquilinos tienen derecho otorgado por la constitución al debido proceso, lo que significa que tienen derecho a ser escuchados y disputar un desalojo en la corte. En algunos lugares específicos, los inquilinos tienen que pagar un depósito –pagar la renta que deben en una cuenta administrada por el sistema de cortes– para tener una audiencia, sin embargo esto no es muy común."
 
 "Al menos cuatro estados --Nueva Jersey, Nueva York, Hawái, Vermont y también el Distrito de Columbia-- tienen sus propias moratorias."
 
@@ -54,6 +54,8 @@ _Este sitio web tiene como intención entregar información general sobre polít
 "No he podido pagar la renta, ¿Qué puedo hacer ahora?"
 
 "Hay miles de millones de dólares disponibles en asistencia para la renta a través de todo el país. Puede llamar al 2-1-1 para preguntar cómo postular a estos fondos en su área. Dependiendo de dónde se encuentre, estos programas pueden estar administrados por la ciudad, el condado, el estado o una organización sin fines de lucro. Puede encontrar <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>cientos de estos programas de asistencia de renta en esta lista (en inglés)</a>."
+
+"La Oficina de Protección Financiera para los Consumidores ha creado una herramienta en la que inquilinos y caseros pueden buscar programas de ayuda de acuerdo a su ubicación: www.consumerfinance.gov/renthelp."
 
 "Le recomendamos postular a la asistencia de renta lo más rápido posible, ya que el proceso para conseguir el dinero puede demorar semanas o meses. Si su casero o administrador presenta tu desalojo en la corte mientras usted espera que su postulación sea procesada, asegúrese de dar aviso en la corte que está en este proceso."
 
