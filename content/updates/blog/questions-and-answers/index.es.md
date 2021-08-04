@@ -39,7 +39,7 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 "Como sucedió con la anterior moratoria, para ser protegido, un inquilino debe declarar lo siguiente:"
 
-"<ul><li>Que ha intentado obtener asistencia de renta.</li><li>Que su ingreso es menor a ciertos límites establecidos por la orden.</li><li>Que no puede pagar la renta completamente debido a pérdida de ingresos, horas de trabajo, despidos o gastos médicos extraordinarios.</li><li>Que ha hecho su mejor esfuerzo para hacer pagos parciales de renta.</li>Que arriesga quedar sin techo si es desalojado.<li>Que reside en un condado de Estados Unidos que actualmente experimenta índices altos o sustanciales de transmisión de COVID-19, de acuerdo a los CDC.</li></ul>"
+"<ul><li>Que ha intentado obtener asistencia de renta.</li><li>Que su ingreso es menor a ciertos límites establecidos por la orden.</li><li>Que no puede pagar la renta completamente debido a pérdida de ingresos, horas de trabajo, despidos o gastos médicos extraordinarios.</li><li>Que ha hecho su mejor esfuerzo para hacer pagos parciales de renta.</li><li>Que arriesga quedar sin techo si es desalojado.</li><li>Que reside en un condado de Estados Unidos que actualmente experimenta índices altos o sustanciales de transmisión de COVID-19, de acuerdo a los CDC.</li></ul>"
 
 "A través de todo el país, los inquilinos tienen derecho otorgado por la constitución al debido proceso, lo que significa que tienen derecho a ser escuchados y disputar un desalojo en la corte. En algunos lugares específicos, los inquilinos tienen que pagar un depósito –pagar la renta que deben en una cuenta administrada por el sistema de cortes– para tener una audiencia, sin embargo esto no es muy común."
 
