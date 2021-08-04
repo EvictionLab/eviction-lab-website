@@ -44,9 +44,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "There are at least four states--California, New Jersey, New York, and Hawaii, as well as the District of Columbia among them—that have their own moratoria in place."
 
-"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up to date information. More legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. More legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>our sister website Just Shelter</a>."
-
->}}
+"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up to date information. More legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. More legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>our sister website Just Shelter</a>." >}}
 
 {{< faq 
 
@@ -60,9 +58,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Apply for rental assistance as quickly as you can, since the process of getting the money may take weeks or months. If your landlord files to evict you while you are waiting to hear back about your application, be sure to let the court know that you have an application pending."
 
-"Depending on the program in your area, your landlord might need to cooperate with the program for you to receive assistance, and the program will pay the rental assistance to the landlord or property management company directly. In other places, if your landlord does not cooperate with the program or send in required forms, the program will pay the tenant directly. If your landlord does not cooperate with the program, ask if it's possible for the assistance to be issued to you instead."
-
->}}
+"Depending on the program in your area, your landlord might need to cooperate with the program for you to receive assistance, and the program will pay the rental assistance to the landlord or property management company directly. In other places, if your landlord does not cooperate with the program or send in required forms, the program will pay the tenant directly. If your landlord does not cooperate with the program, ask if it's possible for the assistance to be issued to you instead." >}}
 
 {{< faq 
 
@@ -70,9 +66,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "I’ve already lost my home. Can I access rental assistance for a new place? Am I eligible for any other resources?"
 
-"If you've already lost your home, call 2-1-1 or check <a href='https://justshelter.org' target='_blank' rel='noreferrer noopener'>Just Shelter</a> to find out about shelters, housing providers, and support available in your community. In some states, rental assistance programs are allowing funds to be used for relocation, and you could be eligible for other benefits. Also, veterans and active duty service members have certain rights in eviction and access to additional legal counsel. "
-
->}} 
+"If you've already lost your home, call 2-1-1 or check <a href='https://justshelter.org' target='_blank' rel='noreferrer noopener'>Just Shelter</a> to find out about shelters, housing providers, and support available in your community. In some states, rental assistance programs are allowing funds to be used for relocation, and you could be eligible for other benefits. Also, veterans and active duty service members have certain rights in eviction and access to additional legal counsel. " >}} 
 
 <br/>
 
@@ -90,9 +84,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Attorneys can help tenants raise defenses or ask the judge for more time (called requesting a continuance), or have the case sealed or dismissed. Renters should mention, regardless of whether they have an attorney, if they have a <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>CDC declaration form</a> or have applied for rental assistance."
 
-"If someone is evicted, they may be eligible for emergency rental assistance and housing counseling services to help identify and pay the rent in a new home." 
-
->}} 
+"If someone is evicted, they may be eligible for emergency rental assistance and housing counseling services to help identify and pay the rent in a new home."  >}} 
 
 <br/>
 
@@ -114,9 +106,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "After delivering the notice of eviction and waiting a certain period of time, which varies by state, the landlord typically files an eviction case in court and the court serves the renter with a summons for a hearing. During the hearing, renters can raise defenses to the eviction. Defenses vary based on where you live, so it's important to talk to a legal aid provider to find out what defenses exist in your city."
 
-"If the judge decides in favor of the landlord, the judge may issue a writ of possession. Renters can appeal the decision, leave the property, or wait until the sheriff or other party executes the writ by removing the renters’ possessions out of the unit."
-
->}} 
+"If the judge decides in favor of the landlord, the judge may issue a writ of possession. Renters can appeal the decision, leave the property, or wait until the sheriff or other party executes the writ by removing the renters’ possessions out of the unit." >}} 
 
 {{< faq 
 
@@ -128,9 +118,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Stay in touch with your landlord, with your local court, and with any organization that can provide legal assistance, to understand your particular case and how far you are in the eviction timeline. You should also apply for <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance</a> in your city, county, or state program. Consult with your local information line to identify programs or <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>search for programs here</a>."
 
-"In some states and localities, you may still be protected by specific moratoriums. Call 2-1-1 to understand what resources are available in your area. You can find information for <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations across the country at this site</a>."
-
->}} 
+"In some states and localities, you may still be protected by specific moratoriums. Call 2-1-1 to understand what resources are available in your area. You can find information for <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations across the country at this site</a>." >}} 
 
 {{< faq 
 
@@ -140,9 +128,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "That depends on where you live. In many states landlords are allowed by law to start eviction proceedings once the tenant is late on rent, and they're not required to accept late or partial payments. Landlords might also be able to accept the late payment, but evict you anyway for paying late. On the other hand, in some places, landlords are required to accept a late payment that you make soon after the eviction filing, and withdraw the court case against you."
 
-"In some states and cities, there might be regulations that allow tenants to catch up in rent or create a grace period before starting an eviction court case. Contact legal services and 2-1-1 to ask about the regulations where you live. Ask whether landlords are required to accept late payments, and whether the court must dismiss your eviction case if you pay what you owe before your eviction hearing."
-
->}} 
+"In some states and cities, there might be regulations that allow tenants to catch up in rent or create a grace period before starting an eviction court case. Contact legal services and 2-1-1 to ask about the regulations where you live. Ask whether landlords are required to accept late payments, and whether the court must dismiss your eviction case if you pay what you owe before your eviction hearing." >}} 
 
 {{< faq 
 
@@ -156,9 +142,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Some cities, counties, and states have created and extended their own moratoria beyond July 31st."
 
-"Building complexes financed by federal loan programs, like the ones provided by Fannie Mae and Freddie Mac, are also protected by their own moratorium, <a href='https://www.fhfa.gov/Media/PublicAffairs/Pages/FHFA-Extends-Eviction-Moratorium-Through-Sept-30-2021.aspx' target='_blank' rel='noreferrer noopener'>which will expire on Sept. 30</a>."
-
->}} 
+"Building complexes financed by federal loan programs, like the ones provided by Fannie Mae and Freddie Mac, are also protected by their own moratorium, <a href='https://www.fhfa.gov/Media/PublicAffairs/Pages/FHFA-Extends-Eviction-Moratorium-Through-Sept-30-2021.aspx' target='_blank' rel='noreferrer noopener'>which will expire on Sept. 30</a>." >}} 
 
 {{< faq 
 
@@ -168,9 +152,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "An eviction doesn’t directly affect the credit score, but outstanding debts could show up in your credit report, including late rent payments and late fees that are owed."
 
-"Evictions can appear though in other consumer reports and make it harder to apply for a rental unit in the future, as landlords check your history as a renter."
-
->}}
+"Evictions can appear though in other consumer reports and make it harder to apply for a rental unit in the future, as landlords check your history as a renter." >}}
 
 {{< faq 
 
@@ -180,9 +162,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "When an eviction case is filed, it can become a public record. This could allow a future landlord to check the eviction history of an applicant and deny an application--even if you win your case or do not leave your home. In some states, renters are allowed to seal the record of the eviction case. This could make it easier for you to find new housing in the future. In other places, some eviction cases are sealed automatically."
 
-"Check the <a href='https://evictionlab.org/covid-policy-scorecard/'>Eviction Lab COVID-19 Housing Policy Scorecard</a> to see if eviction cases from the pandemic are sealed in your state. Check with the court system in your area, or with legal services, to see if or how you can request to have your eviction case sealed. Legal services may be able to help you get your eviction case sealed, especially if you worked with legal services during your eviction hearing or if you won your case."
-
->}}
+"Check the <a href='https://evictionlab.org/covid-policy-scorecard/'>Eviction Lab COVID-19 Housing Policy Scorecard</a> to see if eviction cases from the pandemic are sealed in your state. Check with the court system in your area, or with legal services, to see if or how you can request to have your eviction case sealed. Legal services may be able to help you get your eviction case sealed, especially if you worked with legal services during your eviction hearing or if you won your case." >}}
 
 {{< faq 
 
@@ -194,9 +174,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "In some cities you may also be allowed to apply for free legal assistance, and there are non-governmental organizations and pro bono (free) attorneys that provide legal support and consultation for immigrants. Many rental assistance programs also accept applications from undocumented renters."
 
-"If a landlord or an apartment manager threatens to call immigration officers to force you out, you could find help in immigrant organizations as well as some legal aid organizations. You can find <a href='https://www.immigrationadvocates.org/nonprofit/legaldirectory/' target='_blank' rel='noreferrer noopener'>a list of organizations that help and support immigrants in legal affairs here.</a>"
-
->}}
+"If a landlord or an apartment manager threatens to call immigration officers to force you out, you could find help in immigrant organizations as well as some legal aid organizations. You can find <a href='https://www.immigrationadvocates.org/nonprofit/legaldirectory/' target='_blank' rel='noreferrer noopener'>a list of organizations that help and support immigrants in legal affairs here.</a>" >}}
 
 <br/>
 
@@ -208,6 +186,4 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "How do I address housing security in my community?"
 
-"Renters across the United States have found strength in speaking to one another and organizing for better housing conditions, from experiences during the <a href='https://www.retroreport.org/video/new-york-tenants-are-organizing-against-evictions-as-they-did-in-the-great-depression/' target='_blank' rel='noreferrer noopener'>Great Depression</a>, <a href='https://www.nytimes.com/video/learning/100000007368071/tenants-facing-eviction-over-covid-19-look-to-a-1970s-solution-retro-report.html' target='_blank' rel='noreferrer noopener'>the 1970s</a>, to <a href='https://www.retroreport.org/video/how-decades-of-housing-discrimination-hurts-fresno-in-the-pandemic/' target='_blank' rel='noreferrer noopener'>today</a>. Consider contacting your neighbors, local tenants union, and housing advocates to learn more."
-
->}}
+"Renters across the United States have found strength in speaking to one another and organizing for better housing conditions, from experiences during the <a href='https://www.retroreport.org/video/new-york-tenants-are-organizing-against-evictions-as-they-did-in-the-great-depression/' target='_blank' rel='noreferrer noopener'>Great Depression</a>, <a href='https://www.nytimes.com/video/learning/100000007368071/tenants-facing-eviction-over-covid-19-look-to-a-1970s-solution-retro-report.html' target='_blank' rel='noreferrer noopener'>the 1970s</a>, to <a href='https://www.retroreport.org/video/how-decades-of-housing-discrimination-hurts-fresno-in-the-pandemic/' target='_blank' rel='noreferrer noopener'>today</a>. Consider contacting your neighbors, local tenants union, and housing advocates to learn more." >}}
