@@ -914,8 +914,8 @@ Elab.Chart = (function (Elab) {
     }
 
     function renderBars(data, config, context) {
-      const monthFormat = d3.timeFormat("%m/%Y");
-      const monthParse = d3.timeParse("%m/%Y");
+      var monthFormat = d3.timeFormat("%m/%Y");
+      var monthParse = d3.timeParse("%m/%Y");
       // get data grouped by x value
       var groupedData = groupItems(data.items, function (d) {
         return monthFormat(d.x);
@@ -2352,8 +2352,8 @@ Elab.ListPage = (function (Elab) {
   }
 
   function inMoratorium(day, ranges) {
-    return ranges.reduce(function (inRange, range) {
-      var endDay = new Date();
+    var isDayInRanges = ranges.reduce(function (inRange, range) {
+      var endDay = d3.timeDay.offset(day, 7);
       return inRange
         ? true
         : +day >= +range[0] &&
@@ -2361,6 +2361,7 @@ Elab.ListPage = (function (Elab) {
             +endDay >= +range[0] &&
             +endDay <= +range[1];
     }, false);
+    return isDayInRanges;
   }
 
   function mergeRanges(ranges) {
@@ -2411,6 +2412,7 @@ Elab.ListPage = (function (Elab) {
     var values = data.values.filter(function (v, i) {
       return i !== data.values.length - 1;
     });
+    // get values that fall within the moratorium ranges
     var moratoriumValues = values.map(function (v, i) {
       var lastWeekDay = d3.timeDay.offset(v[0], -7);
       var startInMoratorium = inMoratorium(v[0], moratoriumRanges);
@@ -2418,6 +2420,7 @@ Elab.ListPage = (function (Elab) {
       if (startInMoratorium || lastWeekInMoratorium) return v;
       return [v[0], "NA", "NA"];
     });
+    // get values that fall outside the moratorium ranges
     var noMoratoriumValues = values.map(function (v) {
       var lastWeekDay = d3.timeDay.offset(v[0], -7);
       var startInMoratorium = inMoratorium(v[0], moratoriumRanges);
