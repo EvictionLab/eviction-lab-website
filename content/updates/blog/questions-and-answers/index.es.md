@@ -1,35 +1,33 @@
 ---
 draft: false
 childof: blog
+url: /preguntas
 contenttype: updates
 contentcat: blog
 featured: true
 in_index: true
-researchtype: elresearch
-title: 'Preguntas y respuestas sobre desalojos y el final de la moratoria de los CDC'
+title: Preguntas y respuestas sobre desalojos y el final de la moratoria de los CDC
 date: 2021-07-26T16:46:40.089Z
-postauthorname: The Eviction Lab
 postauthortitle: Princeton University
-authorpic: /images/bios/elab_thumb_sm.jpg
-description: Lo que necesitas saber si estás enfrentando un desalojo o si quieres ayudar.
 listSummary: Lo que necesitas saber si estás enfrentando un desalojo o si quieres ayudar.
 socialDescription: Lo que necesitas saber si estás enfrentando un desalojo o si quieres ayudar.
-fbImage: 'GettyImages-1279347616.jpg'
-twImage: 'GettyImages-1279347616.jpg'
-url: /preguntas
+researchtype: elresearch
+postauthorname: The Eviction Lab
+twImage: GettyImages-1279347616.jpg
+authorpic: /images/bios/elab_thumb_sm.jpg
 image: GettyImages-1279347616.jpg
+description: Lo que necesitas saber si estás enfrentando un desalojo o si quieres ayudar.
+fbImage: GettyImages-1279347616.jpg
 ---
-
 La pandemia del COVID-19 ha generado tremendas dificultades para cientos de miles de personas a la hora de pagar la renta y mantener su vivienda. En el Eviction Lab, creemos que todos se merecen un hogar, especialmente durante una emergencia como esta. 
 
 La siguiente es una guía con algunas de las más relevantes preguntas que los inquilinos podrían tener en el momento que las protecciones contra el desalojo empiezan a expirar. Llamamos a todos a aprender sobre sus derechos en la corte, postular a asistencia de renta y buscar apoyo legal. 
 
-_Este sitio web tiene como intención entregar información general sobre políticas de desalojos y no constituye ayuda legal. Por favor consulte con un abogado en su estado para consejos sobre materias legales específicas._
+*Este sitio web tiene como intención entregar información general sobre políticas de desalojos y no constituye ayuda legal. Por favor consulte con un abogado en su estado para consejos sobre materias legales específicas.*
 
 <br/>
 
 ### ¿Qué esperar de un proceso de desalojo?
-
 
 {{< faq 
 
@@ -37,7 +35,16 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "¿Existen protecciones para los inquilinos que enfrentan un desalojo en la actualidad?"
 
-"La moratoria de los CDC venció el 31 de julio. Antes de su vencimiento, protegió contra desalojos a los inquilinos que cumplían con ciertos requisitos en casi todo el país."
+"La moratoria de los CDC venció el 31 de julio. El 3 de agosto, los CDC anunciaron una nueva orden, que creó una moratoria similar para áreas que “están experimentando altos niveles de transmisión comunitaria”, de acuerdo a la agencia. Esta orden vence el 3 de octubre.
+
+Como sucedió con la anterior moratoria, para ser protegido, un inquilino debe declarar lo siguiente:
+
+* Que ha intentado obtener asistencia de renta.
+* Que su ingreso es menor a ciertos límites establecidos por la orden.
+* Que no puede pagar la renta completamente debido a pérdida de ingresos, horas de trabajo, despidos o gastos médicos extraordinarios.
+* Que ha hecho su mejor esfuerzo para hacer pagos parciales de renta.
+* Que arriesga quedar sin techo si es desalojado.
+* Que reside en un condado de Estados Unidos que actualmente experimenta índices altos o sustanciales de transmisión de COVID-19, de acuerdo a los CDC."
 
 "A través de todo el país, los inquilinos tienen derecho otorgado por la constitución al debido proceso, lo que significa que tienen derecho a ser escuchados y disputar un desalojo en la corte. En algunos lugares específicos, los inquilinos tienen que pagar un depósito –pagar la renta que deben en una cuenta administrada por el sistema de cortes– para tener una audiencia, sin embargo esto no es muy común."
 
@@ -45,7 +52,7 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Recomendamos contactar a organizaciones locales de vivienda y <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>de ayuda lega</a> en su ciudad o su estado para aprender sobre sus derechos, conseguir apoyo legal y encontrar la información más actualizada. Puede encontrar más organizaciones locales a través de <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>las organizaciones estatales de abogados y de la organización nacional NAIP</a>. Hay información sobre asistencia legal en los sitios del <a href='https://www.abafreelegalanswers.org/' target='_blank' rel='noreferrer noopener'>Colegio Estadounidense de Abogados (en inglés</a> y en <a href='https://espanol.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> Encuentre o publique recursos sobre su comunidad en nuestro sitio hermano <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a>."
 
->}}
+> }}
 
 {{< faq 
 
@@ -61,7 +68,7 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Dependiendo de los distintos programas existentes en su área, su casero quizás deberá cooperar con el programa para que usted reciba la ayuda para la renta, y el programa en algunas ocasiones le dará la asistencia de renta directamente al casero o a la administración de su edificio. En otros lugares, si el casero no colabora con el programa o envía los formularios requeridos, el programa podría pagarle directamente a usted. Si su casero no está colaborando con el proceso, pregunte si es posible que usted reciba la ayuda financiera directamente."
 
->}}
+> }}
 
 {{< faq 
 
@@ -71,12 +78,11 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Si ya ha perdido su vivienda, llame al 2-1-1 o consulte nuestro sitio <a href='https://justshelter.org' target='_blank' rel='noreferrer noopener'>Just Shelter</a> para encontrar información sobre albergues, proveedores de vivienda y apoyo disponible en su comunidad. En algunos estados, los programas de asistencia de renta sí están permitiendo usar los fondos para reubicación y usted podría postular para otros beneficios. Es importante agregar que los veteranos y miembros de fuerzas armadas en servicio tienen ciertos derechos en lo que concierne a desalojos y acceso a apoyo legal adicional."
 
->}} 
+> }} 
 
 <br/>
 
 ### Encontrar un abogado
-
 
 {{< faq 
 
@@ -86,19 +92,17 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Los inquilinos pueden presentarse en la corte con un abogado que los represente. Trabajar con un abogado experto en vivienda puede ayudar a los inquilinos a tener un caso más sólido. Hay servicios de apoyo legal gratuitos en todo el país. Para postular a estos, contacte a su <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>agencia local de servicios legales</a>. Los siguientes recursos le podrían ayudar a encontrar respuestas legales o representación legal para su caso en la corte:"
 
-
 "<ul><li><a href='https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help' target='_blank' rel='noreferrer noopener'>La Corporación de Servicios Legales - Lista de oficinas de apoyo legal</a></li><li><a href='https://espanol.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> - Formularios interactivos y una lista de oficinas de apoyo legal</li><li><a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>Asociación Nacional de Programas IOLTA - Encuentre oficinas de ayuda legal</a></li><li><a href='' target='_blank' rel='noreferrer noopener'>Respuestas legales gratuitas (en inglés) - Sistema basado en correos electrónicos para obtener respuestas legales de abogados voluntarios</a></li></ul>"
 
 "Un abogado puede ayudar a los inquilinos a explicar su defensa o pedirle a un juez más tiempo (lo que se conoce como “requesting a continuance” en inglés), o lograr que el caso se selle o que el caso sea desestimado. Los inquilinos deben mencionar siempre, sin importar si tienen un abogado, si es que han firmado <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>la declaración de los CDC</a> o si han postulado a asistencia de renta."
 
 "Si alguien es desalojado, podría igual recibir ayuda de emergencia para renta y servicios de consejería de vivienda para identificar las mejores formas de pagar la renta en un nuevo hogar." 
 
->}} 
+> }} 
 
 <br/>
 
-### Qué sucede cuando va a la corte 
-
+### Qué sucede cuando va a la corte
 
 {{< faq 
 
@@ -124,8 +128,7 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Si el juez decide el caso a favor del casero, el juez puede emitir una orden de desalojo o “writ of possession” en inglés.  Los inquilinos pueden apelar a la decisión, dejar la propiedad o esperar hasta que un alguacil u otro funcionario ejecute el desalojo, retirando las posesiones del inquilino de la vivienda."
 
-
->}} 
+> }} 
 
 {{< faq 
 
@@ -139,7 +142,7 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "En algunos estados y localidades, puede que usted aún esté protegido por moratorias específicas. Llame al 2-1-1 para entender qué recursos están disponibles en su área. También puede encontrar información de ayuda legal y organizaciones de apoyo en todo el país en este sitio <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>https://www.lsc.gov/what-legal-aid/find-legal-aid</a>."
 
->}} 
+> }} 
 
 {{< faq 
 
@@ -151,7 +154,7 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "En algunos estados y ciudades, pueden existir regulaciones que permitan a los inquilinos ponerse al día con la renta o crear un periodo de gracia antes de que se comience un proceso judicial de desalojo. Contacte a servicios legales y al 2-1-1 para preguntar sobre las regulaciones donde usted vive. Pregunte si es que los caseros están obligados a aceptar pagos tardíos y si es que la corte puede desestimar un caso cuando usted paga la renta antes de su audiencia."
 
->}} 
+> }} 
 
 {{< faq 
 
@@ -159,13 +162,15 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Más allá de la moratoria de los CDC, ¿existen otras moratorias actualmente funcionando?"
 
-"Todavía podría existir una moratoria local contra los desalojos en su ciudad."
+"Los CDC ordenaron una nueva moratoria de desalojos el 3 de agosto, para condados con niveles de transmisión de COVID-19 altos o sustanciales."
 
-"Algunas ciudades, condados y estados han creado sus propias moratorias y las han extendido más allá del 31 de julio."
+"Además, todavía podría existir una moratoria local contra los desalojos en su ciudad."
 
-"Algunos edificios que han sido financiados con programas de préstamos federales, como los que entregan Fannie Mae y Freddie Mac también tienen su propia moratoria, la que expirará el 31 de julio si no es renovada."
+"Algunas ciudades, condados y estados han creado sus propias moratorias y las han extendido más allá del 31 de julio.
 
->}} 
+"Algunos edificios que han sido financiados con programas de préstamos federales, como los que entregan Fannie Mae y Freddie Mac también tienen su propia moratoria, la que expirará el 31 de septiembre si no es renovada."
+
+> }} 
 
 {{< faq 
 
@@ -177,7 +182,7 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Los desalojos pueden aparecer en otros reportes de consumo y hacer que sea más difícil postular a una nueva vivienda en el futuro, si es que el casero chequea su historial como inquilino. "
 
->}}
+> }}
 
 {{< faq 
 
@@ -189,7 +194,7 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Revise su situación en el <a href='https://evictionlab.org/covid-policy-scorecard/'>sitio de políticas de vivienda durante COVID-19 que Eviction Lab ha compilado</a>, para así saber si los casos de desalojo se sellan en su estado. Pregunte en las cortes de su área o en agencias de servicios legales para ver si puede sellar su caso. Las agencias de servicios legales pueden apoyarlo en estos intentos, especialmente si usted trabajó con ayuda legal durante su desalojo o si ganó su caso."
 
->}}
+> }}
 
 {{< faq 
 
@@ -203,7 +208,7 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Si un casero o administrador lo amenaza con llamar a agentes de inmigración para echarlo, usted puede encontrar ayuda en organizaciones de inmigración y agencias de apoyo legal. Puede encontrar una lista de organizaciones que ayudan y apoyan a los inmigrantes en temas legales aquí: <a href='https://www.immigrationadvocates.org/nonprofit/legaldirectory/' target='_blank' rel='noreferrer noopener'>https://www.immigrationadvocates.org/nonprofit/legaldirectory/</a>."
 
->}}
+> }}
 
 <br/>
 
@@ -217,4 +222,4 @@ _Este sitio web tiene como intención entregar información general sobre polít
 
 "Inquilinos a través de todo Estados Unidos han encontrado apoyo al iniciar conversaciones entre ellos y organizarse para luchar por mejores condiciones de vivienda. Considere contactar a sus vecinos, organizaciones locales de inquilinos y activistas de vivienda para saber más."
 
->}}
+> }}
