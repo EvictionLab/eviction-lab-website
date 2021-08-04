@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: Houston, Texas
 slug: houston-tx
-date: 2021-05-18T04:00:00.000Z
+date: 2021-08-04T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Houston, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="48201" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -31,6 +33,8 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 
 
+
+
 {{%/ report_intro %}}
 
 
@@ -39,7 +43,7 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 # Changes in eviction filings
 
-Eviction filings in Houston were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April and May were well below average. Filings have increased since then but remain below historical averages.<sup>2</sup>
+Eviction filings in Houston were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April and May of 2020 were well below average. Filings have increased since then but remain below historical averages.<sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
@@ -49,6 +53,8 @@ Eviction filings in Houston were higher than average in January and February of 
 
 
 {{% report_map shapes="/uploads/houston_shapes.json" data="/uploads/houston_map.csv" %}}
+
+
 
 
 
@@ -69,11 +75,15 @@ Harris and Galveston counties are divided into 853 census tracts. In each of tho
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/houston_linechart.csv" %}}
+
+
 
 
 
@@ -84,6 +94,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2012–2015. This allows us to see, for example, that filings in majority-white neighborhoods were higher than average in the first three months of 2020.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
+
+
 
 
 
