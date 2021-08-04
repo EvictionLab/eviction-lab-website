@@ -36,14 +36,9 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "The CDC moratorium expired on July 31st. On August 3rd, the CDC <a href='https://www.cdc.gov/coronavirus/2019-ncov/communication/Signed-CDC-Eviction-Order.pdf' target='_blank' rel='noreferrer noopener'>announced a new order</a>, which created a similar moratorium for areas that are  “experiencing substantial and high levels of community transmission,” according to the agency. This order will expire on October 3rd."
 
-"As was the case with the first moratorium, to receive protection from eviction, a tenant must declare -under penalty of perjury- that:
+"As was the case with the first moratorium, to receive protection from eviction, a tenant must declare -under penalty of perjury- that:"
 
-* They have attempted to obtain rental assistance.
-* Their income is under certain limits
-* They couldn’t pay full rent due to loss of income, work hours, a lay-off or extraordinary out-of-pocket medical expenses.
-* They have made their best efforts to make partial rent payments as they try to go back to normal.
-* They would become homeless if evicted.
-* They reside in a U.S. county experiencing substantial or high rates of COVID-19 transmission according to the CDC."
+"<ul><li>They have attempted to obtain rental assistance.</li><li>Their income is under certain limits</li><li>They couldn’t pay full rent due to loss of income, work hours, a lay-off or extraordinary out-of-pocket medical expenses.</li><li>They have made their best efforts to make partial rent payments as they try to go back to normal.</li><li>They would become homeless if evicted</li><li>They reside in a U.S. county experiencing substantial or high rates of COVID-19 transmission according to the CDC.</li></ul>"
 
 "Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond–pay the rent that they owe to an account held by the court system–to get a hearing."
 
@@ -51,7 +46,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up to date information. More legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. More legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>our sister website Just Shelter</a>."
 
-> }}
+>}}
 
 {{< faq 
 
@@ -67,7 +62,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Depending on the program in your area, your landlord might need to cooperate with the program for you to receive assistance, and the program will pay the rental assistance to the landlord or property management company directly. In other places, if your landlord does not cooperate with the program or send in required forms, the program will pay the tenant directly. If your landlord does not cooperate with the program, ask if it's possible for the assistance to be issued to you instead."
 
-> }}
+>}}
 
 {{< faq 
 
@@ -77,7 +72,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "If you've already lost your home, call 2-1-1 or check <a href='https://justshelter.org' target='_blank' rel='noreferrer noopener'>Just Shelter</a> to find out about shelters, housing providers, and support available in your community. In some states, rental assistance programs are allowing funds to be used for relocation, and you could be eligible for other benefits. Also, veterans and active duty service members have certain rights in eviction and access to additional legal counsel. "
 
-> }} 
+>}} 
 
 <br/>
 
@@ -97,7 +92,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "If someone is evicted, they may be eligible for emergency rental assistance and housing counseling services to help identify and pay the rent in a new home." 
 
-> }} 
+>}} 
 
 <br/>
 
@@ -121,7 +116,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "If the judge decides in favor of the landlord, the judge may issue a writ of possession. Renters can appeal the decision, leave the property, or wait until the sheriff or other party executes the writ by removing the renters’ possessions out of the unit."
 
-> }} 
+>}} 
 
 {{< faq 
 
@@ -135,7 +130,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "In some states and localities, you may still be protected by specific moratoriums. Call 2-1-1 to understand what resources are available in your area. You can find information for <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations across the country at this site</a>."
 
-> }} 
+>}} 
 
 {{< faq 
 
@@ -147,7 +142,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "In some states and cities, there might be regulations that allow tenants to catch up in rent or create a grace period before starting an eviction court case. Contact legal services and 2-1-1 to ask about the regulations where you live. Ask whether landlords are required to accept late payments, and whether the court must dismiss your eviction case if you pay what you owe before your eviction hearing."
 
-> }} 
+>}} 
 
 {{< faq 
 
@@ -163,7 +158,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Building complexes financed by federal loan programs, like the ones provided by Fannie Mae and Freddie Mac, are also protected by their own moratorium, <a href='https://www.fhfa.gov/Media/PublicAffairs/Pages/FHFA-Extends-Eviction-Moratorium-Through-Sept-30-2021.aspx' target='_blank' rel='noreferrer noopener'>which will expire on Sept. 30</a>."
 
-> }} 
+>}} 
 
 {{< faq 
 
@@ -175,7 +170,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Evictions can appear though in other consumer reports and make it harder to apply for a rental unit in the future, as landlords check your history as a renter."
 
-> }}
+>}}
 
 {{< faq 
 
@@ -187,7 +182,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Check the <a href='https://evictionlab.org/covid-policy-scorecard/'>Eviction Lab COVID-19 Housing Policy Scorecard</a> to see if eviction cases from the pandemic are sealed in your state. Check with the court system in your area, or with legal services, to see if or how you can request to have your eviction case sealed. Legal services may be able to help you get your eviction case sealed, especially if you worked with legal services during your eviction hearing or if you won your case."
 
-> }}
+>}}
 
 {{< faq 
 
@@ -201,7 +196,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "If a landlord or an apartment manager threatens to call immigration officers to force you out, you could find help in immigrant organizations as well as some legal aid organizations. You can find <a href='https://www.immigrationadvocates.org/nonprofit/legaldirectory/' target='_blank' rel='noreferrer noopener'>a list of organizations that help and support immigrants in legal affairs here.</a>"
 
-> }}
+>}}
 
 <br/>
 
@@ -215,4 +210,4 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Renters across the United States have found strength in speaking to one another and organizing for better housing conditions, from experiences during the <a href='https://www.retroreport.org/video/new-york-tenants-are-organizing-against-evictions-as-they-did-in-the-great-depression/' target='_blank' rel='noreferrer noopener'>Great Depression</a>, <a href='https://www.nytimes.com/video/learning/100000007368071/tenants-facing-eviction-over-covid-19-look-to-a-1970s-solution-retro-report.html' target='_blank' rel='noreferrer noopener'>the 1970s</a>, to <a href='https://www.retroreport.org/video/how-decades-of-housing-discrimination-hurts-fresno-in-the-pandemic/' target='_blank' rel='noreferrer noopener'>today</a>. Consider contacting your neighbors, local tenants union, and housing advocates to learn more."
 
-> }}
+>}}
