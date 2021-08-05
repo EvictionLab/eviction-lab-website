@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Las Vegas, Nevada
 slug: las-vegas-nv
-date: 2021-07-08T04:00:00.000Z
+date: 2021-08-04T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Las Vegas, Nevada | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -17,13 +17,15 @@ This data, unlike most of the Eviction Tracking System, will only be updated on 
 
 More detail on eviction protections in Nevada can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/nv/).
 
-Our data from Clark County comes from three courts: Las Vegas Justice Court, North Las Vegas Justice Court, and Henderson Justice Court. While the eviction cases in these three courts make up most eviction cases in Clark County, our data will undercount total eviction filings in the county.
+Our data in Clark County is an undercount compared to the number of filings found in [](http://www.courts.state.va.us/courtadmin/aoc/judpln/csi/home.html)data released in the Supreme Court of Nevada's [Annual Report Appendices](https://nvcourts.gov/Supreme/Reports/Annual_Reports/2020_Annual_Report/). Additionally, our data from Clark County comes from three courts: Las Vegas Justice Court, North Las Vegas Justice Court, and Henderson Justice Court. While the eviction cases in these three courts make up most eviction cases in Clark County, our data will undercount total eviction filings in the county.
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/lasvegas_barchart.csv" %}}
+
+
 
 
 
@@ -47,11 +49,15 @@ Eviction filings in Las Vegas were slightly below typical levels in January and 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/las-vegas-shapes.json" data="/uploads/lasvegas_map.csv" %}}
+
+
 
 
 
@@ -72,11 +78,15 @@ Clark County is divided into 487 census tracts. In these tracts, we map the numb
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/lasvegas_linechart.csv" %}}
+
+
 
 
 
@@ -89,6 +99,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2016-2019.<sup>1</sup>
 
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019.
+
+
 
 
 
