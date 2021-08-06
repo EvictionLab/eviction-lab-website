@@ -40,6 +40,8 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "<ul><li>They have attempted to obtain rental assistance.</li><li>Their income is under certain limits</li><li>They couldn’t pay full rent due to loss of income, work hours, a lay-off or extraordinary out-of-pocket medical expenses.</li><li>They have made their best efforts to make partial rent payments as they try to go back to normal.</li><li>They would become homeless if evicted</li><li>They reside in a U.S. county experiencing substantial or high rates of COVID-19 transmission according to the CDC.</li></ul>"
 
+"Download the eviction declaration form <a href='https://www.cdc.gov/coronavirus/2019-ncov/communication/EvictionProtectDeclare_508.pdf' target='_blank' rel='noreferrer noopener'>here</a>. The CDC has asked tenants to fill it, sign it, give a copy to the landlord and keep copies for themselves and in case they are required in court."
+
 "Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond–pay the rent that they owe to an account held by the court system–to get a hearing."
 
 "There are at least four states--California, New Jersey, New York, and Hawaii, as well as the District of Columbia among them—that have their own moratoria in place."

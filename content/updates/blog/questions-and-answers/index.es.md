@@ -41,6 +41,8 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 "<ul><li>Que ha intentado obtener asistencia de renta.</li><li>Que su ingreso es menor a ciertos límites establecidos por la orden.</li><li>Que no puede pagar la renta completamente debido a pérdida de ingresos, horas de trabajo, despidos o gastos médicos extraordinarios.</li><li>Que ha hecho su mejor esfuerzo para hacer pagos parciales de renta.</li><li>Que arriesga quedar sin techo si es desalojado.</li><li>Que reside en un condado de Estados Unidos que actualmente experimenta índices altos o sustanciales de transmisión de COVID-19, de acuerdo a los CDC.</li></ul>"
 
+"Descargue el formulario de la declaración contra desalojos <a href='https://www.cdc.gov/coronavirus/2019-ncov/communication/EvictionProtectDeclare_ESP_508.pdf' target='_blank' rel='noreferrer noopener'>aquí</a>. Los CDC le están pidiendo a los inquilinos que llenen el formulario, lo firmen, entreguen una copia al casero o administrador de su vivienda y guarden copias para uso personal o en caso de que sean solicitadas en la corte."
+
 "A través de todo el país, los inquilinos tienen derecho otorgado por la constitución al debido proceso, lo que significa que tienen derecho a ser escuchados y disputar un desalojo en la corte. En algunos lugares específicos, los inquilinos tienen que pagar un depósito –pagar la renta que deben en una cuenta administrada por el sistema de cortes– para tener una audiencia, sin embargo esto no es muy común."
 
 "Al menos cuatro estados --California, Nueva Jersey, Nueva York, Hawái, y también el Distrito de Columbia-- tienen sus propias moratorias."
