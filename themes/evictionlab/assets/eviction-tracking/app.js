@@ -2544,7 +2544,7 @@ Elab.ListPage = (function (Elab) {
     var lastWeekDateStates = null;
     // array of state IDs
     var stateIds = states.map(function (s) {
-      s.id;
+      return s.id;
     });
     var noStateCities = cities.filter(function (c) {
       return stateIds.indexOf(c.id.substring(0, 2)) === -1;
