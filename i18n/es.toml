@@ -86,4 +86,4 @@ other = "Get"
 [getResourcesTwo]
 other ="Resources"
 [superhead]
-other = "<span class='boldface'>ACTUALIZACIÓN:</span> &nbsp;La moratoria federal de desalojo finaliza el 31/7/21. &nbsp;<a href='/preguntas/'>Lea nuestras preguntas frecuentes para obtener más información y encontrar recursos</a>."
+other = "<span class='boldface'>ACTUALIZACIÓN:</span> &nbsp;Una moratoria federal de desalojo está en vigencia hasta el 3/10/2021. &nbsp;<a href='/preguntas/'>Lea nuestras preguntas frecuentes para obtener más información y encontrar recursos</a>."

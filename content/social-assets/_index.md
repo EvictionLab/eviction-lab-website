@@ -5,7 +5,7 @@ cascade:
   description: A gallery of shareable images from the Eviction Lab.
   fbImage: 
   twImage: 
-  socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
+  socialDescription: A gallery of shareable images from the Eviction Lab.
 date: 2020-11-17T00:00:00.000Z
 layout: social
 h1: Eviction Lab Social Media Assets
