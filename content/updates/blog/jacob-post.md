@@ -29,7 +29,7 @@ Relevant files:
 
 - `themes/evictionlab/assets/mapbox/mapbox.js`
 - `themes/evictionlab/layouts/shortcodes/mapbox.html`
-- notes on scale options: `https://www.d3indepth.com/scales/#scales-with-continuous-input-and-discrete-output`
+- notes on scale options: https://www.d3indepth.com/scales/#scales-with-continuous-input-and-discrete-output
 - shortcodes documentation: `docs/shortcodes.md`
 - this post: `content/updates/blog/jacob-post.md`
 
