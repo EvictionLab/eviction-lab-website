@@ -7,8 +7,8 @@ states:
   data: /uploads/states_table.csv
   nameHeading: State
   filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
-  filingsTotalHeading: <span>Filings</span> Since <br/>03/15
-  trendHeading: Trend <br />Since 03/15
+  filingsTotalHeading: <span>Filings</span> Since <br/>03/15/20
+  trendHeading: Trend <br />Since 03/15/20
 buttonLabel: View Report
 tooltip: Eviction moratorium in effect until {{date}}
 cascade:
@@ -69,8 +69,8 @@ cities:
   data: /uploads/table.csv
   nameHeading: City
   filingsWeekHeading: <span>Filings</span> Last<br />Week<sup>1</sup>
-  filingsTotalHeading: <span>Filings</span> Since <br/>03/15
-  trendHeading: Trend <br />Since 03/15
+  filingsTotalHeading: <span>Filings</span> Since <br/>03/15/20
+  trendHeading: Trend <br />Since 03/15/20
 legend:
   starLabel: Additional Protections
   redAreaLabel: No Moratorium
@@ -90,4 +90,5 @@ aliases:
   - /weekly-reports
   - /eviction-tracking/tracker
 ---
+
 not used
