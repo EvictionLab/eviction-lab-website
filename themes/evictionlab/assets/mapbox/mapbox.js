@@ -128,19 +128,41 @@ Elab.Mapbox = (function (Elab) {
   /**
    * Gets a CSS gradient for the given prop
    */
-  function getCssGradient(colors) {
+  function getCssGradient(colors, gradientType) {
+    var type = gradientType;
     var steps = colors.length;
-    var positions = colors.map(function (c,i) { return i/(steps-1) })
-    var colorScale = getColorScale(positions, colors)
-    return (
-      "linear-gradient(to right," +
-      colorScale(0) +
-      ", " +
-      colorScale(0.5) +
-      " 50%," +
-      colorScale(1) +
-      ")"
-    );
+    //boilerplate css for gradient
+    var front = "linear-gradient(to right";
+    //allocate variables assigned in if
+    var colorScale;
+    var back;
+    var positions;
+
+    //reduce positions array differently depending on type of function describing gradient
+    function linearReducer(accumulator, currentValue) {
+      return `${accumulator}, ${colorScale(currentValue)} ${currentValue*100}%`
+    };
+    function discreteReducer(accumulator, currentValue, i, array) {
+      if(i < array.length - 1) {
+        return `${accumulator}, ${colorScale(currentValue)} ${currentValue*100}%, ${colorScale(currentValue)} ${array[i+1]*100}%`
+      } else {
+        return `${accumulator}, ${colorScale(currentValue)} ${currentValue*100}%`
+      }
+    }
+
+    //get the necessary positions and colorScales, depending on the function describing gradient
+    if(type === "linear") {
+      positions = colors.map(function (c,i) { return i/(steps-1) })
+      colorScale = getColorScale(positions, colors)
+      back = positions.reduce(linearReducer, '')
+    } else {
+      positions = colors.map(function (c,i) { return i/(steps) })
+      colorScale = getColorScale(positions, colors)
+      back = positions.reduce(discreteReducer, '')
+    }
+
+    //add the boilerplate css to the generated css
+    return front + back;
   }
 
   function getColorScale(range, colors) {
@@ -230,6 +252,7 @@ Elab.Mapbox = (function (Elab) {
     var nameProp = config.name
     var colors = config.colors.split(";")
     var legendTitle = config.legendTitle;
+    var gradientType = config.gradientType;
     var colorScale = null;
     var layersAdded = false;
     var formatter = getFormatter(config.format)
@@ -383,7 +406,7 @@ Elab.Mapbox = (function (Elab) {
       var labelContainer = rootEl.find(".legend__gradient-labels");
       var titleContainer = rootEl.find(".legend__title")
       var range = getRange(currentProp);
-      gradientContainer.css("background-image", getCssGradient(colors));
+      gradientContainer.css("background-image", getCssGradient(colors, gradientType));
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });

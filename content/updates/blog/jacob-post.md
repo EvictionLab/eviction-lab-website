@@ -36,7 +36,7 @@ Relevant files:
 Notes from Lane:
 
 - we are using an old version of d3 here for IE11 compatibility (v4 i think)
-- there is no transpiling on this repo and we cannot use modern features (like object deconstruction, const, let, arrow functions, etc.).  changes need to be checked on IE11
+- there is no transpiling on this repo and we cannot use modern features (like object deconstruction, const, let, arrow functions, etc.). changes need to be checked on IE11
 
 {{% mapbox
   id="mapbox1"
@@ -48,13 +48,13 @@ Notes from Lane:
   format="integer"
   title=""
   legendTitle="Eviction Filings (2017 - 2018)"
+  gradientType="discrete"
   colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
 %}}
 
 <br/>
 
 **James is handling charts below.**
-
 
 {{% bar-chart
   id="fig1"
