@@ -1,0 +1,25 @@
+<section
+  id="{{ .Get `id` }}"
+  class="section section--ranking section--{{ .Get `id` }}"
+>
+  <div class="section__content">
+    <div class="details">
+      {{ .Inner }}
+<div class="button-group">
+</div>
+    </div>
+    <div class="visual">
+      <ul id="rankingList" class="ranking">
+      </ul>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', function() {
+      var id = {{ .Get "id" }}
+      var csv = {{ .Get "data" }}
+      var rootEl = '#'+id
+      console.log({id, csv})
+      Elab.Ranking.init(rootEl, { csv: csv, id: id})
+    });
+  </script>
+</section>

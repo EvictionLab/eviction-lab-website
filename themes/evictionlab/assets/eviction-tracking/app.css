@@ -2222,6 +2222,107 @@
 
 /** END SECTION BASE STYLES */
 
+/** RANKING SECTION */
+
+.section--ranking .section__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media(min-width: 600px) {
+  .section--ranking .section__content .visual {
+    width: 480px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .section--ranking .section__content { 
+    flex-direction: row; 
+    align-items: flex-start; 
+  }
+  .section--ranking .section__content .details {
+    position: sticky;
+    top: 8.8rem;
+  }
+  .section--ranking .section__content .visual {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+
+
+.section--ranking .section__content .visual {
+  position: relative;
+}
+
+.ranking {
+  width: 100%;
+  max-width: calc(100vw - 6rem);
+}
+
+.ranking__item {
+  padding: 1.2rem 0;
+}
+
+.ranking__label .ranking__primary, 
+.ranking__label .ranking__secondary {
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 1;
+  margin-bottom: 0.8rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ranking__label .ranking__primary {
+  font-family: GT-Eesti-Display-Bold,sans-serif;
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  
+}
+
+.ranking__label .ranking__secondary {
+  font-size: 1.4rem;
+  color: #424242;
+  letter-spacing: .04em;
+}
+
+.ranking__value {
+  display: flex;
+  align-items: center;
+}
+
+.ranking__bar-label {
+  width: 8rem;
+  text-align: left;
+  margin-left: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.ranking__bar-label span:first-child {
+  font-family: var(--number-font);
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--c1);
+}
+.ranking__bar-label span:last-child {
+  font-size: 1.2rem;
+}
+
+.ranking__bar {
+  height: 1.6rem;
+  background-color: #F8DCD7;
+  transition: width 0.4s ease-in-out
+}
+
+/** END RANKING SECTION */
+
 /** CHART SECTION */
 
 .section.section--chart .visual {
