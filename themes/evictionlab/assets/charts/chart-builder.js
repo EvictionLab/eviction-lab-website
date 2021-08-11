@@ -696,7 +696,7 @@ Elab.ChartBuilder = (function (Elab) {
     this.updaters["bars"] = function () {
       var barData = options.selector(_this.data);
 
-      var spacing = 2;
+      var spacing = 1.5;
       var bandWidth =
         _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
 
@@ -1380,7 +1380,9 @@ Elab.ChartBuilder = (function (Elab) {
             [_this.getInnerWidth(), _this.getInnerHeight()],
           ]);
         var voronoiData = chart.voronoi.polygons(
-          chart.data.filter(function (d) { return !!d.y })
+          chart.data.filter(function (d) {
+            return !!d.y;
+          })
         );
         var voronoi = selection.selectAll("path").data(voronoiData);
         voronoi
