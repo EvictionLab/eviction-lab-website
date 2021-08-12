@@ -421,7 +421,9 @@ Elab.Mapbox = (function (Elab) {
       var titleContainer = rootEl.find(".legend__title")
       var range = getRange(currentProp);
       gradientContainer.css("background-image", getCssGradient(colors, gradientType));
-      renderLegendTicks(gradientContainer, range, colors)
+      if(gradientType === 'discrete'){
+        renderLegendTicks(gradientContainer, range, colors)
+      }
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });
