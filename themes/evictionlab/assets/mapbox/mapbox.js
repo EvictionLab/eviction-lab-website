@@ -415,8 +415,13 @@ Elab.Mapbox = (function (Elab) {
 
     /** renders a legend for a discrete scale */
     function renderDiscreteLegend() {
+      // container elements
+      var gradientContainer = rootEl.find(".legend__gradient");
+      var labelContainer = rootEl.find(".legend__gradient-labels");
+      var titleContainer = rootEl.find(".legend__title")
+
       // legend settings
-      var width = 280;
+      var width = gradientContainer[0].clientWidth;
       var margin = 20;
       var tickFormat = ",d"
       
@@ -459,12 +464,6 @@ Elab.Mapbox = (function (Elab) {
           }
         }
       }
-
-      // container elements
-      var gradientContainer = rootEl.find(".legend__gradient");
-      var labelContainer = rootEl.find(".legend__gradient-labels");
-      var titleContainer = rootEl.find(".legend__title")
-      console.log('hit')
       
       // render color swatches
       gradientContainer.append(swatches(colors).render())
@@ -483,6 +482,7 @@ Elab.Mapbox = (function (Elab) {
 
       // set title
       titleContainer.html(legendTitle)
+      titleContainer.css("padding-left", margin)
     }
 
     function renderLegend() {
