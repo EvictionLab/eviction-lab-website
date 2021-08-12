@@ -2081,6 +2081,7 @@
 .section:nth-child(2n-1) {
   background: var(--section-alt);
 }
+
 .section .details {
   min-width: 320px;
   max-width: 480px;
@@ -2228,6 +2229,10 @@
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.section--ranking .button-group {
+  justify-content: flex-start;
 }
 
 @media(min-width: 600px) {
@@ -2572,6 +2577,33 @@
   font-weight: 500;
 }
 
+/** white background section */
+.section .chart__box {
+  stroke: #f4f7f9;
+}
+
+.section .chart__axis--x .domain,
+.section .chart__axis--x .tick line {
+  stroke: #f4f7f9;
+}
+
+.section .chart__axis--y .tick line {
+  stroke: #f4f7f9;
+}
+
+/** alt background section */
+.section:nth-child(2n-1) .chart__box {
+  stroke: #fff;
+}
+
+.section:nth-child(2n-1) .chart__axis--x .domain,
+.section:nth-child(2n-1) .chart__axis--x .tick line {
+  stroke: #fff;
+}
+
+.section:nth-child(2n-1) .chart__axis--y .tick line {
+  stroke: #fff;
+}
 
 .chart__line {
   stroke-dasharray: 3 1;
