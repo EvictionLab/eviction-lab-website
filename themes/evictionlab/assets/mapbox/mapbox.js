@@ -111,9 +111,14 @@ Elab.Mapbox = (function (Elab) {
    * @param {*} range
    * @param {*} prefix
    */
-  function getLayerColors(range, colors) {
+  function getLayerColors(range, colors, gradientType) {
     var steps = colors.length;
-    var positions = colors.map(function (c,i) { return i/(steps-1) })
+    var positions;
+    if(gradientType === 'discrete') {
+      positions = colors.map(function (c,i) { return i/(steps) })
+    } else {
+      positions = colors.map(function (c,i) { return i/(steps-1) })
+    }
     var dataScale = d3.scaleLinear().domain([0, 1]).range(range)
     var colorScale = getColorScale(positions, colors)
     var colorSteps = []
@@ -174,15 +179,17 @@ Elab.Mapbox = (function (Elab) {
   function addChoroplethFillLayer(map, prop, range, colors, gradientType) {
     var fillColor;
     if(gradientType === "discrete") {
+      console.log(getLayerColors(range, colors, gradientType))
       fillColor = ["step", ["get", prop]].concat(
-        getLayerColors(range, colors)
+        getLayerColors(range, colors, gradientType)
       );
       fillColor.splice(2, 1)
     } else {
       fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
-        getLayerColors(range, colors)
+        getLayerColors(range, colors, gradientType)
       );
     }
+    console.log(fillColor)
     map.addLayer(
       {
         id: "choropleth",
@@ -212,12 +219,12 @@ Elab.Mapbox = (function (Elab) {
     var strokeColor;
     if(gradientType === "discrete") {
       strokeColor = ["step", ["get", prop]].concat(
-        getLayerColors(range, colors)
+        getLayerColors(range, colors, gradientType)
       );
       strokeColor.splice(2, 1)
     } else {
       strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
-        getLayerColors(range, colors)
+        getLayerColors(range, colors, gradientType)
       );
     }
     
