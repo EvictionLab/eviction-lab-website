@@ -2724,6 +2724,13 @@ Elab.ListPage = (function (Elab) {
 })(Elab);
 
 Elab.Ranking = (function (Elab) {
+  var statTemplate = Handlebars.compile(`
+    <p class="stat">
+      <span class="stat__value">{{value}}</span>
+      <span class="stat__label">{{{label}}}</span>
+    </p>
+  `);
+
   var itemTemplate = Handlebars.compile(`
   <li class="ranking__item">
     <div class="ranking__label">
@@ -2764,6 +2771,7 @@ Elab.Ranking = (function (Elab) {
       activeGroup = groups[0].key;
       renderButtonGroups();
       createRankingList();
+      renderEvictorsStat();
       Elab.Utils.callOnEnter($el[0], renderRankingList);
     });
   }
@@ -2775,8 +2783,23 @@ Elab.Ranking = (function (Elab) {
         secondary: row.xplaintiff,
         value: parseInt(row.filings),
         group: row.time_period,
+        top100: parseFloat(row.top100),
       };
     });
+  }
+
+  function renderEvictorsStat() {
+    var format = d3.format(".1%");
+    $el.find(".stat").remove();
+
+    var sibling = $el.find(".details > *:first-child");
+    var groupData = groups.find((group) => group.key === activeGroup).values;
+    var templateData = {
+      value: format(groupData[0].top100),
+      label:
+        "of all eviction filings come from the <strong>top 100</strong> buildings",
+    };
+    sibling.after(statTemplate(templateData));
   }
 
   /**
@@ -2802,6 +2825,7 @@ Elab.Ranking = (function (Elab) {
         activeGroup = $(this).data("group");
         renderButtonGroups();
         renderRankingList();
+        renderEvictorsStat();
       });
       container.append(button);
     });

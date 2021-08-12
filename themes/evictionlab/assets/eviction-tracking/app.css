@@ -2261,6 +2261,28 @@
   position: relative;
 }
 
+/** TOP BUILDINGS STAT */
+
+.section--ranking .stat {
+  display: flex;
+  align-items: center;
+}
+
+.section--ranking .stat__value {
+  font-family: var(--number-font);
+  font-size:4.8rem;
+  color: var(--c1);
+  font-weight: bold;
+  display: block;
+}
+
+.section--ranking .stat__label {
+  display: block;
+  max-width: 22rem;
+  margin-left: 1rem;
+}
+
+/** RANKING LIST */
 .ranking {
   width: 100%;
   max-width: calc(100vw - 6rem);
