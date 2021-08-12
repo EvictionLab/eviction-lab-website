@@ -598,7 +598,10 @@
         }
         .updates-section__entry1-top .title {
             @include media-breakpoint-up(lg) {
-                @include altFont(3.2rem);
+                @include altFont(2.4rem);
+            }
+            @include media-breakpoint-up(xxl) {
+                @include altFont(2.8rem);
                 line-height: 1.4;
                 color: #000;
                 transition: color .3s ease;

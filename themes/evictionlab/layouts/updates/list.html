@@ -199,7 +199,7 @@
                 {{ if .Params.thumb }}
                   {{ $img := .Params.thumb }}
                   {{ with .Resources.GetMatch $img }}
-                  {{ $processed := .Fit "360x240 q70 jpg" }}
+                  {{ $processed := .Fill "360x240 q70 jpg Center" }}
                   <img class="list-thumb" src=" {{ $processed.RelPermalink }} ">
                   {{ end }}
                 {{ end }}  
