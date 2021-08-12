@@ -425,7 +425,7 @@ Elab.Mapbox = (function (Elab) {
         return Object.assign(d3.axisBottom(scale.range([margin, width - margin])), {
           render: function() {
             return d3.create("svg")
-                .attr("viewBox", [0, -2, width, 32])
+                .attr("viewBox", [0, -4, width, 32])
                 .attr("width", width)
                 .attr("height", 32)
                 .style("display", "block")
