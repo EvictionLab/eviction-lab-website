@@ -398,9 +398,7 @@ Elab.Mapbox = (function (Elab) {
       }
       addChoroplethFillLayer(map, currentProp, range, colors, gradientType);
       addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType);
-      layersAdded = true;
-      gradientType === "discrete" ? console.dir('discrete') : console.dir('linear');
-      
+      layersAdded = true;      
       gradientType === "discrete" ? renderDiscreteLegend() : renderLegend();
     }
 
@@ -416,7 +414,6 @@ Elab.Mapbox = (function (Elab) {
 
     /** renders a legend for a discrete scale */
     function renderDiscreteLegend() {
-      console.dir('hit')
       // legend settings
       var width = 280;
       var margin = 20;
