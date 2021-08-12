@@ -1785,10 +1785,10 @@
     margin-top: 0;
     top: 360px;
     position: absolute;
-    right: 20px;
+    right: 32px;
     text-align: left;
     padding: 0;
-    max-width: 210px;
+    max-width: 220px;
     text-indent: -9px;
     font-size: 1.2rem;
   }

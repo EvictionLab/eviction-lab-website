@@ -164,7 +164,17 @@ Elab.Utils = (function (Elab) {
   }
 
   function getCdcMoratoriumRange() {
-    return [new Date(2020, 8, 4), new Date(2021, 6, 31)]; // ends july
+    return [new Date(2020, 8, 4), new Date(2021, 9, 3)]; // ends oct 3
+  }
+
+  function monthAxisFormatter(date, index) {
+    var prevDate = d3.timeMonth.offset(date, -1);
+    var yearFormat = d3.timeFormat("%y");
+    var monthFormat = d3.timeFormat("%b");
+    var monthYearFormat = d3.timeFormat("%b '%y");
+    return yearFormat(prevDate) === yearFormat(date) && index > 0
+      ? monthFormat(date)
+      : monthYearFormat(date);
   }
 
   return {
@@ -179,6 +189,7 @@ Elab.Utils = (function (Elab) {
     debounce: debounce,
     getMoratoriumRanges: getMoratoriumRanges,
     getCdcMoratoriumRange: getCdcMoratoriumRange,
+    monthAxisFormatter: monthAxisFormatter,
   };
 })(Elab);
 
@@ -235,7 +246,7 @@ Elab.Config = (function (Elab) {
         area: d3.timeParse("%d/%m/%Y"),
       },
       format: {
-        x: d3.timeFormat("%b"),
+        x: Elab.Utils.monthAxisFormatter,
         y: d3.format(",d"),
         xTooltip: d3.timeFormat("%B"),
         yTooltip: d3.format(",d"),
@@ -2085,7 +2096,7 @@ Elab.Intro = (function (Elab) {
           chart.getInnerHeight() +
           " h " +
           (chart.getInnerWidth() + 8) +
-          " v 94 h -46"
+          " v 108 h -46"
         );
       }
       return function () {
@@ -2100,7 +2111,7 @@ Elab.Intro = (function (Elab) {
         var lastDate = chart.data[chart.data.length - 1][0];
         var barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
         return (
-          "M " + barPosition + "," + chart.getInnerHeight() + " v 61 h -12"
+          "M " + barPosition + "," + chart.getInnerHeight() + " v 72 h -24"
         );
       }
       return function () {
@@ -2129,7 +2140,7 @@ Elab.Intro = (function (Elab) {
   function createIntroFigure(root, cityData) {
     var seriesData = cityData.values;
     var options = {
-      margin: [32, 12, 90, 40],
+      margin: [32, 12, 104, 40],
     };
     var chart = new Elab.ChartBuilder(root, seriesData, options);
 
@@ -2169,7 +2180,7 @@ Elab.Intro = (function (Elab) {
           selection.selectAll(".tick:last-child text").attr("opacity", 0);
         },
         ticks: d3.timeMonth.every(1),
-        tickFormat: d3.timeFormat("%b"),
+        tickFormat: Elab.Utils.monthAxisFormatter,
       });
     // adds local moratorium areas
     cityData.start.forEach(function (d, i) {
@@ -2202,7 +2213,7 @@ Elab.Intro = (function (Elab) {
   }
 
   function getMoratoriumRange(data) {
-    var dateFormat = d3.timeFormat("%B %e");
+    var dateFormat = d3.timeFormat("%b %e, %Y");
     var ranges = Elab.Utils.getMoratoriumRanges(data);
     if (!ranges || ranges.length === 0) return "";
     return ranges
@@ -2230,7 +2241,7 @@ Elab.Intro = (function (Elab) {
     $("#filingsCumulative").html(
       "<span>" +
         numFormat(cityData.cumulative) +
-        "</span> filings since Mar. 15"
+        "</span> filings since Mar 15, '20"
     );
     addSubgroupBreakdown(cityData);
   }
