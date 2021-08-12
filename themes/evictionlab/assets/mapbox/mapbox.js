@@ -137,6 +137,7 @@ Elab.Mapbox = (function (Elab) {
     var steps = colors.length;
     //boilerplate css for gradient
     var front = "linear-gradient(to right";
+    var cap = ")"
     //allocate variables assigned in if
     var colorScale;
     var back;
@@ -151,7 +152,7 @@ Elab.Mapbox = (function (Elab) {
     }, '');
 
     //add the boilerplate css to the generated css
-    return front + back;
+    return front + back + cap;
   }
 
   function getColorScale(range, colors) {
@@ -463,6 +464,7 @@ Elab.Mapbox = (function (Elab) {
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
       var titleContainer = rootEl.find(".legend__title")
+      console.log('hit')
       
       // render color swatches
       gradientContainer.append(swatches(colors).render())
@@ -488,7 +490,8 @@ Elab.Mapbox = (function (Elab) {
       var labelContainer = rootEl.find(".legend__gradient-labels");
       var titleContainer = rootEl.find(".legend__title")
       var range = getRange(currentProp);
-      gradientContainer.css("background-image", getCssGradient(colors));
+      var linearGradient = getCssGradient(colors)
+      gradientContainer.css("background-image", linearGradient);
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });
