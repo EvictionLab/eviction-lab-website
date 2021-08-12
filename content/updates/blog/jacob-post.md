@@ -48,7 +48,7 @@ Notes from Lane:
   format="integer"
   title=""
   legendTitle="Eviction Filings (2017 - 2018)"
-  gradientType="discrete"
+  gradientType=""
   colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
 %}}
 

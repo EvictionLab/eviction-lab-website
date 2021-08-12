@@ -133,7 +133,7 @@ Elab.Mapbox = (function (Elab) {
   /**
    * Gets a CSS gradient for the given prop
    */
-  function getCssGradient(colors, gradientType) {
+  function getCssGradient(colors) {
     var steps = colors.length;
     //boilerplate css for gradient
     var front = "linear-gradient(to right";
@@ -142,28 +142,13 @@ Elab.Mapbox = (function (Elab) {
     var back;
     var positions;
 
-    //reduce positions array differently depending on type of function describing gradient
-    function linearReducer(accumulator, currentValue) {
-      return `${accumulator}, ${colorScale(currentValue)} ${currentValue*100}%`
-    };
-    function discreteReducer(accumulator, currentValue, i, array) {
-      if(i < array.length - 1) {
-        return `${accumulator}, ${colorScale(currentValue)} ${currentValue*100}%, ${colorScale(currentValue)} ${array[i+1]*100}%`
-      } else {
-        return `${accumulator}, ${colorScale(currentValue)} ${currentValue*100}%`
-      }
-    }
-
     //get the necessary positions and colorScales, depending on the function describing gradient
-    if(gradientType === "discrete") {
-      positions = colors.map(function (c,i) { return i/(steps) })
-      colorScale = getColorScale(positions, colors)
-      back = positions.reduce(discreteReducer, '')
-    } else {
-      positions = colors.map(function (c,i) { return i/(steps-1) })
-      colorScale = getColorScale(positions, colors)
-      back = positions.reduce(linearReducer, '')
-    }
+    positions = colors.map(function (c,i) { return i/(steps-1) })
+    colorScale = getColorScale(positions, colors)
+    back = positions.reduce(function (accumulator, currentValue) {
+      var colorOfCurrent = colorScale(currentValue);
+      return accumulator + ", " + colorOfCurrent + " " + currentValue*100 + "%"
+    }, '');
 
     //add the boilerplate css to the generated css
     return front + back;
@@ -389,7 +374,6 @@ Elab.Mapbox = (function (Elab) {
           });
           map.on("mousemove", "choropleth", handleHover);
           map.on("mouseleave", "choropleth", handleHoverOut);
-          
           update();
           zoomToLocation();
         });
@@ -415,6 +399,8 @@ Elab.Mapbox = (function (Elab) {
       addChoroplethFillLayer(map, currentProp, range, colors, gradientType);
       addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType);
       layersAdded = true;
+      gradientType === "discrete" ? console.dir('discrete') : console.dir('linear');
+      
       gradientType === "discrete" ? renderDiscreteLegend() : renderLegend();
     }
 
@@ -430,6 +416,7 @@ Elab.Mapbox = (function (Elab) {
 
     /** renders a legend for a discrete scale */
     function renderDiscreteLegend() {
+      console.dir('hit')
       // legend settings
       var width = 280;
       var margin = 20;
@@ -438,7 +425,7 @@ Elab.Mapbox = (function (Elab) {
       // creates an axis with the given scale
       function axis(scale) {
         return Object.assign(d3.axisBottom(scale.range([margin, width - margin])), {
-          render() {
+          render: function() {
             return d3.create("svg")
                 .attr("viewBox", [0, -2, width, 32])
                 .attr("width", width)
@@ -504,7 +491,7 @@ Elab.Mapbox = (function (Elab) {
       var labelContainer = rootEl.find(".legend__gradient-labels");
       var titleContainer = rootEl.find(".legend__title")
       var range = getRange(currentProp);
-      gradientContainer.css("background-image", getCssGradient(colors, gradientType));
+      gradientContainer.css("background-image", getCssGradient(colors));
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });
