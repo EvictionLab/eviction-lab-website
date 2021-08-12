@@ -58,6 +58,11 @@
   width: 100%;
   height: 16px;
 }
+
+.visual--mapbox .legend__gradient .legend__gradient-label--tick {
+  font-size: 1.16rem;
+}
+
 .visual--mapbox .legend__gradient-labels {
   width: 100%;
   flex: 1;

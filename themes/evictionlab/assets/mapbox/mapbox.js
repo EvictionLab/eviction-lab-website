@@ -166,9 +166,9 @@ Elab.Mapbox = (function (Elab) {
 
   function getColorScale(range, colors) {
     return d3.scaleLinear()
-        .domain(range)
-        .range(colors)
-        .interpolate(d3.interpolateRgb)
+      .domain(range)
+      .range(colors)
+      .interpolate(d3.interpolateRgb)
   }
 
   function addChoroplethFillLayer(map, prop, range, colors, gradientType) {
@@ -421,11 +421,55 @@ Elab.Mapbox = (function (Elab) {
       var titleContainer = rootEl.find(".legend__title")
       var range = getRange(currentProp);
       gradientContainer.css("background-image", getCssGradient(colors, gradientType));
+      renderLegendTicks(gradientContainer, range, colors)
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });
       labelContainer.html(html);
       titleContainer.html(legendTitle)
+    }
+
+    function renderLegendTicks(item, range, colors){
+      var containerWidth = item[0].clientWidth
+      var containerHeight = item[0].clientHeight
+      var steps = colors.length;
+      var legendRange = colors.reduce(function(result, c, i, array) {
+        if ( i > 0 ) {
+          result.push(containerWidth * (i/(steps)));
+        }
+        return result;
+      }, []);
+      var legendDomain = colors.reduce(function(result, c, i, array) {
+        if ( i > 0 ) {
+          result.push(Math.round(range[1] * (i/(steps))));
+        }
+        return result;
+      }, []);
+      // create svg element
+      var svg = d3.select(".legend__gradient")
+        .append("svg")
+        .attr("width", containerWidth)
+
+      // Create the scale
+      var x = d3.scaleOrdinal()
+        .domain(legendDomain)         // This is what is written on the Axis
+        .range(legendRange);       // This is where the axis is placed
+
+      // Draw the axis
+      svg
+      .append("g")
+      .attr("transform", `translate(0, 0)`)      // This controls the vertical position of the Axis
+      .call(
+        d3.axisBottom(x)
+        .tickSize(containerHeight)
+        .ticks(4)
+      )
+      .call(g => g.select(".domain").remove())
+
+      //style ticks
+      d3.selectAll('text')
+        .attr('y', '24')
+        .attr('class', 'legend__gradient-label--tick')
     }
 
     function renderTooltip(feature, e) {
