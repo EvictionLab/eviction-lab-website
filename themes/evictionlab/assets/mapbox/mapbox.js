@@ -179,7 +179,6 @@ Elab.Mapbox = (function (Elab) {
   function addChoroplethFillLayer(map, prop, range, colors, gradientType) {
     var fillColor;
     if(gradientType === "discrete") {
-      console.log(getLayerColors(range, colors, gradientType))
       fillColor = ["step", ["get", prop]].concat(
         getLayerColors(range, colors, gradientType)
       );
@@ -189,7 +188,6 @@ Elab.Mapbox = (function (Elab) {
         getLayerColors(range, colors, gradientType)
       );
     }
-    console.log(fillColor)
     map.addLayer(
       {
         id: "choropleth",
