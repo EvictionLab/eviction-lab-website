@@ -2272,6 +2272,7 @@
 
 .ranking__label .ranking__primary, 
 .ranking__label .ranking__secondary {
+  opacity:0;
   margin: 0;
   text-align: left;
   white-space: nowrap;
@@ -2304,6 +2305,7 @@
 }
 
 .ranking__bar-label {
+  opacity:0;
   width: 8rem;
   text-align: left;
   margin-left: 0.8rem;
@@ -2323,7 +2325,7 @@
 .ranking__bar {
   height: 1.6rem;
   background-color: #F8DCD7;
-  transition: width 0.4s ease-in-out
+  /* transition: width 0.4s ease-in-out */
 }
 
 /** END RANKING SECTION */

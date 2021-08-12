@@ -179,7 +179,8 @@ Elab.Utils = (function (Elab) {
 
   // group an array of objects by a property
   function group(data, property) {
-    return d3.nest()
+    return d3
+      .nest()
       .key(function (d) {
         return d[property];
       })
@@ -2723,7 +2724,6 @@ Elab.ListPage = (function (Elab) {
 })(Elab);
 
 Elab.Ranking = (function (Elab) {
-
   var itemTemplate = Handlebars.compile(`
   <li class="ranking__item">
     <div class="ranking__label">
@@ -2731,9 +2731,10 @@ Elab.Ranking = (function (Elab) {
       <p class="ranking__secondary">{{secondary}}</p>
     </div>
     <div class="ranking__value">
-      <div class="ranking__bar" style="width: calc({{percent}} - 9rem)"></div>
+      <div class="ranking__bar" style="width: {{percent}}"></div>
       <div class="ranking__bar-label">
-        <span>{{value}}</span> <span>filings</span>
+        <span>{{value}}</span> 
+        <span>filings</span>
       </div>
     </div>
   </li>`);
@@ -2742,7 +2743,7 @@ Elab.Ranking = (function (Elab) {
   <button class="toggle" data-group="{{group}}">
     {{label}}
   </button>
-  `)
+  `);
 
   var dateFormatter = d3.timeFormat("%B %d, %Y");
   var dateParse = d3.timeParse("%Y-%m-%d");
@@ -2757,43 +2758,47 @@ Elab.Ranking = (function (Elab) {
     var csv = config.csv;
     id = config.id;
     $el = $(elId);
-    Elab.Data.loadData(csv, shapeTopEvictions, function(data) {
-      console.log("got data", data, Elab.Utils.group(data, "group"))
+    Elab.Data.loadData(csv, shapeTopEvictions, function (data) {
+      console.log("got data", data, Elab.Utils.group(data, "group"));
       groups = Elab.Utils.group(data, "group");
       activeGroup = groups[0].key;
       renderButtonGroups();
-      renderRankingList();
-    })
+      createRankingList();
+      Elab.Utils.callOnEnter($el[0], renderRankingList);
+    });
   }
 
   function shapeTopEvictions(rows) {
-    return rows.map(function(row) {
+    return rows.map(function (row) {
       return {
         primary: row.xstreet_clean,
         secondary: row.xplaintiff,
         value: parseInt(row.filings),
         group: row.time_period,
-      }
-    })
+      };
+    });
   }
 
   /**
    * Render buttons for the available groups, and bind click handlers.
    */
   function renderButtonGroups() {
-    var buttons = groups.map((group) => {
-      return {
-        label: `Since ${dateFormatter(dateParse(group.key))}`,
-        group: group.key
-      }
-    }).map(buttonGroupTemplate).map($)
+    var buttons = groups
+      .map((group) => {
+        return {
+          label: `Since ${dateFormatter(dateParse(group.key))}`,
+          group: group.key,
+        };
+      })
+      .map(buttonGroupTemplate)
+      .map($);
     var container = $el.find(".button-group");
     container.empty();
     buttons.forEach((button) => {
-      button.data("group") === activeGroup 
-        ? button.addClass("toggle--active") 
-        : button.removeClass("active")
-      button.click(function() {
+      button.data("group") === activeGroup
+        ? button.addClass("toggle--active")
+        : button.removeClass("active");
+      button.click(function () {
         activeGroup = $(this).data("group");
         renderButtonGroups();
         renderRankingList();
@@ -2802,23 +2807,78 @@ Elab.Ranking = (function (Elab) {
     });
   }
 
+  function createRankingList() {
+    const groupData = groups.find((group) => group.key === activeGroup).values;
+    // first render, create the DOM stucture
+    var container = $el.find(".ranking");
+    var items = groupData.map((item) => ({
+      value: null,
+      primary: "loading",
+      secondary: "loading",
+      percent: "0%",
+    }));
+    items.map(itemTemplate).forEach(function (item) {
+      container.append(item);
+    });
+  }
+
   function renderRankingList() {
     const groupData = groups.find((group) => group.key === activeGroup).values;
-    console.log({groupData});
-    var container = $el.find(".ranking");
-    container.empty();
     const max = d3.max(groupData, (d) => d.value);
-    const items = groupData.map((item) => ({...item, value: item.value, percent: percentFormat(item.value/max)})).map(itemTemplate)
-    items.forEach(function(item) {
-      container.append(item);
+    var items = groupData
+      .map((item) => ({
+        ...item,
+        value: item.value,
+        percent: percentFormat(item.value / max),
+      }))
+      .sort(function (a, b) {
+        return b.value - a.value;
+      });
+    var container = $el.find(".ranking");
+
+    // first render, create the DOM stucture
+    if (container.children().length === 0) {
+      container.empty();
+      items.map(itemTemplate).forEach(function (item) {
+        container.append(item);
+      });
+      return;
+    }
+    // subsquent renders, update the DOM
+    container.children().each(function (index, node) {
+      var el = $(node);
+      var item = items[index];
+      el.find(".ranking__primary")
+        .delay(100 * index)
+        .animate({ opacity: 0 }, 200, function () {
+          $(this).text(item.primary);
+        })
+        .animate({ opacity: 1 }, 200);
+      el.find(".ranking__secondary")
+        .delay(110 * index)
+        .animate({ opacity: 0 }, 200, function () {
+          $(this).text(item.primary);
+        })
+        .animate({ opacity: 1 }, 200);
+      el.find(".ranking__bar-label")
+        .delay(200 + 120 * index)
+        .animate({ opacity: 1 }, 200);
+      el.find(".ranking__bar-label span:first-child")
+        .delay(200 + 120 * index)
+        .animate({ opacity: 1 }, 200, function () {
+          $(this).text(item.value);
+        });
+
+      el.find(".ranking__bar")
+        .delay(200 + 120 * index)
+        .animate({ width: `${item.percent}` }, 400);
     });
   }
 
   return {
     init: init,
-  }
-
-})(Elab)
+  };
+})(Elab);
 
 /**
  * SECTION MODULE
