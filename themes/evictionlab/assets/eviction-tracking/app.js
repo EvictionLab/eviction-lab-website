@@ -2857,7 +2857,7 @@ Elab.Ranking = (function (Elab) {
       el.find(".ranking__secondary")
         .delay(110 * index)
         .animate({ opacity: 0 }, 200, function () {
-          $(this).text(item.primary);
+          $(this).text(item.secondary);
         })
         .animate({ opacity: 1 }, 200);
       el.find(".ranking__bar-label")
