@@ -129,7 +129,6 @@ Elab.Mapbox = (function (Elab) {
    * Gets a CSS gradient for the given prop
    */
   function getCssGradient(colors, gradientType) {
-    var type = gradientType;
     var steps = colors.length;
     //boilerplate css for gradient
     var front = "linear-gradient(to right";
@@ -151,14 +150,14 @@ Elab.Mapbox = (function (Elab) {
     }
 
     //get the necessary positions and colorScales, depending on the function describing gradient
-    if(type === "linear") {
-      positions = colors.map(function (c,i) { return i/(steps-1) })
-      colorScale = getColorScale(positions, colors)
-      back = positions.reduce(linearReducer, '')
-    } else {
+    if(gradientType === "discrete") {
       positions = colors.map(function (c,i) { return i/(steps) })
       colorScale = getColorScale(positions, colors)
       back = positions.reduce(discreteReducer, '')
+    } else {
+      positions = colors.map(function (c,i) { return i/(steps-1) })
+      colorScale = getColorScale(positions, colors)
+      back = positions.reduce(linearReducer, '')
     }
 
     //add the boilerplate css to the generated css
@@ -167,15 +166,23 @@ Elab.Mapbox = (function (Elab) {
 
   function getColorScale(range, colors) {
     return d3.scaleLinear()
-      .domain(range)
-      .range(colors)
-      .interpolate(d3.interpolateRgb)
+        .domain(range)
+        .range(colors)
+        .interpolate(d3.interpolateRgb)
   }
 
-  function addChoroplethFillLayer(map, prop, range, colors) {
-    var fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
-      getLayerColors(range, colors)
-    );
+  function addChoroplethFillLayer(map, prop, range, colors, gradientType) {
+    var fillColor;
+    if(gradientType === "discrete") {
+      fillColor = ["step", ["get", prop]].concat(
+        getLayerColors(range, colors)
+      );
+      fillColor.splice(2, 1)
+    } else {
+      fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
+        getLayerColors(range, colors)
+      );
+    }
     map.addLayer(
       {
         id: "choropleth",
@@ -201,12 +208,19 @@ Elab.Mapbox = (function (Elab) {
     );
   }
 
-
-
-  function addChoroplethStrokeLayer(map, prop, range, colors) {
-    var strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
-      getLayerColors(range, colors)
-    );
+  function addChoroplethStrokeLayer(map, prop, range, colors, gradientType) {
+    var strokeColor;
+    if(gradientType === "discrete") {
+      strokeColor = ["step", ["get", prop]].concat(
+        getLayerColors(range, colors)
+      );
+      strokeColor.splice(2, 1)
+    } else {
+      strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
+        getLayerColors(range, colors)
+      );
+    }
+    
     map.addLayer(
       {
         id: "choropleth-stroke",
@@ -385,8 +399,8 @@ Elab.Mapbox = (function (Elab) {
         map.removeLayer("choropleth");
         map.removeLayer("choropleth-stroke");
       }
-      addChoroplethFillLayer(map, currentProp, range, colors);
-      addChoroplethStrokeLayer(map, currentProp, range, colors);
+      addChoroplethFillLayer(map, currentProp, range, colors, gradientType);
+      addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType);
       layersAdded = true;
       renderLegend();
     }

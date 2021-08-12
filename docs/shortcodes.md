@@ -373,7 +373,7 @@ Than include the shortcode in the body of the `.md` file.
   name="school"
   format="integer"
   legendTitle="Eviction Filings (2017 - 2018)"
-  gradientType="linear"
+  gradientType="discrete"
   colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
 %}}
 ```
@@ -389,7 +389,7 @@ Than include the shortcode in the body of the `.md` file.
 - name: a column to use as a "name" identifier for each choropleth (displayed in the tooltip)
 - format: how to format the values ("integer", "percent", or "decimal")
 - legendTitle: title to use for the legend
-- gradientType: "linear" or "discrete", a legend gradient with continuous steps or discrete ones
+- gradientType: if set to "discrete", will create a legend gradient with discrete steps, otherwise linear
 - colors: colors to use for the choropleths, separated by semi colon
 
 #### Demo
