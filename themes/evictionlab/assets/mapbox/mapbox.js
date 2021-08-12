@@ -176,12 +176,20 @@ Elab.Mapbox = (function (Elab) {
       .interpolate(d3.interpolateRgb)
   }
 
+  function getDiscreteColorScale(range, colors) {
+    return d3.scaleQuantize()
+      .domain(range)
+      .range(colors)
+      .nice()
+  }
+
   function addChoroplethFillLayer(map, prop, range, colors, gradientType) {
     var fillColor;
     if(gradientType === "discrete") {
-      fillColor = ["step", ["get", prop]].concat(
-        getLayerColors(range, colors, gradientType)
-      );
+      // need to use the "nice" discrete color scale here to match with colors
+      var discreteScale = getDiscreteColorScale(range, colors);
+      var colorSteps = getLayerColors(discreteScale.domain(), colors, gradientType)
+      fillColor = ["step", ["get", prop]].concat(colorSteps);
       fillColor.splice(2, 1)
     } else {
       fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
@@ -407,7 +415,7 @@ Elab.Mapbox = (function (Elab) {
       addChoroplethFillLayer(map, currentProp, range, colors, gradientType);
       addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType);
       layersAdded = true;
-      renderLegend();
+      gradientType === "discrete" ? renderDiscreteLegend() : renderLegend();
     }
 
     /** add DOM elements for legend */
@@ -420,63 +428,88 @@ Elab.Mapbox = (function (Elab) {
       return [formatter(range[0]), formatter(range[1])];
     }
 
+    /** renders a legend for a discrete scale */
+    function renderDiscreteLegend() {
+      // legend settings
+      var width = 280;
+      var margin = 20;
+      var tickFormat = ",d"
+      
+      // creates an axis with the given scale
+      function axis(scale) {
+        return Object.assign(d3.axisBottom(scale.range([margin, width - margin])), {
+          render() {
+            return d3.create("svg")
+                .attr("viewBox", [0, -2, width, 32])
+                .attr("width", width)
+                .attr("height", 32)
+                .style("display", "block")
+                .call(this)
+              .node();
+          }
+        });
+      }
+
+      // create swatches for colors
+      function swatches(colors) {
+        const n = colors.length;
+        const swatchWidth = (1/n) * (width - margin*2);
+        return {
+          render: function() {
+            var svg = d3.create("svg")
+                .attr("viewBox", [0, 0, width, 16])
+                .attr("width", width)
+                .attr("height", 16)
+                .style("display", "block")
+            svg.selectAll("rect")
+              .data(colors)
+              .enter()
+                .append("rect")
+                .attr("fill", function(d) { return d} )
+                .attr("width", swatchWidth)
+                .attr("height", 24)
+                .attr("x", function(d,i) { return margin + (i * swatchWidth) })
+                .attr("y", 0)
+             return svg.node()
+          }
+        }
+      }
+
+      // container elements
+      var gradientContainer = rootEl.find(".legend__gradient");
+      var labelContainer = rootEl.find(".legend__gradient-labels");
+      var titleContainer = rootEl.find(".legend__title")
+      
+      // render color swatches
+      gradientContainer.append(swatches(colors).render())
+
+      // create tick values based on a "nice" discrete scale
+      var range = getRange(currentProp);
+      var discreteScale = getDiscreteColorScale(range, colors);
+      var colorSteps = getLayerColors(discreteScale.domain(), colors, "discrete")
+      var tickValues = colorSteps.filter(function(value) { return typeof value === "number" })
+      tickValues.push(discreteScale.domain()[1])
+      var tickScale = d3.scaleLinear().domain(discreteScale.domain())
+      var axisNode = axis(tickScale)
+        .tickValues(tickValues, tickFormat)
+        .render()
+      labelContainer.append(axisNode);
+
+      // set title
+      titleContainer.html(legendTitle)
+    }
+
     function renderLegend() {
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
       var titleContainer = rootEl.find(".legend__title")
       var range = getRange(currentProp);
       gradientContainer.css("background-image", getCssGradient(colors, gradientType));
-      if(gradientType === 'discrete'){
-        renderLegendTicks(gradientContainer, range, colors)
-      }
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });
       labelContainer.html(html);
       titleContainer.html(legendTitle)
-    }
-
-    function renderLegendTicks(item, range, colors){
-      var containerWidth = item[0].clientWidth
-      var containerHeight = item[0].clientHeight
-      var steps = colors.length;
-      var legendRange = colors.reduce(function(result, c, i, array) {
-        if ( i > 0 ) {
-          result.push(containerWidth * (i/(steps)));
-        }
-        return result;
-      }, []);
-      var legendDomain = colors.reduce(function(result, c, i, array) {
-        if ( i > 0 ) {
-          result.push(Math.round(range[1] * (i/(steps))));
-        }
-        return result;
-      }, []);
-      // create svg element
-      var svg = d3.select(".legend__gradient")
-        .append("svg")
-        .attr("width", containerWidth)
-
-      // Create the scale
-      var x = d3.scaleOrdinal()
-        .domain(legendDomain)         // This is what is written on the Axis
-        .range(legendRange);       // This is where the axis is placed
-
-      // Draw the axis
-      svg
-      .append("g")
-      .attr("transform", `translate(0, 0)`)      // This controls the vertical position of the Axis
-      .call(
-        d3.axisBottom(x)
-        .tickSize(containerHeight)
-        .ticks(4)
-      )
-      .call(g => g.select(".domain").remove())
-
-      //style ticks
-      d3.selectAll('text')
-        .attr('y', '24')
-        .attr('class', 'legend__gradient-label--tick')
     }
 
     function renderTooltip(feature, e) {
