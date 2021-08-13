@@ -124,7 +124,7 @@ Elab.Utils = (function (Elab) {
    * @param {*} options
    */
   function callOnEnter(el, handler, options) {
-    options = options || { rootMargin: "0px 0px -40px 0px" };
+    options = options || { rootMargin: "0px 0px -40px 0px", threshold: 0.25 };
     if (!!window.IntersectionObserver) {
       var observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(function (entry) {
@@ -1837,6 +1837,7 @@ Elab.Map = (function (Elab) {
           [bbox[2] + padding, bbox[3] + padding],
         ];
         function zoomToLocation() {
+          map.resize();
           map.fitBounds(bounds, { padding: 16 });
         }
         Elab.Utils.callOnEnter(map.getCanvasContainer(), zoomToLocation);
