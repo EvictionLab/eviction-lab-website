@@ -110,6 +110,9 @@
         @include media-breakpoint-up(xl) {
             font-size: 1.8rem;
         }
+        &.reporting-type.cat-link {
+            line-height: 1.4;
+        }
     }
     .red-underbar {
         width: 10.2rem;

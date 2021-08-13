@@ -269,7 +269,8 @@
                   <div class="post-cat">
                     <p class="{{ .Params.childof }}-type cat-link mb-1">{{ .Params.outlet }}</p>
                   </div>
-                  <a class="title {{ .Params.childof }}-type" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title }}</a>
+                  <a class="title {{ .Params.childof }}-type d-none d-md-block" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title }}</a>
+                  <a class="title {{ .Params.childof }}-type d-block d-md-none" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
                 </div>
               </div>  
               <div class="updates-section__entry1--description col-12 px-0">
@@ -285,7 +286,7 @@
                 {{ $img := .Params.thumb }}
                 {{ with .Resources.GetMatch $img }}
                 {{ $processed := .Fill "240x240 q70 jpg" }}
-                <div class="updates-section__entries--image col-3 pl-0 col-lg-3 pl-lg-4 pr-lg-2">
+                <div class="updates-section__entries--image col-3 pl-0 col-lg-3 pl-lg-4 pr-lg-1 pr-xl-2">
                   <img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} ">
                 </div>
                 {{ end }}
@@ -294,7 +295,8 @@
                   <div class="post-cat mb-1">
                     <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
                   </div>
-                  <a class="title {{ .Params.childof }}-type" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
+                  <a class="title {{ .Params.childof }}-type d-block d-md-none d-lg-block" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
+                  <a class="title {{ .Params.childof }}-type d-none d-md-block d-lg-none" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title }}</a>
                 </div>  
               </div>
           {{ end }}
@@ -304,7 +306,7 @@
                 {{ $img := .Params.thumb }}
                 {{ with .Resources.GetMatch $img }}
                 {{ $processed := .Fill "240x240 q70 jpg" }}
-                <div class="updates-section__entries--image col-12 col-md-3 pl-4">
+                <div class="updates-section__entries--image col-12 col-md-3 pl-4 pr-lg-1 pr-xl-2">
                   <img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} ">
                 </div>
                 {{ end }}
@@ -313,7 +315,8 @@
                   <div class="post-cat mb-1">
                     <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
                   </div>
-                  <a class="title {{ .Params.childof }}-type" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
+                  <a class="title {{ .Params.childof }}-type d-block d-md-none d-lg-block" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
+                  <a class="title {{ .Params.childof }}-type d-none d-md-block d-lg-none" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title }}</a>
                 </div>  
               </div>
           {{ end }}
