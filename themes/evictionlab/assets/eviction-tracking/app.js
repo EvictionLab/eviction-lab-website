@@ -2949,8 +2949,8 @@ Elab.MedianFilings = (function (Elab) {
     return rows.map(function (row) {
       var date = dateParse(row[config.xCol]);
       return {
-        name: yearFormat(date),
-        x: date.setFullYear(2020),
+        name: "Median Claim Amount",
+        x: date,
         y: Number(row[config.yCol]),
       };
     });
@@ -2962,7 +2962,7 @@ Elab.MedianFilings = (function (Elab) {
       x: "x",
       y: "y",
       groupBy: "name",
-      xFormat: monthFormat,
+      xFormat: Elab.Utils.monthAxisFormatter,
       yFormat: dollarFormat,
       xTooltipFormat: d3.timeFormat("%B"),
       yTooltipFormat: d3.format("$.2f"),

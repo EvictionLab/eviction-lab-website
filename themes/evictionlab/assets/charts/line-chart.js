@@ -137,11 +137,14 @@ Elab.LineChart = (function (Elab) {
         .addTimeAxis({
           selector: xSelector,
           ticks: dataOptions.xTicks ? getXTicks(dataOptions.xTicks) : undefined,
-          tickFormat: dataOptions.xFormat
-            ? d3.timeFormat(dataOptions.xFormat)
-            : dataOptions.xTicks === "week"
-            ? xFormat
-            : undefined,
+          tickFormat:
+            typeof dataOptions.xFormat === "function"
+              ? dataOptions.xFormat
+              : dataOptions.xFormat
+              ? d3.timeFormat(dataOptions.xFormat)
+              : dataOptions.xTicks === "week"
+              ? xFormat
+              : undefined,
           adjustExtent: dataOptions.adjustExtentX,
           adjustLabels: function (selection) {
             if (window.innerWidth < 540) {
