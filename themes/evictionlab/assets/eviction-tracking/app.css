@@ -1900,6 +1900,10 @@
   max-width: 360px;
 }
 
+.visual__chart {
+  margin-top: 2rem;
+}
+
 @media (min-width: 768px) {
   .visual__title {
     max-width: 420px;
@@ -2177,6 +2181,8 @@
   }
 }
 
+
+
 /** SECTION FOOTNOTES */
 
 .footnote ol {
@@ -2221,44 +2227,59 @@
 
 /** END SECTION FOOTNOTES */
 
-/** END SECTION BASE STYLES */
 
-/** RANKING SECTION */
+/** 
+ * SECTION--FLEX VARIANT
+ * uses flexbox instead of absolute positioning of visual
+ */
 
-.section--ranking .section__content {
+.section.section--flex {min-height: 0; }
+.section--flex .section__content {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.section--ranking .button-group {
+.section--flex .button-group {
   justify-content: flex-start;
 }
 
 @media(min-width: 600px) {
-  .section--ranking .section__content .visual {
+  .section--flex .section__content .visual {
     width: 480px;
   }
 }
 
 @media(min-width: 1024px) {
-  .section--ranking .section__content { 
+  .section--flex .section__content { 
     flex-direction: row; 
     align-items: flex-start; 
   }
-  .section--ranking .section__content .details {
-    position: sticky;
-    top: 8.8rem;
-  }
-  .section--ranking .section__content .visual {
+  .section--flex .section__content .visual {
     width: 50%;
     margin-right: 0;
   }
 }
 
-
-.section--ranking .section__content .visual {
+.section--flex .section__content .visual {
   position: relative;
+}
+
+.section.section--flex .footnote {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+/** END SECTION BASE STYLES */
+
+/** RANKING SECTION */
+
+
+@media(min-width: 1024px) {
+  .section--ranking .section__content .details {
+    position: sticky;
+    top: 8.8rem;
+  }
 }
 
 /** TOP BUILDINGS STAT */
@@ -2574,10 +2595,16 @@
   height: 100%;
 }
 
-.chart__box {
+.chart__box,
+.chart__frame {
   fill: none;
   stroke-width: 3;
   stroke: #fff;
+}
+
+.chart__voronoi path {
+  fill: none;
+  pointer-events: all;
 }
 
 .chart__grid .domain,
@@ -2602,7 +2629,8 @@
 }
 
 /** white background section */
-.section .chart__box {
+.section .chart__box,
+.section .chart__frame {
   stroke: #f4f7f9;
 }
 
@@ -2616,7 +2644,8 @@
 }
 
 /** alt background section */
-.section:nth-child(2n-1) .chart__box {
+.section:nth-child(2n-1) .chart__box,
+.section:nth-child(2n-1) .chart__frame {
   stroke: #fff;
 }
 
@@ -2628,6 +2657,8 @@
 .section:nth-child(2n-1) .chart__axis--y .tick line {
   stroke: #fff;
 }
+
+
 
 .chart__line {
   stroke-dasharray: 3 1;
@@ -2651,6 +2682,27 @@
 }
 .chart__line--3 {
   stroke: var(--c4);
+}
+
+
+.chart__hover-line {
+  stroke-width: 1;
+  stroke: rgba(0,0,0,0.1)
+}
+.chart__hover-dot {
+  fill: var(--c4);
+}
+.chart__hover-dot.chart__hover-dot--0 {
+  fill: var(--c1);
+  fill: #e24000
+}
+.chart__hover-dot.chart__hover-dot--1 {
+  fill: var(--c2);
+  fill: #434878;
+}
+.chart__hover-dot.chart__hover-dot--2 {
+  fill: var(--c3);
+  fill: #2c897f
 }
 
 .chart__bar {
@@ -2735,12 +2787,16 @@
   line-height: 1.5;
   max-width: 240px;
   z-index: 999;
+  pointer-events: none;
 }
 /** no tooltip on mobile */
 @media (max-width: 420px) {
   .chart__tooltip {
     display: none !important;
   }
+}
+.chart__tooltip.chart__tooltip--show {
+  display: block;
 }
 
 .chart__tooltip h1 {

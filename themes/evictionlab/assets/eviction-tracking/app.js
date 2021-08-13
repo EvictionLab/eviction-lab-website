@@ -2756,11 +2756,12 @@ Elab.Ranking = (function (Elab) {
   var dateParse = d3.timeParse("%Y-%m-%d");
   var percentFormat = d3.format(".2%");
 
-  var id;
-  var $el;
-  var groups;
-  var activeGroup;
+  var $el; // jquery wrapped root element
+  var groups; // object containing groups
+  var activeGroup; // current group key (from groups object)
+  var renderCount = 0; // number of times the list has been rendered (used for first render conditionals)
 
+  /** Load the data, set default group, trigger first render */
   function init(elId, config) {
     var csv = config.csv;
     id = config.id;
@@ -2776,6 +2777,7 @@ Elab.Ranking = (function (Elab) {
     });
   }
 
+  /** Shapes the data from the CSV into proper format */
   function shapeTopEvictions(rows) {
     return rows.map(function (row) {
       return {
@@ -2788,6 +2790,7 @@ Elab.Ranking = (function (Elab) {
     });
   }
 
+  /** Renders the top 100 buildings stat */
   function renderEvictorsStat() {
     var format = d3.format(".1%");
     $el.find(".stat").remove();
@@ -2822,7 +2825,9 @@ Elab.Ranking = (function (Elab) {
         ? button.addClass("toggle--active")
         : button.removeClass("active");
       button.click(function () {
-        activeGroup = $(this).data("group");
+        var newGroup = $(this).data("group");
+        if (activeGroup === newGroup) return;
+        activeGroup = newGroup;
         renderButtonGroups();
         renderRankingList();
         renderEvictorsStat();
@@ -2831,6 +2836,7 @@ Elab.Ranking = (function (Elab) {
     });
   }
 
+  /** Creates the initial DOM for the ranking list */
   function createRankingList() {
     const groupData = groups.find((group) => group.key === activeGroup).values;
     // first render, create the DOM stucture
@@ -2846,6 +2852,7 @@ Elab.Ranking = (function (Elab) {
     });
   }
 
+  /** Updates the DOM elements in the ranking list */
   function renderRankingList() {
     const groupData = groups.find((group) => group.key === activeGroup).values;
     const max = d3.max(groupData, (d) => d.value);
@@ -2860,15 +2867,7 @@ Elab.Ranking = (function (Elab) {
       });
     var container = $el.find(".ranking");
 
-    // first render, create the DOM stucture
-    if (container.children().length === 0) {
-      container.empty();
-      items.map(itemTemplate).forEach(function (item) {
-        container.append(item);
-      });
-      return;
-    }
-    // subsquent renders, update the DOM
+    // update the DOM children and animate to new states
     container.children().each(function (index, node) {
       var el = $(node);
       var item = items[index];
@@ -2892,11 +2891,108 @@ Elab.Ranking = (function (Elab) {
         .animate({ opacity: 1 }, 200, function () {
           $(this).text(item.value);
         });
-
-      el.find(".ranking__bar")
-        .delay(200 + 120 * index)
-        .animate({ width: `${item.percent}` }, 400);
+      (index !== 0 || renderCount === 0) &&
+        el
+          .find(".ranking__bar")
+          .delay(200 + 120 * index)
+          .animate({ width: `${item.percent}` }, 400);
     });
+    renderCount++;
+  }
+
+  return {
+    init: init,
+  };
+})(Elab);
+
+Elab.MedianFilings = (function (Elab) {
+  var legendItemTemplate = Handlebars.compile(`
+    <div class="legend-item legend-item--{{index}} legend-item--{{label}}">
+      <div class="legend-item__color"></div>
+      <div class="legend-item__label">{{label}}</div>
+    </div>
+  `);
+
+  var dateFormatter = d3.timeFormat("%B %d, %Y");
+  var dateParse = d3.timeParse("%Y-%m-%d");
+  var monthFormat = d3.timeFormat("%b");
+  var yearFormat = d3.timeFormat("%Y");
+  var dollarFormat = d3.format("$.2s");
+
+  var $el; // jquery wrapped root element
+  var groups; // object containing groups
+  var activeGroup; // current group key (from groups object)
+  var renderCount = 0; // number of times the list has been rendered (used for first render conditionals)
+  var config;
+  var data;
+  var chart;
+
+  /** Load the data, set default group, trigger first render */
+  function init(elId, options) {
+    var csv = options.csv;
+    config = options;
+    id = options.id;
+    $el = $(elId);
+    Elab.Data.loadData(csv, shapeLineData, function (result) {
+      data = result.sort(function (a, b) {
+        return a.name - b.name;
+      });
+      console.log("got data", data, Elab.Utils.group(data, "group"));
+      // var groups = Elab.Utils.group(data, "year");
+      Elab.Utils.callOnEnter($el[0], render);
+    });
+  }
+
+  /** Shapes the data from the CSV into proper format */
+  function shapeLineData(rows) {
+    return rows.map(function (row) {
+      var date = dateParse(row[config.xCol]);
+      return {
+        name: yearFormat(date),
+        x: date.setFullYear(2020),
+        y: Number(row[config.yCol]),
+      };
+    });
+  }
+
+  /** Renders the top 100 buildings stat */
+  function renderLineChart() {
+    Elab.LineChart.createFigure($el.find(".visual__chart")[0], data, {
+      x: "x",
+      y: "y",
+      groupBy: "name",
+      xFormat: monthFormat,
+      yFormat: dollarFormat,
+      xTooltipFormat: d3.timeFormat("%B"),
+      yTooltipFormat: d3.format("$.2f"),
+    });
+  }
+
+  /**
+   * Render buttons for the available groups, and bind click handlers.
+   */
+  function renderLegend() {
+    var groups = Elab.Utils.group(data, "name")
+      .map(function (group) {
+        return group.key;
+      })
+      .sort(function (a, b) {
+        return b - a;
+      });
+    var container = $el.find(".legend");
+    container.empty();
+    groups.forEach(function (group, index) {
+      var item = legendItemTemplate({
+        index: index,
+        label: group,
+      });
+      container.append(item);
+    });
+  }
+
+  function render() {
+    renderLineChart();
+    renderLegend();
   }
 
   return {
@@ -2919,6 +3015,7 @@ Elab.Section = (function (Elab) {
     var contentEl = rootEl.find(".details");
     var footnoteEl = rootEl.find(".footnote");
     footnoteEl.append(contentEl.find("ol"));
+    console.log({ footnoteEl });
 
     // initialize visual component
     if (type === "map") {
@@ -2926,6 +3023,12 @@ Elab.Section = (function (Elab) {
     }
     if (type === "chart") {
       return Elab.Chart.init(rootEl[0], config);
+    }
+    if (type === "ranking") {
+      return Elab.Ranking.init(rootEl[0], config);
+    }
+    if (type === "median_filings") {
+      return Elab.MedianFilings.init(rootEl[0], config);
     }
   }
 
