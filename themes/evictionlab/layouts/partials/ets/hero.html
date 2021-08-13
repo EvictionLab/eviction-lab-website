@@ -8,18 +8,24 @@
   </div>
   <div class="hero__content">
     <div class="hero__text">
-      <p class="counter counter--loading">
-        <span class="counter__context">
-          In the <span id="stateCount"></span> states 
-          and <span id="cityCount"></span> cities we track,
-          landlords have filed for</span
-        >
-        <span id="counterTotal" class="counter__number">0</span>
-        <span class="counter__label">evictions</span>
-        <span class="counter__context"
-          >during the pandemic.</span
-        >
-      </p>
+      <p class="hero__top-line">
+        In the <span id="stateCount"></span> states 
+        and <span id="cityCount"></span> cities we track,
+        landlords have filed for:</p>
+      <ul class="hero__stats">
+        <li>
+          <span id="counterTotal" class="counter__number">0</span>
+          <span class="counter__label">evictions since mid-March 2020</span>
+        </li>
+        <li>
+          <span id="counterWeek" class="counter__number">0</span>
+          <span class="counter__label">evictions in the last week</span>
+        </li>
+      </ul>
+      <div class="hero__shape-text">
+        <div></div>
+        <p>We have been tracking weekly eviction filings since March 2020 to monitor the impact of the COVID-19 pandemic and associated policies.  In the sections below you can see a <a href="#tracker" class="smoothScroll">summary of the states and cities</a> we track, view detailed reports, and <a class="smoothScroll" href="#a-looming-eviction-crisis">learn more</a> about the Eviction Tracking System.</p>
+      </div>
     </div>
   </div>
   <svg
@@ -593,4 +599,5 @@
       </linearGradient>
     </defs>
   </svg>
+  <a id="tracker"></a>
 </div>
