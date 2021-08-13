@@ -2964,7 +2964,7 @@ Elab.MedianFilings = (function (Elab) {
       groupBy: "name",
       xFormat: Elab.Utils.monthAxisFormatter,
       yFormat: dollarFormat,
-      xTooltipFormat: d3.timeFormat("%B"),
+      xTooltipFormat: d3.timeFormat("%B %Y"),
       yTooltipFormat: d3.format("$.2f"),
     });
   }
