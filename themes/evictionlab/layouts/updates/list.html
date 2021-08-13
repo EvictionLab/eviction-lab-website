@@ -213,7 +213,7 @@
                 <a href="{{ .Params.link }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
               </h2>
               {{ if .Params.listSummary }}
-                <div class="post-summary d-block d-md-none">
+                <div class="post-summary d-none">
                   {{ .Params.listSummary | truncate 90 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
                 </div>
                 <div class="post-summary d-none d-md-block">
