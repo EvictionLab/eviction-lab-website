@@ -1008,6 +1008,9 @@
 
 .hero__stats {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .hero__stats li:first-child {
   width: 17rem;
