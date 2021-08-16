@@ -985,10 +985,10 @@
 
 .hero__top-line {
   display: block;
-  max-width: 18rem;
-  font-family: var(--body-font);
-  font-size: 1.5rem;
+  font-family: var(--heading-font);
+  font-size: 1.6rem;
   line-height: 1.5;
+  letter-spacing: 0.01em;
 }
 
 @media (min-width: 767px) {

@@ -29,6 +29,28 @@ Eviction filings in Houston were higher than average in January and February of 
 {{%/ report_chart %}}
 
 
+{{% report_top_evictors id="topEvictors" data="/uploads/harris_top_evictors.csv" %}}
+# Eviction hot spots
+
+Eviction filings in Houston were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April and May of 2020 were well below average. Filings have increased since then but remain below historical averages.<sup>2</sup>
+
+1. Average eviction filings taken from Eviction Lab data for 2012–2015
+2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
+{{%/ report_top_evictors %}}
+
+
+
+{{% report_median_claims id="medianFilings" data="/uploads/houston_filing_amounts.csv" %}}
+# Changes in claim amounts
+
+Eviction filings in Houston were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April and May of 2020 were well below average. Filings have increased since then but remain below historical averages.<sup>2</sup>
+
+1. Average eviction filings taken from Eviction Lab data for 2012–2015
+2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
+{{%/ report_median_claims %}}
+
+
+
 {{% report_map shapes="/uploads/houston_shapes.json" data="/uploads/houston_map.csv" %}}
 
 # The geography of changes in eviction filings
