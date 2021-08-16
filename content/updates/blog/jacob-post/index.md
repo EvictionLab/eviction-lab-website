@@ -56,17 +56,32 @@ Notes from Lane:
 
 **James is handling charts below.**
 
+
+{{% line-chart
+  id="fig6"
+  data="./fig1-3.csv"
+  x="week_date"
+  y="filings"
+  groupBy="filing_type"
+  xTicks="month"
+  xFormat="%b"
+  xTooltipFormat="%x"
+  yFormat=".2s"
+  yTooltipFormat=".2s"
+  highlight="2020-2021;historical average"
+  title="Figure 1: 2020-21 Cumulative Eviction Filings Relative to Historical Average"
+%}}
+
+
 {{% bar-chart
   id="fig1"
-  data="/uploads/jacob_test2.csv"
-  x="week_date"
+  data="./fig2.csv"
+  x="site_name_full"
   y="ratio"
   yMin="0"
-  yMax="1.2"
+  yMax="1"
   yTooltipFormat=".1%"
   yFormat=".0%"
   title=""
   margin="8 8 104 40"
-  axis="time"
-  mark="03/18/2020"
 %}}
