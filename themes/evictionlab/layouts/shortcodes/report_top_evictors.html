@@ -1,0 +1,26 @@
+{{ if .Site.BuildDrafts}}
+<section
+  id="{{ .Get `id` }}"
+  class="section section--flex section--ranking section--{{ .Get `id` }}"
+>
+  <div class="section__content">
+    <div class="details">
+      {{ .Inner }}
+<div class="button-group"></div>
+<div class="footnote"></div>
+</div>
+    <div class="visual">
+      <ul id="rankingList" class="ranking">
+      </ul>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', function() {
+      var id = {{ .Get "id" }}
+      var csv = {{ .Get "data" }}
+      var rootEl = '#'+id
+      Elab.Section.init('ranking', rootEl, { csv: csv, id: id})
+    });
+  </script>
+</section>
+{{ end }}
