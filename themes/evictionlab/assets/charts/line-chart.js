@@ -91,10 +91,8 @@ Elab.LineChart = (function (Elab) {
    * @param {*} data
    */
   var lineSelector = function (data) {
-    var grouped = Elab.ChartUtils.groups(data, function (d) {
-      return d.name;
-    }).map(function (d) {
-      return d[1];
+    var grouped = Elab.Utils.group(data, "name").map(function (d) {
+      return d.values;
     });
     return grouped.map(function (group) {
       return group.map(function (d) {
@@ -137,11 +135,15 @@ Elab.LineChart = (function (Elab) {
         .addTimeAxis({
           selector: xSelector,
           ticks: dataOptions.xTicks ? getXTicks(dataOptions.xTicks) : undefined,
-          tickFormat: dataOptions.xFormat
-            ? d3.timeFormat(dataOptions.xFormat)
-            : dataOptions.xTicks === "week"
-            ? xFormat
-            : undefined,
+          tickFormat:
+            typeof dataOptions.xFormat === "function"
+              ? dataOptions.xFormat
+              : dataOptions.xFormat
+              ? d3.timeFormat(dataOptions.xFormat)
+              : dataOptions.xTicks === "week"
+              ? xFormat
+              : undefined,
+          adjustExtent: dataOptions.adjustExtentX,
           adjustLabels: function (selection) {
             if (window.innerWidth < 540) {
               selection
@@ -168,8 +170,12 @@ Elab.LineChart = (function (Elab) {
         .addHoverDot()
         .addVoronoi({
           renderTooltip: function (hoverData) {
-            var numFormat = d3.format(".0%");
-
+            var yFormat =
+              dataOptions.yTooltipFormat || dataOptions.yFormat || ".0%";
+            var yFormatter = d3.format(yFormat);
+            var xFormat =
+              dataOptions.xTooltipFormat || dataOptions.xFormat || "%B %d, %Y";
+            var xFormatter = d3.timeFormat(xFormat);
             function getWeekTooltip() {
               var weekFormat = d3.timeFormat("%b %d");
               var start = weekFormat(xSelector(hoverData));
@@ -177,7 +183,7 @@ Elab.LineChart = (function (Elab) {
               return {
                 title: hoverData.name,
                 xValue: start + " - " + end,
-                yValue: numFormat(ySelector(hoverData)),
+                yValue: yFormatter(ySelector(hoverData)),
               };
             }
 
@@ -188,18 +194,15 @@ Elab.LineChart = (function (Elab) {
               return {
                 title: hoverData.name,
                 xValue: monthFormat(xSelector(hoverData)),
-                yValue: numFormat(ySelector(hoverData)),
+                yValue: yFormatter(ySelector(hoverData)),
               };
             }
 
             function getDefaultTooltip() {
-              const dateFormat = d3.timeFormat(
-                dataOptions.xFormat || "%B %d, %Y"
-              );
               return {
                 title: hoverData.name,
-                xValue: dateFormat(xSelector(hoverData)),
-                yValue: numFormat(ySelector(hoverData)),
+                xValue: xFormatter(xSelector(hoverData)),
+                yValue: yFormatter(ySelector(hoverData)),
               };
             }
 
@@ -209,6 +212,8 @@ Elab.LineChart = (function (Elab) {
                 : dataOptions.xTicks === "month"
                 ? getMonthTooltip()
                 : getDefaultTooltip();
+
+            console.log("rendertt", tooltip);
 
             return (
               '<h1 class="tooltip__title">' +
@@ -268,5 +273,6 @@ Elab.LineChart = (function (Elab) {
 
   return {
     init: init,
+    createFigure: createFigure,
   };
 })(Elab);
