@@ -19,7 +19,6 @@
       var id = {{ .Get "id" }}
       var csv = {{ .Get "data" }}
       var rootEl = '#'+id
-      console.log({id, csv})
       Elab.Section.init('ranking', rootEl, { csv: csv, id: id})
     });
   </script>
