@@ -1,3 +1,4 @@
+{{ if .Site.BuildDrafts}}
 <section
   id="{{ .Get `id` }}"
   class="section section--flex section--ranking section--{{ .Get `id` }}"
@@ -18,8 +19,8 @@
       var id = {{ .Get "id" }}
       var csv = {{ .Get "data" }}
       var rootEl = '#'+id
-      console.log({id, csv})
       Elab.Section.init('ranking', rootEl, { csv: csv, id: id})
     });
   </script>
 </section>
+{{ end }}

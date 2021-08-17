@@ -91,11 +91,9 @@ Elab.LineChart = (function (Elab) {
    * @param {*} data
    */
   var lineSelector = function (data) {
-    console.log({ data });
     var grouped = Elab.Utils.group(data, "name").map(function (d) {
       return d.values;
     });
-    console.log({ grouped });
     return grouped.map(function (group) {
       return group.map(function (d) {
         return [d.x, d.y, d.name];

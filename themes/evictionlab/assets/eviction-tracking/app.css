@@ -2237,7 +2237,8 @@
  * uses flexbox instead of absolute positioning of visual
  */
 
-.section.section--flex {min-height: 0; }
+.section.section--flex {min-height: 0; display: block; }
+
 .section--flex .section__content {
   display: flex;
   flex-direction: column;
@@ -2281,6 +2282,7 @@
 
 @media(min-width: 1024px) {
   .section--ranking .section__content .details {
+    position: static; /** ie11 fallback */
     position: sticky;
     top: 8.8rem;
   }
@@ -2381,6 +2383,7 @@
 
 .section.section--median {
   min-height:0;
+  display: block;
 }
 
 /** END MEDIAN SECTION */
