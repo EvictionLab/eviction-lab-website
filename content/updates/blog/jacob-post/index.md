@@ -21,7 +21,6 @@ scripts:
   - grouped-bar-chart
 ---
 
-
 {{% line-chart
   id="11months_fig1"
   data="./fig1-3.csv"
@@ -35,9 +34,8 @@ scripts:
   yTooltipFormat=".2s"
   highlight="2020-2021;historical average"
   title="Figure 1: 2020-21 Cumulative Eviction Filings Relative to Historical Average"
+  mark="03/18/2020"
 %}}
-
-
 
 {{% bar-chart
   id="11months_fig2"
@@ -91,25 +89,25 @@ scripts:
   colors="rgba(250,222,211,0.23);#FADED3;#F3AF95;#EB7649;#e24000"
 %}}
 
-{{% grouped-bar-chart 
-  id="11months_fig4" 
-  titlePrefix="Figure 4: Share of eviction-filed defendants pre-and during-pandemic, by race and ethnicity" 
-  titleSuffix="" 
-  data="./race_by_demo_natl.csv" 
-  x="cofips" 
-  y="renters_prop_w" 
-  yTicks="5" 
-  yFormat=".0%" 
-  xTicks="Asian;Black;Latinx;White" 
-  columns="cofips,state,county,year_string,renters_prop_a,defendant_prop_a,judgment_prop_a,renters_prop_b,defendant_prop_b,judgment_prop_b,renters_prop_l,defendant_prop_l,judgment_prop_l,renters_prop_w,defendant_prop_w,judgment_prop_w" 
-  xBars="renters_prop_a,defendant_prop_a,judgment_prop_a;renters_prop_b,defendant_prop_b,judgment_prop_b;renters_prop_l,defendant_prop_l,judgment_prop_l;renters_prop_w,defendant_prop_w,judgment_prop_w" 
-  xFormat="" 
-  highlight="renters;defendant;judgment" 
-  active="0" 
-  searchId="cofips" 
-  searchLabel="county" 
-  type="barGroup" 
-  legendItems="Share of renters;Share of defendants during CDC moratorium;Share of defendants during pandemic" 
-  search="true" 
-  searchPrompt="" 
+{{% grouped-bar-chart
+  id="11months_fig4"
+  titlePrefix="Figure 4: Share of eviction-filed defendants pre-and during-pandemic, by race and ethnicity"
+  titleSuffix=""
+  data="./race_by_demo_natl.csv"
+  x="cofips"
+  y="renters_prop_w"
+  yTicks="5"
+  yFormat=".0%"
+  xTicks="Asian;Black;Latinx;White"
+  columns="cofips,state,county,year_string,renters_prop_a,defendant_prop_a,judgment_prop_a,renters_prop_b,defendant_prop_b,judgment_prop_b,renters_prop_l,defendant_prop_l,judgment_prop_l,renters_prop_w,defendant_prop_w,judgment_prop_w"
+  xBars="renters_prop_a,defendant_prop_a,judgment_prop_a;renters_prop_b,defendant_prop_b,judgment_prop_b;renters_prop_l,defendant_prop_l,judgment_prop_l;renters_prop_w,defendant_prop_w,judgment_prop_w"
+  xFormat=""
+  highlight="renters;defendant;judgment"
+  active="0"
+  searchId="cofips"
+  searchLabel="county"
+  type="barGroup"
+  legendItems="Share of renters;Share of defendants during CDC moratorium;Share of defendants during pandemic"
+  search="true"
+  searchPrompt=""
 %}}

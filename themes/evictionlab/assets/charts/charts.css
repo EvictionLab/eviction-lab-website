@@ -703,7 +703,7 @@ body .visual .visual__title, body .visual .visual__title > * {
   fill: var(--c1);
 }
 
-.chart--fig1 .chart__mark {
+.chart__mark {
   stroke: #e24000;
   stroke: var(--c1);
   stroke-dasharray: 2 2;
