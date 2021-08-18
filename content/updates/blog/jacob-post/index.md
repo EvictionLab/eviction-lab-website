@@ -21,41 +21,6 @@ scripts:
   - grouped-bar-chart
 ---
 
-**For Alex:**
-
-The client wants something like the map below, but with discrete cutoffs at quartiles or quintiles of eviction filing rates rather than a continuous scale. Thinking we can use <code>scaleQuantize</code> in d3, either via a new map shortcode or (ideally) allowing the option of having either a linear or quantized scale in the current one.
-
-Relevant files:
-
-- `themes/evictionlab/assets/mapbox/mapbox.js`
-- `themes/evictionlab/layouts/shortcodes/mapbox.html`
-- notes on scale options: https://www.d3indepth.com/scales/#scales-with-continuous-input-and-discrete-output
-- shortcodes documentation: `docs/shortcodes.md`
-- this post: `content/updates/blog/jacob-post.md`
-
-Notes from Lane:
-
-- we are using an old version of d3 here for IE11 compatibility (v4 i think)
-- there is no transpiling on this repo and we cannot use modern features (like object deconstruction, const, let, arrow functions, etc.). changes need to be checked on IE11
-
-{{% mapbox
-  id="mapbox1"
-  data="/uploads/hisd_data.csv"
-  shapes="/uploads/hisd_shapes.json"
-  column="totalfilings"
-  join="Code"
-  name="school"
-  format="integer"
-  title=""
-  legendTitle="Eviction Filings (2017 - 2018)"
-  gradientType="discrete"
-  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
-%}}
-
-<br/>
-
-**James is handling charts below.**
-
 
 {{% line-chart
   id="fig6"
@@ -72,6 +37,23 @@ Notes from Lane:
   title="Figure 1: 2020-21 Cumulative Eviction Filings Relative to Historical Average"
 %}}
 
+<br>
+
+{{% mapbox
+  id="mapbox1"
+  data="/uploads/hisd_data.csv"
+  shapes="/uploads/hisd_shapes.json"
+  column="totalfilings"
+  join="Code"
+  name="school"
+  format="integer"
+  title=""
+  legendTitle="Eviction Filings (2017 - 2018)"
+  gradientType="discrete"
+  colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+%}}
+
+<br/>
 
 {{% bar-chart
   id="fig1"
