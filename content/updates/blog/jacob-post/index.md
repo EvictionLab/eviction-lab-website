@@ -21,6 +21,8 @@ scripts:
   - grouped-bar-chart
 ---
 
+<mark>Fig. 1 TODO: add red moratorium markline to legend</mark>
+
 {{% line-chart
   id="11months_fig1"
   data="./fig1-3.csv"
@@ -34,7 +36,7 @@ scripts:
   yTooltipFormat=".2s"
   highlight="2020-2021;historical average"
   title="Figure 1: 2020-21 Cumulative Eviction Filings Relative to Historical Average"
-  mark="03/18/2020"
+  mark="09/04/2020"
 %}}
 
 {{% bar-chart
@@ -77,8 +79,8 @@ scripts:
 
 <br>
 
-_Maps TODO: fix tooltip number format. Add legend for quartiles. 
-Q: What should titles be?_
+<mark>Maps TODO: fix tooltip number format. Add legend for quartiles. 
+Q: What should titles be?</mark>
 </div>
 </div>
 </div>
