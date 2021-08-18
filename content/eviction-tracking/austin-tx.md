@@ -13,9 +13,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 Eviction filings in Travis County, TX (Austin) have fallen sharply since eviction proceedings were suspended across Texas on March 19, 2020. Compared to equivalent periods in previous years (2014-2019), eviction filings fell far below average beginning in April. Eviction protections in Texas began to expire on May 18, 2020. However, Travis County has local protections in place until August 1, 2021, though some of those protections expired on June 1, 2021. 
 
 More detail on eviction protections in Texas can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/tx/).
+
+
 
 
 
@@ -25,6 +29,8 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 {{% report_chart id="avg" data="/uploads/austin_barchart.csv" %}}
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Austin were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed by April following the suspension of eviction proceedings and filings have remained well below historical averages.<sup>2</sup>
@@ -32,11 +38,21 @@ Eviction filings in Austin were higher than average in January and February of 2
 1. Eviction filings data for 2014-2019 collected by [BASTA Austin](http://www.bastaaustin.org/) and [Open Austin](https://www.open-austin.org/)
 2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
 
+
+
 {{%/ report_chart %}}
 
 
 
+{{% report_top_evictors id="topEvictorsSection" data="undefined" %}}
+Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and 2021. We analyzed eviction records in \[[CITY]] to determine where the most cases are being filed during the pandemic.This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
+{{%/ report_top_evictors %}}
+
+
+
 {{% report_map shapes="/uploads/austin_shapes.json" data="/uploads/austin_map.csv" %}}
+
+
 
 
 
@@ -77,11 +93,15 @@ Travis County is divided into 64 zip codes. In each of those zip codes, we map t
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/austin_linechart.csv" %}}
+
+
 
 
 
@@ -94,6 +114,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2014-2019.<sup>1</sup>
 
 1. Eviction filings data for 2014-2019 for Travis county were collected by [BASTA Austin](http://www.bastaaustin.org/) and [Open Austin](https://www.open-austin.org/). Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/).
+
+
 
 
 
