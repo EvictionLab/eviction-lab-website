@@ -548,6 +548,24 @@ svg {
   }
 }
 
+// Preliminary-analysis-11-months-of-the-cdc-moratorium post
+
+.page-preliminary-analysis-11-months-of-the-cdc-moratorium {
+  .chart--11months_fig2 .chart__bars .chart__bar {
+    fill: $color1;
+    &:nth-child(3), &:nth-child(4), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(14) {
+      fill: $color2;
+    }
+    &:nth-child(1), &:nth-child(2) {
+      fill: $color3;
+    }
+   
+  }
+  .chart__search-group {
+    display: none;
+  }
+}
+
 // Allow translation option on certain posts
 
 .page-type-updates.url-esmoratorium-extended-evictions-continue, .page-type-updates.url-moratorium-extended-evictions-continue {
