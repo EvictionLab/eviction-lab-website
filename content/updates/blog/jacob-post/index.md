@@ -7,8 +7,8 @@ featured: "home"
 researchtype: elresearch
 title: "Preliminary Analysis: 11 months of the CDC Moratorium"
 date: 2021-08-09T16:46:40.089Z
-postauthorname: The Eviction Lab
-postauthortitle: Princeton University
+postauthorname: Jasmine Rangel, Jacob Haas, Emily Lemmerman, Joe Fish, and Peter Hepburn
+postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Tracking federal, state, and local actions in response to the pandemic.
 socialDescription: Tracking federal, state, and local actions in response to the pandemic.
@@ -35,7 +35,7 @@ scripts:
   yFormat=".2s"
   yTooltipFormat=".2s"
   highlight="2020-2021;historical average"
-  title="Figure 1: 2020-21 Cumulative Eviction Filings Relative to Historical Average"
+  title="Figure 1: Eviction filings were down from historical averages during the CDC Moratorium"
   mark="09/04/2020"
 %}}
 
@@ -80,13 +80,13 @@ scripts:
 <br>
 
 <mark>Maps TODO: fix tooltip number format. Add legend for quartiles. 
-Q: What should titles be?</mark>
+Q: What should titles for each map be?</mark>
 </div>
 </div>
 </div>
 <div class="row mx-4">
 <div class="col-12">
-<div class="figheader mt-0 mt-md-2 mb-1">Figure 3: Maps of Tampa</div>
+<div class="figheader mt-0 mt-md-2 mb-1">Figure 3: A closer look at filings during the CDC moratorium in Tampa, Florida  </div>
 </div>
   <div class="col-12 px-0 mx-auto d-flex" style="max-width: 1440px;">
     <div class="col-12 col-lg-6 px-0 px-md-2">
