@@ -551,13 +551,31 @@ svg {
 // Preliminary-analysis-11-months-of-the-cdc-moratorium post
 
 .page-preliminary-analysis-11-months-of-the-cdc-moratorium {
+ 
+    .visual--mapbox {
+      width: 100% !important;
+      margin-left: 0% !important;
+      .legend  {
+        display: none !important;
+      }
+    }
+
   .chart--11months_fig2 .chart__bars .chart__bar {
     fill: $color1;
+    &:hover {
+      fill: #f37e4f;
+    }
     &:nth-child(3), &:nth-child(4), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(14) {
       fill: $color2;
+      &:hover {
+        fill: #686c92;
+      }
     }
     &:nth-child(1), &:nth-child(2) {
       fill: $color3;
+      &:hover {
+        fill: #3ca599;
+      }
     }
    
   }

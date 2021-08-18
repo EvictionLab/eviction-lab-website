@@ -77,19 +77,59 @@ scripts:
   </svg>
 </div>
 
-{{% mapbox
-  id="11months_fig3_1"
-  data="./fig3_map_tampa_20210813.csv"
-  shapes="/uploads/tampa_shapes.json"
-  column="filing_rate"
-  join="GEOID"
-  name="GEOID"
-  format=".1%"
-  title=""
-  legendTitle="Eviction Filings (2017 - 2018)"
-  gradientType="discrete"
-  colors="rgba(250,222,211,0.23);#FADED3;#F3AF95;#EB7649;#e24000"
-%}}
+<br>
+
+_Maps TODO: fix tooltip number format. Add legend for quartiles. 
+Q: What should titles be?_
+</div>
+</div>
+</div>
+<div class="row mx-4">
+<div class="col-12">
+<div class="figheader mt-0 mt-md-2 mb-1">Figure 3: Maps of Tampa</div>
+</div>
+  <div class="col-12 px-0 mx-auto d-flex" style="max-width: 1440px;">
+    <div class="col-12 col-lg-6 px-0 px-md-2">
+
+    {{% mapbox
+      id="11months_fig3_1"
+      data="./fig3_map_tampa_20210813.csv"
+      shapes="/uploads/tampa_shapes.json"
+      column="quartile_historical"
+      join="GEOID"
+      name="GEOID"
+      format=".1%"
+      title="Historical filing levels"
+      legendTitle="Eviction Filings (2017 - 2018)"
+      gradientType="discrete"
+      colors="rgba(250,222,211,0.14);rgba(226,64,1,0.35);rgba(226,64,1,0.5);rgba(226,64,1,0.75);rgba(226,64,1,1)"
+    %}}
+
+  </div>
+
+  <div class="col-12 col-lg-6 px-0 px-md-2">
+
+    {{% mapbox
+      id="11months_fig3_2"
+      data="./fig3_map_tampa_20210813.csv"
+      shapes="/uploads/tampa_shapes.json"
+      column="quartile_current"
+      join="GEOID"
+      name="GEOID"
+      format=".1%"
+      title="Current filing levels"
+      legendTitle="Eviction Filings (2017 - 2018)"
+      gradientType="discrete"
+      colors="rgba(250,222,211,0.14);rgba(226,64,1,0.35);rgba(226,64,1,0.5);rgba(226,64,1,0.75);rgba(226,64,1,1)"
+    %}}
+
+  </div>
+  </div>
+  </div>
+
+<div class="center-content-post updates-post pb-2">
+<div class="page-content">
+<div class="post-body">
 
 {{% grouped-bar-chart 
   id="11months_fig4" 
