@@ -108,6 +108,7 @@ Elab.LineChart = (function (Elab) {
    * @param {Object} dataOptions { margin, x, y, groupBy, curve, highlight, xTicks, xFormat, yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
+    const parseDate = d3.timeParse("%m/%d/%Y");
     var highlighted = dataOptions.highlight
       ? dataOptions.highlight.split(";").reverse()
       : null;
@@ -229,6 +230,11 @@ Elab.LineChart = (function (Elab) {
               "</div>"
             );
           },
+        })
+        .addMarkLine({
+          marks: dataOptions.mark.split(";").map(function (d) {
+            return parseDate(d);
+          }),
         })
         .render()
     );
