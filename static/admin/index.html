@@ -179,7 +179,7 @@
             widget: "markdown",
           },
         ],
-        pattern: /^{{%[\s]+report_line_chart[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_line_chart[\s]+%}}/,
+        pattern: /^{{%[\s]+report_median_claims[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_median_claims[\s]+%}}/,
         fromBlock: function (match) {
           return {
             id: match[1],
@@ -189,13 +189,13 @@
         },
         toBlock: function (obj) {
           return (
-            '\n{{% report_line_chart id="' +
+            '\n{{% report_median_claims id="' +
             obj.id +
             '" data="' +
             obj.data +
             '" %}}\n' +
             obj.body +
-            "\n{{%/ report_line_chart %}}\n"
+            "\n{{%/ report_median_claims %}}\n"
           );
         },
         toPreview: function (obj) {
