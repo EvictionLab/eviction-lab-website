@@ -2,7 +2,8 @@
 $(document).ready(function () {
   // console.log('document ready');
   var rankings = {
-    POLICY_SHEET_URL: 'https://spreadsheets.google.com/feeds/list/1_7NhsPRHMGhysge5SQYjEp8wHkQe0VoRIMYq_nB4a8U/2/public/values?alt=json',
+   // POLICY_SHEET_URL: 'https://spreadsheets.google.com/feeds/list/1_7NhsPRHMGhysge5SQYjEp8wHkQe0VoRIMYq_nB4a8U/2/public/values?alt=json',
+    POLICY_SHEET_URL: '../docs/policy-rankings.json',
     pageType: null,
     singleState: null,
     statesData: null,
