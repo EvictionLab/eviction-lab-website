@@ -10,7 +10,8 @@ date: 2021-08-09T16:46:40.089Z
 postauthorname: Jasmine Rangel, Jacob Haas, Emily Lemmerman, Joe Fish, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Tracking federal, state, and local actions in response to the pandemic.
+description: A look back at the CDC moratorium to better understand who it protected and which groups have remained at risk of eviction.
+listSummary: We take a look back at the CDC moratorium to better understand who it protected and which groups have remained at risk of eviction.
 socialDescription: Tracking federal, state, and local actions in response to the pandemic.
 fbImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
 twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
@@ -21,11 +22,10 @@ scripts:
   - grouped-bar-chart
 ---
 
-<mark>Fig. 1 TODO: add red moratorium markline to legend</mark>
 
 {{% line-chart
   id="11months_fig1"
-  data="./fig1-3.csv"
+  data="./fig1.csv"
   x="week_date"
   y="filings"
   groupBy="filing_type"
@@ -38,6 +38,9 @@ scripts:
   title="Figure 1: Eviction filings were down from historical averages during the CDC Moratorium"
   mark="09/04/2020"
 %}}
+<div class="d-flex justify-content-center">
+{{< inlinesvg svg="content/updates/blog/jacob-post/markline-legend.svg"  >}}
+</div>
 
 {{% bar-chart
   id="11months_fig2"
@@ -53,43 +56,19 @@ scripts:
 %}}
 
 <div class="d-flex justify-content-center">
-  <svg width="420px" height="100px" viewBox="0 0 559 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Group" transform="translate(14.000000, 15.000000)">
-              <rect id="Rectangle" fill="#2C897F" x="-5.32907052e-15" y="-5.32907052e-15" width="25.941467" height="25.941467"></rect>
-              <text id="LOCAL-MORATORIUM" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="19" font-weight="bold" letter-spacing="0.894117647" fill="#212529">
-                  <tspan x="38.4800588" y="19.9414673">LOCAL MORATORIUM</tspan>
-              </text>
-          </g>
-          <g id="Group-2" transform="translate(287.000000, 15.000000)">
-              <rect id="Rectangle-Copy" fill="#444878" x="5.15143483e-14" y="-5.32907052e-15" width="25.941467" height="25.941467"></rect>
-              <text id="PARTIAL-MORATORIUM" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="19" font-weight="bold" letter-spacing="0.894117647" fill="#212529">
-                  <tspan x="38.7744412" y="19.9707336">PARTIAL MORATORIUM</tspan>
-              </text>
-          </g>
-          <g id="Group-3" transform="translate(147.500000, 63.000000)">
-              <rect id="Rectangle-Copy-2" fill="#E24000" x="-5.32907052e-15" y="-5.32907052e-15" width="25.941467" height="25.941467"></rect>
-              <text id="NO-LOCAL-MORATORIUM" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="19" font-weight="bold" letter-spacing="0.894117647" fill="#212529">
-                  <tspan x="38.1623824" y="18.9707335">NO LOCAL MORATORIUM</tspan>
-              </text>
-          </g>
-      </g>
-  </svg>
+{{< inlinesvg svg="content/updates/blog/jacob-post/fig2-legend.svg"  >}}
 </div>
 
-<br>
 
-<mark>Maps TODO: fix tooltip number format. Add legend for quartiles. 
-Q: What should titles for each map be?</mark>
 </div>
 </div>
 </div>
 <div class="row mx-4">
 <div class="col-12">
-<div class="figheader mt-0 mt-md-2 mb-1">Figure 3: A closer look at filings during the CDC moratorium in Tampa, Florida  </div>
+<div class="figheader mt-0 mt-md-2 mb-1">Figure 3: A closer look at filings during the CDC moratorium in Tampa, Florida</div>
 </div>
-  <div class="col-12 px-0 mx-auto d-flex" style="max-width: 1440px;">
-    <div class="col-12 col-lg-6 px-0 px-md-2">
+  
+  <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 px-md-2">
 
     {{% mapbox
       id="11months_fig3_1"
@@ -98,8 +77,8 @@ Q: What should titles for each map be?</mark>
       column="quartile_historical"
       join="GEOID"
       name="GEOID"
-      format=".1%"
-      title="Historical filing levels"
+      format="integer"
+      title="Historical eviction filing rates"
       legendTitle="Eviction Filings (2017 - 2018)"
       gradientType="discrete"
       colors="rgba(250,222,211,0.14);rgba(226,64,1,0.35);rgba(226,64,1,0.5);rgba(226,64,1,0.75);rgba(226,64,1,1)"
@@ -107,7 +86,7 @@ Q: What should titles for each map be?</mark>
 
   </div>
 
-  <div class="col-12 col-lg-6 px-0 px-md-2">
+  <div class="col-12 col-lg-6 col-x4l-5 px-0 px-md-2">
 
     {{% mapbox
       id="11months_fig3_2"
@@ -116,15 +95,19 @@ Q: What should titles for each map be?</mark>
       column="quartile_current"
       join="GEOID"
       name="GEOID"
-      format=".1%"
-      title="Current filing levels"
+      format="integer"
+      title="Eviction filing rates during the CDC moratorium"
       legendTitle="Eviction Filings (2017 - 2018)"
       gradientType="discrete"
       colors="rgba(250,222,211,0.14);rgba(226,64,1,0.35);rgba(226,64,1,0.5);rgba(226,64,1,0.75);rgba(226,64,1,1)"
     %}}
 
   </div>
+ 
+  <div class="col-12 mt-2 d-flex justify-content-center">
+    {{< inlinesvg svg="content/updates/blog/jacob-post/quartiles-legend.svg"  >}}
   </div>
+  <div class="figcaption col-12 col-lg-7 col-xxxl-6 col-x4l-5 mx-auto mt-1 mb-0"><p>Tracts that fall into quartile 1 have eviction filing rates that are in the bottom 25% of all Census tracts in the city. Those that fall into quartile 4 have eviction filing rates that are in the top 25% of all tracts in the city.</p></div>
   </div>
 
 <div class="center-content-post updates-post pb-2">
@@ -133,7 +116,7 @@ Q: What should titles for each map be?</mark>
 
 {{% grouped-bar-chart
   id="11months_fig4"
-  titlePrefix="Figure 4: Share of eviction-filed defendants pre-and during-pandemic, by race and ethnicity"
+  titlePrefix="Figure 4: Share of renters, defendants pre-pandemic, and defendants during the CDC moratorium, by race/ethnicity"
   titleSuffix=""
   data="./race_by_demo_natl.csv"
   x="cofips"
@@ -149,7 +132,7 @@ Q: What should titles for each map be?</mark>
   searchId="cofips"
   searchLabel="county"
   type="barGroup"
-  legendItems="Share of renters;Share of defendants during CDC moratorium;Share of defendants during pandemic"
+  legendItems="Share of renters;Share of defendants during CDC moratorium;Share of defendants pre-pandemic"
   search="true"
   searchPrompt=""
 %}}

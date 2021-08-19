@@ -1,5 +1,11 @@
-<div class="figheader" style="max-width: 600px;" >{{ index .Params 1 }}</div>
-<div class="upscale124 pb-0 pb-xxl-0">
-{{ readFile (print "themes/evictionlab/static/images/assets/blog/" (index .Params 0 )) | safeHTML }}
-</div>
-<div class="figcaption"><p>{{ index .Params 2 }}</p></div>
+<div class="figheader" style="max-width: 600px;" >{{ .Get "title" }}</div>
+{{ if eq (.Get "format") "upscale" }}
+    <div class="upscale124 pb-0 pb-xxl-0">
+    {{ readFile (print "themes/evictionlab/static/images/assets/blog/" (.Get "svg" )) | safeHTML }}
+    </div>
+{{ else }}
+    <div class="pb-0 pb-xxl-0">
+    {{ readFile (print "./" (.Get "svg" )) | safeHTML }}
+    </div>  
+{{ end }}      
+<div class="figcaption"><p>{{ .Get "caption" }}</p></div>

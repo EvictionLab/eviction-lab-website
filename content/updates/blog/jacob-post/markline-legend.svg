@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="66px" viewBox="0 0 411 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Artboard Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(57.000000, 41.500000)">
+            <text id="START-OF-CDC-MORATOR" font-family="GT-Eesti-Display-Bold" font-size="19" letter-spacing="0.894117647" fill="#212529">
+                <tspan x="19.2586471" y="23.4414673">START OF CDC MORATORIUM</tspan>
+            </text>
+            <line x1="0.5" y1="29.5" x2="0.5" y2="0.5" id="Line" stroke="#E24000" stroke-width="6" stroke-linecap="round" stroke-dasharray="0,10"></line>
+        </g>
+        <g id="Group-2" transform="translate(163.000000, 0.000000)">
+            <rect id="Rectangle-Copy" fill="#444878" x="5.15143483e-14" y="-5.32907052e-15" width="25.941467" height="25.941467"></rect>
+            <text id="HISTORICAL-AVERAGE" font-family="GT-Eesti-Display-Bold" font-size="19" letter-spacing="0.894117647" fill="#212529">
+                <tspan x="37.8086747" y="18.9707335">HISTORICAL AVERAGE</tspan>
+            </text>
+        </g>
+        <g id="Group-3">
+            <rect id="Rectangle-Copy-2" fill="#E24000" x="2.78888024e-13" y="-5.32907052e-15" width="25.941467" height="25.941467"></rect>
+            <text id="2020-2021" font-family="GT-Eesti-Display-Bold" font-size="19" letter-spacing="0.894117647" fill="#212529">
+                <tspan x="39.0899706" y="18.9707335">2020-2021</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

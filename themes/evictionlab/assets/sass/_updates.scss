@@ -559,13 +559,33 @@ svg {
         display: none !important;
       }
     }
-
+    .visual--mapbox .legend__title {
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .1px;
+      color: #5a5a5a;
+    }
+    h3.visual__title {
+      font-family: 'Akkurat-Bold' !important;
+      font-size: 16px !important;
+      letter-spacing: .1px !important;
+      color: #5a5a5a !important;
+      //text-transform: uppercase;
+      //color: #424242;
+    }
+  .chart--11months_fig1 {
+    margin-bottom: 0;
+    .legend {
+      display: none;
+    }  
+  }
   .chart--11months_fig2 .chart__bars .chart__bar {
     fill: $color1;
     &:hover {
-      fill: #f37e4f;
+      fill: #e24000c4;
     }
-    &:nth-child(3), &:nth-child(4), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(14) {
+    &:nth-child(3), &:nth-child(4), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(14), &:nth-child(31) {
       fill: $color2;
       &:hover {
         fill: #686c92;
