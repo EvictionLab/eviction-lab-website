@@ -1,6 +1,6 @@
 site_name_full,num_filings,num_filings_hist_avg,ratio,moratorium_type,moratorium_id
 "Austin, TX",900,8373.333333333334,0.10748407643312101,Local moratorium,3
-"Minneapolis-Saint Paul, MN",816,7351,0.11100530540062577,Local moratorium,3
+"Minn.-St.Paul, MN",816,7351,0.11100530540062577,Local moratorium,3
 "New York, NY",53628,203963.66666666666,0.2629291818314046,Partial local moratorium,2
 "Richmond, VA",5088,18684,0.2723185613359024,Partial local moratorium,2
 "Philadelphia, PA",5456,19062.5,0.28621639344262295,No local moratorium,1

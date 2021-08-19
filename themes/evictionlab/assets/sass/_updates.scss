@@ -574,7 +574,7 @@ svg {
       //text-transform: uppercase;
       //color: #424242;
     }
-  .chart--11months_fig1 {
+  .chart--11months_fig1, .chart--11months_fig1_m {
     margin-bottom: 0;
     .legend {
       display: none;
@@ -602,6 +602,15 @@ svg {
   .chart__search-group {
     display: none;
   }
+  
+    .chart rect.chart__bar.judgment {
+      fill: $color2 !important;
+    }
+    .chart rect.chart__bar.defendant {
+      fill: $color3 !important;
+    }
+  
+
 }
 
 // Allow translation option on certain posts

@@ -30,6 +30,7 @@ In light of the July expiration—and recognizing that that revised CDC moratori
 
 Between September 4, 2020 and July 31, 2021, we observed 368,398 eviction filings across the jurisdictions we monitor. This represents less than half as many eviction filings (47.2%) as we would expect over the same period in a typical year. In Figure 1, we plot eviction filings across all ETS sites since January 2020, as well as the historical average filings in these sites. Normally, the eviction filing rate in the areas we monitor is about 8.1% over this time period. With the CDC eviction moratorium in place, that fell to around 3.8%. 
 
+<div class="d-none d-md-block">
 {{% line-chart
   id="11months_fig1"
   data="./fig1.csv"
@@ -45,6 +46,24 @@ Between September 4, 2020 and July 31, 2021, we observed 368,398 eviction filing
   title="Figure 1: Eviction filings were down from historical averages during the CDC Moratorium"
   mark="09/04/2020"
 %}}
+</div>
+<div class="d-block d-md-none">
+{{% line-chart
+  id="11months_fig1_m"
+  data="./fig1.csv"
+  x="week_date"
+  y="filings"
+  groupBy="filing_type"
+  xTicks="year"
+  xFormat="%b %y"
+  xTooltipFormat="%x"
+  yFormat=".2s"
+  yTooltipFormat=".2s"
+  highlight="2020-2021;historical average"
+  title="Figure 1: Eviction filings were down from historical averages during the CDC Moratorium"
+  mark="09/04/2020"
+%}}
+</div>
 <div class="d-flex justify-content-center mb-5">
 {{< inlinesvg svg="content/updates/research/eleven-months-cdc/markline-legend.svg"  >}}
 </div>
@@ -148,14 +167,14 @@ While the CDC moratorium was in place, eviction filings continued to target memb
   yTooltipFormat=".1%"
   xTicks="Asian;Black;Latinx;White"
   columns="cofips,state,county,year_string,renters_prop_a,defendant_prop_a,judgment_prop_a,renters_prop_b,defendant_prop_b,judgment_prop_b,renters_prop_l,defendant_prop_l,judgment_prop_l,renters_prop_w,defendant_prop_w,judgment_prop_w"
-  xBars="renters_prop_a,defendant_prop_a,judgment_prop_a;renters_prop_b,defendant_prop_b,judgment_prop_b;renters_prop_l,defendant_prop_l,judgment_prop_l;renters_prop_w,defendant_prop_w,judgment_prop_w"
+  xBars="renters_prop_a,judgment_prop_a,defendant_prop_a;renters_prop_b,judgment_prop_b,defendant_prop_b;renters_prop_l,judgment_prop_l,defendant_prop_l;renters_prop_w,judgment_prop_w,defendant_prop_w"
   xFormat=""
-  highlight="renters;defendant;judgment"
+  highlight="renters;judgment;defendant;"
   active="0"
   searchId="cofips"
   searchLabel="county"
   type="barGroup"
-  legendItems="Share of renters;Share of defendants during CDC moratorium;Share of defendants pre-pandemic"
+  legendItems="Share of renters;Share of defendants pre-pandemic;Share of defendants during CDC moratorium"
   search="true"
   searchPrompt=""
 %}}
