@@ -123,6 +123,7 @@ scripts:
   y="renters_prop_w"
   yTicks="5"
   yFormat=".0%"
+  yTooltipFormat=".1%"
   xTicks="Asian;Black;Latinx;White"
   columns="cofips,state,county,year_string,renters_prop_a,defendant_prop_a,judgment_prop_a,renters_prop_b,defendant_prop_b,judgment_prop_b,renters_prop_l,defendant_prop_l,judgment_prop_l,renters_prop_w,defendant_prop_w,judgment_prop_w"
   xBars="renters_prop_a,defendant_prop_a,judgment_prop_a;renters_prop_b,defendant_prop_b,judgment_prop_b;renters_prop_l,defendant_prop_l,judgment_prop_l;renters_prop_w,defendant_prop_w,judgment_prop_w"
