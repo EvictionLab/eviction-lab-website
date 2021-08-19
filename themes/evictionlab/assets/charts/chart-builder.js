@@ -649,6 +649,14 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("height", 0)
         .attr("y", function (d) {
           return _this.getInnerHeight();
+        })
+        .on("mousemove", function (d) {
+          _this.setHovered(d);
+          d.renderTooltip && _this.showTooltip(d3.event, d.renderTooltip);
+        })
+        .on("mouseout", function (d) {
+          _this.setHovered(null);
+          d.renderTooltip && _this.hideTooltip();
         });
 
       // bar updates render

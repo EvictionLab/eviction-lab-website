@@ -73,13 +73,14 @@
     var xFormat = {{ .Get "xFormat" }}
     var highlight = {{ .Get "highlight" }}
     var active = {{ .Get "active" }}
+    var legendItems = {{ .Get "legendItems" }}
     var rootEl = document.getElementById(id);
     /**
      * Initializes chart with whatever values currently are set to.
      */
     var initChart = function() {
       // Init chart with default data.
-      Elab.GroupedBarChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xBars: xBars, xFormat: xFormat, highlight: highlight, active: active, columns: columns, searchId: searchId, searchLabel: searchLabel })
+      Elab.GroupedBarChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xBars: xBars, xFormat: xFormat, highlight: highlight, active: active, columns: columns, searchId: searchId, searchLabel: searchLabel, legendItems: legendItems })
     }
     /**
      * Sets site name in title
