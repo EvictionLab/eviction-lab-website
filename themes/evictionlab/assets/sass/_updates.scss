@@ -609,7 +609,22 @@ svg {
     .chart rect.chart__bar.defendant {
       fill: $color3 !important;
     }
-  
+  .chart.chart--grouped-bar.chart--11months_fig4 {
+    @include media-breakpoint-down(smm) {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-only(md) {
+      margin-bottom: 32px;
+    }
+    .legend {
+      display: none;
+    }
+    @include media-breakpoint-up(md) {
+      .legend {
+        display: flex;
+      }
+    }
+  }
 
 }
 

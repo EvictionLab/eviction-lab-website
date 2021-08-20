@@ -67,9 +67,10 @@ Between September 4, 2020 and July 31, 2021, we observed 368,398 eviction filing
   mark="09/04/2020"
 %}}
 </div>
-<div class="d-flex justify-content-center mb-5">
+<div class="d-flex justify-content-center px-2 px-md-0 mb-4 mb-md-5">
 {{< inlinesvg svg="content/updates/research/eleven-months-cdc/markline-legend.svg"  >}}
 </div>
+
 
 We estimate that the CDC moratorium helped to prevent 1.55 million eviction filings nationwide. The ETS collects data from 31 cities and six full states, home to one in every four renter households in the United States. To provide a national estimate of the total number of eviction filings that have been avoided during the CDC moratorium, we employed regression methods to extrapolate what we observed in the ETS to all other counties for which we have historical eviction filing data. This allows us to cover an additional 28.6 million renter households, bringing overall coverage to 39 million out of 43 million renter households (89.5%). In total, we estimate that federal, state, and local policies helped to prevent at least 2.45 million eviction filings since the start of the pandemic (March 15, 2020)
 
@@ -89,8 +90,11 @@ As a result of differences in local interpretation and implementation of the CDC
   margin="8 8 104 40"
 %}}
 
-<div class="d-flex justify-content-center mb-5">
+<div class="justify-content-center d-none d-md-flex mb-5 mb-md-3">
 {{< inlinesvg svg="content/updates/research/eleven-months-cdc/fig2-legend.svg"  >}}
+</div>
+<div class="d-flex justify-content-center d-block d-md-none px-2 px-md-0 mb-4 mb-md-5">
+{{< inlinesvg svg="content/updates/research/eleven-months-cdc/fig2-legend-m.svg"  >}}
 </div>
 
 In some areas, eviction filing rates were close to historical average, meaning that the CDC order had little if any effect on eviction patterns. In [Las Vegas](/eviction-tracking/las-vegas-nv/), filings were at 91% of historical average overall, though they were considerably lower between December 15, 2020 and May 31, 2021 when local protections were in place. Filings were above 75% of average in all three sites we track in Florida, as well as Columbus, Ohio. By contrast, filings were below 12% of historical average in Austin, TX and the Twin Cities, sites in which state or local governments adopted stronger protections.
@@ -105,7 +109,7 @@ In some areas, eviction filing rates were close to historical average, meaning t
 </div>
 <div class="row mx-4">
 <div class="col-12">
-<div class="figheader mt-0 mt-md-2 mb-1">Figure 3: A closer look at filings during the CDC moratorium in Tampa, Florida</div>
+<div class="figheader px-0 px-md-3 mt-0 mt-md-2 mb-1">Figure 3: A closer look at filings during the CDC moratorium in Tampa, Florida</div>
 </div>
   
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 px-md-2">
@@ -144,15 +148,15 @@ In some areas, eviction filing rates were close to historical average, meaning t
 
   </div>
  
-  <div class="col-12 mt-2 d-flex justify-content-center">
+  <div class="col-12 mt-2 d-flex justify-content-center px-0">
     {{< inlinesvg svg="content/updates/research/eleven-months-cdc/quartiles-legend.svg"  >}}
   </div>
   <div class="figcaption col-12 col-lg-7 col-xxxl-6 col-x4l-5 mx-auto mt-1 mb-0"><p>Tracts that fall into quartile 1 have eviction filing rates that are in the bottom 25% of all Census tracts in the city. Those that fall into quartile 4 have eviction filing rates that are in the top 25% of all tracts in the city.</p></div>
   </div>
 
 <div class="center-content-post updates-post pb-2">
-<div class="page-content">
-<div class="post-body pt-4">
+<div class="page-content pt-4 pt-md-0">
+<div class="post-body pt-lg-3">
 
 Neighborhoods with high eviction filing rates prior to the pandemic continued to see the highest rates during the CDC moratorium. Of Census tracts in Tampa that fell in the top quartile of eviction filing rates prior to the pandemic, 68% stayed in the top quartile during the moratorium and nearly all (96%) remained somewhere in the top half. In Tampa, the correlation between a neighborhood’s pre-pandemic eviction filing rate and its filing rate during the CDC moratorium was 0.66, weighted by renter population, indicating a strong relationship. Across all ETS sites, the correlation was 0.72.  
 
@@ -184,7 +188,10 @@ While the CDC moratorium was in place, eviction filings continued to target memb
   searchPrompt=""
 %}}
 
-<br>
+<div class="d-flex justify-content-center d-block d-md-none px-0 px-md-0 mb-1">
+{{< inlinesvg svg="content/updates/research/eleven-months-cdc/fig4-legend-m.svg"  >}}
+</div>
+
 
 Eviction moratoria may be critical to slowing the spread of the delta variant of COVID-19, which has been the driving force behind the increase in cases in the United States during the summer of 2021. Early research indicates that moratoria are associated with a slower disease spread. {{< extlink "Leifheit and colleagues" "https://academic.oup.com/aje/advance-article/doi/10.1093/aje/kwab196/6328194" >}}, for example, found that in the first few weeks after a state’s moratorium was lifted, COVID-19 incidence and death began to increase relative to states that maintained their moratoria. [Neighborhoods with the highest eviction filing rates during the pandemic have the lowest COVID-19 vaccination rates](/filing-and-vaccination-rates/), leaving residents particularly susceptible to infection. But the public health risk does not stop at neighborhood borders. {{< extlink "Nande and colleagues" "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7605580/" >}} found that excess COVID-19 incidence and death following eviction moratorium expiration affected affluent communities with few evictions as well as poor neighborhoods with many.
   

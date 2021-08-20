@@ -1,11 +1,15 @@
+{{ if (.Get "title") }}
 <div class="figheader" style="max-width: 600px;" >{{ .Get "title" }}</div>
+{{ end }}
 {{ if eq (.Get "format") "upscale" }}
     <div class="upscale124 pb-0 pb-xxl-0">
     {{ readFile (print "themes/evictionlab/static/images/assets/blog/" (.Get "svg" )) | safeHTML }}
     </div>
 {{ else }}
-    <div class="pb-0 pb-xxl-0">
+   
     {{ readFile (print "./" (.Get "svg" )) | safeHTML }}
-    </div>  
-{{ end }}      
+   
+{{ end }} 
+{{ if (.Get "caption") }}     
 <div class="figcaption"><p>{{ .Get "caption" }}</p></div>
+{{ end }}
