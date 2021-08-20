@@ -29,13 +29,10 @@ Eviction filings in Houston were higher than average in January and February of 
 {{%/ report_chart %}}
 
 
-{{% report_top_evictors id="topEvictors" data="/uploads/harris_top_evictors.csv" %}}
-# Eviction hot spots
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/harris_top_evictors.csv" %}}
+# Eviction Hotspots
 
-Eviction filings in Houston were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April and May of 2020 were well below average. Filings have increased since then but remain below historical averages.<sup>2</sup>
-
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
+Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and 2021. We analyzed eviction records in Houston to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
 {{%/ report_top_evictors %}}
 
 
