@@ -3079,6 +3079,7 @@ Elab.MedianFilings = (function (Elab) {
         return b - a;
       });
     var container = $el.find(".legend");
+    if (!container || container.length === 0) return;
     container.empty();
     groups.forEach(function (group, index) {
       var item = legendItemTemplate({
