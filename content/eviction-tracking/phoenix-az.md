@@ -49,7 +49,7 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 {{% report_median_claims id="medianFilings" data="/uploads/phoenix_claims_monthly.csv" %}}
 # Changes in claim amounts
 
-Eviction filings in Houston were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April and May of 2020 were well below average. Filings have increased since then but remain below historical averages.<sup>2</sup>
+When a landlord files an eviction claim in Phoenix, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month since January 2020. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed.
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
