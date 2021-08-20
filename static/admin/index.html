@@ -179,7 +179,7 @@
             widget: "markdown",
           },
         ],
-        pattern: /^{{%[\s]+report_median_claims[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report__median_claims[\s]+%}}/,
+        pattern: /^{{%[\s]+report_median_claims[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_median_claims[\s]+%}}/,
         fromBlock: function (match) {
           return {
             id: match[1],
