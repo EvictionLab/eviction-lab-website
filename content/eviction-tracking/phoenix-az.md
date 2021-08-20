@@ -37,7 +37,6 @@ Eviction filings in Phoenix were near or above historical averages in January, F
 
 
 
-{{% report_map shapes="/uploads/phoenix_shapes.json" data="/uploads/phoenix_map.csv" %}}
 
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/harris_top_evictors.csv" %}}
@@ -47,9 +46,17 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 {{%/ report_top_evictors %}}
 
 
+{{% report_median_claims id="medianFilings" data="/uploads/phoenix_claims_monthly.csv" %}}
+# Changes in claim amounts
+
+Eviction filings in Houston were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April and May of 2020 were well below average. Filings have increased since then but remain below historical averages.<sup>2</sup>
+
+1. Average eviction filings taken from Eviction Lab data for 2012–2015
+2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
+{{%/ report_median_claims %}}
 
 
-
+{{% report_map shapes="/uploads/phoenix_shapes.json" data="/uploads/phoenix_map.csv" %}}
 
 # The geography of changes in eviction filings
 
@@ -57,11 +64,6 @@ Maricopa County is divided into 916 census tracts. In each of those tracts, we m
 
 1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). Historical averages are taken over the years 2015-2019. 
 2. Zip code racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
-
-
-
 
 
 

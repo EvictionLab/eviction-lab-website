@@ -37,7 +37,7 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 
 
 
-{{% report_median_claims id="medianFilings" data="/uploads/houston_filing_amounts.csv" %}}
+{{% report_median_claims id="medianFilings" data="/uploads/houston_claims_monthly.csv" %}}
 # Changes in claim amounts
 
 Eviction filings in Houston were higher than average in January and February of 2020.<sup>1</sup> That pattern reversed in March following the suspension of eviction proceedings. Eviction filings in April and May of 2020 were well below average. Filings have increased since then but remain below historical averages.<sup>2</sup>
