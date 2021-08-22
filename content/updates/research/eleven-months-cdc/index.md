@@ -189,7 +189,7 @@ While the CDC moratorium was in place, eviction filings continued to target memb
   searchPrompt=""
 %}}
 
-<div class="d-flex justify-content-center d-block d-md-none px-0 px-md-0 mb-4">
+<div class="d-flex justify-content-center d-block d-md-none mw-100 px-0 px-md-0 mb-4">
 {{< inlinesvg svg="content/updates/research/eleven-months-cdc/fig4-legend-m.svg"  >}}
 </div>
 
