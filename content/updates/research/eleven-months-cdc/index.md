@@ -3,7 +3,8 @@ draft: false
 childof: research
 contenttype: updates
 contentcat: research
-featured: "home"
+featured: true
+in_index: true
 researchtype: elresearch
 title: "Preliminary Analysis: 11 months of the CDC Moratorium"
 date: 2021-08-18T16:46:40.089Z
