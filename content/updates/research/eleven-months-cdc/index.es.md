@@ -13,7 +13,7 @@ postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: A look back at the CDC moratorium to better understand who it protected and which groups have remained at risk of eviction.
 listSummary: We take a look back at the CDC moratorium to better understand who it protected and which groups have remained at risk of eviction.
-socialDescription: Tracking federal, state, and local actions in response to the pandemic.
+socialDescription: A look back at the CDC moratorium to better understand who it protected and which groups have remained at risk of eviction.
 fbImage: "11-months-cdc-social.png"
 twImage: "11-months-cdc-social.png"
 url: /eleven-months-cdc
