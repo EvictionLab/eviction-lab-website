@@ -49,8 +49,9 @@
       var xTooltipFormat = {{ .Get "xTooltipFormat" }}
       // formatter for y values on tooltip
       var yTooltipFormat = {{ .Get "yTooltipFormat" }}
+      var mark = {{ .Get "mark" }}
       var rootEl = document.getElementById(id);
-      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat, highlight: highlight, curve: curve, xTooltipFormat: xTooltipFormat, yTooltipFormat: yTooltipFormat })
+      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat, highlight: highlight, curve: curve, xTooltipFormat: xTooltipFormat, yTooltipFormat: yTooltipFormat, mark: mark })
     });
   </script>
 </div>

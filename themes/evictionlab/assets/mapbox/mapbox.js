@@ -111,9 +111,14 @@ Elab.Mapbox = (function (Elab) {
    * @param {*} range
    * @param {*} prefix
    */
-  function getLayerColors(range, colors) {
+  function getLayerColors(range, colors, gradientType) {
     var steps = colors.length;
-    var positions = colors.map(function (c,i) { return i/(steps-1) })
+    var positions;
+    if(gradientType === 'discrete') {
+      positions = colors.map(function (c,i) { return i/(steps) })
+    } else {
+      positions = colors.map(function (c,i) { return i/(steps-1) })
+    }
     var dataScale = d3.scaleLinear().domain([0, 1]).range(range)
     var colorScale = getColorScale(positions, colors)
     var colorSteps = []
@@ -130,17 +135,24 @@ Elab.Mapbox = (function (Elab) {
    */
   function getCssGradient(colors) {
     var steps = colors.length;
-    var positions = colors.map(function (c,i) { return i/(steps-1) })
-    var colorScale = getColorScale(positions, colors)
-    return (
-      "linear-gradient(to right," +
-      colorScale(0) +
-      ", " +
-      colorScale(0.5) +
-      " 50%," +
-      colorScale(1) +
-      ")"
-    );
+    //boilerplate css for gradient
+    var front = "linear-gradient(to right";
+    var cap = ")"
+    //allocate variables assigned in if
+    var colorScale;
+    var back;
+    var positions;
+
+    //get the necessary positions and colorScales, depending on the function describing gradient
+    positions = colors.map(function (c,i) { return i/(steps-1) })
+    colorScale = getColorScale(positions, colors)
+    back = positions.reduce(function (accumulator, currentValue) {
+      var colorOfCurrent = colorScale(currentValue);
+      return accumulator + ", " + colorOfCurrent + " " + currentValue*100 + "%"
+    }, '');
+
+    //add the boilerplate css to the generated css
+    return front + back + cap;
   }
 
   function getColorScale(range, colors) {
@@ -150,10 +162,26 @@ Elab.Mapbox = (function (Elab) {
       .interpolate(d3.interpolateRgb)
   }
 
-  function addChoroplethFillLayer(map, prop, range, colors) {
-    var fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
-      getLayerColors(range, colors)
-    );
+  function getDiscreteColorScale(range, colors) {
+    return d3.scaleQuantize()
+      .domain(range)
+      .range(colors)
+      .nice()
+  }
+
+  function addChoroplethFillLayer(map, prop, range, colors, gradientType) {
+    var fillColor;
+    if(gradientType === "discrete") {
+      // need to use the "nice" discrete color scale here to match with colors
+      var discreteScale = getDiscreteColorScale(range, colors);
+      var colorSteps = getLayerColors(discreteScale.domain(), colors, gradientType)
+      fillColor = ["step", ["get", prop]].concat(colorSteps);
+      fillColor.splice(2, 1)
+    } else {
+      fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
+        getLayerColors(range, colors, gradientType)
+      );
+    }
     map.addLayer(
       {
         id: "choropleth",
@@ -179,12 +207,19 @@ Elab.Mapbox = (function (Elab) {
     );
   }
 
-
-
-  function addChoroplethStrokeLayer(map, prop, range, colors) {
-    var strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
-      getLayerColors(range, colors)
-    );
+  function addChoroplethStrokeLayer(map, prop, range, colors, gradientType) {
+    var strokeColor;
+    if(gradientType === "discrete") {
+      strokeColor = ["step", ["get", prop]].concat(
+        getLayerColors(range, colors, gradientType)
+      );
+      strokeColor.splice(2, 1)
+    } else {
+      strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
+        getLayerColors(range, colors, gradientType)
+      );
+    }
+    
     map.addLayer(
       {
         id: "choropleth-stroke",
@@ -230,6 +265,7 @@ Elab.Mapbox = (function (Elab) {
     var nameProp = config.name
     var colors = config.colors.split(";")
     var legendTitle = config.legendTitle;
+    var gradientType = config.gradientType;
     var colorScale = null;
     var layersAdded = false;
     var formatter = getFormatter(config.format)
@@ -339,7 +375,6 @@ Elab.Mapbox = (function (Elab) {
           });
           map.on("mousemove", "choropleth", handleHover);
           map.on("mouseleave", "choropleth", handleHoverOut);
-          
           update();
           zoomToLocation();
         });
@@ -362,10 +397,10 @@ Elab.Mapbox = (function (Elab) {
         map.removeLayer("choropleth");
         map.removeLayer("choropleth-stroke");
       }
-      addChoroplethFillLayer(map, currentProp, range, colors);
-      addChoroplethStrokeLayer(map, currentProp, range, colors);
-      layersAdded = true;
-      renderLegend();
+      addChoroplethFillLayer(map, currentProp, range, colors, gradientType);
+      addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType);
+      layersAdded = true;      
+      gradientType === "discrete" ? renderDiscreteLegend() : renderLegend();
     }
 
     /** add DOM elements for legend */
@@ -378,12 +413,85 @@ Elab.Mapbox = (function (Elab) {
       return [formatter(range[0]), formatter(range[1])];
     }
 
+    /** renders a legend for a discrete scale */
+    function renderDiscreteLegend() {
+      // container elements
+      var gradientContainer = rootEl.find(".legend__gradient");
+      var labelContainer = rootEl.find(".legend__gradient-labels");
+      var titleContainer = rootEl.find(".legend__title")
+
+      // legend settings
+      var width = gradientContainer[0].clientWidth;
+      var margin = 20;
+      var tickFormat = ",d"
+      
+      // creates an axis with the given scale
+      function axis(scale) {
+        return Object.assign(d3.axisBottom(scale.range([margin, width - margin])), {
+          render: function() {
+            return d3.create("svg")
+                .attr("viewBox", [0, -4, width, 32])
+                .attr("width", width)
+                .attr("height", 32)
+                .style("display", "block")
+                .call(this)
+              .node();
+          }
+        });
+      }
+
+      // create swatches for colors
+      function swatches(colors) {
+        const n = colors.length;
+        const swatchWidth = (1/n) * (width - margin*2);
+        return {
+          render: function() {
+            var svg = d3.create("svg")
+                .attr("viewBox", [0, 0, width, 16])
+                .attr("width", width)
+                .attr("height", 16)
+                .style("display", "block")
+            svg.selectAll("rect")
+              .data(colors)
+              .enter()
+                .append("rect")
+                .attr("fill", function(d) { return d} )
+                .attr("width", swatchWidth)
+                .attr("height", 24)
+                .attr("x", function(d,i) { return margin + (i * swatchWidth) })
+                .attr("y", 0)
+             return svg.node()
+          }
+        }
+      }
+      
+      // render color swatches
+      gradientContainer.append(swatches(colors).render())
+
+      // create tick values based on a "nice" discrete scale
+      var range = getRange(currentProp);
+      var discreteScale = getDiscreteColorScale(range, colors);
+      var colorSteps = getLayerColors(discreteScale.domain(), colors, "discrete")
+      var tickValues = colorSteps.filter(function(value) { return typeof value === "number" })
+      tickValues.push(discreteScale.domain()[1])
+      var tickScale = d3.scaleLinear().domain(discreteScale.domain())
+      var axisNode = axis(tickScale)
+        .tickValues(tickValues, tickFormat)
+        .render()
+      labelContainer.append(axisNode);
+
+      // set title
+      titleContainer.html(legendTitle)
+      titleContainer.css("padding-left", margin)
+    }
+
     function renderLegend() {
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
       var titleContainer = rootEl.find(".legend__title")
       var range = getRange(currentProp);
-      gradientContainer.css("background-image", getCssGradient(colors));
+      var linearGradient = getCssGradient(colors)
+      gradientContainer.css("background-image", linearGradient);
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });

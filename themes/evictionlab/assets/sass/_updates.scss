@@ -548,6 +548,86 @@ svg {
   }
 }
 
+// Preliminary-analysis-11-months-of-the-cdc-moratorium post
+
+.page-preliminary-analysis-11-months-of-the-cdc-moratorium {
+ 
+    .visual--mapbox {
+      width: 100% !important;
+      margin-left: 0% !important;
+      .legend  {
+        display: none !important;
+      }
+    }
+    .visual--mapbox .legend__title {
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .1px;
+      color: #5a5a5a;
+    }
+    h3.visual__title {
+      font-family: 'Akkurat-Bold' !important;
+      font-size: 16px !important;
+      letter-spacing: .1px !important;
+      color: #5a5a5a !important;
+      //text-transform: uppercase;
+      //color: #424242;
+    }
+  .chart--11months_fig1, .chart--11months_fig1_m {
+    margin-bottom: 0;
+    .legend {
+      display: none;
+    }  
+  }
+  .chart--11months_fig2 .chart__bars .chart__bar {
+    fill: $color1;
+    &:hover {
+      fill: #e24000c4;
+    }
+    &:nth-child(3), &:nth-child(4), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(14), &:nth-child(31) {
+      fill: $color2;
+      &:hover {
+        fill: #686c92;
+      }
+    }
+    &:nth-child(1), &:nth-child(2) {
+      fill: $color3;
+      &:hover {
+        fill: #3ca599;
+      }
+    }
+   
+  }
+  .chart__search-group {
+    display: none;
+  }
+  
+    .chart rect.chart__bar.judgment {
+      fill: $color2 !important;
+    }
+    .chart rect.chart__bar.defendant {
+      fill: $color3 !important;
+    }
+  .chart.chart--grouped-bar.chart--11months_fig4 {
+    @include media-breakpoint-down(smm) {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-only(md) {
+      margin-bottom: 32px;
+    }
+    .legend {
+      display: none;
+    }
+    @include media-breakpoint-up(md) {
+      .legend {
+        display: flex;
+      }
+    }
+  }
+
+}
+
 // Allow translation option on certain posts
 
 .page-type-updates.url-esmoratorium-extended-evictions-continue, .page-type-updates.url-moratorium-extended-evictions-continue {
