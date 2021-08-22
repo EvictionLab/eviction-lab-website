@@ -6,19 +6,19 @@
     <g id="Artboard-Copy-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Group">
             <rect id="Rectangle" fill="#E24000" x="-5.32907052e-15" y="-5.32907052e-15" width="25.941467" height="25.941467"></rect>
-            <text id="SHARE-OF-RENTERS" font-family="GT-Eesti-Display-Bold" font-size="19" font-weight="bold" letter-spacing="0.894117647" fill="#212529">
+            <text id="SHARE-OF-RENTERS" font-family="GT-Eesti-Display-Bold" font-size="19"  letter-spacing="0.894117647" fill="#212529">
                 <tspan x="38" y="19.9414673">SHARE OF RENTERS</tspan>
             </text>
         </g>
         <g id="Group-2" transform="translate(0.000000, 43.000000)">
             <rect id="Rectangle-Copy" fill="#444878" x="5.15143483e-14" y="-5.32907052e-15" width="25.941467" height="25.941467"></rect>
-            <text id="SHARE-OF-DEFENDANTS" font-family="GT-Eesti-Display-Bold" font-size="19" font-weight="bold" letter-spacing="0.894117647" fill="#212529">
+            <text id="SHARE-OF-DEFENDANTS" font-family="GT-Eesti-Display-Bold" font-size="19"  letter-spacing="0.894117647" fill="#212529">
                 <tspan x="37.9707335" y="18.9707335">SHARE OF DEFENDANTS PRE-PANDEMIC</tspan>
             </text>
         </g>
         <g id="Group-3" transform="translate(0.000000, 86.000000)">
             <rect id="Rectangle-Copy-2" fill="#2C897F" x="-5.32907052e-15" y="-5.32907052e-15" width="25.941467" height="25.941467"></rect>
-            <text id="SHARE-OF-DEFENDANTS" font-family="GT-Eesti-Display-Bold" font-size="19" font-weight="bold" letter-spacing="0.894117647" fill="#212529">
+            <text id="SHARE-OF-DEFENDANTS" font-family="GT-Eesti-Display-Bold" font-size="19"  letter-spacing="0.894117647" fill="#212529">
                 <tspan x="38" y="18.9707335">SHARE OF DEFENDANTS DURING CDC MORATORIUM</tspan>
             </text>
         </g>

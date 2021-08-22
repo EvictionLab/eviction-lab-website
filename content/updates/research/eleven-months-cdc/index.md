@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 contenttype: updates
 contentcat: research
@@ -13,8 +13,8 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: A look back at the CDC moratorium to better understand who it protected and which groups have remained at risk of eviction.
 listSummary: We take a look back at the CDC moratorium to better understand who it protected and which groups have remained at risk of eviction.
 socialDescription: Tracking federal, state, and local actions in response to the pandemic.
-fbImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
-twImage: "/images/assets/blog/covid-eviction-policies-social.jpg"
+fbImage: "11-months-cdc-social.png"
+twImage: "11-months-cdc-social.png"
 url: /eleven-months-cdc
 scripts:
   - charts
@@ -109,7 +109,7 @@ In some areas, eviction filing rates were close to historical average, meaning t
 </div>
 <div class="row mx-4">
 <div class="col-12">
-<div class="figheader px-0 px-md-3 mt-0 mt-md-2 mb-1">Figure 3: A closer look at filings during the CDC moratorium in Tampa, Florida</div>
+<div class="figheader px-0 px-md-3 mt-0 mb-1">Figure 3: A closer look at filings during the CDC moratorium in Tampa, Florida</div>
 </div>
   
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 px-md-2">
@@ -188,7 +188,7 @@ While the CDC moratorium was in place, eviction filings continued to target memb
   searchPrompt=""
 %}}
 
-<div class="d-flex justify-content-center d-block d-md-none px-0 px-md-0 mb-1">
+<div class="d-flex justify-content-center d-block d-md-none px-0 px-md-0 mb-4">
 {{< inlinesvg svg="content/updates/research/eleven-months-cdc/fig4-legend-m.svg"  >}}
 </div>
 
