@@ -354,6 +354,7 @@ collections:
   - name: "research" # Used in routes, e.g., /admin/collections/blog
     label: "Research posts" # Used in the UI
     folder: "/content/updates/research" # The path to the folder where the documents are stored
+    path: '{{slug}}/'
     create: true # Allow users to create new documents in this collection
     extension: md
     editor:
@@ -383,7 +384,7 @@ collections:
           label: "Content Category",
           name: "contentcat",
           widget: "hidden",
-          default: "blog",
+          default: "research",
         }
       - {
           label: "Featured on Front Page",
