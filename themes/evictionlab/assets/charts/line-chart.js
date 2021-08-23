@@ -232,9 +232,11 @@ Elab.LineChart = (function (Elab) {
           },
         })
         .addMarkLine({
-          marks: dataOptions.mark.split(";").map(function (d) {
-            return parseDate(d);
-          }),
+          marks:
+            dataOptions.mark &&
+            dataOptions.mark.split(";").map(function (d) {
+              return parseDate(d);
+            }),
         })
         .render()
     );
