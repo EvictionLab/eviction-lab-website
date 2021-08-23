@@ -17,6 +17,7 @@ socialDescription: Tracking federal, state, and local actions in response to the
 fbImage: "11-months-cdc-social.png"
 twImage: "11-months-cdc-social.png"
 url: /eleven-months-cdc
+collection: true
 scripts:
   - charts
   - mapbox

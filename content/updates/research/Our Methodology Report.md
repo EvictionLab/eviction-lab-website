@@ -10,6 +10,7 @@ postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 hasSubhead: sub
 subhead: Introduction
+collection: true
 ---
 
 In recent years, renters’ housing costs have far outpaced their incomes, driving a nationwide affordability crisis. Current data from the American Housing Survey show that most poor renting families spend at least 50 percent of their income on housing costs. Under these conditions, 1 millions of Americans today are at risk of losing their homes through eviction.

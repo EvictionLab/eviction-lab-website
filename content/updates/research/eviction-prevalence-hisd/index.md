@@ -19,6 +19,7 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Residential mobility affects children’s education, generally for the worse. Forced mobility—involuntary moves over which residents have little or no control—has the potential to be more disruptive, and thus more detrimental to children’s academic performance, than planned moves.
 fbImage: eviction-filings-houston-isd2.png
 image:
+collection: true
 scripts:
   - charts
   - mapbox
