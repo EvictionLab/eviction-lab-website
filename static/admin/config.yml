@@ -357,6 +357,7 @@ collections:
     path: '{{slug}}/'
     create: true # Allow users to create new documents in this collection
     extension: md
+    filter: { field: "collection", value: true }
     editor:
       preview: false
     preview_path: "{{fields.url}}"

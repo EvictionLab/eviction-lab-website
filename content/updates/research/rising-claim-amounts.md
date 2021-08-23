@@ -16,7 +16,7 @@ fbImage: '/images/assets/blog/claim-amount-social.png'
 twImage: '/images/assets/blog/claim-amount-social.png'
 url: /rising-claim-amounts
 aliases:
-  
+collection: true  
 ---
 Landlords filed eviction cases against a growing number of households over the second half of 2020. While eviction filing rates remain below typical levels, they are steadily increasing as we near the end of the year and the expiration of the CDC eviction moratorium. The absolute number of households facing eviction is significant, and so is the amount that they owe when eviction cases are filed. In this brief, we examine trends in claim amounts—the back rent, late fees, and damages that landlords claim when filing an eviction case—over the course of 2020 in a few key cities we are monitoring through the <a href="/eviction-tracking">Eviction Tracking System</a>. This analysis details how much money tenants will likely be evicted for in 2021 and, as such, how much stimulus money and emergency rental assistance will be required to support tenants throughout and beyond the public health crisis.  
 

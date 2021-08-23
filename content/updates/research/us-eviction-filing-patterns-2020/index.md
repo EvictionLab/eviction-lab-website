@@ -17,6 +17,7 @@ postauthorname: Peter Hepburn, Renee Louis, Joe Fish, Emily Lemmerman, Anne Kat 
 twImage: us-eviction-filing-patterns-2020-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were. In a year that was unprecedented in many respects, we aim to show how renters fared, and what they may be facing in 2021.
+collection: true
 fbImage: us-eviction-filing-patterns-2020-social.png
 image:
 scripts:

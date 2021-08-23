@@ -17,7 +17,7 @@ fbImage: '/images/assets/blog/rent_margin_social.png'
 twImage: '/images/assets/blog/rent_margin_social.png'
 url: /serial-eviction-filings
 aliases:
-  
+collection: true  
 ---
 We often associate “eviction” with displacement and removal, boxes and furniture thrown to the curb. When a landlord files to evict a tenant—whether for nonpayment of rent or for property damage—we assume they do so to move them out. As we show in <a href="https://academic.oup.com/sf/advance-article/doi/10.1093/sf/soaa089/5903878" download target="_blank">a new article</a> published in the journal <i>Social Forces</i>, that assumption turns out to be missing half the picture. While some landlords do file intending to remove tenants, others use eviction filings as a way to collect rent and additional fees. That results in the phenomenon of <i>serial eviction filings</i>. This article offers the most comprehensive analysis to date of its prevalence across the United States. 
 

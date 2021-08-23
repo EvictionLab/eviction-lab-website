@@ -17,6 +17,7 @@ socialDescription: We take a look back at the CDC moratorium to better understan
 fbImage: "11-months-cdc-social.png"
 twImage: "11-months-cdc-social.png"
 url: /eleven-months-cdc
+collection: true
 scripts:
   - charts
   - mapbox

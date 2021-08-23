@@ -21,6 +21,7 @@ twImage: top-evicting-landlords-social.png
 aliases: null
 fbImage: top-evicting-landlords-social.png
 image: top-evicting-landlords-social.png
+collection: true
 ---
 
 In 2015, an apartment complex in Fayetteville, NC evicted 156 tenants. One might think perhaps the neighborhood was gentrifying, and this landlord was emptying their complex of all the low-income tenants: a one-time turnover. Yet, the complex evicted 137 tenants, on average, in each of the prior eight years. This one building evicted nearly five percent of all tenants who were removed from their homes in the city of Fayetteville during a ten-year span.

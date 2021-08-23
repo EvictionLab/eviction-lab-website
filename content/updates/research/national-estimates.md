@@ -14,6 +14,7 @@ socialDescription: What Eviction Lab data reveals about the national prevalence 
 fbImage: '/images/assets/blog/national-estimates-fb.jpg'
 twImage: '/images/assets/blog/national-estimates-twitter.jpg'
 url: /national-estimates
+collection: true
 aliases:
     - /updates/research/national-estimates
 ---

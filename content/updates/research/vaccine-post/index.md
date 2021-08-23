@@ -18,6 +18,7 @@ twImage: vaccine-filing-rates-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic? We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
 fbImage: vaccine-filing-rates-social.png
+collection: true
 image:
 scripts:
   - mapbox

@@ -20,6 +20,7 @@ url: /shifts-in-eviction-filings-from-cares-act-to-cdc-order
 scripts:
   - charts
 aliases:
+collection: true
 ---
 
 Two major eviction-related shifts have occurred in the U.S. over the last month.
