@@ -1172,7 +1172,7 @@
 }
 
 .list-intro__date {
-  font-size: 15px;
+  font-size: 15px !important;
   line-height: 24px;
   letter-spacing: 0.01em;
   /* color: #434878; */
@@ -1182,7 +1182,7 @@
 }
 @media (min-width: 1200px) {
   .list-intro__date {
-    font-size: 18px;
+    font-size: 18px !important;
     margin-bottom: 2.4rem;
   }
 }
