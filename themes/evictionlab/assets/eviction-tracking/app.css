@@ -2445,7 +2445,7 @@
 /** MEDIAN SECTION */
 
 .section.section--median {
-  min-height:0;
+  min-height:460px;
   display: block;
 }
 
