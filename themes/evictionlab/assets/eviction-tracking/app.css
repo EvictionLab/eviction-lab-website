@@ -1175,8 +1175,10 @@
   font-size: 15px;
   line-height: 24px;
   letter-spacing: 0.01em;
-  color: #434878;
+  /* color: #434878; */
+  color: #7c7c7c;
   margin-bottom: 1.6rem;
+  font-family: Akkurat-Italic, sans-serif;
 }
 @media (min-width: 1200px) {
   .list-intro__date {
