@@ -9,7 +9,7 @@ cascade:
   socialDescription: Real time eviction tracking in U.S. cities during COVID-19.
 h1: Acknowledgements
 layout: content
-date: 2021-07-07T00:00:00.000Z
+date: 2021-08-25T00:00:00.000Z
 similar: >-
   # Similar Resources
 
@@ -80,6 +80,8 @@ We would like to thank representatives of the following organizations, many of w
 * [New Covenant Legal Services](https://newcovenantlegalservices.org/)
 * [Ohio Legal Help](https://www.ohiolegalhelp.org/)
 * [Ohio Poverty Law Center](https://www.ohiopovertylawcenter.org/)
+* [OpenAddresses.io](https://openaddresses.io/)
+* [Regrid](https://regrid.com/)
 * [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/)
 * [South Carolina Legal Services](https://sclegal.org/)
 * [Texas Housers](https://texashousers.org/)
