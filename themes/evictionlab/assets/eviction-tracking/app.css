@@ -2397,6 +2397,13 @@
   text-overflow: ellipsis;
 }
 
+/* Overrides for sites without plaintiff info to display */
+
+.page-indianapolis-indiana--eviction-tracking-system .ranking__label .ranking__secondary,
+.page-greenville-south-carolina--eviction-tracking-system .ranking__label .ranking__secondary {
+  display: none;
+}
+
 .ranking__label .ranking__primary {
   font-family: GT-Eesti-Display-Bold,sans-serif;
   font-family: var(--heading-font);
