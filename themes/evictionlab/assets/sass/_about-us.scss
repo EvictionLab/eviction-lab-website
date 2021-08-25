@@ -63,10 +63,7 @@
        .bio-thumbs p:last-child {
             padding-bottom: 4.4rem;
         @include for-tablet-landscape-up {
-            padding-bottom: 5.4rem;
-            }
-        @include for-midsize-desktop-up {
-            padding-bottom: 6.2rem;
+            padding-bottom: 1.6rem;
             }
         }
     }
@@ -466,6 +463,11 @@
       max-width: 1000px;
     }
   }
+  @include media-breakpoint-up(xxl) {
+    .modal-dialog {
+        max-width: 80vw;
+      }
+  }
 
   .modal-header {
     margin: 0;
@@ -486,11 +488,12 @@
       height: 500px;
     }
     @include for-tablet-landscape-up {
-        min-height: 100%;
+        //min-height: 100%;
         width: 40%;
         display: block;
         flex-shrink: 0;
         height:auto;
+        max-height: 640px;
     }
   }
   .modal-body {
