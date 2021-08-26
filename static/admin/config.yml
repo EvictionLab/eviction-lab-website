@@ -413,7 +413,7 @@ collections:
           label: "Author Photo",
           name: "authorpic",
           widget: "image",
-          default: "images/uploads/james_hendrickson_thumb.jpg",
+          default: "images/uploads/elab_thumb.jpg",
           required: false,
         }
       - {
@@ -496,7 +496,7 @@ collections:
           label: "Author Photo",
           name: "authorpic",
           widget: "image",
-          default: "images/uploads/james_hendrickson_thumb.jpg",
+          default: "images/uploads/elab_thumb.jpg",
           required: false,
         }
       - {
