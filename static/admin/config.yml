@@ -413,7 +413,7 @@ collections:
           label: "Author Photo",
           name: "authorpic",
           widget: "image",
-          default: "images/uploads/elab_thumb.jpg",
+          default: "/images/bios/elab_thumb_sm.jpg",
           required: false,
         }
       - {
@@ -496,7 +496,7 @@ collections:
           label: "Author Photo",
           name: "authorpic",
           widget: "image",
-          default: "images/uploads/elab_thumb.jpg",
+          default: "/images/bios/elab_thumb_sm.jpg",
           required: false,
         }
       - {
