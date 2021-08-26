@@ -110,14 +110,14 @@ This strong correlation between high eviction filing rates and low vaccination r
 
 The COVID-19 pandemic is far from over, and while vaccination access is improving, it’s still limited in disadvantaged communities that are at greatest risk for eviction. The CDC eviction moratorium is, for many tenants behind on rent, the last remaining protection from the threat of displacement. As its expiration nears, few protections stand in the way of a family losing their home, and potentially contracting a life-threatening virus. 
 
+<hr/>
+
+We published an updated version of this analysis in the journal *Socius*. That piece is available, open-access, [here](https://journals.sagepub.com/doi/full/10.1177/23780231211040885).
+
 {{< blogfootnotes
 
 "We used vaccination data from the <a href='https://www.azdhs.gov/covid19/data/index.php#zipcode-vaccinations' target='_blank' rel='noreferrer noopener'>Arizona Department of Health Services</a>, the <a href='https://www.opendataphilly.org/dataset/covid-vaccinations' target='_blank' rel='noreferrer noopener'>City of Philadelphia</a>, the <a href='https://hub.mph.in.gov/dataset/covid-19-vaccinations-by-zip' target='_blank' rel='noreferrer noopener'>Indiana Department of Health</a>, the <a href='https://www1.nyc.gov/site/doh/covid/covid-19-data-vaccines.page' target='_blank' rel='noreferrer noopener'>New York City Department of Health and Mental Hygiene</a>, and the <a href='https://dshs.texas.gov/coronavirus/AdditionalData.aspx' target='_blank' rel='noreferrer noopener'>Texas Department of State Health Services</a>."
 
 "Three zip code areas in Houston (77030, 77046, 77056) reported fully-vaccinated numbers that exceed the 5-year estimates of the population over the age of 15 from the 2019 ACS data. The unvaccinated rates for those zip code areas have been reported as 0% on the map." >}}
-
-<hr/>
-
-We published an updated version of this analysis in the journal *Socius*. That piece is available, open-access, [here](https://journals.sagepub.com/doi/full/10.1177/23780231211040885).
 
 <div class="text-center" style="color:#6b6b6b"><i>Manhattan photo: {{< extlink "Marcus Lenk on Unsplash" "https://unsplash.com/@marcuslenk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" >}} </i></div>
