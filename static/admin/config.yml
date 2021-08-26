@@ -381,6 +381,12 @@ collections:
           widget: "hidden",
           default: "updates",
         }
+        - {
+          label: "In CMS",
+          name: "collection",
+          widget: "hidden",
+          default: true,
+        }
       - {
           label: "Content Category",
           name: "contentcat",
