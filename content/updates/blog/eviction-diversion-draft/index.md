@@ -4,13 +4,13 @@ childof: blog
 url: /eviction-diversion
 contenttype: updates
 contentcat: blog
-featured: true
+featured: false
 in_index: true
 title: Eviction Diversion (Draft)
 date: 2021-08-26T16:19:11.466Z
 postauthorname: Juan Pablo Garnham
 postauthortitle: The Eviction Lab
-authorpic: images/uploads/james_hendrickson_thumb.jpg
+authorpic: /images/bios/elab_thumb_sm.jpg
 description: Draft blog post
 listSummary: Draft blog post
 ---
