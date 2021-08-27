@@ -14,7 +14,7 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Draft blog post
 listSummary: Draft blog post
 ---
-Since November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. A new eviction diversion program, the initiative seeks to keep people housed by finding alternative solutions between renters and landlords and avoiding court-mandated evictions during the pandemic. 
+Since November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. This new eviction diversion initiative seeks to keep people housed by finding solutions to disputes between renters and landlords and avoiding court-mandated evictions during the pandemic. 
 
 
 
@@ -22,23 +22,23 @@ Since November 2020, more than 8,000 Chicagoans have received support for evicti
 
 
 
-More than 16 months into the pandemic, millions of renters across the country still fear of losing their homes and experiencing homelessness. In June, [the U.S. Census Bureau Pulse Survey](https://www.census.gov/data/tables/2021/demo/hhp/hhp33.html) found that more than 12 million people in the United States have either no confidence or slight confidence of being able to pay rent next month.
+More than 16 months into the pandemic, millions of renters across the country still fear of losing their homes and experiencing homelessness. In August, [the U.S. Census Bureau Pulse Survey](https://www.census.gov/data/tables/2021/demo/hhp/hhp35.html) found that more than 14 million adult renters in the United States have either no confidence or slight confidence of being able to pay rent next month.
 
 
 
-A wide range of moratoriums and benefits initially slowed the impact of evictions among tenants who lost income and employment during the pandemic. The most extensive protection, the CDC eviction moratorium, expired on July 31 and a new moratorium was put in place a few days later, covering only counties that are experiencing [high or substantial levels of COVID-19 transmission](https://covid.cdc.gov/covid-data-tracker/#county-view). But on August 26, the U.S. Supreme Court struck down this protection for renters. In that context, eviction diversion programs could be key to address a national crisis.
+A wide range of eviction moratoria and emergency social safety net benefits initially slowed the impact of evictions among tenants who lost income and employment during the pandemic. The longest federal protection, the CDC eviction moratorium, expired on July 31. The CDC instated the modified eviction moratorium a few days later, but the new order was struck down by the Supreme Court on August 26, 2021. With federal eviction prevention measures removed and cash benefits like expanded unemployment ending, local and state eviction diversion programs could be key to address a national crisis.
 
 
 
-These programs vary in shape and scope, but Deanna Pantín Parrish, Clinical Instructor and Lecturer on Law at Harvard Law School, said that they most commonly aim to prevent evictions through a mix of legal representation, rent assistance, and mediation between landlords and tenants, among offering other resources and services. Parrish was one of the authors of [a study that analyzed several of these programs and the positive effect they can have](https://www.americanbar.org/content/dam/aba/administrative/legal_aid_indigent_defendants/ls-covid19-dpp-best-practices.pdf?utm_source=NLIHC+All+Subscribers&utm_campaign=3d41b859ed-natl-call_summary_07-12-2021&utm_medium=email&utm_term=0_e090383b5e-3d41b859ed-293419986&ct=t(natl-call_summary_07-12-2021)).
+Eviction diversion programs vary in shape and scope, but Deanna Pantín Parrish, Clinical Instructor and Lecturer on Law at Harvard Law School, said that they most commonly aim to prevent evictions through a mix of legal representation, rent assistance, and mediation between landlords and tenants, among offering other resources and services. Parrish was the lead author of [a study that analyzed several of these programs and the positive effect they can have](https://www.americanbar.org/content/dam/aba/administrative/legal_aid_indigent_defendants/ls-covid19-dpp-best-practices.pdf?utm_source=NLIHC+All+Subscribers&utm_campaign=3d41b859ed-natl-call_summary_07-12-2021&utm_medium=email&utm_term=0_e090383b5e-3d41b859ed-293419986&ct=t(natl-call_summary_07-12-2021)).
 
 
 
-Unlike in criminal cases, in housing court the U.S. government does not guarantee legal representation. Washington State recently became the first and only U.S. state to legislate a right to counsel in eviction court. In practice, only 3% of tenants have an attorney, while 81% of landlords do, according to the [National Coalition for the Civil Right to Counsel](http://civilrighttocounsel.org/uploaded_files/280/Landlord_and_tenant_eviction_rep_stats__NCCRC_.pdf).
+Unlike in criminal cases, in housing court the U.S. government does not guarantee legal representation. In 2021, Washington became the first U.S. state to legislate a right to counsel in eviction court, followed by Maryland and Connecticut. Nationwide, only 3% of tenants have an attorney, while 81% of landlords do, according to the [National Coalition for the Civil Right to Counsel](http://civilrighttocounsel.org/uploaded_files/280/Landlord_and_tenant_eviction_rep_stats__NCCRC_.pdf).
 
 
 
-Eviction diversion provides tools—like legal aid, mediation or other resources— that can address the problem at the center, paying the rent and securing housing for a family while avoiding the nuclear option: an eviction.
+Eviction diversion provides tools—like legal aid, mediation or other resources— that can address the problem at the center of the dispute, paying the rent and securing housing for a family while avoiding the nuclear option: an eviction.
 
 
 
@@ -50,7 +50,7 @@ The federal efforts to help tenants in need have focused so far on providing mon
 
 
 
-Although this process has been speeding up, advocates and tenants have complained about the paperwork, an approval process that can last months, and that landlords are skeptical of participating in the program, as [several media outlets have reported](https://www.nbcnews.com/politics/politics-news/federal-eviction-moratorium-set-expire-states-offer-patchwork-protections-n1273408). Parrish explained that rental assistance is an “essential” part of these programs, but an eviction diversion approach allows local governments and nonprofits to go beyond just distributing money.
+Although this process has been speeding up, advocates and tenants have complained about the paperwork, an approval process that can last months, and that landlords are skeptical of participating in diversion or assistance programs, as [several media outlets have reported](https://www.nbcnews.com/politics/politics-news/federal-eviction-moratorium-set-expire-states-offer-patchwork-protections-n1273408). Parrish explained that rental assistance is an “essential” part of these programs, but an eviction diversion approach allows local governments and nonprofits to go beyond just distributing money.
 
 
 
@@ -70,7 +70,7 @@ INSERT GRAPHIC HERE OF THE THREE A’S
 
 
 
-In Chicago, tenants and landlords can receive help [through the program’s hotline and its website](https://www.cookcountylegalaid.org/). If they reach court, they can also find alternatives there: every case starts with a call where case managers of the Center for Conflict Resolution—a local organization that was already working in mediation services before the pandemic—assess the situation, provide referrals to legal and mediation services for those who are unrepresented, and connect them to rental assistance and other information as appropriate. 
+In Chicago, tenants and landlords can receive help [through the program’s hotline and its website](https://www.cookcountylegalaid.org/). If they reach the point of an eviction filing, they can also find alternatives there: every case starts with a call where case managers of the Center for Conflict Resolution—a local organization that was already working in mediation services before the pandemic—assess the situation, provide referrals to legal and mediation services for those who are unrepresented, and connect them to rental assistance and other information as appropriate. 
 
 
 
@@ -110,8 +110,8 @@ According to experts, some of the key elements for the success of these programs
 
 
 
-* Having clearly defined goals, alignment, and coordination between all the actors, agencies, and organizations involved.
-* Promote early interventions and solutions, especially before an eviction case is filed
+* Have clearly defined goals, alignment, and coordination between all the actors, agencies, and organizations involved.
+* Promote early interventions and solutions, especially before an eviction case is filed.
 * Active case management from pre-filing to post-judgment.
 * Build and support holistic eviction diversion interventions that address parties’ human needs, financial needs, and legal needs in the eviction process.
 * Be aware of technological, access, and linguistic barriers that people could experience during the program.
@@ -119,15 +119,14 @@ According to experts, some of the key elements for the success of these programs
 
 
 
-Regardless of the case outcome, appearing in court can damage a tenant’s credit and rental history, making it more difficult to find housing in the future. At the same time, in court the discussion can get more heated and it is less likely to end in favorable terms for both parties. 
-
+Regardless of the case outcome, an eviction case filing can damage a tenant’s credit and rental history, making it more difficult to find housing in the future. Additionally, in court the discussion can become more heated and it is less likely to end in favorable terms for both parties.
 
 
 “The earlier we can intervene in the eviction process, the better. Only cases that need to be in court should be in court,” Parrish said. “If we can address these issues prior to a filing the better likelihood that we have of maintaining and meeting the goal of housing stability.”
 
 
 
-Eviction diversion programs will face a test after the U.S. Supreme Court blocked the CDC eviction moratorium, but advocates and organizers hope that they will be able to contribute to speed up aid distribution and promote solutions before court. 
+Eviction diversion programs will face a test now that the CDC eviction moratorium has ended, but advocates and organizers hope that they will be able to contribute to speed up aid distribution and promote solutions before court. 
 
 
 
