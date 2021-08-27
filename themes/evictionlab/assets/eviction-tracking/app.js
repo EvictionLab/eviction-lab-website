@@ -222,7 +222,7 @@ Elab.Utils = (function (Elab) {
   }
 
   function getCdcMoratoriumRange() {
-    return [new Date(2020, 8, 4), new Date(2021, 9, 3)]; // ends oct 3
+    return [new Date(2020, 8, 4), new Date(2021, 7, 26)]; // ended aug 26
   }
 
   function monthAxisFormatter(date, index) {
