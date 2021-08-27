@@ -112,7 +112,7 @@ The COVID-19 pandemic is far from over, and while vaccination access is improvin
 
 <hr/>
 
-*We published an updated version of this analysis in the journal Socius. That piece is available, open-access, [here](https://journals.sagepub.com/doi/full/10.1177/23780231211040885).*
+*We published an updated version of this analysis in the journal Socius. That piece is available, open-access, [here](https://journals.sagepub.com/doi/full/10.1177/23780231211040885).* You can also find [replication code here](/filing-and-vaccination-rates/replication-code).
 
 {{< blogfootnotes
 
