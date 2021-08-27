@@ -6,7 +6,7 @@ contenttype: updates
 contentcat: blog
 featured: false
 in_index: true
-title: 'Eviction Diversion: Preventing Eviction Before Going to Court'
+title: "Eviction Diversion: Preventing Eviction Before Going to Court"
 date: 2021-08-26T16:19:11.466Z
 postauthorname: Juan Pablo Garnham
 postauthortitle: The Eviction Lab
@@ -22,11 +22,11 @@ Since November 2020, more than 8,000 Chicagoans have received support for evicti
 
 
 
-More than 16 months into the pandemic, millions of renters across the country still fear of losing their homes and risking homelessness. In June, [the U.S. Census Bureau Pulse Survey](https://www.census.gov/data/tables/2021/demo/hhp/hhp33.html) found that more than 12 million people in the United States have either no confidence or slight confidence of being able to pay rent next month.
+More than 16 months into the pandemic, millions of renters across the country still fear of losing their homes and experiencing homelessness. In June, [the U.S. Census Bureau Pulse Survey](https://www.census.gov/data/tables/2021/demo/hhp/hhp33.html) found that more than 12 million people in the United States have either no confidence or slight confidence of being able to pay rent next month.
 
 
 
-A wide range of moratoriums and benefits initially slowed the impact of evictions among tenants who lost income and employment during the pandemic. The most extensive protection, the CDC eviction moratorium, expired on July 31 and a new moratorium was put in place a few days later, covering only counties that are experiencing [high or substantial levels of COVID-19 transmission](https://covid.cdc.gov/covid-data-tracker/#county-view). The new deadline for this protection is October 3rd. . In that context, eviction diversion programs could be key to address a national crisis.
+A wide range of moratoriums and benefits initially slowed the impact of evictions among tenants who lost income and employment during the pandemic. The most extensive protection, the CDC eviction moratorium, expired on July 31 and a new moratorium was put in place a few days later, covering only counties that are experiencing [high or substantial levels of COVID-19 transmission](https://covid.cdc.gov/covid-data-tracker/#county-view). But on August 26, the U.S. Supreme Court struck down this protection for renters. In that context, eviction diversion programs could be key to address a national crisis.
 
 
 
@@ -34,7 +34,7 @@ These programs vary in shape and scope, but Deanna Pantín Parrish, Clinical Ins
 
 
 
-Unlike in criminal cases, in housing court the U.S. government does not guarantee legal representation. Washington State recently became the first and only U.S. state to legislate a right to counsel in eviction court. In practice, only 3% of tenants have an attorney, while 81% of landlords do, according to the [National Coalition for the Civil Right to Counsel](http://civilrighttocounsel.org/uploaded_files/280/Landlord_and_tenant_eviction_rep_stats__NCCRC_.pdf)
+Unlike in criminal cases, in housing court the U.S. government does not guarantee legal representation. Washington State recently became the first and only U.S. state to legislate a right to counsel in eviction court. In practice, only 3% of tenants have an attorney, while 81% of landlords do, according to the [National Coalition for the Civil Right to Counsel](http://civilrighttocounsel.org/uploaded_files/280/Landlord_and_tenant_eviction_rep_stats__NCCRC_.pdf).
 
 
 
@@ -66,7 +66,7 @@ INSERT GRAPHIC HERE OF THE THREE A’S
 
 
 
-“Third party independent evaluations of eviction diversion programs all across the country show real returns on investment. These are cost effective, incredibly efficient programs,” Desmond said.“For example, in Durham, North Carolina, over 70% of families that participated in the diversion program remained in their home. This is the opposite of what happens in conventional eviction courts, where most families that show up to court receive an eviction judgment.”
+“Third party independent evaluations of eviction diversion programs all across the country show real returns on investment. These are cost effective, incredibly efficient programs,” Desmond said. “For example, in Durham, North Carolina, over 70% of families that participated in the diversion program remained in their home. This is the opposite of what happens in conventional eviction courts, where most families that show up to court receive an eviction judgment.”
 
 
 
@@ -94,7 +94,7 @@ Another program that experts highlight is the one created in Philadelphia. While
 
 
 
-Late in 2020, an [early analysis showed that 86% of cases](https://whyy.org/articles/its-a-conversation-phillys-alternative-to-landlord-tenant-court-is-preventing-eviction/) in Philadelphia have either reached an agreement or started a mediation process, according to a local NPR station in the city . 
+Late in 2020, an [early analysis showed that 86% of cases](https://whyy.org/articles/its-a-conversation-phillys-alternative-to-landlord-tenant-court-is-preventing-eviction/) in Philadelphia have either reached an agreement or started a mediation process, according to a local NPR station in the city. 
 
 
 
@@ -110,7 +110,7 @@ According to experts, some of the key elements for the success of these programs
 
 
 
-* Having clearly defined goals, alignment, and coordination between all the actors, agencies and organizations involved.
+* Having clearly defined goals, alignment, and coordination between all the actors, agencies, and organizations involved.
 * Promote early interventions and solutions, especially before an eviction case is filed
 * Active case management from pre-filing to post-judgment.
 * Build and support holistic eviction diversion interventions that address parties’ human needs, financial needs, and legal needs in the eviction process.
@@ -127,7 +127,7 @@ Regardless of the case outcome, appearing in court can damage a tenant’s credi
 
 
 
-Eviction diversion programs will face a test after July 31, when the CDC eviction moratorium is expected to expire, but advocates and organizers hope that they will be able to contribute to speed up aid distribution and promote solutions before court. 
+Eviction diversion programs will face a test after the U.S. Supreme Court blocked the CDC eviction moratorium, but advocates and organizers hope that they will be able to contribute to speed up aid distribution and promote solutions before court. 
 
 
 
@@ -148,3 +148,5 @@ Eviction Diversion Resources:
 
 
 [The DOJ's guidance](https://click.pewtrusts.org/?qs=d726d81a61b4904b8dd0c80529eed0e37906cfa201874c2f914828956d49207eb87f4dfcaae1ace9a4167d9c5c87faed8444017b85c20f8b) for state courts on eviction diversion.
+
+[A map of legal services organizations](https://www.ncsc.org/newsroom/public-health-emergency/implementation-lab/eviction-resources/resources-for-attorneys) created by the National Center for State Courts (NCSC).
