@@ -117,7 +117,7 @@ In some areas, eviction filing rates were close to historical average, meaning t
   
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 px-md-2">
 
-```
+
 {{% mapbox
   id="11months_fig3_1"
   data="./fig3_map_tampa_20210813.csv"
@@ -129,15 +129,14 @@ In some areas, eviction filing rates were close to historical average, meaning t
   title="Historical eviction filing rates"
   legendTitle="Eviction Filings (2017 - 2018)"
   gradientType="discrete"
-  colors="rgba(250,222,211,0.14);rgba(226,64,1,0.35);rgba(226,64,1,0.5);rgba(226,64,1,0.75);rgba(226,64,1,1)"
-%}}
-```
+  colors="rgba(250,222,211,0.14);rgba(226,64,1,0.35);rgba(226,64,1,0.5);rgba(226,64,1,0.75);rgba(226,64,1,1)" %}}
+
 
   </div>
 
   <div class="col-12 col-lg-6 col-x4l-5 px-0 px-md-2">
 
-```
+
 {{% mapbox
   id="11months_fig3_2"
   data="./fig3_map_tampa_20210813.csv"
@@ -149,9 +148,8 @@ In some areas, eviction filing rates were close to historical average, meaning t
   title="Eviction filing rates during the CDC moratorium"
   legendTitle="Eviction Filings (2017 - 2018)"
   gradientType="discrete"
-  colors="rgba(250,222,211,0.14);rgba(226,64,1,0.35);rgba(226,64,1,0.5);rgba(226,64,1,0.75);rgba(226,64,1,1)"
-%}}
-```
+  colors="rgba(250,222,211,0.14);rgba(226,64,1,0.35);rgba(226,64,1,0.5);rgba(226,64,1,0.75);rgba(226,64,1,1)" %}}
+
 
   </div>
  
