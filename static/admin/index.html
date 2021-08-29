@@ -20,7 +20,7 @@
 
       CMS.registerEditorComponent({
         id: "introSection",
-        label: "Intro Section",
+        label: "ETS: Intro Section",
         fields: [
           {
             name: "fips",
@@ -67,7 +67,7 @@
 
       CMS.registerEditorComponent({
         id: "mapSection",
-        label: "Map Section",
+        label: "ETS: Filings Map",
         fields: [
           {
             name: "shapes",
@@ -111,7 +111,7 @@
 
       CMS.registerEditorComponent({
         id: "chartSection",
-        label: "Chart Section",
+        label: "ETS: Bar Chart Section",
         fields: [
           {
             name: "id",
@@ -157,9 +157,101 @@
         },
       });
 
+
+      CMS.registerEditorComponent({
+        id: "medianSection",
+        label: "ETS: Median Claims",
+        fields: [
+          {
+            name: "id",
+            label: "Chart Type",
+            widget: "hidden",
+            default: "medianSection"
+          },
+          {
+            name: "data",
+            label: "CSV File",
+            widget: "file",
+          },
+          {
+            name: "body",
+            label: "Section Content",
+            widget: "markdown",
+          },
+        ],
+        pattern: /^{{%[\s]+report_median_claims[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_median_claims[\s]+%}}/,
+        fromBlock: function (match) {
+          return {
+            id: match[1],
+            data: match[2],
+            body: match[3],
+          };
+        },
+        toBlock: function (obj) {
+          return (
+            '\n{{% report_median_claims id="' +
+            obj.id +
+            '" data="' +
+            obj.data +
+            '" %}}\n' +
+            obj.body +
+            "\n{{%/ report_median_claims %}}\n"
+          );
+        },
+        toPreview: function (obj) {
+          return obj.body;
+        },
+      });
+
+
+      CMS.registerEditorComponent({
+        id: "topEvictorsSection",
+        label: "ETS: Eviction Hot Spots",
+        fields: [
+          {
+            name: "id",
+            label: "Identifier",
+            widget: "hidden",
+            default: "topEvictorsSection"
+          },
+          {
+            name: "data",
+            label: "CSV File",
+            widget: "file",
+          },
+          {
+            name: "body",
+            label: "Section Content",
+            widget: "markdown",
+          },
+        ],
+        pattern: /^{{%[\s]+report_top_evictors[\s]+id="(\S*)"[\s]+data="(\S*)"[\s]+%}}([\S\s]*?){{%\/[\s]+report_top_evictors[\s]+%}}/,
+        fromBlock: function (match) {
+          return {
+            id: match[1],
+            data: match[2],
+            body: match[3],
+          };
+        },
+        toBlock: function (obj) {
+          return (
+            '\n{{% report_top_evictors id="' +
+            obj.id +
+            '" data="' +
+            obj.data +
+            '" %}}\n' +
+            obj.body +
+            "\n{{%/ report_top_evictors %}}\n"
+          );
+        },
+        toPreview: function (obj) {
+          return obj.body;
+        },
+      });
+
       CMS.registerEditorComponent({
         id: "statsTable",
-        label: "City Stats Table",
+        label: "ETS: City Stats Table",
         fields: [
           {
             name: "data",

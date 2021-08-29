@@ -27,6 +27,7 @@ description: TNow that the CDC moratorium has been in place for six months—and
   given that it is set to expire at the end of March—we conducted a preliminary
   analysis of how effective it has been.
 fbImage: ready-tenant-sasha-israel.jpg
+collection: true
 ---
 
 On September 4, 2020, the Centers for Disease Control and Prevention (CDC) ordered a [nationwide eviction moratorium](/moratorium-extended-evictions-continue/). This policy limited evictions when tenants provided a declaration attesting that they qualified for protections. But housing courts interpreted the CDC's order differently across the country and, in October, the CDC clarified that the order was {{< extlink "intended to halt the execution of eviction cases" "https://www.cdc.gov/coronavirus/2019-ncov/downloads/eviction-moratoria-order-faqs.pdf" >}}, but not any court operations—including receiving eviction filings.

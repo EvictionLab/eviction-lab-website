@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Pittsburgh, Pennsylvania
 slug: pittsburgh-pa
-date: 2021-04-12T04:00:00.000Z
+date: 2021-08-24T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Pittsburgh, Pennsylvania | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,19 +11,19 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="42003" data="/uploads/table.csv" %}}
 
-
-
 The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31, 2020. Eviction filings related to nonpayment of rent were not accepted during that period, though courts did process previously-filed eviction cases. Eviction filings in Allegheny County (Pittsburgh) were down to nearly zero in April and May, but increased markedly by September following the end of the moratorium. 
 
+On March 2, 2021, the City of Pittsburgh began prohibiting eviction proceedings except for in cases with “good cause”, which includes nonpayment evictions not due to demonstrated COVID financial hardships. 
+
 More detail on eviction protections in Pennsylvania can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/pa/).
-
-
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/pittsburgh_barchart.csv" %}}
+
+
 
 
 
@@ -35,11 +35,15 @@ Eviction filings in Pittsburgh were slightly above average in January and Februa
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/pittsburgh_shapes.json" data="/uploads/pittsburgh_map.csv" %}}
+
+
 
 
 
@@ -52,11 +56,15 @@ Allegheny County is divided into 115 zip codes. In each of those zip codes, we m
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/pittsburgh_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -65,5 +73,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2012–2019.<sup>1</sup> 
 
 1. Eviction filing data for Allegheny county were collected by the [CMU CREATE Lab](http://evict-response.earthtime.org/). Historical averages cover 2012-2019.
+
+
 
 {{%/ report_chart %}}

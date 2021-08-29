@@ -16,7 +16,7 @@ fbImage: '/images/assets/blog/claim-amount-social.png'
 twImage: '/images/assets/blog/claim-amount-social.png'
 url: /rising-claim-amounts
 aliases:
-  
+collection: true  
 ---
 Landlords filed eviction cases against a growing number of households over the second half of 2020. While eviction filing rates remain below typical levels, they are steadily increasing as we near the end of the year and the expiration of the CDC eviction moratorium. The absolute number of households facing eviction is significant, and so is the amount that they owe when eviction cases are filed. In this brief, we examine trends in claim amounts—the back rent, late fees, and damages that landlords claim when filing an eviction case—over the course of 2020 in a few key cities we are monitoring through the <a href="/eviction-tracking">Eviction Tracking System</a>. This analysis details how much money tenants will likely be evicted for in 2021 and, as such, how much stimulus money and emergency rental assistance will be required to support tenants throughout and beyond the public health crisis.  
 
@@ -27,7 +27,7 @@ On August 27th, the Eviction Lab <a href="/covid-eviction-claims/">published an 
 From August onwards, landlords have filed eviction cases with unusually large claim amounts in all four of the jurisdictions where we are able to track these data. In Figure 1, we plot monthly median eviction claim amounts as a ratio of median rent from January through November. We omit months in which we do not have data or in which very few cases were filed{{< sup 5 >}}. 
 
 
-{{< inlinesvg "risingclaims-fig1.svg" "Figure 1. Monthly median eviction claim amount as a ratio of median rent" "Note:  County-level median rent was taken from the 2014-2018 American Community Survey (ACS) five-year estimates." >}}
+{{< inlinesvg svg="risingclaims-fig1.svg" format="upscale" title="Figure 1. Monthly median eviction claim amount as a ratio of median rent" caption="Note:  County-level median rent was taken from the 2014-2018 American Community Survey (ACS) five-year estimates." >}}
 
 In Figure 1, we observe much higher claim amounts late in 2020 than were typical of early months of the year. For example, in Houston, median eviction claim amounts in January ($1,099), February ($1,050), and March ($1,064) hovered just above the median rent in Harris County ($1,031), suggesting that the typical tenant facing eviction at the beginning of 2020 was roughly a month behind in rent. In November, by contrast, the median eviction claim was for $1,895, 183% of median rent in Harris County. 
 
@@ -38,7 +38,7 @@ In New York City, the typical pre-pandemic eviction claim was for $2,645, or jus
 In Houston and New York City, we are able to compare trends in claim amounts this year to those in recent years. In Figure 2, we plot the monthly median claim amount in 2020 compared to 2016-2018 in New York City and 2016-2017 in Houston.
 
 
-{{< inlinesvg "risingclaims-fig2.svg" "Figure 2. Monthly median amount claimed in Houston and New York City" >}}
+{{< inlinesvg svg="risingclaims-fig2.svg" format="upscale" title="Figure 2. Monthly median amount claimed in Houston and New York City" >}}
 
 
 Figure 2 allows us to better appreciate the extent to which rising claim amounts in 2020 are a significant historical aberration. In previous years, claim amounts in eviction cases were stable across months: the claim amount on a typical case filed in March looked a lot like that on a case filed in October. That is not true of 2020. As state-level eviction protections lifted—in May in Houston and June in New York City—claim amounts rose dramatically. Those dollar figures continue to increase in Houston. In New York City they have declined slightly relative to the high reached in September, but remain well above normal.  

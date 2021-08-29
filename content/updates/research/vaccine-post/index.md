@@ -1,29 +1,37 @@
 ---
 draft: false
+scripts:
+  - mapbox
+  - charts
 childof: research
 url: /filing-and-vaccination-rates/
 contenttype: updates
 contentcat: research
 featured: true
 in_index: true
-title: "Neighborhoods with Highest Eviction Filing Rates have Lowest Levels of COVID-19 Vaccination"
+title: Neighborhoods with Highest Eviction Filing Rates have Lowest Levels of
+  COVID-19 Vaccination
 date: 2021-06-11T00:46:40.089Z
-postauthortitle: The Eviction Lab
-listSummary: >-
-  Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic? We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
-socialDescription: We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
-researchtype: elresearch
 postauthorname: Olivia Jin, Emily Lemmerman, Peter Hepburn, and Matthew Desmond
-twImage: vaccine-filing-rates-social.png
+postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Where do vaccination rates stand in neighborhoods that have seen most eviction filings during the pandemic? We found a pattern of higher eviction filing rates in neighborhoods with lower vaccination rates in every jurisdiction for which we were able to locate data.
+image: null
+description: Where do vaccination rates stand in neighborhoods that have seen
+  most eviction filings during the pandemic? We found a pattern of higher
+  eviction filing rates in neighborhoods with lower vaccination rates in every
+  jurisdiction for which we were able to locate data.
+listSummary: Where do vaccination rates stand in neighborhoods that have seen
+  most eviction filings during the pandemic? We found a pattern of higher
+  eviction filing rates in neighborhoods with lower vaccination rates in every
+  jurisdiction for which we were able to locate data.
+socialDescription: We found a pattern of higher eviction filing rates in
+  neighborhoods with lower vaccination rates in every jurisdiction for which we
+  were able to locate data.
+researchtype: elresearch
+twImage: vaccine-filing-rates-social.png
+collection: true
 fbImage: vaccine-filing-rates-social.png
-image:
-scripts:
-  - mapbox
-  - charts
 ---
-
 In the Lower Manhattan zip code 10006—home to One World Trade Center, the historic Trinity Church, and several luxury apartment buildings—almost 9 in 10 adults were fully vaccinated against COVID-19 by the start of June. Twelve miles north in the West Bronx (zip code 10457), a far different story played out, with just over 4 in 10 adults fully vaccinated. By contrast, those residents of the Bronx were far more likely to have received an eviction filing. Landlords filed 1,521 eviction cases in the West Bronx since March 15, 2020, compared to just 23 in the Financial District. Put differently: one in every 16 renter households in the West Bronx has received an eviction filing during the pandemic, compared to one in 58 in the Financial District. And the New York experience is not unique.
 
 {{< scaleimg_page img="ny-photo-quadrants.jpg" scale="124" title="" caption="Left: Lower Manhattan. Right: The West Bronx." alt="Skylines of Lower Manhattan and the West Bronx" >}}
@@ -72,6 +80,7 @@ Figure 2 puts these disparities into spatial perspective, showing two maps of Ho
   legendTitle="Eviction filing rate (%)"
   colors="rgba(241, 241, 241, 0.5);rgba(234, 187, 169, 0.51);#e99c7e;#e24000"
 %}}
+
 </div>
 <div class="col-12 col-lg-6 px-0 px-md-2">
 {{% mapbox
@@ -101,14 +110,14 @@ This strong correlation between high eviction filing rates and low vaccination r
 
 The COVID-19 pandemic is far from over, and while vaccination access is improving, it’s still limited in disadvantaged communities that are at greatest risk for eviction. The CDC eviction moratorium is, for many tenants behind on rent, the last remaining protection from the threat of displacement. As its expiration nears, few protections stand in the way of a family losing their home, and potentially contracting a life-threatening virus. 
 
+<hr/>
+
+*We published an updated version of this analysis in the journal Socius. That piece is available, open-access, [here](https://journals.sagepub.com/doi/full/10.1177/23780231211040885).* You can also find [replication code here](/filing-and-vaccination-rates/replication-code).
+
 {{< blogfootnotes
 
 "We used vaccination data from the <a href='https://www.azdhs.gov/covid19/data/index.php#zipcode-vaccinations' target='_blank' rel='noreferrer noopener'>Arizona Department of Health Services</a>, the <a href='https://www.opendataphilly.org/dataset/covid-vaccinations' target='_blank' rel='noreferrer noopener'>City of Philadelphia</a>, the <a href='https://hub.mph.in.gov/dataset/covid-19-vaccinations-by-zip' target='_blank' rel='noreferrer noopener'>Indiana Department of Health</a>, the <a href='https://www1.nyc.gov/site/doh/covid/covid-19-data-vaccines.page' target='_blank' rel='noreferrer noopener'>New York City Department of Health and Mental Hygiene</a>, and the <a href='https://dshs.texas.gov/coronavirus/AdditionalData.aspx' target='_blank' rel='noreferrer noopener'>Texas Department of State Health Services</a>."
 
-"Three zip code areas in Houston (77030, 77046, 77056) reported fully-vaccinated numbers that exceed the 5-year estimates of the population over the age of 15 from the 2019 ACS data. The unvaccinated rates for those zip code areas have been reported as 0% on the map."
-
->}}
+"Three zip code areas in Houston (77030, 77046, 77056) reported fully-vaccinated numbers that exceed the 5-year estimates of the population over the age of 15 from the 2019 ACS data. The unvaccinated rates for those zip code areas have been reported as 0% on the map." >}}
 
 <div class="text-center" style="color:#6b6b6b"><i>Manhattan photo: {{< extlink "Marcus Lenk on Unsplash" "https://unsplash.com/@marcuslenk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" >}} </i></div>
-
-

@@ -19,6 +19,7 @@ twImage: pandemic_demographics_social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: The threat of eviction is concentrated among those for whom
   displacement was already an all-too-common risk before the pandemic began.
+collection: true  
 aliases:
   - /pandemic-demographics/
 fbImage: pandemic_demographics_social.png

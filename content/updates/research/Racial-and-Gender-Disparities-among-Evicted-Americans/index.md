@@ -17,6 +17,7 @@ socialDescription: Documenting populations disproportionately at risk of evictio
 fbImage: historical-demographics-social.png
 twImage: historical-demographics-social.png
 url: /demographics-of-eviction/
+collection: true
 scripts:
   - grouped-bar-chart
 aliases:

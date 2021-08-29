@@ -25,6 +25,7 @@ listSummary: March 26, 2021 marks the one year anniversary since the Coronavirus
 socialDescription: Looking back and evaluating twelve months of emergency
   government measures designed to keep people in their homes.
 researchtype: elresearch
+collection: true
 twImage: one-year-moratoria-social.png
 aliases: null
 fbImage: one-year-moratoria-social.png

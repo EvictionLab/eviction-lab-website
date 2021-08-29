@@ -59,6 +59,23 @@ Elab.GroupedBarChart = (function (Elab) {
     return d.y;
   };
 
+  function renderTooltip(tooltip) {
+    return (
+      '<h1 class="tooltip__title">' +
+      tooltip.category +
+      "</h1>" +
+      '<div class="tooltip__item">' +
+      "<span> " +
+      tooltip.type +
+      ": " +
+      "</span>" +
+      "<span> " +
+      tooltip.value +
+      "</span>" +
+      "</div>"
+    );
+  }
+
   /**
    * Creates the chart and renders
    * @param {HTMLElement} root
@@ -66,8 +83,11 @@ Elab.GroupedBarChart = (function (Elab) {
    * @param {Object} dataOptions { margin, x, y, groupBy, curve, highlight, xTicks, xFormat, yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
-    // console.log('createFigure: ', root, data, dataOptions)
+    console.log("createFigure: ", root, data, dataOptions);
     var options = dataOptions;
+    const yTooltipFormat = d3.format(
+      options.yTooltipFormat || options.yFormat || ",d"
+    );
 
     var getBarType = function (str, options) {
       var type = "";
@@ -98,14 +118,24 @@ Elab.GroupedBarChart = (function (Elab) {
         d = data[0];
       }
       result = [];
-      options.ticksArr.forEach(function (el) {
+      options.ticksArr.forEach(function (el, categoryIndex) {
         var targets = options.barFormat[el];
-        // // console.log('targets, ', targets)
+        var categoryStr = dataOptions.xTicks.split(";")[categoryIndex];
         var rArr = [];
         targets.forEach(function (el, i) {
+          var typeStr = dataOptions.legendItems.split(";")[i];
           rArr[i] = {
+            category: String(el),
             value: d[el],
             type: getBarType(el, options),
+            renderTooltip: function (hoverData) {
+              const tooltip = {
+                type: typeStr,
+                category: categoryStr,
+                value: yTooltipFormat(hoverData.value),
+              };
+              return renderTooltip(tooltip);
+            },
           };
         });
         result.push({

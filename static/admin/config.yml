@@ -354,8 +354,10 @@ collections:
   - name: "research" # Used in routes, e.g., /admin/collections/blog
     label: "Research posts" # Used in the UI
     folder: "/content/updates/research" # The path to the folder where the documents are stored
+    path: '{{slug}}/'
     create: true # Allow users to create new documents in this collection
     extension: md
+    filter: { field: "collection", value: true }
     editor:
       preview: false
     preview_path: "{{fields.url}}"
@@ -380,10 +382,16 @@ collections:
           default: "updates",
         }
       - {
+          label: "In CMS",
+          name: "collection",
+          widget: "hidden",
+          default: true,
+        }
+      - {
           label: "Content Category",
           name: "contentcat",
           widget: "hidden",
-          default: "blog",
+          default: "research",
         }
       - {
           label: "Featured on Front Page",
@@ -405,7 +413,7 @@ collections:
           label: "Author Photo",
           name: "authorpic",
           widget: "image",
-          default: "images/uploads/james_hendrickson_thumb.jpg",
+          default: "images/uploads/elab_thumb.jpg",
           required: false,
         }
       - {
@@ -488,7 +496,7 @@ collections:
           label: "Author Photo",
           name: "authorpic",
           widget: "image",
-          default: "images/uploads/james_hendrickson_thumb.jpg",
+          default: "images/uploads/elab_thumb.jpg",
           required: false,
         }
       - {

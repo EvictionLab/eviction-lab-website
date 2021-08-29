@@ -24,6 +24,7 @@ twImage: missing-evictions-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Absent further protections, these cases may be pushed into 2021.
 aliases: null
+collection: true
 fbImage: missing-evictions-social.png
 ---
 America faced a rental housing crisis long before the onset of the COVID-19 pandemic. In a typical, non-pandemic year, landlords would file <a href="https://www.congress.gov/116/meeting/house/110362/witnesses/HHRG-116-BA00-Wstate-DesmondM-20200114.pdf" target="_blank">3.7 million eviction cases across the United States</a>. As a result of eviction moratoria, court closures, and temporary expansions to the social safety net, far fewer eviction cases have been filed in 2020. How many fewer? And what does that tell us about the potential for a surge in eviction filings in early 2021? 
@@ -34,18 +35,18 @@ Leveraging data drawn from the <a href="/eviction-tracking">Eviction Tracking Sy
 
 Focusing on the 18 cities and six states we observed in the ETS, in Figure 1 we plot total weekly eviction filings as a percentage of historical average.{{< sup 1>}} For nearly every week since the pandemic began, filings have been far below average. 
 
-{{< inlinesvg "missing-claims-fig1.svg" "Figure 1. Weekly Eviction Filings in Eviction Tracking System Sites Relative to Historical Average" >}}
+{{< inlinesvg svg="missing-claims-fig1.svg" format="upscale" title="Figure 1. Weekly Eviction Filings in Eviction Tracking System Sites Relative to Historical Average" >}}
 
 <div class="figcaption"><p>Weekly eviction filings are aggregated across sites tracked by the Eviction Tracking System (ETS) as of 11/30/2020. Historical averages are calculated for the same seven-day periods in previous years. The vertical red dashed line in mid-March marks the start of the COVID-19 pandemic. The bars in orange are the <a href="/shifts-in-eviction-filings-from-cares-act-to-cdc-order/">two weeks between the CARES Act eviction moratorium and the CDC eviction moratorium when no federal moratorium was in effect</a>. 
 </p></div>
 
 Between March 15th and November 30th of a typical year, we would expect to see 520,000 eviction filings across the current ETS sites. This year we have observed 172,000 filings, or roughly one-third of normal. That leaves nearly 350,000 missing filings during the pandemic. Missing filings can be understood as a measure of the overall success of emergency eviction bans at the local, state, and federal levels, as well as CARES Act stimulus payments and unemployment expansion. The spike in evictions witnessed in August between the time the CARES Act eviction moratorium expired and the CDC moratorium went into effect (symbolized by the orange bars in Figure 1) indicate that what kept evictions lower-than-average during the pandemic was legal prohibitions on displacement. 
 
-{{< inlinesvg "agg_fig.svg" "Figure 2. Overall Missing Filings across ETS Sites" >}}
+{{< inlinesvg svg="agg_fig.svg" format="upscale" title="Figure 2. Overall Missing Filings across ETS Sites" >}}
 
 These missing filing accrued most quickly in the early months of the pandemic. In Figure 3 we plot the cumulative number of eviction filings across all ETS sites over the course of 2020, as well as the historical average. 
 
-{{< inlinesvg "missing-claims-figure3.svg" "Figure 3. Cumulative Eviction Filings across ETS Sites in 2020 and in Historical Average" >}}
+{{< inlinesvg svg="missing-claims-figure3.svg" format="upscale" title="Figure 3. Cumulative Eviction Filings across ETS Sites in 2020 and in Historical Average" >}}
 
 Prior to the start of the pandemic, eviction filings in 2020 across all ETS sites were almost exactly on pace with the historical average: about 50,000 cases filed each month. Between March and the end of July—when the CARES Act was in place and all sites were, for at least some time, under state or local eviction moratoria—new filings fell to an average of 2,100 per month, or 4.2% of the normal rate. 
 

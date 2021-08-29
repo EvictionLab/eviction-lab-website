@@ -191,7 +191,8 @@ function initCovidTable() {
   }
 
   // Sheet must be published as public 
-  var SHEET_URL = 'https://spreadsheets.google.com/feeds/list/1XX9bBi_4ERpeqw_WyqHEIkfpShbif1i6HenBfymYv_U/1/public/values?alt=json'
+  //var SHEET_URL = 'https://spreadsheets.google.com/feeds/list/1XX9bBi_4ERpeqw_WyqHEIkfpShbif1i6HenBfymYv_U/1/public/values?alt=json'
+  var SHEET_URL = '../docs/policies-table.json'
   // Fetch intervention data
   var mediaReq = new XMLHttpRequest();
   mediaReq.addEventListener("load",  function() { reqHandler('media', mediaReq) });

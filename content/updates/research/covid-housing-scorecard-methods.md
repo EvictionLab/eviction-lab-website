@@ -15,6 +15,7 @@ socialDescription: Our methodology for building the Housing Policy Scorecard.
 fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
 url: /covid-housing-scorecard-methods
+collection: true
 aliases:
     - /updates/blog/covid-housing-scorecard-methods
     - /updates/blog/covid-housing-scorecard-methodology

@@ -58,6 +58,11 @@
   width: 100%;
   height: 16px;
 }
+
+.visual--mapbox .legend__gradient .legend__gradient-label--tick {
+  font-size: 1.16rem;
+}
+
 .visual--mapbox .legend__gradient-labels {
   width: 100%;
   flex: 1;
@@ -698,7 +703,7 @@ body .visual .visual__title, body .visual .visual__title > * {
   fill: var(--c1);
 }
 
-.chart--fig1 .chart__mark {
+.chart__mark {
   stroke: #e24000;
   stroke: var(--c1);
   stroke-dasharray: 2 2;

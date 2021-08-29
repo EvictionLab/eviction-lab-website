@@ -5,7 +5,7 @@ draft: false
 h1: Minnesota
 layout: state
 slug: minnesota
-date: 2021-07-20T04:00:00.000Z
+date: 2021-08-10T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -15,6 +15,8 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Minnesota have been significantly below average since a state-wide eviction moratorium was instituted in March 2020. Eviction protections remained in effect through the remainder of the year and were extended into 2021. The moratorium had been renewed each month until June 2021, after which the state began phasing out protections. Landlords are still restricted from filing for nonpayment of rent through mid-September. 
 
+While Minnesota has protections in place for the entire state, some counties may not be covered by the federal moratorium [under the new CDC guidelines](https://www.cdc.gov/coronavirus/2019-ncov/communication/Signed-CDC-Eviction-Order.pdf). See the [CDC's COVID Data Tracker](https://covid.cdc.gov/covid-data-tracker/#county-view) for more information on which counties are not experiencing "High" or "Substantial" levels of COVID transmission. 
+
 More detail on eviction protections in Minnesota can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mn/). A closer look at eviction filing patterns in the Twin Cities is [available here](https://evictionlab.org/eviction-tracking/minneapolis-saint-paul-mn/).
 
 {{%/ report_intro %}}
@@ -22,6 +24,8 @@ More detail on eviction protections in Minnesota can be found on the [COVID-19 H
 
 
 {{% report_chart id="avg" data="/uploads/minnesota_barchart.csv" %}}
+
+
 
 
 
@@ -41,11 +45,15 @@ Eviction filings in Minnesota were close to historical averages in January and F
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/minnesota_shapes.json" data="/uploads/minnesota_map.csv" %}}
+
+
 
 
 
@@ -59,6 +67,8 @@ Minnesota is divided into 87 counties. In each of those counties, we map the num
 
 1. Eviction filing data for Minnesota were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
 2. Tract racial characteristics determined using American Community Survey (ACS) estimates for 2014–2018.
+
+
 
 
 

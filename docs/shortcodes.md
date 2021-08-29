@@ -197,7 +197,7 @@ Then include the shortcode in the body of the `.md` file.
 - xMax: x axis maximum value
 - xLabel: x axis label
 - margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
-- tooltipTemplate: a template string for the tooltip.  `{total}` and `{range}` will be replaced with their corresponding values.
+- tooltipTemplate: a template string for the tooltip. `{total}` and `{range}` will be replaced with their corresponding values.
 
 #### Demo
 
@@ -328,7 +328,7 @@ Than include the shortcode in the body of the `.md` file.
 Data file should have:
 
 - a column present for state IDs, e.g. `fips`
-- a column for choropleth values,  e.g. `values`
+- a column for choropleth values, e.g. `values`
 
 ```csv
 name,fips,score1,score2,score3,score4
@@ -373,6 +373,7 @@ Than include the shortcode in the body of the `.md` file.
   name="school"
   format="integer"
   legendTitle="Eviction Filings (2017 - 2018)"
+  gradientType="discrete"
   colors="rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
 %}}
 ```
@@ -388,6 +389,7 @@ Than include the shortcode in the body of the `.md` file.
 - name: a column to use as a "name" identifier for each choropleth (displayed in the tooltip)
 - format: how to format the values ("integer", "percent", or "decimal")
 - legendTitle: title to use for the legend
+- gradientType: if set to "discrete", will create a legend gradient with discrete steps, otherwise linear
 - colors: colors to use for the choropleths, separated by semi colon
 
 #### Demo

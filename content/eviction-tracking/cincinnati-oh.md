@@ -33,13 +33,25 @@ Eviction filings in Cincinnati were almost exactly at typical levels in January 
 {{%/ report_chart %}}
 
 
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/cincinnati_output_20210824.csv" %}}
+# Eviction Hotspots
+
+Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and 2021. We analyzed eviction records in Cincinnati to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
+{{%/ report_top_evictors %}}
+
+
+
+{{% report_median_claims id="medianFilings" data="/uploads/cincinnati_claims_monthly.csv" %}}
+# Changes in claim amounts
+
+When a landlord files an eviction claim in Cincinnati, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month since January 2020. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed.
+
+
+{{%/ report_median_claims %}}
+
+
 
 {{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_map.csv" %}}
-
-
-
-
-
 
 
 # The geography of changes in eviction filings

@@ -1,0 +1,32 @@
+site_name_full,num_filings,num_filings_hist_avg,ratio,moratorium_type,moratorium_id
+"Austin, TX",900,8373.333333333334,0.10748407643312101,Local moratorium,3
+"Minn.-St.Paul, MN",816,7351,0.11100530540062577,Local moratorium,3
+"New York, NY",53628,203963.66666666666,0.2629291818314046,Partial local moratorium,2
+"Richmond, VA",5088,18684,0.2723185613359024,Partial local moratorium,2
+"Philadelphia, PA",5456,19062.5,0.28621639344262295,No local moratorium,1
+"Hartford, CT",1751,5420,0.3230627306273063,Partial local moratorium,2
+"Bridgeport, CT",1261,3631.3333333333335,0.34725536992840095,Partial local moratorium,2
+"Pittsburgh, PA",4526,12254.5,0.369333714145824,No local moratorium,1
+"Charleston, SC",5057,13596.75,0.37192711493555447,No local moratorium,1
+"Boston, MA",2890,7052.5,0.4097837646224743,Partial local moratorium,2
+"Wilmington, DE",4274,10216.75,0.418332640027406,No local moratorium,1
+"New Orleans, LA",2318,5499,0.4215311874886343,No local moratorium,1
+"Cleveland, OH",3755,8695.5,0.4318325570697487,No local moratorium,1
+"Kansas City, MO",3774,8252.25,0.45732981914023446,Partial local moratorium,2
+"Albuquerque, NM",4550,9869.666666666666,0.46100847715221727,No local moratorium,1
+"Dallas, TX",17404,36623.666666666664,0.4752118393388611,No local moratorium,1
+"Fort Worth, TX",16246,34032.25,0.47737072923477,No local moratorium,1
+"St Louis, MO",6704,13475.75,0.49748622525647923,No local moratorium,1
+"Houston, TX",27307,52441.75,0.5207110746685608,No local moratorium,1
+"Milwaukee, WI",6177,11664,0.5295781893004116,No local moratorium,1
+"South Bend, IN",1445,2650.75,0.5451287371498632,No local moratorium,1
+"Memphis, TN",13487,24224,0.5567618890356671,No local moratorium,1
+"Phoenix, AZ",34129,57838.6,0.5900730653923159,No local moratorium,1
+"Greenville, SC",8068,13201,0.6111658207711537,No local moratorium,1
+"Indianapolis, IN",15920,25814.25,0.6167136368478651,No local moratorium,1
+"Cincinnati, OH",8222,11541.4,0.7123919108600343,No local moratorium,1
+"Gainesville, FL",1108,1434,0.7726638772663877,No local moratorium,1
+"Jacksonville, FL",8392,10745.2,0.7809998883222276,No local moratorium,1
+"Columbus, OH",13051,16568.333333333332,0.7877074740971733,No local moratorium,1
+"Tampa, FL",13012,15831.75,0.8218927155873482,No local moratorium,1
+"Las Vegas, NV",30333,33172.25,0.9144088809170315,Partial local moratorium,2
