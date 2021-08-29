@@ -251,7 +251,7 @@
                     {{ $img := .Params.thumb }}
                     {{ with .Resources.GetMatch $img }}
                     {{ $processed := .Fill "480x320 q70 jpg Center" }}
-                    <div class="d-none d-lg-block col-3 col-lg-5 pl-0">
+                    <div class="d-none d-lg-flex col-3 col-lg-5 pl-0 align-items-center">
                       <img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} ">
                     </div>
                     {{ end }}
