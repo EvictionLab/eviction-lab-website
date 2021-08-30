@@ -11,8 +11,8 @@ postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: What Eviction Lab data reveals about the national prevalence of evictions.
 socialDescription: What Eviction Lab data reveals about the national prevalence of evictions.  
-fbImage: '/images/assets/blog/national-estimates-fb.jpg'
-twImage: '/images/assets/blog/national-estimates-twitter.jpg'
+fbImage: 'national-estimates-fb.jpg'
+twImage: 'national-estimates-twitter.jpg'
 url: /national-estimates
 collection: true
 aliases:

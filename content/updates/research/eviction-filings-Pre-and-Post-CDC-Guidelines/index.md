@@ -14,8 +14,8 @@ description: Surveying the effects of 2 major eviction-related shifts.
 listSummary: "Two major eviction-related shifts have occurred in the U.S. over the last month. Data from the Eviction Tracking System (ETS) allow us to assess what effects those changes have had and where new eviction filings stand in cities across the U.S."
 socialDescription: Surveying the effects of 2 major eviction-related shifts.
 # image: '/images/assets/blog/rent_margin_display.jpg'
-fbImage: "/images/assets/blog/filing-shifts-social.png"
-twImage: "/images/assets/blog/filing-shifts-social.png"
+fbImage: "filing-shifts-social.png"
+twImage: "filing-shifts-social.png"
 url: /shifts-in-eviction-filings-from-cares-act-to-cdc-order
 scripts:
   - charts

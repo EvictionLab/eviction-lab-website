@@ -13,8 +13,8 @@ description: New findings from the data and policy recommendations to protect re
 listSummary: 'We often associate “eviction” with displacement and removal, boxes and furniture thrown to the curb. When a landlord files to evict a tenant—whether for nonpayment of rent or for property damage—we assume they do so to move them out. While some landlords do file intending to remove tenants, others use eviction filings as a way to collect rent and additional fees.' 
 socialDescription: New findings from the data and policy recommendations to protect renters.
 # image: '/images/assets/blog/rent_margin_display.jpg'
-fbImage: '/images/assets/blog/rent_margin_social.png'
-twImage: '/images/assets/blog/rent_margin_social.png'
+fbImage: 'rent_margin_social.png'
+twImage: 'rent_margin_social.png'
 url: /serial-eviction-filings
 aliases:
 collection: true  

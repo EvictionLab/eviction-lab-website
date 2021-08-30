@@ -18,9 +18,9 @@
 
 {{ if eq .Title "Updates | Eviction Lab"}} <!-- if we are on the Updates page, do stuff -->
 
-    <div class="alt-rows">
+    <div class="alt-rows updates-list">
        
-    {{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") 10 }}   
+    {{ $paginator := .Paginate (where .Site.Pages "Params.contenttype" "updates") 7 }}   
     {{ range .Paginator.Pages }} 
       {{ if ne .Params.in_index false }}
 <!--{{ if eq .Params.contenttype "updates" }}    -->
@@ -33,20 +33,30 @@
             </div>-->
 
             <div class="postlist-left-col">
-                <div class="authorname mb-md-2">{{ .Params.postauthorname | truncate 40 }}</div>
                 <div class="list-thumb-container mb-md-3 mb-xxl-2">
+                  <!-- If post is of "reporting" type -->
                   {{ if eq .Params.childof "reporting"}}
-                    {{ if .Params.thumb }}
                       {{ $img := .Params.thumb }}
                         {{ with .Resources.GetMatch $img }}
-                          {{ $processed := .Fit "360x240 q70 jpg" }}
+                          {{ $processed := .Fill "360x240 q70 jpg Center" }}
                             <img class="list-thumb reporting__thumb" src=" {{ $processed.RelPermalink }} ">
                         {{ end }}
-                    {{ end }}  
-                  {{ else }}
-                    <img class="list-thumb" alt="{{ .Params.postauthorname }} photo" src="{{ .Params.authorpic }}">
                   {{ end }}
+                  <!-- If post is not of reporting type, and has a featured image, use that -->
+                  {{ if ne .Params.childof "reporting" }}
+                    {{ if .Params.fbImage }} 
+                      {{ $img2 := .Params.fbImage }}
+                      {{ with .Resources.GetMatch $img2 }}
+                        {{ $processed := .Fit "360x240 q70 jpg" }}
+                          <img class="list-thumb reporting__thumb" src=" {{ $processed.RelPermalink }} ">
+                      {{ end }}
+                    {{ else }}
+                     <!-- Otherwise use the author thumb -->
+                      <img class="list-thumb author__thumb" alt="{{ .Params.postauthorname }} photo" src="{{ .Params.authorpic }}">
+                    {{ end }}
+                  {{ end }}  
                 </div>  
+                <div class="authorname mb-md-2">{{ .Params.postauthorname | truncate 40 }}</div>
                 <div class="post-date mb-md-2 mb-xxl-1">{{ .Date.Format "January 2, 2006" }}</div>
                 <div class="post-cat">
                   <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" alt="Bookmark icon" />
@@ -183,7 +193,7 @@
         <p>For tips on reporting about eviction, please see our <a href="/media-guide/">Media Guide</a>.</p>
       </div>
     </div>
-    <div class="alt-rows media-list">
+    <div class="alt-rows updates-list">
       {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "reporting") 10 }}   
       {{ range .Paginator.Pages }}
       {{ if ne .Params.in_index false }}

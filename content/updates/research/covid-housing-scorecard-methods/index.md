@@ -12,8 +12,8 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Our methodology for building the Housing Policy Scorecard.
 listSummary: To prevent the deleterious health consequences of eviction and an escalating economic crisis during the COVID-19 outbreak, U.S. states are beginning to pursue strategies to ensure safe, decent, and stable housing during and after the pandemic. To evaluate state responses, the Eviction Lab and Columbia Law School’s Professor Emily Benfer have developed a policy scorecard for each state.
 socialDescription: Our methodology for building the Housing Policy Scorecard.
-fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
-twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
+fbImage: 'covid-eviction-policies-social.jpg'
+twImage: 'covid-eviction-policies-social.jpg'
 url: /covid-housing-scorecard-methods
 collection: true
 aliases:

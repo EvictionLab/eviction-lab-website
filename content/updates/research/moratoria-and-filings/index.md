@@ -16,12 +16,12 @@ listSummary: In this brief, we examine effects of local moratoria. Specifically,
 socialDescription: Examining the effects of local eviction moratoria during the COVID-19 pandemic.
 researchtype: elresearch
 postauthorname: Peter Hepburn and Renee Louis
-twImage: /images/assets/blog/local-moratoria-md-social.png
+twImage: local-moratoria-md-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Our methodology for building the Housing Policy Scorecard.
 aliases: null
 collection: true
-fbImage: /images/assets/blog/local-moratoria-md-social.png
+fbImage: local-moratoria-md-social.png
 ---
 In response to the COVID-19 pandemic, actors at multiple levels of government enacted policies meant to protect renters from the threat of eviction. The federal government issued an eviction moratorium on federally assisted units and properties with federal mortgages through the CARES Act, as well as a <a href="https://evictionlab.org/federal-eviction-moratorium-update/">more far-reaching moratorium in private rental housing units ordered by the Centers for Disease Control and Prevention (CDC)</a>. 
 
