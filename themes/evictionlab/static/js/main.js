@@ -145,54 +145,52 @@ function initCovidTable() {
   // console.log('initCovidTable()')
   // Parse JSON response and insert a table row for each row of data in the sheet.
   function reqHandler(source, req) {
-    // console.log('reqHandler')
-    // console.log('req', req)
-    var rows = JSON.parse(req.responseText).feed.entry;
-    // console.log('rows', rows);
-    var properties = Object.keys(rows[0])
-        .filter(function (p) { return p.startsWith("gsx$"); })
-        .map(function (p) { return p.substr(4); });
-    // console.log('properties', properties)
-    var items = rows.map(function (r) {
+    var rows = JSON.parse(req.responseText).values;
+    var values = rows.slice(1);
+    var properties = rows[0];
+    var items = values.map(function (r) {
       var row = {};
-      properties.forEach(function (p) {
-          row[p.replace('.', '')] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
-          if (row[p] === null) {
-              row[p] = '';
-          }
+      properties.forEach(function (p, i) {
+        row[p.replace(/[^\w]/gi, "").toLowerCase()] = r[i];
       });
-      console.log('row', row)
-      if (row.levelofgovernmentlocalstatenational === 'State' | row.levelofgovernmentlocalstatenational === 'Local' |
-      row.levelofgovernmentlocalstatenational === 'Local/Federal District') {
+      // console.log("row", row);
+      if (
+        (row.levelofgovernmentlocalstatenational === "State") |
+        (row.levelofgovernmentlocalstatenational === "Local") |
+        (row.levelofgovernmentlocalstatenational === "Local/Federal District")
+      ) {
         if (activeStates.indexOf(row.state) <= -1) {
-          activeStates.push(row.state)
+          activeStates.push(row.state);
         }
       }
       return row;
     });
-    // console.log('items', items);
     covidItemsAll = items;
     populateCovidRows(covidItemsAll);
     // Remove disabled class from select items that should not be disabled.
-    activeStates.forEach(function(el, i) {
+    activeStates.forEach(function (el, i) {
       $('#filter_covid_table ul li > a[data-value="' + el + '"]')
-        .parent('li')
-        .removeClass('disabled');
-    })
+        .parent("li")
+        .removeClass("disabled");
+    });
     // Listen for select event.
-    $('#filter_covid_table ul li:not(.disabled) > a').on('select, click', function(e) {
-      // console.log('Clicked or selected filter item.');
-      // console.log($(e.currentTarget).attr('data-value'));
-      var filterBy = $(e.currentTarget).attr('data-value');
-      emptyCovidTable();
-      populateCovidRows(filterCovidTable(covidItemsAll, filterBy));
-      $('span#selected_filter').text($(e.currentTarget).text())
-    })
+    $("#filter_covid_table ul li:not(.disabled) > a").on(
+      "select, click",
+      function (e) {
+        // console.log('Clicked or selected filter item.');
+        // console.log($(e.currentTarget).attr('data-value'));
+        var filterBy = $(e.currentTarget).attr("data-value");
+        emptyCovidTable();
+        populateCovidRows(filterCovidTable(covidItemsAll, filterBy));
+        $("span#selected_filter").text($(e.currentTarget).text());
+      }
+    );
   }
 
-  // Sheet must be published as public 
-  //var SHEET_URL = 'https://spreadsheets.google.com/feeds/list/1XX9bBi_4ERpeqw_WyqHEIkfpShbif1i6HenBfymYv_U/1/public/values?alt=json'
-  var SHEET_URL = '../docs/policies-table.json'
+  // Sheet must be published as public
+  // var SHEET_URL_LOCAL = "../docs/policies-table.json";
+  var SHEET_URL =
+    "https://sheets.googleapis.com/v4/spreadsheets/1XX9bBi_4ERpeqw_WyqHEIkfpShbif1i6HenBfymYv_U/values/Policy%20Table?alt=json&key=AIzaSyD1qajG1iNe_ISqbiCNY3mbrkTTo7v3j4U";
   // Fetch intervention data
   var mediaReq = new XMLHttpRequest();
   mediaReq.addEventListener("load",  function() { reqHandler('media', mediaReq) });
