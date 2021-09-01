@@ -62,9 +62,11 @@ In a White House summit on how to address a potential eviction crisis [on June 3
 
 
 
-INSERT GRAPHIC HERE OF THE THREE A’S
+{{< inlinesvg svg="content/updates/blog/eviction-diversion/3-as.svg" >}}
 
-
+<br/>
+<br/>
+<br/>
 
 “Third party independent evaluations of eviction diversion programs all across the country show real returns on investment. These are cost effective, incredibly efficient programs,” Desmond said. “For example, in Durham, North Carolina, over 70% of families that participated in the diversion program remained in their home. This is the opposite of what happens in conventional eviction courts, where most families that show up to court receive an eviction judgment.”
 
@@ -134,9 +136,9 @@ Eviction diversion programs will face a test now that the CDC eviction moratoriu
 
 
 
-Eviction Diversion Resources:
+### Eviction Diversion Resources:
 
-
+<br/>
 
 [National Center for State Courts' (NCSC) eviction diversion diagnostic tool](https://click.pewtrusts.org/?qs=d726d81a61b4904bcfd19aa8aef0ea74b030f2692e21935341d17858e1db1ea34ca759c98dd09ca3d06a10097edc25c2e68e423a19c199ef). Use this tool to see if and how your jurisdiction can adopt an eviction diversion program.
 
