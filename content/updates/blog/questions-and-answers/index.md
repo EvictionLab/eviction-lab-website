@@ -6,6 +6,7 @@ contenttype: updates
 contentcat: blog
 featured: true
 in_index: true
+collection: true
 title: Questions and answers about evictions as the CDC moratorium ends
 date: 2021-07-26T16:46:40.089Z
 postauthortitle: Princeton University

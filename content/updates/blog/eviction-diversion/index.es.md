@@ -6,6 +6,7 @@ contenttype: updates
 contentcat: blog
 featured: true
 in_index: true
+collection: false
 title: "Eviction Diversion: Preventing Eviction Before Going to Court"
 date: 2021-09-01T16:19:11.466Z
 postauthorname: Juan Pablo Garnham
@@ -17,9 +18,8 @@ listSummary: With federal eviction prevention measures removed and cash benefits
 socialDescription: Local and state eviction diversion programs could be key to address a national crisis.
 fbImage: iStock-185225200-edit.jpg
 twImage: iStock-185225200-edit.jpg
-collection: true
 ---
-<span class="dropcap">S</span>ince November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. This new eviction diversion initiative seeks to keep people housed by finding solutions to disputes between renters and landlords and avoiding court-mandated evictions during the pandemic. 
+Since November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. This new eviction diversion initiative seeks to keep people housed by finding solutions to disputes between renters and landlords and avoiding court-mandated evictions during the pandemic. 
 
 
 
