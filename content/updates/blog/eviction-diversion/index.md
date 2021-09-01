@@ -19,7 +19,7 @@ fbImage: iStock-185225200-edit.jpg
 twImage: iStock-185225200-edit.jpg
 collection: true
 ---
-<span class="dropcap">S</span>ince November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. This new eviction diversion initiative seeks to keep people housed by finding solutions to disputes between renters and landlords and avoiding court-mandated evictions during the pandemic. 
+<span class="dropcap red">S</span>ince November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. This new eviction diversion initiative seeks to keep people housed by finding solutions to disputes between renters and landlords and avoiding court-mandated evictions during the pandemic. 
 
 
 
