@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: blog
 url: /eviction-diversion
 contenttype: updates

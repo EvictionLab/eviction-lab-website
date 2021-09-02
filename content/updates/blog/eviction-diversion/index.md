@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: blog
 url: /eviction-diversion
 contenttype: updates
@@ -27,7 +27,7 @@ collection: true
 
 
 
-More than 16 months into the pandemic, millions of renters across the country still fear of losing their homes and experiencing homelessness. In August, [the U.S. Census Bureau Pulse Survey](https://www.census.gov/data/tables/2021/demo/hhp/hhp35.html) found that more than 14 million adult renters in the United States have either no confidence or slight confidence of being able to pay rent next month.
+More than 16 months into the pandemic, millions of renters across the country still fear of losing their homes and experiencing homelessness. In August, {{< extlink "the U.S. Census Bureau Pulse Survey" "https://www.census.gov/data/tables/2021/demo/hhp/hhp35.html" >}} found that more than 14 million adult renters in the United States have either no confidence or slight confidence of being able to pay rent next month.
 
 
 
@@ -35,15 +35,15 @@ A wide range of eviction moratoria and emergency social safety net benefits init
 
 {{< pullquote "Nationwide, only 3% of tenants have an attorney, while 81% of landlords do." >}}
 
-Eviction diversion programs vary in shape and scope, but Deanna Pantín Parrish, Clinical Instructor and Lecturer on Law at Harvard Law School, said that they most commonly aim to prevent evictions through a mix of legal representation, rent assistance, and mediation between landlords and tenants, among offering other resources and services. Parrish was the lead author of [a study that analyzed several of these programs and the positive effect they can have](https://www.americanbar.org/content/dam/aba/administrative/legal_aid_indigent_defendants/ls-covid19-dpp-best-practices.pdf?utm_source=NLIHC+All+Subscribers&utm_campaign=3d41b859ed-natl-call_summary_07-12-2021&utm_medium=email&utm_term=0_e090383b5e-3d41b859ed-293419986&ct=t(natl-call_summary_07-12-2021)).
+Eviction diversion programs vary in shape and scope, but Deanna Pantín Parrish, Clinical Instructor and Lecturer on Law at Harvard Law School, said that they most commonly aim to prevent evictions through a mix of legal representation, rent assistance, and mediation between landlords and tenants, among offering other resources and services. Parrish was the lead author of {{< extlink "a study that analyzed several of these programs and the positive effect they can have" "https://www.americanbar.org/content/dam/aba/administrative/legal_aid_indigent_defendants/ls-covid19-dpp-best-practices.pdf?utm_source=NLIHC+All+Subscribers&utm_campaign=3d41b859ed-natl-call_summary_07-12-2021&utm_medium=email&utm_term=0_e090383b5e-3d41b859ed-293419986&ct=t(natl-call_summary_07-12-2021" >}}.
 
 
 
-Unlike in criminal cases, in housing court the U.S. government does not guarantee legal representation. In 2021, Washington became the first U.S. state to legislate a right to counsel in eviction court, followed by Maryland and Connecticut. Nationwide, only 3% of tenants have an attorney, while 81% of landlords do, according to the [National Coalition for the Civil Right to Counsel](http://civilrighttocounsel.org/uploaded_files/280/Landlord_and_tenant_eviction_rep_stats__NCCRC_.pdf).
+Unlike in criminal cases, in housing court the U.S. government does not guarantee legal representation. In 2021, Washington became the first U.S. state to legislate a right to counsel in eviction court, followed by Maryland and Connecticut. Nationwide, only 3% of tenants have an attorney, while 81% of landlords do, according to the {{< extlink "National Coalition for the Civil Right to Counsel" "http://civilrighttocounsel.org/uploaded_files/280/Landlord_and_tenant_eviction_rep_stats__NCCRC_.pdf" >}}.
 
 
 
-Eviction diversion provides tools—like legal aid, mediation or other resources— that can address the problem at the center of the dispute, paying the rent and securing housing for a family while avoiding the nuclear option: an eviction.
+Eviction diversion provides tools—like legal aid, mediation or other resources—that can address the problem at the center of the dispute, paying the rent and securing housing for a family while avoiding the loss of home.
 
 
 
@@ -55,7 +55,7 @@ The federal efforts to help tenants in need have focused so far on providing mon
 
 {{< pullquote "Eviction diversion aims to prevent evictions through a mix of legal representation, rent assistance, and mediation between landlords and tenants." >}}
 
-Although this process has been speeding up, advocates and tenants have complained about the paperwork, an approval process that can last months, and that landlords are skeptical of participating in diversion or assistance programs, as [several media outlets have reported](https://www.nbcnews.com/politics/politics-news/federal-eviction-moratorium-set-expire-states-offer-patchwork-protections-n1273408). Parrish explained that rental assistance is an “essential” part of these programs, but an eviction diversion approach allows local governments and nonprofits to go beyond just distributing money.
+Some state and local rental assistance programs have done a much better job than others of getting funds out to tenants and landlords. Eviction filing rates in areas with faster-moving programs have tended to stay lower, while case loads have increased in places that have been slower to distribute aid. Parrish explained that rental assistance is an “essential” part of these programs, but an eviction diversion approach allows local governments and nonprofits to go beyond just distributing money.
 
 
 
@@ -63,7 +63,7 @@ Although this process has been speeding up, advocates and tenants have complaine
 
 
 
-In a White House summit on how to address a potential eviction crisis [on June 30](https://www.youtube.com/watch?v=S3zVlAJFhq4), Eviction Lab’s founder Matthew Desmond described the components of a successful diversion program as “the three A’s”: access to a legal counsel or a non-lawyer advocate; assistance, understood as rental assistance or other support services; and an alternative to court, including mediation before filing a case, alternative dispute resolution or a settlement.
+In a White House summit on how to address a potential eviction crisis {{< extlink "on June 30" "https://www.youtube.com/watch?v=S3zVlAJFhq4" >}}, Eviction Lab’s founder Matthew Desmond described the components of a successful diversion program as “the three A’s”: access to a legal counsel or a non-lawyer advocate; assistance, understood as rental assistance or other support services; and an alternative to court, including mediation before filing a case, alternative dispute resolution or a settlement.
 
 
 <div class="my-5 my-xl-6">
@@ -75,7 +75,7 @@ In a White House summit on how to address a potential eviction crisis [on June 3
 
 
 
-In Chicago, tenants and landlords can receive help [through the program’s hotline and its website](https://www.cookcountylegalaid.org/). If they reach the point of an eviction filing, they can also find alternatives there: every case starts with a call where case managers of the Center for Conflict Resolution—a local organization that was already working in mediation services before the pandemic—assess the situation, provide referrals to legal and mediation services for those who are unrepresented, and connect them to rental assistance and other information as appropriate. 
+In Chicago, tenants and landlords can receive help {{< extlink "through the program’s hotline and its website" "https://www.cookcountylegalaid.org/" >}}. If they reach the point of an eviction filing, they can also find alternatives there: every case starts with a call where case managers of the Center for Conflict Resolution—a local organization that was already working in mediation services before the pandemic—assess the situation, provide referrals to legal and mediation services for those who are unrepresented, and connect them to rental assistance and other information as appropriate. 
 
 
 
@@ -95,11 +95,11 @@ Another program that experts highlight is the one created in Philadelphia. While
 
 
 
-“In our greater scheme of housing policy, we often focus on enforcement mechanisms while we lack the resources to create incentives,” Vincent Reina, an associate professor in the department of city and regional planning at the University of Pennsylvania, told Bloomberg CityLab in [an article about Philadelphia’s program](https://www.bloomberg.com/news/articles/2021-07-15/philadelphia-tries-new-model-to-curb-evictions?srnd=citylab). What happens in court can also be a moment to offer services and protections.  “If localities want to be proactive in protecting households from eviction, they can connect enforcement around evictions to those resources.”
+“In our greater scheme of housing policy, we often focus on enforcement mechanisms while we lack the resources to create incentives,” Vincent Reina, an associate professor in the department of city and regional planning at the University of Pennsylvania, told Bloomberg CityLab in {{< extlink "an article about Philadelphia’s program" "https://www.bloomberg.com/news/articles/2021-07-15/philadelphia-tries-new-model-to-curb-evictions?srnd=citylab" >}}. What happens in court can also be a moment to offer services and protections.  “If localities want to be proactive in protecting households from eviction, they can connect enforcement around evictions to those resources.”
 
 
 
-Late in 2020, an [early analysis showed that 86% of cases](https://whyy.org/articles/its-a-conversation-phillys-alternative-to-landlord-tenant-court-is-preventing-eviction/) in Philadelphia have either reached an agreement or started a mediation process, according to a local NPR station in the city. 
+Late in 2020, an {{< extlink "early analysis showed that 86% of cases" "https://whyy.org/articles/its-a-conversation-phillys-alternative-to-landlord-tenant-court-is-preventing-eviction/" >}} in Philadelphia have either reached an agreement or started a mediation process, according to a local NPR station in the city. 
 
 
 
@@ -139,11 +139,11 @@ Eviction diversion programs will face a test now that the CDC eviction moratoriu
 
 
 
-### Eviction Diversion Resources:
+### Eviction Diversion Resources
 
 <br/>
 
-- [National Center for State Courts' (NCSC) eviction diversion diagnostic tool](https://click.pewtrusts.org/?qs=d726d81a61b4904bcfd19aa8aef0ea74b030f2692e21935341d17858e1db1ea34ca759c98dd09ca3d06a10097edc25c2e68e423a19c199ef). Use this tool to see if and how your jurisdiction can adopt an eviction diversion program.
-- [ABA-Harvard report](https://click.pewtrusts.org/?qs=d726d81a61b4904b2ead0c91a02909a794cc878814a9f0fbc7ccfe425c055de32becf3877eae51e4a79f3d31915de2bff6d6dcdcf8089eeb) outlining best practices for states to reduce evictions using eviction diversion.
-- [The DOJ's guidance](https://click.pewtrusts.org/?qs=d726d81a61b4904b8dd0c80529eed0e37906cfa201874c2f914828956d49207eb87f4dfcaae1ace9a4167d9c5c87faed8444017b85c20f8b) for state courts on eviction diversion.
-- [A map of legal services organizations](https://www.ncsc.org/newsroom/public-health-emergency/implementation-lab/eviction-resources/resources-for-attorneys) created by the National Center for State Courts (NCSC).
+- {{< extlink "National Center for State Courts' (NCSC) eviction diversion diagnostic tool" "https://ncsc.app.law/eviction-diversion-court-diagnostic-tool" >}}. Use this tool to see if and how your jurisdiction can adopt an eviction diversion program.
+- {{< extlink "ABA-Harvard report" "https://www.americanbar.org/content/dam/aba/administrative/legal_aid_indigent_defendants/ls-covid19-dpp-best-practices.pdf" >}} outlining best practices for states to reduce evictions using eviction diversion.
+- The Department of Housing and Urban Development's (HUD) {{< extlink "guidance for eviction diversion" "https://www.huduser.gov/portal/pdredge/pdr-edge-featd-article-062121.html" >}}.
+- {{< extlink "A map of legal services organizations" "https://www.ncsc.org/newsroom/public-health-emergency/implementation-lab/eviction-resources/resources-for-attorneys" >}} created by the National Center for State Courts (NCSC).
