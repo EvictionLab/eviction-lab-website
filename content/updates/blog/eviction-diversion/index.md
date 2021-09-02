@@ -7,7 +7,7 @@ contentcat: blog
 featured: true
 in_index: true
 title: "Eviction Diversion: Preventing Eviction Before Going to Court"
-date: 2021-09-01T16:19:11.466Z
+date: 2021-09-02T16:19:11.466Z
 postauthorname: Juan Pablo Garnham
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
