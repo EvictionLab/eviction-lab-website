@@ -3,6 +3,7 @@ childof: blog
 contenttype: updates
 contentcat: blog
 featured: true
+collection: true
 researchtype: elresearch
 title: 'COVID-19 and Changing Eviction Policies Around the Nation'
 date: 2020-03-19T16:46:40.089Z
@@ -30,7 +31,7 @@ For more information about the Centers for Disease Control and Prevention (CDC) 
 
 <div id="covid-blog">
   <div class="covid-blog-table">
-    <div class="filter-wrapper w-100 d-flex justify-content-center align-items-center">
+    <div class="filter-wrapper w-100 d-none justify-content-center align-items-center">
       <div id="filter-label" class=""><p><b>Show: &nbsp;</b></p></div>
       <div id="filter_covid_table" class="dropdown filter-covid-table language-select show">
         <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true"><span id="selected_filter"><span style="color: #6b6b6b">Choose filter</span></span><i class="fa fa-chevron-down"></i>

@@ -1,18 +1,23 @@
 ---
-draft: true
+draft: false
 childof: blog
 url: /eviction-diversion
 contenttype: updates
 contentcat: blog
-featured: false
+featured: true
 in_index: true
+collection: false
 title: "Eviction Diversion: Preventing Eviction Before Going to Court"
-date: 2021-08-26T16:19:11.466Z
+date: 2021-09-02T16:19:11.466Z
 postauthorname: Juan Pablo Garnham
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Draft blog post
-listSummary: Draft blog post
+image: iStock-185225200-edit.jpg
+description: With federal eviction prevention measures removed and cash benefits like expanded unemployment ending, local and state eviction diversion programs could be key to address a national crisis.
+listSummary: With federal eviction prevention measures removed and cash benefits like expanded unemployment ending, local and state eviction diversion programs could be key to address a national crisis.
+socialDescription: Local and state eviction diversion programs could be key to address a national crisis.
+fbImage: iStock-185225200-edit.jpg
+twImage: iStock-185225200-edit.jpg
 ---
 Since November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. This new eviction diversion initiative seeks to keep people housed by finding solutions to disputes between renters and landlords and avoiding court-mandated evictions during the pandemic. 
 
@@ -28,7 +33,7 @@ More than 16 months into the pandemic, millions of renters across the country st
 
 A wide range of eviction moratoria and emergency social safety net benefits initially slowed the impact of evictions among tenants who lost income and employment during the pandemic. The longest federal protection, the CDC eviction moratorium, expired on July 31. The CDC instated the modified eviction moratorium a few days later, but the new order was struck down by the Supreme Court on August 26, 2021. With federal eviction prevention measures removed and cash benefits like expanded unemployment ending, local and state eviction diversion programs could be key to address a national crisis.
 
-
+{{< pullquote "Nationwide, only 3% of tenants have an attorney, while 81% of landlords do." >}}
 
 Eviction diversion programs vary in shape and scope, but Deanna Pantín Parrish, Clinical Instructor and Lecturer on Law at Harvard Law School, said that they most commonly aim to prevent evictions through a mix of legal representation, rent assistance, and mediation between landlords and tenants, among offering other resources and services. Parrish was the lead author of [a study that analyzed several of these programs and the positive effect they can have](https://www.americanbar.org/content/dam/aba/administrative/legal_aid_indigent_defendants/ls-covid19-dpp-best-practices.pdf?utm_source=NLIHC+All+Subscribers&utm_campaign=3d41b859ed-natl-call_summary_07-12-2021&utm_medium=email&utm_term=0_e090383b5e-3d41b859ed-293419986&ct=t(natl-call_summary_07-12-2021)).
 
@@ -48,7 +53,7 @@ Eviction diversion provides tools—like legal aid, mediation or other resources
 
 The federal efforts to help tenants in need have focused so far on providing money for renters to catch up with landlords. Congress has approved $46 billion in rent assistance, and states and local governments have been in charge of the distribution of these funds.
 
-
+{{< pullquote "Eviction diversion aims to prevent evictions through a mix of legal representation, rent assistance, and mediation between landlords and tenants." >}}
 
 Although this process has been speeding up, advocates and tenants have complained about the paperwork, an approval process that can last months, and that landlords are skeptical of participating in diversion or assistance programs, as [several media outlets have reported](https://www.nbcnews.com/politics/politics-news/federal-eviction-moratorium-set-expire-states-offer-patchwork-protections-n1273408). Parrish explained that rental assistance is an “essential” part of these programs, but an eviction diversion approach allows local governments and nonprofits to go beyond just distributing money.
 
@@ -61,9 +66,9 @@ Although this process has been speeding up, advocates and tenants have complaine
 In a White House summit on how to address a potential eviction crisis [on June 30](https://www.youtube.com/watch?v=S3zVlAJFhq4), Eviction Lab’s founder Matthew Desmond described the components of a successful diversion program as “the three A’s”: access to a legal counsel or a non-lawyer advocate; assistance, understood as rental assistance or other support services; and an alternative to court, including mediation before filing a case, alternative dispute resolution or a settlement.
 
 
-
-INSERT GRAPHIC HERE OF THE THREE A’S
-
+<div class="my-5 my-xl-6">
+{{< inlinesvg svg="content/updates/blog/eviction-diversion/3-as.svg" >}}
+</div>
 
 
 “Third party independent evaluations of eviction diversion programs all across the country show real returns on investment. These are cost effective, incredibly efficient programs,” Desmond said. “For example, in Durham, North Carolina, over 70% of families that participated in the diversion program remained in their home. This is the opposite of what happens in conventional eviction courts, where most families that show up to court receive an eviction judgment.”
@@ -84,7 +89,7 @@ Even if the parties do not want to participate in a mediation, they are pointed 
 
 “Most landlords just want to get paid and most tenants just want to pay the rent,” Glaves said. “We are trying to help make that happen. You don't necessarily need a lawyer for that piece.”
 
-
+{{< pullquote "Eviction diversion provides tools—like legal aid, mediation or other resources— that can address the problem at the center of the dispute, paying the rent and securing housing for a family while avoiding the nuclear option: an eviction." >}}
 
 Another program that experts highlight is the one created in Philadelphia. While in Cook County’s program mediation services are optional, in Philadelphia landlords are required by law to seek mediation before filing in court for a nonpayment of rent eviction. The program assigns a housing counselor to the tenant, who informs them of rights and resources, rental assistance, and helps negotiate possible agreements. The housing counselor also attends the mediation session with the trained mediator to support the tenant in the mediation process. In cases where no solution is reached, the Diversion Program refers the tenant to legal services for advice and possible representation in court, depending on capacity.
 
@@ -134,18 +139,11 @@ Eviction diversion programs will face a test now that the CDC eviction moratoriu
 
 
 
-Eviction Diversion Resources:
+### Eviction Diversion Resources:
 
+<br/>
 
-
-[National Center for State Courts' (NCSC) eviction diversion diagnostic tool](https://click.pewtrusts.org/?qs=d726d81a61b4904bcfd19aa8aef0ea74b030f2692e21935341d17858e1db1ea34ca759c98dd09ca3d06a10097edc25c2e68e423a19c199ef). Use this tool to see if and how your jurisdiction can adopt an eviction diversion program.
-
-
-
-[ABA-Harvard report](https://click.pewtrusts.org/?qs=d726d81a61b4904b2ead0c91a02909a794cc878814a9f0fbc7ccfe425c055de32becf3877eae51e4a79f3d31915de2bff6d6dcdcf8089eeb) outlining best practices for states to reduce evictions using eviction diversion.
-
-
-
-[The DOJ's guidance](https://click.pewtrusts.org/?qs=d726d81a61b4904b8dd0c80529eed0e37906cfa201874c2f914828956d49207eb87f4dfcaae1ace9a4167d9c5c87faed8444017b85c20f8b) for state courts on eviction diversion.
-
-[A map of legal services organizations](https://www.ncsc.org/newsroom/public-health-emergency/implementation-lab/eviction-resources/resources-for-attorneys) created by the National Center for State Courts (NCSC).
+- [National Center for State Courts' (NCSC) eviction diversion diagnostic tool](https://click.pewtrusts.org/?qs=d726d81a61b4904bcfd19aa8aef0ea74b030f2692e21935341d17858e1db1ea34ca759c98dd09ca3d06a10097edc25c2e68e423a19c199ef). Use this tool to see if and how your jurisdiction can adopt an eviction diversion program.
+- [ABA-Harvard report](https://click.pewtrusts.org/?qs=d726d81a61b4904b2ead0c91a02909a794cc878814a9f0fbc7ccfe425c055de32becf3877eae51e4a79f3d31915de2bff6d6dcdcf8089eeb) outlining best practices for states to reduce evictions using eviction diversion.
+- [The DOJ's guidance](https://click.pewtrusts.org/?qs=d726d81a61b4904b8dd0c80529eed0e37906cfa201874c2f914828956d49207eb87f4dfcaae1ace9a4167d9c5c87faed8444017b85c20f8b) for state courts on eviction diversion.
+- [A map of legal services organizations](https://www.ncsc.org/newsroom/public-health-emergency/implementation-lab/eviction-resources/resources-for-attorneys) created by the National Center for State Courts (NCSC).
