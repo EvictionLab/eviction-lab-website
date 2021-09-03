@@ -12,8 +12,8 @@ postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Tracking federal, state, and local actions in response to the pandemic.
 socialDescription: Tracking federal, state, and local actions in response to the pandemic.  
-fbImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
-twImage: '/images/assets/blog/covid-eviction-policies-social.jpg'
+fbImage: 'covid-eviction-policies-social.jpg'
+twImage: 'covid-eviction-policies-social.jpg'
 url: /covid-eviction-policies
 aliases:
     - /updates/blog/covid-eviction-policies

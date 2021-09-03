@@ -4,7 +4,7 @@ childof: blog
 contenttype: updates
 contentcat: blog
 featured: "home"
-researchtype: elresearch
+in_index: false
 title: "(Internal) Interactive figures for use in blog and research posts"
 date: 2019-09-14T16:46:40.089Z
 postauthorname: The Eviction Lab

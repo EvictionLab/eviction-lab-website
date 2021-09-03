@@ -12,9 +12,9 @@ postauthortitle: Princeton University & Wake Forest University School of Law
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Get the latest news and understand your rights.
 socialDescription: Get the latest news and understand your rights.
-image: '/images/assets/blog/federal-moratorium-update-hero3.jpg'
-fbImage: '/images/assets/blog/federal-moratorium-update-social.png'
-twImage: '/images/assets/blog/federal-moratorium-update-social.png'
+image: 'federal-moratorium-update-hero3.jpg'
+fbImage: 'federal-moratorium-update-social.png'
+twImage: 'federal-moratorium-update-social.png'
 url: /federal-eviction-moratorium-update
 aliases:
 ---

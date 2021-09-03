@@ -10,9 +10,9 @@ postauthortitle: Creative Director
 authorpic: /images/bios/jminton_thumb_sm.jpg
 description: A look at the benefits and challenges of compiling the first-ever nationwide eviction database.
 socialDescription: A look at the benefits and challenges of compiling the first-ever nationwide eviction database.
-fbImage: '/images/assets/blog/hhm-eviction-data-map.jpg'
-twImage: '/images/assets/blog/hhm-eviction-data-map.jpg'
-image: /images/assets/blog/hhm-eviction-data-map.jpg
+fbImage: hhm-eviction-data-map.jpg
+twImage: hhm-eviction-data-map.jpg
+image: hhm-eviction-data-map.jpg
 ---
 The Urban Institute's <a href="https://howhousingmatters.org/" target="_blank">How Housing Matters website</a> has published <a href="https://howhousingmatters.org/articles/robust-eviction-data-can-keep-cities-designing-policy-dark/" target="_blank">an enlightening piece</a> summarizing the current state of nationwide eviction data-gathering, as well as describing the critical role this data can play in informing public policy. As Eviction Lab Principal Investigator Matthew Desmond explains,
 
