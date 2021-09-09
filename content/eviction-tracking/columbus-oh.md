@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Columbus, Ohio
 slug: columbus-oh
-date: 2021-08-04T04:00:00.000Z
+date: 2021-09-09T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Columbus Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
