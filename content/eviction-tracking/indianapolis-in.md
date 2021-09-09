@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: Indianapolis, Indiana
 slug: indianapolis-in
-date: 2021-08-04T04:00:00.000Z
+date: 2021-09-09T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Indianapolis, Indiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="18097" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -27,11 +29,15 @@ More detail on eviction protections in Indianapolis can be found on the [COVID-1
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/indianapolis_barchart.csv" %}}
+
+
 
 
 
@@ -43,21 +49,27 @@ Eviction filings in Indianapolis ran above historical averages in January and Fe
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_top_evictors id="topEvictorsSection" data="/uploads/indianapolis_output_20210824.csv" %}}
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/marion_output_20210908.csv" %}}
+
 
 # Eviction Hotspots
 
 Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and 2021. We analyzed eviction records in Indianapolis to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
+
 
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_map shapes="/uploads/indianapolis_shapes.json" data="/uploads/indianapolis_map.csv" %}}
+
+
 
 
 
@@ -78,11 +90,15 @@ Marion County is divided into 224 census tracts. In each of those tracts, we map
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/indianapolis_linechart.csv" %}}
+
+
 
 
 
@@ -95,6 +111,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for Marion County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
+
+
 
 
 
