@@ -2400,7 +2400,11 @@
 /* Overrides for sites without plaintiff info to display */
 
 .page-indianapolis-indiana--eviction-tracking-system .ranking__label .ranking__secondary,
-.page-greenville-south-carolina--eviction-tracking-system .ranking__label .ranking__secondary {
+.page-greenville-south-carolina--eviction-tracking-system .ranking__label .ranking__secondary,
+.page-charleston-south-carolina--eviction-tracking-system .ranking__label .ranking__secondary,
+.page-tampa-florida--eviction-tracking-system .ranking__label .ranking__secondary,
+.page-south-bend-indiana--eviction-tracking-system .ranking__label .ranking__secondary
+ {
   display: none;
 }
 
