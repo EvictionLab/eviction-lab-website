@@ -23,11 +23,15 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 Eviction filings in Duval County (Jacksonville) fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 95% or more in April through July 2020. 
 
 Florida instituted a state-wide eviction moratorium which expired at the end of July, after which eviction filings increased. Execution of eviction orders was also delayed until no earlier than October 1, 2020.
 
 More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
+
+
 
 
 
@@ -51,6 +55,8 @@ More detail on eviction protections in Florida can be found on the [COVID-19 Hou
 
 
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Jacksonville were higher than average in January and February 2020.<sup>1</sup> That pattern reversed in March. Less than 50 cases were filed in both April and May. Filings increased by August following the expiration of the state-wide eviction moratorium and have generally remained close to or just below historical averages.<sup>2</sup>
@@ -62,11 +68,14 @@ Eviction filings in Jacksonville were higher than average in January and Februar
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_top_evictors id="topEvictorsSection" data="/uploads/duval_output_20210909.csv" %}}
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/duval_output_20210910.csv" %}}
+
 
 
 # Eviction Hotspots
@@ -74,11 +83,14 @@ Eviction filings in Jacksonville were higher than average in January and Februar
 Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and 2021. We analyzed eviction records in Jacksonville to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
 
 
+
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_map shapes="/uploads/jacksonville_shapes.json" data="/uploads/jacksonville_map.csv" %}}
+
+
 
 
 
@@ -111,11 +123,15 @@ Jacksonville is divided into 174 census tracts. In each of those tracts, we map 
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/jacksonville_linechart.csv" %}}
+
+
 
 
 
@@ -132,6 +148,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2012–2016.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
+
+
 
 
 
