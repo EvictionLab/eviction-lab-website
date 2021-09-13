@@ -11,9 +11,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="22071" data="/uploads/table.csv" %}}
 
-Eviction filings in Orleans Parish, LA (city of New Orleans) fell sharply in late-March 2020 and have remained below historical averages. The state of Louisiana instituted an eviction moratorium in March, but those statewide protections expired in mid-June 2020. \
-\
-In August and September 2021, Hurricane Ida caused local courts to close and led Governor Edwards to halt court proceedings until September 24. 
+Eviction filings in Orleans Parish, LA (city of New Orleans) fell sharply in late-March 2020 and have remained below historical averages. The state of Louisiana instituted an eviction moratorium in March, but those statewide protections expired in mid-June 2020. In August and September 2021, Hurricane Ida caused local courts to close and led Governor Edwards to halt court proceedings until September 24. 
+
+Data from Orleans Parish may be delayed as a result of Hurricane Ida. 
 
 This data, unlike most of the Eviction Tracking System, will only be updated on a monthly basis for Orleans Parish. [Phoenix (Maricopa County, AZ)](https://evictionlab.org/eviction-tracking/phoenix-az/) and [Las Vegas (Clark County, NV)](https://evictionlab.org/eviction-tracking/las-vegas-nv/) are the only other areas with monthly-only updates. 
 
