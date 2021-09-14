@@ -16,6 +16,7 @@ fbImage: moratorium-extension-7-31.jpg
 twImage: moratorium-extension-7-31.jpg
 url: '/moratorium-extended-evictions-continue/'
 aliases:
+collection: true
 ---
 
 <h3>What is the CDC temporary eviction moratorium? </h3>

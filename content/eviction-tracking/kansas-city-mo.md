@@ -3,13 +3,19 @@ collection: true
 draft: false
 h1: Kansas City, Missouri
 slug: kansas-city-mo
-date: 2021-08-04T04:00:00.000Z
+date: 2021-09-10T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Kansas City, Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="29095" data="/uploads/table.csv" %}}
+
+
+
+
+
+
 
 
 
@@ -31,11 +37,23 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 
 
 
+
+
+
+
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/kansascity_barchart.csv" %}}
+
+
+
+
+
+
 
 # Changes in eviction filings
 
@@ -44,11 +62,33 @@ Eviction filings in Kansas City were slightly below average in January and Febru
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020-2021 collected by [January Advisors](https://www.januaryadvisors.com/)
 
+
+
+
+
+
+
 {{%/ report_chart %}}
 
 
 
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/jackson_output_20210910.csv" %}}
+
+# Eviction Hotspots
+
+Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and 2021. We analyzed eviction records in Kansas City (Jackson County) to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
+
+{{%/ report_top_evictors %}}
+
+
+
 {{% report_map shapes="/uploads/kansas_shapes.json" data="/uploads/kansascity_map.csv" %}}
+
+
+
+
+
+
 
 
 
@@ -73,11 +113,23 @@ Jackson County is divided into 199 census tracts. In each of those tracts, we ma
 
 
 
+
+
+
+
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/kansascity_linechart.csv" %}}
+
+
+
+
+
+
 
 
 
@@ -90,6 +142,12 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2012–2015.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
+
+
+
+
+
+
 
 
 

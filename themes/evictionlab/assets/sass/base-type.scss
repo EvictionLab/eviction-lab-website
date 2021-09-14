@@ -123,6 +123,25 @@ body {
   hr {
     border-top: 2px solid #fff;
   }
+//Drop caps for blog posts
+  span.dropcap {
+    font-family: 'Akkurat-Bold';
+    float: left;
+    line-height: .8;
+    font-size: 51px;
+    margin-top: 2px;
+    margin-right: 5px;
+    @include media-breakpoint-up(md) {
+      font-size: 55px;
+      margin-top: 2px;
+      margin-right: 4px;
+      }
+    @include media-breakpoint-up(xl) {
+    font-size: 60px;
+    margin-top: 2px;
+    margin-right: 6px;
+    }
+  }
   
   // Table
   
