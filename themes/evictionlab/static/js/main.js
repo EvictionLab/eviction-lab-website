@@ -384,16 +384,9 @@ $(document).ready(function () {
 /**
  * Google Sheets-backed media table
  */
-function createMediaTable(oneLastUpdated, oneRowCount, lastUpdated, rows, totalLMSReferrals) {
-  var updatedOne = Date.parse(oneLastUpdated.slice(0, 10));
-  var updatedTwo = Date.parse(lastUpdated.slice(0, 10));
-  var dateNum = updatedOne >= updatedTwo ? updatedOne : updatedTwo;
-  var updatedDate = new Date(dateNum);
-  var updatedStr = updatedDate.toLocaleDateString("en-US");
-  var lmsReferralStr = totalLMSReferrals > 0 ? ', ' + totalLMSReferrals + ' LMS referrals' : ''
+function createMediaTable(rows, totalLMSReferrals) {
 
-  $("#lastUpdated").html(updatedStr);
-  $("#numLocalStories").html(oneRowCount.toLocaleString());
+  var lmsReferralStr = totalLMSReferrals > 0 ? ', ' + totalLMSReferrals + ' LMS referrals' : ''
   $("#numNationalStories").html(rows.length.toLocaleString());
   $("#numLMSReferrals").html(lmsReferralStr);
 
@@ -425,39 +418,30 @@ function createMediaTable(oneLastUpdated, oneRowCount, lastUpdated, rows, totalL
  * Loading Google Sheets national media table, set up map embed
  */
 $(document).ready(function () {
-  var SHEET_BASE = 'https://spreadsheets.google.com/feeds/list/1fIHfkpG134ax5neHQGfipUrWbzPd-EAlVVlYqm4i9iE/';
-  var SHEET_END = '/public/values?alt=json';
-  var SHEET_1_URL = SHEET_BASE + '1' + SHEET_END;
-  var SHEET_2_URL = SHEET_BASE + '2' + SHEET_END;
-  var SHEET_LMS_URL = SHEET_BASE + '3' + SHEET_END;
+  var SHEET_BASE = 'https://sheets.googleapis.com/v4/spreadsheets/1fIHfkpG134ax5neHQGfipUrWbzPd-EAlVVlYqm4i9iE/values/';
+  var SHEET_END = '?alt=json&key=AIzaSyD1qajG1iNe_ISqbiCNY3mbrkTTo7v3j4U';
+  var SHEET_1_URL = SHEET_BASE + 'Local' + SHEET_END;
+  var SHEET_2_URL = SHEET_BASE + 'National' + SHEET_END;
+  var SHEET_LMS_URL = SHEET_BASE + 'LMS' + SHEET_END;
 
   if ($("#national-media-table").length) {
     $.getJSON(SHEET_1_URL, function (data) {
-      var sheetOneUpdated = data.feed.updated.$t;
-      var sheetOneRowCount = data.feed.entry.length;
 
       $.getJSON(SHEET_2_URL, function (data) {
-        var rows = data.feed.entry;
-        var lastUpdated = data.feed.updated.$t;
-        var properties = Object.keys(rows[0])
-          .filter(function (p) { return p.startsWith("gsx$"); })
-          .map(function (p) { return p.substr(4); });
-
+        var rows = data.values.slice(1);
+        var properties = data.values[0];
         var cleanedRows = rows.map(function (r) {
           var row = {};
-          properties.forEach(function (p) {
-            row[p] = r["gsx$" + p].$t === "" ? null : r["gsx$" + p].$t;
-            if (row[p] === null) {
-              row[p] = '';
-            }
+          properties.forEach(function (p, i) {
+            row[p.replace(/[^\w]/gi, "").toLowerCase()] = r[i];
           });
           return row;
         });
 
         $.getJSON(SHEET_LMS_URL, function (data) {
-          var totalLMSReferrals = data.feed.entry.length
+          var totalLMSReferrals = data.values.slice(1).length
 
-          createMediaTable(sheetOneUpdated, sheetOneRowCount, lastUpdated, cleanedRows, totalLMSReferrals);
+          createMediaTable(cleanedRows, totalLMSReferrals);
         });
 
 
