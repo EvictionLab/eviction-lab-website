@@ -55,7 +55,8 @@
 
 {{ if eq .Title "Reporting"}} <!-- if we are on the Media page, do stuff -->
   {{ $paginator := .Paginate (where .Site.Pages "Params.childof" "reporting") 7 }}   
-    {{ if $paginator.HasPrev }}{{ else }}
+  <div class="alt-rows updates-list">
+  {{ if $paginator.HasPrev }}{{ else }}
     <div class="center-page-wrapper">
       <div class="center-content list-intro mb-5 mb-md-8">
         <h4 class="subhead bordered-header mt-4 mb-3 mt-md-7 mb-md-5 blue">Reporting from Our Partners</h4>
@@ -64,7 +65,7 @@
       </div>
     </div>
     {{ end }}
-    <div class="alt-rows updates-list">
+   
       {{ range .Paginator.Pages }}
         {{ if ne .Params.in_index false }}
           {{ partial "updates-category-list" . }}
