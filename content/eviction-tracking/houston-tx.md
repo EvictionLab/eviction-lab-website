@@ -19,9 +19,13 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
+
+
 Eviction filings in Harris and Galveston Counties, TX (Houston) fell sharply once eviction proceedings were suspended across Texas on March 19, 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March, and through April and May. Eviction protections in Texas began to expire on May 18, 2020. Courts in Harris County resumed business shortly thereafter, followed by the courts in Galveston County in early June.
 
 More detail on eviction protections in Texas can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/tx/).
+
+
 
 
 
@@ -36,6 +40,8 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 
 {{% report_chart id="avg" data="/uploads/houston_barchart.csv" %}}
+
+
 
 
 
@@ -60,11 +66,14 @@ Eviction filings in Houston were higher than average in January and February of 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_top_evictors id="topEvictorsSection" data="/uploads/houston_output_20210908.csv" %}}
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/houston_output_20210915.csv" %}}
+
 
 
 
@@ -76,11 +85,13 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 
 
 
+
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_median_claims id="medianFilings" data="/uploads/houston_claims_monthly.csv" %}}
+
 
 
 # Changes in claim amounts
@@ -90,11 +101,14 @@ When a landlord files an eviction claim in Houston, we observe the amount they c
 This data on claim amounts only covers Harris County. We do not currently collect claim amount data for Galveston County.
 
 
+
 {{%/ report_median_claims %}}
 
 
 
 {{% report_map shapes="/uploads/houston_shapes.json" data="/uploads/houston_map.csv" %}}
+
+
 
 
 
@@ -119,11 +133,15 @@ Harris and Galveston counties are divided into 853 census tracts. In each of tho
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/houston_linechart.csv" %}}
+
+
 
 
 
@@ -140,6 +158,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2012–2015. This allows us to see, for example, that filings in majority-white neighborhoods were higher than average in the first three months of 2020.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
+
+
 
 
 
