@@ -240,7 +240,7 @@
   <div class="d-block" id="updates-section">
     <div class="row mx-0 subfeature-panel pt-6 pb-4 py-md-8 py-xl-9 pl-md-1 pl-lg-0">
       <div class="col-12 col-md-10  col-lg-12 px-lg-5 col-xl-10 px-xl-2 col-xxxl-9 mx-auto mx-auto d-flex flex-wrap">
-        <div class="col-12 px-0 mb-4 mb-lg-6 d-flex flex-column flex-md-row align-items-center">
+        <div class="col-12 px-0 mb-4 mb-lg-5 d-flex flex-column flex-md-row align-items-center">
           <img class="mr-1 mr-md-2 mt-1 mt-md-0 header-icon mb-2 mb-md-0" alt="" src="/images/icons/reporting-icon.svg">
           <h2 class="text-center text-md-left">Reporting From Our Partners</h2>
         </div>
@@ -248,20 +248,22 @@
           {{ range first 1 (where (where .Site.RegularPages "Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
               <div class="updates-section__entry1-top px-0 d-flex">
                   {{ if .Params.thumb }}
+                    {{ $link := .Params.link }}
                     {{ $img := .Params.thumb }}
                     {{ with .Resources.GetMatch $img }}
                     {{ $processed := .Fill "480x320 q70 jpg Center" }}
                     <div class="d-none d-lg-flex col-3 col-lg-5 pl-0 align-items-center">
-                      <img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} ">
+                      <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
                     </div>
                     {{ end }}
                   {{ end }} 
                   {{ if .Params.thumb }}
                     {{ $img := .Params.thumb }}
+                    {{ $link := .Params.link }}
                     {{ with .Resources.GetMatch $img }}
                     {{ $processed := .Fill "240x240 q70 jpg" }}
                     <div class="d-block d-lg-none col-3 pl-0">
-                      <img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} ">
+                      <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
                     </div>
                     {{ end }}
                   {{ end }} 
@@ -284,10 +286,11 @@
               <div class="updates-section__entries d-flex flex-row px-0 mb-2">
                 {{ if .Params.thumb }}
                 {{ $img := .Params.thumb }}
+                {{ $link := .Params.link }}
                 {{ with .Resources.GetMatch $img }}
                 {{ $processed := .Fill "240x240 q70 jpg" }}
                 <div class="updates-section__entries--image col-3 pl-0 col-lg-3 pl-lg-4 pr-lg-1 pr-xl-2">
-                  <img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} ">
+                  <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
                 </div>
                 {{ end }}
                 {{ end }} 
@@ -304,10 +307,11 @@
               <div class="updates-section__entries d-none d-lg-flex flex-row px-2 px-md-0 mb-2">
                 {{ if .Params.thumb }}
                 {{ $img := .Params.thumb }}
+                {{ $link := .Params.link }}
                 {{ with .Resources.GetMatch $img }}
                 {{ $processed := .Fill "240x240 q70 jpg" }}
                 <div class="updates-section__entries--image col-12 col-md-3 pl-4 pr-lg-1 pr-xl-2">
-                  <img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} ">
+                  <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
                 </div>
                 {{ end }}
                 {{ end }} 
