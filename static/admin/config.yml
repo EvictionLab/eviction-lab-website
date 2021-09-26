@@ -530,4 +530,60 @@ collections:
           widget: "markdown",
           buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
         }
+
+  - name: "reporting" # Used in routes, e.g., /admin/collections/blog
+    label: "Reporting" # Used in the UI
+    folder: "/content/updates/reporting" # The path to the folder where the documents are stored
+    path: '{{slug}}/'
+    create: true # Allow users to create new documents in this collection
+    extension: md
+    editor:
+      preview: false
+    preview_path: "updates/reporting"
+    filter: { field: "contentcat", value: media }
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Draft",
+          name: "draft",
+          widget: "boolean",
+          hint: "When draft is on, the page will not be published to the live site",
+          default: false,
+        }
+      - {
+          label: "Child Of",
+          name: "childof",
+          widget: "hidden",
+          default: "reporting",
+        }
+      - {
+          label: "Content Type",
+          name: "contenttype",
+          widget: "hidden",
+          default: "updates",
+        }
+      - {
+          label: "Content Category",
+          name: "contentcat",
+          widget: "hidden",
+          default: "media",
+        }
+      - { label: "Article Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author Name", name: "postauthorname", widget: "string" }
+      - { label: "News Outlet Name", name: "outlet", widget: "string" }
+      - { label: "Link to article", name: "link", widget: "string" }
+      - {
+          label: "Thumbnail Image",
+          name: "thumb",
+          widget: "image",
+          required: false,
+          hint: 'Upload an image from the article for use as a thumbnail.'
+        }
+      - {
+          label: "Excerpt for Articles List",
+          name: "listSummary",
+          widget: "string",
+          required: true,
+          hint: 'Copy some text for the article here to serve as a short excerpt.'
+        }
       
