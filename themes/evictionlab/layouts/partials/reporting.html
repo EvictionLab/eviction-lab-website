@@ -1,0 +1,80 @@
+<div class="updates-section__entry1 col-12 col-lg-7 d-block px-0 mb-2 mb-lg-1">
+    {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
+        <div class="updates-section__entry1-top px-0 d-flex">
+            {{ if .Params.thumb }}
+              {{ $link := .Params.link }}
+              {{ $img := .Params.thumb }}
+              {{ with .Resources.GetMatch $img }}
+              {{ $processed := .Fill "480x320 q70 jpg Center" }}
+              <div class="d-none d-lg-flex col-3 col-lg-5 pl-0 align-items-center">
+                <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
+              </div>
+              {{ end }}
+            {{ end }} 
+            {{ if .Params.thumb }}
+              {{ $img := .Params.thumb }}
+              {{ $link := .Params.link }}
+              {{ with .Resources.GetMatch $img }}
+              {{ $processed := .Fill "240x240 q70 jpg" }}
+              <div class="d-block d-lg-none col-3 pl-0">
+                <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
+              </div>
+              {{ end }}
+            {{ end }} 
+          <div class="updates-section__entry1--title col-9 px-0 px-lg-2 col-lg-7 d-md-flex justify-content-start flex-column">
+            <div class="post-cat">
+              <p class="{{ .Params.childof }}-type cat-link mb-1">{{ .Sites.First.Params.outlet }}</p>
+            </div>
+            <a class="title {{ .Params.childof }}-type d-none d-md-block" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title }}</a>
+            <a class="title {{ .Params.childof }}-type d-block d-md-none" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
+          </div>
+        </div>  
+        <div class="updates-section__entry1--description col-12 px-0">
+          <p class="d-none d-lg-block mt-3">{{ .Params.listSummary | truncate 160 }}</p>
+          <a class="sublink mw-100 d-none d-md-block text-center text-md-left mb-2 mb-md-0 mt-4 mt-lg-5  px-0" href="/updates/reporting">SEE ALL ARTICLES <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+        </div>
+    {{ end }}
+  </div>  
+  <div class="col-12 px-0 col-lg-5 px-lg-2 d-block updates-section__wrapper2">
+    {{ range first 2 (after 1 (where (where .Site.RegularPages "Params.childof" ("reporting")) ".Params.featured" "!=" false )) }}
+        <div class="updates-section__entries d-flex flex-row px-0 mb-2">
+          {{ if .Params.thumb }}
+          {{ $img := .Params.thumb }}
+          {{ $link := .Params.link }}
+          {{ with .Resources.GetMatch $img }}
+          {{ $processed := .Fill "240x240 q70 jpg" }}
+          <div class="updates-section__entries--image col-3 pl-0 col-lg-3 pl-lg-4 pr-lg-1 pr-xl-2">
+            <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
+          </div>
+          {{ end }}
+          {{ end }} 
+          <div class="updates-section__entries--title col-9 px-0 col-lg-9 px-lg-2">
+            <div class="post-cat mb-1">
+              <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
+            </div>
+            <a class="title {{ .Params.childof }}-type d-block d-md-none d-lg-block" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
+            <a class="title {{ .Params.childof }}-type d-none d-md-block d-lg-none" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title }}</a>
+          </div>  
+        </div>
+    {{ end }}
+    {{ range first 1 (after 3 (where (where .Site.RegularPages "Params.childof" ("reporting")) ".Params.featured" "!=" false )) }}
+        <div class="updates-section__entries d-none d-lg-flex flex-row px-2 px-md-0 mb-2">
+          {{ if .Params.thumb }}
+          {{ $img := .Params.thumb }}
+          {{ $link := .Params.link }}
+          {{ with .Resources.GetMatch $img }}
+          {{ $processed := .Fill "240x240 q70 jpg" }}
+          <div class="updates-section__entries--image col-12 col-md-3 pl-4 pr-lg-1 pr-xl-2">
+            <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
+          </div>
+          {{ end }}
+          {{ end }} 
+          <div class="updates-section__entries--title col-12 col-md-9">
+            <div class="post-cat mb-1">
+              <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
+            </div>
+            <a class="title {{ .Params.childof }}-type d-block d-md-none d-lg-block" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
+            <a class="title {{ .Params.childof }}-type d-none d-md-block d-lg-none" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title }}</a>
+          </div>  
+        </div>
+    {{ end }}

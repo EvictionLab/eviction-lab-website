@@ -81,8 +81,12 @@ $menuMargin: grid(5);
   li {
     margin-bottom: grid(1.5);
     &:nth-of-type(11), &:nth-of-type(12), &:nth-of-type(13) {
-      margin-left: 12px;
-    } 
+      &:before {
+        content: "•  ";
+        color: #fff;
+        margin-right: 6px;
+      }
+    }
   }
   a {
     display: inline;
@@ -106,7 +110,12 @@ $menuMargin: grid(5);
     li { 
       margin-bottom: grid(2.5);
       &:nth-of-type(11), &:nth-of-type(12), &:nth-of-type(13) {
-        margin-left: 12px;
+        //margin-left: 12px;
+        &:before {
+          content: "•  ";
+          color: #fff;
+          margin-right: 6px;
+        }
       }
      }
   }

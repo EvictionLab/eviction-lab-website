@@ -57,15 +57,15 @@ languageName = "English"
     weight = 11
     url = "/updates/"
 [[Languages.en.menu.main]]
-    name = "• Blog"
+    name = " Blog"
     weight = 12
     url = "/updates/"
 [[Languages.en.menu.main]]
-    name = "• Research"
+    name = " Research"
     weight = 13
     url = "/updates/"
 [[Languages.en.menu.main]]
-    name = "• Reporting"
+    name = " Reporting"
     weight = 14
     url = "/updates/"            
 
