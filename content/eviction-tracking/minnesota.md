@@ -5,7 +5,7 @@ draft: false
 h1: Minnesota
 layout: state
 slug: minnesota
-date: 2021-07-20T04:00:00.000Z
+date: 2021-09-01T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -29,11 +29,19 @@ More detail on eviction protections in Minnesota can be found on the [COVID-19 H
 
 
 
+
+
+
+
 # Changes in eviction filings
 
 Eviction filings in Minnesota were close to historical averages in January and February of 2020.<sup>1</sup> Filings fell sharply in March and have remained low since then.
 
 1. Eviction filing data for Minnesota were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
+
+
+
+
 
 
 
@@ -53,12 +61,20 @@ Eviction filings in Minnesota were close to historical averages in January and F
 
 
 
+
+
+
+
 # The geography of changes in eviction filings
 
 Minnesota is divided into 87 counties. In each of those counties, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup> 
 
 1. Eviction filing data for Minnesota were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
 2. Tract racial characteristics determined using American Community Survey (ACS) estimates for 2014–2018.
+
+
+
+
 
 
 

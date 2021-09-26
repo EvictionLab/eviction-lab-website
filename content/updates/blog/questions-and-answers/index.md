@@ -6,6 +6,7 @@ contenttype: updates
 contentcat: blog
 featured: true
 in_index: true
+collection: true
 title: Questions and answers about evictions as the CDC moratorium ends
 date: 2021-07-26T16:46:40.089Z
 postauthortitle: Princeton University
@@ -34,17 +35,13 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Are renters protected from eviction right now?"
 
-"The CDC moratorium expired on July 31st. On August 3rd, the CDC <a href='https://www.cdc.gov/coronavirus/2019-ncov/communication/Signed-CDC-Eviction-Order.pdf' target='_blank' rel='noreferrer noopener'>announced a new order</a>, which created a similar moratorium for areas that are  “experiencing substantial and high levels of community transmission,” according to the agency. This order will expire on October 3rd."
+"The federal moratorium on evictions was struck down by the Supreme Court, but local moratoriums remain active in some cities and states."
 
-"As was the case with the first moratorium, to receive protection from eviction, a tenant must declare -under penalty of perjury- that:"
-
-"<ul><li>They have attempted to obtain rental assistance.</li><li>Their income is under certain limits</li><li>They couldn’t pay full rent due to loss of income, work hours, a lay-off or extraordinary out-of-pocket medical expenses.</li><li>They have made their best efforts to make partial rent payments as they try to go back to normal.</li><li>They would become homeless if evicted</li><li>They reside in a U.S. county experiencing substantial or high rates of COVID-19 transmission according to the CDC.</li></ul>"
-
-"Download the eviction declaration form <a href='https://www.cdc.gov/coronavirus/2019-ncov/communication/EvictionProtectDeclare_508.pdf' target='_blank' rel='noreferrer noopener'>here</a>. The CDC has asked tenants to fill it, sign it, give a copy to the landlord and keep copies for themselves and in case they are required in court."
+"The original CDC eviction moratorium expired on July 31st. On August 3rd, the CDC <a href='https://www.cdc.gov/coronavirus/2019-ncov/communication/Signed-CDC-Eviction-Order.pdf' target='_blank' rel='noreferrer noopener'>announced a new order</a>, which created a similar moratorium for areas that are  “experiencing substantial and high levels of community transmission,” according to the agency. The order was set to expire on October 3rd, but on August 26, <a href='https://www.npr.org/2021/08/26/1024668578/court-blocks-biden-cdc-evictions-moratorium' target='_blank' rel='noreferrer noopener'>the Supreme Court ended the moratorium</a>."
 
 "Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond–pay the rent that they owe to an account held by the court system–to get a hearing."
 
-"There are at least four states--California, New Jersey, New York, and Hawaii, as well as the District of Columbia among them—that have their own moratoria in place."
+"There are at least four states—California, New Jersey, Washington and Illinois as well as the District of Columbia among them—that have their own eviction-preventing or eviction-limiting orders in place."
 
 "Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up to date information. More legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. More legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>our sister website Just Shelter</a>." >}}
 
@@ -138,11 +135,9 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Besides the CDC eviction moratorium, are there other kinds of moratoriums still in place?"
 
-"The CDC ordered on August 3rd a new eviction moratorium for counties with substantial or high rates of COVID-19 transmission."
+"On August 3rd, the CDC ordered a new eviction moratorium for counties with substantial or high rates of COVID-19 transmission. On August 26th, this order was blocked by the Supreme Court."
 
-"On top of that, there might be local eviction moratoria still in place in your city."
-
-"Some cities, counties, and states have created and extended their own moratoria beyond July 31st."
+"There might be local eviction moratoria still in place in your city county or state."
 
 "Building complexes financed by federal loan programs, like the ones provided by Fannie Mae and Freddie Mac, are also protected by their own moratorium, <a href='https://www.fhfa.gov/Media/PublicAffairs/Pages/FHFA-Extends-Eviction-Moratorium-Through-Sept-30-2021.aspx' target='_blank' rel='noreferrer noopener'>which will expire on Sept. 30</a>." >}} 
 

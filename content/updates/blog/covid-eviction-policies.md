@@ -3,6 +3,7 @@ childof: blog
 contenttype: updates
 contentcat: blog
 featured: true
+collection: true
 researchtype: elresearch
 title: 'COVID-19 and Changing Eviction Policies Around the Nation'
 date: 2020-03-19T16:46:40.089Z

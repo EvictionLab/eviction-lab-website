@@ -6,6 +6,7 @@ contenttype: updates
 contentcat: blog
 featured: true
 in_index: true
+collection: true
 title: Preguntas y respuestas sobre desalojos y el final de la moratoria de los CDC
 date: 2021-07-26T16:46:40.089Z
 postauthortitle: Princeton University
@@ -35,19 +36,17 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 "¿Existen protecciones para los inquilinos que enfrentan un desalojo en la actualidad?"
 
-"La moratoria de los CDC venció el 31 de julio. El 3 de agosto, los CDC anunciaron una nueva orden, que creó una moratoria similar para áreas que “están experimentando altos niveles de transmisión comunitaria”, de acuerdo a la agencia. Esta orden vence el 3 de octubre."
+"La moratoria federal de desalojos fue bloqueada por la Corte Suprema, pero moratorias locales siguen activas en ciudades y estados específicos."
+
+"La moratoria original de los CDC venció el 31 de julio. El 3 de agosto, los CDC anunciaron una nueva orden, que creó una moratoria similar para áreas experimentado niveles altos o sustanciales de transmisión de COVID-19. Esta orden iba a vencer el 3 de octubre, pero el 26 de agosto, la Corte Suprema decidió bloquearla antes de tiempo."
 
 "Como sucedió con la anterior moratoria, para ser protegido, un inquilino debe declarar lo siguiente:"
 
-"<ul><li>Que ha intentado obtener asistencia de renta.</li><li>Que su ingreso es menor a ciertos límites establecidos por la orden.</li><li>Que no puede pagar la renta completamente debido a pérdida de ingresos, horas de trabajo, despidos o gastos médicos extraordinarios.</li><li>Que ha hecho su mejor esfuerzo para hacer pagos parciales de renta.</li><li>Que arriesga quedar sin techo si es desalojado.</li><li>Que reside en un condado de Estados Unidos que actualmente experimenta índices altos o sustanciales de transmisión de COVID-19, de acuerdo a los CDC.</li></ul>"
-
-"Descargue el formulario de la declaración contra desalojos <a href='https://www.cdc.gov/coronavirus/2019-ncov/communication/EvictionProtectDeclare_ESP_508.pdf' target='_blank' rel='noreferrer noopener'>aquí</a>. Los CDC le están pidiendo a los inquilinos que llenen el formulario, lo firmen, entreguen una copia al casero o administrador de su vivienda y guarden copias para uso personal o en caso de que sean solicitadas en la corte."
-
 "A través de todo el país, los inquilinos tienen derecho otorgado por la constitución al debido proceso, lo que significa que tienen derecho a ser escuchados y disputar un desalojo en la corte. En algunos lugares específicos, los inquilinos tienen que pagar un depósito –pagar la renta que deben en una cuenta administrada por el sistema de cortes– para tener una audiencia, sin embargo esto no es muy común."
 
-"Al menos cuatro estados --California, Nueva Jersey, Nueva York, Hawái, y también el Distrito de Columbia-- tienen sus propias moratorias."
+"Al menos cuatro estados --California, Nueva Jersey, Illinois, Washington, y también el Distrito de Columbia-- tienen sus propias moratorias o protecciones para inquilinos."
 
-"Recomendamos contactar a organizaciones locales de vivienda y <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>de ayuda lega</a> en su ciudad o su estado para aprender sobre sus derechos, conseguir apoyo legal y encontrar la información más actualizada. Puede encontrar más organizaciones locales a través de <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>las organizaciones estatales de abogados y de la organización nacional NAIP</a>. Hay información sobre asistencia legal en los sitios del <a href='https://www.abafreelegalanswers.org/' target='_blank' rel='noreferrer noopener'>Colegio Estadounidense de Abogados (en inglés</a> y en <a href='https://espanol.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> Encuentre o publique recursos sobre su comunidad en nuestro sitio hermano <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a>." >}}
+"Recomendamos contactar a organizaciones locales de vivienda y <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>de ayuda legal</a> en su ciudad o su estado para aprender sobre sus derechos, conseguir apoyo legal y encontrar la información más actualizada. Puede encontrar más organizaciones locales a través de <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>las organizaciones estatales de abogados y de la organización nacional NAIP</a>. Hay información sobre asistencia legal en los sitios del <a href='https://www.abafreelegalanswers.org/' target='_blank' rel='noreferrer noopener'>Colegio Estadounidense de Abogados (en inglés</a> y en <a href='https://espanol.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> Encuentre o publique recursos sobre su comunidad en nuestro sitio hermano <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a>." >}}
 
 {{< faq 
 
@@ -145,11 +144,9 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 "Más allá de la moratoria de los CDC, ¿existen otras moratorias actualmente funcionando?"
 
-"Los CDC ordenaron una nueva moratoria de desalojos el 3 de agosto, para condados con niveles de transmisión de COVID-19 altos o sustanciales."
+"Los CDC ordenaron una nueva moratoria de desalojos el 3 de agosto, para condados con niveles de transmisión de COVID-19 altos o sustanciales. El 26 de agosto, esta orden fue bloqueada por la Corte Suprema."
 
-"Además, todavía podría existir una moratoria local contra los desalojos en su ciudad."
-
-"Algunas ciudades, condados y estados han creado sus propias moratorias y las han extendido más allá del 31 de julio."
+"De todas maneras, todavía existen moratorias locales contra los desalojos en algunas ciudades y estados."
 
 "Algunos edificios que han sido financiados con programas de préstamos federales, como los que entregan Fannie Mae y Freddie Mac también tienen su propia moratoria, la que expirará el 31 de septiembre si no es renovada." >}} 
 

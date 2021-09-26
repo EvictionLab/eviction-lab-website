@@ -450,6 +450,7 @@ collections:
     editor:
       preview: false
     preview_path: "{{fields.url}}"
+    filter: { field: "collection", value: true }
     fields: # The fields for each document, usually in front matter
       - {
           label: "Draft",
@@ -470,6 +471,12 @@ collections:
           widget: "hidden",
           default: "updates",
         }
+      - {
+          label: "In CMS",
+          name: "collection",
+          widget: "hidden",
+          default: true,
+        }  
       - {
           label: "Content Category",
           name: "contentcat",
@@ -496,7 +503,7 @@ collections:
           label: "Author Photo",
           name: "authorpic",
           widget: "image",
-          default: "/images/bios/elab_thumb_sm.jpg",
+          default: "/imagses/bios/elab_thumb_sm.jpg",
           required: false,
         }
       - {

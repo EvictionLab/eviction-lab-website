@@ -137,7 +137,7 @@ data:
     geo: Census Tract
     file: /uploads/minnesota_weekly_2020_2021.csv
   - site: Missouri
-    years: 2012-2019
+    years: 2012-2015
     geo: Census Tract
     file: /uploads/missouri_weekly_2020_2021.csv
   - site: New Mexico
