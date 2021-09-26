@@ -3,6 +3,7 @@ draft: false
 childof: blog
 url: /eviction-diversion
 contenttype: updates
+collection: true
 contentcat: blog
 featured: true
 in_index: true
@@ -12,12 +13,16 @@ postauthorname: Juan Pablo Garnham
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 image: iStock-185225200-edit.jpg
-description: With federal eviction prevention measures removed and cash benefits like expanded unemployment ending, local and state eviction diversion programs could be key to address a national crisis.
-listSummary: With federal eviction prevention measures removed and cash benefits like expanded unemployment ending, local and state eviction diversion programs could be key to address a national crisis.
-socialDescription: Local and state eviction diversion programs could be key to address a national crisis.
-fbImage: iStock-185225200-edit.jpg
+description: With federal eviction prevention measures removed and cash benefits
+  like expanded unemployment ending, local and state eviction diversion programs
+  could be key to address a national crisis.
+listSummary: With federal eviction prevention measures removed and cash benefits
+  like expanded unemployment ending, local and state eviction diversion programs
+  could be key to address a national crisis.
+socialDescription: Local and state eviction diversion programs could be key to
+  address a national crisis.
 twImage: iStock-185225200-edit.jpg
-collection: true
+fbImage: iStock-185225200-edit.jpg
 ---
 <span class="dropcap red">S</span>ince November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. This new eviction diversion initiative seeks to keep people housed by finding solutions to disputes between renters and landlords and avoiding court-mandated evictions during the pandemic. 
 
@@ -89,7 +94,7 @@ Even if the parties do not want to participate in a mediation, they are pointed 
 
 “Most landlords just want to get paid and most tenants just want to pay the rent,” Glaves said. “We are trying to help make that happen. You don't necessarily need a lawyer for that piece.”
 
-{{< pullquote "Eviction diversion provides tools—like legal aid, mediation or other resources— that can address the problem at the center of the dispute, paying the rent and securing housing for a family while avoiding the nuclear option: an eviction." >}}
+{{< pullquote "Eviction diversion provides tools—like legal aid, mediation or other resources— that can address the problem at the center of the dispute, paying the rent and securing housing for a family while avoiding the loss of home." >}}
 
 Another program that experts highlight is the one created in Philadelphia. While in Cook County’s program mediation services are optional, in Philadelphia landlords are required by law to seek mediation before filing in court for a nonpayment of rent eviction. The program assigns a housing counselor to the tenant, who informs them of rights and resources, rental assistance, and helps negotiate possible agreements. The housing counselor also attends the mediation session with the trained mediator to support the tenant in the mediation process. In cases where no solution is reached, the Diversion Program refers the tenant to legal services for advice and possible representation in court, depending on capacity.
 
