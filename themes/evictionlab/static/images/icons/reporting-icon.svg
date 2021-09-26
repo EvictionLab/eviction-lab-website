@@ -1,0 +1,25 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="18" cy="18" r="18" fill="url(#paint0_linear)"/>
+<path d="M12 9H10V28H12V9Z" fill="white"/>
+<path d="M13 8H11V10H13V8Z" fill="white"/>
+<path d="M16 7H14V12H16V7Z" fill="white"/>
+<path d="M25 8H23V10H25V8Z" fill="white"/>
+<path d="M22 7H20V12H22V7Z" fill="white"/>
+<path d="M19 7H17V12H19V7Z" fill="white"/>
+<path d="M23 14H13V15H23V14Z" fill="white"/>
+<path d="M23 17H13V18H23V17Z" fill="white"/>
+<path d="M19 20H13V21H19V20Z" fill="white"/>
+<path d="M16 23H13V24H16V23Z" fill="white"/>
+<path d="M15 27H11V29H15V27Z" fill="white"/>
+<path d="M25 27H23V29H25V27Z" fill="white"/>
+<path d="M26 9H24V15H26V9Z" fill="white"/>
+<path d="M26 25H24V28H26V25Z" fill="white"/>
+<path d="M16 29H19L26 22L23 19L16 26V29Z" fill="white"/>
+<path d="M24 18L27 21L29 19L26 16L24.03 17.89" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+<stop stop-color="#777DB5"/>
+<stop offset="1" stop-color="#434877"/>
+</linearGradient>
+</defs>
+</svg>

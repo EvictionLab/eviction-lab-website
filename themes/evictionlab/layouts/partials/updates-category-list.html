@@ -1,0 +1,73 @@
+<div class="center-page-wrapper list-wrapper">
+    <div class="list-item center-content {{ .Params.contenttype }}-list">
+      <div class="postlist-left-col">
+          <div class="list-thumb-container mb-md-3 mb-xxl-2">
+            <!-- If post is of "reporting" type -->
+            {{ if eq .Params.childof "reporting"}}
+                {{ $img := .Params.thumb }}
+                  {{ with .Resources.GetMatch $img }}
+                    {{ $processed := .Fill "360x240 q70 jpg Center" }}
+                      <img class="list-thumb reporting__thumb" src=" {{ $processed.RelPermalink }} ">
+                  {{ end }}
+            {{ end }}
+            <!-- If post is not of reporting type, and has a featured image, use that -->
+            {{ if ne .Params.childof "reporting" }}
+              {{ if .Params.fbImage }} 
+                {{ $img2 := .Params.fbImage }}
+                {{ with .Resources.GetMatch $img2 }}
+                  {{ $processed := .Fit "360x240 q70 jpg" }}
+                    <img class="list-thumb reporting__thumb" src=" {{ $processed.RelPermalink }} ">
+                {{ end }}
+              {{ else }}
+               <!-- Otherwise use the author thumb -->
+                <img class="list-thumb author__thumb" alt="{{ .Params.postauthorname }} photo" src="{{ .Params.authorpic }}">
+              {{ end }}
+            {{ end }}  
+          </div>  
+          <div class="authorname mb-md-2">{{ .Params.postauthorname | truncate 40 }}</div>
+          <div class="post-date mb-md-2 mb-xxl-1">{{ .Date.Format "January 2, 2006" }}</div>
+          <div class="post-cat">
+            <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" alt="Bookmark icon" />
+            <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
+            {{ .Params.childof }}</a>
+          </div>  
+        </div>
+
+        <div class="postlist-right-col">
+          <h2 class="title">
+            {{ if eq .Params.childof "reporting" }}
+              <a href="{{ .Params.link }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+            {{ else }}  
+            <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+            {{ end }}
+          </h2>
+            {{ if eq .Params.childof "reporting" }}
+              {{ if .Params.listSummary }} 
+                <div class="post-summary">
+                    {{ .Params.listSummary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
+                </div>
+              {{ else }}
+                <div class="post-summary">
+                    {{ .Summary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
+                </div>
+              {{ end }}
+            {{ else }}
+              {{ if .Params.listSummary }}
+              <div class="post-summary">
+                  {{ .Params.listSummary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
+              </div>
+              {{ else }}
+              <div class="post-summary">
+                  {{ .Summary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
+              </div>
+              {{ end }}
+            {{ end }}  
+          <div class="post-cat">
+            <img src="/images/icons/{{ .Params.childof }}_bookmark.png" alt="Bookmark icon" class="cat-bookmark" />
+            <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
+            {{ .Params.childof }}</a>
+          </div> 
+        </div>
+  </div>      
+    
+  </div><!-- end center-page-wrapper -->
