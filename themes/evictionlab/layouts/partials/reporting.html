@@ -43,7 +43,7 @@
           {{ $link := .Params.link }}
           {{ with .Resources.GetMatch $img }}
           {{ $processed := .Fill "240x240 q70 jpg" }}
-          <div class="updates-section__entries--image col-3 pl-0 col-lg-3 pl-lg-4 pr-lg-1 pr-xl-2">
+          <div class="updates-section__entries--image col-3 pl-0 col-lg-3 pl-lg-4 pr-lg-0 pr-xxl-1">
             <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
           </div>
           {{ end }}
@@ -64,7 +64,7 @@
           {{ $link := .Params.link }}
           {{ with .Resources.GetMatch $img }}
           {{ $processed := .Fill "240x240 q70 jpg" }}
-          <div class="updates-section__entries--image col-12 col-md-3 pl-4 pr-lg-1 pr-xl-2">
+          <div class="updates-section__entries--image col-12 col-md-3 pl-4 pr-lg-0 pr-xxl-1">
             <a href="{{ $link }}"><img class="updates-section__entries--img mw-100" src=" {{ $processed.RelPermalink }} "></a>
           </div>
           {{ end }}
