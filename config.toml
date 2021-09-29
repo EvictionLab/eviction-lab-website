@@ -59,15 +59,15 @@ languageName = "English"
 [[Languages.en.menu.main]]
     name = " Blog"
     weight = 12
-    url = "/updates/"
+    url = "/updates/blog"
 [[Languages.en.menu.main]]
     name = " Research"
     weight = 13
-    url = "/updates/"
+    url = "/updates/research"
 [[Languages.en.menu.main]]
     name = " Reporting"
     weight = 14
-    url = "/updates/"            
+    url = "/updates/reporting"            
 
 [[Languages.en.menu.footer]]
     name = "Home"
@@ -205,14 +205,15 @@ languageName = "Español"
 [[Languages.es.menu.main]]
     name = "• Blog"
     weight = 12
-    url = "/updates/"
+    url = "/updates/blog"
 [[Languages.es.menu.main]]
     name = "• Research"
     weight = 13
-    url = "/updates/"
+    url = "/updates/research"
 [[Languages.es.menu.main]]
     name = "• Reporting"
     weight = 14    
+    url = "/updates/reporting"
 
 [[Languages.es.menu.footer]]
     name = "Inicio"
