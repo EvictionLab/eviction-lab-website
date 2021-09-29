@@ -213,7 +213,7 @@ languageName = "Español"
 [[Languages.es.menu.main]]
     name = "• Reporting"
     weight = 14    
-    url = "/updates/research/reporting"
+    url = "/updates/reporting"
 
 [[Languages.es.menu.footer]]
     name = "Inicio"
