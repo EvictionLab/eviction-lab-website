@@ -534,7 +534,7 @@ collections:
   - name: "reporting" # Used in routes, e.g., /admin/collections/blog
     label: "Reporting" # Used in the UI
     folder: "/content/updates/reporting" # The path to the folder where the documents are stored
-    path: '{{slug}}/'
+    path: '{{slug}}/index'
     create: true # Allow users to create new documents in this collection
     extension: md
     editor:
