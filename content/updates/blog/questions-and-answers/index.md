@@ -3,10 +3,10 @@ draft: false
 childof: blog
 url: /questions
 contenttype: updates
+collection: true
 contentcat: blog
 featured: true
 in_index: true
-collection: true
 title: Questions and answers about evictions as the CDC moratorium ends
 date: 2021-07-26T16:46:40.089Z
 postauthortitle: Princeton University
@@ -41,7 +41,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond–pay the rent that they owe to an account held by the court system–to get a hearing."
 
-"There are at least four states—California, New Jersey, Washington and Illinois as well as the District of Columbia among them—that have their own eviction-preventing or eviction-limiting orders in place."
+"Several states, cities and counties created their own moratoria. Some of those -like California- have expired and not been renewed. Others are still in place or have special protections for tenants in risk of eviction."
 
 "Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up to date information. More legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. More legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>our sister website Just Shelter</a>." >}}
 
