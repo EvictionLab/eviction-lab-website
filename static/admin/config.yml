@@ -550,6 +550,12 @@ collections:
           default: false,
         }
       - {
+          label: "Featured on Homepage?",
+          name: "featured",
+          widget: "boolean",
+          default: true,
+        }  
+      - {
           label: "Child Of",
           name: "childof",
           widget: "hidden",
