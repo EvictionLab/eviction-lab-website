@@ -304,6 +304,11 @@ footer {
     margin-right: grid(1);
     &:last-child { margin-right: 0; }
   }
+  img.linkedin-icon {
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+  }
   a.btn.btn-border {
     position:relative;
     border: none;
