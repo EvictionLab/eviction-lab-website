@@ -23,7 +23,7 @@
             {{ end }} 
           <div class="updates-section__entry1--title col-9 px-0 px-lg-2 col-lg-7 d-md-flex justify-content-start flex-column">
             <div class="post-cat">
-              <p class="{{ .Params.childof }}-type cat-link mb-1">{{ .Sites.First.Params.outlet }}</p>
+              <p class="{{ .Params.childof }}-type cat-link mb-1">{{ .Params.outlet }}</p>
             </div>
             <a class="title {{ .Params.childof }}-type d-none d-md-block" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title }}</a>
             <a class="title {{ .Params.childof }}-type d-block d-md-none" href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener">{{ .Params.title | truncate 60 }}</a>
