@@ -36,9 +36,9 @@
         <div class="postlist-right-col">
           <h2 class="title">
             {{ if eq .Params.childof "reporting" }}
-              <a href="{{ .Params.link }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+              <a href="{{ .Params.link }}" class="{{ .Params.childof }}-type" target="_blank" rel="noreferrer noopener">{{ .Title }}</a>
             {{ else }}  
-            <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
+              <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
             {{ end }}
           </h2>
             {{ if eq .Params.childof "reporting" }}
