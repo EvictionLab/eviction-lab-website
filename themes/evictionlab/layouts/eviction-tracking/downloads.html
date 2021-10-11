@@ -22,6 +22,7 @@
               <th>{{ .Params.headers.baselineheader }}</th>
               <th>{{ .Params.headers.geoheader }}</th>
               <th>{{ .Params.headers.fileheader }}</th>
+              <th>{{ .Params.headers.monthfileheader }}</th>
           </tr>
         </thead>
         <tbody>
@@ -31,8 +32,9 @@
             <td>{{ .years }}</td>
             <td>{{ .geo }}</td>
             <td><a href="{{ .file }}">Download CSV</a></td>
+            <td><a href="{{ .monthfile }}">Download CSV</a></td>
           </tr>
-          {{ end }}
+          {{ end }} 
         </tbody>
       </table>
     </div>

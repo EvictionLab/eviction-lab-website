@@ -25,7 +25,8 @@ headers:
   siteheader: Site
   baselineheader: Baseline Years
   geoheader: Smallest Geography
-  fileheader: Data File
+  fileheader: Weekly Data
+  monthfileheader: Monthly Data
 layout: downloads
 data:
   - site: All Cities
