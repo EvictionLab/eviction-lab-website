@@ -20,7 +20,7 @@ intro: >-
   Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
 
 
-  1. Boston eviction filing data has a disproportionate number of sealed/missing-tract cases in recent months. Values of filings by tract in Boston may be underestimates as a result.
+  _Note: Boston eviction filing data has a disproportionate number of sealed/missing-tract cases in recent months. Values of filings by tract in Boston may be underestimates as a result._
 headers:
   siteheader: Site
   baselineheader: Baseline Years
