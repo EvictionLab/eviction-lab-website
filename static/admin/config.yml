@@ -1,7 +1,7 @@
 backend:
  name: github
  repo: EvictionLab/eviction-lab-website
- branch: staging
+ branch: update/ets-data
  
 # FOR LOCAL DEVELOPMENT:
 # ---
@@ -302,6 +302,7 @@ collections:
               - { label: "Header 2", name: "baselineheader", widget: "string" }
               - { label: "Header 3", name: "geoheader", widget: "string" }
               - { label: "Header 4", name: "fileheader", widget: "string" }
+              - { label: "Header 5", name: "monthfileheader", widget: "string" }
           - label: Data Table Rows
             name: data
             widget: list
@@ -309,7 +310,8 @@ collections:
               - { label: Site, name: site, widget: string }
               - { label: Baseline Years, name: years, widget: string }
               - { label: Smallest Geography, name: geo, widget: string }
-              - { label: Data File, name: file, widget: file }
+              - { label: Weekly Data File, name: file, widget: file }
+              - { label: Monthly Data File, name: monthfile, widget: file }
           - { label: "Body (below table)", name: "body", widget: "markdown" }
   - name: "eviction-tracking"
     identifier_field: "h1"
