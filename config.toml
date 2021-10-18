@@ -21,53 +21,66 @@ languageName = "English"
     weight = 1
     url = "/"
 [[Languages.en.menu.main]]
-    name = "Map & Data"
+    name = "Latest Data"
     weight = 2
-    url = "/map/"
-[[Languages.en.menu.main]]
-    name = "Eviction Rankings"
-    weight = 3
-    url = "/rankings/"
 [[Languages.en.menu.main]]
     name = "Eviction Tracking System"
+    weight = 4
+    url = "/eviction-tracking/"
+[[Languages.en.menu.main]]
+    name = "Policies Database"
     weight = 5
-    url = "/eviction-tracking/"      
+    url = "/covid-eviction-policies/"
 [[Languages.en.menu.main]]
     name = "Policy Scorecard"
     weight = 6
-    url = "/covid-policy-scorecard/"    
+    url = "/covid-policy-scorecard/"
 [[Languages.en.menu.main]]
-    name = "About Us"
+    name = "New Findings & Stories"
     weight = 7
+[[Languages.en.menu.main]]
+    name = "Blog"
+    weight = 8
+    url = "/updates/blog"
+[[Languages.en.menu.main]]
+    name = "Research"
+    weight = 9
+    url = "/updates/research"
+[[Languages.en.menu.main]]
+    name = "Reporting"
+    weight = 10
+    url = "/updates/reporting"
+[[Languages.en.menu.main]]
+    name = "National Data (1990-2016)"
+    weight = 11
+[[Languages.en.menu.main]]
+    name = "National Eviction Map"
+    weight = 12
+    url = "/map/"
+[[Languages.en.menu.main]]
+    name = "Eviction Rankings"
+    weight = 13
+    url = "/rankings/"
+[[Languages.en.menu.main]]
+    name = "About the Lab"
+    weight = 14
+[[Languages.en.menu.main]]
+    name = "Mission & Team"
+    weight = 15
     url = "/about/"
 [[Languages.en.menu.main]]
     name = "Why Eviction Matters"
-    weight = 8
+    weight = 16
     url = "/why-eviction-matters"
 [[Languages.en.menu.main]]
     name = "Methods"
-    weight = 9
+    weight = 17
     url = "/methods/"
 [[Languages.en.menu.main]]
-    name = "Help & FAQ"
-    weight = 10
+    name = "FAQ"
+    weight = 18
     url = "/help-faq/"
-[[Languages.en.menu.main]]
-    name = "Updates"
-    weight = 11
-    url = "/updates/"
-[[Languages.en.menu.main]]
-    name = " Blog"
-    weight = 12
-    url = "/updates/blog"
-[[Languages.en.menu.main]]
-    name = " Research"
-    weight = 13
-    url = "/updates/research"
-[[Languages.en.menu.main]]
-    name = " Reporting"
-    weight = 14
-    url = "/updates/reporting"            
+
 
 [[Languages.en.menu.footer]]
     name = "Home"
@@ -84,11 +97,11 @@ languageName = "English"
 [[Languages.en.menu.footer]]
     name = "COVID-19 Policy Scorecard"
     weight = 4
-    url = "/covid-policy-scorecard/" 
+    url = "/covid-policy-scorecard/"
 [[Languages.en.menu.footer]]
     name = "Eviction Tracking System"
     weight = 6
-    url = "/eviction-tracking/"        
+    url = "/eviction-tracking/"
 [[Languages.en.menu.footer]]
     name = "About Us"
     weight = 7
@@ -124,7 +137,7 @@ languageName = "English"
 [[Languages.en.menu.footer]]
     name = "Media Guide"
     weight = 14
-    url = "/media-guide/"    
+    url = "/media-guide/"
 
 
 [[Languages.en.menu.updates]]
@@ -140,12 +153,12 @@ languageName = "English"
     name = "EL Research"
     parent = "Research"
     weight = -94
-    url = "/updates/research/el-research" 
+    url = "/updates/research/el-research"
 [[Languages.en.menu.updates]]
     name = "Outside Research"
     parent = "Research"
     weight = -96
-    url = "/updates/research/outside-research"        
+    url = "/updates/research/outside-research"
 [[Languages.en.menu.updates]]
     name = "Reporting"
     weight = -90
@@ -177,11 +190,11 @@ languageName = "Español"
 [[Languages.es.menu.main]]
     name = "Eviction Tracking System"
     weight = 5
-    url = "/eviction-tracking/"      
+    url = "/eviction-tracking/"
 [[Languages.es.menu.main]]
     name = "Policy Scorecard"
     weight = 6
-    url = "/covid-policy-scorecard/"      
+    url = "/covid-policy-scorecard/"
 [[Languages.es.menu.main]]
     name = "Acerca de nosotros"
     weight = 7
@@ -212,7 +225,7 @@ languageName = "Español"
     url = "/updates/research"
 [[Languages.es.menu.main]]
     name = "• Reporting"
-    weight = 14    
+    weight = 14
     url = "/updates/reporting"
 
 [[Languages.es.menu.footer]]
@@ -238,11 +251,11 @@ languageName = "Español"
 [[Languages.es.menu.footer]]
     name = "COVID-19 Policy Scorecard"
     weight = 6
-    url = "/covid-policy-scorecard/" 
+    url = "/covid-policy-scorecard/"
 [[Languages.es.menu.footer]]
     name = "Eviction Tracking System"
     weight = 7
-    url = "/eviction-tracking/"       
+    url = "/eviction-tracking/"
 [[Languages.es.menu.footer]]
     name = "Métodos"
     weight = 8
@@ -270,7 +283,7 @@ languageName = "Español"
 [[Languages.es.menu.footer]]
     name = "Guía de medios"
     weight = 13
-    url = "/media-guide/"     
+    url = "/media-guide/"
 
 
 [[Languages.es.menu.updates]]
@@ -286,12 +299,12 @@ languageName = "Español"
     name = "EL Research"
     parent = "Research"
     weight = -94
-    url = "/updates/research/el-research" 
+    url = "/updates/research/el-research"
 [[Languages.es.menu.updates]]
     name = "Outside Research"
     parent = "Research"
     weight = -96
-    url = "/updates/research/outside-research"        
+    url = "/updates/research/outside-research"
 [[Languages.es.menu.updates]]
     name = "Media"
     weight = -90

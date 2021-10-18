@@ -4,6 +4,8 @@ function setupMenu() {
   var menuClose = $('.app-menu .menu-close');
   var menuButton = $('.el-button-menu');
 
+  $('.app-menu').removeClass("no-animation")
+
   menuButton.click(function () {
     menu.addClass('expanded');
     menu.find('a').each(function () {
