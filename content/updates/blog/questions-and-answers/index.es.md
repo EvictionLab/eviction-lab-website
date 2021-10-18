@@ -3,10 +3,10 @@ draft: false
 childof: blog
 url: /preguntas
 contenttype: updates
+collection: true
 contentcat: blog
 featured: true
 in_index: true
-collection: true
 title: Preguntas y respuestas sobre desalojos y el final de la moratoria de los CDC
 date: 2021-07-26T16:46:40.089Z
 postauthortitle: Princeton University
@@ -44,7 +44,7 @@ La siguiente es una guía con algunas de las más relevantes preguntas que los i
 
 "A través de todo el país, los inquilinos tienen derecho otorgado por la constitución al debido proceso, lo que significa que tienen derecho a ser escuchados y disputar un desalojo en la corte. En algunos lugares específicos, los inquilinos tienen que pagar un depósito –pagar la renta que deben en una cuenta administrada por el sistema de cortes– para tener una audiencia, sin embargo esto no es muy común."
 
-"Al menos cuatro estados --California, Nueva Jersey, Illinois, Washington, y también el Distrito de Columbia-- tienen sus propias moratorias o protecciones para inquilinos."
+"Varios estados, ciudades y condados crearon sus propias moratorias. Algunos de estos programas, como el de California, ya vencieron y no fueron renovados. Otros siguen funcionando o existen protecciones especiales para inquilinos en riesgo."
 
 "Recomendamos contactar a organizaciones locales de vivienda y <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>de ayuda legal</a> en su ciudad o su estado para aprender sobre sus derechos, conseguir apoyo legal y encontrar la información más actualizada. Puede encontrar más organizaciones locales a través de <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>las organizaciones estatales de abogados y de la organización nacional NAIP</a>. Hay información sobre asistencia legal en los sitios del <a href='https://www.abafreelegalanswers.org/' target='_blank' rel='noreferrer noopener'>Colegio Estadounidense de Abogados (en inglés</a> y en <a href='https://espanol.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> Encuentre o publique recursos sobre su comunidad en nuestro sitio hermano <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a>." >}}
 
