@@ -52,9 +52,9 @@
 						<ul class="row">
 							{{ range .Site.Menus.main }}
 								{{ if not .URL }}
-								{{ if not (eq .Weight 2) }}
+									{{ if not (eq .Weight 2) }}
 									</ul></li>
-								{{ end }}
+									{{ end }}
 								<li class="col-12 col-md-6 col-lg-3">
 									<h5>{{ .Name }}</h5>
 									<ul>
