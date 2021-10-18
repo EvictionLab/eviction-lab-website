@@ -40,6 +40,11 @@ jobs:
         with:
           node-version: "12.x"
 
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
       - name: Cache dependencies
         uses: actions/cache@v1
         with:
@@ -49,6 +54,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
+      - run: python update-ets-date.py
       - run: hugo
 
       - name: Deploy
