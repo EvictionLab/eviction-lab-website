@@ -2842,7 +2842,7 @@ Elab.Ranking = (function (Elab) {
     var endDateVal = data[0].end_date;
     if(!endDateVal) return;
     var endDateArr = endDateVal.split('-');
-    var endDate = endDateArr[1]+"-"+endDateArr[2]+"-"+endDateArr[0];
+    var endDate = parseInt(endDateArr[1])+"-"+parseInt(endDateArr[2])+"-"+endDateArr[0];
     $el.find(".button-group").before(
       "<p><em>Data is current through <time>"+endDate+"</time></em></p>"
     );
