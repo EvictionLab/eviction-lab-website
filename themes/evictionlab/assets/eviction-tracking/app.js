@@ -2467,12 +2467,24 @@ Elab.ListPage = (function (Elab) {
     return rowTemplate(rowData);
   }
 
+  /**
+   * Checks if the provided day falls within the moratorium range
+   * @param {*} day 
+   * @param {*} ranges 
+   * @returns 
+   */
   function inMoratorium(day, ranges) {
     var isDayInRanges = ranges.reduce(function (inRange, range) {
+      // get the end day of the week
       var endDay = d3.timeDay.offset(day, 7);
-      return inRange
-        ? true
-        : +day >= +range[0] &&
+      // if day was in earlier range, return true
+      if (inRange) return true
+      // if no start / end, then pass along the value
+      if (!range[0] && !range[1]) return inRange;
+      // if range only has a start date and the day is after that date, return true
+      if (!range[1] && +day >= +range[0]) return true
+      // if range has both a start and an end date
+      return +day >= +range[0] &&
             +day <= +range[1] &&
             +endDay >= +range[0] &&
             +endDay <= +range[1];
