@@ -21,9 +21,9 @@
                 <span class="dim">{{ humanize .Params.childof }}</span>
               </a>
             {{ end }}
-            {{ if eq .Params.childof "media" }}
-              <a href="{{ .Site.BaseURL }}{{ .Section }}/media/">
-                <span class="dim">{{ humanize .Params.childof }}</span>
+            {{ if eq .Params.childof "reporting" }}
+              <a href="{{ .Site.BaseURL }}{{ .Section }}/reporting/">
+              <span class="dim">{{ humanize .Params.childof }}</span>
               </a>
             {{ end }}
             {{ if eq .Params.childof "research" }}

@@ -55,13 +55,13 @@ $menuMargin: grid(5);
 }
 @media(min-width: $gtMobile) {
   .app-menu .menu-close.btn.btn-icon {
-    width: grid(7);
-    height: grid(7);
+    width: 46px;
+    height: 46px;
     .icon { 
       width: grid(4); 
       height: grid(4); 
     }
-    span { @include altSmallCapsText(14px); }
+    span { @include altSmallCapsText(12px); }
   }
 }
 
@@ -71,7 +71,7 @@ $menuMargin: grid(5);
   @include altFont(18px);
   letter-spacing: 0.6px;
   //margin-top: $menuMargin;
-  margin-top: 60px;
+  margin-top: 46px;
   line-height: 1.42857143;
   ul {
     list-style: none;
@@ -80,8 +80,12 @@ $menuMargin: grid(5);
   }
   li {
     margin-bottom: grid(1.5);
-    &:nth-of-type(5), &:nth-of-type(6) {
-      margin-left: 20px;
+    &:nth-of-type(11), &:nth-of-type(12), &:nth-of-type(13) {
+      &:before {
+        content: "•  ";
+        color: #fff;
+        margin-right: 6px;
+      }
     }
   }
   a {
@@ -101,12 +105,17 @@ $menuMargin: grid(5);
 // boost size on tablet+
 @media(min-width: $gtMobile) and (min-height: 680px) {
   .app-menu .site-navigation {
-    @include altFont(22px);
+    @include altFont(18px);
     letter-spacing: 0.7px;
     li { 
       margin-bottom: grid(2.5);
-      &:nth-of-type(5), &:nth-of-type(6) {
-        margin-left: 20px;
+      &:nth-of-type(11), &:nth-of-type(12), &:nth-of-type(13) {
+        //margin-left: 12px;
+        &:before {
+          content: "•  ";
+          color: #fff;
+          margin-right: 6px;
+        }
       }
      }
   }

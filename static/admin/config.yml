@@ -302,6 +302,7 @@ collections:
               - { label: "Header 2", name: "baselineheader", widget: "string" }
               - { label: "Header 3", name: "geoheader", widget: "string" }
               - { label: "Header 4", name: "fileheader", widget: "string" }
+              - { label: "Header 5", name: "monthfileheader", widget: "string" }
           - label: Data Table Rows
             name: data
             widget: list
@@ -309,7 +310,8 @@ collections:
               - { label: Site, name: site, widget: string }
               - { label: Baseline Years, name: years, widget: string }
               - { label: Smallest Geography, name: geo, widget: string }
-              - { label: Data File, name: file, widget: file }
+              - { label: Weekly Data File, name: file, widget: file }
+              - { label: Monthly Data File, name: monthfile, widget: file }
           - { label: "Body (below table)", name: "body", widget: "markdown" }
   - name: "eviction-tracking"
     identifier_field: "h1"
@@ -529,5 +531,67 @@ collections:
           name: "body",
           widget: "markdown",
           buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
+        }
+
+  - name: "reporting" # Used in routes, e.g., /admin/collections/blog
+    label: "Reporting" # Used in the UI
+    folder: "/content/updates/reporting" # The path to the folder where the documents are stored
+    path: '{{slug}}/index'
+    create: true # Allow users to create new documents in this collection
+    extension: md
+    editor:
+      preview: false
+    preview_path: "updates/reporting"
+    filter: { field: "contentcat", value: media }
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Draft",
+          name: "draft",
+          widget: "boolean",
+          hint: "When draft is on, the page will not be published to the live site",
+          default: false,
+        }
+      - {
+          label: "Featured on Homepage?",
+          name: "featured",
+          widget: "boolean",
+          default: true,
+        }  
+      - {
+          label: "Child Of",
+          name: "childof",
+          widget: "hidden",
+          default: "reporting",
+        }
+      - {
+          label: "Content Type",
+          name: "contenttype",
+          widget: "hidden",
+          default: "updates",
+        }
+      - {
+          label: "Content Category",
+          name: "contentcat",
+          widget: "hidden",
+          default: "media",
+        }
+      - { label: "Article Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author Name", name: "postauthorname", widget: "string" }
+      - { label: "News Outlet Name", name: "outlet", widget: "string" }
+      - { label: "Link to article", name: "link", widget: "string" }
+      - {
+          label: "Thumbnail Image",
+          name: "thumb",
+          widget: "image",
+          required: false,
+          hint: 'Upload an image from the article for use as a thumbnail.'
+        }
+      - {
+          label: "Excerpt for Articles List",
+          name: "listSummary",
+          widget: "string",
+          required: true,
+          hint: 'Copy some text for the article here to serve as a short excerpt.'
         }
       

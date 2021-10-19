@@ -15,13 +15,14 @@
     <h1>{{ .Params.h1 }}</h1>
     {{ .Params.intro | markdownify }}
     <div class="table-responsive-sm">
-      <table class="data-table page-stats my-5">
+      <table id="ets-get-data" class="data-table page-stats my-5">
         <thead>
           <tr>
               <th>{{ .Params.headers.siteheader }}</th>
               <th>{{ .Params.headers.baselineheader }}</th>
               <th>{{ .Params.headers.geoheader }}</th>
               <th>{{ .Params.headers.fileheader }}</th>
+              <th>{{ .Params.headers.monthfileheader }}</th>
           </tr>
         </thead>
         <tbody>
@@ -31,8 +32,9 @@
             <td>{{ .years }}</td>
             <td>{{ .geo }}</td>
             <td><a href="{{ .file }}">Download CSV</a></td>
+            <td><a href="{{ .monthfile }}">Download CSV</a></td>
           </tr>
-          {{ end }}
+          {{ end }} 
         </tbody>
       </table>
     </div>

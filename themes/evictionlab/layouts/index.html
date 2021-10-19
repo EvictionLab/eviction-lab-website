@@ -236,32 +236,26 @@
       </div>
     </div>
 
-<!-- Update section -->
-  <div class="d-none" id="updates-section">
+<!-- Reporting section -->
+  <div class="d-block" id="updates-section">
     <div class="row mx-0 subfeature-panel pt-6 pb-4 py-md-8 py-xl-9 pl-md-1 pl-lg-0">
-      <div class="col-11 col-md-12 col-lg-11 col-xxl-11 col-xxxl-10 mx-auto col-2-wrap">
-        <div class="col-12 pl-md-0 mb-4 mb-md-5 mb-lg-7 mb-xl-9">
-          <h2 class="mb-3 text-md-center">Follow our updates and research</h2>
+      <div class="col-12 col-md-10  col-lg-12 px-lg-5 col-xl-10 px-xl-2 col-xxxl-9 mx-auto mx-auto d-flex flex-wrap">
+        <div class="col-12 px-0 mb-4 mb-lg-5 d-flex flex-column flex-md-row align-items-center">
+          <img class="mr-1 mr-md-2 mt-1 mt-md-0 header-icon mb-2 mb-md-0" alt="" src="/images/icons/reporting-icon.svg">
+          <h2 class="text-center text-md-left">Reporting From Our Partners</h2>
         </div>
-        <div class="col-12 d-md-flex pl-0 mb-5 mb-md-5 mb-lg-6 mb-xl-8">
-          {{ range first 3 (where (where .Site.RegularPages "Params.contenttype" ("updates")) ".Params.featured" "!=" false ) }}
-          
-              <div class="updates-section__entries col-12 col-md-4 px-2 px-lg-3">
-                <div class="post-cat mb-2">
-                  <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" alt="Bookmark icon" />
-                  <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
-                  &nbsp;{{ .Params.childof }}</a>
-                </div>
-                <a class="title {{ .Params.childof }}-type" href="{{ .Permalink }}">{{ .Params.title }}</a>
-                <a class="sublink mt-2 mb-3 mb-md-0 mt-md-3" href="{{ .Permalink }}" target="_blank">READ MORE <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-              </div>
-          
-          {{ end }}
-        </div>      
-        <div class="col-12">
-          <a class="sublink mw-100 mb-2 mb-md-0 d-block text-center" href="/updates">SEE ALL UPDATES <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-        </div>      
-        
+        {{ if eq .Site.Language.LanguageName "Español" }}
+          {{ range .Translations }}
+            {{ partial "reporting" . }}
+          {{ end}}  
+        {{ end }} 
+        {{ if eq .Site.Language.LanguageName "English" }}
+            {{ partial "reporting" . }}
+        {{ end }}   
+          <div class="col-12 px-0 px-lg-2">
+            <a class="sublink mw-100 d-block d-md-none text-center text-md-left mb-2 mb-md-0 mt-4 mt-lg-5  px-0" href="/updates/reporting">SEE ALL ARTICLES <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+          </div> 
+        </div>         
       </div>
     </div>    
   </div>

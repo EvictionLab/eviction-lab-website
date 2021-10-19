@@ -29,10 +29,6 @@ languageName = "English"
     weight = 3
     url = "/rankings/"
 [[Languages.en.menu.main]]
-    name = "COVID-19 Resources"
-    weight = 4
-    url = "/covid-resources/" 
-[[Languages.en.menu.main]]
     name = "Eviction Tracking System"
     weight = 5
     url = "/eviction-tracking/"      
@@ -60,6 +56,18 @@ languageName = "English"
     name = "Updates"
     weight = 11
     url = "/updates/"
+[[Languages.en.menu.main]]
+    name = " Blog"
+    weight = 12
+    url = "/updates/blog"
+[[Languages.en.menu.main]]
+    name = " Research"
+    weight = 13
+    url = "/updates/research"
+[[Languages.en.menu.main]]
+    name = " Reporting"
+    weight = 14
+    url = "/updates/reporting"            
 
 [[Languages.en.menu.footer]]
     name = "Home"
@@ -139,9 +147,9 @@ languageName = "English"
     weight = -96
     url = "/updates/research/outside-research"        
 [[Languages.en.menu.updates]]
-    name = "Media"
+    name = "Reporting"
     weight = -90
-    url = "/updates/media/"
+    url = "/updates/reporting/"
 [[Languages.en.menu.updates]]
     name = "Blog"
     weight = -100
@@ -166,10 +174,6 @@ languageName = "Español"
     name = "Rankings de desalojos"
     weight = 3
     url = "/rankings/#/evictions%3Flang%3Des"
-[[Languages.es.menu.main]]
-    name = "COVID-19 Resources"
-    weight = 4
-    url = "/covid-resources/" 
 [[Languages.es.menu.main]]
     name = "Eviction Tracking System"
     weight = 5
@@ -198,6 +202,18 @@ languageName = "Español"
     name = "Actualizaciones"
     weight = 11
     url = "/updates/"
+[[Languages.es.menu.main]]
+    name = "• Blog"
+    weight = 12
+    url = "/updates/blog"
+[[Languages.es.menu.main]]
+    name = "• Research"
+    weight = 13
+    url = "/updates/research"
+[[Languages.es.menu.main]]
+    name = "• Reporting"
+    weight = 14    
+    url = "/updates/reporting"
 
 [[Languages.es.menu.footer]]
     name = "Inicio"
