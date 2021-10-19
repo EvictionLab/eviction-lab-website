@@ -2831,14 +2831,16 @@ Elab.Ranking = (function (Elab) {
   var activeGroup; // current group key (from groups object)
 
   var renderCount = 0; // number of times the list has been rendered (used for first render conditionals)
-
   /** Load the data, set default group, trigger first render */
 
   function init(elId, config) {
     var csv = config.csv;
     id = config.id;
     $el = $(elId);
-    Elab.Data.loadData(csv, shapeTopEvictions, function (data) {
+
+    Elab.Data.loadData(csv, function (data) {
+      addEndDate(data);
+      data = shapeTopEvictions(data);
       groups = Elab.Utils.group(data, "group");
       activeGroup = groups[0].key;
       renderButtonGroups();
@@ -2847,6 +2849,17 @@ Elab.Ranking = (function (Elab) {
       Elab.Utils.callOnEnter($el[0], renderRankingList);
     });
   }
+
+  function addEndDate(data) {
+    var endDateVal = data[0].end_date;
+    if(!endDateVal) return;
+    var endDateArr = endDateVal.split('-');
+    var endDate = parseInt(endDateArr[1])+"-"+parseInt(endDateArr[2])+"-"+endDateArr[0];
+    $el.find(".button-group").before(
+      "<p><em>Data is current through <time>"+endDate+"</time>.</em></p>"
+    );
+  }
+
   /** Shapes the data from the CSV into proper format */
 
   function shapeTopEvictions(rows) {
