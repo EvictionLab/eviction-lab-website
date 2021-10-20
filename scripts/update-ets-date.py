@@ -11,7 +11,6 @@ def update_date(md_path, new_date):
 	for i, line in enumerate(lines):
 		if(line.startswith("date: ")):
 			lines[i] = f"date: {new_date}\n"
-
 	md_file = open(md_path, "w")
 	md_file.writelines(lines)
 	md_file.close()
