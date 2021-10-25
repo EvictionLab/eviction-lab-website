@@ -45,7 +45,6 @@
 				</div>	
 			</div>
 
-
 			<div class="app-menu no-animation">
 				<div class="navigation-wrapper">
 					<nav class="site-navigation">
@@ -59,33 +58,13 @@
 									<h5>{{ .Name }}</h5>
 									<ul>
 								{{ else }}
-								<li class="nav-item">
+								<li class="nav-item {{ .Params.Class }}">
 									<a tabindex="-1" href="{{.URL}}">{{ .Name }}</a>
 								</li>
 								{{ end }}
 							{{ end }}
 						</ul>
 					</nav>
-
-					<!-- <div class="app-menu-footer row">
-						<div class="col-6">
-							<ul class="social-media-links">
-								<li>
-									<a aria-label="Eviction Lab on Facebook" tabindex="-1" class="btn btn-border" href="https://www.facebook.com/evictionlab/" target="_blank">
-										<i class="fa fa-facebook"></i>
-									</a>
-								</li>
-								<li>
-									<a aria-label="Eviction Lab on Twitter" tabindex="-1" class="btn btn-border" href="https://twitter.com/evictionlab" target="_blank">
-										<i class="fa fa-twitter"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-6">
-							<span class="menu-copyright">&copy; 2018 Eviction Lab</span>
-						</div>
-					</div> -->
 
 					<button tabindex="-1" class="btn btn-icon menu-close">
 						<svg class="icon" id="close" viewBox="0 0 20 20">

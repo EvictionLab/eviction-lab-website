@@ -80,7 +80,14 @@ $menuMargin: grid(5);
   }
   > ul > li:first-child {
     width: 100%;
-    margin: 50px 15px;
+    margin: 80px 15px 30px 15px;
+  }
+  .nested {
+    padding-left: 30px;
+    background-image: url('/img/arrow--right.svg');
+    background-size: 10px;
+    background-position: left center;
+    background-repeat: no-repeat;
   }
   h5 {
     color: $white;
@@ -97,8 +104,8 @@ $menuMargin: grid(5);
       color: $white;
       border-bottom-color: $white;
       text-decoration: none;
-      box-shadow:none;
-      outline:0;
+      box-shadow: none;
+      outline: 0;
     }
     
   }

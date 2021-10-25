@@ -36,49 +36,56 @@ languageName = "English"
     weight = 6
     url = "/covid-policy-scorecard/"
 [[Languages.en.menu.main]]
-    name = "New Findings & Stories"
+    name = "Newest Findings & Stories"
     weight = 7
 [[Languages.en.menu.main]]
-    name = "Blog"
+    name = "All Updates"
     weight = 8
+    url = "/updates/"
+[[Languages.en.menu.main]]
+    name = "Blog"
+    weight = 9
     url = "/updates/blog"
+    params = { class = "nested" }
 [[Languages.en.menu.main]]
     name = "Research"
-    weight = 9
+    weight = 10
     url = "/updates/research"
+    params = { class = "nested" }
 [[Languages.en.menu.main]]
     name = "Reporting"
-    weight = 10
+    weight = 11
     url = "/updates/reporting"
+    params = { class = "nested" }
 [[Languages.en.menu.main]]
     name = "National Data (1990-2016)"
-    weight = 11
+    weight = 12
 [[Languages.en.menu.main]]
     name = "National Eviction Map"
-    weight = 12
+    weight = 13
     url = "/map/"
 [[Languages.en.menu.main]]
     name = "Eviction Rankings"
-    weight = 13
+    weight = 14
     url = "/rankings/"
 [[Languages.en.menu.main]]
     name = "About the Lab"
-    weight = 14
+    weight = 15
 [[Languages.en.menu.main]]
     name = "Mission & Team"
-    weight = 15
+    weight = 16
     url = "/about/"
 [[Languages.en.menu.main]]
     name = "Why Eviction Matters"
-    weight = 16
+    weight = 17
     url = "/why-eviction-matters"
 [[Languages.en.menu.main]]
     name = "Methods"
-    weight = 17
+    weight = 18
     url = "/methods/"
 [[Languages.en.menu.main]]
     name = "FAQ"
-    weight = 18
+    weight = 19
     url = "/help-faq/"
 
 
