@@ -3,7 +3,7 @@ $menuMargin: grid(5);
 // Container layout
 // ---
 .app-menu {
-  position:fixed;
+  position: fixed;
   width: 100%;
   max-height: 100%;
   top: 0;
@@ -11,11 +11,12 @@ $menuMargin: grid(5);
   transform: translate3d(0,calc(-100% - 5px),0); // translate a little extra so shadow doesn't show
   z-index: 999;
   background: $menuBg;
-  padding: 0;
+  padding: 0 grid(3);
   display:block;
   transition: transform 0.4s ease;
   box-shadow: $menuShadow;
-  overflow:auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: scroll;
   &.expanded {
     transform: translate3d(0,0,0);
@@ -27,7 +28,7 @@ $menuMargin: grid(5);
 // boost size on tablet+
 @media(min-width: $gtMobile) {
   .app-menu {
-    padding: 0 grid(3);
+    padding: 0 grid(5);
   }
 }
 
@@ -36,7 +37,7 @@ $menuMargin: grid(5);
 .app-menu .menu-close {
   position:absolute;
   top: grid(3);
-  right: grid(4);
+  right: grid(4.75);
   width: grid(6);
   height: grid(6);
   .icon { 
@@ -68,33 +69,36 @@ $menuMargin: grid(5);
 .site-navigation {
   @include altFont(18px);
   letter-spacing: 0.6px;
-  margin-bottom: grid(8);
+  margin-top: grid(10);
+  margin-bottom: grid(4);
   line-height: 1.42857143;
   ul {
     list-style: none;
-    margin:0;
-    padding:0;
+    padding-left: 0;
+    margin-bottom: 0;
   }
   li {
     margin-bottom: grid(1.5);
   }
   > ul > li:first-child {
     width: 100%;
-    margin: 80px 15px 30px 15px;
+    margin-bottom: grid(4.5);
+  }
+  ul > li > div {
+    @include altFont(12px);
+    color: $white;
+    text-transform: uppercase;
+    padding-top: grid(2.5);
+    margin-bottom: grid(2.5);
+    border-top: grid(0.5) solid $white;
   }
   .nested {
-    padding-left: 30px;
+    margin-left: 15px;
+    padding-left: grid(3.75);
     background-image: url('/img/arrow--right.svg');
     background-size: 10px;
     background-position: left center;
     background-repeat: no-repeat;
-  }
-  h5 {
-    color: $white;
-    text-transform: uppercase;
-    padding-top: 20px;
-    margin-bottom: 20px;
-    border-top: grid(0.5) solid $white;
   }
   a {
     display: inline;

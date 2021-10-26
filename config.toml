@@ -187,53 +187,72 @@ languageName = "Español"
     weight = 1
     url = "/es/"
 [[Languages.es.menu.main]]
-    name = "Mapa y datos"
+    name = "Latest Data"
     weight = 2
-    url = "/map/#/2016%3Flang%3Des"
-[[Languages.es.menu.main]]
-    name = "Rankings de desalojos"
-    weight = 3
-    url = "/rankings/#/evictions%3Flang%3Des"
 [[Languages.es.menu.main]]
     name = "Eviction Tracking System"
-    weight = 5
+    weight = 4
     url = "/eviction-tracking/"
+[[Languages.es.menu.main]]
+    name = "Policies Database"
+    weight = 5
+    url = "/covid-eviction-policies/"
 [[Languages.es.menu.main]]
     name = "Policy Scorecard"
     weight = 6
     url = "/covid-policy-scorecard/"
 [[Languages.es.menu.main]]
-    name = "Acerca de nosotros"
+    name = "Newest Findings & Stories"
     weight = 7
+[[Languages.es.menu.main]]
+    name = "Actualizaciones"
+    weight = 8
+    url = "/updates/"
+[[Languages.es.menu.main]]
+    name = "Blog"
+    weight = 9
+    url = "/updates/blog"
+    params = { class = "nested" }
+[[Languages.es.menu.main]]
+    name = "Research"
+    weight = 10
+    url = "/updates/research"
+    params = { class = "nested" }
+[[Languages.es.menu.main]]
+    name = "Reporting"
+    weight = 11
+    url = "/updates/reporting"
+    params = { class = "nested" }
+[[Languages.es.menu.main]]
+    name = "National Data (1990-2016)"
+    weight = 12
+[[Languages.es.menu.main]]
+    name = "National Eviction Map"
+    weight = 13
+    url = "/map/#/2016%3Flang%3Des"
+[[Languages.es.menu.main]]
+    name = "Rankings de desalojos"
+    weight = 14
+    url = "/rankings/#/evictions%3Flang%3Des"
+[[Languages.es.menu.main]]
+    name = "About the Lab"
+    weight = 15
+[[Languages.es.menu.main]]
+    name = "Mission & Team"
+    weight = 16
     url = "/es/about/"
 [[Languages.es.menu.main]]
     name = "Por qué es importante el desalojo"
-    weight = 8
+    weight = 17
     url = "/es/why-eviction-matters"
 [[Languages.es.menu.main]]
     name = "Métodos"
-    weight = 9
+    weight = 18
     url = "/es/methods/"
 [[Languages.es.menu.main]]
-    name = "Ayuda y preguntas frequentes"
-    weight = 10
+    name = "Preguntas frequentes"
+    weight = 19
     url = "/es/help-faq/"
-[[Languages.es.menu.main]]
-    name = "Actualizaciones"
-    weight = 11
-    url = "/updates/"
-[[Languages.es.menu.main]]
-    name = "• Blog"
-    weight = 12
-    url = "/updates/blog"
-[[Languages.es.menu.main]]
-    name = "• Research"
-    weight = 13
-    url = "/updates/research"
-[[Languages.es.menu.main]]
-    name = "• Reporting"
-    weight = 14
-    url = "/updates/reporting"
 
 [[Languages.es.menu.footer]]
     name = "Inicio"
