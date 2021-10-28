@@ -45,31 +45,29 @@
 				</div>	
 			</div>
 
-
-			<div class="app-menu">
+			<div class="app-menu no-animation">
 				<div class="navigation-wrapper">
 					<nav class="site-navigation">
-						<ul>
-							{{ range .Site.Menus.main }}
-							<li class="nav-item">
-								<a tabindex="-1" href="{{.URL}}">{{ .Name }}</a>
-							</li>
-							{{ end }}
+						<ul class="row">
+							<div class="col-x4l-10 px-x4l-0 d-flex mx-auto flex-wrap site-navigation__inner">
+								{{ range .Site.Menus.main }}
+									{{ if not .URL }}
+										{{ if not (eq .Weight 2) }}
+										</ul></li>
+										{{ end }}
+									<li class="col-12 col-md-6 col-lg-3">
+										<div>{{ .Name }}</div>
+										<ul class="row">
+									{{ else }}
+									<li class="col-12 {{ .Params.Class }}">
+										<a tabindex="-1" href="{{.URL}}">{{ .Name }}</a>
+									</li>
+									{{ end }}
+								{{ end }}
+							</div>
 						</ul>
 					</nav>
-					<ul class="social-media-links">
-						<li>
-							<a aria-label="Eviction Lab on Facebook" tabindex="-1" class="btn btn-border" href="https://www.facebook.com/evictionlab/" target="_blank">
-								<i class="fa fa-facebook"></i>
-							</a>
-						</li>
-						<li>
-							<a aria-label="Eviction Lab on Twitter" tabindex="-1" class="btn btn-border" href="https://twitter.com/evictionlab" target="_blank">
-								<i class="fa fa-twitter"></i>
-							</a>
-						</li>
-					</ul>
-					<span class="menu-copyright">&copy; 2018 Eviction Lab</span>
+
 					<button tabindex="-1" class="btn btn-icon menu-close">
 						<svg class="icon" id="close" viewBox="0 0 20 20">
 							<polygon points="12.8571429 10 20 17.1428571 17.1428571 20 10 12.8571429 2.85714286 20 0 17.1428571 7.14285714 10 0 2.85714286 2.85714286 0 10 7.14285714 17.1428571 0 20 2.85714286"></polygon>

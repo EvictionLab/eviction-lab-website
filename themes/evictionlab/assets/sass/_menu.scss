@@ -1,35 +1,34 @@
 $menuMargin: grid(5);
 
-
 // Container layout
 // ---
 .app-menu {
-  position:fixed;
-  width: $menuWidth;
-  height:100%;
-  top:0;
-  right: -1*($menuWidth+5px);
-  transform: translate3d(0,0,0); // translate a little extra so shadow doesn't show
-  z-index:999;
+  position: fixed;
+  width: 100%;
+  max-height: 100%;
+  top: 0;
+  left: 0;
+  transform: translate3d(0,calc(-100% - 5px),0); // translate a little extra so shadow doesn't show
+  z-index: 999;
   background: $menuBg;
-  padding: 0 $pageMarginLg; // large margin on menu
+  padding: 0 grid(3);
   display:block;
   transition: transform 0.4s ease;
   box-shadow: $menuShadow;
-  overflow:auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: scroll;
   &.expanded {
-    transform: translate3d((-1*($menuWidth+5px)),0,0);
+    transform: translate3d(0,0,0);
+  }
+  &.no-animation {
+    transition: none;
   }
 }
 // boost size on tablet+
 @media(min-width: $gtMobile) {
   .app-menu {
-    width: $menuWidthLg;
-    right: -1*($menuWidthLg+5px);
     padding: 0 grid(5);
-    &.expanded {
-      transform: translate3d((-1*($menuWidthLg+5px)),0,0);
-    }
   }
 }
 
@@ -37,8 +36,8 @@ $menuMargin: grid(5);
 // ---
 .app-menu .menu-close {
   position:absolute;
-  top: grid(1);
-  right: grid(1);
+  top: grid(3);
+  right: grid(4.75);
   width: grid(6);
   height: grid(6);
   .icon { 
@@ -70,23 +69,36 @@ $menuMargin: grid(5);
 .site-navigation {
   @include altFont(18px);
   letter-spacing: 0.6px;
-  //margin-top: $menuMargin;
-  margin-top: 46px;
+  margin-top: grid(10);
+  margin-bottom: grid(4);
   line-height: 1.42857143;
   ul {
     list-style: none;
-    margin:0;
-    padding:0;
+    padding-left: 0;
+    margin-bottom: 0;
   }
   li {
     margin-bottom: grid(1.5);
-    &:nth-of-type(11), &:nth-of-type(12), &:nth-of-type(13) {
-      &:before {
-        content: "•  ";
-        color: #fff;
-        margin-right: 6px;
-      }
-    }
+  }
+  > ul > li:first-child {
+    width: 100%;
+    margin-bottom: grid(4.5);
+  }
+  ul > div > li > div {
+    @include altFont(12px);
+    color: $white;
+    text-transform: uppercase;
+    padding-top: grid(2.5);
+    margin-bottom: grid(2.5);
+    border-top: grid(0.5) solid $white;
+  }
+  .nested {
+    margin-left: 15px;
+    padding-left: grid(3.75);
+    background-image: url('/img/arrow--right.svg');
+    background-size: 10px;
+    background-position: left center;
+    background-repeat: no-repeat;
   }
   a {
     display: inline;
@@ -96,31 +108,22 @@ $menuMargin: grid(5);
       color: $white;
       border-bottom-color: $white;
       text-decoration: none;
-      box-shadow:none;
-      outline:0;
+      box-shadow: none;
+      outline: 0;
     }
     
   }
 }
 // boost size on tablet+
-@media(min-width: $gtMobile) and (min-height: 680px) {
+@include media-breakpoint-up(lg) {
   .app-menu .site-navigation {
-    @include altFont(18px);
+    @include altFont(20px);
     letter-spacing: 0.7px;
     li { 
       margin-bottom: grid(2.5);
-      &:nth-of-type(11), &:nth-of-type(12), &:nth-of-type(13) {
-        //margin-left: 12px;
-        &:before {
-          content: "•  ";
-          color: #fff;
-          margin-right: 6px;
-        }
-      }
      }
   }
 }
-
 
 .language-select.dropdown {
   display: flex;
@@ -244,18 +247,19 @@ $menuMargin: grid(5);
   }
 }
 
+.app-menu-footer {
+  width: 100%;
+  position: relative;
+}
 // Social media links
 // ---
 .social-media-links {
-  position:absolute;
-  bottom:0;
-  left:0;
-  padding: 0 0 $pageMargin $pageMargin;
   list-style: none;
   margin:0;
-  display:flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  li {
+    display: table;
+    float: left;
+  }
   // border button overrides
   .btn.btn-border {
     padding: grid(1);
@@ -269,26 +273,15 @@ $menuMargin: grid(5);
   }
 }
 
-@media(min-width: $gtMobile) {
-  .social-media-links {
-    left: grid(2);
-    bottom: grid(2); 
-  }
-}
-
 // Copyright Message
 // ---
 .menu-copyright {
-  position:absolute;
-  bottom: $pageMarginLg;
-  right: $pageMarginLg;
   @include defaultFont(11px);
   color: $menuGrey;
 }
 
 @media(min-width: $gtMobile) {
   .menu-copyright { 
-    bottom: grid(5); 
     font-size:14px;
   }
 }
