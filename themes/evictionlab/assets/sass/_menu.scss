@@ -119,6 +119,9 @@ $menuMargin: grid(5);
   .app-menu .site-navigation {
     @include altFont(20px);
     letter-spacing: 0.7px;
+    ul > div > li > div {
+      @include altFont(14px);
+    }
     li { 
       margin-bottom: grid(2.5);
      }
