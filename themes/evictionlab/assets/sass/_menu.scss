@@ -84,7 +84,7 @@ $menuMargin: grid(5);
     width: 100%;
     margin-bottom: grid(4.5);
   }
-  ul > li > div {
+  ul > div > li > div {
     @include altFont(12px);
     color: $white;
     text-transform: uppercase;
@@ -115,9 +115,9 @@ $menuMargin: grid(5);
   }
 }
 // boost size on tablet+
-@media(min-width: $gtMobile) and (min-height: 680px) {
+@include media-breakpoint-up(lg) {
   .app-menu .site-navigation {
-    @include altFont(18px);
+    @include altFont(20px);
     letter-spacing: 0.7px;
     li { 
       margin-bottom: grid(2.5);
