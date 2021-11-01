@@ -33,7 +33,7 @@ At the Eviction Lab we share Taylor’s concern. Could being forced to leave you
 
 To answer this question, we merged two very large data sets: [our data]('https://evictionlab.org/map/#/2016?geography=states&type=er) on millions of court-ordered evictions from 2013 to 2015 and voter file data{{< sup 1 >}} on millions of registered Americans’ turnout in the 2016 presidential election.
  
-Taylor’s intuition is correct, as we explain in our latest study published in <a href="#" target="_blank" rel="noreferrer noopener">_Politics & Society_</a>. Eviction plays a powerful role in depressing community voter turnout: fewer people turn out to vote in communities where there has been forced displacement through evictions. This is true even after accounting for factors like poverty that are known to affect eviction and voting.  
+Taylor’s intuition is correct, as we explain in our latest study published in <a href="https://journals.sagepub.com/doi/10.1177/00323292211050716" target="_blank" rel="noreferrer noopener">_Politics & Society_</a>. Eviction plays a powerful role in depressing community voter turnout: fewer people turn out to vote in communities where there has been forced displacement through evictions. This is true even after accounting for factors like poverty that are known to affect eviction and voting.  
 </div>
 </div>
 </div>
