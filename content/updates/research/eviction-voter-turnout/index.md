@@ -1,6 +1,6 @@
 ---
 childof: research
-draft: true
+draft: false
 contenttype: updates
 contentcat: research
 featured: true
@@ -13,9 +13,9 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Could being forced to leave your home have an impact on your capacity or your interest to vote? We examined if neighborhoods facing evictions were less likely to vote. 
 listSummary: 'Could being forced to leave your home have an impact on your capacity or your interest to vote? We examined if neighborhoods facing evictions were less likely to vote. ' 
 socialDescription:  Could being forced to leave your home have an impact on your capacity or your interest to vote? We examined if neighborhoods facing evictions were less likely to vote. 
-fbImage: getty-test.jpg
-twImage: getty-test.jpg
-image: getty-test2.jpg
+fbImage: eviction-voter-turnout-social.jpg
+twImage: eviction-voter-turnout-social.jpg
+image: eviction-voter-turnout-social.jpg
 url: /eviction-voter-turnout
 aliases:
 ---
@@ -59,11 +59,11 @@ This study consequently finds: when America votes, housing insecurity matters. E
 
 Research finds {{< extlink "eviction causes poverty" "https://www.google.com/books/edition/Evicted/-QYZCgAAQBAJ?hl=en&gbpv=0" >}} for individuals and communities. We hypothesized eviction could reduce voting in multiple ways. Renters threatened or displaced by eviction often face job loss and the threat of homelessness. In that scenario, voting becomes less of a priority in order to focus on an immediate and universal basic human need: shelter. These hardships—and their political fallout—might spill over to neighbors if they strain their own resources when lending money, caregiving support, or shelter. 
 
-Second, eviction increases social isolation. Losing your home increases isolation by moving families further from family, friend, neighbor, and school networks. When neighbors know and trust each other for years, they can share information and encourage one another to vote. When neighbors lose homes and are forced out of a neighborhood, local community networks suffer. 
+Additionally, eviction increases social isolation. Losing your home increases isolation by moving families further from family, friend, neighbor, and school networks. When neighbors know and trust each other for years, they can share information and encourage one another to vote. When neighbors lose homes and are forced out of a neighborhood, local community networks suffer. 
 
 We ran two additional tests to evaluate how eviction causes lower voter turnout. First, we explored the role of time. Do recent evictions have a greater impact on voting than evictions years ago? We found: the recent eviction rate (2015) had greater influence on voter turnout than the historical, average eviction rate (2013-2015). 
 
-Third, we found that the effect of the eviction rate (which measures the rate of renters’ court-based forced moves in a neighborhood) was stronger than that of the eviction filing rate (which measures the rate at which landlords initiate the eviction process in court). This suggests that eviction affects voter turnout primarily through the forced, physical removal of families from their homes—rather than its threat alone. 
+Second, we found that the effect of the eviction rate (which measures the rate of renters’ court-based forced moves in a neighborhood) was stronger than that of the eviction filing rate (which measures the rate at which landlords initiate the eviction process in court). This suggests that eviction affects voter turnout primarily through the forced, physical removal of families from their homes—rather than its threat alone. 
 
 
 What this means: Eviction’s influence over voting stems from its immediate and significant consequences: finding shelter, relocating, the complications of (re)registering to vote, and the strain of losing supportive family, friend, and neighborhood networks. At the same time, proactive policy interventions that keep renters in their homes and support voters’ access to the polls could limit eviction’s harmful consequences.  
@@ -82,7 +82,7 @@ By identifying the political consequences of the ongoing eviction crisis, we sho
 1. Our results suggest that more people would vote if stably housed. To enhance democratic participation, policymakers should invest in interventions aimed at reducing eviction. This may include supporting the civil right to counsel and a universal right to housing assistance.
 2. We also find same-day and Election Day registration may weaken eviction’s negative political influence. These policies may remove barriers to the ballot box, particularly for citizens experiencing housing insecurity. State and federal policymakers seeking to support voting should consider how policies can support voters living in communities marked by eviction. Community organizers may also evaluate and invest in grassroot efforts focused on voter mobilization in neighborhoods experiencing evictions. 
 3. New voter restrictions and the absence of same-day registration, on the other hand, strengthen eviction’s damaging influence. Restrictions and barriers only exacerbate the immense burdens people face in the fallout of an eviction. Communities seeking to reduce democratic inequality should oppose laws that make voting harder. 
-4. Finally, we call for further research on the link between eviction and voting. Researchers should examine how eviction affects individuals with direct and indirect experiences of loss of home in both local elections foreign elections.
+4. Finally, we call for further research on the link between eviction and voting. Researchers should examine how eviction affects individuals with direct and indirect experiences of loss of home in both local elections and foreign elections.
 
 {{< blogfootnotes 
 
