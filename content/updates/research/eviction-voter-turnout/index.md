@@ -37,7 +37,7 @@ Taylor’s intuition is correct, as we explain in our latest study published in 
 </div>
 </div>
 </div>
-<div style="max-width: 1200px;" class="mx-auto">
+<div style="max-width: 1200px;" class="mx-auto px-2">
 
 {{< inlinesvg title="One-Year Eviction Model Coefficient Plot" svg="/content/updates/research/eviction-voter-turnout/eviction-voter-turnout.svg"  >}}
 
