@@ -1,6 +1,6 @@
 ---
 childof: research
-draft: true
+draft: false
 contenttype: updates
 contentcat: research
 featured: true
@@ -13,8 +13,9 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: Could being forced to leave your home have an impact on your capacity or your interest to vote? We examined if neighborhoods facing evictions were less likely to vote. 
 listSummary: 'Could being forced to leave your home have an impact on your capacity or your interest to vote? We examined if neighborhoods facing evictions were less likely to vote. ' 
 socialDescription:  Could being forced to leave your home have an impact on your capacity or your interest to vote? We examined if neighborhoods facing evictions were less likely to vote. 
-fbImage: eviction-voter-turnout-social.png
-twImage: eviction-voter-turnout-social.png
+fbImage: getty-test.jpg
+twImage: getty-test.jpg
+image: getty-test2.jpg
 url: /eviction-voter-turnout
 aliases:
 ---
@@ -26,8 +27,6 @@ aliases:
 In her home state of California, Taylor has listened to a lot of conversations about race and voter suppression, but not enough about how housing challenges can dampen voter turnout. 
 
 “Faced with finding a roof over their heads, poor people would hardly make re-registering correctly a priority,” she said. “I suspect that the number of people who lose their vote because they’ve lost their housing would be significant.”
-
-{{< pullquote "Eviction has a powerful, negative influence on voting." >}}
 
 At the Eviction Lab we share Taylor’s concern. Could being forced to leave your home have an impact on your capacity or your interest to vote? If this was a factor, how big was it? With my colleague Matthew Desmond, principal investigator at the Eviction Lab, we examined if neighborhoods facing evictions were less likely to vote. 
 
@@ -53,10 +52,9 @@ For example, eviction plays a stronger role in decreasing voter turnout in state
 
 Our results demonstrate that eviction has a powerful, negative influence on voting. To double check our results, we used another methodological approach called an "instrumental variables" strategy. We found that the conclusions stand: Eviction depressed voter turnout in the 2016 presidential election.
 
+{{< pullquote "Eviction has a powerful, negative influence on voting." >}}
+
 This study consequently finds: when America votes, housing insecurity matters. Eviction—like {{< extlink "poverty" "https://www.jstor.org/stable/2939041" >}}, {{< extlink "foreclosure" "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6237.2012.00889.x" >}}, and {{< extlink "incarceration" "https://press.uchicago.edu/ucp/books/book/chicago/T/bo16382248.html" >}}—makes it hard for communities to vote. Yet our results also prompt questions about why eviction keeps communities away from the polls. 
-
-
-{{< pullquote "As eviction disproportionately affects low-income, predominantly-Black and Latinx communities, it is likely diminishing the power of low income, Black, and Latinx voters." >}}
 
 
 Research finds {{< extlink "eviction causes poverty" "https://www.google.com/books/edition/Evicted/-QYZCgAAQBAJ?hl=en&gbpv=0" >}} for individuals and communities. We hypothesized eviction could reduce voting in multiple ways. Renters threatened or displaced by eviction often face job loss and the threat of homelessness. In that scenario, voting becomes less of a priority in order to focus on an immediate and universal basic human need: shelter. These hardships—and their political fallout—might spill over to neighbors if they strain their own resources when lending money, caregiving support, or shelter. 
@@ -67,7 +65,10 @@ We ran two additional tests to evaluate how eviction causes lower voter turnout.
 
 Third, we found that the effect of the eviction rate (which measures the rate of renters’ court-based forced moves in a neighborhood) was stronger than that of the eviction filing rate (which measures the rate at which landlords initiate the eviction process in court). This suggests that eviction affects voter turnout primarily through the forced, physical removal of families from their homes—rather than its threat alone. 
 
+
 What this means: Eviction’s influence over voting stems from its immediate and significant consequences: finding shelter, relocating, the complications of (re)registering to vote, and the strain of losing supportive family, friend, and neighborhood networks. At the same time, proactive policy interventions that keep renters in their homes and support voters’ access to the polls could limit eviction’s harmful consequences.  
+
+{{< pullquote "As eviction disproportionately affects low-income, predominantly-Black and Latinx communities, it is likely diminishing the power of low income, Black, and Latinx voters." >}}
 
 
 The United States is at a critical juncture: housing has become more and more expensive to the point of being unreachable for many. At the same time, some policymakers are making it harder to vote and participate in our democracy.
