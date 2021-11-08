@@ -6,7 +6,7 @@ contentcat: research
 featured: true
 researchtype: elresearch
 title: Eviction Depressed Voter Turnout in the 2016 Presidential Election
-date: 2021-10-31T16:46:40.089Z
+date: 2021-11-08T00:46:40.089Z
 postauthorname: Gillian Slee 
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
