@@ -21,7 +21,7 @@ jobs:
           if [[ $GITHUB_REF == 'refs/heads/production' ]]; then
               echo "::set-output name=S3_BUCKET::eviction-lab-website"
               echo "::set-output name=CLOUDFRONT_ID::${{ secrets.AWS_CLOUDFRONT_ID_PROD }}"
-          else
+          elif [[ $GITHUB_REF == 'refs/heads/production' ]]; then
               echo "::set-output name=S3_BUCKET::eviction-lab-website-staging"
               echo "::set-output name=CLOUDFRONT_ID::${{ secrets.AWS_CLOUDFRONT_ID_STAGING }}"
           fi
@@ -58,8 +58,6 @@ jobs:
       - name: Update ETS Date
         run: |
           python scripts/update-ets-date.py
-          # git remote set-url origin ${{ secrets.ssh }}
-          # git status
           git add .
           git commit -m "Chore(ETS): Auto-increment date"
           git fetch origin ets-last-update-action
