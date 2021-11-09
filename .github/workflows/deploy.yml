@@ -54,7 +54,17 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
-      - run: python scripts/update-ets-date.py
+
+      - name: Update ETS Date
+        run: |
+          python scripts/update-ets-date.py
+          git config user.email "coreytegeler@gmail.com"
+          git config user.name "coreytegeler"
+          git add .
+          git commit -m "Chore(ETS): Auto-increment date"
+          git fetch origin ets-last-update-action
+          git push origin HEAD:ets-last-update-action
+          
       - run: hugo
 
       - name: Deploy
