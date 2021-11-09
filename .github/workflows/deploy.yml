@@ -59,6 +59,8 @@ jobs:
       - name: Update ETS Date
         run: |
           python scripts/update-ets-date.py
+          git config user.email "coreytegeler@gmail.com"
+          git config user.name "coreytegeler"
           git add .
           git commit -m "Chore(ETS): Auto-increment date"
           git fetch origin ets-last-update-action
