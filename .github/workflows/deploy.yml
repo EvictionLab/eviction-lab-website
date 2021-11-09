@@ -5,6 +5,7 @@ on:
     branches:
       - staging
       - production
+      - ets-last-update-action
 
 jobs:
   deploy:
