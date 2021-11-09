@@ -62,9 +62,13 @@ jobs:
           git config user.email "coreytegeler@gmail.com"
           git config user.name "coreytegeler"
           git add .
-          git commit -m "Chore(ETS): Auto-increment date"
-          git fetch origin ets-last-update-action
-          git push origin HEAD:ets-last-update-action
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Chore(ETS): Auto-increment date"
+            git fetch origin ets-last-update-action
+            git push origin HEAD:ets-last-update-action
+          else
+            echo "No changes to commiit";
+          fi
 
       - run: hugo
 
