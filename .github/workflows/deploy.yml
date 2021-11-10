@@ -16,17 +16,6 @@ jobs:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Set bucket for branch
-        id: deploy-bucket
-        run: |
-          if [[ $GITHUB_REF == 'refs/heads/production' ]]; then
-              echo "::set-output name=S3_BUCKET::eviction-lab-website"
-              echo "::set-output name=CLOUDFRONT_ID::${{ secrets.AWS_CLOUDFRONT_ID_PROD }}"
-          elif [[ $GITHUB_REF == 'refs/heads/production' ]]; then
-              echo "::set-output name=S3_BUCKET::eviction-lab-website-staging"
-              echo "::set-output name=CLOUDFRONT_ID::${{ secrets.AWS_CLOUDFRONT_ID_STAGING }}"
-          fi
-
       - run: cp themes/evictionlab/layouts/robots.prod.txt themes/evictionlab/layouts/robots.txt
         if: github.ref == 'refs/heads/production'
 
@@ -71,6 +60,17 @@ jobs:
           fi
 
       - run: hugo
+
+       - name: Set bucket for branch
+        id: deploy-bucket
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/production' ]]; then
+              echo "::set-output name=S3_BUCKET::eviction-lab-website"
+              echo "::set-output name=CLOUDFRONT_ID::${{ secrets.AWS_CLOUDFRONT_ID_PROD }}"
+          else
+              echo "::set-output name=S3_BUCKET::eviction-lab-website-staging"
+              echo "::set-output name=CLOUDFRONT_ID::${{ secrets.AWS_CLOUDFRONT_ID_STAGING }}"
+          fi
 
       - name: Deploy
         uses: InscribeAI/s3-sync-action@master
