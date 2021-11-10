@@ -61,7 +61,7 @@ jobs:
 
       - run: hugo
 
-       - name: Set bucket for branch
+      - name: Set bucket for branch
         id: deploy-bucket
         run: |
           if [[ $GITHUB_REF == 'refs/heads/production' ]]; then
