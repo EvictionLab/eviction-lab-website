@@ -1,0 +1,89 @@
+<!-- Left panel ---------------------->
+
+<div class="d-block" id="featured-updates">
+    <div class="row mx-0 subfeature-panel pt-6 pb-4 py-md-4 pl-md-1 pl-lg-0">
+      <div class="col-12 col-lg-8">
+        <div class="bordered-header border-0 pt-0 blue mb-3 mx-3">
+          Eviction Tracking System
+        </div>
+        <div class="col-12 d-flex mb-5">
+          <div class="col-3"> 
+            <a href="/eviction-tracking">
+                  <div class="feature-image image-ets mt-1" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
+            </a>
+          </div>
+          <div class="col-9">
+            <a href="/eviction-tracking" class="title title-large">
+              See up-to-date maps, charts and data on eviction filings in select cities.
+            </a>
+          </div>
+        </div>
+        <div class="bordered-header blue mb-3 mx-3">
+          Blog & Research
+        </div>
+        <div class="col-12 d-flex flex-wrap">
+          {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
+            <div class="col-3">
+              <a href="{{ .RelPermalink }}">
+                {{ $img := .Params.fbImage }}
+                {{ with .Resources.GetMatch $img }}
+                  {{ $processed := .Fit "600x400 q50 jpg" }}
+                    <div class="feature-image mt-1" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                {{ end }}
+              </a>
+            </div>
+            <div class="col-9">
+              <a href="{{ .RelPermalink }}" class="title mb-1">
+                {{ .Params.title }}
+              </a>
+              <p>{{ .Params.listSummary }}</p>
+            </div>
+          {{ end }}
+          <div class="col-12">
+            {{ range first 5 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
+            <a class="d-block title mb-2" href="{{ .RelPermalink }}">
+              {{ .Params.title }}
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+  
+  <!-- Right panel ---------------->
+  
+      <div class="col-12 col-lg-4 pl-0 pr-3">
+        <div class="bordered-header blue mb-3">
+          Reporting from our partners
+        </div>
+        <div class="col-12 pl-0">
+          {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
+            <div class="post-cat mb-1">
+              <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
+            </div>
+            <a href="{{ .Params.link }}" class="title mb-1" target="_blank" rel="noreferrer noopener">
+              {{ .Params.title }}
+            </a>
+            <p>{{ .Params.listSummary }}</p>
+            {{ if .Params.thumb }}
+              {{ $link := .Params.link }}
+              {{ $img := .Params.thumb }}
+              {{ with .Resources.GetMatch $img }}
+                {{ $processed := .Fill "960x640 q70 jpg Center" }}
+                  <a href="{{ $link }}" target="_blank" rel="noreferrer noopener"><div class="mw-100 mb-2 feature-image image-large" style="background-image: url('{{ $processed.RelPermalink }}')"></div>
+              {{ end }}
+            {{ end }} 
+          {{ end }}
+        </div>
+        <div class="col-12 pl-0">
+          {{ range first 3 (after 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) )}}
+            <div class="post-cat my-1">
+              <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
+            </div>
+            <a href="{{ .Params.link }}" class="title title-small mb-2" target="_blank" rel="noreferrer noopener">
+              {{ .Params.title }}
+            </a>
+          {{ end }}  
+        </div>
+      </div>
+    </div>
+  </div>

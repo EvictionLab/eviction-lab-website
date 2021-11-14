@@ -1,264 +1,29 @@
 {{ partial "header" . }}
 
-<!-- ********** splash section ********** -->
+<!-- ********** hero section ********** -->
 
-
-<div id="hp-hero" class="row mx-auto mt-0 mt-md-4 mt-lg-5  mb-lg-7 hp-hero">
-  <div class="col-12 col-md-11 col-md-12 px-0 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-block d-lg-flex flex-column flex-lg-row">
-      <div class="col-12 col-lg-6 col-xl-7 hp-hero__img"></div>
-      <div class="col-12 col-lg-6 col-xl-5 px-2 px-md-0 pl-lg-4 pl-xl-5 hp-hero__copy d-flex flex-column justify-content-lg-center justify-content-xl-end">
-        <h1 class="mt-3 mb-3 mt-md-3 mb-md-0 mt-lg-2 mt-xl-5 mb-md-2 mb-lg-2 mb-xl-3">
-         {{ i18n "splashHeader1" }} <br class="d-none d-lg-block"/> {{ i18n "splashHeader2" }} <br class="d-none d-lg-block"/> {{ i18n "splashHeader3" }}
-        </h1>
-        <p class="mb-3 mb-md-4 mb-lg-3 mb-xl-6">{{ i18n "splashBody" }}</p>
-        <div class="d-block d-smm-flex flex-wrap align-items-start mb-5 mb-lg-0">   
-          <a class="btn smoothScroll mb-2 mb-mm-0 mb-lg-2 mb-xl-0 mr-1 mr-md-2 mr-lg-1 mr-xl-2" href="#home-menu">{{ i18n "cta" }}</a>
-          <a class="btn" href="/updates">{{ i18n "cta2" }}</a>
-        </div>       
-      </div>
+<div id="home-hero">
+  <div class="row mx-3 align-items-end h-100">
+    <div class="col-12 col-lg-7 mb-12">
+      <h1 class="mb-3">In a typical year, landlords file 3.7 million eviction cases.</h1>
+      <p>The Eviction Lab at Princeton University creates data, interactive tools, and research to help neighbors and policymakers understand the eviction crisis.</p>
+    </div>
   </div>
 </div>
 
-<!-- ********** carousel menu section ********** -->
 
-<!-- Tablet landscape and up -->
-<div id="hp-carousel-4slide" class="hp-carousel carousel slide d-none d-lg-block" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
-  <div class="carousel-inner">
-    <ol class="carousel-indicators">
-      <li data-target="#hp-carousel-4slide" data-slide-to="0" class="active"></li>
-      <li data-target="#hp-carousel-4slide" data-slide-to="1" class=""></li>
-    </ol>
-    <div class="carousel-item active">
-      <div class="row">
-        <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{/* range first 4 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) ) */}}
-          {{ range first 4 (where .Site.Pages "Params.featured" true ) }}
-            <div class="col-3">
-              {{ if ne .Params.contentcat "data" }}
-                <a href="{{ .RelPermalink }}">
-                  {{ $img := .Params.fbImage }}
-                  {{ with .Resources.GetMatch $img }}
-                    {{ $processed := .Fit "600x400 q50 jpg" }}
-                      <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                  {{ end }}
-                </a>
-              {{ else }}
-              <a href="{{ .RelPermalink }}">
-                    <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
-              </a>
-              {{ end }}
-              <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-              {{ if eq .Params.contentcat "data" }}
-                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
-              {{ else }}
-                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
-              {{ end }}
-            </div>
-          {{ end }}
-        </div>  
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
-          {{ range first 3 (after 4 (where .Site.Pages "Params.featured" true ) ) }}
-            <div class="col-3">
-              {{ if ne .Params.contentcat "data" }}
-                <a href="{{ .RelPermalink }}">
-                  {{ $img := .Params.fbImage }}
-                  {{ with .Resources.GetMatch $img }}
-                    {{ $processed := .Fit "600x400 q50 jpg" }}
-                      <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                  {{ end }}
-                </a>
-              {{ else }}
-              <a href="{{ .RelPermalink }}">
-                    <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
-              </a>
-              {{ end }}
-              <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-              {{ if eq .Params.contentcat "data" }}
-                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
-              {{ else }}
-                <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
-              {{ end }}
-            </div>
-          {{ end }}
-          <div class="col-3">
-            <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
-              <a class="viewmore" href="/updates"> </a> 
-                <div class="viewmore__text mx-2">
-                  <div>VIEW MORE <br> RECENT ANALYSIS</div>
-                  <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                </div>  
-            </div>
-        </div>  
-        </div>  
-      </div>
-    </div>
-    <a class="carousel-control-prev inactive" href="#hp-carousel-4slide" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#hp-carousel-4slide" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-<!-- Mobile carousel -->
-<div id="hp-carousel-mobile" class="hp-carousel-mobile row mb-2 mb-md-5 mb-lg-0">
- <div class="col-12 px-md-5 d-flex">
-  {{ range first 7 (where .Site.Pages "Params.featured" true ) }}
-  <div class="col-8 col-md-5 hp-carousel-mobile__slide">
-    {{ if ne .Params.contentcat "data" }}
-        <a href="{{ .RelPermalink }}">
-          {{ $img := .Params.fbImage }}
-          {{ with .Resources.GetMatch $img }}
-            {{ $processed := .Fit "600x400 q50 jpg" }}
-              <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-          {{ end }}
-        </a>
-      {{ else }}
-      <a href="{{ .RelPermalink }}">
-            <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
-      </a>
-    {{ end }}    
-    <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
-    {{ if eq .Params.contentcat "data" }}
-      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
-    {{ else }}
-      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
-    {{ end }}
-  </div>
-{{ end }}
-  <div class="col-8 col-md-5">
-    <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
-      <a class="viewmore" href="/updates"> </a> 
-        <div class="viewmore__text mx-2">
-          <div>VIEW MORE <br> RECENT ANALYSIS</div>
-          <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-        </div>  
-    </div>
-</div>  
- </div>
-</div>
+<!-- ********** featured updates block ******************* -->
 
+{{ partial "homepage-featured-updates" . }}
 
 
 <!-- ********** pictorial menu section ********** -->
 
-  <div id="sub-splash-gateway"><a id="home-menu"></a>
-<!--- Main features row ------------------------------------------>    
-    <div id="main-features" class="row mx-0 feature-panel"> 
-      <div class="col-12 col-md-8 col-lg-7 col-xl-6 mx-auto my-5 my-md-5 my-lg-8 px-3 px-md-2">
-        <div id="interactive-tools-intro" class="d-flex justify-content-center align-items-center mb-3"><img class="mr-1 mr-md-2 header-icon" alt="Interactive Tools icon" src="/images/icons/pm-research3-blue.svg"><h2 class="policies-intro text-center">{{ i18n "toolsHeading" }}</h2></div>
-        <p class="text-center mb-0">{{ i18n "toolsSub" }}</p>
-      </div>
-      <div class="w-100"></div>
-        <div id="feature-map" class="col-12 col-md-6 feature main-feature px-0 d-flex justify-content-end justify-content-mm-center justify-content-md-end">
-            <a class="wraplink" href="/map/" aria-label="Go to the map"></a>  
-            <div class="col-12 col-mm-8 col-md-11 col-lg-10 col-xxxl-9 d-flex flex-column justify-content-center px-4 pl-md-0 px-lg-4 pr-md-4">
-                    <div class="wrapper">
-                        <h3>{{ i18n "mapData" }}</h3>
-                        <p>{{ i18n "mapSub" }}</p>
-                        <a class="sublink" href="/map/">{{ i18n "mapCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                    </div> 
-                
-            </div>     
-        </div>
-        <div id="feature-rankings" class="col-12 col-md-6 feature main-feature px-0 d-flex justify-content-start justify-content-mm-center justify-content-md-start">
-          <a class="wraplink" href="/rankings/" aria-label="Go to rankings"></a>  
-            <div class="col-12 col-mm-8 col-md-10 offset-md-1 d-flex flex-column justify-content-center px-4 pl-md-0 pr-md-2 px-lg-2">
-                    <div class="wrapper">
-                        <h3>{{ i18n "rankingsHead" }}</h3>
-                        <p>{{ i18n "rankingsSubhead" }}</p>
-                        <a class="sublink" href="/rankings/">{{ i18n "rankingsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                    </div> 
-                
-            </div>  
-        </div>
-    </div>
-<!--- COVID features rows ------------------------------------------>    
-    <div id="covid-gateway">
-      <div class="row mx-0 subfeature-panel mb-5 d-flex">
-        <div class="col-12 col-md-8 col-lg-10 col-xxxl-9 mx-auto my-5 my-md-5 my-lg-8 px-3 px-md-2">
-          <div id="covid-intro" class="d-flex align-items-center mb-3"><img class="mr-1 mr-md-2 header-icon" alt="COVID-19 icon" src="/images/icons/covid-mask.svg"><h2 class="policies-intro mb-0">{{ i18n "covidHeading" }}</h2></div>
-      
-          <p id="covid-gateway__para" class="mb-0 ">{{ i18n "covidSub" }}</p>
-        </div>
-        <div class="col-11 col-mm-8 col-md-12 col-lg-10 col-xxxl-9 mx-auto d-md-flex col-2-wrap">
-            <div class="feature d-flex flex-column px-0 mb-6 mb-md-0 mr-md-1 mr-lg-2">
-                <div class="bg-wrapper-1">
-                  <a class="wraplink" href="/eviction-tracking/" aria-label="Go to ETS"></a>
-                    <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
-                        <h3>{{ i18n "etsHead" }}</h3>
-                        <p>{{ i18n "etsSub" }}</p>
-                        <a class="sublink" href="/eviction-tracking/">{{ i18n "etsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                    </div>  
-                </div>       
-            </div>
-            <div class="feature d-flex flex-column justify-content-center px-0 ml-md-1 ml-lg-2">
-                <div class="bg-wrapper-2">
-                  <a class="wraplink" href="/covid-policy-scorecard" aria-label="Go to the scorecard"></a>
-                    <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
-                        <h3>{{ i18n "scorecardHead" }}</h3>
-                        <p>{{ i18n "scorecardSub" }}</p>
-                        <a class="sublink" href="/covid-policy-scorecard">{{ i18n "scorecardCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                    </div>
-                </div>
-            </div>
-        </div>  
-      </div>
-      <div class="row mx-0 subfeature-panel mb-7 mb-md-10 mb-xl-11 mb-xxxl-12">
-        <div class="col-11 col-mm-8 col-md-12 col-lg-10 col-xxxl-9 mx-auto d-md-flex col-2-wrap">
-            <div class="feature d-flex flex-column justify-content-center px-0 mb-6 mb-md-0 mr-md-1 mr-lg-2">
-                <div class="bg-wrapper-3">
-                  <a class="wraplink" href="/covid-eviction-policies/" aria-label="Go to policies"></a> 
-                    <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
-                        <h3>{{ i18n "policiesHead" }}</h3>
-                        <p>{{ i18n "policiesSub" }}</p>
-                        <a class="sublink" href="/covid-eviction-policies/">{{ i18n "policiesCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                    </div>  
-                </div>       
-            </div>
-            <div class="feature d-flex flex-column justify-content-center px-0 ml-md-1 ml-lg-2">
-                <div class="bg-wrapper-4">
-                  <a class="wraplink" href="https://justshelter.org" target="_blank" aria-label="Go to Just Shelter website"></a> 
-                    <div class="text-wrapper mt-18 mt-md-20 mt-xl-25">
-                        <h3>{{ i18n "jsHead" }}</h3>
-                        <p>{{ i18n "jsSub" }}</p>
-                        <a class="sublink" href="https://justshelter.org" target="_blank">{{ i18n "jsCTA" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-                    </div>
-                </div>
-            </div>
-        </div>  
-      </div>
-    </div>
+{{ partial "homepage-interactives-block" . }}
 
-<!-- Reporting section -->
-  <div class="d-block" id="updates-section">
-    <div class="row mx-0 subfeature-panel pt-6 pb-4 py-md-8 py-xl-9 pl-md-1 pl-lg-0">
-      <div class="col-12 col-md-10  col-lg-12 px-lg-5 col-xl-10 px-xl-2 col-xxxl-9 mx-auto mx-auto d-flex flex-wrap">
-        <div class="col-12 px-0 mb-4 mb-lg-5 d-flex flex-column flex-md-row align-items-center">
-          <img class="mr-1 mr-md-2 mt-1 mt-md-0 header-icon mb-2 mb-md-0" alt="" src="/images/icons/reporting-icon.svg">
-          <h2 class="text-center text-md-left">Reporting From Our Partners</h2>
-        </div>
-        {{ if eq .Site.Language.LanguageName "Español" }}
-          {{ range .Translations }}
-            {{ partial "reporting" . }}
-          {{ end}}  
-        {{ end }} 
-        {{ if eq .Site.Language.LanguageName "English" }}
-            {{ partial "reporting" . }}
-        {{ end }}   
-          <div class="col-12 px-0 px-lg-2">
-            <a class="sublink mw-100 d-block d-md-none text-center text-md-left mb-2 mb-md-0 mt-4 mt-lg-5  px-0" href="/updates/reporting">SEE ALL ARTICLES <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-          </div> 
-        </div>         
-      </div>
-    </div>    
-  </div>
+{{ partial "homepage-resources-block" . }}
+
+{{/* partial "homepage-reporting-block" . */}}
 
   <!-- Other pages links -------------->
   <div id="other-pages">

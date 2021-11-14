@@ -1,0 +1,184 @@
+.header-logo-img-white {
+    display: none;
+}
+.page-the-eviction-lab {
+
+// HEADER ---------------------------    
+    header {
+        .header-wrapper {
+            background: transparent;
+            transition: background 0.6s ease;
+            box-shadow: none;
+        }
+        .header-logo-img-white {
+            display: block;
+        }
+        .header-logo-img {
+            display: none;
+        }
+        .language-select.dropdown .el-select.dropdown-toggle {
+            color: #fff;
+            .fa {
+                color: #fff;
+            }
+        }
+        .header-icons .btn.btn-icon.el-button-menu {
+            .icon, span {
+                fill: #fff;
+                color: #fff;
+            }
+        } 
+    }
+    header.condensed {
+        .header-wrapper {
+            transition: background 0.5s ease;
+            background: #fff;
+            box-shadow: 0 3px 6px 0 rgba(145, 145, 145, 0.23);
+        }
+        .header-logo-img-white {
+            display: none;
+        }
+        .header-logo-img {
+            display: block;
+        }
+        .language-select.dropdown .el-select.dropdown-toggle {
+            color: #050403;
+            .fa {
+                color: #e24000;
+            }
+        }
+        .header-icons .btn.btn-icon.el-button-menu {
+            .icon, span {
+                fill: #e24000;
+                color: #e24000;
+            }
+        }
+        
+    }
+// HERO -------------------------------
+
+    #home-hero {
+        height: 600px;
+        background-color: black;
+        position: relative;
+        top: -80px;
+        margin-bottom: -80px;
+        h1 {
+            font-family: GT-Eesti-Display-Bold, sans-serif;
+            font-size: 4.8rem;
+            font-weight: normal;
+            line-height: 1.1;
+            color: #fff;
+        }
+        p {
+            color: #fff;
+        }
+    }
+
+// GENERAL TYPOGRPAPHY -------------------
+
+    .bordered-header {
+        max-width: none;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.6rem;
+        }
+    }
+    
+    .feature-image {
+        height: 130px;
+        background-size: cover;
+        background-position: center center;
+        transition: filter .3s ease;
+        &.image-ets {
+            height: 100%;
+        }
+        &.image-large {
+            height: 200px;
+        }
+    }
+    .title {
+        font-family: GT-Eesti-Display-Bold, sans-serif;
+        font-size: 1.8rem;
+        font-weight: normal;
+        line-height: 1.4;
+        color: #000;
+        transition: color .3s ease;
+        display: inline-block;
+        &.title-small {
+            @include media-breakpoint-up(lg) {
+                font-size: 1.7rem;
+            }
+        }
+        &.title-large {
+            @include media-breakpoint-up(lg) {
+                font-size: 4.2rem;
+                line-height: 1.2;
+            }
+        }
+        &:hover {
+            color: $color1;
+            text-decoration: none;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 2.6rem;
+        }
+    }
+    .cat-link {
+        font-size: 1.4rem;
+    }
+    .description {
+
+    }
+    .resources-img {
+        height: 200px;
+    }
+    .bg-1 { 
+        background-size: 125%;
+        @include media-breakpoint-up(md) {
+            background-size: 175%;
+        }  
+        @include media-breakpoint-up(lg) {
+            background-size: 100%;
+        }
+        background-repeat: no-repeat;    
+        background-image: url('/images/assets/graphics/scorecard-bg.jpg');
+        }
+    .bg-2 {
+        background-size: 180%;
+        
+        @include media-breakpoint-up(smm) {
+            background-size: 151%;
+        }
+        @include media-breakpoint-up(mm) {
+            background-size: 125%;
+        }
+        @include media-breakpoint-up(md) {
+            background-size: 153%;
+        } 
+        @include media-breakpoint-up(lg) {
+            background-size: 166%;
+        }
+        @include media-breakpoint-up(xl) {
+            background-size: 146%;
+        }
+        background-repeat: no-repeat; 
+            background-image: url('/images/assets/graphics/policies-bg.jpg');
+        }
+    .bg-3 { 
+        background-size: 178%;
+        @include media-breakpoint-up(smm) {
+            background-size: 151%;
+        }
+        @include media-breakpoint-up(mm) {
+            background-size: 125%;
+        }
+        @include media-breakpoint-up(md) {
+            background-size: 175%;
+        }  
+        @include media-breakpoint-up(lg) {
+            background-size: 140%;
+        }
+        background-repeat: no-repeat;    
+            background-image: url('/images/assets/graphics/resources-bg.jpg');
+        } 
+}
