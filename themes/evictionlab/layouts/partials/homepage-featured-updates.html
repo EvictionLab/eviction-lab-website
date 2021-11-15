@@ -18,8 +18,9 @@
             </a>
           </div>
         </div>
-        <div class="bordered-header blue mb-3 mx-3">
+        <div class="bordered-header blue mb-3 mx-3 d-flex justify-content-between">
           Blog & Research
+          <a class="see-all" href="/updates">SEE ALL</a>
         </div>
         <div class="col-12 d-flex flex-wrap">
           {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
@@ -52,8 +53,9 @@
   <!-- Right panel ---------------->
   
       <div class="col-12 col-lg-4 pl-0 pr-3">
-        <div class="bordered-header blue mb-3">
+        <div class="bordered-header blue mb-3 d-flex justify-content-between">
           Reporting from our partners
+          <a class="see-all" href="/updates">SEE ALL</a>
         </div>
         <div class="col-12 pl-0">
           {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}

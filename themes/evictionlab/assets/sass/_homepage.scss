@@ -83,7 +83,14 @@
             font-size: 1.6rem;
         }
     }
-    
+    .see-all {
+        color: $color4;
+        font-family: GT-Eesti-Display-Medium, sans-serif;
+        &:hover {
+            color: $color1;
+            text-decoration: none;
+        }
+    }
     .feature-image {
         height: 130px;
         background-size: cover;
@@ -111,7 +118,7 @@
         }
         &.title-large {
             @include media-breakpoint-up(lg) {
-                font-size: 4.2rem;
+                font-size: 4rem;
                 line-height: 1.2;
             }
         }
