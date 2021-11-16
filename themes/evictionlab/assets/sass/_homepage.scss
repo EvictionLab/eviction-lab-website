@@ -104,6 +104,9 @@
         height: 100%;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.46);
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 100%);
+        
     }
 
 // GENERAL TYPOGRPAPHY -------------------
@@ -115,7 +118,7 @@
         }
     }
     .see-all {
-        color: $color4;
+        color: #737373;
         font-family: GT-Eesti-Display-Medium, sans-serif;
         &:hover {
             color: $color1;
@@ -138,8 +141,8 @@
         font-family: GT-Eesti-Display-Bold, sans-serif;
         font-size: 1.8rem;
         font-weight: normal;
-        line-height: 1.4;
-        color: #000;
+        line-height: 1.2;
+        color: #242424;
         transition: color .3s ease;
         display: inline-block;
         &.title-small {
@@ -166,6 +169,9 @@
     }
     .description {
 
+    }
+    p {
+        font-size: 1.6rem;
     }
 
     // Map and rankings blocks --------------------------------------------
