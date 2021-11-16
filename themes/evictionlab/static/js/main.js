@@ -29,26 +29,47 @@ function setupScrollEnd() {
   var isScrolling;
   var headerWrapper = $('header');
 
+  
+  
   function toggleCondense() {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-      headerWrapper.addClass('condensed');
-      $('body').addClass('header-condensed');
-    } else {
-      headerWrapper.removeClass('condensed');
-      $('body').removeClass('header-condensed');
+    if ($( "body" ).hasClass( "page-the-eviction-lab" )) {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        headerWrapper.addClass('condensed');
+        $('body').addClass('header-condensed');
+      } else {
+        headerWrapper.removeClass('condensed');
+        $('body').removeClass('header-condensed');
+      };
+    };
+    if (!$( "body" ).hasClass( "page-the-eviction-lab" )) {
+      console.log('has the class');
+      if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        headerWrapper.addClass('condensed');
+        $('body').addClass('header-condensed');
+      } else {
+        headerWrapper.removeClass('condensed');
+        $('body').removeClass('header-condensed');
+      };
     }
     isScrolling = undefined;
   }
 
   window.addEventListener('scroll', function (event) {
-    if (isScrolling === undefined) {
-      toggleCondense();
-    } else {
-      window.clearTimeout(isScrolling);
-    }
+    if ($( "body" ).hasClass( "page-the-eviction-lab" )) {
+        toggleCondense();
+    };
+    if (!$( "body" ).hasClass( "page-the-eviction-lab" )) {
+      if (isScrolling === undefined) {
+        toggleCondense();
+      } else {
+        window.clearTimeout(isScrolling);
+      }
+    };
     isScrolling = setTimeout(toggleCondense, debounceTime);
   }, false);
-}
+} 
+
+//toggleCondense();
 
 // Update contact form action with selected email path
 function setupContactForm() {

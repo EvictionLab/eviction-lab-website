@@ -5,9 +5,13 @@
 
 // HEADER ---------------------------    
     header {
-        .header-wrapper {
+       // position: relative;
+        transform: translateY(-72px);
+        transition: transform .4s ease;
+       
+     /*   .header-wrapper {
             background: transparent;
-            transition: background 0.6s ease;
+           // transition: background 0.6s ease;
             box-shadow: none;
         }
         .header-logo-img-white {
@@ -27,11 +31,15 @@
                 fill: #fff;
                 color: #fff;
             }
-        } 
+        } */
     }
     header.condensed {
+      //  position: sticky;
+        transition: transform .4s ease;
+        transform: translateY(0px);
+     
         .header-wrapper {
-            transition: background 0.5s ease;
+           // transition: background 0.5s ease;
             background: #fff;
             box-shadow: 0 3px 6px 0 rgba(145, 145, 145, 0.23);
         }
