@@ -3,16 +3,19 @@
 }
 .page-the-eviction-lab {
 
-// HEADER ---------------------------    
-    header {
-       // position: relative;
-        transform: translateY(-72px);
-        transition: transform .4s ease;
-       
-     /*   .header-wrapper {
+    .superheader {
+        z-index: 9999;
+    }
+
+// HEADER ---------------------------   
+
+    .header-position-relative {
+        &.header-wrapper {
             background: transparent;
-           // transition: background 0.6s ease;
+        // transition: background 0.6s ease;
             box-shadow: none;
+            position: relative;
+            top:-80px;
         }
         .header-logo-img-white {
             display: block;
@@ -31,7 +34,19 @@
                 fill: #fff;
                 color: #fff;
             }
-        } */
+        } 
+    }    
+
+    header {
+       // position: relative;
+        transform: translateY(-72px);
+        transition: transform .4s ease;
+        .header-wrapper {
+            height: 56px;
+        }
+        .header-logo img {
+            transform: scale(0.775);
+        }
     }
     header.condensed {
       //  position: sticky;
@@ -67,10 +82,13 @@
 
     #home-hero {
         height: 600px;
-        background-color: black;
+        background-image: url('/img/hp-hero-2021-2560px.jpg');
+        background-size: cover;
+        background-position-y: 31%;
+        background-repeat: no-repeat;
         position: relative;
-        top: -80px;
-        margin-bottom: -80px;
+        top: -160px;
+        margin-bottom: -160px;
         h1 {
             font-family: GT-Eesti-Display-Bold, sans-serif;
             font-size: 4.8rem;
@@ -81,6 +99,11 @@
         p {
             color: #fff;
         }
+    }
+    #hero-overlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.46);
     }
 
 // GENERAL TYPOGRPAPHY -------------------
