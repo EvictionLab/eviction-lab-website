@@ -82,6 +82,12 @@
 
     #home-hero {
         height: 600px;
+        @include media-breakpoint-up(xxxl) {
+            height: 640px;
+        }
+        @include media-breakpoint-up(x4l) {
+            height: 720px;
+        }
         background-image: url('/img/hp-hero-2021-2560px.jpg');
         background-size: cover;
         background-position-y: 31%;
