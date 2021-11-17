@@ -1,0 +1,13 @@
+<div class="carousel-item active align-items-start">
+    <div class="col-8 align-items-start">
+      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title mb-2">{{ .Params.title | truncate 60 }}</a>
+      <a href="{{ .RelPermalink }}">
+        {{ $img := .Params.fbImage }}
+        {{ with .Resources.GetMatch $img }}
+          {{ $processed := .Fit "600x400 q50 jpg" }}
+            <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+        {{ end }}
+      </a>
+      <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1 d-none">{{ .Params.contentcat | title }} </div>
+    </div>
+  </div>
