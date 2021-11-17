@@ -1,5 +1,5 @@
 <div id="hp-carousel" class="carousel slide w-100 row mb-2 d-block d-lg-none mx-0 mt-3" data-interval="false" data-touch="true" data-ride="carousel" data-wrap="false">
-  <div class="carousel-inner col-12 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mr-0 d-md-flex" role="listbox">
+  <div class="carousel-inner col-12 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mr-0 d-md-flex pb-4" role="listbox">
       <ol class="carousel-indicators">
       <li data-target="#hp-carousel" data-slide-to="0" class="active"></li>
       <li data-target="#hp-carousel" data-slide-to="1" class=""></li>
@@ -7,8 +7,6 @@
       <li data-target="#hp-carousel" data-slide-to="3" class=""></li>
       <li data-target="#hp-carousel" data-slide-to="4"></li>
       <li data-target="#hp-carousel" data-slide-to="5"></li>
-      <li data-target="#hp-carousel" data-slide-to="6"></li>
-      <li class="d-none" data-target="#hp-carousel" data-slide-to="7"></li>
     </ol>
     {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
       {{ partial "homepage-carousel-item" . }}
@@ -16,7 +14,7 @@
     {{ range first 4 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
       <div class="carousel-item align-items-start">
         <div class="col-8">
-          <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title mb-2">{{ .Params.title | truncate 60 }}</a>
+          <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title mb-2">{{ .Params.title | truncate 65 }}</a>
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
             {{ with .Resources.GetMatch $img }}
@@ -29,7 +27,7 @@
       </div>
      {{ end }}
      <div class="carousel-item align-items-start">
-      <div class="col-8">
+      <div class="col-12">
           <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
             <a class="viewmore" href="/updates"> </a> 
               <div class="viewmore__text">

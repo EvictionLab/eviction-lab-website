@@ -1,6 +1,6 @@
 <div class="carousel-item active align-items-start">
     <div class="col-8 align-items-start">
-      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title mb-2">{{ .Params.title | truncate 60 }}</a>
+      <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title mb-2">{{ .Params.title | truncate 65 }}</a>
       <a href="{{ .RelPermalink }}">
         {{ $img := .Params.fbImage }}
         {{ with .Resources.GetMatch $img }}

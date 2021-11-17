@@ -491,11 +491,22 @@
     transform: translateX(0);
   }
   .carousel-indicators {
-    bottom: 16px;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: -16px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0;
+    /* margin-right: 15%; */
+    margin-left: 2.7rem;
     li {
-      background-color: $color4;
-      width: 16px;
-      height: 4px;
+        background-color: $color4;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
       &.active {
         background-color: $color1;
         }
