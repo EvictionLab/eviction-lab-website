@@ -15,7 +15,7 @@
     {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
       <div class="carousel-item active align-items-start">
         <div class="col-8 align-items-start pl-1">
-          <a href="{{ .RelPermalink }}" class="title mb-2">{{ .Params.title | truncate 65 }}</a>
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 65 }}</a>
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
             {{ with .Resources.GetMatch $img }}
@@ -30,8 +30,8 @@
     {{ end }}
     {{ range first 4 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
       <div class="carousel-item align-items-end">
-        <div class="col-8">
-          <a href="{{ .RelPermalink }}" class="title mb-2">{{ .Params.title | truncate 65 }}</a>
+        <div class="col-8 pl-1 pr-2">
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 65 }}</a>
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
             {{ with .Resources.GetMatch $img }}
@@ -44,18 +44,7 @@
         </div>  
       </div>
      {{ end }}
-     <div class="carousel-item align-items-end">
-      <div class="col-12">
-          <div class="d-none hp-carousel__slide--image viewmore__background d-flex flex-column">
-            <a class="viewmore" href="/updates"> </a> 
-              <div class="viewmore__text">
-                <div>VIEW MORE <br> RECENT ANALYSIS</div>
-                <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-              </div>  
-           
-          </div>
-      </div>  
-    </div>
+      <div><div class="col-4 mr-5"></div></div>   
   </div>
   <a class="carousel-control-prev d-none" href="#hp-carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -90,7 +79,7 @@
     {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
       <div class="carousel-item active align-items-end">
         <div class="col-8 align-items-start pl-1">
-          <a href="{{ .RelPermalink }}" class="title mb-2">{{ .Params.title | truncate 65 }}</a>
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 65 }}</a>
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.thumb }}
             {{ with .Resources.GetMatch $img }}
@@ -106,8 +95,8 @@
     {{ range first 5 (after 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) )}}
       <div class="carousel-item align-items-end">
         <div class="col-8">
-          <a href="{{ .RelPermalink }}" class="title mb-2">{{ .Params.title | truncate 65 }}</a>
-          <a href="{{ .RelPermalink }}">
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 65 }}</a>
+          <a href="{{ .RelPermalink }}" class="">
             {{ $img := .Params.thumb }}
             {{ with .Resources.GetMatch $img }}
               {{ $processed := .Fit "600x400 q50 jpg" }}
@@ -119,19 +108,7 @@
         </div>  
       </div>
      {{ end }}
-     <div class="carousel-item align-items-end">
-      <div class="col-4">
-          <div class="hp-carousel__slide--image viewmore__background d-none flex-column">
-            <a class="viewmore" href="/updates"> </a> 
-              <div class="viewmore__text">
-                <div>VIEW MORE <br> RECENT ANALYSIS</div>
-                <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
-              </div>  
-           
-          </div>
-      </div>  
-    </div>
-    
+     <div><div class="col-4 mr-5"></div>   </div>   
   </div>
   <a class="carousel-control-prev d-none" href="#hp-carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

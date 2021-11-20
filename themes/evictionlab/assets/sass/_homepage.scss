@@ -395,6 +395,9 @@
         margin-top: 2.4rem;
         margin-bottom: 0;
     }
+    .title {
+        min-height: 84px;
+    }
 }
 
 .hp-carousel__slide--image {
@@ -555,6 +558,7 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
+        list-style: none;
       &.active {
         background-color: $color1;
         }
