@@ -401,7 +401,10 @@
 }
 
 .hp-carousel__slide--image {
-    height: 150px;
+    height: 130px;
+    @include media-breakpoint-up(md) {
+        height: 240px;
+    }
     background-size: cover;
     @include altFont(1.8rem);
     line-height: 1.4;

@@ -19,7 +19,7 @@
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
             {{ with .Resources.GetMatch $img }}
-              {{ $processed := .Fit "600x400 q50 jpg" }}
+              {{ $processed := .Fill "720x480 q50 jpg Center" }}
                 <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
                 <hr/>
             {{ end }}
@@ -35,7 +35,7 @@
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
             {{ with .Resources.GetMatch $img }}
-              {{ $processed := .Fit "600x400 q50 jpg" }}
+              {{ $processed := .Fill "720x480 q50 jpg Center" }}
                 <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
                 <hr/>
             {{ end }}
@@ -83,7 +83,7 @@
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.thumb }}
             {{ with .Resources.GetMatch $img }}
-              {{ $processed := .Fit "600x400 q50 jpg" }}
+              {{ $processed := .Fill "720x480 q50 jpg Center" }}
                 <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
                 <hr/>
             {{ end }}
@@ -99,7 +99,7 @@
           <a href="{{ .RelPermalink }}" class="">
             {{ $img := .Params.thumb }}
             {{ with .Resources.GetMatch $img }}
-              {{ $processed := .Fit "600x400 q50 jpg" }}
+              {{ $processed := .Fill "720x480 q50 jpg Center" }}
                 <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
                 <hr/>
             {{ end }}
