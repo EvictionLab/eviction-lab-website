@@ -1,13 +1,13 @@
 <!-- Left panel ---------------------->
 
-<div class="d-none d-lg-block" id="featured-updates">
+<div class="d-none d-md-block" id="featured-updates">
     <div class="row mx-0 subfeature-panel pt-6 pb-4 pt-md-4 pb-xxl-5 pl-md-1 pl-lg-0">
       <div class="col-12 col-xxl-11 col-x4l-10 mx-auto px-0 d-flex flex-wrap">
-        <div class="col-12 col-lg-8">
-          <div class="bordered-header border-0 pt-0 blue mb-3 mx-3">
+        <div class="col-12 col-lg-8 mb-3 mb-lg-0">
+          <div class="bordered-header d-none d-lg-block border-0 pt-0 blue mb-3 mx-3">
             Eviction Tracking System
           </div>
-          <div class="col-12 d-flex mb-5">
+          <div class="col-12 d-none d-lg-flex mb-5">
             <div class="col-3"> 
               <a href="/eviction-tracking">
                     <div class="feature-image image-ets mt-1" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
@@ -19,11 +19,11 @@
               </a>
             </div>
           </div>
-          <div class="bordered-header blue mb-3 mx-3 d-flex justify-content-between">
+          <div class="bordered-header blue mb-3 mx-2 d-flex justify-content-between">
             Blog & Research
             <a class="see-all" href="/updates">SEE ALL</a>
           </div>
-          <div class="col-12 d-flex flex-wrap">
+          <div class="col-12 px-0 px-lg-2 d-flex flex-wrap">
             {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
               <div class="col-3">
                 <a href="{{ .RelPermalink }}">
@@ -53,7 +53,7 @@
     
     <!-- Right panel ---------------->
     
-        <div class="col-12 col-lg-4  pl-0 pr-3">
+        <div class="col-12 col-lg-4 px-4 pl-lg-0 pr-lg-3">
           <div class="bordered-header blue mb-3 d-flex justify-content-between">
             Reporting from our partners
             <a class="see-all" href="/updates">SEE ALL</a>

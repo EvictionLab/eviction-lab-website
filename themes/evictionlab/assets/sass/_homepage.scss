@@ -129,9 +129,10 @@
         background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.6) 100%); 
     }
     #mobile-ets-link {
-        height: 385px;
+        height: 345px;
         background-color: #11152F;
         background-size: cover;
+        background-repeat: no-repeat;
         background-image: url('/images/assets/graphics/ets-bars-boxes-right.svg');
         .bordered-header {
             color: #fff;
@@ -139,85 +140,97 @@
        h1 {
            color: #fff;
        }
+       @include media-breakpoint-up(md) {
+           background-size: 50%;
+           background-position: 95% 60%;
+       }
     }
 
 // GENERAL TYPOGRPAPHY -------------------
+    #home-body {
 
-    h1 {
-        font-family: GT-Eesti-Display-Bold, sans-serif;
-        font-weight: normal;
-        font-size: 3.6rem;
-        line-height: 1.2;
-        @include media-breakpoint-up(md) {
-            font-size: 4.2rem; 
-            line-height: 1.1;
+        h1 {
+            font-family: GT-Eesti-Display-Bold, sans-serif;
+            font-weight: normal;
+            font-size: 3.6rem;
+            line-height: 1.2;
+            @include media-breakpoint-up(md) {
+                font-size: 4.2rem; 
+                line-height: 1.1;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 4.8rem;
+            }
         }
-        @include media-breakpoint-up(lg) {
-            font-size: 4.8rem;
+        .bordered-header {
+            max-width: none;
+            font-size: 1.2rem;
+            @include media-breakpoint-up(lg) {
+                font-size: 1.6rem;
+            }
         }
-    }
-    .bordered-header {
-        max-width: none;
-        font-size: 1.2rem;
-        @include media-breakpoint-up(lg) {
+        .see-all {
+            color: #737373;
+            font-family: GT-Eesti-Display-Medium, sans-serif;
+            &:hover {
+                color: $color1;
+                text-decoration: none;
+            }
+        }
+        .feature-image {
+            height: 130px;
+            background-size: cover;
+            background-position: center center;
+            transition: filter .3s ease;
+            &.image-ets {
+                height: 100%;
+            }
+            &.image-large {
+                height: 200px;
+            }
+        }
+        .title {
+            font-family: GT-Eesti-Display-Bold, sans-serif;
+            font-size: 1.8rem;
+            font-weight: normal;
+            line-height: 1.2;
+            color: #242424;
+            transition: color .3s ease;
+            display: inline-block;
+            &.title-small {
+                @include media-breakpoint-up(lg) {
+                    font-size: 1.7rem;
+                }
+            }
+            &.title-large {
+                @include media-breakpoint-up(lg) {
+                    font-size: 4rem;
+                    line-height: 1.2;
+                }
+            }
+            &:hover {
+                color: $color1;
+                text-decoration: none;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 2.6rem;
+            }
+        }
+        .cat-link {
+            font-size: 1.4rem;
+        }
+        .description {
+
+        }
+        p {
             font-size: 1.6rem;
         }
-    }
-    .see-all {
-        color: #737373;
-        font-family: GT-Eesti-Display-Medium, sans-serif;
-        &:hover {
-            color: $color1;
-            text-decoration: none;
+        hr {
+            border-top: 1px solid #E5E5E5;
+            margin-top: 2.4rem;
+            margin-bottom: 2.4rem;
         }
-    }
-    .feature-image {
-        height: 130px;
-        background-size: cover;
-        background-position: center center;
-        transition: filter .3s ease;
-        &.image-ets {
-            height: 100%;
-        }
-        &.image-large {
-            height: 200px;
-        }
-    }
-    .title {
-        font-family: GT-Eesti-Display-Bold, sans-serif;
-        font-size: 1.8rem;
-        font-weight: normal;
-        line-height: 1.2;
-        color: #242424;
-        transition: color .3s ease;
-        display: inline-block;
-        &.title-small {
-            @include media-breakpoint-up(lg) {
-                font-size: 1.7rem;
-            }
-        }
-        &.title-large {
-            @include media-breakpoint-up(lg) {
-                font-size: 4rem;
-                line-height: 1.2;
-            }
-        }
-        &:hover {
-            color: $color1;
-            text-decoration: none;
-        }
-        @include media-breakpoint-up(lg) {
-            font-size: 2.6rem;
-        }
-    }
-    .cat-link {
-        font-size: 1.4rem;
-    }
-    .description {
 
-    }
-    p {
-        font-size: 1.6rem;
     }
 
     // Map and rankings blocks --------------------------------------------
@@ -331,8 +344,6 @@
         }   
     }
 
-
-
     .resources-img {
         height: 200px;
     }
@@ -385,18 +396,29 @@
         background-repeat: no-repeat;    
             background-image: url('/images/assets/graphics/resources-bg.jpg');
         } 
-}
 
+
+    #hp-eviction-image {
+        min-height: 240px;
+        order: 1;
+        @include media-breakpoint-up(lg) {
+            min-height: unset;
+            order: 0;
+        }
+        background-image: url('/images/assets/Evicted_Video8.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+    }
+}
 // Mobile carousel
 
 .carousel-item  {
-    hr {
-        border-top: 1px solid #E5E5E5;
-        margin-top: 2.4rem;
-        margin-bottom: 0;
-    }
     .title {
         min-height: 84px;
+    }
+    hr {
+        margin-bottom: 0;
     }
 }
 
@@ -531,12 +553,18 @@
   .carousel-inner .carousel-item-next {
     will-change: transform;
     transform: translateX(66.6666666%);
+    @include media-breakpoint-up(md) {
+        transform: translateX(63.9%);
+    }
   }
 
   .carousel-inner .carousel-item-left.active, 
   .carousel-inner .carousel-item-prev {
     will-change: transform;
     transform: translateX(-66.6666666%);
+    @include media-breakpoint-up(md) {
+        transform: translateX(-63.9%);
+    }
   }
     
   .carousel-inner .carousel-item-right,

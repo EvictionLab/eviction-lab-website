@@ -2,82 +2,19 @@
 
 {{ partial "relative-position-header" . }}
 
+<div id="home-body">
 
-<!-- ********** hero section ********** -->
+  {{ partial "homepage-hero" . }}
 
-<div id="home-hero">
-  <div id="hero-overlay" class="d-none d-md-block">
-    <div class="row mx-3 align-items-end h-100">
-      <div class="col-12 col-xxl-11 col-x4l-10 mx-auto px-0">
-        <div class="col-12 col-lg-7 mb-12">
-          <h1 class="mb-3">In a typical year, landlords file 3.7 million eviction cases.</h1>
-          <p>The Eviction Lab at Princeton University creates data, interactive tools, and research to help neighbors and policymakers understand the eviction crisis.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  {{ partial "homepage-featured-updates" . }}
+  {{ partial "homepage-featured-updates-mobile" . }}
+
+  {{ partial "homepage-interactives-block" . }}
+
+  {{ partial "homepage-resources-block" . }}
+
+  {{ partial "homepage-other-pages" . }}
+
 </div>
-
-<div id="home-hero-sub" class="d-block d-md-none">
-    <div class="row mx-3 align-items-end h-100">
-      <div class="col-12 px-0 my-3">
-          <h1 class="mb-3">In a typical year, landlords file 3.7 million eviction cases.</h1>
-          <p>The Eviction Lab at Princeton University creates data, interactive tools, and research to help neighbors and policymakers understand the eviction crisis.</p>
-      </div>
-    </div>
-</div>
-
-<div id="mobile-ets-link" class="d-block d-lg-none">
-  <div class="row mx-3 align-items-start h-100">
-    <div class="col-12 px-0 my-3">
-      <div class="bordered-header border-0 mb-3 d-flex justify-content-between">
-        Eviction Tracking System
-      </div>
-      <a href="/eviction-tracking"><h1 class="mb-3">See up-to-date maps, charts and data on eviction filings in select cities.</h1></a>
-    </div>
-  </div>
-</div>
-
-
-<!-- ********** featured updates block ******************* -->
-
-{{ partial "homepage-featured-updates" . }}
-{{ partial "homepage-featured-updates-mobile" . }}
-
-
-<!-- ********** pictorial menu section ********** -->
-
-{{ partial "homepage-interactives-block" . }}
-
-{{ partial "homepage-resources-block" . }}
-
-{{/* partial "homepage-reporting-block" . */}}
-
-  <!-- Other pages links -------------->
-  <div id="other-pages">
-    <div class="row mx-0 subfeature-panel">
-     
-        <div id="hp-eviction-image" class="col-12 col-md-6">
-          
-        </div>
-        <div class="col-11 offset-1 offset-md-0 col-md-6 pl-md-8 pl-lg-10 pt-6 pt-md-7 pt-lg-8 pb-5 pb-md-6 pb-lg-10">
-          <h2>{{ i18n "learnMoreHead1" }} <br>{{ i18n "learnMoreHead2" }}</h2>
-          <div class="red-underbar mt-3 mb-4"></div>
-          <ul>
-            <li><a class="sublink aboutus" href="/about">{{ i18n "aboutHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
-            <li><a class="sublink aboutus" href="/why-eviction-matters">{{ i18n "whyHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
-            <li><a class="sublink aboutus" href="/help-faq">{{ i18n "helpHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
-            <li><a class="sublink aboutus" href="/methods">{{ i18n "methodsHead" }} <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a></li>
-          </ul>
-            
-        </div>
-      
-    </div>    
-  </div>
-
-
-<!-- / gateway section ID --> 
-
-  </div>  
 
 {{ partial "footer" . }}

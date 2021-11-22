@@ -23,13 +23,12 @@ function setupMenu() {
   });
 }
 
+
 // Toggle condensed class on header if scrolled to top
 function setupScrollEnd() {
   var debounceTime = 50;
   var isScrolling;
   var headerWrapper = $('header');
-
-  
   
   function toggleCondense() {
     if ($( "body" ).hasClass( "page-the-eviction-lab" )) {
@@ -68,6 +67,7 @@ function setupScrollEnd() {
     isScrolling = setTimeout(toggleCondense, debounceTime);
   }, false);
 } 
+
 
 $('.carousel .carousel-item').each(function(){
   var next = $(this).next();
