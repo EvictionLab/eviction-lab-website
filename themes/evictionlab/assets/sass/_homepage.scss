@@ -178,7 +178,10 @@
             }
         }
         .feature-image {
-            height: 130px;
+            height: 121px;
+            @include media-breakpoint-up(lg) {
+                height: 130px;
+            }
             background-size: cover;
             background-position: center center;
             transition: filter .3s ease;
@@ -186,7 +189,10 @@
                 height: 100%;
             }
             &.image-large {
-                height: 200px;
+                height: 121px;
+                @include media-breakpoint-up(lg) {
+                    height: 200px;
+                }
             }
         }
         .title {
@@ -345,12 +351,15 @@
     }
 
     .resources-img {
-        height: 200px;
+        height: 121px;
+        @include media-breakpoint-up(lg) {
+            height: 200px;
+        }
     }
     .bg-1 { 
         background-size: 125%;
         @include media-breakpoint-up(md) {
-            background-size: 175%;
+            background-size: cover;
         }  
         @include media-breakpoint-up(lg) {
             background-size: 100%;
@@ -368,7 +377,7 @@
             background-size: 125%;
         }
         @include media-breakpoint-up(md) {
-            background-size: 153%;
+            background-size: cover;
         } 
         @include media-breakpoint-up(lg) {
             background-size: 166%;
@@ -388,7 +397,7 @@
             background-size: 125%;
         }
         @include media-breakpoint-up(md) {
-            background-size: 175%;
+            background-size: cover;
         }  
         @include media-breakpoint-up(lg) {
             background-size: 140%;

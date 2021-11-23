@@ -25,16 +25,16 @@
           </div>
           <div class="col-12 px-0 px-lg-2 d-flex flex-wrap">
             {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
-              <div class="col-3">
+              <div class="col-3 mb-3 mb-lg-0">
                 <a href="{{ .RelPermalink }}">
                   {{ $img := .Params.fbImage }}
                   {{ with .Resources.GetMatch $img }}
                     {{ $processed := .Fit "600x400 q50 jpg" }}
-                      <div class="feature-image mt-1" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                      <div class="feature-image mt-lg-1" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
                   {{ end }}
                 </a>
               </div>
-              <div class="col-9">
+              <div class="col-9 pl-0 pl-lg-2">
                 <a href="{{ .RelPermalink }}" class="title mb-3">
                   {{ .Params.title }}
                 </a>
@@ -53,20 +53,22 @@
     
     <!-- Right panel ---------------->
     
-        <div class="col-12 col-lg-4 px-4 pl-lg-0 pr-lg-3">
-          <div class="bordered-header blue mb-3 d-flex justify-content-between">
+        <div class="col-12 col-lg-4 d-flex flex-wrap px-4 pl-lg-0 pr-lg-3">
+          <div class="bordered-header blue w-100 mb-3 d-flex justify-content-between order-0">
             Reporting from our partners
             <a class="see-all" href="/updates">SEE ALL</a>
           </div>
-          <div class="col-12 pl-0">
-            {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
+          {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
+            <div class="col-9 col-lg-12 pl-0 order-2">
               <div class="post-cat mb-1">
                 <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
               </div>
               <a href="{{ .Params.link }}" class="title mb-1" target="_blank" rel="noreferrer noopener">
                 {{ .Params.title }}
               </a>
-              <p>{{ .Params.listSummary }}</p>
+              <p class="mb-1 mb-lg-2">{{ .Params.listSummary }}</p>
+            </div>
+            <div class="col-3 col-lg-12 pl-0 order-1">
               {{ if .Params.thumb }}
                 {{ $link := .Params.link }}
                 {{ $img := .Params.thumb }}
@@ -75,11 +77,11 @@
                     <a href="{{ $link }}" target="_blank" rel="noreferrer noopener"><div class="mw-100 mb-2 feature-image image-large" style="background-image: url('{{ $processed.RelPermalink }}')"></div>
                 {{ end }}
               {{ end }} 
-            {{ end }}
-          </div>
-          <div class="col-12 pl-0">
+            </div>
+          {{ end }}
+          <div class="col-12 pl-0 order-4">
             {{ range first 3 (after 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) )}}
-              <div class="post-cat my-1">
+              <div class="post-cat mb-1 my-lg-1">
                 <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
               </div>
               <a href="{{ .Params.link }}" class="title title-small mb-2" target="_blank" rel="noreferrer noopener">
