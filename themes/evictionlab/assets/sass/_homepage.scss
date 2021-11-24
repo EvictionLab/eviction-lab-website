@@ -137,8 +137,11 @@
         .bordered-header {
             color: #fff;
         }
-       h1 {
+       h1, p {
            color: #fff;
+       }
+       p {
+           font-family: Akkurat-Italic, sans-serif;
        }
        @include media-breakpoint-up(md) {
            background-size: 50%;
@@ -187,6 +190,7 @@
             transition: filter .3s ease;
             &.image-ets {
                 height: 100%;
+                max-height: 180px;
             }
             &.image-large {
                 height: 121px;
@@ -237,6 +241,14 @@
             margin-bottom: 2.4rem;
         }
 
+    }
+
+    // Featured updates
+
+    .ets-homepage {
+        p {
+            font-family: Akkurat-Italic, sans-serif;
+        }
     }
 
     // Map and rankings blocks --------------------------------------------
@@ -378,12 +390,10 @@
         }
         @include media-breakpoint-up(md) {
             background-size: cover;
+            background-position-x: 24%;
         } 
         @include media-breakpoint-up(lg) {
-            background-size: 166%;
-        }
-        @include media-breakpoint-up(xl) {
-            background-size: 146%;
+            background-size: cover;
         }
         background-repeat: no-repeat; 
             background-image: url('/images/assets/graphics/policies-bg.jpg');
@@ -398,9 +408,10 @@
         }
         @include media-breakpoint-up(md) {
             background-size: cover;
+            background-position-x: right;
         }  
         @include media-breakpoint-up(lg) {
-            background-size: 140%;
+            background-size: cover;
         }
         background-repeat: no-repeat;    
             background-image: url('/images/assets/graphics/resources-bg.jpg');
@@ -409,10 +420,8 @@
 
     #hp-eviction-image {
         min-height: 240px;
-        order: 1;
         @include media-breakpoint-up(lg) {
-            min-height: unset;
-            order: 0;
+            min-height: 320px;
         }
         background-image: url('/images/assets/Evicted_Video8.jpg');
         background-repeat: no-repeat;
@@ -585,7 +594,7 @@
     position: absolute;
     width: 100%;
     right: 0;
-    bottom: -16px;
+    bottom: 0;
     left: 0;
     z-index: 15;
     display: flex;

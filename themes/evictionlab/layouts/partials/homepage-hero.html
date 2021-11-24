@@ -28,7 +28,10 @@
         <div class="bordered-header border-0 mb-3 d-flex justify-content-between">
           Eviction Tracking System
         </div>
-        <a href="/eviction-tracking"><h1 class="mb-3">See up-to-date maps, charts and data on eviction filings in select cities.</h1></a>
+        <a href="/eviction-tracking"><h1 class="mb-1 mb-md-3">See up-to-date maps, charts and data on eviction filings in select cities.</h1></a>
+        {{ range where .Site.Pages ".Params.contentcat" ("data") }}
+            <p>Updated {{ .Date.Format "January 2, 2006" }}</p>
+        {{ end }}
       </div>
     </div>
   </div>

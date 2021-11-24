@@ -4,26 +4,29 @@
     <div class="row mx-0 subfeature-panel pt-6 pb-4 pt-md-4 pb-xxl-5 pl-md-1 pl-lg-0">
       <div class="col-12 col-xxl-11 col-x4l-10 mx-auto px-0 d-flex flex-wrap">
         <div class="col-12 col-lg-8 mb-3 mb-lg-0">
-          <div class="bordered-header d-none d-lg-block border-0 pt-0 blue mb-3 mx-3">
+          <div class="bordered-header d-none d-lg-block border-0 pt-0 blue mb-3 mx-3 ">
             Eviction Tracking System
           </div>
-          <div class="col-12 d-none d-lg-flex mb-5">
-            <div class="col-3"> 
+          <div class="ets-homepage col-12 d-none d-lg-flex mb-5 pl-lg-1">
+            <div class="col-4 col-x4l-3"> 
               <a href="/eviction-tracking">
                     <div class="feature-image image-ets mt-1" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
               </a>
             </div>
-            <div class="col-9">
-              <a href="/eviction-tracking" class="title title-large">
+            <div class="col-8 col-x4l-9">
+              <a href="/eviction-tracking" class="title title-large mb-2">
                 See up-to-date maps, charts and data on eviction filings in select cities.
               </a>
+              {{ range where .Site.Pages ".Params.contentcat" ("data") }}
+                <p class="mb-0">Updated {{ .Date.Format "January 2, 2006" }}</p>
+              {{ end }}
             </div>
           </div>
-          <div class="bordered-header blue mb-3 mx-2 d-flex justify-content-between">
+          <div class="bordered-header blue  d-flex justify-content-between mb-3 mx-2 mx-lg-3">
             Blog & Research
             <a class="see-all" href="/updates">SEE ALL</a>
           </div>
-          <div class="col-12 px-0 px-lg-2 d-flex flex-wrap">
+          <div class="col-12 px-0 px-lg-1 d-flex flex-wrap">
             {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
               <div class="col-3 mb-3 mb-lg-0">
                 <a href="{{ .RelPermalink }}">
@@ -55,7 +58,7 @@
     
         <div class="col-12 col-lg-4 d-flex flex-wrap px-4 pl-lg-0 pr-lg-3">
           <div class="bordered-header blue w-100 mb-3 d-flex justify-content-between order-0">
-            Reporting from our partners
+            Reporting 
             <a class="see-all" href="/updates">SEE ALL</a>
           </div>
           {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
