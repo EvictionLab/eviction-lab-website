@@ -80,7 +80,6 @@
                 color: #e24000;
             }
         }
-        
     }
 // HERO -------------------------------
 
@@ -97,7 +96,7 @@
             margin-bottom: -160px;
             background-size: cover;
         }
-        @include media-breakpoint-up(xxxl) {
+        @include media-breakpoint-up(xxl) {
             height: 640px;
         }
         @include media-breakpoint-up(x4l) {
@@ -111,6 +110,9 @@
         }
         p {
             color: #fff;
+            @include media-breakpoint-up(lg) {
+                font-size: 1.8rem;
+            }
         }
     }
     #home-hero-sub {
@@ -126,7 +128,8 @@
         width: 100%;
         background-color: rgba(0, 0, 0, 0.46);
         background: rgb(0,0,0);
-        background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.6) 100%); 
+        background: linear-gradient(
+            180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7) 100%);
     }
     #mobile-ets-link {
         height: 345px;
