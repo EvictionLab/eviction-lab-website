@@ -451,6 +451,15 @@
         margin-bottom: 0;
     }
 }
+.carousel-view-more {
+    height: 240px;
+    font-family: GT-Eesti-Display-Medium, sans-serif;
+    font-size: 1.6rem;
+    z-index: -1;
+    &:hover {
+        text-decoration: none;
+    }
+}
 
 .hp-carousel__slide--image {
     height: 130px;
