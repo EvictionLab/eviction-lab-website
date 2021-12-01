@@ -4,7 +4,7 @@
 .page-the-eviction-lab {
 
     .superheader {
-        z-index: 9999;
+        z-index: 999;
     }
 
 // HEADER ---------------------------   
@@ -42,7 +42,10 @@
     }    
 
     header {
-       // position: relative;
+        opacity: 0;
+            &.condensed {
+                opacity: 1;
+            }
         transform: translateY(-72px);
         transition: transform .4s ease;
         .header-wrapper {
@@ -449,7 +452,7 @@
 .carousel-item  {
     background-color: #fff;
     .title {
-        min-height: 84px;
+        min-height: 64px;
     }
     hr {
         margin-bottom: 0;

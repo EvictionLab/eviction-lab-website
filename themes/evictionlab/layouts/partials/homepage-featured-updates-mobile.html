@@ -3,7 +3,7 @@
     Blog & Research
     <a class="see-all" href="/updates">SEE ALL</a>
   </div>
-  <div class="carousel-inner col-12 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mr-0 d-md-flex pb-4" role="listbox">
+  <div class="carousel-inner col-12 px-md-5 px-xxxl-2 col-xxxl-10 mr-0 d-md-flex pb-4" role="listbox">
       <ol class="carousel-indicators">
       <li data-target="#hp-carousel" data-slide-to="0" class="active"></li>
       <li data-target="#hp-carousel" data-slide-to="1" class=""></li>
@@ -11,40 +11,56 @@
       <li data-target="#hp-carousel" data-slide-to="3" class=""></li>
       <li data-target="#hp-carousel" data-slide-to="4"></li>
       <li data-target="#hp-carousel" data-slide-to="5"></li>
+      
     </ol>
     {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
       <div class="carousel-item active align-items-start">
         <div class="col-10 col-smm-8  col-md-7 align-items-start pl-1 pl-md-0 mr-md-5">
-          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 63 }}</a>
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
             {{ with .Resources.GetMatch $img }}
               {{ $processed := .Fill "720x480 q50 jpg Center" }}
-                <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                <div class="hp-carousel__slide--image mt-3" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
             {{ end }}
           </a>
-          <p class="d-none d-md-block mt-2">{{ .Params.listSummary | truncate 180 }}</p>
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a>
           <hr/> 
         </div>
       </div>
     {{ end }}
-    {{ range first 4 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
+    {{ range first 3 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
       <div class="carousel-item align-items-end">
         <div class="col-10 col-smm-8  col-md-7 pl-1 pl-md-0 pr-2 mr-md-5">
-          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 63 }}</a>
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
             {{ with .Resources.GetMatch $img }}
               {{ $processed := .Fill "720x480 q50 jpg Center" }}
-                <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                <div class="hp-carousel__slide--image mt-3" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
             {{ end }}
-          </a>  
-          <p class="d-none d-md-block mt-2">{{ .Params.listSummary | truncate 180 }}</p>
+          </a>
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
           <hr/> 
         </div>  
       </div>
      {{ end }}
-      <div><a href="/updates" class="blue col-4 mr-5 d-flex carousel-view-more align-items-center">VIEW<br/>MORE<i class="fa fa-chevron-right pl-2"></i></a></div>   
+     {{ range first 1 (after 4 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
+      <div class="carousel-item align-items-end">
+        <div class="col-10 col-smm-8  col-md-7 pl-1 pl-md-0 pr-2 mr-md-5">
+          <a href="{{ .RelPermalink }}">
+            {{ $img := .Params.fbImage }}
+            {{ with .Resources.GetMatch $img }}
+              {{ $processed := .Fill "720x480 q50 jpg Center" }}
+                <div class="hp-carousel__slide--image mt-3" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+            {{ end }}
+          </a>
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
+          <hr/> 
+        </div> 
+        <a href="/updates" class="blue col-4 mr-5 d-flex carousel-view-more align-items-center">VIEW<br/>MORE<i class="fa fa-chevron-right pl-2"></i></a> 
+      </div>
+     {{ end }}
+     <div class="carousel-item align-items-end"></div>   
+
   </div>
   <a class="carousel-control-prev d-none" href="#hp-carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -67,7 +83,7 @@
     Reporting
     <a class="see-all" href="/updates">SEE ALL</a>
   </div>
-  <div class="carousel-inner col-12 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mr-0 d-md-flex pb-4" role="listbox">
+  <div class="carousel-inner col-12 px-md-5 px-xxxl-2 col-xxxl-10 mr-0 d-md-flex pb-4" role="listbox">
       <ol class="carousel-indicators">
       <li data-target="#hp-carousel-2" data-slide-to="0" class="active"></li>
       <li data-target="#hp-carousel-2" data-slide-to="1" class=""></li>
@@ -79,15 +95,16 @@
     {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
       <div class="carousel-item active align-items-end">
         <div class="col-10 col-smm-8 align-items-start pl-1 pl-md-0">
-          <a href="{{ .Params.link }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 63 }}</a>
           <a href="{{ .Params.link }}">
             {{ $img := .Params.thumb }}
             {{ with .Resources.GetMatch $img }}
               {{ $processed := .Fill "720x480 q50 jpg Center" }}
-                <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                <hr/>
+                <div class="hp-carousel__slide--image mt-3" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                
             {{ end }}
           </a>
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
+          <hr/>
           <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1 d-none">{{ .Params.contentcat | title }} </div>
         </div>
       </div>
@@ -95,15 +112,16 @@
     {{ range first 5 (after 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) )}}
       <div class="carousel-item align-items-end">
         <div class="col-10 col-smm-8 pl-1 pr-2 pl-md-0">
-          <a href="{{ .Params.link }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 65 }}</a>
-          <a href="{{ .Params.link }}" class="">
+          <a href="{{ .Params.link }}">
             {{ $img := .Params.thumb }}
             {{ with .Resources.GetMatch $img }}
               {{ $processed := .Fill "720x480 q50 jpg Center" }}
-                <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                <hr/>
+                <div class="hp-carousel__slide--image mt-3" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                
             {{ end }}
-          </a>  
+          </a>
+          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
+          <hr/>
           <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1 d-none">{{ .Params.contentcat | title }} </div>
         </div>  
       </div>
