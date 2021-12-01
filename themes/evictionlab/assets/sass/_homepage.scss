@@ -594,18 +594,18 @@
   .carousel-inner .carousel-item-right.active,
   .carousel-inner .carousel-item-next {
     will-change: transform;
-    transform: translateX(66.6666666%);
-    @include media-breakpoint-up(md) {
-        transform: translateX(63.9%);
+    transform: translateX(83.33333333333%);
+    @include media-breakpoint-up(smm) {
+        ttransform: translateX(66.6666666%);
     }
   }
 
   .carousel-inner .carousel-item-left.active, 
   .carousel-inner .carousel-item-prev {
     will-change: transform;
-    transform: translateX(-66.6666666%);
-    @include media-breakpoint-up(md) {
-        transform: translateX(-63.9%);
+    transform: translateX(-83.333333333%);
+    @include media-breakpoint-up(smm) {
+        transform: translateX(-66.6666666%);
     }
   }
     

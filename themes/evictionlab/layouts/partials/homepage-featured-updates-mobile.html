@@ -14,7 +14,7 @@
     </ol>
     {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
       <div class="carousel-item active align-items-start">
-        <div class="col-8 col-md-7 align-items-start pl-1 pl-md-0 mr-md-5">
+        <div class="col-10 col-smm-8  col-md-7 align-items-start pl-1 pl-md-0 mr-md-5">
           <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 63 }}</a>
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
@@ -30,7 +30,7 @@
     {{ end }}
     {{ range first 4 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
       <div class="carousel-item align-items-end">
-        <div class="col-8 col-md-7 pl-1 pl-md-0 pr-2 mr-md-5">
+        <div class="col-10 col-smm-8  col-md-7 pl-1 pl-md-0 pr-2 mr-md-5">
           <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 63 }}</a>
           <a href="{{ .RelPermalink }}">
             {{ $img := .Params.fbImage }}
@@ -78,7 +78,7 @@
     </ol>
     {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
       <div class="carousel-item active align-items-end">
-        <div class="col-8 align-items-start pl-1 pl-md-0">
+        <div class="col-10 col-smm-8 align-items-start pl-1 pl-md-0">
           <a href="{{ .Params.link }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 63 }}</a>
           <a href="{{ .Params.link }}">
             {{ $img := .Params.thumb }}
@@ -94,7 +94,7 @@
     {{ end }}
     {{ range first 5 (after 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) )}}
       <div class="carousel-item align-items-end">
-        <div class="col-8 pl-1 pr-2 pl-md-0">
+        <div class="col-10 col-smm-8 pl-1 pr-2 pl-md-0">
           <a href="{{ .Params.link }}" class="title mb-2 d-flex flex-column justify-content-end">{{ .Params.title | truncate 65 }}</a>
           <a href="{{ .Params.link }}" class="">
             {{ $img := .Params.thumb }}
