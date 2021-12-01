@@ -28,7 +28,7 @@
         </div>
       </div>
     {{ end }}
-    {{ range first 3 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
+    {{ range first 5 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
       <div class="carousel-item align-items-end">
         <div class="col-10 col-smm-8  col-md-7 pl-1 pl-md-0 pr-2 mr-md-5">
           <a href="{{ .RelPermalink }}">
@@ -43,23 +43,7 @@
         </div>  
       </div>
      {{ end }}
-     {{ range first 1 (after 4 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
-      <div class="carousel-item align-items-end">
-        <div class="col-10 col-smm-8  col-md-7 pl-1 pl-md-0 pr-2 mr-md-5">
-          <a href="{{ .RelPermalink }}">
-            {{ $img := .Params.fbImage }}
-            {{ with .Resources.GetMatch $img }}
-              {{ $processed := .Fill "720x480 q50 jpg Center" }}
-                <div class="hp-carousel__slide--image mt-3" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-            {{ end }}
-          </a>
-          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
-          <hr/> 
-        </div> 
-        <a href="/updates" class="blue col-4 mr-5 d-flex carousel-view-more align-items-center">VIEW<br/>MORE<i class="fa fa-chevron-right pl-2"></i></a> 
-      </div>
-     {{ end }}
-     <div class="carousel-item align-items-end"></div>   
+     <div><a href="/updates/reporting" class="blue col-4 mr-5 d-flex carousel-view-more align-items-center">VIEW<br/>MORE<i class="fa fa-chevron-right pl-2"></i></a></div>   
 
   </div>
   <a class="carousel-control-prev d-none" href="#hp-carousel" role="button" data-slide="prev">
