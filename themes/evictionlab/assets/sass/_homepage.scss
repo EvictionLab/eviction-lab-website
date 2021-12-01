@@ -597,7 +597,7 @@
     will-change: transform;
     transform: translateX(83.33333333333%);
     @include media-breakpoint-up(smm) {
-        ttransform: translateX(66.6666666%);
+        transform: translateX(66.6666666%);
     }
   }
 
