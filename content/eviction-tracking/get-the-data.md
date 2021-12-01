@@ -37,7 +37,7 @@ data:
   - site: All States
     years: "-"
     geo: Census Tract
-    file: https://data-downloads.evictionlab.org/
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/allstates_weekly_2020_2021.csv
     monthfile: /uploads/allstates_monthly_2020_2021.csv
   - site: Albuquerque
     years: 2017-2019
