@@ -87,7 +87,7 @@
                 
             {{ end }}
           </a>
-          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
+          <a href="{{ .Params.link }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
           <hr/>
           <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1 d-none">{{ .Params.contentcat | title }} </div>
         </div>
@@ -104,7 +104,7 @@
                 
             {{ end }}
           </a>
-          <a href="{{ .RelPermalink }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
+          <a href="{{ .Params.link }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
           <hr/>
           <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1 d-none">{{ .Params.contentcat | title }} </div>
         </div>  
