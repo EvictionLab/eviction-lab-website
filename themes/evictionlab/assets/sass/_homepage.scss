@@ -42,10 +42,11 @@
     }    
 
     header {
-        opacity: 0;
+      /*  opacity: 0;
             &.condensed {
                 opacity: 1;
-            }
+            } */
+            z-index: 99;
         transform: translateY(-72px);
         transition: transform .4s ease;
         .header-wrapper {
@@ -87,7 +88,7 @@
 // HERO -------------------------------
 
     #home-hero {
-        height: 441px;
+        height: 54vh;
         background-position-x: 56%;
         top:-56px;
         margin-bottom: -56px;
@@ -135,7 +136,7 @@
             180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7) 100%);
     }
     #mobile-ets-link {
-        height: 345px;
+        height: 364px;
         background-color: #11152F;
         background-size: cover;
         background-repeat: no-repeat;
@@ -175,6 +176,9 @@
             max-width: none;
             font-size: 1.2rem;
             @include media-breakpoint-up(lg) {
+                font-size: 1.4rem;
+            }
+            @include media-breakpoint-up(xxl) {
                 font-size: 1.6rem;
             }
         }
@@ -187,9 +191,10 @@
             }
         }
         .feature-image {
-            height: 121px;
+            min-height: 121px;
+            height: 100%;
             @include media-breakpoint-up(lg) {
-                height: 130px;
+                min-height: 130px;
             }
             background-size: cover;
             background-position: center center;
@@ -220,6 +225,9 @@
             }
             &.title-large {
                 @include media-breakpoint-up(lg) {
+                    font-size: 3.4em;
+                }
+                @include media-breakpoint-up(xxl) {
                     font-size: 4rem;
                     line-height: 1.2;
                 }
@@ -231,7 +239,7 @@
             @include media-breakpoint-up(md) {
                 font-size: 2.4rem;
             }
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(xxl) {
                 font-size: 2.6rem;
             }
         }
@@ -459,10 +467,14 @@
     }
 }
 .carousel-view-more {
-    height: 240px;
-    font-family: GT-Eesti-Display-Medium, sans-serif;
-    font-size: 1.6rem;
+    height: 130px;
+    font-family: GT-Eesti-Display-Bold, sans-serif;
+    font-size: 1.8rem;
     z-index: -1;
+    background-color: $color2;
+    color: #fff;
+    justify-content: center;
+    line-height: 1.3;
     &:hover {
         text-decoration: none;
     }
