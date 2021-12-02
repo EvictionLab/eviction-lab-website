@@ -56,43 +56,17 @@
     
     <!-- Right panel ---------------->
     
-        <div class="col-12 col-lg-4 d-flex flex-wrap px-4 pl-lg-0 pr-lg-3">
-          <div class="bordered-header blue w-100 d-flex justify-content-between order-0 mb-3 mr-lg-2">
-            Reporting 
-            <a class="see-all" href="/updates">SEE ALL</a>
-          </div>
-          {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
-            <div class="col-9 col-lg-12 pl-0 order-2">
-              <div class="post-cat mb-1">
-                <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
-              </div>
-              <a href="{{ .Params.link }}" class="title mb-1" target="_blank" rel="noreferrer noopener">
-                {{ .Params.title }}
-              </a>
-              <p class="mb-1 mb-lg-2">{{ .Params.listSummary }}</p>
-            </div>
-            <div class="col-3 col-lg-12 pl-0 order-1">
-              {{ if .Params.thumb }}
-                {{ $link := .Params.link }}
-                {{ $img := .Params.thumb }}
-                {{ with .Resources.GetMatch $img }}
-                  {{ $processed := .Fill "960x640 q70 jpg Center" }}
-                    <a href="{{ $link }}" target="_blank" rel="noreferrer noopener"><div class="mw-100 mb-2 feature-image image-large" style="background-image: url('{{ $processed.RelPermalink }}')"></div>
-                {{ end }}
-              {{ end }} 
-            </div>
-          {{ end }}
-          <div class="col-12 pl-0 order-4">
-            {{ range first 3 (after 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) )}}
-              <div class="post-cat mb-1 my-lg-1">
-                <p class="{{ .Params.childof }}-type cat-link mb-0"> {{ .Params.outlet }}</p>
-              </div>
-              <a href="{{ .Params.link }}" class="title title-small mb-2" target="_blank" rel="noreferrer noopener">
-                {{ .Params.title }}
-              </a>
-            {{ end }}  
-          </div>
-        </div>
+    {{ if eq .Site.Language.LanguageName "Español" }}
+      {{ range .Translations }}
+          {{ partial "reporting" . }}
+        {{ end }}
+      {{ end }}
+
+      {{ if eq .Site.Language.LanguageName "English" }}
+          {{ partial "reporting" . }}
+      {{ end }}  
+
+
       </div>  
     </div>
   </div>
