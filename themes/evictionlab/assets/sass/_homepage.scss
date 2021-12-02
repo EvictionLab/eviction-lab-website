@@ -201,7 +201,7 @@
             transition: filter .3s ease;
             &.image-ets {
                 height: 100%;
-                max-height: 180px;
+                max-height: 219px;
             }
             &.image-large {
                 height: 121px;
@@ -298,7 +298,7 @@
         background-position: 50% 2rem;
         transition: background-color .3s ease;
         @include media-breakpoint-up(smm) {
-            background-size: 66%;
+            background-size: 88%;
         }
         @include media-breakpoint-up(mm) {
             background-size: 46%;
@@ -335,7 +335,7 @@
             }  
         }
         @include media-breakpoint-up(smm) {
-            background-size: 92%;
+            background-size: 100%;
         }
         @include media-breakpoint-up(mm) {
             background-size: 80%;
