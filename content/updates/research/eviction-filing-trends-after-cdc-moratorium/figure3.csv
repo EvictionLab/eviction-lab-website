@@ -1,0 +1,175 @@
+site_name_full,xfilemonthgroup,xfilemonthgroup_label,num_filings,num_filings_hist_avg,ratio,post_CDC
+"Albuquerque, NM",05/27/2021,May 27 to Jun 26,466,960.6666666666666,0.485,0
+"Albuquerque, NM",06/27/2021,Jun 27 to Jul 26,463,1006.6666666666666,0.46,0
+"Albuquerque, NM",07/27/2021,Jul 27 to Aug 26,489,954.6666666666666,0.512,0
+"Albuquerque, NM",08/27/2021,Aug 27 to Sept 26,383,1041.6666666666667,0.368,1
+"Albuquerque, NM",09/27/2021,Sept 27 to Oct 26,470,996,0.472,1
+"Albuquerque, NM",10/27/2021,Oct 27 to Nov 26,457,825.6666666666666,0.553,1
+"Austin, TX",05/27/2021,May 27 to Jun 26,99,810.8333333333334,0.122,0
+"Austin, TX",06/27/2021,Jun 27 to Jul 26,137,817.5,0.168,0
+"Austin, TX",07/27/2021,Jul 27 to Aug 26,168,813.3333333333334,0.207,0
+"Austin, TX",08/27/2021,Aug 27 to Sept 26,156,845.5,0.185,1
+"Austin, TX",09/27/2021,Sept 27 to Oct 26,201,825.8333333333334,0.243,1
+"Austin, TX",10/27/2021,Oct 27 to Nov 26,214,763.8333333333334,0.28,1
+"Boston, MA",05/27/2021,May 27 to Jun 26,224,634.4166666666666,0.353,0
+"Boston, MA",06/27/2021,Jun 27 to Jul 26,266,722.3333333333334,0.368,0
+"Boston, MA",07/27/2021,Jul 27 to Aug 26,247,752.75,0.328,0
+"Boston, MA",08/27/2021,Aug 27 to Sept 26,246,718.9166666666666,0.342,1
+"Boston, MA",09/27/2021,Sept 27 to Oct 26,239,674.0833333333334,0.355,1
+"Boston, MA",10/27/2021,Oct 27 to Nov 26,259,636.1666666666666,0.407,1
+"Bridgeport, CT",05/27/2021,May 27 to Jun 26,150,348.6666666666667,0.43,0
+"Bridgeport, CT",06/27/2021,Jun 27 to Jul 26,99,354.3333333333333,0.279,0
+"Bridgeport, CT",07/27/2021,Jul 27 to Aug 26,108,352.3333333333333,0.307,0
+"Bridgeport, CT",08/27/2021,Aug 27 to Sept 26,218,357.3333333333333,0.61,1
+"Bridgeport, CT",09/27/2021,Sept 27 to Oct 26,228,346,0.659,1
+"Bridgeport, CT",10/27/2021,Oct 27 to Nov 26,215,327.6666666666667,0.656,1
+"Charleston, SC",05/27/2021,May 27 to Jun 26,409,1166.75,0.351,0
+"Charleston, SC",06/27/2021,Jun 27 to Jul 26,413,1322.5,0.312,0
+"Charleston, SC",07/27/2021,Jul 27 to Aug 26,398,1295.75,0.307,0
+"Charleston, SC",08/27/2021,Aug 27 to Sept 26,568,1341,0.424,1
+"Charleston, SC",09/27/2021,Sept 27 to Oct 26,633,1313.25,0.482,1
+"Charleston, SC",10/27/2021,Oct 27 to Nov 26,499,1194,0.418,1
+"Cincinnati, OH",05/27/2021,May 27 to Jun 26,925,1188.2,0.778,0
+"Cincinnati, OH",06/27/2021,Jun 27 to Jul 26,945,1231.6,0.767,0
+"Cincinnati, OH",07/27/2021,Jul 27 to Aug 26,809,1195.2,0.677,0
+"Cincinnati, OH",08/27/2021,Aug 27 to Sept 26,1006,1214.8,0.828,1
+"Cincinnati, OH",09/27/2021,Sept 27 to Oct 26,870,1096,0.794,1
+"Cincinnati, OH",10/27/2021,Oct 27 to Nov 26,1013,1028,0.985,1
+"Cleveland, OH",05/27/2021,May 27 to Jun 26,291,768.5,0.379,0
+"Cleveland, OH",06/27/2021,Jun 27 to Jul 26,310,905.25,0.342,0
+"Cleveland, OH",07/27/2021,Jul 27 to Aug 26,407,1026.5,0.396,0
+"Cleveland, OH",08/27/2021,Aug 27 to Sept 26,398,917.25,0.434,1
+"Cleveland, OH",09/27/2021,Sept 27 to Oct 26,455,1026.75,0.443,1
+"Cleveland, OH",10/27/2021,Oct 27 to Nov 26,409,698.75,0.585,1
+"Columbus, OH",05/27/2021,May 27 to Jun 26,1227,1460,0.84,0
+"Columbus, OH",06/27/2021,Jun 27 to Jul 26,1305,1497.6666666666667,0.871,0
+"Columbus, OH",07/27/2021,Jul 27 to Aug 26,1621,1716.3333333333333,0.944,0
+"Columbus, OH",08/27/2021,Aug 27 to Sept 26,1351,2019.3333333333333,0.669,1
+"Columbus, OH",09/27/2021,Sept 27 to Oct 26,1595,1528.3333333333333,1.044,1
+"Columbus, OH",10/27/2021,Oct 27 to Nov 26,1286,1284.6666666666667,1.001,1
+"Dallas, TX",05/27/2021,May 27 to Jun 26,1673,3481,0.481,0
+"Dallas, TX",06/27/2021,Jun 27 to Jul 26,1882,3610,0.521,0
+"Dallas, TX",07/27/2021,Jul 27 to Aug 26,2046,3587.6666666666665,0.57,0
+"Dallas, TX",08/27/2021,Aug 27 to Sept 26,2414,3824.3333333333335,0.631,1
+"Dallas, TX",09/27/2021,Sept 27 to Oct 26,3006,3581.6666666666665,0.839,1
+"Dallas, TX",10/27/2021,Oct 27 to Nov 26,2514,3213.3333333333335,0.782,1
+"Fort Worth, TX",05/27/2021,May 27 to Jun 26,1456,3275.75,0.444,0
+"Fort Worth, TX",06/27/2021,Jun 27 to Jul 26,1595,3383.5,0.471,0
+"Fort Worth, TX",07/27/2021,Jul 27 to Aug 26,1897,3323.75,0.571,0
+"Fort Worth, TX",08/27/2021,Aug 27 to Sept 26,2093,3554.75,0.589,1
+"Fort Worth, TX",09/27/2021,Sept 27 to Oct 26,2557,3484,0.734,1
+"Fort Worth, TX",10/27/2021,Oct 27 to Nov 26,2550,3178.5,0.802,1
+"Gainesville, FL",05/27/2021,May 27 to Jun 26,93,135,0.689,0
+"Gainesville, FL",06/27/2021,Jun 27 to Jul 26,93,145.66666666666666,0.638,0
+"Gainesville, FL",07/27/2021,Jul 27 to Aug 26,120,131.33333333333334,0.914,0
+"Gainesville, FL",08/27/2021,Aug 27 to Sept 26,128,149.33333333333334,0.857,1
+"Gainesville, FL",09/27/2021,Sept 27 to Oct 26,128,136,0.941,1
+"Gainesville, FL",10/27/2021,Oct 27 to Nov 26,100,123.66666666666667,0.809,1
+"Greenville, SC",05/27/2021,May 27 to Jun 26,782,1211.5,0.645,0
+"Greenville, SC",06/27/2021,Jun 27 to Jul 26,724,1297.25,0.558,0
+"Greenville, SC",07/27/2021,Jul 27 to Aug 26,748,1247.5,0.6,0
+"Greenville, SC",08/27/2021,Aug 27 to Sept 26,964,1357.75,0.71,1
+"Greenville, SC",09/27/2021,Sept 27 to Oct 26,1089,1316.5,0.827,1
+"Greenville, SC",10/27/2021,Oct 27 to Nov 26,1032,1135.75,0.909,1
+"Hartford, CT",05/27/2021,May 27 to Jun 26,200,516,0.388,0
+"Hartford, CT",06/27/2021,Jun 27 to Jul 26,135,547,0.247,0
+"Hartford, CT",07/27/2021,Jul 27 to Aug 26,162,577.3333333333334,0.281,0
+"Hartford, CT",08/27/2021,Aug 27 to Sept 26,322,594.6666666666666,0.541,1
+"Hartford, CT",09/27/2021,Sept 27 to Oct 26,291,551.3333333333334,0.528,1
+"Hartford, CT",10/27/2021,Oct 27 to Nov 26,351,478.6666666666667,0.733,1
+"Houston, TX",05/27/2021,May 27 to Jun 26,2382,6583.25,0.362,0
+"Houston, TX",06/27/2021,Jun 27 to Jul 26,2654,4703.75,0.564,0
+"Houston, TX",07/27/2021,Jul 27 to Aug 26,3163,5720.25,0.553,0
+"Houston, TX",08/27/2021,Aug 27 to Sept 26,3912,5537.75,0.706,1
+"Houston, TX",09/27/2021,Sept 27 to Oct 26,5007,4629.25,1.082,1
+"Houston, TX",10/27/2021,Oct 27 to Nov 26,4313,5064.25,0.852,1
+"Indianapolis, IN",05/27/2021,May 27 to Jun 26,1365,2650.25,0.515,0
+"Indianapolis, IN",06/27/2021,Jun 27 to Jul 26,1393,2818,0.494,0
+"Indianapolis, IN",07/27/2021,Jul 27 to Aug 26,1542,2764.75,0.558,0
+"Indianapolis, IN",08/27/2021,Aug 27 to Sept 26,1894,2788,0.679,1
+"Indianapolis, IN",09/27/2021,Sept 27 to Oct 26,2214,2602.25,0.851,1
+"Indianapolis, IN",10/27/2021,Oct 27 to Nov 26,1871,2248,0.832,1
+"Jacksonville, FL",05/27/2021,May 27 to Jun 26,626,1152.4,0.543,0
+"Jacksonville, FL",06/27/2021,Jun 27 to Jul 26,782,1079.6,0.724,0
+"Jacksonville, FL",07/27/2021,Jul 27 to Aug 26,767,1144.8,0.67,0
+"Jacksonville, FL",08/27/2021,Aug 27 to Sept 26,928,1184,0.784,1
+"Jacksonville, FL",09/27/2021,Sept 27 to Oct 26,871,1027.6,0.848,1
+"Jacksonville, FL",10/27/2021,Oct 27 to Nov 26,688,968.2,0.711,1
+"Kansas City, MO",05/27/2021,May 27 to Jun 26,531,848.25,0.626,0
+"Kansas City, MO",06/27/2021,Jun 27 to Jul 26,381,764.25,0.499,0
+"Kansas City, MO",07/27/2021,Jul 27 to Aug 26,446,743.75,0.6,0
+"Kansas City, MO",08/27/2021,Aug 27 to Sept 26,549,902.25,0.608,1
+"Kansas City, MO",09/27/2021,Sept 27 to Oct 26,692,750,0.923,1
+"Kansas City, MO",10/27/2021,Oct 27 to Nov 26,445,776.25,0.573,1
+"Memphis, TN",05/27/2021,May 27 to Jun 26,1288,2336.5,0.551,0
+"Memphis, TN",06/27/2021,Jun 27 to Jul 26,1116,2555.75,0.437,0
+"Memphis, TN",07/27/2021,Jul 27 to Aug 26,1624,2442.75,0.665,0
+"Memphis, TN",08/27/2021,Aug 27 to Sept 26,1625,2553,0.637,1
+"Memphis, TN",09/27/2021,Sept 27 to Oct 26,1841,2307.75,0.798,1
+"Memphis, TN",10/27/2021,Oct 27 to Nov 26,1138,2056.25,0.553,1
+"Milwaukee, WI",05/27/2021,May 27 to Jun 26,574,1266,0.453,0
+"Milwaukee, WI",06/27/2021,Jun 27 to Jul 26,541,1203.2,0.45,0
+"Milwaukee, WI",07/27/2021,Jul 27 to Aug 26,610,1258.2,0.485,0
+"Milwaukee, WI",08/27/2021,Aug 27 to Sept 26,895,1283.2,0.697,1
+"Milwaukee, WI",09/27/2021,Sept 27 to Oct 26,974,1097.6,0.887,1
+"Milwaukee, WI",10/27/2021,Oct 27 to Nov 26,799,1054.8,0.757,1
+"Minneapolis-Saint Paul, MN",05/27/2021,May 27 to Jun 26,67,737.875,0.091,0
+"Minneapolis-Saint Paul, MN",06/27/2021,Jun 27 to Jul 26,133,747.125,0.178,0
+"Minneapolis-Saint Paul, MN",07/27/2021,Jul 27 to Aug 26,257,739.75,0.347,0
+"Minneapolis-Saint Paul, MN",08/27/2021,Aug 27 to Sept 26,262,723.25,0.362,1
+"Minneapolis-Saint Paul, MN",09/27/2021,Sept 27 to Oct 26,407,661.125,0.616,1
+"Minneapolis-Saint Paul, MN",10/27/2021,Oct 27 to Nov 26,347,631.5,0.549,1
+"New York, NY",05/27/2021,May 27 to Jun 26,4976,17126,0.291,0
+"New York, NY",06/27/2021,Jun 27 to Jul 26,3917,18419,0.213,0
+"New York, NY",07/27/2021,Jul 27 to Aug 26,4481,20664.666666666668,0.217,0
+"New York, NY",08/27/2021,Aug 27 to Sept 26,2223,18399,0.121,1
+"New York, NY",09/27/2021,Sept 27 to Oct 26,3340,19899.666666666668,0.168,1
+"New York, NY",10/27/2021,Oct 27 to Nov 26,3124,19228.333333333332,0.162,1
+"Philadelphia, PA",05/27/2021,May 27 to Jun 26,303,1751,0.173,0
+"Philadelphia, PA",06/27/2021,Jun 27 to Jul 26,393,1858.75,0.211,0
+"Philadelphia, PA",07/27/2021,Jul 27 to Aug 26,567,1988,0.285,0
+"Philadelphia, PA",08/27/2021,Aug 27 to Sept 26,521,1899.5,0.274,1
+"Philadelphia, PA",09/27/2021,Sept 27 to Oct 26,726,1989.25,0.365,1
+"Philadelphia, PA",10/27/2021,Oct 27 to Nov 26,937,1669.5,0.561,1
+"Pittsburgh, PA",05/27/2021,May 27 to Jun 26,425,1197.125,0.355,0
+"Pittsburgh, PA",06/27/2021,Jun 27 to Jul 26,489,1263.625,0.387,0
+"Pittsburgh, PA",07/27/2021,Jul 27 to Aug 26,580,1307,0.444,0
+"Pittsburgh, PA",08/27/2021,Aug 27 to Sept 26,476,1224.625,0.389,1
+"Pittsburgh, PA",09/27/2021,Sept 27 to Oct 26,571,1189.625,0.48,1
+"Pittsburgh, PA",10/27/2021,Oct 27 to Nov 26,631,1052.625,0.599,1
+"Richmond, VA",05/27/2021,May 27 to Jun 26,398,1821,0.219,0
+"Richmond, VA",06/27/2021,Jun 27 to Jul 26,372,1901,0.196,0
+"Richmond, VA",07/27/2021,Jul 27 to Aug 26,729,1687,0.432,0
+"Richmond, VA",08/27/2021,Aug 27 to Sept 26,301,1831,0.164,1
+"Richmond, VA",09/27/2021,Sept 27 to Oct 26,441,2165,0.204,1
+"Richmond, VA",10/27/2021,Oct 27 to Nov 26,461,1793,0.257,1
+"South Bend, IN",05/27/2021,May 27 to Jun 26,120,271,0.443,0
+"South Bend, IN",06/27/2021,Jun 27 to Jul 26,163,275,0.593,0
+"South Bend, IN",07/27/2021,Jul 27 to Aug 26,165,278.25,0.593,0
+"South Bend, IN",08/27/2021,Aug 27 to Sept 26,167,269.75,0.619,1
+"South Bend, IN",09/27/2021,Sept 27 to Oct 26,191,265.75,0.719,1
+"South Bend, IN",10/27/2021,Oct 27 to Nov 26,171,262.75,0.651,1
+"St Louis, MO",05/27/2021,May 27 to Jun 26,739,1538,0.48,0
+"St Louis, MO",06/27/2021,Jun 27 to Jul 26,858,1388.25,0.618,0
+"St Louis, MO",07/27/2021,Jul 27 to Aug 26,574,1438,0.399,0
+"St Louis, MO",08/27/2021,Aug 27 to Sept 26,971,1492.25,0.651,1
+"St Louis, MO",09/27/2021,Sept 27 to Oct 26,941,1212,0.776,1
+"St Louis, MO",10/27/2021,Oct 27 to Nov 26,856,1173.25,0.73,1
+"Tampa, FL",05/27/2021,May 27 to Jun 26,999,1467,0.681,0
+"Tampa, FL",06/27/2021,Jun 27 to Jul 26,1037,1578.75,0.657,0
+"Tampa, FL",07/27/2021,Jul 27 to Aug 26,1124,1648.25,0.682,0
+"Tampa, FL",08/27/2021,Aug 27 to Sept 26,1094,1515.75,0.722,1
+"Tampa, FL",09/27/2021,Sept 27 to Oct 26,1368,1625.25,0.842,1
+"Tampa, FL",10/27/2021,Oct 27 to Nov 26,1271,1382,0.92,1
+"Wilmington, DE",05/27/2021,May 27 to Jun 26,306,928.25,0.33,0
+"Wilmington, DE",06/27/2021,Jun 27 to Jul 26,435,1007.25,0.432,0
+"Wilmington, DE",07/27/2021,Jul 27 to Aug 26,374,1014,0.369,0
+"Wilmington, DE",08/27/2021,Aug 27 to Sept 26,626,1049.25,0.597,1
+"Wilmington, DE",09/27/2021,Sept 27 to Oct 26,587,1000.75,0.587,1
+"Wilmington, DE",10/27/2021,Oct 27 to Nov 26,559,885.75,0.631,1
+Overall,05/27/2021,May 27 to Jun 26,23094,57631.183333333334,0.401,0
+Overall,06/27/2021,Jun 27 to Jul 26,23031,58404.566666666666,0.394,0
+Overall,07/27/2021,Jul 27 to Aug 26,26223,61813.86666666667,0.424,0
+Overall,08/27/2021,Aug 27 to Sept 26,26691,60589.208333333336,0.441,1
+Overall,09/27/2021,Sept 27 to Oct 26,31933,59298.61666666667,0.539,1
+Overall,10/27/2021,Oct 27 to Nov 26,28510,55135.125,0.517,1

@@ -1,0 +1,32 @@
+xsite,num_filings_hist_avg,total_filings,ratio,site_name_full,protections_type,local_protection_strength
+NEWYORK,57890,8688,0.15007773363275176,"New York, NY",Additional Local Protections in Place,Strong
+RICHMOND,5816,1203,0.20684319119669875,"Richmond, VA",State Protections in Place,Fair
+AUSTIN,2454.5,571,0.23263393766551232,"Austin, TX",Additional Local Protections in Place,Strong
+BOSTON,2046.0833333333333,744,0.3636215533743331,"Boston, MA",Additional Local Protections in Place,Strong
+PHILADELPHIA,5609.25,2184,0.3893568658911619,"Philadelphia, PA",Additional Local Protections in Place,Strong
+CHARLESTON,3883.25,1700,0.43777763471319125,"Charleston, SC",No Additional Protections,Weak
+ALBUQUERQUE,2901.3333333333335,1310,0.451516544117647,"Albuquerque, NM",State Protections in Place,Fair
+NEWORLEANS,1579,725,0.4591513616212793,"New Orleans, LA",Additional Local Protections in Place,Fair
+CLEVELAND,2662.25,1262,0.47403512066860737,"Cleveland, OH",No Additional Protections,Weak
+PITTSBURGH,3497.875,1678,0.479719829896723,"Pittsburgh, PA",Local Protections in Place,Fair
+MINNEAPOLIS,2031.125,1016,0.5002153978706382,"Minneapolis-Saint Paul, MN",State Protections in Place,Strong
+PHOENIX,17130.4,9256,0.5403259702050156,"Phoenix, AZ",No Additional Protections,Weak
+HARTFORD,1642.3333333333333,964,0.5869697584737162,"Hartford, CT",State Protections in Place,Fair
+WILMINGTON,2964.25,1772,0.5977903348233111,"Wilmington, DE",No Additional Protections,Weak
+BRIDGEPORT,1053.6666666666667,661,0.6273331224296108,"Bridgeport, CT",State Protections in Place,Fair
+SOUTHBEND,805.5,529,0.6567349472377405,"South Bend, IN",No Additional Protections,Weak
+MEMPHIS,6995,4604,0.6581844174410293,"Memphis, TN",No Additional Protections,Weak
+KANSASCITY,2436.25,1686,0.6920472036942021,"Kansas City, MO",No Additional Protections,Weak
+FORTWORTH,10305.75,7200,0.6986391092351357,"Fort Worth, TX",No Additional Protections,Weak
+STLOUIS,3924,2768,0.7054026503567788,"St Louis, MO",Additional Local Protections in Place ,Fair
+DALLAS,10752.333333333334,7934,0.7378863502495582,"Dallas, TX",Additional Local Protections in Place,Fair
+MILWAUKEE,3457.6,2668,0.7716335030078667,"Milwaukee, WI",No Additional Protections,Weak
+INDIANAPOLIS,7741.25,5979,0.7723558856773777,"Indianapolis, IN",No Additional Protections,Weak
+JACKSONVILLE,3203.2,2487,0.776411088911089,"Jacksonville, FL",No Additional Protections,Weak
+GREENVILLE,3836.75,3085,0.8040659412262983,"Greenville, SC",No Additional Protections,Weak
+TAMPA,4579,3733,0.815243502948242,"Tampa, FL",No Additional Protections,Weak
+GAINESVILLE,416,356,0.8557692307692307,"Gainesville, FL",No Additional Protections,Weak
+CINCINNATI,3363.4,2889,0.8589522506986977,"Cincinnati, OH",Some Additional Local Protections in Place,Fair
+HOUSTON,15353.5,13232,0.8618230370925196,"Houston, TX",No Additional Protections,Weak
+COLUMBUS,4861.333333333333,4232,0.8705430608886452,"Columbus, OH",No Additional Protections,Weak
+LASVEGAS,9481.75,8420,0.8880217259472144,"Las Vegas, NV",No Additional Protections,Weak
