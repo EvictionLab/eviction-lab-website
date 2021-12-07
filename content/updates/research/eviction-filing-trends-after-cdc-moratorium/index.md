@@ -6,7 +6,7 @@ featured: true
 collection: true
 researchtype: elresearch
 title: "Preliminary Analysis: Eviction Filing Trends After the CDC Moratorium Expiration"
-date: 2021-12-05T12:00:00.000Z
+date: 2021-12-09T12:00:00.000Z
 postauthorname: Jacob Haas, Jasmine Rangel, Juan Pablo Garnham, and Peter Hepburn
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
@@ -14,7 +14,6 @@ description: Get the latest news and understand your rights.
 socialDescription: Get the latest news and understand your rights.
 fbImage: "preview.png"
 twImage: "preview.png"
-url: /eviction-filing-trends-after-cdc-moratorium
 aliases:
 scripts:
   - charts
@@ -73,6 +72,18 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
   font-size: 1.4rem;
   letter-spacing: 0.05em;
 }
+
+.chart.chart--bar.chart--aftercdc_figure1a .chart__axis--bar .tick text,
+.chart.chart--bar.chart--aftercdc_figure1b .chart__axis--bar .tick text {
+  transform: rotate(-40deg) translate(8px, 8px);
+}
+
+.chart.chart--bar.chart--aftercdc_figure2 .chart__bar--good {
+  fill: var(--c3);
+}
+.chart.chart--bar.chart--aftercdc_figure2 .chart__bar--none {
+  fill: var(--c1);
+}
 </style>
 
 <div class="tab-content tab-content--aftercdc" id="pills-tabContent">
@@ -84,7 +95,7 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
   x="xfilemonthgroup_label"
   y="num_filings"
   title="Figure 1: Eviction filings during and after the CDC eviction moratorium"
-  margin="8 8 116 48"
+  margin="8 8 88 48"
 %}}
 
   </div>
@@ -100,7 +111,7 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Figure 1: Eviction filings during and after the CDC eviction moratorium"
-  margin="8 8 116 48"
+  margin="8 8 88 48"
 %}}
 
   </div>
@@ -125,6 +136,7 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
   data="./figure2.csv"
   x="site_name_full"
   y="ratio"
+  barClass="post_cdc_protection_strength"
   yMin="0"
   yMax="1"
   yTooltipFormat=".1%"
@@ -132,6 +144,21 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
   title="Figure 2: Eviction filings relative to historical average, by city"
   margin="8 8 104 40"
 %}}
+
+<div class="legend mb-3">
+  <div class="legend-item legend-item--2">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">Good Protections</div>
+  </div>
+  <div class="legend-item legend-item--1">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">Weak or Moderate Protections</div>
+  </div>
+  <div class="legend-item legend-item--0">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label eesti--bold">No Protections</div>
+  </div>
+</div>
 
 Between August 27 and November 26, 8,420 eviction cases were filed in Las Vegas, about 89% of historical average. Eviction filings exceeded 75% of historical average in 10 cities, including Columbus, Tampa, Indianapolis, and Milwaukee. By contrast, filing rates were much lower in other cities, particularly those that maintained state or local eviction moratoria through some or all of this period. In New York City, for example, the 8,688 eviction cases filed over the three months post-moratorium represented almost 85% fewer filings than historical average.
 
