@@ -798,13 +798,15 @@ Elab.ChartBuilder = (function (Elab) {
   Chart.prototype.addBandedBars = function (overrides) {
     var _this = this;
     var options = overrides || {};
+    options.classSelector = 
+      overrides.classSelector || function (d,i) { return i; };
     options.renderTooltip = overrides.renderTooltip;
     options.selector =
       overrides.selector ||
       function (data) {
         return [
           data.map(function (d) {
-            return [d.x, d.y, d.name];
+            return [d.x, d.y, d.name, d.barClass];
           }),
         ];
       };
@@ -820,7 +822,7 @@ Elab.ChartBuilder = (function (Elab) {
         selection
           .enter()
           .append("rect")
-          .attr("class", "chart__bar")
+          .attr("class", function (d,i) { return "chart__bar chart__bar--" + options.classSelector(d,i) })
           .attr("x", function (d) {
             return _this.xScale(d[0]);
           })

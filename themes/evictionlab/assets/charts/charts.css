@@ -518,7 +518,8 @@ body .visual .visual__title, body .visual .visual__title > * {
 
 .legend-item__label {
   line-height: 1;
-  font-family: var(--heading-font);
+
+  font-family: var(--heading-font, GT-Eesti-Display-Bold, sans-serif);
   margin-bottom: 12px;
   font-size: 1.2rem;
   font-weight: normal;
