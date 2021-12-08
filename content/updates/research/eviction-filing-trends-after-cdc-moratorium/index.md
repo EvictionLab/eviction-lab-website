@@ -84,6 +84,13 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
 .chart.chart--bar.chart--aftercdc_figure2 .chart__bar--none {
   fill: var(--c1);
 }
+
+.chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text,
+.chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text {
+  transform: rotate(0deg) translate(8px, 8px);
+  text-anchor: middle;
+}
+
 </style>
 
 <div class="tab-content tab-content--aftercdc" id="pills-tabContent">
@@ -164,18 +171,17 @@ Between August 27 and November 26, 8,420 eviction cases were filed in Las Vegas,
 
 Much of this variation between cities was <a href="https://evictionlab.org/eleven-months-cdc/">evident before the Supreme Court struck down the CDC moratorium</a>. Since that time, filings have also increased more quickly in some cities than in others&mdash;that is, some have more rapidly trended toward pre-pandemic &quot;normal&quot; eviction filing volume. We illustrate this pattern in Figure 3, which plots eviction filings relative to historical average in each of the 31 cities we monitor over the three months before and the three months after the CDC moratorium ended.
 
-{{% line-chart
+{{% bar-chart
   id="aftercdc_figure3"
   data="./figure3.csv"
-  x="xfilemonthgroup"
-  y="ratio"
-  groupBy="site_name_full"
-  xTicks="month"
-  xFormat="%b"
-  xTooltipFormat="%B"
-  yFormat=".0%"
-  highlight="Overall"
-  title="Figure 3: Changes in eviction filings relative to historical average, by city"
+  x="difference_bins_fullperiod"
+  y="n"
+  xLabel="Percentage Point Difference, the 3 Months Prior to and the 3 Months After CDC Ruling"
+  yLabel="Number of Cities"
+  yTooltipFormat="d"
+  yFormat="d"
+  title="Figure 3: Changes in eviction filings relative to historical average, by number of cities"
+  margin="8 8 64 40"
 %}}
 
 Across the 31 cities that we&rsquo;re monitoring, 22 saw an increase in filings relative to historical average of at least ten percentage points after the CDC moratorium was struck down. This included Houston (increase of 53 percentage points), Hartford, CT (increase of 45 percentage points), and Milwaukee (increase of 40 percentage points).

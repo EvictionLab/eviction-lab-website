@@ -151,6 +151,18 @@ Elab.BarChart = (function (Elab) {
           }),
         });
     }
+    if (dataOptions.xLabel) {
+      chart.addAxisLabel({
+        label: dataOptions.xLabel,
+        position: "bottom",
+      })
+    }
+    if (dataOptions.yLabel) {
+      chart.addAxisLabel({
+        label: dataOptions.yLabel,
+        position: "left",
+      })
+    }
     return chart.render();
   }
 

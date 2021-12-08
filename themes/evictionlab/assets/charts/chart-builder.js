@@ -1183,6 +1183,33 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  Chart.prototype.addAxisLabel = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    options.position = overrides.position || "bottom";
+    options.label = overrides.label || "";
+    function createSelection(parentSelection) {
+      return parentSelection.append("text").attr("class", "chart__label chart__label--" + options.position);
+    }
+    function createRenderFunction(selection, chart) {
+      return function () {
+        selection.attr("transform", function() {
+          if (options.position === "top") {
+            return "translate(" + chart.getInnerWidth() / 2 + ", 0)";
+          } else if (options.position === "bottom") {
+            return "translate(" + chart.getInnerWidth() / 2 + ", " + (chart.getInnerHeight() + chart.options.margin[2] - 16) + ")";
+          } else if (options.position === "left") {
+            return "translate(" + (-chart.options.margin[3] + 16) +", " + chart.getInnerHeight() / 2 + ") rotate(-90)";
+          } else if (options.position === "right") {
+            return "translate(" + chart.getInnerWidth() + ", " + chart.getInnerHeight() / 2 + ")";
+          }
+        }).style("text-anchor", "middle")
+          .text(options.label);
+      };
+    }
+    this.addElement("label-" + options.position, "overlay", createSelection, createRenderFunction);
+  }
+
   /**
    * Adds an axis for bar charts
    * @param {*} selector a function that accepts a data entry and returns the y value
