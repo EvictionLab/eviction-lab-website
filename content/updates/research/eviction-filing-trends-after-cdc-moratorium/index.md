@@ -28,7 +28,13 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
 <style>
 .tab-content.tab-content--aftercdc {
   position: relative;
-  height: 600px;
+  height: 620px;
+}
+@media(min-width: 768px) {
+  .tab-content.tab-content--aftercdc {
+    position: relative;
+    height: 600px;
+  }
 }
 .tab-content.tab-content--aftercdc > .tab-pane {
   display: block;
@@ -59,11 +65,13 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
 .nav.nav--aftercdc {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
-.nav-pills .nav-item {
+.nav.nav--aftercdc.nav-pills .nav-item {
   margin-left:0;
 }
-.nav-pills .nav-link {
+.nav.nav--aftercdc.nav-pills .nav-link {
   border-radius:0;
   border: 1px solid var(--c1, #e24000);
   color: var(--c1, #e24000)!important;
@@ -77,20 +85,6 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
 .chart.chart--bar.chart--aftercdc_figure1b .chart__axis--bar .tick text {
   transform: rotate(-40deg) translate(8px, 8px);
 }
-
-.chart.chart--bar.chart--aftercdc_figure2 .chart__bar--good {
-  fill: var(--c3);
-}
-.chart.chart--bar.chart--aftercdc_figure2 .chart__bar--none {
-  fill: var(--c1);
-}
-
-.chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text,
-.chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text {
-  transform: rotate(0deg) translate(8px, 8px);
-  text-anchor: middle;
-}
-
 </style>
 
 <div class="tab-content tab-content--aftercdc" id="pills-tabContent">
@@ -138,6 +132,15 @@ Still, evictions remained well below historical average after the moratorium was
 
 But looking at the numbers city-by-city shows concerning trends in many areas of the country, especially where renters have few legal protections. In Figure 2 we plot eviction filings as a percent of historical average for each of the cities tracked by the ETS over the three months after the Supreme Court struck down the CDC eviction moratorium.
 
+<style>
+.chart.chart--bar.chart--aftercdc_figure2 .chart__bar--good {
+  fill: var(--c3);
+}
+.chart.chart--bar.chart--aftercdc_figure2 .chart__bar--none {
+  fill: var(--c1);
+}
+</style>
+
 {{% bar-chart
   id="aftercdc_figure2"
   data="./figure2.csv"
@@ -170,6 +173,22 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
 Between August 27 and November 26, 8,420 eviction cases were filed in Las Vegas, about 89% of historical average. Eviction filings exceeded 75% of historical average in 10 cities, including Columbus, Tampa, Indianapolis, and Milwaukee. By contrast, filing rates were much lower in other cities, particularly those that maintained state or local eviction moratoria through some or all of this period. In New York City, for example, the 8,688 eviction cases filed over the three months post-moratorium represented almost 85% fewer filings than historical average.
 
 Much of this variation between cities was <a href="https://evictionlab.org/eleven-months-cdc/">evident before the Supreme Court struck down the CDC moratorium</a>. Since that time, filings have also increased more quickly in some cities than in others&mdash;that is, some have more rapidly trended toward pre-pandemic &quot;normal&quot; eviction filing volume. We illustrate this pattern in Figure 3, which plots eviction filings relative to historical average in each of the 31 cities we monitor over the three months before and the three months after the CDC moratorium ended.
+
+<style>
+.chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text,
+.chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text {
+  transform: rotate(-25deg) translate(8px, 8px);
+}
+.chart--aftercdc_figure3 .chart__label--bottom { display: none; }
+@media(min-width: 600px) {
+  .chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text,
+  .chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text {
+    transform: rotate(0deg) translate(8px, 8px);
+    text-anchor: middle;
+  }
+  .chart--aftercdc_figure3 .chart__label--bottom { display: block; }
+}
+</style>
 
 {{% bar-chart
   id="aftercdc_figure3"
