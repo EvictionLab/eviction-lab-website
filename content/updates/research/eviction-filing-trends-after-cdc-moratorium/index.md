@@ -145,21 +145,21 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
   y="ratio"
   barClass="post_cdc_protection_strength"
   yMin="0"
-  yMax="1"
+  yMax="1.4"
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Figure 2: Eviction filings relative to historical average, by city"
-  margin="8 8 104 40"
+  margin="8 8 164 40"
 %}}
 
 <div class="legend mb-3">
   <div class="legend-item legend-item--2">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">Good Protections</div>
+  <div class="legend-item__label">Stronger Protections</div>
   </div>
   <div class="legend-item legend-item--1">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">Weak or Moderate Protections</div>
+  <div class="legend-item__label">Weaker Protections</div>
   </div>
   <div class="legend-item legend-item--0">
   <div class="legend-item__color"></div>
