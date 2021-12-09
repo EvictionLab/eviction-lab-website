@@ -4,16 +4,17 @@ contenttype: updates
 contentcat: research
 featured: true
 collection: true
+in_index: true
 researchtype: elresearch
 title: "Preliminary Analysis: Eviction Filing Trends After the CDC Moratorium Expiration"
 date: 2021-12-09T12:00:00.000Z
 postauthorname: Jacob Haas, Jasmine Rangel, Juan Pablo Garnham, and Peter Hepburn
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Get the latest news and understand your rights.
-socialDescription: Get the latest news and understand your rights.
-fbImage: "preview.png"
-twImage: "preview.png"
+description: In this brief, we use data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, to examine what has happened after the Supreme Court’s decision.
+socialDescription: In this brief, we use data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, to examine what has happened after the Supreme Court’s decision.
+fbImage: social.png
+twImage: social.png
 aliases:
 scripts:
   - charts
@@ -23,7 +24,7 @@ On August 26, 2021, the Supreme Court struck down the federal eviction moratoriu
 
 {{< pullquote "Since the CDC moratorium ended, landlords have filed a growing number of cases, though still far fewer than are seen in a typical, pre-pandemic year." >}}
 
-Using data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, we can examine what has happened after the Supreme Court’s decision. Since the CDC moratorium ended, landlords have filed a growing number of cases, though still far fewer than are seen in a typical, pre-pandemic year. But when you look at the numbers city-by-city, the landscape is more complex: while filings are increasing rapidly in places like Houston and Milwaukee, they remain unchanged in others, such as New York.
+In this brief, we use data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, to examine what has happened after the Supreme Court’s decision. Since the CDC moratorium ended, landlords have filed a growing number of cases, though still far fewer than are seen in a typical, pre-pandemic year. But when you look at the numbers city-by-city, the landscape is more complex: while filings increased rapidly in places like <a href="https://evictionlab.org/eviction-tracking/houston-tx/">Houston</a> and <a href="https://evictionlab.org/eviction-tracking/milwaukee-wi/">Milwaukee</a>, they remain unchanged in others, such as <a href="https://evictionlab.org/eviction-tracking/new-york-ny/">New York</a>. We also explore some of the factors that may help to explain patterns observed after the federal moratorium ended.
 
 Over the summer of 2021, prior to the Supreme Court’s ruling, eviction filings in the sites we monitor had been around 49% of historical average—just under half of what we would expect for this time of year. As Figure 1 shows, these numbers—both the absolute number of cases filed and the ratio of filings to historical average—increased following the Court’s ruling.
 
@@ -129,7 +130,7 @@ Over the summer of 2021, prior to the Supreme Court’s ruling, eviction filings
   </li>
 </ul>
 
-In terms of the absolute number of eviction cases filed, we observed an increase of 1% between the month before and the month after the Supreme Court’s decision. This count increased again the following month (by 22.7%), but dipped in the third month after the end of the moratorium (11.2% drop). Overall, we observed 20.4% more cases filed in the three months after the moratorium than over the final three months that it was in place. <sup>1</sup>
+Eviction filings increased in the two months after the CDC moratorium ended, but dipped in the third. In terms of the absolute number of eviction cases filed, we observed an increase of 1% between the month before and the month after the Supreme Court’s decision. This count increased again the following month (by 22.7%), but dipped in the third month after the end of the moratorium (11.2% drop). Overall, we observed 20.4% more cases filed in the three months after the moratorium than over the final three months that it was in place. <sup>1</sup>
 
 Still, evictions remained well below historical average after the moratorium was lifted. At their highest level, in the second month after the moratorium ended (September 27 through October 26), the 48,387 eviction cases we recorded was still only 63.4% of historical average. 
 
@@ -173,11 +174,13 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
   </div>
 </div>
 
-Between August 27 and November 26, 11,799 eviction cases were filed in Las Vegas, about 126% of historical average. Eviction filings exceeded 75% of historical average in 11 cities, including Columbus, Tampa, Indianapolis, and Milwaukee. By contrast, filing rates were much lower in other cities, particularly those that maintained state or local eviction moratoria through some or all of this period. In New York City, for example, the 8,687 eviction cases filed over the three months post-moratorium represented almost 85% fewer filings than historical average. 
+Between August 27 and November 26, 11,799 eviction cases were filed in <a href="https://evictionlab.org/eviction-tracking/las-vegas-nv/">Las Vegas</a>, about 126% of historical average. Eviction filings exceeded 75% of historical average in 11 cities, including <a href="https://evictionlab.org/eviction-tracking/columbus-oh/">Columbus</a>, <a href="https://evictionlab.org/eviction-tracking/tampa-fl/">Tampa</a>, <a href="https://evictionlab.org/eviction-tracking/indianapolis-in/">Indianapolis</a>, and <a href="https://evictionlab.org/eviction-tracking/milwaukee-wi/">Milwaukee</a>. 
+
+By contrast, filing rates were much lower in other cities, particularly those that maintained state or local eviction moratoria through some or all of this period. In <a href="https://evictionlab.org/eviction-tracking/new-york-ny/">New York City</a>, for example, the 8,687 eviction cases filed over the three months post-moratorium represented almost 85% fewer filings than historical average. 
 
 {{< pullquote "Across the 31 cities that we’re monitoring, 23 saw an increase in filings relative to historical average of at least ten percentage points after the CDC moratorium was struck down." >}}
 
-Much of this variation between cities was <a href="https://evictionlab.org/eleven-months-cdc/">evident before the Supreme Court struck down the CDC moratorium</a>. Since that time, filings have also increased more quickly in some cities than in others—that is, some have more rapidly trended toward pre-pandemic "normal" eviction filing volume. We illustrate this pattern in Figure 3, which groups each of the 31 cities we monitor by their percentage point change in eviction filings relative to normal between the three months before and the three months after the CDC moratorium ended. For example, Memphis saw filings at 54.9% of historical averages prior to the Supreme Court ruling and filings at 70.1% of historical averages afterwards – a 15.2 percentage point increase, putting them in the middle bin of Figure 3. 
+Much of this variation between cities was <a href="https://evictionlab.org/eleven-months-cdc/">evident before the Supreme Court struck down the CDC moratorium</a>. Since that time, filings have also increased more quickly in some cities than in others—that is, some have more rapidly trended toward pre-pandemic "normal" eviction filing volume. We illustrate this pattern in Figure 3, which groups each of the 31 cities we monitor by their percentage point change in eviction filings relative to normal between the three months before and the three months after the CDC moratorium ended. For example, <a href="https://evictionlab.org/eviction-tracking/memphis-tn/">Memphis</a> saw filings at 54.9% of historical averages prior to the Supreme Court ruling and filings at 70.1% of historical averages afterwards – a 15.2 percentage point increase, putting them in the middle bin of Figure 3. 
 
 <style>
 .chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text,
@@ -209,25 +212,25 @@ Much of this variation between cities was <a href="https://evictionlab.org/eleve
   margin="8 8 64 40"
 %}}
 
-Across the 31 cities that we’re monitoring, 23 saw an increase in filings relative to historical average of at least ten percentage points after the CDC moratorium was struck down. This included Houston (increase of 39 percentage points), New Orleans (increase of 33 percentage points), and Milwaukee (increase of 31 percentage points). 
+Across the 31 cities that we’re monitoring, 23 saw an increase in filings relative to historical average of at least ten percentage points after the CDC moratorium was struck down. This included <a href="https://evictionlab.org/eviction-tracking/houston-tx/">Houston</a> (increase of 39 percentage points), <a href="https://evictionlab.org/eviction-tracking/new-orleans-la/">New Orleans</a> (increase of 33 percentage points), and <a href="https://evictionlab.org/eviction-tracking/milwaukee-wi/">Milwaukee</a> (increase of 31 percentage points). 
 
-In Houston, 8,199 eviction cases were filed in the three months before the Court’s decision (51.8% below historical average). That rose to 13,283 cases in the three months after the moratorium was struck down (12.8% below historical average).
+In <a href="https://evictionlab.org/eviction-tracking/houston-tx/">Houston</a>, 8,199 eviction cases were filed in the three months before the Court’s decision (51.8% below historical average). That rose to 13,283 cases in the three months after the moratorium was struck down (12.8% below historical average).
 
-In some cities, filings increased but remained well below historical average. For example, Cleveland, Ohio and Charleston, South Carolina both remained more than 50% below historical average. In Cleveland, filings increased from 37.3% of historical average the three months before the federal moratorium ended to 48.3% of historical average in the three months after.
+In some cities, filings increased but remained well below historical average. For example, <a href="https://evictionlab.org/eviction-tracking/cleveland-oh/">Cleveland, Ohio</a> and <a href="https://evictionlab.org/eviction-tracking/charleston-sc/">Charleston, South Carolina</a> both remained more than 50% below historical average. In Cleveland, filings increased from 37.3% of historical average the three months before the federal moratorium ended to 48.3% of historical average in the three months after.
 
 “Cleveland has done a really good job of getting money out the door via rent assistance,” said Hazel Remesch, managing attorney of Housing at The Legal Aid Society of Cleveland. “Even though the system itself is still very burdensome and very difficult for tenants to navigate on their own, there has been a big push to get money into the hands of landlords.”
 
 Remesch said that a right to counsel program that started just before the pandemic and more collaboration with courts have also been important to keep evictions at bay.
 
-Eviction filings remained relatively steady—or even fell slightly—in eight cities. Six of these eight cities have had additional local eviction protections in place: Albuquerque, Austin, Boston, New York City, Pittsburgh, and Richmond. The other two cities that have remained steady, Las Vegas and Columbus, had already experienced an increase in filings that brought them close to or above their pre-pandemic average while the CDC moratorium was in place.
+Eviction filings remained relatively steady—or even fell slightly—in eight cities. Six of these eight cities have had additional local eviction protections in place: <a href="https://evictionlab.org/eviction-tracking/albuquerque-nm/">Albuquerque</a>, <a href="https://evictionlab.org/eviction-tracking/austin-tx/">Austin</a>, <a href="https://evictionlab.org/eviction-tracking/boston-ma/">Boston</a>, <a href="https://evictionlab.org/eviction-tracking/new-york-ny/">New York City</a>, <a href="https://evictionlab.org/eviction-tracking/pittsburgh-pa/">Pittsburgh</a>, and <a href="https://evictionlab.org/eviction-tracking/richmond-va/">Richmond</a>. The other two cities that have remained steady, <a href="https://evictionlab.org/eviction-tracking/las-vegas-nv/">Las Vegas</a> and <a href="https://evictionlab.org/eviction-tracking/columbus-oh/">Columbus</a>, had already experienced an increase in filings that brought them close to or above their pre-pandemic average while the CDC moratorium was in place.
 
 ---
 
 Eviction filings have increased since the end of the CDC moratorium, but remain well below normal levels in nearly all jurisdictions we monitor. Why might this be? It is too soon to say definitively, but several plausible explanations bear investigation.
 
-First, emergency rental assistance (ERA) may be deterring filings. The scale and pace of ERA distribution increased markedly over the summer of 2021. The Treasury Department reported that state and local ERA programs delivered approximately $1.6 billion in June. By September, that was up to $2.6 billion, an increase of nearly 70%. Improvements in the distribution of these funds may have helped to encourage landlord participation in these programs and prevented eviction cases from being filed.
+First, emergency rental assistance (ERA) may be deterring filings. The scale and pace of ERA distribution increased markedly over the summer of 2021. The Treasury Department reported that state and local ERA programs delivered approximately $1.6 billion in June. By October, that was up to $2.86 billion, an increase of nearly 80%. The Department of the Treasury expects that $25–$30 billion of ERA funds will be spent or obligated by the end of 2021. Improvements in the distribution of these funds may have helped to encourage landlord participation in these programs and prevented eviction cases from being filed.
 
-But these programs are starting to run out of money in some places. Mitzi Ordoñez, a lead organizer for the Texas Organizing Project in Houston, said that anxiousness is growing both among tenants and landlords. Although more in the Latino community where she works are finding work, the Texas rental assistance program <a href="https://www.texastribune.org/2021/11/04/texas-rent-relief-applications-ending/">paused its applications in November</a>.
+But these programs are starting to run out of money in some places. California, New York, and Texas—all home to large renter populations—have spent, obligated, or have enough pending applications to exhaust all ERA funding. Mitzi Ordoñez, a lead organizer for the Texas Organizing Project in Houston, said that anxiousness is growing both among tenants and landlords. Although more in the Latino community where she works are finding work, the Texas rental assistance program <a href="https://www.texastribune.org/2021/11/04/texas-rent-relief-applications-ending/">paused its applications in November</a>.
 
 “In August and September there were more programs to apply for rent and the money was arriving faster, but I think now landlords are getting tired of waiting for the help of the government,” Ordoñez said.
 
