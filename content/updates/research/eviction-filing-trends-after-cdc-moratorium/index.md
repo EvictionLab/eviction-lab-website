@@ -21,9 +21,11 @@ scripts:
 
 On August 26, 2021, the Supreme Court struck down the federal eviction moratorium established by the Centers for Disease Control and Prevention (CDC) nearly a year prior. While the moratorium was in place, we estimated that <a href="https://evictionlab.org/eleven-months-cdc/">the U.S. saw at least 1.55 million fewer eviction filings than normal</a>. With <a href="https://www.cbpp.org/research/poverty-and-inequality/tracking-the-covid-19-economys-effects-on-food-housing-and">millions still reporting concern about their ability to make rent</a>, many <a href="https://www.washingtonpost.com/opinions/2021/08/26/national-eviction-crisis-is-still-just-around-corner/">feared</a> that the end of these protections would lead to large increases in eviction proceedings and displacement, particularly for lower-income and minority renters.
 
-Using data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, we can examine what has happened after the Supreme Court&rsquo;s decision. Since the CDC moratorium ended, landlords have filed a growing number of cases, though still far fewer than are seen in a typical, pre-pandemic year. But when you look at the numbers city-by-city, the landscape is more complex: while filings are increasing rapidly in places like Houston and Milwaukee, they remain unchanged in others, such as New York.
+{{< pullquote "Since the CDC moratorium ended, landlords have filed a growing number of cases, though still far fewer than are seen in a typical, pre-pandemic year." >}}
 
-Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction filings in the sites we monitor had been around 44%&nbsp;of historical average&mdash;just under half of what we would expect for this time of year.&nbsp;As Figure 1 shows, these numbers&mdash;both the absolute number of cases filed and the ratio of filings to historical average&mdash;increased following the Court&rsquo;s ruling.
+Using data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, we can examine what has happened after the Supreme Court’s decision. Since the CDC moratorium ended, landlords have filed a growing number of cases, though still far fewer than are seen in a typical, pre-pandemic year. But when you look at the numbers city-by-city, the landscape is more complex: while filings are increasing rapidly in places like Houston and Milwaukee, they remain unchanged in others, such as New York.
+
+Over the summer of 2021, prior to the Supreme Court’s ruling, eviction filings in the sites we monitor had been around 49% of historical average—just under half of what we would expect for this time of year. As Figure 1 shows, these numbers—both the absolute number of cases filed and the ratio of filings to historical average—increased following the Court’s ruling.
 
 <style>
 .tab-content.tab-content--aftercdc {
@@ -95,6 +97,7 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
   data="./figure1.csv"
   x="xfilemonthgroup_label"
   y="num_filings"
+  yMin="0"
   title="Figure 1: Eviction filings during and after the CDC eviction moratorium"
   margin="8 8 88 48"
 %}}
@@ -126,11 +129,11 @@ Over the summer of 2021, prior to the Supreme Court&rsquo;s ruling, eviction fil
   </li>
 </ul>
 
-In terms of the absolute number of eviction cases filed, we observed an increase of 1.6% between the month before and the month after the Supreme Court&rsquo;s decision. This count increased again the following month (by 18.8%), but dipped in the third month after the end of the moratorium (11.6% drop). Overall, we observed 19.2% more cases filed in the three months after the moratorium than over the final three months that it was in place.
+In terms of the absolute number of eviction cases filed, we observed an increase of 1% between the month before and the month after the Supreme Court’s decision. This count increased again the following month (by 22.7%), but dipped in the third month after the end of the moratorium (11.2% drop). Overall, we observed 20.4% more cases filed in the three months after the moratorium than over the final three months that it was in place. <sup>1</sup>
 
-Still, evictions remained well below historical average after the moratorium was lifted. At their highest level, in the second month after the moratorium ended (September 27 through October 26), the 38,199 eviction cases we recorded was still only 57.1% of historical average.
+Still, evictions remained well below historical average after the moratorium was lifted. At their highest level, in the second month after the moratorium ended (September 27 through October 26), the 48,387 eviction cases we recorded was still only 63.4% of historical average. 
 
-But looking at the numbers city-by-city shows concerning trends in many areas of the country, especially where renters have few legal protections. In Figure 2 we plot eviction filings as a percent of historical average for each of the cities tracked by the ETS over the three months after the Supreme Court struck down the CDC eviction moratorium.
+But looking at the numbers city-by-city shows concerning trends in many areas of the country, especially where renters have few legal protections. In Figure 2 we plot eviction filings as a percent of historical average for each of the cities tracked by the ETS over the three months after the Supreme Court struck down the CDC eviction moratorium. 
 
 <style>
 .chart.chart--bar.chart--aftercdc_figure2 .chart__bar--good {
@@ -151,7 +154,7 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
   yMax="1.4"
   yTooltipFormat=".1%"
   yFormat=".0%"
-  title="Figure 2: Eviction filings relative to historical average, by city"
+  title="Figure 2: Eviction filings relative to historical average, by city²"
   margin="8 8 164 40"
 %}}
 
@@ -170,9 +173,11 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
   </div>
 </div>
 
-Between August 27 and November 26, 8,420 eviction cases were filed in Las Vegas, about 89% of historical average. Eviction filings exceeded 75% of historical average in 10 cities, including Columbus, Tampa, Indianapolis, and Milwaukee. By contrast, filing rates were much lower in other cities, particularly those that maintained state or local eviction moratoria through some or all of this period. In New York City, for example, the 8,688 eviction cases filed over the three months post-moratorium represented almost 85% fewer filings than historical average.
+Between August 27 and November 26, 11,799 eviction cases were filed in Las Vegas, about 126% of historical average. Eviction filings exceeded 75% of historical average in 11 cities, including Columbus, Tampa, Indianapolis, and Milwaukee. By contrast, filing rates were much lower in other cities, particularly those that maintained state or local eviction moratoria through some or all of this period. In New York City, for example, the 8,687 eviction cases filed over the three months post-moratorium represented almost 85% fewer filings than historical average. 
 
-Much of this variation between cities was <a href="https://evictionlab.org/eleven-months-cdc/">evident before the Supreme Court struck down the CDC moratorium</a>. Since that time, filings have also increased more quickly in some cities than in others&mdash;that is, some have more rapidly trended toward pre-pandemic &quot;normal&quot; eviction filing volume. We illustrate this pattern in Figure 3, which plots eviction filings relative to historical average in each of the 31 cities we monitor over the three months before and the three months after the CDC moratorium ended.
+{{< pullquote "Across the 31 cities that we’re monitoring, 23 saw an increase in filings relative to historical average of at least ten percentage points after the CDC moratorium was struck down." >}}
+
+Much of this variation between cities was <a href="https://evictionlab.org/eleven-months-cdc/">evident before the Supreme Court struck down the CDC moratorium</a>. Since that time, filings have also increased more quickly in some cities than in others—that is, some have more rapidly trended toward pre-pandemic "normal" eviction filing volume. We illustrate this pattern in Figure 3, which groups each of the 31 cities we monitor by their percentage point change in eviction filings relative to normal between the three months before and the three months after the CDC moratorium ended. For example, Memphis saw filings at 54.9% of historical averages prior to the Supreme Court ruling and filings at 70.1% of historical averages afterwards – a 15.2 percentage point increase, putting them in the middle bin of Figure 3. 
 
 <style>
 .chart.chart--bar.chart--aftercdc_figure3 .chart__axis--bar .tick text,
@@ -199,46 +204,58 @@ Much of this variation between cities was <a href="https://evictionlab.org/eleve
   yLabel="Number of Cities"
   yTooltipFormat="d"
   yFormat="d"
-  title="Figure 3: Changes in eviction filings relative to historical average, by number of cities"
+  yMin="0"
+  title="Figure 3: Percentage point changes in eviction filings relative to historical average, by number of cities"
   margin="8 8 64 40"
 %}}
 
-Across the 31 cities that we&rsquo;re monitoring, 22 saw an increase in filings relative to historical average of at least ten percentage points after the CDC moratorium was struck down. This included Houston (increase of 53 percentage points), Hartford, CT (increase of 45 percentage points), and Milwaukee (increase of 40 percentage points).
+Across the 31 cities that we’re monitoring, 23 saw an increase in filings relative to historical average of at least ten percentage points after the CDC moratorium was struck down. This included Houston (increase of 39 percentage points), New Orleans (increase of 33 percentage points), and Milwaukee (increase of 31 percentage points). 
 
-In Houston, 3,163 eviction cases were filed the month before the Court&rsquo;s decision (44.7% below historical average). That rose to 5,007 cases two months after the moratorium was struck down (8.2% above historical average).
+In Houston, 8,199 eviction cases were filed in the three months before the Court’s decision (51.8% below historical average). That rose to 13,283 cases in the three months after the moratorium was struck down (12.8% below historical average).
 
-In some cities, filings increased but remained well below historical average.&nbsp;For example, Cleveland, Ohio and Charleston, South Carolina both remained more than 40% below historical average. In Cleveland, filings increased from 39.6% of historical average the month before the federal moratorium ended to 58.5% of historical average two months after.
+In some cities, filings increased but remained well below historical average. For example, Cleveland, Ohio and Charleston, South Carolina both remained more than 50% below historical average. In Cleveland, filings increased from 37.3% of historical average the three months before the federal moratorium ended to 48.3% of historical average in the three months after.
 
-&ldquo;Cleveland has done a really good job of getting money out the door via rent assistance,&rdquo; said Hazel Remesch, managing attorney of Housing at The Legal Aid Society of Cleveland. &ldquo;Even though the system itself is still very burdensome and very difficult for tenants to navigate on their own, there has been a big push to get money into the hands of landlords.&rdquo;
+“Cleveland has done a really good job of getting money out the door via rent assistance,” said Hazel Remesch, managing attorney of Housing at The Legal Aid Society of Cleveland. “Even though the system itself is still very burdensome and very difficult for tenants to navigate on their own, there has been a big push to get money into the hands of landlords.”
 
 Remesch said that a right to counsel program that started just before the pandemic and more collaboration with courts have also been important to keep evictions at bay.
 
-Eviction filings remained relatively steady&mdash;or even fell slightly&mdash;in six cities. Five of these six cities have additional local eviction protections in place: Albuquerque, Austin, Boston, New York City, and Richmond. The sixth city that has remained steady, Gainesville, Florida, had already experienced an increase in filings close to their pre-pandemic average while the CDC moratorium was in place.
+Eviction filings remained relatively steady—or even fell slightly—in eight cities. Six of these eight cities have had additional local eviction protections in place: Albuquerque, Austin, Boston, New York City, Pittsburgh, and Richmond. The other two cities that have remained steady, Las Vegas and Columbus, had already experienced an increase in filings that brought them close to or above their pre-pandemic average while the CDC moratorium was in place.
 
 ---
 
-Eviction filings have increased since the end of the CDC moratorium, but remain well below normal levels. Why might this be? It is too soon to say definitively, but several plausible explanations bear investigation.
+Eviction filings have increased since the end of the CDC moratorium, but remain well below normal levels in nearly all jurisdictions we monitor. Why might this be? It is too soon to say definitively, but several plausible explanations bear investigation.
 
 First, emergency rental assistance (ERA) may be deterring filings. The scale and pace of ERA distribution increased markedly over the summer of 2021. The Treasury Department reported that state and local ERA programs delivered approximately $1.6 billion in June. By September, that was up to $2.6 billion, an increase of nearly 70%. Improvements in the distribution of these funds may have helped to encourage landlord participation in these programs and prevented eviction cases from being filed.
 
-But these programs are starting to run out of money in some places. Mitzi Ordo&ntilde;ez, a lead organizer for the Texas Organizing Project in Houston, said that anxiousness is growing both among tenants and landlords. Although more in the Latino community where she works are finding work, the Texas rental assistance program <a href="https://www.texastribune.org/2021/11/04/texas-rent-relief-applications-ending/">paused its applications in November</a>.
+But these programs are starting to run out of money in some places. Mitzi Ordoñez, a lead organizer for the Texas Organizing Project in Houston, said that anxiousness is growing both among tenants and landlords. Although more in the Latino community where she works are finding work, the Texas rental assistance program <a href="https://www.texastribune.org/2021/11/04/texas-rent-relief-applications-ending/">paused its applications in November</a>.
 
-&ldquo;In August and September there were more programs to apply for rent and the money was arriving faster, but I think now landlords are getting tired of waiting for the help of the government,&rdquo; Ordo&ntilde;ez said.
+“In August and September there were more programs to apply for rent and the money was arriving faster, but I think now landlords are getting tired of waiting for the help of the government,” Ordoñez said.
 
 In addition to the direct rent assistance, more federal funds were directed to increase access to legal counsel and eviction diversion. The expansion of such programs might give landlords more tools apart from eviction to use when dealing with a rent shortfall.
 
-Second, income supports established by the federal government in response to the pandemic may be helping households avoid rent shortfalls. Stimulus payments, expanded unemployment insurance benefits, and the new Child Tax Credit have <a href="https://www.nytimes.com/2021/12/07/business/pandemic-savings.html">expanded cash reserves</a>, especially for low-income families. More cash in hand could allow households to pay rent more reliably and avoid potential pandemic-induced shortfalls. These &ldquo;excess savings&rdquo; remain above historical levels, though now appear to be shrinking.
+Second, income supports established by the federal government in response to the pandemic may be helping households avoid rent shortfalls. Stimulus payments, expanded unemployment insurance benefits, and the new Child Tax Credit have <a href="https://www.nytimes.com/2021/12/07/business/pandemic-savings.html">expanded cash reserves</a>, especially for low-income families. More cash in hand could allow households to pay rent more reliably and avoid potential pandemic-induced shortfalls. These “excess savings” remain above historical levels, though now appear to be shrinking.
 
-Third, landlords in neighborhoods that normally see a large number of evictions may be filing fewer cases because demand for new rentals remains weak. In most cities, <a href="https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/">evictions are heavily concentrated in a relatively small number of neighborhoods and even buildings</a>. <a href="https://www.usatoday.com/story/money/2021/11/23/rental-prices-small-cities-grew-most/8664490002/?gnt-cfr%3D1">Recent reporting </a>has highlighted increasing rents in many markets, a pattern that would incentivize landlords to remove current tenants if they expect they can find new tenants willing to pay more. It&rsquo;s unclear, however, whether this pattern holds in lower-income neighborhoods that are the sites of most evictions and where little or no real-time data on rents are available.
+Third, landlords in neighborhoods that normally see a large number of evictions may be filing fewer cases because demand for new rentals remains weak. In most cities, <a href="https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/">evictions are heavily concentrated in a relatively small number of neighborhoods and even buildings</a>. Some evidence is at odds with a weak rental market: <a href="https://www.usatoday.com/story/money/2021/11/23/rental-prices-small-cities-grew-most/8664490002/?gnt-cfr%3D1">recent reporting</a> has highlighted increasing rents in many markets, a pattern that would incentivize landlords to remove current tenants if they expect they can find new tenants willing to pay more. It’s unclear, however, whether this pattern holds in lower-income neighborhoods that are the sites of most evictions and where little or no real-time data on rents are available.
 
-Fourth, more than a year and a half into the COVID-19 pandemic, landlords may be changing their property management techniques to rely less on the threat of eviction. <a href="https://www.jchs.harvard.edu/blog/findings-and-lessons-two-national-surveys-landlords">Surveys have found that landlords have adopted a variety of new practices in response to the pandemic</a>. A <a href="https://www.urban.org/features/tracking-rent-payments-mom-and-pop-landlords">growing body</a>&nbsp;of <a href="https://www.jpmorganchase.com/institute/research/household-debt/how-did-landlords-fare-during-covid">data suggests</a>&nbsp;that many have also weathered this period without seeing major drops in rent collection. Fewer eviction case filings might reflect the success of other means of rent collection that are less dependent on the threat of removal. If so, we might see an especially pronounced effect in areas that normally see high rates of <a href="https://evictionlab.org/serial-eviction-filings/">serial eviction filings</a>&mdash;places where historically landlords have used eviction filings as routine rent-collection tools. &nbsp;
+Fourth, more than a year and a half into the COVID-19 pandemic, landlords may be changing their property management techniques to rely less on the threat of eviction. <a href="https://www.jchs.harvard.edu/blog/findings-and-lessons-two-national-surveys-landlords">Surveys have found that landlords have adopted a variety of new practices in response to the pandemic</a>. A <a href="https://www.urban.org/features/tracking-rent-payments-mom-and-pop-landlords">growing body</a> of <a href="https://www.jpmorganchase.com/institute/research/household-debt/how-did-landlords-fare-during-covid">data suggests</a>&nbsp;that many have also weathered this period without seeing major drops in rent collection. Fewer eviction case filings might reflect the success of other means of rent collection that are less dependent on the threat of removal. If so, we might see an especially pronounced effect in areas that normally see high rates of <a href="https://evictionlab.org/serial-eviction-filings/">serial eviction filings</a>&mdash;places where historically landlords have used eviction filings as routine rent-collection tools.
 
-Fifth, it may be that the low rates of eviction filing reported here mask an increase in informal evictions. We are only able to monitor eviction cases filed with the courts, and do not have a reliable way of tracking instances when landlords illegally force tenants out. This might be a especially prominent problem among undocumented communities, like the ones in Houston that Ordo&ntilde;ez works with.
+Fifth, it may be that the low rates of eviction filing reported here mask an increase in displacement following lease expirations or informal evictions. We are only able to monitor eviction cases filed with the courts, and do not have a reliable way of tracking instances when tenants move out as a result of a lease expiration or when landlords illegally force tenants out. Illegal lockouts might be especially prominent among undocumented communities, like the ones in Houston that Ordoñez works with.
 
-&ldquo;Although we do a lot of workshops to inform people that their immigration status does not affect their rights as a tenant, there&rsquo;s a lot of fear of going to court,&rdquo; Ordo&ntilde;ez said. &ldquo;And we also hear of illegal evictions, where building complexes do not follow the due process.&rdquo;
+“Although we do a lot of workshops to inform people that their immigration status does not affect their rights as a tenant, there’s a lot of fear of going to court,” Ordoñez said. “And we also hear of illegal evictions, where building complexes do not follow the due process.”
 
-If these informal evictions became more common during the CDC eviction moratorium&mdash;or in response to stipulations that restrict landlords&rsquo; eviction options after receiving ERA funds&mdash;then our measures of eviction filings would provide an increasingly less-accurate measure of overall displacement.
+If displacement outside of the court system became more common during the CDC eviction moratorium—or in response to stipulations that restrict landlords’ eviction options after receiving ERA funds—then our measures of eviction filings would provide an increasingly less-accurate measure of overall displacement.
 
-Taken jointly, these factors&mdash;and likely others that we haven&rsquo;t considered&mdash;are resulting in fewer eviction filings than normal following the end of the CDC eviction moratorium. An increasing number of cases were filed over the three months following the Supreme Court&rsquo;s decision, but totals remain below historical average in nearly all jurisdictions that we monitor.
+{{< pullquote "Taken jointly, these factors – and likely others that we haven’t considered – are resulting in fewer eviction filings than normal following the end of the CDC eviction moratorium." >}}
 
-Fears of an immediate tsunami of eviction cases in the months following the end of the federal eviction moratorium have thus far not been borne out. We caution that this does not serve as a prediction of what will happen over the coming months and that the pace of filing may increase, especially as ERA programs stop taking applications. Nonetheless, it&rsquo;s encouraging that we did not see an immediate spike in cases and that filings overall remain considerably below historical average, both overall and in most of the jurisdictions that we monitor.
+Taken jointly, these factors—and likely others that we haven’t considered—are resulting in fewer eviction filings than normal following the end of the CDC eviction moratorium. An increasing number of cases were filed over the three months following the Supreme Court’s decision, but totals remain below historical average in nearly all jurisdictions that we monitor.
+
+Fears of an immediate tsunami of eviction cases in the months following the end of the federal eviction moratorium have thus far not been borne out. We caution that this does not serve as a prediction of what will happen over the coming months: the pace of filing may increase, especially as ERA programs stop taking applications. Nonetheless, it’s encouraging that we did not see an immediate spike in cases and that filings remain considerably below historical average, both overall and in most of the jurisdictions that we monitor.
+
+---
+
+<div class="footnotes">
+<ol>
+  <li>The smaller increase in the first month and larger increase in the second month after the Supreme Court decision is partially a result of our data comparison choices rather than a true delay in the increase of filings. The period from August 27 to September 26 contains five full weekends, when eviction filings are rare, while the prior period contains only four weekends. Additionally, a date range in past years may not have had as many weekends compared to 2021, affecting comparisons to historical filings slightly.</li>
+  <li>We classify protections based on three factors: the time period protections were in place (less than 3 weeks, 3-6 weeks, or greater than 6 weeks), protection strength (no protections, protections against execution of eviction/requires tenant action, or further protections), and interaction with rental assistance programs (separate track for assistance, eviction process frozen for a period during assistance application, need to have applied for assistance prior to eviction process). A “Stronger” protection is ranked at the highest level in at least two of these categories, or at the highest level in one category and the middle level in the two others; “No protection” is where protections are ranked at the lowest level in at least two of these categories.</li>
+</ol>
+</div>
