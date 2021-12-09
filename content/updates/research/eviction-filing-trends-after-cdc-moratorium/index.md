@@ -158,11 +158,11 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
 <div class="legend mb-3">
   <div class="legend-item legend-item--2">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">Stronger Protections</div>
+  <div class="legend-item__label">Strong Protections</div>
   </div>
   <div class="legend-item legend-item--1">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">Weaker Protections</div>
+  <div class="legend-item__label">Limited Protections</div>
   </div>
   <div class="legend-item legend-item--0">
   <div class="legend-item__color"></div>
