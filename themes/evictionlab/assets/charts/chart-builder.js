@@ -798,13 +798,15 @@ Elab.ChartBuilder = (function (Elab) {
   Chart.prototype.addBandedBars = function (overrides) {
     var _this = this;
     var options = overrides || {};
+    options.classSelector = 
+      overrides.classSelector || function (d,i) { return i; };
     options.renderTooltip = overrides.renderTooltip;
     options.selector =
       overrides.selector ||
       function (data) {
         return [
           data.map(function (d) {
-            return [d.x, d.y, d.name];
+            return [d.x, d.y, d.name, d.barClass];
           }),
         ];
       };
@@ -820,7 +822,7 @@ Elab.ChartBuilder = (function (Elab) {
         selection
           .enter()
           .append("rect")
-          .attr("class", "chart__bar")
+          .attr("class", function (d,i) { return "chart__bar chart__bar--" + options.classSelector(d,i) })
           .attr("x", function (d) {
             return _this.xScale(d[0]);
           })
@@ -1180,6 +1182,33 @@ Elab.ChartBuilder = (function (Elab) {
     };
     return this;
   };
+
+  Chart.prototype.addAxisLabel = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    options.position = overrides.position || "bottom";
+    options.label = overrides.label || "";
+    function createSelection(parentSelection) {
+      return parentSelection.append("text").attr("class", "chart__label chart__label--" + options.position);
+    }
+    function createRenderFunction(selection, chart) {
+      return function () {
+        selection.attr("transform", function() {
+          if (options.position === "top") {
+            return "translate(" + chart.getInnerWidth() / 2 + ", 0)";
+          } else if (options.position === "bottom") {
+            return "translate(" + chart.getInnerWidth() / 2 + ", " + (chart.getInnerHeight() + chart.options.margin[2] - 16) + ")";
+          } else if (options.position === "left") {
+            return "translate(" + (-chart.options.margin[3] + 16) +", " + chart.getInnerHeight() / 2 + ") rotate(-90)";
+          } else if (options.position === "right") {
+            return "translate(" + chart.getInnerWidth() + ", " + chart.getInnerHeight() / 2 + ")";
+          }
+        }).style("text-anchor", "middle")
+          .text(options.label);
+      };
+    }
+    this.addElement("label-" + options.position, "overlay", createSelection, createRenderFunction);
+  }
 
   /**
    * Adds an axis for bar charts
