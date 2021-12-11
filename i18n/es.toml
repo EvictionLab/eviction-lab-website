@@ -18,13 +18,13 @@ other = "Herramientas interactivas"
 [toolsSub]
 other = "Explorar datos de desalojo a nivel nacional que abarcan los años 2000-2016. Ver mapas y gráficos, descargar informes y más."  
 [mapData]
-other = "Mapa y datos"
+other = "Mapa y datos nacionales"
 [mapSub]
 other = "Aprenda sobre la crisis de vivienda en los Estados Unidos por interactuar con un mapa personalizable"
 [mapCTA]
 other = "Ir al mapa"
 [rankingsHead]
-other = "clasificaciones de desalojo"
+other = "Clasificaciones de desalojo"
 [rankingsSubhead]
 other = "Ver qué ciudades se han clasificado más altos en desalojos en los EE. UU."
 [rankingsCTA]

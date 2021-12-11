@@ -255,7 +255,7 @@
 
         }
         p {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
         }
         hr {
             border-top: 1px solid #E5E5E5;
@@ -308,7 +308,7 @@
         }
         @include media-breakpoint-up(xl) {
             background-position: 68% 2rem;
-            background-size: 70%;
+            background-size: 80%;
         }
         @include media-breakpoint-up(xxxl) {
             background-position: 68% 2rem;
@@ -344,7 +344,7 @@
             background-size: 96%;
         }
         @include media-breakpoint-up(lg) {
-            background-size: 80%;
+            background-size: 90%;
         }
         @include media-breakpoint-up(xxxl) {
             background-size: 90%;
@@ -363,6 +363,9 @@
         }
         @include media-breakpoint-up(xl) {
             padding: 28rem 0 3.2rem;
+        }
+        @include media-breakpoint-up(xxxl) {
+            padding: 33rem 0 3.2rem;
         }
         a.sublink {
             letter-spacing: 0.01rem;
