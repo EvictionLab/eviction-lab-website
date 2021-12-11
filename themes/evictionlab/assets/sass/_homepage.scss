@@ -475,6 +475,10 @@
     color: #fff;
     justify-content: center;
     line-height: 1.3;
+    justify-content: flex-start;
+    @include media-breakpoint-up(smm) {
+        justify-content: unset;
+    }
     &:hover {
         text-decoration: none;
     }
