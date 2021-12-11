@@ -228,7 +228,11 @@
                     font-size: 3.4em;
                 }
                 @include media-breakpoint-up(xxl) {
-                    font-size: 4rem;
+                    font-size: 3.6rem;
+                    line-height: 1.2;
+                }
+                @include media-breakpoint-up(xxxl) {
+                    font-size: 3.8rem;
                     line-height: 1.2;
                 }
             }
@@ -270,6 +274,12 @@
     .ets-homepage {
         p {
             font-family: Akkurat-Italic, sans-serif;
+        }
+        
+    }
+    .blog-research-panel {
+        .feature-image {
+            max-height: 140px;
         }
     }
 

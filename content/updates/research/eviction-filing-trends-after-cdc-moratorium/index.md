@@ -12,6 +12,7 @@ postauthorname: Jacob Haas, Jasmine Rangel, Juan Pablo Garnham, and Peter Hepbur
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: In this brief, we use data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, to examine what has happened after the Supreme Court’s decision.
+listSummary: In this brief, we use data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, to examine what has happened after the Supreme Court’s decision.
 socialDescription: In this brief, we use data from our Eviction Tracking System, which monitors eviction filings in 31 cities and 6 states across the country, to examine what has happened after the Supreme Court’s decision.
 fbImage: social.png
 twImage: social.png

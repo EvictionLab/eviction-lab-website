@@ -1,7 +1,7 @@
 <div class="col-12 col-lg-4 d-flex flex-wrap px-4 pl-lg-0 pr-lg-3">
   <div class="bordered-header blue w-100 d-flex justify-content-between order-0 mb-3 mr-lg-2">
     Reporting 
-    <a class="see-all" href="/updates">SEE ALL</a>
+    <a class="see-all" href="/updates/reporting">SEE ALL</a>
   </div>
   {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
     <div class="col-9 col-lg-12 pl-0 order-2">
