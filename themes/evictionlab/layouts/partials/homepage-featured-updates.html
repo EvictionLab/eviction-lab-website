@@ -1,0 +1,72 @@
+<!-- Left panel ---------------------->
+
+<div class="d-none d-md-block" id="featured-updates">
+    <div class="row mx-0 subfeature-panel pt-6 pb-4 pt-md-4 pb-xxl-5 pl-md-1 pl-lg-0">
+      <div class="col-12 col-xxl-11 col-x4l-10 mx-auto px-0 d-flex flex-wrap">
+        <div class="col-12 col-lg-8 mb-3 mb-lg-0 blog-research-panel">
+          <div class="bordered-header d-none d-lg-block border-0 pt-0 blue mb-3 mx-3 ">
+            Eviction Tracking System
+          </div>
+          <div class="ets-homepage col-12 d-none d-lg-flex mb-5 pl-lg-1">
+            <div class="col-4 col-lg-5 col-xl-4 col-xxl-5 col-xxxl-4"> 
+              <a href="/eviction-tracking">
+                    <div class="feature-image image-ets mt-1" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
+              </a>
+            </div>
+            <div class="col-8 col-lg-7 col-xl-8 col-xxl-7 col-xxxl-8">
+              <a href="/eviction-tracking" class="title title-large mb-2">
+                See up-to-date maps, charts and data on eviction filings in select cities.
+              </a>
+              {{ range where .Site.Pages ".Params.contentcat" ("data") }}
+                <p class="mb-0">Updated {{ .Date.Format "January 2, 2006" }}</p>
+              {{ end }}
+            </div>
+          </div>
+          <div class="bordered-header blue  d-flex justify-content-between mb-3 mx-2 mx-lg-3">
+            Blog & Research
+            <a class="see-all" href="/updates">SEE ALL</a>
+          </div>
+          <div class="col-12 px-0 px-lg-1 d-flex flex-wrap">
+            {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
+              <div class="col-3 mb-4">
+                <a href="{{ .RelPermalink }}">
+                  {{ $img := .Params.fbImage }}
+                  {{ with .Resources.GetMatch $img }}
+                    {{ $processed := .Fit "600x400 q50 jpg" }}
+                      <div class="feature-image mt-lg-1" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                  {{ end }}
+                </a>
+              </div>
+              <div class="col-9 pl-0 pl-lg-2 mb-xl-1">
+                <a href="{{ .RelPermalink }}" class="title mb-3 mb-lg-1">
+                  {{ .Params.title }}
+                </a>
+                <p>{{ .Params.listSummary }}</p>
+              </div>
+            {{ end }}
+            <div class="col-12">
+              {{ range first 5 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
+              <a class="d-block title mb-2" href="{{ .RelPermalink }}">
+                {{ .Params.title }}
+              </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+    
+    <!-- Right panel ---------------->
+    
+    {{ if eq .Site.Language.LanguageName "Español" }}
+      {{ range .Translations }}
+          {{ partial "reporting" . }}
+        {{ end }}
+      {{ end }}
+
+      {{ if eq .Site.Language.LanguageName "English" }}
+          {{ partial "reporting" . }}
+      {{ end }}  
+
+
+      </div>  
+    </div>
+  </div>

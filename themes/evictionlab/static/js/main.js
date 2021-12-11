@@ -23,32 +23,68 @@ function setupMenu() {
   });
 }
 
+
 // Toggle condensed class on header if scrolled to top
 function setupScrollEnd() {
   var debounceTime = 50;
   var isScrolling;
   var headerWrapper = $('header');
-
+  
   function toggleCondense() {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-      headerWrapper.addClass('condensed');
-      $('body').addClass('header-condensed');
-    } else {
-      headerWrapper.removeClass('condensed');
-      $('body').removeClass('header-condensed');
+    if ($( "body" ).hasClass( "page-the-eviction-lab" )) {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        headerWrapper.addClass('condensed');
+        $('body').addClass('header-condensed');
+      } else {
+        headerWrapper.removeClass('condensed');
+        $('body').removeClass('header-condensed');
+      };
+    };
+    if (!$( "body" ).hasClass( "page-the-eviction-lab" )) {
+      console.log('has the class');
+      if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        headerWrapper.addClass('condensed');
+        $('body').addClass('header-condensed');
+      } else {
+        headerWrapper.removeClass('condensed');
+        $('body').removeClass('header-condensed');
+      };
     }
     isScrolling = undefined;
   }
 
   window.addEventListener('scroll', function (event) {
-    if (isScrolling === undefined) {
-      toggleCondense();
-    } else {
-      window.clearTimeout(isScrolling);
-    }
+    if ($( "body" ).hasClass( "page-the-eviction-lab" )) {
+        toggleCondense();
+    };
+    if (!$( "body" ).hasClass( "page-the-eviction-lab" )) {
+      if (isScrolling === undefined) {
+        toggleCondense();
+      } else {
+        window.clearTimeout(isScrolling);
+      }
+    };
     isScrolling = setTimeout(toggleCondense, debounceTime);
   }, false);
-}
+} 
+
+
+$('.carousel .carousel-item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+  next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  for (var i=0;i<2;i++) {
+      next=next.next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      
+      next.children(':first-child').clone().appendTo($(this));
+    }
+});
 
 // Update contact form action with selected email path
 function setupContactForm() {

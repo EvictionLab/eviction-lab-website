@@ -1,0 +1,37 @@
+<!-- ********** hero section ********** -->
+
+<div id="home-hero">
+    <div id="hero-overlay" class="d-none d-md-block">
+      <div class="row mx-3 align-items-end h-100">
+        <div class="col-12 col-xxl-11 col-x4l-10 mx-auto px-0">
+          <div class="col-12 col-lg-7 mb-8 mb-xxl-12">
+            <h1 class="mb-3">{{ i18n "splashHeader1" }} {{ i18n "splashHeader2" }} {{ i18n "splashHeader3" }}</h1>
+            <p>{{ i18n "splashBody" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="home-hero-sub" class="d-block d-md-none">
+      <div class="row mx-3 align-items-end h-100">
+        <div class="col-12 px-0 my-3">
+          <h1 class="mb-3">{{ i18n "splashHeader1" }} {{ i18n "splashHeader2" }} {{ i18n "splashHeader3" }}</h1>
+          <p>{{ i18n "splashBody" }}</p>
+        </div>
+      </div>
+  </div>
+  
+  <div id="mobile-ets-link" class="d-block d-lg-none">
+    <div class="row mx-3 align-items-start h-100">
+      <div class="col-12 col-md-7 px-0 px-md-2 my-3">
+        <div class="bordered-header border-0 mb-3 d-flex justify-content-between">
+          Eviction Tracking System
+        </div>
+        <a href="/eviction-tracking"><h1 class="mb-1 mb-md-3">See up-to-date maps, charts and data on eviction filings in select cities.</h1></a>
+        {{ range where .Site.Pages ".Params.contentcat" ("data") }}
+            <p>Updated {{ .Date.Format "January 2, 2006" }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>

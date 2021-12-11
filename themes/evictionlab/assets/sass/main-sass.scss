@@ -15,7 +15,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1280px,
-  xxxl: 1441px,
+  xxxl: 1440px,
   x4l: 1720px
 );
 
@@ -454,9 +454,7 @@ a:focus, input:focus, textarea:focus, select:focus { outline-color: $color1; }
 @import 'base-type';
 @import 'section-page-header';
 @import 'breadcrumbs';
-@import 'home-splash';
-// @import 'home-pictorial-menu';
-@import 'home-graphic-menu';
+@import 'homepage';
 @import 'index';
 @import 'lists';
 @import 'single';
