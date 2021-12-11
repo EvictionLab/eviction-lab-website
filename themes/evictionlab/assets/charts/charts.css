@@ -393,7 +393,6 @@ body .visual .visual__title, body .visual .visual__title > * {
 }
 .chart__tooltip.chart__tooltip--show {
   opacity:1;
-  z-index:100;
 }
 
 .chart__tooltip .tooltip__title {
@@ -518,8 +517,7 @@ body .visual .visual__title, body .visual .visual__title > * {
 
 .legend-item__label {
   line-height: 1;
-
-  font-family: var(--heading-font, GT-Eesti-Display-Bold, sans-serif);
+  font-family: var(--heading-font);
   margin-bottom: 12px;
   font-size: 1.2rem;
   font-weight: normal;

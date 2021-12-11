@@ -32,7 +32,7 @@ Elab.BarChart = (function (Elab) {
    */
   var barSelector = function (data) {
     return data.map(function (d) {
-      return [d.x, d.y, d.name, d.barClass];
+      return [d.x, d.y, d.name];
     });
   };
 
@@ -96,7 +96,6 @@ Elab.BarChart = (function (Elab) {
         // adds the bars
         .addBandedBars({
           selector: barSelector,
-          classSelector: function (d) { return d[3] },
           renderTooltip: function (hoverData) {
             const tooltip = {
               title: hoverData[0],
@@ -151,18 +150,6 @@ Elab.BarChart = (function (Elab) {
           }),
         });
     }
-    if (dataOptions.xLabel) {
-      chart.addAxisLabel({
-        label: dataOptions.xLabel,
-        position: "bottom",
-      })
-    }
-    if (dataOptions.yLabel) {
-      chart.addAxisLabel({
-        label: dataOptions.yLabel,
-        position: "left",
-      })
-    }
     return chart.render();
   }
 
@@ -182,7 +169,6 @@ Elab.BarChart = (function (Elab) {
         return {
           x: xParse(d[options.x]),
           y: yParse(d[options.y]),
-          barClass: d[options.barClass],
         };
       });
       callback && callback(result);
