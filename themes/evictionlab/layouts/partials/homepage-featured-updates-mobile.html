@@ -59,65 +59,13 @@
 
 <!-- Reporting ------------------------------------------------------>
 
+{{ if eq .Site.Language.LanguageName "Español" }}
+{{ range .Translations }}
+  {{ partial "reporting-mobile" . }}
+  {{ end }}
+{{ end }}
 
+{{ if eq .Site.Language.LanguageName "English" }}
+  {{ partial "reporting-mobile" . }}
+{{ end }} 
 
-
-<div id="hp-carousel-2" class="carousel slide row d-block d-md-none mx-0 my-1" data-interval="false" data-touch="true" data-ride="carousel" data-wrap="false">
-  <div class="bordered-header blue mb-1 mb-md-4 pt-3 mx-3 d-flex justify-content-between">
-    Reporting
-    <a class="see-all" href="/updates/reporting">SEE ALL</a>
-  </div>
-  <div class="carousel-inner col-12 px-md-5 px-xxxl-2 col-xxxl-10 mr-0 d-md-flex pb-4" role="listbox">
-      <ol class="carousel-indicators">
-      <li data-target="#hp-carousel-2" data-slide-to="0" class="active"></li>
-      <li data-target="#hp-carousel-2" data-slide-to="1" class=""></li>
-      <li data-target="#hp-carousel-2" data-slide-to="2" class=""></li>
-      <li data-target="#hp-carousel-2" data-slide-to="3" class=""></li>
-      <li data-target="#hp-carousel-2" data-slide-to="4"></li>
-      <li data-target="#hp-carousel-2" data-slide-to="5"></li>
-    </ol>
-    {{ range first 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) }}
-      <div class="carousel-item active align-items-end">
-        <div class="col-10 col-smm-8 align-items-start pl-1 pl-md-0">
-          <a href="{{ .Params.link }}">
-            {{ $img := .Params.thumb }}
-            {{ with .Resources.GetMatch $img }}
-              {{ $processed := .Fill "720x480 q50 jpg Center" }}
-                <div class="hp-carousel__slide--image mt-3" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                
-            {{ end }}
-          </a>
-          <a href="{{ .Params.link }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
-          <hr/>
-          <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1 d-none">{{ .Params.contentcat | title }} </div>
-        </div>
-      </div>
-    {{ end }}
-    {{ range first 5 (after 1 (where (where .Site.RegularPages ".Params.childof" ("reporting")) ".Params.featured" "!=" false ) )}}
-      <div class="carousel-item align-items-start">
-        <div class="col-10 col-smm-8 pl-1 pr-2 pl-md-0">
-          <a href="{{ .Params.link }}">
-            {{ $img := .Params.thumb }}
-            {{ with .Resources.GetMatch $img }}
-              {{ $processed := .Fill "720x480 q50 jpg Center" }}
-                <div class="hp-carousel__slide--image mt-3" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                
-            {{ end }}
-          </a>
-          <a href="{{ .Params.link }}" class="title mb-2 d-flex flex-column justify-content-start mt-2">{{ .Params.title | truncate 63 }}</a> 
-          <hr/>
-          <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1 d-none">{{ .Params.contentcat | title }} </div>
-        </div>  
-      </div>
-     {{ end }}
-     <div><a href="/updates/reporting" class="blue col-4 d-flex carousel-view-more align-items-center mr-5 mt-3"><span class="d-none d-smm-block">View<br/>more</span><i class="fa fa-chevron-right pl-2"></i></a></div> 
-  </div>
-  <a class="carousel-control-prev d-none" href="#hp-carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next d-none" href="#hp-carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-  </a>
-</div>
