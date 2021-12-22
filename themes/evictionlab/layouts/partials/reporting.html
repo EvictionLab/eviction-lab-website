@@ -19,7 +19,7 @@
         {{ $img := .Params.thumb }}
         {{ with .Resources.GetMatch $img }}
           {{ $processed := .Fill "960x640 q70 jpg Center" }}
-            <a href="{{ $link }}" target="_blank" rel="noreferrer noopener"><div class="mw-100 mb-2 feature-image image-large" style="background-image: url('{{ $processed.RelPermalink }}')"></div>
+            <a href="{{ $link }}" target="_blank" rel="noreferrer noopener"><div class="mw-100 mb-2 feature-image image-large" style="background-image: url('{{ $processed.RelPermalink }}')"></div></a>
         {{ end }}
       {{ end }} 
     </div>
