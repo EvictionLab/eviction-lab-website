@@ -5,7 +5,7 @@ draft: false
 h1: New Mexico
 layout: state
 slug: new-mexico
-date: 2021-09-01T04:00:00.000Z
+date: 2022-01-06T05:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: New Mexico | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="35" data="/uploads/states_table.csv" %}}
 
-Eviction filings in New Mexico have fallen sharply since mid-March 2020. While eviction filings and hearings have been allowed to proceed, on March 24, 2020, the New Mexico Supreme Court implemented a stay on the execution of writs for nonpayment of rent. This order remains in effect until it is amended or withdrawn.
+Eviction filings in New Mexico have fallen sharply since mid-March 2020. While eviction filings and hearings have been allowed to proceed, on March 24, 2020, the New Mexico Supreme Court implemented a stay on the execution of writs for nonpayment of rent. This order remains in effect until February 2, 2022. 
 
 More detail on eviction protections in New Mexico can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/nm/).
 
@@ -22,6 +22,8 @@ More detail on eviction protections in New Mexico can be found on the [COVID-19 
 
 
 {{% report_chart id="avg" data="/uploads/newmexico_barchart.csv" %}}
+
+
 
 
 
@@ -37,11 +39,15 @@ Eviction filings in New Mexico were about average in January and February of 202
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/new-mexico_shapes.json" data="/uploads/newmexico_map.csv" %}}
+
+
 
 
 
@@ -53,6 +59,8 @@ New Mexico is divided into 33 counties. In each, we map the number of eviction f
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019. 
 2. County racial characteristics determined using American Community Survey (ACS) estimates for 2014–2018.
+
+
 
 
 
