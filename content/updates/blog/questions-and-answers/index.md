@@ -21,7 +21,9 @@ fbImage: GettyImages-1279347616.jpg
 ---
 The COVID-19 pandemic has made it difficult for hundreds of thousands of people to pay rent and stay housed. At the Eviction Lab, we believe that everyone deserves a place to call home, especially during an emergency like this. 
 
-The following is a guide with some of the most relevant questions that tenants could have as the eviction protections lapse. We are encouraging everyone to learn about your rights in court, apply to rental assistance, and search for legal counsel.
+The following is a guide with some of the most relevant questions that tenants could have as the eviction protections lapse. We are encouraging everyone to learn about your rights in court, search for legal counsel and apply to rental assistance if it is available.
+
+This page was updated on January 20th, 2022.
 
 *Note: this page is intended to provide general information and does not constitute legal advice. Please consult an attorney barred in your state for advice about a specific legal matter.*
 
@@ -35,13 +37,9 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Are renters protected from eviction right now?"
 
-"The federal moratorium on evictions was struck down by the Supreme Court, but local moratoriums remain active in some cities and states."
+"The federal moratorium on evictions was <a href='https://www.npr.org/2021/08/26/1024668578/court-blocks-biden-cdc-evictions-moratorium' target='_blank' rel='noreferrer noopener'>struck down by the Supreme Court</a> in August of 2021. but local moratoriums remain active in some cities and states. Some local moratoriums remained active afterwards in specific cities and states, but most have expired by now."
 
-"The original CDC eviction moratorium expired on July 31st. On August 3rd, the CDC <a href='https://www.cdc.gov/coronavirus/2019-ncov/communication/Signed-CDC-Eviction-Order.pdf' target='_blank' rel='noreferrer noopener'>announced a new order</a>, which created a similar moratorium for areas that are  “experiencing substantial and high levels of community transmission,” according to the agency. The order was set to expire on October 3rd, but on August 26, <a href='https://www.npr.org/2021/08/26/1024668578/court-blocks-biden-cdc-evictions-moratorium' target='_blank' rel='noreferrer noopener'>the Supreme Court ended the moratorium</a>."
-
-"Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond–pay the rent that they owe to an account held by the court system–to get a hearing."
-
-"Several states, cities and counties created their own moratoria. Some of those -like California- have expired and not been renewed. Others are still in place or have special protections for tenants in risk of eviction."
+"Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond–pay the rent that they owe to an account held by the court system–to get a hearing. Specific locations may still have other protections, but how they can help you and how to apply for these varies from place to place. This is why it is important to reach out to local experts."
 
 "Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up to date information. More legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. More legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>our sister website Just Shelter</a>." >}}
 
@@ -51,11 +49,13 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "I have been unable to afford the rent, what can I do?"
 
-"Billions of dollars in rental assistance funds are now available nationwide. Call 2-1-1 to learn more about how to apply for the rental assistance available in your area. Depending on where you live, these programs might be managed by a city, a county, a state or a non-profit. You can find hundreds of <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance programs available in this list</a>."
+"Many rental assistance programs have expired, but some jurisdictions have received new funds or have allocated more money for rental assistance. Check with local governments and local housing organizations to find out if there’s still help where you live. You can also call 2-1-1 to learn more about how to apply for the rental assistance available in your area. 
+
+"Depending on where you live, these programs might be managed by a city, a county, a state or a non-profit. You can find hundreds of <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance programs available in this list</a>."
 
 "The Consumer Financial Protection Bureau has created a tool where tenants and landlords can search for the available programs by locality: <a href='https://www.consumerfinance.gov/renthelp' target='_blank' rel='noreferrer noopener'>www.consumerfinance.gov/renthelp</a>."
 
-"Apply for rental assistance as quickly as you can, since the process of getting the money may take weeks or months. If your landlord files to evict you while you are waiting to hear back about your application, be sure to let the court know that you have an application pending."
+"Apply for rental assistance as quickly as you can. If your landlord files to evict you while you are waiting to hear back about your application, be sure to let the court know that you have an application pending."
 
 "Depending on the program in your area, your landlord might need to cooperate with the program for you to receive assistance, and the program will pay the rental assistance to the landlord or property management company directly. In other places, if your landlord does not cooperate with the program or send in required forms, the program will pay the tenant directly. If your landlord does not cooperate with the program, ask if it's possible for the assistance to be issued to you instead." >}}
 
@@ -83,7 +83,7 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "Attorneys can help tenants raise defenses or ask the judge for more time (called requesting a continuance), or have the case sealed or dismissed. Renters should mention, regardless of whether they have an attorney, if they have a <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>CDC declaration form</a> or have applied for rental assistance."
 
-"If someone is evicted, they may be eligible for emergency rental assistance and housing counseling services to help identify and pay the rent in a new home."  >}} 
+"In some specific locations, if someone is evicted, they may be eligible for emergency rental assistance and housing counseling services to help identify and pay the rent in a new home."  >}} 
 
 <br/>
 
@@ -111,13 +111,13 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "eviction-stopped-by-moratorium" 
 
-"My eviction was stopped because of the moratorium. What will happen to me if the moratorium is overturned by a court or  when the CDC moratorium ends? What are my options?"
+"My eviction was stopped because of a moratorium. What will happen as the moratorium ends? What are my options?"
 
 "Depending on the local courts, your landlord, and the status of your dispute, the eviction process might *restart*. If you were in an early stage of the eviction you might have to go to a court hearing. In some other cases, you might be at the end of the process and the actual execution of the eviction might happen much sooner. "
 
-"Stay in touch with your landlord, with your local court, and with any organization that can provide legal assistance, to understand your particular case and how far you are in the eviction timeline. You should also apply for <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance</a> in your city, county, or state program. Consult with your local information line to identify programs or <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>search for programs here</a>."
+"Stay in touch with your landlord, with your local court, and with any organization that can provide legal assistance, to understand your particular case and how far you are in the eviction timeline. You should also apply for <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance</a> in your city, county, or state program if these programs still exist where you live. Consult with your local information line to identify programs or <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>search for programs here</a>."
 
-"In some states and localities, you may still be protected by specific moratoriums. Call 2-1-1 to understand what resources are available in your area. You can find information for <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations across the country at this site</a>." >}} 
+"Call 2-1-1 to understand what resources are available in your area. You can find information for <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations across the country at this site</a>." >}} 
 
 {{< faq 
 
@@ -128,18 +128,6 @@ The following is a guide with some of the most relevant questions that tenants c
 "That depends on where you live. In many states landlords are allowed by law to start eviction proceedings once the tenant is late on rent, and they're not required to accept late or partial payments. Landlords might also be able to accept the late payment, but evict you anyway for paying late. On the other hand, in some places, landlords are required to accept a late payment that you make soon after the eviction filing, and withdraw the court case against you."
 
 "In some states and cities, there might be regulations that allow tenants to catch up in rent or create a grace period before starting an eviction court case. Contact legal services and 2-1-1 to ask about the regulations where you live. Ask whether landlords are required to accept late payments, and whether the court must dismiss your eviction case if you pay what you owe before your eviction hearing." >}} 
-
-{{< faq 
-
-"other-moratoriums" 
-
-"Besides the CDC eviction moratorium, are there other kinds of moratoriums still in place?"
-
-"On August 3rd, the CDC ordered a new eviction moratorium for counties with substantial or high rates of COVID-19 transmission. On August 26th, this order was blocked by the Supreme Court."
-
-"There might be local eviction moratoria still in place in your city county or state."
-
-"Building complexes financed by federal loan programs, like the ones provided by Fannie Mae and Freddie Mac, are also protected by their own moratorium, <a href='https://www.fhfa.gov/Media/PublicAffairs/Pages/FHFA-Extends-Eviction-Moratorium-Through-Sept-30-2021.aspx' target='_blank' rel='noreferrer noopener'>which will expire on Sept. 30</a>." >}} 
 
 {{< faq 
 
@@ -183,4 +171,6 @@ The following is a guide with some of the most relevant questions that tenants c
 
 "How do I address housing security in my community?"
 
-"Renters across the United States have found strength in speaking to one another and organizing for better housing conditions, from experiences during the <a href='https://www.retroreport.org/video/new-york-tenants-are-organizing-against-evictions-as-they-did-in-the-great-depression/' target='_blank' rel='noreferrer noopener'>Great Depression</a>, <a href='https://www.nytimes.com/video/learning/100000007368071/tenants-facing-eviction-over-covid-19-look-to-a-1970s-solution-retro-report.html' target='_blank' rel='noreferrer noopener'>the 1970s</a>, to <a href='https://www.retroreport.org/video/how-decades-of-housing-discrimination-hurts-fresno-in-the-pandemic/' target='_blank' rel='noreferrer noopener'>today</a>. Consider contacting your neighbors, local tenants union, and housing advocates to learn more." >}}
+"Renters across the United States have found strength in speaking to one another and organizing for better housing conditions, from experiences during the <a href='https://www.retroreport.org/video/new-york-tenants-are-organizing-against-evictions-as-they-did-in-the-great-depression/' target='_blank' rel='noreferrer noopener'>Great Depression</a>, <a href='https://www.nytimes.com/video/learning/100000007368071/tenants-facing-eviction-over-covid-19-look-to-a-1970s-solution-retro-report.html' target='_blank' rel='noreferrer noopener'>the 1970s</a>, to <a href='https://www.retroreport.org/video/how-decades-of-housing-discrimination-hurts-fresno-in-the-pandemic/' target='_blank' rel='noreferrer noopener'>today</a>. Consider contacting your neighbors, local tenants union, and housing advocates to learn more."
+
+"You can find a list of local organizations that need your support in our sister site, <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a>.">}}
