@@ -49,7 +49,7 @@ This page was updated on January 20th, 2022.
 
 "I have been unable to afford the rent, what can I do?"
 
-"Many rental assistance programs have expired, but some jurisdictions have received new funds or have allocated more money for rental assistance. Check with local governments and local housing organizations to find out if there’s still help where you live. You can also call 2-1-1 to learn more about how to apply for the rental assistance available in your area. 
+"Many rental assistance programs have expired, but some jurisdictions have received new funds or have allocated more money for rental assistance. Check with local governments and local housing organizations to find out if there’s still help where you live. You can also call 2-1-1 to learn more about how to apply for the rental assistance available in your area." 
 
 "Depending on where you live, these programs might be managed by a city, a county, a state or a non-profit. You can find hundreds of <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance programs available in this list</a>."
 
