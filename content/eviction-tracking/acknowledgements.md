@@ -9,7 +9,7 @@ cascade:
   socialDescription: Real time eviction tracking in U.S. cities during COVID-19.
 h1: Acknowledgements
 layout: content
-date: 2021-08-25T00:00:00.000Z
+date: 2022-01-27T01:00:00.000Z
 similar: >-
   # Similar Resources
 
@@ -36,6 +36,8 @@ similar: >-
   * Sam Taub has built an [eviction tracker for the state of New Mexico](https://www.nmevictions.org/). 
 
   * The Right to Counsel NYC Coalition maintains the [Eviction Crisis Monitor](https://www.righttocounselnyc.org/evictioncrisismonitor) in New York City.
+
+  * Texas Housers has developed an [Eviction Diversion Tracker](https://texashousers.org/dashboard/#dashboard-evictions) which details out emergency rent relief distribution and eviction cases throughout the state of Texas.
 ---
 # Acknowledgements
 
