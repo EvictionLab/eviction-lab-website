@@ -7,7 +7,7 @@ cascade:
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
 h1: Get the Data
-date: 2020-06-16T00:00:00.000Z
+date: 2022-01-28T01:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
   that you find new and productive ways to make use of them. When you do so,
