@@ -20,6 +20,9 @@ intro: >-
   Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
 
 
+  A data dictionary for these downloadable files can be found [here](https://eviction-lab-data-downloads.s3.amazonaws.com/ets/data_dictionary_weekly_monthly_20220127.xlsx). 
+
+
   *Note: Some eviction filing data have a number of cases with missing or incorrect tract/zip code information. These cases will be listed in rows where the tract/zip is described as "sealed". Values of filings by tract/zip may be underestimates as a result.*
 headers:
   siteheader: Site
