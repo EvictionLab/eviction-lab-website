@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Austin, Texas
 slug: austin-tx
-date: 2022-01-04T05:00:00.000Z
+date: 2022-02-01T05:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Austin Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
