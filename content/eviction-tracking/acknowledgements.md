@@ -19,6 +19,8 @@ similar: >-
 
   * Legal Services Corporation (LSC) has built an [eviction tracker with filing data on several states and hundreds of counties](https://www.lsctracker.org/summary). 
 
+  * The Housing Alliance of Pennsylvania has developed a [report with detailed eviction data](https://housingalliancepa.org/eviction-data-report/) in Pennsylvania. 
+
   * The Open Justice Oklahoma has developed the [Oklahoma Court Tracker](https://openjusticeok.shinyapps.io/ok-court-tracker/#section-tool-by-open-justice-oklahoma), which counts evictions and foreclosures filed across the state of Oklahoma since March 15th, 2020.
 
   * Carnegie Mellon University’s CREATE Lab is [monitoring eviction filings in Pittsburgh, PA](http://evict-response.earthtime.org/). 
