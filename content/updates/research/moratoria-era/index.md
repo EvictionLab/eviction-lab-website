@@ -37,7 +37,7 @@ fbImage: 11-months-cdc-social.png
   groupBy="category"
   xTicks="month"
   xFormat="%b"
-  xTooltipFormat="%x"
+  xTooltipFormat="%B %Y"
   yFormat=".2s"
   yTooltipFormat=".2s"
   highlight="protected by state moratoria;Cumulative Households Receiving ERA"
