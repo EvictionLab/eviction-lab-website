@@ -2,8 +2,6 @@
 draft: false
 scripts:
   - charts
-  - mapbox
-  - grouped-bar-chart
 childof: research
 url: /era-moratoria
 contenttype: updates
@@ -28,7 +26,7 @@ twImage: 11-months-cdc-social.png
 fbImage: 11-months-cdc-social.png
 ---
 
-<div class="d-none d-md-block">
+<div class="d-block">
 {{% line-chart
   id="11months_fig1"
   data="./era_moratoria_shaped.csv"
