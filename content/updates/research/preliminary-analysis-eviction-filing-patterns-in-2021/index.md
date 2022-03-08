@@ -36,17 +36,17 @@ Over the course of 2021, eviction filings fell below historical average in all b
 
 Eviction filings increased relative to typical monthly averages as 2021 progressed, but ended the year more than one-third below normal levels. In Figure 2 we plot the number of monthly eviction cases in all sites compared to historical averages. In January and February, we saw about 40% of the caseload we would expect each month, based on the same months in prior years. Filings spiked in March, but otherwise remained below 50% of historical average through the end of the summer. On August 26, the Supreme Court struck down the CDC’s federal eviction moratorium, prompting fears of a rapid spike in eviction filings. [While filings did increase in the subsequent months](https://evictionlab.org/updates/research/eviction-filing-trends-after-cdc-moratorium/), reaching a high of 64.6% of historical average in December, they continued to remain well below historical averages. 
 
-{{< scaleimg_page img="el-fig2.jpg" scale="145" title="Figure 2. Eviction filings across all ETS sites as a share of historical average, by month" caption="" alt="bar chart" >}}
+{{< scaleimg_page img="el-fig2.jpg" scale="124" title="Figure 2. Eviction filings across all ETS sites as a share of historical average, by month" caption="" alt="bar chart" >}}
 
 Across all of our sites, reductions in eviction filings were more heavily concentrated in some neighborhoods than others. Using data from the Census Bureau, we categorized every neighborhood from which we collect data by its racial/ethnic majority (Black, Latino, white, or other/none). In Figure 3, we plot overall reductions in eviction filings across these neighborhoods.
 
-{{< scaleimg_page img="el-fig3.jpg" scale="145" title="Figure 3. Absolute reduction in eviction case filings, by neighborhood racial/ethnic majority" caption="" alt="bar chart" >}}
+{{< scaleimg_page img="el-fig3.jpg" scale="124" title="Figure 3. Absolute reduction in eviction case filings, by neighborhood racial/ethnic majority" caption="" alt="bar chart" >}}
 
 All told, we observed just over 120,000 fewer eviction filings than normal in majority-Black neighborhoods. Over a quarter (27.9%) of all avoided eviction cases in 2021 were in majority-Black neighborhoods. That’s particularly striking given that only about one in ten neighborhoods in which we collect data are classified as majority-Black (11.6%). We saw nearly 105,000 fewer eviction cases filed in 2021 in majority-Latino neighborhoods, almost 110,000 fewer in neighborhoods with no racial/ethnic majority areas, and 95,000 fewer in majority-white neighborhoods. Distribution of emergency rental assistance (ERA) may play a significant role in explaining these patterns, given that over 40% of ERA applicants identified as Black and another 20% as Latino.
 
 In Figure 4 we conduct a similar analysis but by socioeconomic status, using neighborhood median income. We find that the largest reductions in eviction filings were in low-income neighborhoods. Over 240,000 fewer eviction cases than normal were filed in 2021 in neighborhoods with median incomes below $50,000. Just over a third of all ETS neighborhoods fall in this category (35.9%), but they were the site of the majority of all avoided evictions (57%). Again, the targeted distribution of ERA to low-income households—over 64% of applicants reported falling below 30% of area median income—likely contributed to these patterns. 
 
-{{< scaleimg_page img="el-fig4.jpg" scale="145" title="Figure 4. Absolute reduction in eviction case filings, by neighborhood median income." caption="" alt="bar chart" >}}
+{{< scaleimg_page img="el-fig4.jpg" scale="136" title="Figure 4. Absolute reduction in eviction case filings, by neighborhood median income." caption="" alt="bar chart" >}}
 
 These findings indicate that in 2021 the most disadvantaged neighborhoods experienced the biggest gains in terms of rental housing stability. 
 
@@ -66,7 +66,7 @@ Fourth, a number of additional policies not specifically targeted to renters may
 
 In Figure 6, we plot these policies over the course of the year. We track the number of renter households living in poverty that were protected each month by state eviction moratoria and the cumulative number of households that received ERA payments. We also mark out the months in which the CDC eviction moratorium was in place, when the American Rescue Plan stimulus checks were delivered, when expanded unemployment benefits were available, and when Child Tax Credit payments were sent. 
 
-{{< scaleimg_page img="el-fig6.jpg" scale="124"  >}}
+{{< scaleimg_page img="el-fig6.jpg" title="Figure 6. Policies assisting renter households nationwide over the course of 2021" scale="132"  >}}
 
 
 <div class="d-none">
