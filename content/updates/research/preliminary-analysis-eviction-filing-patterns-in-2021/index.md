@@ -1,5 +1,7 @@
 ---
-draft: true
+draft: false
+scripts:
+  - charts
 childof: research
 url: "/us-eviction-filing-patterns-2021/ "
 contenttype: updates
@@ -63,6 +65,26 @@ Third, an unprecedented amount of emergency rental assistance was distributed ov
 Fourth, a number of additional policies not specifically targeted to renters may have contributed to housing stability. Until early September, unemployed people could access expanded benefits including an extra $200 or $600 and more weeks of benefits. The American Rescue Plan sent a third round of stimulus payments, this time $1,400, to most Americans. And from July onwards—also as a function of the American Rescue Plan—the IRS mailed Child Tax Credit payments to millions of households, [lifting many out of poverty](https://www.povertycenter.columbia.edu/news-internal/monthly-poverty-december-2021). All three of these policies provided cash to families and may have helped them avoid eviction.  
 
 In Figure 6, we plot these policies over the course of the year. We track the number of renter households living in poverty that were protected each month by state eviction moratoria and the cumulative number of households that received ERA payments. We also mark out the months in which the CDC eviction moratorium was in place, when the American Rescue Plan stimulus checks were delivered, when expanded unemployment benefits were available, and when Child Tax Credit payments were sent. 
+
+{{< scaleimg_page img="el-fig6.jpg" scale="124"  >}}
+
+
+<div class="d-none">
+{{% line-chart
+  id="11months_fig1"
+  data="./era-moratoria-reshaped2.csv"
+  x="month"
+  y="households"
+  groupBy="category"
+  xTicks="month"
+  xFormat="%b"
+  xTooltipFormat="%B %Y"
+  yFormat=".2s"
+  yTooltipFormat=".2s"
+  highlight="Total Renter Households in Poverty Covered by a State Eviction Moratorium;Cumulative Renter Households receiving ERA"
+  title=""
+%}}
+</div>
 
 Determining exactly which policies—or what combination of policies—were most effective at driving down eviction filing rates is challenging. The overlapping nature of these supports makes causal inference difficult, but not impossible. This will be a critical area for future research to ensure that policymakers know what works best when crafting policies to keep eviction filings low and increase housing stability. 
 
