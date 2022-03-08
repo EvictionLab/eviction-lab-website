@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 scripts:
   - charts
 childof: research
@@ -66,10 +66,10 @@ Fourth, a number of additional policies not specifically targeted to renters may
 
 In Figure 6, we plot these policies over the course of the year. We track the number of renter households living in poverty that were protected each month by state eviction moratoria and the cumulative number of households that received ERA payments. We also mark out the months in which the CDC eviction moratorium was in place, when the American Rescue Plan stimulus checks were delivered, when expanded unemployment benefits were available, and when Child Tax Credit payments were sent. 
 
-{{< scaleimg_page img="timelines.svg" scale="108"  >}}
+{{< scaleimg_page img="el-fig6.jpg" scale="124"  >}}
 
 
-<div class="d-block">
+<div class="d-none">
 {{% line-chart
   id="11months_fig1"
   data="./era-moratoria-reshaped2.csv"
