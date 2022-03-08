@@ -9,10 +9,11 @@ featured: true
 in_index: true
 title: "Preliminary Analysis: Eviction Filing Patterns in 2021"
 date: 2022-03-08T15:28:51.756Z
-postauthorname: Peter Hepburn, Olivia Jin, Joe Fish, Emily Lemmerman, & Anne Kat Alexander
+postauthorname: Peter Hepburn, Olivia Jin, Joe Fish, Emily Lemmerman, Anne Kat
+  Alexander & Matthew Desmond
 postauthortitle: The Eviction Lab
-authorpic: /images/bios/elab_thumb_sm.jpg
 twImage: 11-months-cdc-social.png
+authorpic: /images/bios/elab_thumb_sm.jpg
 fbImage: 11-months-cdc-social.png
 ---
 Millions of renters avoided the threat of eviction in 2021 thanks to expanded legal protections and multiple new social safety net programs, many of them enacted as part of the American Rescue Plan. For the second year in a row, eviction filings remained well below normal, pre-pandemic levels.
