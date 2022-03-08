@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Richmond, Virginia
 slug: richmond-va
-date: 2021-08-11T04:00:00.000Z
+date: 2022-02-01T05:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Richmond, Virginia | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,17 +11,23 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="51760" data="/uploads/table.csv" %}}
 
+
+
 Eviction filings in Richmond, VA fell sharply in mid-March of 2020. Compared to equivalent periods in 2016, eviction filings were far below average over the last two weeks of March and  throughout April and May. Eviction hearings were halted from late-March to May 18, and again for most of June. Eviction judgments were also stayed from August 10 to September 7, 2020. From late-November 2020 to June 30, 2021, Virginia also implemented protections for tenants applying for rental assistance and required certain larger landlords to offer payment plans to tenants before taking action to evict.
 
 More detail on eviction protections in Virginia can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/va/).
 
 Our data in Richmond is a slight undercount compared to the number of filings found in [data released](http://www.courts.state.va.us/courtadmin/aoc/judpln/csi/home.html) by the Virginia Judicial System.
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/richmond_barchart.csv" %}}
+
+
 
 
 
@@ -38,34 +44,20 @@ Eviction filings in Richmond were near average in January and February of 2020.<
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_map.csv" %}}
 
-
-
-
-
-
-
-
-
 # The geography of changes in eviction filings
 
 Richmond is divided into 36 zip codes. In each of those zip codes, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2016
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
-
-
-
-
-
-
-
-
+2. Tract racial majority determined using American Community Survey (ACS) estimates for 2015–2019
 
 {{%/ report_map %}}
 
@@ -73,24 +65,12 @@ Richmond is divided into 36 zip codes. In each of those zip codes, we map the nu
 
 {{% report_chart id="race" data="/uploads/richmond_linechart.csv" %}}
 
-
-
-
-
-
-
 # Eviction filings by neighborhood demographics
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. In January and February 2020, eviction filings were highest in majority-Black neighborhoods. Since March, eviction filings have dropped across all neighborhoods.
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and filings in 2016.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2016
-
-
-
-
-
-
 
 {{%/ report_chart %}}

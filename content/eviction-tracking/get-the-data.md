@@ -7,7 +7,7 @@ cascade:
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
 h1: Get the Data
-date: 2020-06-16T00:00:00.000Z
+date: 2022-01-28T01:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
   that you find new and productive ways to make use of them. When you do so,
@@ -18,6 +18,9 @@ intro: >-
 
 
   Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
+
+
+  A data dictionary for these downloadable files can be found [here](https://eviction-lab-data-downloads.s3.amazonaws.com/ets/data_dictionary_weekly_monthly.xlsx). 
 
 
   *Note: Some eviction filing data have a number of cases with missing or incorrect tract/zip code information. These cases will be listed in rows where the tract/zip is described as "sealed". Values of filings by tract/zip may be underestimates as a result.*
@@ -32,12 +35,12 @@ data:
   - site: All Cities
     years: "-"
     geo: Census Tract / ZIP Code
-    file: /uploads/all_sites_weekly_2020_2021.csv
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_weekly_2020_2021.csv
     monthfile: /uploads/all_sites_monthly_2020_2021.csv
   - site: All States
     years: "-"
     geo: Census Tract
-    file: /uploads/allstates_weekly_2020_2021.csv
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/allstates_weekly_2020_2021.csv
     monthfile: /uploads/allstates_monthly_2020_2021.csv
   - site: Albuquerque
     years: 2017-2019

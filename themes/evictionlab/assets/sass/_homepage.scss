@@ -42,11 +42,7 @@
     }    
 
     header {
-      /*  opacity: 0;
-            &.condensed {
-                opacity: 1;
-            } */
-            z-index: 99;
+        z-index: 99;
         transform: translateY(-72px);
         transition: transform .4s ease;
         .header-wrapper {
@@ -281,6 +277,14 @@
     .blog-research-panel {
         .feature-image {
             max-height: 140px;
+        }
+    }
+
+    // Reporting panel
+
+    #reporting-panel {
+        @include media-breakpoint-up(lg) {
+            height: max-content;
         }
     }
 

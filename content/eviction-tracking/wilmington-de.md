@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: Wilmington, Delaware
 slug: wilmington-de
-date: 2021-08-04T04:00:00.000Z
+date: 2022-02-01T05:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Wilmington, Delaware | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="10003" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -23,11 +25,15 @@ More detail on eviction protections in Delaware can be found on the [COVID-19 Ho
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/wilmington_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -35,26 +41,20 @@ Eviction filings in Wilmington were at or just below historical average levels i
 
 1. Eviction filing data for New Castle County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/wilmington_shapes.json" data="/uploads/wilmington_map.csv" %}}
 
-
-
-
-
 # The geography of changes in eviction filings
 
 New Castle County is divided into 131 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for New Castle County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018.
-
-
-
-
+2. Tract racial majority determined using American Community Survey (ACS) estimates for 2015–2019.
 
 {{%/ report_map %}}
 
@@ -62,16 +62,12 @@ New Castle County is divided into 131 census tracts. In each of those tracts, we
 
 {{% report_chart id="race" data="/uploads/wilmington_linechart.csv" %}}
 
-
-
 # Eviction filings by neighborhood demographics
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. Under normal circumstances, most evictions in New Castle County are filed in neighborhoods that are majority-white. Since March 2020, eviction filings have dropped across all neighborhoods, though they have more recently increased slightly closer to historical averages. 
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for New Castle County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
-
-
 
 {{%/ report_chart %}}
