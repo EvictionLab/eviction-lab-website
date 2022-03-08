@@ -3,7 +3,7 @@ draft: false
 scripts:
   - charts
 childof: research
-url: "/us-eviction-filing-patterns-2021/ "
+url: "/us-eviction-filing-patterns-2021/"
 contenttype: updates
 collection: true
 contentcat: research
