@@ -15,7 +15,6 @@ description: Over the last two years, the federal government intervened in the e
 listSummary: Over the last two years, the federal government intervened in the eviction crisis in a serious and unprecedented way. Our data show that that intervention has paid off.
 socialDescription: Over the last two years, the federal government intervened in the eviction crisis in a serious and unprecedented way. Our data show that that intervention has paid off.
 postauthortitle: The Eviction Lab
-twImage: 11-months-cdc-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
 fbImage: preliminary-analysis-eviction-filing-patterns-in-2021-social.jpg
 twImage: preliminary-analysis-eviction-filing-patterns-in-2021-social.jpg
