@@ -19,7 +19,7 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 fbImage: preliminary-analysis-eviction-filing-patterns-in-2021-social.jpg
 twImage: preliminary-analysis-eviction-filing-patterns-in-2021-social.jpg
 ---
-The last two years have witnessed the largest drop in eviction filings on record. Last year, millions of renters avoided the threat of eviction thanks to expanded legal protections and new social safety net programs, many of them enacted as part of the American Rescue Plan. For the second year in a row, eviction filings remained well below normal, pre-pandemic levels. The federal government intervened in the eviction crisis in a serious and unprecedented way. Our data show that that intervention has paid off.
+<span class="dropcap green">T</span>he last two years have witnessed the largest drop in eviction filings on record. Last year, millions of renters avoided the threat of eviction thanks to expanded legal protections and new social safety net programs, many of them enacted as part of the American Rescue Plan. For the second year in a row, eviction filings remained well below normal, pre-pandemic levels. The federal government intervened in the eviction crisis in a serious and unprecedented way. Our data show that that intervention has paid off.
 
 This reduction in eviction filings varied between jurisdictions, over the course of the year, and depending on neighborhood demographics. Low-income and majority-Black neighborhoods that normally see a disproportionate share of eviction cases experienced the largest absolute reductions in filings. Public policies enacted in response to the pandemic have led to a sustained reduction in housing instability and were effective in helping those most in need.
 
