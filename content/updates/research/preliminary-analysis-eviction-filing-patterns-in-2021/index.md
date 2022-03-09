@@ -91,6 +91,8 @@ The large reduction in eviction filings during the pandemic stands as evidence t
 
 "We imputed defendant gender using the R packages gender and genderizeR, as well as the web service Gender API. We took the mean across all available predictions. To impute race/ethnicity, we used the wru package in R, which calculated race/ethnicity probabilities on the basis of two Census Bureau data sets: the Surname List and the 2010 Decennial Census. <a href='https://evictionlab.org/demographics-of-eviction/'>Hepburn, Louis, and Desmond (2020)</a> describe the process for combining these imputations and determining the appropriate comparison to the renter population using IPUMS data. We have <a href='https://evictionlab.org/us-eviction-filing-patterns-2020/'>previously demonstrated the application of these methods to ETS data.</a> In total for the current analysis, imputation was possible for 388,909 cases with a total of 485,462 defendants." 
 
+"A number of cities, particularly in California, still had local eviction moratoria in place at the end of 2021. In addition, a number of the states that previously had eviction moratoria were in an “off-ramp” stage through the end of the year."
+
 "This represents a combination of ERA1 and ERA2 payments."
 
 "NLIHC estimates that there are 26.9 million renter households in the U.S. that fall below the income threshold to receive ERA. See Figure 3 of <a href='https://reports.nlihc.org/sites/default/files/gap/Gap-Report_2021.pdf'>The Gap: A Shortage of Affordable Homes (March 2021)</a>. Not all low-income renter households met the other criteria for ERA receipt, however, meaning that more than one in seven eligible households received aid."
