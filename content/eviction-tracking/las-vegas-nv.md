@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: Las Vegas, Nevada
 slug: las-vegas-nv
-date: 2022-02-01T05:00:00.000Z
+date: 2022-03-16T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Las Vegas, Nevada | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="32003" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -23,11 +25,15 @@ Our data in Clark County is an undercount compared to the number of filings foun
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/lasvegas_barchart.csv" %}}
+
+
 
 
 
@@ -39,11 +45,15 @@ Eviction filings in Las Vegas were slightly below typical levels in January and 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/las-vegas-shapes.json" data="/uploads/lasvegas_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -52,38 +62,20 @@ Clark County is divided into 487 census tracts. In these tracts, we map the numb
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019. 
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2015–2019
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/lasvegas_linechart.csv" %}}
 
-
-
-
-
-
-
-
-
-
-
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2016-2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016-2019.<sup>1</sup>
 
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019.
-
-
-
-
-
-
-
-
-
-
 
 {{%/ report_chart %}}
