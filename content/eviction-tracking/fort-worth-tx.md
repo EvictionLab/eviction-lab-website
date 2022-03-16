@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: Fort Worth, Texas
 slug: fort-worth-tx
-date: 2022-02-01T05:00:00.000Z
+date: 2022-03-16T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Fort Worth, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="48439" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -27,11 +29,15 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/fortworth_barchart.csv" %}}
+
+
 
 
 
@@ -43,11 +49,15 @@ Eviction filings in Fort Worth were higher than average in January and February 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/fort-worth_shapes.json" data="/uploads/fortworth_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -55,6 +65,8 @@ Tarrant and Denton Counties are divided into 494 census tracts. In each of those
 
 1. Eviction filing data for Tarrant County were collected by [January Advisors](https://www.januaryadvisors.com/). Historical averages cover the years 2018-2019. Data for Denton County were collected by [LSC](https://www.lsc.gov/); historical averages cover 2016-2019. 
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2015–2019
+
+
 
 {{%/ report_map %}}
 
@@ -66,7 +78,7 @@ Tarrant and Denton Counties are divided into 494 census tracts. In each of those
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None.
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in the historical years.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in the historical years.<sup>1</sup>
 
 1. Eviction filing data for Tarrant County were collected by [January Advisors](https://www.januaryadvisors.com/). Historical averages cover the years 2018-2019. Data for Denton County were collected by [LSC](https://www.lsc.gov/); historical averages cover 2016-2019.
 
