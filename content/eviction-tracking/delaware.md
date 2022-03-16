@@ -5,7 +5,7 @@ draft: false
 h1: Delaware
 layout: state
 slug: delaware
-date: 2022-02-01T05:00:00.000Z
+date: 2022-03-16T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Delaware | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
