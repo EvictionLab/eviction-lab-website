@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: Indianapolis, Indiana
 slug: indianapolis-in
-date: 2022-03-16T04:00:00.000Z
+date: 2022-03-17T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Indianapolis, Indiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="18097" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -51,45 +53,19 @@ More detail on eviction protections in Indianapolis can be found on the [COVID-1
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/indianapolis_barchart.csv" %}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Changes in eviction filings
 
-Eviction filings in Indianapolis ran above historical averages in January and February of 2020.<sup>1</sup> They began to drop in March and bottomed out near zero in April. Filings remained low during the moratorium period, but jumped immediately after it was lifted, though they still remain below historical averages.
+Eviction filings in Indianapolis ran above historical averages in January and February of 2020.<sup>1</sup> They began to drop in March and bottomed out near zero in April. Filings remained low during the moratorium period, and after it was lifted, filings have slowly increased to normal levels.
 
 1. Eviction filing data for Marion County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {{%/ report_chart %}}
 
@@ -97,17 +73,21 @@ Eviction filings in Indianapolis ran above historical averages in January and Fe
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/indianapolis_hotspots_output.csv" %}}
 
+
 # Eviction Hotspots
 
 Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and 2021. We analyzed eviction records in Indianapolis to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks.
 
 Eviction Hotspot data will be updated quarterly.
 
+
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_map shapes="/uploads/indianapolis_shapes.json" data="/uploads/indianapolis_map.csv" %}}
+
+
 
 
 
@@ -120,11 +100,15 @@ Marion County is divided into 224 census tracts. In each of those tracts, we map
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/indianapolis_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -133,5 +117,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for Marion County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
+
+
 
 {{%/ report_chart %}}
