@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: South Bend, Indiana
 slug: south-bend-in
-date: 2022-03-16T04:00:00.000Z
+date: 2022-03-17T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: South Bend, Indiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="18141" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -39,41 +41,19 @@ More detail on eviction protections in Indiana can be found on the [COVID-19 Hou
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/southbend_barchart.csv" %}}
 
-
-
-
-
-
-
-
-
-
-
-
-
 # Changes in eviction filings
 
-Eviction filings in South Bend ran above historical averages in January and February of 2020.<sup>1</sup> They dropped in March and ran well below average in April and May. Filings jumped immediately after the state-wide moratorium was lifted in August, but have remained below historical averages.
+Eviction filings in South Bend ran above historical averages in January and February of 2020.<sup>1</sup> They dropped in March and ran well below average in April and May. Filings jumped immediately after the state-wide moratorium was lifted in August, but have remained below historical averages. Notably, filings increased to or above historic levels in December of 2021, January and February of 2022. 
 
 1. Eviction filing data for St. Joseph County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
-
-
-
-
-
-
-
-
-
-
-
-
 
 {{%/ report_chart %}}
 
@@ -81,17 +61,21 @@ Eviction filings in South Bend ran above historical averages in January and Febr
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/southbend_hotspots_output.csv" %}}
 
+
 # Eviction Hotspots
 
 Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and 2021. We analyzed eviction records in St. Joseph County to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
 
 Eviction Hotspot data will be updated quarterly.
 
+
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_map shapes="/uploads/south-bend_shapes.json" data="/uploads/southbend_map.csv" %}}
+
+
 
 
 
@@ -104,11 +88,15 @@ St. Joseph County is divided into 75 census tracts. In each of those tracts, we 
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/southbend_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -117,5 +105,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for St. Joseph County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
+
+
 
 {{%/ report_chart %}}
