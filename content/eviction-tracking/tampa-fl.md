@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Tampa, Florida
 slug: tampa-fl
-date: 2022-03-16T04:00:00.000Z
+date: 2022-03-17T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Tampa, Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,39 +11,17 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="12103" data="/uploads/table.csv" %}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-Eviction filings in Tampa—Hilllsborough and Pinellas Counties, FL—fell sharply during the early months of the pandemic. Florida instituted a state-wide eviction moratorium which expired at the end of July 2020. After the moratorium expired, execution of eviction orders was also delayed until no earlier than October 1. Regardless, new eviction filings have increased markedly since early August.
+Eviction filings in Tampa—Hilllsborough and Pinellas Counties, FL—fell sharply during the early months of the pandemic. Florida instituted a state-wide eviction moratorium which expired at the end of July 2020. After the moratorium expired, execution of eviction orders was also delayed until no earlier than October 1. Regardless, new eviction filings have increased markedly since early August of 2020.
 
 More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
-
-
-
-
-
-
-
-
-
-
-
-
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/tampa_barchart.csv" %}}
+
+
 
 
 
@@ -75,11 +53,14 @@ Eviction filings in Tampa ran very close to historical averages in January and F
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/tampa_hotspots_output.csv" %}}
+
 
 # Eviction Hotspots
 
@@ -87,11 +68,14 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 
 Eviction Hotspot data will be updated quarterly.
 
+
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_map shapes="/uploads/tampa_shapes.json" data="/uploads/tampa_map.csv" %}}
+
+
 
 
 
@@ -104,11 +88,15 @@ Pinellas and Hillsborough counties are divided into 567 census tracts. In each o
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/tampa_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -117,5 +105,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for Pinellas and Hillsborough Counties were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
+
+
 
 {{%/ report_chart %}}
