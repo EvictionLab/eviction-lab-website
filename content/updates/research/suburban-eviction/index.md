@@ -15,12 +15,13 @@ postauthorname: Peter Hepburn, Devin Q. Rutan, and Matthew Desmond
 postauthortitle: The Eviction Lab
 socialDescription: Eviction is often seen as a city problem. This overlooks what’s going on outside of inner cities, leaving us blind to eviction patterns in suburban areas.
 researchtype: elresearch
-twImage: ready-tenant-sasha-israel.jpg
+twImage: oregon-suburb.jpg
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: ready-tenant-sasha-israel.jpg
+image: oregon-suburb.jpg
 description: Eviction is often seen as a city problem. This overlooks what’s going on outside of inner cities, leaving us blind to eviction patterns in suburban areas.
-fbImage: ready-tenant-sasha-israel.jpg
+fbImage: oregon-suburb.jpg
 collection: true
+photoCredit: Juan Pablo Garnham
 ---
 <span class="dropcap green">E</span>viction is often seen as a city problem. We tend to think of the eviction crisis as playing out in urban neighborhoods, both in high-poverty places where eviction is a constant threat and in gentrifying neighborhoods where long-term residents may be at growing risk of being forced out. This overlooks what's going on outside of inner cities, leaving us blind to eviction patterns in suburban areas.
 
