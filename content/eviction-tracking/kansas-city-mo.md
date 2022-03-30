@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Kansas City, Missouri
 slug: kansas-city-mo
-date: 2022-03-16T04:00:00.000Z
+date: 2022-03-30T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Kansas City, Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -11,59 +11,19 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="29095" data="/uploads/table.csv" %}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Eviction filings in Jackson County, MO (Kansas City) fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were down nearly 80% in April and May. Filings have increased slightly since then but remain below historical averages.
+Eviction filings in Jackson County, MO (Kansas City) fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were down nearly 80% in April and May. Filings have increased slightly since then but remain below historical averages.<sup>1</sup>
 
 More detail on eviction protections in Missouri can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mo/).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1.  Jackson County eviction filings are delayed in being uploaded to online court records. Recent data may be an undercounting.
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/kansascity_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -72,11 +32,14 @@ Eviction filings in Kansas City were slightly below average in January and Febru
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/kansascity_hotspots_output.csv" %}}
+
 
 # Eviction Hotspots
 
@@ -84,11 +47,14 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 
 Eviction Hotspot data will be updated quarterly.
 
+
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_map shapes="/uploads/kansas_shapes.json" data="/uploads/kansascity_map.csv" %}}
+
+
 
 
 
@@ -101,11 +67,15 @@ Jackson County is divided into 199 census tracts. In each of those tracts, we ma
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/kansascity_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -114,5 +84,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2012–2015.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
+
+
 
 {{%/ report_chart %}}
