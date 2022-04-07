@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Minneapolis–Saint Paul, Minnesota
 slug: minneapolis-saint-paul-mn
-date: 2022-03-17T04:00:00.000Z
+date: 2022-04-07T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Minneapolis–Saint Paul, Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
