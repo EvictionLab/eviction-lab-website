@@ -5,7 +5,7 @@ draft: false
 h1: Minnesota
 layout: state
 slug: minnesota
-date: 2022-03-16T04:00:00.000Z
+date: 2022-04-07T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% report_intro id="27" data="/uploads/states_table.csv" %}}
 
-Eviction filings in Minnesota have been significantly below average since a state-wide eviction moratorium was instituted in March 2020. Eviction protections remained in effect through the remainder of the year and were extended into 2021. The moratorium had been renewed each month until June 2021, after which the state [began phasing out protections](https://nlihc.org/resource/minnesotas-eviction-moratorium-ramp). 
+Eviction filings in Minnesota were significantly below average during its state-wide eviction moratorium, instituted in March 2020. Eviction protections remained in effect through the remainder of the year and were extended into 2021. The moratorium had been renewed each month until June 2021, after which the state [began phasing out protections](https://nlihc.org/resource/minnesotas-eviction-moratorium-ramp). 
 
 More detail on eviction protections in Minnesota can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mn/). A closer look at eviction filing patterns in the Twin Cities is [available here](https://evictionlab.org/eviction-tracking/minneapolis-saint-paul-mn/).
 
