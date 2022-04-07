@@ -25,7 +25,7 @@ More detail on eviction protections in Minnesota can be found on the [COVID-19 H
 
 # Changes in eviction filings
 
-Eviction filings in Minnesota were close to historical averages in January and February of 2020.<sup>1</sup> Filings fell sharply in March and remained low for several months. By mid-2021, filings began rising back towards historical averages. 
+Eviction filings in Minnesota were close to historical averages in January and February of 2020.<sup>1</sup> Filings fell sharply in March and remained low for several months. Filings began rising by mid-2021, reaching above historical averages in March 2022. 
 
 1. Eviction filing data for Minnesota were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
 
