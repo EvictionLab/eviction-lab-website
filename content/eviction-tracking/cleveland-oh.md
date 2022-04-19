@@ -15,7 +15,7 @@ While the state of Ohio has not instituted a general eviction moratorium, the Cl
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
 
-1. The city of Cleveland's eviction filings are delayed in being uploaded to online court records. Recent data may be delayed or an undercounting. 
+1. The city of Cleveland's eviction filings are delayed in being uploaded to online court records. Recent data may be an undercounting. 
 
    [](https://twitter.com/intent/tweet?url=https%3A%2F%2Fstaging--eviction-lab.netlify.app%2Feviction-tracking%2Fkansas-city-mo%2F)
 
