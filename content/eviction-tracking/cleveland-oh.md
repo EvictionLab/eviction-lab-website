@@ -17,13 +17,15 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 1. The city of Cleveland's eviction filings are delayed in being uploaded to online court records. Recent data may be an undercounting. 
 
-   [](https://twitter.com/intent/tweet?url=https%3A%2F%2Fstaging--eviction-lab.netlify.app%2Feviction-tracking%2Fkansas-city-mo%2F)
+[](https://twitter.com/intent/tweet?url=https%3A%2F%2Fstaging--eviction-lab.netlify.app%2Feviction-tracking%2Fkansas-city-mo%2F)
 
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/cleveland_barchart.csv" %}}
+
+
 
 
 
@@ -36,11 +38,14 @@ Eviction filings in Cleveland were slightly below average in January and Februar
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/cleveland_hotspots_output.csv" %}}
+
 
 
 # Eviction Hotspots
@@ -50,11 +55,14 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 Eviction Hotspot data will be updated quarterly.
 
 
+
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_map shapes="/uploads/cleveland_shapes.json" data="/uploads/cleveland_map.csv" %}}
+
+
 
 
 
@@ -71,11 +79,15 @@ Cleveland is divided into 177 census tracts. In each of those tracts, we map the
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/cleveland_linechart.csv" %}}
+
+
 
 
 
@@ -86,6 +98,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2012–2016.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
+
+
 
 
 
