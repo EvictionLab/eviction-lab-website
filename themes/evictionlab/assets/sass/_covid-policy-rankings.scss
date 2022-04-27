@@ -80,6 +80,10 @@ $alt-bg: #F4F7F9;
   width: 100%;
   background-color: #434778;
   margin-top: 4rem;
+  &.disclaim {
+    background-color: $color1;
+  
+  }
   @include media-breakpoint-up(md) {
     margin-top: 4rem;
   }
@@ -91,6 +95,7 @@ $alt-bg: #F4F7F9;
   }
 }
 .disclaimer .bordertop {
+ // background-color: $color1;
   @include media-breakpoint-up(md) {
     margin-top: .8rem;
   }
