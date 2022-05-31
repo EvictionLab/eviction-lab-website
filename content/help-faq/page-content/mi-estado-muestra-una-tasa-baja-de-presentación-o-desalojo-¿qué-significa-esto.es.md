@@ -6,7 +6,7 @@ type: data
 weight: "370"
 faqid: baja-desalojo
 ---
-En el mapa de datos propietarios (nuestro mapa original), hemos indicado con el símbolo  \[INSERT GREY EXCLAMATION SYMBOL] estados con recuentos de desalojo subestimados. Por supuesto, algunos lugares tienen bajas tasas de desalojo porque hay pocos inquilinos que viven allí o porque hay muy pocos desalojos. Pero algunos estados y el Distrito de Columbia han subestimado los conteos de desalojo en nuestro conjunto de datos por una variedad de razones.
+En el mapa de datos propietarios (nuestro mapa original), hemos indicado con el símbolo  <img class="hint" src="/images/icons/hint-icon.png"> estados con recuentos de desalojo subestimados. Por supuesto, algunos lugares tienen bajas tasas de desalojo porque hay pocos inquilinos que viven allí o porque hay muy pocos desalojos. Pero algunos estados y el Distrito de Columbia han subestimado los conteos de desalojo en nuestro conjunto de datos por una variedad de razones.
 
 Debido a que la cobertura dentro de nuestro conjunto de datos depende del área y el año, es posible que un solo condado tenga fluctuaciones en la recopilación de datos a lo largo del tiempo. Como se explica en nuestro [informe de metodología](https://evictionlab.org/docs/Eviction%20Lab%20Methodology%20Report.pdf), hemos marcado condados y geografías (por ejemplo, áreas censales, grupos de bloques) con estimaciones de desalojo bajas. Sin embargo, dado que validamos nuestras estimaciones a nivel de condado, las estimaciones de desalojo de secciones censales y grupos de bloques que conforman un condado de baja estimación pueden de hecho no ser contadas por debajo. Para el mapa original, los números disponibles de la página para descargar los datos contendrán estos indicadores.
 
