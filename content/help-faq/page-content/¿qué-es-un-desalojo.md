@@ -1,7 +1,7 @@
 ---
 childof: faq
 title: ¿Qué es un desalojo?
-type: rankings
+type: definitions
 weight: "260"
 faqid: que-es-un-desalojo
 ---
