@@ -3,7 +3,7 @@ title: What is an eviction filing?
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: definitions
-weight: 212
+weight: "205"
 faqid: eviction-filing
 ---
 An eviction filing is the result of a landlord filing a case in court to have a tenant removed from a property.
