@@ -1,156 +1,171 @@
 ---
-title: 'How many people are evicted nationwide?'
+title: How many people and unique households receive eviction filings nationwide?
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
 weight: 142.7
 faqid: us-stats
 ---
-See the following table:
+See the following table for figures from our National Estimates study. These are estimates, but we are reasonably confident that the true filing rate is within approximately 0.2 percentage points of the listed estimate, while the true households threatened rate is within approximately 0.6 percentage points of the listed estimate. Exact credible intervals can be viewed here:
 
 <table class="page-stats table-responsive">
- <tr>
-  <th>Year</th>
-  <th>Renter Occupied Households</th>
-  <th>Eviction Filings</th>
-  <th>Evictions</th>
-  <th>Eviction Filing Rate</th>
-  <th>Eviction Rate</th>
- </tr>
- <tr>
-  <td>2000</td>
-  <td>19327822</td>
-  <td>1159168</td>
-  <td>518873</td>
-  <td>6</td>
-  <td>2.68</td>
- </tr>
- <tr>
-  <td>2001</td>
-  <td>27438838</td>
-  <td>1750452</td>
-  <td>754652</td>
-  <td>6.38</td>
-  <td>2.75</td>
- </tr>
- <tr>
-  <td >2002</td>
-  <td>29982440</td>
-  <td>2085491</td>
-  <td>864918</td>
-  <td>6.96</td>
-  <td>2.88</td>
- </tr>
- <tr>
-  <td>2003</td>
-  <td>30330222</td>
-  <td>2134014</td>
-  <td>910361</td>
-  <td>7.04</td>
-  <td>3</td>
- </tr>
- <tr>
-  <td>2004</td>
-  <td>30784432</td>
-  <td>2177018</td>
-  <td>940817</td>
-  <td>7.07</td>
-  <td>3.06</td>
- </tr>
- <tr>
-  <td>2005</td>
-  <td>31969192</td>
-  <td>2306580</td>
-  <td>969303</td>
-  <td>7.22</td>
-  <td>3.03</td>
- </tr>
- <tr>
-  <td>2006</td>
-  <td>32578412</td>
-  <td>2441067</td>
-  <td>1019600</td>
-  <td>7.49</td>
-  <td>3.13</td>
- </tr>
- <tr>
-  <td>2007</td>
-  <td>31207532</td>
-  <td>2002531</td>
-  <td>958605</td>
-  <td>6.42</td>
-  <td>3.07</td>
- </tr>
- <tr>
-  <td>2008</td>
-  <td>31990144</td>
-  <td>2079865</td>
-  <td>996233</td>
-  <td>6.5</td>
-  <td>3.11</td>
- </tr>
- <tr>
-  <td>2009</td>
-  <td>32757084</td>
-  <td>2108719</td>
-  <td>952699</td>
-  <td>6.44</td>
-  <td>2.91</td>
- </tr>
- <tr >
-  <td>2010</td>
-  <td>33685912</td>
-  <td>2374084</td>
-  <td>993531</td>
-  <td>7.05</td>
-  <td>2.95</td>
- </tr>
- <tr>
-  <td>2011</td>
-  <td>33975472</td>
-  <td>2452080</td>
-  <td>987999</td>
-  <td>7.22</td>
-  <td>2.91</td>
- </tr>
- <tr>
-  <td>2012</td>
-  <td>34676936</td>
-  <td>2420135</td>
-  <td>983666</td>
-  <td>6.98</td>
-  <td>2.84</td>
- </tr>
- <tr>
-  <td>2013</td>
-  <td>35361292</td>
-  <td>2378464</td>
-  <td>930693</td>
-  <td>6.73</td>
-  <td>2.63</td>
- </tr>
- <tr>
-  <td>2014</td>
-  <td>36302464</td>
-  <td>2394318</td>
-  <td>908977</td>
-  <td>6.6</td>
-  <td>2.5</td>
- </tr>
- <tr>
-  <td>2015</td>
-  <td>36502680</td>
-  <td>2288732</td>
-  <td>870325</td>
-  <td>6.27</td>
-  <td>2.38</td>
- </tr>
- <tr>
-  <td>2016</td>
-  <td>38372860</td>
-  <td>2350042</td>
-  <td>898479</td>
-  <td>6.12</td>
-  <td>2.34</td>
- </tr>
-</table>
+<thead><tr><th title="Field #1">Year</th>
+<th title="Field #2">Renting Households</th>
+<th title="Field #3">Estimated Filings</th>
+<th title="Field #4">Estimated Filings Rates</th>
+<th title="Field #5">Households Threatened (Estimate)</th>
+<th title="Field #6">Households Threatened Rate (Estimate)</th>
+</tr></thead>
+<tbody><tr>
+<td align="right">2000</td>
+<td align="right">35664348</td>
+<td align="right">3009831.5</td>
+<td align="right">0.084</td>
+<td align="right">2177580.3</td>
+<td align="right">0.061</td>
+</tr>
+<tr>
+<td align="right">2001</td>
+<td align="right">36170936</td>
+<td align="right">3256798</td>
+<td align="right">0.09</td>
+<td align="right">2339139.8</td>
+<td align="right">0.065</td>
+</tr>
+<tr>
+<td align="right">2002</td>
+<td align="right">36677520</td>
+<td align="right">3459466.5</td>
+<td align="right">0.094</td>
+<td align="right">2466567.5</td>
+<td align="right">0.067</td>
+</tr>
+<tr>
+<td align="right">2003</td>
+<td align="right">37184108</td>
+<td align="right">3507399.3</td>
+<td align="right">0.094</td>
+<td align="right">2524702.3</td>
+<td align="right">0.068</td>
+</tr>
+<tr>
+<td align="right">2004</td>
+<td align="right">37690696</td>
+<td align="right">3539009.8</td>
+<td align="right">0.094</td>
+<td align="right">2646680.5</td>
+<td align="right">0.07</td>
+</tr>
+<tr>
+<td align="right">2005</td>
+<td align="right">38197284</td>
+<td align="right">3635565</td>
+<td align="right">0.095</td>
+<td align="right">2763771.5</td>
+<td align="right">0.072</td>
+</tr>
+<tr>
+<td align="right">2006</td>
+<td align="right">38703868</td>
+<td align="right">3708815.5</td>
+<td align="right">0.096</td>
+<td align="right">2817412.3</td>
+<td align="right">0.073</td>
+</tr>
+<tr>
+<td align="right">2007</td>
+<td align="right">39210456</td>
+<td align="right">3782635.3</td>
+<td align="right">0.096</td>
+<td align="right">2831062.8</td>
+<td align="right">0.072</td>
+</tr>
+<tr>
+<td align="right">2008</td>
+<td align="right">39717044</td>
+<td align="right">3841053</td>
+<td align="right">0.097</td>
+<td align="right">2867643.3</td>
+<td align="right">0.072</td>
+</tr>
+<tr>
+<td align="right">2009</td>
+<td align="right">40223632</td>
+<td align="right">3791665</td>
+<td align="right">0.094</td>
+<td align="right">2811983.8</td>
+<td align="right">0.07</td>
+</tr>
+<tr>
+<td align="right">2010</td>
+<td align="right">40730216</td>
+<td align="right">3829377.5</td>
+<td align="right">0.094</td>
+<td align="right">2851579.5</td>
+<td align="right">0.07</td>
+</tr>
+<tr>
+<td align="right">2011</td>
+<td align="right">41501696</td>
+<td align="right">3882112.3</td>
+<td align="right">0.094</td>
+<td align="right">2891763.5</td>
+<td align="right">0.07</td>
+</tr>
+<tr>
+<td align="right">2012</td>
+<td align="right">42273176</td>
+<td align="right">3859967.5</td>
+<td align="right">0.091</td>
+<td align="right">2873134</td>
+<td align="right">0.068</td>
+</tr>
+<tr>
+<td align="right">2013</td>
+<td align="right">43044656</td>
+<td align="right">3857783.3</td>
+<td align="right">0.09</td>
+<td align="right">2852587.5</td>
+<td align="right">0.066</td>
+</tr>
+<tr>
+<td align="right">2014</td>
+<td align="right">43816132</td>
+<td align="right">3819414.5</td>
+<td align="right">0.087</td>
+<td align="right">2814987</td>
+<td align="right">0.064</td>
+</tr>
+<tr>
+<td align="right">2015</td>
+<td align="right">44587612</td>
+<td align="right">3733049</td>
+<td align="right">0.084</td>
+<td align="right">2729296</td>
+<td align="right">0.061</td>
+</tr>
+<tr>
+<td align="right">2016</td>
+<td align="right">45359092</td>
+<td align="right">3725835.3</td>
+<td align="right">0.082</td>
+<td align="right">2711472</td>
+<td align="right">0.06</td>
+</tr>
+<tr>
+<td align="right">2017</td>
+<td align="right">46130568</td>
+<td align="right">3767301.3</td>
+<td align="right">0.082</td>
+<td align="right">2764012.5</td>
+<td align="right">0.06</td>
+</tr>
+<tr>
+<td align="right">2018</td>
+<td align="right">46902048</td>
+<td align="right">3656427.8</td>
+<td align="right">0.078</td>
+<td align="right">2734662.8</td>
+<td align="right">0.058</td>
+</tr>
+</tbody></table>
