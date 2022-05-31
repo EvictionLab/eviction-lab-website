@@ -6,4 +6,4 @@ type: map
 weight: 162
 faqid: browsers
 ---
-We support the last two major releases of Edge, Chrome, Firefox, and Safari. We also support Internet Explorer 11.
+We support the last two major releases of Edge, Chrome, Firefox, and Safari. 
