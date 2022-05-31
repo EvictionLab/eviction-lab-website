@@ -3,7 +3,7 @@ childof: faq
 title: Mi área muestra una tasa alta de presentación o desalojo. ¿Qué significa esto?
 type: data
 weight: "360"
-faqid: alta-de-presentación-o-desalojo
+faqid: alta-de-presentacion-o-desalojo
 ---
 En el mapa para 2000-2016, hemos indicado con el símbolo \[INSERT RED EXCLAMATION SYMBOL]  áreas censales y grupos de bloques con tasas de presentación y desalojo en el 1% superior. Hay áreas con altas tasas porque la inseguridad de la vivienda es especialmente aguda allí. Pero hay otras consideraciones también.
 

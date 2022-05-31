@@ -9,17 +9,31 @@ Utilizamos estimaciones de hogares ocupados por inquilinos de los Censos de los 
 
 Utilizamos las siguientes encuestas para otras variables demográficas enumeradas en el sitio web y la descarga de datos:
 
-Años asociados Encuesta(s) utilizada(s)
-
-2000-2004 Censo 2000
-
-2005-2009 Estimaciones de 5 años de ACS 2005-2009
-
-2010 Censos de 2010 para estimados de población; Estimaciones de 5 años de ACS 
-
-2011-2015 2011-2015 Estimaciones de 5 años de ACS
-
-2016-2018 2016-2019 ACS
+<table class="page-stats table-responsive">
+<thead><tr><th title="Field #1">Años asociados</th>
+<th title="Field #2">Encuesta(s) utilizada(s)</th>
+</tr></thead>
+<tbody><tr>
+<td>2000-2004 </td>
+<td>Censo 2000</td>
+</tr>
+<tr>
+<td>2005-2009 </td>
+<td>Estimaciones de 5 años de ACS 2005-2009</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>Censos de 2010 para estimados de población; Estimaciones de 5 años de ACS</td>
+</tr>
+<tr>
+<td>2011-2015 </td>
+<td>2011-2015 Estimaciones de 5 años de ACS</td>
+</tr>
+<tr>
+<td>2016-2018 </td>
+<td>2016-2019 ACS</td>
+</tr>
+</tbody></table>
 
 
 
