@@ -1,6 +1,10 @@
 .header-logo-img-white {
     display: none;
 }
+
+.v2icon {
+    width: 44px;
+}
 .page-the-eviction-lab {
 
     .superheader {
@@ -221,6 +225,9 @@
                 }
             }
             &.title-large {
+             
+                    font-size: 3rem;
+                
                 @include media-breakpoint-up(lg) {
                     font-size: 3.4em;
                 }
@@ -257,6 +264,7 @@
         }
         p {
             font-size: 1.8rem;
+            font-family: Akkurat, sans-serif;
         }
         hr {
             border-top: 1px solid #E5E5E5;
@@ -291,6 +299,9 @@
     // Map and rankings blocks --------------------------------------------
     #main-features {
         background-color: #F4F7F9;
+        .v2icon {
+            margin-left: 10px;
+        }
         h3 {
           color: $color2;
           font-size: 2.6rem;
@@ -302,9 +313,18 @@
             font-size: 3.2rem;
             margin-bottom: 1.6rem;
             }
-            
         }
     }
+    #feature-map-title {
+        ul li {
+            font-size: 1.8rem;
+            font-family: Akkurat, sans-serif;
+            list-style-type: disc;
+            margin-left: 1.6rem;
+            padding-left: 0.8rem;
+        }
+    }
+
     #feature-map {
         background-color: #EAEFF3;
         background-image: url(/images/assets/graphics/map-circles2.svg);
@@ -321,13 +341,17 @@
         @include media-breakpoint-up(md) {
             background-size: 70%;
         }
+        @include media-breakpoint-up(lg) {
+            background-position: 50% 2rem;
+            background-size: 90%;
+        }
         @include media-breakpoint-up(xl) {
             background-position: 68% 2rem;
-            background-size: 80%;
+            background-size: 88%;
         }
         @include media-breakpoint-up(xxxl) {
             background-position: 68% 2rem;
-            background-size: 72%;
+            background-size: 78%;
         }
             &:hover {
                 background-color: #e6ecf2;
@@ -366,18 +390,18 @@
         }
     }
     .main-feature {
-        padding: 19rem 0 3.2rem;
+        padding: 24rem 0 3.2rem;
         @include media-breakpoint-up(mm) {
             padding: 22rem 0 3.2rem;
         }
         @include media-breakpoint-up(md) {
-            padding: 21rem 0 3.2rem;
+            padding: 28rem 0 3.2rem;
         }
         @include media-breakpoint-up(lg) {
-            padding: 24rem 0 3.2rem;
+            padding: 30rem 0 3.2rem;
         }
         @include media-breakpoint-up(xl) {
-            padding: 28rem 0 3.2rem;
+            padding: 32rem 0 3.2rem;
         }
         @include media-breakpoint-up(xxxl) {
             padding: 33rem 0 3.2rem;
