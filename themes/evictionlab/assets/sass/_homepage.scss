@@ -330,7 +330,7 @@
         background-image: url(/images/assets/graphics/map-circles2.svg);
         background-repeat: no-repeat;
         background-size: 80%;
-        background-position: 50% 2rem;
+        background-position: 50% 1rem;
         transition: background-color .3s ease;
         @include media-breakpoint-up(smm) {
             background-size: 88%;
@@ -390,12 +390,12 @@
         }
     }
     .main-feature {
-        padding: 24rem 0 3.2rem;
+        padding: 19rem 0 3.2rem;
         @include media-breakpoint-up(mm) {
-            padding: 22rem 0 3.2rem;
+            padding: 20rem 0 3.2rem;
         }
         @include media-breakpoint-up(md) {
-            padding: 28rem 0 3.2rem;
+            padding: 22rem 0 3.2rem;
         }
         @include media-breakpoint-up(lg) {
             padding: 30rem 0 3.2rem;
@@ -444,8 +444,9 @@
         @include media-breakpoint-up(lg) {
             background-size: 100%;
         }
-        background-repeat: no-repeat;    
-        background-image: url('/images/assets/graphics/scorecard-bg.jpg');
+        background-repeat: no-repeat; 
+        background-color: #f4e9e7;   
+        background-image: url('/images/assets/graphics/rankings-bars.svg');
         }
     .bg-2 {
         background-size: 180%;
