@@ -20,7 +20,7 @@ other = "Explore nationwide eviction data spanning the years 2000-2016. View map
 [mapData]
 other = "Map & Data"
 [mapSub]
-other = "<p>How is the eviction crisis affecting your community? Find out with our newly updated map, which now covers all 50 US States & D.C. You can search for your county, compare data across regions, interact with demographic characteristics, and create local reports.</p><p>New features include:</p><ul><li>Data from 2000 to 2018</li><li>Estimated data for every county in all 50 US States & DC</li><li>New variable: Households threatened with eviction</li></ul>"
+other = "<p>How is the eviction crisis affecting your community? Find out with our newly updated map, which now covers all 50 U.S. states & D.C. You can search for your county, compare data across regions, interact with demographic characteristics, and create local reports.</p><p>New features include:</p><ul><li>Data from 2000 to 2018</li><li>Estimated data for every county in all 50 U.S. states & D.C.</li><li>New variable: Households threatened with eviction</li></ul>"
 [mapCTA]
 other = "Go to the map"
 [rankingsHead]
