@@ -1,20 +1,19 @@
 ---
-title: How many people and unique households receive eviction filings nationwide?
-date: 2017-11-19T20:43:49-08:00
 childof: faq
+title: ¿Cuánta gente y hogares reciben presentaciones de desalojo a nivel nacional?
 type: data
-weight: 142.7
-faqid: us-stats
+weight: "320"
+faqid: desalojo-a-nivel-nacional
 ---
-See the following table for figures from our National Estimates study. These are estimates, but we are reasonably confident that the true filing rate is within approximately 0.2 percentage points of the listed estimate, while the true households threatened rate is within approximately 0.6 percentage points of the listed estimate. Exact credible intervals [can be downloaded here](https://eviction-lab-data-downloads.s3.amazonaws.com/estimating-eviction-prevalance-across-us/national_eviction_estimates_2000_2018.csv).
+En la siguiente tabla puedes ver los números de nuestro estudio nacional de datos estimados. Se trata de estimaciones, pero de acuerdo a nuestros cálculos estos tienen un alto nivel de confianza. Creemos que el número de presentaciones verdaderos está en alrededor de 0.2 puntos porcentuales cercano al que se presenta aquí, mientras que el número verdadero de hogares amenazados está dentro de 0.6 puntos porcentuales de lo que presentamos aquí. Los intervalos de confianza exactos [están disponibles aquí](https://eviction-lab-data-downloads.s3.amazonaws.com/estimating-eviction-prevalance-across-us/national_eviction_estimates_2000_2018.csv).
 
-<table class="page-stats table-responsive">
-<thead><tr><th title="Field #1">Year</th>
-<th title="Field #2">Renting Households</th>
-<th title="Field #3">Estimated Filings</th>
-<th title="Field #4">Estimated Filings Rates</th>
-<th title="Field #5">Households Threatened (Estimate)</th>
-<th title="Field #6">Households Threatened Rate (Estimate)</th>
+<table class="table-responsive page-stats">
+<thead><tr><th title="Field #1">Año</th>
+<th title="Field #2">Hogares que alquilan</th>
+<th title="Field #3">Presentaciones de desalojo estimadas</th>
+<th title="Field #4">Tasa de desalojo estimada</th>
+<th title="Field #5">Hogares amenazados (estimación)</th>
+<th title="Field #6">Tasa de hogares amenazados (estimación)</th>
 </tr></thead>
 <tbody><tr>
 <td align="right">2000</td>

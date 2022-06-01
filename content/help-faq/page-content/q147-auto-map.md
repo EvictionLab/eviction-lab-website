@@ -7,4 +7,4 @@ weight: 147
 faqid: auto-map
 
 ---
-Selecting "auto" enables you to zoom through the geographic levels (states, counties, cities, census tracts, and block groups) automatically. You can also select your desired geographic level from the same dropdown menu.
+Selecting “auto” enables you to zoom through the geographic levels (states, counties, cities, census tracts, and block groups) automatically. You can also select your desired geographic level from the same dropdown menu.
