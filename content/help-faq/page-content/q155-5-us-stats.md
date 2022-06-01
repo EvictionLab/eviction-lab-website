@@ -6,7 +6,7 @@ type: data
 weight: 142.7
 faqid: us-stats
 ---
-See the following table for figures from our National Estimates study. These are estimates, but we are reasonably confident that the true filing rate is within approximately 0.2 percentage points of the listed estimate, while the true households threatened rate is within approximately 0.6 percentage points of the listed estimate. Exact credible intervals can be viewed here:
+See the following table for figures from our National Estimates study. These are estimates, but we are reasonably confident that the true filing rate is within approximately 0.2 percentage points of the listed estimate, while the true households threatened rate is within approximately 0.6 percentage points of the listed estimate. Exact credible intervals [can be downloaded here](https://eviction-lab-data-downloads.s3.amazonaws.com/estimating-eviction-prevalance-across-us/national_eviction_estimates_2000_2018.csv).
 
 <table class="page-stats table-responsive">
 <thead><tr><th title="Field #1">Year</th>
