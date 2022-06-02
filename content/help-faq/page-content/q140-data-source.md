@@ -10,4 +10,4 @@ We have accumulated 99.9 million records related to eviction. The Eviction Lab d
 
 But many states either did not centralize their eviction data or were unwilling to release this information. Accordingly, the Eviction Lab then purchased more comprehensive datasets of public eviction records from two companies: LexisNexis Risk Solutions and American Information Research Services Inc.
 
-For more information about our data collection, see our [Methods page](https://evictionlab.org/methods), our new Methods Report, and our original [Methodology Report (PDF)](https://evictionlab.org/docs/Eviction%20Lab%20Methodology%20Report.pdf).
+For more information about our data collection, see our [Methods page](https://evictionlab.org/methods), our [new Methods Report](https://evictionlab.org/docs/Eviction_Lab_Methodology_Report_2022.pdf), and our original [Methodology Report (PDF)](https://evictionlab.org/docs/Eviction%20Lab%20Methodology%20Report.pdf).

@@ -14,4 +14,4 @@ Mientras que otras unidades de geografía están todas conectadas (grupos de blo
 
 
 
-Nuestras estimaciones para “ciudades/lugares” se basan en las definiciones de lugares del censo. Para obtener más detalles sobre cómo difiere el proceso de estimación de lugares, consulte nuestro [Informe de metodología](https://evictionlab.org/docs/Eviction%20Lab%20Methodology%20Report.pdf). Al descargar cualquiera de nuestros archivos de “ciudades” de la página Obtener los datos, recibirá los estimados de desalojo/presentaciones sin redondear.
+Nuestras estimaciones para “ciudades/lugares” se basan en las definiciones de lugares del censo. Para obtener más detalles sobre cómo difiere el proceso de estimación de lugares, consulte nuestro [Informe de metodología](https://evictionlab.org/docs/Eviction_Lab_Methodology_Report_2022.pdf). Al descargar cualquiera de nuestros archivos de “ciudades” de la página Obtener los datos, recibirá los estimados de desalojo/presentaciones sin redondear.

@@ -5,10 +5,10 @@ type: index
 photoCredit: Michael Kienitz
 hasSubnav: true
 socialDescription: We’ve built the first nationwide database of evictions.  
-description: Read our Methods FAQ and download our full Methodology Report.
+description: Read our Methods FAQ and download our full Methods Report.
 h1: Methods
 li1: GO TO SECTION
 li2: Methods FAQ
-li3: 'Download Report (PDF)'
+li3: 'Download the new Methods Report (PDF)'
 ---
 

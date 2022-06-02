@@ -11,5 +11,5 @@ Un desalojo es un proceso que consiste en varios pasos, desde el momento en que 
 
 <img src="/preguntas/five-stages-eviction-esp-landscape.png" style="width: 100%" />
 
-En nuestros datos, un desalojo se define como un dictamen de desalojo emitido a una casa alquilada. Si un inquilino en la misma dirección tiene múltiples juicios de desalojo, solo contamos el último. Para obtener más información, consulte nuestro [Informe de metodología (PDF)](https://evictionlab.org/docs/Eviction%20Lab%20Methodology%20Report.pdf).**\
+En nuestros datos, un desalojo se define como un dictamen de desalojo emitido a una casa alquilada. Si un inquilino en la misma dirección tiene múltiples juicios de desalojo, solo contamos el último. Para obtener más información, consulte nuestro [Informe de metodología (PDF)](https://evictionlab.org/docs/Eviction_Lab_Methodology_Report_2022.pdf).**\
 Para obtener más información sobre el desalojo y sus efectos, consulte nuestra página sobre [por qué nos debe importar el desalojo](https://evictionlab.org/es/why-eviction-matters/).**

@@ -193,6 +193,6 @@ As the figures above show, our current data suggest there was roughly 1 eviction
   </div>
 </div>
 
-It is important to note that there are several places where we do not have all eviction records, including New York and California. More information about why can be found in our <a href="https://evictionlab.org/docs/Eviction%20Lab%20Methodology%20Report.pdf" target="_blank">Methodology Report</a>. As a result, our current national estimates of evictions and eviction filings underestimate the overall prevalence of both. Our data collection efforts are ongoing, and we will continue to update our estimates as we learn more. 
+It is important to note that there are several places where we do not have all eviction records, including New York and California. More information about why can be found in our <a href="https://evictionlab.org/docs/Eviction_Lab_Methodology_Report_2022.pdf" target="_blank">Methodology Report</a>. As a result, our current national estimates of evictions and eviction filings underestimate the overall prevalence of both. Our data collection efforts are ongoing, and we will continue to update our estimates as we learn more. 
 
 If you have any questions or would like to get in touch with the Eviction Lab, please email us at <a href="mailto:info@evictionlab.org" target="_blank">info@evictionlab.org</a>. We also invite you to explore <a href="https://justshelter.org" target="_blank">justshelter.org</a>, a resource built by our team with contact information for housing advocates all across the country.

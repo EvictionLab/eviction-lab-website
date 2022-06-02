@@ -5,7 +5,7 @@ type: data
 weight: "310"
 faqid: datos-del-censo
 ---
-Utilizamos estimaciones de hogares ocupados por inquilinos de los Censos de los EE. UU. De 2000 y 2010 y ESRI Business Analyst 2016. Para obtener más detalles sobre la variable de hogar ocupada por inquilinos, favor de leer nuestro[Informe de Metodología (PDF)](https://evictionlab.org/docs/Eviction%20Lab%20Methodology%20Report.pdf).
+Utilizamos estimaciones de hogares ocupados por inquilinos de los Censos de los EE. UU. De 2000 y 2010 y ESRI Business Analyst 2016. Para obtener más detalles sobre la variable de hogar ocupada por inquilinos, favor de leer nuestro[Informe de Metodología (PDF)](https://evictionlab.org/docs/Eviction_Lab_Methodology_Report_2022.pdf).
 
 Utilizamos las siguientes encuestas para otras variables demográficas enumeradas en el sitio web y la descarga de datos:
 
