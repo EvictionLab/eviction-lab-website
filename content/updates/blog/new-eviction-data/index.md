@@ -20,7 +20,7 @@ image: data-v2-map.jpg
 description: The Eviction Lab’s newest data release shows that nearly 6 out of 100 renting households were threatened with eviction at least once during 2018.
 fbImage: data-v2-map-social.png
 ---
-The Eviction Lab’s newest data release shows that nearly 6 out of 100 renting households were threatened with eviction at least once during 2018. More than 3.6 million eviction cases were filed in that year, a similar number to the annual average of eviction filings between 2000 and 2018.
+<span class="dropcap red">T</span>he Eviction Lab’s newest data release shows that nearly 6 out of 100 renting households were threatened with eviction at least once during 2018. More than 3.6 million eviction cases were filed in that year, a similar number to the annual average of eviction filings between 2000 and 2018.
 
 These new findings are part of a more extensive update to our existing national database of eviction lawsuits. While our original map was an effective tool in illuminating an invisible side of the country’s housing crisis, it was also limited, with some states and counties underrepresented, and others not represented at all.
 
