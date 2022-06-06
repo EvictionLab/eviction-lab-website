@@ -5,7 +5,7 @@ url: assessing-state-eviction-prevention-covid-19
 contenttype: updates
 collection: true
 contentcat: research
-featured: false
+featured: true
 in_index: true
 scripts:
   - charts
@@ -19,10 +19,12 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 description: We describe and analyze the unprecedented eviction prevention
   housing policies enacted at the state level in response to COVID-19.
 listSummary: We describe and analyze the unprecedented eviction prevention
-  housing policies enacted at the state level in response to COVID-19. Over the
-  first year of the pandemic, 43 states and Washington, DC instituted some form
-  of eviction moratorium, but those protections worked very differently from
+  housing policies enacted at the state level in response to COVID-19, where protections worked very differently from
   state to state.
+collection: true
+twImage: assessing-protections.png
+aliases: null
+fbImage: assessing-protections.png
 ---
 <span class="dropcap green">M</span>illions of people [lost their jobs or saw their working hours cut in the early weeks of the COVID-19 pandemic](https://www.brookings.edu/research/the-pandemic-hurt-low-wage-workers-the-most-and-so-far-the-recovery-has-helped-them-the-least/). This was [felt especially hard by Black and Latino renters](https://www.cbpp.org/research/poverty-and-inequality/tracking-the-covid-19-economys-effects-on-food-housing-and), the same group of people that had the [highest rates of housing cost burden and housing insecurity](https://www.jchs.harvard.edu/americas-rental-housing-2022) before the pandemic. Policymakers had reason to be afraid about a surge in eviction cases as vulnerable tenants fell behind on rent across the country. To avoid a national crisis, federal, state, and local governments issued an array of temporary eviction moratoria and renter-supportive measures. 
 
