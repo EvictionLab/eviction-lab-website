@@ -53,7 +53,7 @@ To better understand these policies and how they left some renters with far more
 <br/>
 <br/>
 
-<h3 class="d-inline">Second,</h3> <p class="d-inline"> some moratoria lasted a lot longer than others. The earliest eviction moratorium went into effect on March 13, 2020, and some remained in effect as of March 13, 2021. The typical length of a moratorium was 144 days. The longest moratorium during the first year of the pandemic was issued by the Washington, DC Superior Court and later extended by the DC Council. It went into effect on March 15, 2020 and was still in place at the end of the study period (363 days). The shortest moratorium was issued by the North Dakota State Supreme Court and was in effect for only 27 days. In Figure 1 we plot the presence and overall duration of protections in each state and D.C. </p>
+<h3 class="d-inline">Second,</h3> <p class="d-inline"> some moratoria lasted a lot longer than others. The earliest eviction moratorium went into effect on March 13, 2020, and some remained in effect as of March 13, 2021. The typical length of a moratorium was 144 days. The longest moratorium during the first year of the pandemic was issued by the Washington, DC Superior Court and later extended by the DC Council. It went into effect on March 15, 2020 and was still in place at the end of the study period (363 days). The shortest moratorium was issued by the North Dakota State Supreme Court and was in effect for only 27 days. In Figure 1 we plot the presence and overall duration of protections in each state and D.C.<sup>1</sup>  </p>
 
 <br/>
 <br/>
@@ -86,13 +86,12 @@ To better understand these policies and how they left some renters with far more
 
 
 
-<h3 class="d-inline">Fifth,</h3> <p class="d-inline">  we find that most moratoria restricted eviction protections to certain renters or certain types of eviction cases. There were two particularly common forms of restriction. The first limited protections to those who could demonstrate a COVID-19 hardship like job or wage loss. The second halted eviction cases brought for nonpayment of rent but allowed other cases, like when the landlord argued that the tenant created a nuisance or public hazard or had stayed beyond the lease term. Initially, 34 states and Washington, DC, applied moratoria to all evictions without eligibility restrictions. Over time, nearly half of these jurisdictions limited protections to nonpayment of rent eviction, demonstration of COVID-19 hardship, or both.</p>
+<h3 class="d-inline">Fifth,</h3> <p class="d-inline">  we find that most moratoria restricted eviction protections to certain renters or certain types of eviction cases. There were two particularly common forms of restriction. The first limited protections to those who could demonstrate a COVID-19 hardship like job or wage loss. The second halted eviction cases brought for nonpayment of rent but allowed other cases, like when the landlord argued that the tenant created a nuisance or public hazard or had stayed beyond the lease term. Initially, 34 states and Washington, DC, applied moratoria to all evictions without eligibility restrictions.<sup>2</sup> Over time, nearly half of these jurisdictions limited protections to nonpayment of rent eviction, demonstration of COVID-19 hardship, or both.</p>
 
 <br/>
 <br/>
 
 {{< pullquote "In most cases, protections were lifted even as case rates were increasing.">}}
-
 
 
 In addition to moratoria, we also describe the different ways that states adopted and implemented the two federal eviction moratoria (the first enacted as part of the CARES Act, the second issued by the CDC). We also show how some states put in place additional renter-supportive measures, such as  financial assistance to tenants, utility shutoff moratoria, utility reconnection, bans on late fees and rent raises, grace periods to pay rent, measures sealing eviction records, and bans on landlords reporting past-due rent to credit bureaus. 
@@ -118,3 +117,13 @@ Second, we explore how eviction moratoria had an impact in the number of evictio
 
 
 The COVID-19 pandemic is the first time that eviction moratoria have been established on a nationwide scale. It is essential that we fully understand the measures that were implemented in response to the pandemic. Doing so ensures that we know what tools are available the next time we face an emergency, and so that we can evaluate which of these policies work best.  The framework that we lay out here provides researchers and practitioners alike with the tools to advance, evaluate, and refine comprehensive renter protection strategies. Understanding and improving these tools serves to safeguard the communities most impacted by public health or other emergencies from housing loss and associated harms.
+
+
+{{< blogfootnotes 
+
+"As of June 15, 2022, two moratoria will still be in effect, with the longest, in California, lasting 810 days."
+
+"Four states—Florida, New Mexico, Tennessee, and Washington—initially restricted the moratoria to nonpayment of rent evictions, and three others—Arizona, Maryland, and Utah—required tenants to demonstrate COVID-19 hardship, typically defined as wage loss or health conditions related to the pandemic. California and Nebraska initially imposed both restrictions."
+
+
+>}}
