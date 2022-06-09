@@ -212,7 +212,7 @@
 }
 
 #svg-map__pattern-zero path {
-  stroke: #DDD;
+  stroke: rgb(214, 214, 214);
   stroke-width: 2px;
 }
 
