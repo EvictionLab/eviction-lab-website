@@ -211,6 +211,11 @@
   font-weight: 500;
 }
 
+#svg-map__pattern-zero path {
+  stroke: rgb(214, 214, 214);
+  stroke-width: 2px;
+}
+
 /** need high specificity here due to other styles in single.scss */
 .center-content-post.updates-post .page-content .svg-map .svg-map__caption {
   text-align: center;
