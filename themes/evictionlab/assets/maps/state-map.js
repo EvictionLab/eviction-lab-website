@@ -10,7 +10,6 @@
  *
  */
 Elab.StateMap = (function (Elab) {
-
   function shapeStateId(value) {
     if (value.length === 2) return value;
     if (value.length === 1) return "0" + value;
@@ -55,6 +54,8 @@ Elab.StateMap = (function (Elab) {
     var ticks;
     // hovered featue
     var hovered;
+    // if states with 0 value should use pattern
+    var zeroPattern;
     var legendGradient;
     var legendColorScale;
     var legendAxis;
@@ -195,6 +196,19 @@ Elab.StateMap = (function (Elab) {
       hoverData.exit().remove()
     }
 
+    function renderZeroPattern() {
+      svg
+        .append('defs')
+        .append('pattern')
+          .attr('id', 'svg-map__pattern-zero')
+          .attr('patternUnits', 'userSpaceOnUse')
+          .attr('width', 4)
+          .attr('height', 4)
+        .append('path')
+          .attr('d', 'M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2');
+    }
+
+
     function render() {
       var rect = root.getBoundingClientRect();
       containerWidth = rect.width
@@ -219,6 +233,7 @@ Elab.StateMap = (function (Elab) {
         .style("transform", "scale(" + scaleFactor + ")");
 
       var svgData = svg.selectAll("path").data(features);
+      zeroPattern = dataOptions.zeroPattern;
 
       svgData
         .enter()
@@ -227,6 +242,8 @@ Elab.StateMap = (function (Elab) {
         .merge(svgData)
         .attr("d", path)
         .style("fill", function (d) {
+          if(zeroPattern && !d.properties.value)
+            return "url(#svg-map__pattern-zero)";
           return ramp(d.properties.value);
         })
         .on("mousemove", function(d) {
@@ -241,6 +258,8 @@ Elab.StateMap = (function (Elab) {
           renderOutline()
 
         });
+
+      if(zeroPattern) renderZeroPattern();
 
       svgData.exit().remove()
     }

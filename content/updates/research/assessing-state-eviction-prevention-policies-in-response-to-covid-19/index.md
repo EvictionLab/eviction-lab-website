@@ -70,6 +70,7 @@ To better understand these policies and how they left some renters with far more
   valueFormat="2"
   colors="#dfefed;#7bcac1;#2c897f"
   caption="Shading represents total number of days of protection for each state."
+  zeroPattern=true
 %}}
 
 <h3 class="d-inline">Third,</h3> <p class="d-inline"> some branches of government were more likely than others to establish eviction protections. The vast majority of eviction moratoria were implemented by governors and courts. Indeed, only seven moratoria were issued by legislative bodies. In many states, more than one actor issued an eviction prevention policy, meaning that a combination of measures implemented by multiple actors created a patchwork state-level moratorium.</p>

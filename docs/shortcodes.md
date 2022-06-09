@@ -303,6 +303,7 @@ Than include the shortcode in the body of the `.md` file.
   valueFormat=".2f"
   colors="#dfefed;#7bcac1;#2c897f"
   caption="sample caption for figure"
+  zeroPattern="true"
 %}}
 ```
 
@@ -320,6 +321,7 @@ Than include the shortcode in the body of the `.md` file.
 - valueTemplate: template string for tooltip
 - colors: colors to use for the choropleths, separated by semi colon
 - caption: caption text below the map
+- zeroPattern: if states with 0 value should use pattern
 
 #### Demo
 
