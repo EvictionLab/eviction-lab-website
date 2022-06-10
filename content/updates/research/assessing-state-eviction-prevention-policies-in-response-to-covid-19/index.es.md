@@ -21,7 +21,7 @@ description: We describe and analyze the unprecedented eviction prevention
 listSummary: We describe and analyze the unprecedented eviction prevention
   housing policies enacted at the state level in response to COVID-19, where protections worked very differently from
   state to state.
-collection: true
+collection: false
 twImage: assessing-protections.png
 aliases: null
 fbImage: assessing-protections.png
