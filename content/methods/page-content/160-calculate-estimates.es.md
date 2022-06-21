@@ -4,7 +4,7 @@ date: 2017-11-19T20:43:49-08:00
 childof: methods
 type: methods
 weight: 164
-faqid: calculate-rate
+faqid: calculate-estimates
 ---
 A pesar de agregar más de 99 millones de registros de desalojo y 30,000 reportes de presentaciones de desalojos anuales a nivel de condado —lo que representa un promedio de 2.6 millones de presentaciones de desalojos anuales—, nuestros registros aún no están completos para condados donde vive un 33% de los hogares que alquilan.
 

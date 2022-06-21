@@ -342,15 +342,15 @@
             background-size: 70%;
         }
         @include media-breakpoint-up(lg) {
-            background-position: 50% 2rem;
+            background-position: 50% center;
             background-size: 90%;
+            height: 87%;
         }
         @include media-breakpoint-up(xl) {
-            background-position: 68% 2rem;
+            background-position: 68% center;
             background-size: 88%;
         }
         @include media-breakpoint-up(xxxl) {
-            background-position: 68% 2rem;
             background-size: 78%;
         }
             &:hover {

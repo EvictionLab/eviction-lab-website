@@ -4,7 +4,7 @@ date: 2017-11-19T20:43:49-08:00
 childof: methods
 type: methods
 weight: 164
-faqid: calculate-rate
+faqid: calculate-estimates
 ---
 Despite aggregating more than 99 million eviction records and 30,000 county-level annual reports on eviction filings—representing an average of 2.6 million annual eviction filings—our records are still missing reliable data for counties that were home to 33% of renting households.
 
