@@ -31,10 +31,17 @@
 		{{ if .Params.image }}
 			{{ $.Scratch.Set "image" .Params.image }}
 		{{ end }}
+		{{ if .Params.redirect }}
+			{{ $.Scratch.Set "redirect" .Params.redirect }}
+		{{ end }}
 
 		<!-- General metadata -->
 		<meta name="description" content="{{ $.Scratch.Get "description" }}" />
 		<meta name='author' content='Eviction Lab' />
+		<!-- Meta refresh -->
+		{{ if .Params.redirect }}
+			<meta http-equiv="refresh" content="0; url={{ $.Scratch.Get "redirect" }}">
+		{{ end }}
 		<!-- Facebook metadata -->
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="website" />
