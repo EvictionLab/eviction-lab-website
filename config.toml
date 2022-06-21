@@ -28,9 +28,9 @@ languageName = "English"
     weight = 3
     url = "/eviction-tracking/"
 [[Languages.en.menu.main]]
-    name = "Policy Scorecard"
-    weight = 5
-    url = "/covid-policy-scorecard/"
+    name = "Policies Database"
+    weight = 4
+    url = "/covid-eviction-policies/"    
 [[Languages.en.menu.main]]
     name = "Newest Findings & Stories"
     weight = 6
@@ -190,9 +190,9 @@ languageName = "Español"
     weight = 3
     url = "/eviction-tracking/"
 [[Languages.es.menu.main]]
-    name = "Policy Scorecard"
-    weight = 5
-    url = "/covid-policy-scorecard/"
+    name = "Policies Database"
+    weight = 4
+    url = "/covid-eviction-policies/"    
 [[Languages.es.menu.main]]
     name = "Hallazgos e historias más recientes"
     weight = 6
