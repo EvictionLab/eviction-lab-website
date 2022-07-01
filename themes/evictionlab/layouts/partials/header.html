@@ -38,6 +38,8 @@
 		<!-- General metadata -->
 		<meta name="description" content="{{ $.Scratch.Get "description" }}" />
 		<meta name='author' content='Eviction Lab' />
+		<!-- Citation metadata -->
+		{{ partial "citation" }}
 		<!-- Meta refresh -->
 		{{ if .Params.redirect }}
 			<meta http-equiv="refresh" content="0; url={{ $.Scratch.Get "redirect" }}">
