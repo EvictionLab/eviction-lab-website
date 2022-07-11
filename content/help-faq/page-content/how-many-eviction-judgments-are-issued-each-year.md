@@ -5,7 +5,7 @@ type: data
 weight: "142.8"
 faqid: how-many-eviction-judgments
 ---
-Data quality for eviction judgments is quite low, and so we are not able to offer national estimates of eviction judgments. Using our proprietary data, we can observe eviction judgments in some states. The table below presents annual figures, but they should be interpreted with caution.
+Data quality for eviction judgments is quite low, and so we are not able to offer national estimates of eviction judgments. Using our original data, we can observe eviction judgments in some states. The table below presents annual figures, but they should be interpreted with caution.
 
 <table class="table-responsive">
 <thead><tr><th title="Field #1">Year</th>
