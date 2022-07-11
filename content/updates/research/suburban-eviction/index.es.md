@@ -3,7 +3,7 @@ draft: true
 scripts:
   - grouped-bar-chart
 childof: research
-url: /suburban-eviction
+url: /es/suburban-eviction
 contenttype: updates
 contentcat: research
 featured: true
