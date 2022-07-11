@@ -141,6 +141,7 @@
             bottom: -16px;
             height: 56px;
             margin-top: 0.8rem;
+            justify-content: center;
             @include for-midsize-desktop-up {
                 margin-top: 1.6rem;
             }
@@ -148,6 +149,7 @@
                 overflow: scroll;
                 margin-right: 0;
                 margin-left: 0;
+                height: 64px;
             }
         }
         iframe {
@@ -265,6 +267,7 @@
                 cursor: pointer;
                 margin-left: 4px;
                 margin-right: 4px;
+                background-color: #fff;
                 &.active img {
                     filter: none;
                 }
@@ -727,7 +730,7 @@
 }
 
 .video-container {
-	position:relative;
+	position:static;
 	padding-bottom:56.25%;
 	padding-top:30px;
 	height:0;

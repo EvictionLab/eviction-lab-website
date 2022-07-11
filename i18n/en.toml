@@ -4,7 +4,7 @@ other = "Multilingual"
 [splashHeader1]
 other = "In a typical year, landlords file"
 [splashHeader2]
-other = "3.7 million"
+other = "3.6 million"
 [splashHeader3]
 other = "eviction cases."
 [splashBody]
@@ -14,13 +14,13 @@ other = "Engage with the data"
 [cta2]
 other = "Explore our research"
 [toolsHeading]
-other = "Interactive Tools"
+other = "Comprehensive national data"
 [toolsSub]
 other = "Explore nationwide eviction data spanning the years 2000-2016. View maps and charts, download reports, and more."  
 [mapData]
 other = "Map & Data"
 [mapSub]
-other = "Learn about the American housing crisis by interacting with a customizable map."
+other = "<p>How is the eviction crisis affecting your community? Find out with our newly updated map, which now covers all 50 U.S. states & D.C. You can search for your county, compare data across regions, interact with demographic characteristics, and create local reports.</p><p>New features include:</p><ul><li>Data from 2000 to 2018</li><li>Estimated data for every county in all 50 U.S. states & D.C.</li><li>New variable: Households threatened with eviction</li></ul>"
 [mapCTA]
 other = "Go to the map"
 [rankingsHead]
@@ -30,7 +30,7 @@ other = "See which cities rank the highest in evictions in the US."
 [rankingsCTA]
 other = "Go to rankings"
 [covidHeading]
-other = "COVID-19 Resources"
+other = "Resources"
 [covidSub]
 other = "Understand changes to landlord-tenant law and how the COVID-19 pandemic has affected renters across the country. Find resources to help if you are facing eviction."
 [etsHead]
@@ -40,9 +40,9 @@ other = "See up-to-date maps, charts and data on eviction filings in select citi
 [etsCTA]
 other = "Go to ETS"
 [scorecardHead]
-other = "Housing Policy Scorecard"
+other = "Eviction Rankings"
 [scorecardSub]
-other = "See the protections your state provides, and how it ranks nationally."
+other = "See which cities rank the highest in evictions in the US (data from 2016)."
 [scorecardCTA]
 other = "Go to the scorecard"
 [policiesHead]

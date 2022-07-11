@@ -1,7 +1,7 @@
 ---
 draft: false
 childof: research
-url: "/us-eviction-filing-patterns-2021/"
+url: "/es/us-eviction-filing-patterns-2021/"
 contenttype: updates
 contentcat: research
 featured: true

@@ -6,4 +6,4 @@ type: map
 weight: 140
 faqid: empty-bubble
 ---
-For locations with an empty bubble, there is no available data for the selected year. Data for that location may exist for other years, however.
+In our original map, you may see empty bubbles. In those cases, there is no available data for the selected year. Data for that location may exist for other years, however.

@@ -4,7 +4,7 @@ other = "Multilingual"
 [splashHeader1]
 other = "En un año normal, los arrendadores inician"
 [splashHeader2]
-other = "3,7 millones de"
+other = "3,6 millones de"
 [splashHeader3]
 other = "procesos de desalojo."
 [splashBody]
@@ -14,13 +14,13 @@ other = "Consultar los datos"
 [cta2]
 other = "Explorar nuestras investigaciones"
 [toolsHeading]
-other = "Herramientas interactivas"
+other = "BASE DE DATOS A NIVEL NACIONAL"
 [toolsSub]
 other = "Explorar datos de desalojo a nivel nacional que abarcan los años 2000-2016. Ver mapas y gráficos, descargar informes y más."  
 [mapData]
-other = "Mapa y datos nacionales"
+other = "Mapa y datos"
 [mapSub]
-other = "Aprenda sobre la crisis de vivienda en los Estados Unidos por interactuar con un mapa personalizable"
+other = "<p>¿Cómo está afectando la crisis de desalojos a tu comunidad? Descúbrelo en nuestro nuevo mapa actualizado, el que cubre los 50 estados y el Distrito de Columbia. Puedes buscar tu condado, comparar datos entre distintas regiones, interactuar con características demográficas y crear reportes locales.</p><p>Esta base de datos incluye las siguientes novedades:</p><ul><li>Datos desde 2000 a 2018.</li><li>Datos estimados para cada condado en los 50 estados y el Distrito de Columbia.</li><li>Una nueva variable: hogares amenazados por desalojos.</li></ul>"
 [mapCTA]
 other = "Ir al mapa"
 [rankingsHead]
