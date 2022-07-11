@@ -1,7 +1,7 @@
 ---
 draft: false
 childof: blog
-url: /new-eviction-data-2022
+url: /es/new-eviction-data-2022
 contenttype: updates
 collection: true
 contentcat: blog
