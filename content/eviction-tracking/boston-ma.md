@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Boston, Massachusetts
 slug: boston-ma
-date: 2022-07-11T04:00:00.000Z
+date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Boston, Massachusetts | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
@@ -27,7 +27,7 @@ More detail on eviction protections in Massachusetts can be found on the [COVID-
 
 # Changes in eviction filings
 
-Eviction filings in Boston were running close to historical averages in January and February of 2020.<sup>1</sup> Filings fell in March following the suspension of eviction proceedings. Eviction filings were down more than 80% in April 2020.<sup>2</sup> Filings increased in November 2020 following the expiration of the state-wide moratorium. 
+Eviction filings in Boston were running close to historical averages in January and February of 2020.<sup>1</sup> Filings fell in March following the suspension of eviction proceedings. Eviction filings were down more than 80% in April 2020.<sup>2</sup> Filings increased in November 2020 following the expiration of the state-wide moratorium.
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)

@@ -3,13 +3,15 @@ collection: true
 draft: false
 h1: Las Vegas, Nevada
 slug: las-vegas-nv
-date: 2022-03-16T04:00:00.000Z
+date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Las Vegas, Nevada | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
 {{% report_intro id="32003" data="/uploads/table.csv" %}}
+
+
 
 
 
@@ -27,25 +29,19 @@ Our data in Clark County is an undercount compared to the number of filings foun
 
 
 
+
+
 {{%/ report_intro %}}
 
 
 
 {{% report_chart id="avg" data="/uploads/lasvegas_barchart.csv" %}}
 
-
-
-
-
 # Changes in eviction filings
 
-Eviction filings in Las Vegas were slightly below typical levels in January and February of 2020. Filings began to fall in March 2020, but have since risen closer to historical averages. Notably, eviction filings surpassed historical averages following the end of the statewide moratoria in November 2020 and June 2021. <sup>1</sup>
+Eviction filings in Las Vegas were around historical averages in January and February of 2020. Filings fell in March and April 2020, but increased in the following months.<sup>1</sup>
 
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019.
-
-
-
-
 
 {{%/ report_chart %}}
 
@@ -53,22 +49,20 @@ Eviction filings in Las Vegas were slightly below typical levels in January and 
 
 {{% report_map shapes="/uploads/las-vegas-shapes.json" data="/uploads/lasvegas_map.csv" %}}
 
-
-
 # The geography of changes in eviction filings
 
 Clark County is divided into 487 census tracts. In these tracts, we map the number of eviction filings over the last four weeks.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>2</sup>
 
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019. 
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2015–2019
-
-
+2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/lasvegas_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -77,5 +71,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016-2019.<sup>1</sup>
 
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019.
+
+
 
 {{%/ report_chart %}}
