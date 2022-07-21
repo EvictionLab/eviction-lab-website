@@ -3,7 +3,7 @@ collection: true
 draft: false
 h1: Albuquerque, New Mexico
 slug: albuquerque-nm
-date: 2022-07-20T04:00:00.000Z
+date: 2022-07-21T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Albuquerque, New Mexico | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
