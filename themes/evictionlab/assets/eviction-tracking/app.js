@@ -1550,6 +1550,7 @@ Elab.Map = (function (Elab) {
       "{{/if}}" +
       "{{#if hasPercents}}" +
       "<hr />" +
+      "<h1>Renter population</h1>" +
       "{{#each percents}}" +
       "<div>{{@key}}: <span class='percent'>{{this}}</span></div>" +
       "{{/each}}" +
