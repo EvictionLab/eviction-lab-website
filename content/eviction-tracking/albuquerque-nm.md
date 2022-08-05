@@ -41,11 +41,13 @@ Eviction filings in Bernalillo County (Albuquerque) were about average in Januar
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/albuquerque_hotspots_output.csv" %}}
 
+
 # Eviction Hotspots
 
 Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and beyond. We analyzed eviction records in Bernalillo County to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
 
 Eviction Hotspot data will be updated quarterly.
+
 
 {{%/ report_top_evictors %}}
 
@@ -59,6 +61,8 @@ Bernalillo County is divided into 153 census tracts. In each of those tracts, we
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+
+
 
 {{%/ report_map %}}
 

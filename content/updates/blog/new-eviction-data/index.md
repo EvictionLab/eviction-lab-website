@@ -8,7 +8,7 @@ contentcat: blog
 featured: true
 in_index: true
 title: New Data Release Shows that 3.6 Million Eviction Cases were Filed in the United States in 2018 
-date: 2022-05-31T16:46:40.089Z
+date: 2022-07-11T16:46:40.089Z
 postauthortitle: Juan Pablo Garnham, Carl Gershenson, & Matthew Desmond
 listSummary: The Eviction Lab’s newest data release shows that nearly 6 out of 100 renting households were threatened with eviction at least once during 2018.
 socialDescription: The Eviction Lab’s newest data release shows that nearly 6 out of 100 renting households were threatened with eviction at least once during 2018.

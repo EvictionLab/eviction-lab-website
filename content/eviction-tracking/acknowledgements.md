@@ -40,6 +40,8 @@ similar: >-
   * The Right to Counsel NYC Coalition maintains the [Eviction Crisis Monitor](https://www.righttocounselnyc.org/evictioncrisismonitor) in New York City.
 
   * Texas Housers has developed an [Eviction Diversion Tracker](https://texashousers.org/dashboard/#dashboard-evictions) which details out emergency rent relief distribution and eviction cases throughout the state of Texas.
+
+  * The King County Bar Association has an [Eviction Tracker](http://www.kcba.org/For-the-Public/Free-Legal-Assistance/Housing-Justice-Project/HJP-Heat-Map) for King County, WA.
 ---
 # Acknowledgements
 
