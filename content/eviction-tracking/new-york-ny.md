@@ -9,7 +9,7 @@ title: New York, New York | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="36061" data="/uploads/table.csv" %}}
+{{% report_intro id="36061" data="/uploads/table.csv" rentersSite="New York City" %}}
 
 
 

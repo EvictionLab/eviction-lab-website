@@ -9,7 +9,7 @@ title: Kansas City, Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="29095" data="/uploads/table.csv" %}}
+{{% report_intro id="29095" data="/uploads/table.csv" rentersSite="Kansas City" %}}
 
 Eviction filings in Jackson County, MO (Kansas City) fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were down nearly 80% in April and May 2020. Filings rose in the following months. <sup>1</sup>
 

@@ -9,7 +9,7 @@ title: Las Vegas, Nevada | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="32003" data="/uploads/table.csv" %}}
+{{% report_intro id="32003" data="/uploads/table.csv" rentersSite="Las Vegas" %}}
 
 
 

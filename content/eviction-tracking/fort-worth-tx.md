@@ -9,7 +9,7 @@ title: Fort Worth, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="48439" data="/uploads/table.csv" %}}
+{{% report_intro id="48439" data="/uploads/table.csv" rentersSite="Fort Worth" %}}
 
 Eviction filings in the Fort Worth-area counties we track—Tarrant and Denton Counties, TX—fell sharply when eviction proceedings were suspended across Texas on March 19, 2020. Eviction protections in Texas began to expire on May 18, 2020, after which new filings increased.
 

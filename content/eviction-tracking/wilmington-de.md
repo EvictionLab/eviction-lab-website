@@ -9,7 +9,7 @@ title: Wilmington, Delaware | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="10003" data="/uploads/table.csv" %}}
+{{% report_intro id="10003" data="/uploads/table.csv" rentersSite="Wilmington" %}}
 
 Delaware implemented a state-wide eviction moratorium between March 17 and July 1, 2020. Almost no new eviction cases were filed in New Castle County (Wilmington and the surrounding areas) during this period. After the moratorium lifted, however, new case filings increased.
 

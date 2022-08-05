@@ -9,7 +9,7 @@ title: Hartford, Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="09003" data="/uploads/table.csv" %}}
+{{% report_intro id="09003" data="/uploads/table.csv" rentersSite="Hartford" %}}
 
 Eviction filings in Hartford, CT (Hartford County) fell below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired on June 30, 2021.
 

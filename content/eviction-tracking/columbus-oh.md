@@ -9,7 +9,7 @@ title: Columbus Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="39049" data="/uploads/table.csv" %}}
+{{% report_intro id="39049" data="/uploads/table.csv" rentersSite="Columbus" %}}
 
 
 
