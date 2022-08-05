@@ -158,6 +158,7 @@
   <script>
     var tableUrl = {{ .Get "data" }}
     var fips = {{ .Get "id" }}
+    var rentersSite = {{ .Get "rentersSite" }}
     window.addEventListener('load', function() {
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
@@ -167,6 +168,28 @@
       }).join(' - ')
       $('#cdcGuidelines').text(cdcMoratorium)
       Elab.Intro.initIntroChart(document.getElementById("introChart"), tableUrl, fips)
+      Elab.Data.loadData(
+        "/uploads/renter_hhs_by_state.csv",
+        function(d) { return d },
+        function(r) {
+          var rentersData = r.find(row => row.site === rentersSite)
+          if (rentersData) {
+            $('.intro__heading')
+            .after(`<h3 class="intro__renter-population">RENTER POPULATION: 
+              ${Number(rentersData.estimate).toLocaleString()}</h3>`)
+          }
+        })
+      Elab.Data.loadData(
+        "/uploads/renter_hhs_by_city.csv",
+        function(d) { return d },
+        function(r) {
+          var rentersData = r.find(row => row.site === rentersSite)
+          if (rentersData) {
+            $('.intro__heading')
+            .after(`<h3 class="intro__renter-population">RENTER POPULATION: 
+              ${Number(rentersData.estimate).toLocaleString()}</h3>`)
+          }
+        })
     })
   </script>
 </div>

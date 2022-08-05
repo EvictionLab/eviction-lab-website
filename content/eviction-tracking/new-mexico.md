@@ -11,7 +11,7 @@ title: New Mexico | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="35" data="/uploads/states_table.csv" %}}
+{{% report_intro id="35" data="/uploads/states_table.csv" rentersSite="New Mexico" %}}
 
 
 

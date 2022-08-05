@@ -11,7 +11,7 @@ title: Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="09" data="/uploads/states_table.csv" %}}
+{{% report_intro id="09" data="/uploads/states_table.csv" rentersSite="Connecticut" %}}
 
 Eviction filings in Connecticut fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired on June 30, 2021.
 

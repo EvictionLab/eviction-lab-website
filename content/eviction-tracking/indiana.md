@@ -11,7 +11,7 @@ title: Indiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{% report_intro id="18" data="/uploads/states_table.csv" %}}
+{{% report_intro id="18" data="/uploads/states_table.csv" rentersSite="Indiana" %}}
 
 The state of Indiana implemented an eviction moratorium that ran from March 19 to August 14, 2020. Filings spiked immediately after that moratorium lifted.
 
