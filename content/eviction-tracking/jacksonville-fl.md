@@ -7,9 +7,10 @@ date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Jacksonville Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Jacksonville
 ---
 
-{{% report_intro id="12031" data="/uploads/table.csv" rentersSite="Jacksonville" %}}
+{{< report_intro id="12031" data="/uploads/table.csv" >}}
 
 Eviction filings in Duval County (Jacksonville) fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 95% or more in April through July 2020. 
 
@@ -17,7 +18,7 @@ Florida instituted a state-wide eviction moratorium which expired at the end of 
 
 More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

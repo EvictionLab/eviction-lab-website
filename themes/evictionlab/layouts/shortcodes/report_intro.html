@@ -1,16 +1,21 @@
+{{ $rentersSite := .Page.Params.rentersSite }}
 <div class="intro intro--loading">
   <div class="layout">
     <div class="intro__content">
       <h1 class="intro__heading">
         <a id="top">{{ .Page.Params.h1 }}</a>
       </h1>
-      {{ range .Site.Data.renter_hhs_by_state }}
-        <h3 class="intro__renter-population">{{ .estimate }}</h3>
+      {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
+        {{ if eq $rentersSite $element.site }}
+          <h3 class="intro__renter-population">RENTER POPULATION: {{ $element.estimate | lang.FormatNumberCustom 0}}</h3>
+        {{ end }}
       {{ end }}
-      <!-- {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
-        <h3 class="intro__renter-population">{{ $element.estimate }}</h3>
-      {{ end }} -->
-      <div id="introText" class="intro__text">{{ .Inner }}</div>
+      {{ range $index, $element := .Site.Data.renter_hhs_by_city }}
+        {{ if eq $rentersSite $element.site }}
+          <h3 class="intro__renter-population">RENTER POPULATION: {{ $element.estimate | lang.FormatNumberCustom 0}}</h3>
+        {{ end }}
+      {{ end }}
+      <div id="introText" class="intro__text">{{ .Inner | markdownify }}</div>
       <div class="share">
         <a class="share__link share__link--twitter">
           <i class="fa fa-twitter"></i>
@@ -164,7 +169,6 @@
   <script>
     var tableUrl = {{ .Get "data" }}
     var fips = {{ .Get "id" }}
-    // var rentersSite = {{ .Get "rentersSite" }}
     window.addEventListener('load', function() {
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
@@ -174,28 +178,6 @@
       }).join(' - ')
       $('#cdcGuidelines').text(cdcMoratorium)
       Elab.Intro.initIntroChart(document.getElementById("introChart"), tableUrl, fips)
-      // Elab.Data.loadData(
-      //   "/uploads/renter_hhs_by_state.csv",
-      //   function(d) { return d },
-      //   function(r) {
-      //     var rentersData = r.find(row => row.site === rentersSite)
-      //     if (rentersData) {
-      //       $('.intro__heading')
-      //       .after(`<h3 class="intro__renter-population">RENTER POPULATION: 
-      //         ${Number(rentersData.estimate).toLocaleString()}</h3>`)
-      //     }
-      //   })
-      // Elab.Data.loadData(
-      //   "/uploads/renter_hhs_by_city.csv",
-      //   function(d) { return d },
-      //   function(r) {
-      //     var rentersData = r.find(row => row.site === rentersSite)
-      //     if (rentersData) {
-      //       $('.intro__heading')
-      //       .after(`<h3 class="intro__renter-population">RENTER POPULATION: 
-      //         ${Number(rentersData.estimate).toLocaleString()}</h3>`)
-      //     }
-      //   })
     })
   </script>
 </div>

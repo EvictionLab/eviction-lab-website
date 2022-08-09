@@ -7,9 +7,10 @@ date: 2022-07-24T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: New Orleans, Louisiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: New Orleans
 ---
 
-{{% report_intro id="22071" data="/uploads/table.csv" rentersSite="New Orleans" %}}
+{{< report_intro id="22071" data="/uploads/table.csv" >}}
 
 Eviction filings in Orleans Parish, LA (city of New Orleans) fell sharply in late-March 2020 and have remained below historical averages. The state of Louisiana instituted an eviction moratorium in March 2020, but those statewide protections expired in mid-June 2020. In August and September 2021, Hurricane Ida caused local courts to close and led Governor Edwards to halt court proceedings until September 24. 
 
@@ -17,7 +18,7 @@ This data, unlike most of the Eviction Tracking System, will only be updated on 
 
 More detail on eviction protections in Louisiana can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/la/).
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

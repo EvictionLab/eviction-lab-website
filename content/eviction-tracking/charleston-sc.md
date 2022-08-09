@@ -7,15 +7,16 @@ date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Charleston, South Carolina | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Charleston
 ---
 
-{{% report_intro id="45019" data="/uploads/table.csv" rentersSite="Charleston" %}}
+{{< report_intro id="45019" data="/uploads/table.csv" >}}
 
 South Carolina implemented a state-wide eviction moratorium between March 17 and May 14, 2020. In both Charleston (Charleston County) and [Greenville](https://evictionlab.org/eviction-tracking/greenville-sc/), this period saw almost no new eviction filings. 
 
 More detail on eviction protections in South Carolina can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/sc/).
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

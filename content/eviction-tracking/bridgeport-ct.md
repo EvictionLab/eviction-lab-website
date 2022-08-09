@@ -7,9 +7,10 @@ date: 2022-07-21T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Bridgeport, Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Bridgeport
 ---
 
-{{% report_intro id="09001" data="/uploads/table.csv" rentersSite="Bridgeport" %}}
+{{< report_intro id="09001" data="/uploads/table.csv" >}}
 
 
 
@@ -19,7 +20,7 @@ More detail on eviction protections in Connecticut can be found on the [COVID-19
 
 
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

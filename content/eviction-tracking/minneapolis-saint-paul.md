@@ -7,9 +7,10 @@ date: 2022-07-21T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Minneapolis–Saint Paul, Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Minneapolis-Saint Paul
 ---
 
-{{% report_intro id="27053" data="/uploads/table.csv" rentersSite="Minneapolis-Saint Paul" %}}
+{{< report_intro id="27053" data="/uploads/table.csv" >}}
 
 
 
@@ -19,7 +20,7 @@ More detail on eviction protections in Minneapolis–Saint Paul can be found on 
 
 
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

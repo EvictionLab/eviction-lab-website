@@ -7,15 +7,16 @@ date: 2022-07-24T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: South Bend, Indiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: South Bend
 ---
 
-{{% report_intro id="18141" data="/uploads/table.csv" rentersSite="South Bend" %}}
+{{< report_intro id="18141" data="/uploads/table.csv" >}}
 
 The state of Indiana implemented an eviction moratorium that ran from March 19 to August 14, 2020. Courts in St. Joseph County (South Bend) began accepting new eviction filings and processing cases again after that moratorium lifted.
 
 More detail on eviction protections in Indiana can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/in/).
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

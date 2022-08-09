@@ -7,9 +7,10 @@ date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Columbus Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Columbus
 ---
 
-{{% report_intro id="39049" data="/uploads/table.csv" rentersSite="Columbus" %}}
+{{< report_intro id="39049" data="/uploads/table.csv" >}}
 
 
 
@@ -47,7 +48,7 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 
 
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 
