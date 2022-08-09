@@ -2,156 +2,156 @@
   {
     "site": "Albuquerque",
     "variable": "renter.hh",
-    "estimate": 99091
+    "estimate": "99,091"
   },
   {
     "site": "Austin",
     "variable": "renter.hh",
-    "estimate": 225010
+    "estimate": "225,010"
   },
   {
     "site": "Boston",
     "variable": "renter.hh",
-    "estimate": 292933
+    "estimate": "292,933"
   },
   {
     "site": "Bridgeport",
     "variable": "renter.hh",
-    "estimate": 112078
+    "estimate": "112,078"
   },
   {
     "site": "Charleston",
     "variable": "renter.hh",
-    "estimate": 61209
+    "estimate": "61,209"
   },
   {
     "site": "Cincinnati",
     "variable": "renter.hh",
-    "estimate": 143889
+    "estimate": "143,889"
   },
   {
     "site": "Cleveland",
     "variable": "renter.hh",
-    "estimate": 99850
+    "estimate": "99,850"
   },
   {
     "site": "Columbus",
     "variable": "renter.hh",
-    "estimate": 238402
+    "estimate": "238,402"
   },
   {
     "site": "Dallas",
     "variable": "renter.hh",
-    "estimate": 464121
+    "estimate": "464,121"
   },
   {
     "site": "Fort Worth",
     "variable": "renter.hh",
-    "estimate": 381009
+    "estimate": "381,009"
   },
   {
     "site": "Gainesville",
     "variable": "renter.hh",
-    "estimate": 44082
+    "estimate": "44,082"
   },
   {
     "site": "Greenville",
     "variable": "renter.hh",
-    "estimate": 62747
+    "estimate": "62,747"
   },
   {
     "site": "Hartford",
     "variable": "renter.hh",
-    "estimate": 125768
+    "estimate": "125,768"
   },
   {
     "site": "Houston",
     "variable": "renter.hh",
-    "estimate": 768357
+    "estimate": "768,357"
   },
   {
     "site": "Indianapolis",
     "variable": "renter.hh",
-    "estimate": 171814
+    "estimate": "171,814"
   },
   {
     "site": "Jacksonville",
     "variable": "renter.hh",
-    "estimate": 155567
+    "estimate": "155,567"
   },
   {
     "site": "Kansas City",
     "variable": "renter.hh",
-    "estimate": 119674
+    "estimate": "119,674"
   },
   {
     "site": "Las Vegas",
     "variable": "renter.hh",
-    "estimate": 362272
+    "estimate": "362,272"
   },
   {
     "site": "Memphis",
     "variable": "renter.hh",
-    "estimate": 157847
+    "estimate": "157,847"
   },
   {
     "site": "Milwaukee",
     "variable": "renter.hh",
-    "estimate": 193121
+    "estimate": "193,121"
   },
   {
     "site": "Minneapolis-Saint Paul",
     "variable": "renter.hh",
-    "estimate": 275972
+    "estimate": "275,972"
   },
   {
     "site": "New Orleans",
     "variable": "renter.hh",
-    "estimate": 79579
+    "estimate": "79,579"
   },
   {
     "site": "New York City",
     "variable": "renter.hh",
-    "estimate": 2132397
+    "estimate": "2,132,397"
   },
   {
     "site": "Philadelphia",
     "variable": "renter.hh",
-    "estimate": 282465
+    "estimate": "282,465"
   },
   {
     "site": "Phoenix",
     "variable": "renter.hh",
-    "estimate": 586804
+    "estimate": "586,804"
   },
   {
     "site": "Pittsburgh",
     "variable": "renter.hh",
-    "estimate": 193411
+    "estimate": "193,411"
   },
   {
     "site": "Richmond",
     "variable": "renter.hh",
-    "estimate": 82080
+    "estimate": "82,080"
   },
   {
     "site": "Saint Louis",
     "variable": "renter.hh",
-    "estimate": 207619
+    "estimate": "207,619"
   },
   {
     "site": "South Bend",
     "variable": "renter.hh",
-    "estimate": 32420
+    "estimate": "32,420"
   },
   {
     "site": "Tampa",
     "variable": "renter.hh",
-    "estimate": 352376
+    "estimate": "352,376"
   },
   {
     "site": "Wilmington",
     "variable": "renter.hh",
-    "estimate": 66082
+    "estimate": "66,082"
   }
 ]
