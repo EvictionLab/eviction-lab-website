@@ -7,15 +7,16 @@ date: 2022-07-24T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: St. Louis, Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Saint Louis
 ---
 
-{{% report_intro id="29510" data="/uploads/table.csv" %}}
+{{< report_intro id="29510" data="/uploads/table.csv" >}}
 
 While the state of Missouri did not enact any protections for renters, the 22nd Judicial Circuit (City of St. Louis) did suspend eviction proceedings in mid-March through July 22, 2020. Eviction filings in St. Louis declined precipitously in April, May and June 2020 before picking up again in July 2020. The execution of certain types of eviction orders in St. Louis City and St. Louis County was suspended until August 27, 2021. 
 
 More detail on eviction protections in Missouri can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mo/).
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

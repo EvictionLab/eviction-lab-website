@@ -7,9 +7,10 @@ date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Las Vegas, Nevada | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Las Vegas
 ---
 
-{{% report_intro id="32003" data="/uploads/table.csv" %}}
+{{< report_intro id="32003" data="/uploads/table.csv" >}}
 
 
 
@@ -31,7 +32,7 @@ Our data in Clark County is an undercount compared to the number of filings foun
 
 
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

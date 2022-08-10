@@ -7,9 +7,10 @@ date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Cincinnati, OH | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Cincinnati
 ---
 
-{{% report_intro id="39061" data="/uploads/table.csv" %}}
+{{< report_intro id="39061" data="/uploads/table.csv" >}}
 
 The state of Ohio did not put a general eviction moratorium in place, but courts in Hamilton County (Cincinnati) suspended proceedings between March 19 and June 1, 2020. Eviction filings were accepted throughout this period, but fell in mid-March and April 2020. 
 
@@ -17,7 +18,7 @@ On April 1, 2021, The Hamilton County Municipal Court stopped enforcing the nati
 
 More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

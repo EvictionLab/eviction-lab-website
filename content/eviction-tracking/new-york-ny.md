@@ -7,9 +7,10 @@ date: 2022-07-24T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: New York, New York | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: New York City
 ---
 
-{{% report_intro id="36061" data="/uploads/table.csv" %}}
+{{< report_intro id="36061" data="/uploads/table.csv" >}}
 
 
 
@@ -19,7 +20,7 @@ More detail on eviction protections in New York can be found on the [COVID-19 Ho
 
 
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

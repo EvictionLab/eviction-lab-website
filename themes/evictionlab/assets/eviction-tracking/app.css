@@ -1600,6 +1600,14 @@
   margin: 0 auto 24px auto;
 }
 
+.intro__renter-population {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  max-width: 480px;
+  position: relative;
+  top: -12px;
+}
+
 /** END INTRO HEADING
 
   /** INTRO LEAD TEXT */

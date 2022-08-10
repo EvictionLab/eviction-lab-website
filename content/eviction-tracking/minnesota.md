@@ -9,9 +9,10 @@ date: 2022-07-21T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Minnesota
 ---
 
-{{% report_intro id="27" data="/uploads/states_table.csv" %}}
+{{< report_intro id="27" data="/uploads/states_table.csv" >}}
 
 
 
@@ -21,7 +22,7 @@ More detail on eviction protections in Minnesota can be found on the [COVID-19 H
 
 
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

@@ -9,9 +9,10 @@ date: 2022-07-24T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Missouri
 ---
 
-{{% report_intro id="29" data="/uploads/states_table.csv" %}}
+{{< report_intro id="29" data="/uploads/states_table.csv" >}}
 
 
 
@@ -21,7 +22,7 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 
 
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

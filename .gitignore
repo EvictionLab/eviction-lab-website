@@ -6,3 +6,7 @@ yarn-error.log
 public/
 resources/_gen/assets/scss/*
 resources/
+
+# IDE
+.idea
+.vscode

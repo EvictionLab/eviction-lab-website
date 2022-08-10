@@ -7,9 +7,10 @@ date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Austin Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Austin
 ---
 
-{{% report_intro id="48453" data="/uploads/table.csv" %}}
+{{< report_intro id="48453" data="/uploads/table.csv" >}}
 
 
 
@@ -19,7 +20,7 @@ More detail on eviction protections in Texas can be found on the [COVID-19 Housi
 
 
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

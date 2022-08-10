@@ -9,9 +9,10 @@ date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: New Mexico | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: New Mexico
 ---
 
-{{% report_intro id="35" data="/uploads/states_table.csv" %}}
+{{< report_intro id="35" data="/uploads/states_table.csv" >}}
 
 
 
@@ -19,7 +20,7 @@ Eviction filings in New Mexico fell sharply in early 2020. While eviction filing
 
 More detail on eviction protections in New Mexico can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/nm/).
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 

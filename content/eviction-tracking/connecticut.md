@@ -9,15 +9,16 @@ date: 2022-07-20T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Connecticut
 ---
 
-{{% report_intro id="09" data="/uploads/states_table.csv" %}}
+{{< report_intro id="09" data="/uploads/states_table.csv" >}}
 
 Eviction filings in Connecticut fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired on June 30, 2021.
 
 More detail on eviction protections in Connecticut can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ct/). Additional information is available on eviction filing patterns in [Bridgeport](https://evictionlab.org/eviction-tracking/bridgeport-ct/) and [Hartford](https://evictionlab.org/eviction-tracking/hartford-ct/).
 
-{{%/ report_intro %}}
+{{< /report_intro >}}
 
 
 

@@ -7,15 +7,16 @@ date: 2022-07-24T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Pittsburgh, Pennsylvania | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Pittsburgh
 ---
 
-{{% report_intro id="42003" data="/uploads/table.csv" %}}
+{{< report_intro id="42003" data="/uploads/table.csv" >}}
 
 The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31, 2020. Eviction filings related to nonpayment of rent were not accepted during that period, though courts did process previously-filed eviction cases. Eviction filings in Allegheny County (Pittsburgh) were down to nearly zero in April and May 2020, but increased by September 2020 following the end of the moratorium. 
 
 More detail on eviction protections in Pennsylvania can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/pa/).
 
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 
