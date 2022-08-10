@@ -7,12 +7,12 @@
       </h1>
       {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
         {{ if eq $rentersSite $element.site }}
-          <h3 class="intro__renter-population">RENTER POPULATION: {{ $element.estimate }}</h3>
+          <h3 class="intro__renter-population mx-auto">RENTER POPULATION: {{ $element.estimate }}</h3>
         {{ end }}
       {{ end }}
       {{ range $index, $element := .Site.Data.renter_hhs_by_city }}
         {{ if eq $rentersSite $element.site }}
-          <h3 class="intro__renter-population">RENTER POPULATION: {{ $element.estimate }}</h3>
+          <h3 class="intro__renter-population mx-auto">RENTER POPULATION: {{ $element.estimate }}</h3>
         {{ end }}
       {{ end }}
       <div id="introText" class="intro__text">{{ .Inner | markdownify }}</div>
