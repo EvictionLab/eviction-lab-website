@@ -1024,9 +1024,37 @@ Elab.Chart = (function (Elab) {
         .scaleBand()
         .domain(groupNames)
         .rangeRound([0, context.x.bandwidth()]);
+
+      //bryony cheat
+      const svg = d3.select(context.els.data.node().parentElement.parentElement);
+
+      //remove any previous pattern and adding a new one
+      svg.selectAll("#finalEvictRect").remove();
+
+      svg.append("pattern")
+          .attr("id", "finalEvictRect")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", 8)
+          .attr("height", 8)
+          .style("fill", "#E24000")
+          .attr("patternUnits", "userSpaceOnUse")
+          .attr("patternTransform", "rotate(45)")
+          .html(
+              '<rect class="chart__pattern chart__pattern--' +
+              "finalEvictRect" +
+              '" x="0" y="0" width="4" height="8" />'
+          );
+
       var group = context.els.data
         .selectAll(".chart__bar-group")
         .data(groupedData); // enter each group
+
+      //Bryony code
+      //finding max date, id of max date and adding boolean to data.
+      const maxDate = d3.max(groupedData, d => monthParse(d.id));
+      const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
+      groupedData.map(m => m.data[0].finalBar = (m.id === maxId ? true : false));
 
       var groupEls = group
         .enter()
@@ -1067,7 +1095,8 @@ Elab.Chart = (function (Elab) {
         .attr("y", 0)
         .attr("height", context.height)
         .attr("width", context.x.bandwidth() + 8);
-      var groupBars = groupEls.selectAll("rect").data(function (d) {
+      var groupBars = groupEls.selectAll("rect")
+          .data(function (d) {
         return d.data;
       });
       groupBars
@@ -1081,6 +1110,7 @@ Elab.Chart = (function (Elab) {
             d.id.toLowerCase()
           );
         })
+        .style("fill", d => d.finalBar === true ? "url(#finalEvictRect)" : "#E24000")
         .attr("width", x1.bandwidth())
         .attr("x", function (d) {
           return x1(d.id);
@@ -1134,17 +1164,33 @@ Elab.Chart = (function (Elab) {
 
     function renderAxis(data, config, context) {
       var rotateLabels = function rotateLabels(selection) {
+
+        //count number of ticks for bryony cheat
+        //could not get to the bottom of where config.view.xTicks was looking
+       const tickCount = selection.selectAll(".tick").nodes().length;
+
         selection
           .selectAll(".tick text")
+            .each(function(d,i){
+              //another bryony cheat.
+              if(tickCount > 20){
+                //if more than 20 ticks
+                if(i % 2 !== 0){
+                  //only show odd ticks.
+                  d3.select(this).attr("display", "none")
+                }
+              }
+            })
           .attr("text-anchor", "end")
           .attr("transform", "rotate(-50)")
           .attr("dx", "-0.5em")
           .attr("dy", "0em");
       }; // setup x axis
 
+
       var xAxis = d3
         .axisBottom(context.x)
-        .ticks(config.view.xTicks)
+        .ticks(5)
         .tickFormat(config.format.x); // setup y axis
 
       var yAxis = d3
@@ -1161,6 +1207,8 @@ Elab.Chart = (function (Elab) {
         .duration(1000)
         .call(xAxis)
         .call(rotateLabels.bind(context.els.xAxis));
+
+
     }
 
     function renderMarkLine(data, config, context) {

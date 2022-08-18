@@ -1724,6 +1724,11 @@
   fill: #e2400018;
   stroke: none;
 }
+
+.intro__figure .chart__pattern--finalEvictRect {
+  fill: var(--c1);
+  stroke: none;
+}
 .intro__figure .chart__area {
   stroke-width: 1;
   stroke: #f4f7f9;
