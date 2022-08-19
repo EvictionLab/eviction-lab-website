@@ -41,7 +41,6 @@ function setupScrollEnd() {
       };
     };
     if (!$( "body" ).hasClass( "page-the-eviction-lab" )) {
-      console.log('has the class');
       if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
         headerWrapper.addClass('condensed');
         $('body').addClass('header-condensed');

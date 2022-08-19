@@ -1024,6 +1024,7 @@ Elab.Chart = (function (Elab) {
         .scaleBand()
         .domain(groupNames)
         .rangeRound([0, context.x.bandwidth()]);
+
       var group = context.els.data
         .selectAll(".chart__bar-group")
         .data(groupedData); // enter each group
@@ -1067,7 +1068,8 @@ Elab.Chart = (function (Elab) {
         .attr("y", 0)
         .attr("height", context.height)
         .attr("width", context.x.bandwidth() + 8);
-      var groupBars = groupEls.selectAll("rect").data(function (d) {
+      var groupBars = groupEls.selectAll("rect")
+          .data(function (d) {
         return d.data;
       });
       groupBars
@@ -1134,17 +1136,33 @@ Elab.Chart = (function (Elab) {
 
     function renderAxis(data, config, context) {
       var rotateLabels = function rotateLabels(selection) {
+
+        //count number of ticks for bryony cheat
+        //could not get to the bottom of where config.view.xTicks was looking
+       const tickCount = selection.selectAll(".tick").nodes().length;
+
         selection
           .selectAll(".tick text")
+            .each(function(d,i){
+              //another bryony cheat.
+              if(tickCount > 20){
+                //if more than 20 ticks
+                if(i % 2 !== 0){
+                  //only show odd ticks.
+                  d3.select(this).attr("display", "none")
+                }
+              }
+            })
           .attr("text-anchor", "end")
           .attr("transform", "rotate(-50)")
           .attr("dx", "-0.5em")
           .attr("dy", "0em");
       }; // setup x axis
 
+
       var xAxis = d3
         .axisBottom(context.x)
-        .ticks(config.view.xTicks)
+        .ticks(5)
         .tickFormat(config.format.x); // setup y axis
 
       var yAxis = d3
@@ -1161,6 +1179,8 @@ Elab.Chart = (function (Elab) {
         .duration(1000)
         .call(xAxis)
         .call(rotateLabels.bind(context.els.xAxis));
+
+
     }
 
     function renderMarkLine(data, config, context) {
@@ -2286,7 +2306,7 @@ Elab.Intro = (function (Elab) {
             .attr("dy", "0.333em");
           selection.selectAll(".tick:last-child text").attr("opacity", 0);
         },
-        ticks: d3.timeMonth.every(1),
+        ticks: d3.timeMonth.every(2),
         tickFormat: Elab.Utils.monthAxisFormatter,
       }); // adds local moratorium areas
 
