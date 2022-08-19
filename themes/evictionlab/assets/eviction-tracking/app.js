@@ -1025,36 +1025,9 @@ Elab.Chart = (function (Elab) {
         .domain(groupNames)
         .rangeRound([0, context.x.bandwidth()]);
 
-      //bryony cheat
-      const svg = d3.select(context.els.data.node().parentElement.parentElement);
-
-      //remove any previous pattern and adding a new one
-      svg.selectAll("#finalEvictRect").remove();
-
-      svg.append("pattern")
-          .attr("id", "finalEvictRect")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 8)
-          .attr("height", 8)
-          .style("fill", "#E24000")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRect" +
-              '" x="0" y="0" width="4" height="8" />'
-          );
-
       var group = context.els.data
         .selectAll(".chart__bar-group")
         .data(groupedData); // enter each group
-
-      //Bryony code
-      //finding max date, id of max date and adding boolean to data.
-      const maxDate = d3.max(groupedData, d => monthParse(d.id));
-      const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
-      groupedData.map(m => m.data[0].finalBar = (m.id === maxId ? true : false));
 
       var groupEls = group
         .enter()
@@ -1110,7 +1083,6 @@ Elab.Chart = (function (Elab) {
             d.id.toLowerCase()
           );
         })
-        .style("fill", d => d.finalBar === true ? "url(#finalEvictRect)" : "#E24000")
         .attr("width", x1.bandwidth())
         .attr("x", function (d) {
           return x1(d.id);
