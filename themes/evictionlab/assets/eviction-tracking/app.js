@@ -1011,6 +1011,8 @@ Elab.Chart = (function (Elab) {
     }
 
     function renderBars(data, config, context) {
+
+      console.log(data, config, context.els.root)
       var monthFormat = d3.timeFormat("%m/%Y");
       var monthParse = d3.timeParse("%m/%Y"); // get data grouped by x value
 
@@ -1052,9 +1054,11 @@ Elab.Chart = (function (Elab) {
 
       //Bryony code
       //finding max date, id of max date and adding boolean to data.
-      const maxDate = d3.max(groupedData, d => monthParse(d.id));
-      const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
-      groupedData.map(m => m.data[0].finalBar = (m.id === maxId ? true : false));
+      if(data.items[0].id === "percentage_diff"){
+        const maxDate = d3.max(groupedData, d => monthParse(d.id));
+        const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
+        groupedData.map(m => m.data[0].finalBar = (m.id === maxId ? true : false));
+      }
 
       var groupEls = group
         .enter()
@@ -1099,7 +1103,8 @@ Elab.Chart = (function (Elab) {
           .data(function (d) {
         return d.data;
       });
-      groupBars
+
+     const barRects =  groupBars
         .enter()
         .append("rect") // add bars for new groups
         .attr("class", function (d, i) {
@@ -1110,7 +1115,7 @@ Elab.Chart = (function (Elab) {
             d.id.toLowerCase()
           );
         })
-        .style("fill", d => d.finalBar === true ? "url(#finalEvictRect)" : "#E24000")
+
         .attr("width", x1.bandwidth())
         .attr("x", function (d) {
           return x1(d.id);
@@ -1137,6 +1142,10 @@ Elab.Chart = (function (Elab) {
         .attr("height", function (d) {
           return context.height - context.y(d.value.y);
         }); // remove bars groups
+
+      if(data.items[0].id === "percentage_diff"){
+        barRects.style("fill", d => d.finalBar === true ? "url(#finalEvictRect)" : "#E24000");
+      }
 
       groupBars
         .exit()
@@ -1443,6 +1452,7 @@ Elab.Chart = (function (Elab) {
    */
 
   function createChart(elementId, config, callback) {
+
     // Load the data and draw a chart
     d3.csv(config.url, function (data) {
       if (!data) {
