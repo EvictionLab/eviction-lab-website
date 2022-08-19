@@ -61,18 +61,18 @@ Elab.GroupedBarChart = (function (Elab) {
 
   function renderTooltip(tooltip) {
     return (
-      '<h1 class="tooltip__title">' +
-      tooltip.category +
-      "</h1>" +
-      '<div class="tooltip__item">' +
-      "<span> " +
-      tooltip.type +
-      ": " +
-      "</span>" +
-      "<span> " +
-      tooltip.value +
-      "</span>" +
-      "</div>"
+        '<h1 class="tooltip__title">' +
+        tooltip.category +
+        "</h1>" +
+        '<div class="tooltip__item">' +
+        "<span> " +
+        tooltip.type +
+        ": " +
+        "</span>" +
+        "<span> " +
+        tooltip.value +
+        "</span>" +
+        "</div>"
     );
   }
 
@@ -86,7 +86,7 @@ Elab.GroupedBarChart = (function (Elab) {
     console.log("createFigure: ", root, data, dataOptions);
     var options = dataOptions;
     const yTooltipFormat = d3.format(
-      options.yTooltipFormat || options.yFormat || ",d"
+        options.yTooltipFormat || options.yFormat || ",d"
     );
 
     var getBarType = function (str, options) {
@@ -148,58 +148,58 @@ Elab.GroupedBarChart = (function (Elab) {
 
     var chart = new Elab.ChartBuilder(root, data, options);
     return (
-      chart
-        // adds y axis, using max of the trend line value or bar value
-        .addAxisY({
-          selector: ySelector,
-          adjustExtent: function (extent) {
-            var newArr = [];
-            var columns = [];
-            Object.values(options.barFormat).forEach(function (el) {
-              var arr = el.slice(",");
-              arr.forEach(function (el) {
-                columns.push(el);
-              });
-            });
-            var d = findDataItem(data, options);
-            // console.log('d, ', d)
-            // d.forEach(function(el, i) {
-            columns.forEach(function (c) {
-              newArr.push(parseFloat(d[c]));
-            });
-            // })
-            // console.log('newArr, ', newArr)
-            var newExtent = d3.extent(newArr);
-            // console.log('newExtent, ', newExtent)
-            var range = newExtent[1] - newExtent[0];
-            // console.log('range, ', range)
-            return [newExtent[0] - range * 0.05, newExtent[1] + range * 0.05];
-          },
-          ticks: dataOptions.yTicks || 5,
-          tickFormat: d3.format(dataOptions.yFormat || ",d"),
-        })
-        // Adds bar chart axes for categories in the dataset.
-        // adds time axis from dates in the dataset
-        .addBarGroupAxis({
-          selector: xSelector,
-          ticks: dataOptions.xTicks,
-          adjustLabels: function (selection) {
-            if (window.innerWidth < 540) {
-              selection
-                .selectAll(".tick text")
-                .attr("text-anchor", "end")
-                .attr("transform", "rotate(-30)");
-            } else {
-              selection
-                .selectAll(".tick text")
-                .attr("text-anchor", null)
-                .attr("transform", null);
-            }
-          },
-        })
-        // adds the bars
-        .addBarGroups(selectBarsData)
-        .render()
+        chart
+            // adds y axis, using max of the trend line value or bar value
+            .addAxisY({
+              selector: ySelector,
+              adjustExtent: function (extent) {
+                var newArr = [];
+                var columns = [];
+                Object.values(options.barFormat).forEach(function (el) {
+                  var arr = el.slice(",");
+                  arr.forEach(function (el) {
+                    columns.push(el);
+                  });
+                });
+                var d = findDataItem(data, options);
+                // console.log('d, ', d)
+                // d.forEach(function(el, i) {
+                columns.forEach(function (c) {
+                  newArr.push(parseFloat(d[c]));
+                });
+                // })
+                // console.log('newArr, ', newArr)
+                var newExtent = d3.extent(newArr);
+                // console.log('newExtent, ', newExtent)
+                var range = newExtent[1] - newExtent[0];
+                // console.log('range, ', range)
+                return [newExtent[0] - range * 0.05, newExtent[1] + range * 0.05];
+              },
+              ticks: dataOptions.yTicks || 5,
+              tickFormat: d3.format(dataOptions.yFormat || ",d"),
+            })
+            // Adds bar chart axes for categories in the dataset.
+            // adds time axis from dates in the dataset
+            .addBarGroupAxis({
+              selector: xSelector,
+              ticks: dataOptions.xTicks,
+              adjustLabels: function (selection) {
+                if (window.innerWidth < 540) {
+                  selection
+                      .selectAll(".tick text")
+                      .attr("text-anchor", "end")
+                      .attr("transform", "rotate(-30)");
+                } else {
+                  selection
+                      .selectAll(".tick text")
+                      .attr("text-anchor", null)
+                      .attr("transform", null);
+                }
+              },
+            })
+            // adds the bars
+            .addBarGroups(selectBarsData)
+            .render()
     );
   }
 
@@ -234,15 +234,15 @@ Elab.GroupedBarChart = (function (Elab) {
       throw new Error("barchart: must provide file URL in options");
     if (!options.columns)
       throw new Error(
-        "barchart: must provide columns for CSV processing in options"
+          "barchart: must provide columns for CSV processing in options"
       );
     options.cofips = "cofips";
     options.state = "state";
     options.ticksArr = String(options.xTicks)
-      .split(";")
-      .map(function (el, i) {
-        return el.toLowerCase();
-      });
+        .split(";")
+        .map(function (el, i) {
+          return el.toLowerCase();
+        });
     options.barsGroups = options.xBars.split(";");
     options.barFormat = [];
     options.ticksArr.forEach(function (el, i) {
