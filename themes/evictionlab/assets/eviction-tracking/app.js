@@ -2334,7 +2334,7 @@ Elab.Intro = (function (Elab) {
             .attr("dy", "0.333em");
           selection.selectAll(".tick:last-child text").attr("opacity", 0);
         },
-        ticks: d3.timeMonth.every(1),
+        ticks: d3.timeMonth.every(2),
         tickFormat: Elab.Utils.monthAxisFormatter,
       }); // adds local moratorium areas
 
