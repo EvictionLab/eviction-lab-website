@@ -1147,7 +1147,6 @@ Elab.Chart = (function (Elab) {
             d.id.toLowerCase()
           );
         })
-
         .attr("width", x1.bandwidth())
         .attr("x", function (d) {
           return x1(d.id);
