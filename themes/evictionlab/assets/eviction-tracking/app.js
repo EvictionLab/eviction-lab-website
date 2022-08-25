@@ -907,15 +907,14 @@ Elab.Chart = (function (Elab) {
 
   function updatePartialFilingsDate(rootEl, data) {
     var rawLastDay = data["_raw"][data["_raw"].length - 1]["month_last_day"];
-    if (!rawLastDay) return;
+    if (!rawLastDay) return "whassup";
     var parseDate = d3.timeParse("%d/%m/%Y");
     var lastDay = parseDate(rawLastDay);
     var value =
       "Partial " +
       d3.timeFormat("%B")(lastDay) +
       " filings as of " +
-      d3.timeFormat("%-m/%-d")(lastDay) +
-      ", relative to average for same period";
+      d3.timeFormat("%-m/%-d")(lastDay) + "<span>relative to average</span>";
     var partialEl = rootEl.find(".visual__note");
     partialEl.html(value);
   }

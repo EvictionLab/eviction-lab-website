@@ -2017,8 +2017,14 @@
     justify-content: flex-start;
     align-items: center;
     margin: auto;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    margin-top: -16px;
 }
+  @media (max-width: 992px) {
+    .visual__note-wrapper {
+      max-width: 170px;
+    }
+  }
 
 .section .visual__note-wrapper .legend-item {
   min-width: unset;
@@ -2027,14 +2033,7 @@
 }
 
 .visual__note {
-  font-family: Akkurat-Regular, sans-serif;
-  position: relative;
-  text-align: center;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--text-secondary);
+
 }
 
 .visual__toggle {
@@ -2096,7 +2095,7 @@
 
 /** labels */
 .legend-item__label {
-  line-height: 1;
+  line-height: 1.2;
   font-family: var(--heading-font);
   margin-bottom: 12px;
   font-size: 1.2rem;
@@ -2121,6 +2120,9 @@
   text-transform: none;
   margin-top: 4px;
   color: #646464;
+}
+#race .legend-item__label span {
+  display: none;
 }
 .section .legend-item {
   min-width: 170px;

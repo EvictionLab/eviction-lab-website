@@ -15,46 +15,6 @@
         <h3 class="visual__title"></h3>
       </div>
       <svg class="chart" role="img" aria-label="{{ $.Scratch.Get `ariaLabel` }}"></svg>
-        <div class="visual__note-wrapper">
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              role="img"
-              aria-labelledby="patternLegend"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="patternLegend">Striped pattern legend indicator</title>
-              <pattern
-                id="redStripesLegend"
-                x="0"
-                y="0"
-                width="8"
-                height="8"
-                patternUnits="userSpaceOnUse"
-                patternTransform="rotate(45)"
-              >
-                <rect
-                  class="legend-item__pattern legend-item__pattern--localLegend"
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="8"
-                ></rect>
-              </pattern>
-              <rect
-                x="0"
-                y="0"
-                width="16"
-                height="16"
-                fill="url(#redStripesLegend)"
-              ></rect>
-            </svg>
-          </div>
-          <div class="visual__note">
-          </div>
-      </div>
       <div class="visual__toggle">
         <div class="button-group">
           <button class="toggle toggle--count">
@@ -84,6 +44,7 @@
                 y="0"
                 width="8"
                 height="8"
+                fill="#e24000"
                 patternUnits="userSpaceOnUse"
                 patternTransform="rotate(45)"
               >
@@ -104,7 +65,7 @@
               ></rect>
             </svg>
           </div>
-          <div class="visual__note">
+          <div class="visual__note legend-item__label">
           </div>
       </div>
     <p class="footnote"></p>
