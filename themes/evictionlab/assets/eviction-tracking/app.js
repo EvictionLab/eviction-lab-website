@@ -1034,7 +1034,7 @@ Elab.Chart = (function (Elab) {
           .attr("id", "finalEvictRectWhite")
           .attr("x", 0)
           .attr("y", 0)
-          .attr("width", 8)
+          .attr("width", 4)
           .attr("height", 8)
           .style("fill", "#E24000")
           .attr("patternUnits", "userSpaceOnUse")
@@ -1042,14 +1042,14 @@ Elab.Chart = (function (Elab) {
           .html(
               '<rect class="chart__pattern chart__pattern--' +
               "finalEvictRectWhite" +
-              '" x="0" y="0" width="4" height="8" />'
+              '" x="0" y="0" width="2" height="8" />'
           );
       svg.selectAll("#finalEvictRectLatinx").remove();
       svg.append("pattern")
           .attr("id", "finalEvictRectLatinx")
           .attr("x", 0)
           .attr("y", 0)
-          .attr("width", 8)
+          .attr("width", 4)
           .attr("height", 8)
           .style("fill", "#2C897F")
           .attr("patternUnits", "userSpaceOnUse")
@@ -1057,14 +1057,14 @@ Elab.Chart = (function (Elab) {
           .html(
               '<rect class="chart__pattern chart__pattern--' +
               "finalEvictRectLatinx" +
-              '" x="0" y="0" width="4" height="8" />'
+              '" x="0" y="0" width="2" height="8" />'
           );
       svg.selectAll("#finalEvictRectOther").remove();
       svg.append("pattern")
           .attr("id", "finalEvictRectOther")
           .attr("x", 0)
           .attr("y", 0)
-          .attr("width", 8)
+          .attr("width", 4)
           .attr("height", 8)
           .style("fill", "#94AABD")
           .attr("patternUnits", "userSpaceOnUse")
@@ -1072,7 +1072,7 @@ Elab.Chart = (function (Elab) {
           .html(
               '<rect class="chart__pattern chart__pattern--' +
               "finalEvictRectOther" +
-              '" x="0" y="0" width="4" height="8" />'
+              '" x="0" y="0" width="2" height="8" />'
           );
 
       var group = context.els.data
