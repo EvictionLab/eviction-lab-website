@@ -2012,17 +2012,28 @@
   }
 }
 
+.visual__note-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+.section .visual__note-wrapper .legend-item {
+  min-width: unset;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
 .visual__note {
   font-family: Akkurat-Regular, sans-serif;
   position: relative;
-  margin-top: -32px;
-  margin-bottom: 16px;
   text-align: center;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  top: 10px;
   color: var(--text-secondary);
 }
 
