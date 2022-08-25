@@ -1725,8 +1725,20 @@
   stroke: none;
 }
 
-.intro__figure .chart__pattern--finalEvictRect {
+.intro__figure .chart__pattern--finalEvictRectWhite {
   fill: var(--c1);
+  stroke: none;
+}
+.intro__figure .chart__pattern--finalEvictRectBlack {
+  fill: var(--c2);
+  stroke: none;
+}
+.intro__figure .chart__pattern--finalEvictRectLatinx {
+  fill: var(--c3);
+  stroke: none;
+}
+.intro__figure .chart__pattern--finalEvictRectOther {
+  fill: var(--c4);
   stroke: none;
 }
 .intro__figure .chart__area {

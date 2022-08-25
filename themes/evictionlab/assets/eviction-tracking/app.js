@@ -1011,8 +1011,6 @@ Elab.Chart = (function (Elab) {
     }
 
     function renderBars(data, config, context) {
-
-      console.log(data, config, context.els.root)
       var monthFormat = d3.timeFormat("%m/%Y");
       var monthParse = d3.timeParse("%m/%Y"); // get data grouped by x value
 
@@ -1031,10 +1029,9 @@ Elab.Chart = (function (Elab) {
       const svg = d3.select(context.els.data.node().parentElement.parentElement);
 
       //remove any previous pattern and adding a new one
-      svg.selectAll("#finalEvictRect").remove();
-
+      svg.selectAll("#finalEvictRectWhite").remove();
       svg.append("pattern")
-          .attr("id", "finalEvictRect")
+          .attr("id", "finalEvictRectWhite")
           .attr("x", 0)
           .attr("y", 0)
           .attr("width", 8)
@@ -1044,7 +1041,37 @@ Elab.Chart = (function (Elab) {
           .attr("patternTransform", "rotate(45)")
           .html(
               '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRect" +
+              "finalEvictRectWhite" +
+              '" x="0" y="0" width="4" height="8" />'
+          );
+      svg.selectAll("#finalEvictRectLatinx").remove();
+      svg.append("pattern")
+          .attr("id", "finalEvictRectLatinx")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", 8)
+          .attr("height", 8)
+          .style("fill", "#2C897F")
+          .attr("patternUnits", "userSpaceOnUse")
+          .attr("patternTransform", "rotate(45)")
+          .html(
+              '<rect class="chart__pattern chart__pattern--' +
+              "finalEvictRectLatinx" +
+              '" x="0" y="0" width="4" height="8" />'
+          );
+      svg.selectAll("#finalEvictRectOther").remove();
+      svg.append("pattern")
+          .attr("id", "finalEvictRectOther")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", 8)
+          .attr("height", 8)
+          .style("fill", "#94AABD")
+          .attr("patternUnits", "userSpaceOnUse")
+          .attr("patternTransform", "rotate(45)")
+          .html(
+              '<rect class="chart__pattern chart__pattern--' +
+              "finalEvictRectOther" +
               '" x="0" y="0" width="4" height="8" />'
           );
 
@@ -1058,6 +1085,11 @@ Elab.Chart = (function (Elab) {
         const maxDate = d3.max(groupedData, d => monthParse(d.id));
         const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
         groupedData.map(m => m.data[0].finalBar = (m.id === maxId ? true : false));
+      }
+      if(data.items[0].id === "White"){
+        const maxDate = d3.max(groupedData, d => monthParse(d.id));
+        const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
+        groupedData.map(m => m.data.map(dataItem => dataItem.finalBar = (m.id === maxId ? true : false)));
       }
 
       var groupEls = group
@@ -1103,7 +1135,7 @@ Elab.Chart = (function (Elab) {
           .data(function (d) {
         return d.data;
       });
-
+      
      const barRects =  groupBars
         .enter()
         .append("rect") // add bars for new groups
@@ -1142,9 +1174,24 @@ Elab.Chart = (function (Elab) {
         .attr("height", function (d) {
           return context.height - context.y(d.value.y);
         }); // remove bars groups
-
+      
       if(data.items[0].id === "percentage_diff"){
-        barRects.style("fill", d => d.finalBar === true ? "url(#finalEvictRect)" : "#E24000");
+        barRects.style("fill", d => d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000");
+      }
+      if(data.items[0].id === "White"){
+        barRects.style("fill", d => {
+          var rectPattern = "url(#finalEvictRectWhite)";
+          var rectColor = "#E24000";
+          if (d.id === 'Latinx') {
+            rectPattern = "url(#finalEvictRectLatinx)";
+            rectColor = "#2C897F";
+          }
+          if (d.id === 'Other') {
+            rectPattern = "url(#finalEvictRectOther)";
+            rectColor = "#94AABD";
+          }
+          return d.finalBar === true ? rectPattern : rectColor;
+        });
       }
 
       groupBars
@@ -1426,7 +1473,7 @@ Elab.Chart = (function (Elab) {
       if (!elements) elements = initElements(root);
       if (newConfig) chartConfig = newConfig;
       parsedData = parseData(source, chartConfig); // use debounced render when updating, for performance
-
+      
       render();
     }
 
@@ -1497,7 +1544,7 @@ Elab.Chart = (function (Elab) {
 
     var configs = Elab.Config.getConfig(config.id, config.csv);
     var currentConfig = configs[0]; // create chart and bind click event to toggle state
-
+    
     createChart(chartEl, currentConfig, function (chart) {
       countToggleEl.on("click", function () {
         currentConfig = config.id === "race" ? configs[0] : configs[1];
