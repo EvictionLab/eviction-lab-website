@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2022-08-11
+
+- feat: add "renter population" statistic to sites
+- style: add "renter population" notation to map tooltips
+
 ## [1.3.0] - 2021-08-20
 
 - feat: add section for eviction hot spots with building ranks

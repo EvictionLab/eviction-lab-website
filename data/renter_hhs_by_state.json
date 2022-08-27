@@ -1,0 +1,32 @@
+[
+  {
+    "site": "Connecticut",
+    "variable": "renter.hh",
+    "estimate": "465,065"
+  },
+  {
+    "site": "Delaware",
+    "variable": "renter.hh",
+    "estimate": "104,542"
+  },
+  {
+    "site": "Indiana",
+    "variable": "renter.hh",
+    "estimate": "794,237"
+  },
+  {
+    "site": "Minnesota",
+    "variable": "renter.hh",
+    "estimate": "620,733"
+  },
+  {
+    "site": "Missouri",
+    "variable": "renter.hh",
+    "estimate": "802,535"
+  },
+  {
+    "site": "New Mexico",
+    "variable": "renter.hh",
+    "estimate": "252,353"
+  }
+]

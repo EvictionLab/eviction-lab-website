@@ -28,8 +28,9 @@
       var ticks = {{ .Get "ticks" }}
       var valueTemplate = {{ .Get "valueTemplate" }}
       var valueFormat = {{ .Get "valueFormat" }}
+      var zeroPattern = {{ .Get "zeroPattern" }}
       var rootEl = document.getElementById(id)
-      Elab.StateMap.init(rootEl, { id:id, data: csv, valueTemplate: valueTemplate, valueFormat: valueFormat, ticks: ticks, minVal: minVal, maxVal: maxVal, colors: colors, idColumn: idColumn, valueColumn: valueColumn })
+      Elab.StateMap.init(rootEl, { id:id, data: csv, valueTemplate: valueTemplate, valueFormat: valueFormat, ticks: ticks, minVal: minVal, maxVal: maxVal, colors: colors, idColumn: idColumn, valueColumn: valueColumn, zeroPattern: zeroPattern })
     });
   </script>
 </div>

@@ -3,27 +3,20 @@ collection: true
 draft: false
 h1: Wilmington, Delaware
 slug: wilmington-de
-date: 2021-08-04T04:00:00.000Z
+date: 2022-07-24T04:00:00.000Z
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Wilmington, Delaware | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+rentersSite: Wilmington
 ---
 
-{{% report_intro id="10003" data="/uploads/table.csv" %}}
+{{< report_intro id="10003" data="/uploads/table.csv" >}}
 
-
-
-
-
-Delaware implemented a state-wide eviction moratorium between March 17 and July 1, 2020. Almost no new eviction cases were filed in New Castle County (Wilmington and the surrounding areas) during this period. Since the moratorium lifted, however, new case filings have increased, but remain below historical averages.
+Delaware implemented a state-wide eviction moratorium between March 17 and July 1, 2020. Almost no new eviction cases were filed in New Castle County (Wilmington and the surrounding areas) during this period. After the moratorium lifted, however, new case filings increased.
 
 More detail on eviction protections in Delaware can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/de/).
 
-
-
-
-
-{{%/ report_intro %}}
+{{</ report_intro >}}
 
 
 
@@ -31,7 +24,7 @@ More detail on eviction protections in Delaware can be found on the [COVID-19 Ho
 
 # Changes in eviction filings
 
-Eviction filings in Wilmington were at or just below historical average levels in January and February of 2020.<sup>1</sup> Filings began to drop in March, and remained near zero for April, May, and June. Filings have increased since then, though remain well below historical averages.
+Eviction filings in Wilmington were at or just below historical average levels in January and February of 2020.<sup>1</sup> Filings began to drop in March, and remained near zero for April, May, and June 2020, after which filings increased.
 
 1. Eviction filing data for New Castle County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
@@ -41,20 +34,12 @@ Eviction filings in Wilmington were at or just below historical average levels i
 
 {{% report_map shapes="/uploads/wilmington_shapes.json" data="/uploads/wilmington_map.csv" %}}
 
-
-
-
-
 # The geography of changes in eviction filings
 
 New Castle County is divided into 131 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for New Castle County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018.
-
-
-
-
+2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
 {{%/ report_map %}}
 
@@ -66,9 +51,9 @@ New Castle County is divided into 131 census tracts. In each of those tracts, we
 
 # Eviction filings by neighborhood demographics
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. Under normal circumstances, most evictions in New Castle County are filed in neighborhoods that are majority-white. Since March 2020, eviction filings have dropped across all neighborhoods, though they have more recently increased slightly closer to historical averages. 
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2021 and average filings in 2016–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for New Castle County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 

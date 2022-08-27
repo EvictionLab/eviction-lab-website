@@ -1,0 +1,18 @@
+{{ partial "header" . }}
+
+<div class="row data-pages">
+  <div class="col-11 col-md-10 col-lg-7 mx-auto mt-10">
+    <h1>{{ .Params.h1 }}</h1>
+    <p class="mb-20">{{ .Params.intro | markdownify }}</p>
+  </div>
+
+    
+    <!--<p id="lastUpdate" class="date">
+      Last Updated:
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+    </p>-->
+  </div>
+</div>
+
+
+{{ partial "footer" . }}

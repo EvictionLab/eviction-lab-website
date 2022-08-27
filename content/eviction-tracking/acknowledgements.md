@@ -9,7 +9,7 @@ cascade:
   socialDescription: Real time eviction tracking in U.S. cities during COVID-19.
 h1: Acknowledgements
 layout: content
-date: 2021-08-25T00:00:00.000Z
+date: 2022-01-27T01:00:00.000Z
 similar: >-
   # Similar Resources
 
@@ -19,7 +19,9 @@ similar: >-
 
   * Legal Services Corporation (LSC) has built an [eviction tracker with filing data on several states and hundreds of counties](https://www.lsctracker.org/summary). 
 
-  * The Open Justice Oklahoma has developed the [Oklahoma Court Tracker](https://openjusticeok.shinyapps.io/ok-court-tracker/#section-tool-by-open-justice-oklahoma), which counts evictions and foreclosures filed across the state of Oklahoma since March 15th, 2020.
+  * The Housing Alliance of Pennsylvania has developed a [report with detailed eviction data](https://housingalliancepa.org/eviction-data-report/) in Pennsylvania. 
+
+  * The Open Justice Oklahoma has developed the [Oklahoma Court Tracker](https://openjustice.okpolicy.org/blog/oklahoma-court-tracker/), which counts evictions filed across the state of Oklahoma since March 15th, 2020.
 
   * Carnegie Mellon University’s CREATE Lab is [monitoring eviction filings in Pittsburgh, PA](http://evict-response.earthtime.org/). 
 
@@ -36,6 +38,10 @@ similar: >-
   * Sam Taub has built an [eviction tracker for the state of New Mexico](https://www.nmevictions.org/). 
 
   * The Right to Counsel NYC Coalition maintains the [Eviction Crisis Monitor](https://www.righttocounselnyc.org/evictioncrisismonitor) in New York City.
+
+  * Texas Housers has developed an [Eviction Diversion Tracker](https://texashousers.org/dashboard/#dashboard-evictions) which details out emergency rent relief distribution and eviction cases throughout the state of Texas.
+
+  * The King County Bar Association has an [Eviction Tracker](http://www.kcba.org/For-the-Public/Free-Legal-Assistance/Housing-Justice-Project/HJP-Heat-Map) for King County, WA.
 ---
 # Acknowledgements
 

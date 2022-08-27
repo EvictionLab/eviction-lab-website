@@ -18,7 +18,7 @@ cascade:
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Real time eviction tracking in U.S. cities during COVID-19.
 h1: Eviction Tracking System
-date: 2021-10-09T00:00:00
+date: 2022-08-06T00:00:00
 featured: true
 intro: "The COVID-19 pandemic has deepened America’s housing crisis. The
   nation’s most severe public health emergency in a century may cause large
@@ -27,18 +27,14 @@ intro: "The COVID-19 pandemic has deepened America’s housing crisis. The
   being filed across the United States. Scroll down to view full reports on the
   cities in which we are operating, and to learn more about the project. "
 crisis: >-
-  ## A Looming Eviction Crisis
+  ## Tracking the Eviction Crisis
 
-
-  Current policy responses to the pandemic may be insufficient to prevent a surge in evictions. CARES Act stimulus payments and unemployment insurance--when accessible--will provide families with some support, but in many cases not enough to make ends meet. Some states have passed temporary eviction moratoria, which the Eviction Lab is tracking in the COVID-19 Housing Policy Scorecard, and localities across the country have introduced additional measures. Once these measures expire, however, millions of renters will owe significant amounts of back rent. For many, a displacement and eviction crisis will follow the public health crisis. 
-
-
-  There is currently no data infrastructure that allows policymakers, legal and advocacy organizations, journalists, academics, and community members to track displacement and evictions in real time. The Eviction Lab has built the Eviction Tracking System (ETS) to fill this critical gap and to help monitor and respond to eviction hotspots as they emerge. The ETS is designed as a multi-site, open-source, and expandable system for tracking eviction filings as they happen. 
+  Until now, there has been no national data infrastructure that allows policymakers, legal and advocacy organizations, journalists, academics, and community members to track displacement and evictions in real time. The Eviction Lab has built the Eviction Tracking System (ETS) to fill this critical gap and to help monitor and respond to eviction hotspots as they emerge. The ETS is designed as a multi-site, open-source, and expandable system for tracking eviction filings as they happen. 
 
 
   We welcome feedback, as well as partnerships with states and localities who wish to work with us in monitoring and responding to emerging eviction hotspots. Ensuring housing security is vital to mitigating the spread of COVID-19 and sustaining health, economic security, and family stability.
 additional: >-
-  ## Additional Information
+  ## Additional Info & Resources
 
 
   * The ETS was made possible by the tireless work of our partners at [January Advisors](https://www.januaryadvisors.com/) (data collection), Legal Services Corporation (data provision), and [Hyperobjekt](https://www.hyperobjekt.com/) (UI design and development).

@@ -30,11 +30,7 @@ languageName = "English"
 [[Languages.en.menu.main]]
     name = "Policies Database"
     weight = 4
-    url = "/covid-eviction-policies/"
-[[Languages.en.menu.main]]
-    name = "Policy Scorecard"
-    weight = 5
-    url = "/covid-policy-scorecard/"
+    url = "/covid-eviction-policies/"    
 [[Languages.en.menu.main]]
     name = "Newest Findings & Stories"
     weight = 6
@@ -58,7 +54,7 @@ languageName = "English"
     url = "/updates/reporting"
     params = { class = "nested" }
 [[Languages.en.menu.main]]
-    name = "National Data (1990-2016)"
+    name = "National Data (2000-2018)"
     weight = 11
 [[Languages.en.menu.main]]
     name = "National Eviction Map"
@@ -196,11 +192,7 @@ languageName = "Español"
 [[Languages.es.menu.main]]
     name = "Policies Database"
     weight = 4
-    url = "/covid-eviction-policies/"
-[[Languages.es.menu.main]]
-    name = "Policy Scorecard"
-    weight = 5
-    url = "/covid-policy-scorecard/"
+    url = "/covid-eviction-policies/"    
 [[Languages.es.menu.main]]
     name = "Hallazgos e historias más recientes"
     weight = 6
@@ -224,7 +216,7 @@ languageName = "Español"
     url = "/updates/reporting"
     params = { class = "nested" }
 [[Languages.es.menu.main]]
-    name = "Datos nacionales (1990-2016)"
+    name = "Datos nacionales (2000-2018)"
     weight = 11
 [[Languages.es.menu.main]]
     name = "National Eviction Map"

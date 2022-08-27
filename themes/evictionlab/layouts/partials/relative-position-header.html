@@ -1,0 +1,70 @@
+<div class="header-position-relative header-wrapper">
+    <div class="header-content row">
+      <div class="col-11 col-md-12 col-lg-12  col-xxl-11 col-x4l-10 d-flex mx-auto px-0 px-xxl-2 px-xxxl-2">
+        <div class="col-6 col-md-8 pl-0 d-flex align-items-center">
+          <div class="header-logo">
+            <a href="/">
+              <img src="/img/eviction-lab-logo.svg" class="header-logo-img" alt="Eviction Lab Logo" />
+              <img src="/img/eviction-lab-logo-white.svg" class="header-logo-img-white" alt="Eviction Lab Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 pr-0 pr-md-2 pr-xxxl-0 d-flex justify-content-end align-items-center">
+          {{ if .IsTranslated }}
+          <div class="dropdown language-select">
+            <button class="el-select dropdown-toggle" data-toggle="dropdown" type="button" aria-haspopup="true">{{ .Language.LanguageName }}
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              {{ range .AllTranslations }}
+              <li class="dropdown menu-item">
+                <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+              </li>
+              {{ end}}
+            </ul>
+          </div>
+          {{ end }}
+          <div class="header-icons">
+            <button class="btn btn-icon el-button-menu">
+              <svg class="icon" id="menu" viewBox="0 0 22 22">
+                <path d="M0,0 L22,0 L22,4 L0,4 L0,0 Z M0,9 L22,9 L22,13 L0,13 L0,9 Z M0,18 L22,18 L22,22 L0,22 L0,18 Z"></path>
+              </svg>
+              <span>Menu</span>
+            </button>
+          </div>
+        </div>	
+      </div>
+  
+      <div class="app-menu no-animation">
+        <div class="navigation-wrapper">
+          <nav class="site-navigation">
+            <ul class="row">
+              <div class="col-x4l-10 px-x4l-0 d-flex mx-auto flex-wrap site-navigation__inner">
+                {{ range .Site.Menus.main }}
+                  {{ if not .URL }}
+                    {{ if not (eq .Weight 2) }}
+                    </ul></li>
+                    {{ end }}
+                  <li class="col-12 col-md-6 col-lg-3">
+                    <div>{{ .Name }}</div>
+                    <ul class="row">
+                  {{ else }}
+                  <li class="col-12 {{ .Params.Class }}">
+                    <a tabindex="-1" href="{{.URL}}">{{ .Name }}</a>
+                  </li>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </ul>
+          </nav>
+  
+          <button tabindex="-1" class="btn btn-icon menu-close">
+            <svg class="icon" id="close" viewBox="0 0 20 20">
+              <polygon points="12.8571429 10 20 17.1428571 17.1428571 20 10 12.8571429 2.85714286 20 0 17.1428571 7.14285714 10 0 2.85714286 2.85714286 0 10 7.14285714 17.1428571 0 20 2.85714286"></polygon>
+              </symbol>
+              <span>Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

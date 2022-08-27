@@ -1,0 +1,124 @@
+
+<!-- Tablet landscape and up -->
+<div id="hp-carousel-4slide" class="hp-carousel carousel slide d-none d-lg-block" data-wrap="false" data-ride="carousel" data-interval="false" data-touch="true">
+    <div class="carousel-inner">
+      <ol class="carousel-indicators">
+        <li data-target="#hp-carousel-4slide" data-slide-to="0" class="active"></li>
+        <li data-target="#hp-carousel-4slide" data-slide-to="1" class=""></li>
+      </ol>
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
+            {{/* range first 4 ((where .Site.Pages "Params.contenttype" ("updates")) | union (where .Site.Pages "Params.contenttype" ("data")) ) */}}
+            {{ range first 4 (where .Site.Pages "Params.featured" true ) }}
+              <div class="col-3">
+                {{ if ne .Params.contentcat "data" }}
+                  <a href="{{ .RelPermalink }}">
+                    {{ $img := .Params.fbImage }}
+                    {{ with .Resources.GetMatch $img }}
+                      {{ $processed := .Fit "600x400 q50 jpg" }}
+                        <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                    {{ end }}
+                  </a>
+                {{ else }}
+                <a href="{{ .RelPermalink }}">
+                      <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
+                </a>
+                {{ end }}
+                <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
+                {{ if eq .Params.contentcat "data" }}
+                  <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
+                {{ else }}
+                  <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>  
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-11 col-mm-8 col-md-12 px-md-5 px-xxxl-2 col-xxxl-10 mx-auto d-md-flex">
+            {{ range first 3 (after 4 (where .Site.Pages "Params.featured" true ) ) }}
+              <div class="col-3">
+                {{ if ne .Params.contentcat "data" }}
+                  <a href="{{ .RelPermalink }}">
+                    {{ $img := .Params.fbImage }}
+                    {{ with .Resources.GetMatch $img }}
+                      {{ $processed := .Fit "600x400 q50 jpg" }}
+                        <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+                    {{ end }}
+                  </a>
+                {{ else }}
+                <a href="{{ .RelPermalink }}">
+                      <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
+                </a>
+                {{ end }}
+                <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
+                {{ if eq .Params.contentcat "data" }}
+                  <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
+                {{ else }}
+                  <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
+                {{ end }}
+              </div>
+            {{ end }}
+            <div class="col-3">
+              <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
+                <a class="viewmore" href="/updates"> </a> 
+                  <div class="viewmore__text mx-2">
+                    <div>VIEW MORE <br> RECENT ANALYSIS</div>
+                    <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+                  </div>  
+              </div>
+          </div>  
+          </div>  
+        </div>
+      </div>
+      <a class="carousel-control-prev inactive" href="#hp-carousel-4slide" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#hp-carousel-4slide" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- Mobile carousel -->
+  <div id="hp-carousel-mobile" class="hp-carousel-mobile row mb-2 mb-md-5 mb-lg-0">
+   <div class="col-12 px-md-5 d-flex">
+    {{ range first 7 (where .Site.Pages "Params.featured" true ) }}
+    <div class="col-8 col-md-5 hp-carousel-mobile__slide">
+      {{ if ne .Params.contentcat "data" }}
+          <a href="{{ .RelPermalink }}">
+            {{ $img := .Params.fbImage }}
+            {{ with .Resources.GetMatch $img }}
+              {{ $processed := .Fit "600x400 q50 jpg" }}
+                <div class="hp-carousel__slide--image" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
+            {{ end }}
+          </a>
+        {{ else }}
+        <a href="{{ .RelPermalink }}">
+              <div class="hp-carousel__slide--image" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');"></div>
+        </a>
+      {{ end }}    
+      <div class="hp-carousel__slide--category {{ .Params.contentcat}}-category mt-2 mb-1">{{ .Params.contentcat | title }} </div>
+      {{ if eq .Params.contentcat "data" }}
+        <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">Eviction Tracking System Updates: {{ .Date.Format "January 2, 2006" }}</a>
+      {{ else }}
+        <a href="{{ .RelPermalink }}" class="hp-carousel__slide--title">{{ .Params.title | truncate 64 }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+    <div class="col-8 col-md-5">
+      <div class="hp-carousel__slide--image viewmore__background d-flex flex-column">
+        <a class="viewmore" href="/updates"> </a> 
+          <div class="viewmore__text mx-2">
+            <div>VIEW MORE <br> RECENT ANALYSIS</div>
+            <a class="sublink mt-1" href="/rankings/">Go to our  Updates  page <i class="fa fa-chevron-right"></i><div class="hoverbar"></div></a>
+          </div>  
+      </div>
+  </div>  
+   </div>
+  </div>
+  

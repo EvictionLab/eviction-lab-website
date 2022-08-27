@@ -179,6 +179,12 @@ a.btn.buttonlink {
       margin-bottom: 4rem;
     }
   }
+  .research-post h2.pullquote {
+    border-top: 4px $color3 solid;
+    border-bottom: 4px $color3 solid;
+    color: $color3;
+  }
+
   .center-content-post .accordion-section {
     margin: 0 -16px;
     p {
@@ -628,6 +634,16 @@ svg {
 
 }
 
+// page-layout-page-assessing-state-eviction-prevention-policies-in-response-to-covid-19
+/*
+.page-assessing-state-eviction-prevention-policies-in-response-to-covid-19 {
+  svg path.svg-map__shape, svg path.svg-map__shape:hover {
+    &:last-child {
+      fill:#7d7d7d !important;
+   }
+  }
+}
+*/
 // Allow translation option on certain posts
 
 .page-type-updates.url-esmoratorium-extended-evictions-continue, .page-type-updates.url-moratorium-extended-evictions-continue {

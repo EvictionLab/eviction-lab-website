@@ -211,6 +211,11 @@
   font-weight: 500;
 }
 
+#svg-map__pattern-zero path {
+  stroke: rgb(214, 214, 214);
+  stroke-width: 2px;
+}
+
 /** need high specificity here due to other styles in single.scss */
 .center-content-post.updates-post .page-content .svg-map .svg-map__caption {
   text-align: center;
@@ -393,6 +398,7 @@ body .visual .visual__title, body .visual .visual__title > * {
 }
 .chart__tooltip.chart__tooltip--show {
   opacity:1;
+  z-index:100;
 }
 
 .chart__tooltip .tooltip__title {
@@ -517,7 +523,8 @@ body .visual .visual__title, body .visual .visual__title > * {
 
 .legend-item__label {
   line-height: 1;
-  font-family: var(--heading-font);
+
+  font-family: var(--heading-font, GT-Eesti-Display-Bold, sans-serif);
   margin-bottom: 12px;
   font-size: 1.2rem;
   font-weight: normal;

@@ -1,10 +1,21 @@
+{{ $rentersSite := .Page.Params.rentersSite }}
 <div class="intro intro--loading">
   <div class="layout">
     <div class="intro__content">
       <h1 class="intro__heading">
         <a id="top">{{ .Page.Params.h1 }}</a>
       </h1>
-      <div id="introText" class="intro__text">{{ .Inner }}</div>
+      {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
+        {{ if eq $rentersSite $element.site }}
+          <h3 class="intro__renter-population mx-auto">RENTER HOUSEHOLDS: {{ $element.estimate }}</h3>
+        {{ end }}
+      {{ end }}
+      {{ range $index, $element := .Site.Data.renter_hhs_by_city }}
+        {{ if eq $rentersSite $element.site }}
+          <h3 class="intro__renter-population mx-auto">RENTER HOUSEHOLDS: {{ $element.estimate }}</h3>
+        {{ end }}
+      {{ end }}
+      <div id="introText" class="intro__text">{{ .Inner | markdownify }}</div>
       <div class="share">
         <a class="share__link share__link--twitter">
           <i class="fa fa-twitter"></i>
