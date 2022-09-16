@@ -906,7 +906,12 @@ Elab.Chart = (function (Elab) {
   }
 
   function updatePartialFilingsDate(rootEl, data, currentConfig) {
-    var rawLastDay = data["_raw"][data["_raw"].length - 1]["month_last_day"];
+    const orderedData = data["_raw"].sort(function(a, b) {
+      aMonth = a.month.split('/').reverse().join('');
+      bMonth = b.month.split('/').reverse().join('');
+      return aMonth > bMonth ? 1 : aMonth < bMonth ? -1 : 0;
+    });
+    var rawLastDay = orderedData[orderedData.length - 1]["month_last_day"];
     if (!rawLastDay) return "whassup";
     var parseDate = d3.timeParse("%d/%m/%Y");
     var lastDay = parseDate(rawLastDay);
