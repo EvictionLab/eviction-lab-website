@@ -1043,6 +1043,21 @@ Elab.Chart = (function (Elab) {
               "finalEvictRectWhite" +
               '" x="0" y="0" width="2" height="8" />'
           );
+      svg.selectAll("#finalEvictRectBlack").remove();
+      svg.append("pattern")
+          .attr("id", "finalEvictRectBlack")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", 4)
+          .attr("height", 8)
+          .style("fill", "#434878")
+          .attr("patternUnits", "userSpaceOnUse")
+          .attr("patternTransform", "rotate(45)")
+          .html(
+              '<rect class="chart__pattern chart__pattern--' +
+              "finalEvictRectBlack" +
+              '" x="0" y="0" width="2" height="8" />'
+          );
       svg.selectAll("#finalEvictRectLatinx").remove();
       svg.append("pattern")
           .attr("id", "finalEvictRectLatinx")
@@ -1080,17 +1095,10 @@ Elab.Chart = (function (Elab) {
 
       //Bryony code
       //finding max date, id of max date and adding boolean to data.
-      if(data.items[0].id === "percentage_diff"){
-        const maxDate = d3.max(groupedData, d => monthParse(d.id));
-        const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
-        groupedData.map(m => m.data[0].finalBar = (m.id === maxId ? true : false));
-      }
-      if(data.items[0].id === "White"){
-        const maxDate = d3.max(groupedData, d => monthParse(d.id));
-        const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
-        groupedData.map(m => m.data.map(dataItem => dataItem.finalBar = (m.id === maxId ? true : false)));
-      }
-
+      const maxDate = d3.max(groupedData, d => monthParse(d.id));
+      const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
+      groupedData.map(m => m.data.map(dataItem => dataItem.finalBar = (m.id === maxId ? true : false)));
+      
       var groupEls = group
         .enter()
         .append("g")
@@ -1173,25 +1181,22 @@ Elab.Chart = (function (Elab) {
           return context.height - context.y(d.value.y);
         }); // remove bars groups
       
-      if(data.items[0].id === "percentage_diff"){
-        barRects.style("fill", d => d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000");
-      }
-      if(data.items[0].id === "White"){
-        barRects.style("fill", d => {
-          var rectPattern = "url(#finalEvictRectWhite)";
-          var rectColor = "#E24000";
-          if (d.id === 'Latinx') {
-            rectPattern = "url(#finalEvictRectLatinx)";
-            rectColor = "#2C897F";
-          }
-          if (d.id === 'Other') {
-            rectPattern = "url(#finalEvictRectOther)";
-            rectColor = "#94AABD";
-          }
-          return d.finalBar === true ? rectPattern : rectColor;
-        });
-      }
-
+      barRects.style("fill", d => {
+        if (d.id === 'percentage_diff') {
+          return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+        }
+        if (d.id === 'avg_filings') {
+          return d.finalBar === true ? "url(#finalEvictRectBlack)" : "#434878";
+        }
+        if (d.id === 'month_filings') {
+          return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+        }
+        if (d.id === 'Other') {
+          return d.finalBar === true ? "url(#finalEvictRectOther)" : "#94AABD";
+        }
+        return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+      });
+      
       groupBars
         .exit()
         .transition()
