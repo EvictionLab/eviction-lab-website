@@ -905,7 +905,7 @@ Elab.Chart = (function (Elab) {
     });
   }
 
-  function updatePartialFilingsDate(rootEl, data) {
+  function updatePartialFilingsDate(rootEl, data, currentConfig) {
     var rawLastDay = data["_raw"][data["_raw"].length - 1]["month_last_day"];
     if (!rawLastDay) return "whassup";
     var parseDate = d3.timeParse("%d/%m/%Y");
@@ -914,7 +914,8 @@ Elab.Chart = (function (Elab) {
       "Partial " +
       d3.timeFormat("%B")(lastDay) +
       " filings as of " +
-      d3.timeFormat("%-m/%-d")(lastDay) + "<span>relative to average</span>";
+      d3.timeFormat("%-m/%-d")(lastDay) + 
+      (currentConfig.id === 'avg' ? "<span>relative to average</span>" : '');
     var partialEl = rootEl.find(".visual__note");
     partialEl.html(value);
   }
@@ -1521,7 +1522,7 @@ Elab.Chart = (function (Elab) {
 
       var root;
       root = d3.select(elementId).append("g"); // create chart
-
+      
       var chart = Chart(data, root, config); // resize the chart when the window size changes
 
       window.addEventListener("resize", function () {
@@ -1555,6 +1556,7 @@ Elab.Chart = (function (Elab) {
         avgToggleEl.removeClass("toggle--active");
         rootEl.removeClass("section--avg-on").addClass("section--count-on");
         chart.update(currentConfig);
+        updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
       avgToggleEl.on("click", function () {
         currentConfig = config.id === "race" ? configs[1] : configs[0];
@@ -1562,8 +1564,9 @@ Elab.Chart = (function (Elab) {
         countToggleEl.removeClass("toggle--active");
         rootEl.addClass("section--avg-on").removeClass("section--count-on");
         chart.update(currentConfig);
+        updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
-      updatePartialFilingsDate(rootEl, chart.data);
+      updatePartialFilingsDate(rootEl, chart.data, currentConfig);
     });
   }
 
