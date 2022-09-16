@@ -1188,14 +1188,11 @@ Elab.Chart = (function (Elab) {
         }); // remove bars groups
       
       barRects.style("fill", d => {
-        if (d.id === 'percentage_diff') {
+        if (d.id === 'percentage_diff' || d.id === 'White' || d.id === 'month_filings') {
           return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
         }
-        if (d.id === 'avg_filings') {
+        if (d.id === 'avg_filings' || d.id === 'Black') {
           return d.finalBar === true ? "url(#finalEvictRectBlack)" : "#434878";
-        }
-        if (d.id === 'month_filings') {
-          return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
         }
         if (d.id === 'Other') {
           return d.finalBar === true ? "url(#finalEvictRectOther)" : "#94AABD";
