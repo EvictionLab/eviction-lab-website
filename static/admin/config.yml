@@ -1,7 +1,7 @@
 backend:
  name: github
  repo: EvictionLab/eviction-lab-website
- branch: staging
+ branch: reconfig-bios
  
 # FOR LOCAL DEVELOPMENT:
 # ---
@@ -624,4 +624,50 @@ collections:
           widget: "markdown",
           buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
         }
+
+  - name: "team-bios" # Used in routes, e.g., /admin/collections/blog
+    label: "Research Team Bios" # Used in the UI
+    folder: "/content/about/page-content/research-team-bios" # The path to the folder where the documents are stored
+    path: '{{slug}}/index'
+    create: true # Allow users to create new documents in this collection
+    extension: md
+    editor:
+      preview: false
+    preview_path: "about/"
+    #filter: { field: "contentcat", value: media }
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Child of",
+          name: "childof",
+          widget: "hidden",
+          default: 'research-team-bios',
+        }
+      - {
+          label: "Unique ID",
+          name: "abbrev",
+          widget: "string",
+          hint: "Create a unique id composed of first initial and last name."
+        }  
+      - {
+          label: "Name",
+          name: "title",
+          widget: "string",
+        }
+      - {
+          label: "Position",
+          name: "position",
+          widget: "string",
+        }
+      - {
+          label: "Full image",
+          name: "image",
+          widget: "image",
+        }
+      - {
+          label: "Thumbnail image",
+          name: "thumb",
+          widget: "image",
+        }  
+      - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
+     
    
