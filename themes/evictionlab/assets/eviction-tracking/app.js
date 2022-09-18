@@ -905,8 +905,13 @@ Elab.Chart = (function (Elab) {
     });
   }
 
-  function updatePartialFilingsDate(rootEl, data) {
-    var rawLastDay = data["_raw"][data["_raw"].length - 1]["month_last_day"];
+  function updatePartialFilingsDate(rootEl, data, currentConfig) {
+    const orderedData = data["_raw"].sort(function(a, b) {
+      aMonth = a.month.split('/').reverse().join('');
+      bMonth = b.month.split('/').reverse().join('');
+      return aMonth > bMonth ? 1 : aMonth < bMonth ? -1 : 0;
+    });
+    var rawLastDay = orderedData[orderedData.length - 1]["month_last_day"];
     if (!rawLastDay) return "whassup";
     var parseDate = d3.timeParse("%d/%m/%Y");
     var lastDay = parseDate(rawLastDay);
@@ -914,7 +919,8 @@ Elab.Chart = (function (Elab) {
       "Partial " +
       d3.timeFormat("%B")(lastDay) +
       " filings as of " +
-      d3.timeFormat("%-m/%-d")(lastDay) + "<span>relative to average</span>";
+      d3.timeFormat("%-m/%-d")(lastDay) + 
+      (currentConfig.id === 'avg' ? "<span>relative to average</span>" : '');
     var partialEl = rootEl.find(".visual__note");
     partialEl.html(value);
   }
@@ -1043,6 +1049,21 @@ Elab.Chart = (function (Elab) {
               "finalEvictRectWhite" +
               '" x="0" y="0" width="2" height="8" />'
           );
+      svg.selectAll("#finalEvictRectBlack").remove();
+      svg.append("pattern")
+          .attr("id", "finalEvictRectBlack")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", 4)
+          .attr("height", 8)
+          .style("fill", "#434878")
+          .attr("patternUnits", "userSpaceOnUse")
+          .attr("patternTransform", "rotate(45)")
+          .html(
+              '<rect class="chart__pattern chart__pattern--' +
+              "finalEvictRectBlack" +
+              '" x="0" y="0" width="2" height="8" />'
+          );
       svg.selectAll("#finalEvictRectLatinx").remove();
       svg.append("pattern")
           .attr("id", "finalEvictRectLatinx")
@@ -1080,17 +1101,10 @@ Elab.Chart = (function (Elab) {
 
       //Bryony code
       //finding max date, id of max date and adding boolean to data.
-      if(data.items[0].id === "percentage_diff"){
-        const maxDate = d3.max(groupedData, d => monthParse(d.id));
-        const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
-        groupedData.map(m => m.data[0].finalBar = (m.id === maxId ? true : false));
-      }
-      if(data.items[0].id === "White"){
-        const maxDate = d3.max(groupedData, d => monthParse(d.id));
-        const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
-        groupedData.map(m => m.data.map(dataItem => dataItem.finalBar = (m.id === maxId ? true : false)));
-      }
-
+      const maxDate = d3.max(groupedData, d => monthParse(d.id));
+      const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
+      groupedData.map(m => m.data.map(dataItem => dataItem.finalBar = (m.id === maxId ? true : false)));
+      
       var groupEls = group
         .enter()
         .append("g")
@@ -1173,25 +1187,19 @@ Elab.Chart = (function (Elab) {
           return context.height - context.y(d.value.y);
         }); // remove bars groups
       
-      if(data.items[0].id === "percentage_diff"){
-        barRects.style("fill", d => d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000");
-      }
-      if(data.items[0].id === "White"){
-        barRects.style("fill", d => {
-          var rectPattern = "url(#finalEvictRectWhite)";
-          var rectColor = "#E24000";
-          if (d.id === 'Latinx') {
-            rectPattern = "url(#finalEvictRectLatinx)";
-            rectColor = "#2C897F";
-          }
-          if (d.id === 'Other') {
-            rectPattern = "url(#finalEvictRectOther)";
-            rectColor = "#94AABD";
-          }
-          return d.finalBar === true ? rectPattern : rectColor;
-        });
-      }
-
+      barRects.style("fill", d => {
+        if (d.id === 'percentage_diff' || d.id === 'White' || d.id === 'month_filings') {
+          return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+        }
+        if (d.id === 'avg_filings' || d.id === 'Black') {
+          return d.finalBar === true ? "url(#finalEvictRectBlack)" : "#434878";
+        }
+        if (d.id === 'Other') {
+          return d.finalBar === true ? "url(#finalEvictRectOther)" : "#94AABD";
+        }
+        return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+      });
+      
       groupBars
         .exit()
         .transition()
@@ -1516,7 +1524,7 @@ Elab.Chart = (function (Elab) {
 
       var root;
       root = d3.select(elementId).append("g"); // create chart
-
+      
       var chart = Chart(data, root, config); // resize the chart when the window size changes
 
       window.addEventListener("resize", function () {
@@ -1550,6 +1558,7 @@ Elab.Chart = (function (Elab) {
         avgToggleEl.removeClass("toggle--active");
         rootEl.removeClass("section--avg-on").addClass("section--count-on");
         chart.update(currentConfig);
+        updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
       avgToggleEl.on("click", function () {
         currentConfig = config.id === "race" ? configs[1] : configs[0];
@@ -1557,8 +1566,9 @@ Elab.Chart = (function (Elab) {
         countToggleEl.removeClass("toggle--active");
         rootEl.addClass("section--avg-on").removeClass("section--count-on");
         chart.update(currentConfig);
+        updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
-      updatePartialFilingsDate(rootEl, chart.data);
+      updatePartialFilingsDate(rootEl, chart.data, currentConfig);
     });
   }
 
