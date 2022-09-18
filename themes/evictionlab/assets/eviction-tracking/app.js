@@ -1194,6 +1194,9 @@ Elab.Chart = (function (Elab) {
         if (d.id === 'avg_filings' || d.id === 'Black') {
           return d.finalBar === true ? "url(#finalEvictRectBlack)" : "#434878";
         }
+        if (d.id === 'Latinx') {
+          return d.finalBar === true ? "url(#finalEvictRectLatinx)" : "#2C897F";
+        }
         if (d.id === 'Other') {
           return d.finalBar === true ? "url(#finalEvictRectOther)" : "#94AABD";
         }
