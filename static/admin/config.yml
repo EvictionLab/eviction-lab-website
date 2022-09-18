@@ -671,6 +671,7 @@ collections:
           hint: "Size to 432 × 432 px, no more than 64kb"
         }  
       - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
+      - { label: "Bio", name: "body", widget: "markdown" }
 
   - name: "student-bios" # Used in routes, e.g., /admin/collections/blog
     label: "Student Researcher Bios" # Used in the UI
@@ -718,5 +719,6 @@ collections:
           hint: "Size to 432 × 432 px, no more than 64kb"
         }  
       - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
+      - { label: "Bio", name: "body", widget: "markdown" }
      
    
