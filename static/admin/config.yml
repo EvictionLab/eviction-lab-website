@@ -671,5 +671,52 @@ collections:
           hint: "Size to 432 × 432 px, no more than 64kb"
         }  
       - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
+
+  - name: "student-bios" # Used in routes, e.g., /admin/collections/blog
+    label: "Student Researcher Bios" # Used in the UI
+    folder: "/content/about/page-content/student-researcher-bios" # The path to the folder where the documents are stored
+    path: '{{slug}}/index'
+    create: true # Allow users to create new documents in this collection
+    extension: md
+    editor:
+      preview: false
+    preview_path: "about/"
+    #filter: { field: "contentcat", value: media }
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Child of",
+          name: "childof",
+          widget: "hidden",
+          default: 'research-team-bios',
+        }
+      - {
+          label: "Unique ID",
+          name: "abbrev",
+          widget: "string",
+          hint: "Create a unique id composed of first initial and last name."
+        }  
+      - {
+          label: "Name",
+          name: "title",
+          widget: "string",
+        }
+      - {
+          label: "Position",
+          name: "position",
+          widget: "string",
+        }
+      - {
+          label: "Full image",
+          name: "image",
+          widget: "image",
+          hint: "Size to 960 × 1444 px, no more than 180kb"
+        }
+      - {
+          label: "Thumbnail image",
+          name: "thumb",
+          widget: "image",
+          hint: "Size to 432 × 432 px, no more than 64kb"
+        }  
+      - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
      
    
