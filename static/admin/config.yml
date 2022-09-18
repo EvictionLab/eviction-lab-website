@@ -662,11 +662,13 @@ collections:
           label: "Full image",
           name: "image",
           widget: "image",
+          hint: "Size to 960 × 1444 px, no more than 180kb"
         }
       - {
           label: "Thumbnail image",
           name: "thumb",
           widget: "image",
+          hint: "Size to 432 × 432 px, no more than 64kb"
         }  
       - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
      

@@ -24,7 +24,7 @@
   <a data-toggle="modal" data-target="#modal-{{ .Params.abbrev }}" data-bio="mdes" href="#">
     <div class="bio-container">
       <picture>
-        <source media="(max-width: 799px)" srcset='/images/bios/grayscale{{ strings.TrimPrefix "/images/bios" .Params.thumb }}'>
+        <!--<source media="(max-width: 799px)" srcset='/images/bios/grayscale{{/* strings.TrimPrefix "/images/bios" .Params.thumb */}}'>-->
         <source media="(min-width: 800px)" srcset="{{ .Params.thumb }}">
         <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
       </picture>
