@@ -499,7 +499,8 @@
   .modal-body {
     padding: 2.4rem 1.6rem;
     @include for-tablet-landscape-up {
-      padding: 3.2rem 4.8rem 3.2rem;;
+      padding: 3.2rem 4.8rem 3.2rem;
+      min-height: 480px;
     }
     @include for-midsize-desktop-up {
       padding: 4.8rem 6.4rem 4.8rem;
