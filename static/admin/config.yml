@@ -688,7 +688,7 @@ collections:
           label: "Child of",
           name: "childof",
           widget: "hidden",
-          default: 'research-team-bios',
+          default: 'student-researcher-bios',
         }
       - {
           label: "Unique ID",
@@ -720,5 +720,51 @@ collections:
         }  
       - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
       - { label: "Bio", name: "body", widget: "markdown" }
-     
+
+  - name: "alumni-bios" # Used in routes, e.g., /admin/collections/blog
+    label: "Alumni Hall of Fame" # Used in the UI
+    folder: "/content/about/page-content/alumni-bios" # The path to the folder where the documents are stored
+    path: '{{slug}}/index'
+    create: true # Allow users to create new documents in this collection
+    extension: md
+    editor:
+      preview: false
+    preview_path: "about/"
+    #filter: { field: "contentcat", value: media }
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Child of",
+          name: "childof",
+          widget: "hidden",
+          default: 'alumni-bios',
+        }
+      - {
+          label: "Unique ID",
+          name: "abbrev",
+          widget: "string",
+          hint: "Create a unique id composed of first initial and last name."
+        }  
+      - {
+          label: "Name",
+          name: "title",
+          widget: "string",
+        }
+      - {
+          label: "Position at the Lab",
+          name: "position",
+          widget: "string",
+        }
+      - {
+          label: "New Position",
+          name: "newposition",
+          widget: "string",
+        }  
+      - {
+          label: "Thumbnail image",
+          name: "thumb",
+          widget: "image",
+          hint: "Size to 432 × 432 px, no more than 64kb"
+        }  
+      - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
+  
    
