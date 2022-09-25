@@ -122,21 +122,45 @@
         <!-- ************* Research Team Bios ***************** -->
         <div role="tabpanel" class="tab-pane active" id="team1">    
           <div class="bio-thumbs">
-            {{ range (where .Site.RegularPages "Params.childof" ("research-team-bios")) }}
-            {{ if eq .Params.childof "research-team-bios" }} 
-              {{ partial "about-modal" . }}
-            {{ end }}
-            {{ end }}
+            {{ if eq .Site.Language.LanguageName "Español" }}
+              {{ range .Translations }}
+                {{ range (where .Site.RegularPages "Params.childof" ("research-team-bios")) }}
+                  {{ if eq .Params.childof "research-team-bios" }} 
+                    {{ partial "about-modal" . }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}  
+            {{ end }} 
+
+            {{ if eq .Site.Language.LanguageName "English" }}
+              {{ range (where .Site.RegularPages "Params.childof" ("research-team-bios")) }}
+                {{ if eq .Params.childof "research-team-bios" }} 
+                  {{ partial "about-modal" . }}
+                {{ end }}
+              {{ end }}
+           {{ end }}
         </div>
         </div> <!-- End Research Team tab-pane -->
         <!-- *************** Student Researcher Bios ******************** -->
         <div role="tabpanel" class="tab-pane" id="team2">
           <div class="bio-thumbs">
+            {{ if eq .Site.Language.LanguageName "Español" }}
+              {{ range .Translations }}
+                {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+                  {{ if eq .Params.childof "student-researcher-bios" }} 
+                    {{ partial "about-modal" . }}
+                  {{ end }}
+               {{ end }}
+              {{ end }}
+            {{ end }} 
+
+            {{ if eq .Site.Language.LanguageName "English" }}
               {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
-              {{ if eq .Params.childof "student-researcher-bios" }} 
-                {{ partial "about-modal" . }}
+                {{ if eq .Params.childof "student-researcher-bios" }} 
+                  {{ partial "about-modal" . }}
+                {{ end }}
               {{ end }}
-              {{ end }}
+           {{ end }}
           </div>
           </div> <!-- End Student Researcher tab-pane -->
         <!-- *************** Web Team Bios ******************** -->
@@ -152,11 +176,23 @@
         <!-- *************** Alumni Bios ******************** -->
           <div role="tabpanel" class="tab-pane" id="team3">
             <div class="bio-thumbs">
+              {{ if eq .Site.Language.LanguageName "Español" }}
+                {{ range .Translations }}
+                  {{ range (where .Site.RegularPages "Params.childof" ("alumni-bios")) }}
+                    {{ if eq .Params.childof "alumni-bios" }} 
+                      {{ partial "about-modal" . }}
+                    {{ end }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }} 
+
+              {{ if eq .Site.Language.LanguageName "English" }}
                 {{ range (where .Site.RegularPages "Params.childof" ("alumni-bios")) }}
-                {{ if eq .Params.childof "alumni-bios" }} 
-                  {{ partial "about-modal" . }}
+                  {{ if eq .Params.childof "alumni-bios" }} 
+                    {{ partial "about-modal" . }}
+                  {{ end }}
                 {{ end }}
-                {{ end }}
+             {{ end }}  
             </div>
           </div> 
          <!-- *************** Citizen Researcher Bios ******************** -->  
