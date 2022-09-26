@@ -12,8 +12,8 @@
           <source media="(min-width: 800px)" srcset="{{ .Params.thumb }}">
           <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
         {{ else }}
-          <source media="(min-width: 800px)" srcset="{{.RelPermalink}}/{{ .Params.thumb }}">
-          <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{.RelPermalink}}/{{ .Params.thumb }}" />
+          <source media="(min-width: 800px)" srcset="{{.RelPermalink}}{{ .Params.thumb }}">
+          <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{.RelPermalink}}{{ .Params.thumb }}" />
         {{ end }}  
       </picture>
       <h3>{{ .Params.title }}</h3>
@@ -34,8 +34,8 @@
         <source media="(min-width: 800px)" srcset="{{ .Params.thumb }}">
         <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
         {{ else }}
-        <source media="(min-width: 800px)" srcset="{{.RelPermalink}}/{{ .Params.thumb }}">
-        <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{.RelPermalink}}/{{ .Params.thumb }}" />
+        <source media="(min-width: 800px)" srcset="{{.RelPermalink}}{{ .Params.thumb }}">
+        <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{.RelPermalink}}{{ .Params.thumb }}" />
         {{ end }}
       </picture>
       
@@ -64,7 +64,7 @@
         {{ if in .Params.image "images/" }}
         <div class="left-column" style="background-image: url({{ .Params.image }})"></div>
         {{ else }}
-        <div class="left-column" style="background-image: url('{{.RelPermalink}}/{{ .Params.image }}')"></div>
+        <div class="left-column" style="background-image: url('{{.RelPermalink}}{{ .Params.image }}')"></div>
         {{ end }}
         <div class="right-column">
           <div class="modal-body">                    
