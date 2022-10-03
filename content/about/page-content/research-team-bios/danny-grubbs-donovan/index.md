@@ -1,7 +1,7 @@
 ---
 childof: research-team-bios
 abbrev: ddonovan
-title: Danny Grubbs Donovan
+title: Daniel Grubbs-Donovan
 position: Research Specialist
 image: ddonovan_full.jpg
 thumb: ddonovan_thumb.jpg
