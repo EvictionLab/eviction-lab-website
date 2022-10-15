@@ -146,33 +146,49 @@
           <div class="bio-thumbs">
           <!-- Espanol -->   
             {{ if eq .Site.Language.LanguageName "Español" }}
-              {{ range .Translations }}
+              
+            ` {{ range .Translations }}
+
                 {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+
                   {{ if eq .Params.childof "student-researcher-bios" }} 
-                    {{ if ne .Params.alumni true }}
+                    {{ if ne .Params.studentalumni true }}
                       {{ partial "about-modal" . }}
                     {{ end }}
                   {{ end }}
+
                 {{ end }}
 
+              {{ end }}  
+            {{ end }}
+              
+
             <h2 class="w-100 text-center page-section-headerv2 mt-5">ALUMNI</h2>
-       
-              {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
-                {{ if eq .Params.childof "student-researcher-bios" }} 
-                    {{ if eq .Params.alumni true }}
+
+            {{ if eq .Site.Language.LanguageName "Español" }}
+              
+            ` {{ range .Translations }}
+
+                {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+
+                  {{ if eq .Params.childof "student-researcher-bios" }} 
+                    {{ if eq .Params.studentalumni true }}
                       {{ partial "about-modal" . }}
                     {{ end }}
                   {{ end }}
+
                 {{ end }}
-              {{ end }}
+
+              {{ end }}  
             {{ end }}
+             
           
           <!-- English -->  
 
             {{ if eq .Site.Language.LanguageName "English" }}
               {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
                 {{ if eq .Params.childof "student-researcher-bios" }} 
-                  {{ if ne .Params.alumni true }}
+                  {{ if ne .Params.studentalumni true }}
                     {{ partial "about-modal" . }}
                   {{ end }}   
                 {{ end }}
@@ -182,14 +198,14 @@
 
             {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
               {{ if eq .Params.childof "student-researcher-bios" }} 
-                {{ if eq .Params.alumni true }}
+                {{ if eq .Params.studentalumni true }}
                   {{ partial "about-modal" . }}
                 {{ end }}  
               {{ end }}
             {{ end }}
+            {{ end }}
 
-
-           {{ end }}
+       
           </div>
           </div> <!-- End Student Researcher tab-pane -->
         <!-- *************** Web Team Bios ******************** -->

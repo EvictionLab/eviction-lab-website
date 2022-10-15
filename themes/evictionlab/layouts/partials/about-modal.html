@@ -1,37 +1,38 @@
 <!-- Modal setup for bios -->
 
-{{ if eq .Params.childof "alumni-bios" }} 
-{{/* trigger if person is alumni  */}}
-
-<div class="bio-thumb-wrapper">
-
-    <div class="bio-container alumni d-flex flex-column align-items-center">
-      <picture>
-        <!--<source media="(max-width: 799px)" srcset='/images/bios/grayscale{{ strings.TrimPrefix "/images/bios" .Params.thumb }}'>-->
-        {{ if in .Params.thumb "images/" }}
-          <source media="(min-width: 800px)" srcset="{{ .Params.thumb }}">
-          <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
-        {{ else }}
-          <source media="(min-width: 800px)" srcset="{{.RelPermalink}}{{ .Params.thumb }}">
-          <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{.RelPermalink}}{{ .Params.thumb }}" />
-        {{ end }}  
-      </picture>
-      <h3>{{ .Params.title }}</h3>
-      <p class="bio-position pb-1">{{ .Params.position }}</p>
-      <p class="bio-position mt-1">{{ .Params.newposition }}</p> 
-    </div>
-
-</div>
-{{ end }}
 <!-- Student researchers --------------------->
 
-{{ if eq .Params.childof "student-researcher-bios" }}
+ 
+
+
+  {{ if eq .Params.childof "alumni-bios" }} 
+  {{/* trigger if person is alumni  */}}
+  
+  <div class="bio-thumb-wrapper">
+  
+      <div class="bio-container alumni d-flex flex-column align-items-center">
+        <picture>
+          <!--<source media="(max-width: 799px)" srcset='/images/bios/grayscale{{ strings.TrimPrefix "/images/bios" .Params.thumb }}'>-->
+          {{ if in .Params.thumb "images/" }}
+            <source media="(min-width: 800px)" srcset="{{ .Params.thumb }}">
+            <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{ .Params.thumb }}" />
+          {{ else }}
+            <source media="(min-width: 800px)" srcset="{{.RelPermalink}}{{ .Params.thumb }}">
+            <img alt="{{ .Params.title }} photo" class="bio-thumb" src="{{.RelPermalink}}{{ .Params.thumb }}" />
+          {{ end }}  
+        </picture>
+        <h3>{{ .Params.title }}</h3>
+        <p class="bio-position pb-1">{{ .Params.position }}</p>
+        <p class="bio-position mt-1">{{ .Params.newposition }}</p> 
+      </div>
+  
+  </div>
+  {{ else }}  
 
   {{ partial "about-thumbs" . }}
- 
-{{ else }}
-  {{ partial "about-thumbs" . }}
-{{ end }}
+
+  {{ end }}
+
 
 <div class="modal fade" id="modal-{{ .Params.abbrev }}" tabindex="-1" role="dialog" aria-labelledby="teamBioModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">

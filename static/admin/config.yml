@@ -707,6 +707,13 @@ collections:
           widget: "string",
         }
       - {
+          label: "Alumni?",
+          name: "studentalumni",
+          widget: boolean,
+          default: false,
+          hint: "Toggle to 'on' if the student is an alumnus"
+        }  
+      - {
           label: "Full image",
           name: "image",
           widget: "image",

@@ -1,6 +1,6 @@
 ---
 childof: student-researcher-bios
-alumni: true
+studentalumni: true
 title: Ndidi Anekwe  
 abbrev: nanekwe
 position: Research Assistant
