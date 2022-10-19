@@ -42,6 +42,10 @@ similar: >-
   * Texas Housers has developed an [Eviction Diversion Tracker](https://texashousers.org/dashboard/#dashboard-evictions) which details out emergency rent relief distribution and eviction cases throughout the state of Texas.
 
   * The King County Bar Association has an [Eviction Tracker](http://www.kcba.org/For-the-Public/Free-Legal-Assistance/Housing-Justice-Project/HJP-Heat-Map) for King County, WA.
+
+  * [Evicted in Oregon](https://www.evictedinoregon.com/by-county) has been tracking eviction filings across all counties in Oregon since the beginning of 2022. 
+
+  * [T﻿he Eviction Research Network](https://evictionresearch.net/index.html) collects, analyzes, and maps eviction data while helping other researchers map and analyze theirs. They track and map eviction data in several states across the country.
 ---
 # Acknowledgements
 
