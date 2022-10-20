@@ -29,6 +29,7 @@
   letter-spacing: 0.2rem;
   color: $color2;
   text-transform: uppercase;
+  margin-bottom: 4.8rem;
   @include for-tablet-portrait-up {
     @include altFont(2rem);
     letter-spacing: 0.18rem;
