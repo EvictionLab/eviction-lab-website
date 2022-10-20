@@ -701,7 +701,6 @@ collections:
           name: "title",
           widget: "string",
         }
-      
       - label: Category
         name: category
         widget: select
@@ -709,19 +708,11 @@ collections:
           - { label: "Graduate Research Assistants", value: "graduate" }
           - { label: "Research Assistants", value: "student" }
           - { label: "Alumni", value: "alumni", }
-        
       - {
           label: "Position",
           name: "position",
           widget: "string",
         }
-      - {
-          label: "Alumni?",
-          name: "studentalumni",
-          widget: boolean,
-          default: false,
-          hint: "Toggle to 'on' if the student is an alumnus"
-        }  
       - {
           label: "Full image",
           name: "image",
