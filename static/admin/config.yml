@@ -703,7 +703,7 @@ collections:
         }
       - {
           label: "Category",
-          name: "category"
+          name: "category",
           widget: "select",
           options:
           - { label: "Graduate Research Assistants", value: "graduate" }
