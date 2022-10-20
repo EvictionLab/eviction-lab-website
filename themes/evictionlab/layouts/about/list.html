@@ -196,7 +196,7 @@
                 {{ end }}
               {{ end }}
 
-          <h2 class="w-100 text-center page-section-headerv3">RESEARCH ASSISTANTS</h2>
+          <h2 class="w-100 text-center page-section-headerv3 mt-md-5">RESEARCH ASSISTANTS</h2>
 
   
               {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
@@ -207,7 +207,7 @@
                 {{ end }}
               {{ end }}    
 
-          <h2 class="w-100 text-center page-section-headerv3">ALUMNI</h2>
+          <h2 class="w-100 text-center page-section-headerv3 mt-md-5">ALUMNI</h2>
 
               {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
                 {{ if eq .Params.childof "student-researcher-bios" }} 
