@@ -1,10 +1,10 @@
 ---
 childof: student-researcher-bios
-category: student
+category: graduate
 abbrev: rhanifa
 title: Raheem Hanifa
 position: Research Assistant
 image: rhanifa_full.jpg
 thumb: rhanifa_thumb.jpg
-weight: 65
+weight: 15
 ---
