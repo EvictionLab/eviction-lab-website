@@ -144,23 +144,83 @@
         <!-- *************** Student Researcher Bios ******************** -->
         <div role="tabpanel" class="tab-pane" id="team2">
           <div class="bio-thumbs">
+          <!-- Espanol -->   
             {{ if eq .Site.Language.LanguageName "Español" }}
-              {{ range .Translations }}
+              
+            ` {{ range .Translations }}
+
                 {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+
                   {{ if eq .Params.childof "student-researcher-bios" }} 
-                    {{ partial "about-modal" . }}
+                    {{ if ne .Params.studentalumni true }}
+                      {{ partial "about-modal" . }}
+                    {{ end }}
                   {{ end }}
-               {{ end }}
-              {{ end }}
-            {{ end }} 
+
+                {{ end }}
+
+              {{ end }}  
+         
+              
+
+            <!--<h2 class="w-100 text-center page-section-headerv2 mt-5">ALUMNI</h2>-->
+
+              
+            ` {{ range .Translations }}
+
+                {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+
+                  {{ if eq .Params.childof "student-researcher-bios" }} 
+                    {{ if eq .Params.studentalumni true }}
+                      {{ partial "about-modal" . }}
+                    {{ end }}
+                  {{ end }}
+
+                {{ end }}
+
+              {{ end }}  
+            {{ end }}
+             
+          
+          <!-- English -->  
+
+
 
             {{ if eq .Site.Language.LanguageName "English" }}
+            <h2 class="w-100 text-center page-section-headerv3">GRADUATE RESEARCH ASSISTANTS</h2>
               {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
                 {{ if eq .Params.childof "student-researcher-bios" }} 
-                  {{ partial "about-modal" . }}
+                  {{ if eq .Params.category "graduate" }}
+                    {{ partial "about-modal" . }}
+                  {{ end }}   
                 {{ end }}
               {{ end }}
-           {{ end }}
+
+          <h2 class="w-100 text-center page-section-headerv3 mt-md-5">RESEARCH ASSISTANTS</h2>
+
+  
+              {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+                {{ if eq .Params.childof "student-researcher-bios" }} 
+                  {{ if eq .Params.category "student" }}
+                    {{ partial "about-modal" . }}
+                  {{ end }}   
+                {{ end }}
+              {{ end }}    
+
+          <h2 class="w-100 text-center page-section-headerv3 mt-md-5">ALUMNI</h2>
+
+              {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+                {{ if eq .Params.childof "student-researcher-bios" }} 
+                  {{ if eq .Params.category "alumni" }}
+                    {{ partial "about-modal" . }}
+                  {{ end }}  
+                {{ end }}
+              {{ end }}
+
+
+            {{ end }}
+
+       
           </div>
           </div> <!-- End Student Researcher tab-pane -->
         <!-- *************** Web Team Bios ******************** -->

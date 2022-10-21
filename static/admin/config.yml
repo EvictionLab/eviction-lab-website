@@ -701,6 +701,13 @@ collections:
           name: "title",
           widget: "string",
         }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - { label: "Graduate Research Assistants", value: "graduate" }
+          - { label: "Research Assistants", value: "student" }
+          - { label: "Alumni", value: "alumni", }
       - {
           label: "Position",
           name: "position",
