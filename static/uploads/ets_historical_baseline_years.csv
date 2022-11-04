@@ -1,0 +1,38 @@
+site,historical_baseline_years,smallest_geography,county_fips
+Albuquerque,2017-2019,Census Tract,35001
+Austin,2014-2019,ZIP Code,48453
+Boston,"2012, 2013, 2015, 2016",Census Tract,25025; 25017; 25021
+Bridgeport,2017-2019,Census Tract,09001
+Charleston,2016-2019,Census Tract,45019
+Cincinnati,2012-2016,Census Tract,39061
+Cleveland,"2012, 2013, 2015, 2016",Census Tract,39035
+Columbus,"2012, 2013, 2015",Census Tract,39049
+Connecticut,2017-2019,Census Tract,09001; 09003
+Dallas,2017-2019,Census Tract,48113
+Delaware,2016-2019,Census Tract,10003
+Fort Worth,2016-2019,Census Tract,48121;48439
+Gainesville,2017-2019,Census Tract,12001
+Greenville,2016-2019,Census Tract,45045
+Hartford,2017-2019,Census Tract,09003
+Houston,2012-2015,Census Tract,48167;48201
+Indiana,2016-2019,Census Tract,18097; 18141
+Indianapolis,2016-2019,Census Tract,18097
+Jacksonville,2012-2016,Census Tract,12031
+Kansas City,2012-2015,Census Tract,29095; 29189
+Las Vegas,2016-2019,Census Tract,32003
+Memphis,2016-2019,Census Tract,47157
+Milwaukee,2012-2016,Census Tract,55079
+Minneapolis-Saint Paul,2012-2019,Census Tract,27053; 27123
+Minnesota,2012-2019,Census Tract,27053; 27123
+Missouri,2012-2015,Census Tract,29095; 29189; 29510
+New Mexico,2017-2019,Census Tract,35001
+New Orleans,2019,Census Tract,22071
+New York,2016-2018,ZIP Code,36061; 36047; 36005; 36081; 36085
+Philadelphia,2016-2019,Census Tract,42101
+Phoenix,2015-2019,Census Tract,04013
+Pittsburgh,2012-2019,ZIP Code,42003
+Richmond,2016,ZIP Code,12103
+South Bend,2016-2019,Census Tract,18141
+St Louis,"2012, 2013, 2015, 2016",Census Tract, 29510
+Tampa,2016-2019,Census Tract,12057
+Wilmington,2016-2019,Census Tract,10003
