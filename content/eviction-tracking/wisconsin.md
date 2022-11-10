@@ -21,6 +21,8 @@ More detail on eviction protections in Wisconsin can be found on the [COVID-19 H
 
 
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Wisconsin were higher than average in January and February of 2020. That pattern reversed in March, and filings were considerably down in April and May 2020.<sup>1</sup> Filings increased following the expiration of state-wide eviction protections.<sup>2</sup>
@@ -32,11 +34,15 @@ Eviction filings in Wisconsin were higher than average in January and February o
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/WI_shapes.geojson" data="/uploads/wisconsin_map.csv" %}}
+{{% report_map shapes="/uploads/WI_data_counties.json" data="/uploads/wisconsin_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -44,5 +50,7 @@ Wisconsin is divided into 72 counties. In each of those counties, we map the num
 
 1. Eviction filing data were collected by [January Advisors](https://www.januaryadvisors.com/). Historical averages were taken from Eviction Lab data and cover the years 2016-2018.
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+
+
 
 {{%/ report_map %}}
