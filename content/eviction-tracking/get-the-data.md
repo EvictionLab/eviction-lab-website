@@ -227,6 +227,11 @@ data:
     geo: Census Tract
     file: /uploads/wilmington_weekly_2020_2021.csv
     monthfile: /uploads/wilmington_monthly_2020_2021.csv
+  - site: Wisconsin
+    years: 2016-2018
+    geo: Census Tract
+    file: /uploads/wisconsin_weekly_2020_2021.csv
+    monthfile: /uploads/wisconsin_monthly_2020_2021.csv
 ---
 Sample code:
 
