@@ -73,7 +73,7 @@ data:
     file: /uploads/cincinnati_weekly_2020_2021.csv
     monthfile: /uploads/cincinnati_monthly_2020_2021.csv
   - site: Cleveland
-    years: 2012, 2013, 2015, 2016
+    years: 2016-2019
     geo: Census Tract
     file: /uploads/cleveland_weekly_2020_2021.csv
     monthfile: /uploads/cleveland_monthly_2020_2021.csv
