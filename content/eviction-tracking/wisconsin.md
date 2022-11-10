@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Wisconsin | Eviction Tracking System
 h1: Wisconsin
 slug: wisconsin
@@ -28,7 +28,7 @@ Eviction filings in Wisconsin were higher than average in January and February o
 
 
 
-{{% report_map shapes="/uploads/WI_data_counties.json" data="/uploads/wisconsin_map.csv" %}}
+{{% report_map shapes="/uploads/wisconsin_shapes.json" data="/uploads/wisconsin_map.csv" %}}
 
 
 
