@@ -1,0 +1,163 @@
+{
+  "currentVersion": [10.81],
+  "id": [3],
+  "name": ["County Boundary"],
+  "type": ["Feature Layer"],
+  "description": ["This polygon feature class represents boundaries of the 72 counties in Wisconsin. The data is derived from 1:24,000-scale sources. This feature class was last updated in December 2011; refer to the Data Quality section of the ArcGIS metadata for information about the nature of the update."],
+  "geometryType": ["esriGeometryPolygon"],
+  "sourceSpatialReference": {
+    "wkid": [3071],
+    "latestWkid": [3071]
+  },
+  "copyrightText": ["WI Dept. of Natural Resources"],
+  "parentLayer": {
+    "id": [1],
+    "name": ["Political"]
+  },
+  "subLayers": [],
+  "minScale": [8110096],
+  "maxScale": [1],
+  "drawingInfo": {
+    "renderer": {
+      "type": ["simple"],
+      "symbol": {
+        "type": ["esriSFS"],
+        "style": ["esriSFSSolid"],
+        "color": [0, 0, 0, 0],
+        "outline": {
+          "type": ["esriSLS"],
+          "style": ["esriSLSSolid"],
+          "color": [204, 204, 204, 255],
+          "width": [0.6]
+        }
+      },
+      "label": [""],
+      "description": [""]
+    },
+    "transparency": [0],
+    "labelingInfo": [
+      {
+        "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+        "labelExpression": "[COUNTY_NAME]",
+        "useCodedValues": true,
+        "symbol": {
+          "type": "esriTS",
+          "color": [104, 104, 104, 255],
+          "verticalAlignment": "bottom",
+          "horizontalAlignment": "center",
+          "rightToLeft": false,
+          "angle": 0,
+          "xoffset": 0,
+          "yoffset": 0,
+          "kerning": true,
+          "font": {
+            "family": "Calibri",
+            "size": 8,
+            "style": "italic",
+            "weight": "normal",
+            "decoration": "none"
+          }
+        },
+        "minScale": 0,
+        "maxScale": 0
+      }
+    ]
+  },
+  "defaultVisibility": [true],
+  "extent": {
+    "xmin": [294838.9999],
+    "ymin": [225108.8128],
+    "xmax": [770036.372],
+    "ymax": [734398.4379],
+    "spatialReference": {
+      "wkid": [3071],
+      "latestWkid": [3071]
+    }
+  },
+  "hasAttachments": [false],
+  "htmlPopupType": ["esriServerHTMLPopupTypeAsHTMLText"],
+  "displayField": ["DNR_REGION_NAME"],
+  "typeIdField": {},
+  "subtypeFieldName": {},
+  "subtypeField": {},
+  "defaultSubtypeCode": {},
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID"
+    },
+    {
+      "name": "COUNTY_NAME",
+      "type": "esriFieldTypeString",
+      "alias": "County Name",
+      "length": 20
+    },
+    {
+      "name": "DNR_CNTY_CODE",
+      "type": "esriFieldTypeInteger",
+      "alias": "DNR  County Code"
+    },
+    {
+      "name": "DNR_REGION_NAME",
+      "type": "esriFieldTypeString",
+      "alias": "DNR Region Name",
+      "length": 20
+    },
+    {
+      "name": "COUNTY_FIPS_CODE",
+      "type": "esriFieldTypeString",
+      "alias": "COUNTY_FIPS_CODE",
+      "length": 3
+    },
+    {
+      "name": "SHAPE",
+      "type": "esriFieldTypeGeometry",
+      "alias": "Shape"
+    }
+  ],
+  "geometryField": {
+    "name": ["SHAPE"],
+    "type": ["esriFieldTypeGeometry"],
+    "alias": ["Shape"]
+  },
+  "indexes": [
+    {
+      "name": "A1785_IX1",
+      "fields": "SHAPE",
+      "isAscending": true,
+      "isUnique": true,
+      "description": ""
+    }
+  ],
+  "subtypes": [],
+  "relationships": [],
+  "canModifyLayer": [true],
+  "canScaleSymbols": [false],
+  "hasLabels": [true],
+  "capabilities": ["Map,Query,Data"],
+  "maxRecordCount": [1000],
+  "supportsStatistics": [true],
+  "supportsAdvancedQueries": [true],
+  "supportedQueryFormats": ["JSON, geoJSON"],
+  "isDataVersioned": [false],
+  "ownershipBasedAccessControlForFeatures": {
+    "allowOthersToQuery": [true]
+  },
+  "useStandardizedQueries": [true],
+  "advancedQueryCapabilities": {
+    "useStandardizedQueries": [true],
+    "supportsStatistics": [true],
+    "supportsHavingClause": [true],
+    "supportsCountDistinct": [true],
+    "supportsOrderBy": [true],
+    "supportsDistinct": [true],
+    "supportsPagination": [true],
+    "supportsTrueCurve": [true],
+    "supportsReturningQueryExtent": [true],
+    "supportsQueryWithDistance": [true],
+    "supportsSqlExpression": [true]
+  },
+  "supportsDatumTransformation": [true],
+  "supportsCoordinatesQuantization": [true]
+}
