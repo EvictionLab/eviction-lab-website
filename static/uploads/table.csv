@@ -1,4 +1,4 @@
-id,name,week_date,week_filings,week_trend,end_moratorium_date,start_moratorium_date,subgroups,subgroup_values,data_date
+id,name,week_date,week_filings,week_trend,end_moratorium_date,start_moratorium_date,subgroups,subgroup_values,data_date,draft
 35001,"Albuquerque, NM",03/15/2020,179,188.75,,,,,11/05/2022
 35001,"Albuquerque, NM",03/22/2020,53,170,,,,,11/05/2022
 35001,"Albuquerque, NM",03/29/2020,26,162.75,,,,,11/05/2022
