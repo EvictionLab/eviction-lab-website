@@ -580,9 +580,12 @@ Elab.Data = (function (Elab) {
    */
 
   var shapeCityData = function shapeCityData(data) {
-    var result = {}; // create an object containing data by identifier
+    var result = {} // create an object containing data by identifier
 
     data.forEach(function (d) {
+      // ignore "draft" rows, so data can be added for draft sites w/o them getting added to table
+      if (d.draft === "1") return
+
       if (!result[d.id]) {
         // key doesn't exist in the object, add it
         result[d.id] = {
@@ -596,17 +599,17 @@ Elab.Data = (function (Elab) {
           subgroups: d["subgroups"] ? d["subgroups"].split(";") : null,
           subgroup_values: d["subgroup_values"]
             ? d["subgroup_values"].split(";").map(function (d) {
-                return parseInt(d);
+                return parseInt(d)
               })
             : null,
-        };
+        }
       } else {
         // key already exists, push values for the given week
-        result[d.id].values.push(parseWeekValues(d));
+        result[d.id].values.push(parseWeekValues(d))
       }
-    });
-    return shapeResult(result);
-  };
+    })
+    return shapeResult(result)
+  }
   /**
    * Takes the state level CSV data and parses / shapes it into
    * an array for the ETS pages
@@ -614,9 +617,12 @@ Elab.Data = (function (Elab) {
    */
 
   var shapeStateData = function shapeStateData(data) {
-    var result = {}; // create an object containing data by identifier
+    var result = {} // create an object containing data by identifier
 
     data.forEach(function (d) {
+      // ignore "draft" rows, so data can be added for draft sites w/o them getting added to table
+      if (d.draft === "1") return
+
       if (!result[d.id]) {
         // key doesn't exist in the object, add it
         result[d.id] = {
@@ -625,14 +631,14 @@ Elab.Data = (function (Elab) {
           values: [parseWeekValues(d)],
           start: d["start_moratorium_date"].split(";").map(parseDate),
           end: d["end_moratorium_date"].split(";").map(parseDate),
-        };
+        }
       } else {
         // key already exists, push values for the given week
-        result[d.id].values.push(parseWeekValues(d));
+        result[d.id].values.push(parseWeekValues(d))
       }
-    });
-    return shapeResult(result);
-  };
+    })
+    return shapeResult(result)
+  }
   /**
    * Generic function to load data, shape it, then fire a callback
    * @param {*} dataUrl
