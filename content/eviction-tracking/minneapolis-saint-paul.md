@@ -4,17 +4,17 @@ draft: false
 h1: Minneapolis–Saint Paul, Minnesota
 slug: minneapolis-saint-paul-mn
 date: 2022-07-21T04:00:00.000Z
+rentersSite: Minneapolis-Saint Paul
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Minneapolis–Saint Paul, Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Minneapolis-Saint Paul
 ---
 
 {{< report_intro id="27053" data="/uploads/table.csv" >}}
 
 
 
-Eviction filings in Minneapolis-Saint Paul (Hennepin and Ramsey Counties, MN) fell sharply in mid-March 2020 when a statewide moratorium on evictions was put in place on March 16. The moratorium had been renewed each month until June 2021, after which the state [began phasing out protections](https://nlihc.org/resource/minnesotas-eviction-moratorium-ramp).
+Eviction filings in Minneapolis-Saint Paul (Hennepin and Ramsey Counties, MN) fell sharply in mid-March 2020 when a statewide moratorium on evictions was put in place on March 16. The moratorium was renewed each month until June 2021, after which the state [began phasing out protections](https://nlihc.org/resource/minnesotas-eviction-moratorium-ramp).
 
 More detail on eviction protections in Minneapolis–Saint Paul can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mn/).
 
