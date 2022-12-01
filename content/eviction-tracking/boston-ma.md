@@ -16,6 +16,8 @@ Eviction filings in Boston, MA fell sharply after eviction proceedings were susp
 
 The City of Boston enacted new protections in August 2021, prohibiting landlords and owners from serving or enforcing residential evictions, except in cases of serious lease violations or health and safety issues. These local protections were [struck down](https://www.bostonglobe.com/2021/11/29/business/judge-strikes-down-bostons-eviction-moratorium/) on November 29, 2021. 
 
+More detail on eviction protections in Massachusetts can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ma/).
+
 1. Boston eviction filing data has a disproportionate number of cases with missing census tract information in recent months. We have temporarily pulled our tract-level analyses as a result.
 
 {{</ report_intro >}}
