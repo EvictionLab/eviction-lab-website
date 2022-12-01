@@ -8,7 +8,7 @@ cascade:
   socialDescription: We’ve built the first nationwide database of evictions.
 h1: Methods
 layout: content
-date: 2021-08-25T00:00:00.000Z
+date: 2022-12-02T01:00:00.000Z
 ---
 # Methods
 
