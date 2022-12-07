@@ -44,6 +44,8 @@ similar: >-
   * The King County Bar Association has an [Eviction Tracker](http://www.kcba.org/For-the-Public/Free-Legal-Assistance/Housing-Justice-Project/HJP-Heat-Map) for King County, WA.
 
   * [T﻿he Eviction Research Network](https://evictionresearch.net/index.html) collects, analyzes, and maps eviction data while helping other researchers map and analyze theirs. They track and map eviction data in several states across the country.
+
+  * L﻿awyers' Committee for Better Housing has been [tracking eviction data in Chicago](https://eviction.lcbh.org/reports/eviction-tracking-monthly).
 ---
 # Acknowledgements
 
