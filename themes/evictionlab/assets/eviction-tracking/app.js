@@ -1930,9 +1930,12 @@ Elab.Map = (function (Elab) {
     var allProps = config.metrics;
     var layersAdded = false;
     var usBounds = [
-      [-129.54443, 18.235058],
-      [-63.802242, 52.886017],
+      [-179.54443, 17.235058],
+      [-63.802242, 71.886017],
     ];
+    // pre AK/PR:
+    // [-129.54443, 18.235058],
+    // [-63.802242, 52.886017],
     mapboxgl.accessToken = accessToken;
     var map = new mapboxgl.Map({
       container: mapEl,
@@ -1959,7 +1962,7 @@ Elab.Map = (function (Elab) {
             },
             {
               hover: false,
-            }
+            },
           );
         }
 
@@ -1971,7 +1974,7 @@ Elab.Map = (function (Elab) {
           },
           {
             hover: true,
-          }
+          },
         );
       }
     }
@@ -1991,7 +1994,7 @@ Elab.Map = (function (Elab) {
           },
           {
             hover: false,
-          }
+          },
         );
       }
 
@@ -2130,12 +2133,9 @@ Elab.Map = (function (Elab) {
       var mapDate = allData[0][config.dateCol];
       var date = d3.timeFormat("%B %e, %Y")(mapDate);
       var label = "since " + date;
-      if (isRate(currentProp))
-        label = "% of rentals with eviction filings, since " + date;
-      if (isAvgDiff(currentProp))
-        label = "% of filings compared to average, since " + date;
-      if (isCount(currentProp))
-        label = "Number of eviction filings, since " + date;
+      if (isRate(currentProp)) label = "% of rentals with eviction filings, since " + date;
+      if (isAvgDiff(currentProp)) label = "% of filings compared to average, since " + date;
+      if (isCount(currentProp)) label = "Number of eviction filings, since " + date;
 
       if (mapDate) {
         rootEl.find(".legend__date").html(label);
@@ -2161,9 +2161,7 @@ Elab.Map = (function (Elab) {
         feature.properties.hasOwnProperty("pct_black") ||
         feature.properties.hasOwnProperty("pct_latinx");
       var html = TooltipTemplate({
-        name: feature.properties.NAME
-          ? feature.properties.NAME.split(",")[0]
-          : "Unknown",
+        name: feature.properties.NAME ? feature.properties.NAME.split(",")[0] : "Unknown",
         value: getTooltipValue(feature, currentProp),
         majority: feature.properties["racial_majority"],
         percents: getPercentBreakdown(feature.properties),

@@ -1,4 +1,4 @@
-id,name,week_date,week_filings,week_trend,end_moratorium_date,start_moratorium_date,data_date
+id,name,week_date,week_filings,week_trend,end_moratorium_date,start_moratorium_date,data_date,draft
 09,connecticut,03/15/2020,260,338.5,06/30/2021,03/16/2020,11/05/2022
 09,connecticut,03/22/2020,192,301.75,06/30/2021,03/16/2020,11/05/2022
 09,connecticut,03/29/2020,78,220,06/30/2021,03/16/2020,11/05/2022
