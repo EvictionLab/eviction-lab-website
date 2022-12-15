@@ -3,33 +3,28 @@ collection: true
 draft: false
 h1: Richmond, Virginia
 slug: richmond-va
-date: 2022-07-24T04:00:00.000Z
+date: 2022-12-15T05:00:00.000Z
+rentersSite: Richmond
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Richmond, Virginia | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Richmond
 ---
-
 {{< report_intro id="51760" data="/uploads/table.csv" >}}
 
-Eviction filings in Richmond, VA fell sharply in mid-March of 2020. Compared to equivalent periods in 2016, eviction filings were far below average over the last two weeks of March and throughout April and May 2020. Eviction hearings were halted from late-March to May 18, and again for most of June 2020. Eviction judgments were also stayed from August 10 to September 7, 2020. From late-November 2020 to June 30, 2021, Virginia also implemented protections for tenants applying for rental assistance and required certain larger landlords to offer payment plans to tenants before taking action to evict.
+Eviction filings in Richmond, VA fell sharply in mid-March of 2020. Compared to equivalent periods in 2016-2019, eviction filings were far below average over the last two weeks of March and throughout April and May 2020. Virginia implemented a state-wide eviction moratorium between March 16, 2020 and June 28, 2020. Further protections restricting the circumstances under which evictions could be filed were in place from January 1, 2021 to June 30, 2021, and were renewed from August 10, 2021 to June 30, 2022. Eviction filings remained low in the state during these periods, but have increased since these protections were lifted.
 
 More detail on eviction protections in Virginia can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/va/).
 
-Our data in Richmond is a slight undercount compared to the number of filings found in [data released](http://www.courts.state.va.us/courtadmin/aoc/judpln/csi/home.html) by the Virginia Judicial System.
-
 {{</ report_intro >}}
-
 
 
 {{% report_chart id="avg" data="/uploads/richmond_barchart.csv" %}}
 
 # Changes in eviction filings
 
-Eviction filings in Richmond were near average in January and February of 2020.<sup>1</sup> Filings began to fall in March and April 2020 following the suspension of eviction proceedings.<sup>2</sup>
+Eviction filings in Richmond were near average in January and February of 2020.<sup>1</sup> Filings began to drop in March, and remained well below pre-pandemic averages until June 2022, after which filings increased.
 
-1. Average eviction filings taken from Eviction Lab data for 2016
-2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
+1. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
 {{%/ report_chart %}}
 
@@ -41,7 +36,7 @@ Eviction filings in Richmond were near average in January and February of 2020.<
 
 Richmond is divided into 36 zip codes. In each of those zip codes, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
-1. Average eviction filings taken from Eviction Lab data for 2016
+1. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 2. Zip code breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
 {{%/ report_map %}}
@@ -50,16 +45,12 @@ Richmond is divided into 36 zip codes. In each of those zip codes, we map the nu
 
 {{% report_chart id="race" data="/uploads/richmond_linechart.csv" %}}
 
-
-
 # Eviction filings by neighborhood demographics
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and filings in 2016.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and filings in 2016-2019.<sup>1</sup>
 
-1. Average eviction filings taken from Eviction Lab data for 2016
-
-
+1. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
 {{%/ report_chart %}}
