@@ -15,7 +15,9 @@ More detail on eviction protections in Virginia can be found on the [COVID-19 Ho
 {{< /report_intro >}}
 
 
-{{% report_chart id="avg" data="undefined" %}}
+{{% report_chart id="avg" data="/uploads/virginia_barchart.csv" %}}
+
+
 
 
 
@@ -27,11 +29,15 @@ Eviction filings in Virginia were very close to historical average in January an
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/virginia_shapes.json" data="undefined" %}}
+{{% report_map shapes="/uploads/virginia_shapes.json" data="/uploads/virginia_map.csv" %}}
+
+
 
 
 
@@ -41,6 +47,8 @@ Virginia is divided into 134 counties and jurisdictions. In 124 of these, we map
 
 1. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+
+
 
 
 
