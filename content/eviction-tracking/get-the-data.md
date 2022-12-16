@@ -203,7 +203,7 @@ data:
     file: /uploads/pittsburgh_weekly_2020_2021.csv
     monthfile: /uploads/pittsburgh_monthly_2020_2021.csv
   - site: Richmond
-    years: "2016"
+    years: 2016-2019
     geo: ZIP Code
     file: /uploads/richmond_weekly_2020_2021.csv
     monthfile: /uploads/richmond_monthly_2020_2021.csv
@@ -232,6 +232,11 @@ data:
     geo: Census Tract
     file: /uploads/wisconsin_weekly_2020_2021.csv
     monthfile: /uploads/wisconsin_monthly_2020_2021.csv
+  - site: Virginia
+    years: 2016-2019
+    geo: ZIP Code
+    file: /uploads/virginia_weekly_2020_2021.csv
+    monthfile: /uploads/virginia_monthly_2020_2021.csv
 ---
 Sample code:
 
