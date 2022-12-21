@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Albuquerque
 ---
 
-{{< report_intro id="35001" data="/uploads/table.csv" >}}
+{{< report_intro id="35001" data="/uploads/table.csv" stats="/uploads/filing_data_by_site.csv" site="Albuquerque" >}}
 
 
 
@@ -54,7 +54,7 @@ Eviction Hotspot data will be updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/albuquerque_shapes.json" data="/uploads/albuquerque_map.csv" %}}
+{{% report_map shapes="/uploads/albuquerque_shapes.json" data="/uploads/albuquerque_map.csv" topData="/uploads/albuquerque_hotspots_media_report.csv" %}}
 
 # The geography of changes in eviction filings
 
