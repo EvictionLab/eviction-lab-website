@@ -16,21 +16,44 @@
       <div class="legend__gradient"></div>
       <div class="legend__gradient-labels"></div>
     </div>
+    <div class="legend legend--points">
+      <div class="legend-item">
+        <div class="legend-item__label">
+          <label for="top-100">
+            <input id="top-100" type="checkbox" checked="true" aria-labelledby="labels_top-100">
+            <span id="labels_top-100">Number of filings by the top 100 filers</span>
+          </label>
+        </div>
+      </div>
+      <div class="legend__points-scale">
+        <div class="legend__points">
+          <svg width="6" height="18">
+            <circle cx="4" cy="8" r="2" fill="rgb(44, 137, 127)"></circle>
+          </svg>
+          <svg width="16" height="18">
+            <circle cx="8" cy="8" r="8" fill="rgb(44, 137, 127)"></circle>
+          </svg>
+        </div>
+        <div class="legend__points-labels"></div>
+      </div>
+    </div>
     <p class="footnote"></p>
   </div>
   <script>
     window.addEventListener("load", function () {
       var geojson = {{ .Get "shapes" }};
       var csv = {{ .Get "data" }};
+          var topCsv = {{ .Get "topData" }};
       var rootEl = '.section--map'
-      Elab.Section.init('map', rootEl, { 
-        geojson: geojson, 
-        csv: csv,  
+          Elab.Section.init('map', rootEl, {
+            geojson: geojson,
+            csv: csv,
+          topCsv: topCsv,
         metrics: {
-          "month_filings": "Filings", 
-          "month_rate": "Filing Rate", 
+          "month_filings": "Filings",
+          "month_rate": "Filing Rate",
           "month_diff": "Relative To Average"
-        }, 
+          },
         dateCol: "month_date"
       })
     })

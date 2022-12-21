@@ -284,6 +284,7 @@ Elab.Config = (function (Elab) {
    */
 
   var xPadExtent = function xPadExtent(extent) {
+    console.log({ extent }, d3.timeMonth(extent[0]));
     return [d3.timeMonth.floor(extent[0]), d3.timeMonth.ceil(extent[1])];
   };
   /**
@@ -453,8 +454,7 @@ Elab.Config = (function (Elab) {
         var distance = d._raw.y - 1;
         var value = Math.abs(distance);
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
-        var str =
-          dir === "mid" ? "average" : d3.format(",.0%")(Math.abs(distance));
+        var str = dir === "mid" ? "average" : d3.format(",.0%")(Math.abs(distance));
         return (
           '<div class="tooltip__item tooltip__item--multi">' +
           "<span>" +
@@ -496,8 +496,7 @@ Elab.Config = (function (Elab) {
         var distance = d._raw.y - d._raw.extras["avg_filings"];
         var value = Math.abs(distance);
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
-        var str =
-          dir === "mid" ? "average" : d3.format(",d")(Math.abs(distance));
+        var str = dir === "mid" ? "average" : d3.format(",d")(Math.abs(distance));
         return (
           '<div class="tooltip__item tooltip__item--multi">' +
           "<span>" +
@@ -584,11 +583,11 @@ Elab.Data = (function (Elab) {
    */
 
   var shapeCityData = function shapeCityData(data) {
-    var result = {} // create an object containing data by identifier
+    var result = {}; // create an object containing data by identifier
 
     data.forEach(function (d) {
       // ignore "draft" rows, so data can be added for draft sites w/o them getting added to table
-      if (d.draft === "1") return
+      if (d.draft === "1") return;
 
       if (!result[d.id]) {
         // key doesn't exist in the object, add it
@@ -603,17 +602,17 @@ Elab.Data = (function (Elab) {
           subgroups: d["subgroups"] ? d["subgroups"].split(";") : null,
           subgroup_values: d["subgroup_values"]
             ? d["subgroup_values"].split(";").map(function (d) {
-                return parseInt(d)
+                return parseInt(d);
               })
             : null,
-        }
+        };
       } else {
         // key already exists, push values for the given week
-        result[d.id].values.push(parseWeekValues(d))
+        result[d.id].values.push(parseWeekValues(d));
       }
-    })
-    return shapeResult(result)
-  }
+    });
+    return shapeResult(result);
+  };
   /**
    * Takes the state level CSV data and parses / shapes it into
    * an array for the ETS pages
@@ -621,11 +620,11 @@ Elab.Data = (function (Elab) {
    */
 
   var shapeStateData = function shapeStateData(data) {
-    var result = {} // create an object containing data by identifier
+    var result = {}; // create an object containing data by identifier
 
     data.forEach(function (d) {
       // ignore "draft" rows, so data can be added for draft sites w/o them getting added to table
-      if (d.draft === "1") return
+      if (d.draft === "1") return;
 
       if (!result[d.id]) {
         // key doesn't exist in the object, add it
@@ -635,14 +634,14 @@ Elab.Data = (function (Elab) {
           values: [parseWeekValues(d)],
           start: d["start_moratorium_date"].split(";").map(parseDate),
           end: d["end_moratorium_date"].split(";").map(parseDate),
-        }
+        };
       } else {
         // key already exists, push values for the given week
-        result[d.id].values.push(parseWeekValues(d))
+        result[d.id].values.push(parseWeekValues(d));
       }
-    })
-    return shapeResult(result)
-  }
+    });
+    return shapeResult(result);
+  };
   /**
    * Generic function to load data, shape it, then fire a callback
    * @param {*} dataUrl
@@ -713,12 +712,9 @@ Elab.Chart = (function (Elab) {
     return collection.reduce(
       function (extent, item) {
         var itemExtent = d3.extent(item.data, selector);
-        return [
-          Math.min(itemExtent[0], extent[0]),
-          Math.max(itemExtent[1], extent[1]),
-        ];
+        return [Math.min(itemExtent[0], extent[0]), Math.max(itemExtent[1], extent[1])];
       },
-      [Number.MAX_VALUE, -Number.MAX_VALUE]
+      [Number.MAX_VALUE, -Number.MAX_VALUE],
     );
   }
   /**
@@ -776,9 +772,7 @@ Elab.Chart = (function (Elab) {
             y: config.parse.y(d[col]),
             // add extra columns to data
             extras: config.data.extra.reduce(function (obj, colName) {
-              obj[colName] = config.parse[colName]
-                ? config.parse[colName](d[colName])
-                : d[colName];
+              obj[colName] = config.parse[colName] ? config.parse[colName](d[colName]) : d[colName];
               return obj;
             }, {}),
           };
@@ -801,9 +795,7 @@ Elab.Chart = (function (Elab) {
         y: config.parse.y(row[config.data.y.col]),
         // add extra columns to data
         extras: config.data.extra.reduce(function (obj, colName) {
-          obj[colName] = config.parse[colName]
-            ? config.parse[colName](row[colName])
-            : row[colName];
+          obj[colName] = config.parse[colName] ? config.parse[colName](row[colName]) : row[colName];
           return obj;
         }, {}),
       });
@@ -868,8 +860,7 @@ Elab.Chart = (function (Elab) {
 
     config = makeParseConfig(config); // grab data points for each of the groups
 
-    var itemParser =
-      config.groupType === "col" ? parseColumnItems : parseRowItems;
+    var itemParser = config.groupType === "col" ? parseColumnItems : parseRowItems;
     result["items"] = itemParser(data, config); // x and y [min, max], padded based on config value
 
     result["extents"] = parseExtents(result["items"], config); // parse the area to mark
@@ -916,9 +907,9 @@ Elab.Chart = (function (Elab) {
   }
 
   function updatePartialFilingsDate(rootEl, data, currentConfig) {
-    const orderedData = data["_raw"].sort(function(a, b) {
-      aMonth = a.month.split('/').reverse().join('');
-      bMonth = b.month.split('/').reverse().join('');
+    const orderedData = data["_raw"].sort(function (a, b) {
+      aMonth = a.month.split("/").reverse().join("");
+      bMonth = b.month.split("/").reverse().join("");
       return aMonth > bMonth ? 1 : aMonth < bMonth ? -1 : 0;
     });
     var rawLastDay = orderedData[orderedData.length - 1]["month_last_day"];
@@ -929,8 +920,8 @@ Elab.Chart = (function (Elab) {
       "Partial " +
       d3.timeFormat("%B")(lastDay) +
       " filings as of " +
-      d3.timeFormat("%-m/%-d")(lastDay) + 
-      (currentConfig.id === 'avg' ? "<span>relative to average</span>" : '');
+      d3.timeFormat("%-m/%-d")(lastDay) +
+      (currentConfig.id === "avg" ? "<span>relative to average</span>" : "");
     var partialEl = rootEl.find(".visual__note");
     partialEl.html(value);
   }
@@ -960,7 +951,7 @@ Elab.Chart = (function (Elab) {
           (xFlipped ? "-100%" : "0") +
           ", " +
           (yFlipped ? "-100%" : "0") +
-          ")"
+          ")",
       )
       .html("<h1>" + title + "</h1>")
       .style("display", "block")
@@ -1035,86 +1026,87 @@ Elab.Chart = (function (Elab) {
       var groupNames = data.items.map(function (d) {
         return d.id;
       });
-      var x1 = d3
-        .scaleBand()
-        .domain(groupNames)
-        .rangeRound([0, context.x.bandwidth()]);
+      var x1 = d3.scaleBand().domain(groupNames).rangeRound([0, context.x.bandwidth()]);
 
       //bryony cheat
       const svg = d3.select(context.els.data.node().parentElement.parentElement);
 
       //remove any previous pattern and adding a new one
       svg.selectAll("#finalEvictRectWhite").remove();
-      svg.append("pattern")
-          .attr("id", "finalEvictRectWhite")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 4)
-          .attr("height", 8)
-          .style("fill", "#E24000")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRectWhite" +
-              '" x="0" y="0" width="2" height="8" />'
-          );
+      svg
+        .append("pattern")
+        .attr("id", "finalEvictRectWhite")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 4)
+        .attr("height", 8)
+        .style("fill", "#E24000")
+        .attr("patternUnits", "userSpaceOnUse")
+        .attr("patternTransform", "rotate(45)")
+        .html(
+          '<rect class="chart__pattern chart__pattern--' +
+            "finalEvictRectWhite" +
+            '" x="0" y="0" width="2" height="8" />',
+        );
       svg.selectAll("#finalEvictRectBlack").remove();
-      svg.append("pattern")
-          .attr("id", "finalEvictRectBlack")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 4)
-          .attr("height", 8)
-          .style("fill", "#434878")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRectBlack" +
-              '" x="0" y="0" width="2" height="8" />'
-          );
+      svg
+        .append("pattern")
+        .attr("id", "finalEvictRectBlack")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 4)
+        .attr("height", 8)
+        .style("fill", "#434878")
+        .attr("patternUnits", "userSpaceOnUse")
+        .attr("patternTransform", "rotate(45)")
+        .html(
+          '<rect class="chart__pattern chart__pattern--' +
+            "finalEvictRectBlack" +
+            '" x="0" y="0" width="2" height="8" />',
+        );
       svg.selectAll("#finalEvictRectLatinx").remove();
-      svg.append("pattern")
-          .attr("id", "finalEvictRectLatinx")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 4)
-          .attr("height", 8)
-          .style("fill", "#2C897F")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRectLatinx" +
-              '" x="0" y="0" width="2" height="8" />'
-          );
+      svg
+        .append("pattern")
+        .attr("id", "finalEvictRectLatinx")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 4)
+        .attr("height", 8)
+        .style("fill", "#2C897F")
+        .attr("patternUnits", "userSpaceOnUse")
+        .attr("patternTransform", "rotate(45)")
+        .html(
+          '<rect class="chart__pattern chart__pattern--' +
+            "finalEvictRectLatinx" +
+            '" x="0" y="0" width="2" height="8" />',
+        );
       svg.selectAll("#finalEvictRectOther").remove();
-      svg.append("pattern")
-          .attr("id", "finalEvictRectOther")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 4)
-          .attr("height", 8)
-          .style("fill", "#94AABD")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRectOther" +
-              '" x="0" y="0" width="2" height="8" />'
-          );
+      svg
+        .append("pattern")
+        .attr("id", "finalEvictRectOther")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 4)
+        .attr("height", 8)
+        .style("fill", "#94AABD")
+        .attr("patternUnits", "userSpaceOnUse")
+        .attr("patternTransform", "rotate(45)")
+        .html(
+          '<rect class="chart__pattern chart__pattern--' +
+            "finalEvictRectOther" +
+            '" x="0" y="0" width="2" height="8" />',
+        );
 
-      var group = context.els.data
-        .selectAll(".chart__bar-group")
-        .data(groupedData); // enter each group
+      var group = context.els.data.selectAll(".chart__bar-group").data(groupedData); // enter each group
 
       //Bryony code
       //finding max date, id of max date and adding boolean to data.
-      const maxDate = d3.max(groupedData, d => monthParse(d.id));
-      const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
-      groupedData.map(m => m.data.map(dataItem => dataItem.finalBar = (m.id === maxId ? true : false)));
-      
+      const maxDate = d3.max(groupedData, (d) => monthParse(d.id));
+      const maxId = groupedData.find((f) => String(monthParse(f.id)) === String(maxDate)).id;
+      groupedData.map((m) =>
+        m.data.map((dataItem) => (dataItem.finalBar = m.id === maxId ? true : false)),
+      );
+
       var groupEls = group
         .enter()
         .append("g")
@@ -1124,9 +1116,7 @@ Elab.Chart = (function (Elab) {
           var date = monthParse(d.id);
           return "translate(" + context.x(date) + ",0)";
         });
-      var groupAreaSelection = context.els.data
-        .selectAll(".chart__bar-area")
-        .data(groupedData);
+      var groupAreaSelection = context.els.data.selectAll(".chart__bar-area").data(groupedData);
       var groupAreas = groupAreaSelection
         .enter()
         .append("rect")
@@ -1135,13 +1125,7 @@ Elab.Chart = (function (Elab) {
         .on("mousemove", function (d) {
           var title = chartConfig.format.xTooltip(d.data[0].value.x);
           var items = d.data.map(getHoverItem);
-          renderBarTooltip(
-            title,
-            items,
-            context,
-            chartConfig.format.tooltip,
-            config.id
-          );
+          renderBarTooltip(title, items, context, chartConfig.format.tooltip, config.id);
         })
         .on("mouseout", function () {
           if (context.els.tooltip) context.els.tooltip.style("display", "none");
@@ -1154,21 +1138,15 @@ Elab.Chart = (function (Elab) {
         .attr("y", 0)
         .attr("height", context.height)
         .attr("width", context.x.bandwidth() + 8);
-      var groupBars = groupEls.selectAll("rect")
-          .data(function (d) {
+      var groupBars = groupEls.selectAll("rect").data(function (d) {
         return d.data;
       });
-      
-     const barRects =  groupBars
+
+      const barRects = groupBars
         .enter()
         .append("rect") // add bars for new groups
         .attr("class", function (d, i) {
-          return (
-            "chart__bar chart__bar--" +
-            d.idx +
-            " chart__bar--" +
-            d.id.toLowerCase()
-          );
+          return "chart__bar chart__bar--" + d.idx + " chart__bar--" + d.id.toLowerCase();
         })
         .attr("width", x1.bandwidth())
         .attr("x", function (d) {
@@ -1196,23 +1174,23 @@ Elab.Chart = (function (Elab) {
         .attr("height", function (d) {
           return context.height - context.y(d.value.y);
         }); // remove bars groups
-      
-      barRects.style("fill", d => {
-        if (d.id === 'percentage_diff' || d.id === 'White' || d.id === 'month_filings') {
+
+      barRects.style("fill", (d) => {
+        if (d.id === "percentage_diff" || d.id === "White" || d.id === "month_filings") {
           return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
         }
-        if (d.id === 'avg_filings' || d.id === 'Black') {
+        if (d.id === "avg_filings" || d.id === "Black") {
           return d.finalBar === true ? "url(#finalEvictRectBlack)" : "#434878";
         }
-        if (d.id === 'Latinx') {
+        if (d.id === "Latinx") {
           return d.finalBar === true ? "url(#finalEvictRectLatinx)" : "#2C897F";
         }
-        if (d.id === 'Other') {
+        if (d.id === "Other") {
           return d.finalBar === true ? "url(#finalEvictRectOther)" : "#94AABD";
         }
         return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
       });
-      
+
       groupBars
         .exit()
         .transition()
@@ -1239,34 +1217,29 @@ Elab.Chart = (function (Elab) {
 
     function renderAxis(data, config, context) {
       var rotateLabels = function rotateLabels(selection) {
-
         //count number of ticks for bryony cheat
         //could not get to the bottom of where config.view.xTicks was looking
-       const tickCount = selection.selectAll(".tick").nodes().length;
+        const tickCount = selection.selectAll(".tick").nodes().length;
 
         selection
           .selectAll(".tick text")
-            .each(function(d,i){
-              //another bryony cheat.
-              if(tickCount > 20){
-                //if more than 20 ticks
-                if(i % 2 !== 0){
-                  //only show odd ticks.
-                  d3.select(this).attr("display", "none")
-                }
+          .each(function (d, i) {
+            //another bryony cheat.
+            if (tickCount > 20) {
+              //if more than 20 ticks
+              if (i % 2 !== 0) {
+                //only show odd ticks.
+                d3.select(this).attr("display", "none");
               }
-            })
+            }
+          })
           .attr("text-anchor", "end")
           .attr("transform", "rotate(-50)")
           .attr("dx", "-0.5em")
           .attr("dy", "0em");
       }; // setup x axis
 
-
-      var xAxis = d3
-        .axisBottom(context.x)
-        .ticks(5)
-        .tickFormat(config.format.x); // setup y axis
+      var xAxis = d3.axisBottom(context.x).ticks(5).tickFormat(config.format.x); // setup y axis
 
       var yAxis = d3
         .axisLeft(context.y)
@@ -1282,19 +1255,15 @@ Elab.Chart = (function (Elab) {
         .duration(1000)
         .call(xAxis)
         .call(rotateLabels.bind(context.els.xAxis));
-
-
     }
 
     function renderMarkLine(data, config, context) {
       // y axis mark lines
-      var markLine = context.els.markLines
-        .selectAll(".chart__mark-line--y")
-        .data(
-          config.markLines.filter(function (v) {
-            return v.labelOnly;
-          })
-        );
+      var markLine = context.els.markLines.selectAll(".chart__mark-line--y").data(
+        config.markLines.filter(function (v) {
+          return v.labelOnly;
+        }),
+      );
       markLine
         .enter()
         .append("line")
@@ -1388,11 +1357,8 @@ Elab.Chart = (function (Elab) {
 
     function renderContentUpdates(content, config) {
       content.forEach(function (item) {
-        var el = document.querySelector(
-          "#" + config.rootId + " " + item.selector
-        );
-        if (!el)
-          throw new Error("no element found for selector: " + item.selector);
+        var el = document.querySelector("#" + config.rootId + " " + item.selector);
+        if (!el) throw new Error("no element found for selector: " + item.selector);
         el.innerHTML = item.text;
       });
     }
@@ -1414,8 +1380,7 @@ Elab.Chart = (function (Elab) {
       };
 
       var el = document.querySelector("#" + config.rootId + " " + selector);
-      if (!el)
-        throw new Error("no element found for selector: " + item.selector);
+      if (!el) throw new Error("no element found for selector: " + item.selector);
       el.innerHTML = items
         .map(function (item) {
           return LegendItem(item);
@@ -1434,10 +1399,7 @@ Elab.Chart = (function (Elab) {
 
       var rect = els.root.node().parentNode.getBoundingClientRect(); // position the root
 
-      els.root.attr(
-        "transform",
-        "translate(" + margin.left + "," + margin.top + ")"
-      ); // account for margins
+      els.root.attr("transform", "translate(" + margin.left + "," + margin.top + ")"); // account for margins
 
       var width = rect.width - margin.left - margin.right;
       var height = rect.height - margin.top - margin.bottom; // extents
@@ -1447,13 +1409,9 @@ Elab.Chart = (function (Elab) {
       var xBands = d3.timeMonth.range(
         d3.timeMonth.floor(xExtent[0]),
         d3.timeMonth.floor(d3.timeMonth.offset(xExtent[1], 1)),
-        1
+        1,
       );
-      var xBandScale = d3
-        .scaleBand()
-        .rangeRound([0, width])
-        .padding(0.5)
-        .domain(xBands); // setup scales
+      var xBandScale = d3.scaleBand().rangeRound([0, width]).padding(0.5).domain(xBands); // setup scales
 
       var x = xBandScale;
       var y = d3.scaleLinear().rangeRound([height, 0]).domain([0, yExtent[1]]); // context passed to render functions
@@ -1492,7 +1450,7 @@ Elab.Chart = (function (Elab) {
       if (!elements) elements = initElements(root);
       if (newConfig) chartConfig = newConfig;
       parsedData = parseData(source, chartConfig); // use debounced render when updating, for performance
-      
+
       render();
     }
 
@@ -1518,7 +1476,6 @@ Elab.Chart = (function (Elab) {
    */
 
   function createChart(elementId, config, callback) {
-
     // Load the data and draw a chart
     d3.csv(config.url, function (data) {
       if (!data) {
@@ -1537,7 +1494,7 @@ Elab.Chart = (function (Elab) {
 
       var root;
       root = d3.select(elementId).append("g"); // create chart
-      
+
       var chart = Chart(data, root, config); // resize the chart when the window size changes
 
       window.addEventListener("resize", function () {
@@ -1563,7 +1520,7 @@ Elab.Chart = (function (Elab) {
 
     var configs = Elab.Config.getConfig(config.id, config.csv);
     var currentConfig = configs[0]; // create chart and bind click event to toggle state
-    
+
     createChart(chartEl, currentConfig, function (chart) {
       countToggleEl.on("click", function () {
         currentConfig = config.id === "race" ? configs[0] : configs[1];
@@ -1659,12 +1616,13 @@ Elab.Map = (function (Elab) {
       "{{#each metrics}}" +
       "<button class='toggle toggle--{{@key}}' data-key='{{@key}}'>{{this}}</button>" +
       "{{/each}}" +
-      "</div>"
+      "</div>",
   );
   var LegendLabelTemplate = Handlebars.compile(
-    "{{#each labels}}" +
-      "<span class='legend__gradient-label'>{{this}}</span>" +
-      "{{/each}}"
+    "{{#each labels}}" + "<span class='legend__gradient-label'>{{this}}</span>" + "{{/each}}",
+  );
+  var LegendPointLabelTemplate = Handlebars.compile(
+    "{{#each labels}}" + "<span class='legend__points-label'>{{this}}</span>" + "{{/each}}",
   );
   var TooltipTemplate = Handlebars.compile(
     "<h1>{{name}}</h1>" +
@@ -1689,12 +1647,20 @@ Elab.Map = (function (Elab) {
       "</em>" +
       "{{/if}}" +
       "{{/if}}" +
-      "</div>"
+      "</div>",
+  );
+
+  var PointTooltipTemplate = Handlebars.compile(
+    "<h1>{{address}}</h1>" +
+      "<h5><strong>{{name}}</strong></h5>" +
+      '<div class="map__tooltip-row">' +
+      "#{{rank}} - " +
+      "{{value}} eviction filings" +
+      "</div>",
   );
 
   function getTooltipValue(feature, prop) {
-    if (!feature.properties[prop] && feature.properties[prop] !== 0)
-      return null;
+    if (!feature.properties[prop] && feature.properties[prop] !== 0) return null;
     var formatter = getFormatter(prop);
     var value = formatter(feature.properties[prop]);
 
@@ -1704,13 +1670,7 @@ Elab.Map = (function (Elab) {
       var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
       return dir === "mid"
         ? "Filings about average."
-        : "Filings <span class='value--" +
-            dir +
-            "'>" +
-            dir +
-            " " +
-            value +
-            "</span> from average.";
+        : "Filings <span class='value--" + dir + "'>" + dir + " " + value + "</span> from average.";
     }
 
     if (isRate(prop)) return "filings against " + value + " of renters";
@@ -1754,10 +1714,7 @@ Elab.Map = (function (Elab) {
       })
       .map(function (feature, i) {
         feature.id = parseInt(feature.properties["GEOID"]);
-        Object.assign(
-          feature.properties,
-          dataDict[feature.properties["GEOID"]]
-        );
+        Object.assign(feature.properties, dataDict[feature.properties["GEOID"]]);
         return feature;
       });
     return Object.assign(geojson, {
@@ -1833,15 +1790,7 @@ Elab.Map = (function (Elab) {
       );
     }
 
-    return (
-      "linear-gradient(to right," +
-      colors[2] +
-      ", " +
-      colors[3] +
-      " 50%," +
-      colors[4] +
-      ")"
-    );
+    return "linear-gradient(to right," + colors[2] + ", " + colors[3] + " 50%," + colors[4] + ")";
   }
 
   function getGradientLabels(prop, range) {
@@ -1858,7 +1807,7 @@ Elab.Map = (function (Elab) {
 
   function addChoroplethFillLayer(map, prop, range) {
     var fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
-      getLayerColors(prop, range, "--choro")
+      getLayerColors(prop, range, "--choro"),
     );
     map.addLayer(
       {
@@ -1866,28 +1815,19 @@ Elab.Map = (function (Elab) {
         type: "fill",
         source: "choropleth",
         layout: {},
-        filter: [
-          "any",
-          ["to-boolean", ["get", prop]],
-          ["==", 0, ["get", prop]],
-        ],
+        filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
         paint: {
           "fill-color": fillColor,
-          "fill-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            1,
-            0.8,
-          ],
+          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.8],
         },
       },
-      "building"
+      "building",
     );
   }
 
   function addChoroplethStrokeLayer(map, prop, range) {
     var strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
-      getLayerColors(prop, range, "--choroStroke")
+      getLayerColors(prop, range, "--choroStroke"),
     );
     map.addLayer(
       {
@@ -1904,15 +1844,10 @@ Elab.Map = (function (Elab) {
             ],
           },
           "line-blur": 0,
-          "line-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            1,
-            0,
-          ],
+          "line-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0],
         },
       },
-      "building"
+      "building",
     );
   }
   /**
@@ -1927,7 +1862,8 @@ Elab.Map = (function (Elab) {
     var mapEl = rootEl.find(".map")[0];
     var geojsonUrl = config.geojson;
     var dataUrl = config.csv;
-    var hoveredStateId = null;
+    var topDataUrl = config.topCsv;
+    var hoveredFeat = null;
     var allData = null;
     var geojsonData = null;
     var currentProp = null;
@@ -1947,6 +1883,7 @@ Elab.Map = (function (Elab) {
       bounds: usBounds,
       maxBounds: usBounds,
     });
+    window.map = map;
     /**
      * Show tooltip and set outline of feature when hovering
      * @param {*} e
@@ -1958,11 +1895,11 @@ Elab.Map = (function (Elab) {
       renderTooltip(e.features[0], e);
 
       if (e.features.length > 0) {
-        if (hoveredStateId) {
+        if (hoveredFeat) {
           map.setFeatureState(
             {
-              source: "choropleth",
-              id: hoveredStateId,
+              source: hoveredFeat.source,
+              id: hoveredFeat.id,
             },
             {
               hover: false,
@@ -1970,11 +1907,11 @@ Elab.Map = (function (Elab) {
           );
         }
 
-        hoveredStateId = e.features[0].id;
+        hoveredFeat = e.features[0];
         map.setFeatureState(
           {
-            source: "choropleth",
-            id: hoveredStateId,
+            source: hoveredFeat.source,
+            id: hoveredFeat.id,
           },
           {
             hover: true,
@@ -1990,11 +1927,11 @@ Elab.Map = (function (Elab) {
       map.getCanvas().style.cursor = "";
       tooltip.style.display = "none";
 
-      if (hoveredStateId) {
+      if (hoveredFeat) {
         map.setFeatureState(
           {
-            source: "choropleth",
-            id: hoveredStateId,
+            source: hoveredFeat.source,
+            id: hoveredFeat.id,
           },
           {
             hover: false,
@@ -2002,7 +1939,7 @@ Elab.Map = (function (Elab) {
         );
       }
 
-      hoveredStateId = null;
+      hoveredFeat = null;
     }
     /**
      * Turn off scroll unless modifier key is pressed
@@ -2067,10 +2004,90 @@ Elab.Map = (function (Elab) {
             type: "geojson",
             data: geojsonData,
           });
+
           map.on("mousemove", "choropleth", handleHover);
           map.on("mouseleave", "choropleth", handleHoverOut);
           renderToggles();
           update();
+        });
+
+        d3.csv(topDataUrl, function (data) {
+          if (!data) {
+            console.error("unable to load top filer data from " + topDataUrl);
+            return;
+          }
+          var topData = data.map(({ lat, lon, filings, xplaintiff, xstreet_clean, position }) => ({
+            lat: parseFloat(lat),
+            lon: parseFloat(lon),
+            filings: parseInt(filings),
+            name: xplaintiff,
+            address: xstreet_clean,
+            rank: position,
+          }));
+
+          var extent = d3.extent(topData, ({ filings }) => filings);
+          var radiusScale = d3.scaleLinear().domain(extent).range([1, 8]);
+
+          var pointJson = Object.assign({}, geojson);
+          pointJson.features = topData.map(({ lat, lon, filings, name, address, rank }, id) => ({
+            type: "Feature",
+            id,
+            geometry: {
+              type: "Point",
+              // need real
+              // coordinates: [lon, lat],
+              coordinates: [
+                (Math.random() - 0.5) * (Math.random() - 0.5) + -106.6,
+                (Math.random() - 0.5) * (Math.random() - 0.5) * 0.6 + 35.06,
+              ],
+            },
+            properties: {
+              radius: radiusScale(filings),
+              filings,
+              name,
+              address,
+              rank,
+            },
+          }));
+
+          console.log({ data, allData, pointJson, extent }, geojson.features);
+          map.addSource("points", {
+            type: "geojson",
+            data: pointJson,
+          });
+
+          map.addLayer(
+            {
+              id: "points",
+              type: "circle",
+              source: "points",
+              layout: {},
+              // filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
+              paint: {
+                "circle-color": "rgb(44, 137, 127)",
+                // "circle-stroke-color": "rgba(255, 255, 255, 1)",
+                "circle-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.7],
+                "circle-stroke-width": 0.2,
+                "circle-radius": [
+                  "interpolate",
+                  ["linear"],
+                  ["zoom"],
+                  3,
+                  ["*", ["get", "radius"], 0.1],
+                  7,
+                  ["*", ["get", "radius"], 0.5],
+                  10,
+                  ["get", "radius"],
+                  17,
+                  ["*", ["get", "radius"], 20],
+                ],
+              },
+            },
+            // "building",
+          );
+          map.on("mousemove", "points", handleHover);
+          map.on("mouseleave", "points", handleHoverOut);
+          renderPointLegend();
         });
       });
     }
@@ -2158,19 +2175,43 @@ Elab.Map = (function (Elab) {
       labelContainer.html(html);
     }
 
+    function renderPointLegend(extents = [4, 189]) {
+      var legendContainer = rootEl.find(".legend--points");
+      console.log({ legendContainer });
+      legendContainer.css("display", "flex");
+
+      var labelContainer = rootEl.find(".legend__points-labels");
+      var html = LegendPointLabelTemplate({
+        labels: extents,
+      });
+      labelContainer.html(html);
+    }
+
     function renderTooltip(feature, e) {
       var tooltipContainer = $(tooltip);
-      var hasPercents =
-        feature.properties.hasOwnProperty("pct_white") ||
-        feature.properties.hasOwnProperty("pct_black") ||
-        feature.properties.hasOwnProperty("pct_latinx");
-      var html = TooltipTemplate({
-        name: feature.properties.NAME ? feature.properties.NAME.split(",")[0] : "Unknown",
-        value: getTooltipValue(feature, currentProp),
-        majority: feature.properties["racial_majority"],
-        percents: getPercentBreakdown(feature.properties),
-        hasPercents: hasPercents,
-      });
+
+      var html;
+      if (feature.source === "points") {
+        html = PointTooltipTemplate({
+          name: feature.properties.name || "Unknown",
+          value: feature.properties.filings,
+          address: feature.properties.address,
+          rank: feature.properties.rank,
+        });
+      } else {
+        var hasPercents =
+          feature.properties.hasOwnProperty("pct_white") ||
+          feature.properties.hasOwnProperty("pct_black") ||
+          feature.properties.hasOwnProperty("pct_latinx");
+        html = TooltipTemplate({
+          name: feature.properties.NAME ? feature.properties.NAME.split(",")[0] : "Unknown",
+          value: getTooltipValue(feature, currentProp),
+          majority: feature.properties["racial_majority"],
+          percents: getPercentBreakdown(feature.properties),
+          hasPercents: hasPercents,
+        });
+      }
+
       var flipped = e.originalEvent.pageX > window.innerWidth - 240;
       var space = flipped ? -32 : 32;
       tooltipContainer
@@ -2226,309 +2267,309 @@ Elab.Intro = (function (Elab) {
    * @param {*} chart ChartBuilder instance
    * @param {*} xHovered hovered value
    */
-  var showIntroTooltip = function showIntroTooltip(chart, xHovered) {
-    var bisectX = d3.bisector(function (d) {
-      return d[0];
-    }).left; // midpoint of the current hovered week
+  // var showIntroTooltip = function showIntroTooltip(chart, xHovered) {
+  //   var bisectX = d3.bisector(function (d) {
+  //     return d[0];
+  //   }).left; // midpoint of the current hovered week
 
-    var xPosition = d3.timeDay.offset(d3.timeWeek.floor(xHovered), 3.5); // index of currently hovered week
+  //   var xPosition = d3.timeDay.offset(d3.timeWeek.floor(xHovered), 3.5); // index of currently hovered week
 
-    var dataIndex = bisectX(chart.data, xHovered) - 1; // data point for the hovered week
+  //   var dataIndex = bisectX(chart.data, xHovered) - 1; // data point for the hovered week
 
-    var weekStart = chart.data[dataIndex]; // exit early if no data point or if out of range
+  //   var weekStart = chart.data[dataIndex]; // exit early if no data point or if out of range
 
-    if (!weekStart || +xPosition > chart.xScale.domain()[1]) return; // create tooltip
+  //   if (!weekStart || +xPosition > chart.xScale.domain()[1]) return; // create tooltip
 
-    var title = "Eviction Filings";
-    var dayFormat = d3.timeFormat("%b %e");
-    var weekLabel = [weekStart[0], d3.timeDay.offset(weekStart[0], 7)]
-      .map(function (d) {
-        return dayFormat(d);
-      })
-      .join(" - ");
-    var items = [
-      {
-        idx: 0,
-        name: weekLabel,
-        value: weekStart[1],
-      },
-    ];
-    var context = {
-      els: {
-        tooltip: chart.selections["tooltip"],
-      },
-    };
-    window.Elab.Chart.renderBarTooltip(title, items, context, undefined, "top"); // position hover line
+  //   var title = "Eviction Filings";
+  //   var dayFormat = d3.timeFormat("%b %e");
+  //   var weekLabel = [weekStart[0], d3.timeDay.offset(weekStart[0], 7)]
+  //     .map(function (d) {
+  //       return dayFormat(d);
+  //     })
+  //     .join(" - ");
+  //   var items = [
+  //     {
+  //       idx: 0,
+  //       name: weekLabel,
+  //       value: weekStart[1],
+  //     },
+  //   ];
+  //   var context = {
+  //     els: {
+  //       tooltip: chart.selections["tooltip"],
+  //     },
+  //   };
+  //   window.Elab.Chart.renderBarTooltip(title, items, context, undefined, "top"); // position hover line
 
-    var position = chart.xScale(xPosition) + 1.5;
-    chart
-      .getSelection("hover-line")
-      .style("display", "block")
-      .transition()
-      .duration(100)
-      .ease(d3.easeLinear)
-      .attr("x1", position)
-      .attr("x2", position)
-      .attr("y1", 0)
-      .attr("y2", chart.getInnerHeight());
-  };
+  //   var position = chart.xScale(xPosition) + 1.5;
+  //   chart
+  //     .getSelection("hover-line")
+  //     .style("display", "block")
+  //     .transition()
+  //     .duration(100)
+  //     .ease(d3.easeLinear)
+  //     .attr("x1", position)
+  //     .attr("x2", position)
+  //     .attr("y1", 0)
+  //     .attr("y2", chart.getInnerHeight());
+  // };
   /**
    * Handler to hide tooltip on hover out
    * @param {*} chart
    */
 
-  var hideIntroTooltip = function hideIntroTooltip(chart) {
-    chart.getSelection("hover-line").style("display", "none");
-    chart.getSelection("tooltip").style("display", "none");
-  };
+  // var hideIntroTooltip = function hideIntroTooltip(chart) {
+  //   chart.getSelection("hover-line").style("display", "none");
+  //   chart.getSelection("tooltip").style("display", "none");
+  // };
   /**
    * Selects the line data set from the chart data
    * @param {*} data
    */
 
-  var selectLineData = function selectLineData(data) {
-    return [
-      data
-        .map(function (d) {
-          return [d3.timeDay.offset(d[0], 3.5), d[2]];
-        })
-        .filter(function (d, i) {
-          return i !== data.length - 1;
-        }),
-    ];
-  };
+  // var selectLineData = function selectLineData(data) {
+  //   return [
+  //     data
+  //       .map(function (d) {
+  //         return [d3.timeDay.offset(d[0], 3.5), d[2]];
+  //       })
+  //       .filter(function (d, i) {
+  //         return i !== data.length - 1;
+  //       }),
+  //   ];
+  // };
   /**
    * Selects the bar data set from the chart data
    * @param {*} data
    */
 
-  var selectBarsData = function selectBarsData(data) {
-    return data.map(function (d) {
-      return [d[0], d[1]];
-    });
-  };
+  // var selectBarsData = function selectBarsData(data) {
+  //   return data.map(function (d) {
+  //     return [d[0], d[1]];
+  //   });
+  // };
   /**
    * Creates the label paths for the markers
    * (last week filings and total filings)
    * @param {*} chart
    */
 
-  var createLabelMarkers = function createLabelMarkers(chart) {
-    function createSpanPathSelection(parentSelection) {
-      return parentSelection.append("path").attr("class", "chart__span-path");
-    }
+  // var createLabelMarkers = function createLabelMarkers(chart) {
+  //   function createSpanPathSelection(parentSelection) {
+  //     return parentSelection.append("path").attr("class", "chart__span-path");
+  //   }
 
-    function createSpanPathRenderFunction(selection, chart) {
-      function draw() {
-        return (
-          "M 0," +
-          chart.getInnerHeight() +
-          " h " +
-          (chart.getInnerWidth() + 8) +
-          " v 108 h -46"
-        );
-      }
+  //   function createSpanPathRenderFunction(selection, chart) {
+  //     function draw() {
+  //       return (
+  //         "M 0," +
+  //         chart.getInnerHeight() +
+  //         " h " +
+  //         (chart.getInnerWidth() + 8) +
+  //         " v 108 h -46"
+  //       );
+  //     }
 
-      return function () {
-        selection.attr("d", draw());
-      };
-    }
+  //     return function () {
+  //       selection.attr("d", draw());
+  //     };
+  //   }
 
-    function createBarMarkerSelection(parentSelection) {
-      return parentSelection.append("path").attr("class", "chart__bar-path");
-    }
+  //   function createBarMarkerSelection(parentSelection) {
+  //     return parentSelection.append("path").attr("class", "chart__bar-path");
+  //   }
 
-    function createBarMarkerRenderFunction(selection, chart) {
-      function draw() {
-        var lastDate = chart.data[chart.data.length - 1][0];
-        var barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
-        return (
-          "M " + barPosition + "," + chart.getInnerHeight() + " v 72 h -24"
-        );
-      }
+  //   function createBarMarkerRenderFunction(selection, chart) {
+  //     function draw() {
+  //       var lastDate = chart.data[chart.data.length - 1][0];
+  //       var barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
+  //       return (
+  //         "M " + barPosition + "," + chart.getInnerHeight() + " v 72 h -24"
+  //       );
+  //     }
 
-      return function () {
-        selection.attr("d", draw());
-      };
-    }
+  //     return function () {
+  //       selection.attr("d", draw());
+  //     };
+  //   }
 
-    chart.addElement(
-      "span-path",
-      "overlay",
-      createSpanPathSelection,
-      createSpanPathRenderFunction
-    );
-    chart.addElement(
-      "bar-path",
-      "overlay",
-      createBarMarkerSelection,
-      createBarMarkerRenderFunction
-    );
-  };
+  //   chart.addElement(
+  //     "span-path",
+  //     "overlay",
+  //     createSpanPathSelection,
+  //     createSpanPathRenderFunction
+  //   );
+  //   chart.addElement(
+  //     "bar-path",
+  //     "overlay",
+  //     createBarMarkerSelection,
+  //     createBarMarkerRenderFunction
+  //   );
+  // };
   /**
    * Creates the chart and renders
    * @param {*} root
    * @param {*} cityData
    */
 
-  function createIntroFigure(root, cityData) {
-    var seriesData = cityData.values;
-    var options = {
-      margin: [32, 12, 104, 40],
-    };
-    var chart = new Elab.ChartBuilder(root, seriesData, options);
-    chart // adds y axis, using max of the trend line value or bar value
-      .addAxisY({
-        selector: function selector(d) {
-          return Math.max(d[2], d[1]);
-        },
-        adjustExtent: function adjustExtent(extent) {
-          return [0, extent[1] + extent[1] * 0.05];
-        },
-        ticks: 4,
-        tickFormat: d3.format(",d"),
-      }) // adds time axis from dates in the dataset
-      .addTimeAxis({
-        selector: function selector(d) {
-          return d[0];
-        },
-        adjustExtent: function adjustExtent(extent) {
-          return [
-            d3.timeDay.offset(extent[0], -2),
-            d3.timeDay.offset(extent[1], 9),
-          ];
-        },
-        adjustLabels: function adjustLabels(selection) {
-          selection
-            .selectAll(".tick text")
-            .attr("text-anchor", "end")
-            .attr(
-              "transform",
-              "translate(" + this.monthToPixels(1) / 2 + ",0) rotate(-50)"
-            )
-            .attr("dx", "-0.25em")
-            .attr("dy", "0.333em");
-          selection.selectAll(".tick:last-child text").attr("opacity", 0);
-        },
-        ticks: d3.timeMonth.every(2),
-        tickFormat: Elab.Utils.monthAxisFormatter,
-      }); // adds local moratorium areas
+  // function createIntroFigure(root, cityData) {
+  //   var seriesData = cityData.values;
+  //   var options = {
+  //     margin: [32, 12, 104, 40],
+  //   };
+  //   var chart = new Elab.ChartBuilder(root, seriesData, options);
+  //   chart // adds y axis, using max of the trend line value or bar value
+  //     .addAxisY({
+  //       selector: function selector(d) {
+  //         return Math.max(d[2], d[1]);
+  //       },
+  //       adjustExtent: function adjustExtent(extent) {
+  //         return [0, extent[1] + extent[1] * 0.05];
+  //       },
+  //       ticks: 4,
+  //       tickFormat: d3.format(",d"),
+  //     }) // adds time axis from dates in the dataset
+  //     .addTimeAxis({
+  //       selector: function selector(d) {
+  //         return d[0];
+  //       },
+  //       adjustExtent: function adjustExtent(extent) {
+  //         return [
+  //           d3.timeDay.offset(extent[0], -2),
+  //           d3.timeDay.offset(extent[1], 9),
+  //         ];
+  //       },
+  //       adjustLabels: function adjustLabels(selection) {
+  //         selection
+  //           .selectAll(".tick text")
+  //           .attr("text-anchor", "end")
+  //           .attr(
+  //             "transform",
+  //             "translate(" + this.monthToPixels(1) / 2 + ",0) rotate(-50)"
+  //           )
+  //           .attr("dx", "-0.25em")
+  //           .attr("dy", "0.333em");
+  //         selection.selectAll(".tick:last-child text").attr("opacity", 0);
+  //       },
+  //       ticks: d3.timeMonth.every(2),
+  //       tickFormat: Elab.Utils.monthAxisFormatter,
+  //     }); // adds local moratorium areas
 
-    cityData.start.forEach(function (d, i) {
-      chart = chart.addArea([cityData.start[i], cityData.end[i]], {
-        areaId: "area" + i,
-        patternId: "stripes",
-        addPattern: i === 0,
-      });
-    }); // adds federal moratorium
+  //   cityData.start.forEach(function (d, i) {
+  //     chart = chart.addArea([cityData.start[i], cityData.end[i]], {
+  //       areaId: "area" + i,
+  //       patternId: "stripes",
+  //       addPattern: i === 0,
+  //     });
+  //   }); // adds federal moratorium
 
-    return chart
-      .addArea(Elab.Utils.getCdcMoratoriumRange(), {
-        areaId: "cdcArea",
-        patternId: "cdcStripes",
-        angle: -45,
-      }) // adds the bars for weekly filings
-      .addBars({
-        selector: selectBarsData,
-      }) // adds the trend line
-      .addLines({
-        selector: selectLineData,
-        curve: d3.curveMonotoneX,
-      }) // adds a tooltip with the provided render function
-      .addTooltip(showIntroTooltip, hideIntroTooltip) // adds a custom element with markers for the last bar and chart span
-      .addCustom(createLabelMarkers) // renders the chart
-      .render();
-  }
+  //   return chart
+  //     .addArea(Elab.Utils.getCdcMoratoriumRange(), {
+  //       areaId: "cdcArea",
+  //       patternId: "cdcStripes",
+  //       angle: -45,
+  //     }) // adds the bars for weekly filings
+  //     .addBars({
+  //       selector: selectBarsData,
+  //     }) // adds the trend line
+  //     .addLines({
+  //       selector: selectLineData,
+  //       curve: d3.curveMonotoneX,
+  //     }) // adds a tooltip with the provided render function
+  //     .addTooltip(showIntroTooltip, hideIntroTooltip) // adds a custom element with markers for the last bar and chart span
+  //     .addCustom(createLabelMarkers) // renders the chart
+  //     .render();
+  // }
 
-  function getMoratoriumRange(data) {
-    var dateFormat = d3.timeFormat("%b %e, %Y");
-    var ranges = Elab.Utils.getMoratoriumRanges(data);
-    if (!ranges || ranges.length === 0) return "";
-    return ranges
-      .map(function (dates) {
-        if (!dates[0]) return "No local moratorium";
-        return dates
-          .map(function (d) {
-            return d ? dateFormat(d) : "Ongoing";
-          })
-          .join(" - ");
-      })
-      .join("<br />");
-  }
+  // function getMoratoriumRange(data) {
+  //   var dateFormat = d3.timeFormat("%b %e, %Y");
+  //   var ranges = Elab.Utils.getMoratoriumRanges(data);
+  //   if (!ranges || ranges.length === 0) return "";
+  //   return ranges
+  //     .map(function (dates) {
+  //       if (!dates[0]) return "No local moratorium";
+  //       return dates
+  //         .map(function (d) {
+  //           return d ? dateFormat(d) : "Ongoing";
+  //         })
+  //         .join(" - ");
+  //     })
+  //     .join("<br />");
+  // }
   /**
    * Inserts the data for the location into the placeholders
    */
 
-  function initDataValues(cityData) {
-    var numFormat = d3.format(",d");
-    var moratorium = getMoratoriumRange(cityData);
-    $("#evictionMoratorium").html(moratorium);
-    $("#filingsLastWeek").html(
-      "<span>" + numFormat(cityData.lastWeek) + "</span> filings last week*"
-    );
-    $("#filingsCumulative").html(
-      "<span>" +
-        numFormat(cityData.cumulative) +
-        "</span> filings since Mar 15, '20"
-    );
-    addSubgroupBreakdown(cityData);
-  }
+  // function initDataValues(cityData) {
+  //   var numFormat = d3.format(",d");
+  //   var moratorium = getMoratoriumRange(cityData);
+  //   $("#evictionMoratorium").html(moratorium);
+  //   $("#filingsLastWeek").html(
+  //     "<span>" + numFormat(cityData.lastWeek) + "</span> filings last week*"
+  //   );
+  //   $("#filingsCumulative").html(
+  //     "<span>" +
+  //       numFormat(cityData.cumulative) +
+  //       "</span> filings since Mar 15, '20"
+  //   );
+  //   addSubgroupBreakdown(cityData);
+  // }
   /**
    * Prepends a paragraph to the intro with a breakdown
    * of all of the counties within the dataset.
    * @param {*} cityData data from table.csv
    */
 
-  function addSubgroupBreakdown(cityData) {
-    if (
-      !cityData.subgroups ||
-      !cityData.subgroup_values ||
-      cityData.subgroups.length === 0
-    )
-      return;
-    var numFormat = d3.format(",d");
-    cityData.subgroup_values = cityData.subgroup_values.map(function (v) {
-      return numFormat(v);
-    });
-    var templateData = Object.assign({}, cityData, {
-      cumulative: numFormat(cityData.cumulative),
-    });
-    var template = Handlebars.compile(
-      "<p>Of the {{cumulative}} filings in {{city}} since March 15th, " +
-        "{{#each subgroups}}" +
-        "{{#if @last}}" +
-        " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
-        "{{else}}" +
-        "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}}, {{/if}}" +
-        "{{/if}}" +
-        "{{/each}}</p>"
-    );
-    var html = template(templateData);
-    $("#introText").prepend(html);
-  }
+  // function addSubgroupBreakdown(cityData) {
+  //   if (
+  //     !cityData.subgroups ||
+  //     !cityData.subgroup_values ||
+  //     cityData.subgroups.length === 0
+  //   )
+  //     return;
+  //   var numFormat = d3.format(",d");
+  //   cityData.subgroup_values = cityData.subgroup_values.map(function (v) {
+  //     return numFormat(v);
+  //   });
+  //   var templateData = Object.assign({}, cityData, {
+  //     cumulative: numFormat(cityData.cumulative),
+  //   });
+  //   var template = Handlebars.compile(
+  //     "<p>Of the {{cumulative}} filings in {{city}} since March 15th, " +
+  //       "{{#each subgroups}}" +
+  //       "{{#if @last}}" +
+  //       " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
+  //       "{{else}}" +
+  //       "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}}, {{/if}}" +
+  //       "{{/if}}" +
+  //       "{{/each}}</p>"
+  //   );
+  //   var html = template(templateData);
+  //   $("#introText").prepend(html);
+  // }
   /**
    * Creates the intro chart
    */
 
-  function initIntroChart(root, dataUrl, locationId) {
-    Elab.Data.loadCityTable(dataUrl, function (data) {
-      var cityData = data.find(function (d) {
-        return Number(d.id) === Number(locationId);
-      });
+  // function initIntroChart(root, dataUrl, locationId) {
+  //   Elab.Data.loadCityTable(dataUrl, function (data) {
+  //     var cityData = data.find(function (d) {
+  //       return Number(d.id) === Number(locationId);
+  //     });
 
-      if (!cityData) {
-        $(".intro").addClass("intro--error");
-        throw new Error("no data found for city");
-      }
+  //     if (!cityData) {
+  //       $(".intro").addClass("intro--error");
+  //       throw new Error("no data found for city");
+  //     }
 
-      $(".intro").removeClass("intro--loading");
-      createIntroFigure(root, cityData);
-      initDataValues(cityData);
-    });
-  }
+  //     $(".intro").removeClass("intro--loading");
+  //     createIntroFigure(root, cityData);
+  //     initDataValues(cityData);
+  //   });
+  // }
 
   return {
-    initIntroChart: initIntroChart,
+    // initIntroChart: initIntroChart,
   };
 })(Elab);
 /**
