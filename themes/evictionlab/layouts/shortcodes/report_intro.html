@@ -58,7 +58,7 @@
                   {{ end }} -->
       
       
-      
+      <!-- intro figure deactivated -->
       <!-- <div id="introChart" class="intro__figure-wrapper">
         <h2 class="intro__figure-title">Eviction Filings By Week</h2>
         <svg role="img" aria-label="Chart of eviction filings by week"></svg>
@@ -214,7 +214,6 @@
             "filings_past_month",]
           stats.forEach(s => el.find('.' + s + ' h3').text(d3.format(',')(row[s])))
         }
-        console.log({ row }, 345)
       }
       Elab.Data.loadData(statsUrl, d => d, callback)
 

@@ -62,10 +62,8 @@ Elab.Utils = (function (Elab) {
    * Turns a string into a URL friendly string
    */
   function slugify(string) {
-    var a =
-      "àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;";
-    var b =
-      "aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------";
+    var a = "àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;";
+    var b = "aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------";
     var p = new RegExp(a.split("").join("|"), "g");
     return string
       .toString()
@@ -85,12 +83,7 @@ Elab.Utils = (function (Elab) {
    */
 
   function getCurrentURL() {
-    return (
-      window.location.protocol +
-      "//" +
-      window.location.host +
-      window.location.pathname
-    );
+    return window.location.protocol + "//" + window.location.host + window.location.pathname;
   }
   /**
    * Returns the value of a CSS variable
@@ -99,8 +92,8 @@ Elab.Utils = (function (Elab) {
 
   function getCssVar(varName) {
     var map = {
-      "--choro1": "#434878",
-      "--choro2": "#c1c5ea",
+      "--choro1": "#2b897f",
+      "--choro2": "#cdece9",
       "--choro3": "rgba(241, 241, 241, 0.7)",
       "--choro4": "#e99c7e",
       "--choro5": "#e24000",
@@ -137,10 +130,7 @@ Elab.Utils = (function (Elab) {
 
   function createFacebookLink(el) {
     var url = Elab.Utils.getCurrentURL();
-    $(el).attr(
-      "href",
-      "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url)
-    );
+    $(el).attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url));
     $(el).attr("target", "_blank");
   }
   /**
@@ -2030,11 +2020,11 @@ Elab.Map = (function (Elab) {
             geometry: {
               type: "Point",
               // need real
-              // coordinates: [lon, lat],
-              coordinates: [
-                (Math.random() - 0.5) * (Math.random() - 0.5) + -106.6,
-                (Math.random() - 0.5) * (Math.random() - 0.5) * 0.6 + 35.06,
-              ],
+              coordinates: [lon, lat],
+              // coordinates: [
+              //   (Math.random() - 0.5) * (Math.random() - 0.5) + -106.6,
+              //   (Math.random() - 0.5) * (Math.random() - 0.5) * 0.6 + 35.06,
+              // ],
             },
             properties: {
               radius: radiusScale(filings),
@@ -2059,7 +2049,7 @@ Elab.Map = (function (Elab) {
               layout: {},
               // filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
               paint: {
-                "circle-color": "rgb(44, 137, 127)",
+                "circle-color": "#E24000",
                 // "circle-stroke-color": "rgba(255, 255, 255, 1)",
                 "circle-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.7],
                 "circle-stroke-width": 0.2,
