@@ -1,27 +1,31 @@
 ---
 draft: false
+scripts:
+  - grouped-bar-chart
 childof: research
+url: /demographics-of-eviction/
 contenttype: updates
+collection: true
 contentcat: research
 featured: true
-researchtype: elresearch
-title: "Racial and Gender Disparities among Evicted Americans"
+in_index: true
+title: Racial and Gender Disparities among Evicted Americans
 date: 2020-12-16T00:46:40.089Z
 postauthorname: Peter Hepburn, Renee Louis, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Documenting populations disproportionately at risk of eviction.
-listSummary: Are Black and Latinx renters evicted at higher rates than their white counterparts? Are women renters evicted at higher rates than men? Is this true for all racial and ethnic groups? Answering these questions is central to addressing the long history of excluding women and communities of color from housing, banking, and credit opportunities in the U.S.
+listSummary: Are Black and Latinx renters evicted at higher rates than their
+  white counterparts? Are women renters evicted at higher rates than men? Is
+  this true for all racial and ethnic groups? Answering these questions is
+  central to addressing the long history of excluding women and communities of
+  color from housing, banking, and credit opportunities in the U.S.
 socialDescription: Documenting populations disproportionately at risk of eviction.
-# image: '/images/assets/blog/rent_margin_display.jpg'
-fbImage: historical-demographics-social.png
+researchtype: elresearch
 twImage: historical-demographics-social.png
-url: /demographics-of-eviction/
-collection: true
-scripts:
-  - grouped-bar-chart
 aliases:
   - /racial-and-gender-disparities-among-evicted-americans/
+fbImage: historical-demographics-social.png
 ---
 
 The Eviction Lab aims to better understand the causes and consequences of eviction in the United States. To do so, we have compiled court records from across the country into a national database. These court records provide a unique opportunity to examine the prevalence of eviction across time and space. But these records contain limited information about each case: case numbers, names of plaintiffs (e.g., landlords, property managers) and defendants (tenants), defendant addresses, filing dates, and case outcomes. Defendant gender and race/ethnicity are not included in eviction records.
@@ -47,7 +51,7 @@ These absolute numbers are important, but the data are often more informative wh
 With these data in hand, we calculated three statistics for every gender-by-race/ethnicity category:
 
 <ol> 
-<li>The <strong>eviction filing rate</strong>: the number of eviction filings divided by the renter population. An eviction filing is typically the first step in the eviction process recorded by the civil court system. Many tenants vacate their homes upon receipt of an eviction filing. Even when they do so, having been filed against for eviction marrs tenants’ credit and rental history, limiting their future housing options and potentially damaging their credit.{{< sup 3 >}}</li>
+<li>The <strong>eviction filing rate</strong>: the number of eviction filings divided by the renter population. An eviction filing is typically the first step in the eviction process recorded by the civil court system. Many tenants vacate their homes upon receipt of an eviction filing. Even when they do so, having been filed against for eviction mars tenants’ credit and rental history, limiting their future housing options and potentially damaging their credit.{{< sup 3 >}}</li>
 
 <li>The <strong>eviction rate</strong>: the number of eviction judgments divided by the renter population. An eviction judgment is rendered by the courts when a case is decided in favor of the plaintiff (property owner or manager). The eviction rate is our best measure of the percentage of renters forcibly removed from their homes by court order. Eviction rate estimates are also adjusted for serial eviction filings, treating the outcome of the most recently-observed case as final.</li>
 
@@ -74,7 +78,7 @@ This resulted in a striking racial disparity. There were just under 40 Black ren
 
 The average renter faced a 4.1% eviction filing rate, and an eviction rate of 2.3%. Put another way, approximately one in 25 renters was threatened with eviction every year, and one in 40 was evicted. These rates varied considerably by race/ethnicity.
 
-- Black renters experienced the highest average rates of eviction filing (6.2%) and eviction judgement (3.4%).
+- Black renters experienced the highest average rates of eviction filing (6.2%) and eviction judgment (3.4%).
 - By contrast, the average eviction filing rate among white renters was 3.4% and the average eviction rate was 2.0%.
 - Nearly one in four black renters lived in a county in which the black eviction rate was more than _double_ the white eviction rate.
 
