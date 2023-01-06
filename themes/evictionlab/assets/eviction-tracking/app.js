@@ -2509,7 +2509,7 @@ Elab.Intro = (function (Elab) {
   function initIntroChart(root, dataUrl, locationId) {
     Elab.Data.loadCityTable(dataUrl, function (data) {
       var cityData = data.find(function (d) {
-        return d.id === locationId;
+        return Number(d.id) === Number(locationId);
       });
 
       if (!cityData) {
