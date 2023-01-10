@@ -1835,6 +1835,38 @@ Elab.Map = (function (Elab) {
       "building",
     );
   }
+
+  function addPointLayer(map) {
+    map.addLayer(
+      {
+        id: "points",
+        type: "circle",
+        source: "points",
+        layout: {},
+        // filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
+        paint: {
+          "circle-color": "#E24000",
+          // "circle-stroke-color": "rgba(255, 255, 255, 1)",
+          "circle-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.7],
+          "circle-stroke-width": 0.2,
+          "circle-radius": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            3,
+            ["*", ["get", "radius"], 0.1],
+            7,
+            ["*", ["get", "radius"], 0.5],
+            10,
+            ["get", "radius"],
+            17,
+            ["*", ["get", "radius"], 20],
+          ],
+        },
+      },
+      // "building",
+    );
+  }
   /**
    * Creates the MapboxGL map
    * @param {*} el
@@ -2040,39 +2072,10 @@ Elab.Map = (function (Elab) {
             type: "geojson",
             data: pointJson,
           });
-
-          map.addLayer(
-            {
-              id: "points",
-              type: "circle",
-              source: "points",
-              layout: {},
-              // filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
-              paint: {
-                "circle-color": "#E24000",
-                // "circle-stroke-color": "rgba(255, 255, 255, 1)",
-                "circle-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.7],
-                "circle-stroke-width": 0.2,
-                "circle-radius": [
-                  "interpolate",
-                  ["linear"],
-                  ["zoom"],
-                  3,
-                  ["*", ["get", "radius"], 0.1],
-                  7,
-                  ["*", ["get", "radius"], 0.5],
-                  10,
-                  ["get", "radius"],
-                  17,
-                  ["*", ["get", "radius"], 20],
-                ],
-              },
-            },
-            // "building",
-          );
+          addPointLayer(map);
           map.on("mousemove", "points", handleHover);
           map.on("mouseleave", "points", handleHoverOut);
-          renderPointLegend();
+          renderPointLegend(extent, map);
         });
       });
     }
@@ -2160,9 +2163,23 @@ Elab.Map = (function (Elab) {
       labelContainer.html(html);
     }
 
-    function renderPointLegend(extents = [4, 189]) {
+    function renderPointLegend(extents, map) {
+      var pointCheckbox = rootEl.find("input#top-100");
+      pointCheckbox.on("change", function (e) {
+        // console.log(e.target.checked, map.getLayer("points"));
+        if (e.target.checked) {
+          addPointLayer(map);
+        } else {
+          map.removeLayer("points");
+        }
+      });
+
+      if (!extents) {
+        console.log("No extents provided for point legend.");
+        return;
+      }
       var legendContainer = rootEl.find(".legend--points");
-      console.log({ legendContainer });
+      // console.log({ legendContainer });
       legendContainer.css("display", "flex");
 
       var labelContainer = rootEl.find(".legend__points-labels");

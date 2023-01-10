@@ -191,19 +191,21 @@
   </div>
 
   <script>
-                      // var tableUrl = {{ .Get "data" }}
-                      // console.log({ tableUrl })
-                      var statsUrl = {{ .Get "stats" }}
-                      // console.log({ statsUrl })
-                      // var fips = {{ .Get "id" }}
-                      // var res = {{ .Params }}
-                      // console.log({ res })
-                      // var rees = {{ .Site }}
-                      // console.log({ rees })
-                      var site = {{ .Get "site" }}
+        // var tableUrl = {{ .Get "data" }}
+        // console.log({ tableUrl })
+        var statsUrl = {{ .Get "stats" }}
+        // console.log({ statsUrl })
+        // var fips = {{ .Get "id" }}
+        // var res = {{ .Params }}
+        // console.log({ res })
+        // var rees = {{ .Site }}
+        // console.log({ rees })
+        var site = {{ .Get "site" }}
     window.addEventListener('load', function() {
 
+      // console.log(876, { statsUrl })
       const callback = function (data) {
+        // console.log(234, { data })
         var row = data.find(d => console.log(d.site) || d.site === site)
 
         if (!!row) {
