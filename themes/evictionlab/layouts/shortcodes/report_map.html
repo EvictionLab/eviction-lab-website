@@ -44,7 +44,6 @@
       var geojson = {{ .Get "shapes" }};
       var csv = {{ .Get "data" }};
       var topCsv = {{ .Get "topData" }};
-          // console.log({ topCsv })
       var rootEl = '.section--map'
           Elab.Section.init('map', rootEl, {
             geojson: geojson,
