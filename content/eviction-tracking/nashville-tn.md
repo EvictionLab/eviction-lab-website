@@ -17,14 +17,10 @@ More detail on eviction protections in Tennessee can be found on the [COVID-19 H
 
 {{% report_chart id="avg" data="/uploads/nashville_barchart.csv" %}}
 
-
-
 # Changes in eviction filings
 
-Eviction filings in Nashville were near average in January and February of 2020.1 Filings dropped in March, and stayed low until the state-wide eviction moratorium expired on June 1, 2020, after which they increased. Filings stayed well below pre-pandemic averages, however, until early 2022.
+Eviction filings in Nashville were near average in January and February of 2020.<sup>1</sup> Filings dropped in March, and stayed low until the state-wide eviction moratorium expired on June 1, 2020, after which they increased. Filings stayed well below pre-pandemic averages, however, until early 2022.
 
 1. Eviction filing data for Tennessee were collected by [Red Door Collective](https://reddoorcollective.org/). Historical averages cover the years 2017-2019.
-
-
 
 {{%/ report_chart %}}
