@@ -198,7 +198,7 @@ data:
     file: /uploads/phoenix_weekly_2020_2021.csv
     monthfile: /uploads/phoenix_monthly_2020_2021.csv
   - site: Pittsburgh
-    years: 2012-2019
+    years: 2016-2019
     geo: ZIP Code
     file: /uploads/pittsburgh_weekly_2020_2021.csv
     monthfile: /uploads/pittsburgh_monthly_2020_2021.csv
