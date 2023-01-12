@@ -1863,9 +1863,21 @@ Elab.Map = (function (Elab) {
             7,
             ["*", ["get", "radius"], 0.5],
             10,
-            ["get", "radius"],
+            ["*", ["get", "radius"], 1],
+            11,
+            ["*", ["get", "radius"], 2],
+            12,
+            ["*", ["get", "radius"], 3],
+            13,
+            ["*", ["get", "radius"], 4],
+            14,
+            ["*", ["get", "radius"], 5],
+            15,
+            ["*", ["get", "radius"], 6],
+            16,
+            ["*", ["get", "radius"], 7],
             17,
-            ["*", ["get", "radius"], 20],
+            ["*", ["get", "radius"], 8],
           ],
         },
       },
@@ -2056,7 +2068,7 @@ Elab.Map = (function (Elab) {
             id,
             geometry: {
               type: "Point",
-              // need real
+              // TODO: need real
               coordinates: [lon, lat],
               // coordinates: [
               //   (Math.random() - 0.5) * (Math.random() - 0.5) + -106.6,

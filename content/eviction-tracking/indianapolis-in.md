@@ -9,7 +9,7 @@ twImage: /images/assets/graphics/ets-bg-social.png
 title: Indianapolis, Indiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-
+<!-- hardcode "stats" url in app since it's same for all sites -->
 {{< report_intro id="18097" data="/uploads/table.csv" stats="/uploads/filing_data_by_site.csv" site="Indianapolis" >}}
 
 The state of Indiana implemented an eviction moratorium that ran from March 19 to August 14, 2020. Filings in Marion County (Indianapolis) increased after that moratorium lifted.
