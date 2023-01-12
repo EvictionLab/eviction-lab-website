@@ -19,15 +19,11 @@ More detail on eviction protections in Pennsylvania can be found on the COVID-19
 
 {{% report_chart id="avg" data="/uploads/pennsylvania_barchart.csv" %}}
 
-
-
 # Changes in eviction filings
 
 Eviction filings in Pennsylvania were around historical averages in January and February 2020.<sup>1</sup> Filings fell by March and April 2020 but began increasing in September 2020 after the expiration of the state-wide moratorium.
 
-1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
-
-
+1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Historical averages cover the years 2016-2019. Additional data was provided by Lancaster Stands Up.
 
 {{%/ report_chart %}}
 
@@ -35,15 +31,11 @@ Eviction filings in Pennsylvania were around historical averages in January and 
 
 {{% report_map shapes="/uploads/pennsylvania_shapes.json" data="/uploads/pennsylvania_map.csv" %}}
 
-
-
 # The geography of changes in eviction filings
 
 Pennsylvania is divided into 67 counties. In each of those counties, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
-1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
+1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Historical averages cover the years 2016-2019. Additional data was provided by Lancaster Stands Up.
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
-
-
 
 {{%/ report_map %}}
