@@ -237,6 +237,11 @@ data:
     geo: ZIP Code
     file: /uploads/virginia_weekly_2020_2021.csv
     monthfile: /uploads/virginia_monthly_2020_2021.csv
+  - site: Pennsylvania
+    years: 2016-2019
+    geo: ZIP Code
+    file: /uploads/pennsylvania_weekly_2020_2021.csv
+    monthfile: /uploads/pennsylvania_monthly_2020_2021.csv
 ---
 Sample code:
 
