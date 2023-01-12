@@ -6,7 +6,7 @@ h1: Pennsylvania
 slug: pennsylvania
 date: 2023-01-11T22:18:49.059Z
 ---
-{{< report_intro id="42 data="/uploads/states_table.csv" >}}
+{{< report_intro id="42" data="/uploads/states_table.csv" >}}
 
 Eviction filings in Pennsylvania fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired on June 30, 2021.
 
