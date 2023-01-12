@@ -242,6 +242,11 @@ data:
     geo: ZIP Code
     file: /uploads/pennsylvania_weekly_2020_2021.csv
     monthfile: /uploads/pennsylvania_monthly_2020_2021.csv
+  - site: Nashville
+    years: 2017-2019
+    geo: N/A
+    file: /uploads/nashville_weekly_2020_2021.csv
+    monthfile: /uploads/nashville_monthly_2020_2021.csv
 ---
 Sample code:
 
