@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Nashville, Tennessee | Eviction Tracking System
 h1: Nashville, Tennessee
 slug: nashville-tn
