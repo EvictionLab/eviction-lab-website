@@ -35,13 +35,13 @@ data:
   - site: All Cities
     years: "-"
     geo: Census Tract / ZIP Code
-    file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_weekly_2020_2021.csv
-    monthfile: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_monthly_2020_2021.csv
+    file: /uploads/all_sites_weekly_2020_2021.csv
+    monthfile: /uploads/all_sites_monthly_2020_2021.csv
   - site: All States
     years: "-"
     geo: Census Tract
-    file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/allstates_weekly_2020_2021.csv
-    monthfile: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/allstates_monthly_2020_2021.csv
+    file: /uploads/allstates_weekly_2020_2021.csv
+    monthfile: /uploads/allstates_monthly_2020_2021.csv
   - site: Albuquerque
     years: 2017-2019
     geo: Census Tract
