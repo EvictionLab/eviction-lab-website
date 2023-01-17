@@ -22,8 +22,10 @@
           {{ end }}  
         </picture>
         <h3>{{ .Params.title }}</h3>
-        <p class="bio-position pb-1">{{ .Params.position }}</p>
-        <p class="bio-position mt-1">{{ .Params.newposition }}</p> 
+        <p class="bio-position mb-1">{{ .Params.position }}</p>
+        {{ if .Params.newposition }}
+          <p class="bio-position pt-1">{{ .Params.newposition }}</p> 
+        {{ end }}  
       </div>
   
   </div>

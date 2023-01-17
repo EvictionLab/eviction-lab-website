@@ -418,8 +418,8 @@
 
  }
  .alumni {
-     p.bio-position:first-of-type {
-        border-bottom: 2px solid #434878;
+     p.bio-position:nth-of-type(2) {
+        border-top: 2px solid #434878;
      }
  }
 }

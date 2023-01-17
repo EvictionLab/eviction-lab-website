@@ -112,7 +112,6 @@
       <ul class="nav nav-tabs anchor-links" role="tablist">
           <li class="only-larger-screens" role="presentation">Choose a team</li>
           <li role="presentation" class="active"><a href="#team1" aria-controls="home" role="tab" data-toggle="tab">{{ .Params.Bios1 }}</a></li>
-          <li role="presentation"><a href="#team2" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios2 }}</a></li>
           <li role="presentation"><a href="#team3" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios3 }}</a></li>
           <li role="presentation"><a href="#team4" aria-controls="profile" role="tab" data-toggle="tab">{{ .Params.Bios4 }}</a></li>
       </ul>
@@ -140,10 +139,10 @@
               {{ end }}
            {{ end }}
         </div>
-        </div> <!-- End Research Team tab-pane -->
+        <!--</div>--> <!-- End Research Team tab-pane -->
         <!-- *************** Student Researcher Bios ******************** -->
-        <div role="tabpanel" class="tab-pane" id="team2">
-          <div class="bio-thumbs">
+       <!-- <div role="tabpanel" class="tab-pane" id="team2"> -->
+          <div class="bio-thumbs pt-1">
           <!-- Espanol -->   
             {{ if eq .Site.Language.LanguageName "Español" }}
               
@@ -207,15 +206,7 @@
                 {{ end }}
               {{ end }}    
 
-          <h2 class="w-100 text-center page-section-headerv3 mt-md-5">ALUMNI</h2>
 
-              {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
-                {{ if eq .Params.childof "student-researcher-bios" }} 
-                  {{ if eq .Params.category "alumni" }}
-                    {{ partial "about-modal" . }}
-                  {{ end }}  
-                {{ end }}
-              {{ end }}
 
 
             {{ end }}
