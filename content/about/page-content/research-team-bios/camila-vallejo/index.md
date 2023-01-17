@@ -1,6 +1,6 @@
 ---
 abbrev: cvallejo
-position: Bilingual Communications Specialist
+position: Communications Specialist
 date: 2017-11-26T03:52:04.376Z
 childof: research-team-bios
 title: Camila Vallejo

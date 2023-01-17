@@ -4,6 +4,7 @@ category: graduate
 title: Gracie Himmelstein
 abbrev: ghimmelstein
 position: Graduate Research Assistant
+newposition: Resident in Internal Medicine, UCLA
 date: 2017-11-26T03:46:25.603Z
 image: /images/bios/ghimmelstein_full.jpg
 thumb: /images/bios/ghimmelstein_thumb.jpg
