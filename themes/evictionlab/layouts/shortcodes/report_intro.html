@@ -16,197 +16,109 @@
         {{ end }}
       {{ end }}
       <div id="introText" class="intro__text">{{ .Inner | markdownify }}</div>
-      <div class="share">
-        <a class="share__link share__link--twitter">
-          <i class="fa fa-twitter"></i>
-          <span>Share on Twitter</span>
-        </a>
-        <a class="share__link share__link--facebook">
-          <i class="fa fa-facebook"></i>
-          <span>Share on Facebook</span>
-        </a>
+    </div>
+    <div id="introStatsWrapper" class="intro__stats-wrapper">
+      <div class="intro__stats-stat filings_pandemic">
+        <h3></h3>
+        <p>filings total</p>
+      </div>
+      <div class="intro__stats-stat filings_past_year">
+        <h3></h3>
+        <p>filings in the past year</p>
+      </div>
+      <div class="intro__stats-stat filings_past_month">
+        <h3></h3>
+        <p>filings in the past month</p>
       </div>
     </div>
-      <div id="introStatsWrapper" class="intro__stats-wrapper">
-        <div class="intro__stats-stat filings_pandemic">
-          <h3></h3>
-          <p>filings total</p>
-        </div>
-        <div class="intro__stats-stat filings_past_year">
-          <h3></h3>
-          <p>filings in the past year</p>
-        </div>
-        <div class="intro__stats-stat filings_past_month">
-          <h3></h3>
-          <p>filings in the past month</p>
-        </div>
-      <!-- {{ range $index, $element := .Site.Data.filing_data_by_site }}
-                  {{ if eq $rentersSite $element.site }}
-                  <div class="intro__stats-stat">
-                    <h3>{{ $element.filings_pandemic }}</h3>
-                    <p>filings total</p>
-                  </div>
-                  <div class="intro__stats-stat">
-                    <h3>{{ $element.filings_past_year }}</h3>
-                    <p>filings in the past year</p>
-                  </div>
-                  <div class="intro__stats-stat">
-                    <h3>{{ $element.filings_past_month }}</h3>
-                    <p>filings in the past month</p>
-                  </div>
-                  {{ end }}
-                  {{ end }} -->
-      
-      
-      <!-- intro figure deactivated -->
-      <!-- <div id="introChart" class="intro__figure-wrapper">
-        <h2 class="intro__figure-title">Eviction Filings By Week</h2>
-        <svg role="img" aria-label="Chart of eviction filings by week"></svg>
-        <div class="intro__figure-legend legend">
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              role="img"
-              aria-labelledby="filingsBarLegend"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="filingsBarLegend">
-                Grey rectangle legend indicator
-              </title>
-              <rect x="0" y="0" width="16" height="16"></rect>
-            </svg>
-            <p class="legend-item__label">Weekly Filings</p>
-          </div>
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              aria-labelledby="trendLegend"
-              role="img"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="trendLegend">Red line legend indicator</title>
-              <path d="M 0,8 h 16" fill="none"></path>
-            </svg>
-            <p class="legend-item__label">Filings Trend</p>
-          </div>
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              role="img"
-              aria-labelledby="patternLegend"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="patternLegend">Striped pattern legend indicator</title>
-              <pattern
-                id="stripesLegend"
-                x="0"
-                y="0"
-                width="8"
-                height="8"
-                patternUnits="userSpaceOnUse"
-                patternTransform="rotate(45)"
-              >
-                <rect
-                  class="legend-item__pattern legend-item__pattern--localLegend"
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="8"
-                ></rect>
-              </pattern>
-              <rect
-                x="0"
-                y="0"
-                width="16"
-                height="16"
-                fill="url(#stripesLegend)"
-              ></rect>
-            </svg>
-            <p class="legend-item__label">
-              Local Moratorium<span
-                class="legend-item__secondary"
-                id="evictionMoratorium"
-              ></span>
-            </p>
-          </div>
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              role="img"
-              aria-labelledby="patternLegend"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="patternLegend">Striped pattern legend indicator</title>
-              <pattern
-                id="cdcLegend"
-                x="0"
-                y="0"
-                width="8"
-                height="8"
-                patternUnits="userSpaceOnUse"
-                patternTransform="rotate(-45)"
-              >
-                <rect
-                  class="legend-item__pattern legend-item__pattern--cdcLegend"
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="8"
-                ></rect>
-              </pattern>
-              <rect
-                x="0"
-                y="0"
-                width="16"
-                height="16"
-                fill="url(#cdcLegend)"
-              ></rect>
-            </svg>
-            <p class="legend-item__label">
-              <a href="https://evictionlab.org/federal-eviction-moratorium-update/">CDC Order</a>
-              <span
-                class="legend-item__secondary"
-                id="cdcGuidelines"></span>
-            </p>
-          </div>
-        </div>
-        <div class="intro__figure-stats">
-          <p id="filingsLastWeek"></p>
-          <p id="filingsCumulative"></p>
-        </div>
-        <p class="intro__figure-footnote">
-          * Filings in the last week may be undercounted as a result of
-          processing delays. These counts will be revised in the following week.
-        </p>
-      </div> -->
+    
+    <div id="introSnapshotWrapper" class="intro__snapshot-wrapper">
+      <dl class="intro__snapshot-stat renter_hh"></dl>
+      <dl class="intro__snapshot-stat median_rent"></dl>
+      <dl class="intro__snapshot-stat historical_efr"></dl>
+      <dl class="intro__snapshot-stat notice_requirement"></dl>
+      <dl class="intro__snapshot-stat avg_filing_fee"></dl>
+      <dl class="intro__snapshot-stat historical_baseline_years"></dl>
+      <dl class="intro__snapshot-stat borders"></dl>
     </div>
   </div>
 
   <script>
-        // var tableUrl = {{ .Get "data" }}
-        // console.log({ tableUrl })
-        var statsUrl = {{ .Get "stats" }}
-        // console.log({ statsUrl })
-        // var fips = {{ .Get "id" }}
-        // var res = {{ .Params }}
-        // console.log({ res })
-        // var rees = {{ .Site }}
-        // console.log({ rees })
+                      var statsUrl = "/uploads/filing_data_by_site.csv"
         var site = {{ .Get "site" }}
+
     window.addEventListener('load', function() {
+      var snapshotFiles = {
+        basic: "/uploads/basic_data_by_site.csv",
+        acs: "/uploads/acs_data_by_site.csv",
+      }
+      var snapshotFigures = [
+        {
+          file: 'acs',
+          field: 'renter_hh',
+          display: 'Renter households',
+          formatter: d3.format(',')
+        },
+        {
+          file: 'acs',
+          field: 'median_rent',
+          display: 'Median rent',
+          formatter: d3.format('$,')
+        },
+        {
+          file: 'basic',
+          field: 'historical_efr',
+          display: 'Historical EFR(national DB)',
+          // formatter: d3.format(',')
+        },
+        {
+          file: 'basic',
+          field: 'notice_requirement',
+          display: 'Notice requirement',
+          formatter: v => !!v ? (v + ' days') : 'N/A'
+        },
+        {
+          file: 'basic',
+          field: 'avg_filing_fee',
+          display: 'Avg filing fee',
+          formatter: d3.format('$,')
+        },
+        {
+          file: 'basic',
+          field: 'historical_baseline_years',
+          display: 'baseline years for which we have data',
+          // formatter: d3.format(',')
+        },
+        {
+          file: 'basic',
+          field: 'borders',
+          display: 'Delineate borders(county coverage)',
+          // formatter: d3.format(',')
+        },
+      ]
+      var snapshotCallback = function (acsData) {
+        Elab.Data.loadData(snapshotFiles.basic, d => d, function (basicData) {
+          var data = {
+            acs: acsData,
+            basic: basicData,
+          }
+
+          var wrapper = $("#introSnapshotWrapper")
+          snapshotFigures.forEach(f => {
+            var el = wrapper.find('.' + f.field)
+            var row = data[f.file].find(d => d.site === site)
+            var val = row && row[f.field]
+            el.append('<dt>' + f.display + '</dt>')
+            el.append('<dd>' + (f.formatter ? f.formatter(val) : val) + '</dd>')
+          })
+        })
+      }
+      Elab.Data.loadData(snapshotFiles.acs, d => d, snapshotCallback)
 
       // console.log(876, { statsUrl })
-      const callback = function (data) {
+      var statsCallback = function (data) {
         // console.log(234, { data })
-        var row = data.find(d => console.log(d.site) || d.site === site)
+        var row = data.find(d => d.site === site)
 
         if (!!row) {
           var el = $("#introStatsWrapper")
@@ -217,7 +129,7 @@
           stats.forEach(s => el.find('.' + s + ' h3').text(d3.format(',')(row[s])))
         }
       }
-      Elab.Data.loadData(statsUrl, d => d, callback)
+      Elab.Data.loadData(statsUrl, d => d, statsCallback)
 
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
