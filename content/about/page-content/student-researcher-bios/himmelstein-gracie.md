@@ -1,6 +1,6 @@
 ---
 childof: alumni-bios
-category: graduate
+category: alumni-student
 title: Gracie Himmelstein
 abbrev: ghimmelstein
 position: Graduate Research Assistant
