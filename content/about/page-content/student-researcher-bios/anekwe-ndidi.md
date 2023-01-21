@@ -1,6 +1,6 @@
 ---
 childof: alumni-bios
-category: alumni
+category: alumni-student
 title: Ndidi Anekwe  
 abbrev: nanekwe
 position: Research Assistant

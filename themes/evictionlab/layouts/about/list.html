@@ -230,7 +230,7 @@
               {{ if eq .Site.Language.LanguageName "Español" }}
                 {{ range .Translations }}
                   {{ range (where .Site.RegularPages "Params.childof" ("alumni-bios")) }}
-                    {{ if eq .Params.childof "alumni-bios" }} 
+                    {{ if ne .Params.category "alumni-student" }} 
                       {{ partial "about-modal" . }}
                     {{ end }}
                     {{ end }}
@@ -239,11 +239,33 @@
 
               {{ if eq .Site.Language.LanguageName "English" }}
                 {{ range (where .Site.RegularPages "Params.childof" ("alumni-bios")) }}
-                  {{ if eq .Params.childof "alumni-bios" }} 
+                  {{ if ne .Params.category "alumni-student" }} 
                     {{ partial "about-modal" . }}
                   {{ end }}
                 {{ end }}
              {{ end }}  
+
+             <h2 class="w-100 text-center page-section-headerv3 mt-md-5">STUDENT RESEARCHERS</h2>
+
+             {{ if eq .Site.Language.LanguageName "Español" }}
+             {{ range .Translations }}
+               {{ range (where .Site.RegularPages "Params.childof" ("alumni-bios")) }}
+                 {{ if eq .Params.category "alumni-student" }} 
+                   {{ partial "about-modal" . }}
+                 {{ end }}
+                 {{ end }}
+               {{ end }}
+             {{ end }} 
+
+           {{ if eq .Site.Language.LanguageName "English" }}
+             {{ range (where .Site.RegularPages "Params.childof" ("alumni-bios")) }}
+               {{ if eq .Params.category "alumni-student" }} 
+                 {{ partial "about-modal" . }}
+               {{ end }}
+             {{ end }}
+          {{ end }}  
+
+
             </div>
           </div> 
          <!-- *************** Citizen Researcher Bios ******************** -->  

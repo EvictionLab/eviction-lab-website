@@ -1,6 +1,6 @@
 ---
 childof: alumni-bios
-category: alumni
+category: alumni-student
 title: Scott Overbey
 abbrev: soverbey
 position: Research Assistant

@@ -1,6 +1,6 @@
 ---
 childof: alumni-bios
-category: alumni
+category: alumni-student
 title: 'Naomi Shifrin'
 abbrev: nshifrin
 position: Research Assistant

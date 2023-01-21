@@ -1,6 +1,6 @@
 ---
 childof: alumni-bios
-category: alumni
+category: alumni-student
 title: Larry Zebaze  
 abbrev: lzebaze
 position: Research Assistant
