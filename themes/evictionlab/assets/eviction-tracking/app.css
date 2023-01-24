@@ -2855,6 +2855,9 @@ span.value--up {
   background: var(--c1);
 }
 
+.section--avg .button-group.time-span {
+  padding-top: 8px;
+}
 /** END VISUALIZATION TOOLTIP */
 
 /** END VISUALIZATION STYLES */
