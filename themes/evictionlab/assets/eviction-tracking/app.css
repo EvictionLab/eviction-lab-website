@@ -1634,12 +1634,20 @@
   padding-top: 32px;
   padding-left: 0;
 }
-.intro .intro__stats-stat h3 {
-  font-family: var(--number-font);
-  font-size: 4.8rem;
-  color: var(--c1);
-  font-weight: bold;
+.intro .intro__stats-wrapper .minor-stats,
+.intro .intro__stats-wrapper .major-stats {
+  column-count: 2;
+  column-gap: 24px;
+}
+
+.intro .intro__stats-wrapper .major-stats {
+  margin-bottom: 1rem;
+}
+
+.intro .intro__stats-wrapper dl {
   display: inline-block;
+  margin-bottom: 1rem;
+    line-height: 1.25;
 }
 
 @media (min-width: 1024px) {
@@ -1655,9 +1663,32 @@
 
 /** END INTRO LEAD TEXT */
 
-/** INTRO STATS */
+/** UNIVERSAL STATS STYLES */
 
-/** END INTRO STATS */
+.highlighted-stat dd {
+  font-family: var(--number-font);
+  color: var(--c1);
+  font-weight: bold;
+  margin-bottom: 0;
+  /* display: inline-block; */
+}
+
+.highlighted-stat dt {
+  font-family: var(--body-font);
+  font-weight: normal;
+  /* display: inline-block; */
+  font-size: 1.6rem;
+}
+
+.major-stats .highlighted-stat dd {
+  font-size: 3.2rem;
+}
+
+.minor-stats .highlighted-stat dd {
+  font-size: 2.0rem;
+}
+
+/** END UNIVERSAL STATS STYLES */
 
 
 /** INTRO SHARE */
