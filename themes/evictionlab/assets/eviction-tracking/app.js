@@ -632,13 +632,13 @@ Elab.Data = (function (Elab) {
     });
     return shapeResult(result);
   };
+
   /**
    * Generic function to load data, shape it, then fire a callback
    * @param {*} dataUrl
    * @param {*} shaper
    * @param {*} callback
    */
-
   function loadData(dataUrl, shaper, callback) {
     d3.csv(dataUrl, function (data) {
       if (!data) {
@@ -646,7 +646,7 @@ Elab.Data = (function (Elab) {
         return;
       }
 
-      var result = shaper(data);
+      var result = shaper ? shaper(data) : data;
       callback && callback(result);
     });
   }
