@@ -686,6 +686,17 @@ Elab.Data = (function (Elab) {
  */
 
 Elab.Chart = (function (Elab) {
+  var buttonGroupTemplate = Handlebars.compile(
+    '\n  <button class="toggle" data-date="{{date}}">\n    {{label}}\n  </button>\n  ',
+  );
+  var dateFormatter = d3.timeFormat("%B %Y");
+  var dateParse = d3.timeParse("%m/%Y");
+
+  // dates for timespan control buttons, to set based on data
+  var earliestDate;
+  var yearAgo;
+  var showLast12 = false;
+
   /**
    * Pulls the extent of the selector from a collection
    * of DataItem objects
@@ -839,6 +850,8 @@ Elab.Chart = (function (Elab) {
    */
 
   function parseData(data, config) {
+    // show only most recent year of data based on toggle, only for "avg" chart
+    data = config.rootId === "avg" && showLast12 ? data.slice(-12) : data;
     var result = {
       _raw: data,
     }; // process config, add default values
@@ -1082,7 +1095,7 @@ Elab.Chart = (function (Elab) {
             '" x="0" y="0" width="2" height="8" />',
         );
 
-      var group = context.els.data.selectAll(".chart__bar-group").data(groupedData); // enter each group
+      var group = context.els.data.selectAll(".chart__bar-group").data(groupedData, (d) => d.id); // enter each group
 
       //Bryony code
       //finding max date, id of max date and adding boolean to data.
@@ -1101,7 +1114,10 @@ Elab.Chart = (function (Elab) {
           var date = monthParse(d.id);
           return "translate(" + context.x(date) + ",0)";
         });
-      var groupAreaSelection = context.els.data.selectAll(".chart__bar-area").data(groupedData);
+      var groupAreaSelection = context.els.data
+        .selectAll(".chart__bar-area")
+        .data(groupedData, (d) => d.id);
+      groupAreaSelection.exit().remove();
       var groupAreas = groupAreaSelection
         .enter()
         .append("rect")
@@ -1430,7 +1446,6 @@ Elab.Chart = (function (Elab) {
      * Updates the chart's configuration
      * @param {*} newConfig
      */
-
     function update(newConfig) {
       if (!elements) elements = initElements(root);
       if (newConfig) chartConfig = newConfig;
@@ -1439,7 +1454,46 @@ Elab.Chart = (function (Elab) {
       render();
     }
 
+    /**
+     * Render buttons for the available groups, and bind click handlers.
+     */
+    function renderButtonGroups() {
+      var buttons = [yearAgo, earliestDate]
+        .map(function (date) {
+          return {
+            label: "Since ".concat(dateFormatter(dateParse(date))),
+            date: date,
+          };
+        })
+        .map(buttonGroupTemplate)
+        .map($);
+      var container = $("#avg .button-group.time-span");
+      container.empty();
+      buttons.forEach(function (button, i) {
+        var isActiveButton = (showLast12 && i === 0) || (!showLast12 && i === 1);
+        isActiveButton ? button.addClass("toggle--active") : button.removeClass("active");
+        button.click(function () {
+          if (isActiveButton) return;
+          showLast12 = !showLast12;
+          renderButtonGroups();
+          update();
+        });
+        container.append(button);
+      });
+    }
+
     function initialRender() {
+      if (config.rootId === "avg") {
+        // set dates for timespan buttons
+        earliestDate = source[0].month;
+        yearAgo = source[source.length - 12].month;
+
+        // initialize to just show last 12 months of data for avg chart
+        showLast12 = true;
+        // and provide buttons for selecting start date
+        renderButtonGroups();
+      }
+
       update(config);
     }
 
@@ -1454,12 +1508,12 @@ Elab.Chart = (function (Elab) {
       data: parsedData,
     };
   }
+
   /**
    *
    * @param {*} elementId id of the section root
    * @param {*} config the chart config
    */
-
   function createChart(elementId, config, callback) {
     // Load the data and draw a chart
     d3.csv(config.url, function (data) {
@@ -2178,7 +2232,6 @@ Elab.Map = (function (Elab) {
     function renderPointLegend(extents, map) {
       var pointCheckbox = rootEl.find("input#top-100");
       pointCheckbox.on("change", function (e) {
-        // console.log(e.target.checked, map.getLayer("points"));
         if (e.target.checked) {
           addPointLayer(map);
         } else {
@@ -2191,7 +2244,6 @@ Elab.Map = (function (Elab) {
         return;
       }
       var legendContainer = rootEl.find(".legend--points");
-      // console.log({ legendContainer });
       legendContainer.css("display", "flex");
 
       var labelContainer = rootEl.find(".legend__points-labels");
@@ -2622,7 +2674,7 @@ Elab.ListPage = (function (Elab) {
         '<td class="table__cell table__cell--button">' +
         '<a href="{{url}}" class="btn btn-default">{{buttonLabel}} <i class="fa fa-chevron-right"></i></a>' +
         "</td>" +
-        "</tr>"
+        "</tr>",
     );
     var moratoriumRanges = Elab.Utils.getMoratoriumRanges(data);
     var isMoratoriumActive = inMoratorium(Date.now(), moratoriumRanges);
@@ -2634,8 +2686,7 @@ Elab.ListPage = (function (Elab) {
     var rowData = {
       id: data.id,
       name: data.name,
-      class:
-        "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
+      class: "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
       url: Elab.Utils.getCurrentURL() + Elab.Utils.slugify(data.name),
       weekFilings: numFormat(data.lastWeek),
       cumulativeFilings: numFormat(data.cumulative),
@@ -2649,25 +2700,22 @@ Elab.ListPage = (function (Elab) {
 
   /**
    * Checks if the provided day falls within the moratorium range
-   * @param {*} day 
-   * @param {*} ranges 
-   * @returns 
+   * @param {*} day
+   * @param {*} ranges
+   * @returns
    */
   function inMoratorium(day, ranges) {
     var isDayInRanges = ranges.reduce(function (inRange, range) {
       // get the end day of the week
       var endDay = d3.timeDay.offset(day, 7);
       // if day was in earlier range, return true
-      if (inRange) return true
+      if (inRange) return true;
       // if no start / end, then pass along the value
       if (!range[0] && !range[1]) return inRange;
       // if range only has a start date and the day is after that date, return true
-      if (!range[1] && +day >= +range[0]) return true
+      if (!range[1] && +day >= +range[0]) return true;
       // if range has both a start and an end date
-      return +day >= +range[0] &&
-            +day <= +range[1] &&
-            +endDay >= +range[0] &&
-            +endDay <= +range[1];
+      return +day >= +range[0] && +day <= +range[1] && +endDay >= +range[0] && +endDay <= +range[1];
     }, false);
     return isDayInRanges;
   }
@@ -2709,9 +2757,7 @@ Elab.ListPage = (function (Elab) {
 
     var localMoratoriums = Elab.Utils.getMoratoriumRanges(data);
     var cdcMoratorium = Elab.Utils.getCdcMoratoriumRange();
-    var moratoriumRanges = mergeRanges(
-      localMoratoriums.concat([cdcMoratorium])
-    );
+    var moratoriumRanges = mergeRanges(localMoratoriums.concat([cdcMoratorium]));
     var values = data.values.filter(function (v, i) {
       return i !== data.values.length - 1;
     }); // get values that fall within the moratorium ranges
@@ -2872,10 +2918,7 @@ Elab.ListPage = (function (Elab) {
       !count2.error && count2.start();
     }
 
-    Elab.Utils.callOnEnter(
-      document.getElementById("counterWeek"),
-      startCounter
-    );
+    Elab.Utils.callOnEnter(document.getElementById("counterWeek"), startCounter);
   }
 
   function initCityTable(cities, options) {
@@ -2976,10 +3019,7 @@ Elab.ListPage = (function (Elab) {
       var startDate = dateFormat(row.values[row.values.length - 1][0]);
       var endDate = dateFormat(row.updated);
       footnoteEl.html(
-        footnoteEl
-          .html()
-          .replace("{{start}}", startDate)
-          .replace("{{end}}", endDate)
+        footnoteEl.html().replace("{{start}}", startDate).replace("{{end}}", endDate),
       ); // initialize any tooltips
 
       $('[data-toggle="tooltip"]').tooltip();
@@ -2993,16 +3033,11 @@ Elab.ListPage = (function (Elab) {
 
 Elab.Ranking = (function (Elab) {
   var statTemplate = Handlebars.compile(
-    '\n    <p class="stat">\n      <span class="stat__value">{{value}}</span>\n      <span class="stat__label">{{{label}}}</span>\n    </p>\n  '
+    '\n    <p class="stat">\n      <span class="stat__value">{{value}}</span>\n      <span class="stat__label">{{{label}}}</span>\n    </p>\n  ',
   );
   var itemTemplate = Handlebars.compile(
-    '\n  <li class="ranking__item">\n    <div class="ranking__label">\n      <p class="ranking__primary">{{primary}}</p>\n      <p class="ranking__secondary">{{secondary}}</p>\n    </div>\n    <div class="ranking__value">\n      <div class="ranking__bar" style="width: {{percent}}"></div>\n      <div class="ranking__bar-label">\n        <span>{{value}}</span> \n        <span>filings</span>\n      </div>\n    </div>\n  </li>'
+    '\n  <li class="ranking__item">\n    <div class="ranking__label">\n      <p class="ranking__primary">{{primary}}</p>\n      <p class="ranking__secondary">{{secondary}}</p>\n    </div>\n    <div class="ranking__value">\n      <div class="ranking__bar" style="width: {{percent}}"></div>\n      <div class="ranking__bar-label">\n        <span>{{value}}</span> \n        <span>filings</span>\n      </div>\n    </div>\n  </li>',
   );
-  var buttonGroupTemplate = Handlebars.compile(
-    '\n  <button class="toggle" data-group="{{group}}">\n    {{label}}\n  </button>\n  '
-  );
-  var dateFormatter = d3.timeFormat("%B %d, %Y");
-  var dateParse = d3.timeParse("%Y-%m-%d");
   var percentFormat = d3.format(".2%");
   var $el; // jquery wrapped root element
 
@@ -3022,8 +3057,9 @@ Elab.Ranking = (function (Elab) {
       addEndDate(data);
       data = shapeTopEvictions(data);
       groups = Elab.Utils.group(data, "group");
+      // todo: when data gets reduced to single time span, hardcode
       activeGroup = groups[0].key;
-      renderButtonGroups();
+      // renderButtonGroups();
       createRankingList();
       renderEvictorsStat();
       Elab.Utils.callOnEnter($el[0], renderRankingList);
@@ -3032,12 +3068,12 @@ Elab.Ranking = (function (Elab) {
 
   function addEndDate(data) {
     var endDateVal = data[0].end_date;
-    if(!endDateVal) return;
-    var endDateArr = endDateVal.split('-');
-    var endDate = parseInt(endDateArr[1])+"-"+parseInt(endDateArr[2])+"-"+endDateArr[0];
-    $el.find(".button-group").before(
-      "<p><em>Data is current through <time>"+endDate+"</time>.</em></p>"
-    );
+    if (!endDateVal) return;
+    var endDateArr = endDateVal.split("-");
+    var endDate = parseInt(endDateArr[1]) + "-" + parseInt(endDateArr[2]) + "-" + endDateArr[0];
+    $el
+      .find(".button-group")
+      .before("<p><em>Data is current through <time>" + endDate + "</time>.</em></p>");
   }
 
   /** Shapes the data from the CSV into proper format */
@@ -3064,41 +3100,9 @@ Elab.Ranking = (function (Elab) {
     }).values;
     var templateData = {
       value: format(groupData[0].top100),
-      label:
-        "of all eviction filings come from the <strong>top 100</strong> buildings",
+      label: "of all eviction filings come from the <strong>top 100</strong> buildings",
     };
     sibling.after(statTemplate(templateData));
-  }
-
-  /**
-   * Render buttons for the available groups, and bind click handlers.
-   */
-  function renderButtonGroups() {
-    var buttons = groups
-      .map(function (group) {
-        return {
-          label: "Since ".concat(dateFormatter(dateParse(group.key))),
-          group: group.key,
-        };
-      })
-      .map(buttonGroupTemplate)
-      .map($);
-    var container = $el.find(".button-group");
-    container.empty();
-    buttons.forEach(function (button) {
-      button.data("group") === activeGroup
-        ? button.addClass("toggle--active")
-        : button.removeClass("active");
-      button.click(function () {
-        var newGroup = $(this).data("group");
-        if (activeGroup === newGroup) return;
-        activeGroup = newGroup;
-        renderButtonGroups();
-        renderRankingList();
-        renderEvictorsStat();
-      });
-      container.append(button);
-    });
   }
 
   /** Creates the initial DOM for the ranking list */
@@ -3138,7 +3142,7 @@ Elab.Ranking = (function (Elab) {
           {
             value: item.value,
             percent: percentFormat(item.value / max),
-          }
+          },
         );
       })
       .sort(function (a, b) {
@@ -3159,13 +3163,13 @@ Elab.Ranking = (function (Elab) {
           200,
           function () {
             $(this).text(item.primary);
-          }
+          },
         )
         .animate(
           {
             opacity: 1,
           },
-          200
+          200,
         );
       el.find(".ranking__secondary")
         .delay(110 * index)
@@ -3176,13 +3180,13 @@ Elab.Ranking = (function (Elab) {
           200,
           function () {
             $(this).text(item.secondary);
-          }
+          },
         )
         .animate(
           {
             opacity: 1,
           },
-          200
+          200,
         );
       el.find(".ranking__bar-label")
         .delay(200 + 120 * index)
@@ -3190,7 +3194,7 @@ Elab.Ranking = (function (Elab) {
           {
             opacity: 1,
           },
-          200
+          200,
         );
       el.find(".ranking__bar-label span:first-child")
         .delay(200 + 120 * index)
@@ -3201,7 +3205,7 @@ Elab.Ranking = (function (Elab) {
           200,
           function () {
             $(this).text(item.value);
-          }
+          },
         );
       (index !== 0 || renderCount === 0) &&
         el
@@ -3211,7 +3215,7 @@ Elab.Ranking = (function (Elab) {
             {
               width: "".concat(item.percent),
             },
-            400
+            400,
           );
     });
     renderCount++;
