@@ -5,7 +5,7 @@
       <h1 class="intro__heading">
         <a id="top">{{ .Page.Params.h1 }}</a>
       </h1>
-      {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
+      <!-- {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
         {{ if eq $rentersSite $element.site }}
           <h3 class="intro__renter-population mx-auto">RENTER HOUSEHOLDS: {{ $element.estimate }}</h3>
         {{ end }}
@@ -14,7 +14,7 @@
         {{ if eq $rentersSite $element.site }}
           <h3 class="intro__renter-population mx-auto">RENTER HOUSEHOLDS: {{ $element.estimate }}</h3>
         {{ end }}
-      {{ end }}
+      {{ end }} -->
       <div id="introText" class="intro__text">{{ .Inner | markdownify }}</div>
     </div>
     <div id="introStatsWrapper" class="intro__stats-wrapper">
@@ -65,33 +65,41 @@
           isMajor: true,
         },
         {
+          file: 'filing',
+          field: 'serial_share',
+          display: 'serial filings',
+          tooltip: 'repeated filings against the same household at the same address in the last 12 months',
+          formatter: d3.format('.0%'),
+          isMajor: true,
+        },
+        {
           file: 'acs',
           field: 'renter_hh',
-          display: 'Renter households',
+          display: 'renter households',
           formatter: d3.format(',')
         },
         {
           file: 'acs',
           field: 'median_rent',
-          display: 'Median rent',
+          display: 'median rent',
           formatter: d3.format('$,')
         },
         {
           file: 'basic',
           field: 'historical_efr',
-          display: 'Historical EFR (national DB)',
+          display: 'historical efr (national db)',
           // formatter: d3.format(',')
         },
         {
           file: 'basic',
           field: 'notice_requirement',
-          display: 'Notice requirement',
+          display: 'notice requirement',
           formatter: v => !!v ? (v + ' days') : 'N/A'
         },
         {
           file: 'basic',
           field: 'avg_filing_fee',
-          display: 'Avg filing fee',
+          display: 'average filing fee',
           formatter: d3.format('$,')
         },
         {
@@ -103,14 +111,8 @@
         {
           file: 'basic',
           field: 'borders',
-          display: 'Delineate borders(county coverage)',
+          display: 'county coverage',
           // formatter: d3.format(',')
-        },
-        {
-          file: 'filing',
-          field: 'serial_share',
-          display: 'Serial filings (repeated against the same household at the same address in the last 12 months)',
-          formatter: d3.format('.0%'),
         },
       ]
       loadAll(statFiles, {}, dataMap => {
@@ -121,8 +123,14 @@
           var row = dataMap[s.file].find(d => d.site === site)
           var val = row && row[s.field]
           if (!!val) {
+            var tt = !s.tooltip
+              ? ''
+              : `<span class="inline-tooltip">(?)
+  <span class="tooltiptext">${s.tooltip}</span>
+</span>`
+              // : '<span title="' + s.tooltip + '"> (?)</span>'
             var fVal = s.formatter ? s.formatter(val) : val
-            el.append('<dl class="highlighted-stat"><dd>' + fVal + '</dd><dt>' + s.display + '</dt></dl>')
+            el.append('<dl class="highlighted-stat"><dd>' + fVal + '</dd><dt>' + s.display + tt + '</dt></dl>')
           }
         })
         wrapper.css('opacity', 1)
