@@ -214,8 +214,6 @@ Elab.LineChart = (function (Elab) {
                 ? getMonthTooltip()
                 : getDefaultTooltip();
 
-            console.log("rendertt", tooltip);
-
             return (
               '<h1 class="tooltip__title">' +
               tooltip.title +

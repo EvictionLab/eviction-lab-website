@@ -6,6 +6,12 @@
 <div class="details">
 {{ .Inner }}
 </div>
+<div class="callout stat-block-wrapper">
+  <p>
+    Over the past year, of all eviction claims,
+  </p>
+  <div class="claims-stats"></div>
+</div>
 <div class="visual">
 <div class="visual__header">
 <h3 class="visual__title">Median Claim Amount by Month</h3>
@@ -24,6 +30,34 @@ window.addEventListener('load', function() {
   var yCol = "median_claim"
   var xCol = "month_date"
   var rootEl = '#'+id
+  var statFiles = [
+    { id: "claims", url: csv },
+  ]
+  var stats = [
+    {
+      file: 'claims',
+      field: 'sub1000',
+      display: 'were for less than $1000',
+      formatter: d3.format('.0%'),
+    },
+    {
+      file: 'claims',
+      field: 'sub_med_rent',
+      display: 'were for less than the median monthly rent',
+      formatter: d3.format('.0%'),
+    },
+    {
+      file: 'claims',
+      field: 'over_six_months_rent',
+      display: 'were for more than 6 months rent',
+      formatter: d3.format('.0%'),
+    },
+  ]
+  var getVal = (fileData, s) => {
+    var row = fileData.findLast((d) => d[s.field] !== undefined);
+    return row ? row[s.field] : null;
+  }
+  Elab.Utils.createStatBlock('.claims-stats', statFiles, stats, getVal)
   Elab.Section.init('median_filings', rootEl, { id: id, csv: csv, yCol: yCol, xCol: xCol })
 });
 </script>

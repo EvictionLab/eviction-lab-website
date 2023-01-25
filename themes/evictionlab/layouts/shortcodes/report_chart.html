@@ -29,7 +29,7 @@
     </div>
     <div class="callout stat-block-wrapper">
       <p>
-        Across all neighborhoods over the past year, we estimate that renters being filed against were:
+        Across all neighborhoods over the past year, we estimate that renters being filed against were
       </p>
       <div class="imputed-stats"></div>
     </div>
@@ -118,7 +118,6 @@
       ]
       var getVal = (fileData, s) => {
         var row = fileData.findLast((d) => d.group === s.group);
-        // console.log({ fileData, s, row })
         return row ? row[s.field] : null;
       }
       Elab.Utils.createStatBlock('.imputed-stats', statFiles, stats, getVal)
