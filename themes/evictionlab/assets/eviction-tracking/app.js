@@ -107,148 +107,188 @@ Elab.Utils = (function (Elab) {
 
     return value ? value : map[varName];
   }
-  /**
-   * Creates a tweet intent link with the provided element
-   * @param {*} el `a` tag DOM element
-   * @param {*} text text to prepopulate tweed
-   * @param {*} via account to refer to in tweet
-   */
 
-  function createTwitterLink(el, text, via) {
-    var url = Elab.Utils.getCurrentURL();
-    var params = [];
-    if (text) params.push("text=" + encodeURIComponent(text));
-    if (via) params.push("via=" + encodeURIComponent(via));
-    params.push("url=" + encodeURIComponent(url));
-    $(el).attr("href", "https://twitter.com/intent/tweet?" + params.join("&"));
-    $(el).attr("target", "_blank");
-  }
-  /**
-   * Create a facebook share intent link with provided element
-   * @param {*} el `a` tag DOM element
-   */
+function loadAll(files, dataMap, callback) {
+  if (!files.length) return callback(dataMap);
 
-  function createFacebookLink(el) {
-    var url = Elab.Utils.getCurrentURL();
-    $(el).attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url));
-    $(el).attr("target", "_blank");
-  }
-  /**
-   * Takes column name and returns an HTML string label
-   * @param {*} id
-   */
+  var file = files.pop();
+  Elab.Data.loadData(file.url, file.shaper, (fileData) => {
+    dataMap[file.id] = fileData;
+    loadAll(files, dataMap, callback);
+  });
+}
 
-  var formatLabel = function formatLabel(id) {
-    switch (id) {
-      case "avg_filings":
-        return "Average Filings";
-
-      case "month_filings":
-        return "Filings This Year";
-
-      case "percentage_diff":
-        return "Filings This Year<span>relative to average</span>";
-
-      case "Other":
-        return "Other/None";
-
-      default:
-        return id;
-    }
-  };
-
-  var formatDate = d3.timeFormat("%B %e");
-  /**
-   * Executes a function once it enters the viewport
-   * @param {*} el
-   * @param {*} handler
-   * @param {*} options
-   */
-
-  function callOnEnter(el, handler, options) {
-    options = options || {
-      rootMargin: "0px 0px -40px 0px",
-      threshold: 0.25,
-    };
-
-    if (!!window.IntersectionObserver) {
-      var observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            handler();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, options);
-      observer.observe(el);
-    } else {
-      // call immediately if IntersectionObserver is unavailable
-      handler();
-    }
-  }
-
-  function debounce(func, wait, immediate) {
-    var timeout;
-    return function () {
-      var context = this,
-        args = arguments;
-
-      var later = function later() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  }
-
-  function getMoratoriumRanges(data) {
-    return data.start.map(function (d, i) {
-      return [data.start[i], data.end[i]];
+/**
+ * Creates a stat block
+ */
+function createStatBlock(el, statFiles, stats, getVal, getContainer = null) {
+  loadAll(statFiles, {}, (dataMap) => {
+    var wrapper = $(el);
+    stats.forEach((s) => {
+      // console.log({ stats, s });
+      // var parentDiv = s.isMajor ? "major-stats" : "minor-stats";
+      // var el = wrapper.find("." + parentDiv);
+      var el = getContainer ? getContainer(wrapper, s) : wrapper;
+      var val = getVal(dataMap[s.file], s);
+      if (!!val) {
+        var tt = !s.tooltip
+          ? ""
+          : `<span class="inline-tooltip">(?)
+  <span class="tooltiptext">${s.tooltip}</span>
+</span>`;
+        var fVal = s.formatter ? s.formatter(val) : val;
+        el.append(
+          '<dl class="highlighted-stat"><dd>' + fVal + "</dd><dt>" + s.display + tt + "</dt></dl>",
+        );
+      }
     });
+    wrapper.css("opacity", 1);
+  });
+}
+
+/**
+ * Creates a tweet intent link with the provided element
+ * @param {*} el `a` tag DOM element
+ * @param {*} text text to prepopulate tweed
+ * @param {*} via account to refer to in tweet
+ */
+
+function createTwitterLink(el, text, via) {
+  var url = Elab.Utils.getCurrentURL();
+  var params = [];
+  if (text) params.push("text=" + encodeURIComponent(text));
+  if (via) params.push("via=" + encodeURIComponent(via));
+  params.push("url=" + encodeURIComponent(url));
+  $(el).attr("href", "https://twitter.com/intent/tweet?" + params.join("&"));
+  $(el).attr("target", "_blank");
+}
+/**
+ * Create a facebook share intent link with provided element
+ * @param {*} el `a` tag DOM element
+ */
+
+function createFacebookLink(el) {
+  var url = Elab.Utils.getCurrentURL();
+  $(el).attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url));
+  $(el).attr("target", "_blank");
+}
+/**
+ * Takes column name and returns an HTML string label
+ * @param {*} id
+ */
+
+var formatLabel = function formatLabel(id) {
+  switch (id) {
+    case "avg_filings":
+      return "Average Filings";
+
+    case "month_filings":
+      return "Filings This Year";
+
+    case "percentage_diff":
+      return "Filings This Year<span>relative to average</span>";
+
+    case "Other":
+      return "Other/None";
+
+    default:
+      return id;
   }
+};
 
-  function getCdcMoratoriumRange() {
-    return [new Date(2020, 8, 4), new Date(2021, 7, 26)]; // ended aug 26
-  }
+var formatDate = d3.timeFormat("%B %e");
+/**
+ * Executes a function once it enters the viewport
+ * @param {*} el
+ * @param {*} handler
+ * @param {*} options
+ */
 
-  function monthAxisFormatter(date, index) {
-    var prevDate = d3.timeMonth.offset(date, -1);
-    var yearFormat = d3.timeFormat("%y");
-    var monthFormat = d3.timeFormat("%b");
-    var monthYearFormat = d3.timeFormat("%b '%y");
-    return yearFormat(prevDate) === yearFormat(date) && index > 0
-      ? monthFormat(date)
-      : monthYearFormat(date);
-  } // group an array of objects by a property
-
-  function group(data, property) {
-    return d3
-      .nest()
-      .key(function (d) {
-        return d[property];
-      })
-      .entries(data);
-  }
-
-  return {
-    group: group,
-    getCssVar: getCssVar,
-    getCurrentURL: getCurrentURL,
-    slugify: slugify,
-    createTwitterLink: createTwitterLink,
-    createFacebookLink: createFacebookLink,
-    formatLabel: formatLabel,
-    formatDate: formatDate,
-    callOnEnter: callOnEnter,
-    debounce: debounce,
-    getMoratoriumRanges: getMoratoriumRanges,
-    getCdcMoratoriumRange: getCdcMoratoriumRange,
-    monthAxisFormatter: monthAxisFormatter,
+function callOnEnter(el, handler, options) {
+  options = options || {
+    rootMargin: "0px 0px -40px 0px",
+    threshold: 0.25,
   };
+
+  if (!!window.IntersectionObserver) {
+    var observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          handler();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    observer.observe(el);
+  } else {
+    // call immediately if IntersectionObserver is unavailable
+    handler();
+  }
+}
+
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function () {
+    var context = this,
+      args = arguments;
+
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+function getMoratoriumRanges(data) {
+  return data.start.map(function (d, i) {
+    return [data.start[i], data.end[i]];
+  });
+}
+
+function getCdcMoratoriumRange() {
+  return [new Date(2020, 8, 4), new Date(2021, 7, 26)]; // ended aug 26
+}
+
+function monthAxisFormatter(date, index) {
+  var prevDate = d3.timeMonth.offset(date, -1);
+  var yearFormat = d3.timeFormat("%y");
+  var monthFormat = d3.timeFormat("%b");
+  var monthYearFormat = d3.timeFormat("%b '%y");
+  return yearFormat(prevDate) === yearFormat(date) && index > 0
+    ? monthFormat(date)
+    : monthYearFormat(date);
+} // group an array of objects by a property
+
+function group(data, property) {
+  return d3
+    .nest()
+    .key(function (d) {
+      return d[property];
+    })
+    .entries(data);
+}
+
+return {
+  group: group,
+  getCssVar: getCssVar,
+  getCurrentURL: getCurrentURL,
+  slugify: slugify,
+  createTwitterLink: createTwitterLink,
+  createFacebookLink: createFacebookLink,
+  createStatBlock: createStatBlock,
+  formatLabel: formatLabel,
+  formatDate: formatDate,
+  callOnEnter: callOnEnter,
+  debounce: debounce,
+  getMoratoriumRanges: getMoratoriumRanges,
+  getCdcMoratoriumRange: getCdcMoratoriumRange,
+  monthAxisFormatter: monthAxisFormatter,
+};
 })(Elab);
 /**
  * CONFIG MODULE

@@ -19,7 +19,8 @@ More detail on eviction protections in New Mexico can be found on the [COVID-19 
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/albuquerque_barchart.csv" %}}
+
+{{% report_chart id="avg" data="/uploads/albuquerque_barchart.csv" impFile="/uploads/albuquerque_linechart.csv" %}}
 
 
 
