@@ -314,7 +314,6 @@ Elab.Config = (function (Elab) {
    */
 
   var xPadExtent = function xPadExtent(extent) {
-    console.log({ extent }, d3.timeMonth(extent[0]));
     return [d3.timeMonth.floor(extent[0]), d3.timeMonth.ceil(extent[1])];
   };
   /**
@@ -2178,7 +2177,7 @@ Elab.Map = (function (Elab) {
             },
           }));
 
-          console.log({ data, allData, pointJson, extent }, geojson.features);
+          // console.log({ data, allData, pointJson, extent }, geojson.features);
           map.addSource("points", {
             type: "geojson",
             data: pointJson,

@@ -1697,11 +1697,6 @@
 
 /* STAT BLOCK (CALLOUT) */
 
-/* only shows for Race section */
-.section--avg .stat-block-wrapper {
-  display: none;
-}
-
 .stat-block-wrapper .highlighted-stat {
   display: inline-block;
 }
@@ -2163,6 +2158,10 @@ label #labels_top-100 {
     width: 40%;
     flex-grow: 0;
   }
+    .section.section--medianFilings .stat-block-wrapper {
+      /* override to fit long stat description */
+      width: 50%;
+    }
   .section .legend {
     width: 100%;
     justify-content: flex-start;
@@ -2400,6 +2399,20 @@ label #labels_top-100 {
   display: block;
 }
 
+/* only one figure per line */
+.section.section--median .highlighted-stat dl {
+  display: block;
+}
+
+/* list entire figure on single line */
+.section.section--median .highlighted-stat dt,
+.section.section--median .highlighted-stat dd {
+  display: inline-block;
+}
+
+.section.section--median .highlighted-stat dd {
+  margin-right: 8px;
+}
 /** END MEDIAN SECTION */
 
 /** CHART SECTION */
@@ -2419,6 +2432,10 @@ label #labels_top-100 {
   }
 }
 
+/* only shows for Race section */
+.section--chart.section--avg .stat-block-wrapper {
+  display: none;
+}
 /** END CHART SECTION */
 
 /** MAP SECTION */
