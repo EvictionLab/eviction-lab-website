@@ -27,6 +27,12 @@
         <div class="button-group time-span"></div>
       </div>
     </div>
+    <div class="callout stat-block-wrapper">
+      <p>
+        Across all neighborhoods over the past year, we estimate that renters being filed against were:
+      </p>
+      <div class="imputed-stats"></div>
+    </div>
     <div class="legend"></div>
     <div class="visual__note-wrapper">
           <div class="legend-item">
@@ -74,8 +80,48 @@
   <script>
     window.addEventListener('load', function() {
       var id = {{ .Get "id" }}
+      var impFile = {{ .Get "impFile" }}
       var csv = {{ .Get "data" }}
       var rootEl = '#'+id
+      var statFiles = [
+        { id: "imputed", url: impFile },
+      ]
+      var stats = [
+        {
+          file: 'imputed',
+          field: 'month_filings_imputed',
+          display: 'Black',
+          group: 'Black',
+          formatter: d3.format('.0%'),
+        },
+        {
+          file: 'imputed',
+          field: 'month_filings_imputed',
+          display: 'Latinx',
+          group: 'Latinx',
+          formatter: d3.format('.0%'),
+        },
+        {
+          file: 'imputed',
+          field: 'month_filings_imputed',
+          display: 'White',
+          group: 'White',
+          formatter: d3.format('.0%'),
+        },
+        {
+          file: 'imputed',
+          field: 'month_filings_imputed',
+          display: 'Female',
+          group: 'Other',
+          formatter: d3.format('.0%'),
+        },
+      ]
+      var getVal = (fileData, s) => {
+        var row = fileData.findLast((d) => d.group === s.group);
+        // console.log({ fileData, s, row })
+        return row ? row[s.field] : null;
+      }
+      Elab.Utils.createStatBlock('.imputed-stats', statFiles, stats, getVal)
       Elab.Section.init('chart', rootEl, { id: id, csv: csv })
     });
   </script>

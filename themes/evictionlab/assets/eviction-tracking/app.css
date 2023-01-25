@@ -1646,11 +1646,15 @@
 
 .intro .intro__stats-wrapper dl {
   display: inline-block;
-    /* so they don't split across multiple columns */
-      width: 100%;
-      /* so they don't combine on one line */
+  /* so they don't split across multiple columns */
+  width: 100%;
+  /* so they don't combine on one line */
   margin-bottom: 1rem;
-  line-height: 1.25;
+}
+
+.minor-stats .highlighted-stat dd {
+  font-size: 2.0rem;
+  color: var(--c2);
 }
 
 @media (min-width: 1024px) {
@@ -1673,6 +1677,7 @@
   font-weight: bold;
   margin-bottom: 0;
   /* display: inline-block; */
+  line-height: 1.25;
 }
 
 .highlighted-stat dt {
@@ -1680,20 +1685,34 @@
   font-weight: normal;
   /* display: inline-block; */
   font-size: 1.6rem;
+  line-height: 1.25;
 }
 
-.major-stats .highlighted-stat dd {
+.highlighted-stat dd {
   font-size: 3.2rem;
   color: var(--c1);
 }
 
-.minor-stats .highlighted-stat dd {
-  font-size: 2.0rem;
-  color: var(--c2);
-}
-
 /** END UNIVERSAL STATS STYLES */
 
+/* STAT BLOCK (CALLOUT) */
+
+/* only shows for Race section */
+.section--avg .stat-block-wrapper {
+  display: none;
+}
+
+.stat-block-wrapper .highlighted-stat {
+  display: inline-block;
+}
+
+.stat-block-wrapper .highlighted-stat:not(:last-child) {
+  margin-right: 16px;
+}
+
+.stat-block-wrapper .highlighted-stat dd {}
+
+/* END STAT BLOCK (CALLOUT) */
 /* TOOLTIP */
 .inline-tooltip {
   position: relative;
@@ -2131,6 +2150,7 @@ label #labels_top-100 {
   }
   .section .details,
   .section .legend,
+  .section .stat-block-wrapper,
   .section .footnote {
     margin: 0 0 16px 0;
     width: 40%;

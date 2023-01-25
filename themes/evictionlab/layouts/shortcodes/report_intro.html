@@ -27,16 +27,6 @@
     var site = {{ .Get "site" }}
     window.addEventListener('load', function () {
 
-      function loadAll(files, dataMap, callback) {
-        if (!files.length) return callback(dataMap);
-
-        var file = files.pop();
-        Elab.Data.loadData(file.url, file.shaper, (fileData) => {
-          dataMap[file.id] = fileData;
-          loadAll(files, dataMap, callback);
-        });
-      }
-
       var statFiles = [
         { id: "filing", url: "/uploads/filing_data_by_site.csv" },
         { id: "basic", url: "/uploads/basic_data_by_site.csv" },
@@ -115,27 +105,34 @@
           // formatter: d3.format(',')
         },
       ]
-      loadAll(statFiles, {}, dataMap => {
-        var wrapper = $("#introStatsWrapper")
-        stats.forEach(s => {
-          var parentDiv = s.isMajor ? 'major-stats' : 'minor-stats'
-          var el = wrapper.find('.' + parentDiv)
-          var row = dataMap[s.file].find(d => d.site === site)
-          var val = row && row[s.field]
-          if (!!val) {
-            var tt = !s.tooltip
-              ? ''
-              : `<span class="inline-tooltip">(?)
-  <span class="tooltiptext">${s.tooltip}</span>
-</span>`
-              // : '<span title="' + s.tooltip + '"> (?)</span>'
-            var fVal = s.formatter ? s.formatter(val) : val
-            el.append('<dl class="highlighted-stat"><dd>' + fVal + '</dd><dt>' + s.display + tt + '</dt></dl>')
-          }
-        })
-        wrapper.css('opacity', 1)
-      })
+//       loadAll(statFiles, {}, dataMap => {
+//         var wrapper = $("#introStatsWrapper")
+//         stats.forEach(s => {
+//           var parentDiv = s.isMajor ? 'major-stats' : 'minor-stats'
+//           var el = wrapper.find('.' + parentDiv)
+//           var row = dataMap[s.file].find(d => d.site === site)
+//           var val = row && row[s.field]
+//           if (!!val) {
+//             var tt = !s.tooltip
+//               ? ''
+//               : `<span class="inline-tooltip">(?)
+//   <span class="tooltiptext">${s.tooltip}</span>
+// </span>`
+//             var fVal = s.formatter ? s.formatter(val) : val
+//             el.append('<dl class="highlighted-stat"><dd>' + fVal + '</dd><dt>' + s.display + tt + '</dt></dl>')
+//           }
+//         })
+//         wrapper.css('opacity', 1)
+//       })
 
+      var getVal = (fileData, s) => {
+        var row = fileData.find((d) => d.site === site);
+        return row ? row[s.field] : null;
+      }
+
+      var getContainer = (wrapper, stat) => wrapper.find(stat.isMajor ? '.major-stats' : '.minor-stats')
+
+      Elab.Utils.createStatBlock('#introStatsWrapper', statFiles, stats, getVal, getContainer)
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
       var dateFormat = d3.timeFormat("%b %e, %Y")
