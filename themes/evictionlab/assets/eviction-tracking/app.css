@@ -1646,8 +1646,11 @@
 
 .intro .intro__stats-wrapper dl {
   display: inline-block;
+    /* so they don't split across multiple columns */
+      width: 100%;
+      /* so they don't combine on one line */
   margin-bottom: 1rem;
-    line-height: 1.25;
+  line-height: 1.25;
 }
 
 @media (min-width: 1024px) {
@@ -1667,7 +1670,6 @@
 
 .highlighted-stat dd {
   font-family: var(--number-font);
-  color: var(--c1);
   font-weight: bold;
   margin-bottom: 0;
   /* display: inline-block; */
@@ -1682,14 +1684,63 @@
 
 .major-stats .highlighted-stat dd {
   font-size: 3.2rem;
+  color: var(--c1);
 }
 
 .minor-stats .highlighted-stat dd {
   font-size: 2.0rem;
+  color: var(--c2);
 }
 
 /** END UNIVERSAL STATS STYLES */
 
+/* TOOLTIP */
+.inline-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  margin-left: 4px;
+}
+
+.inline-tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 4px);
+  left: calc(50% - 90px);
+  /* top: -100%;
+  left: calc(100% + 4px); */
+  /* margin-left: -60px; */
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 180px;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.inline-tooltip .tooltiptext::after {
+  /* arrow */
+  /* content: "";
+  position: relative;
+  top: 30%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent; */
+}
+
+.inline-tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* END TOOLTIP */
 
 /** INTRO SHARE */
 
