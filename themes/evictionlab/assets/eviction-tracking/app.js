@@ -733,7 +733,7 @@ Elab.Chart = (function (Elab) {
   var buttonGroupTemplate = Handlebars.compile(
     '\n  <button class="toggle" data-date="{{date}}">\n    {{label}}\n  </button>\n  ',
   );
-  var dateFormatter = d3.timeFormat("%B %Y");
+  var dateFormatter = d3.timeFormat("%m/%Y");
   var dateParse = d3.timeParse("%m/%Y");
 
   // dates for timespan control buttons, to set based on data
@@ -1502,13 +1502,19 @@ Elab.Chart = (function (Elab) {
      * Render buttons for the available groups, and bind click handlers.
      */
     function renderButtonGroups() {
-      var buttons = [yearAgo, earliestDate]
-        .map(function (date) {
-          return {
-            label: "Since ".concat(dateFormatter(dateParse(date))),
-            date: date,
-          };
-        })
+      var buttons = [{
+            label: "Past year",
+            date: yearAgo,
+          }, {
+            label: "Since ".concat(dateFormatter(dateParse(earliestDate))),
+            date: earliestDate,
+          }]
+        // .map(function (date, i) {
+        //   return {
+        //     label: "Since ".concat(dateFormatter(dateParse(date))),
+        //     date: date,
+        //   };
+        // })
         .map(buttonGroupTemplate)
         .map($);
       var container = $("#avg .button-group.time-span");

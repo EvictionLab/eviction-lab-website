@@ -6,22 +6,22 @@
 <div class="details">
 {{ .Inner }}
 </div>
+<div class="visual">
+  <div class="visual__header">
+    <h3 class="visual__title">Median Claim Amount by Month</h3>
+  </div>
+  <div id="medianChart" class="visual__chart">
+    <svg></svg>
+  </div>
+</div>
+  <div class="legend"></div>
+  <div class="footnote"></div>
 <div class="callout stat-block-wrapper">
   <p>
     Over the past year, of all eviction claims,
   </p>
   <div class="claims-stats"></div>
 </div>
-<div class="visual">
-<div class="visual__header">
-<h3 class="visual__title">Median Claim Amount by Month</h3>
-</div>
-<div id="medianChart" class="visual__chart">
-<svg></svg>
-</div>
-</div>
-<div class="legend"></div>
-<div class="footnote"></div>
 </div>
 <script>
 window.addEventListener('load', function() {
