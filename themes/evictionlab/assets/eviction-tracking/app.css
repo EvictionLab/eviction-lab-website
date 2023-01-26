@@ -1714,29 +1714,42 @@
 .inline-tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
   margin-left: 4px;
+  background-image: url("/img/icon--info.svg");
+  width: 16px;
+  height: 18px;
+  vertical-align: top;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .inline-tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #555;
+  background-color: black;
   color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+  border-radius: 2px;
   position: absolute;
   z-index: 1;
   top: calc(100% + 4px);
-  left: calc(50% - 90px);
+  /* 50% - width/2 */
+  left: calc(50% - 105px);
   /* top: -100%;
   left: calc(100% + 4px); */
   /* margin-left: -60px; */
   opacity: 0;
   transition: opacity 0.3s;
-  width: 180px;
+  width: 210px;
   padding: 8px;
-  font-size: 12px;
+  font-size: 14px;
+}
+@media (max-width: 480px) {
+  .inline-tooltip .tooltiptext {
+    /* protect against flowing offscreen: narrow with tooltip extending left */
+    width: 140px;
+    left: unset;
+    right: -8px;
+  }
 }
 
 .inline-tooltip .tooltiptext::after {
@@ -2431,6 +2444,9 @@ label #labels_top-100 {
 .section--chart.section--avg .stat-block-wrapper {
   display: none;
 }
+.callout.stat-block-wrapper p {
+  font-size: 16px;
+}
 .callout.stat-block-wrapper {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
@@ -2440,6 +2456,10 @@ label #labels_top-100 {
   text-align: start;
 }
 
+.section--chart.section--race .callout.stat-block-wrapper {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
 .section--chart.section--race .imputed-stats {
   display: flex;
   justify-content: space-around;

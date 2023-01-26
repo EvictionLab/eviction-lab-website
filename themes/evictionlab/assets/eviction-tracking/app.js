@@ -108,6 +108,13 @@ Elab.Utils = (function (Elab) {
     return value ? value : map[varName];
   }
 
+function createTooltip(text) {
+  if (!text) return "";
+  return `<span class="inline-tooltip">
+<span class="tooltiptext">${text}</span>
+</span>`;
+}
+
 function loadAll(files, dataMap, callback) {
   if (!files.length) return callback(dataMap);
 
@@ -125,20 +132,17 @@ function createStatBlock(el, statFiles, stats, getVal, getContainer = null) {
   loadAll(statFiles, {}, (dataMap) => {
     var wrapper = $(el);
     stats.forEach((s) => {
-      // console.log({ stats, s });
-      // var parentDiv = s.isMajor ? "major-stats" : "minor-stats";
-      // var el = wrapper.find("." + parentDiv);
       var el = getContainer ? getContainer(wrapper, s) : wrapper;
       var val = getVal(dataMap[s.file], s);
       if (!!val) {
-        var tt = !s.tooltip
-          ? ""
-          : `<span class="inline-tooltip">(?)
-  <span class="tooltiptext">${s.tooltip}</span>
-</span>`;
         var fVal = s.formatter ? s.formatter(val) : val;
         el.append(
-          '<dl class="highlighted-stat"><dd>' + fVal + "</dd><dt>" + s.display + tt + "</dt></dl>",
+          '<dl class="highlighted-stat"><dd>' +
+            fVal +
+            "</dd><dt>" +
+            s.display +
+            createTooltip(s.tooltip) +
+            "</dt></dl>",
         );
       }
     });
