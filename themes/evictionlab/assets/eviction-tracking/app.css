@@ -1701,12 +1701,14 @@
   display: inline-block;
 }
 
-.stat-block-wrapper .highlighted-stat:not(:last-child) {
-  margin-right: 16px;
-}
-
 .stat-block-wrapper .highlighted-stat dd {}
 
+@media (max-width: 1024px) {
+  .callout.stat-block-wrapper {
+    max-width: 480px;
+    margin: 0 auto 16px;
+  }
+}
 /* END STAT BLOCK (CALLOUT) */
 /* TOOLTIP */
 .inline-tooltip {
@@ -1868,7 +1870,7 @@
     margin-bottom: 16px;
     margin-top: -16px;
 }
-  @media (max-width: 992px) {
+        @media (max-width: 1024px) {
     .visual__note-wrapper {
       max-width: 170px;
     }
@@ -2429,6 +2431,19 @@ label #labels_top-100 {
 .section--chart.section--avg .stat-block-wrapper {
   display: none;
 }
+.callout.stat-block-wrapper {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  background: unset;
+}
+.callout.stat-block-wrapper>* {
+  text-align: start;
+}
+
+.section--chart.section--race .imputed-stats {
+  display: flex;
+  justify-content: space-around;
+}
 /** END CHART SECTION */
 
 /** MAP SECTION */
@@ -2967,8 +2982,9 @@ span.value--up {
   background: var(--c1);
 }
 
-.section--avg .button-group.time-span {
-  padding-top: 8px;
+.section--avg .visual__toggle {
+  display: flex;
+  gap: 16px;
 }
 /** END VISUALIZATION TOOLTIP */
 
