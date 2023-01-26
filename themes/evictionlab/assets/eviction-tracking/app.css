@@ -2462,7 +2462,7 @@ label #labels_top-100 {
 }
 .section--chart.section--race .imputed-stats {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 /** END CHART SECTION */
 
