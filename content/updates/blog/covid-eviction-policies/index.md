@@ -21,6 +21,10 @@ aliases:
     - /covid-response-policies
 ---
 
+<strong>Note: this page has been archived. The last update was made in March 2022. Check local news sites and housing organizations to learn about possible renter protections in your area.</strong>
+
+<hr />
+
 As the world seeks to contain the COVID-19 pandemic, policymakers across the U.S. are responding to the heightened insecurity so many face.
 
 This table details where local governments, states, and the federal government have taken action. We continually update this table and <a href="https://evictionlab.org/contact/">welcome tips</a> regarding what your community is putting into place. Please note that as policies are changing daily, this table may not be comprehensive of all orders that are in effect in towns, cities, and counties. 

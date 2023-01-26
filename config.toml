@@ -26,11 +26,7 @@ languageName = "English"
 [[Languages.en.menu.main]]
     name = "Eviction Tracking System"
     weight = 3
-    url = "/eviction-tracking/"
-[[Languages.en.menu.main]]
-    name = "Policies Database"
-    weight = 4
-    url = "/covid-eviction-policies/"    
+    url = "/eviction-tracking/" 
 [[Languages.en.menu.main]]
     name = "Newest Findings & Stories"
     weight = 6
@@ -189,10 +185,6 @@ languageName = "Español"
     name = "Eviction Tracking System"
     weight = 3
     url = "/eviction-tracking/"
-[[Languages.es.menu.main]]
-    name = "Policies Database"
-    weight = 4
-    url = "/covid-eviction-policies/"    
 [[Languages.es.menu.main]]
     name = "Hallazgos e historias más recientes"
     weight = 6
