@@ -39,7 +39,7 @@ data:
     monthfile: /uploads/all_sites_monthly_2020_2021.csv
   - site: All States
     years: "-"
-    geo: Census Tract
+    geo: Census Tract / ZIP Code
     file: /uploads/allstates_weekly_2020_2021.csv
     monthfile: /uploads/allstates_monthly_2020_2021.csv
   - site: Albuquerque
