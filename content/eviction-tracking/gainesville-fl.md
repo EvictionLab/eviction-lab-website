@@ -4,10 +4,10 @@ draft: false
 h1: Gainesville, Florida
 slug: gainesville-fl
 date: 2022-07-20T04:00:00.000Z
+rentersSite: Gainesville
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Gainesville Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Gainesville
 ---
 
 {{< report_intro id="12001" data="/uploads/table.csv" >}}
@@ -63,7 +63,7 @@ Gainesville is divided into 56 census tracts. In each of those tracts, we map th
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2017–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data were collected by Drew Nolan in association with the [Alachua County Labor Coalition](https://laborcoalition.org/). Historical averages are calculated for the years 2017-2019.
 
