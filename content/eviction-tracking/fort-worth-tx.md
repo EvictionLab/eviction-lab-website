@@ -4,10 +4,10 @@ draft: false
 h1: Fort Worth, Texas
 slug: fort-worth-tx
 date: 2022-07-20T04:00:00.000Z
+rentersSite: Fort Worth
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Fort Worth, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Fort Worth
 ---
 
 {{< report_intro id="48439" data="/uploads/table.csv" >}}
@@ -55,7 +55,7 @@ Tarrant and Denton Counties are divided into 494 census tracts. In each of those
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None.
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in the historical years.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in the historical years.<sup>1</sup>
 
 1. Eviction filing data for Tarrant County were collected by [January Advisors](https://www.januaryadvisors.com/). Historical averages cover the years 2018-2019. Data for Denton County were collected by [LSC](https://www.lsc.gov/); historical averages cover 2016-2019.
 
