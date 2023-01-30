@@ -4,10 +4,10 @@ draft: false
 h1: Hartford, Connecticut
 slug: hartford-ct
 date: 2022-07-20T04:00:00.000Z
+rentersSite: Hartford
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Hartford, Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Hartford
 ---
 
 {{< report_intro id="09003" data="/uploads/table.csv" >}}
@@ -51,7 +51,7 @@ Hartford is made up of 223 census tracts. In each of those tracts, we map the nu
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2017–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
 
