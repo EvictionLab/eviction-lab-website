@@ -26,7 +26,7 @@ Filing counts in some counties for baseline years may differ slightly compared t
 Eviction filings in Wisconsin were higher than average in January and February of 2020. That pattern reversed in March, and filings were considerably down in April and May 2020.<sup>1</sup> Filings increased following the expiration of state-wide eviction protections.<sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2016-2018. 
-2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/).
+2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/).
 
 
 
