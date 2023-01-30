@@ -4,10 +4,10 @@ draft: false
 h1: Tampa, Florida
 slug: tampa-fl
 date: 2022-07-24T04:00:00.000Z
+rentersSite: Tampa
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Tampa, Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Tampa
 ---
 
 {{< report_intro id="12103" data="/uploads/table.csv" >}}
@@ -65,7 +65,7 @@ Pinellas and Hillsborough counties are divided into 567 census tracts. In each o
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for Pinellas and Hillsborough Counties were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
