@@ -4,10 +4,10 @@ draft: false
 h1: South Bend, Indiana
 slug: south-bend-in
 date: 2022-07-24T04:00:00.000Z
+rentersSite: South Bend
 twImage: /images/assets/graphics/ets-bg-social.png
 title: South Bend, Indiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: South Bend
 ---
 
 {{< report_intro id="18141" data="/uploads/table.csv" >}}
@@ -61,7 +61,7 @@ St. Joseph County is divided into 75 census tracts. In each of those tracts, we 
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for St. Joseph County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
