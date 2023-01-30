@@ -124,7 +124,7 @@ Maricopa County is divided into 916 census tracts. In each of those tracts, we m
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2015-2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2015-2019.<sup>1</sup>
 
 1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). Historical averages are taken over the years 2015-2019.
 
