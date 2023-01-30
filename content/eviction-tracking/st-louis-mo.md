@@ -4,10 +4,10 @@ draft: false
 h1: St. Louis, Missouri
 slug: st-louis-mo
 date: 2022-07-24T04:00:00.000Z
+rentersSite: Saint Louis
 twImage: /images/assets/graphics/ets-bg-social.png
 title: St. Louis, Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Saint Louis
 ---
 
 {{< report_intro id="29510" data="/uploads/table.csv" >}}
@@ -27,7 +27,7 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 Eviction filings in St. Louis City and St. Louis County were slightly above average in January and February of 2020, but began to fall in March.<sup>1</sup> Filings in April, May, and June 2020 were significantly below average. Eviction filings increased by July 2020.<sup>2</sup> 
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
-2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
+2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/)
 
 {{%/ report_chart %}}
 
@@ -64,7 +64,7 @@ St. Louis is made up of 305 census tracts. In each of those tracts, we map the n
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in previous years. This allows us to see, for example, that filings in majority-Black neighborhoods were higher than average in the first two months of 2020.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in previous years.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 
