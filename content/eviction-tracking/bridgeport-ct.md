@@ -4,10 +4,10 @@ draft: false
 h1: Bridgeport, Connecticut
 slug: bridgeport-ct
 date: 2022-07-21T04:00:00.000Z
+rentersSite: Bridgeport
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Bridgeport, Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Bridgeport
 ---
 
 {{< report_intro id="09001" data="/uploads/table.csv" >}}
@@ -71,7 +71,7 @@ Fairfield County is made up of 211 census tracts. In each of those tracts, we ma
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2017–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
 
