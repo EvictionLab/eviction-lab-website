@@ -4,10 +4,10 @@ draft: false
 h1: Jacksonville, Florida
 slug: jacksonville-fl
 date: 2022-07-20T04:00:00.000Z
+rentersSite: Jacksonville
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Jacksonville Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Jacksonville
 ---
 
 {{< report_intro id="12031" data="/uploads/table.csv" >}}
@@ -29,7 +29,7 @@ More detail on eviction protections in Florida can be found on the [COVID-19 Hou
 Eviction filings in Jacksonville were higher than average in January and February 2020.<sup>1</sup> That pattern reversed in March. Less than 50 cases were filed in both April and May. Filings increased by August 2020 following the expiration of the state-wide eviction moratorium.<sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
-2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
+2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/)
 
 {{%/ report_chart %}}
 
@@ -66,7 +66,7 @@ Jacksonville is divided into 174 census tracts. In each of those tracts, we map 
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2012–2016.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2012–2016.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 
