@@ -58,11 +58,15 @@ Elab.StackAreaChart = (function (Elab) {
    */
   var getLineSelector = function (options) {
     var sum = []; // track totals
+    console.log(1, {options, sum})
     return function (data) {
+      console.log(2,{ data })
       var result = options.groups.map(function (group) {
+        console.log(3,{ group })
         return data.map(function (d, i) {
           var base = sum[i] || 0;
           sum[i] = base + d[group];
+          console.log(4, { base, d })
           return [d.x, sum[i], group];
         });
       });

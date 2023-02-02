@@ -102,6 +102,21 @@ Elab.LineChart = (function (Elab) {
   };
 
   /**
+   * Selects the line data set from the chart data
+   * @param {*} data
+   */
+  var avgLineSelector = function (data) {
+    console.log(321, {data})
+    // var grouped = Elab.Utils.group(data, "name").map(function (d) {
+    //   return d.values;
+    // });
+    return data.map(function (group) {
+      console.log(432, { group })  
+      return [group.x, 2000]
+    });
+  };
+
+  /**
    * Creates the chart and renders
    * @param {HTMLElement} root
    * @param {Array<Object>} data
@@ -120,6 +135,14 @@ Elab.LineChart = (function (Elab) {
       $(root).addClass("chart__body--highlight" + highlighted.length);
     }
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
+
+    let markLines
+    if (dataOptions.avgLine) {
+      // markLines = $(root).find("svg").append("g").attr("class", "chart__avg-lines");
+      markLines = root
+      console.log("!@#", { root, markLines, data, dataOptions, chart }, d3.select(markLines), this, chart.getInnerWidth(), chart.getInnerHeight())
+    }
+    
     return (
       chart
         // adds y axis, using max of the trend line value or bar value
@@ -160,9 +183,17 @@ Elab.LineChart = (function (Elab) {
           },
         })
         // adds the trend line
+        // .addLines({
+        //   selector: lineSelector,
+        //   curve: dataOptions.curve ? d3[dataOptions.curve] : null,
+        // })
         .addLines({
-          selector: lineSelector,
-          curve: dataOptions.curve ? d3[dataOptions.curve] : null,
+          selector: d => avgLineSelector(d),
+          // selector: getLineSelector(dataOptions),
+          linesId: 'avg',
+          curve: false,
+          delay: 1,
+          duration: 1,
         })
         // adds a tooltip with the provided render function
         // .addTooltip(showTooltip, hideTooltip)
@@ -190,7 +221,7 @@ Elab.LineChart = (function (Elab) {
 
             function getMonthTooltip() {
               const monthFormat = d3.timeFormat(
-                dataOptions.xTooltipFormat || dataOptions.xFormat || "%B"
+                dataOptions.xTooltipFormat || dataOptions.xFormat || "%B",
               );
               return {
                 title: hoverData.name,
@@ -235,6 +266,10 @@ Elab.LineChart = (function (Elab) {
             dataOptions.mark.split(";").map(function (d) {
               return parseDate(d);
             }),
+        })
+        .addAvgLine(markLines, {
+          width: root.getBoundingClientRect().width - dataOptions.margin[1] - dataOptions.margin[3],
+          average: dataOptions.avgLine,
         })
         .render()
     );

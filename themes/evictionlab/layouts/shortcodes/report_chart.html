@@ -69,10 +69,12 @@
           <div class="visual__note legend-item__label">
       </div>
     </div>
-      <div class="callout stat-block-wrapper">
+      <div 
+      id="imputed-stat-wrapper--{{ .Get `id` }}" 
+      class="callout stat-block-wrapper">
         <p>
           Across all neighborhoods over the past year, we estimate that renters being filed against were
-        </p>
+      div/p>
         <div class="imputed-stats"></div>
       </div>
     <p class="footnote"></p>
@@ -120,7 +122,10 @@
         var row = fileData.findLast((d) => d.group === s.group);
         return row ? row[s.field] : null;
       }
-      Elab.Utils.createStatBlock('.imputed-stats', statFiles, stats, getVal)
+      var getContainer = (wrapper) => wrapper.find('.imputed-stats')
+      if (id === 'race') {
+        Elab.Utils.createStatBlock('#imputed-stat-wrapper--race', statFiles, stats, getVal, getContainer)
+      }
       Elab.Section.init('chart', rootEl, { id: id, csv: csv })
     });
   </script>

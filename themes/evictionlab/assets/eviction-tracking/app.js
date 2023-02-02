@@ -1303,6 +1303,7 @@ Elab.Chart = (function (Elab) {
 
     function renderMarkLine(data, config, context) {
       // y axis mark lines
+      // console.log({ config, context });
       var markLine = context.els.markLines.selectAll(".chart__mark-line--y").data(
         config.markLines.filter(function (v) {
           return v.labelOnly;
@@ -3292,9 +3293,12 @@ Elab.MedianFilings = (function (Elab) {
     id = options.id;
     $el = $(elId);
     Elab.Data.loadData(csv, shapeLineData, function (result) {
-      data = result.sort(function (a, b) {
-        return a.name - b.name;
-      });
+      data = result
+        .sort(function (a, b) {
+          // console.log({ a, b, result });
+          return a.name - b.name;
+        })
+        .slice(-12);
 
       Elab.Utils.callOnEnter($el[0], render);
     });
@@ -3322,6 +3326,8 @@ Elab.MedianFilings = (function (Elab) {
       yFormat: dollarFormat,
       xTooltipFormat: d3.timeFormat("%B %Y"),
       yTooltipFormat: d3.format("$.2f"),
+      // mark: "10/10/2021;07/07/2022",
+      avgLine: 2000
     });
   }
 

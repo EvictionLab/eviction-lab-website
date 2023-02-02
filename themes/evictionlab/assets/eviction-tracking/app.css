@@ -2440,9 +2440,11 @@ label #labels_top-100 {
   }
 }
 
-/* only shows for Race section */
-.section--chart.section--avg .stat-block-wrapper {
+.section--chart .stat-block-wrapper {
+  /* start off, display (for race chart) if data found */
   display: none;
+  /* fade in */
+  opacity: 0;
 }
 .callout.stat-block-wrapper p {
   font-size: 16px;

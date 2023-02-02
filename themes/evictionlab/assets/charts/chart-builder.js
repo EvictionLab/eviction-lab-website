@@ -791,6 +791,109 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  Chart.prototype.addAvgLine = function (markLines, options) {
+    var data = [
+      {
+        y: 1,
+        label: "average",
+      },
+      {
+        y: 1,
+        label: "filings",
+        labelOnly: true,
+      },
+    ];
+
+    if (!options) this;
+
+    // console.log({ markLines, options }, markLines.selectAll);
+
+    // var markLine = d3.select(markLines).selectAll(".chart__mark-line--y");
+    //   .data(
+    //     data.filter(function (v) {
+    //       return v.labelOnly;
+    //     }),
+    //   );
+
+    // markLine
+    //   .enter()
+    //   .append("line")
+    //   .attr("class", "chart__mark-line--y")
+    //   .attr("x1", function (d) {
+    //     return 0;
+    //   })
+    //   .attr("x2", function (d) {
+    //     return options.width;
+    //   })
+    //   .attr("y1", options.height)
+    //   .attr("y2", options.height);
+
+
+
+    // .merge(markLine)
+    // .transition()
+    // .duration(1000)
+    // .attr("x1", function (d) {
+    //   return 0;
+    // })
+    // .attr("x2", function (d) {
+    //   return options.width;
+    // })
+    // .attr("y1", function (d) {
+    //   return options.height;
+    // })
+    // .attr("y2", function (d) {
+    //   return options.height;
+    // });
+    // markLine
+    //   .exit()
+    //   .transition()
+    //   .duration(1000)
+    //   .attr("y1", options.height)
+    //   .attr("y2", options.height)
+    //   .remove();
+    // var markLabel = d3.select(markLines).selectAll(".chart__mark-label--y").data(data);
+    // markLabel
+    //   .enter()
+    //   .append("text")
+    //   .attr("class", "chart__mark-label--y")
+    //   .html(function (d) {
+    //     return d.label;
+    //   })
+    //   .attr("x", function (d) {
+    //     return options.width + 4;
+    //   })
+    //   .attr("y", function (d) {
+    //     return options.height - 4;
+    //   })
+    //   .attr("fill-opacity", 0)
+    //   .merge(markLabel)
+    //   .transition()
+    //   .duration(1000)
+    //   .attr("text-anchor", "start")
+    //   .attr("x", function (d) {
+    //     return options.width + 4;
+    //   })
+    //   .attr("y", function (d, i) {
+    //     return options.height - 4 + i * 16;
+    //   })
+    //   .attr("fill-opacity", 1);
+    // markLabel
+    //   .exit()
+    //   .transition()
+    //   .duration(1000)
+    //   .attr("x", function (d) {
+    //     return options.width - 4;
+    //   })
+    //   .attr("y", function (d) {
+    //     return options.height - 4;
+    //   })
+    //   .attr("fill-opacity", 0)
+    //   .remove();
+
+    return this;
+  };
+
   /**
    * Adds bars to the chart for category or location based axis
    * @param {function} selector function that takes the chart data and returns the bar data
@@ -872,13 +975,16 @@ Elab.ChartBuilder = (function (Elab) {
     options.selector =
       overrides.selector ||
       function (data) {
+        console.log(87, data)
         return [
           data.map(function (d) {
+            console.log(987, d)
             return [d.x, d.y];
           }),
         ];
       };
     _this.lineData = options.selector(_this.data);
+    console.log(678, { overrides }, _this.lineData, options.selector, _this.data);
     if (_this.getSelection(options.linesId))
       throw new Error(
         "addLines: selection already exists for given linesId " +
