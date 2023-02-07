@@ -11,8 +11,10 @@ title: "2022: The Year We Refused to Go Back to Normal"
 date: 2023-02-07T18:49:04.271Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
-authorpic: /imagses/bios/elab_thumb_sm.jpg
+authorpic: /images/bios/elab_thumb_sm.jpg
 image: 24153653237_6d5182fb1b_o.jpeg
+twImage: 24153653237_6d5182fb1b_o.jpeg
+fbImage: 24153653237_6d5182fb1b_o.jpeg
 description: As pandemic-era rental assistance funds and related resources
   started to sunset, the fight for better protections didn’t. 2022 was defined
   by groups across the country continuing to push for housing justice
@@ -22,9 +24,9 @@ listSummary: As pandemic-era rental assistance funds and related resources
 ---
 *As pandemic-era rental assistance funds and related resources started to sunset, the fight for better protections didn’t. 2022 was defined by groups across the country continuing to push for housing justice.* 
 
-<﻿hr/>
+<hr/>
 
-In 2022, the stress that many Americans feel daily about housing also reached polling places and city governments: according to the National Low Income Housing Coalition, there were dozens of [housing ballot-related](https://nlihc.org/sites/default/files/2022-12/voters-choose-housing.pdf) measures before voters in the midterm election and more than 150 [tenant protections](https://twitter.com/evictionlab/status/1546856957029494784) were implemented across the country since January 2021.
+<span class="dropcap red">I</span>n 2022, the stress that many Americans feel daily about housing also reached polling places and city governments: according to the National Low Income Housing Coalition, there were dozens of [housing ballot-related](https://nlihc.org/sites/default/files/2022-12/voters-choose-housing.pdf) measures before voters in the midterm election and more than 150 [tenant protections](https://twitter.com/evictionlab/status/1546856957029494784) were implemented across the country since January 2021.
 
 
 
@@ -42,11 +44,11 @@ But cities like Detroit and New Orleans stepped up, implementing free legal help
 
 These advances didn’t happen everywhere in the country: most of them were put in place in larger cities with progressive leadership, while suburban and rural areas are still in need of improvements. But for many tenants in the United States, 2022 was defined by a growing hunger to improve the renting experience across the country, from expanding social safety net programs to fighting for tenants’ bill of rights. 
 
-
+<br/>
 
 ### Solutions before the courtroom
 
-
+<br/>
 
 Evidence of the life-altering effect of an eviction has been clear well before the pandemic. An eviction judgment can [disrupt tenants’ physical and mental health](https://www.cityhealth.org/wp-content/uploads/2022/08/CityHealth-Report-Addressing-Americas-Housing-Crisis.pdf), derail their credit scores and [lead to homelessness](https://www.aclu.org/report/no-eviction-without-representation) – just to name a few of the long-term effects after the initial housing loss. [Research](https://www.networkforphl.org/wp-content/uploads/2021/05/Fact-Sheet-Eviction-Diversion.pdf) shows eviction can also have an impact on landlords, who have to deal with thousands of dollars in costs – cleaning, marketing the apartment and vetting a new tenant –  to get a unit back on the market.
 
@@ -86,11 +88,12 @@ One of the initiatives that has contributed to this was coordinated by the Natio
 
 The Las Vegas Justice Court in Nevada is one of those and will use the funds to offer wrap-around services at the courthouse, including job training, housing relocation assistance and more. The 18th Judicial District in Kansas will use funds to establish the first eviction diversion program in the state. And Lawrence Township Small Claims Court in Indiana committed to using some funds to host eviction sealing clinics at the courthouse to [“mitigate the harm for community members already evicted.”](https://nationalcenterforstatecourts.app.box.com/s/40kkp8xy2dpgosj5x3qgniiavlnh89sc) 
 
-
+<br/>
 
 ### Level the Playing Field 
 
 
+<br/>
 
 Tenants facing eviction are often entering an uneven field. Nationally, 81% of landlords benefit from legal representation while 3% of tenants have the same benefit, according to the [National Coalition for a Civil Right to Counsel](http://civilrighttocounsel.org/highlighted_work/organizing_around_right_to_counsel).   
 
@@ -166,11 +169,11 @@ And it wouldn’t have been possible without the advocates who are living with t
 
 “Without tenant organizing or other equivalent groups it’s extremely difficult to get stuff through and what does get through is usually weaker,” Pollock said.  
 
-
+<br/>
 
 ### Tenant Power
 
-
+<br/>
 
 A push for better tenant protections wasn’t just happening in official settings like courtrooms or legislative buildings. It was also happening in apartment hallways, community spaces and living rooms. Close observers of the tenant organizing scene noticed an [increase in activity](https://shelterforce.org/category/tenant-power-returns/) in 2022. 
 
@@ -213,3 +216,7 @@ This growing understanding seemed to open up more pathways to progress across th
 
 
 To share your big win with us, fill out [this form](https://forms.gle/zKs4eenBxDxthEUh6).
+
+<hr/>
+
+<p class="attribution">Image credit: "<a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/33000102@N03/24153653237">Marching at Tenant Rights Rally - December 2017 Photos by Alex Garland</a>" by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/33000102@N03">Backbone Campaign</a> is licensed under <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img></a>. </p>
