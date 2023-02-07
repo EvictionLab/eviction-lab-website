@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: blog
 url: 2022-the-year-we-refused-to-go-back-to-normal
 contenttype: updates
@@ -26,7 +26,7 @@ listSummary: As pandemic-era rental assistance funds and related resources
 
 <hr/>
 
-<span class="dropcap red">I</span>n 2022, the stress that many Americans feel daily about housing also reached polling places and city governments: according to the National Low Income Housing Coalition, there were dozens of [housing ballot-related](https://nlihc.org/sites/default/files/2022-12/voters-choose-housing.pdf) measures before voters in the midterm election and more than 150 [tenant protections](https://twitter.com/evictionlab/status/1546856957029494784) were implemented across the country since January 2021.
+<span class="dropcap red">I</span>n 2022, the stress that many Americans felt daily about housing also reached polling places and city governments: according to the National Low Income Housing Coalition, there were dozens of [housing ballot-related](https://nlihc.org/sites/default/files/2022-12/voters-choose-housing.pdf) measures before voters in the midterm election and more than 150 [tenant protections](https://twitter.com/evictionlab/status/1546856957029494784) were implemented across the country since January 2021.
 
 
 
@@ -34,7 +34,7 @@ This happened as historic resources were winding down across the country. More t
 
 
 
-But cities like Detroit and New Orleans stepped up, implementing free legal help for tenants facing eviction. Others strengthened source-of-income protections, like in the state of Illinois. Some governments also voted in favor of policies to seal evictions after a certain time frame and to require just cause evictions. Meanwhile, housing advocates continued to pressure governments to do more – with one of the [most recent wins](https://www.whitehouse.gov/briefing-room/statements-releases/2023/01/25/fact-sheet-biden-harris-administration-announces-new-actions-to-protect-renters-and-promote-rental-affordability/) announced recently by the Biden Administration.  
+But cities like Detroit and New Orleans stepped up, implementing free legal help for tenants facing eviction. Others strengthened source-of-income protections, like in the state of Illinois. Some governments also voted in favor of policies to seal evictions after a certain time frame and to require just cause evictions. Meanwhile, housing advocates continued to pressure governments to do more – with one [win](https://www.whitehouse.gov/briefing-room/statements-releases/2023/01/25/fact-sheet-biden-harris-administration-announces-new-actions-to-protect-renters-and-promote-rental-affordability/) announced recently by the Biden Administration.  
 
 
 
@@ -179,7 +179,7 @@ A push for better tenant protections wasn’t just happening in official setting
 
 
 
-While tenant organizations, often referred to as tenant unions or associations, aren’t new – having played a big role in the [1970s and 80s](https://shelterforce.org/2022/11/22/the-rise-and-fall-of-the-national-tenants-union/) – they saw a resurgence as groups of tenants gathered across the country to address [record high inflation](https://www.pbs.org/newshour/economy/u-s-inflation-at-9-1-percent-a-record-high), poor housing conditions and cumbersome legal systems. 
+Tenant organizations (often referred to as tenant unions or associations) played a big role in the [1970s and 80s](https://shelterforce.org/2022/11/22/the-rise-and-fall-of-the-national-tenants-union/), and last year they saw a resurgence. Groups of tenants gathered across the country to address [record high inflation](https://www.pbs.org/newshour/economy/u-s-inflation-at-9-1-percent-a-record-high), poor housing conditions and cumbersome legal systems.
 
 
 
