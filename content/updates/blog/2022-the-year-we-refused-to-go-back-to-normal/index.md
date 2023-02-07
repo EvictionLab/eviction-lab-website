@@ -9,9 +9,9 @@ featured: true
 in_index: true
 title: "2022: The Year We Refused to Go Back to Normal"
 date: 2023-02-07T18:49:04.271Z
-postauthorname: The Eviction Lab
-postauthortitle: Princeton University
-authorpic: /images/bios/elab_thumb_sm.jpg
+postauthorname: Camila Vallejo
+postauthortitle: The Eviction Lab
+authorpic: /about/page-content/research-team-bios/camila-vallejo/cvallejo_thumb.jpg
 image: 24153653237_6d5182fb1b_o.jpeg
 twImage: 24153653237_6d5182fb1b_o.jpeg
 fbImage: 24153653237_6d5182fb1b_o.jpeg
