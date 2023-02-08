@@ -17,10 +17,10 @@ twImage: 24153653237_6d5182fb1b_o.jpeg
 fbImage: 24153653237_6d5182fb1b_o.jpeg
 description: As pandemic-era rental assistance funds and related resources
   started to sunset, the fight for better protections didn’t. 2022 was defined
-  by groups across the country continuing to push for housing justice
+  by groups across the country continuing to push for housing justice.
 listSummary: As pandemic-era rental assistance funds and related resources
   started to sunset, the fight for better protections didn’t. 2022 was defined
-  by groups across the country continuing to push for housing justice
+  by groups across the country continuing to push for housing justice.
 ---
 *As pandemic-era rental assistance funds and related resources started to sunset, the fight for better protections didn’t. 2022 was defined by groups across the country continuing to push for housing justice.* 
 
