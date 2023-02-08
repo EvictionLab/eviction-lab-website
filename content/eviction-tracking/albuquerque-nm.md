@@ -14,7 +14,7 @@ rentersSite: Albuquerque
 
 
 
-Eviction filings in Bernalillo County, NM (Albuquerque) fell sharply in early 2020. While eviction filings and hearings were allowed to proceed, on March 24, 2020, the New Mexico Supreme Court implemented a stay on the execution of writs for nonpayment of rent. This order remained in effect through March 2022.
+Eviction filings in Bernalillo County fell sharply in early 2020. While eviction filings and hearings were allowed to proceed, on March 24, 2020, the New Mexico Supreme Court implemented a stay on the execution of writs for nonpayment of rent. This order remained in effect through March 2022.
 
 More detail on eviction protections in New Mexico can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/nm/).
 
@@ -24,7 +24,7 @@ More detail on eviction protections in New Mexico can be found on the [COVID-19 
 
 
 
-{{% report_chart id="avg" data="/uploads/albuquerque_barchart.csv" impFile="/uploads/albuquerque_linechart.csv" %}}
+{{% report_chart id="avg" data="/uploads/albuquerque_barchart.csv" %}}
 
 
 

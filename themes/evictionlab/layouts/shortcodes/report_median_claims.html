@@ -16,11 +16,10 @@
 </div>
   <div class="legend"></div>
   <div class="footnote"></div>
-<div class="callout stat-block-wrapper">
+<div id="claimsStats" class="callout stat-block-wrapper">
   <p>
     Over the past year, of all eviction claims,
   </p>
-  <div class="claims-stats"></div>
 </div>
 </div>
 <script>
@@ -57,7 +56,7 @@ window.addEventListener('load', function() {
     var row = fileData.findLast((d) => d[s.field] !== undefined);
     return row ? row[s.field] : null;
   }
-  Elab.Utils.createStatBlock('.claims-stats', statFiles, stats, getVal)
+  Elab.Utils.createStatBlock('#claimsStats', statFiles, stats, getVal)
   Elab.Section.init('median_filings', rootEl, { id: id, csv: csv, yCol: yCol, xCol: xCol })
 });
 </script>

@@ -1616,7 +1616,7 @@
 
 /** INTRO LEAD TEXT */
 
-.intro .layout>div {
+.intro .layout > div {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -1629,36 +1629,34 @@
 
 .intro .intro__stats-wrapper {
   /* flex-grow: 1; */
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  letter-spacing: 0.04rem;
   padding-top: 32px;
   padding-left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
-.intro .intro__stats-wrapper .minor-stats,
-.intro .intro__stats-wrapper .major-stats {
-  column-count: 2;
-  column-gap: 24px;
-}
-
-.intro .intro__stats-wrapper .major-stats {
-  margin-bottom: 1rem;
-}
-
-.intro .intro__stats-wrapper dl {
-  display: inline-block;
-  /* so they don't split across multiple columns */
-  width: 100%;
-  /* so they don't combine on one line */
-  margin-bottom: 1rem;
+.intro .intro__stats-wrapper h3 {
+  color: var(--text-secondary);
+  border-bottom: 2px solid;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  line-height: 2;
 }
 
-.minor-stats .highlighted-stat dd {
-  font-size: 2.0rem;
+.intro .stat-block-wrapper .stat-block-stat {
+  flex: 50% 0 0;
+  margin-bottom: 6px;
+}
+
+#filingCounts {
+  margin-bottom: 16px;
+}
+#filingRates .stat-block-stat > dd {
   color: var(--c2);
 }
 
 @media (min-width: 1024px) {
-  .intro .layout>div {
+  .intro .layout > div {
       max-width: 460px;
       margin-left: unset;
   }
@@ -1672,36 +1670,53 @@
 
 /** UNIVERSAL STATS STYLES */
 
-.highlighted-stat dd {
+/* only applies to the "parent" stat dd  */
+.stat-block-stat > dd {
+  font-size: 3.2rem;
+  color: var(--c1);
+  padding-bottom: 6px;
+}
+/* applies to sub-stats' dds as well */
+.stat-block-stat dd {
   font-family: var(--number-font);
   font-weight: bold;
   margin-bottom: 0;
   /* display: inline-block; */
   line-height: 1.25;
 }
+.stat-block-sub-stat dd {
+  display: inline-block;
+  color: var(--c3);
+  font-size: 2rem;
+}
 
-.highlighted-stat dt {
+/* applies to sub-stats' dts as well */
+.stat-block-stat dt {
   font-family: var(--body-font);
   font-weight: normal;
   /* display: inline-block; */
   font-size: 1.6rem;
   line-height: 1.25;
 }
+.stat-block-sub-stat dt {
+  display: inline-block;
+  color: var(--text-secondary);
+  padding-left: 6px;
+  letter-spacing: 0.02rem;
+}
 
-.highlighted-stat dd {
-  font-size: 3.2rem;
-  color: var(--c1);
+.stat-block-sub-stat {
+  padding-top: 4px;
+  margin-bottom: 0;
 }
 
 /** END UNIVERSAL STATS STYLES */
 
 /* STAT BLOCK (CALLOUT) */
 
-.stat-block-wrapper .highlighted-stat {
+.stat-block-wrapper .stat-block-stat {
   display: inline-block;
 }
-
-.stat-block-wrapper .highlighted-stat dd {}
 
 @media (max-width: 1024px) {
   .callout.stat-block-wrapper {
@@ -1742,6 +1757,7 @@
   width: 210px;
   padding: 8px;
   font-size: 14px;
+  letter-spacing: 0;
 }
 @media (max-width: 480px) {
   .inline-tooltip .tooltiptext {
@@ -1752,17 +1768,17 @@
   }
 }
 
-.inline-tooltip .tooltiptext::after {
-  /* arrow */
-  /* content: "";
+/* arrow */
+/* .inline-tooltip .tooltiptext::after {
+  content: "";
   position: relative;
   top: 30%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent; */
-}
+  border-color: #555 transparent transparent transparent;
+} */
 
 .inline-tooltip:hover .tooltiptext {
   visibility: visible;
@@ -2408,17 +2424,17 @@ label #labels_top-100 {
 }
 
 /* only one figure per line */
-.section.section--median .highlighted-stat {
+.section.section--median .stat-block-stat {
   display: block;
 }
 
 /* list entire figure on single line */
-.section.section--median .highlighted-stat dt,
-.section.section--median .highlighted-stat dd {
-  display: inline-block;
+.section.section--median .stat-block-stat dt,
+.section.section--median .stat-block-stat dd {
+  display: inline;
 }
 
-.section.section--median .highlighted-stat dd {
+.section.section--median .stat-block-stat dd {
   margin-right: 8px;
 }
 /** END MEDIAN SECTION */
@@ -2440,30 +2456,30 @@ label #labels_top-100 {
   }
 }
 
-/* only shows for Race section */
-.section--chart.section--avg .stat-block-wrapper {
+/* gets rendered conditionally  */
+.stat-block-wrapper {
+  /* set display to flex & opacity: 1 iff stat is found */
   display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
-.callout.stat-block-wrapper p {
-  font-size: 16px;
+
+.section--chart.section--race .stat-block-wrapper {
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 .callout.stat-block-wrapper {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   background: unset;
 }
-.callout.stat-block-wrapper>* {
-  text-align: start;
+
+.callout.stat-block-wrapper p {
+  font-size: 16px;
 }
 
-.section--chart.section--race .callout.stat-block-wrapper {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-.section--chart.section--race .imputed-stats {
-  display: flex;
-  justify-content: space-between;
-}
 /** END CHART SECTION */
 
 /** MAP SECTION */
