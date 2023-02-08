@@ -118,35 +118,85 @@ function createTooltip(text) {
 function loadAll(files, dataMap, callback) {
   if (!files.length) return callback(dataMap);
 
-  var file = files.pop();
+  const [file, ...restFiles] = files;
   Elab.Data.loadData(file.url, file.shaper, (fileData) => {
     dataMap[file.id] = fileData;
-    loadAll(files, dataMap, callback);
+    console.log(file.id, file, fileData)
+    loadAll(restFiles, dataMap, callback);
   });
 }
 
 /**
  * Creates a stat block
  */
-function createStatBlock(el, statFiles, stats, getVal, getContainer = null) {
+function createStatBlock(el, statFiles, stats, getVal, callback) {
   loadAll(statFiles, {}, (dataMap) => {
-    var wrapper = $(el);
+    var $el = $(el);
+    var someStatFound = false;
+
+    var createStat = (val, stat, isSubStat) => {
+      var fVal = !val ? stat.default : stat.formatter ? stat.formatter(val) : val;
+      console.log(stat.display, fVal);
+
+      var tooltipContent = !val ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
+
+      var subStatVal = !isSubStat && stat.subStat && getVal(dataMap[stat.subStat.file], stat.subStat);
+      var subStat = subStatVal
+        ? createStat(subStatVal, stat.subStat, true)
+        : "";
+      
+      var statClass = isSubStat ? 'stat-block-sub-stat' : 'stat-block-stat';
+      return (
+        '<dl class="' + statClass + '"><dd>' +
+          fVal +
+          "</dd><dt>" +
+          stat.display +
+          createTooltip(tooltipContent) +
+          "</dt>" + subStat + "</dl>"
+      );
+    }
+
     stats.forEach((s) => {
-      var el = getContainer ? getContainer(wrapper, s) : wrapper;
+      // var el = getContainer ? getContainer($el, s) : $el;
       var val = getVal(dataMap[s.file], s);
-      if (!!val) {
-        var fVal = s.formatter ? s.formatter(val) : val;
-        el.append(
-          '<dl class="highlighted-stat"><dd>' +
-            fVal +
-            "</dd><dt>" +
-            s.display +
-            createTooltip(s.tooltip) +
-            "</dt></dl>",
-        );
+      console.log({ s, val, $el });
+      if (!!val || !!s.default) {
+        someStatFound = true;
+        var stat = createStat(val, s)
+        $el.append(stat)
       }
     });
-    wrapper.css("opacity", 1);
+
+    if (someStatFound) {
+      $el.css("display", "flex");
+      setTimeout(() => $el.css("opacity", 1), 1);
+    }
+    callback && callback(someStatFound);
+  });
+}
+
+/**
+ * Creates a stat paragraph (interpolate values)
+ */
+function createStatParagraph(el, text, statFiles, stats, getVal) {
+  loadAll(statFiles, {}, (dataMap) => {
+    var $el = $(el);
+    var interpolatedText = text
+    var hasAllData = true
+    stats.forEach((s) => {
+      var val = getVal(dataMap[s.file], s);
+      // only add paragraph if all values found
+      if (!val) {
+        console.log({ dataMap, s })
+        hasAllData = false
+        return null
+      }
+      var fVal = s.formatter ? s.formatter(val) : val;
+      fVal = s.bold ? '<b>'+fVal+'</b>' : fVal;
+      interpolatedText = interpolatedText.replace('%{'+s.placeholder+'}', fVal) 
+    });
+    hasAllData && $el.append(`<p>${interpolatedText}</p>`);
+    // $el.css("opacity", 1);
   });
 }
 
@@ -285,6 +335,7 @@ return {
   createTwitterLink: createTwitterLink,
   createFacebookLink: createFacebookLink,
   createStatBlock: createStatBlock,
+  createStatParagraph: createStatParagraph,
   formatLabel: formatLabel,
   formatDate: formatDate,
   callOnEnter: callOnEnter,

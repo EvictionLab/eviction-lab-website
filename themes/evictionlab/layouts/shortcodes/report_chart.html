@@ -69,22 +69,20 @@
           <div class="visual__note legend-item__label">
       </div>
     </div>
-      <div class="callout stat-block-wrapper">
-        <p>
-          Across all neighborhoods over the past year, we estimate that renters being filed against were
-        </p>
-        <div class="imputed-stats"></div>
-      </div>
+    <div id="imputedStats--{{ .Get `id` }}" class="callout stat-block-wrapper">
+      <p>
+        Across all neighborhoods over the past year, we estimate that renters being filed against were
+      </p>
+    </div>
     <p class="footnote"></p>
   </div>
   <script>
     window.addEventListener('load', function() {
       var id = {{ .Get "id" }}
-      var impFile = {{ .Get "impFile" }}
       var csv = {{ .Get "data" }}
       var rootEl = '#'+id
       var statFiles = [
-        { id: "imputed", url: impFile },
+        { id: "imputed", url: csv },
       ]
       var stats = [
         {
@@ -120,7 +118,9 @@
         var row = fileData.findLast((d) => d.group === s.group);
         return row ? row[s.field] : null;
       }
-      Elab.Utils.createStatBlock('.imputed-stats', statFiles, stats, getVal)
+      if (id === "race") {
+        Elab.Utils.createStatBlock('#imputedStats--race', statFiles, stats, getVal)
+    }
       Elab.Section.init('chart', rootEl, { id: id, csv: csv })
     });
   </script>

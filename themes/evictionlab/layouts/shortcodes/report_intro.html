@@ -15,11 +15,16 @@
           <h3 class="intro__renter-population mx-auto">RENTER HOUSEHOLDS: {{ $element.estimate }}</h3>
         {{ end }}
       {{ end }} -->
+      <div id="summaryStats" class="intro__text"></div>
       <div id="introText" class="intro__text">{{ .Inner | markdownify }}</div>
     </div>
-    <div id="introStatsWrapper" class="intro__stats-wrapper">
-      <div class="major-stats"></div>
-      <div class="minor-stats"></div>
+    <div class="intro__stats-wrapper">
+      <h3>Filing Counts</h3>
+      <div id="filingCounts" class="stat-block-wrapper">
+      </div>
+      <h3>Filing Rates</h3>
+      <div id="filingRates" class="stat-block-wrapper">
+      </div>
     </div>
   </div>
 
@@ -32,27 +37,57 @@
         { id: "basic", url: "/uploads/basic_data_by_site.csv" },
         { id: "acs", url: "/uploads/acs_data_by_site.csv" },
       ]
-      var stats = [
+      var filingCounts = [
         {
           file: 'filing',
           field: 'filings_pandemic',
           display: 'filings total',
           formatter: d3.format(','),
-          isMajor: true,
+          subStat: {
+            file: 'filing',
+            field: 'filings_pandemic_pct_hist',
+            display: 'of average',
+            formatter: d3.format('.0%'),
+          }
         },
         {
           file: 'filing',
           field: 'filings_past_year',
           display: 'filings in the past year',
           formatter: d3.format(','),
-          isMajor: true,
+          subStat: {
+            file: 'filing',
+            field: 'filings_past_year_pct_hist',
+            display: 'of average',
+            formatter: d3.format('.0%'),
+          }
         },
         {
           file: 'filing',
           field: 'filings_past_month',
           display: 'filings in the past month',
           formatter: d3.format(','),
-          isMajor: true,
+          subStat: {
+            file: 'filing',
+            field: 'filings_past_month_pct_hist',
+            display: 'of average',
+            formatter: d3.format('.0%'),
+          }
+        },
+      ]
+      var filingRates = [
+        {
+          file: 'filing',
+          field: 'eviction_filing_rate',
+          display: 'eviction filing rate',
+          formatter: d3.format('.0%'),
+        },
+        {
+          file: 'filing',
+          field: 'hhs_threatened_rate',
+          display: 'households threatened',
+          formatter: d3.format('.0%'),
+          default: 'Unavailable'
         },
         {
           file: 'filing',
@@ -60,79 +95,64 @@
           display: 'serial filings',
           tooltip: 'Repeated filings against the same household at the same address in the last 12 months',
           formatter: d3.format('.0%'),
-          isMajor: true,
+          default: 'Unavailable'
         },
+      ]
+      var paragraphStats = [
         {
           file: 'acs',
           field: 'renter_hh',
-          display: 'renter households',
+          placeholder: 'households',
           formatter: d3.format(',')
         },
         {
           file: 'acs',
           field: 'median_rent',
-          display: 'median rent',
+          placeholder: 'rent',
           formatter: d3.format('$,')
-        },
-        {
-          file: 'basic',
-          field: 'historical_efr',
-          display: 'historical efr (national db)',
-          // formatter: d3.format(',')
         },
         {
           file: 'basic',
           field: 'notice_requirement',
-          display: 'notice requirement',
-          formatter: v => !!v ? (v + ' days') : 'N/A'
+          placeholder: 'days',
         },
         {
           file: 'basic',
           field: 'avg_filing_fee',
-          display: 'average filing fee',
+          placeholder: 'fee',
           formatter: d3.format('$,')
         },
         {
           file: 'basic',
-          field: 'historical_baseline_years',
-          display: 'baseline years for which we have data',
-          // formatter: d3.format(',')
-        },
-        {
-          file: 'basic',
           field: 'borders',
-          display: 'county coverage',
-          // formatter: d3.format(',')
+          placeholder: 'county',
         },
       ]
-//       loadAll(statFiles, {}, dataMap => {
-//         var wrapper = $("#introStatsWrapper")
-//         stats.forEach(s => {
-//           var parentDiv = s.isMajor ? 'major-stats' : 'minor-stats'
-//           var el = wrapper.find('.' + parentDiv)
-//           var row = dataMap[s.file].find(d => d.site === site)
-//           var val = row && row[s.field]
-//           if (!!val) {
-//             var tt = !s.tooltip
-//               ? ''
-//               : `<span class="inline-tooltip">(?)
-//   <span class="tooltiptext">${s.tooltip}</span>
-// </span>`
-//             var fVal = s.formatter ? s.formatter(val) : val
-//             el.append('<dl class="highlighted-stat"><dd>' + fVal + '</dd><dt>' + s.display + tt + '</dt></dl>')
-//           }
-//         })
-//         wrapper.css('opacity', 1)
-//       })
 
       var getVal = (fileData, s) => {
+        if (!fileData) {
+          console.error("No filedata found ", fileData, s)
+          return null;
+        }
         var row = fileData.find((d) => d.site === site);
         return row ? row[s.field] : null;
       }
 
-      var getContainer = (wrapper, stat) => wrapper.find(stat.isMajor ? '.major-stats' : '.minor-stats')
+      var otherBlockLoaded = false;
+      var displayStatBlock = () => {
+        if (otherBlockLoaded) {
+          $(".intro .intro__stats-wrapper").css("opacity", 1);
+        } else {
+          otherBlockLoaded = true
+        }
+      }
+      Elab.Utils.createStatBlock('#filingCounts', statFiles, filingCounts, getVal, displayStatBlock)
+      Elab.Utils.createStatBlock('#filingRates', statFiles, filingRates, getVal, displayStatBlock)
 
-      Elab.Utils.createStatBlock('#introStatsWrapper', statFiles, stats, getVal, getContainer)
+      // TODO: update for state pages
+      var paragraphText = "There are %{households} renter households in %{county} (%{state}), paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} days' notice and pay a %{fee} filing fee to the courts.".replace('%{state}', site)
+      Elab.Utils.createStatParagraph('#summaryStats', paragraphText, statFiles, paragraphStats, getVal)
+
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
       var dateFormat = d3.timeFormat("%b %e, %Y")
