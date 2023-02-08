@@ -35,8 +35,8 @@ data:
   - site: All Cities
     years: "-"
     geo: Census Tract / ZIP Code
-    file: https://evictionlab.org/data/downloads/all_sites_weekly_2020_2021.csv
-    monthfile: /uploads/all_sites_monthly_2020_2021.csv
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_weekly_2020_2021.csv
+    monthfile: https://data-downloads.evictionlab.org/ets/all_sites_monthly_2020_2021.csv
   - site: All States
     years: "-"
     geo: Census Tract / ZIP Code
