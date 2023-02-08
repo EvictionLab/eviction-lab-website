@@ -2052,8 +2052,9 @@ label #labels_top-100 {
 
 /** CHOROPLETH LEGEND */
 
-.legend.legend--choropleth, .legend.legend--points {
-  width: 240px;
+.section .legend.legend--choropleth, .section .legend.legend--points {
+  width: 310px;
+  max-width: 310px;
 }
 .legend.legend--choropleth .legend-item, .legend.legend--points .legend-item {
   /* width: 100%; */
@@ -2253,6 +2254,9 @@ label #labels_top-100 {
 .section .footnote span {
   display: block;
 }
+.section .footnote .data-download {
+  margin-bottom: 2rem;
+}
 @media (min-width: 768px) {
   .section .footnote {
     font-size: 1.4rem;
@@ -2308,7 +2312,7 @@ label #labels_top-100 {
 
 .section.section--flex .footnote {
   width: 100%;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 }
 
 /** END SECTION BASE STYLES */

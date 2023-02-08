@@ -37,7 +37,13 @@
         <div class="legend__points-labels"></div>
       </div>
     </div>
-    <p class="footnote"></p>
+    <p class="footnote">
+      <span class="data-download">Get the data for 
+        <a href="{{ .Get `data` }}">tracts</a> 
+        and 
+        <a href="{{ .Get `topData` }}">top filers</a> 
+        for this figure</span>
+    </p>
   </div>
   <script>
     window.addEventListener("load", function () {
