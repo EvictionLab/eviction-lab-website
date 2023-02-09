@@ -3,7 +3,7 @@ collection: true
 draft: true
 title: Rhode Island | Eviction Tracking System
 h1: Rhode Island
-slug: rhodeisland
+slug: rhode-island
 date: 2023-02-09T18:00:25.655Z
 ---
 {{< report_intro id="18" data="/uploads/states_table.csv" >}}
