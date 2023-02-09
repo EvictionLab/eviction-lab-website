@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Providence, RI | Eviction Tracking
 h1: Providence, Rhode Island
 slug: providence-ri
