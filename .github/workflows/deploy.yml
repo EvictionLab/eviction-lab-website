@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: "16.x"
 
       - name: Setup Python
         uses: actions/setup-python@v2
