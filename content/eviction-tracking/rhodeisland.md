@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 title: Rhode Island | Eviction Tracking System
 h1: Rhode Island
 slug: rhode-island
