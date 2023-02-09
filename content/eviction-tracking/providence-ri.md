@@ -6,7 +6,7 @@ h1: Providence, Rhode Island
 slug: providence-ri
 date: 2023-02-09T18:28:49.024Z
 ---
-{< report_intro id="18" data="/uploads/states_table.csv" >}}
+{{< report_intro id="18" data="/uploads/states_table.csv" >}}
 
 The state of Rhode Island implemented an eviction moratorium that ran from March 17 to July 1, 2020. Filings spiked immediately after that moratorium lifted.
 
