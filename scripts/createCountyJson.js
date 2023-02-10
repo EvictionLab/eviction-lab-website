@@ -3,11 +3,12 @@
  *
  * Steps:
  * 1. find state shape zip by FIPS code on https://www2.census.gov/geo/tiger/TIGER_RD18/LAYER/TRACT/
- * 2. convert the shp file to geojson using the export feature of https://mapshaper.org/
- * 3. save that json to the same directory as this script
+ * 2. upload the shp, prj, & dbf files to https://mapshaper.org/ and export as GeoJSON
+ * 3. save that json to the SAME DIRECTORY AS THIS SCRIPT
  * 4. run this script, eg:
- *    `node './scripts/createCountyJson.js './tl_rd22_47_tract.json' './static/uploads/nashville_shapes.json' '037'`
- * 5. delete the input json file before committing
+ *    `node ./scripts/createCountyJson.js './tl_rd22_44_tract.json' './static/uploads/providence_shapes.json' '007'`
+ * 5. manually add the county's bbox for proper zoom on load (TODO: calculate dynamically)
+ * 6. delete the input json file before committing
  */
 
 const fs = require("fs");
