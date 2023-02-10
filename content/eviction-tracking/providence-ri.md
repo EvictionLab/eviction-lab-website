@@ -19,7 +19,7 @@ More detail on eviction protections in Rhode Island can be found on the [COVID-1
 
 # Changes in eviction filings
 
-Eviction filings in Rhode Island were significantly above historical average in January and February of 2020<sup>1</sup>. Filings began to drop in March, and remained well below average between April and July 2020, after which filings increased. 
+Eviction filings in Providence County were significantly above historical average in January and February of 2020<sup>1</sup>. Filings began to drop in March, and remained well below average between April and July 2020, after which filings increased. 
 
 1. Eviction filing data for Rhode Island were collected by the Rhode Island Housing Authority. Historical averages cover the years 2016-2019.
 
