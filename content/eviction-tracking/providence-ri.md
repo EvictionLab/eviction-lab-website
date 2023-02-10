@@ -6,7 +6,7 @@ h1: Providence, Rhode Island
 slug: providence-ri
 date: 2023-02-09T18:28:49.024Z
 ---
-{{< report_intro id="44007" data="/uploads/states_table.csv" >}}
+{{< report_intro id="44007" data="/uploads/table.csv" >}}
 
 Eviction filings in Providence County, RI fell sharply in early 2020 after the state of Rhode Island implemented an eviction moratorium, which was in place from March 17 to July 1, 2020. Filings spiked immediately after the moratorium was lifted.
 
@@ -19,6 +19,8 @@ More detail on eviction protections in Rhode Island can be found on the [COVID-1
 
 
 
+
+
 # Changes in eviction filings
 
 Eviction filings in Providence County were significantly above historical average in January and February of 2020<sup>1</sup>. Filings began to drop in March, and remained well below average between April and July 2020, after which filings increased. 
@@ -27,11 +29,15 @@ Eviction filings in Providence County were significantly above historical averag
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/providence_shapes.json" data="/uploads/providence_map.csv" %}}
+
+
 
 
 
@@ -44,11 +50,15 @@ Providence County is divided into 141 census tracts. In each of those tracts, we
 
 
 
+
+
 {{%/ report_map %}}
 
 
 
 {{% report_chart id="race" data="/uploads/providence_linechart.csv" %}}
+
+
 
 
 
@@ -59,6 +69,8 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data for Providence County are provided by the Rhode Island Housing Authority. Historical averages cover 2016-2019.
+
+
 
 
 
