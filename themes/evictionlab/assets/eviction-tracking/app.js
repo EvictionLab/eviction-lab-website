@@ -1130,83 +1130,83 @@ Elab.Chart = (function (Elab) {
       var x1 = d3.scaleBand().domain(groupNames).rangeRound([0, context.x.bandwidth()]);
 
       //bryony cheat
-      const svg = d3.select(context.els.data.node().parentElement.parentElement);
+      // const svg = d3.select(context.els.data.node().parentElement.parentElement);
 
-      //remove any previous pattern and adding a new one
-      svg.selectAll("#finalEvictRectWhite").remove();
-      svg
-        .append("pattern")
-        .attr("id", "finalEvictRectWhite")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", 4)
-        .attr("height", 8)
-        .style("fill", "#E24000")
-        .attr("patternUnits", "userSpaceOnUse")
-        .attr("patternTransform", "rotate(45)")
-        .html(
-          '<rect class="chart__pattern chart__pattern--' +
-            "finalEvictRectWhite" +
-            '" x="0" y="0" width="2" height="8" />',
-        );
-      svg.selectAll("#finalEvictRectBlack").remove();
-      svg
-        .append("pattern")
-        .attr("id", "finalEvictRectBlack")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", 4)
-        .attr("height", 8)
-        .style("fill", "#434878")
-        .attr("patternUnits", "userSpaceOnUse")
-        .attr("patternTransform", "rotate(45)")
-        .html(
-          '<rect class="chart__pattern chart__pattern--' +
-            "finalEvictRectBlack" +
-            '" x="0" y="0" width="2" height="8" />',
-        );
-      svg.selectAll("#finalEvictRectLatinx").remove();
-      svg
-        .append("pattern")
-        .attr("id", "finalEvictRectLatinx")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", 4)
-        .attr("height", 8)
-        .style("fill", "#2C897F")
-        .attr("patternUnits", "userSpaceOnUse")
-        .attr("patternTransform", "rotate(45)")
-        .html(
-          '<rect class="chart__pattern chart__pattern--' +
-            "finalEvictRectLatinx" +
-            '" x="0" y="0" width="2" height="8" />',
-        );
-      svg.selectAll("#finalEvictRectOther").remove();
-      svg
-        .append("pattern")
-        .attr("id", "finalEvictRectOther")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", 4)
-        .attr("height", 8)
-        .style("fill", "#94AABD")
-        .attr("patternUnits", "userSpaceOnUse")
-        .attr("patternTransform", "rotate(45)")
-        .html(
-          '<rect class="chart__pattern chart__pattern--' +
-            "finalEvictRectOther" +
-            '" x="0" y="0" width="2" height="8" />',
-        );
+      // //remove any previous pattern and adding a new one
+      // svg.selectAll("#finalEvictRectWhite").remove();
+      // svg
+      //   .append("pattern")
+      //   .attr("id", "finalEvictRectWhite")
+      //   .attr("x", 0)
+      //   .attr("y", 0)
+      //   .attr("width", 4)
+      //   .attr("height", 8)
+      //   .style("fill", "#E24000")
+      //   .attr("patternUnits", "userSpaceOnUse")
+      //   .attr("patternTransform", "rotate(45)")
+      //   .html(
+      //     '<rect class="chart__pattern chart__pattern--' +
+      //       "finalEvictRectWhite" +
+      //       '" x="0" y="0" width="2" height="8" />',
+      //   );
+      // svg.selectAll("#finalEvictRectBlack").remove();
+      // svg
+      //   .append("pattern")
+      //   .attr("id", "finalEvictRectBlack")
+      //   .attr("x", 0)
+      //   .attr("y", 0)
+      //   .attr("width", 4)
+      //   .attr("height", 8)
+      //   .style("fill", "#434878")
+      //   .attr("patternUnits", "userSpaceOnUse")
+      //   .attr("patternTransform", "rotate(45)")
+      //   .html(
+      //     '<rect class="chart__pattern chart__pattern--' +
+      //       "finalEvictRectBlack" +
+      //       '" x="0" y="0" width="2" height="8" />',
+      //   );
+      // svg.selectAll("#finalEvictRectLatinx").remove();
+      // svg
+      //   .append("pattern")
+      //   .attr("id", "finalEvictRectLatinx")
+      //   .attr("x", 0)
+      //   .attr("y", 0)
+      //   .attr("width", 4)
+      //   .attr("height", 8)
+      //   .style("fill", "#2C897F")
+      //   .attr("patternUnits", "userSpaceOnUse")
+      //   .attr("patternTransform", "rotate(45)")
+      //   .html(
+      //     '<rect class="chart__pattern chart__pattern--' +
+      //       "finalEvictRectLatinx" +
+      //       '" x="0" y="0" width="2" height="8" />',
+      //   );
+      // svg.selectAll("#finalEvictRectOther").remove();
+      // svg
+      //   .append("pattern")
+      //   .attr("id", "finalEvictRectOther")
+      //   .attr("x", 0)
+      //   .attr("y", 0)
+      //   .attr("width", 4)
+      //   .attr("height", 8)
+      //   .style("fill", "#94AABD")
+      //   .attr("patternUnits", "userSpaceOnUse")
+      //   .attr("patternTransform", "rotate(45)")
+      //   .html(
+      //     '<rect class="chart__pattern chart__pattern--' +
+      //       "finalEvictRectOther" +
+      //       '" x="0" y="0" width="2" height="8" />',
+      //   );
 
       var group = context.els.data.selectAll(".chart__bar-group").data(groupedData, (d) => d.id); // enter each group
 
-      //Bryony code
-      //finding max date, id of max date and adding boolean to data.
-      const maxDate = d3.max(groupedData, (d) => monthParse(d.id));
-      const maxId = groupedData.find((f) => String(monthParse(f.id)) === String(maxDate)).id;
-      groupedData.map((m) =>
-        m.data.map((dataItem) => (dataItem.finalBar = m.id === maxId ? true : false)),
-      );
+      // //Bryony code
+      // //finding max date, id of max date and adding boolean to data.
+      // const maxDate = d3.max(groupedData, (d) => monthParse(d.id));
+      // const maxId = groupedData.find((f) => String(monthParse(f.id)) === String(maxDate)).id;
+      // groupedData.map((m) =>
+      //   m.data.map((dataItem) => (dataItem.finalBar = m.id === maxId ? true : false)),
+      // );
 
       var groupEls = group
         .enter()
@@ -1281,18 +1281,12 @@ Elab.Chart = (function (Elab) {
 
       barRects.style("fill", (d) => {
         if (d.id === "percentage_diff" || d.id === "White" || d.id === "month_filings") {
-          return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+          return "#E24000";
         }
-        if (d.id === "avg_filings" || d.id === "Black") {
-          return d.finalBar === true ? "url(#finalEvictRectBlack)" : "#434878";
-        }
-        if (d.id === "Latinx") {
-          return d.finalBar === true ? "url(#finalEvictRectLatinx)" : "#2C897F";
-        }
-        if (d.id === "Other") {
-          return d.finalBar === true ? "url(#finalEvictRectOther)" : "#94AABD";
-        }
-        return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+        if (d.id === "avg_filings" || d.id === "Black") return "#434878";
+        if (d.id === "Latinx") return "#2C897F";
+        if (d.id === "Other") return "#94AABD";
+        return "#E24000";
       });
 
       groupBars
