@@ -1891,30 +1891,6 @@
   }
 }
 
-.visual__note-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 16px;
-    margin-top: -16px;
-}
-        @media (max-width: 1024px) {
-    .visual__note-wrapper {
-      max-width: 170px;
-    }
-  }
-
-.section .visual__note-wrapper .legend-item {
-  min-width: unset;
-  margin-right: 16px;
-  margin-bottom: 0;
-}
-
-.visual__note {
-
-}
-
 .visual__toggle {
   margin: 0px auto 32px;
 }
