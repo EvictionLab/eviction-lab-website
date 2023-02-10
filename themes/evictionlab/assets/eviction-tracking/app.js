@@ -558,7 +558,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text: "Filings by Neighborhood Racial/Ethnic Majority",
+        text: "Filings over the last year by Neighborhood Racial/Ethnic Majority",
       },
     ],
     markLines: [],
@@ -936,16 +936,20 @@ Elab.Chart = (function (Elab) {
 
     return [padded.x, padded.y];
   }
+  
   /**
    * Parses data based on the provided config
    * @param {*} data json to parse
    * @param {ChartConfig} config parse configuration
    * @returns {ChartData}
    */
-
   function parseData(data, config) {
     // show only most recent year of data based on toggle, only for "avg" chart
-    data = config.rootId === "avg" && showLast12 ? data.slice(-12) : data;
+    if (config.rootId === "avg" && showLast12) {
+      data = data
+        .sort((a, b) => dateParse(a.month) - dateParse(b.month))
+        .slice(-12)
+    }
     var result = {
       _raw: data,
     }; // process config, add default values
@@ -998,25 +1002,25 @@ Elab.Chart = (function (Elab) {
     });
   }
 
-  function updatePartialFilingsDate(rootEl, data, currentConfig) {
-    const orderedData = data["_raw"].sort(function (a, b) {
-      aMonth = a.month.split("/").reverse().join("");
-      bMonth = b.month.split("/").reverse().join("");
-      return aMonth > bMonth ? 1 : aMonth < bMonth ? -1 : 0;
-    });
-    var rawLastDay = orderedData[orderedData.length - 1]["month_last_day"];
-    if (!rawLastDay) return "whassup";
-    var parseDate = d3.timeParse("%d/%m/%Y");
-    var lastDay = parseDate(rawLastDay);
-    var value =
-      "Partial " +
-      d3.timeFormat("%B")(lastDay) +
-      " filings as of " +
-      d3.timeFormat("%-m/%-d")(lastDay) +
-      (currentConfig.id === "avg" ? "<span>relative to average</span>" : "");
-    var partialEl = rootEl.find(".visual__note");
-    partialEl.html(value);
-  }
+  // function updatePartialFilingsDate(rootEl, data, currentConfig) {
+  //   const orderedData = data["_raw"].sort(function (a, b) {
+  //     aMonth = a.month.split("/").reverse().join("");
+  //     bMonth = b.month.split("/").reverse().join("");
+  //     return aMonth > bMonth ? 1 : aMonth < bMonth ? -1 : 0;
+  //   });
+  //   var rawLastDay = orderedData[orderedData.length - 1]["month_last_day"];
+  //   if (!rawLastDay) return "whassup";
+  //   var parseDate = d3.timeParse("%d/%m/%Y");
+  //   var lastDay = parseDate(rawLastDay);
+  //   var value =
+  //     "Partial " +
+  //     d3.timeFormat("%B")(lastDay) +
+  //     " filings as of " +
+  //     d3.timeFormat("%-m/%-d")(lastDay) +
+  //     (currentConfig.id === "avg" ? "<span>relative to average</span>" : "");
+  //   var partialEl = rootEl.find(".visual__note");
+  //   partialEl.html(value);
+  // }
 
   function renderBarTooltip(title, items, context, render, type) {
     render =
@@ -1552,13 +1556,16 @@ Elab.Chart = (function (Elab) {
      * Render buttons for the available groups, and bind click handlers.
      */
     function renderButtonGroups() {
-      var buttons = [{
-            label: "Past year",
-            date: yearAgo,
-          }, {
-            label: "Since ".concat(dateFormatter(dateParse(earliestDate))),
-            date: earliestDate,
-          }]
+      var buttons = [
+        {
+          label: "Past year",
+          date: yearAgo,
+        },
+        {
+          label: "Since ".concat(dateFormatter(dateParse(earliestDate))),
+          date: earliestDate,
+        },
+      ]
         // .map(function (date, i) {
         //   return {
         //     label: "Since ".concat(dateFormatter(dateParse(date))),
@@ -1667,7 +1674,7 @@ Elab.Chart = (function (Elab) {
         avgToggleEl.removeClass("toggle--active");
         rootEl.removeClass("section--avg-on").addClass("section--count-on");
         chart.update(currentConfig);
-        updatePartialFilingsDate(rootEl, chart.data, currentConfig);
+        // updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
       avgToggleEl.on("click", function () {
         currentConfig = config.id === "race" ? configs[1] : configs[0];
@@ -1675,9 +1682,9 @@ Elab.Chart = (function (Elab) {
         countToggleEl.removeClass("toggle--active");
         rootEl.addClass("section--avg-on").removeClass("section--count-on");
         chart.update(currentConfig);
-        updatePartialFilingsDate(rootEl, chart.data, currentConfig);
+        // updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
-      updatePartialFilingsDate(rootEl, chart.data, currentConfig);
+      // updatePartialFilingsDate(rootEl, chart.data, currentConfig);
     });
   }
 
@@ -3328,7 +3335,7 @@ Elab.Ranking = (function (Elab) {
 
 Elab.MedianFilings = (function (Elab) {
   var legendItemTemplate = Handlebars.compile(
-    '\n    <div class="legend-item legend-item--{{index}} legend-item--{{label}}">\n      <div class="legend-item__color"></div>\n      <div class="legend-item__label">{{label}}</div>\n    </div>\n  '
+    '\n    <div class="legend-item legend-item--{{index}} legend-item--{{label}}">\n      <div class="legend-item__color"></div>\n      <div class="legend-item__label">{{label}}</div>\n    </div>\n  ',
   );
   var dateParse = d3.timeParse("%Y-%m-%d");
   var dollarFormat = d3.format("$.2s");
@@ -3343,10 +3350,9 @@ Elab.MedianFilings = (function (Elab) {
     id = options.id;
     $el = $(elId);
     Elab.Data.loadData(csv, shapeLineData, function (result) {
-      data = result.sort(function (a, b) {
-        return a.name - b.name;
-      });
-
+      data = result
+        .sort((a, b) => a.date - b.date)
+        .slice(-12);
       Elab.Utils.callOnEnter($el[0], render);
     });
   }
@@ -3363,7 +3369,7 @@ Elab.MedianFilings = (function (Elab) {
     });
   }
 
-  /** Renders the top 100 buildings stat */
+  /** Renders the median claim line chart */
   function renderLineChart() {
     Elab.LineChart.createFigure($el.find(".visual__chart")[0], data, {
       x: "x",
