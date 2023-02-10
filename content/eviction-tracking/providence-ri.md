@@ -31,7 +31,7 @@ Eviction filings in Rhode Island were significantly above historical average in 
 
 # The geography of changes in eviction filings
 
-Providence County is divided into 244 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.1 2
+Providence County is divided into 141 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Providence County are provided by the Rhode Island Housing Authority. Historical averages cover 2016-2019. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
