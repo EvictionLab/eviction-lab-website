@@ -26,7 +26,7 @@ fbImage: 24153653237_6d5182fb1b_o.jpeg
 
 <hr/>
 
-<span class="dropcap red">I</span>n 2022, the stress that many Americans felt daily about housing also reached polling places and city governments: according to the National Low Income Housing Coalition, there were dozens of [housing ballot-related](https://nlihc.org/sites/default/files/2022-12/voters-choose-housing.pdf) measures before voters in the midterm election and more than 150 [tenant protections](https://twitter.com/evictionlab/status/1546856957029494784) were implemented across the country since January 2021.
+<span class="dropcap red">I</span>n 2022, the stress that many Americans felt daily about housing also reached polling places and city governments: according to the National Low Income Housing Coalition, there were dozens of [housing ballot-related](https://nlihc.org/sites/default/files/2022-12/voters-choose-housing.pdf) measures before voters in the midterm election and more than 150 [tenant protections](https://nlihc.org/tenant-protections) were implemented across the country since January 2021.
 
 
 
