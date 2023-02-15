@@ -12,15 +12,15 @@ date: 2023-02-07T18:49:04.271Z
 postauthorname: Camila Vallejo
 postauthortitle: The Eviction Lab
 authorpic: /about/page-content/research-team-bios/camila-vallejo/cvallejo_thumb.jpg
-image: 24153653237_6d5182fb1b_o.jpeg
-twImage: 24153653237_6d5182fb1b_o.jpeg
-fbImage: 24153653237_6d5182fb1b_o.jpeg
 description: As pandemic-era rental assistance funds and related resources
   started to sunset, the fight for better protections didn’t. 2022 was defined
   by groups across the country continuing to push for housing justice.
 listSummary: As pandemic-era rental assistance funds and related resources
   started to sunset, the fight for better protections didn’t. 2022 was defined
   by groups across the country continuing to push for housing justice.
+twImage: 24153653237_6d5182fb1b_o.jpeg
+image: 24153653237_6d5182fb1b_o.jpeg
+fbImage: 24153653237_6d5182fb1b_o.jpeg
 ---
 *As pandemic-era rental assistance funds and related resources started to sunset, the fight for better protections didn’t. 2022 was defined by groups across the country continuing to push for housing justice.* 
 
@@ -34,7 +34,7 @@ This happened as historic resources were winding down across the country. More t
 
 
 
-But cities like Detroit and New Orleans stepped up, implementing free legal help for tenants facing eviction. Others strengthened source-of-income protections, like in the state of Illinois. Some governments also voted in favor of policies to seal evictions after a certain time frame and to require just cause evictions. Meanwhile, housing advocates continued to pressure governments to do more – with one [win](https://www.whitehouse.gov/briefing-room/statements-releases/2023/01/25/fact-sheet-biden-harris-administration-announces-new-actions-to-protect-renters-and-promote-rental-affordability/) announced recently by the Biden Administration.  
+But cities like Detroit and New Orleans stepped up mandating free legal help for tenants on a larger scale. Others strengthened source-of-income protections, like in the state of Illinois. Some governments also voted in favor of policies to seal evictions after a certain time frame and to require just cause evictions. Meanwhile, housing advocates continued to pressure governments to do more – with one [win](https://www.whitehouse.gov/briefing-room/statements-releases/2023/01/25/fact-sheet-biden-harris-administration-announces-new-actions-to-protect-renters-and-promote-rental-affordability/) announced recently by the Biden Administration.  
 
 
 
@@ -213,7 +213,7 @@ This growing understanding seemed to open up more pathways to progress across th
 
 2022 materialized several housing wins championed in years prior and gave us a taste of what to expect as housing justice stays at the forefront of the conversation. If you strengthened renter protections in your jurisdiction in 2022, we want to celebrate with you. This may be shared on our social media handles with your name, location and organization. 
 
-
+<i>This blog post has been updated for clarity to specify that right to counsel programs in some cases expand already existing legal aid services.</i>
 
 To share your big win with us, fill out the form below:
 
