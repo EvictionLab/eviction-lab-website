@@ -25,11 +25,7 @@ function _objectSpread(target) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
       ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(
-          target,
-          key,
-          Object.getOwnPropertyDescriptor(source, key)
-        );
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
   }
@@ -108,242 +104,243 @@ Elab.Utils = (function (Elab) {
     return value ? value : map[varName];
   }
 
-function createTooltip(text) {
-  if (!text) return "";
-  return `<span class="inline-tooltip">
+  function createTooltip(text) {
+    if (!text) return "";
+    return `<span class="inline-tooltip">
 <span class="tooltiptext">${text}</span>
 </span>`;
-}
+  }
 
-function loadAll(files, dataMap, callback) {
-  if (!files.length) return callback(dataMap);
+  function loadAll(files, dataMap, callback) {
+    if (!files.length) return callback(dataMap);
 
-  const [file, ...restFiles] = files;
-  Elab.Data.loadData(file.url, file.shaper, (fileData) => {
-    dataMap[file.id] = fileData;
-    console.log(file.id, file, fileData)
-    loadAll(restFiles, dataMap, callback);
-  });
-}
+    const [file, ...restFiles] = files;
+    Elab.Data.loadData(file.url, file.shaper, (fileData) => {
+      dataMap[file.id] = fileData;
+      console.log(file.id, file, fileData);
+      loadAll(restFiles, dataMap, callback);
+    });
+  }
 
-/**
- * Creates a stat block
- */
-function createStatBlock(el, statFiles, stats, getVal, callback) {
-  loadAll(statFiles, {}, (dataMap) => {
-    var $el = $(el);
-    var someStatFound = false;
+  /**
+   * Creates a stat block
+   */
+  function createStatBlock(el, statFiles, stats, getVal, callback) {
+    loadAll(statFiles, {}, (dataMap) => {
+      var $el = $(el);
+      var someStatFound = false;
 
-    var createStat = (val, stat, isSubStat) => {
-      var fVal = !val ? stat.default : stat.formatter ? stat.formatter(val) : val;
-      console.log(stat.display, fVal);
+      var createStat = (val, stat, isSubStat) => {
+        var fVal = !val ? stat.default : stat.formatter ? stat.formatter(val) : val;
+        console.log(stat.display, fVal);
 
-      var tooltipContent = !val ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
+        var tooltipContent = !val ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
 
-      var subStatVal = !isSubStat && stat.subStat && getVal(dataMap[stat.subStat.file], stat.subStat);
-      var subStat = subStatVal
-        ? createStat(subStatVal, stat.subStat, true)
-        : "";
-      
-      var statClass = isSubStat ? 'stat-block-sub-stat' : 'stat-block-stat';
-      return (
-        '<dl class="' + statClass + '"><dd>' +
+        var subStatVal =
+          !isSubStat && stat.subStat && getVal(dataMap[stat.subStat.file], stat.subStat);
+        var subStat = subStatVal ? createStat(subStatVal, stat.subStat, true) : "";
+
+        var statClass = isSubStat ? "stat-block-sub-stat" : "stat-block-stat";
+        return (
+          '<dl class="' +
+          statClass +
+          '"><dd>' +
           fVal +
           "</dd><dt>" +
           stat.display +
           createTooltip(tooltipContent) +
-          "</dt>" + subStat + "</dl>"
-      );
-    }
+          "</dt>" +
+          subStat +
+          "</dl>"
+        );
+      };
 
-    stats.forEach((s) => {
-      // var el = getContainer ? getContainer($el, s) : $el;
-      var val = getVal(dataMap[s.file], s);
-      console.log({ s, val, $el });
-      if (!!val || !!s.default) {
-        someStatFound = true;
-        var stat = createStat(val, s)
-        $el.append(stat)
-      }
-    });
-
-    if (someStatFound) {
-      $el.css("display", "flex");
-      setTimeout(() => $el.css("opacity", 1), 1);
-    }
-    callback && callback(someStatFound);
-  });
-}
-
-/**
- * Creates a stat paragraph (interpolate values)
- */
-function createStatParagraph(el, text, statFiles, stats, getVal) {
-  loadAll(statFiles, {}, (dataMap) => {
-    var $el = $(el);
-    var interpolatedText = text
-    var hasAllData = true
-    stats.forEach((s) => {
-      var val = getVal(dataMap[s.file], s);
-      // only add paragraph if all values found
-      if (!val) {
-        console.log({ dataMap, s })
-        hasAllData = false
-        return null
-      }
-      var fVal = s.formatter ? s.formatter(val) : val;
-      fVal = s.bold ? '<b>'+fVal+'</b>' : fVal;
-      interpolatedText = interpolatedText.replace('%{'+s.placeholder+'}', fVal) 
-    });
-    hasAllData && $el.append(`<p>${interpolatedText}</p>`);
-    // $el.css("opacity", 1);
-  });
-}
-
-/**
- * Creates a tweet intent link with the provided element
- * @param {*} el `a` tag DOM element
- * @param {*} text text to prepopulate tweed
- * @param {*} via account to refer to in tweet
- */
-
-function createTwitterLink(el, text, via) {
-  var url = Elab.Utils.getCurrentURL();
-  var params = [];
-  if (text) params.push("text=" + encodeURIComponent(text));
-  if (via) params.push("via=" + encodeURIComponent(via));
-  params.push("url=" + encodeURIComponent(url));
-  $(el).attr("href", "https://twitter.com/intent/tweet?" + params.join("&"));
-  $(el).attr("target", "_blank");
-}
-/**
- * Create a facebook share intent link with provided element
- * @param {*} el `a` tag DOM element
- */
-
-function createFacebookLink(el) {
-  var url = Elab.Utils.getCurrentURL();
-  $(el).attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url));
-  $(el).attr("target", "_blank");
-}
-/**
- * Takes column name and returns an HTML string label
- * @param {*} id
- */
-
-var formatLabel = function formatLabel(id) {
-  switch (id) {
-    case "avg_filings":
-      return "Average Filings";
-
-    case "month_filings":
-      return "Filings This Year";
-
-    case "percentage_diff":
-      return "Filings This Year<span>relative to average</span>";
-
-    case "Other":
-      return "Other/None";
-
-    default:
-      return id;
-  }
-};
-
-var formatDate = d3.timeFormat("%B %e");
-/**
- * Executes a function once it enters the viewport
- * @param {*} el
- * @param {*} handler
- * @param {*} options
- */
-
-function callOnEnter(el, handler, options) {
-  options = options || {
-    rootMargin: "0px 0px -40px 0px",
-    threshold: 0.25,
-  };
-
-  if (!!window.IntersectionObserver) {
-    var observer = new IntersectionObserver(function (entries, observer) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          handler();
-          observer.unobserve(entry.target);
+      stats.forEach((s) => {
+        var val = getVal(dataMap[s.file], s);
+        if (!!val || !!s.default) {
+          someStatFound = true;
+          var stat = createStat(val, s);
+          $el.append(stat);
         }
       });
-    }, options);
-    observer.observe(el);
-  } else {
-    // call immediately if IntersectionObserver is unavailable
-    handler();
+
+      if (someStatFound) {
+        $el.css("display", "flex");
+        setTimeout(() => $el.css("opacity", 1), 1);
+      }
+      callback && callback(someStatFound);
+    });
   }
-}
 
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
+  /**
+   * Creates a stat paragraph (interpolate values)
+   */
+  function createStatParagraph(el, text, statFiles, stats, getVal) {
+    loadAll(statFiles, {}, (dataMap) => {
+      var $el = $(el);
+      var interpolatedText = text;
+      var hasAllData = true;
+      stats.forEach((s) => {
+        var val = getVal(dataMap[s.file], s);
+        // only add paragraph if all values found
+        if (!val) {
+          console.log({ dataMap, s });
+          hasAllData = false;
+          return null;
+        }
+        var fVal = s.formatter ? s.formatter(val) : val;
+        fVal = s.bold ? "<b>" + fVal + "</b>" : fVal;
+        interpolatedText = interpolatedText.replace("%{" + s.placeholder + "}", fVal);
+      });
+      hasAllData && $el.append(`<p>${interpolatedText}</p>`);
+      // $el.css("opacity", 1);
+    });
+  }
 
-    var later = function later() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
+  /**
+   * Creates a tweet intent link with the provided element
+   * @param {*} el `a` tag DOM element
+   * @param {*} text text to prepopulate tweed
+   * @param {*} via account to refer to in tweet
+   */
+
+  function createTwitterLink(el, text, via) {
+    var url = Elab.Utils.getCurrentURL();
+    var params = [];
+    if (text) params.push("text=" + encodeURIComponent(text));
+    if (via) params.push("via=" + encodeURIComponent(via));
+    params.push("url=" + encodeURIComponent(url));
+    $(el).attr("href", "https://twitter.com/intent/tweet?" + params.join("&"));
+    $(el).attr("target", "_blank");
+  }
+  /**
+   * Create a facebook share intent link with provided element
+   * @param {*} el `a` tag DOM element
+   */
+
+  function createFacebookLink(el) {
+    var url = Elab.Utils.getCurrentURL();
+    $(el).attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url));
+    $(el).attr("target", "_blank");
+  }
+  /**
+   * Takes column name and returns an HTML string label
+   * @param {*} id
+   */
+
+  var formatLabel = function formatLabel(id) {
+    switch (id) {
+      case "avg_filings":
+        return "Average Filings";
+
+      case "month_filings":
+        return "Filings This Year";
+
+      case "percentage_diff":
+        return "Filings This Year<span>relative to average</span>";
+
+      case "Other":
+        return "Other/None";
+
+      default:
+        return id;
+    }
+  };
+
+  var formatDate = d3.timeFormat("%B %e");
+  /**
+   * Executes a function once it enters the viewport
+   * @param {*} el
+   * @param {*} handler
+   * @param {*} options
+   */
+
+  function callOnEnter(el, handler, options) {
+    options = options || {
+      rootMargin: "0px 0px -40px 0px",
+      threshold: 0.25,
     };
 
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
+    if (!!window.IntersectionObserver) {
+      var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            handler();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+      observer.observe(el);
+    } else {
+      // call immediately if IntersectionObserver is unavailable
+      handler();
+    }
+  }
+
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this,
+        args = arguments;
+
+      var later = function later() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
+
+  function getMoratoriumRanges(data) {
+    return data.start.map(function (d, i) {
+      return [data.start[i], data.end[i]];
+    });
+  }
+
+  function getCdcMoratoriumRange() {
+    return [new Date(2020, 8, 4), new Date(2021, 7, 26)]; // ended aug 26
+  }
+
+  function monthAxisFormatter(date, index) {
+    var prevDate = d3.timeMonth.offset(date, -1);
+    var yearFormat = d3.timeFormat("%y");
+    var monthFormat = d3.timeFormat("%b");
+    var monthYearFormat = d3.timeFormat("%b '%y");
+    return yearFormat(prevDate) === yearFormat(date) && index > 0
+      ? monthFormat(date)
+      : monthYearFormat(date);
+  } // group an array of objects by a property
+
+  function group(data, property) {
+    return d3
+      .nest()
+      .key(function (d) {
+        return d[property];
+      })
+      .entries(data);
+  }
+
+  return {
+    group: group,
+    getCssVar: getCssVar,
+    getCurrentURL: getCurrentURL,
+    slugify: slugify,
+    createTwitterLink: createTwitterLink,
+    createFacebookLink: createFacebookLink,
+    createStatBlock: createStatBlock,
+    createStatParagraph: createStatParagraph,
+    formatLabel: formatLabel,
+    formatDate: formatDate,
+    callOnEnter: callOnEnter,
+    debounce: debounce,
+    getMoratoriumRanges: getMoratoriumRanges,
+    getCdcMoratoriumRange: getCdcMoratoriumRange,
+    monthAxisFormatter: monthAxisFormatter,
   };
-}
-
-function getMoratoriumRanges(data) {
-  return data.start.map(function (d, i) {
-    return [data.start[i], data.end[i]];
-  });
-}
-
-function getCdcMoratoriumRange() {
-  return [new Date(2020, 8, 4), new Date(2021, 7, 26)]; // ended aug 26
-}
-
-function monthAxisFormatter(date, index) {
-  var prevDate = d3.timeMonth.offset(date, -1);
-  var yearFormat = d3.timeFormat("%y");
-  var monthFormat = d3.timeFormat("%b");
-  var monthYearFormat = d3.timeFormat("%b '%y");
-  return yearFormat(prevDate) === yearFormat(date) && index > 0
-    ? monthFormat(date)
-    : monthYearFormat(date);
-} // group an array of objects by a property
-
-function group(data, property) {
-  return d3
-    .nest()
-    .key(function (d) {
-      return d[property];
-    })
-    .entries(data);
-}
-
-return {
-  group: group,
-  getCssVar: getCssVar,
-  getCurrentURL: getCurrentURL,
-  slugify: slugify,
-  createTwitterLink: createTwitterLink,
-  createFacebookLink: createFacebookLink,
-  createStatBlock: createStatBlock,
-  createStatParagraph: createStatParagraph,
-  formatLabel: formatLabel,
-  formatDate: formatDate,
-  callOnEnter: callOnEnter,
-  debounce: debounce,
-  getMoratoriumRanges: getMoratoriumRanges,
-  getCdcMoratoriumRange: getCdcMoratoriumRange,
-  monthAxisFormatter: monthAxisFormatter,
-};
 })(Elab);
 /**
  * CONFIG MODULE
@@ -385,6 +382,39 @@ Elab.Config = (function (Elab) {
     return [extent[0], extent[1] + pad];
   };
   /**
+   * Groups items by a given selector
+   * @param {Array<DataItem>} items
+   * @param {function} selector returns an item value to group by
+   * @returns {GroupItems}
+   */
+
+  function groupItems(items, selector) {
+    window.items = items;
+    window.selector = selector;
+    var xValues = items.reduce(function (values, item, i) {
+      item.data.forEach(function (d) {
+        var value = selector(d);
+        if (values.indexOf(value) === -1) values.push(value);
+      });
+      return values;
+    }, []);
+    return xValues.map(function (value) {
+      return {
+        id: value,
+        data: items.map(function (item, i) {
+          return {
+            id: item.id,
+            idx: item.idx || i,
+            value:
+              item.data.find(function (d) {
+                return selector(d) === value;
+              }),
+          };
+        }),
+      };
+    });
+  }
+  /**
    * Helper function for creating configs
    * @param {*} config
    */
@@ -393,10 +423,13 @@ Elab.Config = (function (Elab) {
     var BASE_CONFIG = {
       legend: ".legend",
       parse: {
+        // default chart has a date axis, like for "avg" bar chart
+        // override for others (like "race")
         x: monthParser,
         y: parseFloat,
         area: d3.timeParse("%d/%m/%Y"),
       },
+      groupItems: groupItems,
       format: {
         x: Elab.Utils.monthAxisFormatter,
         y: d3.format(",d"),
@@ -503,6 +536,7 @@ Elab.Config = (function (Elab) {
     },
   });
   var CHART_2_CONFIG = createConfig({
+    legend: null, // no legend for race chart
     groupType: "row",
     id: "avg",
     content: [
@@ -531,8 +565,8 @@ Elab.Config = (function (Elab) {
       extra: ["month_last_day"],
     },
     format: {
+      x: (id) => id,
       y: d3.format(",.0%"),
-      xTooltip: d3.timeFormat("%B %Y"),
       yTooltip: d3.format(",.0%"),
       tooltip: function tooltip(d) {
         var distance = d._raw.y - 1;
@@ -556,8 +590,21 @@ Elab.Config = (function (Elab) {
         );
       },
     },
+    parse: {
+      x: (x) => x,
+    },
+    // overrides to differentiate from the default bar chart by date
+    getXExtent: (items) => [0, items.length],
+    getXDomain: (items) => d3.range(0, items[0].data.length),
+    getXBands: (items) => items.map((d) => d.id),
+    groupItems: (items) =>
+      items.map((d) => ({
+        data: [{ id: d.id, idx: 0, value: { ...d.data[0], x: d.id } }],
+        id: d.id,
+      })),
   });
   var CHART_2A_CONFIG = createConfig({
+    legend: null, // no legend for race chart
     groupType: "row",
     id: "filings",
     content: [
@@ -576,6 +623,7 @@ Elab.Config = (function (Elab) {
       extra: ["month_last_day", "avg_filings"],
     },
     format: {
+      x: (id) => id,
       tooltip: function tooltip(d) {
         var distance = d._raw.y - d._raw.extras["avg_filings"];
         var value = Math.abs(distance);
@@ -600,7 +648,17 @@ Elab.Config = (function (Elab) {
     },
     parse: {
       avg_filings: parseFloat,
+      x: (x) => x,
     },
+    // overrides to differentiate from the default bar chart by date
+    getXExtent: (items) => [0, items.length],
+    getXDomain: (items) => d3.range(0, items[0].data.length),
+    getXBands: (items) => items.map((d) => d.id),
+    groupItems: (items) =>
+      items.map((d) => ({
+        data: [{ id: d.id, idx: 0, value: { ...d.data[0], x: d.id } }],
+        id: d.id,
+      })),
   });
   var CONFIGS = {
     avg: [CHART_1A_CONFIG, CHART_1_CONFIG],
@@ -913,9 +971,9 @@ Elab.Chart = (function (Elab) {
 
   function parseExtents(items, config) {
     // calculate x and y [min, max] pairs
-    var xExtent = getExtentForCollection(items, function (d) {
-      return d.x;
-    });
+    var xExtent = config.getXExtent
+      ? config.getXExtent(items)
+      : getExtentForCollection(items, (d) => d.x);
     var yExtent = getExtentForCollection(items, function (d) {
       return d.y;
     }); // x and y [min, max], padded based on config value
@@ -941,7 +999,7 @@ Elab.Chart = (function (Elab) {
 
     return [padded.x, padded.y];
   }
-  
+
   /**
    * Parses data based on the provided config
    * @param {*} data json to parse
@@ -951,9 +1009,7 @@ Elab.Chart = (function (Elab) {
   function parseData(data, config) {
     // show only most recent year of data based on toggle, only for "avg" chart
     if (config.rootId === "avg" && showLast12) {
-      data = data
-        .sort((a, b) => dateParse(a.month) - dateParse(b.month))
-        .slice(-12)
+      data = data.sort((a, b) => dateParse(a.month) - dateParse(b.month)).slice(-12);
     }
     var result = {
       _raw: data,
@@ -976,56 +1032,6 @@ Elab.Chart = (function (Elab) {
 
     return result;
   }
-  /**
-   * Groups items by a given selector
-   * @param {Array<DataItem>} items
-   * @param {function} selector returns an item value to group by
-   * @returns {GroupItems}
-   */
-
-  function groupItems(items, selector) {
-    var xValues = items.reduce(function (values, item, i) {
-      item.data.forEach(function (d) {
-        var value = selector(d);
-        if (values.indexOf(value) === -1) values.push(value);
-      });
-      return values;
-    }, []);
-    return xValues.map(function (value) {
-      return {
-        id: value,
-        data: items.map(function (item, i) {
-          return {
-            id: item.id,
-            idx: item.idx || i,
-            value: item.data.find(function (d) {
-              return selector(d) === value;
-            }),
-          };
-        }),
-      };
-    });
-  }
-
-  // function updatePartialFilingsDate(rootEl, data, currentConfig) {
-  //   const orderedData = data["_raw"].sort(function (a, b) {
-  //     aMonth = a.month.split("/").reverse().join("");
-  //     bMonth = b.month.split("/").reverse().join("");
-  //     return aMonth > bMonth ? 1 : aMonth < bMonth ? -1 : 0;
-  //   });
-  //   var rawLastDay = orderedData[orderedData.length - 1]["month_last_day"];
-  //   if (!rawLastDay) return "whassup";
-  //   var parseDate = d3.timeParse("%d/%m/%Y");
-  //   var lastDay = parseDate(rawLastDay);
-  //   var value =
-  //     "Partial " +
-  //     d3.timeFormat("%B")(lastDay) +
-  //     " filings as of " +
-  //     d3.timeFormat("%-m/%-d")(lastDay) +
-  //     (currentConfig.id === "avg" ? "<span>relative to average</span>" : "");
-  //   var partialEl = rootEl.find(".visual__note");
-  //   partialEl.html(value);
-  // }
 
   function renderBarTooltip(title, items, context, render, type) {
     render =
@@ -1119,94 +1125,15 @@ Elab.Chart = (function (Elab) {
 
     function renderBars(data, config, context) {
       var monthFormat = d3.timeFormat("%m/%Y");
-      var monthParse = d3.timeParse("%m/%Y"); // get data grouped by x value
+      // var monthParse = d3.timeParse("%m/%Y"); // get data grouped by x value
 
-      var groupedData = groupItems(data.items, function (d) {
-        return monthFormat(d.x);
-      });
-      var groupNames = data.items.map(function (d) {
-        return d.id;
-      });
-      var x1 = d3.scaleBand().domain(groupNames).rangeRound([0, context.x.bandwidth()]);
+      var groupedData = config.groupItems(data.items, (d) => monthFormat(d.x));
 
-      //bryony cheat
-      // const svg = d3.select(context.els.data.node().parentElement.parentElement);
+      var xDomain = config.getXDomain ? config.getXDomain(data.items) : data.items.map((d) => d.id);
 
-      // //remove any previous pattern and adding a new one
-      // svg.selectAll("#finalEvictRectWhite").remove();
-      // svg
-      //   .append("pattern")
-      //   .attr("id", "finalEvictRectWhite")
-      //   .attr("x", 0)
-      //   .attr("y", 0)
-      //   .attr("width", 4)
-      //   .attr("height", 8)
-      //   .style("fill", "#E24000")
-      //   .attr("patternUnits", "userSpaceOnUse")
-      //   .attr("patternTransform", "rotate(45)")
-      //   .html(
-      //     '<rect class="chart__pattern chart__pattern--' +
-      //       "finalEvictRectWhite" +
-      //       '" x="0" y="0" width="2" height="8" />',
-      //   );
-      // svg.selectAll("#finalEvictRectBlack").remove();
-      // svg
-      //   .append("pattern")
-      //   .attr("id", "finalEvictRectBlack")
-      //   .attr("x", 0)
-      //   .attr("y", 0)
-      //   .attr("width", 4)
-      //   .attr("height", 8)
-      //   .style("fill", "#434878")
-      //   .attr("patternUnits", "userSpaceOnUse")
-      //   .attr("patternTransform", "rotate(45)")
-      //   .html(
-      //     '<rect class="chart__pattern chart__pattern--' +
-      //       "finalEvictRectBlack" +
-      //       '" x="0" y="0" width="2" height="8" />',
-      //   );
-      // svg.selectAll("#finalEvictRectLatinx").remove();
-      // svg
-      //   .append("pattern")
-      //   .attr("id", "finalEvictRectLatinx")
-      //   .attr("x", 0)
-      //   .attr("y", 0)
-      //   .attr("width", 4)
-      //   .attr("height", 8)
-      //   .style("fill", "#2C897F")
-      //   .attr("patternUnits", "userSpaceOnUse")
-      //   .attr("patternTransform", "rotate(45)")
-      //   .html(
-      //     '<rect class="chart__pattern chart__pattern--' +
-      //       "finalEvictRectLatinx" +
-      //       '" x="0" y="0" width="2" height="8" />',
-      //   );
-      // svg.selectAll("#finalEvictRectOther").remove();
-      // svg
-      //   .append("pattern")
-      //   .attr("id", "finalEvictRectOther")
-      //   .attr("x", 0)
-      //   .attr("y", 0)
-      //   .attr("width", 4)
-      //   .attr("height", 8)
-      //   .style("fill", "#94AABD")
-      //   .attr("patternUnits", "userSpaceOnUse")
-      //   .attr("patternTransform", "rotate(45)")
-      //   .html(
-      //     '<rect class="chart__pattern chart__pattern--' +
-      //       "finalEvictRectOther" +
-      //       '" x="0" y="0" width="2" height="8" />',
-      //   );
+      var x1 = d3.scaleBand().domain(xDomain).rangeRound([0, context.x.bandwidth()]);
 
       var group = context.els.data.selectAll(".chart__bar-group").data(groupedData, (d) => d.id); // enter each group
-
-      // //Bryony code
-      // //finding max date, id of max date and adding boolean to data.
-      // const maxDate = d3.max(groupedData, (d) => monthParse(d.id));
-      // const maxId = groupedData.find((f) => String(monthParse(f.id)) === String(maxDate)).id;
-      // groupedData.map((m) =>
-      //   m.data.map((dataItem) => (dataItem.finalBar = m.id === maxId ? true : false)),
-      // );
 
       var groupEls = group
         .enter()
@@ -1214,8 +1141,8 @@ Elab.Chart = (function (Elab) {
         .attr("class", "chart__bar-group")
         .merge(group)
         .attr("transform", function (d) {
-          var date = monthParse(d.id);
-          return "translate(" + context.x(date) + ",0)";
+          var parsedX = config.parse.x(d.id);
+          return "translate(" + context.x(parsedX) + ",0)";
         });
       var groupAreaSelection = context.els.data
         .selectAll(".chart__bar-area")
@@ -1236,11 +1163,13 @@ Elab.Chart = (function (Elab) {
         })
         .merge(groupAreaSelection)
         .attr("x", function (d, i) {
-          var date = monthParse(d.id);
-          return context.x(date) - 4;
+          var parsedX = config.parse.x(d.id);
+          // center within buffer of 8
+          return context.x(parsedX) - 4;
         })
         .attr("y", 0)
         .attr("height", context.height)
+        // buffer of 8
         .attr("width", context.x.bandwidth() + 8);
       var groupBars = groupEls.selectAll("rect").data(function (d) {
         return d.data;
@@ -1317,18 +1246,17 @@ Elab.Chart = (function (Elab) {
       var rotateLabels = function rotateLabels(selection) {
         //count number of ticks for bryony cheat
         //could not get to the bottom of where config.view.xTicks was looking
-        const tickCount = selection.selectAll(".tick").nodes().length;
-
+        const tickCount = data._raw.length;
         selection
           .selectAll(".tick text")
           .each(function (d, i) {
-            //another bryony cheat.
-            if (tickCount > 20) {
-              //if more than 20 ticks
-              if (i % 2 !== 0) {
-                //only show odd ticks.
-                d3.select(this).attr("display", "none");
-              }
+            // another bryony cheat.
+            if (tickCount > 20 && i % 2 !== 0) {
+              // if more than 20 ticks only show odd
+              d3.select(this).attr("display", "none");
+            } else {
+              // unset to display ticks in case they were hidden above (for toggleable chart)
+              d3.select(this).attr("display", "unset");
             }
           })
           .attr("text-anchor", "end")
@@ -1504,11 +1432,13 @@ Elab.Chart = (function (Elab) {
 
       var xExtent = data.extents[0];
       var yExtent = data.extents[1];
-      var xBands = d3.timeMonth.range(
-        d3.timeMonth.floor(xExtent[0]),
-        d3.timeMonth.floor(d3.timeMonth.offset(xExtent[1], 1)),
-        1,
-      );
+      var xBands = config.getXBands
+        ? config.getXBands(data.items)
+        : d3.timeMonth.range(
+            d3.timeMonth.floor(xExtent[0]),
+            d3.timeMonth.floor(d3.timeMonth.offset(xExtent[1], 1)),
+            1,
+          );
       var xBandScale = d3.scaleBand().rangeRound([0, width]).padding(0.5).domain(xBands); // setup scales
 
       var x = xBandScale;
@@ -1673,7 +1603,6 @@ Elab.Chart = (function (Elab) {
         avgToggleEl.removeClass("toggle--active");
         rootEl.removeClass("section--avg-on").addClass("section--count-on");
         chart.update(currentConfig);
-        // updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
       avgToggleEl.on("click", function () {
         currentConfig = config.id === "race" ? configs[1] : configs[0];
@@ -1681,9 +1610,7 @@ Elab.Chart = (function (Elab) {
         countToggleEl.removeClass("toggle--active");
         rootEl.addClass("section--avg-on").removeClass("section--count-on");
         chart.update(currentConfig);
-        // updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
-      // updatePartialFilingsDate(rootEl, chart.data, currentConfig);
     });
   }
 
@@ -3349,9 +3276,7 @@ Elab.MedianFilings = (function (Elab) {
     id = options.id;
     $el = $(elId);
     Elab.Data.loadData(csv, shapeLineData, function (result) {
-      data = result
-        .sort((a, b) => a.date - b.date)
-        .slice(-12);
+      data = result.sort((a, b) => a.date - b.date).slice(-12);
       Elab.Utils.callOnEnter($el[0], render);
     });
   }
