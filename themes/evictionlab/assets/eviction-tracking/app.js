@@ -3284,12 +3284,21 @@ Elab.MedianFilings = (function (Elab) {
         name: "Median Claim Amount",
         x: date,
         y: Number(row[config.yCol]),
+        avg: Number(row[config.avg]),
       };
     });
   }
 
   /** Renders the median claim line chart */
   function renderLineChart() {
+    // chunk label to break btw lines
+    var avgLabel = ["pre-pandemic", "average"]
+    var avgLines = data[0].avg && avgLabel.map((w, i) => ({
+      y: data[0].avg,
+      label: w,
+      // first item gets used for plotting line, rest just for the label word
+      labelOnly: !i 
+    }))
     Elab.LineChart.createFigure($el.find(".visual__chart")[0], data, {
       x: "x",
       y: "y",
@@ -3298,6 +3307,9 @@ Elab.MedianFilings = (function (Elab) {
       yFormat: dollarFormat,
       xTooltipFormat: d3.timeFormat("%B %Y"),
       yTooltipFormat: d3.format("$.2f"),
+      avgLines,
+      // make room for avg label
+      margin: "8 84 60 54"
     });
   }
 

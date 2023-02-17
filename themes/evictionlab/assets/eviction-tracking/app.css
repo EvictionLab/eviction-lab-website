@@ -2836,13 +2836,19 @@ label #labels_top-100 {
   stroke: rgba(0, 0, 0, 0.1);
 }
 
-.chart__mark-lines line {
+.chart__marks line {
+  stroke: var(--c1);
+}
+
+.chart__mark-lines line,
+.avg__lines line {
   stroke: rgba(0, 0, 0, 0.3);
   stroke-dasharray: 3 3;
   stroke-width: 2;
 }
 
-.chart__mark-lines text {
+.chart__mark-lines text,
+.avg__line-labels text {
   fill: #7d7d7d;
   font-size: 12px;
   font-family: Akkurat-Bold, sans-serif;

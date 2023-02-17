@@ -30,6 +30,7 @@ window.addEventListener('load', function() {
   var csv = {{ .Get "data" }}
   var yCol = "median_claim"
   var xCol = "month_date"
+  var avg = "median_claim_prepandemic"
   var rootEl = '#'+id
   var statFiles = [
     { id: "claims", url: csv },
@@ -59,7 +60,7 @@ window.addEventListener('load', function() {
     return row ? row[s.field] : null;
   }
   Elab.Utils.createStatBlock('#claimsStats', statFiles, stats, getVal)
-  Elab.Section.init('median_filings', rootEl, { id: id, csv: csv, yCol: yCol, xCol: xCol })
+  Elab.Section.init('median_filings', rootEl, { id, csv, yCol, xCol, avg })
 });
 </script>
 </section>

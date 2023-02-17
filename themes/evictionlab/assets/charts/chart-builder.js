@@ -749,6 +749,7 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  // adds vertical lines to mark dates
   Chart.prototype.addMarkLine = function (overrides) {
     var _this = this;
     var options = overrides || {};
@@ -791,6 +792,81 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  // adds horizontal reference line (with label)
+  Chart.prototype.addAvgLine = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    var lineData = options.lines;
+    if (!lineData) return this;
+
+    // LINE
+    this.selections["avg"] = this.selections["data"].append("g").attr("class", "avg__lines");
+
+    this.updaters["avg"] = function () {
+      var selection = _this.selections["avg"]
+        .selectAll(".avg__lines")
+        .data(lineData.filter((l) => !l.labelOnly));
+
+      // HACK: otherwise multiple added on resize. Why is .exit().remove() not managing?
+      _this.selections["avg"].selectAll(".avg__line").remove();
+
+      selection
+        .enter()
+        .append("line")
+        .attr("class", "avg__line")
+        .attr("x1", _this.getInnerWidth())
+        .attr("x2", _this.getInnerWidth())
+        .attr("y1", function (d) {
+          return _this.yScale(d.y);
+        })
+        .attr("y2", function (d) {
+          return _this.yScale(d.y);
+        })
+        .merge(selection)
+        .transition()
+        .duration(1000)
+        .attr("x1", 0);
+      selection.exit().remove();
+    };
+
+    // LABEL
+    // add to chart__root rather than chart__data so that label can display outside chart area
+    this.selections["avg__labels"] = this.selections["root"]
+      .append("g")
+      .attr("class", "avg__line-labels")
+      // shift right to account for left margin
+      .attr("transform", `translate(${getMargin()[3]}, 0)`);
+
+    this.updaters["avg__labels"] = function () {
+      var labelSelection = _this.selections["avg__labels"]
+        .selectAll(".avg__line-label")
+        .data(lineData);
+
+      // HACK: otherwise multiple added on resize. Why is .exit().remove() not managing?
+      _this.selections["avg__labels"].selectAll(".avg__line-label--y").remove();
+
+      labelSelection
+        .enter()
+        .append("text")
+        .attr("class", "avg__line-label--y")
+        .html(function (d) {
+          return d.label;
+        })
+        .attr("x", _this.getInnerWidth() + 4)
+        .attr("y", function (d, i) {
+          return _this.yScale(d.y);
+        })
+        .attr("dy", function (d, i) {
+          // offset sequential lines of text
+          return i * 16;
+        });
+
+      labelSelection.exit().remove();
+    };
+
+    return this;
+  };
+  
   /**
    * Adds bars to the chart for category or location based axis
    * @param {function} selector function that takes the chart data and returns the bar data
