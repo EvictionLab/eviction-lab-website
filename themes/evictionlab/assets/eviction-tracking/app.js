@@ -117,7 +117,6 @@ Elab.Utils = (function (Elab) {
     const [file, ...restFiles] = files;
     Elab.Data.loadData(file.url, file.shaper, (fileData) => {
       dataMap[file.id] = fileData;
-      console.log(file.id, file, fileData);
       loadAll(restFiles, dataMap, callback);
     });
   }
@@ -132,7 +131,6 @@ Elab.Utils = (function (Elab) {
 
       var createStat = (val, stat, isSubStat) => {
         var fVal = !val ? stat.default : stat.formatter ? stat.formatter(val) : val;
-        console.log(stat.display, fVal);
 
         var tooltipContent = !val ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
 
@@ -184,7 +182,6 @@ Elab.Utils = (function (Elab) {
         var val = getVal(dataMap[s.file], s);
         // only add paragraph if all values found
         if (!val) {
-          console.log({ dataMap, s });
           hasAllData = false;
           return null;
         }
@@ -405,10 +402,9 @@ Elab.Config = (function (Elab) {
           return {
             id: item.id,
             idx: item.idx || i,
-            value:
-              item.data.find(function (d) {
-                return selector(d) === value;
-              }),
+            value: item.data.find(function (d) {
+              return selector(d) === value;
+            }),
           };
         }),
       };
@@ -590,11 +586,11 @@ Elab.Config = (function (Elab) {
     },
     // overrides to differentiate from the default bar chart by date
     getXExtent: (items) => [0, items.length],
-    getXDomain: (items) => d3.range(0, items[0].data.length),
+    // getXDomain: (items) => d3.range(0, items[0].data.length),
     getXBands: (items) => items.map((d) => d.id),
     groupItems: (items) =>
       items.map((d) => ({
-        data: [{ id: d.id, idx: 0, value: { ...d.data[0], x: d.id } }],
+        data: [{ id: d.id, idx: 0, value: { ...d.data[d.data.length - 1], x: d.id } }],
         id: d.id,
       })),
   });
@@ -647,11 +643,11 @@ Elab.Config = (function (Elab) {
     },
     // overrides to differentiate from the default bar chart by date
     getXExtent: (items) => [0, items.length],
-    getXDomain: (items) => d3.range(0, items[0].data.length),
+    // getXDomain: (items) => d3.range(0, items[0].data.length),
     getXBands: (items) => items.map((d) => d.id),
     groupItems: (items) =>
       items.map((d) => ({
-        data: [{ id: d.id, idx: 0, value: { ...d.data[0], x: d.id } }],
+        data: [{ id: d.id, idx: 0, value: { ...d.data[d.data.length - 1], x: d.id } }],
         id: d.id,
       })),
   });
@@ -937,16 +933,27 @@ Elab.Chart = (function (Elab) {
   function parseRowItems(data, config) {
     var groupCol = config.data.y.groupBy;
     var dataByGroup = data.reduce(function (result, row) {
-      if (!result.hasOwnProperty(row[groupCol])) result[row[groupCol]] = [];
-      result[row[groupCol]].push({
-        x: config.parse.x(row[config.data.x]),
-        y: config.parse.y(row[config.data.y.col]),
-        // add extra columns to data
-        extras: config.data.extra.reduce(function (obj, colName) {
-          obj[colName] = config.parse[colName] ? config.parse[colName](row[colName]) : row[colName];
-          return obj;
-        }, {}),
-      });
+      const x = row[config.data.x];
+      const y = row[config.data.y.col];
+      const groupVal = row[groupCol];
+
+      if ([x, y, groupCol].includes(undefined)) {
+        console.warn("Row has undefined x, y, or groupBy value: ", row, config);
+      } else {
+        if (!result.hasOwnProperty(groupVal)) result[groupVal] = [];
+
+        result[groupVal].push({
+          x: config.parse.x(x),
+          y: config.parse.y(y),
+          // add extra columns to data
+          extras: config.data.extra.reduce(function (obj, colName) {
+            obj[colName] = config.parse[colName]
+              ? config.parse[colName](row[colName])
+              : row[colName];
+            return obj;
+          }, {}),
+        });
+      }
       return result;
     }, {});
     return Object.keys(dataByGroup).map(function (key, i) {
@@ -1118,17 +1125,19 @@ Elab.Chart = (function (Elab) {
       };
     }
 
-    function renderBars(data, config, context) {
-      var monthFormat = d3.timeFormat("%m/%Y");
+    function renderBars(groupedItems, config, context) {
       // var monthParse = d3.timeParse("%m/%Y"); // get data grouped by x value
 
-      var groupedData = config.groupItems(data.items, (d) => monthFormat(d.x));
-
-      var xDomain = config.getXDomain ? config.getXDomain(data.items) : data.items.map((d) => d.id);
+      // because we currently don't have any grouped bar charts
+      // there will always be a single bar in each group
+      var xDomain = [0];
+      // var xDomain = config.getXDomain
+      //   ? config.getXDomain(groupedItems)
+      //   : groupedItems.map((d) => d.id);
 
       var x1 = d3.scaleBand().domain(xDomain).rangeRound([0, context.x.bandwidth()]);
 
-      var group = context.els.data.selectAll(".chart__bar-group").data(groupedData, (d) => d.id); // enter each group
+      var group = context.els.data.selectAll(".chart__bar-group").data(groupedItems, (d) => d.id); // enter each group
 
       var groupEls = group
         .enter()
@@ -1141,7 +1150,7 @@ Elab.Chart = (function (Elab) {
         });
       var groupAreaSelection = context.els.data
         .selectAll(".chart__bar-area")
-        .data(groupedData, (d) => d.id);
+        .data(groupedItems, (d) => d.id);
       groupAreaSelection.exit().remove();
       var groupAreas = groupAreaSelection
         .enter()
@@ -1232,16 +1241,16 @@ Elab.Chart = (function (Elab) {
     }
     /**
      * Renders the x and y axis
-     * @param {*} data
+     * @param {*} groupedItems
      * @param {*} config
      * @param {*} context
      */
 
-    function renderAxis(data, config, context) {
+    function renderAxis(groupedItems, config, context) {
       var rotateLabels = function rotateLabels(selection) {
         //count number of ticks for bryony cheat
         //could not get to the bottom of where config.view.xTicks was looking
-        const tickCount = data._raw.length;
+        const tickCount = groupedItems.length;
         selection
           .selectAll(".tick text")
           .each(function (d, i) {
@@ -1362,12 +1371,12 @@ Elab.Chart = (function (Elab) {
     }
     /**
      * Renders the outline of the chart
-     * @param {*} data
+     * @param {*} groupedItems
      * @param {*} config
      * @param {*} context
      */
 
-    function renderFrame(data, config, context) {
+    function renderFrame(groupedItems, config, context) {
       // bounding rect border
       context.els.frame
         .attr("x", -1)
@@ -1415,6 +1424,9 @@ Elab.Chart = (function (Elab) {
      */
 
     function renderGraph(data, els, config) {
+      var monthFormat = d3.timeFormat("%m/%Y");
+      var groupedItems = config.groupItems(data.items, (d) => monthFormat(d.x));
+
       // render legend first, as it can add to chart height
       config.legend && renderLegend(config.legend, data.items, config); // get parent width and height
 
@@ -1448,10 +1460,11 @@ Elab.Chart = (function (Elab) {
         xExtent: xExtent,
         yExtent: yExtent,
       };
-      renderAxis(data, config, context);
-      renderBars(data, config, context);
+
+      renderAxis(groupedItems, config, context);
+      renderBars(groupedItems, config, context);
       config.markLines && renderMarkLine(data, config, context);
-      renderFrame(data, config, context);
+      renderFrame(groupedItems, config, context);
       config.content && renderContentUpdates(config.content, config);
     }
     /**
