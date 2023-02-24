@@ -22,7 +22,7 @@
       <h3>Filing Counts</h3>
       <div id="filingCounts" class="stat-block-wrapper">
       </div>
-      <h3>Filing Rates</h3>
+      <h3>Filing Rates Over the Past Year</h3>
       <div id="filingRates" class="stat-block-wrapper">
       </div>
     </div>
@@ -47,6 +47,7 @@
             file: 'filing',
             field: 'filings_pandemic_pct_hist',
             display: 'of average',
+            tooltip: 'Compared to filings over the same time frame before the COVID-19 pandemic',
             formatter: d3.format('.0%'),
           }
         },
@@ -59,6 +60,7 @@
             file: 'filing',
             field: 'filings_past_year_pct_hist',
             display: 'of average',
+            tooltip: 'Compared to filings over an average year before the COVID-19 pandemic',
             formatter: d3.format('.0%'),
           }
         },
@@ -71,6 +73,7 @@
             file: 'filing',
             field: 'filings_past_month_pct_hist',
             display: 'of average',
+            tooltip: 'Compared to filings over the same month before the COVID-19 pandemic',
             formatter: d3.format('.0%'),
           }
         },
@@ -80,12 +83,14 @@
           file: 'filing',
           field: 'eviction_filing_rate',
           display: 'eviction filing rate',
+          tooltip: 'The number of evictions filed per 100 renter households over the last 12 months',
           formatter: d3.format('.0%'),
         },
         {
           file: 'filing',
           field: 'hhs_threatened_rate',
           display: 'households threatened',
+          tooltip: 'The percentage of unique households that received an eviction filing, regardless of how many evictions were filed against the same household',
           formatter: d3.format('.0%'),
           default: 'Unavailable'
         },
