@@ -33,7 +33,7 @@ More detail on eviction protections in New Mexico can be found on the [COVID-19 
 Eviction filings in Bernalillo County (Albuquerque) were about average in January and February of 2020.<sup>1</sup> That pattern reversed in April 2020, when filings fell well below historical averages. 
 
 1. Data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019.
-
+2. Note about imputed data.
 
 
 

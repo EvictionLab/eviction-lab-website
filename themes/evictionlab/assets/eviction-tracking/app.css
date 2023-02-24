@@ -1730,8 +1730,9 @@
   position: relative;
   display: inline-block;
   margin-left: 4px;
+  cursor: pointer;
   background-image: url("/img/icon--info.svg");
-  width: 16px;
+  width: 14x;
   height: 18px;
   vertical-align: top;
   background-position: center;
