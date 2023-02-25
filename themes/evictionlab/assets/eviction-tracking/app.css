@@ -1731,9 +1731,9 @@
   display: inline-block;
   margin-left: 4px;
   cursor: pointer;
-  background-image: url("/img/icon--info.svg");
-  width: 14px;
-  height: 18px;
+  background-image: url("/img/icon--info-new.svg");
+  width: 16px;
+  height: 20px;
   vertical-align: top;
   background-position: center;
   background-size: contain;
