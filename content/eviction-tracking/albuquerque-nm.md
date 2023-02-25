@@ -33,8 +33,6 @@ More detail on eviction protections in New Mexico can be found on the [COVID-19 
 Eviction filings in Bernalillo County (Albuquerque) were about average in January and February of 2020.<sup>1</sup> That pattern reversed in April 2020, when filings fell well below historical averages. 
 
 1. Data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019.
-2. Note about imputed data.
-
 
 {{%/ report_chart %}}
 
@@ -69,7 +67,7 @@ Bernalillo County is divided into 153 census tracts. In each of those tracts, we
 
 
 
-{{% report_chart id="race" data="/uploads/albuquerque_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/albuquerque_linechart.csv" imputedNoteNumber="2" %}}
 
 
 
@@ -80,7 +78,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019.
-
+2. Note about imputed data.
 
 
 {{%/ report_chart %}}
