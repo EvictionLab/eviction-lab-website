@@ -23,10 +23,18 @@ socialDescription: Local and state eviction diversion programs could be key to
   address a national crisis.
 twImage: iStock-185225200-edit.jpg
 fbImage: iStock-185225200-edit.jpg
+scripts:
+  - charts
+  - bar-chart
+  - arrow-chart
 ---
 <span class="dropcap red">S</span>ince November 2020, more than 8,000 Chicagoans have received support for evictions and related issues through a hotline. Another 1,000 people have received legal services or mediation as they face an eviction case in court, part of Cook County’s Legal Aid for Housing and Debt Initiative. This new eviction diversion initiative seeks to keep people housed by finding solutions to disputes between renters and landlords and avoiding court-mandated evictions during the pandemic. 
 
-
+{{% arrow-chart
+  id="fig1"
+  title="chart title"
+  data="/uploads/blog_fig2.csv"
+%}}
 
 “People can call to get connected to legal advice and mediation before anything happens, so they don't even have to be in court to figure out issues related to eviction,” said Bob Glaves, executive director of The Chicago Bar Foundation, one of the organizations involved in the program. “Then, in court, every case starts with a special case management call...They can connect them to legal aid right away there and even set up a mediation if people want to do that right then.”
 

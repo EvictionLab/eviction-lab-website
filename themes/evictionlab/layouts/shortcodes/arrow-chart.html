@@ -1,0 +1,314 @@
+{{/**
+
+Shortcode for rendering basic bar graphs
+
+**Must include the following frontmatter in the `.md` file to use**:
+
+```
+scripts:
+- arrow-chart
+```
+
+See: _chart-demo.md for usage
+
+Props:
+- id: unique identifier for this bar chart instance
+- title: title for the chart
+- csv: url to CSV data File
+- x: name of column in CSV to use for x values
+- y: name of column in CSV to use for y values
+- yTicks: number of y ticks to display
+- yMin: y axis minimum value
+- yMax: y axis maximum value
+- yFormat: formatting for y axis values
+- yTickFormat: formatting for y values in the tooltip
+- margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104
+40")
+*/}}
+
+{{ $title := .Get "title" }}
+
+<div class="chart chart--arrow chart--{{ .Get `id` }}">
+  <style type="text/css">
+    text {
+      font-size: 2.25px;
+      font-family: Akkurat-Regular, sans-serif;
+      dominant-baseline: middle;
+    }
+
+    .chart__body.is-mobile text {
+      font-size: 3.5px;
+    }
+
+    .chart__body.is-mobile text {
+      font-size: 3.5px;
+    }
+
+    .chart-row rect {
+      fill: #E6EFF4;
+    }
+    
+    .chart-row.odd rect {
+      fill: #F4F7F9;
+    }
+
+    .chart-row.highlighted rect {
+      fill: #c6e0bf;
+    }
+
+    .axis-lines line,
+    .tick-lines line {
+      stroke: white;
+      stroke-width: 0.25;
+    }
+
+    text.name {
+      text-anchor: end;
+      dominant-baseline: text-before-edge;
+      transform: translate(-3px, 1px);
+    }
+
+    .arrow line {
+      stroke: #434878;
+      stroke-width: .3;
+      marker-end: url(#arrowhead-dec);
+    }
+
+    #arrowhead-dec {
+      stroke: #434878;
+    }
+
+    .arrow.inc line {
+      stroke: #E24000;
+      marker-end: url(#arrowhead-inc);
+    }
+
+    #arrowhead-inc {
+      stroke: #E24000;
+    }
+
+    .arrowhead {
+      fill: none;
+    }
+
+    .arrow line {
+      transform: translate(0, -0.1px);
+    }
+    .arrow .row-value, .legend-desc .arrow.inc .row-value {
+      transform: translate(2px, 0);
+      text-anchor: start;
+    }
+
+    .arrow.inc .row-value {
+      transform: translate(-2px, 0);
+      text-anchor: end;
+    }
+
+    .chart-row:not(.highlighted) text.row-value {
+      display: none;
+    }
+
+    .chart-row:hover text.row-value {
+      display: block;
+    }
+
+    .tick-values text {
+      text-anchor: middle;
+      dominant-baseline: text-before-edge;
+    }
+
+    .tick-values text:first-of-type {
+      text-anchor: start;
+    }
+
+    .tick-values text:last-of-type {
+      text-anchor: end;
+    }
+    .chart__body.is-mobile .tick-values text:last-of-type {
+      transform: translate(-1px, 0);
+    }
+
+    .legend-title {
+      text-anchor: middle;
+      transform: translate(0, 8px);
+    }
+    .chart__body.is-mobile .legend-title {
+      transform: translate(0, 12px);
+    }
+    .legend-desc {
+      transform: translate(0, 14px);
+    }
+    .chart__body.is-mobile .legend-desc {
+      transform: translate(0, 22px);
+    }
+    
+    .legend-desc text {
+      text-transform: uppercase;
+      font-family: GT-Eesti-Display-Medium, sans-serif;
+    }
+
+    .arosvg {
+      display: block;
+      margin-bottom: -72px;
+    }
+
+    .sticky-leg {
+      background: #F4F7F9;
+      opacity: 0.9;
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      margin-top: 72px;
+    }
+
+    .chart__body {
+      height: 100% !important;
+    }
+
+    .chart__body.is-mobile .arosvg {
+      margin-bottom: -64px;
+    }
+
+    .chart__body.is-mobile .sticky-leg {
+      margin-top: 64px;
+    }
+  </style>
+  {{ if $title }}
+  <h3 class="chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}" class="chart__body">
+    <svg class="arosvg" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrowhead-inc" class="arrowhead" markerWidth="10" markerHeight="10" refY="5" orient="auto" refX="10">
+          <polyline points="0 0, 10 5, 0 10"></polyline>
+        </marker>
+        <marker id="arrowhead-dec" class="arrowhead" markerWidth="10" markerHeight="10" refY="5" orient="auto" refX="10">
+          <polyline points="0 0, 10 5, 0 10"></polyline>
+        </marker>
+      </defs>
+      <g class="rows"></g>
+    </svg>
+    <svg class="sticky-leg" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+      <g class="tick-lines">
+        <line x1="0" x2="0" y1="0" y2="1.2"></line>
+        <line x1="25" x2="25" y1="0" y2="1.2"></line>
+        <line x1="50" x2="50" y1="0" y2="1.2"></line>
+        <line x1="75" x2="75" y1="0" y2="1.2"></line>
+        <line x1="100" x2="100" y1="0" y2="1.2"></line>
+      </g>
+      <g class="tick-values" transform="translate(0, 2)">
+        <text x="0">0%</text>
+        <text x="25">25%</text>
+        <text x="50">50%</text>
+        <text x="75">75%</text>
+        <text x="100">100%</text>
+      </g>
+      <text class="legend-title" x="50">
+        Suburban Share of Evictions
+      </text>
+      <g class="legend-desc"></g>
+    </svg>
+  </div>
+
+  <script>
+    var csv = {{ .Get "data" }}
+
+    window.addEventListener('load', function () {
+      var isMobile = window.innerWidth <= 600;
+      const rowHeight = isMobile ? 6 : 4.5;
+      const xMin = isMobile ? -42 : -30;
+
+      const $rows = $('.arosvg g.rows')
+      const $arrows = $('.arosvg g.arrows')
+      console.log("strock gold", csv, Elab, d3, $rows)
+
+      const getArrow = ({ before, after, yOffset = 0, valueContent = '', valueRight = false }) => {
+        const shift = after - before
+        let arrowClass = "arrow"
+        if (before < after) arrowClass += " inc"
+
+        let valueOffset = Math.abs(shift) < 3.5
+          ? (3.5 - Math.abs(shift)) * Math.sign(shift * -1)
+          : 0;
+        if (valueRight && shift > 0) {
+          valueOffset = Math.abs(valueOffset) + shift
+        }
+
+        const content = valueContent || Math.round(shift * 10) / 10 + "%"
+        const value = `
+  <text dx="${valueOffset}" class="row-value">
+    ${content}
+  </text>
+          `
+        return `
+<g class="${arrowClass}" transform="translate(${before}, ${yOffset})">
+  <line x1="0" y1="0" x2="${shift}" y2="0" />
+  ${value}
+</g>
+`
+      }
+      
+      d3.csv(csv, function (data) {
+        data.
+          map(r => {
+            const before = parseFloat(r.before) * 100;
+            const after = parseFloat(r.after) * 100;
+            return {
+              // id: parseInt(r.id),
+              name: r.metro,
+              highlighted: !!r.highlighted && r.highlighted !== "false",
+              before,
+              after,
+            }
+          })
+          .sort((a, b) => b.after - a.after)
+          .forEach((r, i) => {
+            const y = rowHeight * i;
+            let rowClasses = "chart-row"
+            if (r.highlighted) rowClasses += " highlighted"
+            if (!(i % 2)) rowClasses += " odd"
+
+            const axisLines = `
+  <g class="axis-lines">
+    <line x1="0" x2="0" y1="0" y2="${rowHeight}"></line>
+    <line x1="25" x2="25" y1="0" y2="${rowHeight}"></line>
+    <line x1="50" x2="50" y1="0" y2="${rowHeight}"></line>
+    <line x1="75" x2="75" y1="0" y2="${rowHeight}"></line>
+    <line x1="100" x2="100" y1="0" y2="${rowHeight}"></line>
+  </g>
+`
+            const rowWrapper = `
+<g class="${rowClasses}" transform="translate(0, ${y})">
+  <rect x="${xMin}" y="0" height="${rowHeight}" width="100%" width="100%" height="${rowHeight}" />
+  ${axisLines}
+  <text class="name" x="0" y="0">${r.name}</text>
+  ${getArrow({ ...r, yOffset: rowHeight / 2 + 0.1, includeTooltip: true })}
+</g>
+          `
+            $rows.append(rowWrapper)
+          })
+        console.log({ data })
+
+        const startX = isMobile ? xMin + 12 : 0;
+        const arrowLength = 7;
+        const decBefore = isMobile ? 27 : 40;
+        const incBefore = isMobile ? 55 : 60;
+        const legendDesc = `
+        <text x="${startX}">
+          Shift in Suburban Share:
+        </text>
+        ${getArrow({ before: decBefore, after: decBefore - arrowLength, valueContent: "More Urban", valueRight: true })}
+        ${getArrow({ before: incBefore, after: incBefore + arrowLength, valueContent: "More Suburban", valueRight: true })}
+        `
+        $(".legend-desc").append(legendDesc)
+
+        const viewBoxChart = `${xMin} 0 ${100 - xMin} ${data.length * rowHeight}`
+        const viewBoxLegend = `${xMin} 0 ${100 - xMin} ${isMobile ? 30 : 20}`
+        $(".arosvg").attr("viewBox", viewBoxChart)
+        $(".sticky-leg").attr("viewBox", viewBoxLegend)
+        $(".chart__body").toggleClass("is-mobile", isMobile)
+        $("body").html($("body").html());
+      })
+    });
+  </script>
+</div>
