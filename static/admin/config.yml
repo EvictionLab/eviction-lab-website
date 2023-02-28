@@ -361,6 +361,7 @@ collections:
     slug: "{{slug}}"
     path: "{{slug}}/{{filename}}"
     extension: md
+    identifier_field: title
     editor:
       preview: false
     preview_path: "{{fields.url}}"
