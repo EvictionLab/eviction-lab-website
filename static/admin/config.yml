@@ -359,6 +359,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     filter: { field: "collection", value: true }
     slug: "{{slug}}"
+    path: "{{slug}}/{{filename}}"
     extension: md
     editor:
       preview: false
