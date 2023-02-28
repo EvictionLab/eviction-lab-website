@@ -79,11 +79,6 @@ Some state and local rental assistance programs have done a much better job than
 In a White House summit on how to address a potential eviction crisis {{< extlink "on June 30" "https://www.youtube.com/watch?v=S3zVlAJFhq4" >}}, Eviction Lab’s founder Matthew Desmond described the components of a successful diversion program as “the three A’s”: access to a legal counsel or a non-lawyer advocate; assistance, understood as rental assistance or other support services; and an alternative to court, including mediation before filing a case, alternative dispute resolution or a settlement.
 
 
-<div class="my-5 my-xl-6">
-{{< inlinesvg svg="content/updates/blog/eviction-diversion/3-as.svg" >}}
-</div>
-
-
 “Third party independent evaluations of eviction diversion programs all across the country show real returns on investment. These are cost effective, incredibly efficient programs,” Desmond said. “For example, in Durham, North Carolina, over 70% of families that participated in the diversion program remained in their home. This is the opposite of what happens in conventional eviction courts, where most families that show up to court receive an eviction judgment.”
 
 

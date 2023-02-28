@@ -40,10 +40,6 @@ Props:
       font-size: 3.5px;
     }
 
-    .chart__body.is-mobile text {
-      font-size: 3.5px;
-    }
-
     .chart-row rect {
       fill: #E6EFF4;
     }
@@ -65,7 +61,7 @@ Props:
     text.name {
       text-anchor: end;
       dominant-baseline: text-before-edge;
-      transform: translate(-3px, 1px);
+      transform: translate(-3px, 1.1px);
     }
 
     .arrow line {
@@ -154,7 +150,7 @@ Props:
 
     .sticky-leg {
       background: #F4F7F9;
-      opacity: 0.9;
+      opacity: 0.93;
       position: sticky;
       bottom: 0;
       left: 0;
@@ -220,7 +216,6 @@ Props:
 
       const $rows = $('.arosvg g.rows')
       const $arrows = $('.arosvg g.arrows')
-      console.log("strock gold", csv, Elab, d3, $rows)
 
       const getArrow = ({ before, after, yOffset = 0, valueContent = '', valueRight = false }) => {
         const shift = after - before
@@ -287,7 +282,6 @@ Props:
           `
             $rows.append(rowWrapper)
           })
-        console.log({ data })
 
         const startX = isMobile ? xMin + 12 : 0;
         const arrowLength = 7;
