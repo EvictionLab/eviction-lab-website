@@ -358,8 +358,7 @@ collections:
     folder: "/content/updates/research" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     filter: { field: "collection", value: true }
-    slug: "{{slug}}"
-    path: "{{slug}}/{{filename}}"
+    path: "{{slug}}/index.md"
     extension: md
     identifier_field: title
     editor:
