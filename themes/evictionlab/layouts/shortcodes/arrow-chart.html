@@ -65,7 +65,7 @@ Props:
     text.name {
       text-anchor: end;
       dominant-baseline: text-before-edge;
-      transform: translate(-3px, 1.1px);
+      transform: translate(-3px, 1.2px);
     }
 
     .arrow line {
@@ -147,7 +147,7 @@ Props:
       font-family: GT-Eesti-Display-Medium, sans-serif;
     }
 
-    .arosvg {
+    .arrow-chart {
       display: block;
       margin-bottom: -72px;
     }
@@ -165,7 +165,7 @@ Props:
       height: 100% !important;
     }
 
-    .chart__body.is-mobile .arosvg {
+    .chart__body.is-mobile .arrow-chart {
       margin-bottom: -64px;
     }
 
@@ -177,7 +177,7 @@ Props:
   <h3 class="chart__title">{{ $title }}</h3>
   {{ end }}
   <div id="{{ .Get `id` }}" class="chart__body">
-    <svg class="arosvg" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+    <svg class="arrow-chart" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <marker id="arrowhead-inc" class="arrowhead" markerWidth="10" markerHeight="10" refY="5" orient="auto" refX="10">
           <polyline points="0 0, 10 5, 0 10"></polyline>
@@ -218,8 +218,8 @@ Props:
       const rowHeight = isMobile ? 6 : 4.5;
       const xMin = isMobile ? -42 : -30;
 
-      const $rows = $('.arosvg g.rows')
-      const $arrows = $('.arosvg g.arrows')
+      const $rows = $('.arrow-chart g.rows')
+      const $arrows = $('.arrow-chart g.arrows')
 
       const getArrow = ({ before, after, yOffset = 0, valueContent = '', valueRight = false }) => {
         const shift = after - before
@@ -302,7 +302,7 @@ Props:
 
         const viewBoxChart = `${xMin} 0 ${100 - xMin} ${data.length * rowHeight}`
         const viewBoxLegend = `${xMin} 0 ${100 - xMin} ${isMobile ? 30 : 20}`
-        $(".arosvg").attr("viewBox", viewBoxChart)
+        $(".arrow-chart").attr("viewBox", viewBoxChart)
         $(".sticky-leg").attr("viewBox", viewBoxLegend)
         $(".chart__body").toggleClass("is-mobile", isMobile)
         $("body").html($("body").html());
