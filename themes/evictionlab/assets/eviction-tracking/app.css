@@ -1647,6 +1647,11 @@
   flex: 50% 0 0;
   margin-bottom: 6px;
 }
+@media (max-width: 420px) {
+  .intro .stat-block-wrapper .stat-block-stat {
+    flex-basis: 100%;
+  }
+}
 
 #filingCounts {
   margin-bottom: 16px;
@@ -1657,7 +1662,7 @@
 
 @media (min-width: 1024px) {
   .intro .layout > div {
-      max-width: 460px;
+      /* max-width: 460px; */
       margin-left: unset;
   }
     .intro .intro__stats-wrapper {
@@ -1716,6 +1721,9 @@
 
 .stat-block-wrapper .stat-block-stat {
   display: inline-block;
+}
+.stat-block-wrapper .stat-block-stat:not(:last-of-type) {
+  padding-right: 6px;
 }
 
 @media (max-width: 1024px) {

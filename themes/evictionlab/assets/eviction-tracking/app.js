@@ -1135,7 +1135,7 @@ Elab.Chart = (function (Elab) {
 
       // because we currently don't have any grouped bar charts
       // there will always be a single bar in each group
-      var xDomain = [0];
+      var xDomain = [0, 1];
       // var xDomain = config.getXDomain
       //   ? config.getXDomain(groupedItems)
       //   : groupedItems.map((d) => d.id);
@@ -2285,7 +2285,7 @@ Elab.Map = (function (Elab) {
         }
       });
 
-      if (!extents) {
+      if (!extents || extents.includes(undefined)) {
         console.log("No extents provided for point legend.");
         return;
       }
