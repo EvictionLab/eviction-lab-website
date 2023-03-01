@@ -426,6 +426,7 @@ Elab.Config = (function (Elab) {
         area: d3.timeParse("%d/%m/%Y"),
       },
       groupItems: groupItems,
+      getXDomain: (items) => items.map((d) => d.id),
       format: {
         x: Elab.Utils.monthAxisFormatter,
         y: d3.format(",d"),
@@ -586,7 +587,7 @@ Elab.Config = (function (Elab) {
     },
     // overrides to differentiate from the default bar chart by date
     getXExtent: (items) => [0, items.length],
-    // getXDomain: (items) => d3.range(0, items[0].data.length),
+    getXDomain: (items) => [0],
     getXBands: (items) => items.map((d) => d.id),
     groupItems: (items) =>
       items.map((d) => ({
@@ -643,7 +644,7 @@ Elab.Config = (function (Elab) {
     },
     // overrides to differentiate from the default bar chart by date
     getXExtent: (items) => [0, items.length],
-    // getXDomain: (items) => d3.range(0, items[0].data.length),
+    getXDomain: (items) => [0],
     getXBands: (items) => items.map((d) => d.id),
     groupItems: (items) =>
       items.map((d) => ({
@@ -1125,15 +1126,8 @@ Elab.Chart = (function (Elab) {
       };
     }
 
-    function renderBars(groupedItems, config, context) {
+    function renderBars(groupedItems, config, context, xDomain) {
       // var monthParse = d3.timeParse("%m/%Y"); // get data grouped by x value
-
-      // because we currently don't have any grouped bar charts
-      // there will always be a single bar in each group
-      var xDomain = [0, 1];
-      // var xDomain = config.getXDomain
-      //   ? config.getXDomain(groupedItems)
-      //   : groupedItems.map((d) => d.id);
 
       var x1 = d3.scaleBand().domain(xDomain).rangeRound([0, context.x.bandwidth()]);
 
@@ -1426,6 +1420,7 @@ Elab.Chart = (function (Elab) {
     function renderGraph(data, els, config) {
       var monthFormat = d3.timeFormat("%m/%Y");
       var groupedItems = config.groupItems(data.items, (d) => monthFormat(d.x));
+      const xDomain = config.getXDomain(data.items);
 
       // render legend first, as it can add to chart height
       config.legend && renderLegend(config.legend, data.items, config); // get parent width and height
@@ -1462,7 +1457,7 @@ Elab.Chart = (function (Elab) {
       };
 
       renderAxis(groupedItems, config, context);
-      renderBars(groupedItems, config, context);
+      renderBars(groupedItems, config, context, xDomain);
       config.markLines && renderMarkLine(data, config, context);
       renderFrame(groupedItems, config, context);
       config.content && renderContentUpdates(config.content, config);
