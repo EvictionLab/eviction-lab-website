@@ -36,11 +36,11 @@ Props:
       dominant-baseline: middle;
     }
 
-    .chart__body.is-mobile text {
+    .arrow-chart__body.is-mobile text {
       font-size: 3.5px;
     }
 
-    .chart__body.is-mobile text {
+    .arrow-chart__body.is-mobile text {
       font-size: 3.5px;
     }
 
@@ -124,7 +124,7 @@ Props:
     .tick-values text:last-of-type {
       text-anchor: end;
     }
-    .chart__body.is-mobile .tick-values text:last-of-type {
+    .arrow-chart__body.is-mobile .tick-values text:last-of-type {
       transform: translate(-1px, 0);
     }
 
@@ -132,13 +132,13 @@ Props:
       text-anchor: middle;
       transform: translate(0, 8px);
     }
-    .chart__body.is-mobile .legend-title {
+    .arrow-chart__body.is-mobile .legend-title {
       transform: translate(0, 12px);
     }
     .legend-desc {
       transform: translate(0, 14px);
     }
-    .chart__body.is-mobile .legend-desc {
+    .arrow-chart__body.is-mobile .legend-desc {
       transform: translate(0, 22px);
     }
     
@@ -161,22 +161,22 @@ Props:
       margin-top: 72px;
     }
 
-    .chart__body {
+    .arrow-chart__body {
       height: 100% !important;
     }
 
-    .chart__body.is-mobile .arrow-chart {
+    .arrow-chart__body.is-mobile .arrow-chart {
       margin-bottom: -64px;
     }
 
-    .chart__body.is-mobile .sticky-leg {
+    .arrow-chart__body.is-mobile .sticky-leg {
       margin-top: 64px;
     }
   </style>
   {{ if $title }}
   <h3 class="chart__title">{{ $title }}</h3>
   {{ end }}
-  <div id="{{ .Get `id` }}" class="chart__body">
+  <div id="{{ .Get `id` }}" class="arrow-chart__body">
     <svg class="arrow-chart" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <marker id="arrowhead-inc" class="arrowhead" markerWidth="10" markerHeight="10" refY="5" orient="auto" refX="10">
@@ -304,8 +304,8 @@ Props:
         const viewBoxLegend = `${xMin} 0 ${100 - xMin} ${isMobile ? 30 : 20}`
         $(".arrow-chart").attr("viewBox", viewBoxChart)
         $(".sticky-leg").attr("viewBox", viewBoxLegend)
-        $(".chart__body").toggleClass("is-mobile", isMobile)
-        $("body").html($("body").html());
+        $(".arrow-chart__body").toggleClass("is-mobile", isMobile)
+        $(".arrow-chart__body").html($(".arrow-chart__body").html());
       })
     });
   </script>
