@@ -110,6 +110,12 @@
   font-family: $fontStack;
   font-weight: 300;
 }
+.gt-eesti {
+  font-family: $headerFontStack !important;
+}
+.font-125 {
+  font-size: 125% !important;
+}
 .high-z {
   z-index: 10000;
 }
@@ -219,7 +225,7 @@ span.middot:before {
 }
 .smallcaps {
   text-transform: uppercase;
-  font-size: 93%;
+  font-size: 93% !important;
   font-family: Akkurat-Bold, sans-serif;
   color: #737373;
 }
