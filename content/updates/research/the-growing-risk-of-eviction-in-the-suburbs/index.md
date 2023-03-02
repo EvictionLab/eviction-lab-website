@@ -44,7 +44,7 @@ In 2000, evictions were far more common in cities than in suburbs, but that gap 
   xTicks="year"
   maxTicks="12"
   xFormat="%Y"
-  xTooltipFormat="%B"
+  xTooltipFormat="%Y"
   yTooltipFormat=".2f"
   highlight="city;suburb"
   title="Figure 1. Change over time in evictions in urban and suburban neighborhoods"
