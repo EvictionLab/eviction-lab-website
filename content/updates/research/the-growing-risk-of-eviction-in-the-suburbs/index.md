@@ -13,6 +13,7 @@ postauthorname: Devin Q. Rutan, Peter Hepburn, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 fbImage: growing-risk-suburban-eviction-social.png
+description: 'American suburbs have changed dramatically over the last several decades. Over time, they’ve become poorer, more diverse, and the site of a growing share of eviction cases.' 
 listSummary: 'American suburbs have changed dramatically over the last several decades. Over time, they’ve become poorer, more diverse, and the site of a growing share of eviction cases.' 
 scripts:
   - charts
