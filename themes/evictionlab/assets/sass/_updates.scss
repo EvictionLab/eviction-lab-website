@@ -663,4 +663,10 @@ svg {
     font-size: 125%;
   }
 }
+.journal-image {
+  max-width: 240px;
+  @include media-breakpoint-up(md) {
+    max-width: 240px;
+  }
+}
 
