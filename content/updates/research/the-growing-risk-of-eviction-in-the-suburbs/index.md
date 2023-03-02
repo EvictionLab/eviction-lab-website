@@ -35,7 +35,7 @@ We used millions of court records from across the country to track how common ev
 In 2000, evictions were far more common in cities than in suburbs, but that gap shrank steadily over time. By 2016, evictions were in many metro areas nearly as frequent in suburbs as in cities.
 
 {{% line-chart
-  id="sub-fig"
+  id="sub-fig1"
   data="./blog_fig1.csv"
   x="year"
   y="evictions"
@@ -63,9 +63,9 @@ This process started even earlier in Seattle, where the tech boom of the ‘90s 
 Overall, we find that the share of suburban evictions increased over time in 59 of the 74 metropolitan areas in our sample. By 2016, suburbs accounted for more than half of all evictions in 34 of these metro areas. 
 
 {{% arrow-chart
-  id="fig1"
+  id="sub-fig2"
   title="Figure 2. Change in the share of suburban eviction between 2000 and 2016, by metro area"
-  data="/uploads/blog_fig2.csv"
+  data="./blog_fig2.csv"
 %}}
 
 
