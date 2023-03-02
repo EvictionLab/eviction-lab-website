@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: growing-risk-of-suburban-eviction
 contenttype: updates
