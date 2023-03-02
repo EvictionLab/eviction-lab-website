@@ -60,7 +60,7 @@ This process started even earlier in Seattle, where the tech boom of the ‘90s 
 
 
 
-Overall, we find that the share of suburban evictions increased over time in 59 of the 74 metropolitan areas in our sample. By 2016, suburbs accounted for more than half of all evictions in 34 of these metro areas. 
+Overall, we find that the share of suburban evictions increased over time in 59 of the 74 metropolitan areas in our sample. We plot these changes over time in Figure 2. Cities at the top of this graph had a large share of suburban evictions back in 2000, while evictions were more heavily concentrated in urban neighborhoods in cities at the bottom of the graph. The arrows represent the change over time, an increasing (to the right) or decreasing (to the left) share of suburban evictions. By 2016, suburbs accounted for more than half of all evictions in 34 of these metro areas. 
 
 {{% arrow-chart
   id="fig1"
