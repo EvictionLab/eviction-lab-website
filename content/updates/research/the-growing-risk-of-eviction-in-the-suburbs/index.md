@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: The Growing Risk of Eviction in the Suburbs
-date: 2023-02-28T16:20:51.942Z
+date: 2023-03-02T00:20:51.942Z
 postauthorname: Devin Q. Rutan, Peter Hepburn, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
