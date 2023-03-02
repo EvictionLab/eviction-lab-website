@@ -652,5 +652,15 @@ svg {
     }
 }
 
+// Suburban eviction post 3/2/23
 
+.journal-subheading {
+  font-size: 1.6rem !important;
+}
+.journal-heading {
+  font-size: 2rem;
+  @include media-breakpoint-up(md) {
+    font-size: 125%;
+  }
+}
 
