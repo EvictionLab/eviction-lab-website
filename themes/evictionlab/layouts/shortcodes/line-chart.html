@@ -37,8 +37,12 @@
       var yTicks = {{ .Get "yTicks" }}
       // d3 formatting string for y values
       var yFormat = {{ .Get "yFormat" }}
+      // label for y axis
+      var yLabel = {{ .Get "yLabel" }}
       // frequency of x ticks (e.g. week, month)
       var xTicks = {{ .Get "xTicks" }}
+      // max x ticks (more will be thinned)
+      var maxTicks = {{ .Get "maxTicks" }}
       // d3 formatting string for x values
       var xFormat = {{ .Get "xFormat" }}
       // semi-colon separated string of data groups to highlight
@@ -51,7 +55,7 @@
       var yTooltipFormat = {{ .Get "yTooltipFormat" }}
       var mark = {{ .Get "mark" }}
       var rootEl = document.getElementById(id);
-      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, xTicks: xTicks, xFormat: xFormat, highlight: highlight, curve: curve, xTooltipFormat: xTooltipFormat, yTooltipFormat: yTooltipFormat, mark: mark })
+      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, yLabel: yLabel, xTicks: xTicks, maxTicks: maxTicks, xFormat: xFormat, highlight: highlight, curve: curve, xTooltipFormat: xTooltipFormat, yTooltipFormat: yTooltipFormat, mark: mark })
     });
   </script>
 </div>

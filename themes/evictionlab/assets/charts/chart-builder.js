@@ -1185,11 +1185,15 @@ Elab.ChartBuilder = (function (Elab) {
 
   Chart.prototype.addAxisLabel = function (overrides) {
     var _this = this;
-    var options = overrides || {};
-    options.position = overrides.position || "bottom";
-    options.label = overrides.label || "";
+    if (!overrides || !overrides.label) return this;
+    var options = {
+      label: overrides.label,
+      position: overrides.position || "bottom",
+    };
     function createSelection(parentSelection) {
-      return parentSelection.append("text").attr("class", "chart__label chart__label--" + options.position);
+      return parentSelection
+        .append("text")
+        .attr("class", "chart__label chart__axis-label chart__label--" + options.position);
     }
     function createRenderFunction(selection, chart) {
       return function () {
@@ -1208,6 +1212,8 @@ Elab.ChartBuilder = (function (Elab) {
       };
     }
     this.addElement("label-" + options.position, "overlay", createSelection, createRenderFunction);
+
+    return this;
   }
 
   /**
