@@ -18,17 +18,21 @@ listSummary: 'American suburbs have changed dramatically over the last several d
 scripts:
   - charts
 ---
-<span class="dropcap green">A</span>merican suburbs have changed dramatically over the last several decades. Back in the 1960s and ‘70s, suburbs were largely white, middle-class spaces. Over time, they’ve become poorer, more diverse, and—as we show in a new study published in *RSF: The Russell Sage Foundation Journal of the Social Sciences*—the site of a growing share of eviction cases. 
+<span class="dropcap green">A</span>merican suburbs have changed dramatically over the last several decades. Back in the 1960s and ‘70s, suburbs were largely white, middle-class spaces. Over time, they’ve become poorer, more diverse, and—as we show in a new study published in <span class="ital">RSF: The Russell Sage Foundation Journal of the Social Sciences</span>—the site of a growing share of eviction cases. 
 
-<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 my-6">
+<hr style="border-top-color: #2c897f; margin: 3.2rem 0 2.4rem;">
+
+<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100">
     <div class="pr-12 pr-md-0">
-        <a href="https://www.rsfjournal.org/content/9/1/104.abstract" target="_blank" rel="noreferrer noopener"><img class="mw-100 mb-3 mb-md-0" src="rsf-study.jpg" /></a>
+        <a href="https://www.rsfjournal.org/content/9/1/104.abstract" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="rsf-study.jpg" /></a>
     </div>
     <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE STUDY:</p>
         <p><a class="green gt-eesti journal-heading" href="https://www.rsfjournal.org/content/9/1/104.abstract" target="_blank" rel="noreferrer noopener">The Suburbanization of Eviction: Increasing Displacement and Inequality Within American Suburbs</a></p>
-        <p class="mt-3">by Devin Q. Rutan, Peter Hepburn, Matthew Desmond</p>
+        <p class="mt-3">by Devin Q. Rutan, Peter Hepburn, and Matthew Desmond</p>
     </div>
 </div>
+
+<hr style="border-top-color: #2c897f; margin: 2.4rem 0 3.2rem;">
 
 We used millions of court records from across the country to track how common eviction cases are in cities and their suburbs, and how that has changed over time. [Building on previous work](https://evictionlab.org/suburban-eviction/), we focused on 74 of the largest metro areas in the U.S.—cities and their surrounding suburbs—where we had reliable data covering the years 2000 to 2016. Our sample included metro areas across the country, from Boston to Phoenix, Pensacola, FL to Olympia, WA. 
 
