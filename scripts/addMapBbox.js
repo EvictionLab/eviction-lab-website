@@ -18,6 +18,11 @@ function addMapBbox(fullStateJson) {
   const bbox = fullStateJson.features.reduce(
     (accum, f) => {
       const fBounds = f.properties.bounds;
+      if (!fBounds) {
+        throw new Error(
+          "\nNo bounds found for feature. See note above about adding using mapshaper.\n",
+        );
+      }
       // delete property, which is no longer needed
       delete f.properties.bounds;
       return [
