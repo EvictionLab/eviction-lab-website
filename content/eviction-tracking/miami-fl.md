@@ -1,5 +1,6 @@
 ---
 draft: true
+collection: true
 title: Miami - Ft. Lauderdale, Florida | Eviction Tracking System
 h1: Miami - Ft. Lauderdale, Florida
 slug: miami-fl
