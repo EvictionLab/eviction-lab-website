@@ -1,9 +1,9 @@
 ---
-draft: true
 collection: true
+draft: true
 title: Miami - Ft. Lauderdale, Florida | Eviction Tracking System
-h1: Miami - Ft. Lauderdale, Florida
-slug: miami-fl
+h1: Miami-Ft. Lauderdale, Florida
+slug: miami-ft-lauderdale-fl
 date: 2023-03-08T04:27:06.983Z
 ---
 {{< report_intro id="12086" data="/uploads/table.csv" >}}
@@ -14,7 +14,9 @@ More detail on eviction protections in Florida can be found on the COVID-19 Hous
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="undefined" %}}
+{{% report_chart id="avg" data="/uploads/miami_barchart.csv" %}}
+
+
 
 # Changes in eviction filings
 
@@ -22,11 +24,15 @@ Eviction filings in the Miami-Dade, Broward, and Palm Beach Counties ran close t
 
 1. Eviction filing data for Miami-Dade, Broward, and Palm Beach Counties were collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="undefined" data="undefined" %}}
+{{% report_map shapes="/uploads/miami_shapes.json" data="/uploads/miami_map.csv" %}}
+
+
 
 # The geography of changes in eviction filings
 
@@ -38,11 +44,15 @@ We are unable to assign many cases from prior to 2020 in Miami-Dade County to a 
 1. Eviction filing data for Miami-Dade, Broward, and Palm Beach Counties were collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
+
+
 {{%/ report_map %}}
 
 
 
-{{% report_chart id="race" data="undefined" %}}
+{{% report_chart id="race" data="/uploads/miami_linechart.csv" %}}
+
+
 
 # Eviction filings by neighborhood demographics
 
@@ -51,5 +61,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for Miami-Dade, Broward, and Palm Beach Counties were collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
+
+
 
 {{%/ report_chart %}}
