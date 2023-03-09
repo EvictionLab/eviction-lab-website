@@ -147,6 +147,11 @@ data:
     geo: Census Tract
     file: /uploads/lasvegas_weekly_2020_2021.csv
     monthfile: /uploads/lasvegas_monthly_2020_2021.csv
+  - site: Miami-Ft. Lauderdale
+    years: 2014-2019
+    geo: Tract (County for Miami-Dade)
+    file: /uploads/miami_weekly_2020_2021.csv
+    monthfile: /uploads/miami_monthly_2020_2021.csv
   - site: Memphis
     years: 2016-2019
     geo: Census Tract
