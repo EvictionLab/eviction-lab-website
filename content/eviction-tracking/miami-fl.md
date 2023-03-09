@@ -51,7 +51,7 @@ Miami-Dade, Broward, and Palm Beach Counties are divided into 1,219 census tract
 
 We are unable to assign many cases from prior to 2020 in Miami-Dade County to a census tract due to missing street address information. As a result, the “Relative to Average” tab in Miami-Dade County census tracts will not be shaded. 
 
-1. Eviction filing data for Miami-Dade, Broward, and Palm Beach Counties were collected by the Shimberg Center for Housing Studies at the University of Florida. Historical averages cover the years 2014-2019.
+1. Eviction filing data for Miami-Dade, Broward, and Palm Beach Counties were collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
 {{%/ report_map %}}
