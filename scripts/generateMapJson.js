@@ -2,16 +2,18 @@
  * General tips for generating a new _shapes.json file:
  *
  * 1. find the shp file of the parent geography
- *  - for tract map, find state shape zip by FIPS code at https://www2.census.gov/geo/tiger/TIGER_RD18/LAYER/TRACT/
- *  - for zip code map, download entire US at https://www2.census.gov/geo/tiger/TIGER2022/ZCTA520/
+ *  - for tract map, find state shape zip by FIPS code at: 
+ *    https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/ (EL still using 2010 shapes)
+ *  - for zip code map, download entire US at https://www2.census.gov/geo/tiger/TIGER2010/ZCTA5/2010/
  * 2. upload the shp, prj, & dbf files to https://mapshaper.org/
  *
  * USING MAPSHAPER (RECOMMENDED):
  * 3. open the Console
  * 4. filter/shape the data, something like the following:
  *  - filter '"85003,...,85545".indexOf(GEOID20) > -1' // filter by some property, eg GEOID by known list of zips
- *  - GEOID=GEOID20 // each feature will be expected to have a GEOID to align with client-provided _map.csv data ('id' column)
- *  - each NAME="ZCTA5 "+GEOID // add NAME field, like so for zips, or for tracts eg "Census Tract 1.14" (formatted tract number)
+ *  - GEOID=GEOID10 // each feature will be expected to have a GEOID to align with client-provided _map.csv data ('id' column)
+ *  - each NAME=NAMELSAD10 // add NAME field, like so for zips, or for tracts eg "Census Tract 1.14" (formatted tract number)
+ *    - if formatted name doesn't already exist on featurees, create it eg NAME="ZCTA5 "+GEOID
  *  - filter-fields GEOID,NAME // filter to the necessary fields
  * 5. export as GeoJSON and save the json to static/uploads
  * 6. to generate the map bbox, (keep mapshaper open and) see addMapBbox.js
