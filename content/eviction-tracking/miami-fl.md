@@ -35,21 +35,3 @@ Eviction filings in the Miami-Dade, Broward, and Palm Beach Counties ran close t
 
 
 {{%/ report_chart %}}
-
-
-
-{{% report_map shapes="/uploads/miami_shapes.json" data="/uploads/miami_map.csv" %}}
-
-# The geography of changes in eviction filings
-
-Miami-Dade, Broward, and Palm Beach Counties are divided into 1,219 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
-
-
-We are unable to assign many cases from prior to 2020 in Miami-Dade County to a census tract due to missing street address information. As a result, the “Relative to Average” tab in Miami-Dade County census tracts will not be shaded. 
-
-
-
-1. Eviction filing data for Miami-Dade, Broward, and Palm Beach Counties were collected by the Shimberg Center for Housing Studies at the University of Florida. Historical averages cover the years 2014-2019.
-2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
-
-{{%/ report_map %}}
