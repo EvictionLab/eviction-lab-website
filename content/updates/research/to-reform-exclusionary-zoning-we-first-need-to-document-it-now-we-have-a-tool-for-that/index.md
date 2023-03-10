@@ -10,7 +10,7 @@ in_index: true
 title: To reform exclusionary zoning, we first need to document it. Now we have
   a tool for that.
 date: 2023-03-09T20:04:56.565Z
-postauthorname: Matt Mleczko
+postauthorname: Matt Mleczko and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 fbImage: growing-risk-suburban-eviction-social.png
@@ -27,7 +27,7 @@ Consider the case of Fulshear, Texas, a small but growing municipality located o
 
 Zoning is fundamental to the make-up of our communities and our neighborhoods, but understanding these regulations and how they vary within and between places is enormously challenging. In large part, that’s because we lack straightforward, nationwide data. There is no comprehensive database of U.S. zoning and land use policies. Researchers have conducted  a number of important surveys that begin to describe the landscape of exclusionary zoning, but these data miss much of the country (including places like Fulshear), are not regularly updated, and likely contain inaccuracies.  
 
-To help solve this problem, we used publicly available zoning and land use information to build the National Zoning and Land Use Database (NZLUD).This process, which we describe in a new paper published in Urban Studies, involved downloading and processing the text of municipal codes containing zoning and land use policies. Rather than do this by hand, we used tools from computer science to automate the process. To make sure that these methods produced reliable results, we then replicated zoning and land use measures from previous studies for over 2,600 municipalities across the U.S., yielding very similar conclusions. 
+To help solve this problem, we used publicly available zoning and land use information to build the National Zoning and Land Use Database (NZLUD). This process, which we describe in a new paper published in Urban Studies, involved downloading and processing the text of municipal codes containing zoning and land use policies. Rather than do this by hand, we used tools from computer science to automate the process. To make sure that these methods produced reliable results, we then replicated zoning and land use measures from previous studies for over 2,600 municipalities across the U.S., yielding very similar conclusions. 
 
 READ OUR LATEST PAPER ON ZONING HERE
 
@@ -35,9 +35,13 @@ The NZLUD describes key elements of zoning codes and the limitations that munici
 
 {{< pullquote "Exclusionary zoning is more common than many have acknowledged, both across and within metro areas." >}}
 
-In the article, we condense all of these land use policies into a single measure of exclusionary zoning: the Zoning Restrictiveness Index (ZRI). This allows us to compare the restrictiveness of policies across municipalities and metro areas. We find highly-restrictive zoning policies in some of the coastal metro areas you might expect—Washington DC, New York, Seattle—but also in rustbelt metro areas like Milwaukee and Detroit. This underscores that exclusionary zoning is more common than many have acknowledged, both across and within metro areas. 
+In the article, we condense all of these land use policies into a single measure of exclusionary zoning: the Zoning Restrictiveness Index (ZRI).<sup>1</sup> This allows us to compare the restrictiveness of policies across municipalities and metro areas. We find highly-restrictive zoning policies in some of the coastal metro areas you might expect—Washington DC, New York, Seattle—but also in rustbelt metro areas like Milwaukee and Detroit. This underscores that exclusionary zoning is more common than many have acknowledged, both across and within metro areas. 
 
-<table class="blog-table table-responsive my-3" cellspacing="0" cellpadding="0">
+<div class="figheader">
+  Figure 1: Ranking of most restrictive metropolitan statistical areas in National Zoning and Land Use Database
+</div>
+
+<table class="blog-table table-responsive" cellspacing="0" cellpadding="0">
 <thead>
 <tr>
 <td style="background-color: #fbf6f3;" class="blog-table__text subhead">Rank</td>
@@ -46,18 +50,18 @@ In the article, we condense all of these land use policies into a single measure
 </tr>
 </thead>
 <tbody>
-
 <tr>
-
 <td>1</td>
 <td>Washington-Arlington-Alexandria, DC-VA-MD-WV</td>
 <td>2.05</td>
 </tr>
+
 <tr>
 <td>2</td>
 <td>New York-Northern New Jersey-Long Island, NY-NJ-PA</td>
 <td>2.01</td>
 </tr>
+
 <tr>
 <td>3</td>
 <td>Providence-New Bedford-Fall River, RI-MA</td>
@@ -69,32 +73,32 @@ In the article, we condense all of these land use policies into a single measure
 <td>Seattle-Tacoma-Bellevue, WA</td>
 <td>1.6</td>
 </tr>
-<tr>
 
+<tr>
 <td>5</td>
 <td>Tampa-St. Petersburg-Clearwater, FL</td>
 <td>1.44</td>
 </tr>
-<tr>
 
+<tr>
 <td>6</td>
 <td>Milwaukee-Waukesha-West Allis, WI</td>
 <td>1.27</td>
 </tr>
-<tr>
 
+<tr>
 <td>7</td>
 <td>Miami-Fort Lauderdale-Pompano Beach, FL</td>
 <td>1.2</td>
 </tr>
-<tr>
 
+<tr>
 <td>8</td>
 <td>Detroit-Warren-Livonia, MI</td>
 <td>1.14</td>
 </tr>
-<tr>
 
+<tr>
 <td>9</td>
 <td>Boston-Cambridge-Quincy, MA-NH</td>
 <td>1.14</td>
@@ -105,14 +109,16 @@ In the article, we condense all of these land use policies into a single measure
 <td>Springfield, MA</td>
 <td>1.01</td>
 </tr>
-<tr>
 
-</tr>
 </tbody>
 </table>
+<div class="figcaption">
+  <p>
+    Note: these rankings are calculated among metropolitan statistical areas with at least 10 municipalities present in the data.
+  </p>
 </div>
 
-We not only replicate zoning and land use measures for municipalities included in prior studies, but also go a step further, collecting and coding data on a host of cities where we haven’t had any information previously. For instance, prior zoning data cover only 38% of the San Francisco metro area and a mere 16% of the Houston metro area. Using our methods, we downloaded and created zoning data for 100% of the San Francisco metro area and 70% of the Houston metro area. Equipped with those data, we can much more confidently draw conclusions about zoning and land use policies in these areas. In doing so, we can  demonstrate how much more restrictive the average municipality in the San Francisco metro area is compared to one in the Houston metro area, but also that exclusionary municipalities exist within the Houston metro as well. It’s only with these more comprehensive data, for example, that we’re able to identify Fulshear and understand it as a pocket of exclusionary zoning in the otherwise-permissive Houston metro area. 
+We not only replicate zoning and land use measures for municipalities included in prior studies, but also go a step further, collecting and coding data on a host of cities where we haven’t had any information previously. For instance, prior zoning data cover only 38% of the San Francisco metro area and a mere 16% of the Houston metro area. Using our methods, we downloaded and created zoning data for 100% of the San Francisco metro area and 70% of the Houston metro area.<sup>2</sup> Equipped with those data, we can much more confidently draw conclusions about zoning and land use policies in these areas. In doing so, we can  demonstrate how much more restrictive the average municipality in the San Francisco metro area is compared to one in the Houston metro area, but also that exclusionary municipalities exist within the Houston metro as well. It’s only with these more comprehensive data, for example, that we’re able to identify Fulshear and understand it as a pocket of exclusionary zoning in the otherwise-permissive Houston metro area. 
 
 </div>
 </div>
@@ -159,6 +165,11 @@ We not only replicate zoning and land use measures for municipalities included i
     {{< inlinesvg svg="content/updates/research/to-reform-exclusionary-zoning-we-first-need-to-document-it-now-we-have-a-tool-for-that/quintiles-legend.svg"  >}}
   </div>
 
+  <div class="figcaption col-12 col-lg-7 col-xxxl-6 col-x4l-5 mx-auto mt-1 mb-0">
+    <p>
+      {{ZRI EXPLANATION}}
+    </p>
+  </div>
 </div>
 <div class="center-content-post updates-post pb-2">
 <div class="page-content pt-4 pt-md-0">
@@ -168,7 +179,7 @@ Accurate and up-to-date zoning and land use information is critical both in work
 
 Access to clear and accurate zoning and land use data can assist these efforts. It can provide reform-minded citizens and advocates the information necessary to target their efforts by identifying municipalities that are employing particularly exclusionary policies. This is an important step along the way to ensuring that our housing policies promote housing affordability and opportunity for all. 
 
-Researchers also need timely, detailed, and accurate information to document not only which zoning policies cause higher housing prices or lock in segregation, but also to assess the impact of burgeoning zoning reform efforts underway in <a href="https://www.nytimes.com/2021/08/26/business/california-duplex-senate-bill-9.html?referringSource=articleShare" target="_blank" rel="noreferrer noopener">California</a> and <a href="https://www.planetizen.com/features/117584-four-low-hanging-fruit-zoning-reforms" target="_blank" rel="noreferrer noopener">elsewhere</a>. We believe that our data and code can promote this goal and complement <a href="https://www.zoningatlas.org/" target="_blank" rel="noreferrer noopener">similar exciting efforts</a>, helping researchers to access and establish longitudinal, nationwide zoning and land use data moving forward.
+Researchers also need timely, detailed, and accurate information to document not only which zoning policies cause higher housing prices or lock in segregation, but also to assess the impact of burgeoning zoning reform efforts underway in <a href="https://www.nytimes.com/2021/08/26/business/california-duplex-senate-bill-9.html?referringSource=articleShare" target="_blank" rel="noreferrer noopener">California</a> and <a href="https://www.planetizen.com/features/117584-four-low-hanging-fruit-zoning-reforms" target="_blank" rel="noreferrer noopener">elsewhere</a>. We believe that our data and code can promote this goal and complement <a href="https://www.zoningatlas.org/" target="_blank" rel="noreferrer noopener">similar exciting efforts</a>, helping researchers to access and establish longitudinal, nationwide zoning and land use data moving forward.<sup>3</sup>
 
 <div class="footnotes">
 <ol>
