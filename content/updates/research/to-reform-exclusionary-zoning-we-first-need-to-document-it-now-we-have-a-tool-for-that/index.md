@@ -37,7 +37,80 @@ The NZLUD describes key elements of zoning codes and the limitations that munici
 
 In the article, we condense all of these land use policies into a single measure of exclusionary zoning: the Zoning Restrictiveness Index (ZRI). This allows us to compare the restrictiveness of policies across municipalities and metro areas. We find highly-restrictive zoning policies in some of the coastal metro areas you might expect—Washington DC, New York, Seattle—but also in rustbelt metro areas like Milwaukee and Detroit. This underscores that exclusionary zoning is more common than many have acknowledged, both across and within metro areas. 
 
-TABLE HERE WITH ZRI LIST 
+<table class="blog-table table-responsive my-3" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+<td style="background-color: #fbf6f3;" class="blog-table__text subhead">Rank</td>
+<td style="background-color: #fbf6f3;" class="blog-table__text subhead">Metropolitan area	Zoning</td>
+<td style="background-color: #fbf6f3;" class="blog-table__text subhead">Restrictiveness Index score</td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+
+<td>1</td>
+<td>Washington-Arlington-Alexandria, DC-VA-MD-WV</td>
+<td>2.05</td>
+</tr>
+<tr>
+<td>2</td>
+<td>New York-Northern New Jersey-Long Island, NY-NJ-PA</td>
+<td>2.01</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Providence-New Bedford-Fall River, RI-MA</td>
+<td>1.81</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Seattle-Tacoma-Bellevue, WA</td>
+<td>1.6</td>
+</tr>
+<tr>
+
+<td>5</td>
+<td>Tampa-St. Petersburg-Clearwater, FL</td>
+<td>1.44</td>
+</tr>
+<tr>
+
+<td>6</td>
+<td>Milwaukee-Waukesha-West Allis, WI</td>
+<td>1.27</td>
+</tr>
+<tr>
+
+<td>7</td>
+<td>Miami-Fort Lauderdale-Pompano Beach, FL</td>
+<td>1.2</td>
+</tr>
+<tr>
+
+<td>8</td>
+<td>Detroit-Warren-Livonia, MI</td>
+<td>1.14</td>
+</tr>
+<tr>
+
+<td>9</td>
+<td>Boston-Cambridge-Quincy, MA-NH</td>
+<td>1.14</td>
+</tr>
+<tr>
+
+<td>10</td>
+<td>Springfield, MA</td>
+<td>1.01</td>
+</tr>
+<tr>
+
+</tr>
+</tbody>
+</table>
+</div>
 
 We not only replicate zoning and land use measures for municipalities included in prior studies, but also go a step further, collecting and coding data on a host of cities where we haven’t had any information previously. For instance, prior zoning data cover only 38% of the San Francisco metro area and a mere 16% of the Houston metro area. Using our methods, we downloaded and created zoning data for 100% of the San Francisco metro area and 70% of the Houston metro area. Equipped with those data, we can much more confidently draw conclusions about zoning and land use policies in these areas. In doing so, we can  demonstrate how much more restrictive the average municipality in the San Francisco metro area is compared to one in the Houston metro area, but also that exclusionary municipalities exist within the Houston metro as well. It’s only with these more comprehensive data, for example, that we’re able to identify Fulshear and understand it as a pocket of exclusionary zoning in the otherwise-permissive Houston metro area. 
 
