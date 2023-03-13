@@ -10,8 +10,8 @@
  * USING MAPSHAPER (RECOMMENDED):
  * 3. open the Console
  * 4. filter/shape the data, something like the following:
- *  - filter '"85003,...,85545".indexOf(GEOID20) > -1' // filter by some property, eg GEOID by known list of zips
  *  - GEOID=GEOID10 // each feature will be expected to have a GEOID to align with client-provided _map.csv data ('id' column)
+ *  - filter '"85003,...,85545".indexOf(GEOID) > -1' // filter by some property, eg GEOID by known list of zips
  *  - each NAME=NAMELSAD10 // add NAME field, like so for zips, or for tracts eg "Census Tract 1.14" (formatted tract number)
  *    - if formatted name doesn't already exist on featurees, create it eg NAME="ZCTA5 "+GEOID
  *  - filter-fields GEOID,NAME // filter to the necessary fields
