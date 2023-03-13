@@ -37,12 +37,14 @@ The NZLUD describes key elements of zoning codes and the limitations that munici
 
 In the article, we condense all of these land use policies into a single measure of exclusionary zoning: the Zoning Restrictiveness Index (ZRI).<sup>1</sup> This allows us to compare the restrictiveness of policies across municipalities and metro areas. We find highly-restrictive zoning policies in some of the coastal metro areas you might expect—Washington DC, New York, Seattle—but also in rustbelt metro areas like Milwaukee and Detroit. This underscores that exclusionary zoning is more common than many have acknowledged, both across and within metro areas. 
 
-In the following table, we show the top 10 metropolitan areas with the highest aggregated Zoning Restrictiveness Index (ZRI) score out of 48 areas with at least 10 municipalities that were included in the study. The ZRI is a standardized measure of exclusionary zoning (mean of 0) in which higher values indicate more exclusionary zoning. The metropolitan area level ZRI accounts for both average restrictiveness as well as gaps between central city and suburban zoning restrictiveness.
-
 <div class="figheader">
   Figure 1: Ranking of most restrictive metropolitan areas in National Zoning and Land Use Database
 </div>
-
+<div class="figcaption">
+  <p>
+    In the following table, we show the top 10 metropolitan areas with the highest aggregated ZRI score out of 48 areas with at least 10 municipalities that were included in the study. The ZRI is a standardized measure of exclusionary zoning (mean of 0) in which higher values indicate more exclusionary zoning. The metropolitan area level ZRI accounts for both average restrictiveness as well as gaps between central city and suburban zoning restrictiveness.
+  </p>
+</div>
 <table class="blog-table table-responsive" cellspacing="0" cellpadding="0">
 <thead>
 <tr>
@@ -116,13 +118,11 @@ In the following table, we show the top 10 metropolitan areas with the highest a
 </table>
 <div class="figcaption">
   <p>
-    Note: these rankings are calculated among metropolitan statistical areas with at least 10 municipalities present in the data.
+    The 10 metropolitan areas with the highest aggregated ZRI score out of 48 areas with at least 10 municipalities that were included in the study. The ZRI is a standardized measure of exclusionary zoning (mean of 0) in which higher values indicate more exclusionary zoning. The metropolitan area level ZRI accounts for both average restrictiveness as well as gaps between central city and suburban zoning restrictiveness.
   </p>
 </div>
 
 We not only replicate zoning and land use measures for municipalities included in prior studies, but also go a step further, collecting and coding data on a host of cities where we haven’t had any information previously. For instance, prior zoning data cover only 38% of the San Francisco metro area and a mere 16% of the Houston metro area. Using our methods, we downloaded and created zoning data for 100% of the San Francisco metro area and 70% of the Houston metro area.<sup>2</sup> Equipped with those data, we can much more confidently draw conclusions about zoning and land use policies in these areas. In doing so, we can  demonstrate how much more restrictive the average municipality in the San Francisco metro area is compared to one in the Houston metro area, but also that exclusionary municipalities exist within the Houston metro as well. It’s only with these more comprehensive data, for example, that we’re able to identify Fulshear and understand it as a pocket of exclusionary zoning in the otherwise-permissive Houston metro area. 
-
-The following maps contain the San Francisco-Oakland-Fremont (right) and Houston-Sugarland-Baytown (left) metropolitan areas along with measurements of zoning and land use regulations for municipalities in these areas. We ranked municipalities by zoning and land use restrictiveness from 1 to 5, where 1 indicates the least restrictive category and 5 indicates the most restrictive category.
 
 </div>
 </div>
@@ -134,7 +134,11 @@ The following maps contain the San Francisco-Oakland-Fremont (right) and Houston
       Figure 2: Zoning restrictiveness across the San Francisco and Houston metropolitan areas
     </div>
   </div>
-  
+  <div class="figcaption col-12 mx-auto mt-1 mb-0">
+    <p>
+      The following maps contain the San Francisco-Oakland-Fremont and Houston-Sugarland-Baytown metropolitan areas along with measurements of zoning and land use regulations for municipalities in these areas. We ranked municipalities by zoning and land use restrictiveness from 1 to 5, where 1 indicates the least restrictive category and 5 indicates the most restrictive category.
+    </p>
+  </div>
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 px-md-2">
     {{% mapbox
       id="cali-map"
@@ -164,17 +168,15 @@ The following maps contain the San Francisco-Oakland-Fremont (right) and Houston
       colors="white;#434878;#c1c5ea;#e8dce8;#e99c7e;#e24000"
     %}}
   </div>
-
   <div class="col-12 mt-2 d-flex justify-content-center px-0">
     {{< inlinesvg svg="content/updates/research/to-reform-exclusionary-zoning-we-first-need-to-document-it-now-we-have-a-tool-for-that/quintiles-legend.svg"  >}}
   </div>
-
-  <div class="figcaption col-12 col-lg-7 col-xxxl-6 col-x4l-5 mx-auto mt-1 mb-0">
+</div>
+  <div class="figcaption col-12 mx-auto mt-1 mb-0">
     <p>
-      {{ZRI EXPLANATION}}
+      The following maps contain the San Francisco-Oakland-Fremont and Houston-Sugarland-Baytown metropolitan areas along with measurements of zoning and land use regulations for municipalities in these areas. We ranked municipalities by zoning and land use restrictiveness from 1 to 5, where 1 indicates the least restrictive category and 5 indicates the most restrictive category.
     </p>
   </div>
-</div>
 <div class="center-content-post updates-post pb-2">
 <div class="page-content pt-4 pt-md-0">
 <div class="post-body pt-lg-3">
