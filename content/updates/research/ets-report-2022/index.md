@@ -12,8 +12,8 @@ date: 2023-03-09T20:04:56.565Z
 postauthorname: Camila Vallejo, Jacob Haas, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-fbImage: increased-filing.png
-twImage: increased-filing.png
+fbImage: ets-report-social.png
+twImage: ets-report-social.png
 description: 'Over the last three years, eviction filing rates across the United States fell below levels that were normal prior to the COVID-19 pandemic. But evidence from 2022 shows that this exceptional period has come to an end.'
 listSummary: 'Over the last three years, eviction filing rates across the United States fell below levels that were normal prior to the COVID-19 pandemic. But evidence from 2022 shows that this exceptional period has come to an end.'
 scripts:
