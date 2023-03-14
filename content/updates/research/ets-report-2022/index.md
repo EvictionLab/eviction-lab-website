@@ -30,8 +30,17 @@ Early in the pandemic, court closures and eviction moratoria dramatically reduce
 
 But in 2022, case filings started to look much closer to what we would have expected in pre-pandemic years. All told, landlords filed more than 969,000 eviction cases across the sites that we track in the ETS, an increase of 78.6% compared to 2021. In Figure 1 we plot the total number of eviction cases filed each year relative to that pre-pandemic baseline.
 
-Figure 1. Eviction filings across ETS sites, by year
-
+{{% proportion-bar
+  title="Figure 1. Eviction filings across ETS sites, by year"
+  v1Label="Observed Filings"
+  v2Label="Missing Filings"
+  data="./fig1.csv"
+  labelField="xfileyear"
+  proportionField="pct_of_historical"
+  v1Field="year_filings"
+  v2Field="missing_filings"
+  vFormat=",d"
+%}}
 
 This increase in case volume is also apparent when we zoom in just on 2022 data. Across all sites in the ETS, we recorded 65,919 eviction filings in January 2022, approximately 35.1% less than normal for a typical, pre-pandemic January. Over the next eight months, those numbers steadily increased, peaking at 96,208 cases filed in August, 2022 (8.2% less than historical average). Case volumes declined slightly in the last quarter of the year, but that follows a predictable seasonal pattern. The 85,593 cases filed in December were 1.6% less than historical average. 
 
