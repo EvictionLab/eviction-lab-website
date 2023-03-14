@@ -76,14 +76,20 @@ scripts:
   font-size: 1.4rem;
   letter-spacing: 0.05em;
 }
+.callout {
+  position: relative;
+  border-left: 0.5em solid #2c897f;
+  padding: 3.6em 2.4em;
+  margin-bottom: 3rem;
+}
 </style>
 <span class="dropcap green">O</span>ver the last three years, eviction filing rates across the United States fell below levels that were normal prior to the COVID-19 pandemic. A wide range of policies contributed to this reduction: federal, state, and local eviction moratoria; an unprecedented investment of $46.6 billion in emergency rental assistance (ERA); expansion of the right to legal representation in eviction cases in a number of cities and states; and the growth in eviction diversion programs. These policies prevented millions of American renters from losing their homes to eviction during this public health emergency. 
 
 But evidence from 2022 shows that this exceptional period when renters had additional tools to remain housed has come to an end. Eviction filings are increasing as policies are expiring. Since the start of the pandemic, we have been tracking eviction court filings in jurisdictions across the country. The ten states and 34 cities in the Eviction Tracking System (ETS) are home to about one in three renter households nationwide. While not designed as a random, representative sample, these data nonetheless allow us to monitor trends and provide the best available picture of shifting eviction risk. In this brief, we update our previous research on filing patterns in 2020 and 2021, exploring how patterns changed over the third year of the pandemic. 
 
-[break]
+{{< pullquote "Landlords filed more than 969,000 eviction cases across the sites that we track in the ETS, an increase of 78.6% compared to 2021" >}}
  
-Early in the pandemic, court closures and eviction moratoria dramatically reduced the number of eviction cases that landlords filed with the court. In 2020, 541,583 eviction cases were filed across the places where we collect data. That was 578,070 cases fewer than normal, with these “missing evictions” marking the cases that were never filed. Even as state eviction protections expired, the nationwide eviction moratorium issued by the Centers for Disease Control and Prevention and the roll-out of ERA helped to keep eviction filings well below average in 2021. 
+Early in the pandemic, court closures and eviction moratoria dramatically reduced the number of eviction cases that landlords filed with the court. In 2020, 541,583 eviction cases were filed across the places where we collect data.<sup>1</sup> That was 578,070 cases fewer than normal, with these “missing evictions” marking the cases that were never filed. Even as state eviction protections expired, the nationwide eviction moratorium issued by the Centers for Disease Control and Prevention and the roll-out of ERA helped to keep eviction filings well below average in 2021. 
 
 But in 2022, case filings started to look much closer to what we would have expected in pre-pandemic years. All told, landlords filed more than 969,000 eviction cases across the sites that we track in the ETS, an increase of 78.6% compared to 2021. In Figure 1 we plot the total number of eviction cases filed each year relative to that pre-pandemic baseline.
 
@@ -170,11 +176,11 @@ Between 2021 and 2022, all of the 32 cities in the ETS we have full data coverag
 
 Overall, 14 of the ETS cities finished the year with eviction filings above historical average. Particularly striking among this group is Houston, TX, where landlords filed over 82,000 eviction cases in 2022, 40.6% more than would have been normal in a typical year prior to the pandemic. There was no month over the course of the years in which eviction filings in Houston were below historical average. By contrast, eviction filings in 18 cities remained below average, with particularly low numbers—below two-thirds of average—in New York, Richmond, and Charleston.
 
-[break]
-
+<div class="callout">
+<p>
 In six ETS cities—Cincinnati, Dallas, Houston, New Orleans, New York City, and Philadelphia—we track the amounts that landlords claim tenants owe when they file an eviction case against them. Since mid-2020, landlords have been making claims that were far larger than was normal prior to the pandemic. Between 2020 and 2022, landlords across these cities have claimed a total of $2.15 billion in eviction cases. More than half of that amount—$1.19 billion—was claimed in 2022 alone. Overall, fewer cases than normal were filed in 2022 in these cities, but total claims were 40% above average. Fewer tenants were facing the threat of eviction in these cities, but those who did owed considerably more.
-
-[break]
+</p>
+</div>
 
 Figure 3 highlights the extent to which eviction risk in 2022 came down to local circumstances: what protections were removed, what new policies were implemented, and how remaining ERA funds were used. But it doesn’t provide an explanation of which factors were most important, or why—for example—eviction filings were so much lower, relative to average, in Philadelphia than in Hartford, CT. Eviction Lab reached out to local experts in several of these cities to build a preliminary understanding of what was happening on the ground in these areas.
 
@@ -194,8 +200,15 @@ The situation left legal aid organizations struggling to meet the increasing dem
 
 “If a tenant goes into court or mediation without a lawyer, it’s a lost cause. Tenant with a lawyer it’s a totally different bargaining chip. Totally different idea,” Karni said. 
 
-[break]
+{{< pullquote "Between 2021 and 2022, all of the 32 cities in the ETS we have full data coverage of saw an increase in eviction filings" >}}
 
 Over the first two years of the COVID-19 pandemic, a combination of federal, state, and local government efforts served to significantly reduce eviction filing rates and increase housing stability for millions of renter households. As these policies and programs expired or lost funding in 2022, eviction filings rebounded. While court case volumes remain, on average, slightly below levels that were normal prior to the pandemic, the trend is toward increases across the board. And in some places, the pre-pandemic status quo has long since been surpassed, resulting in thousands more eviction cases than ever before. 
 
 With emergency measures a thing of the past, 2023 will be the first year that we can observe long-term changes to eviction patterns coming out of the pandemic. Political creativity over the last few years produced a range of new approaches to eviction prevention and tenant organizing that weren’t previously on the table. That led to lasting change in cities and states across the country. In cities like Los Angeles and Philadelphia that made tenant protections a priority, how has that led to changes in eviction filing patterns? Meanwhile, which cities simply reverted to old habits, or established worse patterns? 
+
+<hr />
+<div class="footnotes">
+<ol>
+  <li> To allow for comparability over time, all numbers in this analysis exclude filing counts in Miami-Ft. Lauderdale-Palm Beach and Gainesville, Florida, as data was not yet available through the end of 2022 in these areas.</li>
+</ol>
+</div>
