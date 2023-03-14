@@ -71,6 +71,10 @@ Overall, we find that the share of suburban evictions increased over time in 59 
   id="sub-fig2"
   title="Figure 2. Change in the share of suburban eviction between 2000 and 2016, by metro area"
   data="./blog_fig2.csv"
+  axisLabelText="Suburban Share of Evictions"
+  legendDecArrowText="more urban"
+  legendIncArrowText="more suburban"
+  legendLabelText="shift in suburban share"
 %}}
 
 

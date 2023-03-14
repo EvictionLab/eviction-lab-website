@@ -14,6 +14,8 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
 */}}
 
 {{ $title := .Get "title" }}
+{{ $xMax := .Get "xMax" }}
+{{ $axisLabelText := .Get "axisLabelText" }}
 
 <div class="chart chart--arrow chart--{{ .Get `id` }}">
   <style type="text/css">
@@ -116,11 +118,11 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       transform: translate(-1px, 0);
     }
 
-    .arrow-chart__body .legend-title {
+    .arrow-chart__body .axis-title {
       text-anchor: middle;
       transform: translate(0, 8px);
     }
-    .arrow-chart__body.is-mobile .legend-title {
+    .arrow-chart__body.is-mobile .axis-title {
       transform: translate(0, 12px);
     }
     .arrow-chart__body .legend-desc {
@@ -167,34 +169,48 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       <g class="rows"></g>
     </svg>
     <svg class="sticky-leg" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
-      <g class="tick-lines">
-        <line x1="0" x2="0" y1="0" y2="1.2"></line>
-        <line x1="25" x2="25" y1="0" y2="1.2"></line>
-        <line x1="50" x2="50" y1="0" y2="1.2"></line>
-        <line x1="75" x2="75" y1="0" y2="1.2"></line>
-        <line x1="100" x2="100" y1="0" y2="1.2"></line>
+      <g class="tick-lines xMax-dependent">
+        <line data-val="0" x1="0" x2="0" y1="0" y2="1.2"></line>
+        <line data-val="25" x1="25" x2="25" y1="0" y2="1.2"></line>
+        <line data-val="50" x1="50" x2="50" y1="0" y2="1.2"></line>
+        <line data-val="75" x1="75" x2="75" y1="0" y2="1.2"></line>
+        <line data-val="100" x1="100" x2="100" y1="0" y2="1.2"></line>
+        <line data-val="125" x1="125" x2="125" y1="0" y2="1.2"></line>
+        <line data-val="150" x1="150" x2="150" y1="0" y2="1.2"></line>
+        <line data-val="175" x1="175" x2="175" y1="0" y2="1.2"></line>
+        <line data-val="200" x1="200" x2="200" y1="0" y2="1.2"></line>
       </g>
-      <g class="tick-values" transform="translate(0, 2)">
-        <text x="0">0%</text>
-        <text x="25">25%</text>
-        <text x="50">50%</text>
-        <text x="75">75%</text>
-        <text x="100">100%</text>
+      <g class="tick-values xMax-dependent" transform="translate(0, 2)">
+        <text data-val="0" x="0">0%</text>
+        <text data-val="25" x="25">25%</text>
+        <text data-val="50" x="50">50%</text>
+        <text data-val="75" x="75">75%</text>
+        <text data-val="100" x="100">100%</text>
+        <text data-val="125" x="125">125%</text>
+        <text data-val="150" x="150">150%</text>
+        <text data-val="175" x="175">175%</text>
+        <text data-val="200" x="200">200%</text>
       </g>
-      <text class="legend-title" x="50">
-        Suburban Share of Evictions
-      </text>
+      <text class="axis-title" x="50"></text>
       <g class="legend-desc"></g>
     </svg>
   </div>
 
   <script>
     var csv = {{ .Get "data" }}
+            var xMax = {{ .Get "xMax" }} || 100;
+            var xMinMobile = {{ .Get "xMinMobile" }} || -42;
+            var xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
+            var mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
+            var legendDecArrowText = {{ .Get "legendDecArrowText" }} || "";
+            var legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
+            var legendLabelText = {{ .Get "legendLabelText" }} || "";
+            var axisLabelText = {{ .Get "axisLabelText" }} || "";
 
     window.addEventListener('load', function () {
-      var isMobile = window.innerWidth <= 600;
+      var isMobile = window.innerWidth <= Number(mobileCutoff);
       const rowHeight = isMobile ? 6 : 4.5;
-      const xMin = isMobile ? -42 : -30;
+      const xMin = isMobile ? xMinMobile : xMinDesktop;
 
       const $rows = $('.arrow-chart g.rows')
       const $arrows = $('.arrow-chart g.arrows')
@@ -231,7 +247,6 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
             const before = parseFloat(r.before) * 100;
             const after = parseFloat(r.after) * 100;
             return {
-              // id: parseInt(r.id),
               name: r.metro,
               highlighted: !!r.highlighted && r.highlighted !== "false",
               before,
@@ -246,12 +261,16 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
             if (!(i % 2)) rowClasses += " odd"
 
             const axisLines = `
-  <g class="axis-lines">
-    <line x1="0" x2="0" y1="0" y2="${rowHeight}"></line>
-    <line x1="25" x2="25" y1="0" y2="${rowHeight}"></line>
-    <line x1="50" x2="50" y1="0" y2="${rowHeight}"></line>
-    <line x1="75" x2="75" y1="0" y2="${rowHeight}"></line>
-    <line x1="100" x2="100" y1="0" y2="${rowHeight}"></line>
+  <g class="axis-lines xMax-dependent">
+    <line data-val="0" x1="0" x2="0" y1="0" y2="${rowHeight}"></line>
+    <line data-val="25" x1="25" x2="25" y1="0" y2="${rowHeight}"></line>
+    <line data-val="50" x1="50" x2="50" y1="0" y2="${rowHeight}"></line>
+    <line data-val="75" x1="75" x2="75" y1="0" y2="${rowHeight}"></line>
+    <line data-val="100" x1="100" x2="100" y1="0" y2="${rowHeight}"></line>
+    <line data-val="125" x1="125" x2="125" y1="0" y2="${rowHeight}"></line>
+    <line data-val="150" x1="150" x2="150" y1="0" y2="${rowHeight}"></line>
+    <line data-val="175" x1="175" x2="175" y1="0" y2="${rowHeight}"></line>
+    <line data-val="200" x1="200" x2="200" y1="0" y2="${rowHeight}"></line>
   </g>
 `
             const rowWrapper = `
@@ -269,20 +288,35 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         const arrowLength = 7;
         const decBefore = isMobile ? 27 : 40;
         const incBefore = isMobile ? 55 : 60;
-        const legendDesc = `
-        <text x="${startX}">
-          Shift in Suburban Share:
-        </text>
-        ${getArrow({ before: decBefore, after: decBefore - arrowLength, valueContent: "More Urban", valueRight: true })}
-        ${getArrow({ before: incBefore, after: incBefore + arrowLength, valueContent: "More Suburban", valueRight: true })}
+        const labelText = !legendLabelText ? "" : legendLabelText + ":";
+        const decArrow = !legendDecArrowText
+          ? ""
+          : getArrow({ before: decBefore, after: decBefore - arrowLength, valueContent: legendDecArrowText, valueRight: true })
+        const incArrow = !legendIncArrowText
+          ? ""
+          : getArrow({ before: incBefore, after: incBefore + arrowLength, valueContent: legendIncArrowText, valueRight: true })
+        const legendLabel = `
+        <text x="${startX}">${labelText}</text>
+        ${decArrow}
+        ${incArrow}
         `
-        $(".legend-desc").append(legendDesc)
+        $(".legend-desc").append(legendLabel)
+        axisLabelText && $(".axis-title").append(axisLabelText)
 
-        const viewBoxChart = `${xMin} 0 ${100 - xMin} ${data.length * rowHeight}`
-        const viewBoxLegend = `${xMin} 0 ${100 - xMin} ${isMobile ? 30 : 20}`
+        const viewBoxChart = `${xMin} 0 ${xMax - xMin} ${data.length * rowHeight}`
+        const viewBoxLegend = `${xMin} 0 ${xMax - xMin} ${isMobile ? 30 : 20}`
         $(".arrow-chart").attr("viewBox", viewBoxChart)
         $(".sticky-leg").attr("viewBox", viewBoxLegend)
         $(".arrow-chart__body").toggleClass("is-mobile", isMobile)
+
+        $('.xMax-dependent [data-val]').each((i, el) => {
+          if (parseInt(el.dataset.val) > xMax) {
+            // xMax-dependent elements only get rendered if their val is relevant to the arrow
+            // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
+            el.remove()
+          }
+        })
+
         $(".arrow-chart__body").html($(".arrow-chart__body").html());
       })
     });
