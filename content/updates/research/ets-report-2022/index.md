@@ -20,6 +20,63 @@ scripts:
   - charts
   - mapbox
 ---
+
+<style>
+.tab-content.tab-content--aftercdc {
+  position: relative;
+  height: 620px;
+}
+@media(min-width: 768px) {
+  .tab-content.tab-content--aftercdc {
+    position: relative;
+    height: 600px;
+  }
+}
+.tab-content.tab-content--aftercdc > .tab-pane {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index:1;
+}
+.tab-content.tab-content--aftercdc > .tab-pane.show.active {
+  z-index:2;
+}
+/** 
+ * there is a high specificty rule that adds bullets to *all* `li` elements 
+ * inside of so we need to use !important to override here 😢
+ * (❗️ `.center-content-post ul li:before`) 
+ */
+.nav.nav--aftercdc .nav-item:before {
+  display:none!important;
+}
+/**
+ * need to override another high specificity rule that sets *all* `a` elements on the page to red
+ * (❗️ `.center-content-post.updates-post .page-content .post-body a` )
+ */
+.nav.nav--aftercdc .nav-item .nav-link.active {
+  color: #fff!important
+}
+.nav.nav--aftercdc {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.nav.nav--aftercdc.nav-pills .nav-item {
+  margin-left:0;
+}
+.nav.nav--aftercdc.nav-pills .nav-link {
+  border-radius:0;
+  border: 1px solid var(--c1, #e24000);
+  color: var(--c1, #e24000)!important;
+  font-family: GT-Eesti-Display-Bold,sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+</style>
 <span class="dropcap green">O</span>ver the last three years, eviction filing rates across the United States fell below levels that were normal prior to the COVID-19 pandemic. A wide range of policies contributed to this reduction: federal, state, and local eviction moratoria; an unprecedented investment of $46.6 billion in emergency rental assistance (ERA); expansion of the right to legal representation in eviction cases in a number of cities and states; and the growth in eviction diversion programs. These policies prevented millions of American renters from losing their homes to eviction during this public health emergency. 
 
 But evidence from 2022 shows that this exceptional period when renters had additional tools to remain housed has come to an end. Eviction filings are increasing as policies are expiring. Since the start of the pandemic, we have been tracking eviction court filings in jurisdictions across the country. The ten states and 34 cities in the Eviction Tracking System (ETS) are home to about one in three renter households nationwide. While not designed as a random, representative sample, these data nonetheless allow us to monitor trends and provide the best available picture of shifting eviction risk. In this brief, we update our previous research on filing patterns in 2020 and 2021, exploring how patterns changed over the third year of the pandemic. 
@@ -44,8 +101,12 @@ But in 2022, case filings started to look much closer to what we would have expe
 
 This increase in case volume is also apparent when we zoom in just on 2022 data. Across all sites in the ETS, we recorded 65,919 eviction filings in January 2022, approximately 35.1% less than normal for a typical, pre-pandemic January. Over the next eight months, those numbers steadily increased, peaking at 96,208 cases filed in August, 2022 (8.2% less than historical average). Case volumes declined slightly in the last quarter of the year, but that follows a predictable seasonal pattern. The 85,593 cases filed in December were 1.6% less than historical average. 
 
+
+<div class="tab-content tab-content--aftercdc" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+  
 {{% bar-chart
-  id="fig2"
+  id="fig2a"
   data="./fig2.csv"
   x="month"
   xFormat="%b"
@@ -55,8 +116,37 @@ This increase in case volume is also apparent when we zoom in just on 2022 data.
   yTooltipFormat=",d"
   yFormat=".2s"
   title="Figure 2. Eviction filings by month in 2022 across all ETS sites"
-  margin="8 8 134 40"
+  margin="8 8 80 40"
 %}}
+
+
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+{{% bar-chart
+  id="fig2b"
+  data="./fig2.csv"
+  x="month"
+  xFormat="%b"
+  y="pct_of_historical"
+  yMin="0"
+  yMax="1"
+  yTooltipFormat=".1%"
+  yFormat=".0%"
+  title="Figure 2. Eviction filings by month in 2022 across all ETS sites"
+  margin="8 8 80 40"
+%}}
+
+  </div>
+</div>
+<ul class="nav nav-pills nav--aftercdc mb-3" id="pills-aftercdc" role="tablist" data-toggle="pills">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="pills-counts-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-counts" aria-selected="true">Filing Counts</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="pills-relative-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-relative" aria-selected="false">Relative to Historic Average</a>
+  </li>
+</ul>
 
 Not every jurisdiction where we tracked data followed this pattern over the course of the year. In some cities, we saw even more dramatic increases, or rates that were already high to start the year. In others, eviction filings started low in 2022 and remained at those levels throughout the year.
 
