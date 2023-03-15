@@ -179,7 +179,7 @@ Overall, 14 of the ETS cities finished the year with eviction filings above hist
 
 <div class="callout">
 <p>
-In six ETS cities—Cincinnati, Dallas, Houston, New Orleans, New York City, and Philadelphia—we track the amounts that landlords claim tenants owe when they file an eviction case against them. Since mid-2020, landlords have been making claims that were far larger than was normal prior to the pandemic. Between 2020 and 2022, landlords across these cities have claimed a total of $2.15 billion in eviction cases. More than half of that amount—$1.19 billion—was claimed in 2022 alone. Overall, fewer cases than normal were filed in 2022 in these cities, but total claims were 40% above average. Fewer tenants were facing the threat of eviction in these cities, but those who did owed considerably more.
+In six ETS cities—Cincinnati, Dallas, Houston, New Orleans, New York City, and Philadelphia—we track the amounts that landlords claim tenants owe when they file an eviction case against them. Since mid-2020, <a href="https://evictionlab.org/rising-claim-amounts/">landlords have been making claims that were far larger</a> than was normal prior to the pandemic. Between 2020 and 2022, landlords across these cities have claimed a total of $2.15 billion in eviction cases. More than half of that amount—$1.19 billion—was claimed in 2022 alone. Overall, fewer cases than normal were filed in 2022 in these cities, but total claims were 40% above average. Fewer tenants were facing the threat of eviction in these cities, but those who did owed considerably more.
 </p>
 </div>
 
