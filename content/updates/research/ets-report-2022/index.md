@@ -176,9 +176,11 @@ Between 2021 and 2022, all of the 32 cities in the ETS we have full data coverag
 
 Overall, 14 of the ETS cities finished the year with eviction filings above historical average. Particularly striking among this group is Houston, TX, where landlords filed over 82,000 eviction cases in 2022, 40.6% more than would have been normal in a typical year prior to the pandemic. There was no month over the course of the years in which eviction filings in Houston were below historical average. By contrast, eviction filings in 18 cities remained below average, with particularly low numbers—below two-thirds of average—in New York, Richmond, and Charleston.
 
+<div class="callout">
+<p>
 In six ETS cities—Cincinnati, Dallas, Houston, New Orleans, New York City, and Philadelphia—we track the amounts that landlords claim tenants owe when they file an eviction case against them. Since mid-2020, landlords have been making claims that were far larger than was normal prior to the pandemic. Between 2020 and 2022, landlords across these cities have claimed a total of $2.15 billion in eviction cases. More than half of that amount—$1.19 billion—was claimed in 2022 alone. Overall, fewer cases than normal were filed in 2022 in these cities, but total claims were 40% above average. Fewer tenants were facing the threat of eviction in these cities, but those who did owed considerably more.
-
-{{< pullquote "Since mid-2020, landlords have been making claims that were far larger than was normal prior to the pandemic" >}}
+</p>
+</div>
 
 Figure 3 highlights the extent to which eviction risk in 2022 came down to local circumstances: what protections were removed, what new policies were implemented, and how remaining ERA funds were used. But it doesn’t provide an explanation of which factors were most important, or why—for example—eviction filings were so much lower, relative to average, in Philadelphia than in Hartford, CT. Eviction Lab reached out to local experts in several of these cities to build a preliminary understanding of what was happening on the ground in these areas.
 
