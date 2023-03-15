@@ -116,12 +116,7 @@ In the article, we condense all of these land use policies into a single measure
 
 </tbody>
 </table>
-<div class="figcaption">
-  <p>
-    The 10 metropolitan areas with the highest aggregated ZRI score out of 48 areas with at least 10 municipalities that were included in the study. The ZRI is a standardized measure of exclusionary zoning (mean of 0) in which higher values indicate more exclusionary zoning. The metropolitan area level ZRI accounts for both average restrictiveness as well as gaps between central city and suburban zoning restrictiveness.
-  </p>
-</div>
-
+<div class="figcaption"></div>
 We not only replicate zoning and land use measures for municipalities included in prior studies, but also go a step further, collecting and coding data on a host of cities where we haven’t had any information previously. For instance, prior zoning data cover only 38% of the San Francisco metro area and a mere 16% of the Houston metro area. Using our methods, we downloaded and created zoning data for 100% of the San Francisco metro area and 70% of the Houston metro area.<sup>2</sup> Equipped with those data, we can much more confidently draw conclusions about zoning and land use policies in these areas. In doing so, we can  demonstrate how much more restrictive the average municipality in the San Francisco metro area is compared to one in the Houston metro area, but also that exclusionary municipalities exist within the Houston metro as well. It’s only with these more comprehensive data, for example, that we’re able to identify Fulshear and understand it as a pocket of exclusionary zoning in the otherwise-permissive Houston metro area. 
 
 </div>
@@ -135,7 +130,7 @@ We not only replicate zoning and land use measures for municipalities included i
     </div>
   </div>
   <div class="figcaption col-12 mx-auto mt-1 mb-0">
-    <p>
+    <p class="mb-0">
       The following maps contain the San Francisco-Oakland-Fremont and Houston-Sugarland-Baytown metropolitan areas along with measurements of zoning and land use regulations for municipalities in these areas. We ranked municipalities by zoning and land use restrictiveness from 1 to 5, where 1 indicates the least restrictive category and 5 indicates the most restrictive category.
     </p>
   </div>
@@ -172,11 +167,6 @@ We not only replicate zoning and land use measures for municipalities included i
     {{< inlinesvg svg="content/updates/research/to-reform-exclusionary-zoning-we-first-need-to-document-it-now-we-have-a-tool-for-that/quintiles-legend.svg"  >}}
   </div>
 </div>
-  <div class="figcaption col-12 mx-auto mt-1 mb-0">
-    <p>
-      The following maps contain the San Francisco-Oakland-Fremont and Houston-Sugarland-Baytown metropolitan areas along with measurements of zoning and land use regulations for municipalities in these areas. We ranked municipalities by zoning and land use restrictiveness from 1 to 5, where 1 indicates the least restrictive category and 5 indicates the most restrictive category.
-    </p>
-  </div>
 <div class="center-content-post updates-post pb-2">
 <div class="page-content pt-4 pt-md-0">
 <div class="post-body pt-lg-3">
@@ -187,6 +177,7 @@ Access to clear and accurate zoning and land use data can assist these efforts. 
 
 Researchers also need timely, detailed, and accurate information to document not only which zoning policies cause higher housing prices or lock in segregation, but also to assess the impact of burgeoning zoning reform efforts underway in <a href="https://www.nytimes.com/2021/08/26/business/california-duplex-senate-bill-9.html?referringSource=articleShare" target="_blank" rel="noreferrer noopener">California</a> and <a href="https://www.planetizen.com/features/117584-four-low-hanging-fruit-zoning-reforms" target="_blank" rel="noreferrer noopener">elsewhere</a>. We believe that our data and code can promote this goal and complement <a href="https://www.zoningatlas.org/" target="_blank" rel="noreferrer noopener">similar exciting efforts</a>, helping researchers to access and establish longitudinal, nationwide zoning and land use data moving forward.<sup>3</sup>
 
+<hr />
 <div class="footnotes">
 <ol>
 <li> See the paper and its online supplementary materials for more of the technical details.
