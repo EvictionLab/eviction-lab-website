@@ -90,16 +90,17 @@ Elab.Mapbox = (function (Elab) {
       dict[item[config.join]] = item;
       return dict;
     }, {});
+    console.log({ geojson, config, data });
+
     var newFeatures = geojson.features
       .filter(function (f) {
+        // console.log({ f }, dataDict[f.properties[config.join]]);
         return dataDict[f.properties[config.join]];
       })
       .map(function (feature, i) {
         feature.id = feature.properties[config.join];
-        Object.assign(
-          feature.properties,
-          dataDict[feature.properties[config.join]]
-        );
+        Object.assign(feature.properties, dataDict[feature.properties[config.join]]);
+        console.log(103, feature.id, feature.properties)
         return feature;
       });
     return Object.assign(geojson, { features: newFeatures });
@@ -114,18 +115,22 @@ Elab.Mapbox = (function (Elab) {
   function getLayerColors(range, colors, gradientType) {
     var steps = colors.length;
     var positions;
-    if(gradientType === 'discrete') {
-      positions = colors.map(function (c,i) { return i/(steps) })
+    if (gradientType === "discrete") {
+      positions = colors.map(function (c, i) {
+        return i / steps;
+      });
     } else {
-      positions = colors.map(function (c,i) { return i/(steps-1) })
+      positions = colors.map(function (c, i) {
+        return i / (steps - 1);
+      });
     }
-    var dataScale = d3.scaleLinear().domain([0, 1]).range(range)
-    var colorScale = getColorScale(positions, colors)
-    var colorSteps = []
+    var dataScale = d3.scaleLinear().domain([0, 1]).range(range);
+    var colorScale = getColorScale(positions, colors);
+    var colorSteps = [];
     for (var i = 0; i < positions.length; i++) {
-      const percent = positions[i]
-      colorSteps.push(dataScale(percent))
-      colorSteps.push(colorScale(percent))
+      const percent = positions[i];
+      colorSteps.push(dataScale(percent));
+      colorSteps.push(colorScale(percent));
     }
     return colorSteps;
   }
@@ -137,49 +142,45 @@ Elab.Mapbox = (function (Elab) {
     var steps = colors.length;
     //boilerplate css for gradient
     var front = "linear-gradient(to right";
-    var cap = ")"
+    var cap = ")";
     //allocate variables assigned in if
     var colorScale;
     var back;
     var positions;
 
     //get the necessary positions and colorScales, depending on the function describing gradient
-    positions = colors.map(function (c,i) { return i/(steps-1) })
-    colorScale = getColorScale(positions, colors)
+    positions = colors.map(function (c, i) {
+      return i / (steps - 1);
+    });
+    colorScale = getColorScale(positions, colors);
     back = positions.reduce(function (accumulator, currentValue) {
       var colorOfCurrent = colorScale(currentValue);
-      return accumulator + ", " + colorOfCurrent + " " + currentValue*100 + "%"
-    }, '');
+      return accumulator + ", " + colorOfCurrent + " " + currentValue * 100 + "%";
+    }, "");
 
     //add the boilerplate css to the generated css
     return front + back + cap;
   }
 
   function getColorScale(range, colors) {
-    return d3.scaleLinear()
-      .domain(range)
-      .range(colors)
-      .interpolate(d3.interpolateRgb)
+    return d3.scaleLinear().domain(range).range(colors).interpolate(d3.interpolateRgb);
   }
 
   function getDiscreteColorScale(range, colors) {
-    return d3.scaleQuantize()
-      .domain(range)
-      .range(colors)
-      .nice()
+    return d3.scaleQuantize().domain(range).range(colors).nice();
   }
 
   function addChoroplethFillLayer(map, prop, range, colors, gradientType) {
     var fillColor;
-    if(gradientType === "discrete") {
+    if (gradientType === "discrete") {
       // need to use the "nice" discrete color scale here to match with colors
       var discreteScale = getDiscreteColorScale(range, colors);
-      var colorSteps = getLayerColors(discreteScale.domain(), colors, gradientType)
+      var colorSteps = getLayerColors(discreteScale.domain(), colors, gradientType);
       fillColor = ["step", ["get", prop]].concat(colorSteps);
-      fillColor.splice(2, 1)
+      fillColor.splice(2, 1);
     } else {
       fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
-        getLayerColors(range, colors, gradientType)
+        getLayerColors(range, colors, gradientType),
       );
     }
     map.addLayer(
@@ -188,38 +189,28 @@ Elab.Mapbox = (function (Elab) {
         type: "fill",
         source: "choropleth",
         layout: {},
-        filter: [
-          "any",
-          ["to-boolean", ["get", prop]],
-          ["==", 0, ["get", prop]],
-        ],
+        filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
         paint: {
           "fill-color": fillColor,
-          "fill-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            1,
-            0.8,
-          ],
+          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.8],
         },
       },
-      "building"
+      "building",
     );
   }
 
   function addChoroplethStrokeLayer(map, prop, range, colors, gradientType) {
     var strokeColor;
-    if(gradientType === "discrete") {
-      strokeColor = ["step", ["get", prop]].concat(
-        getLayerColors(range, colors, gradientType)
-      );
-      strokeColor.splice(2, 1)
+    if (gradientType === "discrete") {
+      strokeColor = ["step", ["get", prop]].concat(getLayerColors(range, colors, gradientType));
+      strokeColor.splice(2, 1);
     } else {
       strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
-        getLayerColors(range, colors, gradientType)
+        getLayerColors(range, colors, gradientType),
       );
     }
-    
+
+    console.log({strokeColor})
     map.addLayer(
       {
         id: "choropleth-stroke",
@@ -235,15 +226,10 @@ Elab.Mapbox = (function (Elab) {
             ],
           },
           "line-blur": 0,
-          "line-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            1,
-            0,
-          ],
+          "line-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0],
         },
       },
-      "building"
+      "building",
     );
   }
 
@@ -254,6 +240,8 @@ Elab.Mapbox = (function (Elab) {
    * @param {*} dataUrl
    */
   function createMap(el, config) {
+    console.log({ el, config });
+
     var rootEl = $(el);
     var mapEl = rootEl.find(".map")[0];
     var geojsonUrl = config.geojson;
@@ -262,13 +250,13 @@ Elab.Mapbox = (function (Elab) {
     var allData = null;
     var geojsonData = null;
     var currentProp = config.column;
-    var nameProp = config.name
-    var colors = config.colors.split(";")
+    var nameProp = config.name;
+    var colors = config.colors.split(";");
     var legendTitle = config.legendTitle;
     var gradientType = config.gradientType;
     var colorScale = null;
     var layersAdded = false;
-    var formatter = getFormatter(config.format)
+    var formatter = getFormatter(config.format);
     var usBounds = [
       [-129.54443, 18.235058],
       [-63.802242, 52.886017],
@@ -284,8 +272,7 @@ Elab.Mapbox = (function (Elab) {
     createLegend();
 
     function getTooltipValue(feature, prop) {
-      if (!feature.properties[prop] && feature.properties[prop] !== 0)
-        return null;
+      if (!feature.properties[prop] && feature.properties[prop] !== 0) return null;
       var value = formatter(feature.properties[prop]);
       return value;
     }
@@ -300,16 +287,10 @@ Elab.Mapbox = (function (Elab) {
       renderTooltip(e.features[0], e);
       if (e.features.length > 0) {
         if (hoveredStateId) {
-          map.setFeatureState(
-            { source: "choropleth", id: hoveredStateId },
-            { hover: false }
-          );
+          map.setFeatureState({ source: "choropleth", id: hoveredStateId }, { hover: false });
         }
         hoveredStateId = e.features[0].id;
-        map.setFeatureState(
-          { source: "choropleth", id: hoveredStateId },
-          { hover: true }
-        );
+        map.setFeatureState({ source: "choropleth", id: hoveredStateId }, { hover: true });
       }
     }
 
@@ -320,10 +301,7 @@ Elab.Mapbox = (function (Elab) {
       map.getCanvas().style.cursor = "";
       tooltip.style.display = "none";
       if (hoveredStateId) {
-        map.setFeatureState(
-          { source: "choropleth", id: hoveredStateId },
-          { hover: false }
-        );
+        map.setFeatureState({ source: "choropleth", id: hoveredStateId }, { hover: false });
       }
       hoveredStateId = null;
     }
@@ -346,6 +324,8 @@ Elab.Mapbox = (function (Elab) {
      */
     function handleLoad() {
       d3.json(geojsonUrl, function (err, json) {
+        console.log(354, { json, err });
+
         if (err) {
           console.error("unable to load geojson from " + geojsonUrl);
           return;
@@ -353,10 +333,12 @@ Elab.Mapbox = (function (Elab) {
         var geojson = json;
         var bbox = geojson.bbox;
         var padding = 0;
+        console.log(334, bbox)
         var bounds = [
           [bbox[0] - padding, bbox[1] - padding],
           [bbox[2] + padding, bbox[3] + padding],
         ];
+          console.log(339, bounds)
         function zoomToLocation() {
           map.fitBounds(bounds, { padding: 16 });
         }
@@ -366,9 +348,11 @@ Elab.Mapbox = (function (Elab) {
             console.error("unable to load data from " + dataUrl);
             return;
           }
+          console.log(374, { data });
           allData = parseValues(data);
+          console.log(376, { allData });
           geojsonData = addDataToGeojson(geojson, allData, config);
-          colorScale = getColorScale(allData, currentProp)
+          colorScale = getColorScale(allData, currentProp);
           map.addSource("choropleth", {
             type: "geojson",
             data: geojsonData,
@@ -389,7 +373,7 @@ Elab.Mapbox = (function (Elab) {
       });
       return [0, extent[1]];
     }
-    
+
     /** Updates the map layers and legend */
     function update() {
       var range = getRange(currentProp);
@@ -399,13 +383,15 @@ Elab.Mapbox = (function (Elab) {
       }
       addChoroplethFillLayer(map, currentProp, range, colors, gradientType);
       addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType);
-      layersAdded = true;      
+      layersAdded = true;
       gradientType === "discrete" ? renderDiscreteLegend() : renderLegend();
     }
 
     /** add DOM elements for legend */
     function createLegend() {
-      rootEl.append('<div class="legend"><p class="legend__title"></p><div class="legend__gradient"></div><div class="legend__gradient-labels"></div></div>')
+      rootEl.append(
+        '<div class="legend"><p class="legend__title"></p><div class="legend__gradient"></div><div class="legend__gradient-labels"></div></div>',
+      );
     }
 
     /** return labels for ends of legend */
@@ -418,93 +404,98 @@ Elab.Mapbox = (function (Elab) {
       // container elements
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
-      var titleContainer = rootEl.find(".legend__title")
+      var titleContainer = rootEl.find(".legend__title");
 
       // legend settings
       var width = gradientContainer[0].clientWidth;
       var margin = 20;
-      var tickFormat = ",d"
-      
+      var tickFormat = ",d";
+
       // creates an axis with the given scale
       function axis(scale) {
         return Object.assign(d3.axisBottom(scale.range([margin, width - margin])), {
-          render: function() {
-            return d3.create("svg")
-                .attr("viewBox", [0, -4, width, 32])
-                .attr("width", width)
-                .attr("height", 32)
-                .style("display", "block")
-                .call(this)
+          render: function () {
+            return d3
+              .create("svg")
+              .attr("viewBox", [0, -4, width, 32])
+              .attr("width", width)
+              .attr("height", 32)
+              .style("display", "block")
+              .call(this)
               .node();
-          }
+          },
         });
       }
 
       // create swatches for colors
       function swatches(colors) {
         const n = colors.length;
-        const swatchWidth = (1/n) * (width - margin*2);
+        const swatchWidth = (1 / n) * (width - margin * 2);
         return {
-          render: function() {
-            var svg = d3.create("svg")
-                .attr("viewBox", [0, 0, width, 16])
-                .attr("width", width)
-                .attr("height", 16)
-                .style("display", "block")
-            svg.selectAll("rect")
+          render: function () {
+            var svg = d3
+              .create("svg")
+              .attr("viewBox", [0, 0, width, 16])
+              .attr("width", width)
+              .attr("height", 16)
+              .style("display", "block");
+            svg
+              .selectAll("rect")
               .data(colors)
               .enter()
-                .append("rect")
-                .attr("fill", function(d) { return d} )
-                .attr("width", swatchWidth)
-                .attr("height", 24)
-                .attr("x", function(d,i) { return margin + (i * swatchWidth) })
-                .attr("y", 0)
-             return svg.node()
-          }
-        }
+              .append("rect")
+              .attr("fill", function (d) {
+                return d;
+              })
+              .attr("width", swatchWidth)
+              .attr("height", 24)
+              .attr("x", function (d, i) {
+                return margin + i * swatchWidth;
+              })
+              .attr("y", 0);
+            return svg.node();
+          },
+        };
       }
-      
+
       // render color swatches
-      gradientContainer.append(swatches(colors).render())
+      gradientContainer.append(swatches(colors).render());
 
       // create tick values based on a "nice" discrete scale
       var range = getRange(currentProp);
       var discreteScale = getDiscreteColorScale(range, colors);
-      var colorSteps = getLayerColors(discreteScale.domain(), colors, "discrete")
-      var tickValues = colorSteps.filter(function(value) { return typeof value === "number" })
-      tickValues.push(discreteScale.domain()[1])
-      var tickScale = d3.scaleLinear().domain(discreteScale.domain())
-      var axisNode = axis(tickScale)
-        .tickValues(tickValues, tickFormat)
-        .render()
+      var colorSteps = getLayerColors(discreteScale.domain(), colors, "discrete");
+      var tickValues = colorSteps.filter(function (value) {
+        return typeof value === "number";
+      });
+      tickValues.push(discreteScale.domain()[1]);
+      var tickScale = d3.scaleLinear().domain(discreteScale.domain());
+      var axisNode = axis(tickScale).tickValues(tickValues, tickFormat).render();
       labelContainer.append(axisNode);
 
       // set title
-      titleContainer.html(legendTitle)
-      titleContainer.css("padding-left", margin)
+      titleContainer.html(legendTitle);
+      titleContainer.css("padding-left", margin);
     }
 
     function renderLegend() {
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
-      var titleContainer = rootEl.find(".legend__title")
+      var titleContainer = rootEl.find(".legend__title");
       var range = getRange(currentProp);
-      var linearGradient = getCssGradient(colors)
+      var linearGradient = getCssGradient(colors);
       gradientContainer.css("background-image", linearGradient);
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });
       labelContainer.html(html);
-      titleContainer.html(legendTitle)
+      titleContainer.html(legendTitle);
     }
 
     function renderTooltip(feature, e) {
       var tooltipContainer = $(tooltip);
       var html = TooltipTemplate({
-        name: feature.properties[nameProp]
-          ? feature.properties[nameProp]
-          : "Unknown",
+        name: feature.properties[nameProp] ? feature.properties[nameProp] : "Unknown",
         value: getTooltipValue(feature, currentProp),
       });
       var flipped = e.originalEvent.pageX > window.innerWidth - 240;
@@ -514,7 +505,7 @@ Elab.Mapbox = (function (Elab) {
         .css({
           display: "block",
           left: e.originalEvent.pageX + space + "px",
-          top: e.originalEvent.pageY - window.scrollY  + 32 + "px",
+          top: e.originalEvent.pageY - window.scrollY + 32 + "px",
         })
         .html(html);
     }
