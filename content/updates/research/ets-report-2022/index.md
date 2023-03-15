@@ -18,11 +18,12 @@ listSummary: Over the last three years, eviction filing rates across the United
   States fell below levels that were normal prior to the COVID-19 pandemic. But
   evidence from 2022 shows that this exceptional period has come to an end.
 twImage: ets-report-social.png
+fbImage: ets-report-social.png
+image: house.jpg
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Over the last three years, eviction filing rates across the United
   States fell below levels that were normal prior to the COVID-19 pandemic. But
   evidence from 2022 shows that this exceptional period has come to an end.
-fbImage: ets-report-social.png
 ---
 <style>
 .tab-content.tab-content--aftercdc {
@@ -79,9 +80,9 @@ fbImage: ets-report-social.png
   font-size: 1.4rem;
   letter-spacing: 0.05em;
 }
-.callout {
+.boxed-content {
   position: relative;
-  border-left: 0.5em solid #2c897f;
+  background: #2c897f13;
   padding: 3.6em 2.4em;
   margin-bottom: 3rem;
 }
@@ -177,7 +178,7 @@ Between 2021 and 2022, all of the 32 cities in the ETS we have full data coverag
 
 Overall, 14 of the ETS cities finished the year with eviction filings above historical average. Particularly striking among this group is Houston, TX, where landlords filed over 82,000 eviction cases in 2022, 40.6% more than would have been normal in a typical year prior to the pandemic. There was no month over the course of the years in which eviction filings in Houston were below historical average. By contrast, eviction filings in 18 cities remained below average, with particularly low numbers—below two-thirds of average—in New York, Richmond, and Charleston.
 
-<div class="callout">
+<div class="boxed-content">
 <p>
 In six ETS cities—Cincinnati, Dallas, Houston, New Orleans, New York City, and Philadelphia—we track the amounts that landlords claim tenants owe when they file an eviction case against them. Since mid-2020, <a href="https://evictionlab.org/rising-claim-amounts/">landlords have been making claims that were far larger</a> than was normal prior to the pandemic. Between 2020 and 2022, landlords across these cities have claimed a total of $2.15 billion in eviction cases. More than half of that amount—$1.19 billion—was claimed in 2022 alone. Overall, fewer cases than normal were filed in 2022 in these cities, but total claims were 40% above average. Fewer tenants were facing the threat of eviction in these cities, but those who did owed considerably more.
 </p>
