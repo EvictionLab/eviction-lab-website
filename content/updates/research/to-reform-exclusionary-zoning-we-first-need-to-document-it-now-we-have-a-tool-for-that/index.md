@@ -116,8 +116,10 @@ In the article, we condense all of these land use policies into a single measure
 
 </tbody>
 </table>
-<div class="figcaption"></div>
+<div class="figcaption"><p></p></div>
+<p>
 We not only replicate zoning and land use measures for municipalities included in prior studies, but also go a step further, collecting and coding data on a host of cities where we haven’t had any information previously. For instance, prior zoning data cover only 38% of the San Francisco metro area and a mere 16% of the Houston metro area. Using our methods, we downloaded and created zoning data for 100% of the San Francisco metro area and 70% of the Houston metro area.<sup>2</sup> Equipped with those data, we can much more confidently draw conclusions about zoning and land use policies in these areas. In doing so, we can  demonstrate how much more restrictive the average municipality in the San Francisco metro area is compared to one in the Houston metro area, but also that exclusionary municipalities exist within the Houston metro as well. It’s only with these more comprehensive data, for example, that we’re able to identify Fulshear and understand it as a pocket of exclusionary zoning in the otherwise-permissive Houston metro area. 
+<p>
 
 </div>
 </div>
