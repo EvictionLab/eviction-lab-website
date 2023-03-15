@@ -89,16 +89,16 @@ fbImage: ets-report-social.png
 
 <span class="dropcap green">O</span>ver the last three years, eviction filing rates across the United States fell below levels that were normal prior to the COVID-19 pandemic. A wide range of policies contributed to this reduction: federal, state, and local eviction moratoria; an unprecedented investment of $46.6 billion in emergency rental assistance (ERA); expansion of the right to legal representation in eviction cases in a number of cities and states; and the growth in eviction diversion programs. These policies prevented millions of American renters from losing their homes to eviction during this public health emergency. 
 
-But evidence from 2022 shows that this exceptional period when renters had additional tools to remain housed has come to an end. Eviction filings are increasing as policies are expiring. Since the start of the pandemic, we have been tracking eviction court filings in jurisdictions across the country. The ten states and 34 cities in the Eviction Tracking System (ETS) are home to about one in three renter households nationwide. While not designed as a random, representative sample, these data nonetheless allow us to monitor trends and provide the best available picture of shifting eviction risk. In this brief, we update our previous research on filing patterns in 2020 and 2021, exploring how patterns changed over the third year of the pandemic. 
+But evidence from 2022 shows that this exceptional period when renters had additional tools to remain housed has come to an end. Eviction filings are increasing as policies expire. Since the start of the pandemic, we have been tracking eviction court filings in jurisdictions across the country. The ten states and 34 cities in the Eviction Tracking System (ETS) are home to about one in three renter households nationwide. While not designed as a random, representative sample, these data nonetheless allow us to monitor trends and provide the best available picture of shifting eviction risk. In this brief, we update our previous research on filing patterns in 2020 and 2021, exploring how patterns changed over the third year of the pandemic.
 
-{{< pullquote "Landlords filed more than 969,000 eviction cases across the sites that we track in the ETS, an increase of 78.6% compared to 2021" >}}
+{{< pullquote "Landlords filed nearly 970,000 eviction cases across the sites that we track in the ETS, an increase of 78.6% compared to 2021" >}} 
 
-Early in the pandemic, court closures and eviction moratoria dramatically reduced the number of eviction cases that landlords filed with the court. In 2020, 541,583 eviction cases were filed across the places where we collect data.<sup>1</sup> That was 578,070 cases fewer than normal, with these “missing evictions” marking the cases that were never filed. Even as state eviction protections expired, the nationwide eviction moratorium issued by the Centers for Disease Control and Prevention and the roll-out of ERA helped to keep eviction filings well below average in 2021. 
+Early in the pandemic, court closures and eviction moratoria dramatically reduced the number of eviction cases that landlords filed with the court. In 2020, roughly 540,000 eviction cases were filed across the places where we collect data.<sup>1</sup> That was almost 580,000 cases fewer than normal, with these “missing evictions” marking the cases that were never filed. Even as state eviction protections expired, the nationwide eviction moratorium issued by the Centers for Disease Control and Prevention and the roll-out of ERA helped to keep eviction filings well below average in 2021.
 
-But in 2022, case filings started to look much closer to what we would have expected in pre-pandemic years. All told, landlords filed more than 969,000 eviction cases across the sites that we track in the ETS, an increase of 78.6% compared to 2021. In Figure 1 we plot the total number of eviction cases filed each year relative to that pre-pandemic baseline.
+But in 2022, case filings started to look much closer to what we would have expected in pre-pandemic years. All told, landlords filed nearly 970,000 eviction cases across the sites that we track in the ETS, an increase of 78.6% compared to 2021. In Figure 1 we plot the total number of eviction cases filed each year relative to that pre-pandemic baseline.
 
 {{% proportion-bar
-  title="Figure 1. Eviction filings across ETS sites, by year"
+  title="Figure 1. Eviction filings across ETS sites compared to historical averages"
   v1Label="Observed Filings"
   v2Label="Missing Filings"
   data="./fig1.csv"
@@ -109,7 +109,7 @@ But in 2022, case filings started to look much closer to what we would have expe
   vFormat=",d"
 %}}
 
-This increase in case volume is also apparent when we zoom in just on 2022 data. Across all sites in the ETS, we recorded 65,919 eviction filings in January 2022, approximately 35.1% less than normal for a typical, pre-pandemic January. Over the next eight months, those numbers steadily increased, peaking at 96,208 cases filed in August, 2022 (8.2% less than historical average). Case volumes declined slightly in the last quarter of the year, but that follows a predictable seasonal pattern. The 85,593 cases filed in December were 1.6% less than historical average. 
+This increase in case volume is also apparent when we zoom in just on 2022 data. Across all sites in the ETS, we recorded almost 66,000 eviction filings in January 2022, approximately 35.1% less than normal for a typical, pre-pandemic January. Over the next eight months, those numbers steadily increased, peaking at over 96,000 cases filed in August, 2022 (8.2% less than historical average). Case volumes declined slightly in the last quarter of the year, but that follows a predictable seasonal pattern. The 85,593 cases filed in December were 1.6% less than historical average. 
 
 <div class="tab-content tab-content--aftercdc" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -162,7 +162,7 @@ To capture this variation, in Figure 3 we plot eviction filings relative to hist
 
 {{% arrow-chart
   id="fig3"
-  title="Figure 3. Change in eviction filings relative to historical average, by city, from 2021 to 2022"
+  title="Figure 3. Change in eviction filings relative to historical average from 2021 to 2022"
   data="./fig3.csv"
   xMax="175"
   mobileCutoff="Infinity"
