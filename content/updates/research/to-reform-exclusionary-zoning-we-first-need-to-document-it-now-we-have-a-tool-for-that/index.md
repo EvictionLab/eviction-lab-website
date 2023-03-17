@@ -137,7 +137,6 @@ We not only replicate zoning and land use measures for municipalities included i
 </div>
 </div>
 <div class="row mx-4">
-
   <div class="col-12">
     <div class="figheader px-0 px-md-3 mt-0 mb-1">
       Figure 2: Zoning restrictiveness across the San Francisco and Houston metropolitan areas
@@ -148,38 +147,7 @@ We not only replicate zoning and land use measures for municipalities included i
       The following maps contain the San Francisco-Oakland-Fremont and Houston-Sugarland-Baytown metropolitan areas along with measurements of zoning and land use regulations for municipalities in these areas. We ranked municipalities by zoning and land use restrictiveness from 1 to 5, where 1 indicates the least restrictive category and 5 indicates the most restrictive category.
     </p>
   </div>
-  <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 px-md-2">
-    {{% mapbox
-      id="cali-map"
-      data="./zri_ca.csv"
-      shapes="./ca_cities2.json"
-      column="quint"
-      join="NAMEID"
-      name="NAME"
-      format="integer"
-      title="San-Francisco-Oakland-Fremont MSA"
-      gradientType="discrete"
-      colors="white;#434878;#c1c5ea;#e8dce8;#e99c7e;#e24000"
-    %}}
-  </div>
-
-  <div class="col-12 col-lg-6 col-x4l-5 px-0 px-md-2">
-    {{% mapbox
-      id="tex-map"
-      data="./zri_tx.csv"
-      shapes="./tx_cities.json"
-      column="quint"
-      join="NAMEID"
-      name="NAME"
-      format="integer"
-      title="Houston-Sugar Land-Baytown MSA"
-      gradientType="discrete"
-      colors="white;#434878;#c1c5ea;#e8dce8;#e99c7e;#e24000"
-    %}}
-  </div>
-  <div class="col-12 mt-2 d-flex justify-content-center px-0">
-    {{< inlinesvg svg="content/updates/research/to-reform-exclusionary-zoning-we-first-need-to-document-it-now-we-have-a-tool-for-that/quintiles-legend.svg"  >}}
-  </div>
+  <img src="mapscreenshot.png" style="max-width: 100%;margin-top: 24px;">
 </div>
 <div class="center-content-post updates-post pb-2">
 <div class="page-content pt-4 pt-md-0">
