@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: zoning-restrictiveness-index
 contenttype: updates
@@ -9,10 +9,11 @@ featured: true
 in_index: true
 title: To reform exclusionary zoning, we first need to document it. Now we have
   a tool for that.
-date: 2023-03-09T20:04:56.565Z
+date: 2023-03-17T20:04:56.565Z
 postauthorname: Matt Mleczko and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
+image: houses.jpeg
 fbImage: houston.png
 twImage: houston.png
 description: 'The U.S. needs more housing—lots of it. We have millions fewer housing units than we need, particularly affordable housing units. This shortfall has devastating impacts, especially for low-income renters.'
@@ -21,7 +22,7 @@ scripts:
   - charts
   - mapbox
 ---
-<span class="dropcap green">T</span>he U.S. needs more housing—lots of it. We have <a href="https://www.freddiemac.com/research/insight/20210507-housing-supply" target="_blank" rel="noreferrer noopener">millions fewer housing units than we need</a>, particularly affordable housing units. <a href="https://nlihc.org/gap" target="_blank" rel="noreferrer noopener">This shortfall has devastating impacts</a>, especially for low-income renters facing ever-greater challenges securing safe, affordable housing. Yet despite the glaring need, building to meet this demand is often infeasible—if not outright illegal—because of local land use and zoning laws. 
+<span class="dropcap green">T</span>he U.S. needs more housing—lots of it. We have <a href="https://www.freddiemac.com/research/insight/20210507-housing-supply" target="_blank" rel="noreferrer noopener">millions of fewer housing units than we need</a>, particularly affordable housing units. <a href="https://nlihc.org/gap" target="_blank" rel="noreferrer noopener">This shortfall has devastating impacts</a>, especially for low-income renters facing ever-greater challenges securing safe, affordable housing. Yet despite the glaring need, building to meet this demand is often infeasible—if not outright illegal—because of local land use and zoning laws. 
 
 Consider the case of Fulshear, Texas, a small but growing municipality located on the western fringe of the Houston metro area. About one-fifth of the city is zoned as an “Estate Residential” district where developers can only build single-family detached homes on a minimum of two acres per lot. That restriction makes it impossible to develop multi-family properties, essentially banning affordable housing development in a substantial portion of the municipality. This is exclusionary zoning. 
 
@@ -197,6 +198,6 @@ Researchers also need timely, detailed, and accurate information to document not
 </li>
 <li>The municipalities in the Houston metro area that we downloaded represent 99% of the Houston metro area population and 95% of its land area.
 </li>
-<li> For instance, see <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3792544" target="_blank" rel="noreferrer noopener">Bronin, 2022</a>; <a href="https://drive.google.com/file/d/1Dd0KKH7oS1-mxNVAOblRTj-rmnX0wI0D/view" target="_blank" rel="noreferrer noopener">Sahn, 2022</a>; <a href="https://brendanshanks.com/wp-content/uploads/shanks_jmp.pdf" target="_blank" rel="noreferrer noopener">Shanks, 2022</a>; <a href="https://static1.squarespace.com/static/6160e89a75cba2217fc14866/t/61a3f4ea1898562e22cf38d8/1638135020614/Jaehee_Song_JMP_share.pdf" target="_blank" rel="noreferrer noopener">Song, 2021</a>; <a href="https://greaterdc.urban.org/blog/we-need-better-zoning-data-data-science-can-help" target="_blank" rel="noreferrer noopener">Tyagi and MacDonald, 2019</a></li>
+<li> For instance, see <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3792544" target="_blank" rel="noreferrer noopener">Bronin, 2022</a>; <a href="https://drive.google.com/file/d/1Dd0KKH7oS1-mxNVAOblRTj-rmnX0wI0D/view" target="_blank" rel="noreferrer noopener">Sahn, 2022</a>; <a href="https://brendanshanks.com/wp-content/uploads/shanks_jmp.pdf" target="_blank" rel="noreferrer noopener">Shanks, 2021</a>; <a href="https://static1.squarespace.com/static/6160e89a75cba2217fc14866/t/61a3f4ea1898562e22cf38d8/1638135020614/Jaehee_Song_JMP_share.pdf" target="_blank" rel="noreferrer noopener">Song, 2021</a>; <a href="https://greaterdc.urban.org/blog/we-need-better-zoning-data-data-science-can-help" target="_blank" rel="noreferrer noopener">Tyagi and MacDonald, 2019</a></li>
 </ol>
 </div>
