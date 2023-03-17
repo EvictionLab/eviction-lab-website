@@ -133,20 +133,24 @@ In the article, we condense all of these land use policies into a single measure
 <p class="mb-0">
 We not only replicate zoning and land use measures for municipalities included in prior studies, but also go a step further, collecting and coding data on a host of cities where we haven’t had any information previously. For instance, prior zoning data cover only 38% of the San Francisco metro area and a mere 16% of the Houston metro area. Using our methods, we downloaded and created zoning data for 100% of the San Francisco metro area and 70% of the Houston metro area.<sup>2</sup> Equipped with those data, we can much more confidently draw conclusions about zoning and land use policies in these areas. In doing so, we can  demonstrate how much more restrictive the average municipality in the San Francisco metro area is compared to one in the Houston metro area, but also that exclusionary municipalities exist within the Houston metro as well. It’s only with these more comprehensive data, for example, that we’re able to identify Fulshear and understand it as a pocket of exclusionary zoning in the otherwise-permissive Houston metro area. 
 <p>
-</div>
-</div>
-</div>
-<div class="row mx-4">
-  <div class="col-12">
-    <div class="figheader px-0 px-md-3 mt-0 mb-1">
-      Figure 2: Zoning restrictiveness across the San Francisco and Houston metropolitan areas
-    </div>
+  <div class="figheader px-0">
+    Figure 2: Zoning restrictiveness across the San Francisco and Houston metropolitan areas
   </div>
-  <div class="figcaption col-12 mx-auto mt-1 mb-0">
+  <div class="figcaption px-0 mb-0">
     <p class="mb-0">
       The following maps contain the San Francisco-Oakland-Fremont and Houston-Sugarland-Baytown metropolitan areas along with measurements of zoning and land use regulations for municipalities in these areas. We ranked municipalities by zoning and land use restrictiveness from 1 to 5, where 1 indicates the least restrictive category and 5 indicates the most restrictive category.
     </p>
   </div>
+</div>
+</div>
+</div>
+<style>
+  #cali-map h3.visual__title,
+  #tex-map h3.visual__title {
+    margin: 24px auto 24px;
+  }
+</style>
+<div class="row mx-4">
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 px-md-2">
 {{% mapbox
   id="cali-map"
