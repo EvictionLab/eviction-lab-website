@@ -27,9 +27,21 @@ Consider the case of Fulshear, Texas, a small but growing municipality located o
 
 Zoning is fundamental to the make-up of our communities and our neighborhoods, but understanding these regulations and how they vary within and between places is enormously challenging. In large part, that’s because we lack straightforward, nationwide data. There is no comprehensive database of U.S. zoning and land use policies. Researchers have conducted  a number of important surveys that begin to describe the landscape of exclusionary zoning, but these data miss much of the country (including places like Fulshear), are not regularly updated, and likely contain inaccuracies.  
 
-To help solve this problem, we used publicly available zoning and land use information to build the National Zoning and Land Use Database (NZLUD). This process, which we describe in a new paper published in Urban Studies, involved downloading and processing the text of municipal codes containing zoning and land use policies. Rather than do this by hand, we used tools from computer science to automate the process. To make sure that these methods produced reliable results, we then replicated zoning and land use measures from previous studies for over 2,600 municipalities across the U.S., yielding very similar conclusions. 
+To help solve this problem, we used publicly available zoning and land use information to build the National Zoning and Land Use Database (NZLUD). This process, which we describe in a new paper published in Urban Studies, involved downloading and processing the text of municipal codes containing zoning and land use policies. Rather than do this by hand, we used tools from computer science to automate the process. To make sure that these methods produced reliable results, we then replicated zoning and land use measures from previous studies for over 2,600 municipalities across the U.S., yielding very similar conclusions.
 
-READ OUR LATEST PAPER ON ZONING HERE
+<hr style="border-top-color: #2c897f; margin: 3.2rem 0 2.4rem;">
+
+<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100">
+    <div class="pr-12 pr-md-0">
+        <a href="https://www.rsfjournal.org/content/9/1/104.abstract" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="urban-studies.png" /></a>
+    </div>
+    <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE PAPER:</p>
+        <p><a class="green gt-eesti journal-heading" href="https://journals.sagepub.com/eprint/2YGAQ9JE5S6PYXHVTBZG/full" target="_blank" rel="noreferrer noopener">Using natural language processing to construct a National Zoning and Land Use Database</a></p>
+        <p class="mt-3">Matt Mleczko and Matthew Desmond</p>
+    </div>
+</div>
+
+<hr style="border-top-color: #2c897f; margin: 2.4rem 0 3.2rem;">
 
 The NZLUD describes key elements of zoning codes and the limitations that municipalities establish on housing development. This includes previously available measures like minimum lot size and maximum permitted density, but also new items such as minimum parking requirements and maximum building height restrictions. We view the database as a living, evolving resource. We make our code and data <a href="https://github.com/mtmleczko/nzlud" target="_blank" rel="noreferrer noopener">publicly available</a> for anyone to access and build on, representing the most open-source method for zoning and land use data creation to date. 
 
