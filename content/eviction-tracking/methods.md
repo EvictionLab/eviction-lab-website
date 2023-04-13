@@ -8,7 +8,7 @@ cascade:
   socialDescription: We’ve built the first nationwide database of evictions.
 h1: Methods
 layout: content
-date: 2022-12-02T01:00:00.000Z
+date: 2023-04-12T00:00:00.000Z
 ---
 # Methods
 
@@ -39,3 +39,17 @@ Our research shows that [a small set of buildings and landlords](https://evictio
 We cleaned and geocoded defendant addresses in [Eviction Tracking System](https://evictionlab.org/eviction-tracking/) (ETS) filing data. We then joined the ETS data to the crosswalk of parcels and addresses through a series of merges. The process of merging ETS data to the crosswalk differed slightly depending on the site. Generally, we first directly joined the ETS data to the crosswalk of parcels and addresses by street address and city name. For eviction filings that remained unmatched to a parcel, we performed a spatial join between the geocoded ETS address and the parcel geometry. Finally, for filings still unmatched, we joined the eviction filing data to the parcel crosswalk based on spatial proximity: a filing would match if within 25 feet of a parcel. We kept only unique matches between ETS eviction filings and parcels; filings that matched to multiple parcels were left unmatched. 
 
 We counted the number of eviction filings at each parcel, along with the plaintiff name most often associated with a given parcel address in the eviction filing data. Filings that were unmatched to a parcel were also grouped and tabulated by address, and are included in our counts of top evictors.
+
+## Imputing Defendant Race/Ethnicity and Gender
+
+In most ETS sites, we are able to use defendant (tenant) names and addresses from eviction case filings to impute (estimate) their likely race/ethnicity and gender. A detailed description of the underlying methods can be found in our [previous published work describing demographic disparities in eviction risk](https://evictionlab.org/demographics-of-eviction/) (as well as in [pandemic-specific analyses](https://evictionlab.org/demographics-of-eviction/)). Here we detail the processes employed for estimates displayed on the ETS.
+
+To impute race/ethnicity, we used a Bayesian predictor algorithm—[the wru package in R](https://github.com/kosukeimai/wru)—that calculated the conditional probability of a defendant’s race/ethnicity on the basis of their first and last names and the racial/ethnic composition of the Census tract in which they lived. We used both first and last names when available, and only surnames if the former was not listed. If valid 2010 Census tract was not available for a given case, we did not impute race/ethnicity. 
+
+The gender of a given name is imputed based on the corresponding name-year frequency in the Social Security Administration (SSA) baby name list. Since the SSA does not list name-years that appear fewer than five times, and the list contains only name-years for individuals born in the US or naturalized within a few months of birth, we rely on [Gender API](https://gender-api.com/en/) for all names without a corresponding name-year in the SSA list.
+
+The probability of each name-year in the SSA baby name list being female is derived via beta-binomial conjugate updating with empirical Bayes for each name across all years it appears in the SSA list (since 1900), and the 95% interval is calculated for robustness. Following [Silver and McCann](https://fivethirtyeight.com/features/how-to-tell-someones-age-when-all-you-know-is-her-name/), an actuarial lifetable is used to find the probability that a defendant name-year was born into each name-year cohort in the SSA baby name list. The joint probability of these distributions is then calculated and the point estimate taken for every defendant name-year that can be found in the SSA baby name list.
+
+For defendant name-years that are omitted from the SSA baby name list, Gender API is assumed to represent the total count of living individuals in the US with that name. Therefore the probability of being female for names imputed with Gender API is assumed to follow a binomial distribution, again allowing for the collection of a 95% interval. Names that cannot be imputed via either method are given a probability of being female of 50%. This likely results in a conservative bias in estimates of the share of defendants who are female. The scale of this bias is associated with the size of the Black population and quality/transparency of record-keeping. 
+
+Once all defendant names in a site for the past year have been given a probability of being female, the mean across all probabilities is taken. 
