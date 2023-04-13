@@ -24,9 +24,9 @@ More detail on eviction protections in Philadelphia can be found on the [COVID-1
 
 {{% report_chart id="avg" data="/uploads/philadelphia_barchart.csv" %}}
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in Philadelphia were slightly higher than average in January and February of 2020.<sup>1</sup> Filings fell in March and held at zero from April through June 2020. Following the end of the state eviction moratorium on August 31, 2020, new eviction filings increased.
+This plot shows monthly eviction filings in Philadelphia over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). Historical averages cover the years 2016-2019.
 
@@ -37,9 +37,9 @@ Eviction filings in Philadelphia were slightly higher than average in January an
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/philadelphia_hotspots_output.csv" %}}
 # Eviction Hotspots
 
-Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and beyond. We analyzed eviction records in Philadelphia to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
+Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and beyond. We analyzed eviction records in Philadelphia to determine where the most cases are being filed. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the last year. We also display the plaintiff name most often listed with a given building in the court filings. In the next section, we map the top 100 hotspots across the county.
 
-Eviction Hotspot data will be updated quarterly.
+Eviction Hotspot data are updated quarterly.
 {{%/ report_top_evictors %}}
 
 
@@ -54,7 +54,7 @@ Eviction Hotspot data will be updated quarterly.
 
 # Changes in claim amounts
 
-When a landlord files an eviction claim in Philadelphia, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month since January 2020. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed.
+When a landlord files an eviction claim in Philadelphia, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month over the last year. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed. The dashed horizontal line on the plot marks the typical claim on an eviction case filed before the pandemic.
 
 
 
@@ -72,7 +72,7 @@ When a landlord files an eviction claim in Philadelphia, we observe the amount t
 
 # The geography of changes in eviction filings
 
-Philadelphia County is divided into 384 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Philadelphia County is divided into 384 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). Historical averages cover the years 2016-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
@@ -81,18 +81,19 @@ Philadelphia County is divided into 384 census tracts. In each of those tracts, 
 
 
 
-{{% report_chart id="race" data="/uploads/philadelphia_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/philadelphia_linechart.csv" imputedNoteNumber="2" %}}
 
 
 
-# Eviction filings by neighborhood demographics
+# The demographics of eviction filings
+
+**Eviction filings by neighborhood race/ethnicity**
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2019.<sup>1</sup> 
 
 1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). Historical averages cover the years 2016-2019.
-
-
+2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).
 
 {{%/ report_chart %}}

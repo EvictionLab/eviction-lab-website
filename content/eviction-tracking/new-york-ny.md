@@ -28,9 +28,9 @@ More detail on eviction protections in New York can be found on the [COVID-19 Ho
 
 
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in New York City were significantly below historical averages in January and February of 2020.<sup>1</sup> Filings dropped to nearly zero in April, May, and June 2020, but increased starting in July. Filings fell again at the end of December 2020 following the implementation of a state-wide moratorium.
+This plot shows monthly eviction filings in New York City over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Eviction filing data for New York City were collected by the [Housing Data Coalition](https://www.housingdatanyc.org//). Historical averages cover the years 2016-2018.
 
@@ -43,7 +43,7 @@ Eviction filings in New York City were significantly below historical averages i
 
 # Changes in claim amounts
 
-When a landlord files an eviction claim in New York, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month since January 2020. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed.
+When a landlord files an eviction claim in New York, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month over the last year. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed. The dashed horizontal line on the plot marks the typical claim on an eviction case filed before the pandemic.
 
 {{%/ report_median_claims %}}
 
@@ -52,7 +52,7 @@ When a landlord files an eviction claim in New York, we observe the amount they 
 
 # The geography of changes in eviction filings
 
-New York City is divided into 299 zip codes. In each of those zip codes, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+New York City is divided into 299 zip codes. In each of those zip codes, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for New York City were collected by the [Housing Data Coalition](https://www.housingdatanyc.org//). Historical averages cover the years 2016-2018.
 2. Zip code breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
@@ -61,7 +61,7 @@ New York City is divided into 299 zip codes. In each of those zip codes, we map 
 
 
 
-{{% report_chart id="race" data="/uploads/newyork_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/newyork_linechart.csv" imputedNoteNumber="2" %}}
 
 
 
@@ -69,18 +69,15 @@ New York City is divided into 299 zip codes. In each of those zip codes, we map 
 
 
 
-# Eviction filings by neighborhood demographics
+# The demographics of eviction filings
+
+**Eviction filings by neighborhood race/ethnicity**
 
 American Community Survey (ACS) data allow us to categorize zip codes by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of zip codes defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2018.<sup>1</sup>
 
 1. Eviction filing data for New York City were collected by the [Housing Data Coalition](https://www.housingdatanyc.org//). Historical averages cover the years 2016-2018.
-
-
-
-
-
-
+2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).
 
 {{%/ report_chart %}}

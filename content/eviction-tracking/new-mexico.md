@@ -28,9 +28,9 @@ More detail on eviction protections in New Mexico can be found on the [COVID-19 
 
 
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in New Mexico were about average in January and February of 2020.<sup>1</sup> Filings fell far below historical averages in April 2020.
+This plot shows monthly eviction filings in New Mexico over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Data for New Mexico are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019.
 
@@ -46,7 +46,7 @@ Eviction filings in New Mexico were about average in January and February of 202
 
 # The geography of changes in eviction filings
 
-New Mexico is divided into 33 counties. In each, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+New Mexico is divided into 33 counties. In each, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019. 
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
