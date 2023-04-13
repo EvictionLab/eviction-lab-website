@@ -1,39 +1,45 @@
-site,historical_efr,notice_requirement,avg_filing_fee,historical_baseline_years,borders
-Albuquerque,2.5,14,150,2017-2019,Bernalillo County
-Austin,2.5,14,150,2014-2019,Travis County
-Boston,2.5,14,150,"2012, 2013, 2015, 2016",Arlington; Boston; Brookline; Belmont; Cambridge; Chelsea; Medford; Newton; Revere; Somerville; Winthrop Town
-Bridgeport,2.5,14,150,2017-2019,Fairfield County
-Charleston,2.5,14,150,2016-2019,Charleston County
-Cincinnati,2.5,14,150,2012-2016,Hamilton County
-Cleveland,2.5,14,150,2016-2019,City of Cleveland
-Columbus,2.5,14,150,"2012, 2013, 2015",Franklin County
-Dallas,2.5,14,150,2017-2019,Dallas County
-Fort Worth,2.5,14,150,2016-2019,Denton County; Tarrant County
-Gainesville,2.5,14,150,2017-2019,Alachua County
-Greenville,2.5,14,150,2016-2019,Greenville County
-Hartford,2.5,14,150,2017-2019,Hartford County
-Houston,2.5,14,150,2012-2015,Harris County; Galveston County
-Indianapolis,2.5,14,150,2016-2019,Marion County
-Jacksonville,2.5,14,150,2012-2016,Duval County
-Kansas City,2.5,14,150,2012-2015,Jackson County
-Las Vegas,2.5,14,150,2016-2019,Clark County
-Memphis,2.5,14,150,2016-2019,Shelby County
-Milwaukee,2.5,14,150,2012-2016,Milwaukee County
-Minneapolis-Saint Paul,2.5,14,150,2012-2019,Hennepin County; Ramsey County
-New Orleans,2.5,14,150,2019,Orleans Parish
-New York City,2.5,14,150,2016-2018,Kings County; Queens County; Richmond County; New York County; Bronx County
-Philadelphia,2.5,14,150,2016-2019,Philadelphia County
-Phoenix,2.5,14,150,2015-2019,Maricopa County
-Pittsburgh,2.5,14,150,2012-2019,Allegheny County
-Richmond,2.5,14,150,2016,City of Richmond; Chesterfield County
-Saint Louis,2.5,14,150,"2012, 2013, 2015, 2016",City of St. Louis; St. Louis County
-South Bend,2.5,14,150,2016-2019,St. Joseph County
-Tampa,2.5,14,150,2016-2019,Pinellas County; Hillsborough County
-Wilmington,2.5,14,150,2016-2019,New Castle County
-Connecticut,2.5,14,150,2017-2019,Connecticut
-Delaware,2.5,14,150,2016-2019,Delaware
-Indiana,2.5,14,150,2016-2019,Indiana
-Minnesota,2.5,14,150,2012-2019,Minnesota
-Missouri,2.5,14,150,2012-2015,Missouri
-New Mexico,2.5,14,150,2017-2019,New Mexico
-Wisconsin,2.5,14,150,2016-2018,Wisconsin
+﻿site,historical_efr,notice_requirement,avg_filing_fee,historical_baseline_years,borders
+Albuquerque,,at least three days notice (in some cases more),$77 filing fee,2017-2019,Bernalillo County
+Austin,,at least three days notice (in some cases more),$116 filing fee,2014-2019,Travis County
+Boston,,at least 14 days notice (in some cases more),$171 filing fee ($231 in Middlesex County),"2012, 2013, 2015, 2016",Arlington; Boston; Brookline; Belmont; Cambridge; Chelsea; Medford; Newton; Revere; Somerville; Winthrop Town
+Bridgeport,,at least three days notice (in some cases more),$205 filing fee,2017-2019,Fairfield County
+Charleston,,at least five days notice (in some cases more),$40 filing fee,2016-2019,Charleston County
+Cincinnati,,at least three days notice (in some cases more),$110 filing fee,2012-2016,Hamilton County
+Cleveland,,at least three days notice (in some cases more),$110 filing fee,2016-2019,City of Cleveland
+Columbus,,at least three days notice (in some cases more),$133 filing fee,"2012, 2013, 2015",Franklin County
+Dallas,,at least three days notice (in some cases more),$141 filing fee,2017-2019,Dallas County
+Fort Worth,,at least three days notice (in some cases more),$121 filing fee,2016-2019,Denton County; Tarrant County
+Gainesville,,at least three days notice (in some cases more),$185 filing fee,2017-2019,Alachua County
+Greenville,,at least five days notice (in some cases more),$40 filing fee,2016-2019,Greenville County
+Hartford,,at least three days notice (in some cases more),$205 filing fee,2017-2019,Hartford County
+Houston,,at least three days notice (in some cases more),$121 filing fee ($145 in Galveston),2012-2015,Harris County; Galveston County
+Indianapolis,,at least ten days notice (in some cases more),$102 filing fee,2016-2019,Marion County
+Jacksonville,,at least three days notice (in some cases more),$185 filing fee,2012-2016,Duval County
+Kansas City,,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$62 filing fee,2012-2015,Jackson County
+Las Vegas,,"at least seven days notice (for nonpayment of rent cases, though in other cases less)",$71 filing fee,2016-2019,Clark County
+Memphis,,"14 days notice (for nonpayment of rent cases, though in many cases less)",$102.5 filing fee,2016-2019,Shelby County
+Miami-Ft. Lauderdale,,at least three days notice (in some cases more),$185 filing fee,2014-2019,Broward County; Miami-Dade County; Palm Beach County 
+Milwaukee,,at least five days notice (in some cases more),$98 filing fee,2012-2016,Milwaukee County
+Minneapolis-Saint Paul,,no advance notice (in the case of nonpayment of rent),$297 filing fee,2012-2019,Hennepin County; Ramsey County
+Nashville,,"14 days notice (for nonpayment of rent cases, though in many cases less)",$127.75 filing fee,2017-2019,Davidson County
+New Orleans,,at least five days notice (in some cases more),$100 filing fee,2019,Orleans Parish
+New York City,,at least 14 days notice (in some cases more),$45 filing fee,2016-2018,Kings County; Queens County; Richmond County; New York County; Bronx County
+Philadelphia,,at least ten days notice (in some cases more),$139.75 filing fee,2016-2019,Philadelphia County
+Phoenix,,at least five days notice (in some cases more),$119 filing fee,2015-2019,Maricopa County
+Pittsburgh,,at least ten days notice (in some cases more),$147 filing fee,2016-2019,Allegheny County
+Providence,,at least five days notice (in some cases more),$100.75 filing fee,2016-2019,Providence County
+Richmond,,at least five days notice (in some cases more),$40 filing fee ($44 in Chesterfield County),2016-2019,City of Richmond; Chesterfield County
+Saint Louis,,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$36 filing fee,"2012, 2013, 2015, 2016",City of St. Louis; St. Louis County
+South Bend,,at least ten days notice (in some cases more),$87 filing fee,2016-2019,St. Joseph County
+Tampa,,at least three days notice (in some cases more),$185 filing fee,2016-2019,Pinellas County; Hillsborough County
+Wilmington,,at least five days notice (in some cases more),$45 filing fee,2016-2019,New Castle County
+Connecticut,,at least three days notice (in some cases more),$205 filing fee,2017-2019,Connecticut
+Delaware,,at least five days notice (in some cases more),$45 filing fee,2016-2019,Delaware
+Indiana,,at least ten days notice (in some cases more),$100 filing fee on average,2016-2019,Indiana
+Minnesota,,no advance notice (in the case of nonpayment of rent),$295 filing feeon average,2012-2019,Minnesota
+Missouri,,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$52 filing fee on average,2012-2015,Missouri
+New Mexico,,at least three days notice (in some cases more),$77 filing fee,2017-2019,New Mexico
+Pennsylvania,,at least ten days notice (in some cases more),$162 filing fee on average,2016-2019,Pennsylvania
+Rhode Island,,at least five days notice (in some cases more),$101 filing fee on average,2016-2019,Rhode Island
+Virginia,,at least five days notice (in some cases more),$44 filing fee on average,2016-2019,Virginia
+Wisconsin,,at least five days notice (in some cases more),$95 filing fee on average,2016-2018,Wisconsin

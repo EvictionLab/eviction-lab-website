@@ -17,7 +17,7 @@ El Paso Intro
 
 {{% report_chart id="avg" data="/uploads/richmond_w17_barchart.csv" %}}
 
-# Changes in eviction filings
+# Trends in eviction filings
 
 El Paso Chart 1
 
@@ -35,9 +35,11 @@ El Paso Map
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
    {{%/ report_map %}}
 
-{{% report_chart id="race" data="/uploads/richmond_w17_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/richmond_w17_linechart.csv" imputedNoteNumber="2" %}}
 
-# Eviction filings by neighborhood demographics
+# The demographics of eviction filings
+
+**Eviction filings by neighborhood race/ethnicity**
 
 El Paso Chart 2
 

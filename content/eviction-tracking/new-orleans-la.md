@@ -24,9 +24,9 @@ More detail on eviction protections in Louisiana can be found on the [COVID-19 H
 
 {{% report_chart id="avg" data="/uploads/neworleans_barchart.csv" %}}
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in New Orleans were near typical levels in January and February of 2020. Filings began to fall in March and were at zero in April and May 2020, but have since increased.<sup>1</sup>
+This plot shows monthly eviction filings in New Orleans over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Eviction filing data were collected by [Professor Davida Finger](https://law.loyno.edu/academics/faculty-and-staff-directory/davida-finger) (Loyola University New Orleans College of Law). Professor Finger works in partnership with [Jane Place Neighborhood Sustainability Initiative.](https://www.jpnsi.org/evictions) Historical averages are taken from 2019 data.
 
@@ -38,7 +38,7 @@ Eviction filings in New Orleans were near typical levels in January and February
 
 # The geography of changes in eviction filings
 
-New Orleans is divided into 177 census tracts. In most of those tracts, we map the number of eviction filings over the last four weeks.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>2</sup>
+New Orleans is divided into 177 census tracts. In most of those tracts, we map the number of eviction filings over the last year.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>2</sup>
 
 1. We do not have tract-level data for areas covered by the Second City Court, on the West Bank of Orleans Parish (south of the Mississippi River). Eviction filing data were collected by [Professor Davida Finger](https://law.loyno.edu/academics/faculty-and-staff-directory/davida-finger) (Loyola University New Orleans College of Law). Professor Finger works in partnership with [Jane Place Neighborhood Sustainability Initiative.](https://www.jpnsi.org/evictions) Historical averages are taken from 2019 data. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
@@ -47,14 +47,17 @@ New Orleans is divided into 177 census tracts. In most of those tracts, we map t
 
 
 
-{{% report_chart id="race" data="/uploads/neworleans_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/neworleans_linechart.csv" imputedNoteNumber="2" %}}
 
-# Eviction filings by neighborhood demographics
+# The demographics of eviction filings
+
+**Eviction filings by neighborhood race/ethnicity**
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2019.<sup>1</sup>
 
 1. We do not have tract-level data for areas covered by the Second City Court, on the West Bank of Orleans Parish (south of the Mississippi River). Eviction filing data were collected by [Professor Davida Finger](https://law.loyno.edu/academics/faculty-and-staff-directory/davida-finger) (Loyola University New Orleans College of Law). Professor Finger works in partnership with [Jane Place Neighborhood Sustainability Initiative.](https://www.jpnsi.org/evictions) Historical averages are taken from 2019 data.
+2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).
 
 {{%/ report_chart %}}

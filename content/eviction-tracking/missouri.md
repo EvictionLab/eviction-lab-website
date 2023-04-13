@@ -28,9 +28,9 @@ More detail on eviction protections in Missouri can be found on the [COVID-19 Ho
 
 {{% report_chart id="avg" data="/uploads/missouri_barchart.csv" %}}
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in Missouri were near their historical averages in January and February of 2020.<sup>1</sup> Filings dropped in March and April 2020, though they increased in the months following.<sup>2</sup>
+This plot shows monthly eviction filings in Missouri over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Average eviction filings taken from Missouri state court microdata for 2012–2015.
 2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/).
@@ -43,7 +43,7 @@ Eviction filings in Missouri were near their historical averages in January and 
 
 # The geography of changes in eviction filings
 
-Missouri is divided into 115 counties and county-equivalents. In each, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Missouri is divided into 115 counties and county-equivalents. In each, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Missouri in 2020-2022 were collected by [January Advisors](https://www.januaryadvisors.com/). Historical data taken from Missouri state court microdata for 2012–2015.
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.

@@ -28,9 +28,9 @@ More detail on eviction protections in Minnesota can be found on the [COVID-19 H
 
 {{% report_chart id="avg" data="/uploads/minnesota_barchart.csv" %}}
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in Minnesota were close to historical averages in January and February of 2020.<sup>1</sup> Filings fell sharply in March 2020 and remained low for several months. Filings increased following the expiration of state protections.
+This plot shows monthly eviction filings in Minnesota over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Eviction filing data for Minnesota were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
 
@@ -42,7 +42,7 @@ Eviction filings in Minnesota were close to historical averages in January and F
 
 # The geography of changes in eviction filings
 
-Minnesota is divided into 87 counties. In each of those counties, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup> 
+Minnesota is divided into 87 counties. In each of those counties, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup> 
 
 1. Eviction filing data for Minnesota were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.

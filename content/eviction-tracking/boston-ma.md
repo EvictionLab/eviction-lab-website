@@ -26,11 +26,12 @@ More detail on eviction protections in Massachusetts can be found on the [COVID-
 
 {{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in Boston were running close to historical averages in January and February of 2020.<sup>1</sup> Filings fell in March following the suspension of eviction proceedings. Eviction filings were down more than 80% in April 2020.<sup>2</sup> Filings increased in November 2020 following the expiration of the state-wide moratorium.
+This plot shows monthly eviction filings in Boston over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
+2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).
 
 {{%/ report_chart %}}
