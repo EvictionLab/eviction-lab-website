@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Albuquerque
 ---
 
-{{< report_intro id="35001" data="/uploads/table.csv" site="Albuquerque" >}}
+{{< report_intro id="35001" data="/uploads/table.csv" >}}
 
 
 

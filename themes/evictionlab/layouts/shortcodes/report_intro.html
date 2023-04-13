@@ -29,7 +29,52 @@
   </div>
 
   <script>
-    var site = {{ .Get "site" }}
+            var siteMap = {
+              "09": "Connecticut",
+              "10": "Delaware",
+              "18": "Indiana",
+              "27": "Minnesota",
+              "29": "Missouri",
+              "35": "New Mexico",
+              "55": "Wisconsin",
+              "35001": "Albuquerque",
+              "48453": "Austin",
+              "25025": "Boston",
+              "09001": "Bridgeport",
+              "45019": "Charleston",
+              "39061": "Cincinnati",
+              "39035": "Cleveland",
+              "39049": "Columbus",
+              "48113": "Dallas",
+              "51760": "El Paso",
+              "48439": "Fort Worth",
+              "12001": "Gainesville",
+              "45045": "Greenville",
+              "09003": "Hartford",
+              "48201": "Houston",
+              "18097": "Indianapolis",
+              "12031": "Jacksonville",
+              "29095": "Kansas City",
+              "32003": "Las Vegas",
+              "47157": "Memphis",
+              "55079": "Milwaukee",
+              "27053": "Minneapolis-Saint Paul",
+              "22071": "New Orleans",
+              "36061": "New York",
+              "42101": "Philadelphia",
+              "04013": "Phoenix",
+              "42003": "Pittsburgh",
+              "51760": "Richmond",
+              "18141": "South Bend",
+              "29510": "St Louis",
+              "12103": "Tampa",
+              "10003": "Wilmington",
+            }
+
+            // var site = {{ .Get "site" }}
+            var id = {{ .Get "id" }}
+            var site = siteMap[id]
+                                    // console.log(1234, site, id, siteMap[id])
     window.addEventListener('load', function () {
 
       var statFiles = [
@@ -140,6 +185,7 @@
           return null;
         }
         var row = fileData.find((d) => d.site === site);
+        if (!row || !row[s.field]) console.log("missing for ", row, s.field)
         return row ? row[s.field] : null;
       }
 
