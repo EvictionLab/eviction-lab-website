@@ -389,6 +389,11 @@ Elab.Config = (function (Elab) {
         var rawParse = d3.timeParse("%d/%m/%Y");
         var distance = d._raw.y - 1;
         var value = Math.abs(distance);
+
+        // NOTE: hide tooltips for "dummy rows" to obscure partial filing bars
+        // TODO: remove when we no longer use partial filing striping
+        if (isNaN(value)) return;
+
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
 
         if (dir === "mid") {
@@ -405,8 +410,7 @@ Elab.Config = (function (Elab) {
           d3.format(",.0%")(value) +
           "</span>&nbsp;from average" +
           (d._raw.extras["month_last_day"]
-            ? ", <br />as of " +
-              d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
+            ? ", <br />as of " + d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
             : "") +
           ".</div>"
         );
