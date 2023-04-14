@@ -1,45 +1,48 @@
-﻿site,historical_efr,notice_requirement,avg_filing_fee,historical_baseline_years,borders
-Albuquerque,,at least three days notice (in some cases more),$77 filing fee,2017-2019,Bernalillo County
-Austin,,at least three days notice (in some cases more),$116 filing fee,2014-2019,Travis County
-Boston,,at least 14 days notice (in some cases more),$171 filing fee ($231 in Middlesex County),"2012, 2013, 2015, 2016",Arlington; Boston; Brookline; Belmont; Cambridge; Chelsea; Medford; Newton; Revere; Somerville; Winthrop Town
-Bridgeport,,at least three days notice (in some cases more),$205 filing fee,2017-2019,Fairfield County
-Charleston,,at least five days notice (in some cases more),$40 filing fee,2016-2019,Charleston County
-Cincinnati,,at least three days notice (in some cases more),$110 filing fee,2012-2016,Hamilton County
-Cleveland,,at least three days notice (in some cases more),$110 filing fee,2016-2019,City of Cleveland
-Columbus,,at least three days notice (in some cases more),$133 filing fee,"2012, 2013, 2015",Franklin County
-Dallas,,at least three days notice (in some cases more),$141 filing fee,2017-2019,Dallas County
-Fort Worth,,at least three days notice (in some cases more),$121 filing fee,2016-2019,Denton County; Tarrant County
-Gainesville,,at least three days notice (in some cases more),$185 filing fee,2017-2019,Alachua County
-Greenville,,at least five days notice (in some cases more),$40 filing fee,2016-2019,Greenville County
-Hartford,,at least three days notice (in some cases more),$205 filing fee,2017-2019,Hartford County
-Houston,,at least three days notice (in some cases more),$121 filing fee ($145 in Galveston),2012-2015,Harris County; Galveston County
-Indianapolis,,at least ten days notice (in some cases more),$102 filing fee,2016-2019,Marion County
-Jacksonville,,at least three days notice (in some cases more),$185 filing fee,2012-2016,Duval County
-Kansas City,,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$62 filing fee,2012-2015,Jackson County
-Las Vegas,,"at least seven days notice (for nonpayment of rent cases, though in other cases less)",$71 filing fee,2016-2019,Clark County
-Memphis,,"14 days notice (for nonpayment of rent cases, though in many cases less)",$102.5 filing fee,2016-2019,Shelby County
-Miami-Ft. Lauderdale,,at least three days notice (in some cases more),$185 filing fee,2014-2019,Broward County; Miami-Dade County; Palm Beach County 
-Milwaukee,,at least five days notice (in some cases more),$98 filing fee,2012-2016,Milwaukee County
-Minneapolis-Saint Paul,,no advance notice (in the case of nonpayment of rent),$297 filing fee,2012-2019,Hennepin County; Ramsey County
-Nashville,,"14 days notice (for nonpayment of rent cases, though in many cases less)",$127.75 filing fee,2017-2019,Davidson County
-New Orleans,,at least five days notice (in some cases more),$100 filing fee,2019,Orleans Parish
-New York,,at least 14 days notice (in some cases more),$45 filing fee,2016-2018,Kings County; Queens County; Richmond County; New York County; Bronx County
-Philadelphia,,at least ten days notice (in some cases more),$139.75 filing fee,2016-2019,Philadelphia County
-Phoenix,,at least five days notice (in some cases more),$119 filing fee,2015-2019,Maricopa County
-Pittsburgh,,at least ten days notice (in some cases more),$147 filing fee,2016-2019,Allegheny County
-Providence,,at least five days notice (in some cases more),$100.75 filing fee,2016-2019,Providence County
-Richmond,,at least five days notice (in some cases more),$40 filing fee ($44 in Chesterfield County),2016-2019,City of Richmond; Chesterfield County
-St Louis,,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$36 filing fee,"2012, 2013, 2015, 2016",City of St. Louis; St. Louis County
-South Bend,,at least ten days notice (in some cases more),$87 filing fee,2016-2019,St. Joseph County
-Tampa,,at least three days notice (in some cases more),$185 filing fee,2016-2019,Pinellas County; Hillsborough County
-Wilmington,,at least five days notice (in some cases more),$45 filing fee,2016-2019,New Castle County
-Connecticut,,at least three days notice (in some cases more),$205 filing fee,2017-2019,Connecticut
-Delaware,,at least five days notice (in some cases more),$45 filing fee,2016-2019,Delaware
-Indiana,,at least ten days notice (in some cases more),$100 filing fee on average,2016-2019,Indiana
-Minnesota,,no advance notice (in the case of nonpayment of rent),$295 filing feeon average,2012-2019,Minnesota
-Missouri,,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$52 filing fee on average,2012-2015,Missouri
-New Mexico,,at least three days notice (in some cases more),$77 filing fee,2017-2019,New Mexico
-Pennsylvania,,at least ten days notice (in some cases more),$162 filing fee on average,2016-2019,Pennsylvania
-Rhode Island,,at least five days notice (in some cases more),$101 filing fee on average,2016-2019,Rhode Island
-Virginia,,at least five days notice (in some cases more),$44 filing fee on average,2016-2019,Virginia
-Wisconsin,,at least five days notice (in some cases more),$95 filing fee on average,2016-2018,Wisconsin
+site,notice_requirement,avg_filing_fee,historical_baseline_years,borders
+35001,at least three days notice (in some cases more),$77 filing fee,2017-2019,Bernalillo County
+48453,at least three days notice (in some cases more),$116 filing fee,2014-2019,Travis County
+25025,at least 14 days notice (in some cases more),$171 filing fee ($231 in Middlesex County),"2012, 2013, 2015, 2016",Arlington; Boston; Brookline; Belmont; Cambridge; Chelsea; Medford; Newton; Revere; Somerville; Winthrop Town
+09001,at least three days notice (in some cases more),$205 filing fee,2017-2019,Fairfield County
+45019,at least five days notice (in some cases more),$40 filing fee,2016-2019,Charleston County
+39061,at least three days notice (in some cases more),$110 filing fee,2012-2016,Hamilton County
+39035,at least three days notice (in some cases more),$110 filing fee,2016-2019,City of Cleveland
+39049,at least three days notice (in some cases more),$133 filing fee,"2012, 2013, 2015",Franklin County
+48113,at least three days notice (in some cases more),$141 filing fee,2017-2019,Dallas County
+48439,at least three days notice (in some cases more),$121 filing fee,2016-2019,Denton County; Tarrant County
+48439,at least three days notice (in some cases more),$121 filing fee,2016-2019,Denton County; Tarrant County
+12001,at least three days notice (in some cases more),$185 filing fee,2017-2019,Alachua County
+45045,at least five days notice (in some cases more),$40 filing fee,2016-2019,Greenville County
+09003,at least three days notice (in some cases more),$205 filing fee,2017-2019,Hartford County
+48201,at least three days notice (in some cases more),$121 filing fee ($145 in Galveston),2012-2015,Harris County; Galveston County
+48201,at least three days notice (in some cases more),$121 filing fee ($145 in Galveston),2012-2015,Harris County; Galveston County
+18097,at least ten days notice (in some cases more),$102 filing fee,2016-2019,Marion County
+12031,at least three days notice (in some cases more),$185 filing fee,2012-2016,Duval County
+29095,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$62 filing fee,2012-2015,Jackson County
+32003,"at least seven days notice (for nonpayment of rent cases, though in other cases less)",$71 filing fee,2016-2019,Clark County
+47157,"14 days notice (for nonpayment of rent cases, though in many cases less)",$102.5 filing fee,2016-2019,Shelby County
+12086,at least three days notice (in some cases more),$185 filing fee,2014-2019,Broward County; Miami-Dade County; Palm Beach County
+55079,at least five days notice (in some cases more),$98 filing fee,2012-2016,Milwaukee County
+27053,no advance notice (in the case of nonpayment of rent),$297 filing fee,2012-2019,Hennepin County; Ramsey County
+47037,"14 days notice (for nonpayment of rent cases, though in many cases less)",$127.75 filing fee,2017-2019,Davidson County
+22071,at least five days notice (in some cases more),$100 filing fee,2019,Orleans Parish
+36061,at least 14 days notice (in some cases more),$45 filing fee,2016-2018,Kings County; Queens County; Richmond County; New York County; Bronx County
+42101,at least ten days notice (in some cases more),$139.75 filing fee,2016-2019,Philadelphia County
+04013,at least five days notice (in some cases more),$119 filing fee,2015-2019,Maricopa County
+42003,at least ten days notice (in some cases more),$147 filing fee,2016-2019,Allegheny County
+44007,at least five days notice (in some cases more),$100.75 filing fee,2016-2019,Providence County
+51760,at least five days notice (in some cases more),$40 filing fee ($44 in Chesterfield County),2016-2019,City of Richmond; Chesterfield County
+18141,at least ten days notice (in some cases more),$87 filing fee,2016-2019,St. Joseph County
+29510,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$36 filing fee,"2012, 2013, 2015, 2016",City of St. Louis; St. Louis County
+12103,at least three days notice (in some cases more),$185 filing fee,2016-2019,Pinellas County; Hillsborough County
+12103,at least three days notice (in some cases more),$185 filing fee,2016-2019,Pinellas County; Hillsborough County
+10003,at least five days notice (in some cases more),$45 filing fee,2016-2019,New Castle County
+09,at least three days notice (in some cases more),$205 filing fee,2017-2019,Connecticut
+10,at least five days notice (in some cases more),$45 filing fee,2016-2019,Delaware
+18,at least ten days notice (in some cases more),$100 filing fee on average,2016-2019,Indiana
+27,no advance notice (in the case of nonpayment of rent),$295 filing feeon average,2012-2019,Minnesota
+29,"at least ten days notice (for nonpayment of rent cases, though in other cases more)",$52 filing fee on average,2012-2015,Missouri
+35,at least three days notice (in some cases more),$77 filing fee,2017-2019,New Mexico
+42,at least ten days notice (in some cases more),$162 filing fee on average,2016-2019,Pennsylvania
+44,at least five days notice (in some cases more),$101 filing fee on average,2016-2019,Rhode Island
+51,at least five days notice (in some cases more),$44 filing fee on average,2016-2019,Virginia
+55,at least five days notice (in some cases more),$95 filing fee on average,2016-2018,Wisconsin
