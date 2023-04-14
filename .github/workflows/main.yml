@@ -1,7 +1,7 @@
 name: Scheduled Deploy to Production
 on:
   schedule:
-    - cron: "0 19 * * *"
+    - cron: "0 7 * * *"
   workflow_dispatch:
 jobs:
   productionPromotion:
