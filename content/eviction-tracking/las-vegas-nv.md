@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Las Vegas
 ---
 
-{{< report_intro id="32003" data="/uploads/table.csv" >}}
+{{< report_intro site_id="32003" data="/uploads/table.csv" >}}
 
 
 

@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Minneapolis-Saint Paul
 ---
 
-{{< report_intro id="27053" data="/uploads/table.csv" >}}
+{{< report_intro site_id="27053" data="/uploads/table.csv" >}}
 
 
 

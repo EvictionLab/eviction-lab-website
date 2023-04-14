@@ -40,7 +40,7 @@
             widget: "markdown",
           },
         ],
-        pattern: /^{{%\s?report_intro id="(\S*)" data="(\S*)"\s?%}}([\S\s]*?){{%\/\s?report_intro\s?%}}/,
+        pattern: /^{{%\s?report_intro site_id="(\S*)" data="(\S*)"\s?%}}([\S\s]*?){{%\/\s?report_intro\s?%}}/,
         fromBlock: function (match) {
           return {
             fips: match[1],
@@ -50,7 +50,7 @@
         },
         toBlock: function (obj) {
           return (
-            '\n{{% report_intro id="' +
+            '\n{{% report_intro site_id="' +
             obj.fips +
             '" data="' +
             obj.data +

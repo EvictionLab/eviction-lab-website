@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Memphis
 ---
 
-{{< report_intro id="47157" data="/uploads/table.csv" >}}
+{{< report_intro site_id="47157" data="/uploads/table.csv" >}}
 
 The state of Tennessee implemented an eviction moratorium that ran from March 13 to June 1, 2020, and courts in Shelby County (Memphis) were closed until June 15, 2020. During this period, new eviction filings were still allowed. The rate of new filings picked up after the moratorium lifted.
 

@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: New York City
 ---
 
-{{< report_intro id="36061" data="/uploads/table.csv" >}}
+{{< report_intro site_id="36061" data="/uploads/table.csv" >}}
 
 
 

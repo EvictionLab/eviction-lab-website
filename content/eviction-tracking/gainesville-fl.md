@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Gainesville
 ---
 
-{{< report_intro id="12001" data="/uploads/table.csv" >}}
+{{< report_intro site_id="12001" data="/uploads/table.csv" >}}
 
 Eviction filings in Alachua County, FL (Gainesville) fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired at the end of July 2020. After the moratorium expired, execution of eviction orders was also delayed until October 1, 2020.
 

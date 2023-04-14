@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Austin
 ---
 
-{{< report_intro id="48453" data="/uploads/table.csv" >}}
+{{< report_intro site_id="48453" data="/uploads/table.csv" >}}
 
 
 

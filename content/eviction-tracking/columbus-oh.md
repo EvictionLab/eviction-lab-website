@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Columbus
 ---
 
-{{< report_intro id="39049" data="/uploads/table.csv" >}}
+{{< report_intro site_id="39049" data="/uploads/table.csv" >}}
 
 
 

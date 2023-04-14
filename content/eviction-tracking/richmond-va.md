@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Richmond
 ---
 
-{{< report_intro id="51760" data="/uploads/table.csv" >}}
+{{< report_intro site_id="51760" data="/uploads/table.csv" >}}
 
 Eviction filings in Richmond, VA fell sharply in mid-March of 2020. Compared to equivalent periods in 2016, eviction filings were far below average over the last two weeks of March and throughout April and May 2020. Eviction hearings were halted from late-March to May 18, and again for most of June 2020. Eviction judgments were also stayed from August 10 to September 7, 2020. From late-November 2020 to June 30, 2021, Virginia also implemented protections for tenants applying for rental assistance and required certain larger landlords to offer payment plans to tenants before taking action to evict.
 

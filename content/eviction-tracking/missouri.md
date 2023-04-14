@@ -12,7 +12,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Missouri
 ---
 
-{{< report_intro id="29" data="/uploads/states_table.csv" >}}
+{{< report_intro site_id="29" data="/uploads/states_table.csv" >}}
 
 
 

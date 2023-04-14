@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Phoenix
 ---
 
-{{< report_intro id="04013" data="/uploads/table.csv" >}}
+{{< report_intro site_id="04013" data="/uploads/table.csv" >}}
 
 Eviction filings in Maricopa County, AZ (Phoenix) fell sharply in April 2020. The state of Arizona instituted an eviction moratorium in late-March 2020, but this policy only suspended enforcement of COVID-19-related nonpayment evictions, and new filings were being accepted. These eviction protections in the state expired at the end of October 2020.
 

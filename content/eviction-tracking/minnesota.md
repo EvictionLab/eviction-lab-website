@@ -12,7 +12,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Minnesota
 ---
 
-{{< report_intro id="27" data="/uploads/states_table.csv" >}}
+{{< report_intro site_id="27" data="/uploads/states_table.csv" >}}
 
 
 

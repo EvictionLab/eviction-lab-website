@@ -10,7 +10,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Bridgeport
 ---
 
-{{< report_intro id="09001" data="/uploads/table.csv" >}}
+{{< report_intro site_id="09001" data="/uploads/table.csv" >}}
 
 
 
