@@ -9,7 +9,8 @@ twImage: /images/assets/graphics/ets-bg-social.png
 title: Cleveland Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro id="39035" data="/uploads/table.csv" >}}
+
+{{< report_intro site_id="39035" data="/uploads/table.csv" >}}
 
 While the state of Ohio did not institute a general eviction moratorium, the Cleveland Municipal Housing Court halted the processing of non-emergency eviction filings on March 16, 2020. This policy reduced filings to near zero until its expiration on June 15, 2020, after which filings increased. During the summer of 2020, Cleveland also extended the [right to counsel for many tenants facing eviction](https://freeevictionhelp.org/).
 

@@ -10,7 +10,7 @@ title: Jacksonville Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{< report_intro id="12031" data="/uploads/table.csv" >}}
+{{< report_intro site_id="12031" data="/uploads/table.csv" >}}
 
 Eviction filings in Duval County (Jacksonville) fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 95% or more in April through July 2020. 
 

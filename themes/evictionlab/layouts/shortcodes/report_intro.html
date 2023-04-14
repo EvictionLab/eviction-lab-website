@@ -29,52 +29,51 @@
   </div>
 
   <script>
-            var siteMap = {
-              "09": "Connecticut",
-              "10": "Delaware",
-              "18": "Indiana",
-              "27": "Minnesota",
-              "29": "Missouri",
-              "35": "New Mexico",
-              "55": "Wisconsin",
-              "35001": "Albuquerque",
-              "48453": "Austin",
-              "25025": "Boston",
-              "09001": "Bridgeport",
-              "45019": "Charleston",
-              "39061": "Cincinnati",
-              "39035": "Cleveland",
-              "39049": "Columbus",
-              "48113": "Dallas",
-              "51760": "El Paso",
-              "48439": "Fort Worth",
-              "12001": "Gainesville",
-              "45045": "Greenville",
-              "09003": "Hartford",
-              "48201": "Houston",
-              "18097": "Indianapolis",
-              "12031": "Jacksonville",
-              "29095": "Kansas City",
-              "32003": "Las Vegas",
-              "47157": "Memphis",
-              "55079": "Milwaukee",
-              "27053": "Minneapolis-Saint Paul",
-              "22071": "New Orleans",
-              "36061": "New York",
-              "42101": "Philadelphia",
-              "04013": "Phoenix",
-              "42003": "Pittsburgh",
-              "51760": "Richmond",
-              "18141": "South Bend",
-              "29510": "St Louis",
-              "12103": "Tampa",
-              "10003": "Wilmington",
-            }
+            // var siteMap = {
+            //   "09": "Connecticut",
+            //   "10": "Delaware",
+            //   "18": "Indiana",
+            //   "27": "Minnesota",
+            //   "29": "Missouri",
+            //   "35": "New Mexico",
+            //   "55": "Wisconsin",
+            //   "35001": "Albuquerque",
+            //   "48453": "Austin",
+            //   "25025": "Boston",
+            //   "09001": "Bridgeport",
+            //   "45019": "Charleston",
+            //   "39061": "Cincinnati",
+            //   "39035": "Cleveland",
+            //   "39049": "Columbus",
+            //   "48113": "Dallas",
+            //   "51760": "El Paso",
+            //   "48439": "Fort Worth",
+            //   "12001": "Gainesville",
+            //   "45045": "Greenville",
+            //   "09003": "Hartford",
+            //   "48201": "Houston",
+            //   "18097": "Indianapolis",
+            //   "12031": "Jacksonville",
+            //   "29095": "Kansas City",
+            //   "32003": "Las Vegas",
+            //   "47157": "Memphis",
+            //   "55079": "Milwaukee",
+            //   "27053": "Minneapolis-Saint Paul",
+            //   "22071": "New Orleans",
+            //   "36061": "New York",
+            //   "42101": "Philadelphia",
+            //   "04013": "Phoenix",
+            //   "42003": "Pittsburgh",
+            //   "51760": "Richmond",
+            //   "18141": "South Bend",
+            //   "29510": "St Louis",
+            //   "12103": "Tampa",
+            //   "10003": "Wilmington",
+            // }
 
             // var site = {{ .Get "site" }}
-            var id = {{ .Get "id" }}
-            var site = siteMap[id]
-                                    // console.log(1234, site, id, siteMap[id])
+              var site_id = {{ .Get "site_id" }}
+                var renterssite = {{ .Page.Params.renterssite }};
     window.addEventListener('load', function () {
 
       var statFiles = [
@@ -184,7 +183,7 @@
           console.error("No filedata found ", fileData, s)
           return null;
         }
-        var row = fileData.find((d) => d.site === site);
+        var row = fileData.find((d) => d.id === site_id);
         if (!row || !row[s.field]) console.log("missing for ", row, s.field)
         return row ? row[s.field] : null;
       }
@@ -201,7 +200,8 @@
       Elab.Utils.createStatBlock('#filingRates', statFiles, filingRates, getVal, displayStatBlock)
 
       // TODO: update for state pages
-      var paragraphText = "There are %{households} renter households in %{county} (%{state}), paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} days' notice and pay a %{fee} filing fee to the courts.".replace('%{state}', site)
+      var siteText = site_id.length === 2 ? '' : ` (${renterssite})`;
+      var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} filing fee to the courts.".replace('%{site}', siteText)
       Elab.Utils.createStatParagraph('#summaryStats', paragraphText, statFiles, paragraphStats, getVal)
 
       Elab.Utils.createTwitterLink('.share__link--twitter')

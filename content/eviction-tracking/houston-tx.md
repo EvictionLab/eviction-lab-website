@@ -10,7 +10,7 @@ title: Houston, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{< report_intro id="48201" data="/uploads/table.csv" >}}
+{{< report_intro site_id="48201" data="/uploads/table.csv" >}}
 
 Eviction filings in Harris and Galveston Counties, TX (Houston) fell sharply once eviction proceedings were suspended across Texas on March 19, 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March, and through April and May. Eviction protections in Texas began to expire on May 18, 2020. Courts in Harris County resumed business shortly thereafter, followed by the courts in Galveston County in early June.
 

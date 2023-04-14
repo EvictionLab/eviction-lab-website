@@ -12,7 +12,7 @@ title: Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 
-{{< report_intro id="29" data="/uploads/states_table.csv" >}}
+{{< report_intro site_id="29" data="/uploads/states_table.csv" >}}
 
 
 

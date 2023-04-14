@@ -12,7 +12,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 rentersSite: Delaware
 ---
 
-{{< report_intro id="10" data="/uploads/states_table.csv" >}}
+{{< report_intro site_id="10" data="/uploads/states_table.csv" >}}
 
 Delaware implemented a state-wide eviction moratorium between March 17 and July 1, 2020. Almost no new eviction cases were filed in the state during this period. New filings increased after these protections were lifted. 
 
