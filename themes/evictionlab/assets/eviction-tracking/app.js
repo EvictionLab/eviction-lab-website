@@ -534,7 +534,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text: "Filings Relative to Average, by Neighborhood Racial/Ethnic Majority",
+        text: "Filings over the last year relative to average, by Neighborhood Racial/Ethnic Majority",
       },
     ],
     markLines: [
@@ -1010,9 +1010,15 @@ Elab.Chart = (function (Elab) {
    * @returns {ChartData}
    */
   function parseData(data, config) {
-    // show only most recent year of data based on toggle, only for "avg" chart
     if (config.rootId === "avg" && showLast12) {
+      // show only most recent year of data based on toggle, only for "avg" chart
       data = data.sort((a, b) => dateParse(a.month) - dateParse(b.month)).slice(-12);
+    } else if (config.rootId === "race") {
+      // get rid of groups w/o data to plot
+      data = data.filter((d) => {
+        var v = d[config.data.y.col];
+        return v !== "" && v !== undefined && !isNaN(Number(v));
+      });
     }
     var result = {
       _raw: data,
