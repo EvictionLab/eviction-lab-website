@@ -2436,7 +2436,7 @@ label #labels_top-100 {
 }
 .section.section--chart .chart {
   min-height: 320px;
-  max-height: 675px;
+  max-height: 670px;
 }
 
 @media (min-width: 1024px) {
@@ -2460,6 +2460,12 @@ label #labels_top-100 {
 .section--chart.section--race .stat-block-wrapper {
   margin-top: 32px;
   margin-bottom: 32px;
+}
+.section--chart.section--race .stat-block-wrapper strong {
+  display: block;
+  /* HACK: heading barely overflows line... */
+  width: 102%;
+  margin-bottom: 1.5rem;
 }
 .callout.stat-block-wrapper {
   padding-top: 0.2rem;
