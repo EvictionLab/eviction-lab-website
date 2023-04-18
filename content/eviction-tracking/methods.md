@@ -42,7 +42,7 @@ We counted the number of eviction filings at each parcel, along with the plainti
 
 ## Imputing Defendant Race/Ethnicity and Gender
 
-In most ETS sites, we are able to use defendant (tenant) names and addresses from eviction case filings to impute (estimate) their likely race/ethnicity and gender. A detailed description of the underlying methods can be found in our [previous published work describing demographic disparities in eviction risk](https://evictionlab.org/demographics-of-eviction/) (as well as in [pandemic-specific analyses](https://evictionlab.org/demographics-of-eviction/)). Here we detail the processes employed for estimates displayed on the ETS.
+In most ETS sites, we are able to use defendant (tenant) names and addresses from eviction case filings to impute (estimate) their likely race/ethnicity and gender. A detailed description of the underlying methods can be found in our [previous published work describing demographic disparities in eviction risk](https://evictionlab.org/demographics-of-eviction/) (as well as in [pandemic-specific analyses](https://evictionlab.org/us-eviction-filing-patterns-2020/)). Here we detail the processes employed for estimates displayed on the ETS.
 
 To impute race/ethnicity, we used a Bayesian predictor algorithm—[the wru package in R](https://github.com/kosukeimai/wru)—that calculated the conditional probability of a defendant’s race/ethnicity on the basis of their first and last names and the racial/ethnic composition of the Census tract in which they lived. We used both first and last names when available, and only surnames if the former was not listed. If valid 2010 Census tract was not available for a given case, we did not impute race/ethnicity. 
 

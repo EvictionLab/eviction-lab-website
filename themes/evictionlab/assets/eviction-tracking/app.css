@@ -1992,13 +1992,6 @@
   min-width: 170px;
 }
 
-/* 
-  NOTE: hide demo bar chart for one update
-  TODO: remove with 2.0 launch
-*/
-.section--chart.section--race {
-  display: none;
-}
 /** POINTS LEGEND */
 .section .legend.legend--points {
   display: none;
@@ -2443,6 +2436,7 @@ label #labels_top-100 {
 }
 .section.section--chart .chart {
   min-height: 320px;
+  max-height: 675px;
 }
 
 @media (min-width: 1024px) {
@@ -2470,6 +2464,7 @@ label #labels_top-100 {
 .callout.stat-block-wrapper {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
+  padding-right: 0;
   background: unset;
 }
 

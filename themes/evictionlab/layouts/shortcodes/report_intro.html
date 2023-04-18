@@ -91,7 +91,7 @@
         {
           file: 'filing',
           field: 'hhs_threatened_rate',
-          display: 'households threatened',
+          display: 'households threatened rate',
           tooltip: 'The percentage of unique households that received an eviction filing, regardless of how many evictions were filed against the same household',
           formatter: d3.format('.0%'),
           default: 'Unavailable'
@@ -99,7 +99,7 @@
         {
           file: 'filing',
           field: 'serial_share',
-          display: 'serial filings',
+          display: 'serial filings rate',
           tooltip: 'Repeated filings against the same household at the same address in the last 12 months',
           formatter: d3.format('.0%'),
           default: 'Unavailable'
@@ -157,9 +157,8 @@
       Elab.Utils.createStatBlock('#filingCounts', statFiles, filingCounts, getVal, displayStatBlock)
       Elab.Utils.createStatBlock('#filingRates', statFiles, filingRates, getVal, displayStatBlock)
 
-      // TODO: update for state pages
       var siteText = site_id.length === 2 ? '' : ` (${renterssite})`;
-      var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} filing fee to the courts.".replace('%{site}', siteText)
+      var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.".replace('%{site}', siteText)
       Elab.Utils.createStatParagraph('#summaryStats', paragraphText, statFiles, paragraphStats, getVal)
 
       Elab.Utils.createTwitterLink('.share__link--twitter')

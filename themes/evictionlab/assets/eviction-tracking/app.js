@@ -2164,12 +2164,7 @@ Elab.Map = (function (Elab) {
             id,
             geometry: {
               type: "Point",
-              // TODO: need real
               coordinates: [lon, lat],
-              // coordinates: [
-              //   (Math.random() - 0.5) * (Math.random() - 0.5) + -106.6,
-              //   (Math.random() - 0.5) * (Math.random() - 0.5) * 0.6 + 35.06,
-              // ],
             },
             properties: {
               radius: radiusScale(filings),
