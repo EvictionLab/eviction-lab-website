@@ -75,7 +75,7 @@ New York City is divided into 299 zip codes. In each of those zip codes, we map 
 
 American Community Survey (ACS) data allow us to categorize zip codes by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of zip codes defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2018.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of zip codes defined by racial/ethnic majority—between filings over the last year and average filings in 2016–2018.<sup>1</sup>
 
 1. Eviction filing data for New York City were collected by the [Housing Data Coalition](https://www.housingdatanyc.org//). Historical averages cover the years 2016-2018.
 2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).

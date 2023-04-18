@@ -68,7 +68,7 @@ Eviction filings in the Miami-Dade, Broward, and Palm Beach Counties ran close t
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2014–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2014–2019.<sup>1</sup>
 
 We are unable to assign many cases from prior to 2020 in Miami-Dade County to a census tract due to missing street address information. As a result, the “Filings Relative to Average” tab in Miami-Dade County census tracts only reflects data in Broward and Palm Beach Counties. 
 
@@ -90,7 +90,7 @@ We are unable to assign many cases from prior to 2020 in Miami-Dade County to a 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2014–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2014–2019.<sup>1</sup>
 
 
 We are unable to assign many cases from prior to 2020 in Miami-Dade County to a census tract due to missing street address information. As a result, the “Filings Relative to Average” tab in Miami-Dade County census tracts only reflects data in Broward and Palm Beach Counties. 
