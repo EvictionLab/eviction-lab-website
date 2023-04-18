@@ -6,7 +6,7 @@ h1: Wisconsin
 slug: wisconsin
 date: 2022-11-10T03:36:32.873Z
 ---
-{{< report_intro id="55" data="/uploads/states_table.csv" >}}
+{{< report_intro site_id="55" data="/uploads/states_table.csv" >}}
 
 Eviction filings in Wisconsin fell sharply once Governor Tony Evers blocked the initiation of non-emergency eviction proceedings on March 27, 2020. Eviction protections in Wisconsin began to expire on May 26, 2020, after which filings increased.
 

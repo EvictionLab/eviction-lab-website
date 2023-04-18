@@ -6,7 +6,7 @@ h1: Pennsylvania
 slug: pennsylvania
 date: 2023-01-11T22:18:49.059Z
 ---
-{{< report_intro id="42" data="/uploads/states_table.csv" >}}
+{{< report_intro site_id="42" data="/uploads/states_table.csv" >}}
 
 The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31, 2020. Eviction filings related to nonpayment of rent were not accepted during that period. Filings increased following the end of the moratorium.
 

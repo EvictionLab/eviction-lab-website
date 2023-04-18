@@ -67,12 +67,6 @@ Cleveland is divided into 177 census tracts. In each of those tracts, we map the
 
 {{% report_chart id="race" data="/uploads/cleveland_linechart.csv" imputedNoteNumber="2" %}}
 
-
-
-
-
-
-
 # The demographics of eviction filings
 
 **Eviction filings by neighborhood race/ethnicity**
