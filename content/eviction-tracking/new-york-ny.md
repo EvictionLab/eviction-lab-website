@@ -16,7 +16,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 New York saw a number of steps taken to prevent a surge in eviction cases. A state-wide moratorium prevented landlords from filing eviction cases from late-March until June 20, 2020. Additional protections—including the [Tenant Safe Harbor Act](https://www.nysenate.gov/legislation/bills/2019/s8192/amendment/b) and the [automatic suspension of newly-filed eviction cases](http://nycourts.gov/whatsnew/pdf/ao160a20.pdf)—kept filings below historical averages. A state-wide moratorium was again implemented in late-December 2020. Pieces of the state-wide moratorium that allowed tenants to avoid a court case by declaring a COVID hardship were struck down by the Supreme Court in August 2021, but a new moratorium was enacted on September 2, 2021 that still afforded tenants certain protections in cases of COVID hardship. This moratorium expired on January 15, 2022. 
 
-More detail on eviction protections in New York can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/ny/) and from the [Furman Center](https://furmancenter.org/thestoop/entry/data-update-eviction-filings-in-nyc-since-covid-19).
+More detail on eviction protections in New York is available from the [Furman Center](https://furmancenter.org/thestoop/entry/data-update-eviction-filings-in-nyc-since-covid-19).
 
 
 

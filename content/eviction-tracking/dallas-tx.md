@@ -14,7 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Dallas County, TX fell sharply when eviction proceedings were suspended across Texas on March 19, 2020. Eviction protections in Texas began to expire on May 18, 2020, after which new filings increased.
 
-More detail on eviction protections in Texas can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/tx/).
+
 
 {{</ report_intro >}}
 

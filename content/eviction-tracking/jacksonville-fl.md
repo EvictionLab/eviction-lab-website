@@ -16,7 +16,7 @@ Eviction filings in Duval County (Jacksonville) fell sharply in April 2020. Comp
 
 Florida instituted a state-wide eviction moratorium which expired at the end of July, after which eviction filings increased. Execution of eviction orders was also delayed until October 1, 2020.
 
-More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
+
 
 {{</ report_intro >}}
 

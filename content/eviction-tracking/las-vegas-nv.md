@@ -14,7 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in the Las Vegas area (Clark County, NV) fell sharply by March 2020. The state of Nevada put in place a moratorium on eviction proceedings from late-March until mid-October 2020. After the expiration of these protections, eviction filings rose. The state then implemented a second moratorium in December 2020 for tenants who affirmed that they had been financially affected by COVID-19 or would be made homeless by eviction. Those protections expired at the end of May 2021. 
 
-More detail on eviction protections in Nevada can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/nv/).
+
 
 Our data in Clark County is an undercount compared to the number of filings found in [](http://www.courts.state.va.us/courtadmin/aoc/judpln/csi/home.html)data released in the Supreme Court of Nevada's [Annual Report Appendices](https://nvcourts.gov/Supreme/Reports/Annual_Reports/2020_Annual_Report/). Additionally, our data from Clark County comes from three courts: Las Vegas Justice Court, North Las Vegas Justice Court, and Henderson Justice Court. While the eviction cases in these three courts make up vast majority of eviction cases in Clark County, our data will undercount total eviction filings in the county.
 

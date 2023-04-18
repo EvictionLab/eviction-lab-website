@@ -16,7 +16,7 @@ The state of Ohio did not put a general eviction moratorium in place, but courts
 
 On April 1, 2021, The Hamilton County Municipal Court stopped enforcing the national CDC moratorium, allowing for evictions for nonpayment of rent that may have been previously stayed.
 
-More detail on eviction protections in Ohio can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/oh/).
+
 
 {{</ report_intro >}}
 

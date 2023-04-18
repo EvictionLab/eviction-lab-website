@@ -14,7 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Jackson County, MO (Kansas City) fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were down nearly 80% in April and May 2020. Filings rose in the following months. <sup>1</sup>
 
-More detail on eviction protections in Missouri can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mo/).
+
 
 1. Jackson County eviction filings are delayed in being uploaded to online court records. Recent data may be an undercounting.
 

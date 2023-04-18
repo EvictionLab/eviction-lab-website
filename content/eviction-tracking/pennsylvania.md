@@ -12,7 +12,7 @@ The state of Pennsylvania enacted a strong eviction moratorium that extended unt
 
 Our state-wide counts of eviction filings are slight underestimates when compared to the official [Pennsylvania court data dashboard](https://www.pacourts.us/news-and-statistics/research-and-statistics/dashboard-table-of-contents/magisterial-district-courts-statewide-dashboard). 
 
-More detail on eviction protections in Pennsylvania can be found on the COVID-19 [Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/pa/). Additional information is available on eviction filing patterns in [Pittsburgh ](https://evictionlab.org/eviction-tracking/pittsburgh-pa/)and [Philadelphia](https://evictionlab.org/eviction-tracking/philadelphia-pa/)
+ Additional information is available on eviction filing patterns in [Pittsburgh ](https://evictionlab.org/eviction-tracking/pittsburgh-pa/)and [Philadelphia](https://evictionlab.org/eviction-tracking/philadelphia-pa/)
 
 {{< /report_intro >}}
 

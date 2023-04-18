@@ -14,7 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Milwaukee, WI fell sharply once Governor Tony Evers blocked the initiation of non-emergency eviction proceedings on March 27, 2020. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average in March, April, and May 2020. Eviction protections in Wisconsin began to expire on May 26, 2020, after which filings increased. 
 
-More detail on eviction protections in Wisconsin can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/wi/).
+
 
 {{</ report_intro >}}
 

@@ -14,7 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 South Carolina implemented a state-wide eviction moratorium between March 17 and May 14, 2020. In both Greenville (Greenville County) and [Charleston](https://evictionlab.org/eviction-tracking/charleston-sc/), this period saw almost no new eviction filings. New case filings increased after the moratorium lifted. 
 
-More detail on eviction protections in South Carolina can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/sc/).
+
 
 {{</ report_intro >}}
 

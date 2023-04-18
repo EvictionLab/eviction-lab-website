@@ -16,7 +16,7 @@ The state of Pennsylvania enacted a strong eviction moratorium that extended unt
 
 Starting in April 2021, Philadelphia landlords were required to participate in the city's eviction diversion program before filing for eviction for non-payment of rent. 
 
-More detail on eviction protections in Philadelphia can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/pa/).
+
 
 {{</ report_intro >}}
 

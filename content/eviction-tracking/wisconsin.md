@@ -10,7 +10,7 @@ date: 2022-11-10T03:36:32.873Z
 
 Eviction filings in Wisconsin fell sharply once Governor Tony Evers blocked the initiation of non-emergency eviction proceedings on March 27, 2020. Eviction protections in Wisconsin began to expire on May 26, 2020, after which filings increased.
 
-More detail on eviction protections in Wisconsin can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/wi/). A closer look at eviction filing patterns in Milwaukee County is available [here](https://evictionlab.org/eviction-tracking/milwaukee-wi/).
+ A closer look at eviction filing patterns in Milwaukee County is available [here](https://evictionlab.org/eviction-tracking/milwaukee-wi/).
 
 Filing counts in some counties for baseline years may differ slightly compared to court-released aggregates in Wisconsin. In particular, Chippewa, Douglas, Fond du Lac, La Crosse, Marathon, Rock, St. Croix, and Waukesha Counties are slightly underestimated in at least one of the three years compared to court aggregate data, while Eau Claire and Outagamie Counties see overestimates. Please see [here ](https://evictionlab.org/eviction-tracking/methods/)for more information on our validation procedures. 
 

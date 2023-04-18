@@ -14,7 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Harris and Galveston Counties, TX (Houston) fell sharply once eviction proceedings were suspended across Texas on March 19, 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March, and through April and May. Eviction protections in Texas began to expire on May 18, 2020. Courts in Harris County resumed business shortly thereafter, followed by the courts in Galveston County in early June.
 
-More detail on eviction protections in Texas can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/tx/).
+
 
 {{</ report_intro >}}
 

@@ -16,7 +16,7 @@ Eviction filings in Alachua County, FL (Gainesville) fell significantly below av
 
 Note: Data collection in Alachua County is currently on hold as we switch to a different data source.
 
-More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
+
 
 {{</ report_intro >}}
 

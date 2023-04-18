@@ -16,7 +16,7 @@ rentersSite: Indiana
 
 The state of Indiana implemented an eviction moratorium that ran from March 19 to August 14, 2020. Filings spiked immediately after that moratorium lifted.
 
-More detail on eviction protections in Indiana can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/in/). Additional information is available on eviction filing patterns in [Indianapolis](https://evictionlab.org/eviction-tracking/indianapolis-in/) and [South Bend](https://evictionlab.org/eviction-tracking/south-bend-in/).
+ Additional information is available on eviction filing patterns in [Indianapolis](https://evictionlab.org/eviction-tracking/indianapolis-in/) and [South Bend](https://evictionlab.org/eviction-tracking/south-bend-in/).
 
 {{</ report_intro >}}
 

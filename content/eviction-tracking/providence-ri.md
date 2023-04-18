@@ -10,7 +10,7 @@ date: 2023-02-09T18:28:49.024Z
 
 Eviction filings in Providence County, RI fell sharply in early 2020 after the state of Rhode Island implemented an eviction moratorium, which was in place from March 17 to July 1, 2020. Filings spiked immediately after the moratorium was lifted.
 
-More detail on eviction protections in Rhode Island can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/). 
+ 
 
 {{</ report_intro >}}
 

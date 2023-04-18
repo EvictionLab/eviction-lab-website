@@ -18,7 +18,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Minnesota were significantly below average during its state-wide eviction moratorium, instituted in March 2020. Eviction protections remained in effect through the remainder of the year and were extended into 2021. The moratorium was renewed each month until June 2021, after which the state [began phasing out protections](https://nlihc.org/resource/minnesotas-eviction-moratorium-ramp). 
 
-More detail on eviction protections in Minnesota can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/mn/). A closer look at eviction filing patterns in the Twin Cities is [available here](https://evictionlab.org/eviction-tracking/minneapolis-saint-paul-mn/).
+ A closer look at eviction filing patterns in the Twin Cities is [available here](https://evictionlab.org/eviction-tracking/minneapolis-saint-paul-mn/).
 
 
 

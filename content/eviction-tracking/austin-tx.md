@@ -16,7 +16,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Travis County, TX (Austin) fell sharply when eviction proceedings were suspended across Texas on March 19, 2020. Compared to equivalent periods in previous years (2014-2019), eviction filings fell far below average beginning in April. Eviction protections in Texas began to expire on May 18, 2020. However, Travis County had local protections in place through the end of 2021 and implemented an extended timeline for cases through March 1, 2022. 
 
-More detail on eviction protections in Texas can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/tx/).
+
 
 
 
