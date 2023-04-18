@@ -28,9 +28,9 @@ Virginia implemented a state-wide eviction moratorium between March 16, 2020 and
 
 
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in Virginia were very close to historical average in January and February of 2020.<sup>1</sup> Filings began to drop in March, and remained well below pre-pandemic averages until June 2022, after which filings increased.
+This plot shows monthly eviction filings in Virginia over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
@@ -54,7 +54,7 @@ Eviction filings in Virginia were very close to historical average in January an
 
 # The geography of changes in eviction filings
 
-Virginia is divided into 134 counties and jurisdictions. In 124<sup>1</sup> of these, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>2</sup> <sup>3</sup>
+Virginia is divided into 134 counties and jurisdictions. In 124<sup>1</sup> of these, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>2</sup> <sup>3</sup>
 
 1. Filings could not be tracked at the county-level in 10 counties due to the use of combined court jurisdictions in Virginia.
 2. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
