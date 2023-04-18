@@ -3,6 +3,7 @@ collection: true
 draft: false
 title: Wisconsin | Eviction Tracking System
 h1: Wisconsin
+rentersSite: Wisconsin
 slug: wisconsin
 date: 2022-11-10T03:36:32.873Z
 ---
