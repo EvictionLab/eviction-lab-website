@@ -19,6 +19,26 @@
       <div id="introText" class="intro__text">
         <p>{{ .Inner | markdownify }}</p>
       </div>
+          <span class="footnote">
+            <ol>
+              <li>
+                Data on renter population and median rent drawn from the American Community Survey (ACS). Details of the eviction
+                process from <a
+                  href="https://www.lsc.gov/initiatives/effect-state-local-laws-evictions/lsc-eviction-laws-database">the LSC
+                  Eviction Laws Database</a>.
+              </li>
+            </ol>
+          </span>
+          <div class="share">
+            <a class="share__link share__link--twitter">
+              <i class="fa fa-twitter"></i>
+              <span>Share on Twitter</span>
+            </a>
+            <a class="share__link share__link--facebook">
+              <i class="fa fa-facebook"></i>
+              <span>Share on Facebook</span>
+            </a>
+          </div>
     </div>
     <div class="intro__stats-wrapper">
       <h3>Filing Counts</h3>
@@ -160,7 +180,7 @@
       Elab.Utils.createStatBlock('#filingRates', statFiles, filingRates, getVal, displayStatBlock)
 
       var siteText = site_id.length === 2 ? '' : ` (${renterssite})`;
-      var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.".replace('%{site}', siteText)
+      var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.<sup>1</sup>".replace('%{site}', siteText)
       Elab.Utils.createStatParagraph('#summaryStats', paragraphText, statFiles, paragraphStats, getVal)
 
       Elab.Utils.createTwitterLink('.share__link--twitter')
