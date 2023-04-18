@@ -16,7 +16,9 @@
         {{ end }}
       {{ end }} -->
       <div id="summaryStats" class="intro__text"></div>
-      <div id="introText" class="intro__text">{{ .Inner | markdownify }}</div>
+      <div id="introText" class="intro__text">
+        <p>{{ .Inner | markdownify }}</p>
+      </div>
     </div>
     <div class="intro__stats-wrapper">
       <h3>Filing Counts</h3>
