@@ -50,7 +50,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/bridgeport_shapes.json" data="/uploads/bridgeport_map.csv" %}}
+{{% report_map shapes="/uploads/bridgeport_shapes.json" data="/uploads/bridgeport_map.csv" topData="/uploads/bridgeport_hotspots_media_report.csv" %}}
 
 # The geography of changes in eviction filings
 

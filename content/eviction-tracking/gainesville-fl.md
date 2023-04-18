@@ -42,7 +42,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/gainesville_map.csv" %}}
+{{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/gainesville_map.csv" topData="/uploads/gainesville_hotspots_media_report.csv" %}}
 
 # The geography of changes in eviction filings
 
