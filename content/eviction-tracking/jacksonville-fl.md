@@ -45,7 +45,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/jacksonville_shapes.json" data="/uploads/jacksonville_map.csv" %}}
+{{% report_map shapes="/uploads/jacksonville_shapes.json" data="/uploads/jacksonville_map.csv" topData="/uploads/jacksonville_hotspots_media_report.csv" %}}
 
 # The geography of changes in eviction filings
 

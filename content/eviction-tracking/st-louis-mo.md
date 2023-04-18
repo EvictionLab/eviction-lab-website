@@ -43,7 +43,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/stlouis_shapes.json" data="/uploads/stlouis_map.csv" %}}
+{{% report_map shapes="/uploads/stlouis_shapes.json" data="/uploads/stlouis_map.csv" topData="/uploads/stlouis_hotspots_media_report.csv" %}}
 
 # The geography of changes in eviction filings
 

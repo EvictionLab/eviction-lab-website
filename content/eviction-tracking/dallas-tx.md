@@ -42,7 +42,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/dallas_shapes.json" data="/uploads/dallas_map.csv" %}}
+{{% report_map shapes="/uploads/dallas_shapes.json" data="/uploads/dallas_map.csv" topData="/uploads/dallas_hotspots_media_report.csv" %}}
 
 # The geography of changes in eviction filings
 

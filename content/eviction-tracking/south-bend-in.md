@@ -42,7 +42,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/south-bend_shapes.json" data="/uploads/southbend_map.csv" %}}
+{{% report_map shapes="/uploads/south-bend_shapes.json" data="/uploads/southbend_map.csv" topData="/uploads/southbend_hotspots_media_report.csv" %}}
 
 # The geography of changes in eviction filings
 

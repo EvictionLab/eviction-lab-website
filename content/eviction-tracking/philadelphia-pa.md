@@ -68,7 +68,7 @@ When a landlord files an eviction claim in Philadelphia, we observe the amount t
 
 
 
-{{% report_map shapes="/uploads/philadelphia_shapes.json" data="/uploads/philadelphia_map.csv" %}}
+{{% report_map shapes="/uploads/philadelphia_shapes.json" data="/uploads/philadelphia_map.csv" topData="/uploads/philadelphia_hotspots_media_report.csv" %}}
 
 # The geography of changes in eviction filings
 
