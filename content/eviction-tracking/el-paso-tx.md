@@ -1,6 +1,7 @@
 ---
 h1: "El Paso, Texas"
 slug: "el-paso-tx"
+rentersSite: El Paso
 title: "El Paso, Texas | Eviction Tracking System"
 fbImage: /images/assets/graphics/ets-bg-social.png
 twImage: /images/assets/graphics/ets-bg-social.png
@@ -19,7 +20,7 @@ El Paso Intro
 
 # Trends in eviction filings
 
-El Paso Chart 1
+This plot shows monthly eviction filings in El Paso over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 
