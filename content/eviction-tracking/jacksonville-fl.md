@@ -12,7 +12,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{< report_intro site_id="12031" data="/uploads/table.csv" >}}
 
-Eviction filings in Duval County (Jacksonville) fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 95% or more in April through July 2020. 
+Eviction filings in Jacksonville fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2016), eviction filings were down 95% or more in April through July 2020. 
 
 Florida instituted a state-wide eviction moratorium which expired at the end of July, after which eviction filings increased. Execution of eviction orders was also delayed until October 1, 2020.
 

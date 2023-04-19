@@ -12,7 +12,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{< report_intro site_id="25025" data="/uploads/table.csv" >}}
 
-Eviction filings in Boston, MA fell sharply after eviction proceedings were suspended across Massachusetts on March 17, 2020. A subsequent moratorium halted evictions through mid-October of 2020. Compared to equivalent periods in previous years (2012–2013, 2015–2016), eviction filings fell far below average beginning in April 2020, though filings rose modestly in November 2020 after the state moratorium expired.
+Eviction filings in Boston fell sharply after eviction proceedings were suspended across Massachusetts on March 17, 2020. A subsequent moratorium halted evictions through mid-October of 2020. Compared to equivalent periods in previous years (2012–2013, 2015–2016), eviction filings fell far below average beginning in April 2020, though filings rose modestly in November 2020 after the state moratorium expired.
 
 The City of Boston enacted new protections in August 2021, prohibiting landlords and owners from serving or enforcing residential evictions, except in cases of serious lease violations or health and safety issues. These local protections were [struck down](https://www.bostonglobe.com/2021/11/29/business/judge-strikes-down-bostons-eviction-moratorium/) on November 29, 2021. 
 

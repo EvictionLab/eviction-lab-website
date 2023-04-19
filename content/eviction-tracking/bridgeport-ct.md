@@ -14,7 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
-Eviction filings in Bridgeport, CT (Fairfield County) fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired on June 30, 2021.
+Eviction filings in Bridgeport fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired on June 30, 2021.
 
 
 
