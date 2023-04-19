@@ -12,7 +12,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{< report_intro site_id="42003" data="/uploads/table.csv" >}}
 
-The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31, 2020. Eviction filings related to nonpayment of rent were not accepted during that period, though courts did process previously-filed eviction cases. Eviction filings in Allegheny County (Pittsburgh) were down to nearly zero in April and May 2020, but increased by September 2020 following the end of the moratorium. 
+The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31, 2020. Eviction filings related to nonpayment of rent were not accepted during that period, though courts did process previously-filed eviction cases. Eviction filings in Pittsburgh were down to nearly zero in April and May 2020, but increased by September 2020 following the end of the moratorium. 
 
 
 
