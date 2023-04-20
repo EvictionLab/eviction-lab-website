@@ -164,18 +164,20 @@ Elab.LineChart = (function (Elab) {
 
             if (dataOptions.maxTicks && tickCount > dataOptions.maxTicks) {
               const factorToKeep = Math.ceil(tickCount / dataOptions.maxTicks);
+              // thin down to every other (or fewer) when many labels
               selection
                 .selectAll(".tick text")
                 .attr("display", (d, i) => (!!(i % factorToKeep) ? "none" : "block"));
             }
-            if (window.innerWidth < 540) {
-              selection
-                .selectAll(".tick text")
-                .attr("text-anchor", "end")
-                .attr("transform", "rotate(-30)");
-            } else {
-              selection.selectAll(".tick text").attr("text-anchor", null).attr("transform", null);
-            }
+            // if (window.innerWidth < 540) {
+            // now always rotate labels
+            selection
+              .selectAll(".tick text")
+              .attr("text-anchor", "end")
+              .attr("transform", "rotate(-50)");
+            // } else {
+            //   selection.selectAll(".tick text").attr("text-anchor", null).attr("transform", null);
+            // }
           },
         })
         // adds the trend line
