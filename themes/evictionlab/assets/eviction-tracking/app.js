@@ -1955,25 +1955,25 @@ Elab.Map = (function (Elab) {
             ["linear"],
             ["zoom"],
             3,
-            ["*", ["get", "radius"], 0.1],
+            ["*", ["get", "radius"], 0.2],
             7,
-            ["*", ["get", "radius"], 0.5],
+            ["*", ["get", "radius"], 0.8],
             10,
-            ["*", ["get", "radius"], 1],
+            ["*", ["get", "radius"], 1.7],
             11,
-            ["*", ["get", "radius"], 2],
+            ["*", ["get", "radius"], 2.5],
             12,
-            ["*", ["get", "radius"], 3],
+            ["*", ["get", "radius"], 3.5],
             13,
-            ["*", ["get", "radius"], 4],
-            14,
             ["*", ["get", "radius"], 5],
-            15,
+            14,
             ["*", ["get", "radius"], 6],
-            16,
+            15,
             ["*", ["get", "radius"], 7],
-            17,
+            16,
             ["*", ["get", "radius"], 8],
+            17,
+            ["*", ["get", "radius"], 9],
           ],
         },
       },
@@ -2156,7 +2156,7 @@ Elab.Map = (function (Elab) {
           }));
 
           var extent = d3.extent(topData, ({ filings }) => filings);
-          var radiusScale = d3.scaleLinear().domain(extent).range([1, 8]);
+          var radiusScale = d3.scaleSqrt().domain(extent).range([1, 8]);
 
           var pointJson = Object.assign({}, geojson);
           pointJson.features = topData.map(({ lat, lon, filings, name, address, rank }, id) => ({
