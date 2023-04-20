@@ -44,7 +44,7 @@ Eviction Hotspot data are updated quarterly.
 
 {{% report_map shapes="/uploads/tampa_shapes.json" data="/uploads/tampa_map.csv" topData="/uploads/tampa_hotspots_media_report.csv" %}}
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 Pinellas and Hillsborough counties are divided into 567 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 

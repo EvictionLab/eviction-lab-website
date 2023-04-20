@@ -41,7 +41,7 @@ This plot shows monthly eviction filings in Missouri over the last year. Filings
 
 {{% report_map shapes="/uploads/missouri_shapes.json" data="/uploads/missouri_map.csv" %}}
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 Missouri is divided into 115 counties and county-equivalents. In each, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 

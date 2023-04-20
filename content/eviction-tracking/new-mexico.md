@@ -44,7 +44,7 @@ This plot shows monthly eviction filings in New Mexico over the last year. Filin
 
 
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 New Mexico is divided into 33 counties. In each, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 

@@ -28,7 +28,7 @@ This plot shows monthly eviction filings in El Paso over the last year. Filings 
 
 {{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_w17_map.csv" %}}
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 El Paso Map
 

@@ -70,7 +70,7 @@ When a landlord files an eviction claim in Philadelphia, we observe the amount t
 
 {{% report_map shapes="/uploads/philadelphia_shapes.json" data="/uploads/philadelphia_map.csv" topData="/uploads/philadelphia_hotspots_media_report.csv" %}}
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 Philadelphia County is divided into 384 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 

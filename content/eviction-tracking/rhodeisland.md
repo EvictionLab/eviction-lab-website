@@ -44,12 +44,12 @@ This plot shows monthly eviction filings in Rhode Island over the last year. Fil
 
 
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 Rhode Island is divided into five counties. In each of those counties, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Rhode Island are provided by the Rhode Island Housing Authority. Historical averages cover 2016-2019. 
-2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+2. County-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
 
 

@@ -39,7 +39,7 @@ This plot shows monthly eviction filings in Las Vegas over the last year. Filing
 
 
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 Clark County is divided into 487 census tracts. In these tracts, we map the number of eviction filings over the last year.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>2</sup>
 

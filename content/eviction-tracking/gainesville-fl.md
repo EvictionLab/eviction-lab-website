@@ -50,7 +50,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 Gainesville is divided into 56 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 

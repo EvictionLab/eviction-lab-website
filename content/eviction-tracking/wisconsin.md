@@ -43,7 +43,7 @@ This plot shows monthly eviction filings in Wisconsin were higher than average i
 
 
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 Wisconsin is divided into 72 counties. In each of those counties, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 

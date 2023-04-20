@@ -33,7 +33,7 @@ This plot shows monthly eviction filings in Pittsburgh over the last year. Filin
 
 {{% report_map shapes="/uploads/pittsburgh_shapes.json" data="/uploads/pittsburgh_map.csv" %}}
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 Allegheny County is divided into 115 zip codes. In each of those zip codes, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
