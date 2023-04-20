@@ -32,6 +32,13 @@ This plot shows monthly eviction filings in New Orleans over the last year. Fili
 {{%/ report_chart %}}
 
 
+{{% report_median_claims id="medianFilings" data="/uploads/new orleans_claims_monthly.csv" %}}
+
+# Changes in claim amounts
+
+When a landlord files an eviction claim in New Orleans, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month over the last year. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed. The dashed horizontal line on the plot marks the typical claim on an eviction case filed before the pandemic.
+
+{{%/ report_median_claims %}}
 
 {{% report_map shapes="/uploads/orleans-parish-tracts.json" data="/uploads/neworleans_map.csv" %}}
 

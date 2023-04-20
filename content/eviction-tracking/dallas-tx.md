@@ -41,6 +41,13 @@ Eviction Hotspot data are updated quarterly.
 {{%/ report_top_evictors %}}
 
 
+{{% report_median_claims id="medianFilings" data="/uploads/dallas_claims_monthly.csv" %}}
+
+# Changes in claim amounts
+
+When a landlord files an eviction claim in Dallas, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month over the last year. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed. The dashed horizontal line on the plot marks the typical claim on an eviction case filed before the pandemic.
+
+{{%/ report_median_claims %}}
 
 {{% report_map shapes="/uploads/dallas_shapes.json" data="/uploads/dallas_map.csv" topData="/uploads/dallas_hotspots_media_report.csv" %}}
 
