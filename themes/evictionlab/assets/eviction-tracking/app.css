@@ -2431,6 +2431,10 @@ label #labels_top-100 {
 
 .section.section--median .stat-block-stat dd {
   margin-right: 8px;
+  display: inline-block;
+    /* set width and align-right so 1s digits all line up vertically */
+    width: 68px;
+    text-align: right;
 }
 /** END MEDIAN SECTION */
 
