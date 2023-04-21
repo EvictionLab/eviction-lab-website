@@ -1638,7 +1638,7 @@
 .intro .intro__stats-wrapper h3 {
   color: var(--text-secondary);
   border-bottom: 2px solid;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   font-size: 1.2rem;
   line-height: 2;
 }
@@ -1657,7 +1657,15 @@
   margin-bottom: 16px;
 }
 #filingRates .stat-block-stat > dd {
-  color: var(--c2);
+  color: var(--c3);
+  }
+  
+  #filingCounts .stat-block-stat.missing>dd,
+  #filingRates .stat-block-stat.missing>dd {
+    color: var(--c4);
+    font-size: 2.8rem;
+    /*even smaller missing stats should get same height for alignment */
+    line-height: 4rem;
 }
 
 @media (min-width: 1024px) {
@@ -1691,7 +1699,7 @@
 }
 .stat-block-sub-stat dd {
   display: inline-block;
-  color: var(--c3);
+  color: var(--c2);
   font-size: 2rem;
 }
 
@@ -1724,6 +1732,7 @@
 }
 .stat-block-wrapper .stat-block-stat:not(:last-of-type) {
   padding-right: 6px;
+  padding-bottom: 8px;
 }
 
 @media (max-width: 1024px) {
@@ -1747,7 +1756,18 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+/* HACK: prevent ? icon from overflowing to next line on its own for htr */
+.stat-block-stat.hhs_threatened_rate .inline-tooltip {
+  position: absolute;
+}
 
+@media (min-width: 480px) {
+
+  /* prevent from going offscreen to the right */
+  .stat-block-stat.hhs_threatened_rate .tooltiptext {
+    left: calc(50% - 200px);
+  }
+}
 .inline-tooltip .tooltiptext {
   visibility: hidden;
   background-color: black;

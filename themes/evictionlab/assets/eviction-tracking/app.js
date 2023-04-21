@@ -54,6 +54,10 @@ var Elab = Elab || {};
  */
 
 Elab.Utils = (function (Elab) {
+  function isNumeric(val) {
+    return val !== "" && val !== undefined && !isNaN(Number(val));
+  }
+
   /**
    * Turns a string into a URL friendly string
    */
@@ -130,15 +134,19 @@ Elab.Utils = (function (Elab) {
       var someStatFound = false;
 
       var createStat = (val, stat, isSubStat) => {
-        var fVal = !val ? stat.default : stat.formatter ? stat.formatter(val) : val;
+        var missingVal = !Elab.Utils.isNumeric(val);
+        var fVal = missingVal ? stat.default : stat.formatter ? stat.formatter(val) : val;
 
-        var tooltipContent = !val ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
+        var tooltipContent = missingVal ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
 
         var subStatVal =
           !isSubStat && stat.subStat && getVal(dataMap[stat.subStat.file], stat.subStat);
         var subStat = subStatVal ? createStat(subStatVal, stat.subStat, true) : "";
 
         var statClass = isSubStat ? "stat-block-sub-stat" : "stat-block-stat";
+        statClass += ` ${stat.field}`;
+        if (missingVal) statClass += " missing";
+
         return (
           '<dl class="' +
           statClass +
@@ -325,6 +333,7 @@ Elab.Utils = (function (Elab) {
     group: group,
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
+    isNumeric: isNumeric,
     slugify: slugify,
     createTwitterLink: createTwitterLink,
     createFacebookLink: createFacebookLink,
@@ -1022,7 +1031,7 @@ Elab.Chart = (function (Elab) {
       // get rid of groups w/o data to plot
       data = data.filter((d) => {
         var v = d[config.data.y.col];
-        return v !== "" && v !== undefined && !isNaN(Number(v));
+        return Elab.Utils.isNumeric(v);
       });
     }
     var result = {

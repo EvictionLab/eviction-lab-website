@@ -115,6 +115,7 @@
           field: 'hhs_threatened_rate',
           display: 'households threatened rate',
           tooltip: 'The percentage of unique households that received an eviction filing, regardless of how many evictions were filed against the same household',
+          tooltipMissingValue: `The percentage of unique households that received an eviction filing, regardless of how many evictions were filed against the same household.<br/><br/>Address data are currently insufficient to calculate this rate.`,
           formatter: d3.format('.0%'),
           default: 'Unavailable'
         },
@@ -123,6 +124,7 @@
           field: 'serial_share',
           display: 'serial filing rate',
           tooltip: 'Repeated filings against the same household at the same address in the last 12 months',
+          tooltipMissingValue: `Repeated filings against the same household at the same address in the last 12 months.<br/><br/>Address data are currently insufficient to calculate this rate.`,
           formatter: d3.format('.0%'),
           default: 'Unavailable'
         },
