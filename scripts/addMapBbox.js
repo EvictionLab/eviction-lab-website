@@ -1,7 +1,7 @@
 /*
  * ADD BBOX (so map zooms to correct area)
  * example usage (from this directory):
- *  node addMapBbox.js input.json output_shapes.json
+ *  node addMapBbox.js './input.json' output_shapes.json
  *
  * Assumes that all map features have a properties.bounds array.
  * To generate these, open the map in mapshaper, open the Console and run:
