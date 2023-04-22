@@ -1888,13 +1888,14 @@ Elab.Map = (function (Elab) {
     return "linear-gradient(to right," + colors[2] + ", " + colors[3] + " 50%," + colors[4] + ")";
   }
 
-  function getGradientLabels(prop, range) {
+  function getGradientLabels(prop, range, isCapped = false) {
     if (isAvgDiff(prop)) {
       return ["-100%", "average", "100%"];
     }
 
     if (isRate(prop)) {
-      return ["0%", formatPercent(range[1])];
+      // tweak legend to faithfully reflect data (as some values may exceed the max)
+      return ["0%", formatPercent(range[1]) + (isCapped ? "+" : "")];
     }
 
     return [formatCount(range[0]), formatCount(range[1])];
@@ -2201,6 +2202,10 @@ Elab.Map = (function (Elab) {
       if (!allData) return [0, 1];
       if (isAvgDiff(prop)) return [0, 2];
       var extent = d3.extent(allData, function (d) {
+        // allows scale to be based on more limited range
+        // so choropleth colors aren't greatly skewed by outliers
+        var cappedMax = d[prop + "_scale_max"];
+        if (cappedMax && d[prop] > cappedMax) return cappedMax;
         return d[prop];
       });
       if (isRate(prop)) return [0, Math.max(extent[1], 0.01)];
@@ -2274,8 +2279,9 @@ Elab.Map = (function (Elab) {
       var labelContainer = rootEl.find(".legend__gradient-labels");
       gradientContainer.css("background-image", getCssGradient(currentProp));
       var range = getRange(currentProp);
+      var isCapped = range[1] === allData[0][currentProp + "_scale_max"];
       var html = LegendLabelTemplate({
-        labels: getGradientLabels(currentProp, range),
+        labels: getGradientLabels(currentProp, range, isCapped),
       });
       labelContainer.html(html);
     }
