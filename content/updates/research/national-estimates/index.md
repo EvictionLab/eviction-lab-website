@@ -5,12 +5,11 @@ url: /national-estimates
 contenttype: updates
 collection: true
 contentcat: research
-featured: home
+featured: true
 in_index: true
 title: "National Estimates: Eviction in America"
 date: 2018-05-11T16:46:40.089Z
 postauthortitle: Princeton University
-socialDescription: What Eviction Lab data reveals about the national prevalence of evictions.
 researchtype: elresearch
 postauthorname: The Eviction Lab
 twImage: national-estimates-twitter.jpg
