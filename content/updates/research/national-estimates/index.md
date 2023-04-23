@@ -15,6 +15,8 @@ fbImage: 'national-estimates-fb.jpg'
 twImage: 'national-estimates-twitter.jpg'
 url: /national-estimates
 collection: true
+scripts:
+  - charts
 aliases:
     - /updates/research/national-estimates
 ---
@@ -182,16 +184,22 @@ You may notice that the numbers of evictions and filings appear to increase over
 
 As the figures above show, our current data suggest there was roughly 1 eviction filing for every 17 renter households between 2000 and 2016. Approximately 1 in 40 renter households were evicted over this period. To put these numbers into perspective, at the peak of the financial crisis in 2010, <a href="https://www.corelogic.com/research/foreclosure-report/national-foreclosure-report-10-year.pdf" target="_blank">estimates suggest</a> slightly over one million foreclosures were completed nationally. By comparison, we see almost a million evictions against tenants every single year. The narrative on housing often focuses on displacement among homeowners, but our findings suggest that there is an ongoing epidemic of eviction and displacement in the renting market. As you’ll see from the graphs below, the national eviction and filing rates have remained consistent over time, with small declines over the last few years.
 
-<div class="graph-wrapper natl-graph1">
-  <div class="embed-responsive embed-responsive-4by3 table-responsive">
-    <iframe class="embed-responsive-item" src="https://evictionlab.org/tool/#/graph?items=nationwide%7Ce%2Bnationwide%7Cef" frameborder="0"></iframe>
-  </div>
-</div>
-<div class="graph-wrapper">
-  <div class="embed-responsive embed-responsive-4by3 table-responsive">
-    <iframe class="embed-responsive-item" src="https://evictionlab.org/tool/#/graph?items=nationwide%7Cer%2Bnationwide%7Cefr" frameborder="0"></iframe>
-  </div>
-</div>
+{{% line-chart
+  id="fig2"
+  data="national_estimates_2023.csv"
+  x="date"
+  y="value"
+  groupBy="metric"
+  yFormat=""
+  xTicks="year"
+  xFormat="%Y"
+  xTooltipFormat=""
+  yFormat=""
+  highlight="filings;threatened"
+  title="Line chart ex. 2"
+%}}
+
+
 
 It is important to note that there are several places where we do not have all eviction records, including New York and California. More information about why can be found in our <a href="https://evictionlab.org/docs/Eviction_Lab_Methodology_Report_2022.pdf" target="_blank">Methodology Report</a>. As a result, our current national estimates of evictions and eviction filings underestimate the overall prevalence of both. Our data collection efforts are ongoing, and we will continue to update our estimates as we learn more. 
 
