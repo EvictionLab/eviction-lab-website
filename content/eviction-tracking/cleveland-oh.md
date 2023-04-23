@@ -29,7 +29,7 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 Eviction filings in Cleveland were slightly below average in January and February 2020.<sup>1</sup> Filings dropped dramatically in March and were near zero until mid-June 2020, after which filings increased.<sup>2</sup>
 
 1. Average eviction filings are based on data from 2016-2019, collected by [LSC](https://www.lsc.gov/).
-2. Filing data for 2020-2022 collected by [LSC](https://www.lsc.gov/).
+2. Filing data for 2020 onwards collected by [LSC](https://www.lsc.gov/).
 
 
 
@@ -76,7 +76,7 @@ Cleveland is divided into 177 census tracts. In each of those tracts, we map the
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2012–2016.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2012–2016.<sup>1</sup>
 
 1. Average eviction filings are based on data from 2016-2019, collected by [LSC](https://www.lsc.gov/).
 

@@ -4,10 +4,10 @@ draft: false
 h1: Cincinnati, Ohio
 slug: cincinnati-oh
 date: 2022-07-20T04:00:00.000Z
+rentersSite: Cincinnati
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Cincinnati, OH | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Cincinnati
 ---
 
 {{< report_intro id="39061" data="/uploads/table.csv" >}}
@@ -29,7 +29,7 @@ More detail on eviction protections in Ohio can be found on the [COVID-19 Housin
 Eviction filings in Cincinnati were almost exactly at typical levels in January and February of 2020.<sup>1</sup> Filings began to fall in March and were well below average in April and May 2020, but rose again in the following months.<sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
-2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
+2. Filing data for 2020 onwards collected by [January Advisors](https://www.januaryadvisors.com/)
 
 {{%/ report_chart %}}
 
@@ -94,7 +94,7 @@ Cincinnati is divided into 222 census tracts. In each of those tracts, we map th
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2012–2016.<sup>1</sup> 
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2012–2016.<sup>1</sup> 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 

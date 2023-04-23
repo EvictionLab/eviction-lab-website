@@ -4,10 +4,10 @@ draft: false
 h1: Greenville, South Carolina
 slug: greenville-sc
 date: 2022-07-20T04:00:00.000Z
+rentersSite: Greenville
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Greenville, South Carolina | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Greenville
 ---
 
 {{< report_intro id="45045" data="/uploads/table.csv" >}}
@@ -61,7 +61,7 @@ Greenville County is divided into 111 census tracts. In each of those tracts, we
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for Greenville County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 

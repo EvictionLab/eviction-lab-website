@@ -2011,9 +2011,9 @@
     padding: 0 32px 0 8px;
   }
 }
-
+/* TODO -- reactivate if needed for ETS 2.0. Removing from display as temporary hotfix */
 .visual__note-wrapper {
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
     margin: auto;
@@ -2128,6 +2128,13 @@
   min-width: 170px;
 }
 
+/* 
+  NOTE: hide demo bar chart for one update
+  TODO: remove with 2.0 launch
+*/
+.section--chart.section--race {
+  display: none;
+}
 /** CHOROPLETH LEGEND */
 
 .legend.legend--choropleth {

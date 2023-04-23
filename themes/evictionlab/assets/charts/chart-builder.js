@@ -705,12 +705,13 @@ Elab.ChartBuilder = (function (Elab) {
       var barData = options.selector(_this.data);
 
       var spacing = 1.5;
-      var bandWidth =
-        _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
-
-      var selection = _this.selections["bars"]
-        .selectAll(".chart__bar")
-        .data(barData);
+      // NOTE: with enough data points bars become 0px wide... need to thin out
+      // bars if we continue using chart (but chart being retired)
+      var bandWidth = Math.max(
+        1,
+        _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2,
+      );
+      var selection = _this.selections["bars"].selectAll(".chart__bar").data(barData);
 
       selection
         .enter()
@@ -724,8 +725,7 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("height", 0)
         .on("mousemove", function (d) {
           _this.setHovered(d);
-          options.renderTooltip &&
-            _this.showTooltip(d3.event, options.renderTooltip);
+          options.renderTooltip && _this.showTooltip(d3.event, options.renderTooltip);
         })
         .on("mouseout", function (d) {
           _this.setHovered(null);
@@ -1185,11 +1185,15 @@ Elab.ChartBuilder = (function (Elab) {
 
   Chart.prototype.addAxisLabel = function (overrides) {
     var _this = this;
-    var options = overrides || {};
-    options.position = overrides.position || "bottom";
-    options.label = overrides.label || "";
+    if (!overrides || !overrides.label) return this;
+    var options = {
+      label: overrides.label,
+      position: overrides.position || "bottom",
+    };
     function createSelection(parentSelection) {
-      return parentSelection.append("text").attr("class", "chart__label chart__label--" + options.position);
+      return parentSelection
+        .append("text")
+        .attr("class", "chart__label chart__axis-label chart__label--" + options.position);
     }
     function createRenderFunction(selection, chart) {
       return function () {
@@ -1208,6 +1212,8 @@ Elab.ChartBuilder = (function (Elab) {
       };
     }
     this.addElement("label-" + options.position, "overlay", createSelection, createRenderFunction);
+
+    return this;
   }
 
   /**

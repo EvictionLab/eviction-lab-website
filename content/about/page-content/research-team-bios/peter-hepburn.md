@@ -2,7 +2,7 @@
 childof: research-team-bios
 title: Peter Hepburn
 abbrev: phepburn
-position: Research Fellow
+position: Associate Director
 date: 2017-11-26T03:46:25.603Z
 image: /images/bios/phepburn_full.jpg
 thumb: /images/bios/phepburn_thumb.jpg

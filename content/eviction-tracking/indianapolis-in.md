@@ -4,10 +4,10 @@ draft: false
 h1: Indianapolis, Indiana
 slug: indianapolis-in
 date: 2022-07-20T04:00:00.000Z
+rentersSite: Indianapolis
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Indianapolis, Indiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Indianapolis
 ---
 
 {{< report_intro id="18097" data="/uploads/table.csv" >}}
@@ -61,7 +61,7 @@ Marion County is divided into 224 census tracts. In each of those tracts, we map
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for Marion County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 

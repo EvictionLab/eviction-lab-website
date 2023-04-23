@@ -4,10 +4,10 @@ draft: false
 h1: New York, New York
 slug: new-york-ny
 date: 2022-07-24T04:00:00.000Z
+rentersSite: New York City
 twImage: /images/assets/graphics/ets-bg-social.png
 title: New York, New York | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: New York City
 ---
 
 {{< report_intro id="36061" data="/uploads/table.csv" >}}
@@ -73,7 +73,7 @@ New York City is divided into 299 zip codes. In each of those zip codes, we map 
 
 American Community Survey (ACS) data allow us to categorize zip codes by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of zip codes defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2018.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of zip codes defined by racial/ethnic majority—between filings over the last six months and average filings in 2016–2018.<sup>1</sup>
 
 1. Eviction filing data for New York City were collected by the [Housing Data Coalition](https://www.housingdatanyc.org//). Historical averages cover the years 2016-2018.
 

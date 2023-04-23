@@ -3,8 +3,8 @@ childof: research-team-bios
 abbrev: achapnik
 title: Adam Chapnik
 position: Research Specialist
-image: achapnik_full.jpg
-thumb: achapnik_thumb.jpg
+image: p3191306.jpg
+thumb: adam-thumb-sq.jpg
 weight: 42
 ---
-Adam graduated from Vassar College where he majored in Quantitative Political Science and minored in Political Philosophy. As an undergraduate, he worked as a research assistant analyzing social network dynamics among officials within the Chinese government in order to understand how loyalty and competency have related to promotions. He also worked with a group of down-ballot Democratic candidates in southern Minnesota through Bluebonnet Data, leading a group of volunteers examining the rate and causes of ticket-splitting in the region to help the candidates to better target swing voters. As a researcher, he is interested in expanding his knowledge of quantitative techniques to discover hidden patterns in renting, evictions, and inequality. Originally from New England, Adam enjoys backpacking and canoeing, ceramics, and learning how to cook new foods.
+Adam has a BA from Vassar College where he majored in Quantitative Political Science and minored in Political Philosophy. As an undergraduate, he worked as a research assistant analyzing the social network dynamics of promotion among Chinese government officials and its relationship to economic growth. Through Bluebonnet Data, he led a team of data analysts examining the prevalence and causes of ticket-splitting in southern Minnesota. He has contributed to the Eviction Tracking System as well as to research on landlord behavior and how eviction impacts displacement and the loss of food benefits. He is interested in Bayesian statistical inference, social science methods, and uncovering hidden patterns in housing insecurity and inequality. From Massachusetts, Adam enjoys backpacking and canoeing, ceramics, and learning how to cook new foods.
