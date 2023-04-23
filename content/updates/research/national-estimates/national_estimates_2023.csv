@@ -1,38 +1,58 @@
 metric,date,value
-filings,2000,1169939
-threatened,2000,950487
-filings,2001,1666655
-threatened,2001,1340952
-filings,2002,1911505
-threatened,2002,1498093
-threatened,2003,1490852
-filings,2004,1930337
-threatened,2004,1570346
-filings,2005,2112298
-threatened,2005,1706957
-filings,2006,2271168
-threatened,2006,1782243
-filings,2007,1913017
-threatened,2007,1599092
-filings,2008,1979137
-threatened,2008,1603827
-filings,2009,2003067
-threatened,2009,1630409
-filings,2010,2242803
-threatened,2010,1770453
-filings,2011,2316713
-threatened,2011,1806639
-filings,2012,2270612
-threatened,2012,1771925
-filings,2013,2191948
-threatened,2013,1697390
-filings,2014,2254308
-threatened,2014,1731088
-filings,2015,2232095
-threatened,2015,1723530
-filings,2016,2276248
-threatened,2016,1753885
-filings,2017,1951165
-threatened,2017,1544640
-filings,2018,2003340
-threatened,2018,1570538
+filings,1/1/2000,1169939
+households threatened,1/1/2000,950487
+judgments,1/1/2000,531394
+filings,1/1/2001,1666655
+households threatened,1/1/2001,1340952
+judgments,1/1/2001,688200
+filings,1/1/2002,1911505
+households threatened,1/1/2002,1498093
+judgments,1/1/2002,771671
+filings,1/1/2003,1866244
+households threatened,1/1/2003,1490852
+judgments,1/1/2003,799480
+filings,1/1/2004,1930337
+households threatened,1/1/2004,1570346
+judgments,1/1/2004,844945
+filings,1/1/2005,2112298
+households threatened,1/1/2005,1706957
+judgments,1/1/2005,881453
+filings,1/1/2006,2271168
+households threatened,1/1/2006,1782243
+judgments,1/1/2006,952475
+filings,1/1/2007,1913017
+households threatened,1/1/2007,1599092
+judgments,1/1/2007,923407
+filings,1/1/2008,1979137
+households threatened,1/1/2008,1603827
+judgments,1/1/2008,939177
+filings,1/1/2009,2003067
+households threatened,1/1/2009,1630409
+judgments,1/1/2009,919725
+filings,1/1/2010,2242803
+households threatened,1/1/2010,1770453
+judgments,1/1/2010,951016
+filings,1/1/2011,2316713
+households threatened,1/1/2011,1806639
+judgments,1/1/2011,954543
+filings,1/1/2012,2270612
+households threatened,1/1/2012,1771925
+judgments,1/1/2012,944749
+filings,1/1/2013,2191948
+households threatened,1/1/2013,1697390
+judgments,1/1/2013,878544
+filings,1/1/2014,2254308
+households threatened,1/1/2014,1731088
+judgments,1/1/2014,883235
+filings,1/1/2015,2232095
+households threatened,1/1/2015,1723530
+judgments,1/1/2015,858507
+filings,1/1/2016,2276248
+households threatened,1/1/2016,1753885
+judgments,1/1/2016,849125
+filings,1/1/2017,1951165
+households threatened,1/1/2017,1544640
+judgments,1/1/2017,753674
+filings,1/1/2018,2003340
+households threatened,1/1/2018,1570538
+judgments,1/1/2018,779069
