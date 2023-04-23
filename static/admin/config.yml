@@ -1,7 +1,7 @@
 backend:
  name: github
  repo: EvictionLab/eviction-lab-website
- branch: staging
+ branch: natl-figures-update
  
 # FOR LOCAL DEVELOPMENT:
 # ---
