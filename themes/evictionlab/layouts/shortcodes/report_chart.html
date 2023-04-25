@@ -28,13 +28,26 @@
       </div>
     </div>
     <div class="legend"></div>
-    <div id="imputedStats--{{ .Get `id` }}" class="callout stat-block-wrapper">
-      <p>
-        <strong>Eviction filings by defendant race/ethnicity and gender</strong>
-        Across all neighborhoods over the past year, we estimate that renters filed against were<sup>{{ .Get `imputedNoteNumber`
-          }}</sup>
-      </p>
-    </div>
+        <div id="imputedComps--{{ .Get `id` }}" class="callout comparison-block-wrapper">
+          <p>
+            <strong>Eviction filings by defendant race/ethnicity and gender</strong>
+            There are often large <a href="https://evictionlab.org/demographics-of-eviction/">racial/ethnic and gender
+              disparities
+              in eviction risk</a>. Here, we estimate the demographic
+            characteristics of those filed against for evicteion over the last year. We compare to data from the ACS that show
+            the
+            share of renters in the same categories.<sup>{{ .Get `imputedNoteNumber`
+              }}</sup>
+            </p>
+            <div class="comparison-legend">
+              <div><span class="color-chip chip-a"></span>
+                <p class="caption">Share of eviction filings</p>
+              </div>
+              <div><span class="color-chip chip-b"></span>
+                <p class="caption">Share of renters</p>
+              </div>
+            </div>
+          </div>
     <p class="footnote">
       <span class="data-download"><a href="{{ .Get `data` }}">Get the data</a> for this figure</span>
     </p>
@@ -44,45 +57,49 @@
       var id = {{ .Get "id" }}
       var csv = {{ .Get "data" }}
       var rootEl = '#'+id
-      var statFiles = [
+      var comparisonFiles = [
         { id: "imputed", url: csv },
       ]
-      var stats = [
+      var comparisons = [
         {
           file: 'imputed',
-          field: 'month_filings_imputed',
+          fieldA: 'month_filings_imputed',
+          fieldB: 'baseline_share',
           display: 'Black',
           group: 'Black',
           formatter: d3.format('.0%'),
         },
         {
           file: 'imputed',
-          field: 'month_filings_imputed',
+          fieldA: 'month_filings_imputed',
+          fieldB: 'baseline_share',
           display: 'Latinx',
           group: 'Latinx',
           formatter: d3.format('.0%'),
         },
         {
           file: 'imputed',
-          field: 'month_filings_imputed',
+          fieldA: 'month_filings_imputed',
+          fieldB: 'baseline_share',
           display: 'White',
           group: 'White',
           formatter: d3.format('.0%'),
         },
         {
           file: 'imputed',
-          field: 'month_filings_imputed',
+          fieldA: 'month_filings_imputed',
+          fieldB: 'baseline_share',
           display: 'Female',
           group: 'Female',
           formatter: d3.format('.0%'),
         },
       ]
-      var getVal = (fileData, s) => {
+                    var getVals = (fileData, s) => {
         var row = fileData.findLast((d) => d.group === s.group);
-        return row ? row[s.field] : null;
+                    return row ? [row[s.fieldA], row[s.fieldB]] : [];
       }
       if (id === "race") {
-        Elab.Utils.createStatBlock('#imputedStats--race', statFiles, stats, getVal)
+        Elab.Utils.createComparisonBlock('#imputedComps--race', comparisonFiles, comparisons, getVals)
     }
       Elab.Section.init('chart', rootEl, { id: id, csv: csv })
     });

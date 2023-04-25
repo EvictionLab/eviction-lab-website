@@ -30,6 +30,7 @@
   --section-alt: #f4f7f9;
   --row-alt: #f4f7f9;
   --text-secondary: #7d7d7d;
+  --off-black: #212529;
   --primary: var(--c1);
   --secondary: var(--c2);
   --font-family-sans-serif: Akkurat-Regular, sans-serif;
@@ -1643,25 +1644,15 @@
   line-height: 2;
 }
 
-.intro .stat-block-wrapper .stat-block-stat {
-  flex: 50% 0 0;
-  margin-bottom: 6px;
-}
-@media (max-width: 420px) {
-  .intro .stat-block-wrapper .stat-block-stat {
-    flex-basis: 100%;
-  }
-}
-
 #filingCounts {
   margin-bottom: 16px;
 }
 #filingRates .stat-block-stat > dd {
   color: var(--c3);
-  }
-  
-  #filingCounts .stat-block-stat.missing>dd,
-  #filingRates .stat-block-stat.missing>dd {
+}
+
+#filingCounts .stat-block-stat.missing>dd,
+#filingRates .stat-block-stat.missing>dd {
     color: var(--c4);
     font-size: 2.8rem;
     /*even smaller missing stats should get same height for alignment */
@@ -1725,23 +1716,157 @@
 
 /** END UNIVERSAL STATS STYLES */
 
-/* STAT BLOCK (CALLOUT) */
+/** COMPARISON STYLES */
+.comparison-block-comp dd {
+  color: var(--off-black);
+  font-family: var(--body-font);
+  padding-bottom: 6px;
+  font-weight: bold;
+  margin-bottom: 0;
+  /* display: inline-block; */
+  font-size: 2.1rem;
+  line-height: 1;
+}
 
-.stat-block-wrapper .stat-block-stat {
+.comparison-block-comp dt {
+  font-family: var(--number-font);
+  font-weight: 600;
+  /* display: inline-block; */
+  font-size: 1.6rem;
+  /* line-height: 1.25; */
+}
+
+.comparison-block-comp dt .comparison-bar {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  top: 4px;
+}
+
+.comparison-block-comp dt .field-a {
+  color: var(--primary);
+}
+
+.comparison-block-comp dt .field-a .comparison-bar {
+  background-color: var(--primary);
+}
+
+.comparison-block-comp dt .field-b {
+  color: var(--secondary);
+}
+
+.comparison-block-comp dt .field-b .comparison-bar {
+  background-color: var(--secondary);
+}
+
+.comparison-legend {
+  flex-basis: 100%;
+  margin-bottom: 16px;
+}
+
+.comparison-legend div {
   display: inline-block;
 }
-.stat-block-wrapper .stat-block-stat:not(:last-of-type) {
+
+.comparison-legend>div:not(:last-child) {
+  margin-right: 16px;
+}
+
+.comparison-legend .color-chip {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 2px;
+}
+
+.comparison-legend .color-chip.chip-a {
+  background-color: var(--primary);
+}
+
+.comparison-legend .color-chip.chip-b {
+  background-color: var(--secondary);
+}
+
+.comparison-block-wrapper div.comparison-legend p {
+  display: inline-block;
+  font-size: 1.4rem;
+  padding-left: 4px;
+  margin-bottom: 0;
+}
+
+.section--chart.section--race .comparison-block-wrapper {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.section--chart.section--race .comparison-block-wrapper strong {
+  display: block;
+  /* HACK: heading barely overflows line... */
+  width: 102%;
+  margin-bottom: 1.5rem;
+}
+
+/** END COMPARISON STYLES */
+
+/* STAT & COMPARISON BLOCK (shared 2x2 grid styles) */
+.stat-block-wrapper,
+.comparison-block-wrapper {
+  /* display (flex & opacity: 1) conditionally iff data is found */
+  display: none;
+  opacity: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: opacity 1s ease-in-out;
+}
+
+/* specifically for callout blocks */
+.callout.stat-block-wrapper,
+.callout.comparison-block-wrapper {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-right: 0;
+  background: unset;
+}
+
+.callout.stat-block-wrapper p,
+.callout.comparison-block-wrapper p {
+  font-size: 16px;
+}
+
+.stat-block-wrapper .stat-block-stat,
+.comparison-block-wrapper .comparison-block-comp {
+  display: inline-block;
+  flex: 50% 0 0;
+  margin-bottom: 6px;
+}
+.section--medianFilings .stat-block-stat {
+  /* claim stats always take their own row */
+  flex-basis: 100%;
+  margin-bottom: 0;
+}
+.stat-block-wrapper .stat-block-stat:not(:last-of-type),
+.comparison-block-wrapper .comparison-block-comp:not(:last-of-type) {
   padding-right: 6px;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
+  }
+
+/* on small screens grid becomes list */
+@media (max-width: 420px) {
+  .stat-block-wrapper .stat-block-stat,
+  .comparison-block-wrapper .comparison-block-comp {
+    flex-basis: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
-  .callout.stat-block-wrapper {
+  .callout.stat-block-wrapper,
+  .callout.comparison-block-wrapper {
     max-width: 480px;
     margin: 0 auto 16px;
   }
 }
-/* END STAT BLOCK (CALLOUT) */
+/* END STAT & COMPARISON BLOCK (CALLOUT) */
 /* TOOLTIP */
 .inline-tooltip {
   position: relative;
@@ -2184,6 +2309,7 @@ label #labels_top-100 {
   .section .details,
   .section .legend,
   .section .stat-block-wrapper,
+  .section .comparison-block-wrapper,
   .section .footnote {
     margin: 0 0 16px 0;
     width: 40%;
@@ -2474,37 +2600,6 @@ label #labels_top-100 {
     bottom: 0;
     right: 0;
   }
-}
-
-/* gets rendered conditionally  */
-.stat-block-wrapper {
-  /* set display to flex & opacity: 1 iff stat is found */
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.section--chart.section--race .stat-block-wrapper {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-.section--chart.section--race .stat-block-wrapper strong {
-  display: block;
-  /* HACK: heading barely overflows line... */
-  width: 102%;
-  margin-bottom: 1.5rem;
-}
-.callout.stat-block-wrapper {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  padding-right: 0;
-  background: unset;
-}
-
-.callout.stat-block-wrapper p {
-  font-size: 16px;
 }
 
 /** END CHART SECTION */

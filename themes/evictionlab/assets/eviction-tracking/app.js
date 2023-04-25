@@ -179,6 +179,54 @@ Elab.Utils = (function (Elab) {
   }
 
   /**
+   * Creates a comparison block
+   */
+  function createComparisonBlock(el, compFiles, comps, getVals, callback) {
+    loadAll(compFiles, {}, (dataMap) => {
+      var $el = $(el);
+      var someCompFound = false;
+
+      var createComp = (vals, comp) => {
+        var fVals = vals.map((v) => (Elab.Utils.isNumeric(v) ? comp.formatter(v) : ""));
+        var bars = fVals.map((v, i) =>
+          v
+            ? `<div class="field-${["a", "b"][i]}">
+          <span class="comparison-bar" style="width:${vals[i] * 100}%"></span>
+          <span>${v}</span>
+          </div>
+          `
+            : "",
+        );
+
+        return (
+          '<dl class="comparison-block-comp"><dd>' +
+          comp.display +
+          "</dd><dt>" +
+          bars[0] +
+          bars[1] +
+          "</dt>" +
+          "</dl>"
+        );
+      };
+
+      comps.forEach((s) => {
+        var vals = getVals(dataMap[s.file], s);
+        if (Elab.Utils.isNumeric(vals[0]) || Elab.Utils.isNumeric(vals[1])) {
+          someCompFound = true;
+          var comp = createComp(vals, s);
+          $el.append(comp);
+        }
+      });
+
+      if (someCompFound) {
+        $el.css("display", "flex");
+        setTimeout(() => $el.css("opacity", 1), 1);
+      }
+      callback && callback(someCompFound);
+    });
+  }
+
+  /**
    * Creates a stat paragraph (interpolate values)
    */
   function createStatParagraph(el, text, statFiles, stats, getVal) {
@@ -338,6 +386,7 @@ Elab.Utils = (function (Elab) {
     createTwitterLink: createTwitterLink,
     createFacebookLink: createFacebookLink,
     createStatBlock: createStatBlock,
+    createComparisonBlock: createComparisonBlock,
     createStatParagraph: createStatParagraph,
     formatLabel: formatLabel,
     formatDate: formatDate,
