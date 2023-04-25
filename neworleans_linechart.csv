@@ -1,0 +1,6 @@
+group,month,month_last_day,month_filings,avg_filings,month_diff,month_filings_imputed,baseline_share
+White,04/2022,,700,653,1.07197549770291,,0.295794116538283
+Black,04/2022,,3577,4005,0.893133583021223,,0.616519433518893
+Other,04/2022,,265,256,1.03515625,,
+Latinx,04/2022,,,,,,0.0597770768670127
+Female,04/2022,,,,,,0.584595493165866
