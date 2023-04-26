@@ -2138,10 +2138,6 @@
 }
 
 /** POINTS LEGEND */
-.section .legend.legend--points {
-  display: none;
-}
-
 .section .legend.legend--points input[type="checkbox"] {
   /* width: 80px; */
   width: 16px;
@@ -2385,7 +2381,47 @@ label #labels_top-100 {
   display: block;
 }
 .section .footnote .data-download {
+  font-family: Akkurat-Bold, sans-serif;
+    font-size: 1.8rem;
   margin-bottom: 2rem;
+}
+.section .footnote .data-download a:before {
+  background-image: url("/img/icon--get-the-data.svg");
+  display: inline-block;
+  width: 21px;
+  height: 17px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  margin-right: 4px;
+}
+
+.section .footnote .data-download a {
+  text-decoration: none !important;
+}
+
+.section .footnote .data-download strong {
+  color: var(--secondary);
+  font-weight: unset;
+}
+
+.section.section--map .footnote .data-download {
+  margin-bottom: 8px;
+}
+.section.section--map .footnote ol {
+  padding-top: 12px;
+}
+
+.get-the-data-icon {
+  background-image: url("/img/icon--get-the-data.svg");
+  display: inline-block;
+  width: 21px;
+  height: 17px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* vertical-align: middle; */
 }
 @media (min-width: 768px) {
   .section .footnote {
@@ -2647,6 +2683,11 @@ label #labels_top-100 {
   }
 }
 
+/* elements to only display if there's top-filers data */
+div.section.section--map .top-filers-only {
+  /* if data found, will display block (or data-display value if set on element) */
+  display: none;
+}
 /** END MAP SECTION */
 
 /** BOTTOM LINKS SECTION */

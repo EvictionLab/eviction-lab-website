@@ -2,6 +2,8 @@
   <div class="section__content">
     <div class="details">
       <p class="description">{{ .Inner }}</p>
+      <p class="description top-filers-only">On map, we also plot the location of the top 100 eviction hotspots in the county (see above). Hover over the circles to
+      see more information about filings from these locations.</p>
     </div>
     <div class="visual">
       <div id="map" class="map"></div>
@@ -16,7 +18,7 @@
       <div class="legend__gradient"></div>
       <div class="legend__gradient-labels"></div>
     </div>
-    <div class="legend legend--points">
+    <div class="legend legend--points top-filers-only" data-display="flex">
       <div class="legend-item">
         <div class="legend-item__label">
           <label for="top-100">
@@ -38,11 +40,18 @@
       </div>
     </div>
     <p class="footnote">
-      <span class="data-download">Get the data for 
-        <a href="{{ .Get `data` }}">tracts</a> 
-        and 
-        <a href="{{ .Get `topData` }}">top filers</a> 
-        for this figure</span>
+      <span class="data-download">
+        <a href="{{ .Get `data` }}">
+          Get the data
+        </a>
+        for <strong>tracts</strong> in this figure
+      </span>
+      <span class="data-download top-filers-only">
+        <a href="{{ .Get `topData` }}">
+          Get the data
+        </a>
+        for <strong>top filers</strong> in this figure
+      </span>
     </p>
   </div>
   <script>

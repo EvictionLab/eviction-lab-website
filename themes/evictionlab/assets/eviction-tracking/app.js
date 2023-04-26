@@ -2349,8 +2349,10 @@ Elab.Map = (function (Elab) {
         console.log("No extents provided for point legend.");
         return;
       }
-      var legendContainer = rootEl.find(".legend--points");
-      legendContainer.css("display", "flex");
+      // the set of elements to display if we have top filers data
+      var legendContainer = rootEl.find(".top-filers-only");
+      // display them block, unless we've designated otherwise on data-display
+      legendContainer.each((i, el) => $(el).css("display", el.dataset.display || "block"));
 
       var labelContainer = rootEl.find(".legend__points-labels");
       var html = LegendPointLabelTemplate({
