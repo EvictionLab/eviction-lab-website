@@ -518,6 +518,9 @@ Elab.Config = (function (Elab) {
         text: "Monthly Eviction Filings",
       },
     ],
+    margin: {
+      right: 55,
+    },
     markLines: [],
     data: {
       x: "month",
@@ -536,14 +539,17 @@ Elab.Config = (function (Elab) {
         text: "Monthly Eviction Filings Relative To Average",
       },
     ],
+    margin: {
+      right: 55,
+    },
     markLines: [
       {
         y: 1,
-        label: "average",
+        label: "pre-2020",
       },
       {
         y: 1,
-        label: "filings",
+        label: "average",
         labelOnly: true,
       },
     ],
@@ -600,14 +606,17 @@ Elab.Config = (function (Elab) {
         text: "Filings over the last year relative to average, by Neighborhood Racial/Ethnic Majority",
       },
     ],
+    margin: {
+      right: 65,
+    },
     markLines: [
       {
         y: 1,
-        label: "average",
+        label: "2012-2016",
       },
       {
         y: 1,
-        label: "filings",
+        label: "average",
         labelOnly: true,
       },
     ],
@@ -668,6 +677,9 @@ Elab.Config = (function (Elab) {
         text: "Filings over the last year by Neighborhood Racial/Ethnic Majority",
       },
     ],
+    margin: {
+      right: 65,
+    },
     markLines: [],
     data: {
       x: "month",
@@ -1157,11 +1169,12 @@ Elab.Chart = (function (Elab) {
   function Chart(source, root, config) {
     // options
     config = config || {};
-    var margin = config.margin || {
+    var margin = {
       top: 32,
       right: 52,
       bottom: 72,
       left: 48,
+      ...config.margin,
     };
     var parsedData;
     var elements;
@@ -3379,13 +3392,15 @@ Elab.MedianFilings = (function (Elab) {
   /** Renders the median claim line chart */
   function renderLineChart() {
     // chunk label to break btw lines
-    var avgLabel = ["pre-pandemic", "average"]
-    var avgLines = data[0].avg && avgLabel.map((w, i) => ({
-      y: data[0].avg,
-      label: w,
-      // first item gets used for plotting line, rest just for the label word
-      labelOnly: !i 
-    }))
+    var avgLabel = ["pre-2020", "average"];
+    var avgLines =
+      data[0].avg &&
+      avgLabel.map((w, i) => ({
+        y: data[0].avg,
+        label: w,
+        // first item gets used for plotting line, rest just for the label word
+        labelOnly: !i,
+      }));
     Elab.LineChart.createFigure($el.find(".visual__chart")[0], data, {
       x: "x",
       y: "y",
@@ -3396,7 +3411,7 @@ Elab.MedianFilings = (function (Elab) {
       yTooltipFormat: d3.format("$.2f"),
       avgLines,
       // make room for avg label
-      margin: "8 84 60 54"
+      margin: "8 60 60 54",
     });
   }
 

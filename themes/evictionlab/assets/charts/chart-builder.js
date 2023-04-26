@@ -57,10 +57,10 @@ Elab.ChartBuilder = (function (Elab) {
     this.options = Object.assign(
       {
         width: Math.max(rect.width, 320),
-        height: Math.max(rect.height, 320),
+        height: Math.max(rect.height, 420),
       },
       this.defaultOptions,
-      options
+      options,
     );
     this.innerWidth =
       this.options.width + this.options.margin[1] + this.options.margin[3];
