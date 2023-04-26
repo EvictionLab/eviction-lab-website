@@ -2402,8 +2402,10 @@ label #labels_top-100 {
 }
 
 .section .footnote .data-download strong {
-  color: var(--secondary);
   font-weight: unset;
+}
+.section .footnote .data-download.emphasize strong {
+  color: var(--secondary);
 }
 
 .section.section--map .footnote .data-download {

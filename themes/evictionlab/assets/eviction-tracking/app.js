@@ -2352,9 +2352,14 @@ Elab.Map = (function (Elab) {
         return;
       }
       // the set of elements to display if we have top filers data
-      var legendContainer = rootEl.find(".top-filers-only");
+      var topFilersOnlyElements = rootEl.find(".top-filers-only");
       // display them block, unless we've designated otherwise on data-display
-      legendContainer.each((i, el) => $(el).css("display", el.dataset.display || "block"));
+      topFilersOnlyElements.each((i, el) => $(el).css("display", el.dataset.display || "block"));
+
+      // certain elements get a class added if we have top filers data
+      rootEl
+        .find(".top-filers-only-class")
+        .each((i, el) => $(el).toggleClass(el.dataset.class || ""));
 
       var labelContainer = rootEl.find(".legend__points-labels");
       var html = LegendPointLabelTemplate({
