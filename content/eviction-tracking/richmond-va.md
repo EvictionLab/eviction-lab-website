@@ -8,6 +8,7 @@ rentersSite: Richmond
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Richmond, Virginia | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+geographies: zips
 ---
 
 {{< report_intro site_id="51760" data="/uploads/table.csv" >}}

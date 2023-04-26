@@ -8,6 +8,7 @@ rentersSite: New York City
 twImage: /images/assets/graphics/ets-bg-social.png
 title: New York, New York | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+geographies: zips
 ---
 
 {{< report_intro site_id="36061" data="/uploads/table.csv" >}}

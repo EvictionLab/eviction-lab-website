@@ -1,3 +1,4 @@
+{{ $geographies := .Page.Params.geographies | default "tracts" }}
 <div class="section section--map">
   <div class="section__content">
     <div class="details">
@@ -41,10 +42,8 @@
     </div>
     <p class="footnote">
       <span class="data-download">
-        <a href="{{ .Get `data` }}">
-          Get the data
-        </a>
-        for <strong>tracts</strong> in this figure
+        <a href="{{ .Get `data` }}">Get the data</a>
+        for <strong>{{ $geographies }}</strong> in this figure
       </span>
       <span class="data-download top-filers-only">
         <a href="{{ .Get `topFilers` }}">

@@ -8,6 +8,7 @@ rentersSite: Pittsburgh
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Pittsburgh, Pennsylvania | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+geographies: zips
 ---
 
 {{< report_intro site_id="42003" data="/uploads/table.csv" >}}

@@ -1,5 +1,6 @@
 ---
 statePage: true
+geographies: counties
 collection: true
 draft: false
 h1: New Mexico

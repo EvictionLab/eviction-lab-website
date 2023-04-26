@@ -8,6 +8,7 @@ rentersSite: Austin
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Austin Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+geographies: zips
 ---
 
 {{< report_intro site_id="48453" data="/uploads/table.csv" >}}
