@@ -41,7 +41,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/indianapolis_shapes.json" data="/uploads/indianapolis_map.csv" topData="/uploads/indianapolis_hotspots_media_report.csv" topData="/uploads/indianapolis_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/indianapolis_shapes.json" data="/uploads/indianapolis_map.csv" topData="/uploads/indianapolis_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 
@@ -49,6 +49,7 @@ Marion County is divided into 224 census tracts. In each of those tracts, we map
 
 1. Eviction filing data for Marion County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts.
 
 {{%/ report_map %}}
 

@@ -54,6 +54,7 @@ Hennepin and Ramsey Counties are divided into 436 census tracts. In each of thos
 
 1. Eviction filing data for Hennepin and Ramsey Counties were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts.
 
 {{%/ report_map %}}
 

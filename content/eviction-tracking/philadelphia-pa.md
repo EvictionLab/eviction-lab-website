@@ -62,6 +62,7 @@ Philadelphia County is divided into 384 census tracts. In each of those tracts, 
 
 1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). Historical averages cover the years 2016-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts.
 
 {{%/ report_map %}}
 

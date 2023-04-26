@@ -57,6 +57,7 @@ Dallas County is divided into 529 census tracts. In each of those tracts, we map
 
 1. Data for Dallas County were collected by the [Child Poverty Action Lab](https://childpovertyactionlab.org/); historical averages cover 2017-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts.
 
 {{%/ report_map %}}
 

@@ -53,6 +53,7 @@ Jacksonville is divided into 174 census tracts. In each of those tracts, we map 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts.
 
 {{%/ report_map %}}
 

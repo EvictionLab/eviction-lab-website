@@ -77,6 +77,7 @@ Harris and Galveston counties are divided into 853 census tracts. In each of tho
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts.
 
 {{%/ report_map %}}
 

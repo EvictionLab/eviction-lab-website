@@ -50,6 +50,7 @@ Pinellas and Hillsborough counties are divided into 567 census tracts. In each o
 
 1. Eviction filing data for Pinellas and Hillsborough Counties were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts.
 
 {{%/ report_map %}}
 
