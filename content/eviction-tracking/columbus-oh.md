@@ -75,7 +75,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/columbus_map.csv" topData="/uploads/columbus_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/columbus_shapes.json" data="/uploads/columbus_map.csv" topFilers="/uploads/columbus_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

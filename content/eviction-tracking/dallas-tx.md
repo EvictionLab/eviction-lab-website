@@ -49,7 +49,7 @@ When a landlord files an eviction claim in Dallas, we observe the amount they cl
 
 {{%/ report_median_claims %}}
 
-{{% report_map shapes="/uploads/dallas_shapes.json" data="/uploads/dallas_map.csv" topData="/uploads/dallas_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/dallas_shapes.json" data="/uploads/dallas_map.csv" topFilers="/uploads/dallas_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

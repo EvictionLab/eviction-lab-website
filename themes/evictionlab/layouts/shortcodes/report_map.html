@@ -47,7 +47,7 @@
         for <strong>tracts</strong> in this figure
       </span>
       <span class="data-download top-filers-only">
-        <a href="{{ .Get `topData` }}">
+        <a href="{{ .Get `topFilers` }}">
           Get the data
         </a>
         for <strong>top filers</strong> in this figure
@@ -58,7 +58,7 @@
     window.addEventListener("load", function () {
       var geojson = {{ .Get "shapes" }};
       var csv = {{ .Get "data" }};
-      var topCsv = {{ .Get "topData" }};
+        var topCsv = {{ .Get "topFilers" }};
       var rootEl = '.section--map'
           Elab.Section.init('map', rootEl, {
             geojson: geojson,

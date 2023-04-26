@@ -42,7 +42,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/greenville_shapes.json" data="/uploads/greenville_map.csv" topData="/uploads/greenville_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/greenville_shapes.json" data="/uploads/greenville_map.csv" topFilers="/uploads/greenville_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

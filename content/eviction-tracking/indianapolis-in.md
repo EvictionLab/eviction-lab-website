@@ -41,7 +41,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/indianapolis_shapes.json" data="/uploads/indianapolis_map.csv" topData="/uploads/indianapolis_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/indianapolis_shapes.json" data="/uploads/indianapolis_map.csv" topFilers="/uploads/indianapolis_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

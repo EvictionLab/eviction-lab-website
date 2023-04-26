@@ -42,7 +42,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/memphis_shapes.json" data="/uploads/memphis_map.csv" topData="/uploads/memphis_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/memphis_shapes.json" data="/uploads/memphis_map.csv" topFilers="/uploads/memphis_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

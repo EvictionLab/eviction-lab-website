@@ -42,7 +42,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/tampa_shapes.json" data="/uploads/tampa_map.csv" topData="/uploads/tampa_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/tampa_shapes.json" data="/uploads/tampa_map.csv" topFilers="/uploads/tampa_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

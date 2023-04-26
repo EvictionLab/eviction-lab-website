@@ -69,7 +69,7 @@ This data on claim amounts only covers Harris County. We do not currently collec
 
 
 
-{{% report_map shapes="/uploads/houston_shapes.json" data="/uploads/houston_map.csv" topData="/uploads/houston_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/houston_shapes.json" data="/uploads/houston_map.csv" topFilers="/uploads/houston_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

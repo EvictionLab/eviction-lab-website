@@ -71,7 +71,7 @@ When a landlord files an eviction claim in Cincinnati, we observe the amount the
 
 
 
-{{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_map.csv" topData="/uploads/cincinnati_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/cincinnati_shapes.json" data="/uploads/cincinnati_map.csv" topFilers="/uploads/cincinnati_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

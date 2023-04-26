@@ -2051,7 +2051,7 @@ Elab.Map = (function (Elab) {
     var mapEl = rootEl.find(".map")[0];
     var geojsonUrl = config.geojson;
     var dataUrl = config.csv;
-    var topDataUrl = config.topCsv;
+    var topFilersUrl = config.topCsv;
     var hoveredFeat = null;
     var allData = null;
     var geojsonData = null;
@@ -2200,25 +2200,27 @@ Elab.Map = (function (Elab) {
           update();
         });
 
-        d3.csv(topDataUrl, function (data) {
+        d3.csv(topFilersUrl, function (data) {
           if (!data) {
-            console.error("unable to load top filer data from " + topDataUrl);
+            console.error("unable to load top filer data from " + topFilersUrl);
             return;
           }
-          var topData = data.map(({ lat, lon, filings, xplaintiff, xstreet_clean, position }) => ({
-            lat: parseFloat(lat),
-            lon: parseFloat(lon),
-            filings: parseInt(filings),
-            name: xplaintiff,
-            address: xstreet_clean,
-            rank: position,
-          }));
+          var topFilers = data.map(
+            ({ lat, lon, filings, xplaintiff, xstreet_clean, position }) => ({
+              lat: parseFloat(lat),
+              lon: parseFloat(lon),
+              filings: parseInt(filings),
+              name: xplaintiff,
+              address: xstreet_clean,
+              rank: position,
+            }),
+          );
 
-          var extent = d3.extent(topData, ({ filings }) => filings);
+          var extent = d3.extent(topFilers, ({ filings }) => filings);
           var radiusScale = d3.scaleSqrt().domain(extent).range([1, 8]);
 
           var pointJson = Object.assign({}, geojson);
-          pointJson.features = topData.map(({ lat, lon, filings, name, address, rank }, id) => ({
+          pointJson.features = topFilers.map(({ lat, lon, filings, name, address, rank }, id) => ({
             type: "Feature",
             id,
             geometry: {

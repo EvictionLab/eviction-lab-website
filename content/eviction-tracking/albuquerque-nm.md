@@ -54,7 +54,7 @@ Eviction Hotspot data are updated quarterly.
 
 
 
-{{% report_map shapes="/uploads/albuquerque_shapes.json" data="/uploads/albuquerque_map.csv" topData="/uploads/albuquerque_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/albuquerque_shapes.json" data="/uploads/albuquerque_map.csv" topFilers="/uploads/albuquerque_hotspots_media_report.csv" %}}
 
 
 
