@@ -199,9 +199,9 @@ Elab.Utils = (function (Elab) {
         );
 
         return (
-          '<dl class="comparison-block-comp"><dd>' +
+          '<dl class="comparison-block-comp"><dd><p>' +
           comp.display +
-          "</dd><dt>" +
+          "</p></dd><dt>" +
           bars[0] +
           bars[1] +
           "</dt>" +
@@ -218,10 +218,13 @@ Elab.Utils = (function (Elab) {
         }
       });
 
-      if (someCompFound) {
-        $el.css("display", "flex");
-        setTimeout(() => $el.css("opacity", 1), 1);
-      }
+      // console.log({ someCompFound, comps });
+      // if (someCompFound) {
+      //   var $displayEl = $(elToDisplay);
+      //   console.log({ someCompFound, elToDisplay, $displayEl });
+      //   window.dd = $displayEl;
+      //   setTimeout(() => $el.css("opacity", 1), 1);
+      // }
       callback && callback(someCompFound);
     });
   }
@@ -607,6 +610,7 @@ Elab.Config = (function (Elab) {
       },
     ],
     margin: {
+      // keep in sync with .section--race .comparison-block-wrapper margin
       right: 65,
     },
     markLines: [
@@ -678,6 +682,7 @@ Elab.Config = (function (Elab) {
       },
     ],
     margin: {
+      // keep in sync with .section--race .comparison-block-wrapper margin
       right: 65,
     },
     markLines: [],

@@ -1717,14 +1717,17 @@
 /** END UNIVERSAL STATS STYLES */
 
 /** COMPARISON STYLES */
-.comparison-block-comp dd {
-  color: var(--off-black);
+.section--chart .section__content.imputed-data-only {
+  display: none;
+}
+.comparison-block-comp dd p {
+  color: var(--text-secondary);
   font-family: var(--body-font);
-  padding-bottom: 6px;
+  padding-bottom: 2px;
   font-weight: bold;
   margin-bottom: 0;
   /* display: inline-block; */
-  font-size: 2.1rem;
+  /* font-size: 2.1rem; */
   line-height: 1;
 }
 
@@ -1796,8 +1799,17 @@
 }
 
 .section--chart.section--race .comparison-block-wrapper {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 40px;
+  border: white solid 3px;
+  padding: 40px 24px 24px 40px;
+  text-align: start;
+}
+
+@media (min-width: 600px) {
+  .section--chart.section--race .comparison-block-wrapper {
+    /* keep in sync with CHART_2_CONFIG/CHART_2A_CONFIG margin right/left */
+    margin: 40px 62px 32px 44px;
+  }
 }
 
 .section--chart.section--race .comparison-block-wrapper strong {
@@ -1812,12 +1824,15 @@
 /* STAT & COMPARISON BLOCK (shared 2x2 grid styles) */
 .stat-block-wrapper,
 .comparison-block-wrapper {
-  /* display (flex & opacity: 1) conditionally iff data is found */
-  display: none;
-  opacity: 0;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   transition: opacity 1s ease-in-out;
+}
+.stat-block-wrapper {
+  /* display (flex & opacity: 1) conditionally iff data is found */
+  display: none;
+  opacity: 0;
 }
 
 /* specifically for callout blocks */
@@ -2305,7 +2320,6 @@ label #labels_top-100 {
   .section .details,
   .section .legend,
   .section .stat-block-wrapper,
-  .section .comparison-block-wrapper,
   .section .footnote {
     margin: 0 0 16px 0;
     width: 40%;
@@ -2342,11 +2356,12 @@ label #labels_top-100 {
 
 
 /** SECTION FOOTNOTES */
-
-.footnote ol {
+/* use additional-footnote (with child ul) to avoid dom manipulation of footnotes passed through md */
+.footnote ol, .additional-footnote ul {
   counter-reset: number;
 }
-.footnote ol li {
+.footnote ol li,
+.additional-footnote ul li {
   counter-increment: number;
   position: relative;
   line-height: 1.42;
@@ -2358,11 +2373,13 @@ label #labels_top-100 {
   max-width: unset;
   margin-bottom: 16px;
 }
-.footnote ol li p {
+.footnote ol li p,
+.additional-footnote ul li p {
   font-size: 1.4rem;
   margin-bottom: 8px;
 }
-.footnote ol li::before {
+.footnote ol li::before,
+.additional-footnote ul li::before {
   content: counter(number) " ";
   font-size: 0.8em;
   position: absolute;
@@ -2371,21 +2388,25 @@ label #labels_top-100 {
 }
 
 .section .footnote,
+.section .additional-footnote,
 .intro__content .footnote {
   font-size: 1.2rem;
   color: var(--text-secondary);
   max-width: 320px;
   margin: auto;
 }
-.section .footnote span {
+.section .footnote span,
+.section .additional-footnote span {
   display: block;
 }
-.section .footnote .data-download {
+.section .footnote .data-download, 
+.section .additional-footnote .data-download {
   font-family: Akkurat-Bold, sans-serif;
     font-size: 1.8rem;
   margin-bottom: 2rem;
 }
-.section .footnote .data-download a:before {
+.section .footnote .data-download a:before,
+.section .additional-footnote .data-download a:before {
   background-image: url("/img/icon--get-the-data.svg");
   display: inline-block;
   width: 21px;
@@ -2397,7 +2418,8 @@ label #labels_top-100 {
   margin-right: 4px;
 }
 
-.section .footnote .data-download a {
+.section .footnote .data-download a,
+.section .additional-footnote .data-download a {
   text-decoration: none !important;
 }
 
@@ -2426,13 +2448,15 @@ label #labels_top-100 {
   /* vertical-align: middle; */
 }
 @media (min-width: 768px) {
-  .section .footnote {
+  .section .footnote,
+  .section .additional-footnote {
     font-size: 1.4rem;
     max-width: 480px;
   }
 }
 @media (min-width: 1024px) {
-  .section .footnote {
+  .section .footnote,
+  .section .additional-footnote {
     margin-left: 0;
   }
 }
@@ -2624,6 +2648,13 @@ label #labels_top-100 {
 
 /** CHART SECTION */
 
+.section.section--chart .section__content.imputed-data-only {
+  margin-top: 64px;
+}
+
+.section.section--chart .section__content.imputed-data-only .visual {
+  top: 10px;
+}
 .section.section--chart .visual {
   max-width: 600px;
 }

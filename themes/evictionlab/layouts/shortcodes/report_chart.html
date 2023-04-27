@@ -4,6 +4,7 @@
 {{ if eq (.Get `id`) "race" }}
 {{ $.Scratch.Set "ariaLabel" "Bar chart showing average filings and filing counts by month grouped by neighborhood demographics" }}
 {{ end }}
+{{ $imputedNoteNumber := .Get `imputedNoteNumber` }}
 <section
   id="{{ .Get `id` }}"
   class="section section--chart section--{{ .Get `id` }}"
@@ -28,29 +29,50 @@
       </div>
     </div>
     <div class="legend"></div>
-        <div id="imputedComps--{{ .Get `id` }}" class="callout comparison-block-wrapper">
-          <p>
-            <strong>Eviction filings by defendant race/ethnicity and gender</strong>
-            There are often large <a href="https://evictionlab.org/demographics-of-eviction/">racial/ethnic and gender
-              disparities
-              in eviction risk</a>. Here, we estimate the demographic
-            characteristics of those filed against for eviction over the last year. We compare to data from the ACS that show
-            the
-            share of renters in the same categories.<sup>{{ .Get `imputedNoteNumber`
-              }}</sup>
-            </p>
-            <div class="comparison-legend">
-              <div><span class="color-chip chip-a"></span>
-                <p class="caption">Share of eviction filings</p>
-              </div>
-              <div><span class="color-chip chip-b"></span>
-                <p class="caption">Share of renters</p>
-              </div>
-            </div>
-          </div>
     <p class="footnote">
       <span class="data-download"><a href="{{ .Get `data` }}">Get the data</a> for this figure</span>
     </p>
+    </div>
+    <div class="section__content imputed-data-only">
+      <div class="details">
+        <p><strong>Eviction filings by defendant race/ethnicity and gender</strong></p>
+        <p>
+        There are often large
+        <a href="https://evictionlab.org/demographics-of-eviction/">
+          racial/ethnic and gender disparities in eviction risk</a>.
+        Here, we estimate the demographic characteristics of those filed against for eviction over
+        the last year. We compare to data from the ACS that show the share of renters in the same
+        categories.<sup>1</sup>
+        </p>
+      </div>
+      <div class="visual">
+        <div class="visual__header">
+          <h3 class="visual__title">FILINGS OVER THE LAST YEAR BY DEFENDANT RACE/ETHNICITY AND GENDER
+          </h3>
+        </div>
+        <div class="comparison-block-wrapper" id="imputedComps--{{ .Get `id` }}">
+        <div class="comparison-legend">
+          <div><span class="color-chip chip-a"></span>
+            <p class="caption">Share of eviction filings</p>
+          </div>
+          <div><span class="color-chip chip-b"></span>
+            <p class="caption">Share of renters</p>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="additional-footnote">
+      <ul>
+        <li>
+          Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete
+          description of this process can be found in the <a href="https://evictionlab.org/eviction-tracking/methods/">ETS
+            methods
+            page</a>.
+        </li>
+      </ul>
+      <br />
+      <span class="data-download"><a href="{{ .Get `data` }}">Get the data</a> for these figures</span>
+    </div>
   </div>
   <script>
     window.addEventListener('load', function() {
@@ -94,12 +116,18 @@
           formatter: d3.format('.0%'),
         },
       ]
-                    var getVals = (fileData, s) => {
+      var getVals = (fileData, s) => {
         var row = fileData.findLast((d) => d.group === s.group);
-                    return row ? [row[s.fieldA], row[s.fieldB]] : [];
+        return row ? [row[s.fieldA], row[s.fieldB]] : [];
+      }
+      var callback = (dataFound) => {
+        if (dataFound) {
+          $('#race .section__content.imputed-data-only').css("display", "block");
+          $("#race .footnote .data-download").css("display", "none");
+        } 
       }
       if (id === "race") {
-        Elab.Utils.createComparisonBlock('#imputedComps--race', comparisonFiles, comparisons, getVals)
+        Elab.Utils.createComparisonBlock('#imputedComps--race', comparisonFiles, comparisons, getVals, callback)
     }
       Elab.Section.init('chart', rootEl, { id: id, csv: csv })
     });
