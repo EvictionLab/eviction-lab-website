@@ -1793,7 +1793,7 @@
 
 .comparison-legend p {
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1.4rem !important;
   padding-left: 4px;
   margin-bottom: 0;
   font-family: var(--heading-font);
