@@ -1791,9 +1791,9 @@
   background-color: var(--secondary);
 }
 
-.comparison-legend p {
+.section div.comparison-legend p {
   display: inline-block;
-  font-size: 1.4rem !important;
+  font-size: 1.4rem;
   padding-left: 4px;
   margin-bottom: 0;
   font-family: var(--heading-font);
