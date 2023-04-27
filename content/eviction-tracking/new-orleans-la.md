@@ -68,7 +68,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2019.<sup>1</sup>
 
 1. We do not have tract-level data for areas covered by the Second City Court, on the West Bank of Orleans Parish (south of the Mississippi River). Eviction filing data were collected by [Professor Davida Finger](https://law.loyno.edu/academics/faculty-and-staff-directory/davida-finger) (Loyola University New Orleans College of Law). Professor Finger works in partnership with [Jane Place Neighborhood Sustainability Initiative.](https://www.jpnsi.org/evictions) Historical averages are taken from 2019 data.
-2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).
+
 
 
 

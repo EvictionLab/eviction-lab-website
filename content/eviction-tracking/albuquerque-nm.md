@@ -85,6 +85,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019.
-2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).
+
 
 {{%/ report_chart %}}

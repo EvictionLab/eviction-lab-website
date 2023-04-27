@@ -76,6 +76,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in the historical years.<sup>1</sup>
 
 1. Data for Dallas County were collected by the [Child Poverty Action Lab](https://childpovertyactionlab.org/); historical averages cover 2017-2019.
-2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).
+
 
 {{%/ report_chart %}}

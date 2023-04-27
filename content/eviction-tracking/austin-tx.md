@@ -72,6 +72,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2014-2019.<sup>1</sup>
 
 1. Eviction filings data for 2014-2019 for Travis County were collected by [BASTA Austin](http://www.bastaaustin.org/) and [Open Austin](https://www.open-austin.org/). Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/).
-2. Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. A complete description of this process can be found in the [ETS methods page](https://evictionlab.org/eviction-tracking/methods/).
+
 
 {{%/ report_chart %}}
