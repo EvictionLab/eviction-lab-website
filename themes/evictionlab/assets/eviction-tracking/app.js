@@ -546,12 +546,12 @@ Elab.Config = (function (Elab) {
       },
     ],
     margin: {
-      right: 55,
+      right: 63,
     },
     markLines: [
       {
         y: 1,
-        label: "pre-2020",
+        label: "pre-COVID",
       },
       {
         y: 1,
@@ -3410,7 +3410,7 @@ Elab.MedianFilings = (function (Elab) {
   /** Renders the median claim line chart */
   function renderLineChart() {
     // chunk label to break btw lines
-    var avgLabel = ["pre-2020", "average"];
+    var avgLabel = ["pre-COVID", "average"];
     var avgLines =
       data[0].avg &&
       avgLabel.map((w, i) => ({
@@ -3429,7 +3429,7 @@ Elab.MedianFilings = (function (Elab) {
       yTooltipFormat: d3.format("$.2f"),
       avgLines,
       // make room for avg label
-      margin: "8 60 60 54",
+      margin: "8 68 60 54",
     });
   }
 
