@@ -610,7 +610,7 @@ Elab.Config = (function (Elab) {
       },
     ],
     margin: {
-      // keep in sync with .section--race .comparison-block-wrapper margin
+      // keep in sync with .section--race .comparison-block-wrapper margin left/right
       right: 65,
       bottom: 40,
     },
@@ -1337,7 +1337,8 @@ Elab.Chart = (function (Elab) {
 
         // charts to not thin ticks on smaller screens (or based on tick count) or rotate
         // (such as if ticks are for group names rather than months)
-        const noThinning = config.rootId !== "race";
+        const noThinning = config.rootId === "race";
+        console.log({ tickCount, noThinning });
         const ticks = selection.selectAll(".tick text").each(function (d, i) {
           // another bryony cheat.
           if (!noThinning && tickCount > 20 && i % 2 !== 0) {
@@ -1348,13 +1349,14 @@ Elab.Chart = (function (Elab) {
             d3.select(this).attr("display", "unset");
           }
         });
-        if (noThinning) {
+        if (!noThinning) {
           // by default rotate ticks
           window.ticks = ticks
             .attr("text-anchor", "end")
             .attr("transform", "rotate(-50)")
             .attr("dx", "-0.5em")
             .attr("dy", "0em");
+          // todo: consider removing class and instead thinning here based on window.innerWidth
         } else ticks.attr("class", "no-thinning");
       }; // setup x axis
 
