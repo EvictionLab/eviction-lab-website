@@ -1630,7 +1630,7 @@
 
 .intro .intro__stats-wrapper {
   /* flex-grow: 1; */
-  letter-spacing: 0.04rem;
+  /* letter-spacing: 0.04rem; */
   padding-top: 32px;
   padding-left: 0;
   opacity: 0;
@@ -1647,9 +1647,9 @@
 #filingCounts {
   margin-bottom: 16px;
 }
-#filingRates .stat-block-stat > dd {
-  color: var(--c3);
-}
+/* #filingRates .stat-block-stat > dd {
+  color: var(--c1);
+} */
 
 #filingCounts .stat-block-stat.missing>dd,
 #filingRates .stat-block-stat.missing>dd {
@@ -1722,7 +1722,7 @@
 }
 .comparison-block-comp dd p {
   color: var(--text-secondary);
-  font-family: var(--body-font);
+  font-family: var(--heading-font);
   padding-bottom: 2px;
   font-weight: bold;
   margin-bottom: 0;
@@ -1791,11 +1791,13 @@
   background-color: var(--secondary);
 }
 
-.comparison-block-wrapper div.comparison-legend p {
+.comparison-legend p {
   display: inline-block;
   font-size: 1.4rem;
   padding-left: 4px;
   margin-bottom: 0;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
 }
 
 .section--chart.section--race .comparison-block-wrapper {
@@ -1860,10 +1862,13 @@
   flex-basis: 100%;
   margin-bottom: 0;
 }
-.stat-block-wrapper .stat-block-stat:not(:last-of-type),
+.stat-block-wrapper dl.stat-block-stat:not(:last-of-type) {
+  padding-right: 6px;
+  padding-bottom: 8px;
+}
 .comparison-block-wrapper .comparison-block-comp:not(:last-of-type) {
   padding-right: 6px;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
   }
 
 /* on small screens grid becomes list */
@@ -2025,6 +2030,10 @@
   justify-content: center;
 }
 
+#race .details strong {
+  font-family: var(--heading-font);
+}
+
 .visual .chart,
 .visual .map {
   flex: 1;
@@ -2168,7 +2177,9 @@ label #labels_top-100 {
 }
 
 .legend__points-scale {
-  width: 70px;
+  width: 82px;
+  padding: 8px;
+  border: 1px solid #c6cccf;
 }
 .legend__points-scale > div {
   display: flex;
@@ -2187,8 +2198,8 @@ label #labels_top-100 {
 /** CHOROPLETH LEGEND */
 
 .section .legend.legend--choropleth, .section .legend.legend--points {
-  width: 310px;
-  max-width: 310px;
+  width: 330px;
+  max-width: 360px;
 }
 .legend.legend--choropleth .legend-item, .legend.legend--points .legend-item {
   /* width: 100%; */
@@ -2368,6 +2379,7 @@ label #labels_top-100 {
   margin-bottom: 8px;
   padding-left: 1em;
   max-width: 26em;
+  font-family: var(--body-font);
 }
 .intro__content .footnote ol li {
   max-width: unset;
@@ -2402,15 +2414,15 @@ label #labels_top-100 {
 .section .footnote .data-download, 
 .section .additional-footnote .data-download {
   font-family: Akkurat-Bold, sans-serif;
-    font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 .section .footnote .data-download a:before,
 .section .additional-footnote .data-download a:before {
   background-image: url("/img/icon--get-the-data.svg");
   display: inline-block;
-  width: 21px;
-  height: 17px;
+  width: 20px;
+  height: 13px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2642,7 +2654,7 @@ label #labels_top-100 {
   display: inline-block;
     /* set width and align-right so 1s digits all line up vertically */
     width: 68px;
-    text-align: right;
+    text-align: left;
 }
 /** END MEDIAN SECTION */
 
