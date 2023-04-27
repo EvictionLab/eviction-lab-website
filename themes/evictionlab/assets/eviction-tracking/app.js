@@ -211,8 +211,11 @@ Elab.Utils = (function (Elab) {
 
       comps.forEach((s) => {
         var vals = getVals(dataMap[s.file], s);
+        // create a comparison for any metric with at least one value...
         if (Elab.Utils.isNumeric(vals[0]) || Elab.Utils.isNumeric(vals[1])) {
-          someCompFound = true;
+          // ...but both values must exist for some metric to merit displaying the block
+          someCompFound =
+            someCompFound || (Elab.Utils.isNumeric(vals[0]) && Elab.Utils.isNumeric(vals[1]));
           var comp = createComp(vals, s);
           $el.append(comp);
         }
