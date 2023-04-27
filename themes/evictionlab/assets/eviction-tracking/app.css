@@ -3275,7 +3275,7 @@ span.value--up {
 
 /** hide every second label on non-intro chart x axis for small devices to prevent overlap */
 @media(max-width: 400px) {
-  .visual .chart__axis.chart__axis--x .tick:nth-child(2n+1) {
+  .visual .chart__axis.chart__axis--x .tick:nth-child(2n+1) text:not(.no-thinning) {
     display: none;
   }
 }

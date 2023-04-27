@@ -612,6 +612,7 @@ Elab.Config = (function (Elab) {
     margin: {
       // keep in sync with .section--race .comparison-block-wrapper margin
       right: 65,
+      bottom: 40,
     },
     markLines: [
       {
@@ -684,6 +685,7 @@ Elab.Config = (function (Elab) {
     margin: {
       // keep in sync with .section--race .comparison-block-wrapper margin
       right: 65,
+      bottom: 40,
     },
     markLines: [],
     data: {
@@ -1332,22 +1334,28 @@ Elab.Chart = (function (Elab) {
         //count number of ticks for bryony cheat
         //could not get to the bottom of where config.view.xTicks was looking
         const tickCount = groupedItems.length;
-        selection
-          .selectAll(".tick text")
-          .each(function (d, i) {
-            // another bryony cheat.
-            if (tickCount > 20 && i % 2 !== 0) {
-              // if more than 20 ticks only show odd
-              d3.select(this).attr("display", "none");
-            } else {
-              // unset to display ticks in case they were hidden above (for toggleable chart)
-              d3.select(this).attr("display", "unset");
-            }
-          })
-          .attr("text-anchor", "end")
-          .attr("transform", "rotate(-50)")
-          .attr("dx", "-0.5em")
-          .attr("dy", "0em");
+
+        // charts to not thin ticks on smaller screens (or based on tick count) or rotate
+        // (such as if ticks are for group names rather than months)
+        const noThinning = config.rootId !== "race";
+        const ticks = selection.selectAll(".tick text").each(function (d, i) {
+          // another bryony cheat.
+          if (!noThinning && tickCount > 20 && i % 2 !== 0) {
+            // if more than 20 ticks only show odd
+            d3.select(this).attr("display", "none");
+          } else {
+            // unset to display ticks in case they were hidden above (for toggleable chart)
+            d3.select(this).attr("display", "unset");
+          }
+        });
+        if (noThinning) {
+          // by default rotate ticks
+          window.ticks = ticks
+            .attr("text-anchor", "end")
+            .attr("transform", "rotate(-50)")
+            .attr("dx", "-0.5em")
+            .attr("dy", "0em");
+        } else ticks.attr("class", "no-thinning");
       }; // setup x axis
 
       var xAxis = d3.axisBottom(context.x).ticks(5).tickFormat(config.format.x); // setup y axis
