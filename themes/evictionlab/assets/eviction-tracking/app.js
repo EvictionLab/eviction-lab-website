@@ -617,11 +617,11 @@ Elab.Config = (function (Elab) {
     markLines: [
       {
         y: 1,
-        label: "2012-2016",
+        label: "average",
       },
       {
         y: 1,
-        label: "average",
+        label: "filings",
         labelOnly: true,
       },
     ],
