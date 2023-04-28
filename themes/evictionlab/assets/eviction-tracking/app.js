@@ -1690,8 +1690,9 @@ Elab.Chart = (function (Elab) {
     var countToggleEl = rootEl.find(".toggle--count");
     var avgToggleEl = rootEl.find(".toggle--avg");
     if (config.id === "avg") avgToggleEl.addClass("toggle--active");
-    if (config.id === "race") countToggleEl.addClass("toggle--active"); // move footnotes into proper container
+    if (config.id === "race") countToggleEl.addClass("toggle--active");
 
+    // move footnotes into proper container
     var contentEl = rootEl.find(".details");
     var footnoteEl = rootEl.find(".footnote");
     footnoteEl.append(contentEl.find("ol")); // setup default chart config

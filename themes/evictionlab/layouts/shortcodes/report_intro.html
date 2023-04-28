@@ -192,6 +192,13 @@
         return dateFormat(d)
       }).join(' - ')
       $('#cdcGuidelines').text(cdcMoratorium)
+
+            // move footnotes into proper container
+            var rootEl = $('.intro .layout');
+            var contentEl = rootEl.find(".intro__text");
+            var footnoteEl = rootEl.find(".footnote ol");
+            window.cc = contentEl;
+            footnoteEl.append(contentEl.find("ol li"));
     })
   </script>
 </div>
