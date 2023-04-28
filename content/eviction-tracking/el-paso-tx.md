@@ -1,6 +1,7 @@
 ---
 h1: "El Paso, Texas"
 slug: "el-paso-tx"
+rentersSite: El Paso
 title: "El Paso, Texas | Eviction Tracking System"
 fbImage: /images/assets/graphics/ets-bg-social.png
 twImage: /images/assets/graphics/ets-bg-social.png
@@ -9,7 +10,7 @@ collection: true
 draft: true
 ---
 
-{{% report_intro id="51760" data="/uploads/w17_table.csv" %}}
+{{% report_intro site_id="51760" data="/uploads/w17_table.csv" %}}
 
 El Paso Intro
 
@@ -17,9 +18,9 @@ El Paso Intro
 
 {{% report_chart id="avg" data="/uploads/richmond_w17_barchart.csv" %}}
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-El Paso Chart 1
+This plot shows monthly eviction filings in El Paso over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 
@@ -27,7 +28,7 @@ El Paso Chart 1
 
 {{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_w17_map.csv" %}}
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
 El Paso Map
 
@@ -35,9 +36,11 @@ El Paso Map
 2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
    {{%/ report_map %}}
 
-{{% report_chart id="race" data="/uploads/richmond_w17_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/richmond_w17_linechart.csv" imputedNoteNumber="2" %}}
 
-# Eviction filings by neighborhood demographics
+# The demographics of eviction filings
+
+**Eviction filings by neighborhood race/ethnicity**
 
 El Paso Chart 2
 

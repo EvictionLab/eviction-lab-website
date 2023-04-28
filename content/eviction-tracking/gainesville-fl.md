@@ -9,24 +9,23 @@ twImage: /images/assets/graphics/ets-bg-social.png
 title: Gainesville Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro id="12001" data="/uploads/table.csv" >}}
 
-Eviction filings in Alachua County, FL (Gainesville) fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired at the end of July 2020. After the moratorium expired, execution of eviction orders was also delayed until October 1, 2020.
+{{< report_intro site_id="12001" data="/uploads/table.csv" >}}
+
+Eviction filings in Gainesville fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired at the end of July 2020. After the moratorium expired, execution of eviction orders was also delayed until October 1, 2020.
 
 Note: Data collection in Alachua County is currently on hold as we switch to a different data source.
 
-More detail on eviction protections in Florida can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/fl/).
+
 
 {{</ report_intro >}}
 
 
 {{% report_chart id="avg" data="/uploads/gainesville_barchart.csv" %}}
 
+# Trends in eviction filings
 
-
-# Changes in eviction filings
-
-Eviction filings in Gainesville were near or above average over the first three months of 2020.<sup>1</sup> New filings dropped in April and remained well below historical averages through July 2020, after which filings increased.
+This plot shows monthly eviction filings in Gainesville over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Eviction filing data were collected by Drew Nolan in association with the [Alachua County Labor Coalition](https://laborcoalition.org/). Historical averages are calculated for the years 2017-2019.
 
@@ -36,49 +35,21 @@ Eviction filings in Gainesville were near or above average over the first three 
 
 
 
-{{% report_top_evictors id="topEvictorsSection" data="/uploads/gainesville_hotspots_output.csv" %}}
 
-# Eviction Hotspots
 
-Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and beyond. We analyzed eviction records in Alachua County to determine where the most cases are being filed during the pandemic. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the full pandemic and over the last eight weeks. We also display the plaintiff name most often listed with a given building in the court filings.
-
-Eviction Hotspot data will be updated quarterly.
-
-{{%/ report_top_evictors %}}
+{{% report_chart id="race" data="/uploads/gainesville_linechart.csv" imputedNoteNumber="2" %}}
 
 
 
-{{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/gainesville_map.csv" %}}
+# The demographics of eviction filings
 
-
-
-# The geography of changes in eviction filings
-
-Gainesville is divided into 56 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
-
-1. Eviction filing data were collected by Drew Nolan in association with the [Alachua County Labor Coalition](https://laborcoalition.org/). Historical averages are calculated for the years 2017-2019. 
-2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
-
-
-
-{{%/ report_map %}}
-
-
-
-{{% report_chart id="race" data="/uploads/gainesville_linechart.csv" %}}
-
-
-
-
-
-# Eviction filings by neighborhood demographics
+**Eviction filings by neighborhood race/ethnicity**
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last six months and average filings in 2017–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data were collected by Drew Nolan in association with the [Alachua County Labor Coalition](https://laborcoalition.org/). Historical averages are calculated for the years 2017-2019.
-
 
 
 

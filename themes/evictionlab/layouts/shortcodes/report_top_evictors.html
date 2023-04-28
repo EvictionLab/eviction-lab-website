@@ -6,7 +6,9 @@
 <div class="details">
 {{ .Inner }}
 <div class="button-group"></div>
-<div class="footnote"></div>
+<div class="footnote">
+  <span class="data-download"><a href="{{ .Get `data` }}">Get the data</a> for this figure</span>
+</div>
 </div>
 <div class="visual">
 <ul id="rankingList" class="ranking">

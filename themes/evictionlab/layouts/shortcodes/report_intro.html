@@ -1,11 +1,11 @@
 {{ $rentersSite := .Page.Params.rentersSite }}
-<div class="intro intro--loading">
+<div class="intro">
   <div class="layout">
     <div class="intro__content">
       <h1 class="intro__heading">
         <a id="top">{{ .Page.Params.h1 }}</a>
       </h1>
-      {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
+      <!-- {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
         {{ if eq $rentersSite $element.site }}
           <h3 class="intro__renter-population mx-auto">RENTER HOUSEHOLDS: {{ $element.estimate }}</h3>
         {{ end }}
@@ -14,162 +14,177 @@
         {{ if eq $rentersSite $element.site }}
           <h3 class="intro__renter-population mx-auto">RENTER HOUSEHOLDS: {{ $element.estimate }}</h3>
         {{ end }}
-      {{ end }}
-      <div id="introText" class="intro__text">{{ .Inner | markdownify }}</div>
-      <div class="share">
-        <a class="share__link share__link--twitter">
-          <i class="fa fa-twitter"></i>
-          <span>Share on Twitter</span>
-        </a>
-        <a class="share__link share__link--facebook">
-          <i class="fa fa-facebook"></i>
-          <span>Share on Facebook</span>
-        </a>
+      {{ end }} -->
+      <div id="summaryStats" class="intro__text"></div>
+      <div id="introText" class="intro__text">
+        <p>{{ .Inner | markdownify }}</p>
       </div>
+          <span class="footnote">
+            <ol>
+              <li>
+                Data on renter population and median rent drawn from the American Community Survey (ACS). Details of the eviction
+                process from <a
+                  href="https://www.lsc.gov/initiatives/effect-state-local-laws-evictions/lsc-eviction-laws-database">the LSC
+                  Eviction Laws Database</a>.
+              </li>
+            </ol>
+          </span>
+          <div class="share">
+            <a class="share__link share__link--twitter">
+              <i class="fa fa-twitter"></i>
+              <span>Share on Twitter</span>
+            </a>
+            <a class="share__link share__link--facebook">
+              <i class="fa fa-facebook"></i>
+              <span>Share on Facebook</span>
+            </a>
+          </div>
     </div>
-    <div class="intro__figure">
-      <div class="intro__loading">
-        <div class="spinner">
-          <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
-        </div>
+    <div class="intro__stats-wrapper">
+      <h3>Filing Counts</h3>
+      <div id="filingCounts" class="stat-block-wrapper">
       </div>
-      <div id="introChart" class="intro__figure-wrapper">
-        <h2 class="intro__figure-title">Eviction Filings By Week</h2>
-        <svg role="img" aria-label="Chart of eviction filings by week"></svg>
-        <div class="intro__figure-legend legend">
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              role="img"
-              aria-labelledby="filingsBarLegend"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="filingsBarLegend">
-                Grey rectangle legend indicator
-              </title>
-              <rect x="0" y="0" width="16" height="16"></rect>
-            </svg>
-            <p class="legend-item__label">Weekly Filings</p>
-          </div>
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              aria-labelledby="trendLegend"
-              role="img"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="trendLegend">Red line legend indicator</title>
-              <path d="M 0,8 h 16" fill="none"></path>
-            </svg>
-            <p class="legend-item__label">Filings Trend</p>
-          </div>
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              role="img"
-              aria-labelledby="patternLegend"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="patternLegend">Striped pattern legend indicator</title>
-              <pattern
-                id="stripesLegend"
-                x="0"
-                y="0"
-                width="8"
-                height="8"
-                patternUnits="userSpaceOnUse"
-                patternTransform="rotate(45)"
-              >
-                <rect
-                  class="legend-item__pattern legend-item__pattern--localLegend"
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="8"
-                ></rect>
-              </pattern>
-              <rect
-                x="0"
-                y="0"
-                width="16"
-                height="16"
-                fill="url(#stripesLegend)"
-              ></rect>
-            </svg>
-            <p class="legend-item__label">
-              Local Moratorium<span
-                class="legend-item__secondary"
-                id="evictionMoratorium"
-              ></span>
-            </p>
-          </div>
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              role="img"
-              aria-labelledby="patternLegend"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="patternLegend">Striped pattern legend indicator</title>
-              <pattern
-                id="cdcLegend"
-                x="0"
-                y="0"
-                width="8"
-                height="8"
-                patternUnits="userSpaceOnUse"
-                patternTransform="rotate(-45)"
-              >
-                <rect
-                  class="legend-item__pattern legend-item__pattern--cdcLegend"
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="8"
-                ></rect>
-              </pattern>
-              <rect
-                x="0"
-                y="0"
-                width="16"
-                height="16"
-                fill="url(#cdcLegend)"
-              ></rect>
-            </svg>
-            <p class="legend-item__label">
-              <a href="https://evictionlab.org/federal-eviction-moratorium-update/">CDC Order</a>
-              <span
-                class="legend-item__secondary"
-                id="cdcGuidelines"></span>
-            </p>
-          </div>
-        </div>
-        <div class="intro__figure-stats">
-          <p id="filingsLastWeek"></p>
-          <p id="filingsCumulative"></p>
-        </div>
-        <p class="intro__figure-footnote">
-          * Filings in the last week may be undercounted as a result of
-          processing delays. These counts will be revised in the following week.
-        </p>
+      <h3>Filing Rates Over the Past Year</h3>
+      <div id="filingRates" class="stat-block-wrapper">
       </div>
     </div>
   </div>
 
   <script>
-    var tableUrl = {{ .Get "data" }}
-    var fips = {{ .Get "id" }}
-    window.addEventListener('load', function() {
+
+          var site_id = {{ .Get "site_id" }}
+          var renterssite = {{ .Page.Params.renterssite }};
+          window.addEventListener('load', function () {
+
+      var statFiles = [
+        { id: "filing", url: "/uploads/filing_data_by_site.csv" },
+        { id: "basic", url: "/uploads/basic_data_by_site.csv" },
+        { id: "acs", url: "/uploads/acs_data_by_site.csv" },
+      ]
+      var filingCounts = [
+        {
+          file: 'filing',
+          field: 'filings_pandemic',
+          display: 'filings since 3/15/2020',
+          formatter: d3.format(','),
+          subStat: {
+            file: 'filing',
+            field: 'filings_pandemic_pct_hist',
+            display: 'of average',
+            tooltip: 'Compared to filings over the same time frame before the COVID-19 pandemic',
+            formatter: d3.format('.0%'),
+          }
+        },
+        {
+          file: 'filing',
+          field: 'filings_past_year',
+          display: 'filings in the past year',
+          formatter: d3.format(','),
+          subStat: {
+            file: 'filing',
+            field: 'filings_past_year_pct_hist',
+            display: 'of average',
+            tooltip: 'Compared to filings over an average year before the COVID-19 pandemic',
+            formatter: d3.format('.0%'),
+          }
+        },
+        {
+          file: 'filing',
+          field: 'filings_past_month',
+          display: 'filings in the past month',
+          formatter: d3.format(','),
+          subStat: {
+            file: 'filing',
+            field: 'filings_past_month_pct_hist',
+            display: 'of average',
+            tooltip: 'Compared to filings over the same month before the COVID-19 pandemic',
+            formatter: d3.format('.0%'),
+          }
+        },
+      ]
+      var filingRates = [
+        {
+          file: 'filing',
+          field: 'eviction_filing_rate',
+          display: 'eviction filing rate',
+          tooltip: 'The number of evictions filed per 100 renter households over the last 12 months',
+          formatter: d3.format('.0%'),
+        },
+        {
+          file: 'filing',
+          field: 'hhs_threatened_rate',
+          display: 'households threatened rate',
+          tooltip: 'The percentage of unique households that received an eviction filing, regardless of how many evictions were filed against the same household',
+          tooltipMissingValue: `The percentage of unique households that received an eviction filing, regardless of how many evictions were filed against the same household.<br/><br/>Address data are currently insufficient to calculate this rate.`,
+          formatter: d3.format('.0%'),
+          default: 'Unavailable'
+        },
+        {
+          file: 'filing',
+          field: 'serial_share',
+          display: 'serial filing rate',
+          tooltip: 'Of unique households filed against in the last 12 months, the share filed against repeatedly at the same address within the last two years',
+          tooltipMissingValue: `Of unique households filed against in the last 12 months, the share filed against repeatedly at the same address within the last two years.<br/><br/>Address data are currently insufficient to calculate this rate.`,
+          formatter: d3.format('.0%'),
+          default: 'Unavailable'
+        },
+      ]
+      var paragraphStats = [
+        {
+          file: 'acs',
+          field: 'renter_hh',
+          placeholder: 'households',
+          formatter: d3.format(',')
+        },
+        {
+          file: 'acs',
+          field: 'median_rent',
+          placeholder: 'rent',
+          formatter: d3.format('$,')
+        },
+        {
+          file: 'basic',
+          field: 'notice_requirement',
+          placeholder: 'days',
+        },
+        {
+          file: 'basic',
+          field: 'avg_filing_fee',
+          placeholder: 'fee',
+          // formatter: d3.format('$,')
+        },
+        {
+          file: 'basic',
+          field: 'borders',
+          placeholder: 'county',
+        },
+      ]
+
+      var getVal = (fileData, s) => {
+        if (!fileData) {
+          console.error("No filedata found ", fileData, s)
+          return null;
+        }
+        var row = fileData.find((d) => d.site_id === site_id);
+        if (!row || !row[s.field]) console.log("missing for ", row, s.field)
+        return row ? row[s.field] : null;
+      }
+
+      var otherBlockLoaded = false;
+      var displayStatBlock = () => {
+        if (otherBlockLoaded) {
+          $(".intro .intro__stats-wrapper").css("opacity", 1);
+        } else {
+          otherBlockLoaded = true
+        }
+      }
+      Elab.Utils.createStatBlock('#filingCounts', statFiles, filingCounts, getVal, displayStatBlock)
+      Elab.Utils.createStatBlock('#filingRates', statFiles, filingRates, getVal, displayStatBlock)
+
+      var siteText = site_id.length === 2 ? '' : ` (${renterssite})`;
+      var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.<sup>1</sup>".replace('%{site}', siteText)
+      Elab.Utils.createStatParagraph('#summaryStats', paragraphText, statFiles, paragraphStats, getVal)
+
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
       var dateFormat = d3.timeFormat("%b %e, %Y")
@@ -177,7 +192,13 @@
         return dateFormat(d)
       }).join(' - ')
       $('#cdcGuidelines').text(cdcMoratorium)
-      Elab.Intro.initIntroChart(document.getElementById("introChart"), tableUrl, fips)
+
+            // move footnotes into proper container
+            var rootEl = $('.intro .layout');
+            var contentEl = rootEl.find(".intro__text");
+            var footnoteEl = rootEl.find(".footnote ol");
+            window.cc = contentEl;
+            footnoteEl.append(contentEl.find("ol li"));
     })
   </script>
 </div>

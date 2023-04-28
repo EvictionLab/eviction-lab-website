@@ -117,15 +117,30 @@ Elab.LineChart = (function (Elab) {
       // add number to highlight class to root
       $(root).addClass("chart__body--highlight" + highlighted.length);
     }
+
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
     return (
       chart
-        // adds y axis, using max of the trend line value or bar value
+        // adds y axis, using extremes of data extent as well as avg line (if plotted)
         .addAxisY({
           selector: ySelector,
           adjustExtent: function (extent) {
-            var range = extent[1] - extent[0];
-            return [extent[0] - range * 0.05, extent[1] + range * 0.05];
+            var avgLineMax = dataOptions.avgLines &&
+              Math.max(...dataOptions.avgLines.map(l => l.y));
+            var avgLineMin = dataOptions.avgLines &&
+              Math.min(...dataOptions.avgLines.map(l => l.y));
+
+            var max = typeof avgLineMax !== "number"
+              ? extent[1]
+              : Math.max(extent[1], avgLineMax);
+            var min = typeof avgLineMin !== "number"
+              ? extent[0]
+              : Math.min(extent[0], avgLineMin);
+            
+            var range = max - min;
+
+            // buffer of 5% on either end
+            return [min - range * 0.05, max + range * 0.05];
           },
           ticks: dataOptions.yTicks || 5,
           tickFormat: d3.format(dataOptions.yFormat || ",d"),
@@ -149,18 +164,20 @@ Elab.LineChart = (function (Elab) {
 
             if (dataOptions.maxTicks && tickCount > dataOptions.maxTicks) {
               const factorToKeep = Math.ceil(tickCount / dataOptions.maxTicks);
+              // thin down to every other (or fewer) when many labels
               selection
                 .selectAll(".tick text")
                 .attr("display", (d, i) => (!!(i % factorToKeep) ? "none" : "block"));
             }
-            if (window.innerWidth < 540) {
-              selection
-                .selectAll(".tick text")
-                .attr("text-anchor", "end")
-                .attr("transform", "rotate(-30)");
-            } else {
-              selection.selectAll(".tick text").attr("text-anchor", null).attr("transform", null);
-            }
+            // if (window.innerWidth < 540) {
+            // now always rotate labels
+            selection
+              .selectAll(".tick text")
+              .attr("text-anchor", "end")
+              .attr("transform", "rotate(-50)");
+            // } else {
+            //   selection.selectAll(".tick text").attr("text-anchor", null).attr("transform", null);
+            // }
           },
         })
         // adds the trend line
@@ -231,12 +248,17 @@ Elab.LineChart = (function (Elab) {
             );
           },
         })
+        // vertical lines marking dates
         .addMarkLine({
           marks:
             dataOptions.mark &&
             dataOptions.mark.split(";").map(function (d) {
               return parseDate(d);
             }),
+        })
+        // horizontal reference line
+        .addAvgLine({
+          lines: dataOptions.avgLines,
         })
         .render()
     );

@@ -1,7 +1,10 @@
+{{ $geographies := .Page.Params.geographies | default "tracts" }}
 <div class="section section--map">
   <div class="section__content">
     <div class="details">
       <p class="description">{{ .Inner }}</p>
+      <p class="description top-filers-only">On map, we also plot the location of the top 100 eviction hotspots in the county (see above). Hover over the circles to
+      see more information about filings from these locations.</p>
     </div>
     <div class="visual">
       <div id="map" class="map"></div>
@@ -16,23 +19,57 @@
       <div class="legend__gradient"></div>
       <div class="legend__gradient-labels"></div>
     </div>
-    <p class="footnote"></p>
+    <div class="legend legend--points top-filers-only" data-display="flex">
+      <div class="legend-item">
+        <div class="legend-item__label">
+          <label for="top-100">
+            <input id="top-100" type="checkbox" checked="true" aria-labelledby="labels_top-100">
+            <span id="labels_top-100">Number of filings by the top 100 filers</span>
+          </label>
+        </div>
+      </div>
+      <div class="legend__points-scale">
+        <div class="legend__points">
+          <svg width="6" height="18">
+            <circle cx="4" cy="8" r="2" fill="#E24000"></circle>
+          </svg>
+          <svg width="16" height="18">
+            <circle cx="8" cy="8" r="8" fill="#E24000"></circle>
+          </svg>
+        </div>
+        <div class="legend__points-labels"></div>
+      </div>
+    </div>
+    <p class="footnote">
+      <span class="data-download top-filers-only-class" data-class="emphasize">
+        <a href="{{ .Get `data` }}">Get the data</a>
+        for <strong>{{ $geographies }}</strong> in this figure
+      </span>
+      <span class="data-download top-filers-only emphasize">
+        <a href="{{ .Get `topFilers` }}">
+          Get the data
+        </a>
+        for <strong>top filers</strong> in this figure
+      </span>
+    </p>
   </div>
   <script>
     window.addEventListener("load", function () {
       var geojson = {{ .Get "shapes" }};
       var csv = {{ .Get "data" }};
+        var topCsv = {{ .Get "topFilers" }};
       var rootEl = '.section--map'
-      Elab.Section.init('map', rootEl, { 
-        geojson: geojson, 
-        csv: csv,  
-        metrics: {
-          "month_filings": "Filings", 
-          "month_rate": "Filing Rate", 
-          "month_diff": "Relative To Average"
-        }, 
-        dateCol: "month_date"
-      })
+          Elab.Section.init('map', rootEl, {
+            geojson: geojson,
+            csv: csv,
+            topCsv: topCsv,
+            metrics: {
+              "month_filings": "Filings",
+              "month_rate": "Filing Rate",
+              "month_diff": "Relative To Average"
+              },
+            dateCol: "month_date"
+          })
     })
   </script>
 </div>
