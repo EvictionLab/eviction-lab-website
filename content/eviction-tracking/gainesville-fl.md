@@ -35,6 +35,32 @@ This plot shows monthly eviction filings in Gainesville over the last year. Fili
 
 
 
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/gainesville_hotspots_output.csv" %}}
+
+# Eviction Hotspots
+
+Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and beyond. We analyzed eviction records in Alachua County to determine where the most cases are being filed. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the last year. We also display the plaintiff name most often listed with a given building in the court filings. In the next section, we map the top 100 hotspots across the county.
+
+Eviction Hotspot data are updated quarterly.
+{{%/ report_top_evictors %}}
+
+
+
+{{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/gainesville_map.csv" topData="/uploads/gainesville_hotspots_media_report.csv" %}}
+
+
+
+# The geography of eviction filings
+
+Gainesville is divided into 56 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+
+1. Eviction filing data were collected by Drew Nolan in association with the [Alachua County Labor Coalition](https://laborcoalition.org/). Historical averages are calculated for the years 2017-2019. 
+2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+
+
+
+{{%/ report_map %}}
+
 
 
 {{% report_chart id="race" data="/uploads/gainesville_linechart.csv" imputedNoteNumber="2" %}}
