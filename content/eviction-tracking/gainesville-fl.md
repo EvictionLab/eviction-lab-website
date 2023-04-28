@@ -34,6 +34,20 @@ This plot shows monthly eviction filings in Gainesville over the last year. Fili
 {{%/ report_chart %}}
 
 
+{{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/gainesville_map.csv" %}}
+
+
+
+# The geography of eviction filings
+
+Gainesville is divided into 56 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+
+1. Eviction filing data were collected by Drew Nolan in association with the [Alachua County Labor Coalition](https://laborcoalition.org/). Historical averages are calculated for the years 2017-2019. 
+2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+
+
+
+{{%/ report_map %}}
 
 
 
