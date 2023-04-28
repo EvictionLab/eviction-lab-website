@@ -31,7 +31,7 @@ Eviction filings in Austin fell sharply when eviction proceedings were suspended
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Austin over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Austin over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filings data for 2014-2019 collected by [BASTA Austin](http://www.bastaaustin.org/) and [Open Austin](https://www.open-austin.org/)
 2. Filing data for 2020 onwards collected by [January Advisors](https://www.januaryadvisors.com/)

@@ -15,36 +15,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 While the state of Ohio did not institute a general eviction moratorium, the courts in Franklin County (Columbus) halted the processing of non-emergency eviction filings between March 16 and June 1, 2020. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -56,7 +27,7 @@ While the state of Ohio did not institute a general eviction moratorium, the cou
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Columbus over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Columbus over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, and 2015
 2. Filing data for 2020 onward provided by the [Franklin County Municipal Court](http://www.fcmcclerk.com/reports/evictions)

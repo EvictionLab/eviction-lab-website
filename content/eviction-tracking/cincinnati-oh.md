@@ -26,7 +26,7 @@ On April 1, 2021, The Hamilton County Municipal Court stopped enforcing the nati
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Cincinnati over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Cincinnati over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Filing data for 2020 onwards collected by [January Advisors](https://www.januaryadvisors.com/)

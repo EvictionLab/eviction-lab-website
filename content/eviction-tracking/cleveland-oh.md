@@ -25,7 +25,7 @@ While the state of Ohio did not institute a general eviction moratorium, the Cle
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Cleveland over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Cleveland over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings are based on data from 2016-2019, collected by [LSC](https://www.lsc.gov/).
 2. Filing data for 2020 onwards collected by [LSC](https://www.lsc.gov/).

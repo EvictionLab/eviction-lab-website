@@ -24,7 +24,7 @@ Eviction filings in Houston fell sharply once eviction proceedings were suspende
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Houston over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Houston over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/)
