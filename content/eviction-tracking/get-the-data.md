@@ -247,6 +247,21 @@ data:
     geo: ZIP Code
     file: /uploads/pennsylvania_weekly_2020_2021.csv
     monthfile: /uploads/pennsylvania_monthly_2020_2021.csv
+  - site: Providence
+    years: 2016-2019
+    file: /uploads/providence_weekly_2020_2021.csv
+    monthfile: /uploads/providence_monthly_2020_2021.csv
+    geo: Census Tract
+  - site: Rhode Island
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/rhode_island_weekly_2020_2021.csv
+    monthfile: /uploads/rhode_island_monthly_2020_2021.csv
+  - site: Nashville
+    years: 2017-2019
+    geo: ZIP Code
+    file: /uploads/nashville_weekly_2020_2021.csv
+    monthfile: /uploads/nashville_monthly_2020_2021.csv
 ---
 Sample code:
 
