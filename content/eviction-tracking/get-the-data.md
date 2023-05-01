@@ -177,6 +177,11 @@ data:
     geo: Census Tract
     file: /uploads/missouri_weekly_2020_2021.csv
     monthfile: /uploads/missouri_monthly_2020_2021.csv
+  - site: Nashville
+    years: 2017-2019
+    geo: ZIP Code
+    file: /uploads/nashville_weekly_2020_2021.csv
+    monthfile: /uploads/nashville_monthly_2020_2021.csv
   - site: New Mexico
     years: 2017-2019
     geo: Census Tract
@@ -192,6 +197,11 @@ data:
     geo: ZIP Code
     file: /uploads/newyork_weekly_2020_2021.csv
     monthfile: /uploads/newyork_monthly_2020_2021.csv
+  - site: Pennsylvania
+    years: 2016-2019
+    geo: ZIP Code
+    file: /uploads/pennsylvania_weekly_2020_2021.csv
+    monthfile: /uploads/pennsylvania_monthly_2020_2021.csv
   - site: Philadelphia
     years: 2016-2019
     geo: Census Tract
@@ -207,6 +217,16 @@ data:
     geo: ZIP Code
     file: /uploads/pittsburgh_weekly_2020_2021.csv
     monthfile: /uploads/pittsburgh_monthly_2020_2021.csv
+  - site: Providence
+    years: 2016-2019
+    file: /uploads/providence_weekly_2020_2021.csv
+    monthfile: /uploads/providence_monthly_2020_2021.csv
+    geo: Census Tract
+  - site: Rhode Island
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/rhode_island_weekly_2020_2021.csv
+    monthfile: /uploads/rhode_island_monthly_2020_2021.csv
   - site: Richmond
     years: 2016-2019
     geo: ZIP Code
@@ -227,6 +247,11 @@ data:
     geo: Census Tract
     file: /uploads/tampa_weekly_2020_2021.csv
     monthfile: /uploads/tampa_monthly_2020_2021.csv
+  - site: Virginia
+    years: 2016-2019
+    geo: ZIP Code
+    file: /uploads/virginia_weekly_2020_2021.csv
+    monthfile: /uploads/virginia_monthly_2020_2021.csv
   - site: Wilmington
     years: 2016-2019
     geo: Census Tract
@@ -237,31 +262,6 @@ data:
     geo: Census Tract
     file: /uploads/wisconsin_weekly_2020_2021.csv
     monthfile: /uploads/wisconsin_monthly_2020_2021.csv
-  - site: Virginia
-    years: 2016-2019
-    geo: ZIP Code
-    file: /uploads/virginia_weekly_2020_2021.csv
-    monthfile: /uploads/virginia_monthly_2020_2021.csv
-  - site: Pennsylvania
-    years: 2016-2019
-    geo: ZIP Code
-    file: /uploads/pennsylvania_weekly_2020_2021.csv
-    monthfile: /uploads/pennsylvania_monthly_2020_2021.csv
-  - site: Providence
-    years: 2016-2019
-    file: /uploads/providence_weekly_2020_2021.csv
-    monthfile: /uploads/providence_monthly_2020_2021.csv
-    geo: Census Tract
-  - site: Rhode Island
-    years: 2016-2019
-    geo: Census Tract
-    file: /uploads/rhode_island_weekly_2020_2021.csv
-    monthfile: /uploads/rhode_island_monthly_2020_2021.csv
-  - site: Nashville
-    years: 2017-2019
-    geo: ZIP Code
-    file: /uploads/nashville_weekly_2020_2021.csv
-    monthfile: /uploads/nashville_monthly_2020_2021.csv
 ---
 Sample code:
 
