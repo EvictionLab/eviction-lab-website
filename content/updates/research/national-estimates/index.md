@@ -1,23 +1,27 @@
 ---
+draft: false
 childof: research
+url: /national-estimates
 contenttype: updates
+collection: true
 contentcat: research
-featured: "home"
-researchtype: elresearch
-title: 'National Estimates: Eviction in America'
+featured: home
+in_index: true
+title: "National Estimates: Eviction in America"
 date: 2018-05-11T16:46:40.089Z
-postauthorname: The Eviction Lab
 postauthortitle: Princeton University
+socialDescription: What Eviction Lab data reveals about the national prevalence of evictions.
+researchtype: elresearch
+postauthorname: The Eviction Lab
+twImage: national-estimates-twitter.jpg
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: What Eviction Lab data reveals about the national prevalence of evictions.
-socialDescription: What Eviction Lab data reveals about the national prevalence of evictions.  
-fbImage: 'national-estimates-fb.jpg'
-twImage: 'national-estimates-twitter.jpg'
-url: /national-estimates
-collection: true
 aliases:
-    - /updates/research/national-estimates
+  - /updates/research/national-estimates
+fbImage: national-estimates-fb.jpg
 ---
+<b>N﻿OTE (April 2023): In July 2022, new research allowed us to improve our data gathering and add two more years of eviction data. We recommend you use our updated data for any analysis, which you can find  <a href="https://eviction-lab-data-downloads.s3.amazonaws.com/estimating-eviction-prevalance-across-us/us_proprietary_2000_2018.csv">here</a>. To learn more about our new data, our methodology, and its limitations, read our <a href="https://evictionlab.org/new-eviction-data-2022/">blog post from 2022</a>.</b>
+
 
 Since the Eviction Lab’s inception, we’ve been in constant pursuit of a seemingly simple question: how many evictions take place in the United States each year? After countless hours of data collection and research, we are finally able to produce some of the first estimates of the national prevalence of eviction.
 

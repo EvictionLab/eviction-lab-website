@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="420px" height="138px" viewBox="0 0 520 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Artboard Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#212529" font-family="GT-Eesti-Display-Bold, sans-serif" font-size="19" letter-spacing="0.894117647">
+            <text>
+                <tspan font-family="GT-Eesti-Display-Medium,sans-serif;" text-anchor="middle" x="260" y="17.9414673">ZRI (QUINTILES) </tspan>
+            </text>
+        </g>
+        <rect fill="#434878" x="0" y="77" width="104" height="32"></rect>
+        <rect fill="#c1c5ea" x="104" y="77" width="104" height="32"></rect>
+        <rect fill="#e8dce8" x="208" y="77" width="104" height="32"></rect>
+        <rect fill="#e99c7e" x="312" y="77" width="104" height="32"></rect>
+        <rect fill="#e24000" x="416" y="77" width="104" height="32"></rect>
+        <text font-family="Akkurat-Regular" font-size="19" font-weight="normal" letter-spacing="92" fill="#212529">
+            <tspan x="52" y="134">12345</tspan>
+        </text>
+        <text font-family="Akkurat-Regular" font-size="19" font-weight="normal" letter-spacing="0.794118" fill="#212529">
+            <tspan x="5" y="62">Bottom 20%</tspan>
+        </text>
+        <text font-family="Akkurat-Regular" font-size="19" font-weight="normal" letter-spacing="0.794118" fill="#212529">
+            <tspan text-anchor="end" x="515" y="62">Top 20%</tspan>
+        </text>
+    </g>
+</svg>

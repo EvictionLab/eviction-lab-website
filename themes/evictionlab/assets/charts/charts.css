@@ -265,6 +265,13 @@
   }
 }
 
+/** ...Besides the bars, which get to big */
+@media(min-width: 768px) {
+  .chart.proportional-bars {
+    width: 84%;
+    margin-left: 8%;
+  }
+}
 /** 
   Need a high level of specificity here, 
   as several of the page level CSS definitions

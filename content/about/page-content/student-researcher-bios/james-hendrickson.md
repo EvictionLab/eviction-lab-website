@@ -3,7 +3,8 @@ childof: alumni-bios
 category: alumni
 title: James Hendrickson
 abbrev: jhendrickson
-position: Research Affiliate
+position: Senior Research Specialist, 2017-2019
+newposition: University of Southern California, PhD Student (Public Policy and Management)
 date: 2017-11-26T03:50:19.190Z
 image: /images/bios/jhendrickson_full.jpg
 thumb: /images/bios/jhendrickson_thumb.jpg

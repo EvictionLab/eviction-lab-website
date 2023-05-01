@@ -57,10 +57,10 @@ Elab.ChartBuilder = (function (Elab) {
     this.options = Object.assign(
       {
         width: Math.max(rect.width, 320),
-        height: Math.max(rect.height, 320),
+        height: Math.max(rect.height, 420),
       },
       this.defaultOptions,
-      options
+      options,
     );
     this.innerWidth =
       this.options.width + this.options.margin[1] + this.options.margin[3];
@@ -705,12 +705,13 @@ Elab.ChartBuilder = (function (Elab) {
       var barData = options.selector(_this.data);
 
       var spacing = 1.5;
-      var bandWidth =
-        _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2;
-
-      var selection = _this.selections["bars"]
-        .selectAll(".chart__bar")
-        .data(barData);
+      // NOTE: with enough data points bars become 0px wide... need to thin out
+      // bars if we continue using chart (but chart being retired)
+      var bandWidth = Math.max(
+        1,
+        _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2,
+      );
+      var selection = _this.selections["bars"].selectAll(".chart__bar").data(barData);
 
       selection
         .enter()
@@ -724,8 +725,7 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("height", 0)
         .on("mousemove", function (d) {
           _this.setHovered(d);
-          options.renderTooltip &&
-            _this.showTooltip(d3.event, options.renderTooltip);
+          options.renderTooltip && _this.showTooltip(d3.event, options.renderTooltip);
         })
         .on("mouseout", function (d) {
           _this.setHovered(null);
@@ -749,6 +749,7 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  // adds vertical lines to mark dates
   Chart.prototype.addMarkLine = function (overrides) {
     var _this = this;
     var options = overrides || {};
@@ -791,6 +792,81 @@ Elab.ChartBuilder = (function (Elab) {
     return this;
   };
 
+  // adds horizontal reference line (with label)
+  Chart.prototype.addAvgLine = function (overrides) {
+    var _this = this;
+    var options = overrides || {};
+    var lineData = options.lines;
+    if (!lineData) return this;
+
+    // LINE
+    this.selections["avg"] = this.selections["data"].append("g").attr("class", "avg__lines");
+
+    this.updaters["avg"] = function () {
+      var selection = _this.selections["avg"]
+        .selectAll(".avg__lines")
+        .data(lineData.filter((l) => !l.labelOnly));
+
+      // HACK: otherwise multiple added on resize. Why is .exit().remove() not managing?
+      _this.selections["avg"].selectAll(".avg__line").remove();
+
+      selection
+        .enter()
+        .append("line")
+        .attr("class", "avg__line")
+        .attr("x1", _this.getInnerWidth())
+        .attr("x2", _this.getInnerWidth())
+        .attr("y1", function (d) {
+          return _this.yScale(d.y);
+        })
+        .attr("y2", function (d) {
+          return _this.yScale(d.y);
+        })
+        .merge(selection)
+        .transition()
+        .duration(1000)
+        .attr("x1", 0);
+      selection.exit().remove();
+    };
+
+    // LABEL
+    // add to chart__root rather than chart__data so that label can display outside chart area
+    this.selections["avg__labels"] = this.selections["root"]
+      .append("g")
+      .attr("class", "avg__line-labels")
+      // shift right to account for left margin
+      .attr("transform", `translate(${getMargin()[3]}, 0)`);
+
+    this.updaters["avg__labels"] = function () {
+      var labelSelection = _this.selections["avg__labels"]
+        .selectAll(".avg__line-label")
+        .data(lineData);
+
+      // HACK: otherwise multiple added on resize. Why is .exit().remove() not managing?
+      _this.selections["avg__labels"].selectAll(".avg__line-label--y").remove();
+
+      labelSelection
+        .enter()
+        .append("text")
+        .attr("class", "avg__line-label--y")
+        .html(function (d) {
+          return d.label;
+        })
+        .attr("x", _this.getInnerWidth() + 4)
+        .attr("y", function (d, i) {
+          return _this.yScale(d.y);
+        })
+        .attr("dy", function (d, i) {
+          // offset sequential lines of text
+          return i * 16;
+        });
+
+      labelSelection.exit().remove();
+    };
+
+    return this;
+  };
+  
   /**
    * Adds bars to the chart for category or location based axis
    * @param {function} selector function that takes the chart data and returns the bar data
@@ -1185,11 +1261,15 @@ Elab.ChartBuilder = (function (Elab) {
 
   Chart.prototype.addAxisLabel = function (overrides) {
     var _this = this;
-    var options = overrides || {};
-    options.position = overrides.position || "bottom";
-    options.label = overrides.label || "";
+    if (!overrides || !overrides.label) return this;
+    var options = {
+      label: overrides.label,
+      position: overrides.position || "bottom",
+    };
     function createSelection(parentSelection) {
-      return parentSelection.append("text").attr("class", "chart__label chart__label--" + options.position);
+      return parentSelection
+        .append("text")
+        .attr("class", "chart__label chart__axis-label chart__label--" + options.position);
     }
     function createRenderFunction(selection, chart) {
       return function () {
@@ -1208,6 +1288,8 @@ Elab.ChartBuilder = (function (Elab) {
       };
     }
     this.addElement("label-" + options.position, "overlay", createSelection, createRenderFunction);
+
+    return this;
   }
 
   /**

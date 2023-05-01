@@ -109,9 +109,7 @@ Elab.LineChart = (function (Elab) {
    */
   function createFigure(root, data, dataOptions) {
     const parseDate = d3.timeParse("%m/%d/%Y");
-    var highlighted = dataOptions.highlight
-      ? dataOptions.highlight.split(";").reverse()
-      : null;
+    var highlighted = dataOptions.highlight ? dataOptions.highlight.split(";").reverse() : null;
     // sort data so highlighted items are at the end of the array in the same order as the "highlight" string
     if (highlighted) {
       var compare = createHighlightComparator(highlighted, "name");
@@ -119,19 +117,35 @@ Elab.LineChart = (function (Elab) {
       // add number to highlight class to root
       $(root).addClass("chart__body--highlight" + highlighted.length);
     }
+
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
     return (
       chart
-        // adds y axis, using max of the trend line value or bar value
+        // adds y axis, using extremes of data extent as well as avg line (if plotted)
         .addAxisY({
           selector: ySelector,
           adjustExtent: function (extent) {
-            var range = extent[1] - extent[0];
-            return [extent[0] - range * 0.05, extent[1] + range * 0.05];
+            var avgLineMax = dataOptions.avgLines &&
+              Math.max(...dataOptions.avgLines.map(l => l.y));
+            var avgLineMin = dataOptions.avgLines &&
+              Math.min(...dataOptions.avgLines.map(l => l.y));
+
+            var max = typeof avgLineMax !== "number"
+              ? extent[1]
+              : Math.max(extent[1], avgLineMax);
+            var min = typeof avgLineMin !== "number"
+              ? extent[0]
+              : Math.min(extent[0], avgLineMin);
+            
+            var range = max - min;
+
+            // buffer of 5% on either end
+            return [min - range * 0.05, max + range * 0.05];
           },
           ticks: dataOptions.yTicks || 5,
           tickFormat: d3.format(dataOptions.yFormat || ",d"),
         })
+        .addAxisLabel({ label: dataOptions.yLabel, position: "left" })
         // adds time axis from dates in the dataset
         .addTimeAxis({
           selector: xSelector,
@@ -146,17 +160,24 @@ Elab.LineChart = (function (Elab) {
               : undefined,
           adjustExtent: dataOptions.adjustExtentX,
           adjustLabels: function (selection) {
-            if (window.innerWidth < 540) {
+            const tickCount = selection.selectAll(".tick text").nodes().length;
+
+            if (dataOptions.maxTicks && tickCount > dataOptions.maxTicks) {
+              const factorToKeep = Math.ceil(tickCount / dataOptions.maxTicks);
+              // thin down to every other (or fewer) when many labels
               selection
                 .selectAll(".tick text")
-                .attr("text-anchor", "end")
-                .attr("transform", "rotate(-30)");
-            } else {
-              selection
-                .selectAll(".tick text")
-                .attr("text-anchor", null)
-                .attr("transform", null);
+                .attr("display", (d, i) => (!!(i % factorToKeep) ? "none" : "block"));
             }
+            // if (window.innerWidth < 540) {
+            // now always rotate labels
+            selection
+              .selectAll(".tick text")
+              .attr("text-anchor", "end")
+              .attr("transform", "rotate(-50)");
+            // } else {
+            //   selection.selectAll(".tick text").attr("text-anchor", null).attr("transform", null);
+            // }
           },
         })
         // adds the trend line
@@ -171,11 +192,9 @@ Elab.LineChart = (function (Elab) {
         .addHoverDot()
         .addVoronoi({
           renderTooltip: function (hoverData) {
-            var yFormat =
-              dataOptions.yTooltipFormat || dataOptions.yFormat || ".0%";
+            var yFormat = dataOptions.yTooltipFormat || dataOptions.yFormat || ".0%";
             var yFormatter = d3.format(yFormat);
-            var xFormat =
-              dataOptions.xTooltipFormat || dataOptions.xFormat || "%B %d, %Y";
+            var xFormat = dataOptions.xTooltipFormat || dataOptions.xFormat || "%B %d, %Y";
             var xFormatter = d3.timeFormat(xFormat);
             function getWeekTooltip() {
               var weekFormat = d3.timeFormat("%b %d");
@@ -190,7 +209,7 @@ Elab.LineChart = (function (Elab) {
 
             function getMonthTooltip() {
               const monthFormat = d3.timeFormat(
-                dataOptions.xTooltipFormat || dataOptions.xFormat || "%B"
+                dataOptions.xTooltipFormat || dataOptions.xFormat || "%B",
               );
               return {
                 title: hoverData.name,
@@ -214,8 +233,6 @@ Elab.LineChart = (function (Elab) {
                 ? getMonthTooltip()
                 : getDefaultTooltip();
 
-            console.log("rendertt", tooltip);
-
             return (
               '<h1 class="tooltip__title">' +
               tooltip.title +
@@ -231,12 +248,17 @@ Elab.LineChart = (function (Elab) {
             );
           },
         })
+        // vertical lines marking dates
         .addMarkLine({
           marks:
             dataOptions.mark &&
             dataOptions.mark.split(";").map(function (d) {
               return parseDate(d);
             }),
+        })
+        // horizontal reference line
+        .addAvgLine({
+          lines: dataOptions.avgLines,
         })
         .render()
     );
@@ -269,8 +291,7 @@ Elab.LineChart = (function (Elab) {
   function init(rootEl, options) {
     if (!options || typeof options !== "object")
       throw new Error("linechart: no options object provided");
-    if (!options.data)
-      throw new Error("linechart: must provide file URL in options");
+    if (!options.data) throw new Error("linechart: must provide file URL in options");
     options.x = options.x || "x";
     options.y = options.y || "y";
     options.groupBy = options.groupBy || "name";

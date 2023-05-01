@@ -356,10 +356,11 @@ collections:
   - name: "research" # Used in routes, e.g., /admin/collections/blog
     label: "Research posts" # Used in the UI
     folder: "/content/updates/research" # The path to the folder where the documents are stored
-    path: '{{slug}}/'
     create: true # Allow users to create new documents in this collection
-    extension: md
     filter: { field: "collection", value: true }
+    path: '{{slug}}/{{title}}'
+    extension: md
+    identifier_field: title
     editor:
       preview: false
     preview_path: "{{fields.url}}"
@@ -446,7 +447,7 @@ collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog posts" # Used in the UI
     folder: "/content/updates/blog" # The path to the folder where the documents are stored
-    path: '{{slug}}/'
+    path: '{{slug}}/index'
     create: true # Allow users to create new documents in this collection
     extension: md
     editor:
@@ -505,7 +506,7 @@ collections:
           label: "Author Photo",
           name: "authorpic",
           widget: "image",
-          default: "/imagses/bios/elab_thumb_sm.jpg",
+          default: "/images/bios/elab_thumb_sm.jpg",
           required: false,
         }
       - {

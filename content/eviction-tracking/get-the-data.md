@@ -35,7 +35,7 @@ data:
   - site: All Cities
     years: "-"
     geo: Census Tract / ZIP Code
-    file: /uploads/all_sites_weekly_2020_2021.csv
+    file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_weekly_2020_2021.csv
     monthfile: /uploads/all_sites_monthly_2020_2021.csv
   - site: All States
     years: "-"
@@ -147,6 +147,11 @@ data:
     geo: Census Tract
     file: /uploads/lasvegas_weekly_2020_2021.csv
     monthfile: /uploads/lasvegas_monthly_2020_2021.csv
+  - site: Miami-Ft. Lauderdale
+    years: 2014-2019
+    geo: Tract (County for Miami-Dade)
+    file: /uploads/miami_weekly_2020_2021.csv
+    monthfile: /uploads/miami_monthly_2020_2021.csv
   - site: Memphis
     years: 2016-2019
     geo: Census Tract

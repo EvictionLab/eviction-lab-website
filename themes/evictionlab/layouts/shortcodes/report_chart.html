@@ -4,6 +4,7 @@
 {{ if eq (.Get `id`) "race" }}
 {{ $.Scratch.Set "ariaLabel" "Bar chart showing average filings and filing counts by month grouped by neighborhood demographics" }}
 {{ end }}
+{{ $imputedNoteNumber := .Get `imputedNoteNumber` }}
 <section
   id="{{ .Get `id` }}"
   class="section section--chart section--{{ .Get `id` }}"
@@ -21,60 +22,112 @@
             Filing Counts
           </button>
           <button class="toggle toggle--avg">
-            Filings Relative to Average
+            Vs. Average
           </button>
         </div>
+        <div class="button-group time-span"></div>
       </div>
     </div>
     <div class="legend"></div>
-    <div class="visual__note-wrapper">
-          <div class="legend-item">
-            <svg
-              class="legend-item__visual"
-              role="img"
-              aria-labelledby="patternLegend"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
-              <title id="patternLegend">Striped pattern legend indicator</title>
-              <pattern
-                id="redStripesLegend"
-                x="0"
-                y="0"
-                width="8"
-                height="8"
-                fill="#e24000"
-                patternUnits="userSpaceOnUse"
-                patternTransform="rotate(45)"
-              >
-                <rect
-                  class="legend-item__pattern legend-item__pattern--localLegend"
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="8"
-                ></rect>
-              </pattern>
-              <rect
-                x="0"
-                y="0"
-                width="16"
-                height="16"
-                fill="url(#redStripesLegend)"
-              ></rect>
-            </svg>
+    <p class="footnote">
+      <span class="data-download"><a href="{{ .Get `data` }}">Get the data</a> for this figure</span>
+    </p>
+    </div>
+    <div class="section__content imputed-data-only">
+      <div class="details">
+        <p><strong>Eviction filings by defendant race/ethnicity and gender</strong></p>
+        <p>
+        There are often large
+        <a href="https://evictionlab.org/demographics-of-eviction/">
+          racial/ethnic and gender disparities in eviction risk</a>.
+        Here, we estimate the demographic characteristics of those filed against for eviction over
+        the last year. We compare to data from the ACS that show the share of renters in the same
+        categories.<sup>1</sup> </p>
+        <div class="comparison-legend">
+          <div><span class="color-chip chip-a"></span>
+            <p class="caption">Share of eviction filings</p>
           </div>
-          <div class="visual__note legend-item__label">
+          <div><span class="color-chip chip-b"></span>
+            <p class="caption">Share of renters</p>
           </div>
+        </div>
       </div>
-    <p class="footnote"></p>
+      <div class="visual">
+        <div class="visual__header">
+          <h3 class="visual__title">FILINGS OVER THE LAST YEAR BY DEFENDANT RACE/ETHNICITY AND GENDER
+          </h3>
+        </div>
+        <div class="comparison-block-wrapper" id="imputedComps--{{ .Get `id` }}">
+        </div>
+    </div>
+    <div class="additional-footnote">
+      <ul>
+        <li>
+          Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. We refer to “gender”
+          throughout while acknowledging necessarily limitations of the imputation process and its inability to capture important
+          subtleties in individuals’ gender identification. A complete description of this process can be found in the <a href="https://evictionlab.org/eviction-tracking/methods/">ETS 
+          methods page</a>. ACS data are from 2015-2019 five-year estimates.
+        </li>
+      </ul>
+      <br />
+      <span class="data-download"><a href="{{ .Get `data` }}">Get the data</a> for these figures</span>
+    </div>
   </div>
   <script>
     window.addEventListener('load', function() {
       var id = {{ .Get "id" }}
       var csv = {{ .Get "data" }}
       var rootEl = '#'+id
+      var comparisonFiles = [
+        { id: "imputed", url: csv },
+      ]
+      var comparisons = [
+        {
+          file: 'imputed',
+          fieldA: 'month_filings_imputed',
+          fieldB: 'baseline_share',
+          display: 'Black',
+          group: 'Black',
+          formatter: d3.format('.0%'),
+        },
+        {
+          file: 'imputed',
+          fieldA: 'month_filings_imputed',
+          fieldB: 'baseline_share',
+          display: 'Latinx',
+          group: 'Latinx',
+          formatter: d3.format('.0%'),
+        },
+        {
+          file: 'imputed',
+          fieldA: 'month_filings_imputed',
+          fieldB: 'baseline_share',
+          display: 'White',
+          group: 'White',
+          formatter: d3.format('.0%'),
+        },
+        {
+          file: 'imputed',
+          fieldA: 'month_filings_imputed',
+          fieldB: 'baseline_share',
+          display: 'Female',
+          group: 'Female',
+          formatter: d3.format('.0%'),
+        },
+      ]
+      var getVals = (fileData, s) => {
+        var row = fileData.findLast((d) => d.group === s.group);
+        return row ? [row[s.fieldA], row[s.fieldB]] : [];
+      }
+      var callback = (dataFound) => {
+        if (dataFound) {
+          $('#race .section__content.imputed-data-only').css("display", "block");
+          $("#race .footnote .data-download").css("display", "none");
+        } 
+      }
+      if (id === "race") {
+        Elab.Utils.createComparisonBlock('#imputedComps--race', comparisonFiles, comparisons, getVals, callback)
+    }
       Elab.Section.init('chart', rootEl, { id: id, csv: csv })
     });
   </script>

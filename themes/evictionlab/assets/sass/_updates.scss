@@ -633,6 +633,35 @@ svg {
   }
 
 }
+// zri updates post
+.url-zoning-restrictiveness-index {
+
+  .visual--mapbox {
+    width: 100% !important;
+    margin-left: 0% !important;
+
+    .legend {
+      display: none !important;
+    }
+  }
+
+  .visual--mapbox .legend__title {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .1px;
+    color: #5a5a5a;
+  }
+
+  h3.visual__title {
+    font-family: 'Akkurat-Bold' !important;
+    font-size: 16px !important;
+    letter-spacing: .1px !important;
+    color: #5a5a5a !important;
+    //text-transform: uppercase;
+    //color: #424242;
+  }
+}
 
 // page-layout-page-assessing-state-eviction-prevention-policies-in-response-to-covid-19
 /*
@@ -652,5 +681,21 @@ svg {
     }
 }
 
+// Suburban eviction post 3/2/23
 
+.journal-subheading {
+  font-size: 1.6rem !important;
+}
+.journal-heading {
+  font-size: 2rem;
+  @include media-breakpoint-up(md) {
+    font-size: 125%;
+  }
+}
+.journal-image {
+  max-width: 240px;
+  @include media-breakpoint-up(md) {
+    max-width: 240px;
+  }
+}
 

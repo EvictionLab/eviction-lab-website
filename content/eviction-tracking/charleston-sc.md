@@ -4,17 +4,17 @@ draft: false
 h1: Charleston, South Carolina
 slug: charleston-sc
 date: 2022-07-20T04:00:00.000Z
+rentersSite: Charleston
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Charleston, South Carolina | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
-rentersSite: Charleston
 ---
 
-{{< report_intro id="45019" data="/uploads/table.csv" >}}
+{{< report_intro site_id="45019" data="/uploads/table.csv" >}}
 
 South Carolina implemented a state-wide eviction moratorium between March 17 and May 14, 2020. In both Charleston (Charleston County) and [Greenville](https://evictionlab.org/eviction-tracking/greenville-sc/), this period saw almost no new eviction filings. 
 
-More detail on eviction protections in South Carolina can be found on the [COVID-19 Housing Policy Scorecard](https://evictionlab.org/covid-policy-scorecard/sc/).
+
 
 {{</ report_intro >}}
 
@@ -22,9 +22,9 @@ More detail on eviction protections in South Carolina can be found on the [COVID
 
 {{% report_chart id="avg" data="/uploads/charleston_barchart.csv" %}}
 
-# Changes in eviction filings
+# Trends in eviction filings
 
-Eviction filings in Charleston were slightly below average in January and February 2020.<sup>1</sup> Filings dropped in March, and fell to nearly zero in April 2020. 
+This plot shows monthly eviction filings in Charleston over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Eviction filing data for Charleston County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 
@@ -34,9 +34,9 @@ Eviction filings in Charleston were slightly below average in January and Februa
 
 {{% report_map shapes="/uploads/charleston_shapes.json" data="/uploads/charleston_map.csv" %}}
 
-# The geography of changes in eviction filings
+# The geography of eviction filings
 
-Charleston County is divided into 86 census tracts. In each of those tracts, we map the number of eviction filings over the last four weeks. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Charleston County is divided into 86 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Charleston County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
@@ -45,14 +45,17 @@ Charleston County is divided into 86 census tracts. In each of those tracts, we 
 
 
 
-{{% report_chart id="race" data="/uploads/charleston_linechart.csv" %}}
+{{% report_chart id="race" data="/uploads/charleston_linechart.csv" imputedNoteNumber="2" %}}
 
-# Eviction filings by neighborhood demographics
+# The demographics of eviction filings
+
+**Eviction filings by neighborhood race/ethnicity**
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2016–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2016–2019.<sup>1</sup>
 
 1. Eviction filing data for Charleston County were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2016-2019.
+
 
 {{%/ report_chart %}}

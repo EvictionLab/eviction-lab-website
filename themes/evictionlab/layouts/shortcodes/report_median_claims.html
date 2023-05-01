@@ -7,15 +7,22 @@
 {{ .Inner }}
 </div>
 <div class="visual">
-<div class="visual__header">
-<h3 class="visual__title">Median Claim Amount by Month</h3>
+  <div class="visual__header">
+    <h3 class="visual__title">Median Claim Amount by Month</h3>
+  </div>
+  <div id="medianChart" class="visual__chart">
+    <svg></svg>
+  </div>
 </div>
-<div id="medianChart" class="visual__chart">
-<svg></svg>
-</div>
-</div>
-<div class="legend"></div>
-<div class="footnote"></div>
+  <div class="legend"></div>
+  <div id="claimsStats" class="callout stat-block-wrapper">
+    <p>
+      Over the past year, of all eviction claims,
+    </p>
+  </div>
+  <div class="footnote">
+    <span class="data-download"><a href="{{ .Get `data` }}">Get the data</a> for this figure</span>
+  </div>
 </div>
 <script>
 window.addEventListener('load', function() {
@@ -23,8 +30,37 @@ window.addEventListener('load', function() {
   var csv = {{ .Get "data" }}
   var yCol = "median_claim"
   var xCol = "month_date"
+  var avg = "median_claim_prepandemic"
   var rootEl = '#'+id
-  Elab.Section.init('median_filings', rootEl, { id: id, csv: csv, yCol: yCol, xCol: xCol })
+  var statFiles = [
+    { id: "claims", url: csv },
+  ]
+  var stats = [
+    {
+      file: 'claims',
+      field: 'sub1000',
+      display: 'were for less than $1000',
+      formatter: d3.format('.0%'),
+    },
+    {
+      file: 'claims',
+      field: 'sub_med_rent',
+      display: 'were for less than the median monthly rent',
+      formatter: d3.format('.0%'),
+    },
+    {
+      file: 'claims',
+      field: 'over_six_months_rent',
+      display: 'were for more than 6 months rent',
+      formatter: d3.format('.0%'),
+    },
+  ]
+  var getVal = (fileData, s) => {
+    var row = fileData.findLast((d) => d[s.field] !== undefined);
+    return row ? row[s.field] : null;
+  }
+  Elab.Utils.createStatBlock('#claimsStats', statFiles, stats, getVal)
+  Elab.Section.init('median_filings', rootEl, { id, csv, yCol, xCol, avg })
 });
 </script>
 </section>

@@ -1,0 +1,158 @@
+{{/**
+
+Shortcode for rendering a color bar to convey a percentage/proportion
+
+See: /ets-report-2022/index.md for usage
+
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $v1Label := .Get "v1Label" }}
+{{ $v2Label := .Get "v2Label" }}
+
+<div class="chart proportional-bars chart--{{ .Get `id` }}">
+  <style type="text/css">
+    text {
+      font-size: 3px;
+      font-family: Gotham A, Gotham B;
+      dominant-baseline: text-before-edge;
+    }
+
+    text {
+      font-size: 3px;
+      font-family: Gotham A, Gotham B;
+      dominant-baseline: text-before-edge;
+    }
+
+    .ticks text {
+      text-anchor: middle;
+      fill: #4D4D4D;
+    }
+
+    .ticks text:first-of-type {
+      text-anchor: start;
+    }
+
+    .ticks text:last-of-type {
+      text-anchor: end;
+    }
+
+    .block rect {
+      fill: #434878;
+    }
+
+    .block rect:last-of-type {
+      fill: #e24000;
+    }
+
+    .blocks text {
+      fill: white;
+      font-size: 4px;
+      dominant-baseline: central;
+      text-anchor: start;
+      font-weight: 600;
+    }
+
+    .blocks text.v2 {
+      text-anchor: end;
+    }
+
+    .blocks text.label {
+      fill: #444444;
+      font-size: 4px;
+      transform: rotate(-90deg);
+      text-anchor: middle;
+      dominant-baseline: text-after-edge;
+      font-weight: 500;
+    }
+
+    .legend text {
+      font-size: 3px;
+      dominant-baseline: alphabetic;
+      font-weight: bold;
+      text-anchor: start;
+      transform: translate(20px, 0);
+    }
+
+    .legend text:last-of-type {
+      transform: translate(-20px, 0);
+    }
+
+    .legend text .color-chip {
+      fill: #434878;
+      font-size: 4.5px;
+    }
+
+    .legend text:last-of-type .color-chip {
+      fill: #e24000;
+    }
+
+    .legend text:last-of-type {
+      text-anchor: end;
+    }
+  </style>
+  {{ if $title }}
+  <h3 class="chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}">
+    <svg style="width: 100%;" viewBox="-7 0 109 81" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g class="legend">
+        <text x="0" y="4">
+          <tspan class="color-chip">■</tspan>
+          <tspan>{{ $v1Label }}</tspan>
+        </text>
+        <text x="100" y="4">
+          <tspan class="color-chip">■</tspan>
+          <tspan>{{ $v2Label }}</tspan>
+        </text>
+      </g>
+      <g class="blocks"></g>
+      <g class="ticks" transform="translate(0, 76)">
+        <text x="0">0%</text>
+        <text x="25">25%</text>
+        <text x="50">50%</text>
+        <text x="75">75%</text>
+        <text x="100">100%</text>
+      </g>
+    </svg>
+  </div>
+  <script>
+    var pbCsv = {{ .Get "data" }}
+    var labelField = {{ .Get "labelField" }};
+    var proportionField = {{ .Get "proportionField" }};
+    var v1Field = {{ .Get "v1Field" }};
+    var v2Field = {{ .Get "v2Field" }};
+    var vFormat = {{ .Get "vFormat" }};
+    var barHeight = 20;
+    var barGap = 2;
+    var currentOffset = 10;
+    var getBlock = ({ label, v1, v2, proportion }) => `
+    <g class="block" transform="translate(0, ${currentOffset})">
+      <rect y="0" height="${barHeight}" x="0" width="${proportion}" />
+      <rect y="0" height="${barHeight}" x="${proportion}" width="${100 - proportion}" />
+      <text class="v1" x="5" y="${barHeight / 2}">${v1}</text>
+      <text class="v2" x="95" y="${barHeight / 2}">${v2}</text>
+      <text class="label" x="${-barHeight / 2}" y="-1">${label}</text>
+    </g>
+  `
+    window.addEventListener('load', function () {
+      d3.csv(pbCsv, function (data) {
+        var blocks = data.
+          forEach(r => {
+            var block = getBlock({
+              label: r[labelField],
+              proportion: parseInt(r[proportionField]),
+              v1: d3.format(vFormat)(r[v1Field]),
+              v2: d3.format(vFormat)(r[v2Field]),
+            })
+            $(".proportional-bars .blocks").append(block)
+            currentOffset += (barHeight + barGap)
+          })
+        $(".proportional-bars .ticks").attr("transform", `translate(0, ${currentOffset})`)
+        $(".proportional-bars svg").attr("viewBox", `-7 0 109 ${currentOffset + 5}`)
+        $(".proportional-bars").html($(".proportional-bars").html());
+      })
+    });
+  </script>
+</div>

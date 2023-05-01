@@ -25,11 +25,7 @@ function _objectSpread(target) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
       ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(
-          target,
-          key,
-          Object.getOwnPropertyDescriptor(source, key)
-        );
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
   }
@@ -58,14 +54,16 @@ var Elab = Elab || {};
  */
 
 Elab.Utils = (function (Elab) {
+  function isNumeric(val) {
+    return val !== "" && val !== undefined && !isNaN(Number(val));
+  }
+
   /**
    * Turns a string into a URL friendly string
    */
   function slugify(string) {
-    var a =
-      "àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;";
-    var b =
-      "aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------";
+    var a = "àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;";
+    var b = "aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------";
     var p = new RegExp(a.split("").join("|"), "g");
     return string
       .toString()
@@ -85,12 +83,7 @@ Elab.Utils = (function (Elab) {
    */
 
   function getCurrentURL() {
-    return (
-      window.location.protocol +
-      "//" +
-      window.location.host +
-      window.location.pathname
-    );
+    return window.location.protocol + "//" + window.location.host + window.location.pathname;
   }
   /**
    * Returns the value of a CSS variable
@@ -99,8 +92,8 @@ Elab.Utils = (function (Elab) {
 
   function getCssVar(varName) {
     var map = {
-      "--choro1": "#434878",
-      "--choro2": "#c1c5ea",
+      "--choro1": "#2b897f",
+      "--choro2": "#cdece9",
       "--choro3": "rgba(241, 241, 241, 0.7)",
       "--choro4": "#e99c7e",
       "--choro5": "#e24000",
@@ -114,6 +107,155 @@ Elab.Utils = (function (Elab) {
 
     return value ? value : map[varName];
   }
+
+  function createTooltip(text) {
+    if (!text) return "";
+    return `<span class="inline-tooltip">
+<span class="tooltiptext">${text}</span>
+</span>`;
+  }
+
+  function loadAll(files, dataMap, callback) {
+    if (!files.length) return callback(dataMap);
+
+    const [file, ...restFiles] = files;
+    Elab.Data.loadData(file.url, file.shaper, (fileData) => {
+      dataMap[file.id] = fileData;
+      loadAll(restFiles, dataMap, callback);
+    });
+  }
+
+  /**
+   * Creates a stat block
+   */
+  function createStatBlock(el, statFiles, stats, getVal, callback) {
+    loadAll(statFiles, {}, (dataMap) => {
+      var $el = $(el);
+      var someStatFound = false;
+
+      var createStat = (val, stat, isSubStat) => {
+        var missingVal = !Elab.Utils.isNumeric(val);
+        var fVal = missingVal ? stat.default : stat.formatter ? stat.formatter(val) : val;
+
+        var tooltipContent = missingVal ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
+
+        var subStatVal =
+          !isSubStat && stat.subStat && getVal(dataMap[stat.subStat.file], stat.subStat);
+        var subStat = subStatVal ? createStat(subStatVal, stat.subStat, true) : "";
+
+        var statClass = isSubStat ? "stat-block-sub-stat" : "stat-block-stat";
+        statClass += ` ${stat.field}`;
+        if (missingVal) statClass += " missing";
+
+        return (
+          '<dl class="' +
+          statClass +
+          '"><dd>' +
+          fVal +
+          "</dd><dt>" +
+          stat.display +
+          createTooltip(tooltipContent) +
+          "</dt>" +
+          subStat +
+          "</dl>"
+        );
+      };
+
+      stats.forEach((s) => {
+        var val = getVal(dataMap[s.file], s);
+        if (!!val || !!s.default) {
+          someStatFound = true;
+          var stat = createStat(val, s);
+          $el.append(stat);
+        }
+      });
+
+      if (someStatFound) {
+        $el.css("display", "flex");
+        setTimeout(() => $el.css("opacity", 1), 1);
+      }
+      callback && callback(someStatFound);
+    });
+  }
+
+  /**
+   * Creates a comparison block
+   */
+  function createComparisonBlock(el, compFiles, comps, getVals, callback) {
+    loadAll(compFiles, {}, (dataMap) => {
+      var $el = $(el);
+      var someCompFound = false;
+
+      var createComp = (vals, comp) => {
+        var fVals = vals.map((v) => (Elab.Utils.isNumeric(v) ? comp.formatter(v) : ""));
+        var bars = fVals.map((v, i) =>
+          v
+            ? `<div class="field-${["a", "b"][i]}">
+          <span class="comparison-bar" style="width:${vals[i] * 100}%"></span>
+          <span>${v}</span>
+          </div>
+          `
+            : "",
+        );
+
+        return (
+          '<dl class="comparison-block-comp"><dd><p>' +
+          comp.display +
+          "</p></dd><dt>" +
+          bars[0] +
+          bars[1] +
+          "</dt>" +
+          "</dl>"
+        );
+      };
+
+      comps.forEach((s) => {
+        var vals = getVals(dataMap[s.file], s);
+        // create a comparison for any metric with at least one value...
+        if (Elab.Utils.isNumeric(vals[0]) || Elab.Utils.isNumeric(vals[1])) {
+          // ...but both values must exist for some metric to merit displaying the block
+          someCompFound =
+            someCompFound || (Elab.Utils.isNumeric(vals[0]) && Elab.Utils.isNumeric(vals[1]));
+          var comp = createComp(vals, s);
+          $el.append(comp);
+        }
+      });
+
+      // console.log({ someCompFound, comps });
+      // if (someCompFound) {
+      //   var $displayEl = $(elToDisplay);
+      //   console.log({ someCompFound, elToDisplay, $displayEl });
+      //   window.dd = $displayEl;
+      //   setTimeout(() => $el.css("opacity", 1), 1);
+      // }
+      callback && callback(someCompFound);
+    });
+  }
+
+  /**
+   * Creates a stat paragraph (interpolate values)
+   */
+  function createStatParagraph(el, text, statFiles, stats, getVal) {
+    loadAll(statFiles, {}, (dataMap) => {
+      var $el = $(el);
+      var interpolatedText = text;
+      var hasAllData = true;
+      stats.forEach((s) => {
+        var val = getVal(dataMap[s.file], s);
+        // only add paragraph if all values found
+        if (!val) {
+          hasAllData = false;
+          return null;
+        }
+        var fVal = s.formatter ? s.formatter(val) : val;
+        fVal = s.bold ? "<b>" + fVal + "</b>" : fVal;
+        interpolatedText = interpolatedText.replace("%{" + s.placeholder + "}", fVal);
+      });
+      hasAllData && $el.append(`<p>${interpolatedText}</p>`);
+      // $el.css("opacity", 1);
+    });
+  }
+
   /**
    * Creates a tweet intent link with the provided element
    * @param {*} el `a` tag DOM element
@@ -137,10 +279,7 @@ Elab.Utils = (function (Elab) {
 
   function createFacebookLink(el) {
     var url = Elab.Utils.getCurrentURL();
-    $(el).attr(
-      "href",
-      "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url)
-    );
+    $(el).attr("href", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url));
     $(el).attr("target", "_blank");
   }
   /**
@@ -248,9 +387,13 @@ Elab.Utils = (function (Elab) {
     group: group,
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
+    isNumeric: isNumeric,
     slugify: slugify,
     createTwitterLink: createTwitterLink,
     createFacebookLink: createFacebookLink,
+    createStatBlock: createStatBlock,
+    createComparisonBlock: createComparisonBlock,
+    createStatParagraph: createStatParagraph,
     formatLabel: formatLabel,
     formatDate: formatDate,
     callOnEnter: callOnEnter,
@@ -300,6 +443,38 @@ Elab.Config = (function (Elab) {
     return [extent[0], extent[1] + pad];
   };
   /**
+   * Groups items by a given selector
+   * @param {Array<DataItem>} items
+   * @param {function} selector returns an item value to group by
+   * @returns {GroupItems}
+   */
+
+  function groupItems(items, selector) {
+    window.items = items;
+    window.selector = selector;
+    var xValues = items.reduce(function (values, item, i) {
+      item.data.forEach(function (d) {
+        var value = selector(d);
+        if (values.indexOf(value) === -1) values.push(value);
+      });
+      return values;
+    }, []);
+    return xValues.map(function (value) {
+      return {
+        id: value,
+        data: items.map(function (item, i) {
+          return {
+            id: item.id,
+            idx: item.idx || i,
+            value: item.data.find(function (d) {
+              return selector(d) === value;
+            }),
+          };
+        }),
+      };
+    });
+  }
+  /**
    * Helper function for creating configs
    * @param {*} config
    */
@@ -308,10 +483,14 @@ Elab.Config = (function (Elab) {
     var BASE_CONFIG = {
       legend: ".legend",
       parse: {
+        // default chart has a date axis, like for "avg" bar chart
+        // override for others (like "race")
         x: monthParser,
         y: parseFloat,
         area: d3.timeParse("%d/%m/%Y"),
       },
+      groupItems: groupItems,
+      getXDomain: (items) => items.map((d) => d.id),
       format: {
         x: Elab.Utils.monthAxisFormatter,
         y: d3.format(",d"),
@@ -345,6 +524,9 @@ Elab.Config = (function (Elab) {
         text: "Monthly Eviction Filings",
       },
     ],
+    margin: {
+      right: 55,
+    },
     markLines: [],
     data: {
       x: "month",
@@ -363,14 +545,17 @@ Elab.Config = (function (Elab) {
         text: "Monthly Eviction Filings Relative To Average",
       },
     ],
+    margin: {
+      right: 63,
+    },
     markLines: [
       {
         y: 1,
-        label: "average",
+        label: "pre-COVID",
       },
       {
         y: 1,
-        label: "filings",
+        label: "average",
         labelOnly: true,
       },
     ],
@@ -389,6 +574,11 @@ Elab.Config = (function (Elab) {
         var rawParse = d3.timeParse("%d/%m/%Y");
         var distance = d._raw.y - 1;
         var value = Math.abs(distance);
+
+        // NOTE: hide tooltips for "dummy rows" to obscure partial filing bars
+        // TODO: remove when we no longer use partial filing striping
+        if (isNaN(value)) return;
+
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
 
         if (dir === "mid") {
@@ -405,8 +595,7 @@ Elab.Config = (function (Elab) {
           d3.format(",.0%")(value) +
           "</span>&nbsp;from average" +
           (d._raw.extras["month_last_day"]
-            ? ", <br />as of " +
-              d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
+            ? ", <br />as of " + d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
             : "") +
           ".</div>"
         );
@@ -414,14 +603,20 @@ Elab.Config = (function (Elab) {
     },
   });
   var CHART_2_CONFIG = createConfig({
+    legend: null, // no legend for race chart
     groupType: "row",
     id: "avg",
     content: [
       {
         selector: ".visual__title",
-        text: "Filings Relative to Average, by Neighborhood Racial/Ethnic Majority",
+        text: "Filings over the last year relative to average, by Neighborhood Racial/Ethnic Majority",
       },
     ],
+    margin: {
+      // keep in sync with .section--race .comparison-block-wrapper margin left/right
+      right: 65,
+      bottom: 40,
+    },
     markLines: [
       {
         y: 1,
@@ -442,15 +637,14 @@ Elab.Config = (function (Elab) {
       extra: ["month_last_day"],
     },
     format: {
+      x: (id) => id,
       y: d3.format(",.0%"),
-      xTooltip: d3.timeFormat("%B %Y"),
       yTooltip: d3.format(",.0%"),
       tooltip: function tooltip(d) {
         var distance = d._raw.y - 1;
         var value = Math.abs(distance);
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
-        var str =
-          dir === "mid" ? "average" : d3.format(",.0%")(Math.abs(distance));
+        var str = dir === "mid" ? "average" : d3.format(",.0%")(Math.abs(distance));
         return (
           '<div class="tooltip__item tooltip__item--multi">' +
           "<span>" +
@@ -468,16 +662,34 @@ Elab.Config = (function (Elab) {
         );
       },
     },
+    parse: {
+      x: (x) => x,
+    },
+    // overrides to differentiate from the default bar chart by date
+    getXExtent: (items) => [0, items.length],
+    getXDomain: (items) => [0],
+    getXBands: (items) => items.map((d) => d.id),
+    groupItems: (items) =>
+      items.map((d) => ({
+        data: [{ id: d.id, idx: 0, value: { ...d.data[d.data.length - 1], x: d.id } }],
+        id: d.id,
+      })),
   });
   var CHART_2A_CONFIG = createConfig({
+    legend: null, // no legend for race chart
     groupType: "row",
     id: "filings",
     content: [
       {
         selector: ".visual__title",
-        text: "Filings by Neighborhood Racial/Ethnic Majority",
+        text: "Filings over the last year by Neighborhood Racial/Ethnic Majority",
       },
     ],
+    margin: {
+      // keep in sync with .section--race .comparison-block-wrapper margin
+      right: 65,
+      bottom: 40,
+    },
     markLines: [],
     data: {
       x: "month",
@@ -488,12 +700,12 @@ Elab.Config = (function (Elab) {
       extra: ["month_last_day", "avg_filings"],
     },
     format: {
+      x: (id) => id,
       tooltip: function tooltip(d) {
         var distance = d._raw.y - d._raw.extras["avg_filings"];
         var value = Math.abs(distance);
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
-        var str =
-          dir === "mid" ? "average" : d3.format(",d")(Math.abs(distance));
+        var str = dir === "mid" ? "average" : d3.format(",d")(Math.abs(distance));
         return (
           '<div class="tooltip__item tooltip__item--multi">' +
           "<span>" +
@@ -513,7 +725,17 @@ Elab.Config = (function (Elab) {
     },
     parse: {
       avg_filings: parseFloat,
+      x: (x) => x,
     },
+    // overrides to differentiate from the default bar chart by date
+    getXExtent: (items) => [0, items.length],
+    getXDomain: (items) => [0],
+    getXBands: (items) => items.map((d) => d.id),
+    groupItems: (items) =>
+      items.map((d) => ({
+        data: [{ id: d.id, idx: 0, value: { ...d.data[d.data.length - 1], x: d.id } }],
+        id: d.id,
+      })),
   });
   var CONFIGS = {
     avg: [CHART_1A_CONFIG, CHART_1_CONFIG],
@@ -580,11 +802,11 @@ Elab.Data = (function (Elab) {
    */
 
   var shapeCityData = function shapeCityData(data) {
-    var result = {} // create an object containing data by identifier
+    var result = {}; // create an object containing data by identifier
 
     data.forEach(function (d) {
       // ignore "draft" rows, so data can be added for draft sites w/o them getting added to table
-      if (d.draft === "1") return
+      if (d.draft === "1") return;
 
       if (!result[d.id]) {
         // key doesn't exist in the object, add it
@@ -599,17 +821,17 @@ Elab.Data = (function (Elab) {
           subgroups: d["subgroups"] ? d["subgroups"].split(";") : null,
           subgroup_values: d["subgroup_values"]
             ? d["subgroup_values"].split(";").map(function (d) {
-                return parseInt(d)
+                return parseInt(d);
               })
             : null,
-        }
+        };
       } else {
         // key already exists, push values for the given week
-        result[d.id].values.push(parseWeekValues(d))
+        result[d.id].values.push(parseWeekValues(d));
       }
-    })
-    return shapeResult(result)
-  }
+    });
+    return shapeResult(result);
+  };
   /**
    * Takes the state level CSV data and parses / shapes it into
    * an array for the ETS pages
@@ -617,11 +839,11 @@ Elab.Data = (function (Elab) {
    */
 
   var shapeStateData = function shapeStateData(data) {
-    var result = {} // create an object containing data by identifier
+    var result = {}; // create an object containing data by identifier
 
     data.forEach(function (d) {
       // ignore "draft" rows, so data can be added for draft sites w/o them getting added to table
-      if (d.draft === "1") return
+      if (d.draft === "1") return;
 
       if (!result[d.id]) {
         // key doesn't exist in the object, add it
@@ -631,21 +853,21 @@ Elab.Data = (function (Elab) {
           values: [parseWeekValues(d)],
           start: d["start_moratorium_date"].split(";").map(parseDate),
           end: d["end_moratorium_date"].split(";").map(parseDate),
-        }
+        };
       } else {
         // key already exists, push values for the given week
-        result[d.id].values.push(parseWeekValues(d))
+        result[d.id].values.push(parseWeekValues(d));
       }
-    })
-    return shapeResult(result)
-  }
+    });
+    return shapeResult(result);
+  };
+
   /**
    * Generic function to load data, shape it, then fire a callback
    * @param {*} dataUrl
    * @param {*} shaper
    * @param {*} callback
    */
-
   function loadData(dataUrl, shaper, callback) {
     d3.csv(dataUrl, function (data) {
       if (!data) {
@@ -653,7 +875,7 @@ Elab.Data = (function (Elab) {
         return;
       }
 
-      var result = shaper(data);
+      var result = shaper ? shaper(data) : data;
       callback && callback(result);
     });
   }
@@ -698,6 +920,17 @@ Elab.Data = (function (Elab) {
  */
 
 Elab.Chart = (function (Elab) {
+  var buttonGroupTemplate = Handlebars.compile(
+    '\n  <button class="toggle" data-date="{{date}}">\n    {{label}}\n  </button>\n  ',
+  );
+  var dateFormatter = d3.timeFormat("%m/%Y");
+  var dateParse = d3.timeParse("%m/%Y");
+
+  // dates for timespan control buttons, to set based on data
+  var earliestDate;
+  var yearAgo;
+  var showLast12 = false;
+
   /**
    * Pulls the extent of the selector from a collection
    * of DataItem objects
@@ -709,12 +942,9 @@ Elab.Chart = (function (Elab) {
     return collection.reduce(
       function (extent, item) {
         var itemExtent = d3.extent(item.data, selector);
-        return [
-          Math.min(itemExtent[0], extent[0]),
-          Math.max(itemExtent[1], extent[1]),
-        ];
+        return [Math.min(itemExtent[0], extent[0]), Math.max(itemExtent[1], extent[1])];
       },
-      [Number.MAX_VALUE, -Number.MAX_VALUE]
+      [Number.MAX_VALUE, -Number.MAX_VALUE],
     );
   }
   /**
@@ -772,9 +1002,7 @@ Elab.Chart = (function (Elab) {
             y: config.parse.y(d[col]),
             // add extra columns to data
             extras: config.data.extra.reduce(function (obj, colName) {
-              obj[colName] = config.parse[colName]
-                ? config.parse[colName](d[colName])
-                : d[colName];
+              obj[colName] = config.parse[colName] ? config.parse[colName](d[colName]) : d[colName];
               return obj;
             }, {}),
           };
@@ -791,18 +1019,27 @@ Elab.Chart = (function (Elab) {
   function parseRowItems(data, config) {
     var groupCol = config.data.y.groupBy;
     var dataByGroup = data.reduce(function (result, row) {
-      if (!result.hasOwnProperty(row[groupCol])) result[row[groupCol]] = [];
-      result[row[groupCol]].push({
-        x: config.parse.x(row[config.data.x]),
-        y: config.parse.y(row[config.data.y.col]),
-        // add extra columns to data
-        extras: config.data.extra.reduce(function (obj, colName) {
-          obj[colName] = config.parse[colName]
-            ? config.parse[colName](row[colName])
-            : row[colName];
-          return obj;
-        }, {}),
-      });
+      const x = row[config.data.x];
+      const y = row[config.data.y.col];
+      const groupVal = row[groupCol];
+
+      if ([x, y, groupCol].includes(undefined)) {
+        console.warn("Row has undefined x, y, or groupBy value: ", row, config);
+      } else {
+        if (!result.hasOwnProperty(groupVal)) result[groupVal] = [];
+
+        result[groupVal].push({
+          x: config.parse.x(x),
+          y: config.parse.y(y),
+          // add extra columns to data
+          extras: config.data.extra.reduce(function (obj, colName) {
+            obj[colName] = config.parse[colName]
+              ? config.parse[colName](row[colName])
+              : row[colName];
+            return obj;
+          }, {}),
+        });
+      }
       return result;
     }, {});
     return Object.keys(dataByGroup).map(function (key, i) {
@@ -822,9 +1059,9 @@ Elab.Chart = (function (Elab) {
 
   function parseExtents(items, config) {
     // calculate x and y [min, max] pairs
-    var xExtent = getExtentForCollection(items, function (d) {
-      return d.x;
-    });
+    var xExtent = config.getXExtent
+      ? config.getXExtent(items)
+      : getExtentForCollection(items, (d) => d.x);
     var yExtent = getExtentForCollection(items, function (d) {
       return d.y;
     }); // x and y [min, max], padded based on config value
@@ -850,22 +1087,31 @@ Elab.Chart = (function (Elab) {
 
     return [padded.x, padded.y];
   }
+
   /**
    * Parses data based on the provided config
    * @param {*} data json to parse
    * @param {ChartConfig} config parse configuration
    * @returns {ChartData}
    */
-
   function parseData(data, config) {
+    if (config.rootId === "avg" && showLast12) {
+      // show only most recent year of data based on toggle, only for "avg" chart
+      data = data.sort((a, b) => dateParse(a.month) - dateParse(b.month)).slice(-12);
+    } else if (config.rootId === "race") {
+      // get rid of groups w/o data to plot
+      data = data.filter((d) => {
+        var v = d[config.data.y.col];
+        return Elab.Utils.isNumeric(v);
+      });
+    }
     var result = {
       _raw: data,
     }; // process config, add default values
 
     config = makeParseConfig(config); // grab data points for each of the groups
 
-    var itemParser =
-      config.groupType === "col" ? parseColumnItems : parseRowItems;
+    var itemParser = config.groupType === "col" ? parseColumnItems : parseRowItems;
     result["items"] = itemParser(data, config); // x and y [min, max], padded based on config value
 
     result["extents"] = parseExtents(result["items"], config); // parse the area to mark
@@ -879,56 +1125,6 @@ Elab.Chart = (function (Elab) {
     }
 
     return result;
-  }
-  /**
-   * Groups items by a given selector
-   * @param {Array<DataItem>} items
-   * @param {function} selector returns an item value to group by
-   * @returns {GroupItems}
-   */
-
-  function groupItems(items, selector) {
-    var xValues = items.reduce(function (values, item, i) {
-      item.data.forEach(function (d) {
-        var value = selector(d);
-        if (values.indexOf(value) === -1) values.push(value);
-      });
-      return values;
-    }, []);
-    return xValues.map(function (value) {
-      return {
-        id: value,
-        data: items.map(function (item, i) {
-          return {
-            id: item.id,
-            idx: item.idx || i,
-            value: item.data.find(function (d) {
-              return selector(d) === value;
-            }),
-          };
-        }),
-      };
-    });
-  }
-
-  function updatePartialFilingsDate(rootEl, data, currentConfig) {
-    const orderedData = data["_raw"].sort(function(a, b) {
-      aMonth = a.month.split('/').reverse().join('');
-      bMonth = b.month.split('/').reverse().join('');
-      return aMonth > bMonth ? 1 : aMonth < bMonth ? -1 : 0;
-    });
-    var rawLastDay = orderedData[orderedData.length - 1]["month_last_day"];
-    if (!rawLastDay) return "whassup";
-    var parseDate = d3.timeParse("%d/%m/%Y");
-    var lastDay = parseDate(rawLastDay);
-    var value =
-      "Partial " +
-      d3.timeFormat("%B")(lastDay) +
-      " filings as of " +
-      d3.timeFormat("%-m/%-d")(lastDay) + 
-      (currentConfig.id === 'avg' ? "<span>relative to average</span>" : '');
-    var partialEl = rootEl.find(".visual__note");
-    partialEl.html(value);
   }
 
   function renderBarTooltip(title, items, context, render, type) {
@@ -956,7 +1152,7 @@ Elab.Chart = (function (Elab) {
           (xFlipped ? "-100%" : "0") +
           ", " +
           (yFlipped ? "-100%" : "0") +
-          ")"
+          ")",
       )
       .html("<h1>" + title + "</h1>")
       .style("display", "block")
@@ -983,11 +1179,12 @@ Elab.Chart = (function (Elab) {
   function Chart(source, root, config) {
     // options
     config = config || {};
-    var margin = config.margin || {
+    var margin = {
       top: 32,
       right: 52,
       bottom: 72,
       left: 48,
+      ...config.margin,
     };
     var parsedData;
     var elements;
@@ -1021,108 +1218,26 @@ Elab.Chart = (function (Elab) {
       };
     }
 
-    function renderBars(data, config, context) {
-      var monthFormat = d3.timeFormat("%m/%Y");
-      var monthParse = d3.timeParse("%m/%Y"); // get data grouped by x value
+    function renderBars(groupedItems, config, context, xDomain) {
+      // var monthParse = d3.timeParse("%m/%Y"); // get data grouped by x value
 
-      var groupedData = groupItems(data.items, function (d) {
-        return monthFormat(d.x);
-      });
-      var groupNames = data.items.map(function (d) {
-        return d.id;
-      });
-      var x1 = d3
-        .scaleBand()
-        .domain(groupNames)
-        .rangeRound([0, context.x.bandwidth()]);
+      var x1 = d3.scaleBand().domain(xDomain).rangeRound([0, context.x.bandwidth()]);
 
-      //bryony cheat
-      const svg = d3.select(context.els.data.node().parentElement.parentElement);
+      var group = context.els.data.selectAll(".chart__bar-group").data(groupedItems, (d) => d.id); // enter each group
 
-      //remove any previous pattern and adding a new one
-      svg.selectAll("#finalEvictRectWhite").remove();
-      svg.append("pattern")
-          .attr("id", "finalEvictRectWhite")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 4)
-          .attr("height", 8)
-          .style("fill", "#E24000")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRectWhite" +
-              '" x="0" y="0" width="2" height="8" />'
-          );
-      svg.selectAll("#finalEvictRectBlack").remove();
-      svg.append("pattern")
-          .attr("id", "finalEvictRectBlack")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 4)
-          .attr("height", 8)
-          .style("fill", "#434878")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRectBlack" +
-              '" x="0" y="0" width="2" height="8" />'
-          );
-      svg.selectAll("#finalEvictRectLatinx").remove();
-      svg.append("pattern")
-          .attr("id", "finalEvictRectLatinx")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 4)
-          .attr("height", 8)
-          .style("fill", "#2C897F")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRectLatinx" +
-              '" x="0" y="0" width="2" height="8" />'
-          );
-      svg.selectAll("#finalEvictRectOther").remove();
-      svg.append("pattern")
-          .attr("id", "finalEvictRectOther")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 4)
-          .attr("height", 8)
-          .style("fill", "#94AABD")
-          .attr("patternUnits", "userSpaceOnUse")
-          .attr("patternTransform", "rotate(45)")
-          .html(
-              '<rect class="chart__pattern chart__pattern--' +
-              "finalEvictRectOther" +
-              '" x="0" y="0" width="2" height="8" />'
-          );
-
-      var group = context.els.data
-        .selectAll(".chart__bar-group")
-        .data(groupedData); // enter each group
-
-      //Bryony code
-      //finding max date, id of max date and adding boolean to data.
-      const maxDate = d3.max(groupedData, d => monthParse(d.id));
-      const maxId = groupedData.find(f => String(monthParse(f.id)) === String(maxDate)).id;
-      groupedData.map(m => m.data.map(dataItem => dataItem.finalBar = (m.id === maxId ? true : false)));
-      
       var groupEls = group
         .enter()
         .append("g")
         .attr("class", "chart__bar-group")
         .merge(group)
         .attr("transform", function (d) {
-          var date = monthParse(d.id);
-          return "translate(" + context.x(date) + ",0)";
+          var parsedX = config.parse.x(d.id);
+          return "translate(" + context.x(parsedX) + ",0)";
         });
       var groupAreaSelection = context.els.data
         .selectAll(".chart__bar-area")
-        .data(groupedData);
+        .data(groupedItems, (d) => d.id);
+      groupAreaSelection.exit().remove();
       var groupAreas = groupAreaSelection
         .enter()
         .append("rect")
@@ -1131,40 +1246,30 @@ Elab.Chart = (function (Elab) {
         .on("mousemove", function (d) {
           var title = chartConfig.format.xTooltip(d.data[0].value.x);
           var items = d.data.map(getHoverItem);
-          renderBarTooltip(
-            title,
-            items,
-            context,
-            chartConfig.format.tooltip,
-            config.id
-          );
+          renderBarTooltip(title, items, context, chartConfig.format.tooltip, config.id);
         })
         .on("mouseout", function () {
           if (context.els.tooltip) context.els.tooltip.style("display", "none");
         })
         .merge(groupAreaSelection)
         .attr("x", function (d, i) {
-          var date = monthParse(d.id);
-          return context.x(date) - 4;
+          var parsedX = config.parse.x(d.id);
+          // center within buffer of 8
+          return context.x(parsedX) - 4;
         })
         .attr("y", 0)
         .attr("height", context.height)
+        // buffer of 8
         .attr("width", context.x.bandwidth() + 8);
-      var groupBars = groupEls.selectAll("rect")
-          .data(function (d) {
+      var groupBars = groupEls.selectAll("rect").data(function (d) {
         return d.data;
       });
-      
-     const barRects =  groupBars
+
+      const barRects = groupBars
         .enter()
         .append("rect") // add bars for new groups
         .attr("class", function (d, i) {
-          return (
-            "chart__bar chart__bar--" +
-            d.idx +
-            " chart__bar--" +
-            d.id.toLowerCase()
-          );
+          return "chart__bar chart__bar--" + d.idx + " chart__bar--" + d.id.toLowerCase();
         })
         .attr("width", x1.bandwidth())
         .attr("x", function (d) {
@@ -1192,23 +1297,17 @@ Elab.Chart = (function (Elab) {
         .attr("height", function (d) {
           return context.height - context.y(d.value.y);
         }); // remove bars groups
-      
-      barRects.style("fill", d => {
-        if (d.id === 'percentage_diff' || d.id === 'White' || d.id === 'month_filings') {
-          return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+
+      barRects.style("fill", (d) => {
+        if (d.id === "percentage_diff" || d.id === "White" || d.id === "month_filings") {
+          return "#E24000";
         }
-        if (d.id === 'avg_filings' || d.id === 'Black') {
-          return d.finalBar === true ? "url(#finalEvictRectBlack)" : "#434878";
-        }
-        if (d.id === 'Latinx') {
-          return d.finalBar === true ? "url(#finalEvictRectLatinx)" : "#2C897F";
-        }
-        if (d.id === 'Other') {
-          return d.finalBar === true ? "url(#finalEvictRectOther)" : "#94AABD";
-        }
-        return d.finalBar === true ? "url(#finalEvictRectWhite)" : "#E24000";
+        if (d.id === "avg_filings" || d.id === "Black") return "#434878";
+        if (d.id === "Latinx") return "#2C897F";
+        if (d.id === "Other") return "#94AABD";
+        return "#E24000";
       });
-      
+
       groupBars
         .exit()
         .transition()
@@ -1228,41 +1327,43 @@ Elab.Chart = (function (Elab) {
     }
     /**
      * Renders the x and y axis
-     * @param {*} data
+     * @param {*} groupedItems
      * @param {*} config
      * @param {*} context
      */
 
-    function renderAxis(data, config, context) {
+    function renderAxis(groupedItems, config, context) {
       var rotateLabels = function rotateLabels(selection) {
-
         //count number of ticks for bryony cheat
         //could not get to the bottom of where config.view.xTicks was looking
-       const tickCount = selection.selectAll(".tick").nodes().length;
+        const tickCount = groupedItems.length;
 
-        selection
-          .selectAll(".tick text")
-            .each(function(d,i){
-              //another bryony cheat.
-              if(tickCount > 20){
-                //if more than 20 ticks
-                if(i % 2 !== 0){
-                  //only show odd ticks.
-                  d3.select(this).attr("display", "none")
-                }
-              }
-            })
-          .attr("text-anchor", "end")
-          .attr("transform", "rotate(-50)")
-          .attr("dx", "-0.5em")
-          .attr("dy", "0em");
+        // charts to not thin ticks on smaller screens (or based on tick count) or rotate
+        // (such as if ticks are for group names rather than months)
+        const noThinning = config.rootId === "race";
+        console.log({ tickCount, noThinning });
+        const ticks = selection.selectAll(".tick text").each(function (d, i) {
+          // another bryony cheat.
+          if (!noThinning && tickCount > 20 && i % 2 !== 0) {
+            // if more than 20 ticks only show odd
+            d3.select(this).attr("display", "none");
+          } else {
+            // unset to display ticks in case they were hidden above (for toggleable chart)
+            d3.select(this).attr("display", "unset");
+          }
+        });
+        if (!noThinning) {
+          // by default rotate ticks
+          window.ticks = ticks
+            .attr("text-anchor", "end")
+            .attr("transform", "rotate(-50)")
+            .attr("dx", "-0.5em")
+            .attr("dy", "0em");
+          // todo: consider removing class and instead thinning here based on window.innerWidth
+        } else ticks.attr("class", "no-thinning");
       }; // setup x axis
 
-
-      var xAxis = d3
-        .axisBottom(context.x)
-        .ticks(5)
-        .tickFormat(config.format.x); // setup y axis
+      var xAxis = d3.axisBottom(context.x).ticks(5).tickFormat(config.format.x); // setup y axis
 
       var yAxis = d3
         .axisLeft(context.y)
@@ -1278,19 +1379,15 @@ Elab.Chart = (function (Elab) {
         .duration(1000)
         .call(xAxis)
         .call(rotateLabels.bind(context.els.xAxis));
-
-
     }
 
     function renderMarkLine(data, config, context) {
       // y axis mark lines
-      var markLine = context.els.markLines
-        .selectAll(".chart__mark-line--y")
-        .data(
-          config.markLines.filter(function (v) {
-            return v.labelOnly;
-          })
-        );
+      var markLine = context.els.markLines.selectAll(".chart__mark-line--y").data(
+        config.markLines.filter(function (v) {
+          return v.labelOnly;
+        }),
+      );
       markLine
         .enter()
         .append("line")
@@ -1368,12 +1465,12 @@ Elab.Chart = (function (Elab) {
     }
     /**
      * Renders the outline of the chart
-     * @param {*} data
+     * @param {*} groupedItems
      * @param {*} config
      * @param {*} context
      */
 
-    function renderFrame(data, config, context) {
+    function renderFrame(groupedItems, config, context) {
       // bounding rect border
       context.els.frame
         .attr("x", -1)
@@ -1384,11 +1481,8 @@ Elab.Chart = (function (Elab) {
 
     function renderContentUpdates(content, config) {
       content.forEach(function (item) {
-        var el = document.querySelector(
-          "#" + config.rootId + " " + item.selector
-        );
-        if (!el)
-          throw new Error("no element found for selector: " + item.selector);
+        var el = document.querySelector("#" + config.rootId + " " + item.selector);
+        if (!el) throw new Error("no element found for selector: " + item.selector);
         el.innerHTML = item.text;
       });
     }
@@ -1410,8 +1504,7 @@ Elab.Chart = (function (Elab) {
       };
 
       var el = document.querySelector("#" + config.rootId + " " + selector);
-      if (!el)
-        throw new Error("no element found for selector: " + item.selector);
+      if (!el) throw new Error("no element found for selector: " + item.selector);
       el.innerHTML = items
         .map(function (item) {
           return LegendItem(item);
@@ -1425,31 +1518,30 @@ Elab.Chart = (function (Elab) {
      */
 
     function renderGraph(data, els, config) {
+      var monthFormat = d3.timeFormat("%m/%Y");
+      var groupedItems = config.groupItems(data.items, (d) => monthFormat(d.x));
+      const xDomain = config.getXDomain(data.items);
+
       // render legend first, as it can add to chart height
       config.legend && renderLegend(config.legend, data.items, config); // get parent width and height
 
       var rect = els.root.node().parentNode.getBoundingClientRect(); // position the root
 
-      els.root.attr(
-        "transform",
-        "translate(" + margin.left + "," + margin.top + ")"
-      ); // account for margins
+      els.root.attr("transform", "translate(" + margin.left + "," + margin.top + ")"); // account for margins
 
       var width = rect.width - margin.left - margin.right;
       var height = rect.height - margin.top - margin.bottom; // extents
 
       var xExtent = data.extents[0];
       var yExtent = data.extents[1];
-      var xBands = d3.timeMonth.range(
-        d3.timeMonth.floor(xExtent[0]),
-        d3.timeMonth.floor(d3.timeMonth.offset(xExtent[1], 1)),
-        1
-      );
-      var xBandScale = d3
-        .scaleBand()
-        .rangeRound([0, width])
-        .padding(0.5)
-        .domain(xBands); // setup scales
+      var xBands = config.getXBands
+        ? config.getXBands(data.items)
+        : d3.timeMonth.range(
+            d3.timeMonth.floor(xExtent[0]),
+            d3.timeMonth.floor(d3.timeMonth.offset(xExtent[1], 1)),
+            1,
+          );
+      var xBandScale = d3.scaleBand().rangeRound([0, width]).padding(0.5).domain(xBands); // setup scales
 
       var x = xBandScale;
       var y = d3.scaleLinear().rangeRound([height, 0]).domain([0, yExtent[1]]); // context passed to render functions
@@ -1463,10 +1555,11 @@ Elab.Chart = (function (Elab) {
         xExtent: xExtent,
         yExtent: yExtent,
       };
-      renderAxis(data, config, context);
-      renderBars(data, config, context);
+
+      renderAxis(groupedItems, config, context);
+      renderBars(groupedItems, config, context, xDomain);
       config.markLines && renderMarkLine(data, config, context);
-      renderFrame(data, config, context);
+      renderFrame(groupedItems, config, context);
       config.content && renderContentUpdates(config.content, config);
     }
     /**
@@ -1483,16 +1576,63 @@ Elab.Chart = (function (Elab) {
      * Updates the chart's configuration
      * @param {*} newConfig
      */
-
     function update(newConfig) {
       if (!elements) elements = initElements(root);
       if (newConfig) chartConfig = newConfig;
       parsedData = parseData(source, chartConfig); // use debounced render when updating, for performance
-      
+
       render();
     }
 
+    /**
+     * Render buttons for the available groups, and bind click handlers.
+     */
+    function renderButtonGroups() {
+      var buttons = [
+        {
+          label: "Past year",
+          date: yearAgo,
+        },
+        {
+          label: "Since ".concat(dateFormatter(dateParse(earliestDate))),
+          date: earliestDate,
+        },
+      ]
+        // .map(function (date, i) {
+        //   return {
+        //     label: "Since ".concat(dateFormatter(dateParse(date))),
+        //     date: date,
+        //   };
+        // })
+        .map(buttonGroupTemplate)
+        .map($);
+      var container = $("#avg .button-group.time-span");
+      container.empty();
+      buttons.forEach(function (button, i) {
+        var isActiveButton = (showLast12 && i === 0) || (!showLast12 && i === 1);
+        isActiveButton ? button.addClass("toggle--active") : button.removeClass("active");
+        button.click(function () {
+          if (isActiveButton) return;
+          showLast12 = !showLast12;
+          renderButtonGroups();
+          update();
+        });
+        container.append(button);
+      });
+    }
+
     function initialRender() {
+      if (config.rootId === "avg") {
+        // set dates for timespan buttons
+        earliestDate = source[0].month;
+        yearAgo = source[source.length - 12].month;
+
+        // initialize to just show last 12 months of data for avg chart
+        showLast12 = true;
+        // and provide buttons for selecting start date
+        renderButtonGroups();
+      }
+
       update(config);
     }
 
@@ -1507,14 +1647,13 @@ Elab.Chart = (function (Elab) {
       data: parsedData,
     };
   }
+
   /**
    *
    * @param {*} elementId id of the section root
    * @param {*} config the chart config
    */
-
   function createChart(elementId, config, callback) {
-
     // Load the data and draw a chart
     d3.csv(config.url, function (data) {
       if (!data) {
@@ -1533,7 +1672,7 @@ Elab.Chart = (function (Elab) {
 
       var root;
       root = d3.select(elementId).append("g"); // create chart
-      
+
       var chart = Chart(data, root, config); // resize the chart when the window size changes
 
       window.addEventListener("resize", function () {
@@ -1551,15 +1690,16 @@ Elab.Chart = (function (Elab) {
     var countToggleEl = rootEl.find(".toggle--count");
     var avgToggleEl = rootEl.find(".toggle--avg");
     if (config.id === "avg") avgToggleEl.addClass("toggle--active");
-    if (config.id === "race") countToggleEl.addClass("toggle--active"); // move footnotes into proper container
+    if (config.id === "race") countToggleEl.addClass("toggle--active");
 
+    // move footnotes into proper container
     var contentEl = rootEl.find(".details");
     var footnoteEl = rootEl.find(".footnote");
     footnoteEl.append(contentEl.find("ol")); // setup default chart config
 
     var configs = Elab.Config.getConfig(config.id, config.csv);
     var currentConfig = configs[0]; // create chart and bind click event to toggle state
-    
+
     createChart(chartEl, currentConfig, function (chart) {
       countToggleEl.on("click", function () {
         currentConfig = config.id === "race" ? configs[0] : configs[1];
@@ -1567,7 +1707,6 @@ Elab.Chart = (function (Elab) {
         avgToggleEl.removeClass("toggle--active");
         rootEl.removeClass("section--avg-on").addClass("section--count-on");
         chart.update(currentConfig);
-        updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
       avgToggleEl.on("click", function () {
         currentConfig = config.id === "race" ? configs[1] : configs[0];
@@ -1575,9 +1714,7 @@ Elab.Chart = (function (Elab) {
         countToggleEl.removeClass("toggle--active");
         rootEl.addClass("section--avg-on").removeClass("section--count-on");
         chart.update(currentConfig);
-        updatePartialFilingsDate(rootEl, chart.data, currentConfig);
       });
-      updatePartialFilingsDate(rootEl, chart.data, currentConfig);
     });
   }
 
@@ -1655,12 +1792,13 @@ Elab.Map = (function (Elab) {
       "{{#each metrics}}" +
       "<button class='toggle toggle--{{@key}}' data-key='{{@key}}'>{{this}}</button>" +
       "{{/each}}" +
-      "</div>"
+      "</div>",
   );
   var LegendLabelTemplate = Handlebars.compile(
-    "{{#each labels}}" +
-      "<span class='legend__gradient-label'>{{this}}</span>" +
-      "{{/each}}"
+    "{{#each labels}}" + "<span class='legend__gradient-label'>{{this}}</span>" + "{{/each}}",
+  );
+  var LegendPointLabelTemplate = Handlebars.compile(
+    "{{#each labels}}" + "<span class='legend__points-label'>{{this}}</span>" + "{{/each}}",
   );
   var TooltipTemplate = Handlebars.compile(
     "<h1>{{name}}</h1>" +
@@ -1685,12 +1823,20 @@ Elab.Map = (function (Elab) {
       "</em>" +
       "{{/if}}" +
       "{{/if}}" +
-      "</div>"
+      "</div>",
+  );
+
+  var PointTooltipTemplate = Handlebars.compile(
+    "<h1>{{address}}</h1>" +
+      "<h5><strong>{{name}}</strong></h5>" +
+      '<div class="map__tooltip-row">' +
+      "#{{rank}} - " +
+      "{{value}} eviction filings" +
+      "</div>",
   );
 
   function getTooltipValue(feature, prop) {
-    if (!feature.properties[prop] && feature.properties[prop] !== 0)
-      return null;
+    if (!feature.properties[prop] && feature.properties[prop] !== 0) return null;
     var formatter = getFormatter(prop);
     var value = formatter(feature.properties[prop]);
 
@@ -1700,13 +1846,7 @@ Elab.Map = (function (Elab) {
       var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
       return dir === "mid"
         ? "Filings about average."
-        : "Filings <span class='value--" +
-            dir +
-            "'>" +
-            dir +
-            " " +
-            value +
-            "</span> from average.";
+        : "Filings <span class='value--" + dir + "'>" + dir + " " + value + "</span> from average.";
     }
 
     if (isRate(prop)) return "filings against " + value + " of renters";
@@ -1750,10 +1890,7 @@ Elab.Map = (function (Elab) {
       })
       .map(function (feature, i) {
         feature.id = parseInt(feature.properties["GEOID"]);
-        Object.assign(
-          feature.properties,
-          dataDict[feature.properties["GEOID"]]
-        );
+        Object.assign(feature.properties, dataDict[feature.properties["GEOID"]]);
         return feature;
       });
     return Object.assign(geojson, {
@@ -1829,24 +1966,17 @@ Elab.Map = (function (Elab) {
       );
     }
 
-    return (
-      "linear-gradient(to right," +
-      colors[2] +
-      ", " +
-      colors[3] +
-      " 50%," +
-      colors[4] +
-      ")"
-    );
+    return "linear-gradient(to right," + colors[2] + ", " + colors[3] + " 50%," + colors[4] + ")";
   }
 
-  function getGradientLabels(prop, range) {
+  function getGradientLabels(prop, range, isCapped = false) {
     if (isAvgDiff(prop)) {
       return ["-100%", "average", "100%"];
     }
 
     if (isRate(prop)) {
-      return ["0%", formatPercent(range[1])];
+      // tweak legend to faithfully reflect data (as some values may exceed the max)
+      return ["0%", formatPercent(range[1]) + (isCapped ? "+" : "")];
     }
 
     return [formatCount(range[0]), formatCount(range[1])];
@@ -1854,7 +1984,7 @@ Elab.Map = (function (Elab) {
 
   function addChoroplethFillLayer(map, prop, range) {
     var fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
-      getLayerColors(prop, range, "--choro")
+      getLayerColors(prop, range, "--choro"),
     );
     map.addLayer(
       {
@@ -1862,28 +1992,19 @@ Elab.Map = (function (Elab) {
         type: "fill",
         source: "choropleth",
         layout: {},
-        filter: [
-          "any",
-          ["to-boolean", ["get", prop]],
-          ["==", 0, ["get", prop]],
-        ],
+        filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
         paint: {
           "fill-color": fillColor,
-          "fill-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            1,
-            0.8,
-          ],
+          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.8],
         },
       },
-      "building"
+      "building",
     );
   }
 
   function addChoroplethStrokeLayer(map, prop, range) {
     var strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
-      getLayerColors(prop, range, "--choroStroke")
+      getLayerColors(prop, range, "--choroStroke"),
     );
     map.addLayer(
       {
@@ -1900,15 +2021,54 @@ Elab.Map = (function (Elab) {
             ],
           },
           "line-blur": 0,
-          "line-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            1,
-            0,
+          "line-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0],
+        },
+      },
+      "building",
+    );
+  }
+
+  function addPointLayer(map) {
+    map.addLayer(
+      {
+        id: "points",
+        type: "circle",
+        source: "points",
+        layout: {},
+        // filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
+        paint: {
+          "circle-color": "#E24000",
+          // "circle-stroke-color": "rgba(255, 255, 255, 1)",
+          "circle-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.7],
+          "circle-stroke-width": 0.2,
+          "circle-radius": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            3,
+            ["*", ["get", "radius"], 0.2],
+            7,
+            ["*", ["get", "radius"], 0.8],
+            10,
+            ["*", ["get", "radius"], 1.7],
+            11,
+            ["*", ["get", "radius"], 2.5],
+            12,
+            ["*", ["get", "radius"], 3.5],
+            13,
+            ["*", ["get", "radius"], 5],
+            14,
+            ["*", ["get", "radius"], 6],
+            15,
+            ["*", ["get", "radius"], 7],
+            16,
+            ["*", ["get", "radius"], 8],
+            17,
+            ["*", ["get", "radius"], 9],
           ],
         },
       },
-      "building"
+      // "building",
     );
   }
   /**
@@ -1923,7 +2083,8 @@ Elab.Map = (function (Elab) {
     var mapEl = rootEl.find(".map")[0];
     var geojsonUrl = config.geojson;
     var dataUrl = config.csv;
-    var hoveredStateId = null;
+    var topFilersUrl = config.topCsv;
+    var hoveredFeat = null;
     var allData = null;
     var geojsonData = null;
     var currentProp = null;
@@ -1943,6 +2104,7 @@ Elab.Map = (function (Elab) {
       bounds: usBounds,
       maxBounds: usBounds,
     });
+    window.map = map;
     /**
      * Show tooltip and set outline of feature when hovering
      * @param {*} e
@@ -1954,11 +2116,11 @@ Elab.Map = (function (Elab) {
       renderTooltip(e.features[0], e);
 
       if (e.features.length > 0) {
-        if (hoveredStateId) {
+        if (hoveredFeat) {
           map.setFeatureState(
             {
-              source: "choropleth",
-              id: hoveredStateId,
+              source: hoveredFeat.source,
+              id: hoveredFeat.id,
             },
             {
               hover: false,
@@ -1966,11 +2128,11 @@ Elab.Map = (function (Elab) {
           );
         }
 
-        hoveredStateId = e.features[0].id;
+        hoveredFeat = e.features[0];
         map.setFeatureState(
           {
-            source: "choropleth",
-            id: hoveredStateId,
+            source: hoveredFeat.source,
+            id: hoveredFeat.id,
           },
           {
             hover: true,
@@ -1986,11 +2148,11 @@ Elab.Map = (function (Elab) {
       map.getCanvas().style.cursor = "";
       tooltip.style.display = "none";
 
-      if (hoveredStateId) {
+      if (hoveredFeat) {
         map.setFeatureState(
           {
-            source: "choropleth",
-            id: hoveredStateId,
+            source: hoveredFeat.source,
+            id: hoveredFeat.id,
           },
           {
             hover: false,
@@ -1998,7 +2160,7 @@ Elab.Map = (function (Elab) {
         );
       }
 
-      hoveredStateId = null;
+      hoveredFeat = null;
     }
     /**
      * Turn off scroll unless modifier key is pressed
@@ -2063,10 +2225,58 @@ Elab.Map = (function (Elab) {
             type: "geojson",
             data: geojsonData,
           });
+
           map.on("mousemove", "choropleth", handleHover);
           map.on("mouseleave", "choropleth", handleHoverOut);
           renderToggles();
           update();
+        });
+
+        d3.csv(topFilersUrl, function (data) {
+          if (!data) {
+            console.error("unable to load top filer data from " + topFilersUrl);
+            return;
+          }
+          var topFilers = data.map(
+            ({ lat, lon, filings, xplaintiff, xstreet_clean, position }) => ({
+              lat: parseFloat(lat),
+              lon: parseFloat(lon),
+              filings: parseInt(filings),
+              name: xplaintiff,
+              address: xstreet_clean,
+              rank: position,
+            }),
+          );
+
+          var extent = d3.extent(topFilers, ({ filings }) => filings);
+          var radiusScale = d3.scaleSqrt().domain(extent).range([1, 8]);
+
+          var pointJson = Object.assign({}, geojson);
+          pointJson.features = topFilers.map(({ lat, lon, filings, name, address, rank }, id) => ({
+            type: "Feature",
+            id,
+            geometry: {
+              type: "Point",
+              coordinates: [lon, lat],
+            },
+            properties: {
+              radius: radiusScale(filings),
+              filings,
+              name,
+              address,
+              rank,
+            },
+          }));
+
+          // console.log({ data, allData, pointJson, extent }, geojson.features);
+          map.addSource("points", {
+            type: "geojson",
+            data: pointJson,
+          });
+          addPointLayer(map);
+          map.on("mousemove", "points", handleHover);
+          map.on("mouseleave", "points", handleHoverOut);
+          renderPointLegend(extent, map);
         });
       });
     }
@@ -2075,6 +2285,10 @@ Elab.Map = (function (Elab) {
       if (!allData) return [0, 1];
       if (isAvgDiff(prop)) return [0, 2];
       var extent = d3.extent(allData, function (d) {
+        // allows scale to be based on more limited range
+        // so choropleth colors aren't greatly skewed by outliers
+        var cappedMax = d[prop + "_scale_max"];
+        if (cappedMax && d[prop] > cappedMax) return cappedMax;
         return d[prop];
       });
       if (isRate(prop)) return [0, Math.max(extent[1], 0.01)];
@@ -2148,25 +2362,69 @@ Elab.Map = (function (Elab) {
       var labelContainer = rootEl.find(".legend__gradient-labels");
       gradientContainer.css("background-image", getCssGradient(currentProp));
       var range = getRange(currentProp);
+      var isCapped = range[1] === allData[0][currentProp + "_scale_max"];
       var html = LegendLabelTemplate({
-        labels: getGradientLabels(currentProp, range),
+        labels: getGradientLabels(currentProp, range, isCapped),
+      });
+      labelContainer.html(html);
+    }
+
+    function renderPointLegend(extents, map) {
+      var pointCheckbox = rootEl.find("input#top-100");
+      pointCheckbox.on("change", function (e) {
+        if (e.target.checked) {
+          addPointLayer(map);
+        } else {
+          map.removeLayer("points");
+        }
+      });
+
+      if (!extents || extents.includes(undefined)) {
+        console.log("No extents provided for point legend.");
+        return;
+      }
+      // the set of elements to display if we have top filers data
+      var topFilersOnlyElements = rootEl.find(".top-filers-only");
+      // display them block, unless we've designated otherwise on data-display
+      topFilersOnlyElements.each((i, el) => $(el).css("display", el.dataset.display || "block"));
+
+      // certain elements get a class added if we have top filers data
+      rootEl
+        .find(".top-filers-only-class")
+        .each((i, el) => $(el).toggleClass(el.dataset.class || ""));
+
+      var labelContainer = rootEl.find(".legend__points-labels");
+      var html = LegendPointLabelTemplate({
+        labels: extents,
       });
       labelContainer.html(html);
     }
 
     function renderTooltip(feature, e) {
       var tooltipContainer = $(tooltip);
-      var hasPercents =
-        feature.properties.hasOwnProperty("pct_white") ||
-        feature.properties.hasOwnProperty("pct_black") ||
-        feature.properties.hasOwnProperty("pct_latinx");
-      var html = TooltipTemplate({
-        name: feature.properties.NAME ? feature.properties.NAME.split(",")[0] : "Unknown",
-        value: getTooltipValue(feature, currentProp),
-        majority: feature.properties["racial_majority"],
-        percents: getPercentBreakdown(feature.properties),
-        hasPercents: hasPercents,
-      });
+
+      var html;
+      if (feature.source === "points") {
+        html = PointTooltipTemplate({
+          name: feature.properties.name || "Unknown",
+          value: feature.properties.filings,
+          address: feature.properties.address,
+          rank: feature.properties.rank,
+        });
+      } else {
+        var hasPercents =
+          feature.properties.hasOwnProperty("pct_white") ||
+          feature.properties.hasOwnProperty("pct_black") ||
+          feature.properties.hasOwnProperty("pct_latinx");
+        html = TooltipTemplate({
+          name: feature.properties.NAME ? feature.properties.NAME.split(",")[0] : "Unknown",
+          value: getTooltipValue(feature, currentProp),
+          majority: feature.properties["racial_majority"],
+          percents: getPercentBreakdown(feature.properties),
+          hasPercents: hasPercents,
+        });
+      }
+
       var flipped = e.originalEvent.pageX > window.innerWidth - 240;
       var space = flipped ? -32 : 32;
       tooltipContainer
@@ -2222,309 +2480,309 @@ Elab.Intro = (function (Elab) {
    * @param {*} chart ChartBuilder instance
    * @param {*} xHovered hovered value
    */
-  var showIntroTooltip = function showIntroTooltip(chart, xHovered) {
-    var bisectX = d3.bisector(function (d) {
-      return d[0];
-    }).left; // midpoint of the current hovered week
+  // var showIntroTooltip = function showIntroTooltip(chart, xHovered) {
+  //   var bisectX = d3.bisector(function (d) {
+  //     return d[0];
+  //   }).left; // midpoint of the current hovered week
 
-    var xPosition = d3.timeDay.offset(d3.timeWeek.floor(xHovered), 3.5); // index of currently hovered week
+  //   var xPosition = d3.timeDay.offset(d3.timeWeek.floor(xHovered), 3.5); // index of currently hovered week
 
-    var dataIndex = bisectX(chart.data, xHovered) - 1; // data point for the hovered week
+  //   var dataIndex = bisectX(chart.data, xHovered) - 1; // data point for the hovered week
 
-    var weekStart = chart.data[dataIndex]; // exit early if no data point or if out of range
+  //   var weekStart = chart.data[dataIndex]; // exit early if no data point or if out of range
 
-    if (!weekStart || +xPosition > chart.xScale.domain()[1]) return; // create tooltip
+  //   if (!weekStart || +xPosition > chart.xScale.domain()[1]) return; // create tooltip
 
-    var title = "Eviction Filings";
-    var dayFormat = d3.timeFormat("%b %e");
-    var weekLabel = [weekStart[0], d3.timeDay.offset(weekStart[0], 7)]
-      .map(function (d) {
-        return dayFormat(d);
-      })
-      .join(" - ");
-    var items = [
-      {
-        idx: 0,
-        name: weekLabel,
-        value: weekStart[1],
-      },
-    ];
-    var context = {
-      els: {
-        tooltip: chart.selections["tooltip"],
-      },
-    };
-    window.Elab.Chart.renderBarTooltip(title, items, context, undefined, "top"); // position hover line
+  //   var title = "Eviction Filings";
+  //   var dayFormat = d3.timeFormat("%b %e");
+  //   var weekLabel = [weekStart[0], d3.timeDay.offset(weekStart[0], 7)]
+  //     .map(function (d) {
+  //       return dayFormat(d);
+  //     })
+  //     .join(" - ");
+  //   var items = [
+  //     {
+  //       idx: 0,
+  //       name: weekLabel,
+  //       value: weekStart[1],
+  //     },
+  //   ];
+  //   var context = {
+  //     els: {
+  //       tooltip: chart.selections["tooltip"],
+  //     },
+  //   };
+  //   window.Elab.Chart.renderBarTooltip(title, items, context, undefined, "top"); // position hover line
 
-    var position = chart.xScale(xPosition) + 1.5;
-    chart
-      .getSelection("hover-line")
-      .style("display", "block")
-      .transition()
-      .duration(100)
-      .ease(d3.easeLinear)
-      .attr("x1", position)
-      .attr("x2", position)
-      .attr("y1", 0)
-      .attr("y2", chart.getInnerHeight());
-  };
+  //   var position = chart.xScale(xPosition) + 1.5;
+  //   chart
+  //     .getSelection("hover-line")
+  //     .style("display", "block")
+  //     .transition()
+  //     .duration(100)
+  //     .ease(d3.easeLinear)
+  //     .attr("x1", position)
+  //     .attr("x2", position)
+  //     .attr("y1", 0)
+  //     .attr("y2", chart.getInnerHeight());
+  // };
   /**
    * Handler to hide tooltip on hover out
    * @param {*} chart
    */
 
-  var hideIntroTooltip = function hideIntroTooltip(chart) {
-    chart.getSelection("hover-line").style("display", "none");
-    chart.getSelection("tooltip").style("display", "none");
-  };
+  // var hideIntroTooltip = function hideIntroTooltip(chart) {
+  //   chart.getSelection("hover-line").style("display", "none");
+  //   chart.getSelection("tooltip").style("display", "none");
+  // };
   /**
    * Selects the line data set from the chart data
    * @param {*} data
    */
 
-  var selectLineData = function selectLineData(data) {
-    return [
-      data
-        .map(function (d) {
-          return [d3.timeDay.offset(d[0], 3.5), d[2]];
-        })
-        .filter(function (d, i) {
-          return i !== data.length - 1;
-        }),
-    ];
-  };
+  // var selectLineData = function selectLineData(data) {
+  //   return [
+  //     data
+  //       .map(function (d) {
+  //         return [d3.timeDay.offset(d[0], 3.5), d[2]];
+  //       })
+  //       .filter(function (d, i) {
+  //         return i !== data.length - 1;
+  //       }),
+  //   ];
+  // };
   /**
    * Selects the bar data set from the chart data
    * @param {*} data
    */
 
-  var selectBarsData = function selectBarsData(data) {
-    return data.map(function (d) {
-      return [d[0], d[1]];
-    });
-  };
+  // var selectBarsData = function selectBarsData(data) {
+  //   return data.map(function (d) {
+  //     return [d[0], d[1]];
+  //   });
+  // };
   /**
    * Creates the label paths for the markers
    * (last week filings and total filings)
    * @param {*} chart
    */
 
-  var createLabelMarkers = function createLabelMarkers(chart) {
-    function createSpanPathSelection(parentSelection) {
-      return parentSelection.append("path").attr("class", "chart__span-path");
-    }
+  // var createLabelMarkers = function createLabelMarkers(chart) {
+  //   function createSpanPathSelection(parentSelection) {
+  //     return parentSelection.append("path").attr("class", "chart__span-path");
+  //   }
 
-    function createSpanPathRenderFunction(selection, chart) {
-      function draw() {
-        return (
-          "M 0," +
-          chart.getInnerHeight() +
-          " h " +
-          (chart.getInnerWidth() + 8) +
-          " v 108 h -46"
-        );
-      }
+  //   function createSpanPathRenderFunction(selection, chart) {
+  //     function draw() {
+  //       return (
+  //         "M 0," +
+  //         chart.getInnerHeight() +
+  //         " h " +
+  //         (chart.getInnerWidth() + 8) +
+  //         " v 108 h -46"
+  //       );
+  //     }
 
-      return function () {
-        selection.attr("d", draw());
-      };
-    }
+  //     return function () {
+  //       selection.attr("d", draw());
+  //     };
+  //   }
 
-    function createBarMarkerSelection(parentSelection) {
-      return parentSelection.append("path").attr("class", "chart__bar-path");
-    }
+  //   function createBarMarkerSelection(parentSelection) {
+  //     return parentSelection.append("path").attr("class", "chart__bar-path");
+  //   }
 
-    function createBarMarkerRenderFunction(selection, chart) {
-      function draw() {
-        var lastDate = chart.data[chart.data.length - 1][0];
-        var barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
-        return (
-          "M " + barPosition + "," + chart.getInnerHeight() + " v 72 h -24"
-        );
-      }
+  //   function createBarMarkerRenderFunction(selection, chart) {
+  //     function draw() {
+  //       var lastDate = chart.data[chart.data.length - 1][0];
+  //       var barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
+  //       return (
+  //         "M " + barPosition + "," + chart.getInnerHeight() + " v 72 h -24"
+  //       );
+  //     }
 
-      return function () {
-        selection.attr("d", draw());
-      };
-    }
+  //     return function () {
+  //       selection.attr("d", draw());
+  //     };
+  //   }
 
-    chart.addElement(
-      "span-path",
-      "overlay",
-      createSpanPathSelection,
-      createSpanPathRenderFunction
-    );
-    chart.addElement(
-      "bar-path",
-      "overlay",
-      createBarMarkerSelection,
-      createBarMarkerRenderFunction
-    );
-  };
+  //   chart.addElement(
+  //     "span-path",
+  //     "overlay",
+  //     createSpanPathSelection,
+  //     createSpanPathRenderFunction
+  //   );
+  //   chart.addElement(
+  //     "bar-path",
+  //     "overlay",
+  //     createBarMarkerSelection,
+  //     createBarMarkerRenderFunction
+  //   );
+  // };
   /**
    * Creates the chart and renders
    * @param {*} root
    * @param {*} cityData
    */
 
-  function createIntroFigure(root, cityData) {
-    var seriesData = cityData.values;
-    var options = {
-      margin: [32, 12, 104, 40],
-    };
-    var chart = new Elab.ChartBuilder(root, seriesData, options);
-    chart // adds y axis, using max of the trend line value or bar value
-      .addAxisY({
-        selector: function selector(d) {
-          return Math.max(d[2], d[1]);
-        },
-        adjustExtent: function adjustExtent(extent) {
-          return [0, extent[1] + extent[1] * 0.05];
-        },
-        ticks: 4,
-        tickFormat: d3.format(",d"),
-      }) // adds time axis from dates in the dataset
-      .addTimeAxis({
-        selector: function selector(d) {
-          return d[0];
-        },
-        adjustExtent: function adjustExtent(extent) {
-          return [
-            d3.timeDay.offset(extent[0], -2),
-            d3.timeDay.offset(extent[1], 9),
-          ];
-        },
-        adjustLabels: function adjustLabels(selection) {
-          selection
-            .selectAll(".tick text")
-            .attr("text-anchor", "end")
-            .attr(
-              "transform",
-              "translate(" + this.monthToPixels(1) / 2 + ",0) rotate(-50)"
-            )
-            .attr("dx", "-0.25em")
-            .attr("dy", "0.333em");
-          selection.selectAll(".tick:last-child text").attr("opacity", 0);
-        },
-        ticks: d3.timeMonth.every(2),
-        tickFormat: Elab.Utils.monthAxisFormatter,
-      }); // adds local moratorium areas
+  // function createIntroFigure(root, cityData) {
+  //   var seriesData = cityData.values;
+  //   var options = {
+  //     margin: [32, 12, 104, 40],
+  //   };
+  //   var chart = new Elab.ChartBuilder(root, seriesData, options);
+  //   chart // adds y axis, using max of the trend line value or bar value
+  //     .addAxisY({
+  //       selector: function selector(d) {
+  //         return Math.max(d[2], d[1]);
+  //       },
+  //       adjustExtent: function adjustExtent(extent) {
+  //         return [0, extent[1] + extent[1] * 0.05];
+  //       },
+  //       ticks: 4,
+  //       tickFormat: d3.format(",d"),
+  //     }) // adds time axis from dates in the dataset
+  //     .addTimeAxis({
+  //       selector: function selector(d) {
+  //         return d[0];
+  //       },
+  //       adjustExtent: function adjustExtent(extent) {
+  //         return [
+  //           d3.timeDay.offset(extent[0], -2),
+  //           d3.timeDay.offset(extent[1], 9),
+  //         ];
+  //       },
+  //       adjustLabels: function adjustLabels(selection) {
+  //         selection
+  //           .selectAll(".tick text")
+  //           .attr("text-anchor", "end")
+  //           .attr(
+  //             "transform",
+  //             "translate(" + this.monthToPixels(1) / 2 + ",0) rotate(-50)"
+  //           )
+  //           .attr("dx", "-0.25em")
+  //           .attr("dy", "0.333em");
+  //         selection.selectAll(".tick:last-child text").attr("opacity", 0);
+  //       },
+  //       ticks: d3.timeMonth.every(2),
+  //       tickFormat: Elab.Utils.monthAxisFormatter,
+  //     }); // adds local moratorium areas
 
-    cityData.start.forEach(function (d, i) {
-      chart = chart.addArea([cityData.start[i], cityData.end[i]], {
-        areaId: "area" + i,
-        patternId: "stripes",
-        addPattern: i === 0,
-      });
-    }); // adds federal moratorium
+  //   cityData.start.forEach(function (d, i) {
+  //     chart = chart.addArea([cityData.start[i], cityData.end[i]], {
+  //       areaId: "area" + i,
+  //       patternId: "stripes",
+  //       addPattern: i === 0,
+  //     });
+  //   }); // adds federal moratorium
 
-    return chart
-      .addArea(Elab.Utils.getCdcMoratoriumRange(), {
-        areaId: "cdcArea",
-        patternId: "cdcStripes",
-        angle: -45,
-      }) // adds the bars for weekly filings
-      .addBars({
-        selector: selectBarsData,
-      }) // adds the trend line
-      .addLines({
-        selector: selectLineData,
-        curve: d3.curveMonotoneX,
-      }) // adds a tooltip with the provided render function
-      .addTooltip(showIntroTooltip, hideIntroTooltip) // adds a custom element with markers for the last bar and chart span
-      .addCustom(createLabelMarkers) // renders the chart
-      .render();
-  }
+  //   return chart
+  //     .addArea(Elab.Utils.getCdcMoratoriumRange(), {
+  //       areaId: "cdcArea",
+  //       patternId: "cdcStripes",
+  //       angle: -45,
+  //     }) // adds the bars for weekly filings
+  //     .addBars({
+  //       selector: selectBarsData,
+  //     }) // adds the trend line
+  //     .addLines({
+  //       selector: selectLineData,
+  //       curve: d3.curveMonotoneX,
+  //     }) // adds a tooltip with the provided render function
+  //     .addTooltip(showIntroTooltip, hideIntroTooltip) // adds a custom element with markers for the last bar and chart span
+  //     .addCustom(createLabelMarkers) // renders the chart
+  //     .render();
+  // }
 
-  function getMoratoriumRange(data) {
-    var dateFormat = d3.timeFormat("%b %e, %Y");
-    var ranges = Elab.Utils.getMoratoriumRanges(data);
-    if (!ranges || ranges.length === 0) return "";
-    return ranges
-      .map(function (dates) {
-        if (!dates[0]) return "No local moratorium";
-        return dates
-          .map(function (d) {
-            return d ? dateFormat(d) : "Ongoing";
-          })
-          .join(" - ");
-      })
-      .join("<br />");
-  }
+  // function getMoratoriumRange(data) {
+  //   var dateFormat = d3.timeFormat("%b %e, %Y");
+  //   var ranges = Elab.Utils.getMoratoriumRanges(data);
+  //   if (!ranges || ranges.length === 0) return "";
+  //   return ranges
+  //     .map(function (dates) {
+  //       if (!dates[0]) return "No local moratorium";
+  //       return dates
+  //         .map(function (d) {
+  //           return d ? dateFormat(d) : "Ongoing";
+  //         })
+  //         .join(" - ");
+  //     })
+  //     .join("<br />");
+  // }
   /**
    * Inserts the data for the location into the placeholders
    */
 
-  function initDataValues(cityData) {
-    var numFormat = d3.format(",d");
-    var moratorium = getMoratoriumRange(cityData);
-    $("#evictionMoratorium").html(moratorium);
-    $("#filingsLastWeek").html(
-      "<span>" + numFormat(cityData.lastWeek) + "</span> filings last week*"
-    );
-    $("#filingsCumulative").html(
-      "<span>" +
-        numFormat(cityData.cumulative) +
-        "</span> filings since Mar 15, '20"
-    );
-    addSubgroupBreakdown(cityData);
-  }
+  // function initDataValues(cityData) {
+  //   var numFormat = d3.format(",d");
+  //   var moratorium = getMoratoriumRange(cityData);
+  //   $("#evictionMoratorium").html(moratorium);
+  //   $("#filingsLastWeek").html(
+  //     "<span>" + numFormat(cityData.lastWeek) + "</span> filings last week*"
+  //   );
+  //   $("#filingsCumulative").html(
+  //     "<span>" +
+  //       numFormat(cityData.cumulative) +
+  //       "</span> filings since Mar 15, '20"
+  //   );
+  //   addSubgroupBreakdown(cityData);
+  // }
   /**
    * Prepends a paragraph to the intro with a breakdown
    * of all of the counties within the dataset.
    * @param {*} cityData data from table.csv
    */
 
-  function addSubgroupBreakdown(cityData) {
-    if (
-      !cityData.subgroups ||
-      !cityData.subgroup_values ||
-      cityData.subgroups.length === 0
-    )
-      return;
-    var numFormat = d3.format(",d");
-    cityData.subgroup_values = cityData.subgroup_values.map(function (v) {
-      return numFormat(v);
-    });
-    var templateData = Object.assign({}, cityData, {
-      cumulative: numFormat(cityData.cumulative),
-    });
-    var template = Handlebars.compile(
-      "<p>Of the {{cumulative}} filings in {{city}} since March 15th, " +
-        "{{#each subgroups}}" +
-        "{{#if @last}}" +
-        " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
-        "{{else}}" +
-        "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}}, {{/if}}" +
-        "{{/if}}" +
-        "{{/each}}</p>"
-    );
-    var html = template(templateData);
-    $("#introText").prepend(html);
-  }
+  // function addSubgroupBreakdown(cityData) {
+  //   if (
+  //     !cityData.subgroups ||
+  //     !cityData.subgroup_values ||
+  //     cityData.subgroups.length === 0
+  //   )
+  //     return;
+  //   var numFormat = d3.format(",d");
+  //   cityData.subgroup_values = cityData.subgroup_values.map(function (v) {
+  //     return numFormat(v);
+  //   });
+  //   var templateData = Object.assign({}, cityData, {
+  //     cumulative: numFormat(cityData.cumulative),
+  //   });
+  //   var template = Handlebars.compile(
+  //     "<p>Of the {{cumulative}} filings in {{city}} since March 15th, " +
+  //       "{{#each subgroups}}" +
+  //       "{{#if @last}}" +
+  //       " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
+  //       "{{else}}" +
+  //       "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}}, {{/if}}" +
+  //       "{{/if}}" +
+  //       "{{/each}}</p>"
+  //   );
+  //   var html = template(templateData);
+  //   $("#introText").prepend(html);
+  // }
   /**
    * Creates the intro chart
    */
 
-  function initIntroChart(root, dataUrl, locationId) {
-    Elab.Data.loadCityTable(dataUrl, function (data) {
-      var cityData = data.find(function (d) {
-        return Number(d.id) === Number(locationId);
-      });
+  // function initIntroChart(root, dataUrl, locationId) {
+  //   Elab.Data.loadCityTable(dataUrl, function (data) {
+  //     var cityData = data.find(function (d) {
+  //       return Number(d.id) === Number(locationId);
+  //     });
 
-      if (!cityData) {
-        $(".intro").addClass("intro--error");
-        throw new Error("no data found for city");
-      }
+  //     if (!cityData) {
+  //       $(".intro").addClass("intro--error");
+  //       throw new Error("no data found for city");
+  //     }
 
-      $(".intro").removeClass("intro--loading");
-      createIntroFigure(root, cityData);
-      initDataValues(cityData);
-    });
-  }
+  //     $(".intro").removeClass("intro--loading");
+  //     createIntroFigure(root, cityData);
+  //     initDataValues(cityData);
+  //   });
+  // }
 
   return {
-    initIntroChart: initIntroChart,
+    // initIntroChart: initIntroChart,
   };
 })(Elab);
 /**
@@ -2563,7 +2821,7 @@ Elab.ListPage = (function (Elab) {
         '<td class="table__cell table__cell--button">' +
         '<a href="{{url}}" class="btn btn-default">{{buttonLabel}} <i class="fa fa-chevron-right"></i></a>' +
         "</td>" +
-        "</tr>"
+        "</tr>",
     );
     var moratoriumRanges = Elab.Utils.getMoratoriumRanges(data);
     var isMoratoriumActive = inMoratorium(Date.now(), moratoriumRanges);
@@ -2575,8 +2833,7 @@ Elab.ListPage = (function (Elab) {
     var rowData = {
       id: data.id,
       name: data.name,
-      class:
-        "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
+      class: "table__row--" + (isMoratoriumActive ? "moratorium" : "no-moratorium"),
       url: Elab.Utils.getCurrentURL() + Elab.Utils.slugify(data.name),
       weekFilings: numFormat(data.lastWeek),
       cumulativeFilings: numFormat(data.cumulative),
@@ -2590,25 +2847,22 @@ Elab.ListPage = (function (Elab) {
 
   /**
    * Checks if the provided day falls within the moratorium range
-   * @param {*} day 
-   * @param {*} ranges 
-   * @returns 
+   * @param {*} day
+   * @param {*} ranges
+   * @returns
    */
   function inMoratorium(day, ranges) {
     var isDayInRanges = ranges.reduce(function (inRange, range) {
       // get the end day of the week
       var endDay = d3.timeDay.offset(day, 7);
       // if day was in earlier range, return true
-      if (inRange) return true
+      if (inRange) return true;
       // if no start / end, then pass along the value
       if (!range[0] && !range[1]) return inRange;
       // if range only has a start date and the day is after that date, return true
-      if (!range[1] && +day >= +range[0]) return true
+      if (!range[1] && +day >= +range[0]) return true;
       // if range has both a start and an end date
-      return +day >= +range[0] &&
-            +day <= +range[1] &&
-            +endDay >= +range[0] &&
-            +endDay <= +range[1];
+      return +day >= +range[0] && +day <= +range[1] && +endDay >= +range[0] && +endDay <= +range[1];
     }, false);
     return isDayInRanges;
   }
@@ -2650,9 +2904,7 @@ Elab.ListPage = (function (Elab) {
 
     var localMoratoriums = Elab.Utils.getMoratoriumRanges(data);
     var cdcMoratorium = Elab.Utils.getCdcMoratoriumRange();
-    var moratoriumRanges = mergeRanges(
-      localMoratoriums.concat([cdcMoratorium])
-    );
+    var moratoriumRanges = mergeRanges(localMoratoriums.concat([cdcMoratorium]));
     var values = data.values.filter(function (v, i) {
       return i !== data.values.length - 1;
     }); // get values that fall within the moratorium ranges
@@ -2813,10 +3065,7 @@ Elab.ListPage = (function (Elab) {
       !count2.error && count2.start();
     }
 
-    Elab.Utils.callOnEnter(
-      document.getElementById("counterWeek"),
-      startCounter
-    );
+    Elab.Utils.callOnEnter(document.getElementById("counterWeek"), startCounter);
   }
 
   function initCityTable(cities, options) {
@@ -2917,10 +3166,7 @@ Elab.ListPage = (function (Elab) {
       var startDate = dateFormat(row.values[row.values.length - 1][0]);
       var endDate = dateFormat(row.updated);
       footnoteEl.html(
-        footnoteEl
-          .html()
-          .replace("{{start}}", startDate)
-          .replace("{{end}}", endDate)
+        footnoteEl.html().replace("{{start}}", startDate).replace("{{end}}", endDate),
       ); // initialize any tooltips
 
       $('[data-toggle="tooltip"]').tooltip();
@@ -2934,16 +3180,11 @@ Elab.ListPage = (function (Elab) {
 
 Elab.Ranking = (function (Elab) {
   var statTemplate = Handlebars.compile(
-    '\n    <p class="stat">\n      <span class="stat__value">{{value}}</span>\n      <span class="stat__label">{{{label}}}</span>\n    </p>\n  '
+    '\n    <p class="stat">\n      <span class="stat__value">{{value}}</span>\n      <span class="stat__label">{{{label}}}</span>\n    </p>\n  ',
   );
   var itemTemplate = Handlebars.compile(
-    '\n  <li class="ranking__item">\n    <div class="ranking__label">\n      <p class="ranking__primary">{{primary}}</p>\n      <p class="ranking__secondary">{{secondary}}</p>\n    </div>\n    <div class="ranking__value">\n      <div class="ranking__bar" style="width: {{percent}}"></div>\n      <div class="ranking__bar-label">\n        <span>{{value}}</span> \n        <span>filings</span>\n      </div>\n    </div>\n  </li>'
+    '\n  <li class="ranking__item">\n    <div class="ranking__label">\n      <p class="ranking__primary">{{primary}}</p>\n      <p class="ranking__secondary">{{secondary}}</p>\n    </div>\n    <div class="ranking__value">\n      <div class="ranking__bar" style="width: {{percent}}"></div>\n      <div class="ranking__bar-label">\n        <span>{{value}}</span> \n        <span>filings</span>\n      </div>\n    </div>\n  </li>',
   );
-  var buttonGroupTemplate = Handlebars.compile(
-    '\n  <button class="toggle" data-group="{{group}}">\n    {{label}}\n  </button>\n  '
-  );
-  var dateFormatter = d3.timeFormat("%B %d, %Y");
-  var dateParse = d3.timeParse("%Y-%m-%d");
   var percentFormat = d3.format(".2%");
   var $el; // jquery wrapped root element
 
@@ -2963,8 +3204,9 @@ Elab.Ranking = (function (Elab) {
       addEndDate(data);
       data = shapeTopEvictions(data);
       groups = Elab.Utils.group(data, "group");
+      // todo: when data gets reduced to single time span, hardcode
       activeGroup = groups[0].key;
-      renderButtonGroups();
+      // renderButtonGroups();
       createRankingList();
       renderEvictorsStat();
       Elab.Utils.callOnEnter($el[0], renderRankingList);
@@ -2973,12 +3215,12 @@ Elab.Ranking = (function (Elab) {
 
   function addEndDate(data) {
     var endDateVal = data[0].end_date;
-    if(!endDateVal) return;
-    var endDateArr = endDateVal.split('-');
-    var endDate = parseInt(endDateArr[1])+"-"+parseInt(endDateArr[2])+"-"+endDateArr[0];
-    $el.find(".button-group").before(
-      "<p><em>Data is current through <time>"+endDate+"</time>.</em></p>"
-    );
+    if (!endDateVal) return;
+    var endDateArr = endDateVal.split("-");
+    var endDate = parseInt(endDateArr[1]) + "-" + parseInt(endDateArr[2]) + "-" + endDateArr[0];
+    $el
+      .find(".button-group")
+      .before("<p><em>Data is current through <time>" + endDate + "</time>.</em></p>");
   }
 
   /** Shapes the data from the CSV into proper format */
@@ -3005,41 +3247,9 @@ Elab.Ranking = (function (Elab) {
     }).values;
     var templateData = {
       value: format(groupData[0].top100),
-      label:
-        "of all eviction filings come from the <strong>top 100</strong> buildings",
+      label: "of all eviction filings come from the <strong>top 100</strong> buildings",
     };
     sibling.after(statTemplate(templateData));
-  }
-
-  /**
-   * Render buttons for the available groups, and bind click handlers.
-   */
-  function renderButtonGroups() {
-    var buttons = groups
-      .map(function (group) {
-        return {
-          label: "Since ".concat(dateFormatter(dateParse(group.key))),
-          group: group.key,
-        };
-      })
-      .map(buttonGroupTemplate)
-      .map($);
-    var container = $el.find(".button-group");
-    container.empty();
-    buttons.forEach(function (button) {
-      button.data("group") === activeGroup
-        ? button.addClass("toggle--active")
-        : button.removeClass("active");
-      button.click(function () {
-        var newGroup = $(this).data("group");
-        if (activeGroup === newGroup) return;
-        activeGroup = newGroup;
-        renderButtonGroups();
-        renderRankingList();
-        renderEvictorsStat();
-      });
-      container.append(button);
-    });
   }
 
   /** Creates the initial DOM for the ranking list */
@@ -3079,7 +3289,7 @@ Elab.Ranking = (function (Elab) {
           {
             value: item.value,
             percent: percentFormat(item.value / max),
-          }
+          },
         );
       })
       .sort(function (a, b) {
@@ -3100,13 +3310,13 @@ Elab.Ranking = (function (Elab) {
           200,
           function () {
             $(this).text(item.primary);
-          }
+          },
         )
         .animate(
           {
             opacity: 1,
           },
-          200
+          200,
         );
       el.find(".ranking__secondary")
         .delay(110 * index)
@@ -3117,13 +3327,13 @@ Elab.Ranking = (function (Elab) {
           200,
           function () {
             $(this).text(item.secondary);
-          }
+          },
         )
         .animate(
           {
             opacity: 1,
           },
-          200
+          200,
         );
       el.find(".ranking__bar-label")
         .delay(200 + 120 * index)
@@ -3131,7 +3341,7 @@ Elab.Ranking = (function (Elab) {
           {
             opacity: 1,
           },
-          200
+          200,
         );
       el.find(".ranking__bar-label span:first-child")
         .delay(200 + 120 * index)
@@ -3142,7 +3352,7 @@ Elab.Ranking = (function (Elab) {
           200,
           function () {
             $(this).text(item.value);
-          }
+          },
         );
       (index !== 0 || renderCount === 0) &&
         el
@@ -3152,7 +3362,7 @@ Elab.Ranking = (function (Elab) {
             {
               width: "".concat(item.percent),
             },
-            400
+            400,
           );
     });
     renderCount++;
@@ -3165,7 +3375,7 @@ Elab.Ranking = (function (Elab) {
 
 Elab.MedianFilings = (function (Elab) {
   var legendItemTemplate = Handlebars.compile(
-    '\n    <div class="legend-item legend-item--{{index}} legend-item--{{label}}">\n      <div class="legend-item__color"></div>\n      <div class="legend-item__label">{{label}}</div>\n    </div>\n  '
+    '\n    <div class="legend-item legend-item--{{index}} legend-item--{{label}}">\n      <div class="legend-item__color"></div>\n      <div class="legend-item__label">{{label}}</div>\n    </div>\n  ',
   );
   var dateParse = d3.timeParse("%Y-%m-%d");
   var dollarFormat = d3.format("$.2s");
@@ -3180,10 +3390,7 @@ Elab.MedianFilings = (function (Elab) {
     id = options.id;
     $el = $(elId);
     Elab.Data.loadData(csv, shapeLineData, function (result) {
-      data = result.sort(function (a, b) {
-        return a.name - b.name;
-      });
-
+      data = result.sort((a, b) => a.date - b.date).slice(-12);
       Elab.Utils.callOnEnter($el[0], render);
     });
   }
@@ -3196,12 +3403,23 @@ Elab.MedianFilings = (function (Elab) {
         name: "Median Claim Amount",
         x: date,
         y: Number(row[config.yCol]),
+        avg: Number(row[config.avg]),
       };
     });
   }
 
-  /** Renders the top 100 buildings stat */
+  /** Renders the median claim line chart */
   function renderLineChart() {
+    // chunk label to break btw lines
+    var avgLabel = ["pre-COVID", "average"];
+    var avgLines =
+      data[0].avg &&
+      avgLabel.map((w, i) => ({
+        y: data[0].avg,
+        label: w,
+        // first item gets used for plotting line, rest just for the label word
+        labelOnly: !i,
+      }));
     Elab.LineChart.createFigure($el.find(".visual__chart")[0], data, {
       x: "x",
       y: "y",
@@ -3210,6 +3428,9 @@ Elab.MedianFilings = (function (Elab) {
       yFormat: dollarFormat,
       xTooltipFormat: d3.timeFormat("%B %Y"),
       yTooltipFormat: d3.format("$.2f"),
+      avgLines,
+      // make room for avg label
+      margin: "8 68 60 54",
     });
   }
 
