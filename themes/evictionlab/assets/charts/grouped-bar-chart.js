@@ -148,58 +148,57 @@ Elab.GroupedBarChart = (function (Elab) {
 
     var chart = new Elab.ChartBuilder(root, data, options);
     return (
-        chart
-            // adds y axis, using max of the trend line value or bar value
-            .addAxisY({
-              selector: ySelector,
-              adjustExtent: function (extent) {
-                var newArr = [];
-                var columns = [];
-                Object.values(options.barFormat).forEach(function (el) {
-                  var arr = el.slice(",");
-                  arr.forEach(function (el) {
-                    columns.push(el);
-                  });
-                });
-                var d = findDataItem(data, options);
-                // console.log('d, ', d)
-                // d.forEach(function(el, i) {
-                columns.forEach(function (c) {
-                  newArr.push(parseFloat(d[c]));
-                });
-                // })
-                // console.log('newArr, ', newArr)
-                var newExtent = d3.extent(newArr);
-                // console.log('newExtent, ', newExtent)
-                var range = newExtent[1] - newExtent[0];
-                // console.log('range, ', range)
-                return [newExtent[0] - range * 0.05, newExtent[1] + range * 0.05];
-              },
-              ticks: dataOptions.yTicks || 5,
-              tickFormat: d3.format(dataOptions.yFormat || ",d"),
-            })
-            // Adds bar chart axes for categories in the dataset.
-            // adds time axis from dates in the dataset
-            .addBarGroupAxis({
-              selector: xSelector,
-              ticks: dataOptions.xTicks,
-              adjustLabels: function (selection) {
-                if (window.innerWidth < 540) {
-                  selection
-                      .selectAll(".tick text")
-                      .attr("text-anchor", "end")
-                      .attr("transform", "rotate(-30)");
-                } else {
-                  selection
-                      .selectAll(".tick text")
-                      .attr("text-anchor", null)
-                      .attr("transform", null);
-                }
-              },
-            })
-            // adds the bars
-            .addBarGroups(selectBarsData)
-            .render()
+      chart
+        // adds y axis, using max of the trend line value or bar value
+        .addAxisY({
+          selector: ySelector,
+          adjustExtent: function (extent) {
+            var newArr = [];
+            if (options.yMin) newArr.push(Number(options.yMin));
+            var columns = [];
+            Object.values(options.barFormat).forEach(function (el) {
+              var arr = el.slice(",");
+              arr.forEach(function (el) {
+                columns.push(el);
+              });
+            });
+            var d = findDataItem(data, options);
+            // console.log('d, ', d)
+            // d.forEach(function(el, i) {
+            columns.forEach(function (c) {
+              console.log({ d, c, data, options });
+              newArr.push(parseFloat(d[c]));
+            });
+            // })
+            // console.log('newArr, ', newArr)
+            var newExtent = d3.extent(newArr);
+            // console.log('newExtent, ', newExtent)
+            var range = newExtent[1] - newExtent[0];
+            // console.log('range, ', range)
+            return [newExtent[0] - range * 0.05, newExtent[1] + range * 0.05];
+          },
+          ticks: dataOptions.yTicks || 5,
+          tickFormat: d3.format(dataOptions.yFormat || ",d"),
+        })
+        // Adds bar chart axes for categories in the dataset.
+        // adds time axis from dates in the dataset
+        .addBarGroupAxis({
+          selector: xSelector,
+          ticks: dataOptions.xTicks,
+          adjustLabels: function (selection) {
+            if (window.innerWidth < 540) {
+              selection
+                .selectAll(".tick text")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-30)");
+            } else {
+              selection.selectAll(".tick text").attr("text-anchor", null).attr("transform", null);
+            }
+          },
+        })
+        // adds the bars
+        .addBarGroups(selectBarsData)
+        .render()
     );
   }
 

@@ -215,6 +215,7 @@ title="Stacked area chart"
 %}}
 
 
+See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-bars and arrow-chart examples
 
 
 

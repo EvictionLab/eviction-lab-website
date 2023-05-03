@@ -704,7 +704,13 @@ Elab.ChartBuilder = (function (Elab) {
     this.updaters["bars"] = function () {
       var barData = options.selector(_this.data);
 
-      var spacing = 1.5;
+      /*
+       * HACK: bar placement is based on date, but bar width is fixed. for this reason, february
+       * bars sometimes don't quite fit (run into next bar) on larger screens.
+       * fix with added spacing.
+       *
+       */
+      var spacing = window.innerWidth >= 1200 ? 3 : 1.5;
       // NOTE: with enough data points bars become 0px wide... need to thin out
       // bars if we continue using chart (but chart being retired)
       var bandWidth = Math.max(
