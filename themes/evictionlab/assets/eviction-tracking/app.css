@@ -1807,6 +1807,10 @@
   text-align: start;
 }
 
+.section:nth-child(2n).section--chart.section--race .comparison-block-wrapper {
+  border: #f5f7f9 solid 3px;
+}
+
 @media (min-width: 600px) {
   .section--chart.section--race .comparison-block-wrapper {
     /* keep in sync with CHART_2_CONFIG/CHART_2A_CONFIG margin right/left */
@@ -2404,9 +2408,10 @@ label #labels_top-100 {
 .intro__content .footnote {
   font-size: 1.2rem;
   color: var(--text-secondary);
-  max-width: 320px;
   margin: auto;
+  max-width: 320px;
 }
+
 .section .footnote span,
 .section .additional-footnote span {
   display: block;
