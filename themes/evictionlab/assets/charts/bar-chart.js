@@ -106,22 +106,18 @@ Elab.BarChart = (function (Elab) {
           },
         });
     } else {
+      // for month timeFrame, if last data point is for 5/1 axis should extend to 6/1
+      var endXOffset = dataOptions.timeUnit === "month" ? 31 : 9;
       chart
         .addTimeAxis({
           adjustExtent: function (extent) {
-            return [
-              d3.timeDay.offset(extent[0], -2),
-              d3.timeDay.offset(extent[1], 9),
-            ];
+            return [d3.timeDay.offset(extent[0], -2), d3.timeDay.offset(extent[1], endXOffset)];
           },
           adjustLabels: function (selection) {
             selection
               .selectAll(".tick text")
               .attr("text-anchor", "end")
-              .attr(
-                "transform",
-                "translate(" + chart.monthToPixels(1) / 2 + ",0) rotate(-50)"
-              )
+              .attr("transform", "translate(" + chart.monthToPixels(1) / 2 + ",0) rotate(-50)")
               .attr("dx", "-0.25em")
               .attr("dy", "0.333em");
             selection.selectAll(".tick:last-child text").attr("opacity", 0);
@@ -132,14 +128,22 @@ Elab.BarChart = (function (Elab) {
         .addBars({
           selector: barSelector,
           renderTooltip: function (hoverData) {
-            var dayFormat = d3.timeFormat("%b %e");
-            var weekLabel = [hoverData[0], d3.timeDay.offset(hoverData[0], 7)]
-              .map(function (d) {
-                return dayFormat(d);
-              })
-              .join(" - ");
+            var label = "";
+            if (dataOptions.xTooltipFormat) {
+              label = d3.timeFormat(dataOptions.xTooltipFormat)(hoverData[0]);
+            } else if (dataOptions.timeUnit === "month") {
+              label = d3.timeFormat("%B %Y")(hoverData[0]);
+            } else {
+              var dayFormat = d3.timeFormat("%b %e");
+              // creates week label, eg "Mar 1 - Mar 8"
+              label = [hoverData[0], d3.timeDay.offset(hoverData[0], 7)]
+                .map(function (d) {
+                  return dayFormat(d);
+                })
+                .join(" - ");
+            }
             const tooltip = {
-              title: weekLabel,
+              title: label,
               value: yTooltipFormat(hoverData[1]),
             };
             return renderTooltip(tooltip);

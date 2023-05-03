@@ -1,0 +1,32 @@
+xsite,num_filings,num_filings_hist_avg,site_protections_rank,site_protections_label,pct_of_historical,xsite_label
+ALBUQUERQUE,8597,19568,Limited Local Protections,Limited,0.4393397383483238,Albuquerque
+AUSTIN,2527,16625.333333333332,Strong Local Protections,Strong,0.1519969524420563,Austin
+BOSTON,4487,14141.833333333334,Limited Local Protections,Limited,0.31728559474844137,Boston
+BRIDGEPORT,2432,7204.666666666667,Strong Local Protections,Strong,0.3375589895438142,Bridgeport
+CHARLESTON,9627,26554,No Local Protections,None,0.3625442494539429,Charleston
+CINCINNATI,15503,23263.6,No Local Protections,None,0.666405887308929,Cincinnati
+CLEVELAND,7224,17639.75,No Local Protections,None,0.4095296135149308,Cleveland
+COLUMBUS,24217,33012,No Local Protections,None,0.733581727856537,Columbus
+DALLAS,35109,72538.33333333333,No Local Protections,None,0.48400615766376404,Dallas
+FORTWORTH,32111,67757.25,No Local Protections,None,0.4739123857594575,Fort Worth
+GAINESVILLE,1944,2813,Limited Local Protections,Limited,0.6910771418414504,Gainesville
+GREENVILLE,15707,25926,No Local Protections,None,0.605839697600864,Greenville
+HARTFORD,3641,10860.666666666666,Strong Local Protections,Strong,0.33524645509790685,Hartford
+HOUSTON,58481,104991.25,No Local Protections,None,0.5570083221220816,Houston
+INDIANAPOLIS,28542,52990.5,No Local Protections,None,0.5386248478500864,Indianapolis
+JACKSONVILLE,13771,21681.8,Limited Local Protections,Limited,0.6351409938289256,Jacksonville
+KANSASCITY,7912,16274.75,No Local Protections,None,0.4861518610116899,Kansas City
+LASVEGAS,51654,66055.5,Strong Local Protections,Strong,0.7819787905624815,Las Vegas
+MEMPHIS,26912,48629.5,No Local Protections,None,0.553408939018497,Memphis
+MILWAUKEE,14365,23808.399999999994,No Local Protections,None,0.6033584785201863,Milwaukee
+MINNEAPOLIS,2662,14580.5,Strong Local Protections,Strong,0.1825726141078838,Minneapolis
+NEWORLEANS,5012,11096,No Local Protections,None,0.45169430425378515,New Orleans
+NEWYORK,82763,402458.6666666667,Strong Local Protections,Strong,0.20564347808801897,New York
+PHILADELPHIA,9882,38007.5,Limited Local Protections,Limited,0.26000131552982964,Philadelphia
+PHOENIX,66227,116117.20000000007,Limited Local Protections,Limited,0.5703461674928431,Phoenix
+PITTSBURGH,8091,24542.875,Limited Local Protections,Limited,0.3296679789959408,Pittsburgh
+RICHMOND,9614,37081,Limited Local Protections,Limited,0.25927024621773953,Richmond
+SOUTHBEND,2658,5393.5,No Local Protections,None,0.4928154259757115,South Bend
+STLOUIS,12843,27266,Limited Local Protections,Limited,0.47102618645932665,St Louis
+TAMPA,21741,31721.5,Limited Local Protections,Limited,0.6853711205333922,Tampa
+WILMINGTON,8096,20480.25,No Local Protections,None,0.39530767446686443,Wilmington
