@@ -82,7 +82,7 @@ description: Over the last three years, eviction filing rates across the United
 }
 .boxed-content {
   position: relative;
-  background: #2c897f13;
+  background: #ecf1f6;
   padding: 3.6em 2.4em;
   margin-bottom: 3rem;
 }
