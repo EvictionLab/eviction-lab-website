@@ -13,7 +13,6 @@ description: Responding to the unfolding emergency of COVID-19, policymakers at 
 listSummary: Responding to the unfolding emergency of COVID-19, policymakers at the federal, state, and local levels enacted a range of new policies. These policies drove eviction filing rates to historic lows.
 researchtype: elresearch
 postauthorname: Peter Hepburn, Jacob Haas, Nick Graetz, Renee Louis, Devin Q. Rutan, Anne Kat Alexander, Jasmine Rangel, Olivia Jin, Emily Benfer, and Matthew Desmond
-twImage: house.jpg
 authorpic: /images/bios/elab_thumb_sm.jpg
 collection: true
 twImage: house.jpg
