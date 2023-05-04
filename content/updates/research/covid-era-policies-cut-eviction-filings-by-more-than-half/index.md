@@ -47,7 +47,19 @@ These policies drove eviction filing rates to historic lows. Take the [Hill Dist
 
 In a research article published in RSF: The Russell Sage Foundation Journal of the Social Sciences, we trace these patterns in 31 cities across the United States. We assess the cumulative effects of pandemic-era policies, analyzing changes in eviction filing patterns over the first two years of the COVID-19 pandemic. We pay particular attention to what these policies did to address socio-economic, racial/ethnic, and gender disparities in eviction risk that predated the pandemic. 
 
-[READ THE ARTICLE LINK]
+<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
+
+<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100">
+    <div class="pr-12 pr-md-0">
+        <a href="https://www.rsfjournal.org/content/9/3/186.abstract" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="rsf-cover-5-2023.jpg" /></a>
+    </div>
+    <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE STUDY:</p>
+        <p><a class="green gt-eesti journal-heading" href="https://www.rsfjournal.org/content/9/3/186.abstract" target="_blank" rel="noreferrer noopener">Protecting the Most Vulnerable: Policy Response and Eviction Filing Patterns During the COVID-19 Pandemic</a></p>
+        <p class="mt-3" style="font-size: 1.6rem;">by Peter Hepburn, Jacob Haas, Nick Graetz, Renee Louis, Devin Q. Rutan, Anne Kat Alexander, Jasmine Rangel, Olivia Jin, Emily Benfer, and Matthew Desmond</p>
+    </div>
+</div>
+
+<hr style="border-top-color: #2c897f; margin: 2.4rem 0 4rem;">
 
 In the article, we draw on the records of eviction case filings from cities across the country that we have collected through the [Eviction Tracking System](https://evictionlab.org/eviction-tracking/). Those include five of the ten largest cities in the U.S.—Dallas, Houston, New York City, Philadelphia, and Phoenix—but also a number of smaller places like Gainesville, FL and Wilmington, DE.<sup>1</sup> All of these cities were covered by some form of local eviction moratorium at the start of the pandemic, often closing courts due to public health concerns. However, many state and local governments began rolling back protections in mid-2020: half of these cities had no meaningful emergency eviction protections in place after August 31, 2020.
 
