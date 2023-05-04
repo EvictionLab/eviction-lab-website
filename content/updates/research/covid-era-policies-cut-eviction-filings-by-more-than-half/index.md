@@ -27,9 +27,6 @@ description: Responding to the unfolding emergency of COVID-19, policymakers at
   the federal, state, and local levels enacted a range of new policies. These
   policies drove eviction filing rates to historic lows.
 fbImage: house.jpg
-scripts:
-  - charts
-  - grouped-bar-chart
 ---
 <style>
   #fig3-mfr .chart__bar.mfr_hi {
