@@ -15,7 +15,6 @@ researchtype: elresearch
 postauthorname: Peter Hepburn, Jacob Haas, Nick Graetz, Renee Louis, Devin Q. Rutan, Anne Kat Alexander, Jasmine Rangel, Olivia Jin, Emily Benfer, and Matthew Desmond
 twImage: us-eviction-filing-patterns-2020-social.png
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: We provide a snapshot of U.S. eviction filing patterns in 2020 and a first description of how effective these policies were. In a year that was unprecedented in many respects, we aim to show how renters fared, and what they may be facing in 2021.
 collection: true
 twImage: bars.png
 image: house.jpg
