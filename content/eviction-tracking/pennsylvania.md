@@ -5,7 +5,7 @@ title: Pennsylvania | Eviction Tracking System
 h1: Pennsylvania
 rentersSite: Pennsylvania
 slug: pennsylvania
-date: 2023-01-11T22:18:49.059Z
+date: 2023-05-04T21:18:49.059Z
 ---
 {{< report_intro site_id="42" data="/uploads/states_table.csv" >}}
 
