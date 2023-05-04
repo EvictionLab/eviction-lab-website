@@ -27,6 +27,9 @@ description: Responding to the unfolding emergency of COVID-19, policymakers at
   the federal, state, and local levels enacted a range of new policies. These
   policies drove eviction filing rates to historic lows.
 fbImage: house.jpg
+scripts:
+  - charts
+  - grouped-bar-chart
 ---
 <style>
   #fig3-mfr .chart__bar.mfr_hi {
@@ -152,6 +155,4 @@ Still, the fact that inequalities endured should not distract from the fact that
 {{< blogfootnotes 
 "We would like to thank the [many organizations and individuals](https://evictionlab.org/eviction-tracking/acknowledgements/) who contributed data or assistance for the Eviction Tracking System. The city sites described in this piece often follow county boundaries; see the full article for further information."
 
-"Neighborhood racial/ethnic majority and median incomes were determined on the basis of ACS five-year estimates from 2015-2019 for the full population (i.e., not just those living in rental housing)."
-
-> }}
+"Neighborhood racial/ethnic majority and median incomes were determined on the basis of ACS five-year estimates from 2015-2019 for the full population (i.e., not just those living in rental housing)." >}}
