@@ -35,10 +35,17 @@ scripts:
   }
   
 </style>
+<script>
+  // HACK: gets the grouped-bar-chart to resize, which properly makes room for its axis labels
+  // TODO: fix for all charts
+  setTimeout(() => window.dispatchEvent(new Event('resize')), 3000);
+</script>
 
 <span class="dropcap green">M</span>illions of people were laid off over the course of just a few weeks in spring 2020 as COVID-19 lockdowns were put in place nationwide. Job losses were concentrated in industries and occupations that employ a large number of renters, especially the retail, service, and tourism sectors. With few jobs available and limited savings, these tenants were at immediate risk of eviction if they could not pay next month’s rent. Evictions in turn raised the prospect of more households ending up homeless or doubled-up with friends or relatives, conditions that foster the spread of COVID-19. Responding to the unfolding emergency, policymakers at the federal, state, and local levels enacted a range of new policies. These included eviction moratoria to prevent immediate displacement, stimulus payments and expanded unemployment insurance that allowed many tenants to stay current on rent, and emergency rental assistance (ERA) to help them catch up if they fell behind. 
 
 These policies drove eviction filing rates to historic lows. Take the [Hill District in Pittsburgh, PA](https://www.google.com/maps/place/Pittsburgh,+PA+15219/@40.4506351,-79.9822375,13z/data=!3m1!4b1!4m6!3m5!1s0x8834f15f65521405:0xa3568b4291b83a30!8m2!3d40.440368!4d-79.9836108!16s%2Fm%2F020tq_f) as an example. The Hill District is adjacent to Downtown Pittsburgh, nestled between  the Allegheny and Monongahela Rivers. The neighborhood has a median household income of around $25,000 and, during a typical period extending from mid-March to the end of December of the following year, would be the site of nearly 1,000 eviction case filings. Between the start of the COVID-19 pandemic (March 15, 2020) and December 31, 2021, only 186 cases were filed, a reduction of 81.2%. 
+
+{{< pullquote "We observed 800,000 fewer eviction cases filed than normal in 31 cities we tracked, a reduction of 57.6%" >}}
 
 In a research article published in RSF: The Russell Sage Foundation Journal of the Social Sciences, we trace these patterns in 31 cities across the United States. We assess the cumulative effects of pandemic-era policies, analyzing changes in eviction filing patterns over the first two years of the COVID-19 pandemic. We pay particular attention to what these policies did to address socio-economic, racial/ethnic, and gender disparities in eviction risk that predated the pandemic. 
 
@@ -47,6 +54,8 @@ In a research article published in RSF: The Russell Sage Foundation Journal of t
 In the article, we draw on the records of eviction case filings from cities across the country that we have collected through the [Eviction Tracking System](https://evictionlab.org/eviction-tracking/). Those include five of the ten largest cities in the U.S.—Dallas, Houston, New York City, Philadelphia, and Phoenix—but also a number of smaller places like Gainesville, FL and Wilmington, DE.<sup>1</sup> All of these cities were covered by some form of local eviction moratorium at the start of the pandemic, often closing courts due to public health concerns. However, many state and local governments began rolling back protections in mid-2020: half of these cities had no meaningful emergency eviction protections in place after August 31, 2020.
 
 Between the start of the pandemic and the end of 2021, we recorded the filing of almost 600,000 eviction cases in these 31 cities. Under normal circumstances, we would have expected over 1.4 million cases to be filed over the same timeframe. That means that we observed 800,000 fewer eviction cases filed than normal in these 31 cities, a reduction of 57.6%. 
+
+{{< pullquote "Pre-COVID, one in every six renters faced an eviction filing each year in a typical high-eviction neighborhood. That fell to only one in twelve renters risking eviction during the pandemic." >}}
 
 In Figure 1 we show what these reductions looked like, month by month. We plot eviction filings relative to the pre-pandemic average from January 2020 through December 2021. Filings were reduced most dramatically in the early months of the pandemic, dropping as low as 8.6 percent of historical average in April 2020. By fall 2020—with the CDC eviction moratorium in place nationwide—this rate had increased to approximately 50 percent of historical average. Filings remained around this level [throughout the duration of the CDC moratorium](https://evictionlab.org/eleven-months-cdc/), and increased slightly after it was struck down by the U.S. Supreme Court in late August, 2021. The study period of this analysis only extends through the end of 2021; if we were to extend this figure through 2022, [we would see filings returning to pre-pandemic levels](https://evictionlab.org/ets-report-2022/).
 
@@ -117,7 +126,7 @@ The largest reductions in eviction filings were in majority-Black neighborhoods.
 
 In the article’s final section, we evaluate the effects of strong local eviction moratoria: protections that went beyond federal measures and stopped the earliest stages of the eviction process. This sort of evaluation is complicated because of all the various policies that were being implemented simultaneously. We’re able to take advantage of the timing of these local measures to estimate their specific impact. Doing so, we show that strong eviction moratoria significantly reduced eviction filings when they were put in place, and that eviction filings jumped considerably when these policies were phased out. Effect sizes are large and [confirm previous findings on the importance of such policies in driving down eviction filing rates](https://evictionlab.org/assessing-state-eviction-prevention-covid-19/). 
 
-[break]
+{{< pullquote "Even with filing rates cut by more than half, the risk of eviction in majority-Black neighborhoods was greater than equivalent risk in majority-White spaces prior to the pandemic" >}}
 
 Our findings highlight both the potential and the limitations of public policies aimed at reducing the prevalence of eviction. We show that an unprecedented combination of restrictions to the eviction process, income supports, and direct ERA payments to landlords and tenants resulted in a significant reduction in eviction caseloads for a prolonged period. In the 31 cities that we analyzed, we found that 57.6% fewer eviction cases than normal were filed between March 15, 2020 and December 31, 2021. This reduction in filings was concentrated in neighborhoods that normally see the most eviction cases. Filing rates were cut by more than half in majority-Black neighborhoods and in neighborhoods with lowest median income. Black women saw the largest absolute reduction in eviction filing rates.       
 
