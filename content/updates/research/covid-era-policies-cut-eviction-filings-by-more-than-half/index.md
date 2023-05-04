@@ -1,28 +1,33 @@
 ---
 draft: true
-childof: research
-url: /covid-era-policies-cut-eviction-filings-by-more-than-half/
-contenttype: updates
-contentcat: research
-featured: true
-in_index: true
-title: "COVID-era policies cut eviction filings by more than half"
-date: 2023-05-03T00:46:40.089Z
-postauthortitle: The Eviction Lab
-description: Responding to the unfolding emergency of COVID-19, policymakers at the federal, state, and local levels enacted a range of new policies. These policies drove eviction filing rates to historic lows.
-listSummary: Responding to the unfolding emergency of COVID-19, policymakers at the federal, state, and local levels enacted a range of new policies. These policies drove eviction filing rates to historic lows.
-researchtype: elresearch
-postauthorname: Peter Hepburn, Jacob Haas, Nick Graetz, Renee Louis, Devin Q. Rutan, Anne Kat Alexander, Jasmine Rangel, Olivia Jin, Emily Benfer, and Matthew Desmond
-authorpic: /images/bios/elab_thumb_sm.jpg
-collection: true
-twImage: house.jpg
-image: house.jpg
-fbImage: house.jpg
 scripts:
   - charts
   - grouped-bar-chart
+childof: research
+url: /covid-era-policies-cut-eviction-filings-by-more-than-half/
+contenttype: updates
+collection: true
+contentcat: research
+featured: true
+in_index: true
+title: COVID-era policies cut eviction filings by more than half
+date: 2023-05-03T00:46:40.089Z
+postauthorname: Peter Hepburn, Jacob Haas, Nick Graetz, Renee Louis, Devin Q.
+  Rutan, Anne Kat Alexander, Jasmine Rangel, Olivia Jin, Emily Benfer, and
+  Matthew Desmond
+postauthortitle: The Eviction Lab
+authorpic: /images/bios/elab_thumb_sm.jpg
+image: house.jpg
+listSummary: Responding to the unfolding emergency of COVID-19, policymakers at
+  the federal, state, and local levels enacted a range of new policies. These
+  policies drove eviction filing rates to historic lows.
+researchtype: elresearch
+twImage: house.jpg
+description: Responding to the unfolding emergency of COVID-19, policymakers at
+  the federal, state, and local levels enacted a range of new policies. These
+  policies drove eviction filing rates to historic lows.
+fbImage: house.jpg
 ---
-
 <style>
   #fig3-mfr .chart__bar.mfr_hi {
     fill: var(--c1);
@@ -33,19 +38,22 @@ scripts:
   }
   
 </style>
+
 <script>
   // HACK: gets the grouped-bar-chart to resize, which properly makes room for its axis labels
   // TODO: fix for all charts
   setTimeout(() => window.dispatchEvent(new Event('resize')), 3000);
 </script>
 
-<span class="dropcap green">M</span>illions of people were laid off over the course of just a few weeks in spring 2020 as COVID-19 lockdowns were put in place nationwide. Job losses were concentrated in industries and occupations that employ a large number of renters, especially the retail, service, and tourism sectors. With few jobs available and limited savings, these tenants were at immediate risk of eviction if they could not pay next month’s rent. Evictions in turn raised the prospect of more households ending up homeless or doubled-up with friends or relatives, conditions that foster the spread of COVID-19. Responding to the unfolding emergency, policymakers at the federal, state, and local levels enacted a range of new policies. These included eviction moratoria to prevent immediate displacement, stimulus payments and expanded unemployment insurance that allowed many tenants to stay current on rent, and emergency rental assistance (ERA) to help them catch up if they fell behind. 
+<span class="dropcap green">M</span>illions of people were laid off over the course of just a few weeks in spring 2020 as COVID-19 lockdowns were put in place nationwide. Job losses were concentrated in industries that employ a large number of renters, especially the retail, service, and tourism sectors. With few jobs available and limited savings, these tenants were at immediate risk of eviction if they could not pay next month’s rent. Evictions in turn raised the prospect of more households ending up homeless or doubled-up with friends or relatives, conditions that foster the spread of COVID-19. 
+
+Responding to the unfolding emergency, policymakers at the federal, state, and local levels enacted a range of new policies. These included eviction moratoria to prevent immediate displacement, stimulus payments and expanded unemployment insurance that allowed many tenants to stay current on rent, and emergency rental assistance (ERA) to help them catch up if they fell behind. 
 
 These policies drove eviction filing rates to historic lows. Take the [Hill District in Pittsburgh, PA](https://www.google.com/maps/place/Pittsburgh,+PA+15219/@40.4506351,-79.9822375,13z/data=!3m1!4b1!4m6!3m5!1s0x8834f15f65521405:0xa3568b4291b83a30!8m2!3d40.440368!4d-79.9836108!16s%2Fm%2F020tq_f) as an example. The Hill District is adjacent to Downtown Pittsburgh, nestled between  the Allegheny and Monongahela Rivers. The neighborhood has a median household income of around $25,000 and, during a typical period extending from mid-March to the end of December of the following year, would be the site of nearly 1,000 eviction case filings. Between the start of the COVID-19 pandemic (March 15, 2020) and December 31, 2021, only 186 cases were filed, a reduction of 81.2%. 
 
 {{< pullquote "We observed 800,000 fewer eviction cases filed than normal in 31 cities we tracked, a reduction of 57.6%" >}}
 
-In a research article published in RSF: The Russell Sage Foundation Journal of the Social Sciences, we trace these patterns in 31 cities across the United States. We assess the cumulative effects of pandemic-era policies, analyzing changes in eviction filing patterns over the first two years of the COVID-19 pandemic. We pay particular attention to what these policies did to address socio-economic, racial/ethnic, and gender disparities in eviction risk that predated the pandemic. 
+In a research article published in *[RSF: The Russell Sage Foundation Journal of the Social Sciences](https://www.rsfjournal.org/content/9/3/186.abstract)*, we trace these patterns in 31 cities across the United States. We assess the cumulative effects of pandemic-era policies, analyzing changes in eviction filing patterns over the first two years of the COVID-19 pandemic. We pay particular attention to what these policies did to address socio-economic, racial/ethnic, and gender disparities in eviction risk that predated the pandemic. 
 
 <hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
 
@@ -83,9 +91,7 @@ In Figure 1 we show what these reductions looked like, month by month. We plot e
   timeUnit="month"
 %}}
 
-
 Eviction filings were reduced much more in some cities than in others. Differences in how county courts interpreted and implemented federal eviction moratoria—as well as establishment of additional state- or local-level protections—led to a lot of variation in eviction filing rates. In Figure 2 we plot cumulative eviction filings relative to historical average in each city. Case filings ranged from 78.2 percent of historical average in Las Vegas to 15.2 percent in Austin.
-
 
 {{% horizontal-bars
   id="fig2-hbars"
@@ -102,9 +108,8 @@ Eviction filings were reduced much more in some cities than in others. Differenc
   legendLabelText=""
 %}}
 
-
 Simply based on where they lived, a tenant struggling to pay rent was at much greater risk of receiving an eviction filing in Columbus than in New York. Cities that had the strongest and longest-lasting eviction moratoria fell on the bottom of Figure 2. For example, except under exceptional circumstances, landlords in Minneapolis-St. Paul could not start the eviction process between March 16, 2020 and June 30, 2021. Over the full study period, eviction filings fell by 81.7% in the Twin Cities. By contrast, cities with weaker and shorter-lived protections cluster on the top of Figure 2.
- 
+
 We also explore what effect these protections had in different sorts of neighborhoods. One way of doing that was to look at neighborhoods that normally see lots of eviction cases and those that see relatively few. Pre-COVID, one in every six renters faced an eviction filing each year in a typical high-eviction neighborhood. That fell to one in twelve renters risking eviction during the pandemic. Reductions in eviction filings were much larger in these neighborhoods that normally see the most eviction cases. Eviction filings fell by almost two-thirds in high-eviction neighborhoods and only one-third in low-eviction neighborhoods.  Of the 800,000 eviction cases that were avoided during this period, over 475,000 of them—almost 60%—were missing from the one-fifth of neighborhoods that normally see the most cases filed. 
 
 Another way of analyzing this variation was to look at eviction filings by neighborhood racial/ethnic composition. In Figure 3 we plot historical and pandemic-era eviction filing rates in majority-Black, majority-Latino, and majority-White neighborhoods, as well as well as those neighborhoods with no racial/ethnic majority.<sup>2</sup>
@@ -148,4 +153,5 @@ Still, the fact that inequalities endured should not distract from the fact that
 "We would like to thank the [many organizations and individuals](https://evictionlab.org/eviction-tracking/acknowledgements/) who contributed data or assistance for the Eviction Tracking System. The city sites described in this piece often follow county boundaries; see the full article for further information."
 
 "Neighborhood racial/ethnic majority and median incomes were determined on the basis of ACS five-year estimates from 2015-2019 for the full population (i.e., not just those living in rental housing)."
->}}
+
+> }}
