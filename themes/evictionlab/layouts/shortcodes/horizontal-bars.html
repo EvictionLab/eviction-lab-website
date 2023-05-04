@@ -1,0 +1,308 @@
+{{/**
+
+Shortcode for rendering a chart of arrows conveying up/down shifts
+
+See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
+
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $xMax := .Get "xMax" }}
+{{ $axisLabelText := .Get "axisLabelText" }}
+
+<div class="chart chart--arrow chart--{{ .Get `id` }}">
+  <style type="text/css">
+    .arrow-chart__body text {
+      font-size: 2.25px;
+      font-family: Akkurat-Regular, sans-serif;
+      dominant-baseline: middle;
+    }
+
+    .arrow-chart__body.is-mobile text {
+      font-size: 3.5px;
+    }
+
+    .arrow-chart__body.is-mobile text {
+      font-size: 3.5px;
+    }
+
+    .arrow-chart__body .chart-row rect {
+      fill: #E6EFF4;
+    }
+
+    .arrow-chart__body .chart-row.odd rect {
+      fill: #F4F7F9;
+    }
+
+    .arrow-chart__body .chart-row.highlighted rect {
+      fill: #c6e0bf;
+      fill: #2c89803b;
+    }
+
+    .axis-lines line,
+    .arrow-chart__body .tick-lines line {
+      stroke: white;
+      stroke-width: 0.25;
+    }
+
+    .arrow-chart__body text.name {
+      text-anchor: end;
+      dominant-baseline: text-before-edge;
+      transform: translate(-3px, 1px);
+    }
+
+    .arrow-chart__body .arrow line {
+      stroke: #434878;
+      stroke-width: 4;
+    }
+
+    #arrowhead-dec {
+      stroke: #434878;
+    }
+
+    .arrow-chart__body .arrow.inc line {
+      stroke: #E24000;
+    }
+
+    #arrowhead-inc {
+      stroke: #E24000;
+    }
+
+    .arrow-chart__body .arrowhead {
+      fill: none;
+    }
+
+    .arrow-chart__body .arrow line {
+      transform: translate(0, -0.1px);
+    }
+
+    .arrow-chart__body .arrow .row-value,
+    .arrow-chart__body .legend-desc .arrow.inc .row-value {
+      transform: translate(2px, 0);
+      text-anchor: start;
+      color: white;
+    }
+
+    .arrow-chart__body .arrow.inc .row-value {
+      transform: translate(-2px, 0);
+      text-anchor: end;
+    }
+
+    .arrow-chart__body .chart-row:not(.highlighted) text.row-value {
+      display: none;
+    }
+
+    .arrow-chart__body .chart-row:hover g.arrow line {
+      stroke: var(--c1);
+    }
+    .arrow-chart__body .chart-row:hover text.row-value {
+      display: block;
+    }
+
+    .arrow-chart__body .tick-values text {
+      text-anchor: middle;
+      dominant-baseline: text-before-edge;
+    }
+
+    .arrow-chart__body .tick-values text:first-of-type {
+      text-anchor: start;
+    }
+
+    .arrow-chart__body .tick-values text:last-of-type {
+      text-anchor: end;
+    }
+
+    .arrow-chart__body.is-mobile .tick-values text:last-of-type {
+      transform: translate(-1px, 0);
+    }
+
+    .arrow-chart__body .axis-title {
+      text-anchor: middle;
+      transform: translate(0, 8px);
+    }
+
+    .arrow-chart__body.is-mobile .axis-title {
+      transform: translate(0, 12px);
+    }
+
+    .arrow-chart__body .legend-desc {
+      transform: translate(0, 14px);
+    }
+
+    .arrow-chart__body.is-mobile .legend-desc {
+      transform: translate(0, 22px);
+    }
+
+    .arrow-chart__body .legend-desc text {
+      text-transform: uppercase;
+      font-family: GT-Eesti-Display-Medium, sans-serif;
+    }
+
+    .arrow-chart__body .arrow-chart {
+      display: block;
+    }
+
+    .arrow-chart__body .sticky-leg {
+      background: #F4F7F9;
+      opacity: 0.93;
+      position: sticky;
+      bottom: 0;
+      left: 0;
+    }
+
+    .arrow-chart__body {
+      height: 100% !important;
+    }
+  </style>
+  {{ if $title }}
+  <h3 class="chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}" class="arrow-chart__body">
+    <svg class="arrow-chart" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+      <g class="rows"></g>
+    </svg>
+    <svg class="sticky-leg" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+      <g class="tick-lines xMax-dependent">
+        <line data-val="0" x1="0" x2="0" y1="0" y2="1.2"></line>
+        <line data-val="25" x1="25" x2="25" y1="0" y2="1.2"></line>
+        <line data-val="50" x1="50" x2="50" y1="0" y2="1.2"></line>
+        <line data-val="75" x1="75" x2="75" y1="0" y2="1.2"></line>
+        <line data-val="100" x1="100" x2="100" y1="0" y2="1.2"></line>
+        <line data-val="125" x1="125" x2="125" y1="0" y2="1.2"></line>
+        <line data-val="150" x1="150" x2="150" y1="0" y2="1.2"></line>
+        <line data-val="175" x1="175" x2="175" y1="0" y2="1.2"></line>
+        <line data-val="200" x1="200" x2="200" y1="0" y2="1.2"></line>
+      </g>
+      <g class="tick-values xMax-dependent" transform="translate(0, 2)">
+        <text data-val="0" x="0">0%</text>
+        <text data-val="25" x="25">25%</text>
+        <text data-val="50" x="50">50%</text>
+        <text data-val="75" x="75">75%</text>
+        <text data-val="100" x="100">100%</text>
+        <text data-val="125" x="125">125%</text>
+        <text data-val="150" x="150">150%</text>
+        <text data-val="175" x="175">175%</text>
+        <text data-val="200" x="200">200%</text>
+      </g>
+      <text class="axis-title" x="50"></text>
+      <g class="legend-desc"></g>
+    </svg>
+  </div>
+
+  <script>
+    var hbCsv = {{ .Get "data" }}
+    var xMax = {{ .Get "xMax" }} || 100;
+    var xMinMobile = {{ .Get "xMinMobile" }} || -42;
+    var xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
+    var mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
+    var nameField = {{ .Get "nameField" }};
+    var numeratorField = {{ .Get "numeratorField" }};
+    var denominatorField = {{ .Get "denominatorField" }};
+    var legendDecArrowText = {{ .Get "legendDecArrowText" }} || "";
+    var legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
+    var legendLabelText = {{ .Get "legendLabelText" }} || "";
+    var axisLabelText = {{ .Get "axisLabelText" }} || "";
+
+    window.addEventListener('load', function () {
+      var isMobile = window.innerWidth <= Number(mobileCutoff);
+      const rowHeight = isMobile ? 6 : 4.5;
+      const xMin = isMobile ? xMinMobile : xMinDesktop;
+
+      const $rows = $('.arrow-chart g.rows')
+      const $arrows = $('.arrow-chart g.arrows')
+
+      const getArrow = ({ value, yOffset = 0, valueContent = '', valueRight = false }) => {
+        const shift = value;
+        let arrowClass = "arrow"
+
+        let valueOffset = Math.abs(shift) < 3.5
+          ? (3.5 - Math.abs(shift)) * Math.sign(shift * -1)
+          : 0;
+        if (valueRight && shift > 0) {
+          valueOffset = Math.abs(valueOffset) + shift
+        }
+
+        const content = valueContent || d3.format('.1%')(shift / 100)
+        const valueVal = `
+  <text dx="${valueOffset}" class="row-value">
+    ${content}
+  </text>
+          `
+        return `
+<g class="${arrowClass}" transform="translate(0, ${yOffset})">
+  <line x1="0" y1="0" x2="${shift}" y2="0" />
+  ${valueVal}
+</g>
+`
+      }
+
+      d3.csv(hbCsv, function (data) {
+        data.
+          map(r => {
+            const numerator = parseFloat(r[numeratorField]);
+            const denominator = parseFloat(r[denominatorField]);
+            return {
+              name: r[nameField],
+              highlighted: !!r.highlighted && r.highlighted !== "false",
+              value: 100 * numerator / denominator,
+            }
+          })
+          .sort((a, b) => b.value - a.value)
+          .forEach((r, i) => {
+            const y = rowHeight * i;
+            let rowClasses = "chart-row"
+            if (r.highlighted) rowClasses += " highlighted"
+            if (!(i % 2)) rowClasses += " odd"
+
+            const axisLines = `
+  <g class="axis-lines xMax-dependent">
+    <line data-val="0" x1="0" x2="0" y1="0" y2="${rowHeight}"></line>
+    <line data-val="25" x1="25" x2="25" y1="0" y2="${rowHeight}"></line>
+    <line data-val="50" x1="50" x2="50" y1="0" y2="${rowHeight}"></line>
+    <line data-val="75" x1="75" x2="75" y1="0" y2="${rowHeight}"></line>
+    <line data-val="100" x1="100" x2="100" y1="0" y2="${rowHeight}"></line>
+    <line data-val="125" x1="125" x2="125" y1="0" y2="${rowHeight}"></line>
+    <line data-val="150" x1="150" x2="150" y1="0" y2="${rowHeight}"></line>
+    <line data-val="175" x1="175" x2="175" y1="0" y2="${rowHeight}"></line>
+    <line data-val="200" x1="200" x2="200" y1="0" y2="${rowHeight}"></line>
+  </g>
+`
+            const rowWrapper = `
+<g class="${rowClasses}" transform="translate(0, ${y})">
+  <rect x="${xMin}" y="0" height="${rowHeight}" width="100%" width="100%" height="${rowHeight}" />
+  ${axisLines}
+  <text class="name" x="0" y="0">${r.name}</text>
+  ${getArrow({ ...r, yOffset: rowHeight / 2 + 0.1, includeTooltip: true, valueRight: true })}
+</g>
+          `
+            $rows.append(rowWrapper)
+          })
+
+        const startX = isMobile ? xMin + 12 : 0;
+        const arrowLength = 7;
+        const decBefore = isMobile ? 27 : 40;
+        const incBefore = isMobile ? 55 : 60;
+        const labelText = !legendLabelText ? "" : legendLabelText + ":";
+
+        // $(".legend-desc").append(legendLabel)
+        axisLabelText && $(".axis-title").append(axisLabelText)
+
+        const viewBoxChart = `${xMin} 0 ${xMax - xMin} ${data.length * rowHeight}`
+        const viewBoxLegend = `${xMin} 0 ${xMax - xMin} 15`
+        $(".arrow-chart").attr("viewBox", viewBoxChart)
+        $(".sticky-leg").attr("viewBox", viewBoxLegend)
+        $(".arrow-chart__body").toggleClass("is-mobile", isMobile)
+
+        $('.xMax-dependent [data-val]').each((i, el) => {
+          if (parseInt(el.dataset.val) > xMax) {
+            // xMax-dependent elements only get rendered if their val is relevant to the arrow
+            // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
+            el.remove()
+          }
+        })
+
+        $(".arrow-chart__body").html($(".arrow-chart__body").html());
+      })
+    });
+  </script>
+</div>

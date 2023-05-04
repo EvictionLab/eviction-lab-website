@@ -67,8 +67,21 @@ In Figure 1 we show what these reductions looked like, month by month. We plot e
 
 Eviction filings were reduced much more in some cities than in others. Differences in how county courts interpreted and implemented federal eviction moratoria—as well as establishment of additional state- or local-level protections—led to a lot of variation in eviction filing rates. In Figure 2 we plot cumulative eviction filings relative to historical average in each city. Case filings ranged from 78.2 percent of historical average in Las Vegas to 15.2 percent in Austin.
 
-Figure 2. Eviction filings from March 15, 2020 through December 31, 2021 relative to historical average, by city
 
+{{% horizontal-bars
+  id="fig2-hbars"
+  title="Figure 2. Eviction filings from March 15, 2020 through December 31, 2021 relative to historical average, by city"
+  data="./fig2_blog_daily_by_site.csv"
+  nameField="xsite"
+  numeratorField="num_filings"
+  denominatorField="num_filings_hist_avg"
+  mobileCutoff="Infinity"
+  legendIncArrowText="increase in filings"
+  axisLabelText=""
+  legendDecArrowText=""
+  legendIncArrowText="increase in filings"
+  legendLabelText=""
+%}}
 
 
 Simply based on where they lived, a tenant struggling to pay rent was at much greater risk of receiving an eviction filing in Columbus than in New York. Cities that had the strongest and longest-lasting eviction moratoria fell on the bottom of Figure 2. For example, except under exceptional circumstances, landlords in Minneapolis-St. Paul could not start the eviction process between March 16, 2020 and June 30, 2021. Over the full study period, eviction filings fell by 81.7% in the Twin Cities. By contrast, cities with weaker and shorter-lived protections cluster on the top of Figure 2.
