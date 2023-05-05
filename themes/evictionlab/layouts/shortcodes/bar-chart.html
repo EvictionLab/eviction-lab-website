@@ -26,6 +26,7 @@
     - timeUnit: by default treated as week, month will set tooltip formatting and
     make room on axis for last bar (whose data may be for the 1st of the month)
     - margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
+    - centerLabels: don't rotate and shift tick labels (the default)
 */}}
 
 {{ $title := .Get "title" }}
@@ -61,9 +62,10 @@
       var mark = {{ .Get "mark" }}
       var xLabel = {{ .Get "xLabel" }}
       var yLabel = {{ .Get "yLabel" }}
+      var centerLabels = {{ .Get "centerLabels" }}
       
       // Init chart on page load.
-      Elab.BarChart.init(rootEl, { xLabel: xLabel, yLabel: yLabel, barClass: barClass, mark: mark, axis: axis, id: id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, xTooltipFormat: xTooltipFormat, margin: margin, timeUnit: timeUnit })
+      Elab.BarChart.init(rootEl, { xLabel: xLabel, yLabel: yLabel, barClass: barClass, mark: mark, axis: axis, id: id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, xTooltipFormat: xTooltipFormat, margin: margin, timeUnit: timeUnit, centerLabels: centerLabels })
     });
   </script>
 </div>
