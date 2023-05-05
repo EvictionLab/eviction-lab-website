@@ -1,8 +1,5 @@
 ---
 draft: false
-scripts:
-  - charts
-  - grouped-bar-chart
 childof: research
 url: /covid-era-policies-cut-eviction-filings-by-more-than-half/
 contenttype: updates
@@ -18,14 +15,17 @@ postauthorname: Peter Hepburn, Jacob Haas, Nick Graetz, Renee Louis, Devin Q.
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 image: house.jpg
-listSummary: Responding to the unfolding emergency of COVID-19, policymakers at
-  the federal, state, and local levels enacted a range of new policies. These
-  policies drove eviction filing rates to historic lows.
-researchtype: elresearch
-twImage: house.jpg
 description: Responding to the unfolding emergency of COVID-19, policymakers at
   the federal, state, and local levels enacted a range of new policies. These
   policies drove eviction filing rates to historic lows.
+listSummary: Responding to the unfolding emergency of COVID-19, policymakers at
+  the federal, state, and local levels enacted a range of new policies. These
+  policies drove eviction filing rates to historic lows.
+scripts:
+  - charts
+  - grouped-bar-chart
+researchtype: elresearch
+twImage: house.jpg
 fbImage: house.jpg
 ---
 <style>
@@ -75,7 +75,7 @@ Between the start of the pandemic and the end of 2021, we recorded the filing of
 
 {{< pullquote "Pre-COVID, one in every six renters faced an eviction filing each year in a typical high-eviction neighborhood. That fell to only one in twelve renters risking eviction during the pandemic." >}}
 
-In Figure 1 we show what these reductions looked like, month by month. We plot eviction filings relative to the pre-pandemic average from January 2020 through December 2021. Filings were reduced most dramatically in the early months of the pandemic, dropping as low as 8.6 percent of historical average in April 2020. By fall 2020—with the CDC eviction moratorium in place nationwide—this rate had increased to approximately 50 percent of historical average. Filings remained around this level [throughout the duration of the CDC moratorium](https://evictionlab.org/eleven-months-cdc/), and increased slightly after it was struck down by the U.S. Supreme Court in late August, 2021. The study period of this analysis only extends through the end of 2021; if we were to extend this figure through 2022, [we would see filings returning to pre-pandemic levels](https://evictionlab.org/ets-report-2022/).
+In Figure 1 we show what these reductions looked like, month by month. We plot eviction filings relative to the pre-pandemic average from January 2020 through December 2021. Filings were reduced most dramatically in the early months of the pandemic, dropping as low as 8.6 percent of historical average in April 2020. By fall 2020—with the CDC eviction moratorium in place nationwide—this rate had increased to approximately 50 percent of historical average. Filings remained around this level [throughout the duration of the CDC moratorium](https://evictionlab.org/eleven-months-cdc/), and increased slightly after it was struck down by the U.S. Supreme Court in late August, 2021. The study period for this article only extends through the end of 2021; [in other analyses, we describe trends in 2022](https://evictionlab.org/ets-report-2022/). 
 
 {{% bar-chart
   id="fig1"
