@@ -218,6 +218,28 @@ title="Stacked area chart"
 See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-bars and arrow-chart examples
 
 
+{{% arrow-chart
+  id="arrows-fig"
+  title="Arrow chart"
+  data="/uploads/arrow_sample.csv"
+  axisLabelText="Suburban Share of Evictions"
+  legendDecArrowText="more urban"
+  legendIncArrowText="more suburban"
+  legendLabelText="shift in suburban share"
+%}}
+
+{{% arrow-chart
+  id="arrows-fig2"
+  title="Arrow chart with highlighted rows"
+  data="/uploads/arrow_sample2.csv"
+  xMax="175"
+  mobileCutoff="Infinity"
+  legendIncArrowText="increase in filings"
+  axisLabelText=""
+  legendDecArrowText=""
+  legendIncArrowText="increase in filings"
+  legendLabelText=""
+%}}
 
 
 

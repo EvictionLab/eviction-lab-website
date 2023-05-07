@@ -190,23 +190,27 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
   </div>
 
   <script>
-    var csv = {{ .Get "data" }}
-            var xMax = {{ .Get "xMax" }} || 100;
-            var xMinMobile = {{ .Get "xMinMobile" }} || -42;
-            var xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
-            var mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
-            var legendDecArrowText = {{ .Get "legendDecArrowText" }} || "";
-            var legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
-            var legendLabelText = {{ .Get "legendLabelText" }} || "";
-            var axisLabelText = {{ .Get "axisLabelText" }} || "";
+    // immediately invoked function so that we don't pollute the global scope
+    // (variables overwrite those in other component script tags)
+  (() => {
+    var arrowElementId = {{ .Get "id" }};
+    var csv = {{ .Get "data" }};
+    var xMax = {{ .Get "xMax" }} || 100;
+    var xMinMobile = {{ .Get "xMinMobile" }} || -42;
+    var xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
+    var mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
+    var legendDecArrowText = {{ .Get "legendDecArrowText" }} || "";
+    var legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
+    var legendLabelText = {{ .Get "legendLabelText" }} || "";
+    var axisLabelText = {{ .Get "axisLabelText" }} || "";
 
     window.addEventListener('load', function () {
       var isMobile = window.innerWidth <= Number(mobileCutoff);
       const rowHeight = isMobile ? 6 : 4.5;
       const xMin = isMobile ? xMinMobile : xMinDesktop;
 
-      const $rows = $('.arrow-chart g.rows')
-      const $arrows = $('.arrow-chart g.arrows')
+      const $rows = $("#" + arrowElementId + ' .arrow-chart g.rows')
+      const $arrows = $("#" + arrowElementId + ' .arrow-chart g.arrows')
 
       const getArrow = ({ before, after, yOffset = 0, valueContent = '', valueRight = false }) => {
         const shift = after - before
@@ -293,16 +297,16 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         ${decArrow}
         ${incArrow}
         `
-        $(".legend-desc").append(legendLabel)
-        axisLabelText && $(".axis-title").append(axisLabelText)
+        $("#" + arrowElementId + " .legend-desc").append(legendLabel)
+        axisLabelText && $("#" + arrowElementId + " .axis-title").append(axisLabelText)
 
         const viewBoxChart = `${xMin} 0 ${xMax - xMin} ${data.length * rowHeight}`
         const viewBoxLegend = `${xMin} 0 ${xMax - xMin} ${isMobile ? 30 : 20}`
-        $(".arrow-chart").attr("viewBox", viewBoxChart)
-        $(".sticky-leg").attr("viewBox", viewBoxLegend)
-        $(".arrow-chart__body").toggleClass("is-mobile", isMobile)
+        $("#" + arrowElementId + " .arrow-chart").attr("viewBox", viewBoxChart)
+        $("#" + arrowElementId + " .sticky-leg").attr("viewBox", viewBoxLegend)
+        $("#" + arrowElementId + ".arrow-chart__body").toggleClass("is-mobile", isMobile)
 
-        $('.xMax-dependent [data-val]').each((i, el) => {
+        $("#" + arrowElementId + ' .xMax-dependent [data-val]').each((i, el) => {
           if (parseInt(el.dataset.val) > xMax) {
             // xMax-dependent elements only get rendered if their val is relevant to the arrow
             // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
@@ -310,8 +314,9 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
           }
         })
 
-        $(".arrow-chart__body").html($(".arrow-chart__body").html());
+        $("#" + arrowElementId + ".arrow-chart__body").html($("#" + arrowElementId + ".arrow-chart__body").html());
       })
     });
+    }) ();
   </script>
 </div>
