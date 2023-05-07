@@ -85,12 +85,16 @@ Elab.BarChart = (function (Elab) {
         .addBarAxis({
           selector: xSelector,
           adjustLabels: function (selection) {
-            selection
-              .selectAll(".tick text")
-              .attr("text-anchor", "end")
-              .attr("transform", "rotate(-66)")
-              .attr("dx", "-1em")
-              .attr("dy", "0em");
+            if (dataOptions.centerLabels) {
+              selection.selectAll(".tick text").attr("text-anchor", "middle").attr("dy", "1em");
+            } else {
+              selection
+                .selectAll(".tick text")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-66)")
+                .attr("dx", "-1em")
+                .attr("dy", "0em");
+            }
           },
         })
         // adds the bars

@@ -443,6 +443,12 @@ collections:
           widget: "markdown",
           buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"],
         }
+      - {
+          label: "Scripts",
+          name: "scripts",
+          widget: "hidden",
+          default: "",
+        }  
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog posts" # Used in the UI

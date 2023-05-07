@@ -10,7 +10,7 @@ On the original map, we have indicated with the symbol <img class="hint" src="/i
 
 Because coverage within our dataset is dependent on the area and year, it is possible for a single county to have fluctuations in data collection over time. As explained in our [Methodology Report](https://evictionlab.org/docs/Eviction_Lab_Methodology_Report_2022.pdf), we have flagged counties and embedded geographies (e.g., census tracts, block groups) with low eviction estimates. However, since we validated our data at the county level, counts of eviction filings at the level of census tracts and block groups that make up a low-estimate county might not in fact be undercounted. Our original data downloaded from the Get the Data page will contain these flags.
 
-Here is a list of known issues with data collection at the state level, which have been flagged on our Orignal Data map:
+Here is a list of known issues with data collection at the state level, which have been flagged on our Original Data map:
 
 In New York, records are often kept as “abstracted judgments,” which means they are only in the public record if the plaintiff/landlord pays to have them placed there. That plus the amount of town and village courts in the state makes collection difficult.
 
