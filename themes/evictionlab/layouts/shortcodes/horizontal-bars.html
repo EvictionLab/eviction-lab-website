@@ -1,8 +1,6 @@
 {{/**
 
-Shortcode for rendering a chart of arrows conveying up/down shifts
-
-See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
+Shortcode for rendering a stack of horizontal bars.
 
 */}}
 
@@ -10,146 +8,134 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
 {{ $xMax := .Get "xMax" }}
 {{ $axisLabelText := .Get "axisLabelText" }}
 
-<div class="chart chart--arrow chart--{{ .Get `id` }}">
+<div class="chart chart--hbar chart--{{ .Get `id` }}">
   <style type="text/css">
-    .arrow-chart__body text {
+    .hbar-chart__body text {
       font-size: 2.25px;
       font-family: GT-Eesti-Display-Bold, GT Eesti Display, sans-serif;
       dominant-baseline: middle;
     }
 
-    .arrow-chart__body.is-mobile text {
+    .hbar-chart__body.is-mobile text {
       font-size: 3px;
     }
 
-    .arrow-chart__body.is-mobile text {
+    .hbar-chart__body.is-mobile text {
       font-size: 3px;
       text-transform: uppercase;
       fill: #434878;
     }
 
-    .arrow-chart__body.is-mobile .tick-values text {
+    .hbar-chart__body.is-mobile .tick-values text {
       font-family: GT-Eesti-Display-Medium, GT Eesti Display, sans-serif;
       fill: #7d7d7d;
     }
 
-    .arrow-chart__body .chart-row rect {
+    .hbar-chart__body .chart-row rect {
       fill: #E6EFF4;
     }
 
-    .arrow-chart__body .chart-row.odd rect {
+    .hbar-chart__body .chart-row.odd rect {
       fill: #F4F7F9;
     }
 
-    .arrow-chart__body .chart-row.highlighted rect {
+    .hbar-chart__body .chart-row.highlighted rect {
       fill: #c6e0bf;
       fill: #2c89803b;
     }
 
-    .axis-lines line,
-    .arrow-chart__body .tick-lines line {
+    .hbar-chart__body .axis-lines line,
+    .hbar-chart__body .tick-lines line {
       stroke: white;
       stroke-width: 0.25;
     }
 
-    .arrow-chart__body text.name {
+    .hbar-chart__body text.name {
       text-anchor: end;
       dominant-baseline: text-before-edge;
       transform: translate(-3px, 1px);
     }
 
-    .arrow-chart__body .arrow line {
+    .hbar-chart__body .hbar line {
       stroke: #434878;
       stroke-width: 4;
     }
 
-    #arrowhead-dec {
-      stroke: #434878;
-    }
-
-    .arrow-chart__body .arrow.inc line {
+    .hbar-chart__body .hbar.inc line {
       stroke: #E24000;
     }
 
-    #arrowhead-inc {
-      stroke: #E24000;
-    }
-
-    .arrow-chart__body .arrowhead {
-      fill: none;
-    }
-
-    .arrow-chart__body .arrow line {
+    .hbar-chart__body .hbar line {
       transform: translate(0, -0.1px);
     }
 
-    .arrow-chart__body .arrow .row-value,
-    .arrow-chart__body .legend-desc .arrow.inc .row-value {
+    .hbar-chart__body .hbar .row-value,
+    .hbar-chart__body .legend-desc .hbar.inc .row-value {
       transform: translate(2px, 0);
       text-anchor: start;
       color: white;
     }
 
-    .arrow-chart__body .arrow.inc .row-value {
+    .hbar-chart__body .hbar.inc .row-value {
       transform: translate(-2px, 0);
       text-anchor: end;
     }
 
-    .arrow-chart__body .chart-row:not(.highlighted) text.row-value {
+    .hbar-chart__body .chart-row:not(.highlighted) text.row-value {
       display: none;
     }
 
-    .arrow-chart__body .chart-row:hover g.arrow line {
+    .hbar-chart__body .chart-row:hover g.hbar line {
       stroke: var(--c1);
     }
-    .arrow-chart__body .chart-row:hover text.row-value {
+    .hbar-chart__body .chart-row:hover text.row-value {
       display: block;
     }
 
-    .arrow-chart__body .tick-values text {
+    .hbar-chart__body .tick-values text {
       text-anchor: middle;
       dominant-baseline: text-before-edge;
     }
 
-    .arrow-chart__body .tick-values text:first-of-type {
+    .hbar-chart__body .tick-values text:first-of-type {
       text-anchor: start;
     }
 
-    .arrow-chart__body .tick-values text:last-of-type {
+    .hbar-chart__body .tick-values text:last-of-type {
       text-anchor: end;
     }
 
-    .arrow-chart__body.is-mobile .tick-values text:last-of-type {
+    .hbar-chart__body.is-mobile .tick-values text:last-of-type {
       transform: translate(-1px, 0);
     }
 
-    .arrow-chart__body .axis-title {
+    .hbar-chart__body .axis-title {
       text-anchor: middle;
       transform: translate(0, 8px);
     }
 
-    .arrow-chart__body.is-mobile .axis-title {
+    .hbar-chart__body.is-mobile .axis-title {
       transform: translate(0, 12px);
     }
 
-    .arrow-chart__body .legend-desc {
+    .hbar-chart__body .legend-desc {
       transform: translate(0, 14px);
     }
 
-    .arrow-chart__body.is-mobile .legend-desc {
+    .hbar-chart__body.is-mobile .legend-desc {
       transform: translate(0, 22px);
     }
 
-    .arrow-chart__body .legend-desc text {
+    .hbar-chart__body .legend-desc text {
       text-transform: uppercase;
       font-family: GT-Eesti-Display-Medium, sans-serif;
     }
 
-    .arrow-chart__body .arrow-chart {
+    .hbar-chart__body .hbar-chart {
       display: block;
     }
 
-    .arrow-chart__body .sticky-leg {
+    .hbar-chart__body .sticky-leg {
       background: #F4F7F9;
       opacity: 0.93;
       position: sticky;
@@ -157,15 +143,15 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       left: 0;
     }
 
-    .arrow-chart__body {
+    .hbar-chart__body {
       height: 100% !important;
     }
   </style>
   {{ if $title }}
   <h3 class="chart__title">{{ $title }}</h3>
   {{ end }}
-  <div id="{{ .Get `id` }}" class="arrow-chart__body">
-    <svg class="arrow-chart" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+  <div id="{{ .Get `id` }}" class="hbar-chart__body">
+    <svg class="hbar-chart" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
       <g class="rows"></g>
     </svg>
     <svg class="sticky-leg" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
@@ -197,6 +183,10 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
   </div>
 
   <script>
+  // immediately invoked function so that we don't pollute the global scope
+  // (variables overwrite those in other component script tags)
+  (() => {
+    var id = {{ .Get "id" }}
     var hbCsv = {{ .Get "data" }}
     var xMax = {{ .Get "xMax" }} || 100;
     var xMinMobile = {{ .Get "xMinMobile" }} || -42;
@@ -205,22 +195,22 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     var nameField = {{ .Get "nameField" }};
     var numeratorField = {{ .Get "numeratorField" }};
     var denominatorField = {{ .Get "denominatorField" }};
-    var legendDecArrowText = {{ .Get "legendDecArrowText" }} || "";
-    var legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
     var legendLabelText = {{ .Get "legendLabelText" }} || "";
     var axisLabelText = {{ .Get "axisLabelText" }} || "";
 
     window.addEventListener('load', function () {
+      var $el = $("#" + id);
+      window.el = $el;
+      
       var isMobile = window.innerWidth <= Number(mobileCutoff);
       const rowHeight = isMobile ? 6 : 4.5;
       const xMin = isMobile ? xMinMobile : xMinDesktop;
+      
+      const $rows = el.find('.hbar-chart g.rows')
 
-      const $rows = $('.arrow-chart g.rows')
-      const $arrows = $('.arrow-chart g.arrows')
-
-      const getArrow = ({ value, yOffset = 0, valueContent = '', valueRight = false }) => {
+      const getBar = ({ value, yOffset = 0, valueContent = '', valueRight = false }) => {
         const shift = value;
-        let arrowClass = "arrow"
+        let barClass = "hbar"
 
         let valueOffset = Math.abs(shift) < 3.5
           ? (3.5 - Math.abs(shift)) * Math.sign(shift * -1)
@@ -236,7 +226,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
   </text>
           `
         return `
-<g class="${arrowClass}" transform="translate(0, ${yOffset})">
+<g class="${barClass}" transform="translate(0, ${yOffset})">
   <line x1="0" y1="0" x2="${shift}" y2="0" />
   ${valueVal}
 </g>
@@ -279,37 +269,38 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
   <rect x="${xMin}" y="0" height="${rowHeight}" width="100%" width="100%" height="${rowHeight}" />
   ${axisLines}
   <text class="name" x="0" y="0">${r.name}</text>
-  ${getArrow({ ...r, yOffset: rowHeight / 2 + 0.1, includeTooltip: true, valueRight: true })}
+  ${getBar({ ...r, yOffset: rowHeight / 2 + 0.1, includeTooltip: true, valueRight: true })}
 </g>
           `
             $rows.append(rowWrapper)
           })
 
         const startX = isMobile ? xMin + 12 : 0;
-        const arrowLength = 7;
+        const barLength = 7;
         const decBefore = isMobile ? 27 : 40;
         const incBefore = isMobile ? 55 : 60;
         const labelText = !legendLabelText ? "" : legendLabelText + ":";
 
         // $(".legend-desc").append(legendLabel)
-        axisLabelText && $(".axis-title").append(axisLabelText)
+        axisLabelText && el.find(".axis-title").append(axisLabelText)
 
         const viewBoxChart = `${xMin} 0 ${xMax - xMin} ${data.length * rowHeight}`
         const viewBoxLegend = `${xMin} 0 ${xMax - xMin} 15`
-        $(".arrow-chart").attr("viewBox", viewBoxChart)
-        $(".sticky-leg").attr("viewBox", viewBoxLegend)
-        $(".arrow-chart__body").toggleClass("is-mobile", isMobile)
+        el.find(".hbar-chart").attr("viewBox", viewBoxChart)
+        el.find(".sticky-leg").attr("viewBox", viewBoxLegend)
+        $el.toggleClass("is-mobile", isMobile)
 
-        $('.xMax-dependent [data-val]').each((i, el) => {
+        el.find('.xMax-dependent [data-val]').each((i, el) => {
           if (parseInt(el.dataset.val) > xMax) {
-            // xMax-dependent elements only get rendered if their val is relevant to the arrow
+            // xMax-dependent elements only get rendered if their val is relevant to the bar
             // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
             el.remove()
           }
         })
 
-        $(".arrow-chart__body").html($(".arrow-chart__body").html());
+        $el.html($el.html());
       })
     });
+    }) ();
   </script>
 </div>

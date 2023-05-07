@@ -220,7 +220,7 @@ See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-b
 
 {{% arrow-chart
   id="arrows-fig"
-  title="Arrow chart"
+  title="Arrow chart with separate mobile layout"
   data="/uploads/arrow_sample.csv"
   axisLabelText="Suburban Share of Evictions"
   legendDecArrowText="more urban"
@@ -230,7 +230,7 @@ See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-b
 
 {{% arrow-chart
   id="arrows-fig2"
-  title="Arrow chart with highlighted rows"
+  title="Arrow chart with x values above 100, single layout"
   data="/uploads/arrow_sample2.csv"
   xMax="175"
   mobileCutoff="Infinity"
@@ -241,6 +241,19 @@ See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-b
   legendLabelText=""
 %}}
 
-
+{{% horizontal-bars
+  id="hbars"
+  title="Horizontal bar stack"
+  data="/uploads/horizontal_bars_sample.csv"
+  nameField="xsite"
+  numeratorField="num_filings"
+  denominatorField="num_filings_hist_avg"
+  mobileCutoff="Infinity"
+  legendIncArrowText="increase in filings"
+  axisLabelText=""
+  legendDecArrowText=""
+  legendIncArrowText="increase in filings"
+  legendLabelText=""
+%}}
 
 
