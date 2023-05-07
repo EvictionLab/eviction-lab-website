@@ -1,6 +1,8 @@
 {{/**
 
-Shortcode for rendering a chart of arrows conveying up/down shifts
+Shortcode for rendering a chart of arrows conveying up/down shifts.
+Gets a different viewbox on if page loads narrower than the mobileCutoff (default of 600px)
+(text-sizing gets bumped to take up a greater portion of the figure's width, for legibility on smaller screens).
 
 See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
 
@@ -39,7 +41,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       fill: #2c89803b;
     }
 
-    .axis-lines line,
+    .arrow-chart__body .axis-lines line,
     .arrow-chart__body .tick-lines line {
       stroke: white;
       stroke-width: 0.25;
@@ -193,7 +195,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     // immediately invoked function so that we don't pollute the global scope
     // (variables overwrite those in other component script tags)
   (() => {
-    var arrowElementId = {{ .Get "id" }};
+    var id = {{ .Get "id" }};
     var csv = {{ .Get "data" }};
     var xMax = {{ .Get "xMax" }} || 100;
     var xMinMobile = {{ .Get "xMinMobile" }} || -42;
@@ -205,12 +207,14 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     var axisLabelText = {{ .Get "axisLabelText" }} || "";
 
     window.addEventListener('load', function () {
+      var $el = $("#" + id);
+      
       var isMobile = window.innerWidth <= Number(mobileCutoff);
       const rowHeight = isMobile ? 6 : 4.5;
       const xMin = isMobile ? xMinMobile : xMinDesktop;
 
-      const $rows = $("#" + arrowElementId + ' .arrow-chart g.rows')
-      const $arrows = $("#" + arrowElementId + ' .arrow-chart g.arrows')
+      const $rows = $el.find('.arrow-chart g.rows')
+      const $arrows = $el.find('.arrow-chart g.arrows')
 
       const getArrow = ({ before, after, yOffset = 0, valueContent = '', valueRight = false }) => {
         const shift = after - before
@@ -297,16 +301,16 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         ${decArrow}
         ${incArrow}
         `
-        $("#" + arrowElementId + " .legend-desc").append(legendLabel)
-        axisLabelText && $("#" + arrowElementId + " .axis-title").append(axisLabelText)
+        $el.find(".legend-desc").append(legendLabel)
+        axisLabelText && $el.find(".axis-title").append(axisLabelText)
 
         const viewBoxChart = `${xMin} 0 ${xMax - xMin} ${data.length * rowHeight}`
         const viewBoxLegend = `${xMin} 0 ${xMax - xMin} ${isMobile ? 30 : 20}`
-        $("#" + arrowElementId + " .arrow-chart").attr("viewBox", viewBoxChart)
-        $("#" + arrowElementId + " .sticky-leg").attr("viewBox", viewBoxLegend)
-        $("#" + arrowElementId + ".arrow-chart__body").toggleClass("is-mobile", isMobile)
+        $el.find(".arrow-chart").attr("viewBox", viewBoxChart)
+        $el.find(".sticky-leg").attr("viewBox", viewBoxLegend)
+        $el.toggleClass("is-mobile", isMobile)
 
-        $("#" + arrowElementId + ' .xMax-dependent [data-val]').each((i, el) => {
+        $el.find('.xMax-dependent [data-val]').each((i, el) => {
           if (parseInt(el.dataset.val) > xMax) {
             // xMax-dependent elements only get rendered if their val is relevant to the arrow
             // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
@@ -314,7 +318,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
           }
         })
 
-        $("#" + arrowElementId + ".arrow-chart__body").html($("#" + arrowElementId + ".arrow-chart__body").html());
+        $el.html($el.html());
       })
     });
     }) ();

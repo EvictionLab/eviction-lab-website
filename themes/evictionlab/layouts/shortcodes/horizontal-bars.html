@@ -200,13 +200,12 @@ Shortcode for rendering a stack of horizontal bars.
 
     window.addEventListener('load', function () {
       var $el = $("#" + id);
-      window.el = $el;
       
       var isMobile = window.innerWidth <= Number(mobileCutoff);
       const rowHeight = isMobile ? 6 : 4.5;
       const xMin = isMobile ? xMinMobile : xMinDesktop;
       
-      const $rows = el.find('.hbar-chart g.rows')
+      const $rows = $el.find('.hbar-chart g.rows')
 
       const getBar = ({ value, yOffset = 0, valueContent = '', valueRight = false }) => {
         const shift = value;
@@ -282,15 +281,15 @@ Shortcode for rendering a stack of horizontal bars.
         const labelText = !legendLabelText ? "" : legendLabelText + ":";
 
         // $(".legend-desc").append(legendLabel)
-        axisLabelText && el.find(".axis-title").append(axisLabelText)
+        axisLabelText && $el.find(".axis-title").append(axisLabelText);
 
         const viewBoxChart = `${xMin} 0 ${xMax - xMin} ${data.length * rowHeight}`
         const viewBoxLegend = `${xMin} 0 ${xMax - xMin} 15`
-        el.find(".hbar-chart").attr("viewBox", viewBoxChart)
-        el.find(".sticky-leg").attr("viewBox", viewBoxLegend)
+        $el.find(".hbar-chart").attr("viewBox", viewBoxChart);
+        $el.find(".sticky-leg").attr("viewBox", viewBoxLegend);
         $el.toggleClass("is-mobile", isMobile)
 
-        el.find('.xMax-dependent [data-val]').each((i, el) => {
+        $el.find('.xMax-dependent [data-val]').each((i, el) => {
           if (parseInt(el.dataset.val) > xMax) {
             // xMax-dependent elements only get rendered if their val is relevant to the bar
             // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
