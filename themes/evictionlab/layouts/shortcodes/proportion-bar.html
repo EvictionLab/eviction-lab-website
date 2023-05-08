@@ -10,42 +10,39 @@ See: /ets-report-2022/index.md for usage
 {{ $v1Label := .Get "v1Label" }}
 {{ $v2Label := .Get "v2Label" }}
 
-<div class="chart proportional-bars chart--{{ .Get `id` }}">
+<div id="{{ .Get `id` }}" class="chart proportion-bars chart--{{ .Get `id` }}">
   <style type="text/css">
-    text {
+    .proportion-bars text {
       font-size: 3px;
       font-family: Gotham A, Gotham B;
       dominant-baseline: text-before-edge;
     }
 
-    text {
-      font-size: 3px;
-      font-family: Gotham A, Gotham B;
-      dominant-baseline: text-before-edge;
-    }
+    /* HACK: 2nd CSS rule gets deleted (🤦‍♂️ hugo) */
+    .proportion-bars text {}
 
-    .ticks text {
+    .proportion-bars .ticks text {
       text-anchor: middle;
       fill: #4D4D4D;
     }
 
-    .ticks text:first-of-type {
+    .proportion-bars .ticks text:first-of-type {
       text-anchor: start;
     }
 
-    .ticks text:last-of-type {
+    .proportion-bars .ticks text:last-of-type {
       text-anchor: end;
     }
 
-    .block rect {
+    .proportion-bars .block rect {
       fill: #434878;
     }
 
-    .block rect:last-of-type {
+    .proportion-bars .block rect:last-of-type {
       fill: #e24000;
     }
 
-    .blocks text {
+    .proportion-bars .blocks text {
       fill: white;
       font-size: 4px;
       dominant-baseline: central;
@@ -53,11 +50,11 @@ See: /ets-report-2022/index.md for usage
       font-weight: 600;
     }
 
-    .blocks text.v2 {
+    .proportion-bars .blocks text.v2 {
       text-anchor: end;
     }
 
-    .blocks text.label {
+    .proportion-bars .blocks text.label {
       fill: #444444;
       font-size: 4px;
       transform: rotate(-90deg);
@@ -66,7 +63,7 @@ See: /ets-report-2022/index.md for usage
       font-weight: 500;
     }
 
-    .legend text {
+    .proportion-bars .legend text {
       font-size: 3px;
       dominant-baseline: alphabetic;
       font-weight: bold;
@@ -74,20 +71,20 @@ See: /ets-report-2022/index.md for usage
       transform: translate(20px, 0);
     }
 
-    .legend text:last-of-type {
+    .proportion-bars .legend text:last-of-type {
       transform: translate(-20px, 0);
     }
 
-    .legend text .color-chip {
+    .proportion-bars .legend text .color-chip {
       fill: #434878;
       font-size: 4.5px;
     }
 
-    .legend text:last-of-type .color-chip {
+    .proportion-bars .legend text:last-of-type .color-chip {
       fill: #e24000;
     }
 
-    .legend text:last-of-type {
+    .proportion-bars .legend text:last-of-type {
       text-anchor: end;
     }
   </style>
@@ -118,7 +115,9 @@ See: /ets-report-2022/index.md for usage
     </svg>
   </div>
   <script>
-    var pbCsv = {{ .Get "data" }}
+  (() => {
+    var id = {{ .Get "id" }};
+    var pbCsv = {{ .Get "data" }};
     var labelField = {{ .Get "labelField" }};
     var proportionField = {{ .Get "proportionField" }};
     var v1Field = {{ .Get "v1Field" }};
@@ -137,6 +136,7 @@ See: /ets-report-2022/index.md for usage
     </g>
   `
     window.addEventListener('load', function () {
+      var $el = $("#" +  id);
       d3.csv(pbCsv, function (data) {
         var blocks = data.
           forEach(r => {
@@ -146,13 +146,14 @@ See: /ets-report-2022/index.md for usage
               v1: d3.format(vFormat)(r[v1Field]),
               v2: d3.format(vFormat)(r[v2Field]),
             })
-            $(".proportional-bars .blocks").append(block)
+            $el.find(".blocks").append(block)
             currentOffset += (barHeight + barGap)
           })
-        $(".proportional-bars .ticks").attr("transform", `translate(0, ${currentOffset})`)
-        $(".proportional-bars svg").attr("viewBox", `-7 0 109 ${currentOffset + 5}`)
-        $(".proportional-bars").html($(".proportional-bars").html());
+        $el.find(".ticks").attr("transform", `translate(0, ${currentOffset})`)
+        $el.find("svg").attr("viewBox", `-7 0 109 ${currentOffset + 5}`)
+        $el.html($el.html());
       })
     });
+  }) ();
   </script>
 </div>

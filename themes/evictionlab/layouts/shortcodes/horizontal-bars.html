@@ -14,16 +14,15 @@ Shortcode for rendering a stack of horizontal bars.
       font-size: 2.25px;
       font-family: GT-Eesti-Display-Bold, GT Eesti Display, sans-serif;
       dominant-baseline: middle;
-    }
-
-    .hbar-chart__body.is-mobile text {
-      font-size: 3px;
-    }
-
-    .hbar-chart__body.is-mobile text {
-      font-size: 3px;
       text-transform: uppercase;
       fill: #434878;
+    }
+
+    /* HACK: 2nd CSS rule gets deleted (🤦‍♂️ hugo) */
+    .hbar-chart__body.is-mobile text {}
+
+    .hbar-chart__body.is-mobile text {
+      font-size: 3px;
     }
 
     .hbar-chart__body.is-mobile .tick-values text {

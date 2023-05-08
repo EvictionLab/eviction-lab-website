@@ -83,7 +83,7 @@ Elab.GroupedBarChart = (function (Elab) {
    * @param {Object} dataOptions { margin, x, y, groupBy, curve, highlight, xTicks, xFormat, yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
-    console.log("createFigure: ", root, data, dataOptions);
+    // console.log("createFigure: ", root, data, dataOptions);
     var options = dataOptions;
     const yTooltipFormat = d3.format(
         options.yTooltipFormat || options.yFormat || ",d"
@@ -166,7 +166,7 @@ Elab.GroupedBarChart = (function (Elab) {
             // console.log('d, ', d)
             // d.forEach(function(el, i) {
             columns.forEach(function (c) {
-              console.log({ d, c, data, options });
+              // console.log({ d, c, data, options });
               newArr.push(parseFloat(d[c]));
             });
             // })

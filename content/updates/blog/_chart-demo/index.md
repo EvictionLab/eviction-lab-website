@@ -256,4 +256,21 @@ See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-b
   legendLabelText=""
 %}}
 
-
+<style>
+  /* uncomment to view in Ankurrat (should appear properly in Gotham in blog posts) */
+  /* .proportion-bars g text {
+    font-family: unset;
+  } */
+</style>
+{{% proportion-bar
+  id="pbars"
+  title="Proportion bars (Note: uses Gotham font, which loads in blog post but not here (?))"
+  v1Label="Observed Filings"
+  v2Label="Missing Filings"
+  data="/uploads/proportion_bars_sample.csv"
+  labelField="xfileyear"
+  proportionField="pct_of_historical"
+  v1Field="year_filings"
+  v2Field="missing_filings"
+  vFormat=",d"
+%}}

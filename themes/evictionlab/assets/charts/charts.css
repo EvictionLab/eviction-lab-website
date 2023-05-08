@@ -267,7 +267,7 @@
 
 /** ...Besides the bars, which get to big */
 @media(min-width: 768px) {
-  .chart.proportional-bars {
+  .chart.proportion-bars {
     width: 84%;
     margin-left: 8%;
   }
