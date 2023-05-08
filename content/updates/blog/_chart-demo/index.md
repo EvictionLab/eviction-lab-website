@@ -264,7 +264,7 @@ See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-b
 </style>
 {{% proportion-bar
   id="pbars"
-  title="Proportion bars (Note: uses Gotham font, which loads in blog post but not here (?))"
+  title="Proportion bars"
   v1Label="Observed Filings"
   v2Label="Missing Filings"
   data="/uploads/proportion_bars_sample.csv"
