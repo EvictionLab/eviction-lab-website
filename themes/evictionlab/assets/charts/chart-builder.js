@@ -900,21 +900,30 @@ Elab.ChartBuilder = (function (Elab) {
       return function () {
         var barData = options.selector(_this.data);
         var bandWidth = _this.xScale.bandwidth();
+        var xCorrection = 0;
+        if (overrides.maxBarWidth) {
+          // if a maxBarWidth is provided, must shift bars over so they center over their labels
+          var cappedBandWidth = Math.min(bandWidth, Number(overrides.maxBarWidth));
+          xCorrection = (bandWidth - cappedBandWidth) / 2;
+          bandWidth = cappedBandWidth;
+        }
+        console.log(2334, { bandWidth });
         var selection = currentSelection.selectAll(".chart__bar").data(barData);
         selection
           .enter()
           .append("rect")
-          .attr("class", function (d,i) { return "chart__bar chart__bar--" + options.classSelector(d,i) })
+          .attr("class", function (d, i) {
+            return "chart__bar chart__bar--" + options.classSelector(d, i);
+          })
           .attr("x", function (d) {
-            return _this.xScale(d[0]);
+            return _this.xScale(d[0]) + xCorrection;
           })
           .attr("width", bandWidth)
           .attr("y", _this.getInnerHeight())
           .attr("height", 0)
           .on("mousemove", function (d) {
             chart.setHovered(d);
-            options.renderTooltip &&
-              chart.showTooltip(d3.event, options.renderTooltip);
+            options.renderTooltip && chart.showTooltip(d3.event, options.renderTooltip);
           })
           .on("mouseout", function (d) {
             chart.setHovered(null);
@@ -924,7 +933,7 @@ Elab.ChartBuilder = (function (Elab) {
           .transition()
           .duration(1000)
           .attr("x", function (d) {
-            return _this.xScale(d[0]);
+            return _this.xScale(d[0]) + xCorrection;
           })
           .attr("width", bandWidth)
           .attr("y", function (d) {

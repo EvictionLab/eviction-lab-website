@@ -21,6 +21,31 @@ researchtype: elresearch
 twImage: house.jpg
 fbImage: house.jpg
 ---
+<style>
+  .chart.chart--bar .chart__bar:nth-of-type(1) {
+    fill: var(--c2) !important;
+  }
+  .chart.chart--bar .chart__bar:nth-of-type(2) {
+    fill: var(--c1) !important;
+  }
+
+  .row h3.chart__title {
+    margin-top: 2rem;
+  }
+  @media(min-width: 990px) {
+    /* expand beyond content width */
+    .row {
+      margin-left: -18rem;
+      margin-right: -18rem;
+    }
+    /* make sizing more predictable */
+    .chart, .visual {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+</style>
+
 <span class="dropcap green">F</span>or more than a decade, Curtis Hoff ran a Milwaukee real estate empire that rented run-down properties to tenants with few other options. Hoff entered the market around 2000, and by 2021—the year he sold off his properties—he owned over 700 units, predominantly in Milwaukee’s majority-Black north side. He purchased most of these properties through foreclosure sales during the Great Recession. 
 
 As described in reporting by the Milwaukee Journal Sentinel, Hoff and his staff routinely ignored tenants’ maintenance requests, refusing to deal with cockroach and rodent infestations and malfunctioning heat and plumbing. Hoff readily filed evictions when tenants fell behind on rent. This strategy made sense because eviction filings intimidate tenants, saddle them with fees, limit future housing options by damaging rental histories, and grant the landlord considerable legal power—even if no eviction is ever executed. Indeed, eviction was so central to Hoff’s business strategy that he gave his holding companies names beginning with the letter A, such as “Aardvark Properties,” to ensure they would be at the top of the docket in eviction court. 
@@ -59,6 +84,7 @@ All else equal, properties owned by landlords with a pattern of extractive manag
   yFormat=".2"
   title="Figure 1. Relationship between extractive management and crime incidents"
   margin="8 8 26 62"
+  maxBarWidth="192"
 %}}
   <div class="figcaption px-0 mb-0">
     <p class="mb-0">
@@ -77,8 +103,12 @@ Most of the tenants preyed upon by extractive landlords in Milwaukee are Black. 
 
 Extractive landlord strategies don’t work everywhere. They are most viable in stigmatized neighborhoods, places avoided by those who have other options. In particular, we find that the level of crime within a neighborhood is one of the strongest predictors of extractive landlord management. In higher-crime neighborhoods, tenants are much more likely to report having chosen their housing as a last resort and to have unaddressed maintenance problems (Figure 2). This makes sense, since public safety is a key factor renters consider when choosing where to live. People who end up in high-crime areas are the ones with few alternatives. 
 
+<div class="row mb-2">
+<div class="figheader mt-1 mb-0">Figure 2. Relationship between neighborhood crime and extractive management</div>
+  <div class="col-12 col-lg-6">
 {{% bar-chart
   id="fig2"
+  title="Plot A. Probability tenant reports choosing current residence as last resort"
   data="./fig1&2.csv"
   x="id"
   centerLabels="true"
@@ -87,12 +117,19 @@ Extractive landlord strategies don’t work everywhere. They are most viable in 
   yMin="0"
   yTooltipFormat=".3"
   yFormat=".2"
-  title="Figure 2. Relationship between neighborhood crime and extractive management"
   margin="8 8 26 62"
+  maxBarWidth="192"
 %}}
-
+  <div class="figcaption px-2 py-1 mb-0">
+    <p class="mb-0">
+Plot A shows the probability that a tenant reports choosing their current residence as a last resort, in average and high-crime neighborhoods, after controlling for property and neighborhood characteristics. In areas with more crime, tenants are much more likely to say they chose their current residence as a last resort.
+    </p>
+  </div>
+  </div>
+  <div class="col-12 col-lg-6">
 {{% bar-chart
   id="fig3"
+  title="Plot B. Expected number of housing problems reported by tenants"
   data="./fig1&2.csv"
   x="id"
   centerLabels="true"
@@ -101,16 +138,16 @@ Extractive landlord strategies don’t work everywhere. They are most viable in 
   yMin="0"
   yTooltipFormat=".3"
   yFormat=".2"
-  title=""
   margin="8 8 26 62"
+  maxBarWidth="192"
 %}}
-
-  <div class="figcaption px-0 mb-0">
+  <div class="figcaption px-2 py-1 mb-0">
     <p class="mb-0">
-Note: Figure 2, Plot 1, shows the probability that a tenant reports choosing their current residence as a last resort, in average and high-crime neighborhoods, after controlling for property and neighborhood characteristics. In areas with more crime, tenants are much more likely to say they chose their current residence as a last resort. Figure 2, Plot 2, shows the expected number of housing problems reported by tenants in average and high-crime neighborhoods, after controlling for property and neighborhood characteristics. In areas with more crime, tenants report many more housing problems, suggesting high-crime areas incentivize under maintenance by landlords.
+Plot B shows the expected number of housing problems reported by tenants in average and high-crime neighborhoods, after controlling for property and neighborhood characteristics. In areas with more crime, tenants report many more housing problems, suggesting high-crime areas incentivize under maintenance by landlords.
     </p>
-    <br>
   </div>
+  </div>
+</div>
 
 This makes clear a vicious cycle: as neighborhoods become dangerous and undesirable, those with the ability to move out do so. Landlords with properties in these places turn to extractive strategies to exploit those who have no option but to stay. These strategies in turn increase the level of crime at their properties, further stigmatizing the neighborhood and incentivizing extractive strategies. 
 

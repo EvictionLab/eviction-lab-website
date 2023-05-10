@@ -63,9 +63,10 @@
       var xLabel = {{ .Get "xLabel" }}
       var yLabel = {{ .Get "yLabel" }}
       var centerLabels = {{ .Get "centerLabels" }}
+      var maxBarWidth = {{ .Get "maxBarWidth" }}
       
       // Init chart on page load.
-      Elab.BarChart.init(rootEl, { xLabel: xLabel, yLabel: yLabel, barClass: barClass, mark: mark, axis: axis, id: id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, xTooltipFormat: xTooltipFormat, margin: margin, timeUnit: timeUnit, centerLabels: centerLabels })
+      Elab.BarChart.init(rootEl, { xLabel: xLabel, yLabel: yLabel, barClass: barClass, mark: mark, axis: axis, id: id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, xTooltipFormat: xTooltipFormat, margin: margin, timeUnit: timeUnit, maxBarWidth: maxBarWidth, centerLabels: centerLabels })
     });
   </script>
 </div>

@@ -100,7 +100,10 @@ Elab.BarChart = (function (Elab) {
         // adds the bars
         .addBandedBars({
           selector: barSelector,
-          classSelector: function (d) { return d[3] },
+          classSelector: function (d) {
+            return d[3];
+          },
+          maxBarWidth: dataOptions.maxBarWidth,
           renderTooltip: function (hoverData) {
             const tooltip = {
               title: hoverData[0],
