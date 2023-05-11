@@ -31,14 +31,14 @@ fbImage: GettyImages-174232228.jpg
   }
   .chart--fig2 h3.chart__title, .chart--fig3 h3.chart__title {
     font-size: 1.6rem;
-    color: #7d7d7d;
+    color: #696969;
   }
   .row h3.chart__title {
     margin-top: 2rem;
   }
   text.chart__label.chart__axis-label.chart__label--left {
     font-family: GT-Eesti-Display-Medium,sans-serif;
-    fill: #7c7d7d;
+    fill: #696969;
     font-size: 15px;
     letter-spacing: 0.04rem;
   }
