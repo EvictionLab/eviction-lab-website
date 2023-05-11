@@ -7,7 +7,7 @@ collection: true
 contentcat: research
 featured: true
 in_index: true
-title: 'Neighborhoods of last resort: How the private rental market creates crime hot spots'
+title: 'Extractive landlord strategies: How the private rental market creates crime hot spots'
 date: 2023-05-11T00:46:40.089Z
 postauthorname: Henry Gomory and Matthew Desmond
 postauthortitle: The Eviction Lab
