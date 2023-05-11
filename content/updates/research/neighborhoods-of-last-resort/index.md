@@ -18,8 +18,9 @@ scripts:
   - charts
   - grouped-bar-chart
 researchtype: elresearch
-twImage: house.jpg
-fbImage: house.jpg
+image: GettyImages-174232228.jpg
+twImage: GettyImages-174232228.jpg
+fbImage: GettyImages-174232228.jpg
 ---
 <style>
   .chart.chart--bar .chart__bar:nth-of-type(1) {
