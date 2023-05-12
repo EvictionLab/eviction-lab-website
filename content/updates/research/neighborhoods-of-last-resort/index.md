@@ -44,7 +44,12 @@ fbImage: GettyImages-174232228.jpg
   }
   .chart__axis.chart__axis--bar .tick text {
     font-size: 13px;
-}
+  }
+  @media(max-width: 767px) {
+    .chart__axis.chart__axis--bar .tick text {
+    font-size: 10.5px;
+  }
+  }
   @media(min-width: 990px) {
     /* expand beyond content width */
     .row {
@@ -159,7 +164,7 @@ Plot A shows the probability that a tenant reports choosing their current reside
 %}}
   <div class="figcaption px-2 py-1 mb-0">
     <p class="mb-0">
-Plot B shows the expected number of housing problems reported by tenants in average and high-crime neighborhoods, after controlling for property and neighborhood characteristics. In areas with more crime, tenants report many more housing problems, suggesting high-crime areas incentivize under maintenance by landlords.
+Plot B shows the expected number of housing problems reported by tenants in average and high-crime neighborhoods, after controlling for property and neighborhood characteristics. In areas with more crime, tenants report many more housing problems, suggesting high-crime areas incentivize under-maintenance by landlords.
     </p>
   </div>
   </div>
