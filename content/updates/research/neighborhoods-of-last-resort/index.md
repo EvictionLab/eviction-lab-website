@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: /extractive-landlords-and-crime
 contenttype: updates
