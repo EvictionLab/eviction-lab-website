@@ -488,17 +488,7 @@
 
 
     #hp-eviction-image {
-        min-height: 240px;
-        @include media-breakpoint-up(lg) {
-            min-height: 480px;
-        }
-        @include media-breakpoint-up(xxxl) {
-            min-height: 560px;
-        }
-        background-image: url('/images/assets/Evicted_Video8.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-x: center;
+        
     }
 }
 // Mobile carousel
