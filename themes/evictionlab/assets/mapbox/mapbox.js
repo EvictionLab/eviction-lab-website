@@ -112,9 +112,6 @@ Elab.Mapbox = (function (Elab) {
   function getLayerColors(range, colors, gradientType, cutoffs) {
     var steps = colors.length;
     var positions;
-    // if (cutoffs) {
-    //   positions = cutoffs.split(",").map(Number);
-    // } else
     if (gradientType === "discrete") {
       positions = colors.map(function (c, i) {
         return i / steps;

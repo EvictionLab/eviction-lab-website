@@ -31,7 +31,7 @@ One explanation is the price that landlords have to pay for evicting a family. W
     <div class="pr-12 pr-md-0">
         <a href="https://www.tandfonline.com/doi/abs/10.1080/10511482.2023.2212662" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="hpd.jpg" /></a>
     </div>
-    <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE STUDY:</p>
+    <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE ARTICLE:</p>
         <p><a class="green gt-eesti journal-heading" href="https://www.tandfonline.com/doi/abs/10.1080/10511482.2023.2212662" target="_blank" rel="noreferrer noopener">Neighborhoods of last resort: How landlord strategies concentrate violent crime</a></p>
         <p class="mt-3" style="font-size: 1.6rem;">Henry Gomory, Douglas S. Massey, James R. Hendrickson, and Matthew Desmond</p>
     </div>
