@@ -62,10 +62,8 @@ Elab.ChartBuilder = (function (Elab) {
       this.defaultOptions,
       options,
     );
-    this.innerWidth =
-      this.options.width + this.options.margin[1] + this.options.margin[3];
-    this.innerHeight =
-      this.options.height + this.options.margin[0] + this.options.margin[2];
+    this.innerWidth = this.options.width + this.options.margin[1] + this.options.margin[3];
+    this.innerHeight = this.options.height + this.options.margin[0] + this.options.margin[2];
     this.svgEl = svgEl;
     this.updaters = {};
     this.selections = {};
@@ -91,7 +89,7 @@ Elab.ChartBuilder = (function (Elab) {
       var rect = selection.node().getBoundingClientRect();
       var xPos = Math.min(
         window.innerWidth - rect.width / 2 - 12,
-        Math.max(12 + rect.width / 2, e.clientX)
+        Math.max(12 + rect.width / 2, e.clientX),
       );
       selection
         .style("top", topOffset + "px")
@@ -131,9 +129,7 @@ Elab.ChartBuilder = (function (Elab) {
    * Returns the height of the data area for the chart
    */
   Chart.prototype.getInnerHeight = function () {
-    return (
-      this.options.height - this.options.margin[0] - this.options.margin[2]
-    );
+    return this.options.height - this.options.margin[0] - this.options.margin[2];
   };
 
   /**
@@ -189,16 +185,8 @@ Elab.ChartBuilder = (function (Elab) {
    * @param {function} createSelection returns a selection
    * @param {function} createRenderFunction returns a render function
    */
-  Chart.prototype.addElement = function (
-    id,
-    parentId,
-    createSelection,
-    createRenderFunction
-  ) {
-    this.addSelection(id, parentId, createSelection).addRenderFunction(
-      id,
-      createRenderFunction
-    );
+  Chart.prototype.addElement = function (id, parentId, createSelection, createRenderFunction) {
+    this.addSelection(id, parentId, createSelection).addRenderFunction(id, createRenderFunction);
     return this;
   };
 
@@ -211,9 +199,7 @@ Elab.ChartBuilder = (function (Elab) {
     }
     function createRootRenderer(selection, chart) {
       return function () {
-        selection
-          .attr("width", chart.options.width)
-          .attr("height", chart.options.height);
+        selection.attr("width", chart.options.width).attr("height", chart.options.height);
       };
     }
     this.addElement("root", null, createRootSelection, createRootRenderer);
@@ -233,11 +219,7 @@ Elab.ChartBuilder = (function (Elab) {
       return function () {
         selection.attr(
           "transform",
-          "translate(" +
-            chart.options.margin[3] +
-            " " +
-            chart.options.margin[0] +
-            ")"
+          "translate(" + chart.options.margin[3] + " " + chart.options.margin[0] + ")",
         );
       };
     }
@@ -261,11 +243,7 @@ Elab.ChartBuilder = (function (Elab) {
       return function () {
         selection.attr(
           "transform",
-          "translate(" +
-            chart.options.margin[3] +
-            " " +
-            chart.options.margin[0] +
-            ")"
+          "translate(" + chart.options.margin[3] + " " + chart.options.margin[0] + ")",
         );
       };
     }
@@ -287,11 +265,7 @@ Elab.ChartBuilder = (function (Elab) {
       return function () {
         selection.attr(
           "transform",
-          "translate(" +
-            chart.options.margin[3] +
-            " " +
-            chart.options.margin[0] +
-            ")"
+          "translate(" + chart.options.margin[3] + " " + chart.options.margin[0] + ")",
         );
       };
     }
@@ -355,11 +329,7 @@ Elab.ChartBuilder = (function (Elab) {
     options.areaId = options.areaId || "area";
     options.addPattern = options.addPattern === false ? false : true;
     // make sure IDs have not already been assigned
-    if (
-      options.patternId &&
-      this.getSelection(options.patternId) &&
-      options.addPattern
-    )
+    if (options.patternId && this.getSelection(options.patternId) && options.addPattern)
       throw new Error("patternId already exists: " + options.patternId);
     if (this.getSelection(options.areaId))
       throw new Error("areaId already exists: " + options.areaId);
@@ -377,7 +347,7 @@ Elab.ChartBuilder = (function (Elab) {
         .html(
           '<rect class="chart__pattern chart__pattern--' +
             options.patternId +
-            '" x="0" y="0" width="6" height="12" />'
+            '" x="0" y="0" width="6" height="12" />',
         );
     }
     // creates area element and returns selection
@@ -390,15 +360,11 @@ Elab.ChartBuilder = (function (Elab) {
     function createAreaRenderFunction(selection, chart) {
       return function () {
         var maxDate = chart.xScale.domain()[1];
-        areaData[1] =
-          !areaData[1] || +areaData[1] > +maxDate ? maxDate : areaData[1];
+        areaData[1] = !areaData[1] || +areaData[1] > +maxDate ? maxDate : areaData[1];
         selection
           .attr("x", chart.xScale(areaData[0]))
           .attr("y", 1)
-          .attr(
-            "width",
-            chart.xScale(areaData[1]) - chart.xScale(areaData[0]) - 1
-          )
+          .attr("width", chart.xScale(areaData[1]) - chart.xScale(areaData[0]) - 1)
           .attr("height", chart.getInnerHeight() - 2)
           .attr("fill", "url(#" + options.patternId + ")");
       };
@@ -437,9 +403,7 @@ Elab.ChartBuilder = (function (Elab) {
     };
 
     function handleHover() {
-      var xHovered = _this.xScale.invert(
-        d3.mouse(_this.selections["hover"].node())[0]
-      );
+      var xHovered = _this.xScale.invert(d3.mouse(_this.selections["hover"].node())[0]);
       showTooltip(_this, xHovered);
     }
 
@@ -485,8 +449,7 @@ Elab.ChartBuilder = (function (Elab) {
             chart.setHovered(chart.data[closestIndex]);
             var renderLine = chart.getRenderer("hoverLine");
             renderLine && renderLine();
-            options.renderTooltip &&
-              chart.showTooltip(d3.event, options.renderTooltip);
+            options.renderTooltip && chart.showTooltip(d3.event, options.renderTooltip);
           })
           .on("mouseout", function (d) {
             chart.setHovered(null);
@@ -551,8 +514,7 @@ Elab.ChartBuilder = (function (Elab) {
           selection
             .attr(
               "class",
-              "chart__hover-dot chart__hover-dot--" +
-                (chart.lineData.length - hoverIndex - 1)
+              "chart__hover-dot chart__hover-dot--" + (chart.lineData.length - hoverIndex - 1),
             )
             .attr("cx", function (d) {
               return chart.xScale(chart.hovered.x);
@@ -628,11 +590,9 @@ Elab.ChartBuilder = (function (Elab) {
           return "translate(" + _this.groupScale(d.category) + ",0)";
         });
 
-      var barDataSelection = groupSelection
-        .selectAll(".chart__bar")
-        .data(function (d) {
-          return d.values;
-        });
+      var barDataSelection = groupSelection.selectAll(".chart__bar").data(function (d) {
+        return d.values;
+      });
 
       var barsSelection = barDataSelection
         .enter()
@@ -697,9 +657,7 @@ Elab.ChartBuilder = (function (Elab) {
           }),
         ];
       };
-    this.selections["bars"] = this.selections["data"]
-      .append("g")
-      .attr("class", "chart__bars");
+    this.selections["bars"] = this.selections["data"].append("g").attr("class", "chart__bars");
 
     this.updaters["bars"] = function () {
       var barData = options.selector(_this.data);
@@ -760,14 +718,10 @@ Elab.ChartBuilder = (function (Elab) {
     var _this = this;
     var options = overrides || {};
     if (!options.marks) return this;
-    this.selections["marks"] = this.selections["data"]
-      .append("g")
-      .attr("class", "chart__marks");
+    this.selections["marks"] = this.selections["data"].append("g").attr("class", "chart__marks");
 
     this.updaters["marks"] = function () {
-      var selection = _this.selections["marks"]
-        .selectAll(".chart__mark")
-        .data(options.marks);
+      var selection = _this.selections["marks"].selectAll(".chart__mark").data(options.marks);
 
       selection
         .enter()
@@ -872,7 +826,7 @@ Elab.ChartBuilder = (function (Elab) {
 
     return this;
   };
-  
+
   /**
    * Adds bars to the chart for category or location based axis
    * @param {function} selector function that takes the chart data and returns the bar data
@@ -880,8 +834,11 @@ Elab.ChartBuilder = (function (Elab) {
   Chart.prototype.addBandedBars = function (overrides) {
     var _this = this;
     var options = overrides || {};
-    options.classSelector = 
-      overrides.classSelector || function (d,i) { return i; };
+    options.classSelector =
+      overrides.classSelector ||
+      function (d, i) {
+        return i;
+      };
     options.renderTooltip = overrides.renderTooltip;
     options.selector =
       overrides.selector ||
@@ -907,7 +864,8 @@ Elab.ChartBuilder = (function (Elab) {
           xCorrection = (bandWidth - cappedBandWidth) / 2;
           bandWidth = cappedBandWidth;
         }
-        console.log(2334, { bandWidth });
+        if (barData.some((d) => d[1] * barData[0][1] < 0))
+          console.warn("bar chart not set up to display both + and - y values");
         var selection = currentSelection.selectAll(".chart__bar").data(barData);
         selection
           .enter()
@@ -937,9 +895,13 @@ Elab.ChartBuilder = (function (Elab) {
           })
           .attr("width", bandWidth)
           .attr("y", function (d) {
+            // accommodates neg y vals
+            if (d[1] < 0) return 0;
             return _this.yScale(d[1]);
           })
           .attr("height", function (d) {
+            // accommodates neg y vals
+            if (d[1] < 0) return _this.yScale(d[1]);
             return _this.getInnerHeight() - _this.yScale(d[1]);
           });
       };
@@ -971,10 +933,7 @@ Elab.ChartBuilder = (function (Elab) {
       };
     _this.lineData = options.selector(_this.data);
     if (_this.getSelection(options.linesId))
-      throw new Error(
-        "addLines: selection already exists for given linesId " +
-          options.linesId
-      );
+      throw new Error("addLines: selection already exists for given linesId " + options.linesId);
     function createLineSelection(parentSelection) {
       return parentSelection.append("g").attr("class", "chart__lines");
     }
@@ -998,9 +957,7 @@ Elab.ChartBuilder = (function (Elab) {
           .enter()
           .append("path")
           .attr("class", function (d, i) {
-            return (
-              "chart__line chart__line--" + (chart.lineData.length - i - 1)
-            );
+            return "chart__line chart__line--" + (chart.lineData.length - i - 1);
           })
           .attr("d", line)
           .attr("data-id", function (d) {
@@ -1019,9 +976,7 @@ Elab.ChartBuilder = (function (Elab) {
           .attr("d", line)
           .style("stroke-dasharray", function () {
             // need to increase the dasharray to prevent line from cutting off
-            var ratio = chart.lastWidth
-              ? chart.getInnerWidth() / chart.lastWidth
-              : 1;
+            var ratio = chart.lastWidth ? chart.getInnerWidth() / chart.lastWidth : 1;
             return this.getTotalLength() * ratio + "px";
           })
           .style("stroke-dashoffset", 0);
@@ -1072,12 +1027,7 @@ Elab.ChartBuilder = (function (Elab) {
       };
     }
 
-    this.addElement(
-      options.stackId,
-      "data",
-      createAreaSelection,
-      createAreaRenderer
-    );
+    this.addElement(options.stackId, "data", createAreaSelection, createAreaRenderer);
     return this;
   };
 
@@ -1095,7 +1045,7 @@ Elab.ChartBuilder = (function (Elab) {
         .domain(
           d3.extent(data, function (d) {
             return d.x;
-          })
+          }),
         )
         .thresholds(thresholds || 40);
     }
@@ -1176,23 +1126,14 @@ Elab.ChartBuilder = (function (Elab) {
       .append("g")
       .attr("class", "chart__axis chart__axis--x");
     this.updaters["xAxis"] = function () {
-      var extent = options.extent
-        ? options.extent
-        : d3.extent(_this.data, options.selector);
+      var extent = options.extent ? options.extent : d3.extent(_this.data, options.selector);
       var xExtent =
-        typeof options.adjustExtent === "function"
-          ? options.adjustExtent(extent)
-          : extent;
-      _this.xScale = d3
-        .scaleLinear()
-        .rangeRound([0, _this.getInnerWidth()])
-        .domain(xExtent);
+        typeof options.adjustExtent === "function" ? options.adjustExtent(extent) : extent;
+      _this.xScale = d3.scaleLinear().rangeRound([0, _this.getInnerWidth()]).domain(xExtent);
       if (options.nice) {
         _this.xScale.nice();
       }
-      var xAxis = d3
-        .axisBottom(_this.xScale)
-        .tickSize(-1 * _this.getInnerHeight());
+      var xAxis = d3.axisBottom(_this.xScale).tickSize(-1 * _this.getInnerHeight());
       if (options.ticks) xAxis.ticks(options.ticks);
       if (options.tickFormat) xAxis.tickFormat(options.tickFormat);
       _this.selections["xAxis"]
@@ -1200,8 +1141,7 @@ Elab.ChartBuilder = (function (Elab) {
         .transition()
         .duration(1000)
         .call(xAxis);
-      if (options.adjustLabels)
-        _this.selections["xAxis"].call(options.adjustLabels.bind(_this));
+      if (options.adjustLabels) _this.selections["xAxis"].call(options.adjustLabels.bind(_this));
       // text label for the x axis
       if (options.xLabel) {
         _this.selections["base"].selectAll(".chart__axis-label--x").remove();
@@ -1235,21 +1175,17 @@ Elab.ChartBuilder = (function (Elab) {
       .append("g")
       .attr("class", "chart__axis chart__axis--y");
     this.updaters["yAxis"] = function () {
-      var extent = options.extent
-        ? options.extent
-        : d3.extent(_this.data, options.selector);
+      var extent = options.extent ? options.extent : d3.extent(_this.data, options.selector);
       var yExtent =
-        typeof options.adjustExtent === "function"
-          ? options.adjustExtent(extent)
-          : extent;
+        typeof options.adjustExtent === "function" ? options.adjustExtent(extent) : extent;
       _this.yScale = d3
         .scaleLinear()
         .rangeRound([_this.getInnerHeight(), 0])
         .domain(yExtent)
         .nice();
-      var yAxis = d3
-        .axisLeft(_this.yScale)
-        .tickSize(-1 * _this.getInnerWidth());
+      window.yy = _this.yScale;
+      console.log(window.yy, 123, extent, yExtent);
+      var yAxis = d3.axisLeft(_this.yScale).tickSize(-1 * _this.getInnerWidth());
       if (options.ticks) yAxis.ticks(options.ticks);
       if (options.tickFormat) yAxis.tickFormat(options.tickFormat);
       _this.selections["yAxis"]
@@ -1288,24 +1224,38 @@ Elab.ChartBuilder = (function (Elab) {
     }
     function createRenderFunction(selection, chart) {
       return function () {
-        selection.attr("transform", function() {
-          if (options.position === "top") {
-            return "translate(" + chart.getInnerWidth() / 2 + ", 0)";
-          } else if (options.position === "bottom") {
-            return "translate(" + chart.getInnerWidth() / 2 + ", " + (chart.getInnerHeight() + chart.options.margin[2] - 16) + ")";
-          } else if (options.position === "left") {
-            return "translate(" + (-chart.options.margin[3] + 16) +", " + chart.getInnerHeight() / 2 + ") rotate(-90)";
-          } else if (options.position === "right") {
-            return "translate(" + chart.getInnerWidth() + ", " + chart.getInnerHeight() / 2 + ")";
-          }
-        }).style("text-anchor", "middle")
+        selection
+          .attr("transform", function () {
+            if (options.position === "top") {
+              return "translate(" + chart.getInnerWidth() / 2 + ", 0)";
+            } else if (options.position === "bottom") {
+              return (
+                "translate(" +
+                chart.getInnerWidth() / 2 +
+                ", " +
+                (chart.getInnerHeight() + chart.options.margin[2] - 16) +
+                ")"
+              );
+            } else if (options.position === "left") {
+              return (
+                "translate(" +
+                (-chart.options.margin[3] + 16) +
+                ", " +
+                chart.getInnerHeight() / 2 +
+                ") rotate(-90)"
+              );
+            } else if (options.position === "right") {
+              return "translate(" + chart.getInnerWidth() + ", " + chart.getInnerHeight() / 2 + ")";
+            }
+          })
+          .style("text-anchor", "middle")
           .text(options.label);
       };
     }
     this.addElement("label-" + options.position, "overlay", createSelection, createRenderFunction);
 
     return this;
-  }
+  };
 
   /**
    * Adds an axis for bar charts
@@ -1373,8 +1323,7 @@ Elab.ChartBuilder = (function (Elab) {
       .append("g")
       .attr("class", "chart__axis chart__axis--bargroup");
     this.updaters["barGroup"] = function () {
-      var innerWidth =
-        _this.options.width - _this.options.margin[1] - _this.options.margin[3];
+      var innerWidth = _this.options.width - _this.options.margin[1] - _this.options.margin[3];
       _this.xScale = d3
         .scaleBand() // projecting discrete data into the diagram
         .domain(_this.options.xTicks.split(";"))
@@ -1420,10 +1369,7 @@ Elab.ChartBuilder = (function (Elab) {
     this.updaters["timeAxis"] = function () {
       var extent = d3.extent(_this.data, options.selector);
       var xExtent = options.adjustExtent(extent);
-      _this.xScale = d3
-        .scaleTime()
-        .rangeRound([0, _this.getInnerWidth()])
-        .domain(xExtent);
+      _this.xScale = d3.scaleTime().rangeRound([0, _this.getInnerWidth()]).domain(xExtent);
       var xAxis = d3.axisBottom(_this.xScale).tickSize(8).tickSizeOuter(0);
       if (options.ticks) xAxis.ticks(options.ticks);
       if (options.tickFormat) xAxis.tickFormat(options.tickFormat);
@@ -1516,7 +1462,7 @@ Elab.ChartBuilder = (function (Elab) {
         var voronoiData = chart.voronoi.polygons(
           chart.data.filter(function (d) {
             return !!d.y;
-          })
+          }),
         );
         var voronoi = selection.selectAll("path").data(voronoiData);
         voronoi
