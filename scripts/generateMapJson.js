@@ -5,6 +5,7 @@
  *  - for tract map, find state shape zip by FIPS code at: 
  *    https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/ (EL still using 2010 shapes)
  *  - for zip code map, download entire US at https://www2.census.gov/geo/tiger/TIGER2010/ZCTA5/2010/
+ *  - (counties: https://www2.census.gov/geo/tiger/TIGER2010/COUNTY/2010/)
  * 2. upload the shp, prj, & dbf files to https://mapshaper.org/
  *
  * USING MAPSHAPER (RECOMMENDED):

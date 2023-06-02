@@ -8,6 +8,7 @@
  *  each bounds=this.bounds
  * To confirm the bbox looks correct, back in mapshaper run:
  *  shape coordinates="{bbox values listed separated by commas}"
+ *  (and then unhide the map of shapes to confirm the new line spans its diagonal)
  * Then export as GEOJson
  */
 

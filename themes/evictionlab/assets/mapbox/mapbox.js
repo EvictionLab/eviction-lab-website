@@ -26,20 +26,20 @@ Elab.Mapbox = (function (Elab) {
     "pk.eyJ1IjoiZXZpY3Rpb24tbGFiIiwiYSI6ImNqYzJoMzhkbjBncGkyeW4yNGlkbjRkcTQifQ.IQNWME_jYqxTH7wmFrFX-g";
 
   function getFormatter(type) {
-    switch(type) {
+    switch (type) {
       case "integer":
         return d3.format(",d");
       case "percent":
         return d3.format(".01%");
+      case "currency":
+        return d3.format("$,d");
       default:
-        return d3.format(".1f")
+        return d3.format(".1f");
     }
   }
 
   var LegendLabelTemplate = Handlebars.compile(
-    "{{#each labels}}" +
-      "<span class='legend__gradient-label'>{{this}}</span>" +
-      "{{/each}}"
+    "{{#each labels}}" + "<span class='legend__gradient-label'>{{this}}</span>" + "{{/each}}",
   );
 
   var TooltipTemplate = Handlebars.compile(
@@ -50,23 +50,24 @@ Elab.Mapbox = (function (Elab) {
       "{{else}}" +
       "Data not available." +
       "{{/if}}" +
-      "</div>"
+      "</div>",
   );
-
 
   /**
    * Parses an object, converts any numeric values to numbers
-   * @param {*} row 
-   * @returns 
+   * @param {*} row
+   * @returns
    */
   function parseRow(row) {
-    return Object.entries(row).map(function (entry) {
-      const num = Number(entry[1])
-      return isNaN(num) ? entry : [entry[0], num]
-    }).reduce(function(obj, curr) {
-      obj[curr[0]] = curr[1]
-      return obj
-    }, {})
+    return Object.entries(row)
+      .map(function (entry) {
+        const num = Number(entry[1]);
+        return isNaN(num) ? entry : [entry[0], num];
+      })
+      .reduce(function (obj, curr) {
+        obj[curr[0]] = curr[1];
+        return obj;
+      }, {});
   }
 
   /**
@@ -96,10 +97,7 @@ Elab.Mapbox = (function (Elab) {
       })
       .map(function (feature, i) {
         feature.id = feature.properties[config.join];
-        Object.assign(
-          feature.properties,
-          dataDict[feature.properties[config.join]]
-        );
+        Object.assign(feature.properties, dataDict[feature.properties[config.join]]);
         return feature;
       });
     return Object.assign(geojson, { features: newFeatures });
@@ -111,21 +109,28 @@ Elab.Mapbox = (function (Elab) {
    * @param {*} range
    * @param {*} prefix
    */
-  function getLayerColors(range, colors, gradientType) {
+  function getLayerColors(range, colors, gradientType, cutoffs) {
     var steps = colors.length;
     var positions;
-    if(gradientType === 'discrete') {
-      positions = colors.map(function (c,i) { return i/(steps) })
+    // if (cutoffs) {
+    //   positions = cutoffs.split(",").map(Number);
+    // } else
+    if (gradientType === "discrete") {
+      positions = colors.map(function (c, i) {
+        return i / steps;
+      });
     } else {
-      positions = colors.map(function (c,i) { return i/(steps-1) })
+      positions = colors.map(function (c, i) {
+        return i / (steps - 1);
+      });
     }
-    var dataScale = d3.scaleLinear().domain([0, 1]).range(range)
-    var colorScale = getColorScale(positions, colors)
-    var colorSteps = []
+    var dataScale = d3.scaleLinear().domain([0, 1]).range(range);
+    var colorScale = getColorScale(positions, colors);
+    var colorSteps = [];
     for (var i = 0; i < positions.length; i++) {
-      const percent = positions[i]
-      colorSteps.push(dataScale(percent))
-      colorSteps.push(colorScale(percent))
+      const percent = positions[i];
+      colorSteps.push(cutoffs ? cutoffs[i] : dataScale(percent));
+      colorSteps.push(colorScale(percent));
     }
     return colorSteps;
   }
@@ -137,49 +142,56 @@ Elab.Mapbox = (function (Elab) {
     var steps = colors.length;
     //boilerplate css for gradient
     var front = "linear-gradient(to right";
-    var cap = ")"
+    var cap = ")";
     //allocate variables assigned in if
     var colorScale;
     var back;
     var positions;
 
     //get the necessary positions and colorScales, depending on the function describing gradient
-    positions = colors.map(function (c,i) { return i/(steps-1) })
-    colorScale = getColorScale(positions, colors)
+    positions = colors.map(function (c, i) {
+      return i / (steps - 1);
+    });
+    colorScale = getColorScale(positions, colors);
     back = positions.reduce(function (accumulator, currentValue) {
       var colorOfCurrent = colorScale(currentValue);
-      return accumulator + ", " + colorOfCurrent + " " + currentValue*100 + "%"
-    }, '');
+      return accumulator + ", " + colorOfCurrent + " " + currentValue * 100 + "%";
+    }, "");
 
     //add the boilerplate css to the generated css
     return front + back + cap;
   }
 
   function getColorScale(range, colors) {
-    return d3.scaleLinear()
-      .domain(range)
-      .range(colors)
-      .interpolate(d3.interpolateRgb)
+    return d3.scaleLinear().domain(range).range(colors).interpolate(d3.interpolateRgb);
   }
 
-  function getDiscreteColorScale(range, colors) {
-    return d3.scaleQuantize()
-      .domain(range)
-      .range(colors)
-      .nice()
+  function getDiscreteColorScale(range, colors, usesCustomCutoffs = false) {
+    // with custom cutoffs, run scale exactly between the passed in extents
+    return usesCustomCutoffs
+      ? d3.scaleQuantize().domain(range).range(colors)
+      : d3.scaleQuantize().domain(range).range(colors).nice();
   }
 
-  function addChoroplethFillLayer(map, prop, range, colors, gradientType) {
+  function addChoroplethFillLayer(
+    map,
+    prop,
+    range,
+    colors,
+    gradientType,
+    cutoffs,
+    usesCustomCutoffs,
+  ) {
     var fillColor;
-    if(gradientType === "discrete") {
-      // need to use the "nice" discrete color scale here to match with colors
-      var discreteScale = getDiscreteColorScale(range, colors);
-      var colorSteps = getLayerColors(discreteScale.domain(), colors, gradientType)
+    if (gradientType === "discrete") {
+      // need to use the "nice" discrete color scale here to match with colors (unless custom cutoffs)
+      var discreteScale = getDiscreteColorScale(range, colors, usesCustomCutoffs);
+      var colorSteps = getLayerColors(discreteScale.domain(), colors, gradientType, cutoffs);
       fillColor = ["step", ["get", prop]].concat(colorSteps);
-      fillColor.splice(2, 1)
+      fillColor.splice(2, 1);
     } else {
       fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
-        getLayerColors(range, colors, gradientType)
+        getLayerColors(range, colors, gradientType, cutoffs),
       );
     }
     map.addLayer(
@@ -188,38 +200,29 @@ Elab.Mapbox = (function (Elab) {
         type: "fill",
         source: "choropleth",
         layout: {},
-        filter: [
-          "any",
-          ["to-boolean", ["get", prop]],
-          ["==", 0, ["get", prop]],
-        ],
+        filter: ["any", ["to-boolean", ["get", prop]], ["==", 0, ["get", prop]]],
         paint: {
           "fill-color": fillColor,
-          "fill-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            1,
-            0.8,
-          ],
+          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0.8],
         },
       },
-      "building"
+      "building",
     );
   }
 
-  function addChoroplethStrokeLayer(map, prop, range, colors, gradientType) {
+  function addChoroplethStrokeLayer(map, prop, range, colors, gradientType, cutoffs) {
     var strokeColor;
-    if(gradientType === "discrete") {
+    if (gradientType === "discrete") {
       strokeColor = ["step", ["get", prop]].concat(
-        getLayerColors(range, colors, gradientType)
+        getLayerColors(range, colors, gradientType, cutoffs),
       );
-      strokeColor.splice(2, 1)
+      strokeColor.splice(2, 1);
     } else {
       strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
-        getLayerColors(range, colors, gradientType)
+        getLayerColors(range, colors, gradientType, cutoffs),
       );
     }
-    
+
     map.addLayer(
       {
         id: "choropleth-stroke",
@@ -235,15 +238,10 @@ Elab.Mapbox = (function (Elab) {
             ],
           },
           "line-blur": 0,
-          "line-opacity": [
-            "case",
-            ["boolean", ["feature-state", "hover"], false],
-            1,
-            0,
-          ],
+          "line-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 1, 0],
         },
       },
-      "building"
+      "building",
     );
   }
 
@@ -262,13 +260,15 @@ Elab.Mapbox = (function (Elab) {
     var allData = null;
     var geojsonData = null;
     var currentProp = config.column;
-    var nameProp = config.name
-    var colors = config.colors.split(";")
+    var nameProp = config.name;
+    var colors = config.colors.split(";");
     var legendTitle = config.legendTitle;
     var gradientType = config.gradientType;
+    var cutoffs = config.cutoffs ? config.cutoffs.split(",").map(Number) : null;
+    var usesCustomCutoffs = !!cutoffs;
     var colorScale = null;
     var layersAdded = false;
-    var formatter = getFormatter(config.format)
+    var formatter = getFormatter(config.format);
     var usBounds = [
       [-129.54443, 18.235058],
       [-63.802242, 52.886017],
@@ -284,8 +284,7 @@ Elab.Mapbox = (function (Elab) {
     createLegend();
 
     function getTooltipValue(feature, prop) {
-      if (!feature.properties[prop] && feature.properties[prop] !== 0)
-        return null;
+      if (!feature.properties[prop] && feature.properties[prop] !== 0) return null;
       var value = formatter(feature.properties[prop]);
       return value;
     }
@@ -300,16 +299,10 @@ Elab.Mapbox = (function (Elab) {
       renderTooltip(e.features[0], e);
       if (e.features.length > 0) {
         if (hoveredStateId) {
-          map.setFeatureState(
-            { source: "choropleth", id: hoveredStateId },
-            { hover: false }
-          );
+          map.setFeatureState({ source: "choropleth", id: hoveredStateId }, { hover: false });
         }
         hoveredStateId = e.features[0].id;
-        map.setFeatureState(
-          { source: "choropleth", id: hoveredStateId },
-          { hover: true }
-        );
+        map.setFeatureState({ source: "choropleth", id: hoveredStateId }, { hover: true });
       }
     }
 
@@ -320,10 +313,7 @@ Elab.Mapbox = (function (Elab) {
       map.getCanvas().style.cursor = "";
       tooltip.style.display = "none";
       if (hoveredStateId) {
-        map.setFeatureState(
-          { source: "choropleth", id: hoveredStateId },
-          { hover: false }
-        );
+        map.setFeatureState({ source: "choropleth", id: hoveredStateId }, { hover: false });
       }
       hoveredStateId = null;
     }
@@ -368,7 +358,7 @@ Elab.Mapbox = (function (Elab) {
           }
           allData = parseValues(data);
           geojsonData = addDataToGeojson(geojson, allData, config);
-          colorScale = getColorScale(allData, currentProp)
+          colorScale = getColorScale(allData, currentProp);
           map.addSource("choropleth", {
             type: "geojson",
             data: geojsonData,
@@ -384,12 +374,14 @@ Elab.Mapbox = (function (Elab) {
     /** Gets the range of  data values */
     function getRange(prop) {
       if (!allData) return [0, 1];
+      // if cutoffs passed in, use its extents rather than the data's
+      if (usesCustomCutoffs) return [cutoffs[0], cutoffs[cutoffs.length - 1]];
       var extent = d3.extent(allData, function (d) {
         return d[prop];
       });
       return [0, extent[1]];
     }
-    
+
     /** Updates the map layers and legend */
     function update() {
       var range = getRange(currentProp);
@@ -397,15 +389,25 @@ Elab.Mapbox = (function (Elab) {
         map.removeLayer("choropleth");
         map.removeLayer("choropleth-stroke");
       }
-      addChoroplethFillLayer(map, currentProp, range, colors, gradientType);
-      addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType);
-      layersAdded = true;      
+      addChoroplethFillLayer(
+        map,
+        currentProp,
+        range,
+        colors,
+        gradientType,
+        cutoffs,
+        usesCustomCutoffs,
+      );
+      addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType, cutoffs);
+      layersAdded = true;
       gradientType === "discrete" ? renderDiscreteLegend() : renderLegend();
     }
 
     /** add DOM elements for legend */
     function createLegend() {
-      rootEl.append('<div class="legend"><p class="legend__title"></p><div class="legend__gradient"></div><div class="legend__gradient-labels"></div></div>')
+      rootEl.append(
+        '<div class="legend"><p class="legend__title"></p><div class="legend__gradient"></div><div class="legend__gradient-labels"></div></div>',
+      );
     }
 
     /** return labels for ends of legend */
@@ -418,93 +420,108 @@ Elab.Mapbox = (function (Elab) {
       // container elements
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
-      var titleContainer = rootEl.find(".legend__title")
+      var titleContainer = rootEl.find(".legend__title");
 
       // legend settings
       var width = gradientContainer[0].clientWidth;
       var margin = 20;
-      var tickFormat = ",d"
-      
+      var tickFormat = ",d";
+
+      // create tick values based on a "nice" discrete scale (unless custom cutoffs)
+      var range = getRange(currentProp);
+      var discreteScale = getDiscreteColorScale(range, colors, usesCustomCutoffs);
+      var colorSteps = getLayerColors(discreteScale.domain(), colors, "discrete", cutoffs);
+      var tickValues = colorSteps.filter(function (value) {
+        return typeof value === "number";
+      });
+      tickValues.push(discreteScale.domain()[1]);
+
       // creates an axis with the given scale
       function axis(scale) {
         return Object.assign(d3.axisBottom(scale.range([margin, width - margin])), {
-          render: function() {
-            return d3.create("svg")
-                .attr("viewBox", [0, -4, width, 32])
-                .attr("width", width)
-                .attr("height", 32)
-                .style("display", "block")
-                .call(this)
+          render: function () {
+            return d3
+              .create("svg")
+              .attr("viewBox", [0, -4, width, 32])
+              .attr("width", width)
+              .attr("height", 32)
+              .style("display", "block")
+              .call(this)
               .node();
-          }
+          },
         });
       }
 
       // create swatches for colors
       function swatches(colors) {
-        const n = colors.length;
-        const swatchWidth = (1/n) * (width - margin*2);
+        // const n = colors.length;
+        const getSwatchX = (i) => {
+          const totalPx = width - margin * 2;
+          // if (!cutoffs) return (i / n) * totalPx;
+          const x0 = tickValues[0];
+          const thisX = tickValues[i];
+          const totalX = tickValues[tickValues.length - 1] - x0;
+          return ((thisX - x0) / totalX) * totalPx;
+        };
         return {
-          render: function() {
-            var svg = d3.create("svg")
-                .attr("viewBox", [0, 0, width, 16])
-                .attr("width", width)
-                .attr("height", 16)
-                .style("display", "block")
-            svg.selectAll("rect")
+          render: function () {
+            var svg = d3
+              .create("svg")
+              .attr("viewBox", [0, 0, width, 16])
+              .attr("width", width)
+              .attr("height", 16)
+              .style("display", "block");
+            svg
+              .selectAll("rect")
               .data(colors)
               .enter()
-                .append("rect")
-                .attr("fill", function(d) { return d} )
-                .attr("width", swatchWidth)
-                .attr("height", 24)
-                .attr("x", function(d,i) { return margin + (i * swatchWidth) })
-                .attr("y", 0)
-             return svg.node()
-          }
-        }
+              .append("rect")
+              .attr("fill", function (d) {
+                return d;
+              })
+              .attr("width", function (d, i) {
+                return getSwatchX(i + 1) - getSwatchX(i);
+              })
+              .attr("height", 24)
+              .attr("x", function (d, i) {
+                return margin + getSwatchX(i);
+              })
+              .attr("y", 0);
+            return svg.node();
+          },
+        };
       }
-      
-      // render color swatches
-      gradientContainer.append(swatches(colors).render())
 
-      // create tick values based on a "nice" discrete scale
-      var range = getRange(currentProp);
-      var discreteScale = getDiscreteColorScale(range, colors);
-      var colorSteps = getLayerColors(discreteScale.domain(), colors, "discrete")
-      var tickValues = colorSteps.filter(function(value) { return typeof value === "number" })
-      tickValues.push(discreteScale.domain()[1])
-      var tickScale = d3.scaleLinear().domain(discreteScale.domain())
-      var axisNode = axis(tickScale)
-        .tickValues(tickValues, tickFormat)
-        .render()
+      // render color swatches
+      gradientContainer.append(swatches(colors).render());
+
+      var tickScale = d3.scaleLinear().domain(discreteScale.domain());
+      var axisNode = axis(tickScale).tickValues(tickValues, tickFormat).render();
       labelContainer.append(axisNode);
 
       // set title
-      titleContainer.html(legendTitle)
-      titleContainer.css("padding-left", margin)
+      titleContainer.html(legendTitle);
+      titleContainer.css("padding-left", margin);
     }
 
     function renderLegend() {
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
-      var titleContainer = rootEl.find(".legend__title")
+      var titleContainer = rootEl.find(".legend__title");
       var range = getRange(currentProp);
-      var linearGradient = getCssGradient(colors)
+      var linearGradient = getCssGradient(colors);
       gradientContainer.css("background-image", linearGradient);
       var html = LegendLabelTemplate({
         labels: getGradientLabels(currentProp, range),
       });
       labelContainer.html(html);
-      titleContainer.html(legendTitle)
+      titleContainer.html(legendTitle);
     }
 
     function renderTooltip(feature, e) {
       var tooltipContainer = $(tooltip);
       var html = TooltipTemplate({
-        name: feature.properties[nameProp]
-          ? feature.properties[nameProp]
-          : "Unknown",
+        name: feature.properties[nameProp] ? feature.properties[nameProp] : "Unknown",
         value: getTooltipValue(feature, currentProp),
       });
       var flipped = e.originalEvent.pageX > window.innerWidth - 240;
@@ -514,7 +531,7 @@ Elab.Mapbox = (function (Elab) {
         .css({
           display: "block",
           left: e.originalEvent.pageX + space + "px",
-          top: e.originalEvent.pageY - window.scrollY  + 32 + "px",
+          top: e.originalEvent.pageY - window.scrollY + 32 + "px",
         })
         .html(html);
     }

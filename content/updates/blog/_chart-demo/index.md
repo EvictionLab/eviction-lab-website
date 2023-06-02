@@ -50,6 +50,37 @@ Below are examples of interactive data viz components that can be repurposed wit
   legendTitle="Filing Rate (2017 - 2018)"
 %}}
 
+{{% mapbox
+  id="mapbox3"
+  data="/uploads/hisd_data.csv"
+  shapes="/uploads/hisd_shapes.json"
+  column="totalfilings"
+  join="Code"
+  name="school"
+  gradientType="discrete"
+  format="integer"
+  title="Discrete-scale choropleth map"
+  legendTitle="Eviction Filings (2017 - 2018)"
+  colors="rgba(226, 64, 0, 0.33);rgba(226, 64, 0, 0.66);rgba(226, 64, 0, 1)"
+%}}
+
+<!-- cutoffs: provide the min, each cutoff, and max, to be used for choropleth coloring and legend -->
+<!-- colors: provide 1 for each "bucket" (so 1 fewer than cutoffs) -->
+{{% mapbox
+  id="mapbox4"
+  data="/uploads/hisd_data.csv"
+  shapes="/uploads/hisd_shapes.json"
+  column="totalfilings"
+  join="Code"
+  name="school"
+  gradientType="discrete"
+  format="integer"
+  title="Discrete-scale choropleth map with custom cutoffs"
+  legendTitle="Eviction Filings (2017 - 2018)"
+  cutoffs="7,100,400,800,1630"
+  colors="rgba(226, 64, 0, 0.25);rgba(226, 64, 0, 0.5);rgba(226, 64, 0, 0.75);rgba(226, 64, 0, 1)"
+%}}
+
 {{% state-map
   id="statemap1"
   data="/uploads/score_map_uncorrected_20210322.csv"
