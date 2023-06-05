@@ -6,7 +6,7 @@ contenttype: updates
 contentcat: research
 featured: true
 title: "When it’s cheap to file an eviction case, tenants pay the price"
-date: 2023-06-02T16:46:40.089Z
+date: 2023-06-05T16:46:40.089Z
 postauthortitle: The Eviction Lab
 listSummary: We wanted to understand how these filing fees affected eviction patterns. We found that higher filing fees lead to lower eviction rates, and that effects are largest for renters in majority-Black neighborhoods.
 socialDescription: We show that higher filing fees lead to lower eviction rates, and that effects are largest for renters in majority-Black neighborhoods.
