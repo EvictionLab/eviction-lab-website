@@ -265,11 +265,33 @@
   }
 }
 
-/** ...Besides the bars, which get to big */
+/** ...Besides the bars, which get too big */
 @media(min-width: 768px) {
   .chart.proportion-bars {
     width: 84%;
     margin-left: 8%;
+  }
+}
+/* visuals marked 'extra-grow' break out further outside of content width */
+@media(min-width: 768px) {
+  .extra-grow .visual {
+    width: 136%;
+    margin-left: -18%;
+  }
+
+  .extra-grow .visual .visual__mapbox {
+    height: 440px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .extra-grow .visual {
+    width: 174%;
+    margin-left: -38%;
+  }
+
+  .extra-grow .visual .visual__mapbox {
+    height: 540px;
   }
 }
 /** 
@@ -277,7 +299,6 @@
   as several of the page level CSS definitions
   override this
 */
-
 body .chart .chart__title, body .chart .chart__title > *,
 body .visual .visual__title, body .visual .visual__title > * {
   font-family: GT-Eesti-Display-Medium, sans-serif;
