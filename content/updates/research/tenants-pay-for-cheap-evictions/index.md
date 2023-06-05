@@ -8,16 +8,17 @@ featured: true
 title: "When it’s cheap to file an eviction case, tenants pay the price"
 date: 2023-06-02T16:46:40.089Z
 postauthortitle: The Eviction Lab
-listSummary: lorem ipsum dolor sit amet
-socialDescription: lorem ipsum dolor sit amet
+listSummary: We wanted to understand how these filing fees affected eviction patterns. We found that higher filing fees lead to lower eviction rates, and that effects are largest for renters in majority-Black neighborhoods.
+socialDescription: We show that higher filing fees lead to lower eviction rates, and that effects are largest for renters in majority-Black neighborhoods.
 researchtype: elresearch
 postauthorname: Henry Gomory, Douglas S. Massey, James R. Hendrickson, and Matthew Desmond
-twImage: local-moratoria-md-social.png
+twImage: sasha-israel-camden-1h9a5044.jpg
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Our methodology for building the Housing Policy Scorecard.
+description: We show that higher filing fees lead to lower eviction rates, and that effects are largest for renters in majority-Black neighborhoods.
 aliases: null
 collection: true
-fbImage: local-moratoria-md-social.png
+fbImage: sasha-israel-camden-1h9a5044.jpg
+image: sasha-israel-camden-1h9a5044.jpg
 scripts:
   - charts
   - mapbox
@@ -27,6 +28,7 @@ scripts:
 
 One explanation is the price that landlords have to pay for evicting a family. When a landlord goes to court in Mississippi, they usually pay a filing fee of $65 to start the process. In Georgia, it’s $87, on average. But in Alabama the average fee is $276. That higher price changes landlords’ economic calculus and encourages them to work with their tenants rather than turning immediately to the courts. In a research article published in the journal <em>Housing Policy Debate</em>, we show that higher filing fees lead to lower eviction rates, and that effects are largest for renters in majority-Black neighborhoods.
 
+<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
 <div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-5">
     <div class="pr-12 pr-md-0">
         <a href="https://www.tandfonline.com/doi/abs/10.1080/10511482.2023.2212662" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="hpd.jpg" /></a>
@@ -36,8 +38,9 @@ One explanation is the price that landlords have to pay for evicting a family. W
         <p class="mt-3" style="font-size: 1.6rem;">Henry Gomory, Douglas S. Massey, James R. Hendrickson, and Matthew Desmond</p>
     </div>
 </div>
+<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
 
-The difference in filing fees between Alabama, Mississippi, and Georgia is not unique to these three states. As part of this project, we collected filing fee information from all counties across the U.S. On average, the filing fee for an eviction case is $109, but the range is broad, from a low of $15 in much of Marylandup to $350 in Lee County, Alabama. In Figure 1 we map this out, showing just how widely these filing fees vary. We are making the data underlying this map publicly available for download <a href="./filing_fees.csv">here</a>. 
+The difference in filing fees between Alabama, Mississippi, and Georgia is not unique to these three states. As part of this project, we collected filing fee information from all counties across the U.S. On average, the filing fee for an eviction case is $109, but the range is broad, from a low of $15 in much of Maryland up to $350 in Lee County, Alabama. In Figure 1 we map this out, showing just how widely these filing fees vary. We are making the data underlying this map publicly available for download <a href="./filing_fees.csv">here</a>. 
 
 <div class="extra-grow mb-4">
 {{% mapbox
@@ -91,6 +94,6 @@ Is raising the filing fee by $100 really enough to affect landlords’ decisions
 
 {{< pullquote "For all outcomes—filings, serial filings, and judgments—the effect of increasing the filing fee in driving down eviction rates was much larger in majority-Black than in majority-white neighborhoods." >}}
 
-Current eviction filing fees aren’t set for any particularly good reasons and don’t reflect the actual cost of the court administrative process. In many counties, these fees are simply the same as for any other civil court cases. In Minnesota, for example, filing an eviction case costs the same amount as filing for divorce or formally adopting a child. In other areas, court fees are raised or lowered for arbitrary reasons, such as funding a new court library or roadside memorial. [A report from Illinois](https://www.illinoiscourts.gov/Resources/4b970035-98ba-4110-86fc-60e02b6a126b/2016_Statutory_Court_Fee_Task_Force_Report.pdf) describes court fees as “a Byzantine system… a complex web of filing fees, fines, surcharges, and other costs… wildly inconsistent from county to county.”  This has led to the patchwork of high and low filing fees that we saw in Figure 1. This randomness was useful in our analysis because it allowed us to compare high- and low-fee areas that were otherwise very similar. 
+Current eviction filing fees aren’t set for any particularly good reasons and don’t reflect the actual cost of the court administrative process. In many counties, these fees are simply the same as for any other civil court case. In Minnesota, for example, filing an eviction case costs the same amount as filing for divorce or formally adopting a child. In other areas, court fees are raised or lowered for arbitrary reasons, such as funding a new court library or roadside memorial. [A report from Illinois](https://www.illinoiscourts.gov/Resources/4b970035-98ba-4110-86fc-60e02b6a126b/2016_Statutory_Court_Fee_Task_Force_Report.pdf) describes court fees as “a Byzantine system… a complex web of filing fees, fines, surcharges, and other costs… wildly inconsistent from county to county.”  This has led to the patchwork of high and low filing fees that we saw in Figure 1. This randomness was useful in our analysis because it allowed us to compare high- and low-fee areas that were otherwise very similar. 
 
 This variation in filing fees also signals an opportunity for policymakers looking for ways to improve housing stability. If people are paying the same amount to get divorced as to evict a tenant, it exposes the fundamental arbitrariness of these fees. Filing fees are bureaucratic artifacts that have little reason to remain at their current levels. Increasing these fees could dramatically reduce evictions and help tenants remain stably housed. 
