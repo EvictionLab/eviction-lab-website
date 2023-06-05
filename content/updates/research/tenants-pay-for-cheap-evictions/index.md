@@ -19,6 +19,7 @@ aliases: null
 collection: true
 fbImage: sasha-israel-camden-1h9a5044.jpg
 image: sasha-israel-camden-1h9a5044.jpg
+photoCredit: Sasha Israel
 scripts:
   - charts
   - mapbox
