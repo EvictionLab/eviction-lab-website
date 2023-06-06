@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: /tenants-pay-for-cheap-evictions/
 contenttype: updates
