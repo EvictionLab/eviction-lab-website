@@ -1,0 +1,80 @@
+{{ partial "header" . }}
+
+<!-- section header -->
+<div class="graphic-header wem-hero center-page-wrapper">
+  <div class="center-page">
+    <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
+    <div class="underbar"></div>
+  </div>
+</div>
+
+<!-- subnav -->
+<div class="shadow-bottom center-page-wrapper subnav">
+  <div class="center-content-post max1200">
+    <ul class="anchor-links mobile-off">
+      <li class="only-larger-screens">{{ .Params.nav.li1 }}</li>
+      <li><a href="#intro-link" class="smoothScroll">{{ .Params.nav.li2 }}</a></li>
+      <li><a href="#que-es-desktop" class="smoothScroll">{{ .Params.nav.li3 }}</a></li>
+      <li><a href="#necesito-ayuda" class="smoothScroll">{{ .Params.nav.li4 }}</a></li>
+      <li><a href="#comparte" class="smoothScroll">{{ .Params.nav.li5 }}</a></li>
+    </ul>
+    <div class="dropdown mobile-on">
+      <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ .Params.nav.li1 }}
+      </button>
+      <ul class="anchor-links dropdown-menu">
+        <li><a class="dropdown-item smoothScroll" href="#intro-link">{{ .Params.nav.li2 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#que-es">{{ .Params.nav.li3 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#necesito-ayuda">{{ .Params.nav.li4 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#comparte">{{ .Params.nav.li5 }}</a></li>            
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="alt-page eviction-matters social-side">
+
+  {{ partial "social-share-vert" . }}
+
+  <div class="center-page-wrapper eqa">
+    <div class="center-content-post page-list eviction-facts">
+      <div id="intro-link">
+          <a name="intro-link"></a>
+          <h2 class="bordered-header blue ">Introducción</h2>
+          <h2 class="red mb-4">Cada año, más de 2,7 millones de familias se ven forzadas a dejar su hogar por desalojos en Estados Unidos.</h2> 
+          <p>Sin embargo, sabemos muy poco sobre cómo este problema afecta a los inmigrantes indocumentados.</p> 
+          <p>Necesitamos tu testimonio para entender esta situación y proponer soluciones.</p>
+          <p>{{ .Params.intro.text | markdownify | safeHTML }}
+            <a name="que-es-desktop" class="d-block mt-8"></a> 
+          </p>
+         
+          
+      </div>
+   
+    <div id="que-es">
+      <a name="eviction-facts"></a>
+      <h2 class="bordered-header blue ">{{ .Params.queEsSection.heading }}</h2>
+       <p>{{ .Params.queEsSection.text | markdownify | safeHTML }}</p>
+    </div>   
+    
+    <div id="necesito-ayuda">
+      <a name="eviction-facts"></a>
+      <h2 class="bordered-header blue mt-8">{{ .Params.needHelpSection.heading }}</h2>
+       <p>{{ .Params.needHelpSection.text | markdownify | safeHTML }}</p>
+    </div>     
+
+    <div id="comparte">
+      <a name="eviction-facts"></a>
+      <h2 class="bordered-header blue mt-6">{{ .Params.comparteSection.heading }}</h2>
+    </div>  
+
+    </div><!-- End center content post -->
+  </div><!-- End center page wrapper -->
+
+</div><!-- end page-content wrapper -->
+
+</div><!-- end center page wrapper -->
+</div><!-- end alt-bg -->
+</div><!-- end WEM Page ID -->
+
+{{ partial "footer" . }}
