@@ -56,7 +56,7 @@ scripts:
     z-index: 10;
     background: white;
     position: fixed; 
-    bottom: 20px;
+    bottom: 26px;
   }
 </style>
 
