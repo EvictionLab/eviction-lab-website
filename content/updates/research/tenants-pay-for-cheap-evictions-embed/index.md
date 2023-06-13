@@ -49,6 +49,9 @@ scripts:
     height: 100vh;
   }
 
+  .visual__mapbox {
+    min-height: unset;
+  }
   .visual--mapbox .legend {
     z-index: 100000;
     background: white;
