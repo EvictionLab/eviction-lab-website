@@ -53,7 +53,7 @@ scripts:
     min-height: unset;
   }
   .visual--mapbox .legend {
-    z-index: 100000;
+    z-index: 10;
     background: white;
     position: fixed; 
     bottom: 20px;
