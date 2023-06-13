@@ -41,9 +41,19 @@ scripts:
   body > *:not(#fee_by_county_map) {
     display: none;
   }
-  #fee_by_county_map .map {
+  #fee_by_county_map, #fee_by_county_map .map {
     /* height: calc(50vw); */
     /* max-height: 100%; */
+    width: 100% !important;
+    margin: 0 !important;
+    height: 100vh;
+  }
+
+  .visual--mapbox .legend {
+    z-index: 100000;
+    background: white;
+    position: fixed; 
+    bottom: 20px;
   }
 </style>
 
