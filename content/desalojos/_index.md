@@ -29,7 +29,7 @@ intro:
 
  
 
-    **¿Quieres contarnos tu experiencia?** Escríbenos a desalojos@evictionlab.org o manda un mensaje por <a href="https://wa.me/19174012210">WhatsApp al +1-971-401-2210</a>. También puedes responder este breve cuestionario de manera segura y anónima.
+    **¿Quieres contarnos tu experiencia?** Escríbenos a desalojos@evictionlab.org o manda un mensaje por <a href="https://wa.me/19714012210">WhatsApp al +1-971-401-2210</a>. También puedes responder este breve cuestionario de manera segura y anónima.
 
  
 
@@ -46,7 +46,7 @@ intro:
 
     <img class="px-0 my-6" src="postcard.jpeg" />
 
-    ¿Necesitas ayuda o tienes preguntas sobre cómo funciona un desalojo? **Escríbenos un mensaje por <a href="https://wa.me/19174012210">WhatsApp al +1-971-401-2210</a>.**
+    ¿Necesitas ayuda o tienes preguntas sobre cómo funciona un desalojo? **Escríbenos un mensaje por <a href="https://wa.me/19714012210">WhatsApp al +1-971-401-2210</a>.**
 
     Este es un proyecto de Eviction Lab, un centro de investigación en temas de vivienda de la Universidad de Princeton. Para más información sobre el proyecto, por favor contactar a Juan Pablo Garnham <a href="mailto:desalojos@evictionlab.org">por correo electrónico</a> o con un mensaje al teléfono WHATSAPP al +1-971-401-2210.  
   
@@ -80,7 +80,7 @@ needHelpSection:
 
     Incluso si no tienes papeles, **tienes derechos en EEUU y no puedes ser discriminado por tu origen o idioma**. 
 
-    Tus derechos y deberes pueden variar dependiendo del lugar donde vives o de donde te encuentres. Lo mejor para saber más de esto es contactar a organizaciones locales. Nos puedes contactar por <a href="https://wa.me/19174012210">WhatsApp (+1-971-401-2210)</a> o por correo electrónico (desalojos@evictionlab.org) para que te demos información de las organizaciones en tu ciudad o estado que podrían ayudarte.
+    Tus derechos y deberes pueden variar dependiendo del lugar donde vives o de donde te encuentres. Lo mejor para saber más de esto es contactar a organizaciones locales. Nos puedes contactar por <a href="https://wa.me/19714012210">WhatsApp (+1-971-401-2210)</a> o por correo electrónico (desalojos@evictionlab.org) para que te demos información de las organizaciones en tu ciudad o estado que podrían ayudarte.
 
     **La discriminación en temas de vivienda en base a raza, color, origen nacional, religión, sexo, condición familiar, una familia con niños menores de edad, o una persona embarazada o discapacidad está prohibida** a nivel nacional. El Departamento de Vivienda y Desarrollo Urbano recibe quejas e investiga casos al respecto (<a href="https://www.hud.gov/espanol/complaints/housediscrim" target="_blank">más información aquí</a>).
 
@@ -100,7 +100,7 @@ needHelpSection:
 
     Tienes muchas más posibilidades de solucionar tu problema si buscas ayuda. **En algunas ciudades hay abogados gratuitos. En otras, hay grupos comunitarios que te pueden orientar**.
 
-    Los recursos para inquilinos indocumentados son más escasos, dependiendo de dónde vives. Contáctanos a <a href="desalojos@evictionlab.org" target="_blank">nuestro correo electrónico</a> o a nuestro teléfono por <a href="https://wa.me/19174012210">WhatsApp (+1-971-401-2210)</a> para saber si hay organizaciones de apoyo legal en tu zona. 
+    Los recursos para inquilinos indocumentados son más escasos, dependiendo de dónde vives. Contáctanos a <a href="desalojos@evictionlab.org" target="_blank">nuestro correo electrónico</a> o a nuestro teléfono por <a href="https://wa.me/19714012210">WhatsApp (+1-971-401-2210)</a> para saber si hay organizaciones de apoyo legal en tu zona. 
 
     También puedes buscar organizaciones civiles, comunitarias y legales en el sitio <a href="https://justshelter.org" target="_blank">JustShelter.Org</a>.
 
