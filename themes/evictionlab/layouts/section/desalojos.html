@@ -1,9 +1,9 @@
 {{ partial "header" . }}
 
 <!-- section header -->
-<div class="graphic-header wem-hero center-page-wrapper">
+<div class="graphic-header wem-hero center-page-wrapper d-flex flex-column justify-content-center">
   <div class="center-page">
-    <h1 class="graphic-page-header">{{ .Params.h1 }}</h1>
+    <h1 class="graphic-page-header pt-0">{{ .Params.h1 }}</h1>
     <div class="underbar"></div>
   </div>
 </div>
@@ -13,55 +13,54 @@
   <div class="center-content-post max1200">
     <ul class="anchor-links mobile-off">
       <li class="only-larger-screens">{{ .Params.nav.li1 }}</li>
-      <li><a href="#intro-link" class="smoothScroll">{{ .Params.nav.li2 }}</a></li>
-      <li><a href="#que-es-desktop" class="smoothScroll">{{ .Params.nav.li3 }}</a></li>
+      <li><a href="#intro" class="smoothScroll">{{ .Params.nav.li2 }}</a></li>
+      <li><a href="#que-es-desalojo" class="smoothScroll">{{ .Params.nav.li3 }}</a></li>
       <li><a href="#necesito-ayuda" class="smoothScroll">{{ .Params.nav.li4 }}</a></li>
-      <li><a href="#comparte" class="smoothScroll">{{ .Params.nav.li5 }}</a></li>
+      <li><a href="#comparte-historia" class="smoothScroll">{{ .Params.nav.li5 }}</a></li>
     </ul>
     <div class="dropdown mobile-on">
       <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{ .Params.nav.li1 }}
       </button>
       <ul class="anchor-links dropdown-menu">
-        <li><a class="dropdown-item smoothScroll" href="#intro-link">{{ .Params.nav.li2 }}</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#que-es">{{ .Params.nav.li3 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#intro">{{ .Params.nav.li2 }}</a></li>
+        <li><a class="dropdown-item smoothScroll" href="#que-es-desalojo">{{ .Params.nav.li3 }}</a></li>
         <li><a class="dropdown-item smoothScroll" href="#necesito-ayuda">{{ .Params.nav.li4 }}</a></li>
-        <li><a class="dropdown-item smoothScroll" href="#comparte">{{ .Params.nav.li5 }}</a></li>            
+        <li><a class="dropdown-item smoothScroll" href="#comparte-historia">{{ .Params.nav.li5 }}</a></li>            
       </ul>
     </div>
   </div>
 </div>
-
+<a name="intro"></a>
 <div class="alt-page eviction-matters social-side">
 
   {{ partial "social-share-vert" . }}
 
   <div class="center-page-wrapper eqa">
     <div class="center-content-post page-list eviction-facts">
-      <div id="intro-link">
-          <a name="intro-link"></a>
+      <div id="intro-section">
           <h2 class="bordered-header blue ">Introducción</h2>
           <p>{{ .Params.intro.text | markdownify | safeHTML }}
-            <a name="que-es-desktop" class="d-block mt-8"></a> 
+            <a name="que-es-desalojo" class="d-block mb-8"></a> 
           </p>
-         
+  
           
       </div>
-   
     <div id="que-es">
-      <a name="eviction-facts"></a>
       <h2 class="bordered-header blue ">{{ .Params.queEsSection.heading }}</h2>
-       <p>{{ .Params.queEsSection.text | markdownify | safeHTML }}</p>
+       <p>{{ .Params.queEsSection.text | markdownify | safeHTML }}
+        <a name="necesito-ayuda"></a>
+       </p>
+       
     </div>   
     
     <div id="necesito-ayuda">
-      <a name="eviction-facts"></a>
       <h2 class="bordered-header blue mt-8">{{ .Params.needHelpSection.heading }}</h2>
        <p>{{ .Params.needHelpSection.text | markdownify | safeHTML }}</p>
+       <a name="comparte-historia"></a>
     </div>     
 
     <div id="comparte">
-      <a name="eviction-facts"></a>
       <h2 class="bordered-header blue mt-6">{{ .Params.comparteSection.heading }}</h2>
     </div>  
 
