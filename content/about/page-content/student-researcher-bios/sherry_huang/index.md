@@ -1,10 +1,10 @@
 ---
-childof: student-researcher-bios
-category: student
+childof: alumni-bios
+category: alumni-student
 abbrev: shuang
 title: Sherry Huang
-position: Research Assistant
+position: Summer Intern
 image: shuang_full.jpg
 thumb: shuang_thumb.jpg
-weight: 70
+weight: 315
 ---
