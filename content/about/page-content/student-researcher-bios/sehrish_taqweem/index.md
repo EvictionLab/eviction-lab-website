@@ -1,10 +1,10 @@
 ---
-childof: student-researcher-bios
-category: student
+childof: alumni-bios
+category: alumni-student
 abbrev: staqweem
 title: Sehrish Taqweem
-position: Research Assistant
+position: Summer Intern
 image: staqweem_full.jpg
 thumb: staqweem_thumb.jpg
-weight: 90
+weight: 410
 ---
