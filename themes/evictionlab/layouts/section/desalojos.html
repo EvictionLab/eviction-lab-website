@@ -1,5 +1,6 @@
 {{ partial "header" . }}
 
+
 <!-- section header -->
 <div class="graphic-header wem-hero center-page-wrapper d-flex flex-column justify-content-center">
   <div class="center-page">
@@ -36,40 +37,46 @@
 
   {{ partial "social-share-vert" . }}
 
-  <div class="center-page-wrapper eqa">
+  <div class="center-page-wrapper eqa" style="background-color: #fff;">
     <div class="center-content-post page-list eviction-facts">
       <div id="intro-section">
           <h2 class="bordered-header blue ">Introducción</h2>
           <p>{{ .Params.intro.text | markdownify | safeHTML }}
             <a name="que-es-desalojo" class="d-block mb-8"></a> 
-          </p>
-  
-          
+          </p>          
       </div>
-    <div id="que-es">
-      <h2 class="bordered-header blue ">{{ .Params.queEsSection.heading }}</h2>
-       <p>{{ .Params.queEsSection.text | markdownify | safeHTML }}
-        <a name="necesito-ayuda"></a>
-       </p>
-       
-    </div>   
-    
-    <div id="necesito-ayuda">
-      <h2 class="bordered-header blue mt-8">{{ .Params.needHelpSection.heading }}</h2>
-       <p>{{ .Params.needHelpSection.text | markdownify | safeHTML }}</p>
-       <a name="comparte-historia"></a>
-    </div>     
-
-    <div id="comparte">
-      <h2 class="bordered-header blue mt-6">{{ .Params.comparteSection.heading }}</h2>
-      <div class="mx-auto d-none d-md-block">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVU1JAGY03eAp5hGkbTxLHPQ09OfzIjacmzItcGfnH-oPz_A/viewform?embedded=true" width="640" height="3000" frameborder="0" marginheight="0" marginwidth="0" style="margin: auto; display: block;">Loading…</iframe>
+    </div>
+  </div>   
+  <div class="center-page-wrapper eqa">
+    <div class="center-content-post page-list eviction-facts">
+      <div id="que-es"> 
+        <h2 class="bordered-header blue ">{{ .Params.queEsSection.heading }}</h2>
+        <p>{{ .Params.queEsSection.text | markdownify | safeHTML }}
+          <a name="necesito-ayuda"></a>
+        </p>
+      </div> 
+    </div>
+  </div>      
+  <div class="center-page-wrapper eqa" style="background-color: #fff;">
+    <div class="center-content-post page-list eviction-facts">  
+      <div id="necesito-ayuda">
+        <h2 class="bordered-header blue">{{ .Params.needHelpSection.heading }}</h2>
+        <p>{{ .Params.needHelpSection.text | markdownify | safeHTML }}</p>
+        <a name="comparte-historia"></a>
+      </div>   
+    </div>    
+  </div>  
+  <div class="center-page-wrapper eqa">
+    <div class="center-content-post page-list eviction-facts">
+      <div id="comparte">
+        <h2 class="bordered-header blue">{{ .Params.comparteSection.heading }}</h2>
+        <div class="mx-auto d-none d-md-block">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVU1JAGY03eAp5hGkbTxLHPQ09OfzIjacmzItcGfnH-oPz_A/viewform?embedded=true" width="640" height="3000" frameborder="0" marginheight="0" marginwidth="0" style="margin: auto; display: block;">Loading…</iframe>
+        </div>  
+        <div class="mx-auto d-block d-md-none">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVU1JAGY03eAp5hGkbTxLHPQ09OfzIjacmzItcGfnH-oPz_A/viewform?embedded=true" width="350" height="3600" frameborder="0" marginheight="0" marginwidth="0" style="margin: auto; display: block;">Loading…</iframe>
+        </div>  
       </div>  
-      <div class="mx-auto d-block d-md-none">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVU1JAGY03eAp5hGkbTxLHPQ09OfzIjacmzItcGfnH-oPz_A/viewform?embedded=true" width="350" height="3600" frameborder="0" marginheight="0" marginwidth="0" style="margin: auto; display: block;">Loading…</iframe>
-      </div>  
-    </div>  
-
     </div><!-- End center content post -->
   </div><!-- End center page wrapper -->
 

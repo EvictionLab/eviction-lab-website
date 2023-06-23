@@ -16,7 +16,7 @@ nav:
 intro:
   heading: Introduction
   text: >- 
-    <h2 class="red mb-4">Cada año, más de 2,7 millones de familias se ven forzadas a dejar su hogar por desalojos en Estados Unidos.</h2> 
+    <h2 class="red mb-4 desalojos-pullquote">Cada año, más de 2,7 millones de familias se ven forzadas a dejar su hogar por desalojos en Estados Unidos.</h2> 
 
 
     Sin embargo, sabemos muy poco sobre cómo este problema afecta a los inmigrantes indocumentados.
