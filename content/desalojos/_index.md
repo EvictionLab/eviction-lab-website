@@ -2,7 +2,7 @@
 title: "Proyecto Desalojos Entra la Comunidad Indocumentada | Eviction Lab"
 date: 2017-11-19T20:43:49-08:00
 type: index
-image: child-in-court-social.jpg
+image: '/child-in-court-social.jpg'
 photoCredit: Sasha Israel
 hasSubnav: true
 socialDescription: Necesitamos tu testimonio para entender esta situación y proponer soluciones.

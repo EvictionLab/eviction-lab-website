@@ -780,5 +780,60 @@ collections:
           hint: "Size to 432 × 432 px, no more than 64kb"
         }  
       - { label: "Order", name: "weight", widget: "number", hint: "Smaller number = earlier in the list" }
-  
-   
+#
+#  - label: "Desalojos"
+#    name: "desalojos"
+#    file: "content/desalojos/index.md"
+#    identifier_field: name
+#    fields:
+#      - {
+#          label: "Title",
+#          name: "title",
+#          widget: "string",
+#        }
+#      - {
+#        label: "type",
+#        name: "type",
+#        widget: "hidden",
+#        default: 'index',
+#        }
+#      - {
+#        label: "image",
+#        name: "image",
+#        widget: "hidden",
+#        default: 'child-in-court-social.jpg',
+#        } 
+#      - {
+#        label: "hasSubnav",
+#        name: "hasSubnav",
+#        widget: "hidden",
+#        default: true,
+#        }   
+#      - {
+#        label: "Social Media Description",
+#        name: "socialDescription",
+#        widget: "string",
+#        }   
+#      - {
+#        label: "SEO Description",
+#        name: "description",
+#        widget: "string",
+#        } 
+#      - {
+#        label: "Hero Heading",
+#        name: "h1",
+#        widget: "string",
+#        }  
+#    label: "intro",
+#    name: "intro",
+#    fields:
+#      - {
+#        label: "Heading",
+#        name: "heading",
+#        widget: "string",
+#      }
+#               
+#       
+#
+#
+#
