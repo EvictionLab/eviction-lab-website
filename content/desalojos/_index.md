@@ -1,11 +1,12 @@
 ---
-title: "Desalojos | Eviction Lab"
+title: "Proyecto Desalojos Entra la Comunidad Indocumentada | Eviction Lab"
 date: 2017-11-19T20:43:49-08:00
 type: index
+image: child-in-court-social.jpg
 photoCredit: Sasha Israel
 hasSubnav: true
-socialDescription: We’ve built the first nationwide database of evictions.  
-description: Learn about eviction, its effects, and why it matters.
+socialDescription: Necesitamos tu testimonio para entender esta situación y proponer soluciones.
+description: Necesitamos tu testimonio para entender esta situación y proponer soluciones.
 h1: Proyecto Desalojos entre la Comunidad Indocumentada
 nav:
   li1: IR A LA SECCIÓN
@@ -86,7 +87,7 @@ needHelpSection:
 
     ### 2. Puedes esperar (aunque debes actuar)
 
-    **No tienes que dejar tu hogar sino hasta que un juez lo ordene**. Infórmate sobre cómo funciona el proceso de desalojo aquí.
+    **No tienes que dejar tu hogar sino hasta que un juez lo ordene**. Infórmate sobre <a href="#que-es-desalojo" class="smoothScroll">cómo funciona el proceso de desalojo aquí</a>.
 
     Como inquilino, eres libre de dejar tu hogar cuando comienza este proceso, pero en la mayoría de los estados puedes disputar tu caso en la corte, sin importar si eres indocumentado.
 
@@ -100,7 +101,7 @@ needHelpSection:
 
     Tienes muchas más posibilidades de solucionar tu problema si buscas ayuda. **En algunas ciudades hay abogados gratuitos. En otras, hay grupos comunitarios que te pueden orientar**.
 
-    Los recursos para inquilinos indocumentados son más escasos, dependiendo de dónde vives. Contáctanos a <a href="desalojos@evictionlab.org" target="_blank">nuestro correo electrónico</a> o a nuestro teléfono por <a href="https://wa.me/19714012210">WhatsApp (+1-971-401-2210)</a> para saber si hay organizaciones de apoyo legal en tu zona. 
+    Los recursos para inquilinos indocumentados son más escasos, dependiendo de dónde vives. Contáctanos a <a href="mailto:desalojos@evictionlab.org" target="_blank">nuestro correo electrónico</a> o a nuestro teléfono por <a href="https://wa.me/19714012210">WhatsApp (+1-971-401-2210)</a> para saber si hay organizaciones de apoyo legal en tu zona. 
 
     También puedes buscar organizaciones civiles, comunitarias y legales en el sitio <a href="https://justshelter.org" target="_blank">JustShelter.Org</a>.
 
