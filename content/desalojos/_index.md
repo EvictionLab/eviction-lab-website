@@ -1,5 +1,5 @@
 ---
-title: "Proyecto Desalojos Entra la Comunidad Indocumentada | Eviction Lab"
+title: "Proyecto Desalojos Entre la Comunidad Indocumentada | Eviction Lab"
 date: 2017-11-19T20:43:49-08:00
 type: index
 image: '/desalojos/child-in-court-social.jpg'
@@ -45,7 +45,7 @@ intro:
 
     Comparte esta información en usando esta imagen.
 
-    <img class="px-0 my-6" src="postcard.jpeg" />
+    <img class="px-0 my-6" src="postcard_undocumented_spa.jpg" />
 
     ¿Necesitas ayuda o tienes preguntas sobre cómo funciona un desalojo? **Escríbenos un mensaje por <a href="https://wa.me/19714012210">WhatsApp al +1-971-401-2210</a>.**
 
