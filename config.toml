@@ -31,24 +31,13 @@ languageName = "English"
     name = "Newest Findings & Stories"
     weight = 6
 [[Languages.en.menu.main]]
-    name = "All Updates"
-    weight = 7
-    url = "/updates/"
-[[Languages.en.menu.main]]
-    name = "Blog"
-    weight = 8
-    url = "/updates/blog"
-    params = { class = "nested" }
-[[Languages.en.menu.main]]
     name = "Research"
-    weight = 9
-    url = "/updates/research"
-    params = { class = "nested" }
+    weight = 7
+    url = "/research/"    
 [[Languages.en.menu.main]]
-    name = "Reporting"
-    weight = 10
-    url = "/updates/reporting"
-    params = { class = "nested" }
+    name = "Updates"
+    weight = 8
+    url = "/updates/"
 [[Languages.en.menu.main]]
     name = "National Data (2000-2018)"
     weight = 11
@@ -84,23 +73,27 @@ languageName = "English"
 [[Languages.en.menu.footer]]
     name = "Home"
     weight = 1
-    url = "/"
+    url = "/"  
 [[Languages.en.menu.footer]]
-    name = "Map & Data"
+    name = "National Eviction Map"
     weight = 2
     url = "/map/"
 [[Languages.en.menu.footer]]
-    name = "Eviction Rankings"
+    name = "Eviction Tracking System"
     weight = 3
+    url = "/eviction-tracking/"  
+[[Languages.en.menu.footer]]
+    name = "Research"
+    weight = 4
+    url = "/research/"        
+[[Languages.en.menu.footer]]
+    name = "Eviction Rankings"
+    weight = 5
     url = "/rankings/"
 [[Languages.en.menu.footer]]
-    name = "COVID-19 Policy Scorecard"
-    weight = 4
-    url = "/covid-policy-scorecard/"
-[[Languages.en.menu.footer]]
-    name = "Eviction Tracking System"
+    name = "Policy Scorecard"
     weight = 6
-    url = "/eviction-tracking/"
+    url = "/covid-policy-scorecard/"
 [[Languages.en.menu.footer]]
     name = "About Us"
     weight = 7
@@ -122,10 +115,6 @@ languageName = "English"
     weight = 11
     url = "/updates/"
 [[Languages.en.menu.footer]]
-    name = "Contact Us"
-    weight = 11
-    url = "/contact"
-[[Languages.en.menu.footer]]
     name = "Get the Data"
     weight = 12
     url = "/get-the-data"
@@ -137,6 +126,10 @@ languageName = "English"
     name = "Media Guide"
     weight = 14
     url = "/media-guide/"
+[[Languages.en.menu.footer]]
+    name = "Contact Us"
+    weight = 15
+    url = "/contact"    
 
 
 [[Languages.en.menu.updates]]
@@ -189,24 +182,13 @@ languageName = "Español"
     name = "Hallazgos e historias más recientes"
     weight = 6
 [[Languages.es.menu.main]]
+    name = "Research"
+    weight = 7
+    url = "/research/"
+[[Languages.es.menu.main]]
     name = "Updates"
     weight = 7
-    url = "/updates/"
-[[Languages.es.menu.main]]
-    name = "Blog"
-    weight = 8
-    url = "/updates/blog"
-    params = { class = "nested" }
-[[Languages.es.menu.main]]
-    name = "Research"
-    weight = 9
-    url = "/updates/research"
-    params = { class = "nested" }
-[[Languages.es.menu.main]]
-    name = "Reporting"
-    weight = 10
-    url = "/updates/reporting"
-    params = { class = "nested" }
+    url = "/updates/"    
 [[Languages.es.menu.main]]
     name = "Datos nacionales (2000-2018)"
     weight = 11
@@ -243,57 +225,61 @@ languageName = "Español"
     weight = 1
     url = "/es/"
 [[Languages.es.menu.footer]]
-    name = "Mapa y datos"
+    name = "Mapa Nacional de Desalojo"
     weight = 2
     url = "/map/#/2016%3Flang%3Des"
 [[Languages.es.menu.footer]]
-    name = "Rankings de desalojos"
+    name = "Eviction Tracking System"
     weight = 3
+    url = "/eviction-tracking/"
+[[Languages.es.menu.footer]]
+    name = "Research"
+    weight = 4
+    url = "/research/"        
+[[Languages.es.menu.footer]]
+    name = "Rankings de desalojos"
+    weight = 5
     url = "/rankings/#/evictions%3Flang%3Des"
 [[Languages.es.menu.footer]]
+    name = "Policy Scorecard"
+    weight = 6
+    url = "/covid-policy-scorecard/"    
+[[Languages.es.menu.footer]]
     name = "Acerca de nosotros"
-    weight = 4
+    weight = 7
     url = "/es/about/"
 [[Languages.es.menu.footer]]
     name = "Por qué es importante el desalojo"
-    weight = 5
+    weight = 8
     url = "/es/why-eviction-matters"
 [[Languages.es.menu.footer]]
-    name = "COVID-19 Policy Scorecard"
-    weight = 6
-    url = "/covid-policy-scorecard/"
-[[Languages.es.menu.footer]]
-    name = "Eviction Tracking System"
-    weight = 7
-    url = "/eviction-tracking/"
-[[Languages.es.menu.footer]]
     name = "Métodos"
-    weight = 8
+    weight = 9
     url = "/es/methods/"
 [[Languages.es.menu.footer]]
     name = "Ayuda y preguntas frequentes"
-    weight = 9
+    weight = 10
     url = "/es/help-faq/"
 [[Languages.es.menu.footer]]
     name = "Actualizaciones"
-    weight = 10
+    weight = 11
     url = "/updates/"
 [[Languages.es.menu.footer]]
-    name = "Contactarnos"
-    weight = 11
-    url = "/es/contact"
-[[Languages.es.menu.footer]]
     name = "Obtener los datos"
-    weight = 11
+    weight = 12
     url = "/es/get-the-data"
 [[Languages.es.menu.footer]]
     name = "Aplicación de solicitud de datos"
-    weight = 12
+    weight = 13
     url = "/es/data-request"
 [[Languages.es.menu.footer]]
     name = "Guía de medios"
-    weight = 13
+    weight = 14
     url = "/media-guide/"
+[[Languages.es.menu.footer]]
+    name = "Contactarnos"
+    weight = 15
+    url = "/es/contact"    
 
 
 [[Languages.es.menu.updates]]
