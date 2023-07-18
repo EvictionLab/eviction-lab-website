@@ -16,8 +16,8 @@ socialDescription: We examine the benefits and challenges renters experienced as
 image: 'moratorium-renter.jpg'
 fbImage: 'moratorium-renter.jpg'
 twImage: 'moratorium-renter.jpg'
-url: /security-blanket
-aliases:
+url: /in-their-own-words-how-tenants-experienced-eviction-moratoria
+aliases: /security-blanket
 collection: true  
 ---
 Early in the COVID-19 pandemic, Lizzie{{< sup 1 >}}, a Black single mother living in Connecticut, was struggling to keep up with rent. She was only working one day a week after her employer cut her hours and her rental debt was growing. “Every month [I would see] that increase and the number get bigger, it got scary.” But Lizzie lived in a state with a strong eviction moratorium. That protection bought her enough time to apply for rental assistance, which she got just before her landlord intended to kick her out. “It never actually made it to court, because that is when the program came through”, she explained. “The timing was excellent.”
