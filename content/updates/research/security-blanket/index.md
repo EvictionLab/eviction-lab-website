@@ -3,7 +3,7 @@ childof: research
 contenttype: updates
 contentcat: research
 featured: true
-draft: true
+draft: false
 researchtype: elresearch
 title: 'In Their Own Words: How Tenants Experienced Eviction Moratoria'
 date: 2023-07-17T00:46:40.089Z
