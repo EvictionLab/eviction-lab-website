@@ -9,18 +9,16 @@ twImage: /images/assets/graphics/ets-bg-social.png
 title: Houston, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-
 {{< report_intro site_id="48201" data="/uploads/table.csv" >}}
 
 Eviction filings in Houston fell sharply once eviction proceedings were suspended across Texas on March 19, 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were far below average over the last two weeks of March, and through April and May. Eviction protections in Texas began to expire on May 18, 2020. Courts in Harris County resumed business shortly thereafter, followed by the courts in Galveston County in early June.
 
-
-
 {{</ report_intro >}}
 
 
-
 {{% report_chart id="avg" data="/uploads/houston_barchart.csv" %}}
+
+
 
 # Trends in eviction filings
 
@@ -28,6 +26,8 @@ This plot shows monthly eviction filings in Houston over the last year. Filings 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/)
+
+
 
 {{%/ report_chart %}}
 
@@ -38,12 +38,13 @@ This plot shows monthly eviction filings in Houston over the last year. Filings 
 
 Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), has continued in 2020 and beyond. We analyzed eviction records in Houston to determine where the most cases are being filed. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the last year. We also display the plaintiff name most often listed with a given building in the court filings. In the next section, we map the top 100 hotspots across the county.
 
-Eviction Hotspot data are updated semi-annuallyally.
+Eviction Hotspot data are updated semi-annually.
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_median_claims id="medianFilings" data="/uploads/houston_claims_monthly.csv" %}}
+
 
 
 
@@ -65,8 +66,8 @@ This data on claim amounts only covers Harris County. We do not currently collec
 
 
 
-{{%/ report_median_claims %}}
 
+{{%/ report_median_claims %}}
 
 
 {{% report_map shapes="/uploads/houston_shapes.json" data="/uploads/houston_map.csv" topFilers="/uploads/houston_hotspots_media_report.csv" %}}
@@ -81,13 +82,7 @@ Harris and Galveston counties are divided into 853 census tracts. In each of tho
 
 {{%/ report_map %}}
 
-
-
 {{% report_chart id="race" data="/uploads/houston_linechart.csv" imputedNoteNumber="2" %}}
-
-
-
-
 
 # The demographics of eviction filings
 
@@ -98,6 +93,5 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2012–2015. <sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
-
 
 {{%/ report_chart %}}
