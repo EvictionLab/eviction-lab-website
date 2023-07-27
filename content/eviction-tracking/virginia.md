@@ -1,5 +1,6 @@
 ---
 collection: true
+geographies: counties
 draft: false
 title: Virginia | Eviction Tracking System
 h1: Virginia
