@@ -1,5 +1,6 @@
 ---
 collection: true
+geographies: counties
 draft: false
 title: Rhode Island | Eviction Tracking System
 h1: Rhode Island

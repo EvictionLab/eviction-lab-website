@@ -1,5 +1,6 @@
 ---
 collection: true
+geographies: counties
 draft: false
 title: Wisconsin | Eviction Tracking System
 h1: Wisconsin

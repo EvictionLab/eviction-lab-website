@@ -1,5 +1,6 @@
 ---
 collection: true
+geographies: counties
 draft: false
 title: Pennsylvania | Eviction Tracking System
 h1: Pennsylvania
