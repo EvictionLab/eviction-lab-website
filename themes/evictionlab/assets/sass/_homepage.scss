@@ -202,13 +202,39 @@
             transition: filter .3s ease;
             &.image-ets {
                 height: 100%;
-                max-height: 219px;
             }
             &.image-large {
                 height: 121px;
                 @include media-breakpoint-up(lg) {
                     height: 200px;
                 }
+            }
+        }
+        #ets-block .feature-image {
+            background-size: 132%;
+            background-position: center top;
+            background-repeat: no-repeat;
+            min-height: 170px;
+            @include media-breakpoint-up(xxl) {
+                background-size: 144%
+            }
+            @include media-breakpoint-up(xxxl) {
+                background-size: 110%;
+            }
+        }
+        #research-page-block .feature-image {
+            background-size: 100%;
+            background-position: left top;
+            background-repeat: no-repeat;
+            min-height: 220px;
+            @include media-breakpoint-up(md) {
+                min-height: 156px;
+            }
+            @include media-breakpoint-up(xxl) {
+                min-height: 150px;
+            }
+            @include media-breakpoint-up(xxxl) {
+                min-height: 170px;
             }
         }
         .title {
@@ -229,14 +255,14 @@
                     font-size: 3rem;
                 
                 @include media-breakpoint-up(lg) {
-                    font-size: 3.4em;
+                    font-size: 3.2em;
                 }
                 @include media-breakpoint-up(xxl) {
-                    font-size: 3.6rem;
+                    font-size: 3.4rem;
                     line-height: 1.2;
                 }
                 @include media-breakpoint-up(xxxl) {
-                    font-size: 3.8rem;
+                    font-size: 3.6rem;
                     line-height: 1.2;
                 }
             }
