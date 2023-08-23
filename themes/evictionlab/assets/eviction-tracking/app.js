@@ -119,9 +119,28 @@ Elab.Utils = (function (Elab) {
     if (!files.length) return callback(dataMap);
 
     const [file, ...restFiles] = files;
+    // chains one load after the next. could convert to a Promise.all for efficiency
     Elab.Data.loadData(file.url, file.shaper, (fileData) => {
       dataMap[file.id] = fileData;
       loadAll(restFiles, dataMap, callback);
+    });
+  }
+
+  /**
+   * Adds the Last Updated date to stat block
+   */
+  function addLatestUpdateDate(el, fileName, site_id) {
+    Elab.Data.loadData(fileName, undefined, (fileData) => {
+      const allSites = fileData.find((s) => Number(s.site_id) === 0);
+      const site = fileData.find((s) => s.site_id === site_id);
+      const parseDate = d3.timeParse("%Y-%m-%d");
+      const latestUpdateSite = parseDate(site.latest_update);
+      const latestUpdateAllSites = parseDate(allSites.latest_update);
+
+      const dateFormat = d3.timeFormat("%m/%d/%Y");
+      var $el = $(el);
+      $el.append(dateFormat(latestUpdateSite));
+      $el.toggleClass("outdated", latestUpdateSite < latestUpdateAllSites);
     });
   }
 
@@ -391,6 +410,7 @@ Elab.Utils = (function (Elab) {
     slugify: slugify,
     createTwitterLink: createTwitterLink,
     createFacebookLink: createFacebookLink,
+    addLatestUpdateDate: addLatestUpdateDate,
     createStatBlock: createStatBlock,
     createComparisonBlock: createComparisonBlock,
     createStatParagraph: createStatParagraph,
@@ -1341,7 +1361,7 @@ Elab.Chart = (function (Elab) {
         // charts to not thin ticks on smaller screens (or based on tick count) or rotate
         // (such as if ticks are for group names rather than months)
         const noThinning = config.rootId === "race";
-        console.log({ tickCount, noThinning });
+        // console.log({ tickCount, noThinning });
         const ticks = selection.selectAll(".tick text").each(function (d, i) {
           // another bryony cheat.
           if (!noThinning && tickCount > 20 && i % 2 !== 0) {

@@ -1642,6 +1642,12 @@
   margin-bottom: 20px;
   font-size: 1.2rem;
   line-height: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+#latestUpdate.outdated {
+  color: var(--c1);
 }
 
 #filingCounts {
