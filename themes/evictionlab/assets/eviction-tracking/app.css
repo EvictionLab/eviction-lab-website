@@ -1649,6 +1649,14 @@
 #latestUpdate.outdated {
   color: var(--c1);
 }
+#latestUpdate .inline-tooltip.warning {
+  margin-right: 4px;
+  width: 14px;
+}
+
+#latestUpdate .inline-tooltip .tooltiptext {
+  width: 220px;
+}
 
 #filingCounts {
   margin-bottom: 16px;
@@ -1903,13 +1911,17 @@
   display: inline-block;
   margin-left: 4px;
   cursor: pointer;
-  background-image: url("/img/icon--info-new.svg");
   width: 16px;
   height: 20px;
   vertical-align: top;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: url("/img/icon--info-new.svg");
+  }
+  
+  .inline-tooltip.warning {
+    background-image: url("/img/icon--warning.svg");
 }
 /* HACK: prevent ? icon from overflowing to next line on its own for htr */
 .stat-block-stat.hhs_threatened_rate .inline-tooltip {
@@ -1942,6 +1954,11 @@
   padding: 8px;
   font-size: 14px;
   letter-spacing: 0;
+font-family: var(--body-font);
+  text-transform: none;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.25;
 }
 @media (max-width: 480px) {
   .inline-tooltip .tooltiptext {

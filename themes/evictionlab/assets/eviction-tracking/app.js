@@ -108,9 +108,16 @@ Elab.Utils = (function (Elab) {
     return value ? value : map[varName];
   }
 
-  function createTooltip(text) {
+  function createTooltip(text, options = {}) {
     if (!text) return "";
-    return `<span class="inline-tooltip">
+    let classes = "inline-tooltip";
+    if (options.isWarning) {
+      classes += " warning";
+    }
+    if (options.class) {
+      classes += ` ${options.class}`;
+    }
+    return `<span class="${classes}">
 <span class="tooltiptext">${text}</span>
 </span>`;
   }
@@ -136,11 +143,21 @@ Elab.Utils = (function (Elab) {
       const parseDate = d3.timeParse("%Y-%m-%d");
       const latestUpdateSite = parseDate(site.latest_update);
       const latestUpdateAllSites = parseDate(allSites.latest_update);
+      const isOutdated = latestUpdateSite < latestUpdateAllSites;
 
       const dateFormat = d3.timeFormat("%m/%d/%Y");
       var $el = $(el);
       $el.append(dateFormat(latestUpdateSite));
-      $el.toggleClass("outdated", latestUpdateSite < latestUpdateAllSites);
+      $el.toggleClass("outdated", isOutdated);
+      if (isOutdated) {
+        const annualUpdateStart = new Date(
+          new Date(latestUpdateAllSites).setMonth(latestUpdateAllSites.getMonth() - 12),
+        );
+        const message = `This location has less-recent data than other sites we track. Its annual statistics (which are calculated for all sites from ${dateFormat(
+          annualUpdateStart,
+        )}—${dateFormat(latestUpdateAllSites)}) therefore comprise less than a year of data.`;
+        $el.prepend(createTooltip(message, { isWarning: true }));
+      }
     });
   }
 
