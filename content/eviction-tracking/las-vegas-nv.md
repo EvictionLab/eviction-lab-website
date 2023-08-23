@@ -18,6 +18,9 @@ Eviction filings in Las Vegas fell sharply by March 2020. The state of Nevada pu
 
 Our data in Clark County is an undercount compared to the number of filings found in [](http://www.courts.state.va.us/courtadmin/aoc/judpln/csi/home.html)data released in the Supreme Court of Nevada's [Annual Report Appendices](https://nvcourts.gov/Supreme/Reports/Annual_Reports/2020_Annual_Report/). Additionally, our data from Clark County comes from three courts: Las Vegas Justice Court, North Las Vegas Justice Court, and Henderson Justice Court. While the eviction cases in these three courts make up vast majority of eviction cases in Clark County, our data will undercount total eviction filings in the county.
 
+
+In most locations that we track, we are able to access eviction filing records shortly after they are filed with the courts. In Las Vegas, however, these records are only available with a delay. We update this page with the most recent data that we have available. The past month reported here is the most recent month for which we have data.
+
 {{</ report_intro >}}
 
 

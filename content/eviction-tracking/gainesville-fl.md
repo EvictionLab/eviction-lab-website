@@ -13,6 +13,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Eviction filings in Gainesville fell significantly below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired at the end of July 2020. After the moratorium expired, execution of eviction orders was also delayed until October 1, 2020.
 
+
+In most locations that we track, we are able to access eviction filing records shortly after they are filed with the courts. In Gainesville, however, these records are only available with a delay. We update this page with the most recent data that we have available. The past month reported here is the most recent month for which we have data.
+
 {{</ report_intro >}}
 
 
