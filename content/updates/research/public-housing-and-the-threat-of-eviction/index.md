@@ -14,14 +14,14 @@ postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 image: dallas-public-housing.jpg
 photocaption: "Public housing in Dallas, TX. Credit: Juan Pablo Garnham"
-description: todo
-listSummary: todo
+description: Public housing authorities (PHAs) are responsible for a disproportionate share of eviction cases in many cities across the U.S.
+listSummary: Public housing authorities (PHAs) are responsible for a disproportionate share of eviction cases in many cities across the U.S. In an article published in Social Service Review, we take a closer look at these dynamics.
 scripts:
   - charts
   - grouped-bar-chart
 researchtype: elresearch
-twImage: house.jpg
-fbImage: house.jpg
+twImage: dallas-public-housing.jpg
+fbImage: dallas-public-housing.jpg
 ---
 
 
