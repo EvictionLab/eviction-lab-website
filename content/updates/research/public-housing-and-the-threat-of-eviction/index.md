@@ -32,10 +32,10 @@ In an article published in Social Service Review we take a closer look at these 
 <hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
 <div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-5">
     <div class="pr-12 pr-md-0">
-        <a href="https://www.journals.uchicago.edu/doi/10.1086/725320" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="ssr.jpeg" /></a>
+        <a href="https://www.journals.uchicago.edu/doi/10.1086/725777" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="ssr.jpeg" /></a>
     </div>
     <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE ARTICLE:</p>
-        <p><a class="green gt-eesti journal-heading" href="https://www.journals.uchicago.edu/doi/10.1086/725320" target="_blank" rel="noreferrer noopener">No Safe Harbor: Eviction Filing in Public Housing
+        <p><a class="green gt-eesti journal-heading" href="https://www.journals.uchicago.edu/doi/10.1086/725777" target="_blank" rel="noreferrer noopener">No Safe Harbor: Eviction Filing in Public Housing
 </a></p>
         <p class="mt-3" style="font-size: 1.6rem;">Lillian Leung, Peter Hepburn, James Hendrickson, and Matthew Desmond</p>
     </div>
