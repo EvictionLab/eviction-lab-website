@@ -33,21 +33,9 @@ We find that public housing residents are filed against for eviction at a simila
 
 Like private landlords, PHA managers are more likely to file serial cases when the eviction process is cheap and fast, and they do so even more often. Going state-by-state, we find a strong correlation between serial eviction filing rates in public housing and on the private market (see Figure 1). Overall, serial eviction filing rates from public housing were higher than those in private-market housing in 21 of the 28 states in our sample (all those above the 45-degree line in Figure 1). 
 
-<script>console.log("HIHI")</script>
-{{% scatter-chart
-  id="fig1-scatter"
-  title="Figure 1. Serial eviction filing rates in public housing and the private market, by state"
-  data="./fig_1_data.csv"
-  nameField="state"
-  xNumeratorField="pha_sefr"
-  yNumeratorField="open_sefr"
-  mobileCutoff="Infinity"
-  legendIncArrowText="increase in filings"
-  axisLabelText=""
-  legendDecArrowText=""
-  legendIncArrowText="increase in filings"
-  legendLabelText=""
-%}}
+<div class="figheader">Figure 1. Serial eviction filing rates in public housing and the private market, by state</div>
+
+<iframe class="visual" src="https://blog-fresh--eviction-lab-site.netlify.app/blog/public-housing-and-the-threat-of-eviction-vis/"></iframe>
 
 With nearly 3,000 different housing authorities across the country, the landscape of public housing is diverse. We show that serial eviction filing was more common in housing authorities with more Black residents. By contrast, it was less common in PHAs with fewer total units and with a larger share of residents were seniors. 
 
