@@ -9,6 +9,7 @@
     {{ if .Param "image" }}
     <figure class="article-image">
       <img src="{{ .Param "image" }}" onError="this.onerror=null;this.classList.add('null-img');" />
+      <span class="d-block mt-0 mb-1 mb-md-0 mt-md-1 subhead-rt date text-center font-italic">{{ .Params.photocaption }}</span>
       <figcaption>
         <div class="bordered-header {{ .Params.childof }}-type">
           <a href="/updates"><span class="mobile-off">Eviction Lab</span> {{ .Params.contenttype }}</a>

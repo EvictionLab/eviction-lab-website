@@ -8,11 +8,12 @@ contentcat: research
 featured: true
 in_index: true
 title: Public Housing and the Threat of Eviction
-date: 2023-08-10T00:46:40.089Z
+date: 2023-08-24T00:46:40.089Z
 postauthorname: Lillian Leung, Peter Hepburn, James Hendrickson, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: house.jpg
+image: dallas-public-housing.jpg
+photocaption: "Public housing in Dallas, TX. Credit: Juan Pablo Garnham"
 description: todo
 listSummary: todo
 scripts:
@@ -23,19 +24,36 @@ twImage: house.jpg
 fbImage: house.jpg
 ---
 
-Public housing can be a lifesaver. Because rents are capped at 30% of household income, residents have affordable housing that is otherwise nearly impossible to find. Tenants also benefit from protections set by the Department of Housing and Urban Development (HUD) that should help prevent residential instability. Yet previous research from the Eviction Lab shows that public housing authorities (PHAs) are responsible for a disproportionate share of eviction cases in many cities across the U.S.
+
+Public housing can be a lifesaver. Because rents are capped at 30% of household income, residents have {{< extlink "affordable housing that is otherwise nearly impossible to find" "https://nlihc.org/oor" >}}. Tenants also benefit from protections set by the Department of Housing and Urban Development (HUD) that should help prevent residential instability. {{< extlink "Yet previous research from the Eviction Lab" "https://www.sciencedirect.com/science/article/pii/S0264275122001883" >}} shows that public housing authorities (PHAs) are responsible for a disproportionate share of eviction cases in many cities across the U.S.
 
 In an article published in Social Service Review we take a closer look at these dynamics. Using the records of hundreds of thousands of eviction court cases filed across the country between 2010 and 2016, we paint a detailed picture of how PHAs rely on the eviction process. We show large variations between PHAs in how often they file cases, likely driven by agency-level policies. In-depth interviews with public housing staff shed light on why some of them turn to the courts in response to their conflicting roles as property managers and social service providers. 
 
-[READ THE STUDY]
+<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
+<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-5">
+    <div class="pr-12 pr-md-0">
+        <a href="https://www.journals.uchicago.edu/doi/10.1086/725320" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="ssr.jpeg" /></a>
+    </div>
+    <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE ARTICLE:</p>
+        <p><a class="green gt-eesti journal-heading" href="https://www.journals.uchicago.edu/doi/10.1086/725320" target="_blank" rel="noreferrer noopener">No Safe Harbor: Eviction Filing in Public Housing
+</a></p>
+        <p class="mt-3" style="font-size: 1.6rem;">Lillian Leung, Peter Hepburn, James Hendrickson, and Matthew Desmond</p>
+    </div>
+</div>
+<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
 
-We find that public housing residents are filed against for eviction at a similar rate as people living in private-market housing in exactly the same neighborhoods. But among those who face an eviction filing, public housing residents are much more likely to be filed against repeatedly at the same address, a process of serial eviction filing that we described in previous research. Indeed, among public housing residents in our study who were filed against for eviction, nearly half (46.8 percent) were filed against repeatedly, compared to less than one-third (28.4 percent) of those living in private-market homes. These serial filings overload the courts and are stressful and damaging for tenants, increasing housing costs and worsening eviction records.
+
+We find that public housing residents are filed against for eviction at a similar rate as people living in private-market housing in exactly the same neighborhoods. But among those who face an eviction filing, public housing residents are much more likely to be filed against repeatedly at the same address, [a process of serial eviction filing that we described in previous research](https://evictionlab.org/serial-eviction-filings/). Indeed, among public housing residents in our study who were filed against for eviction, nearly half (46.8 percent) were filed against repeatedly, compared to less than one-third (28.4 percent) of those living in private-market homes. These serial filings overload the courts and are stressful and damaging for tenants, increasing housing costs and worsening eviction records.
+
+{{< pullquote "Among public housing residents in our study who were filed against for eviction, nearly half (46.8 percent) were filed against repeatedly, compared to less than one-third (28.4 percent) of those living in private-market homes" >}}
 
 Like private landlords, PHA managers are more likely to file serial cases when the eviction process is cheap and fast, and they do so even more often. Going state-by-state, we find a strong correlation between serial eviction filing rates in public housing and on the private market (see Figure 1). Overall, serial eviction filing rates from public housing were higher than those in private-market housing in 21 of the 28 states in our sample (all those above the 45-degree line in Figure 1). 
 
 <div class="figheader">Figure 1. Serial eviction filing rates in public housing and the private market, by state</div>
 
 <iframe class="visual" src="https://blog-fresh--eviction-lab-site.netlify.app/blog/public-housing-and-the-threat-of-eviction-vis/"></iframe>
+
+<div class="figcaption"><p>In the figure above, states plotted as dots above the diagonal line have higher serial filing rates by public housing authorities than in the private market; points below the diagonal line have higher serial filing rates within the private market.</p></div>
 
 With nearly 3,000 different housing authorities across the country, the landscape of public housing is diverse. We show that serial eviction filing was more common in housing authorities with more Black residents. By contrast, it was less common in PHAs with fewer total units and with a larger share of residents were seniors. 
 
@@ -63,6 +81,8 @@ The Housing Authority of the City of Charleston, South Carolina, had the highest
 
 We also show that serial eviction filing rates vary more between housing authorities than across buildings within PHAs. This is important, because it shows that eviction practices are related to how an agency manages their portfolio of homes and that solutions should come at this level rather than building-by-building. 
 
+{{< pullquote "There is no evidence that repeatedly filing evictions against the same tenants actually improves the performance of a public housing authority." >}}
+
 To better understand the policies that drove these patterns, we conducted interviews with 42 PHA managers and administrators from two housing authorities in Northeastern Ohio: the Cuyahoga Metropolitan Housing Authority, which serves greater Cleveland, and the Akron Metropolitan Housing Authority. Both follow HUD regulations, both operate under the Ohio Landlord Tenant Law, and both serve demographically-similar populations. But in Cleveland over half (51.5%) of all tenants who were filed against received more than one filing, while in Akron this almost never happened. What drove the difference?
 
 In our interviews, managers in both PHAs emphasized the need to meet rent collection metrics, but they responded to these pressures differently. In Cleveland, managers will file eviction cases as soon as permissible, and then continue to work with the tenants, offering payment plans and trying to find ways for them to stay. That strategy, combined with intervention from Cleveland’s unique Housing Court, means that eviction filings often serve more as a rent collection tactic than a tool of displacement. This has led to a management philosophy that turns to the court system more quickly and frequently. 
@@ -71,7 +91,7 @@ By contrast, property managers in Akron’s housing authority understand evictio
 
 The end result is that the public housing authority in Cleveland brings far more cases overall than the one in Akron, and more of them repeatedly against the same tenants. They end up evicting tenants slightly more often too, yet when we compare the property management and rent collection evaluation metrics used by HUD, the two housing authorities receive similar scores. 
 
-[break]
+{{< pullquote "Strong incentives for rent collection push some PHA managers to file often and repeatedly against their tenants, undermining their residential stability." >}}
 
 Over the years, large-scale failures and notable instances of mismanagement have fed popular narratives that paint public housing as distressed and decrepit, in turn leading to increased scrutiny. Concerns over cost-effectiveness and the broader turn in federal policies toward market-based solutions have pressured PHAs to downsize programs. As funding is cut back, rent collection is more critical than ever to these agencies, both to shore up budgets and as a signal of efficiency. 
 
