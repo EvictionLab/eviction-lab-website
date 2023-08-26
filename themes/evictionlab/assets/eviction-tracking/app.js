@@ -224,15 +224,17 @@ Elab.Utils = (function (Elab) {
 
       var createComp = (vals, comp) => {
         var fVals = vals.map((v) => (Elab.Utils.isNumeric(v) ? comp.formatter(v) : ""));
-        var bars = fVals.map((v, i) =>
-          v
-            ? `<div class="field-${["a", "b"][i]}">
-          <span class="comparison-bar" style="width:${vals[i] * 100}%"></span>
+        var bars = fVals.map((v, i) => {
+          if (v === undefined) return "";
+          const width = vals[i] * 100;
+
+          // left value transitions to 0 when in-view for animation
+          return `<div class="field field-${i + 1}">
+          <span class="comparison-bar" style="width:${width}%; left:-${width - 1}%"></span>
           <span>${v}</span>
           </div>
-          `
-            : "",
-        );
+          `;
+        });
 
         return (
           '<dl class="comparison-block-comp"><dd><p>' +
@@ -264,6 +266,7 @@ Elab.Utils = (function (Elab) {
       //   window.dd = $displayEl;
       //   setTimeout(() => $el.css("opacity", 1), 1);
       // }
+      Elab.Utils.callOnEnter($el[0], () => $el.toggleClass("in-view"));
       callback && callback(someCompFound);
     });
   }

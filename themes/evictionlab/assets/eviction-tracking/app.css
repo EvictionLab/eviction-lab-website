@@ -1758,21 +1758,31 @@
   height: 20px;
   position: relative;
   top: 4px;
+  transition: left ease-in-out 1s;
 }
 
-.comparison-block-comp dt .field-a {
+/* once in-view, transition animates bar */
+.comparison-block-wrapper.in-view .comparison-bar {
+  left: 0 !important;
+}
+
+.comparison-block-comp dt .field {
+  overflow: hidden;
+}
+
+.comparison-block-comp dt .field-1 {
   color: var(--primary);
 }
 
-.comparison-block-comp dt .field-a .comparison-bar {
+.comparison-block-comp dt .field-1 .comparison-bar {
   background-color: var(--primary);
 }
 
-.comparison-block-comp dt .field-b {
+.comparison-block-comp dt .field-2 {
   color: var(--secondary);
 }
 
-.comparison-block-comp dt .field-b .comparison-bar {
+.comparison-block-comp dt .field-2 .comparison-bar {
   background-color: var(--secondary);
 }
 
