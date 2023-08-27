@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: /public-housing-and-the-threat-of-eviction
 contenttype: updates
