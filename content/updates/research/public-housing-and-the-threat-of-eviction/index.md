@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: Public Housing and the Threat of Eviction
-date: 2023-08-24T00:46:40.089Z
+date: 2023-08-26T00:46:40.089Z
 postauthorname: Lillian Leung, Peter Hepburn, James Hendrickson, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
@@ -25,13 +25,13 @@ fbImage: dallas-public-housing.jpg
 ---
 
 
-Public housing can be a lifesaver. Because rents are capped at 30% of household income, residents have {{< extlink "affordable housing that is otherwise nearly impossible to find" "https://nlihc.org/oor" >}}. Tenants also benefit from protections set by the Department of Housing and Urban Development (HUD) that should help prevent residential instability. {{< extlink "Yet previous research from the Eviction Lab" "https://www.sciencedirect.com/science/article/pii/S0264275122001883" >}} shows that public housing authorities (PHAs) are responsible for a disproportionate share of eviction cases in many cities across the U.S.
+<span class="dropcap green">P</span>ublic housing can be a lifesaver. Because rents are capped at 30% of household income, residents have {{< extlink "affordable housing that is otherwise nearly impossible to find" "https://nlihc.org/oor" >}}. Tenants also benefit from protections set by the Department of Housing and Urban Development (HUD) that should help prevent residential instability. {{< extlink "Yet previous research from the Eviction Lab" "https://www.sciencedirect.com/science/article/pii/S0264275122001883" >}} shows that public housing authorities (PHAs) are responsible for a disproportionate share of eviction cases in many cities across the U.S.
 
 In an article published in Social Service Review we take a closer look at these dynamics. Using the records of hundreds of thousands of eviction court cases filed across the country between 2010 and 2016, we paint a detailed picture of how PHAs rely on the eviction process. We show large variations between PHAs in how often they file cases, likely driven by agency-level policies. In-depth interviews with public housing staff shed light on why some of them turn to the courts in response to their conflicting roles as property managers and social service providers. 
 
-<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
-<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-5">
-    <div class="pr-12 pr-md-0">
+<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem; border-width: 2px;">
+<div class="d-flex flex-wrap flex-md-nowrap align-items-center justify-content-center justify-content-md-start mw-100 mt-2 mb-5">
+    <div class="pr-md-0">
         <a href="https://www.journals.uchicago.edu/doi/10.1086/725777" target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src="ssr.jpeg" /></a>
     </div>
     <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE ARTICLE:</p>
@@ -40,7 +40,7 @@ In an article published in Social Service Review we take a closer look at these 
         <p class="mt-3" style="font-size: 1.6rem;">Lillian Leung, Peter Hepburn, James Hendrickson, and Matthew Desmond</p>
     </div>
 </div>
-<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
+<hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem; border-width: 2px;">
 
 
 We find that public housing residents are filed against for eviction at a similar rate as people living in private-market housing in exactly the same neighborhoods. But among those who face an eviction filing, public housing residents are much more likely to be filed against repeatedly at the same address, [a process of serial eviction filing that we described in previous research](https://evictionlab.org/serial-eviction-filings/). Indeed, among public housing residents in our study who were filed against for eviction, nearly half (46.8 percent) were filed against repeatedly, compared to less than one-third (28.4 percent) of those living in private-market homes. These serial filings overload the courts and are stressful and damaging for tenants, increasing housing costs and worsening eviction records.
