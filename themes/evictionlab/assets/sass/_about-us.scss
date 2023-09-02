@@ -493,14 +493,14 @@
         display: block;
         flex-shrink: 0;
         height:auto;
-        max-height: 640px;
+        max-height: 680px;
     }
   }
   .modal-body {
     padding: 2.4rem 1.6rem;
     @include for-tablet-landscape-up {
       padding: 3.2rem 4.8rem 3.2rem;
-      min-height: 480px;
+      min-height: 600px;
     }
     @include for-midsize-desktop-up {
       padding: 4.8rem 6.4rem 4.8rem;
