@@ -94,17 +94,17 @@
         margin-bottom: -56px;
         background-size: 213%;
         @include media-breakpoint-up(md) {
-            height: 600px;
+            height: 640px;
             background-position-y: 31%;
             top: -160px;
             margin-bottom: -160px;
             background-size: cover;
         }
         @include media-breakpoint-up(xxl) {
-            height: 720px;
+            height: 780px;
         }
         @include media-breakpoint-up(x4l) {
-            height: 720px;
+            height: 780px;
         }
         background-color: #11152F;
         background-image: url('/img/hp-hero-2021-2560px.jpg');
