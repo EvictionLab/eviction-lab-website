@@ -1964,10 +1964,10 @@
   padding: 8px;
   font-size: 14px;
   letter-spacing: 0;
-font-family: var(--body-font);
+  font-family: var(--body-font);
   text-transform: none;
   font-weight: 400;
-  font-size: 1.6rem;
+  /*font-size: 1.6rem; */
   line-height: 1.25;
 }
 @media (max-width: 480px) {
