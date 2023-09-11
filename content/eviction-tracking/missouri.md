@@ -19,7 +19,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 Missouri never implemented a state-wide eviction moratorium, though a number of counties did establish protections for renters. Filings fell early in the pandemic, but increased steadily over the course of 2020.
 
- Additional information is available on eviction filing patterns in [St. Louis](https://evictionlab.org/eviction-tracking/st-louis-mo/) and [Kansas City](https://evictionlab.org/eviction-tracking/kansas-city-mo/).
+In most locations that we track, we are able to access eviction filing records shortly after they are filed with the courts. In Missouri, however, these records are only available with a delay. We update this page with the most recent data that we have available. The past month reported here is the most recent month for which we have data.
+
+Additional information is available on eviction filing patterns in [St. Louis](https://evictionlab.org/eviction-tracking/st-louis-mo/) and [Kansas City](https://evictionlab.org/eviction-tracking/kansas-city-mo/).
 
 
 

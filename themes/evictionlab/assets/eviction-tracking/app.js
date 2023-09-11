@@ -108,9 +108,16 @@ Elab.Utils = (function (Elab) {
     return value ? value : map[varName];
   }
 
-  function createTooltip(text) {
+  function createTooltip(text, options = {}) {
     if (!text) return "";
-    return `<span class="inline-tooltip">
+    let classes = "inline-tooltip";
+    if (options.isWarning) {
+      classes += " warning";
+    }
+    if (options.class) {
+      classes += ` ${options.class}`;
+    }
+    return `<span class="${classes}">
 <span class="tooltiptext">${text}</span>
 </span>`;
   }
@@ -119,9 +126,38 @@ Elab.Utils = (function (Elab) {
     if (!files.length) return callback(dataMap);
 
     const [file, ...restFiles] = files;
+    // chains one load after the next. could convert to a Promise.all for efficiency
     Elab.Data.loadData(file.url, file.shaper, (fileData) => {
       dataMap[file.id] = fileData;
       loadAll(restFiles, dataMap, callback);
+    });
+  }
+
+  /**
+   * Adds the Last Updated date to stat block
+   */
+  function addLatestUpdateDate(el, fileName, site_id) {
+    Elab.Data.loadData(fileName, undefined, (fileData) => {
+      const allSites = fileData.find((s) => Number(s.site_id) === 0);
+      const site = fileData.find((s) => s.site_id === site_id);
+      const parseDate = d3.timeParse("%Y-%m-%d");
+      const latestUpdateSite = parseDate(site.latest_update);
+      const latestUpdateAllSites = parseDate(allSites.latest_update);
+      const isOutdated = latestUpdateSite < latestUpdateAllSites;
+
+      const dateFormat = d3.timeFormat("%m/%d/%Y");
+      var $el = $(el);
+      $el.append(dateFormat(latestUpdateSite));
+      $el.toggleClass("outdated", isOutdated);
+      if (isOutdated) {
+        const annualUpdateStart = new Date(
+          new Date(latestUpdateAllSites).setMonth(latestUpdateAllSites.getMonth() - 12),
+        );
+        const message = `This location has less-recent data than other sites we track. Its annual statistics (which are calculated for all sites from ${dateFormat(
+          annualUpdateStart,
+        )}—${dateFormat(latestUpdateAllSites)}) therefore comprise less than a year of data.`;
+        $el.prepend(createTooltip(message, { isWarning: true }));
+      }
     });
   }
 
@@ -188,15 +224,17 @@ Elab.Utils = (function (Elab) {
 
       var createComp = (vals, comp) => {
         var fVals = vals.map((v) => (Elab.Utils.isNumeric(v) ? comp.formatter(v) : ""));
-        var bars = fVals.map((v, i) =>
-          v
-            ? `<div class="field-${["a", "b"][i]}">
-          <span class="comparison-bar" style="width:${vals[i] * 100}%"></span>
+        var bars = fVals.map((v, i) => {
+          if (v === undefined) return "";
+          const width = vals[i] * 100;
+
+          // left value transitions to 0 when in-view for animation
+          return `<div class="field field-${i + 1}">
+          <span class="comparison-bar" style="width:${width}%; left:-${width - 1}%"></span>
           <span>${v}</span>
           </div>
-          `
-            : "",
-        );
+          `;
+        });
 
         return (
           '<dl class="comparison-block-comp"><dd><p>' +
@@ -228,6 +266,7 @@ Elab.Utils = (function (Elab) {
       //   window.dd = $displayEl;
       //   setTimeout(() => $el.css("opacity", 1), 1);
       // }
+      Elab.Utils.callOnEnter($el[0], () => $el.toggleClass("in-view"));
       callback && callback(someCompFound);
     });
   }
@@ -391,6 +430,7 @@ Elab.Utils = (function (Elab) {
     slugify: slugify,
     createTwitterLink: createTwitterLink,
     createFacebookLink: createFacebookLink,
+    addLatestUpdateDate: addLatestUpdateDate,
     createStatBlock: createStatBlock,
     createComparisonBlock: createComparisonBlock,
     createStatParagraph: createStatParagraph,
@@ -1341,7 +1381,7 @@ Elab.Chart = (function (Elab) {
         // charts to not thin ticks on smaller screens (or based on tick count) or rotate
         // (such as if ticks are for group names rather than months)
         const noThinning = config.rootId === "race";
-        console.log({ tickCount, noThinning });
+        // console.log({ tickCount, noThinning });
         const ticks = selection.selectAll(".tick text").each(function (d, i) {
           // another bryony cheat.
           if (!noThinning && tickCount > 20 && i % 2 !== 0) {

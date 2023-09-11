@@ -1642,6 +1642,20 @@
   margin-bottom: 20px;
   font-size: 1.2rem;
   line-height: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+#latestUpdate.outdated {
+  color: var(--c1);
+}
+#latestUpdate .inline-tooltip.warning {
+  margin-right: 4px;
+  width: 14px;
+}
+
+#latestUpdate .inline-tooltip .tooltiptext {
+  width: 220px;
 }
 
 #filingCounts {
@@ -1744,21 +1758,31 @@
   height: 20px;
   position: relative;
   top: 4px;
+  transition: left ease-in-out 1s;
 }
 
-.comparison-block-comp dt .field-a {
+/* once in-view, transition animates bar */
+.comparison-block-wrapper.in-view .comparison-bar {
+  left: 0 !important;
+}
+
+.comparison-block-comp dt .field {
+  overflow: hidden;
+}
+
+.comparison-block-comp dt .field-1 {
   color: var(--primary);
 }
 
-.comparison-block-comp dt .field-a .comparison-bar {
+.comparison-block-comp dt .field-1 .comparison-bar {
   background-color: var(--primary);
 }
 
-.comparison-block-comp dt .field-b {
+.comparison-block-comp dt .field-2 {
   color: var(--secondary);
 }
 
-.comparison-block-comp dt .field-b .comparison-bar {
+.comparison-block-comp dt .field-2 .comparison-bar {
   background-color: var(--secondary);
 }
 
@@ -1897,13 +1921,17 @@
   display: inline-block;
   margin-left: 4px;
   cursor: pointer;
-  background-image: url("/img/icon--info-new.svg");
   width: 16px;
   height: 20px;
   vertical-align: top;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: url("/img/icon--info-new.svg");
+  }
+  
+  .inline-tooltip.warning {
+    background-image: url("/img/icon--warning.svg");
 }
 /* HACK: prevent ? icon from overflowing to next line on its own for htr */
 .stat-block-stat.hhs_threatened_rate .inline-tooltip {
@@ -1936,6 +1964,11 @@
   padding: 8px;
   font-size: 14px;
   letter-spacing: 0;
+  font-family: var(--body-font);
+  text-transform: none;
+  font-weight: 400;
+  /*font-size: 1.6rem; */
+  line-height: 1.25;
 }
 @media (max-width: 480px) {
   .inline-tooltip .tooltiptext {

@@ -15,6 +15,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 Eviction filings in Kansas City fell sharply in April 2020. Compared to equivalent periods in previous years (2012–2015), eviction filings were down nearly 80% in April and May 2020. Filings rose in the following months.<sup>2</sup>
 
 
+In most locations that we track, we are able to access eviction filing records shortly after they are filed with the courts. In Kansas City, however, these records are only available with a delay. We update this page with the most recent data that we have available. The past month reported here is the most recent month for which we have data.
 
 2. Jackson County eviction filings are delayed in being uploaded to online court records. Recent data may be an undercounting.
 

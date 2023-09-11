@@ -41,7 +41,10 @@
           </div>
     </div>
     <div class="intro__stats-wrapper">
-      <h3>Filing Counts</h3>
+      <h3>
+        Filing Counts
+        <span id="latestUpdate">Last updated: </span>
+      </h3>
       <div id="filingCounts" class="stat-block-wrapper">
       </div>
       <h3>Filing Rates Over the Past Year</h3>
@@ -59,7 +62,6 @@
       var statFiles = [
         { id: "filing", url: "/uploads/filing_data_by_site.csv" },
         { id: "basic", url: "/uploads/basic_data_by_site.csv" },
-        { id: "acs", url: "/uploads/acs_data_by_site.csv" },
       ]
       var filingCounts = [
         {
@@ -131,13 +133,13 @@
       ]
       var paragraphStats = [
         {
-          file: 'acs',
+          file: 'filing',
           field: 'renter_hh',
           placeholder: 'households',
           formatter: d3.format(',')
         },
         {
-          file: 'acs',
+          file: 'filing',
           field: 'median_rent',
           placeholder: 'rent',
           formatter: d3.format('$,')
@@ -160,14 +162,14 @@
         },
       ]
 
-      var getVal = (fileData, s) => {
+            var getVal = (fileData, stat) => {
         if (!fileData) {
-          console.error("No filedata found ", fileData, s)
+          console.error("No filedata found ", fileData, stat);
           return null;
         }
         var row = fileData.find((d) => d.site_id === site_id);
-        if (!row || !row[s.field]) console.log("missing for ", row, s.field)
-        return row ? row[s.field] : null;
+        if (!row || !row[stat.field]) console.log("missing for ", row, stat.field);
+        return row ? row[stat.field] : null;
       }
 
       var otherBlockLoaded = false;
@@ -185,9 +187,14 @@
       var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.<sup>1</sup>".replace('%{site}', siteText)
       Elab.Utils.createStatParagraph('#summaryStats', paragraphText, statFiles, paragraphStats, getVal)
 
+      Elab.Utils.addLatestUpdateDate("#latestUpdate", "/uploads/filing_data_by_site.csv", site_id);
+
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
+
       var dateFormat = d3.timeFormat("%b %e, %Y")
+
+
       var cdcMoratorium = Elab.Utils.getCdcMoratoriumRange().map(function(d) {
         return dateFormat(d)
       }).join(' - ')
