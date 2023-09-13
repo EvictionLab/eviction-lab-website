@@ -14,7 +14,7 @@ intro: >-
   please cite as follows:
 
 
-  > Peter Hepburn, Renee Louis, and Matthew Desmond. Eviction Tracking System: Version 1.0. Princeton: Princeton University, 2020. [www.evictionlab.org](http://www.evictionlab.org/).
+  > Peter Hepburn, Jacob Haas, Renee Louis, Adam Chapnik, Danny Grubbs-Donovan, Olivia Jin, Jasmine Rangel, and Matthew Desmond. Eviction Tracking System: Version 2.0. Princeton: Princeton University, 2020. [www.evictionlab.org](http://www.evictionlab.org/)
 
 
   Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
