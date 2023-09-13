@@ -1,0 +1,46 @@
+site_id,display_name,slug,parent_state,lat,lng
+0,All Sites,,,,
+09,Connecticut,connecticut,,,
+10,Delaware,delaware,,,
+18,Indiana,indiana,,,
+27,Minnesota,minnesota,,,
+29,Missouri,missouri,,,
+35,New Mexico,new-mexico,,,
+42,Pennsylvania,pennsylvania,,,
+44,Rhode island,rhode-island,,,
+51,Virginia,virginia,,,
+55,Wisconsin,wisconsin,,,
+35001,Albuquerque,albuquerque-nm,NM,35.0844,-106.6504
+48453,Austin,austin-tx,TX,30.2672,-97.7431
+25025,Boston,boston-ma,MA,42.3601,-71.0589
+09001,Bridgeport,bridgeport-ct,CT,41.1792,-73.1894
+45019,Charleston,charleston-sc,SC,32.7765,-79.9311
+39061,Cincinnati,cincinnati-oh,OH,39.1031,-84.5120
+39035,Cleveland,cleveland-oh,OH,41.4993,-81.6944
+39049,Columbus,columbus-oh,OH,39.9612,-82.9988
+48113,Dallas,dallas-tx,TX,32.7767,-96.7970
+48439,Fort Worth,fort-worth-tx,TX,32.7555,-97.3308
+12001,Gainesville,gainesville-fl,FL,29.6516,-82.3248
+45045,Greenville,greenville-sc,SC,34.8526,-82.3940
+09003,Hartford,hartford-ct,CT,41.7658,-72.6734
+48201,Houston,houston-tx,TX,29.7604,-95.3698
+18097,Indianapolis,indianapolis-in,IN,39.7684,-86.1581
+12031,Jacksonville,jacksonville-fl,FL,30.3322,-81.6557
+29095,Kansas City,kansas-city-mo,MO,39.0997,-94.5786
+32003,Las Vegas,las-vegas-nv,NV,36.1716,-115.1391
+47157,Memphis,memphis-tn,TN,35.1495,-90.0490
+12086,Miami–Ft. Lauderdale,miami-ft-lauderdale-fl,FL,25.7617,-80.1918
+55079,Milwaukee,milwaukee-wi,WI,43.0389,-87.9065
+27053,Minneapolis–Saint Paul,minneapolis-saint-paul-mn,MN,44.9778,-93.2650
+47037,Nashville,nashville-tn,TN,36.1627,-86.7816
+22071,New Orleans,new-orleans-la,LA,29.9511,-90.0715
+36061,New York,new-york-ny,NY,40.7128,-74.0060
+42101,Philadelphia,philadelphia-pa,PA,39.9526,-75.1652
+04013,Phoenix,phoenix-az,AZ,33.4484,-112.0740
+42003,Pittsburgh,pittsburgh-pa,PA,40.4406,-79.9959
+44007,Providence,providence-ri,RI,41.8240,-71.4128
+51760,Richmond,richmond-va,VA,37.5407,-77.4360
+18141,South Bend,south-bend-in,IN,41.6764,-86.2520
+29510,St Louis,st-louis-mo,MO,38.6270,-90.1994
+12103,Tampa,tampa-fl,FL,27.9506,-82.4572
+10003,Wilmington,wilmington-de,DE,39.7447,-75.5484
