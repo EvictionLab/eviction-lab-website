@@ -21,6 +21,8 @@ Our data in Clark County is an undercount compared to the number of filings foun
 
 In most locations that we track, we are able to access eviction filing records shortly after they are filed with the courts. In Las Vegas, however, these records are only available with a delay. We update this page with the most recent data that we have available. The past month reported here is the most recent month for which we have data.
 
+_We are delayed in updating our data in Clark County in July 2023. We apologize for any inconvenience._
+
 {{</ report_intro >}}
 
 
