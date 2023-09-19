@@ -202,6 +202,16 @@ Elab.GroupedBarChart = (function (Elab) {
     );
   }
 
+  function createLegend(legendEl, items) {
+    // console.log({ legendEl, items });
+    items.forEach((item, i) => {
+      $(legendEl).append(`
+        <div class="legend-item legend-item--${i}">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">${item}</div>`);
+    });
+  }
+
   const strip = (s) => s.toLowerCase().replace(/[^a-z]/g, "-");
 
   /**
@@ -248,7 +258,7 @@ Elab.GroupedBarChart = (function (Elab) {
         });
       }
 
-      console.log({ data, result });
+      // console.log({ data, result });
       callback && callback(result);
     });
   }
@@ -288,6 +298,8 @@ Elab.GroupedBarChart = (function (Elab) {
 
       console.log("coverted options", options);
       createFigure(rootEl, data, options);
+      if (options.autoGenLegend)
+        createLegend(options.generatedLegendEl, options.legendItems.split(";"));
       // HACK: gets the chart to resize, which properly makes room for its axis labels
       window.dispatchEvent(new Event("resize"));
     });
