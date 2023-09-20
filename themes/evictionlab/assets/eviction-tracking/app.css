@@ -97,11 +97,13 @@
 
 .page-layout-content .column--content p,
 .page-layout-content .column--content ul,
+.page-layout-content .column--content li,
 .page-layout-downloads .column--content p,
 .page-layout-downloads .column--content ul {
   font-size: 1.6rem;
   line-height: 1.5;
   letter-spacing: 0.006em;
+  font-family: Akkurat-Regular, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -125,6 +127,7 @@
 @media (min-width: 1280px) {
   .page-layout-content .column--content p,
   .page-layout-content .column--content ul,
+  .page-layout-content .column--content li,
   .page-layout-downloads .column--content p,
   .page-layout-downloads .column--content ul {
     font-size: 1.8rem;
