@@ -119,6 +119,8 @@ similar: >-
 
   ### Texas
 
+  - The Child Poverty Action Lab (CPAL) has built the [North Texas Eviction Project](https://northtexasevictions.org/) to track eviction filings in the Dallas-Fort Worth area.
+
 
   - The Eviction Solidarity Network in Austin, TX has built a [dashboard to track eviction filings in Travis County](https://trla.maps.arcgis.com/apps/opsdashboard/index.html#/8f5beb8367f44d30aa2ed6eeb2b3b3e4).
 
