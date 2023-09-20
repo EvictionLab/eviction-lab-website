@@ -63,7 +63,18 @@ We observed the same pattern when we examined eviction rates as well: Between 20
 
 However, each metropolitan area experienced gentrification pressure differently, and we wanted to take that variation into account. In Figure 2 we show differences in eviction rates between gentrifying and low-SES neighborhoods for every metropolitan area in the sample. The typical gentrifying neighborhood had a lower eviction rate than the typical low-SES neighborhoods in 62 of the 72 metropolitan areas in our sample. There were some specific locations, like Las Vegas, where eviction rates were higher in gentrifying areas than in low-income communities, but in most cities it was the opposite.
 
-Figure 2. Median eviction rate by neighborhood gentrification classification and metropolitan areas (2012-2016)
+{{% arrow-chart
+  id="arrows-fig"
+  variant="lollipop"
+  title="Figure 2. Median eviction rate by neighborhood gentrification classification and metropolitan areas (2012-2016)"
+  data="./fig2.csv"
+  xMax="125"
+  scaleFactor="10"
+  axisLabelText="Median Eviction Rate"
+  legendDecArrowText="Gentrifying"
+  legendIncArrowText="Low-SES"
+  legendLabelText=""
+%}}
 
 These analyses, though, just tell us about patterns at the end of the study period (near 2016). To investigate changes in eviction rates over time, we analyzed data from 38 of the metropolitan areas where we had eviction data from both the start and the end of the study timeframe (both near 2000 and near 2016). We found that gentrifying neighborhoods saw larger declines in eviction rates than otherwise-comparable low-SES tracts. That is, eviction rates fell more in the places that were gentrifying than in very similar neighborhoods that weren’t.
 
