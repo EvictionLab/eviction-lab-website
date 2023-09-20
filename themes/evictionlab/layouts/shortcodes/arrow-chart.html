@@ -4,6 +4,13 @@ Shortcode for rendering a chart of arrows conveying up/down shifts.
 Gets a different viewbox on if page loads narrower than the mobileCutoff (default of 600px)
 (text-sizing gets bumped to take up a greater portion of the figure's width, for legibility on smaller screens).
 
+scaleFactor: to "zoom in" on a segment of the x-axis without having to change the viewbox and manually adjust all the
+svg coordinates to maintain proper scaling. eg a scaleFactor of 5 would create an x axis going from 0-20 with ticks at 5
+(25/5), 10, 15, and 20, without altering the proportions of the generic 0-100 axis. note that the tick values will be
+divided this factor, so it may be simplest to use a multiple of 5 (and set a manual xMax if desired). (a more intuitive
+solution would've been not to set any absolute px sizes and normalize everything based on the x extents, but this was a
+simpler adaptation.)
+
 See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
 
 */}}
@@ -11,8 +18,9 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
 {{ $title := .Get "title" }}
 {{ $xMax := .Get "xMax" }}
 {{ $axisLabelText := .Get "axisLabelText" }}
+{{ $variant := .Get "variant" }}
 
-<div class="chart chart--arrow chart--{{ .Get `id` }}">
+<div class="chart chart--arrow chart--{{ .Get `id` }} {{ if $variant }}{{ $variant }}-variant{{ end }}">
   <style type="text/css">
     .arrow-chart__body text {
       font-size: 2.25px;
@@ -53,8 +61,12 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     }
 
     .arrow-chart__body .arrow line {
-      stroke: #434878;
+      stroke: #aaa;
       stroke-width: .3;
+    }
+
+    .chart:not(.lollipop-variant).arrow-chart__body .arrow line {
+      stroke: #434878;
       marker-end: url(#arrowhead-dec);
     }
 
@@ -62,7 +74,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       stroke: #434878;
     }
 
-    .arrow-chart__body .arrow.inc line {
+    .chart:not(.lollipop-variant).arrow-chart__body .arrow.inc line {
       stroke: #E24000;
       marker-end: url(#arrowhead-inc);
     }
@@ -86,6 +98,21 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     .arrow-chart__body .arrow.inc .row-value {
       transform: translate(-2px, 0);
       text-anchor: end;
+    }
+
+    .lollipop-variant circle {
+      stroke-width: 0.2;
+      fill-opacity: 0.7;
+    }
+
+    .lollipop-variant circle.before {
+      stroke: #434878;
+      fill: #434878;
+    }
+    
+    .lollipop-variant circle.after {
+      stroke: #E24000;
+      fill: #E24000;
     }
 
     .arrow-chart__body .chart-row:not(.highlighted) text.row-value {
@@ -143,6 +170,12 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       left: 0;
     }
 
+    .lollipop-variant .legend-desc .arrow.inc circle.before,
+    .lollipop-variant .legend-desc .arrow:not(.inc) circle.after,
+    .lollipop-variant .legend-desc .arrow line {
+      display: none;
+    }
+
     .arrow-chart__body {
       height: 100% !important;
     }
@@ -174,7 +207,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         <line data-val="175" x1="175" x2="175" y1="0" y2="1.2"></line>
         <line data-val="200" x1="200" x2="200" y1="0" y2="1.2"></line>
       </g>
-      <g class="tick-values xMax-dependent" transform="translate(0, 2)">
+      <g class="tick-values xMax-dependent scaleFactor-dependent" transform="translate(0, 2)">
         <text data-val="0" x="0">0%</text>
         <text data-val="25" x="25">25%</text>
         <text data-val="50" x="50">50%</text>
@@ -197,6 +230,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     var id = {{ .Get "id" }};
     var csv = {{ .Get "data" }};
     var xMax = {{ .Get "xMax" }} || 100;
+    var scaleFactor = {{ .Get "scaleFactor" }} || 1;
     var xMinMobile = {{ .Get "xMinMobile" }} || -42;
     var xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
     var mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
@@ -204,6 +238,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     var legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
     var legendLabelText = {{ .Get "legendLabelText" }} || "";
     var axisLabelText = {{ .Get "axisLabelText" }} || "";
+    var isLollipop = {{ .Get "variant" }} === "lollipop";
 
     window.addEventListener('load', function () {
       var $el = $("#" + id);
@@ -227,7 +262,15 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
           valueOffset = Math.abs(valueOffset) + shift
         }
 
-        const content = valueContent || d3.format('.1%')(shift / 100)
+        const shapes = isLollipop
+          ? `
+  <circle class="before" r="1" cy="-0.1" />
+  <circle class="after" r="1" cy="-0.1" cx="${shift}" />
+  `
+          : '';
+        
+
+        const content = valueContent || d3.format('.1%')(shift / 100 / scaleFactor)
         const value = `
   <text dx="${valueOffset}" class="row-value">
     ${content}
@@ -236,6 +279,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         return `
 <g class="${arrowClass}" transform="translate(${before}, ${yOffset})">
   <line x1="0" y1="0" x2="${shift}" y2="0" />
+  ${shapes}
   ${value}
 </g>
 `
@@ -244,8 +288,8 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       d3.csv(csv, function (data) {
         data.
           map(r => {
-            const before = parseFloat(r.before) * 100;
-            const after = parseFloat(r.after) * 100;
+            const before = parseFloat(r.before) * 100 * scaleFactor;
+            const after = parseFloat(r.after) * 100 * scaleFactor;
             return {
               name: r.metro,
               highlighted: !!r.highlighted && r.highlighted !== "false",
@@ -316,6 +360,13 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
             el.remove()
           }
         })
+        if (scaleFactor !== 1) {
+          $el.find('.scaleFactor-dependent [data-val]').each((i, el) => {
+            // elements only get rendered if their val is relevant to the arrow
+            // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
+            el.textContent = el.dataset.val / scaleFactor + "%"
+          })
+        }
 
         $el.html($el.html());
       })
