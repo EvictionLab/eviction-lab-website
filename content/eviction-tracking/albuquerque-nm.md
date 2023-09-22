@@ -9,20 +9,16 @@ twImage: /images/assets/graphics/ets-bg-social.png
 title: Albuquerque, New Mexico | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-
 {{< report_intro site_id="35001" data="/uploads/table.csv" >}}
 
-
-
 Eviction filings in Albuquerque fell sharply in early 2020. While eviction filings and hearings were allowed to proceed, on March 24, 2020, the New Mexico Supreme Court implemented a stay on the execution of writs for nonpayment of rent. This order remained in effect through March 2022.
-
-
 
 {{</ report_intro >}}
 
 
-
 {{% report_chart id="avg" data="/uploads/albuquerque_barchart.csv" %}}
+
+
 
 
 
@@ -34,11 +30,14 @@ This plot shows monthly eviction filings in Bernalillo County (Albuquerque) over
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/albuquerque_hotspots_output.csv" %}}
+
 
 
 
@@ -50,13 +49,11 @@ Eviction Hotspot data are updated semi-annually.
 
 
 
+
 {{%/ report_top_evictors %}}
 
 
-
 {{% report_map shapes="/uploads/albuquerque_shapes.json" data="/uploads/albuquerque_map.csv" topFilers="/uploads/albuquerque_hotspots_media_report.csv" %}}
-
-
 
 # The geography of eviction filings
 
@@ -64,17 +61,11 @@ Bernalillo County is divided into 153 census tracts. In each of those tracts, we
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
-3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts.
-
-
-
-
+3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts. We exclude buildings with fewer than 15 filings, in which case fewer than 100 buildings will be displayed. 
 
 {{%/ report_map %}}
 
 {{% report_chart id="race" data="/uploads/albuquerque_linechart.csv" imputedNoteNumber="2" %}}
-
-
 
 # The demographics of eviction filings
 
@@ -85,6 +76,5 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019.
-
 
 {{%/ report_chart %}}
