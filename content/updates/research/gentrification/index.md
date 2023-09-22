@@ -82,7 +82,20 @@ Still, this sort of analysis might miss sudden jumps in evictions during the gen
 
 <div class="figheader">Figure 3. Average (weighted) eviction rate over time by neighborhood gentrification classification</div>
 <iframe class="visual" src="https://blog-fresh--eviction-lab-site.netlify.app/blog/gentrification2/"></iframe>
-
+<div class="legend mb-3">
+  <div class="legend-item legend-item--0">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">Low-SES</div>
+  </div>
+  <div class="legend-item legend-item--1">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">Gentrifying</div>
+  </div>
+  <div class="legend-item legend-item--2">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label eesti--bold">High-SES</div>
+  </div>
+</div>
 
 We also searched for unexpected spikes in evictions within each neighborhood, relative to all other neighborhoods in the same metropolitan area. We found that eviction spikes did occur in gentrifying neighborhoods, but significantly less often than in low-SES neighborhoods. One in seven gentrifying neighborhoods experienced at least one such spike, compared to nearly one in four low-SES tracts.
 
