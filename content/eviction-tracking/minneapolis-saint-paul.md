@@ -35,7 +35,7 @@ This plot shows monthly eviction filings in the Twin Cities over the last year. 
 {{%/ report_chart %}}
 
 
-{{% report_map shapes="/uploads/twin-cities_shapes.json" data="/uploads/minneapolis_map.csv" topFilers="/uploads/minneapolis_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/twin-cities_shapes.json" data="/uploads/minneapolis_map.csv" %}}
 
 # The geography of eviction filings
 
