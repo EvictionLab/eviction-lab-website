@@ -235,7 +235,7 @@ Shortcode for rendering a stack of horizontal bars.
         data.
           map(r => {
             const numerator = parseFloat(r[numeratorField]);
-            const denominator = parseFloat(r[denominatorField]);
+            const denominator = parseFloat(r[denominatorField]) || 1;
             return {
               name: r[nameField],
               highlighted: !!r.highlighted && r.highlighted !== "false",

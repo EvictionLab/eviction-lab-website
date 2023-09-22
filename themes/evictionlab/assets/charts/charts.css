@@ -94,6 +94,10 @@
   margin: 2em auto;
 }
 
+iframe.visual {
+  height: 500px;
+  min-width: 100%;
+}
 /** break out from margins */
 @media (min-width: 960px) {
   .svg-map {
