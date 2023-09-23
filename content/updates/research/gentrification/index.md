@@ -72,8 +72,9 @@ However, each metropolitan area experienced gentrification pressure differently,
   scaleFactor="10"
   axisLabelText="Median Eviction Rate"
   legendDecArrowText="Gentrifying"
-  legendIncArrowText="Low-SES"
+  legendIncArrowText=" Low-SES"
   legendLabelText=""
+  mobileCutoff="Infinity"
 %}}
 
 These analyses, though, just tell us about patterns at the end of the study period (near 2016). To investigate changes in eviction rates over time, we analyzed data from 38 of the metropolitan areas where we had eviction data from both the start and the end of the study timeframe (both near 2000 and near 2016). We found that gentrifying neighborhoods saw larger declines in eviction rates than otherwise-comparable low-SES tracts. That is, eviction rates fell more in the places that were gentrifying than in very similar neighborhoods that weren’t.

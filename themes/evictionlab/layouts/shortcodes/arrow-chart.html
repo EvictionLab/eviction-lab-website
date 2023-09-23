@@ -99,19 +99,13 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       transform: translate(-2px, 0);
       text-anchor: end;
     }
-    /* .arrow-chart__body .arrow .row-value, .arrow-chart__body .legend-desc .arrow.inc .row-value, .arrow-chart__body .arrow .row-value.right {
-      transform: translate(2px, 0);
-      text-anchor: start;
-    }
-
-    .arrow-chart__body .arrow.inc .row-value, .arrow .row-value.left {
-      transform: translate(-2px, 0);
-      text-anchor: end;
-    } */
 
     .lollipop-variant circle {
       stroke-width: 0.2;
       fill-opacity: 0.7;
+    }
+    .lollipop-variant .chart-row:hover circle {
+      fill-opacity: 0.9;
     }
 
     .lollipop-variant circle.before {
@@ -259,7 +253,11 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       const $rows = $el.find('.arrow-chart g.rows')
       const $arrows = $el.find('.arrow-chart g.arrows')
 
-      // const getRowValue = ({})
+      const getRowValue = ({ content, classes = "", dx }) => `
+        <text class="row-value ${classes}" ${dx && `dx="${dx}"`}>
+          ${content}
+        </text>
+      `
 
       const getArrow = ({ before, after, yOffset = 0, valueContent = '', beforeContent = '', afterContent = '', displayRight = false }) => {
         const shift = after - before
@@ -273,16 +271,16 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
 <circle class="before" r="1" cy="-0.1" />
 <circle class="after" r="1" cy="-0.1" cx="${shift}" />
 `
-          const beforeLoc = shift > 0 ? "left" : "right";
-          const afterLoc = shift > 0 ? "right" : "left";
-          rowValues = `
-        <text class="row-value before ${beforeLoc}">
-          ${beforeContent || d3.format('.1%')(before / 100 / scaleFactor)}
-          </text>
-        <text class="row-value after ${afterLoc}" dx="${shift}">
-          ${afterContent || d3.format('.1%')(after / 100 / scaleFactor)}
-          </text>
-          `
+          const beforeRowValue = getRowValue({
+            content: beforeContent || d3.format('.1%')(before / 100 / scaleFactor),
+            classes: shift > 0 ? "left" : "right",
+          });
+          const afterRowValue = getRowValue({
+            content: afterContent || d3.format('.1%')(after / 100 / scaleFactor),
+            classes: shift > 0 ? "right" : "left",
+            dx: shift
+          });
+          rowValues = `${beforeRowValue}${afterRowValue}`
         } else {
         // make room for size of arrow head
         let valueOffset = Math.abs(shift) < 3.5
@@ -291,13 +289,11 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         if (displayRight && shift > 0) {
           valueOffset = shift;
         }
-        const valueLoc = displayRight || shift < 0 ? "right" : "left";
-        const content = valueContent || d3.format('.1%')(shift / 100 / scaleFactor)
-          rowValues = `
-            <text dx="${valueOffset}" class="row-value ${valueLoc}">
-              ${content}
-            </text>
-          `
+          rowValues = getRowValue({
+            content: valueContent || d3.format('.1%')(shift / 100 / scaleFactor),
+            classes: displayRight || shift < 0 ? "right" : "left",
+            dx: valueOffset
+          });
         }
 
         return `
@@ -352,6 +348,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
             $rows.append(rowWrapper)
           })
 
+        // create legend
         const startX = isMobile ? xMin + 12 : 0;
         const arrowLength = 7;
         const decBefore = isMobile ? 27 : 40;
@@ -359,10 +356,24 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         const labelText = !legendLabelText ? "" : legendLabelText + ":";
         const decArrow = !legendDecArrowText
           ? ""
-          : getArrow({ before: decBefore, after: decBefore - arrowLength, valueContent: legendDecArrowText, beforeContent: legendDecArrowText, afterContent: " ", displayRight: true })
+          : getArrow({
+            before: decBefore,
+            after: decBefore - arrowLength,
+            valueContent: legendDecArrowText,
+            beforeContent: legendDecArrowText,
+            afterContent: " ", // overwrite the numeric value
+            displayRight: true
+          });
         const incArrow = !legendIncArrowText
           ? ""
-          : getArrow({ before: incBefore, after: incBefore + arrowLength, valueContent: legendIncArrowText, beforeContent: " ", afterContent: legendIncArrowText, displayRight: true })
+          : getArrow({
+            before: incBefore,
+            after: incBefore + arrowLength,
+            valueContent: legendIncArrowText,
+            beforeContent: " ", // overwrite the numeric value
+            afterContent: legendIncArrowText,
+            displayRight: true
+          });
         const legendLabel = `
         <text x="${startX}">${labelText}</text>
         ${decArrow}
