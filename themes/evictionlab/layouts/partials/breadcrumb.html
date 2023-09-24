@@ -5,7 +5,7 @@
   <!-- do nothing -->
   {{ else }}
     <div class="breadcrumbs bc-{{ if .Params.childof }}{{.Params.childof}}{{ else }}{{.Params.type}}{{ end }} center-page-wrapper">
-      <div class="center-page">
+      <div class="px-0 px-xxl-2">
 
           <a href="{{ .Site.BaseURL }}{{ .Section }}">
             <span class="dim">{{ humanize .Section }}</span>
