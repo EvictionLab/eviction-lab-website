@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: gentrifications-role-in-the-eviction-crisis
 contenttype: updates
