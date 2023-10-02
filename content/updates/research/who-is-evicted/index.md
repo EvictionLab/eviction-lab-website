@@ -12,9 +12,9 @@ date: 2023-09-30T16:20:51.942Z
 postauthorname: Nick Graetz, Carl Gershenson, Peter Hepburn, Sonya R. Porter, Danielle H. Sandler, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: GettyImages-1245604936.jpg
-fbImage: GettyImages-1245604936.jpg
-twImage: GettyImages-1245604936.jpg
+image: 
+fbImage: 
+twImage: 
 description: 'One of the fiercest debates in sociology and urban studies has concerned the nature of gentrification. Analyzing eviction in cities across the country, we show that eviction rates were lower and decreasing faster in gentrifying areas.'
 listSummary: 'One of the fiercest debates in sociology and urban studies has concerned the nature of gentrification. Analyzing eviction in cities across the country, we show that eviction rates were lower and decreasing faster in gentrifying areas.'
 scripts:
