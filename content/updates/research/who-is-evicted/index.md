@@ -15,8 +15,8 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 image: 
 fbImage: GettyImages-1245604936.jpg
 twImage: GettyImages-1245604936.jpg
-description: 'Through a groundbreaking collaboration with the U.S. Census Bureau, we are able to demonstrate, for the first time, the sheer number of people facing the threat of eviction, the scale of racial/ethnic disparities in eviction risk, and the heavy burden of eviction faced by children'
-listSummary: 'Through a groundbreaking collaboration with the U.S. Census Bureau, we are able to demonstrate, for the first time, the sheer number of people facing the threat of eviction, the scale of racial/ethnic disparities in eviction risk, and the heavy burden of eviction faced by children'
+description: 'Through a groundbreaking collaboration with the U.S. Census Bureau, we are able to demonstrate, for the first time, the sheer number of people facing the threat of eviction, the scale of racial/ethnic disparities in eviction risk, and the heavy burden of eviction faced by children.'
+listSummary: 'Through a groundbreaking collaboration with the U.S. Census Bureau, we are able to demonstrate, for the first time, the sheer number of people facing the threat of eviction, the scale of racial/ethnic disparities in eviction risk, and the heavy burden of eviction faced by children.'
 scripts:
   - charts
   - grouped-bar-chart
