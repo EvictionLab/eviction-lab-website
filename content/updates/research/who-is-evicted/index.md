@@ -161,7 +161,7 @@ Those under age 20 are at greatest risk of eviction. In Figure 1, we display evi
   <div class="tab-pane fade" id="pop-py-er" role="tabpanel" aria-labelledby="pop-py-er-tab">
 
 
-{{% horizontal-bars2
+{{% butterfly-chart
   id="hbars2a"
   title="Figure 1. Eviction by Gender and Five-Year Age Group"
   data="./fig1.csv"
