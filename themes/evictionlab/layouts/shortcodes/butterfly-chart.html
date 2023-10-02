@@ -1,12 +1,14 @@
 {{/**
 
-Shortcode for rendering a stack of horizontal bars (which was adapted from arrow-chart).
+Shortcode for rendering a butterfly chart, generic form of a population pyramid (which was adapted from horizontal-bars).
+
 
 */}}
 
 {{ $title := .Get "title" }}
 {{ $xMax := .Get "xMax" }}
 {{ $axisLabelText := .Get "axisLabelText" }}
+{{ $axisLabelX := .Get "axisLabelX" }}
 
 <div class="chart chart--hbar chart--{{ .Get `id` }}">
   <style type="text/css">
@@ -22,7 +24,7 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
     .hbar-chart__body.is-mobile text {}
 
     .hbar-chart__body.is-mobile text {
-      font-size: 3px;
+      font-size: 3.5px;
     }
 
     .hbar-chart__body.is-mobile .tick-values text {
@@ -60,6 +62,10 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
       stroke-width: 4;
     }
 
+    .hbar-chart__body .hbar:not(.left) .legend-text {
+      text-anchor: end;
+    }
+
     .hbar-chart__body .hbar.inc line {
       stroke: #E24000;
     }
@@ -70,13 +76,13 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
 
     .hbar-chart__body .hbar .row-value,
     .hbar-chart__body .legend-desc .hbar.inc .row-value {
-      transform: translate(2px, 0);
+      transform: translate(2px, .35px);
       text-anchor: start;
       color: white;
     }
 
-    .hbar-chart__body .hbar.inc .row-value {
-      transform: translate(-2px, 0);
+    .hbar-chart__body .hbar.left .row-value {
+      transform: translate(-2px, .35px);
       text-anchor: end;
     }
 
@@ -87,6 +93,7 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
     .hbar-chart__body .chart-row:hover g.hbar line {
       stroke: var(--c1);
     }
+
     .hbar-chart__body .chart-row:hover text.row-value {
       display: block;
     }
@@ -155,6 +162,14 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
     </svg>
     <svg class="sticky-leg" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
       <g class="tick-lines xMax-dependent">
+        <line data-val="200" x1="-200" x2="-200" y1="0" y2="1.2"></line>
+        <line data-val="175" x1="-175" x2="-175" y1="0" y2="1.2"></line>
+        <line data-val="150" x1="-150" x2="-150" y1="0" y2="1.2"></line>
+        <line data-val="125" x1="-125" x2="-125" y1="0" y2="1.2"></line>
+        <line data-val="100" x1="-100" x2="-100" y1="0" y2="1.2"></line>
+        <line data-val="75" x1="-75" x2="-75" y1="0" y2="1.2"></line>
+        <line data-val="50" x1="-50" x2="-50" y1="0" y2="1.2"></line>
+        <line data-val="25" x1="-25" x2="-25" y1="0" y2="1.2"></line>
         <line data-val="0" x1="0" x2="0" y1="0" y2="1.2"></line>
         <line data-val="25" x1="25" x2="25" y1="0" y2="1.2"></line>
         <line data-val="50" x1="50" x2="50" y1="0" y2="1.2"></line>
@@ -165,7 +180,15 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
         <line data-val="175" x1="175" x2="175" y1="0" y2="1.2"></line>
         <line data-val="200" x1="200" x2="200" y1="0" y2="1.2"></line>
       </g>
-      <g class="tick-values xMax-dependent" transform="translate(0, 2)">
+      <g class="tick-values xMax-dependent scaleFactor-dependent" transform="translate(0, 2)">
+        <text data-val="200" x="-200">200%</text>
+        <text data-val="175" x="-175">175%</text>
+        <text data-val="150" x="-150">150%</text>
+        <text data-val="125" x="-125">125%</text>
+        <text data-val="100" x="-100">100%</text>
+        <text data-val="75" x="-75">75%</text>
+        <text data-val="50" x="-50">50%</text>
+        <text data-val="25" x="-25">25%</text>
         <text data-val="0" x="0">0%</text>
         <text data-val="25" x="25">25%</text>
         <text data-val="50" x="50">50%</text>
@@ -176,57 +199,65 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
         <text data-val="175" x="175">175%</text>
         <text data-val="200" x="200">200%</text>
       </g>
-      <text class="axis-title" x="50"></text>
+      <text class="axis-title" x="{{ $axisLabelX }}"></text>
       <g class="legend-desc"></g>
     </svg>
   </div>
 
   <script>
-  // immediately invoked function so that we don't pollute the global scope
-  // (variables overwrite those in other component script tags)
-  (() => {
+    // immediately invoked function so that we don't pollute the global scope
+    // (variables overwrite those in other component script tags)
+    (() => {
     var id = {{ .Get "id" }}
     var hbCsv = {{ .Get "data" }}
     var xMax = {{ .Get "xMax" }} || 100;
+    var scaleFactor = {{ .Get "scaleFactor" }} || 1;
+    var nameX = {{ .Get "nameX" }} || 0;
+    var barGap = {{ .Get "barGap" }} || 0;
     var xMinMobile = {{ .Get "xMinMobile" }} || -42;
     var xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
     var mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
     var nameField = {{ .Get "nameField" }};
-    var numeratorField = {{ .Get "numeratorField" }};
+    var numerator1Field = {{ .Get "numerator1Field" }};
+    var numerator2Field = {{ .Get "numerator2Field" }};
     var denominatorField = {{ .Get "denominatorField" }};
     var legendLabelText = {{ .Get "legendLabelText" }} || "";
     var axisLabelText = {{ .Get "axisLabelText" }} || "";
+    var legendLeftText = {{ .Get "legendLeftText" }} || "";
+    var legendRightText = {{ .Get "legendRightText" }} || "";
 
     window.addEventListener('load', function () {
       var $el = $("#" + id);
-      
+
       var isMobile = window.innerWidth <= Number(mobileCutoff);
       const rowHeight = isMobile ? 6 : 4.5;
       const xMin = isMobile ? xMinMobile : xMinDesktop;
-      
+
       const $rows = $el.find('.hbar-chart g.rows')
 
-      const getBar = ({ value, yOffset = 0, valueContent = '', valueRight = false }) => {
-        const shift = value;
+      const getBar = ({ value, yOffset = 0, valueContent = '', leftBar, legendText }) => {
+        if (isNaN(value)) return '';
+        const width = value * scaleFactor;
         let barClass = "hbar"
-
-        let valueOffset = Math.abs(shift) < 3.5
-          ? (3.5 - Math.abs(shift)) * Math.sign(shift * -1)
-          : 0;
-        if (valueRight && shift > 0) {
-          valueOffset = Math.abs(valueOffset) + shift
-        }
-
-        const content = valueContent || d3.format('.1%')(shift / 100)
+        if (leftBar) barClass += " left"
+        const content = valueContent ||
+          d3.format('.1%')(Math.abs(width) / 100 / scaleFactor);
         const valueVal = `
-  <text dx="${valueOffset}" class="row-value">
+  <text dx="${width}" class="row-value">
     ${content}
   </text>
           `
+        const legendItem = legendText && `
+  <text dx="${50 * Math.sign(width)}" class="legend-text">
+    ${legendText}
+  </text>
+          `
+
         return `
 <g class="${barClass}" transform="translate(0, ${yOffset})">
-  <line x1="0" y1="0" x2="${shift}" y2="0" />
+  <line x1="${barGap * Math.sign(width)}" y1="0" x2="${width}" y2="0" />
   ${valueVal}
+  ${legendItem}
 </g>
 `
       }
@@ -234,12 +265,15 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
       d3.csv(hbCsv, function (data) {
         data.
           map(r => {
-            const numerator = parseFloat(r[numeratorField]);
+            const numerator1 = parseFloat(r[numerator1Field]);
+            const numerator2 = parseFloat(r[numerator2Field]);
             const denominator = parseFloat(r[denominatorField]) || 1;
+            // console.log(r, numerator, denominator, numerator / denominator)
             return {
               name: r[nameField],
               highlighted: !!r.highlighted && r.highlighted !== "false",
-              value: 100 * numerator / denominator,
+              value1: numerator1 / denominator,
+              value2: numerator2 / denominator,
             }
           })
           .sort((a, b) => b.value - a.value)
@@ -251,6 +285,14 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
 
             const axisLines = `
   <g class="axis-lines xMax-dependent">
+    <line data-val="200" x1="-200" x2="-200" y1="0" y2="${rowHeight}"></line>
+    <line data-val="175" x1="-175" x2="-175" y1="0" y2="${rowHeight}"></line>
+    <line data-val="150" x1="-150" x2="-150" y1="0" y2="${rowHeight}"></line>
+    <line data-val="125" x1="-125" x2="-125" y1="0" y2="${rowHeight}"></line>
+    <line data-val="100" x1="-100" x2="-100" y1="0" y2="${rowHeight}"></line>
+    <line data-val="75" x1="-75" x2="-75" y1="0" y2="${rowHeight}"></line>
+    <line data-val="50" x1="-50" x2="-50" y1="0" y2="${rowHeight}"></line>
+    <line data-val="25" x1="-25" x2="-25" y1="0" y2="${rowHeight}"></line>
     <line data-val="0" x1="0" x2="0" y1="0" y2="${rowHeight}"></line>
     <line data-val="25" x1="25" x2="25" y1="0" y2="${rowHeight}"></line>
     <line data-val="50" x1="50" x2="50" y1="0" y2="${rowHeight}"></line>
@@ -266,8 +308,9 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
 <g class="${rowClasses}" transform="translate(0, ${y})">
   <rect x="${xMin}" y="0" height="${rowHeight}" width="100%" width="100%" height="${rowHeight}" />
   ${axisLines}
-  <text class="name" x="0" y="0">${r.name}</text>
-  ${getBar({ ...r, yOffset: rowHeight / 2 + 0.1, includeTooltip: true, valueRight: true })}
+  <text class="name" x="${nameX}" y="0">${r.name}</text>
+  ${getBar({ ...r, value: -r.value1, yOffset: rowHeight / 2 + 0.1, leftBar: true, legendText: !i && legendLeftText })}
+  ${getBar({ ...r, value: r.value2, yOffset: rowHeight / 2 + 0.1, legendText: !i && legendRightText })}
 </g>
           `
             $rows.append(rowWrapper)
@@ -295,6 +338,13 @@ Shortcode for rendering a stack of horizontal bars (which was adapted from arrow
             el.remove()
           }
         })
+        if (scaleFactor !== 1) {
+          $el.find('.scaleFactor-dependent [data-val]').each((i, el) => {
+            // elements only get rendered if their val is relevant to the arrow
+            // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
+            el.textContent = el.dataset.val / scaleFactor + "%"
+          })
+        }
 
         $el.html($el.html());
       })
