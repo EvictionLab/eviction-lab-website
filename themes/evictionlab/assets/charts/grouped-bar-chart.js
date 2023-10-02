@@ -85,12 +85,10 @@ Elab.GroupedBarChart = (function (Elab) {
   function createFigure(root, data, dataOptions) {
     // console.log("createFigure: ", root, data, dataOptions);
     var options = dataOptions;
-    const yTooltipFormat = d3.format(
-        options.yTooltipFormat || options.yFormat || ",d"
-    );
+    const yTooltipFormat = d3.format(options.yTooltipFormat || options.yFormat || ",d");
 
     var getBarType = function (str, options) {
-      var type = "";
+      if (options.saneLoading) return str.split("_")[0];
       var c = options.highlight.split(";");
       var result = c.find(function (el) {
         return str.indexOf(el) > -1;
@@ -99,11 +97,13 @@ Elab.GroupedBarChart = (function (Elab) {
     };
 
     var findDataItem = function (data, options) {
-      // console.log('findDataItem, ', data, options)
+      // console.log("findDataItem, ", data, options);
+      if (options.saneLoading) return data[0];
+
       var result = data.find(function (d) {
         return Number(d[options.searchId]) === Number(options.active);
       });
-      // console.log('result, ', result)
+      // console.log("result, ", result);
       return result;
     };
 
@@ -174,8 +174,9 @@ Elab.GroupedBarChart = (function (Elab) {
             var newExtent = d3.extent(newArr);
             // console.log('newExtent, ', newExtent)
             var range = newExtent[1] - newExtent[0];
-            // console.log('range, ', range)
-            return [newExtent[0] - range * 0.05, newExtent[1] + range * 0.05];
+            // console.log('range, ', range, newExtent)
+            var upper = options.yMax || newExtent[1] + range * 0.05;
+            return [newExtent[0], upper];
           },
           ticks: dataOptions.yTicks || 5,
           tickFormat: d3.format(dataOptions.yFormat || ",d"),
@@ -202,22 +203,67 @@ Elab.GroupedBarChart = (function (Elab) {
     );
   }
 
+  function createLegend(legendEl, items) {
+    // console.log({ legendEl, items });
+    items.forEach((item, i) => {
+      $(legendEl).append(`
+        <div class="legend-item legend-item--${i}">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">${item}</div>`);
+    });
+  }
+
+  const strip = (s) => s.toLowerCase().replace(/[^a-z]/g, "-");
+
   /**
    * Loads and parses the CSV table
    */
   function loadData(options, callback) {
-    // console.log('loadData, ', options)
+    // console.log("loadData, ", options);
     // var parseDate = d3.timeParse("%m/%d/%Y");
     d3.csv(options.data, function (data) {
-      // console.log('d3.csv, ', data, options)
-      var result = data.map(function (d) {
-        var obj = {};
-        options.columns.forEach(function (el, i) {
-          obj[el] = d[el];
+      // console.log("d3.csv, ", data, options);
+      var result;
+      if (options.saneLoading) {
+        // convert rows of data into the expected single data object
+        const { dataMap, groups, metrics } = data.reduce(
+          (accum, d) => {
+            const [valueField, groupField, metricField] = options.saneLoading.includes(",")
+              ? options.saneLoading.split(",")
+              : ["value", "group", "metric"];
+            const [value, group, metric] = [valueField, groupField, metricField].map((f) => d[f]);
+            const key = `${strip(metric)}_${strip(group)}`;
+            if (!group || !metric || !!accum.dataMap[key] || typeof value !== "string") {
+              console.warn("check grouped bar chart data format");
+            }
+            accum.dataMap[key] = value;
+            if (!accum.groups.includes(group)) accum.groups.push(group);
+            if (!accum.metrics.includes(metric)) accum.metrics.push(metric);
+            return accum;
+          },
+          { dataMap: {}, groups: [], metrics: [] },
+        );
+        result = [dataMap];
+        options.barsGroups = groups.map((g) =>
+          metrics.map((m) => `${strip(m)}_${strip(g)}`).join(","),
+        );
+        // set the xTicks based on the groups, in the order they appear in the data
+        if (!options.xTicks) options.xTicks = groups.join(";");
+        // set the legend items based on the metrics, in the order they appear in the data
+        if (!options.legendItems) options.legendItems = metrics.join(";");
+      } else {
+        result = data.map(function (d) {
+          var obj = {};
+
+          options.columns.forEach(function (el, i) {
+            obj[el] = d[el];
+          });
+          // console.log('obj, ',obj)
+          return obj;
         });
-        // console.log('obj, ',obj)
-        return obj;
-      });
+      }
+
+      // console.log({ data, result });
       callback && callback(result);
     });
   }
@@ -229,30 +275,37 @@ Elab.GroupedBarChart = (function (Elab) {
     // console.log('barchart init, ', rootEl, options)
     if (!options || typeof options !== "object")
       throw new Error("barchart: no options object provided");
-    if (!options.data)
-      throw new Error("barchart: must provide file URL in options");
-    if (!options.columns)
-      throw new Error(
-          "barchart: must provide columns for CSV processing in options"
-      );
+    if (!options.data) throw new Error("barchart: must provide file URL in options");
+    if (!options.columns && !options.saneLoading)
+      throw new Error("barchart: must provide columns for CSV processing in options");
     options.cofips = "cofips";
     options.state = "state";
-    options.ticksArr = String(options.xTicks)
+    // console.log('options')
+
+    options.columns = options.columns.split(",");
+    loadData(options, function (data) {
+      // console.log("loadData", data, options);
+      options.ticksArr = String(options.xTicks)
         .split(";")
         .map(function (el, i) {
           return el.toLowerCase();
         });
-    options.barsGroups = options.xBars.split(";");
-    options.barFormat = [];
-    options.ticksArr.forEach(function (el, i) {
-      options.barFormat[el.toLowerCase()] = options.barsGroups[i].split(",");
-    });
-    options.columns = options.columns.split(",");
-    // console.log('options')
+      // saneLoading calculates bargoups based on data
+      if (!options.saneLoading) {
+        options.barsGroups = options.xBars.split(";");
+      }
+      // console.log("bargroups: ", options.barsGroups);
+      options.barFormat = [];
+      options.ticksArr.forEach(function (el, i) {
+        options.barFormat[el.toLowerCase()] = options.barsGroups[i].split(",");
+      });
+      // console.log("barFormat: ", options.barFormat);
 
-    loadData(options, function (data) {
-      // console.log('loadData')
       createFigure(rootEl, data, options);
+      if (options.autoGenLegend)
+        createLegend(options.generatedLegendEl, options.legendItems.split(";"));
+      // HACK: gets the chart to resize, which properly makes room for its axis labels
+      window.dispatchEvent(new Event("resize"));
     });
   }
 

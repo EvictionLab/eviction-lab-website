@@ -39,12 +39,6 @@ fbImage: house.jpg
   
 </style>
 
-<script>
-  // HACK: gets the grouped-bar-chart to resize, which properly makes room for its axis labels
-  // TODO: fix for all charts
-  setTimeout(() => window.dispatchEvent(new Event('resize')), 3000);
-</script>
-
 <span class="dropcap green">M</span>illions of people were laid off over the course of just a few weeks in spring 2020 as COVID-19 lockdowns were put in place nationwide. Job losses were concentrated in industries that employ a large number of renters, especially the retail, service, and tourism sectors. With few jobs available and limited savings, these tenants were at immediate risk of eviction if they could not pay next month’s rent. Evictions in turn raised the prospect of more households ending up homeless or doubled-up with friends or relatives, conditions that foster the spread of COVID-19. 
 
 Responding to the unfolding emergency, policymakers at the federal, state, and local levels enacted a range of new policies. These included eviction moratoria to prevent immediate displacement, stimulus payments and expanded unemployment insurance that allowed many tenants to stay current on rent, and emergency rental assistance (ERA) to help them catch up if they fell behind. 
@@ -119,9 +113,9 @@ Another way of analyzing this variation was to look at eviction filings by neigh
   titlePrefix="Figure 3. Median eviction filings rates prior to and during the COVID-19 pandemic by neighborhood racial/ethnic majority" 
   titleSuffix="" 
   data="./fig3.csv" 
-  x="id" 
-  y="mfr_w_20" 
-  yTicks="5" 
+  x="" 
+  y="" 
+  yTicks="" 
   yMin="0"
   yFormat=".1%" 
   xTicks="Black;Latino;White;Other/None" 

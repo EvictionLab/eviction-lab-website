@@ -150,6 +150,7 @@ caption="Colors represent state eviction policy scores from our <a href='#'>COVI
   margin="8 8 104 40"
 %}}
 
+<!-- see gentrification post for updated GBC using saneLoading and autoGenLegend for minimal configuration -->
 {{% grouped-bar-chart 
   id="county_rd_disp" 
   titlePrefix="Grouped bar chart with search. Title reflects search scope; currently showing rates" 

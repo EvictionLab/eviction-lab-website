@@ -1183,8 +1183,7 @@ Elab.ChartBuilder = (function (Elab) {
         .rangeRound([_this.getInnerHeight(), 0])
         .domain(yExtent)
         .nice();
-      window.yy = _this.yScale;
-      console.log(window.yy, 123, extent, yExtent);
+
       var yAxis = d3.axisLeft(_this.yScale).tickSize(-1 * _this.getInnerWidth());
       if (options.ticks) yAxis.ticks(options.ticks);
       if (options.tickFormat) yAxis.tickFormat(options.tickFormat);
