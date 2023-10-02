@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: Gentrification’s Role in the Eviction Crisis
-date: 2023-09-22T16:20:51.942Z
+date: 2023-10-02T00:20:51.942Z
 postauthorname: Peter Hepburn, Renee Louis, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
