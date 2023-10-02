@@ -174,8 +174,9 @@ Elab.GroupedBarChart = (function (Elab) {
             var newExtent = d3.extent(newArr);
             // console.log('newExtent, ', newExtent)
             var range = newExtent[1] - newExtent[0];
-            // console.log('range, ', range)
-            return [newExtent[0] - range * 0.05, newExtent[1] + range * 0.05];
+            // console.log('range, ', range, newExtent)
+            var upper = options.yMax || newExtent[1] + range * 0.05;
+            return [newExtent[0], upper];
           },
           ticks: dataOptions.yTicks || 5,
           tickFormat: d3.format(dataOptions.yFormat || ",d"),
@@ -218,7 +219,7 @@ Elab.GroupedBarChart = (function (Elab) {
    * Loads and parses the CSV table
    */
   function loadData(options, callback) {
-    // console.log('loadData, ', options)
+    // console.log("loadData, ", options);
     // var parseDate = d3.timeParse("%m/%d/%Y");
     d3.csv(options.data, function (data) {
       // console.log("d3.csv, ", data, options);
@@ -226,7 +227,11 @@ Elab.GroupedBarChart = (function (Elab) {
       if (options.saneLoading) {
         // convert rows of data into the expected single data object
         const { dataMap, groups, metrics } = data.reduce(
-          (accum, { group, metric, value }) => {
+          (accum, d) => {
+            const [valueField, groupField, metricField] = options.saneLoading.includes(",")
+              ? options.saneLoading.split(",")
+              : ["value", "group", "metric"];
+            const [value, group, metric] = [valueField, groupField, metricField].map((f) => d[f]);
             const key = `${strip(metric)}_${strip(group)}`;
             if (!group || !metric || !!accum.dataMap[key] || typeof value !== "string") {
               console.warn("check grouped bar chart data format");
@@ -296,7 +301,6 @@ Elab.GroupedBarChart = (function (Elab) {
       });
       // console.log("barFormat: ", options.barFormat);
 
-      console.log("coverted options", options);
       createFigure(rootEl, data, options);
       if (options.autoGenLegend)
         createLegend(options.generatedLegendEl, options.legendItems.split(";"));
