@@ -132,7 +132,7 @@ These data offer an unprecedented opportunity to understand eviction risk in Ame
 <hr style="border-top-color: #2c897f; margin: 4rem 0 2.4rem;">
 <div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-3">
     <div class="pr-12 pr-md-0">
-        <a href='{{ index .Params 1 }}' target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src='pnas.jpg' /></a>
+        <a href='https://www.pnas.org/doi/10.1073/pnas.2305860120' target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src='pnas.jpg' /></a>
     </div>
     <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE STUDY:</p>
         <p><a class="green gt-eesti journal-heading" href='https://www.pnas.org/doi/10.1073/pnas.2305860120' target="_blank" rel="noreferrer noopener">A comprehensive demographic profile of the US evicted population</a></p>
@@ -142,7 +142,7 @@ These data offer an unprecedented opportunity to understand eviction risk in Ame
 <hr style="border-top-color: #2c897f; margin: 2.4rem 0 2.4rem;">
 <div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-3">
     <div class="pr-12 pr-md-0">
-        <a href='{{ index .Params 1 }}' target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src='nyt.jpg' /></a>
+        <a href='https://www.nytimes.com/2023/10/02/upshot/evictions-children-american-renters.html' target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src='nyt.jpg' /></a>
     </div>
     <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ COVERAGE IN THE NEW YORK TIMES:</p>
         <p><a class="green gt-eesti journal-heading" href='https://www.nytimes.com/2023/10/02/upshot/evictions-children-american-renters.html' target="_blank" rel="noreferrer noopener">The Americans Most Threatened by Eviction: Young Children</a></p>
