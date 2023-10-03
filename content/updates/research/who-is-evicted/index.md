@@ -125,7 +125,7 @@ scripts:
 
 </style>
 
-<span class="dropcap green">T</span>hrough a groundbreaking collaboration with the U.S. Census Bureau, we are able to provide a comprehensive picture of the full population of renters living in households that were threatened with eviction between 2007 and 2016 (we describe the full methodology below). We are able to demonstrate, for the first time, the sheer number of people facing the threat of eviction, the scale of racial/ethnic disparities in eviction risk, and the heavy burden of eviction faced by children. Across the life-course, the risk of experiencing an eviction—a deeply traumatizing event—is highest during childhood. Evicted children face increased risk of food insecurity, exposure to environmental hazards, academic challenges, and a range of long-term physical and mental health problems. We now know that nearly three million children face these risks every single year.
+<span class="dropcap green">T</span>hrough a groundbreaking collaboration with the U.S. Census Bureau, we are able to provide a comprehensive picture of the full population of renters living in households that were threatened with eviction between 2007 and 2016 (<a class="smoothScroll" href="#methods">we describe the full methodology below</a>). We are able to demonstrate, for the first time, the sheer number of people facing the threat of eviction, the scale of racial/ethnic disparities in eviction risk, and the heavy burden of eviction faced by children. Across the life-course, the risk of experiencing an eviction—a deeply traumatizing event—is highest during childhood. Evicted children face increased risk of food insecurity, exposure to environmental hazards, academic challenges, and a range of long-term physical and mental health problems. We now know that nearly three million children face these risks every single year.
 
 These data offer an unprecedented opportunity to understand eviction risk in America. They also make clear that several groups officially protected from housing discrimination by the [Fair Housing Act](https://www.hud.gov/program_offices/fair_housing_equal_opp/fair_housing_act_overview) (FHA) are at disproportionately high risk of eviction. We describe our findings in an article published in the _Proceedings of the National Academy of Sciences_ and highlight five key results here.
 
@@ -136,7 +136,7 @@ These data offer an unprecedented opportunity to understand eviction risk in Ame
     </div>
     <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ THE STUDY:</p>
         <p><a class="green gt-eesti journal-heading" href='https://www.pnas.org/doi/10.1073/pnas.2305860120' target="_blank" rel="noreferrer noopener">A comprehensive demographic profile of the US evicted population</a></p>
-        <p class="mt-3" style="font-size: 1.6rem;">Nick Graetz, Carl Gershenson, Peter Hepburn, and Matthew Desmond</p>
+        <p class="mt-3" style="font-size: 1.6rem;">Nick Graetz, Carl Gershenson, Peter Hepburn, Sonya R. Porter, Danielle H. Sandlerand, and Matthew Desmond</p>
     </div>
 </div>
 <hr style="border-top-color: #2c897f; margin: 2.4rem 0 2.4rem;">
@@ -153,7 +153,7 @@ These data offer an unprecedented opportunity to understand eviction risk in Ame
 
 ### 7.6 Million Renters Face the Threat of Eviction Annually
 
-[Previous work documenting the prevalence of eviction has counted the number of](https://evictionlab.org/new-eviction-data-2022/) [_households_](https://evictionlab.org/new-eviction-data-2022/) [that face the threat of eviction](https://evictionlab.org/new-eviction-data-2022/). But we knew almost nothing about who exactly lives in those homes. Documents from courts only give us the names of the people listed on the lease and their address. Previously, we've been able to estimate [racial and gender disparities in eviction risk](https://evictionlab.org/demographics-of-eviction/) using this information. But those estimates are imperfect, and only account for the people listed in the filing.
+[Previous work documenting the prevalence of eviction has counted the number of _households_ that face the threat of eviction](https://evictionlab.org/new-eviction-data-2022/). But we knew almost nothing about who exactly lives in those homes. Documents from courts only give us the names of the people listed on the lease and their address. Previously, we've been able to estimate [racial and gender disparities in eviction risk](https://evictionlab.org/demographics-of-eviction/) using this information. But those estimates are imperfect, and only account for the people listed in the filing.
 
 Here, for the first time, we're able to count all the people living in those households. We find that, on average, 7.6 million _individuals_ were threatened with eviction every year between 2007 and 2016. Just over half of these individuals—3.9 million people—lived in a household that received an eviction judgment.
 
@@ -187,7 +187,7 @@ Those under age 20 are at greatest risk of eviction. In Figure 1, we display [ev
   mobileCutoff="Infinity"
   legendLeftText="Females"
   legendRightText="Males"
-  axisLabelText="Average annual rate, 2007-2018"
+  axisLabelText="Average annual rate, 2007-2016"
   axisLabelX="0"
 %}}
 
@@ -211,7 +211,7 @@ Those under age 20 are at greatest risk of eviction. In Figure 1, we display [ev
   mobileCutoff="Infinity"
   legendLeftText="Females"
   legendRightText="Males"
-  axisLabelText="Average annual rate, 2007-2018"
+  axisLabelText="Average annual rate, 2007-2016"
   axisLabelX="0"
 %}}
 
@@ -292,6 +292,9 @@ Racial disparities in eviction risk are also compounded by the higher risk of ev
     <a class="nav-link" id="pills-relative-tab" data-toggle="pill" href="#ch-ba-er" role="tab" aria-controls="pills-relative" aria-selected="false">Eviction Rate</a>
   </li>
 </ul>
+<div class="figcaption">
+<p>In the figure above, A.I./A.N. represents American Indian/Alaska Native, and N.H./P.I. represents Native Hawaiian/Pacific Islander.</p>
+</div>
 
 ### Eviction Risk Declines with Income, but Racial Disparities are Large
 
@@ -338,11 +341,15 @@ Poor households are at greatest risk of eviction. As household income increases,
 
 <hr/>
 
+
+
 This study is the result of an ongoing collaboration between the Eviction Lab and the U.S. Census Bureau. Our work allows us to observe, for the first time, the extent of eviction risk nationwide at an individual level. It also highlights the need to collect more data about renter households. As a result of the 1975 Home Mortgage Disclosure Act, the federal government collects data about home loans, allowing researchers to document ethno-racial disparities in access to credit and patterns of segregation among homeowners. There is no equivalent law or data collection when it comes to private rental housing, where the vast majority of low-income Americans—especially Black and Hispanic Americans—find housing. Without reliable and transparent data systems, we cannot begin to truly address America's ongoing history of discriminatory housing policies and practices.
 
 This study also makes clear how much work is necessary to fulfill the promise of the Fair Housing Act and to [affirmatively further fair housing](https://www.hud.gov/AFFH). The FHA was established to protect people from discrimination in housing because of their race, national origin, religion, sex, familial status, or disability. Our results demonstrate the disparate impact of eviction faced by at least two protected classes: Black renters and renters with children. [As eviction filing rates return to pre-pandemic levels](https://evictionlab.org/ets-report-2022/), it's these renters who will pay the price.
 
 ### Methods
+
+<a id="methods"></a>
 
 Our partnership with the Census Bureau involved linking millions of eviction court records to unique identifiers maintained by the Bureau. Using that linkage, we were able to analyze how households that were threatened with eviction responded to the American Community Survey (ACS). Those ACS data included detailed listings of everyone living in the household as well as information on household economic well-being.
 
