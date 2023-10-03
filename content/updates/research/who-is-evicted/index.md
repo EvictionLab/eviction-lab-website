@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: who-is-evicted-in-america
 contenttype: updates
