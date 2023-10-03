@@ -92,6 +92,18 @@ a.btn.buttonlink {
   }
 }
 .footnotes {
+  font-family: $fontStack;
+      font-size: 1.5rem !important;
+      list-style: none;
+      counter-increment: el-counter;
+      margin-left: 0;
+      letter-spacing: 0.015rem;
+      @include media-breakpoint-up(lg) {
+        font-size: 1.6rem !important;
+      }
+      margin-bottom: 0.8rem !important;
+      /* background-color: white; */
+      color: #6b6b6b;
   ol {
     counter-reset: el-counter;
     li {
