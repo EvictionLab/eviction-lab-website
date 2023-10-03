@@ -173,7 +173,7 @@ Those under age 20 are at greatest risk of eviction. In Figure 1, we display [ev
 
 {{% butterfly-chart
   id="hbars2"
-  title="Figure 1. Eviction Rates by Gender and Five-Year Age Group"
+  title="Figure 1. Eviction rates by gender and five-year age group"
   data="./fig1.csv"
   xMax="75"
   xMinDesktop="-90"
@@ -197,7 +197,7 @@ Those under age 20 are at greatest risk of eviction. In Figure 1, we display [ev
 
 {{% butterfly-chart
   id="hbars2a"
-  title="Figure 1. Eviction by Gender and Five-Year Age Group"
+  title="Figure 1. Eviction rates by gender and five-year age group"
   data="./fig1.csv"
   xMax="75"
   xMinDesktop="-90"
@@ -245,7 +245,7 @@ Eviction filing and eviction rates for Hispanic adult renters were comparable to
 
 Racial disparities in eviction risk are also compounded by the higher risk of eviction faced by those living with children. Figure 2 displays eviction rates for adult renters by race/ethnicity, broken down by whether the individual lives in a household with a child. Annual eviction filing rates among Black adults living with kids surpass 25%, well over double the risk faced by members of any other group.
 
-<div class="figheader children-bars">Figure 2. Eviction among adult renters, by race/ethnicity and presence of children</div>
+<div class="figheader children-bars">Figure 2. Eviction rates among adult renters, by race/ethnicity and presence of children</div>
 
 <div class="tab-content tab-content--children-bars" id="ch-ba-tabContent">
   <div class="tab-pane fade show active" id="ch-ba-efr" role="tabpanel" aria-labelledby="ch-ba-efr-tab">
@@ -297,7 +297,7 @@ Racial disparities in eviction risk are also compounded by the higher risk of ev
 
 Poor households are at greatest risk of eviction. As household income increases, the risk of being threatened with eviction falls. However, as we show in Figure 3, this pattern is shaped by the disparities in eviction risk that we document above (by race/ethnicity and by the presence of children). Within every income category, Black renters—particularly those living with kids—are at greater risk of eviction than their white peers.
 
-<div class="figheader">Figure 3. Eviction Rates for Adult Renters by Race/Ethnicity and Household Income</div>
+<div class="figheader">Figure 3. Eviction rates for adult renters by race/ethnicity and household income</div>
 
 <div class="tab-content tab-content--children-lines" id="ch-li-tabContent">
   <div class="tab-pane fade show active" id="ch-li-with" role="tabpanel" aria-labelledby="ch-li-with-tab">
