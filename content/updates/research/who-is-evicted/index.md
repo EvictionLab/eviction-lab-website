@@ -8,13 +8,13 @@ contentcat: research
 featured: true
 in_index: true
 title: Who is Evicted in America
-date: 2023-10-02T00:20:51.942Z
+date: 2023-10-03T00:20:51.942Z
 postauthorname: Nick Graetz, Carl Gershenson, Peter Hepburn, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: 
-fbImage: GettyImages-1245604936.jpg
-twImage: GettyImages-1245604936.jpg
+image: GettyImages-1298794304-sr.jpg
+fbImage: GettyImages-1298794304-sr.jpg
+twImage: GettyImages-1298794304-sr.jpg
 description: 'Through a groundbreaking collaboration with the U.S. Census Bureau, we are able to demonstrate, for the first time, the sheer number of people facing the threat of eviction, the scale of racial/ethnic disparities in eviction risk, and the heavy burden of eviction faced by children.'
 listSummary: 'Through a groundbreaking collaboration with the U.S. Census Bureau, we are able to demonstrate, for the first time, the sheer number of people facing the threat of eviction, the scale of racial/ethnic disparities in eviction risk, and the heavy burden of eviction faced by children.'
 scripts:
@@ -364,3 +364,5 @@ To estimate eviction filing and eviction rates, we first calculated ratios per u
 "Any opinions and conclusions expressed herein are those of the authors and do not represent the views of the U.S. Census Bureau. The Census Bureau has ensured appropriate access and use of confidential data and has reviewed these results for disclosure avoidance protection (Project 6000427-7516612: CBDRB-FY23-CES004-012, CBDRB-FY23-0407)."
 
 >}}
+
+<p class="font-italic footnotes">Header photo: Shantel McClendon climbs onto her bed to say good-bye to her youngest children before her eviction hearing in 2019, in San Francisco, Calif. (San Francisco Chronicle via Getty Images.)</p>
