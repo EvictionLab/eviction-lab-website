@@ -1,0 +1,28 @@
+name: Deploy Landing Page On Update
+
+on:
+  push:
+    branches:
+      - production
+      - staging
+      - development
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Branch and Trigger Redeploy
+        run: |
+          echo "GITHUB_REF is: $GITHUB_REF"
+          if [ "${GITHUB_REF}" = "refs/heads/production" ]; then
+            curl -X POST -d {} https://api.netlify.com/build_hooks/653193b94ea3932842de3b72
+            echo "deploy prod"
+          elif [ "${GITHUB_REF}" = "refs/heads/staging" ]; then
+            curl -X POST -d {} https://api.netlify.com/build_hooks/653193b03572112d3a927cd9
+            echo "deploy staging"
+          elif [ "${GITHUB_REF}" = "refs/heads/development" ]; then
+            curl -X POST -d {} https://api.netlify.com/build_hooks/653193a24ea393286fde3c2e
+            echo "deploy dev"
+          else
+            echo "No action needed for this branch."
+          fi
