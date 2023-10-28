@@ -46,9 +46,9 @@ other = "Ver las protecciones que brinda su estado y cómo se clasifica a nivel 
 [scorecardCTA]
 other = "Ir al cuadro de mando"
 [policiesHead]
-other = "Base de datos de políticas"
+other = "Zoning & Land Use Database"
 [policiesSub]
-other = "Usar nuestra tabla interactiva para obtener lo último sobre políticas locales, estatales y federales."
+other = "Get zoning code data for over 2,600 municipalities across the U.S."
 [policiesCTA]
 other = "Ir a políticas"
 [jsHead]

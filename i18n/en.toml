@@ -46,9 +46,9 @@ other = "See which cities rank the highest in evictions in the US (data from 201
 [scorecardCTA]
 other = "Go to the scorecard"
 [policiesHead]
-other = "Policies Database"
+other = "Zoning & Land Use Database"
 [policiesSub]
-other = "Use our interactive table to get the latest on local, state, and federal policies."
+other = "Get zoning code data for over 2,600 municipalities across the U.S."
 [policiesCTA]
 other = "Go to policies database"
 [jsHead]
