@@ -95,9 +95,9 @@ languageName = "English"
     weight = 5
     url = "/rankings/"
 [[Languages.en.menu.footer]]
-    name = "Policy Scorecard"
+    name = "National Zoning & Land Use Database"
     weight = 6
-    url = "/covid-policy-scorecard/"
+    url = "/national-zoning-and-land-use-database/"
 [[Languages.en.menu.footer]]
     name = "About Us"
     weight = 7
@@ -249,9 +249,9 @@ languageName = "Español"
     weight = 5
     url = "/rankings/#/evictions%3Flang%3Des"
 [[Languages.es.menu.footer]]
-    name = "Policy Scorecard"
+    name = "National Zoning & Land Use Database"
     weight = 6
-    url = "/covid-policy-scorecard/"    
+    url = "/national-zoning-and-land-use-database/"    
 [[Languages.es.menu.footer]]
     name = "Acerca de nosotros"
     weight = 7
