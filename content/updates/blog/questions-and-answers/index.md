@@ -49,15 +49,11 @@ This page was updated on October 31st, 2023.
 
 "I have been unable to afford the rent, what can I do?"
 
-"Many rental assistance programs have expired, but some jurisdictions have received new funds or have allocated more money for rental assistance. Check with local governments and local housing organizations to find out if there’s still help where you live. You can also call 2-1-1 to learn more about how to apply for the rental assistance available in your area." 
+"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href=’https://www.hud.gov/topics/rental_assistance’ target='_blank' rel='noreferrer noopener'>here</a> or use this <a href=’https://legalfaq.org/’ target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give insight into what is available locally." 
 
-"Depending on where you live, these programs might be managed by a city, a county, a state or a non-profit. You can find hundreds of <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance programs available in this list</a>."
+"Depending on where you live, these programs might be managed by your city, your county,  your state, or a non-profit. Programs may be able to help you with back rent or future payments, including relocation in some cases. However, some may also require your landlord to cooperate in order to access these funds. This is why it’s important to see what programs are available in your area and learn about their individual requirements." 
 
-"The Consumer Financial Protection Bureau has created a tool where tenants and landlords can search for the available programs by locality: <a href='https://www.consumerfinance.gov/renthelp' target='_blank' rel='noreferrer noopener'>www.consumerfinance.gov/renthelp</a>."
-
-"Apply for rental assistance as quickly as you can. If your landlord files to evict you while you are waiting to hear back about your application, be sure to let the court know that you have an application pending."
-
-"Depending on the program in your area, your landlord might need to cooperate with the program for you to receive assistance, and the program will pay the rental assistance to the landlord or property management company directly. In other places, if your landlord does not cooperate with the program or send in required forms, the program will pay the tenant directly. If your landlord does not cooperate with the program, ask if it's possible for the assistance to be issued to you instead." >}}
+"Apply for rental assistance as quickly as you can. If your landlord files to evict you while you are waiting to hear back about your application, be sure to let the court know that you have an application for rental assistance pending." >}}
 
 {{< faq 
 
@@ -65,7 +61,7 @@ This page was updated on October 31st, 2023.
 
 "I’ve already lost my home. Can I access rental assistance for a new place? Am I eligible for any other resources?"
 
-"If you've already lost your home, call 2-1-1 or check <a href='https://justshelter.org' target='_blank' rel='noreferrer noopener'>Just Shelter</a> to find out about shelters, housing providers, and support available in your community. In some states, rental assistance programs are allowing funds to be used for relocation, and you could be eligible for other benefits. Also, veterans and active duty service members have certain rights in eviction and access to additional legal counsel. " >}} 
+"If you've already lost your home, call 2-1-1 or check <a href='https://justshelter.org' target='_blank' rel='noreferrer noopener'>Just Shelter</a> to find shelters, housing providers, and support available in your community. In some states, there are programs that can help with relocation or security deposits and you could be eligible for other benefits. Veterans and active duty service members also have additional benefits when facing an eviction." >}} 
 
 <br/>
 
@@ -77,13 +73,17 @@ This page was updated on October 31st, 2023.
 
 "How can I find a lawyer to help me understand my rights and defend against an eviction?"
 
-"Renters may bring an attorney to represent them. Working with a housing attorney could strengthen a renter’s case. There are free legal services across the country. To apply, contact a <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>local legal aid office</a>. The following resources can help you find legal answers or legal representation in court:"
+"Renters may have an attorney represent them in court. In fact, working with a housing attorney could strengthen a renter’s case. Attorneys can help tenants raise defenses, ask the judge for more time (called requesting a continuance), or request to have the case sealed or dismissed." 
+
+"﻿In some specific locations, if someone is evicted, they may be eligible for emergency rental assistance and housing counseling services to help locate, and pay the rent in, a new home."
+
+"﻿There are free legal services across the country. To apply, contact a <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>local legal aid office</a>. The following resources can help you find legal answers or legal representation in court:"
 
 "<ul><li><a href='https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help' target='_blank' rel='noreferrer noopener'>Legal Services Corporation - List of legal aid offices</a></li><li><a href='https://www.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> - Interactive forms and list of legal aid offices</li><li><a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>National Association of IOLTA Programs - Find legal aid offices</a></li><li><a href='https://www.abafreelegalanswers.org/' target='_blank' rel='noreferrer noopener'>Free Legal Answers - Email-based legal answers from volunteer attorneys</a></li></ul>"
 
 "Attorneys can help tenants raise defenses or ask the judge for more time (called requesting a continuance), or have the case sealed or dismissed. Renters should mention, regardless of whether they have an attorney, if they have a <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>CDC declaration form</a> or have applied for rental assistance."
 
-"In some specific locations, if someone is evicted, they may be eligible for emergency rental assistance and housing counseling services to help identify and pay the rent in a new home."  >}} 
+"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a WhatsApp message to the number <a href=’https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0’ target='_blank' rel='noreferrer noopener'>+1-971-401-2210</a> to ask about options in your area.">}} 
 
 <br/>
 
