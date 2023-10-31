@@ -7,7 +7,7 @@ collection: true
 contentcat: blog
 featured: true
 in_index: true
-title: Questions and answers about evictions as the CDC moratorium ends
+title: "Questions and answers about evictions "
 date: 2021-07-26T16:46:40.089Z
 postauthortitle: Princeton University
 socialDescription: What to know if you are facing eviction, or want to help.
@@ -19,11 +19,11 @@ image: GettyImages-1279347616.jpg
 description: What to know if you are facing eviction, or want to help.
 fbImage: GettyImages-1279347616.jpg
 ---
-The COVID-19 pandemic has made it difficult for hundreds of thousands of people to pay rent and stay housed. At the Eviction Lab, we believe that everyone deserves a place to call home, especially during an emergency like this. 
+With most COVID-19 aid now in the rearview mirror, eviction filings are once again reaching, or even surpassing, pre-pandemic levels in cities across the country. As many tenants are left to navigate an eviction with few protections we believe that everyone deserves a safe and affordable home. 
 
-The following is a guide with some of the most relevant questions that tenants could have as the eviction protections lapse. We are encouraging everyone to learn about your rights in court, search for legal counsel and apply to rental assistance if it is available.
+The following guide includes some of the most relevant questions that tenants could have as they face an eviction notice. We encourage everyone to learn about their rights in court, search for legal counsel, and apply for rental assistance if it is available.
 
-This page was updated on January 20th, 2022.
+This page was updated on October 31st, 2023.
 
 *Note: this page is intended to provide general information and does not constitute legal advice. Please consult an attorney barred in your state for advice about a specific legal matter.*
 
@@ -35,13 +35,15 @@ This page was updated on January 20th, 2022.
 
 "are-renters-protected" 
 
-"Are renters protected from eviction right now?"
+"Are renters protected from eviction?"
 
-"The federal moratorium on evictions was <a href='https://www.npr.org/2021/08/26/1024668578/court-blocks-biden-cdc-evictions-moratorium' target='_blank' rel='noreferrer noopener'>struck down by the Supreme Court</a> in August of 2021. but local moratoriums remain active in some cities and states. Some local moratoriums remained active afterwards in specific cities and states, but most have expired by now."
+"While there is nothing preventing landlords from filing an eviction in court, renters do have rights. Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places like Florida, tenants might have to post a bond to get a hearing. In other words, they have to pay the rent they owe to an account held by the court system in order to dispute their eviction."
 
-"Across the country, renters have a constitutional right to due process, which means they have the right to be heard and can dispute an eviction in court. Although it is not common, in some specific places, tenants might have to post a bond–pay the rent that they owe to an account held by the court system–to get a hearing. Specific locations may still have other protections, but how they can help you and how to apply for these varies from place to place. This is why it is important to reach out to local experts."
+"Tenants' rights vary state to state, and specific locations may have additional protections. For example, some places have laws that protect tenants with disabilities or prohibit evictions if there is no “good” cause. But how these protections can help you, and how to apply for them, varies depending on where you live. This is why it is important to reach out to local experts."
 
-"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up to date information. More legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. More legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>our sister website Just Shelter</a>." >}}
+"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up-to-date information. Legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. Legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to our sister websites <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a> And <a href=’https://endpovertyusa.org/#resources’ target='_blank' rel='noreferrer noopener'>
+End Poverty in America</a>
+." >}}
 
 {{< faq 
 
