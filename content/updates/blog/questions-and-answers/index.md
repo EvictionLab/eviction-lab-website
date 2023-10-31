@@ -41,7 +41,7 @@ This page was updated on October 31st, 2023.
 
 "Tenants' rights vary state to state, and specific locations may have additional protections. For example, some places have laws that protect tenants with disabilities or prohibit evictions if there is no “good” cause. But how these protections can help you, and how to apply for them, varies depending on where you live. This is why it is important to reach out to local experts."
 
-"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up-to-date information. Legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. Legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to our sister websites <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a> And <a href=’https://endpovertyusa.org/#resources’ target='_blank' rel='noreferrer noopener'>End Poverty in America</a>." >}}
+"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up-to-date information. Legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. Legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to our sister websites <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a> And <a href='https://endpovertyusa.org/#resources' target='_blank' rel='noreferrer noopener'>End Poverty in America</a>." >}}
 
 {{< faq 
 
@@ -49,7 +49,7 @@ This page was updated on October 31st, 2023.
 
 "I have been unable to afford the rent, what can I do?"
 
-"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href=’https://www.hud.gov/topics/rental_assistance’ target='_blank' rel='noreferrer noopener'>here</a> or use this <a href=’https://legalfaq.org/’ target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give insight into what is available locally." 
+"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href='https://www.hud.gov/topics/rental_assistance' target='_blank' rel='noreferrer noopener'>here</a> or use this <a href='https://legalfaq.org/' target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give insight into what is available locally." 
 
 "Depending on where you live, these programs might be managed by your city, your county,  your state, or a non-profit. Programs may be able to help you with back rent or future payments, including relocation in some cases. However, some may also require your landlord to cooperate in order to access these funds. This is why it’s important to see what programs are available in your area and learn about their individual requirements." 
 
@@ -83,7 +83,7 @@ This page was updated on October 31st, 2023.
 
 "Attorneys can help tenants raise defenses or ask the judge for more time (called requesting a continuance), or have the case sealed or dismissed. Renters should mention, regardless of whether they have an attorney, if they have a <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>CDC declaration form</a> or have applied for rental assistance."
 
-"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a WhatsApp message to the number <a href=’https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0’ target='_blank' rel='noreferrer noopener'>+1-971-401-2210</a> to ask about options in your area.">}} 
+"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a WhatsApp message to the number <a href='https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0' target='_blank' rel='noreferrer noopener'>+1-971-401-2210</a> to ask about options in your area.">}} 
 
 <br/>
 
