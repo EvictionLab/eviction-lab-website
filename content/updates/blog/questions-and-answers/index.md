@@ -41,7 +41,7 @@ This page was updated on October 31st, 2023.
 
 "Tenants' rights vary state to state, and specific locations may have additional protections. For example, some places have laws that protect tenants with disabilities or prohibit evictions if there is no “good” cause. But how these protections can help you, and how to apply for them, varies depending on where you live. This is why it is important to reach out to local experts."
 
-"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up-to-date information. Legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. Legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to our sister websites <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a> And <a href='https://endpovertyusa.org/#resources' target='_blank' rel='noreferrer noopener'>End Poverty in America</a>." >}}
+"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up-to-date information. Legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. Legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to our sister websites <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a> And <a href=’https://endpovertyusa.org/#resources’ target='_blank' rel='noreferrer noopener'>End Poverty in America</a>." >}}
 
 {{< faq 
 
@@ -49,7 +49,7 @@ This page was updated on October 31st, 2023.
 
 "I have been unable to afford the rent, what can I do?"
 
-"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href='https://www.hud.gov/topics/rental_assistance' target='_blank' rel='noreferrer noopener'>here</a> or use this <a href='https://legalfaq.org/' target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give insight into what is available locally." 
+"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href=’https://www.hud.gov/topics/rental_assistance’ target='_blank' rel='noreferrer noopener'>here</a> or use this <a href=’https://legalfaq.org/’ target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give insight into what is available locally." 
 
 "Depending on where you live, these programs might be managed by your city, your county,  your state, or a non-profit. Programs may be able to help you with back rent or future payments, including relocation in some cases. However, some may also require your landlord to cooperate in order to access these funds. This is why it’s important to see what programs are available in your area and learn about their individual requirements." 
 
@@ -83,7 +83,7 @@ This page was updated on October 31st, 2023.
 
 "Attorneys can help tenants raise defenses or ask the judge for more time (called requesting a continuance), or have the case sealed or dismissed. Renters should mention, regardless of whether they have an attorney, if they have a <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>CDC declaration form</a> or have applied for rental assistance."
 
-"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a WhatsApp message to the number <a href='https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0' target='_blank' rel='noreferrer noopener'>+1-971-401-2210</a> to ask about options in your area.">}} 
+"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a <a href=’https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0’ target='_blank' rel='noreferrer noopener'>WhatsApp message</a> to the number +1-971-401-2210 to ask about options in your area.">}} 
 
 <br/>
 
@@ -97,27 +97,15 @@ This page was updated on October 31st, 2023.
 
 "<img class='d-none' src='vacate_notice.jpg' alt='A notice to vacate letter' />"
 
-"A “notice to vacate” is the first step in a process that can last weeks or even months. Most states require landlords to give you a notice of their intent to file an eviction. States have different requirements for what a notice to vacate looks like: it might be a piece of paper taped on the door or sent by certified mail, or your landlord might contact you in person or over the phone to let you know that they intend to file an eviction case against you. Depending on your state and local law, you may have a right to address any issues cited in the notice and avoid an eviction case. This is called the “right to cure.” "
+"A “notice to vacate” is the first step in a process that can last weeks or even months. Most states require landlords to give you a notice of their intent to file an eviction. States have different requirements for what a notice to vacate looks like: it might be a piece of paper taped on the door or sent by certified mail, or your landlord might contact you in person or over the phone to let you know that they intend to file an eviction case against you. Depending on your state and local law, you may have a right to address any issues cited in the notice and avoid an eviction case. This is called the “right to cure.” For example, if you live in a state with the right to cure and the intended eviction is for non-payment of rent, you can avoid an eviction by paying back rent."
 
 "<img class='d-none d-md-block my-5' src='/img/stages-of-eviction-landscape.png' alt='The stages of eviction' />"
 
 "<img class='d-block d-md-none' src='/img/stages-of-eviction-portrait.png' alt='The stages of eviction' />"
 
-"After delivering the notice of eviction and waiting a certain period of time, which varies by state, the landlord typically files an eviction case in court and the court serves the renter with a summons for a hearing. During the hearing, renters can raise defenses to the eviction. Defenses vary based on where you live, so it's important to talk to a legal aid provider to find out what defenses exist in your city."
+"After delivering the notice of eviction and waiting a certain period of time, the length of which varies by state, the landlord typically files an eviction case in court and the court serves the renter with a summons for a hearing. During the hearing, renters can raise defenses to the eviction. Defenses vary based on where you live, so it’s important to talk to a legal aid provider to find out what defenses exist in your location."
 
 "If the judge decides in favor of the landlord, the judge may issue a writ of possession. Renters can appeal the decision, leave the property, or wait until the sheriff or other party executes the writ by removing the renters’ possessions out of the unit." >}} 
-
-{{< faq 
-
-"eviction-stopped-by-moratorium" 
-
-"My eviction was stopped because of a moratorium. What will happen as the moratorium ends? What are my options?"
-
-"Depending on the local courts, your landlord, and the status of your dispute, the eviction process might *restart*. If you were in an early stage of the eviction you might have to go to a court hearing. In some other cases, you might be at the end of the process and the actual execution of the eviction might happen much sooner. "
-
-"Stay in touch with your landlord, with your local court, and with any organization that can provide legal assistance, to understand your particular case and how far you are in the eviction timeline. You should also apply for <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>rental assistance</a> in your city, county, or state program if these programs still exist where you live. Consult with your local information line to identify programs or <a href='https://nlihc.org/rental-assistance' target='_blank' rel='noreferrer noopener'>search for programs here</a>."
-
-"Call 2-1-1 to understand what resources are available in your area. You can find information for <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations across the country at this site</a>." >}} 
 
 {{< faq 
 
@@ -125,9 +113,20 @@ This page was updated on October 31st, 2023.
 
 "I have the money now, but my landlord still wants to evict me. Can they do that?"
 
-"That depends on where you live. In many states landlords are allowed by law to start eviction proceedings once the tenant is late on rent, and they're not required to accept late or partial payments. Landlords might also be able to accept the late payment, but evict you anyway for paying late. On the other hand, in some places, landlords are required to accept a late payment that you make soon after the eviction filing, and withdraw the court case against you."
+"That depends on where you live. In many states, landlords are allowed by law to start eviction proceedings once the tenant is late on rent, and they’re not required to accept late or partial payments. In other states, landlords might be able to accept the late payment, but can still evict you for paying late. On the other hand, in some places, landlords are required to accept a late payment that you make soon after the eviction filing, and withdraw the court case against you."
 
-"In some states and cities, there might be regulations that allow tenants to catch up in rent or create a grace period before starting an eviction court case. Contact legal services and 2-1-1 to ask about the regulations where you live. Ask whether landlords are required to accept late payments, and whether the court must dismiss your eviction case if you pay what you owe before your eviction hearing." >}} 
+"In some states and cities, there might be regulations that allow tenants to catch up in rent or create a grace period before starting an eviction court case. Contact legal services and 2-1-1 to inquire about the regulations where you live. Ask whether landlords are required to accept late payments, and whether the court must dismiss your eviction case if you pay what you owe before your eviction hearing." >}} 
+
+{{< faq
+
+"﻿followed-rules-but-landlord-wants-to-evict"
+
+"﻿I’ve always paid my rent and followed the rules but my landlord wants to evict me. Can they do that?"
+
+"﻿A landlord must have a cause of action and follow the local notice requirements before they can evict you. In most places, “causes of action” include nonpayment of rent, lease violations, and damage or harm to property or other tenants. While Most evictions are filed for owing rent, in most jurisdictions, a landlord can also ask you to leave at the end of your lease. If you refuse to leave, they can file to evict you for staying past the lease term. Landlords might also be able to end your tenancy for several other reasons including their plans to move into or renovate the property. However, in some places there are laws that require a landlord to have a <a href=’https://nlihc.org/sites/default/files/Promoting-Housing-Stability-Through-Just-Cause-Eviction-Legislation.pdf’ target='_blank' rel='noreferrer noopener'>“good” or “just” cause to evict</a>. The specific details vary by location but in general this means that a landlord needs to have a valid legal reason (which is usually detailed in local law), like non-payment of rent or lease violations, to evict a tenant. “Good” or “just” cause protections can protect tenants from displacement and veiled discrimination and retaliation."
+
+"﻿It is critical to know that these protections don’t exist everywhere so you must check with local legal services to see what is available to you.">}} 
+
 
 {{< faq 
 
