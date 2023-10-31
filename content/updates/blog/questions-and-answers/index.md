@@ -121,13 +121,13 @@ This page was updated on October 31st, 2023.
 
 {{< faq
 
-"﻿followed-rules-but-landlord-wants-to-evict"
+"followed-rules-but-landlord-wants-to-evict"
 
-"﻿I’ve always paid my rent and followed the rules but my landlord wants to evict me. Can they do that?"
+"I’ve always paid my rent and followed the rules but my landlord wants to evict me. Can they do that?"
 
-"﻿A landlord must have a cause of action and follow the local notice requirements before they can evict you. In most places, “causes of action” include nonpayment of rent, lease violations, and damage or harm to property or other tenants. While Most evictions are filed for owing rent, in most jurisdictions, a landlord can also ask you to leave at the end of your lease. If you refuse to leave, they can file to evict you for staying past the lease term. Landlords might also be able to end your tenancy for several other reasons including their plans to move into or renovate the property. However, in some places there are laws that require a landlord to have a <a href=’https://nlihc.org/sites/default/files/Promoting-Housing-Stability-Through-Just-Cause-Eviction-Legislation.pdf’ target='_blank' rel='noreferrer noopener'>“good” or “just” cause to evict</a>. The specific details vary by location but in general this means that a landlord needs to have a valid legal reason (which is usually detailed in local law), like non-payment of rent or lease violations, to evict a tenant. “Good” or “just” cause protections can protect tenants from displacement and veiled discrimination and retaliation."
+"A landlord must have a cause of action and follow the local notice requirements before they can evict you. In most places, “causes of action” include nonpayment of rent, lease violations, and damage or harm to property or other tenants. While Most evictions are filed for owing rent, in most jurisdictions, a landlord can also ask you to leave at the end of your lease. If you refuse to leave, they can file to evict you for staying past the lease term. Landlords might also be able to end your tenancy for several other reasons including their plans to move into or renovate the property. However, in some places there are laws that require a landlord to have a <a href='https://nlihc.org/sites/default/files/Promoting-Housing-Stability-Through-Just-Cause-Eviction-Legislation.pdf' target='_blank' rel='noreferrer noopener'>“good” or “just” cause to evict</a>. The specific details vary by location but in general this means that a landlord needs to have a valid legal reason (which is usually detailed in local law), like non-payment of rent or lease violations, to evict a tenant. “Good” or “just” cause protections can protect tenants from displacement and veiled discrimination and retaliation."
 
-"﻿It is critical to know that these protections don’t exist everywhere so you must check with local legal services to see what is available to you." >}} 
+"It is critical to know that these protections don’t exist everywhere so you must check with local legal services to see what is available to you." >}} 
 
 
 {{< faq 
@@ -153,11 +153,11 @@ This page was updated on October 31st, 2023.
 
 {{< faq 
 
-"﻿landlord-won't-make-repairs"
+"landlord-wont-make-repairs"
 
-"﻿My landlord refuses to make necessary repairs. What can I do?"
+"My landlord refuses to make necessary repairs. What can I do?"
 
-"﻿In most states, a unit must be “habitable,” implying that the landlord is responsible for keeping a home in decent conditions. However, what “habitable” means can differ depending on where you live. It usually implies a unit needs to meet the area’s housing basic codes like working heat, air conditioning, bathroom, etc. If a landlord is renting a unit that doesn’t have these or refuses to make repairs, a tenant may be able to complain on the city or county level.  In some locations, it is even possible for a tenant to pay for the repairs themselves and deduct it from their rent if the landlord is not making repairs in a timely manner. But this is not the law everywhere, so be sure to check your local law or contact housing organizations or legal aid providers in your area before withholding any rent." >}} 
+"In most states, a unit must be “habitable,” implying that the landlord is responsible for keeping a home in decent conditions. However, what “habitable” means can differ depending on where you live. It usually implies a unit needs to meet the area’s housing basic codes like working heat, air conditioning, bathroom, etc. If a landlord is renting a unit that doesn’t have these or refuses to make repairs, a tenant may be able to complain on the city or county level.  In some locations, it is even possible for a tenant to pay for the repairs themselves and deduct it from their rent if the landlord is not making repairs in a timely manner. But this is not the law everywhere, so be sure to check your local law or contact housing organizations or legal aid providers in your area before withholding any rent." >}} 
 
 {{< faq
 
