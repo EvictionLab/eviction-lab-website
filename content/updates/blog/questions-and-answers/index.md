@@ -41,15 +41,15 @@ This page was updated on October 31st, 2023.
 
 "Tenants' rights vary state to state, and specific locations may have additional protections. For example, some places have laws that protect tenants with disabilities or prohibit evictions if there is no “good” cause. But how these protections can help you, and how to apply for them, varies depending on where you live. This is why it is important to reach out to local experts."
 
-"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up-to-date information. Legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. Legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to our sister websites <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a> And <a href='https://endpovertyusa.org/#resources' target='_blank' rel='noreferrer noopener'>End Poverty in America</a>." >}}
+"Contact local housing advocates and <a href='https://www.lsc.gov/what-legal-aid/find-legal-aid' target='_blank' rel='noreferrer noopener'>legal aid organizations</a> in your city or state to learn your rights, seek legal counsel and find the most up-to-date information. Legal aid providers can be found through <a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>state bar associations (associations of all attorneys in the state) and NAIP</a>. Legal assistance can be found from the American Bar Association and LawHelp.org. Find or post resources in your community to our sister websites <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a> And <a href=’https://endpovertyusa.org/#resources’ target='_blank' rel='noreferrer noopener'>End Poverty in America</a>." >}}
 
 {{< faq 
 
 "cant-afford-rent" 
 
-"I have been unable to afford the rent, what can I do?"
+"I have been unable to afford the rent. What can I do?"
 
-"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href='https://www.hud.gov/topics/rental_assistance' target='_blank' rel='noreferrer noopener'>here</a> or use this <a href='https://legalfaq.org/' target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give insight into what is available locally." 
+"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href=’https://www.hud.gov/topics/rental_assistance’ target='_blank' rel='noreferrer noopener'>here</a> or use this <a href=’https://legalfaq.org/’ target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give you insight into what is available locally."
 
 "Depending on where you live, these programs might be managed by your city, your county,  your state, or a non-profit. Programs may be able to help you with back rent or future payments, including relocation in some cases. However, some may also require your landlord to cooperate in order to access these funds. This is why it’s important to see what programs are available in your area and learn about their individual requirements." 
 
@@ -81,9 +81,7 @@ This page was updated on October 31st, 2023.
 
 "<ul><li><a href='https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help' target='_blank' rel='noreferrer noopener'>Legal Services Corporation - List of legal aid offices</a></li><li><a href='https://www.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> - Interactive forms and list of legal aid offices</li><li><a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>National Association of IOLTA Programs - Find legal aid offices</a></li><li><a href='https://www.abafreelegalanswers.org/' target='_blank' rel='noreferrer noopener'>Free Legal Answers - Email-based legal answers from volunteer attorneys</a></li></ul>"
 
-"Attorneys can help tenants raise defenses or ask the judge for more time (called requesting a continuance), or have the case sealed or dismissed. Renters should mention, regardless of whether they have an attorney, if they have a <a href='https://www.cdc.gov/coronavirus/2019-ncov/downloads/evictiondeclare_d508.pdf' target='_blank' rel='noreferrer noopener'>CDC declaration form</a> or have applied for rental assistance."
-
-"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a <a href='https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0' target='_blank' rel='noreferrer noopener'>WhatsApp message</a> to the number +1-971-401-2210 to ask about options in your area.">}} 
+"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a <a href=’https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0’ target='_blank' rel='noreferrer noopener'>WhatsApp message</a> to the number +1-971-401-2210 to ask about options in your area.">}} 
 
 <br/>
 
@@ -97,7 +95,10 @@ This page was updated on October 31st, 2023.
 
 "<img class='d-none' src='vacate_notice.jpg' alt='A notice to vacate letter' />"
 
-"A “notice to vacate” is the first step in a process that can last weeks or even months. Most states require landlords to give you a notice of their intent to file an eviction. States have different requirements for what a notice to vacate looks like: it might be a piece of paper taped on the door or sent by certified mail, or your landlord might contact you in person or over the phone to let you know that they intend to file an eviction case against you. Depending on your state and local law, you may have a right to address any issues cited in the notice and avoid an eviction case. This is called the “right to cure.” For example, if you live in a state with the right to cure and the intended eviction is for non-payment of rent, you can avoid an eviction by paying back rent."
+"A “notice to vacate” is the first step in a process that can last weeks or even months. Most states require landlords to give you a notice of their intent to file an eviction. States have different requirements for what a notice to vacate looks like: it might be a piece of paper taped on the door or sent by certified mail, or your landlord might contact you in person or over the phone to let you know that they intend to file an eviction case against you." 
+
+"Depending on your state and local law, you may have a right to address any issues cited in the notice and avoid an eviction case. This is called the “right to cure.” For example, if you live in a state with the right to cure and the intended eviction is for non-payment of rent, you can avoid an eviction by paying back rent."
+
 
 "<img class='d-none d-md-block my-5' src='/img/stages-of-eviction-landscape.png' alt='The stages of eviction' />"
 
@@ -117,15 +118,16 @@ This page was updated on October 31st, 2023.
 
 "In some states and cities, there might be regulations that allow tenants to catch up in rent or create a grace period before starting an eviction court case. Contact legal services and 2-1-1 to inquire about the regulations where you live. Ask whether landlords are required to accept late payments, and whether the court must dismiss your eviction case if you pay what you owe before your eviction hearing." >}} 
 
+
 {{< faq
 
 "﻿followed-rules-but-landlord-wants-to-evict"
 
 "﻿I’ve always paid my rent and followed the rules but my landlord wants to evict me. Can they do that?"
 
-"﻿A landlord must have a cause of action and follow the local notice requirements before they can evict you. In most places, “causes of action” include nonpayment of rent, lease violations, and damage or harm to property or other tenants. While Most evictions are filed for owing rent, in most jurisdictions, a landlord can also ask you to leave at the end of your lease. If you refuse to leave, they can file to evict you for staying past the lease term. Landlords might also be able to end your tenancy for several other reasons including their plans to move into or renovate the property. However, in some places there are laws that require a landlord to have a <a href='https://nlihc.org/sites/default/files/Promoting-Housing-Stability-Through-Just-Cause-Eviction-Legislation.pdf' target='_blank' rel='noreferrer noopener'>“good” or “just” cause to evict</a>. The specific details vary by location but in general this means that a landlord needs to have a valid legal reason (which is usually detailed in local law), like non-payment of rent or lease violations, to evict a tenant. “Good” or “just” cause protections can protect tenants from displacement and veiled discrimination and retaliation."
+"﻿A landlord must have a cause of action and follow the local notice requirements before they can evict you. In most places, “causes of action” include nonpayment of rent, lease violations, and damage or harm to property or other tenants. While Most evictions are filed for owing rent, in most jurisdictions, a landlord can also ask you to leave at the end of your lease. If you refuse to leave, they can file to evict you for staying past the lease term. Landlords might also be able to end your tenancy for several other reasons including their plans to move into or renovate the property. However, in some places there are laws that require a landlord to have a <a href=’https://nlihc.org/sites/default/files/Promoting-Housing-Stability-Through-Just-Cause-Eviction-Legislation.pdf’ target='_blank' rel='noreferrer noopener'>“good” or “just” cause to evict</a>. The specific details vary by location but in general this means that a landlord needs to have a valid legal reason (which is usually detailed in local law), like non-payment of rent or lease violations, to evict a tenant. “Good” or “just” cause protections can protect tenants from displacement and veiled discrimination and retaliation."
 
-"﻿It is critical to know that these protections don’t exist everywhere so you must check with local legal services to see what is available to you.">}} 
+"﻿It is critical to know that these protections don’t exist everywhere so you must check with local legal services to see what is available to you." >}} 
 
 
 {{< faq 
@@ -148,13 +150,14 @@ This page was updated on October 31st, 2023.
 
 "Check with the court system in your area, or with legal services, to see if or how you can request to have your eviction case sealed. Legal services may be able to help you get your eviction case sealed, especially if you worked with legal services during your eviction hearing or if you won your case." >}}
 
+
 {{< faq 
 
 "﻿landlord-won't-make-repairs"
 
 "﻿My landlord refuses to make necessary repairs. What can I do?"
 
-"﻿In most states, a unit must be “habitable,” implying that the landlord is responsible for keeping a home in decent conditions. However, what “habitable” means can differ depending on where you live. It usually implies a unit needs to meet the area’s housing basic codes like working heat, air conditioning, bathroom, etc. If a landlord is renting a unit that doesn’t have these or refuses to make repairs, a tenant may be able to complain on the city or county level.  In some locations, it is even possible for a tenant to pay for the repairs themselves and deduct it from their rent if the landlord is not making repairs in a timely manner. But this is not the law everywhere, so be sure to check your local law or contact housing organizations or legal aid providers in your area before withholding any rent.">}} 
+"﻿In most states, a unit must be “habitable,” implying that the landlord is responsible for keeping a home in decent conditions. However, what “habitable” means can differ depending on where you live. It usually implies a unit needs to meet the area’s housing basic codes like working heat, air conditioning, bathroom, etc. If a landlord is renting a unit that doesn’t have these or refuses to make repairs, a tenant may be able to complain on the city or county level.  In some locations, it is even possible for a tenant to pay for the repairs themselves and deduct it from their rent if the landlord is not making repairs in a timely manner. But this is not the law everywhere, so be sure to check your local law or contact housing organizations or legal aid providers in your area before withholding any rent." >}} 
 
 {{< faq
 
@@ -162,7 +165,7 @@ This page was updated on October 31st, 2023.
 
 "I am undocumented. Do I have the same rights in court? Can I apply for rental assistance or free legal help?"
 
-"No matter your legal status in the United States, you are still entitled to a hearing in court, although in some specific places you might need to post a bond. According to <a href='https://www.cbp.gov/sites/default/files/assets/documents/2021-Apr/Enforcement-Actions-in-Courthouses-04-26-21.pdf' target='_blank' rel='noreferrer noopener'>new rules issued during the Biden administration</a>, officers from Immigrations and Customs Enforcement (ICE) can’t detain people in a courthouse."
+"No matter your legal status in the United States, you are still entitled to a hearing in court, although in some specific places you might need to post a bond. According to <a href='https://www.cbp.gov/sites/default/files/assets/documents/2021-Apr/Enforcement-Actions-in-Courthouses-04-26-21.pdf' target='_blank' rel='noreferrer noopener'>new policies issued during the Biden administration</a>, officers from Immigrations and Customs Enforcement (ICE) can’t detain people in a courthouse."
 
 "In some cities you may also be allowed to apply for free legal assistance, and there are non-governmental organizations and pro bono (free) attorneys that provide legal support and consultation for immigrants. Many rental assistance programs also accept applications from undocumented renters."
 
@@ -178,6 +181,6 @@ This page was updated on October 31st, 2023.
 
 "How do I address housing security in my community?"
 
-"Renters across the United States have found strength in speaking to one another and organizing for better housing conditions, from experiences during the <a href='https://www.retroreport.org/video/new-york-tenants-are-organizing-against-evictions-as-they-did-in-the-great-depression/' target='_blank' rel='noreferrer noopener'>Great Depression</a>, <a href='https://www.nytimes.com/video/learning/100000007368071/tenants-facing-eviction-over-covid-19-look-to-a-1970s-solution-retro-report.html' target='_blank' rel='noreferrer noopener'>the 1970s</a>, to <a href='https://www.retroreport.org/video/how-decades-of-housing-discrimination-hurts-fresno-in-the-pandemic/' target='_blank' rel='noreferrer noopener'>today</a>. Consider contacting your neighbors, local tenants union, and housing advocates to learn more."
+"Renters across the United States have found strength in connecting with each other  and organizing for better housing conditions, from the <a href='https://www.retroreport.org/video/new-york-tenants-are-organizing-against-evictions-as-they-did-in-the-great-depression/' target='_blank' rel='noreferrer noopener'>Great Depression</a> and <a href='https://www.nytimes.com/video/learning/100000007368071/tenants-facing-eviction-over-covid-19-look-to-a-1970s-solution-retro-report.html' target='_blank' rel='noreferrer noopener'>the 1970s</a> to <a href='https://www.retroreport.org/video/how-decades-of-housing-discrimination-hurts-fresno-in-the-pandemic/' target='_blank' rel='noreferrer noopener'>today</a>. Consider contacting your neighbors, local tenants union, and housing advocates to learn more."
 
-"You can find a list of local organizations that need your support in our sister site, <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a>.">}}
+"You can find a list of local organizations that need your support in our sister sites, <a href='https://justshelter.org/community-resources/' target='_blank' rel='noreferrer noopener'>Just Shelter</a> and <a href='https://endpovertyusa.org/#resources' target='_blank' rel='noreferrer noopener'>End Poverty in America</a>.">}}
