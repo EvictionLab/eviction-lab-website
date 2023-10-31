@@ -144,11 +144,19 @@ This page was updated on October 31st, 2023.
 
 "How does eviction affect my ability to find a new home? Why is it important to try to seal my record after an eviction case? Is that possible everywhere?"
 
-"When an eviction case is filed, it can become a public record. This could allow a future landlord to check the eviction history of an applicant and deny an application--even if you win your case or do not leave your home. In some states, renters are allowed to seal the record of the eviction case. This could make it easier for you to find new housing in the future. In other places, some eviction cases are sealed automatically."
+"When an eviction case is filed, it can become a public record. This could allow a future landlord to check your eviction history and deny your application—–even if you won your case or did not leave your home. In some states, renters are allowed to seal the record of the eviction case. This could make it easier for you to find new housing in the future. In other places, some eviction cases are sealed automatically."
 
-"Check the <a href='https://evictionlab.org/covid-policy-scorecard/'>Eviction Lab COVID-19 Housing Policy Scorecard</a> to see if eviction cases from the pandemic are sealed in your state. Check with the court system in your area, or with legal services, to see if or how you can request to have your eviction case sealed. Legal services may be able to help you get your eviction case sealed, especially if you worked with legal services during your eviction hearing or if you won your case." >}}
+"Check with the court system in your area, or with legal services, to see if or how you can request to have your eviction case sealed. Legal services may be able to help you get your eviction case sealed, especially if you worked with legal services during your eviction hearing or if you won your case." >}}
 
 {{< faq 
+
+"﻿landlord-won't-make-repairs"
+
+"﻿My landlord refuses to make necessary repairs. What can I do?"
+
+"﻿In most states, a unit must be “habitable,” implying that the landlord is responsible for keeping a home in decent conditions. However, what “habitable” means can differ depending on where you live. It usually implies a unit needs to meet the area’s housing basic codes like working heat, air conditioning, bathroom, etc. If a landlord is renting a unit that doesn’t have these or refuses to make repairs, a tenant may be able to complain on the city or county level.  In some locations, it is even possible for a tenant to pay for the repairs themselves and deduct it from their rent if the landlord is not making repairs in a timely manner. But this is not the law everywhere, so be sure to check your local law or contact housing organizations or legal aid providers in your area before withholding any rent.">}} 
+
+{{< faq
 
 "undocumented-rights-in-court" 
 
