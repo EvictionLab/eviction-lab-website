@@ -49,7 +49,7 @@ This page was updated on October 31st, 2023.
 
 "I have been unable to afford the rent. What can I do?"
 
-"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href='https://www.hud.gov/topics/rental_assistance' target='_blank' rel='noreferrer noopener'>here</a> or use this <a href='https://legalfaq.org/’ target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give you insight into what is available locally."
+"Various groups, from your local and state government to housing organizations and charities,  may be able to help with short-term rental assistance. Learn more about rental programs in your area <a href='https://www.hud.gov/topics/rental_assistance' target='_blank' rel='noreferrer noopener'>here</a> or use this <a href='https://legalfaq.org/' target='_blank' rel='noreferrer noopener'>tool</a> by Pew Charitable Trusts and the Stanford Legal Design Lab. Calling your local  2-1-1 can also give you insight into what is available locally."
 
 "Depending on where you live, these programs might be managed by your city, your county,  your state, or a non-profit. Programs may be able to help you with back rent or future payments, including relocation in some cases. However, some may also require your landlord to cooperate in order to access these funds. This is why it’s important to see what programs are available in your area and learn about their individual requirements." 
 
