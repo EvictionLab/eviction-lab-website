@@ -28,16 +28,20 @@ languageName = "English"
     weight = 3
     url = "/eviction-tracking/" 
 [[Languages.en.menu.main]]
-    name = "Newest Findings & Stories"
+    name = "Findings & Stories"
     weight = 6
 [[Languages.en.menu.main]]
-    name = "Research"
+    name = "Eviction Lab Research"
     weight = 7
     url = "/research/"    
 [[Languages.en.menu.main]]
-    name = "Updates"
+    name = "Articles & Updates"
     weight = 8
     url = "/updates/"
+[[Languages.en.menu.main]]
+    name = "National Zoning & Land Use Database"
+    weight = 9
+    url = "/national-zoning-and-land-use-database/"
 [[Languages.en.menu.main]]
     name = "National Data (2000-2018)"
     weight = 11
@@ -91,9 +95,9 @@ languageName = "English"
     weight = 5
     url = "/rankings/"
 [[Languages.en.menu.footer]]
-    name = "Policy Scorecard"
+    name = "National Zoning & Land Use Database"
     weight = 6
-    url = "/covid-policy-scorecard/"
+    url = "/national-zoning-and-land-use-database/"
 [[Languages.en.menu.footer]]
     name = "About Us"
     weight = 7
@@ -182,13 +186,17 @@ languageName = "Español"
     name = "Hallazgos e historias más recientes"
     weight = 6
 [[Languages.es.menu.main]]
-    name = "Research"
+    name = "Eviction Lab Research"
     weight = 7
     url = "/research/"
 [[Languages.es.menu.main]]
-    name = "Updates"
+    name = "Articles & Updates"
     weight = 7
-    url = "/updates/"    
+    url = "/updates/"  
+[[Languages.es.menu.main]]
+    name = "National Zoning & Land Use Database"
+    weight = 8
+    url = "/national-zoning-and-land-use-database/"         
 [[Languages.es.menu.main]]
     name = "Datos nacionales (2000-2018)"
     weight = 11
@@ -241,9 +249,9 @@ languageName = "Español"
     weight = 5
     url = "/rankings/#/evictions%3Flang%3Des"
 [[Languages.es.menu.footer]]
-    name = "Policy Scorecard"
+    name = "National Zoning & Land Use Database"
     weight = 6
-    url = "/covid-policy-scorecard/"    
+    url = "/national-zoning-and-land-use-database/"    
 [[Languages.es.menu.footer]]
     name = "Acerca de nosotros"
     weight = 7

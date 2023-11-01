@@ -485,13 +485,10 @@
         }
         @include media-breakpoint-up(md) {
             background-size: cover;
-            background-position-x: 24%;
+            background-position-x: center;
         } 
-        @include media-breakpoint-up(lg) {
-            background-size: cover;
-        }
         background-repeat: no-repeat; 
-            background-image: url('/images/assets/graphics/policies-bg.jpg');
+            background-image: url('/images/assets/graphics/nzlu-graphic10.png');
         }
     .bg-3 { 
         background-size: 178%;
