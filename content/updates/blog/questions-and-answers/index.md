@@ -61,7 +61,7 @@ This page was updated on October 31st, 2023.
 
 "I’ve already lost my home. Can I access rental assistance for a new place? Am I eligible for any other resources?"
 
-"If you've already lost your home, call 2-1-1 or check <a href='https://justshelter.org' target='_blank' rel='noreferrer noopener'>Just Shelter</a> to find shelters, housing providers, and support available in your community. In some states, there are programs that can help with relocation or security deposits and you could be eligible for other benefits. Veterans and active duty service members also have additional benefits when facing an eviction." >}} 
+"If you've already lost your home, call 2-1-1 or check our sister sites <a href='https://justshelter.org' target='_blank' rel='noreferrer noopener'>Just Shelter</a> and <a href='https://endpovertyusa.org/#resources' target='_blank' rel='noreferrer noopener'>End Poverty in America</a> to find shelters, housing providers, and support available in your community. In some states, there are programs that can help with relocation or security deposits and you could be eligible for other benefits. Veterans and active duty service members also have additional benefits when facing an eviction." >}} 
 
 <br/>
 
@@ -81,7 +81,7 @@ This page was updated on October 31st, 2023.
 
 "<ul><li><a href='https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help' target='_blank' rel='noreferrer noopener'>Legal Services Corporation - List of legal aid offices</a></li><li><a href='https://www.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org</a> - Interactive forms and list of legal aid offices</li><li><a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>National Association of IOLTA Programs - Find legal aid offices</a></li><li><a href='https://www.abafreelegalanswers.org/' target='_blank' rel='noreferrer noopener'>Free Legal Answers - Email-based legal answers from volunteer attorneys</a></li></ul>"
 
-"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a <a href=’https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0’ target='_blank' rel='noreferrer noopener'>WhatsApp message</a> to the number +1-971-401-2210 to ask about options in your area.">}} 
+"Sometimes for undocumented tenants, finding free legal aid can be difficult. You can send a <a href='https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0' target='_blank' rel='noreferrer noopener'>WhatsApp message</a> to the number +1-971-401-2210 to ask about options in your area.">}} 
 
 <br/>
 
