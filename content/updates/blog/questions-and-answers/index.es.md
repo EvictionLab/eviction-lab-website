@@ -83,7 +83,7 @@ Esta página fue actualizada el 31 de octubre de 2023.
 
 "<ul><li><a href='https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help' target='_blank' rel='noreferrer noopener'>La Corporación de Servicios Legales - Lista de oficinas de apoyo legal</a></li><li><a href='https://espanol.lawhelp.org/' target='_blank' rel='noreferrer noopener'>LawHelp.org - Formularios interactivos y una lista de oficinas de apoyo legal</a></li><li><a href='https://iolta.org/program-directory/#us-programs' target='_blank' rel='noreferrer noopener'>Asociación Nacional de Programas IOLTA - Encuentre oficinas de ayuda legal</a></li><li><a href='' target='_blank' rel='noreferrer noopener'>Respuestas legales gratuitas (en inglés) - Sistema basado en correos electrónicos para obtener respuestas legales de abogados voluntarios</a></li></ul>"
 
-"A veces, para los inquilinos indocumentados, encontrar asistencia legal gratuita puede ser difícil. Puedes enviar un <a href='https://api.whatsapp.com/send/phone=19714012210&text&type=phone_number&app_absent=0' target='_blank' rel='noreferrer noopener'>mensaje de WhatsApp</a> al número +1-971-401-2210 para averiguar si existen opciones en tu zona." >}} 
+"A veces, para los inquilinos indocumentados, encontrar asistencia legal gratuita puede ser difícil. Puedes enviar un <a href='https://api.whatsapp.com/send/?phone=19714012210&text&type=phone_number&app_absent=0' target='_blank' rel='noreferrer noopener'>mensaje de WhatsApp</a> al número +1-971-401-2210 para averiguar si existen opciones en tu zona." >}} 
 
 <br/>
 
