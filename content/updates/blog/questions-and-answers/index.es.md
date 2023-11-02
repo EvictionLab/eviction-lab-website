@@ -51,7 +51,7 @@ Esta página fue actualizada el 31 de octubre de 2023.
 
 "No he podido pagar la renta, ¿Qué puedo hacer ahora?"
 
-"Varias organizaciones, desde agencias de su gobierno local y estatal hasta organizaciones de vivienda o caridad, pueden ayudarle con el pago de alquiler a corto plazo. Obten mas informacion sobre programas en tu zona aquí: https://www.hud.gov/topics/rental_assistance o utiliza esta herramienta de Pew Charitable Trusts y Stanford Legal Design Lab: https://legalfaq.org/. También puedes llamar al 2-1-1 de tu ciudad, para obtener información sobre opciones locales."
+"Varias organizaciones, desde agencias de su gobierno local y estatal hasta organizaciones de vivienda o caridad, pueden ayudarle con el pago de alquiler a corto plazo. Obten mas informacion sobre programas en tu zona <a href='https://www.hud.gov/topics/rental_assistance' target='_blank' rel='noreferrer noopener'>aqui</a> o utiliza <a href='https://legalfaq.org/' target='_blank' rel='noreferrer noopener'>esta herramienta</a> de Pew Charitable Trusts y Stanford Legal Design Lab. También puedes llamar al 2-1-1 de tu ciudad, para obtener información sobre opciones locales."
 
 "Dependiendo de dónde se encuentre, estos programas pueden estar administrados por la ciudad, el condado, el estado o una organización sin fines de lucro. Ciertos programas pueden ayudarte con el alquiler atrasado o pagos futuros, incluyendo ayuda para la mudanza. Sin embargo, algunos de estos programas pueden exigir la cooperación del propietario para acceder a estos fondos. Por eso es importante ver qué programas hay disponibles en su zona y conocer sus requisitos."
 
@@ -131,8 +131,7 @@ Esta página fue actualizada el 31 de octubre de 2023.
 
 "﻿Su propietario debe tener una “causa de acción” y cumplir los requisitos locales de notificación antes de poder desalojarlo. En la mayoría de los lugares, las "causas de acción" incluyen no pagar el alquiler, violaciones del contrato de arrendamiento y daños o perjudicar a la propiedad o a otros inquilinos. Aunque la mayoría de los desalojos se producen por falta de pago del alquiler, en la mayoría de ciudades el propietario también puede pedirte que te vayas al final del contrato. Si te niegas a irte, el propietario puede presentar una demanda de desalojo por quedarse más allá del plazo del contrato. Los propietarios también pueden poner fin a tu contrato por otros motivos, como planes de mudarse o renovar la vivienda. Sin embargo, en algunos lugares hay leyes que exigen que el propietario tenga una causa “justa” para desalojar a un inquilino. Los detalles específicos varían según el lugar, pero en general esto significa que el propietario debe tener una razón legal válida (normalmente está detallada en la leyes local), como no pagar el alquiler o una violacion de el contrato para desalojar a un inquilino. Las protecciones de "buena" o "justa" causa pueden proteger a los inquilinos contra el desplazamiento, la discriminación y las represalias."
 
-"﻿Es fundamental saber que estas protecciones no existen en todas partes, por lo que debe consultar con los servicios de ayuda legal locales para ver si esta opción  está disponible en su zona.">}} 
-
+"﻿Es fundamental saber que estas protecciones no existen en todas partes, por lo que debe consultar con los servicios de ayuda legal locales para ver si esta opción  está disponible en su zona." >}} 
 
 {{< faq 
 
@@ -142,7 +141,7 @@ Esta página fue actualizada el 31 de octubre de 2023.
 
 "Un desalojo normalmente no afecta directamente el puntaje crediticio, pero las deudas pendientes sí pueden aparecer en un reporte de crédito, incluyendo pagos tardíos de renta y cargos por atrasos que usted adeude. "
 
-"Los desalojos pueden aparecer en otros reportes de consumo y hacer que sea más difícil postular a una nueva vivienda en el futuro, si es que el casero chequea su historial como inquilino. " >}}
+"Los desalojos pueden aparecer en otros reportes de consumo y hacer que sea más difícil postular a una nueva vivienda en el futuro, si es que el casero chequea su historial como inquilino." >}}
 
 {{< faq 
 
