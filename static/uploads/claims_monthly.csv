@@ -1,4 +1,4 @@
-jurisdiction,month,month_date,xfileyear,xfilemonth,median_claim,median_rent,ratio
+jurisdiction,month_alone,month,xfileyear,xfilemonth,median_claim,median_rent,ratio
 Cincinnati,1,2020-01-01,2020,1,944.835,810,1.166462962962963
 Cincinnati,1,2022-01-01,2022,1,1350,810,1.6666666666666667
 Cincinnati,2,2020-02-01,2020,2,950,810,1.1728395061728396
