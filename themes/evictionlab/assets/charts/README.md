@@ -58,11 +58,11 @@ Elab.MyModule.doSomething();
 To create a chart shortcode, you need to do the following:
 
 1. create a new module for the type of chart (e.g. `./stack-chart.js`)
-1. add your javascript file to the charts bundle in the [footer](../../layouts/partials/footer.html#L171)
-1. create an HTML template in the [shortcodes directory](../../layouts/shortcodes)
+2. add your javascript file to the charts bundle in the [footer](../../layouts/partials/footer.html#L171)
+3. create an HTML template in the [shortcodes directory](../../layouts/shortcodes)
    _this file provides the HTML skeleton and initializes the your chart module._
-1. add any chart-specific CSS to `./charts.css` using the `.chart--{{type}}` selector. (chart CSS selectors follow [Block, Element, Modifier (BEM) methodology](https://css-tricks.com/bem-101/) )
-1. add documentation of your shortcode to the [shortcodes documentation](../../../../docs/shortcodes.md)
-1. (_optional_) add a widget to Netlify CMS so this component can be added / edited via CMS
+4. add any chart-specific CSS to `./charts.css` using the `.chart--{{type}}` selector. (chart CSS selectors follow [Block, Element, Modifier (BEM) methodology](https://css-tricks.com/bem-101/) )
+5. add documentation of your shortcode to the [shortcodes documentation](../../../../docs/shortcodes.md)
+6. (_optional_) add a widget to Netlify CMS so this component can be added / edited via CMS
 
 > Note: the full details of the chart builder are not yet documented. Check out `bar-chart.js` or `line-chart.js` for example implementations. If you need support here, get in touch with [Lane](https://github.com/Lane)
