@@ -1,12 +1,14 @@
 {{/**
 
 Shortcode for rendering a chart of arrows conveying up/down shifts.
+
 Gets a different viewbox on if page loads narrower than the mobileCutoff (default of 600px)
 (text-sizing gets bumped to take up a greater portion of the figure's width, for legibility on smaller screens).
 
 scaleFactor: to "zoom in" on a segment of the x-axis without having to change the viewbox and manually adjust all the
-svg coordinates to maintain proper scaling. eg a scaleFactor of 5 would create an x axis going from 0-20 with ticks at 5
-(25/5), 10, 15, and 20, without altering the proportions of the generic 0-100 axis. note that the tick values will be
+svg coordinates/sizes etc to maintain proper scaling. eg a scaleFactor of 5 would create an x axis going from 0-20 with
+ticks at 5
+(25/5), 10, 15, and 20, with the same proportions as the default 0-100 axis. note that the tick values will be
 divided this factor, so it may be simplest to use a multiple of 5 (and set a manual xMax if desired). (a more intuitive
 solution would've been not to set any absolute px sizes and normalize everything based on the x extents, but this was a
 simpler adaptation.)
