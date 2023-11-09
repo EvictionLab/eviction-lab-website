@@ -1,0 +1,18 @@
+name: Rebuild Landing Page (staging)
+# data from this repo is also fetched by the landing page (https://github.com/hyperobjekt/eviction-lab)
+# when data updates, hit netlify build hook to rebuild corresponding deploy 
+# (https://app.netlify.com/sites/eviction-lab-site/configuration/deploys#build-hooks)
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Deploy
+        run: |
+          curl -X POST -d {} https://api.netlify.com/build_hooks/653193b03572112d3a927cd9
+          echo "deploy staging"
