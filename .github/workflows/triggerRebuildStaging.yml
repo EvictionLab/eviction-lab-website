@@ -15,4 +15,5 @@ jobs:
       - name: Trigger Deploy
         run: |
           curl -X POST -d {} https://api.netlify.com/build_hooks/653193b03572112d3a927cd9
-          echo "deploy staging"
+          echo "Deploy staging branch. Details:"
+          echo "ref: $GITHUB_REF, commit: $GITHUB_SHA, event: $GITHUB_EVENT_NAME, actor: $GITHUB_ACTOR"
