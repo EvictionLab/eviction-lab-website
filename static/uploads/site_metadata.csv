@@ -1,4 +1,4 @@
-site_id,display_name,slug,parent_state,lat,lng
+site_id,display_name,slug,parent_state,lat,lng,disabled
 0,All Sites,,,,
 09,Connecticut,connecticut,,,
 10,Delaware,delaware,,,
@@ -12,7 +12,7 @@ site_id,display_name,slug,parent_state,lat,lng
 55,Wisconsin,wisconsin,,,
 35001,Albuquerque,albuquerque-nm,NM,35.0844,-106.6504
 48453,Austin,austin-tx,TX,30.2672,-97.7431
-25025,Boston,boston-ma,MA,42.3601,-71.0589
+25025,Boston,boston-ma,MA,42.3601,-71.0589,true
 09001,Bridgeport,bridgeport-ct,CT,41.1792,-73.1894
 45019,Charleston,charleston-sc,SC,32.7765,-79.9311
 39061,Cincinnati,cincinnati-oh,OH,39.1031,-84.5120

@@ -9,7 +9,14 @@ twImage: /images/assets/graphics/ets-bg-social.png
 title: Boston, Massachusetts | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
+<div class="intro">
 
+## Currently Unavailable
+<br />
+Filings information for Boston is currently unavailable while we fix an error in our data collection process.
+</div>
+
+<!-- 
 {{< report_intro site_id="25025" data="/uploads/table.csv" >}}
 
 Eviction filings in Boston fell sharply after eviction proceedings were suspended across Massachusetts on March 17, 2020. A subsequent moratorium halted evictions through mid-October of 2020. Compared to equivalent periods in previous years (2012–2013, 2015–2016), eviction filings fell far below average beginning in April 2020, though filings rose modestly in November 2020 after the state moratorium expired.
@@ -34,3 +41,4 @@ This plot shows monthly eviction filings in Boston over the last year. Filings a
 2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
 
 {{%/ report_chart %}}
+-->
