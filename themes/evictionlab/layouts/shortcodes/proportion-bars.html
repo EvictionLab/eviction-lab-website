@@ -115,7 +115,7 @@ See: /ets-report-2022/index.md for usage
     </svg>
   </div>
   <script>
-  (() => {
+    (() => {
     var id = {{ .Get "id" }};
     var pbCsv = {{ .Get "data" }};
     var labelField = {{ .Get "labelField" }};
@@ -136,7 +136,7 @@ See: /ets-report-2022/index.md for usage
     </g>
   `
     window.addEventListener('load', function () {
-      var $el = $("#" +  id);
+      var $el = $("#" + id);
       d3.csv(pbCsv, function (data) {
         var blocks = data.
           forEach(r => {
