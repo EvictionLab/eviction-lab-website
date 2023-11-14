@@ -209,6 +209,10 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         <line data-val="150" x1="150" x2="150" y1="0" y2="1.2"></line>
         <line data-val="175" x1="175" x2="175" y1="0" y2="1.2"></line>
         <line data-val="200" x1="200" x2="200" y1="0" y2="1.2"></line>
+        <line data-val="225" x1="225" x2="225" y1="0" y2="1.2"></line>
+        <line data-val="250" x1="250" x2="250" y1="0" y2="1.2"></line>
+        <line data-val="275" x1="275" x2="275" y1="0" y2="1.2"></line>
+        <line data-val="300" x1="300" x2="300" y1="0" y2="1.2"></line>
       </g>
       <g class="tick-values xMax-dependent scaleFactor-dependent" transform="translate(0, 2)">
         <text data-val="0" x="0">0%</text>
@@ -220,6 +224,10 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         <text data-val="150" x="150">150%</text>
         <text data-val="175" x="175">175%</text>
         <text data-val="200" x="200">200%</text>
+        <text data-val="225" x="225">225%</text>
+        <text data-val="250" x="250">250%</text>
+        <text data-val="275" x="275">275%</text>
+        <text data-val="300" x="300">300%</text>
       </g>
       <text class="axis-title" x="50"></text>
       <g class="legend-desc"></g>
@@ -236,18 +244,30 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     var scaleFactor = {{ .Get "scaleFactor" }} || 1;
     var xMinMobile = {{ .Get "xMinMobile" }} || -42;
     var xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
+    var rHeight = {{ .Get "rowHeight" }};
     var mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
     var legendDecArrowText = {{ .Get "legendDecArrowText" }} || "";
     var legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
     var legendLabelText = {{ .Get "legendLabelText" }} || "";
     var axisLabelText = {{ .Get "axisLabelText" }} || "";
     var isLollipop = {{ .Get "variant" }} === "lollipop";
+    var nameCol = {{ .Get "nameCol" }} || "metro";
+    var beforeCol = {{ .Get "beforeCol" }} || "before";
+    var afterCol = {{ .Get "afterCol" }} || "after";
+    var isPercentValue = {{ .Get "isPercent" }}
+    var isPercent = String(isPercentValue) !== "false";
 
+    var format = isPercent ? '.1%' : '';
+    
     window.addEventListener('load', function () {
       var $el = $("#" + id);
       
       var isMobile = window.innerWidth <= Number(mobileCutoff);
-      const rowHeight = isMobile ? 6 : 4.5;
+      const rowHeight = rHeight
+        ? rHeight
+        : isMobile
+          ? 6
+          : 4.5;
       const xMin = isMobile ? xMinMobile : xMinDesktop;
 
       const $rows = $el.find('.arrow-chart g.rows')
@@ -270,13 +290,13 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
           shapes = `
 <circle class="before" r="1" cy="-0.1" />
 <circle class="after" r="1" cy="-0.1" cx="${shift}" />
-`
+`         
           const beforeRowValue = getRowValue({
-            content: beforeContent || d3.format('.1%')(before / 100 / scaleFactor),
+            content: beforeContent || d3.format(format)(before / (isPercent ? 100 : 1) / scaleFactor),
             classes: shift > 0 ? "left" : "right",
           });
           const afterRowValue = getRowValue({
-            content: afterContent || d3.format('.1%')(after / 100 / scaleFactor),
+            content: afterContent || d3.format(format)(after / (isPercent ? 100 : 1) / scaleFactor),
             classes: shift > 0 ? "right" : "left",
             dx: shift
           });
@@ -290,7 +310,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
           valueOffset = shift;
         }
           rowValues = getRowValue({
-            content: valueContent || d3.format('.1%')(shift / 100 / scaleFactor),
+            content: valueContent || d3.format(format)(shift / (isPercent ? 100 : 1) / scaleFactor),
             classes: displayRight || shift < 0 ? "right" : "left",
             dx: valueOffset
           });
@@ -308,10 +328,10 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       d3.csv(csv, function (data) {
         data.
           map((r, i) => {
-            const before = parseFloat(r.before) * 100 * scaleFactor;
-            const after = parseFloat(r.after) * 100 * scaleFactor;
+            const before = parseFloat(r[beforeCol]) * (isPercent ? 100 : 1) * scaleFactor;
+            const after = parseFloat(r[afterCol]) * (isPercent ? 100 : 1) * scaleFactor;
             return {
-              name: r.metro,
+              name: r[nameCol],
               highlighted: !!r.highlighted && r.highlighted !== "false",
               before,
               after,
@@ -323,7 +343,6 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
             let rowClasses = "chart-row"
             if (r.highlighted) rowClasses += " highlighted"
             if (!(i % 2)) rowClasses += " odd"
-
             const axisLines = `
   <g class="axis-lines xMax-dependent">
     <line data-val="0" x1="0" x2="0" y1="0" y2="${rowHeight}"></line>
@@ -335,6 +354,11 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     <line data-val="150" x1="150" x2="150" y1="0" y2="${rowHeight}"></line>
     <line data-val="175" x1="175" x2="175" y1="0" y2="${rowHeight}"></line>
     <line data-val="200" x1="200" x2="200" y1="0" y2="${rowHeight}"></line>
+    <line data-val="200" x1="200" x2="200" y1="0" y2="${rowHeight}"></line>
+    <line data-val="225" x1="225" x2="225" y1="0" y2="${rowHeight}"></line>
+    <line data-val="250" x1="250" x2="250" y1="0" y2="${rowHeight}"></line>
+    <line data-val="275" x1="275" x2="275" y1="0" y2="${rowHeight}"></line>
+    <line data-val="300" x1="300" x2="300" y1="0" y2="${rowHeight}"></line>
   </g>
 `
             const rowWrapper = `
@@ -395,11 +419,11 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
             el.remove()
           }
         })
-        if (scaleFactor !== 1) {
+        if (scaleFactor !== 1 || !isPercent) {
           $el.find('.scaleFactor-dependent [data-val]').each((i, el) => {
             // elements only get rendered if their val is relevant to the arrow
             // chart being created (eg if scale is 0-100, elements for values > 100 get removed)
-            el.textContent = el.dataset.val / scaleFactor + "%"
+            el.textContent = el.dataset.val / scaleFactor + (isPercent ? "%" : "")
           })
         }
 
