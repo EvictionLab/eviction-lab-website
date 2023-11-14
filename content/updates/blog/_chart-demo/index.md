@@ -246,9 +246,9 @@ caption="Colors represent state eviction policy scores from our <a href='#'>COVI
 title="Stacked area chart"
 %}}
 
+<h2>Row charts</h2>
 
-See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-bars and arrow-chart examples
-
+The following graphics all take the form of a stack of rows (one per location, year, income group etc), each with some type of horizontally-oriented visual element to represent that row's value for some metric. 
 
 {{% arrow-chart
   id="arrows-fig"
@@ -273,6 +273,22 @@ See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-b
   legendLabelText=""
 %}}
 
+The arrow chart also has lollipop chart variant:
+
+{{% arrow-chart
+  id="lollipop-fig"
+  variant="lollipop"
+  title="Figure 2. Median eviction rate by neighborhood gentrification classification and metropolitan areas (2012-2016)"
+  data="/uploads/sample_lollipop.csv"
+  xMax="125"
+  scaleFactor="10"
+  axisLabelText="Median Eviction Rate"
+  legendDecArrowText="Gentrifying"
+  legendIncArrowText="Low-SES"
+  legendLabelText=""
+  mobileCutoff="Infinity"
+%}}
+
 {{% horizontal-bars
   id="hbars"
   title="Horizontal bar stack"
@@ -288,13 +304,33 @@ See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-b
   legendLabelText=""
 %}}
 
+{{% butterfly-chart
+  id="butterfly"
+  title="Butterfly chart (generic form of a population pyramid)"
+  data="/uploads/butterfly_sample.csv"
+  xMax="75"
+  xMinDesktop="-90"
+  xMinMobile="-90"
+  scaleFactor="5"
+  barGap="0.15"
+  nameX="-75"
+  nameField="age_group"
+  numerator1Field="EFR_f"
+  numerator2Field="EFR_m"
+  mobileCutoff="Infinity"
+  legendLeftText="Females"
+  legendRightText="Males"
+  axisLabelText="Average annual rate, 2007-2018"
+  axisLabelX="0"
+%}}
+
 <style>
   /* uncomment to view in Ankurrat (should appear properly in Gotham in blog posts) */
   /* .proportion-bars g text {
     font-family: unset;
   } */
 </style>
-{{% proportion-bar
+{{% proportion-bars
   id="pbars"
   title="Proportion bars"
   v1Label="Observed Filings"
@@ -306,3 +342,5 @@ See [ETS Report 2022](https://evictionlab.org/ets-report-2022/) for proportion-b
   v2Field="missing_filings"
   vFormat=",d"
 %}}
+
+<code>Developers see charts/README for additional documentation.</code>
