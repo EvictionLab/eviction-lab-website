@@ -13,7 +13,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 ## Currently Unavailable
 <br />
+<p>
 Filings information for Boston is currently unavailable while we fix an error in our data collection process.
+</p>
 </div>
 
 <!-- 
