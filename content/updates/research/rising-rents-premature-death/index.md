@@ -8,13 +8,12 @@ contentcat: research
 featured: true
 in_index: true
 title: Rising Rents and Evictions Linked to Premature Death
-date: 2023-11-11T00:20:51.942Z
+date: 2023-11-16T00:20:51.942Z
 postauthorname: Nick Graetz, Carl Gershenson, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: GettyImages-1245604936.jpg
-fbImage: GettyImages-1245604936.jpg
-twImage: GettyImages-1245604936.jpg
+fbImage: SS&M.jpg
+twImage: SS&M.jpg
 description: 'We analyzed millions of records to understand the direct link between rent burden, eviction, and mortality. Our research shows that rising rent costs and evictions have important consequences for the risk of premature death.'
 listSummary: 'We analyzed millions of records to understand the direct link between rent burden, eviction, and mortality. Our research shows that rising rent costs and evictions have important consequences for the risk of premature death.'
 ---
@@ -23,11 +22,10 @@ listSummary: 'We analyzed millions of records to understand the direct link betw
 
 In a study published in the journal Social Science and Medicine, we show that the high cost of housing increases American renters’ risk of death. Chances of premature death are even higher when you are not able to keep up with the rent and are evicted. Building on our [groundbreaking collaboration with the U.S. Census Bureau](https://evictionlab.org/who-is-evicted-in-america/), we analyzed millions of records to understand the direct link between rent burden, eviction, and mortality for people who are paying the price for our housing crisis.
 
-[READ THE STUDY]
 
-<!-- {{< researchpaperlink "Beyond Gentrification: Housing Loss, Poverty, and the Geography of Displacement" "https://doi.org/10.1093/sf/soad123" "Peter Hepburn, Renee Louis, and Matthew Desmond" "social-forces.jpg" "Open Access Preprint" "https://osf.io/preprints/socarxiv/pyfa8/" >}} -->
+{{< researchpaperlink "The impacts of rent burden and eviction on mortality in the United States, 2000–2019" "https://doi.org/10.1016/j.socscimed.2023.116398" "Nick Graetz, Carl Gershenson, Sonya R. Porter, Danielle H. Sandler, Emily Lemmerman, and Matthew Desmond" "SS&M.jpg" >}}
 
-Over the last several decades, {{< extlink "rents have steadily increased while wages have remained stagnant" "https://www.cbpp.org/blog/2019-income-rent-gap-underscores-need-for-rental-assistance-census-data-show" >}}. The result is that a growing share of renters—especially poor renters—are rent burdened, paying more than 30% of their income for housing. In 2019, {{< extlink "four in every five renter households with incomes below $30,000 were rent burdened" "https://www.jchs.harvard.edu/americas-rental-housing-2022" >}}. This situation only worsened during the COVID-19 pandemic, as {{< extlink "rents increased at the fastest rate ever recorded" "https://www.washingtonpost.com/business/interactive/2022/rising-rent-prices/" >}}. 
+Over the last several decades, {{< extlink "rents have steadily increased while wages have remained stagnant" "https://www.cbpp.org/blog/2019-income-rent-gap-underscores-need-for-rental-assistance-census-data-show" >}}. The result is that a growing share of renters—especially poor renters—are rent burdened, paying more than 30% of their income for housing. In 2019, {{< extlink "four in every five renter households with incomes below $30,000 were rent-burdened" "https://www.jchs.harvard.edu/americas-rental-housing-2022" >}}. This situation only worsened during the COVID-19 pandemic, as {{< extlink "rents increased at the fastest rate ever recorded" "https://www.washingtonpost.com/business/interactive/2022/rising-rent-prices/" >}}. 
 
 Why might rent burden or eviction affect someone’s health? As rents rise, families cut back on other spending, including on essentials for health and well-being. For example, {{< extlink "poor households with children who are moderately rent-burdened (devoting 30-50% of income to rent) spend 57% less on healthcare and 17% less on food compared to unburdened households" "https://www.tandfonline.com/doi/abs/10.1080/10511482.2021.2020866" >}}. At least in part, households prioritize paying rent over other essential spending out of fear that non-payment could lead to an eviction. Eviction, in turn, is associated with a host of {{< extlink "negative repercussions for physical and mental health" "https://scholar.harvard.edu/files/mdesmond/files/desmondkimbro.evictions.fallout.sf2015_2.pdf" >}}. But until now, no one has conclusively demonstrated that exposure to rent burden or to eviction is associated with higher risk of death. 
 
