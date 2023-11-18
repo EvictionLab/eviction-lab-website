@@ -8,12 +8,13 @@ contentcat: research
 featured: true
 in_index: true
 title: Rising Rents and Evictions Linked to Premature Death
-date: 2023-11-16T00:20:51.942Z
+date: 2023-11-18T00:20:51.942Z
 postauthorname: Nick Graetz, Carl Gershenson, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-fbImage: SS&M.jpg
-twImage: SS&M.jpg
+image: 'GettyImages-1340254188-SR.jpg'
+fbImage: 'GettyImages-1340254188-SR.jpg'
+twImage: 'GettyImages-1340254188-SR.jpg'
 description: 'We analyzed millions of records to understand the direct link between rent burden, eviction, and mortality. Our research shows that rising rent costs and evictions have important consequences for the risk of premature death.'
 listSummary: 'We analyzed millions of records to understand the direct link between rent burden, eviction, and mortality. Our research shows that rising rent costs and evictions have important consequences for the risk of premature death.'
 ---
@@ -31,7 +32,7 @@ Why might rent burden or eviction affect someone’s health? As rents rise, fami
 
 To do so, we created a unique dataset in which we followed individual renters from the year 2000 onwards. Using responses to the 2000 decennial Census, we could tell how much of their income they were spending on rent. We found that higher levels of rent burden were associated with significantly higher levels of death. Controlling for a large set of individual, household, neighborhood, and state characteristics, someone paying 50% of their income toward rent in 2000 was 9% more likely to die over the next twenty years compared with someone paying 30% of their income toward rent. Someone paying 70% of their income toward rent was 12% more likely to die. These effects were more pronounced for men, especially Black and Hispanic men. 
 
-{{< pullquote "Higher levels of rent burden were associated with significantly higher levels of death" >}}
+{{< pullquote "Higher levels of rent burden were associated with significantly higher levels of death." >}}
 
 We also wanted to explore the impact of rent increases over time. To do so, we followed a sample of renters from 2000 for up to a decade, observing how the amount of income they were devoting to rent changed. Many experienced a decline in rent burden, but not all of them. Especially among poor renters, increases in rent burden were quite common. For example, among poor renters spending 30-49% of income on rent in 2000, nearly half (45%) experienced an increase of 20 percentage points or more in rent burden a decade later.
 
@@ -39,7 +40,7 @@ These hikes to rent burden were consistently associated with a higher risk of de
 
 If paying an excess amount for rent can increase your chances of dying early, an eviction can be a fatal blow. We used the records of millions of eviction court cases filed between 2000 and 2016 to understand the impact of such events on renters’ health. Simply being threatened with an eviction—even when that case did not result in an eviction judgment—was associated with a 19% increase in mortality. Receiving an eviction judgment was associated with a 40% increase in the risk of death. 
 
-{{< pullquote "Paying a smaller share of income toward rent—or seeing that share drop over time—reduces your risk of dying" >}}
+{{< pullquote "Paying a smaller share of income toward rent—or seeing that share drop over time—reduces your risk of dying." >}}
 
 Most evictions occurred within highly marginalized renter populations where mortality rates were already very high. However, even when we restricted our analyses to the most disadvantaged renters—those estimated to be at highest risk of experiencing an eviction—we still found that eviction was associated with a significant increase in mortality.
 
