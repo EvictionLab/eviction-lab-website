@@ -9,10 +9,10 @@ featured: true
 in_index: true
 title: Eviction was a Deadly Risk During the COVID-19 Pandemic
 date: 2023-11-18T00:20:51.942Z
-postauthorname: Nick Gratez, Peter Hepburn, Carl Gershenson, Emily Lemmerman, and Matthew Desmond
+postauthorname: Nick Graetz, Peter Hepburn, Carl Gershenson, Emily Lemmerman, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: GettyImages-1245604936.jpg
+image: 
 fbImage: GettyImages-1245604936.jpg
 twImage: GettyImages-1245604936.jpg
 description: 'While many groups experienced higher-than-normal rates of death during the pandemic, the excess mortality of renters threatened with eviction was ten times higher than that of the general population.'
