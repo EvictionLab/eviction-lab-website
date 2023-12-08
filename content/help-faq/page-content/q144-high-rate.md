@@ -1,5 +1,5 @@
 ---
-title: "My area shows a high filing or eviction rate. What does this mean?"
+title: My area shows a high filing or eviction rate. What does this mean?
 date: 2017-11-19T20:43:49-08:00
 childof: faq
 type: data
@@ -10,7 +10,11 @@ On the map, we have indicated with the symbol <img class="hint" src="/images/ico
 
 Remember that filing and eviction rates are calculated by dividing the number of filings or evictions in an area by the number of renter homes. That means that very high rates could be the result of (1) a large number of evictions or filings or (2) a small number of renter homes in an area.
 
-Take neighborhoods in Prince George’s County in Maryland. Because the way Maryland records eviction notices, it has a much higher filing rate than everywhere else, but this doesn’t mean it has more evictions. In most jurisdictions, the eviction process starts with an out-of- court notice delivered to a tenant, but in Maryland the process begins with an eviction filed in court. Many landlords file against their tenants every month, resulting in a very high case volume. Here, the number of filings is inflated because of unique court procedures, resulting in a high rate.
+Take neighborhoods in Prince George’s County in Maryland. Because of how Maryland recorded eviction notices prior to 2021, it has a much higher filing rate than other states in our historical data.
+
+This doesn’t necessarily mean Maryland had more evictions. In most jurisdictions, the eviction process starts with an out-of- court notice delivered to a
+tenant, but in Maryland the process used to begin with an eviction filed in court. Many landlords filed against their tenants every month, resulting in a
+very high case volume. This process was modified in October 2021, and landlords in Maryland must now give tenants notice before filing an eviction with the courts.
 
 Now consider a residential neighborhood bordering a large industrial zone. The Census tract that includes the industrial zone also includes a small residential section with 40 renter homes. If there were 20 evictions from those homes over the course of a year, that would generate an eviction rate
 of 50%. Here, the eviction rate is high because the number of renter homes in the area is small. 
