@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: rising-rents-and-evictions-linked-to-premature-death
 contenttype: updates
@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: Rising Rents and Evictions Linked to Premature Death
-date: 2023-11-18T00:20:51.942Z
+date: 2023-12-13T00:20:51.942Z
 postauthorname: Nick Graetz, Carl Gershenson, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
@@ -21,7 +21,7 @@ listSummary: 'We analyzed millions of records to understand the direct link betw
 
 <span class="dropcap green">H</span>ousing takes a toll on America’s health. Tenants might have mold in their walls that impacts the air they breathe. Parents might live far from parks where they can go for a run or play with their kids, and families might not be able to find fresh fruits and vegetables within walking distance. But the most pressing issue for many is paying the increasingly unaffordable rent. This is not just an economic hardship. Our research shows that rising rent costs and evictions have important consequences for the risk of premature death.
 
-In a study published in the journal Social Science and Medicine, we show that the high cost of housing increases American renters’ risk of death. Chances of premature death are even higher when you are not able to keep up with the rent and are evicted. Building on our [groundbreaking collaboration with the U.S. Census Bureau](https://evictionlab.org/who-is-evicted-in-america/), we analyzed millions of records to understand the direct link between rent burden, eviction, and mortality for people who are paying the price for our housing crisis.
+In a study published in the journal _Social Science and Medicine_, we show that the high cost of housing increases American renters’ risk of death. Chances of premature death are even higher when you are not able to keep up with the rent and are evicted. Building on our [groundbreaking collaboration with the U.S. Census Bureau](https://evictionlab.org/who-is-evicted-in-america/), we analyzed millions of records to understand the direct link between rent burden, eviction, and mortality for people who are paying the price for our housing crisis.
 
 
 {{< researchpaperlink "The impacts of rent burden and eviction on mortality in the United States, 2000–2019" "https://doi.org/10.1016/j.socscimed.2023.116398" "Nick Graetz, Carl Gershenson, Sonya R. Porter, Danielle H. Sandler, Emily Lemmerman, and Matthew Desmond" "SS&M.jpg" >}}
@@ -30,7 +30,9 @@ Over the last several decades, {{< extlink "rents have steadily increased while 
 
 Why might rent burden or eviction affect someone’s health? As rents rise, families cut back on other spending, including on essentials for health and well-being. For example, {{< extlink "poor households with children who are moderately rent-burdened (devoting 30-50% of income to rent) spend 57% less on healthcare and 17% less on food compared to unburdened households" "https://www.tandfonline.com/doi/abs/10.1080/10511482.2021.2020866" >}}. At least in part, households prioritize paying rent over other essential spending out of fear that non-payment could lead to an eviction. Eviction, in turn, is associated with a host of {{< extlink "negative repercussions for physical and mental health" "https://scholar.harvard.edu/files/mdesmond/files/desmondkimbro.evictions.fallout.sf2015_2.pdf" >}}. But until now, no one has conclusively demonstrated that exposure to rent burden or to eviction is associated with higher risk of death. 
 
-To do so, we created a unique dataset in which we followed individual renters from the year 2000 onwards. Using responses to the 2000 decennial Census, we could tell how much of their income they were spending on rent. We found that higher levels of rent burden were associated with significantly higher levels of death. Controlling for a large set of individual, household, neighborhood, and state characteristics, someone paying 50% of their income toward rent in 2000 was 9% more likely to die over the next twenty years compared with someone paying 30% of their income toward rent. Someone paying 70% of their income toward rent was 12% more likely to die. These effects were more pronounced for men, especially Black and Hispanic men. 
+To do so, we created a unique dataset in which we followed individual renters from the year 2000 onwards. Using responses to the 2000 decennial Census, we could tell how much of their income they were spending on rent. We found that higher levels of rent burden were associated with significantly higher levels of death. 
+
+Controlling for a large set of individual, household, neighborhood, and state characteristics, someone paying 50% of their income toward rent in 2000 was 9% more likely to die over the next twenty years compared with someone paying 30% of their income toward rent. Someone paying 70% of their income toward rent was 12% more likely to die. These effects were more pronounced for men, especially Black and Hispanic men. 
 
 {{< pullquote "Higher levels of rent burden were associated with significantly higher levels of death." >}}
 
