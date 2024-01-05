@@ -33,7 +33,7 @@ scripts:
 
 A new study published in {{< extlink "Society & Natural Resources" "https://www.tandfonline.com/doi/full/10.1080/08941920.2023.2286640?src=exp-la" >}} shows how commodity booms affect communities like Williston, the county seat of Williams County. In Williams County, eviction filings used to be extremely rare: In 2010, the filing rate was merely 0.002%. But by 2019, the filing rate was over 7%, rivaling major cities like New York and Philadelphia.
 
-{{< researchpaperlink "Fracking Evictions: Housing Instability in a Fossil Fuel Boomtown" "https://www.tandfonline.com/doi/full/10.1080/08941920.2023.2286640?src=exp-la" "Carl Gershenson, Olivia Jin, Jacob Haas, and Matthew Desmond" "study.jpg" >}}
+{{< researchpaperlink "Fracking Evictions: Housing Instability in a Fossil Fuel Boomtown" "https://www.tandfonline.com/doi/full/10.1080/08941920.2023.2286640?src=exp-la" "Carl Gershenson, Olivia Jin, Jacob Haas, and Matthew Desmond" "study.png" >}}
 
 In order to understand how commodity booms are tied to housing instability, we analyzed monthly eviction counts in Williams County alongside data on oil production, the housing market, and the local economy between 2000 and 2022. 
 
