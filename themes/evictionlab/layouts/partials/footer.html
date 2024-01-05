@@ -176,7 +176,9 @@
   {{ $barchart := resources.Get "charts/bar-chart.js" }}
   {{ $stackchart := resources.Get "charts/stack-area-chart.js" }}
   {{ $histogram := resources.Get "charts/histogram.js" }}
-  {{ $js := slice $d3 $builder $utils $linechart $barchart $stackchart $histogram | resources.Concat "js/charts/bundle.js" | resources.Minify }}
+  {{ $legend := resources.Get "charts/legend.js" }}
+  {{ $js := slice $d3 $builder $utils $linechart $barchart $stackchart $histogram $legend | resources.Concat
+  "js/charts/bundle.js" | resources.Minify }}
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>
 {{ end }}
 

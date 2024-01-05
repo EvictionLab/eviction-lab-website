@@ -1,0 +1,39 @@
+{{/**
+
+```
+scripts:
+- charts
+```
+
+*/}}
+
+<div class="custom-legend">
+  <style type="text/css">
+    .legend__body {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+  </style>
+
+  <div id="{{ .Get `id` }}" class="legend__body"></div>
+
+  <script>
+    window.addEventListener('load', function () {
+      var id = {{ .Get "id" }};
+      var domain = {{ .Get "domain" }};
+      var range = {{ .Get "range" }};
+      var minWidth = {{ .Get "minWidth" }} || undefined;
+      var maxWidth = {{ .Get "maxWidth" }} || undefined;
+      var scaleType = {{ .Get "scaleType" }} || undefined;
+      var rootEl = document.getElementById(id);
+      Elab.Legend.init(rootEl, {
+        domain,
+        range,
+        minWidth,
+        maxWidth,
+        scaleType,
+      })
+      });
+  </script>
+</div>
