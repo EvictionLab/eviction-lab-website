@@ -126,7 +126,7 @@ Elab.Legend = (function (Elab) {
     rootEl,
     { domain, range, scaleType = "scaleThreshold", minWidth = 200, maxWidth = 500 },
   ) {
-    const buffer = 64;
+    const buffer = 32;
     const useableWidth = window.innerWidth - buffer;
     // use dynamic width between min and max
     const width = useableWidth > maxWidth ? maxWidth : Math.max(useableWidth, minWidth);
