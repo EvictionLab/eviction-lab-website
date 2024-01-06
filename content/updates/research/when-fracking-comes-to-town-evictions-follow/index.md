@@ -24,12 +24,15 @@ scripts:
 <span class="dropcap green">W</span>illiams County, North Dakota changed radically in just ten years. Its population doubled between 2010 and 2020 as new drilling technologies—including {{< extlink "hydraulic fracturing, or fracking" "https://www.nrdc.org/stories/fracking-101" >}}—enabled an oil boom that made this isolated corner of North Dakota one of the centers of the global oil trade. As investment flooded the region, wages increased from $55,000 a year to around $80,000. Many locals prospered as their property values went up and their businesses found new customers. But others suffered, especially those who found that the cost of living grew faster than their income.
 
 <div class="figheader px-0 px-md-3 mt-0 mb-1">Figure 1: North Dakota Population Per Square Mile (Based on 2010 Census Data)</div>
-<img src="/images/assets/blog/williams-county-map.png" class="upscale124">
+<img src="williams-county-map2.png" class="upscale124 my-2">
+
 {{% legend 
   id="map-legend"
   domain="1;10;25;50;100;250;500;1000;2500;5000"
   range="rgb(28,137,63);rgb(66,165,75);rgb(111,192,83);rgb(156,214,90);rgb(196,233,113);rgb(231,228,121);rgb(251,206,112);rgb(250,164,83);rgb(243,114,63);rgb(228,67,44);rgb(250,0,0)"
 %}}
+
+<br>
 
 A new study published in {{< extlink "Society & Natural Resources" "https://www.tandfonline.com/doi/full/10.1080/08941920.2023.2286640?src=exp-la" >}} shows how commodity booms affect communities like Williston, the county seat of Williams County. In Williams County, eviction filings used to be extremely rare: In 2010, the filing rate was merely 0.002%. But by 2019, the filing rate was over 7%, rivaling major cities like New York and Philadelphia.
 
