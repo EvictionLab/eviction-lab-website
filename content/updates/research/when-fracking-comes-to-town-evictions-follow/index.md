@@ -12,9 +12,9 @@ date: 2024-01-04T00:20:51.942Z
 postauthorname: Juan Pablo Garnham, Carl Gershenson, Olivia Jin, Jacob Haas, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: 'GettyImages-1340254188-SR.jpg'
-fbImage: 'GettyImages-1340254188-SR.jpg'
-twImage: 'GettyImages-1340254188-SR.jpg'
+image: 'istockphoto-1321918988-1024x1024.jpeg'
+fbImage: 'istockphoto-1321918988-1024x1024.jpeg'
+twImage: 'istockphoto-1321918988-1024x1024.jpeg'
 description: 'lorem ipsum'
 listSummary: 'lorem ipsum'
 scripts:
