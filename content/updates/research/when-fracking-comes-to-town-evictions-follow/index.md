@@ -15,8 +15,8 @@ authorpic: /images/bios/elab_thumb_sm.jpg
 image: 'istockphoto-1321918988-1024x1024.jpeg'
 fbImage: 'istockphoto-1321918988-1024x1024.jpeg'
 twImage: 'istockphoto-1321918988-1024x1024.jpeg'
-description: 'lorem ipsum'
-listSummary: 'lorem ipsum'
+description: 'An oil boom in Williams County, ND brought prosperity but also suffering, as many residents saw the cost of living grow faster than their income.'
+listSummary: 'An oil boom in Williams County, ND brought prosperity but also suffering, as many residents saw the cost of living grow faster than their income.'
 scripts:
   - charts
 ---
@@ -24,7 +24,7 @@ scripts:
 <span class="dropcap green">W</span>illiams County, North Dakota changed radically in just ten years. Its population doubled between 2010 and 2020 as new drilling technologies—including {{< extlink "hydraulic fracturing, or fracking" "https://www.nrdc.org/stories/fracking-101" >}}—enabled an oil boom that made this isolated corner of North Dakota one of the centers of the global oil trade. As investment flooded the region, wages increased from $55,000 a year to around $80,000. Many locals prospered as their property values went up and their businesses found new customers. But others suffered, especially those who found that the cost of living grew faster than their income.
 
 <div class="figheader px-0 px-md-3 mt-0 mb-1">Figure 1: North Dakota Population Per Square Mile (Based on 2010 Census Data)</div>
-<img src="williams-county-map2.png" class="upscale124 my-2">
+<img src="williams-county-map2.png" class="mw-100 my-2">
 
 {{% legend 
   id="map-legend"
