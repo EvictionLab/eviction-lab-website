@@ -8,15 +8,15 @@ contentcat: research
 featured: true
 in_index: true
 title: When Fracking Comes to Town, Evictions Follow
-date: 2024-01-04T00:20:51.942Z
+date: 2024-01-09T00:20:51.942Z
 postauthorname: Juan Pablo Garnham, Carl Gershenson, Olivia Jin, Jacob Haas, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: 'istockphoto-1321918988-1024x1024.jpeg'
-fbImage: 'istockphoto-1321918988-1024x1024.jpeg'
-twImage: 'istockphoto-1321918988-1024x1024.jpeg'
-description: 'An oil boom in Williams County, ND brought prosperity but also suffering, as many residents saw the cost of living grow faster than their income.'
-listSummary: 'An oil boom in Williams County, ND brought prosperity but also suffering, as many residents saw the cost of living grow faster than their income.'
+image: 'iStock-1321918988.jpg'
+fbImage: 'iStock-1321918988.jpg'
+twImage: 'iStock-1321918988.jpg'
+description: 'An oil boom in Williams County, ND brought prosperity for many. But it also brought suffering, as many residents saw the cost of living grow faster than their income.'
+listSummary: 'An oil boom in Williams County, ND brought prosperity for many. But it also brought suffering, as many residents saw the cost of living grow faster than their income.'
 scripts:
   - charts
 ---
