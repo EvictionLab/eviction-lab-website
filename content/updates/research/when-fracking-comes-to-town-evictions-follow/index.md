@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: when-fracking-comes-to-town-evictions-follow
 contenttype: updates
