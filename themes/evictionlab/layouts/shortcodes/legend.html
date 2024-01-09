@@ -14,6 +14,13 @@ scripts:
       justify-content: center;
       margin-bottom: 12px;
     }
+    .legend__body text {
+      font-family: Gotham A, Gotham B;
+      font-size: 10px;
+      @media (min-width: 600px) {
+        font-size: 12px;
+      }
+    }
   </style>
 
   <div id="{{ .Get `id` }}" class="legend__body"></div>

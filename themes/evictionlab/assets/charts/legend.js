@@ -1,7 +1,6 @@
 "use strict";
 
 var Elab = Elab || {};
-console.log(23432423);
 /**
  * LEGEND MODULE
  * ----
@@ -12,7 +11,6 @@ console.log(23432423);
  *
  */
 Elab.Legend = (function (Elab) {
-  console.log("ihhi");
   // Copyright 2021, Observable Inc.
   // Released under the ISC license.
   // https://observablehq.com/@d3/color-legend
