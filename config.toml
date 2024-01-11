@@ -127,9 +127,9 @@ languageName = "English"
     weight = 13
     url = "/data-request"
 [[Languages.en.menu.footer]]
-    name = "Media Guide"
+    name = "Media Resources"
     weight = 14
-    url = "/media-guide/"
+    url = "/media/"
 [[Languages.en.menu.footer]]
     name = "Contact Us"
     weight = 15
@@ -283,7 +283,7 @@ languageName = "Español"
 [[Languages.es.menu.footer]]
     name = "Guía de medios"
     weight = 14
-    url = "/media-guide/"
+    url = "/media/"
 [[Languages.es.menu.footer]]
     name = "Contactarnos"
     weight = 15
