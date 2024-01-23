@@ -12,4 +12,4 @@ Carl Gershenson is Lab Director at Eviction Lab. He has published on the causes 
 
 At the Eviction Lab, Carl will continue to study how American political economy creates the conditions for the contemporary housing crisis. He is also deeply interested in issues around climate and energy, and he will work these interests into his research at Eviction Lab. When life gives him the chance, Carl likes to read history and fiction and explore Philadelphia. 
 
-For more on Carl’s research, go to <a href="https://scholar.harvard.edu/cgersh/home" target="_blank">https://scholar.harvard.edu/cgersh/home</a>
+For more on Carl’s research, go to <a href="https://gershenson.scholar.princeton.edu/" target="_blank">https://gershenson.scholar.princeton.edu/</a>
