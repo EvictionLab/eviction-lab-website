@@ -89,7 +89,7 @@ These analyses, though, just tell us about patterns at the end of the study peri
 Still, this sort of analysis might miss sudden jumps in evictions during the gentrification process. We plotted out eviction rates for every year between 2000 and 2016 (see Figure 3). In 2000, eviction rates in low-SES neighborhoods that went on to gentrify and those that did not were quite similar. Those rates overlapped for much of the first five years, but were consistently lower in gentrifying tracts from 2007 onwards. 
 
 <div class="figheader">Figure 3. Average (weighted) eviction rate over time by neighborhood gentrification classification</div>
-<iframe class="visual" src="https://development--eviction-lab-site.netlify.app/blog/gentrifications-role-in-the-eviction-crisis-viz/"></iframe>
+<iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/gentrifications-role-in-the-eviction-crisis-viz/"></iframe>
 <div class="legend mb-3">
   <div class="legend-item legend-item--0">
   <div class="legend-item__color"></div>

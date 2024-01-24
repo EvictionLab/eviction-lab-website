@@ -47,7 +47,7 @@ The weakness of the state’s eviction laws became obvious as rents surged in Wi
 Evictions climbed in lockstep with oil production, as shown in Figure 2. Between 2000 and 2019, oil production increased in the county from 300,000 barrels a month to 7.5 million barrels a month. In 2000, landlords would file only one or two evictions a month in the county. But by 2019, there were 42 eviction filings per month in Williams County. 
 
 <div class="figheader">Figure 2. Monthly Eviction Filings and Oil Production in Williams County, ND</div>
-<iframe class="visual" src="https://development--eviction-lab-site.netlify.app/blog/fracking-and-eviction-viz/"></iframe>
+<iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/fracking-and-eviction-viz/"></iframe>
 
 Evictions and oil production peaked in 2019. The COVID-19 pandemic disrupted demand for oil, leading to {{< extlink "notable declines in North Dakota’s production" "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=M&n=PET&s=MCRFPND1" >}}. At the same time, emergency protections at the state and federal level, {{< extlink "coupled with substantial federal spending on renters" "https://www.washingtonpost.com/outlook/2021/02/01/rental-relief-federal-inefficient-distribution/" >}}, temporarily kept renters in their homes.
 

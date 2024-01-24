@@ -51,7 +51,7 @@ Like private landlords, PHA managers are more likely to file serial cases when t
 
 <div class="figheader">Figure 1. Serial eviction filing rates in public housing and the private market, by state</div>
 
-<iframe class="visual" src="https://blog-fresh--eviction-lab-site.netlify.app/blog/public-housing-and-the-threat-of-eviction-vis/"></iframe>
+<iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/public-housing-and-the-threat-of-eviction-vis/"></iframe>
 
 <div class="figcaption"><p>In the figure above, states plotted as dots above the diagonal line have higher serial filing rates by public housing authorities than in the private market; states below the diagonal line have higher serial filing rates within the private market.</p></div>
 
