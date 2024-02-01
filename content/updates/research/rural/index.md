@@ -53,16 +53,22 @@ Metus aliquam eleifend mi in nulla posuere. In hac habitasse platea dictumst ves
       width: 100%;
     }
     .side-by-side .vis-wrapper {
-      /* redistribute the -40px margin on the 2nd chart and the 60px of empty margin-right
-      on the 3rd chart among the widths of the 3 charts. since this will exceed the width
-      of the container, we set overflow: hidden on side-by-side above */
-      flex: 0 0 calc(100%/3 + (40px + 60px)/3);
+      /*
+        redistribute the -40px margin on the 2nd chart and the 50px of empty margin-right
+        on the 3rd chart** among the widths of the 3 charts. since this will exceed the
+        width of the container, we set overflow: hidden on side-by-side above.
+      */
+      flex: 0 0 calc(100%/3 + (40px + 50px)/3);
       flex-wrap: nowrap;
     }
     .side-by-side .vis-wrapper:nth-of-type(1) {
       z-index: 1;
     }
     .side-by-side .vis-wrapper:nth-of-type(2) {
+      /* 
+        remove some of the empty margin on the middle chart**
+        **charts all have equivalent total horiz margin to keep charts equal width despite axis
+      */
       margin-left: -20px;
       margin-right: -20px;
     }
