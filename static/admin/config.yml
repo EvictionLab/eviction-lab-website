@@ -411,6 +411,7 @@ collections:
       - { label: "Blog Post Title", name: "title", widget: "string" }
       - { label: "Created Date", name: "date", widget: "datetime" }
       - { label: "Author Name", name: "postauthorname", widget: "string" }
+      - { label: "Researcher Name", name: "researchauthorname", widget: "string" }
       - { label: "Author Title", name: "postauthortitle", widget: "string" }
       - {
           label: "Author Photo",
