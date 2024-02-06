@@ -1,6 +1,7 @@
 
 {{ partial "header" . }}
 {{ $pagetype := .Params.childof }}
+{{ $researchauthor := .Params.researchauthorname }}
 <!--{{ partial "subnav" . }}-->
 <div class="mobile-off">{{ partial "breadcrumb" . }}</div>
 
@@ -34,7 +35,12 @@
       <div class="authorbox">
         <img class="post-thumb" src="{{ .Params.authorpic }}">
         <ul>
+          {{ if $researchauthor }}
+          <li class="authorname">Written by <span>{{ .Params.postauthorname }}</span></li>
+          <li class="authorname pb-1">Based on research by <span>{{ .Params.researchauthorname }}</span></li>
+          {{else}}
           <li class="authorname">{{ .Params.postauthorname }}</li>
+          {{ end}}
           <li class="authortitle">{{ .Params.postauthortitle }}</li>
         </ul>
       </div>

@@ -165,6 +165,9 @@ img.post-thumb {
   .authorname {
     font-family: $boldFontStack;
   }
+  .authorname span {
+    font-family: $fontStack;
+  }
   span.authortitle {
     display: block;
   }
