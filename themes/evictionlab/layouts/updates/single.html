@@ -1,7 +1,9 @@
 
 {{ partial "header" . }}
 {{ $pagetype := .Params.childof }}
+{{ $authorpic := .Params.authorpic }}
 {{ $researchauthor := .Params.researchauthorname }}
+{{ $postauthortitle := .Params.postauthortitle }}
 <!--{{ partial "subnav" . }}-->
 <div class="mobile-off">{{ partial "breadcrumb" . }}</div>
 
@@ -33,15 +35,19 @@
 <!-- /// UPDATES META SECTION /// -->       
       {{ if eq .Params.contenttype "updates" }}
       <div class="authorbox">
-        <img class="post-thumb" src="{{ .Params.authorpic }}">
+        {{ if $authorpic }}
+        <img class="post-thumb" src="{{ $authorpic }}">
+        {{ end }}
         <ul>
           {{ if $researchauthor }}
-          <li class="authorname">Written by <span>{{ .Params.postauthorname }}</span></li>
-          <li class="authorname pb-1">Based on research by <span>{{ .Params.researchauthorname }}</span></li>
+          <li class="authorname"><span class="label">Written by </span><span>{{ .Params.postauthorname }}</span></li>
+          <li class="authorname pb-1"><span class="label">Research by </span><span>{{ $researchauthor }}</span></li>
           {{else}}
           <li class="authorname">{{ .Params.postauthorname }}</li>
           {{ end}}
-          <li class="authortitle">{{ .Params.postauthortitle }}</li>
+          {{ if $postauthortitle }}
+          <li class="authortitle">{{ $postauthortitle }}</li>
+          {{ end}}
         </ul>
       </div>
       <div class="social-box mobile-off">

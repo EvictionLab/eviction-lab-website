@@ -164,9 +164,19 @@ img.post-thumb {
   }
   .authorname {
     font-family: $boldFontStack;
+    display: flex;
   }
-  .authorname span {
-    font-family: $fontStack;
+  .authorname .label {
+    flex: 102px 0 0;
+    text-transform: uppercase;
+    line-height: 1.8;
+    letter-spacing: .54px;
+    color: $secondaryAltTextColor;
+    @include headerFont(1.3rem);
+    @include media-breakpoint-up(lg) {
+      @include headerFont(1.35rem);
+      flex-basis: 107px;
+    }
   }
   span.authortitle {
     display: block;
