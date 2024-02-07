@@ -169,12 +169,13 @@ img.post-thumb {
   .authorname .label {
     flex: 102px 0 0;
     text-transform: uppercase;
-    line-height: 1.8;
+    line-height: 1.5;
     letter-spacing: .54px;
     color: $secondaryAltTextColor;
     @include headerFont(1.3rem);
     @include media-breakpoint-up(lg) {
       @include headerFont(1.35rem);
+      line-height: 1.7;
       flex-basis: 107px;
     }
   }
