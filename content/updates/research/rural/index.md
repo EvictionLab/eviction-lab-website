@@ -9,7 +9,7 @@ featured: true
 in_index: true
 title: More than 200,000 rural families face an eviction every year
 date: 2024-01-09T00:20:51.942Z
-postauthorname: Juan Pablo Garnham, Carl Gershenson, and Camilla Vallejo
+postauthorname: Juan Pablo Garnham and Camilla Vallejo
 researchauthorname: Peter Hepburn, Carl Gershenson, and Matthew Desmond
 image: dallas-public-housing.jpg
 fbImage: dallas-public-housing.jpg
