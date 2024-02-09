@@ -11,7 +11,7 @@ title: More than 200,000 rural families face an eviction every year
 date: 2024-01-09T00:20:51.942Z
 postauthorname: Juan Pablo Garnham
 researchauthorname: Carl Gershenson and Matthew Desmond
-image: rv-park.jpg
+image: rv-park2.jpg
 fbImage: rv-park.jpg
 twImage: rv-park.jpg
 description: 'Most research to date has focused on the impact of eviction on cities and suburbs. Our new paper documents the many families in rural counties facing eviction every year, a crisis disproportionately affecting Black communities.'
