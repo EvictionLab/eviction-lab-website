@@ -2,6 +2,7 @@
 .superheader {
     background-color: #11152F;
     color: #fff;
+    transition: all 0.2s ease-in-out;
     a {
         color: #fff;
         font-family: $boldFontStack;

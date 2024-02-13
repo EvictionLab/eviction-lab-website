@@ -536,20 +536,29 @@ if (!count3.error) {
 /**
  * Check for banner cookie
  */
-$(function() {
-
-  if(localStorage && localStorage.getItem("el-banner") == $(".superheader").html()) {
-    $(".superheader").addClass("inactive");
-  }else {
-    console.log($(".superheader").html())
+$(function () {
+  const $Superheader = $(".superheader");
+  const bannerText = $Superheader.text();
+  // console.log("current banner: ", bannerText);
+  if (localStorage && localStorage.getItem("el-banner") == bannerText) {
+    // console.log("header already dismissed");
+  } else {
+    // transition header from off-screen
+    $Superheader.css("margin-top", `-${$Superheader.height()}px`);
+    setTimeout(() => {
+      $Superheader.removeClass("inactive");
+      $Superheader.css("margin-top", 0);
+    }, 200);
   }
-});
 
-$(".superheader .close").click(function () {
-  $(".superheader").addClass("inactive");
+  $Superheader.find(".close").click(function () {
+    // transition header off-screen before removing
+    $Superheader.css("margin-top", `-${$Superheader.height()}px`);
+    setTimeout(() => $Superheader.addClass("inactive"), 200);
 
-  if(localStorage) {
-    localStorage.setItem("el-banner", $(".superheader").html())
-  }
+    if (localStorage) {
+      localStorage.setItem("el-banner", bannerText);
+    }
+  });
 });
 
