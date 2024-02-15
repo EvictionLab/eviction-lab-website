@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: More than 200,000 rural families face an eviction every year
-date: 2024-01-09T00:20:51.942Z
+date: 2024-02-15T00:20:51.942Z
 postauthorname: Juan Pablo Garnham
 researchauthorname: Carl Gershenson and Matthew Desmond
 image: rv-park2.jpg
@@ -77,7 +77,7 @@ scripts:
 
 Evictions are commonplace in the United States, but most research to date has focused on the impact of evictions in cities and [suburbs](https://evictionlab.org/growing-risk-of-suburban-eviction/). Rural evictions are a hidden feature of our national housing crisis. In a paper published in Rural Sociology [LINK], we document for the first time the hundreds of thousands of families who face evictions every year in rural counties and show how this crisis disproportionately affects Black communities. This situation is likely to worsen as development pressures push into rural communities while USDA affordable housing programs expire.
 
-LINK TO THE PAPER/JOURNAL
+{{< researchpaperlink "Eviction and the Rental Housing Crisis in Rural America" "https://onlinelibrary.wiley.com/doi/full/10.1111/ruso.12528" "Carl Gershenson and Matthew Desmond" "rural-sociology-cover.jpg" >}}
 
 Approximately 17 million people rented homes in rural America in 2018. As in the rest of the country, these tenants are burdened by unaffordable rents and a shortage of rental housing. Using the [Eviction Lab’s national database](http://www.evictionlab.org/map), we found that approximately 220,000 evictions were filed against rural renters each year between 2000 to 2018. The annual eviction filing rate in rural counties was 4.3%, lower than the national average and the 9.7% rate in urban counties, but {{< extlink "still higher than what we see in other high-income countries" "https://www.oecd.org/els/family/HC3-3-Evictions.pdf" >}}. And while urban eviction rates fell over this period, rural rates remained flat.
 
