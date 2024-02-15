@@ -156,6 +156,21 @@
            background-position: 95% 60%;
        }
     }
+    .splash-header,
+    .splash-body {
+        position: relative;
+        animation: fadeIn 1s forwards 0.5s;
+        opacity: 0;
+    }
+    .splash-body {
+        animation-delay: 1.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
 
 // GENERAL TYPOGRPAPHY -------------------
     #home-body {
