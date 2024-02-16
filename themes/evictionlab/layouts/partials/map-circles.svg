@@ -7,10 +7,10 @@
         circle {
             opacity: 0;
             fill: #E13700;
-            animation: fadeIn 1s forwards;
+            animation: fadeInCircles 1s forwards;
         }
 
-        @keyframes fadeIn {
+        @keyframes fadeInCircles {
             0% {
                 opacity: 0;
             }
