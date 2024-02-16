@@ -89,26 +89,10 @@
 
     #home-hero {
         height: 54vh;
-        background-position-x: 56%;
         top:-56px;
         margin-bottom: -56px;
-        background-size: 213%;
-        overflow: hidden;
-        @include media-breakpoint-up(md) {
-            height: 640px;
-            background-position-y: 31%;
-            top: -160px;
-            margin-bottom: -160px;
-            background-size: cover;
-        }
-        @include media-breakpoint-up(xxl) {
-            height: 780px;
-        }
-        @include media-breakpoint-up(x4l) {
-            height: 780px;
-        }
-                                                                                                                                background-color: #11152F;
         position: relative;
+        overflow: hidden;
         h1 {
             color: #fff;
         }
@@ -118,14 +102,30 @@
                 font-size: 1.8rem;
             }
         }
+        @include media-breakpoint-up(md) {
+            height: 640px;
+            top: -160px;
+            margin-bottom: -160px;
+        }
+        @include media-breakpoint-up(xxl) {
+            height: 780px;
+        }
     }
-    #hero-image {
-        background: url('/img/hp-hero-2021-2560px.jpg');
+    .home-hero-image {
+        background-color: #11152f;
+        background-image: url('/img/hp-hero-2021-2560px.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
         height: 100%;
         position: absolute;
+        background-position-x: 56%;
+        @include media-breakpoint-up(md) {
+            background-position-y: 31%;
+        }
+    }
+    .home-hero-image.mobile {
+        background-size: 213%;
     }
     #home-hero-sub {
         h1 {
@@ -166,14 +166,14 @@
     .splash-header,
     .splash-body {
         position: relative;
-        animation: fadeIn 1s forwards 0.5s;
+        animation: fadeInText 1s forwards 0.5s;
         opacity: 0;
     }
     .splash-body {
         animation-delay: 1.5s;
     }
 
-    @keyframes fadeIn {
+    @keyframes fadeInText {
         to {
             opacity: 1;
         }
