@@ -93,6 +93,7 @@
         top:-56px;
         margin-bottom: -56px;
         background-size: 213%;
+        overflow: hidden;
         @include media-breakpoint-up(md) {
             height: 640px;
             background-position-y: 31%;
@@ -106,9 +107,7 @@
         @include media-breakpoint-up(x4l) {
             height: 780px;
         }
-        background-color: #11152F;
-        background-image: url('/img/hp-hero-2021-2560px.jpg');
-        background-repeat: no-repeat;
+                                                                                                                                background-color: #11152F;
         position: relative;
         h1 {
             color: #fff;
@@ -119,6 +118,14 @@
                 font-size: 1.8rem;
             }
         }
+    }
+    #hero-image {
+        background: url('/img/hp-hero-2021-2560px.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
     }
     #home-hero-sub {
         h1 {

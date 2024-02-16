@@ -1,13 +1,28 @@
 <!-- ********** hero section ********** -->
 
+<script>
+  // parallax adapted from https://codepen.io/mali89/pen/YQXxWL
+  document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('scroll', function () {
+      var scrollTop = window.scrollY;
+      var heroImage = document.getElementById('hero-image');
+      // 0 gives no parallax effect, 1 gives stationary img while text scrolls
+      const pRate = 0.2;
+      heroImage.style.transform = 'translate3d(0,' + scrollTop * pRate + 'px, 0)';
+    });
+  });
+</script>
 <div id="home-hero">
-    <div id="hero-overlay" class="d-none d-md-block">
-      <div class="row mx-3 align-items-end h-100">
-        <div class="col-12 col-xxl-10 col-x4l-9 mx-auto px-0">
-          <div class="col-12 col-lg-7 mb-8 mb-xxl-12 px-xxl-3">
-            <h1 class="splash-header mb-3">{{ i18n "splashHeader1" }} {{ i18n "splashHeader2" }} {{ i18n "splashHeader3" }}</h1>
-            <p class="splash-body">{{ i18n "splashBody" }}</p>
-          </div>
+  <div id="hero-image">
+    <div id="hero-overlay"></div>
+  </div>
+  
+  <div class="row mx-3 align-items-end h-100">
+    <div class="col-12 col-xxl-10 col-x4l-9 mx-auto px-0">
+      <div class="col-12 col-lg-7 mb-8 mb-xxl-12 px-xxl-3">
+        <h1 class="splash-header mb-3">{{ i18n "splashHeader1" }} {{ i18n "splashHeader2" }} {{ i18n "splashHeader3" }}
+        </h1>
+        <p class="splash-body">{{ i18n "splashBody" }}</p>
         </div>
       </div>
     </div>
