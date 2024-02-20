@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: eviction-was-a-deadly-risk-during-the-covid-19-pandemic
 contenttype: updates
