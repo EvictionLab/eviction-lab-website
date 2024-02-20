@@ -24,8 +24,7 @@ scripts:
 
 Yet, despite these policies, evictions never fully stopped and hundreds of thousands of renters still did face this threat in the midst of the public health emergency. In an article published in the Journal of the American Medical Association, we show that the mortality rate for renters threatened with eviction doubled during the pandemic. Many groups experienced higher-than-normal rates of death during the pandemic—{{< extlink "often referred to as “excess mortality”" "https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm" >}}—but the experience of renters facing eviction stands out. Indeed, we show that tenants who were threatened with eviction experienced excess mortality that was ten times higher than that of the general population. 
 
-[READ THE STUDY]
-<!-- {{< researchpaperlink "Beyond Gentrification: Housing Loss, Poverty, and the Geography of Displacement" "https://doi.org/10.1093/sf/soad123" "Peter Hepburn, Renee Louis, and Matthew Desmond" "social-forces.jpg" "Open Access Preprint" "https://osf.io/preprints/socarxiv/pyfa8/" >}} -->
+{{< researchpaperlink "Examining Excess Mortality Associated With the COVID-19 Pandemic for Renters Threatened With Eviction" "https://jamanetwork.com/journals/jama/article-abstract/2815200" "Nick Graetz, Peter Hepburn, Carl Gershenson, Emily Lemmerman, and Matthew Desmond" "jama-cover.jpg" >}}
 
 This research is based on our [groundbreaking collaboration with the U.S. Census Bureau](https://evictionlab.org/who-is-evicted-in-america/). For this study, we matched eviction filing data we collected during the pandemic through the  [Eviction Tracking System](https://evictionlab.org/eviction-tracking/) (ETS) with death records provided by the Census. This, plus our pre-pandemic eviction data, allowed us to calculate excess mortality: how much higher than normal death rates were following eviction filing during the pandemic. 
 
