@@ -28,7 +28,7 @@ Yet, despite these policies, evictions never fully stopped and hundreds of thous
 
 This research is based on our [groundbreaking collaboration with the U.S. Census Bureau](https://evictionlab.org/who-is-evicted-in-america/). For this study, we matched eviction filing data we collected during the pandemic through the  [Eviction Tracking System](https://evictionlab.org/eviction-tracking/) (ETS) with death records provided by the Census. This, plus our pre-pandemic eviction data, allowed us to calculate excess mortality: how much higher than normal death rates were following eviction filing during the pandemic. 
 
-{{< pullquote "People who faced an eviction filing during the pandemic died at over twice the rate that was normal prior to the pandemic" >}}
+{{< pullquote "People who faced an eviction filing during the pandemic died at over twice the rate that was normal prior to the pandemic." >}}
 
 For renters facing eviction, observed mortality rates during the pandemic were 238.6 per 100,000 person-months, 106% higher than what we would have expected based on pre-pandemic patterns (116.5; see Figure 1). In other words, people who faced an eviction filing during the pandemic died at over twice the rate that was normal prior to the pandemic. By comparison, pre-pandemic mortality among the general population was lower and it increased by less: excess mortality among the general population in these same locations was only 9% higher than expected. Put another way, excess mortality was ten times higher for renters threatened with eviction as compared to the general population.
 
@@ -65,7 +65,7 @@ These results help to highlight the effects of pandemic-era anti-eviction polici
 
 This study has several important limitations beyond just the restricted geographic scope. The death records we examine do not allow us to determine the cause of death, so we cannot determine how much excess mortality was directly attributable to COVID-19 relative to other possible causes. In addition, we only demonstrate excess mortality for those listed on eviction records. [As we have demonstrated in previous research](https://evictionlab.org/who-is-evicted-in-america/), these cases affect households that include a large number of people who are not listed in the cases, including seniors who may have been at particularly high risk of death during the pandemic. As such, we are likely underestimating the scale of excess mortality. 
 
-{{< pullquote "If eviction filings had remained at normal levels, more than 9,000 additional renters would likely have died just in these jurisdictions... if we had eliminated eviction filings altogether, more than 8,000 lives could have been saved." >}}
+{{< pullquote "If eviction filings had remained at normal levels, more than 9,000 additional renters would likely have died just in these jurisdictions ... if we had eliminated eviction filings altogether, more than 8,000 lives could have been saved." >}}
 
 Still, our findings highlight housing instability as a key social determinant of health. In previous research, [we have shown that high rent burden and eviction were linked to increased risk of death well before the COVID-19 pandemic](/rising-rents-and-evictions-linked-to-premature-death). But increases in mortality for threatened renters were particularly pronounced during the pandemic. This study underscores the importance of an equity perspective in documenting mortality from COVID-19. Those facing housing instability and eviction represent a particularly at-risk population. 
 
