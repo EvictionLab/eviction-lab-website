@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: more-than-200000-rural-families-face-an-eviction-every-year
 contenttype: updates
@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: More than 200,000 rural families face an eviction every year
-date: 2024-02-15T00:20:51.942Z
+date: 2024-02-28T00:20:51.942Z
 postauthorname: Juan Pablo Garnham
 researchauthorname: Carl Gershenson and Matthew Desmond
 image: rv-park2.jpg
