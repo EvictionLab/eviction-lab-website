@@ -74,14 +74,14 @@ const fadeElements = document.querySelectorAll('.fade-in-element');
 
   function handleScroll() {
     const windowTop = window.scrollY;
-    const windowCenter = windowTop + window.innerHeight / 1.2;
+    const windowCenter = windowTop + window.innerHeight / 1.3;
 
     fadeElements.forEach(element => {
       const elementTop = element.offsetTop;
       const elementHeight = element.offsetHeight;
-      const elementCenter = elementTop + elementHeight / 1.2;
+      const elementCenter = elementTop + elementHeight / 1.3;
 
-      if (elementCenter >= windowCenter - elementHeight / 1.5 && elementCenter <= windowCenter + elementHeight / 1.5) {
+      if (elementCenter >= windowCenter - elementHeight / 1.3 && elementCenter <= windowCenter + elementHeight / 1.3) {
         if (!element.classList.contains('faded-in')) {
           element.classList.add('fade-in');
           element.classList.add('faded-in'); // Prevent re-animation
@@ -92,6 +92,7 @@ const fadeElements = document.querySelectorAll('.fade-in-element');
 
 window.addEventListener('scroll', handleScroll);
 handleScroll(); // Initial fade-in on page load
+
 
   // Carousel
 
