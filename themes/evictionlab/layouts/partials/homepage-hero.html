@@ -7,7 +7,7 @@
       const scrollTop = window.scrollY;
       const heroImage = document.querySelector('.home-hero-image.desktop');
       // 0 gives no parallax effect, 1 gives stationary img while text scrolls
-      const pRate = 0.2;
+      const pRate = 0.125;
       heroImage.style.transform = 'translate3d(0,' + scrollTop * pRate + 'px, 0)';
     });
   });

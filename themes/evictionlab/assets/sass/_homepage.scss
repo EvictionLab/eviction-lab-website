@@ -166,16 +166,18 @@
     .splash-header,
     .splash-body {
         position: relative;
-        animation: fadeInText 1s forwards 0.5s;
+        animation: fadeInText 1.25s forwards 0.5s;
         opacity: 0;
+        transform: translateY(5px);
     }
     .splash-body {
-        animation-delay: 1.5s;
+        animation-delay: 1.25s;
     }
 
     @keyframes fadeInText {
         to {
             opacity: 1;
+            transform: translateY(0px);
         }
     }
 

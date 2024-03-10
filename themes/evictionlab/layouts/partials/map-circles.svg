@@ -154,8 +154,8 @@
         CircleEl.append(AnimateEl);
           
         // stagger append to map to fade points in
-        const msInitialDelay = 500;
-        const msBetweenPoints = 50;
+        const msInitialDelay = 100;
+        const msBetweenPoints = 20;
         const delay = msInitialDelay + msBetweenPoints * idx;
         setTimeout(function() {
           CirclesGroupEl.append(CircleEl);
