@@ -67,6 +67,33 @@ function setupScrollEnd() {
   }, false);
 } 
 
+// Fade-in on scroll for selected div elements
+
+
+const fadeElements = document.querySelectorAll('.fade-in-element');
+
+  function handleScroll() {
+    const windowTop = window.scrollY;
+    const windowCenter = windowTop + window.innerHeight / 1.2;
+
+    fadeElements.forEach(element => {
+      const elementTop = element.offsetTop;
+      const elementHeight = element.offsetHeight;
+      const elementCenter = elementTop + elementHeight / 1.2;
+
+      if (elementCenter >= windowCenter - elementHeight / 1.5 && elementCenter <= windowCenter + elementHeight / 1.5) {
+        if (!element.classList.contains('faded-in')) {
+          element.classList.add('fade-in');
+          element.classList.add('faded-in'); // Prevent re-animation
+        }
+      }
+    });
+  }
+
+window.addEventListener('scroll', handleScroll);
+handleScroll(); // Initial fade-in on page load
+
+  // Carousel
 
 $('.carousel .carousel-item').each(function(){
   var next = $(this).next();

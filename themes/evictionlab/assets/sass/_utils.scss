@@ -31,6 +31,17 @@
     }
 }
 
+// Fade in on scroll
+
+.fade-in-element {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-element.fade-in {
+  opacity: 1;
+}
+
 .center-page-wrapper {
   width: 100%;
   display: block;
