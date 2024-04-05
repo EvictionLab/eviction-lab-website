@@ -178,13 +178,13 @@
         .splash-header,
         .splash-body {
             position: relative;
-            animation: fadeInText 1.25s forwards 1s;
+            animation: fadeInText 1s forwards .25s;
             opacity: 0;
             transform: translateY(5px);
         }
         
         .splash-body {
-            animation-delay: 1.75s;
+            animation-delay: 1s;
         }
     }
 
