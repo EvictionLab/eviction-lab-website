@@ -563,30 +563,31 @@ if (!count3.error) {
 
 /**
  * Check for banner cookie
+ * For now always show the banner
  */
-$(function () {
-  const $Superheader = $(".superheader");
-  const bannerText = $Superheader.text();
-  // console.log("current banner: ", bannerText);
-  if (localStorage && localStorage.getItem("el-banner") == bannerText) {
-    // console.log("header already dismissed");
-  } else {
-    // transition header from off-screen
-    $Superheader.css("margin-top", `-${$Superheader.height()}px`);
-    setTimeout(() => {
-      $Superheader.removeClass("inactive");
-      $Superheader.css("margin-top", 0);
-    }, 200);
-  }
+// $(function () {
+//   const $Superheader = $(".superheader");
+//   const bannerText = $Superheader.text();
+//   // console.log("current banner: ", bannerText);
+//   if (localStorage && localStorage.getItem("el-banner") == bannerText) {
+//     // console.log("header already dismissed");
+//   } else {
+//     // transition header from off-screen
+//     $Superheader.css("margin-top", `-${$Superheader.height()}px`);
+//     setTimeout(() => {
+//       $Superheader.removeClass("inactive");
+//       $Superheader.css("margin-top", 0);
+//     }, 200);
+//   }
 
-  $Superheader.find(".close").click(function () {
-    // transition header off-screen before removing
-    $Superheader.css("margin-top", `-${$Superheader.height()}px`);
-    setTimeout(() => $Superheader.addClass("inactive"), 200);
+//   $Superheader.find(".close").click(function () {
+//     // transition header off-screen before removing
+//     $Superheader.css("margin-top", `-${$Superheader.height()}px`);
+//     setTimeout(() => $Superheader.addClass("inactive"), 200);
 
-    if (localStorage) {
-      localStorage.setItem("el-banner", bannerText);
-    }
-  });
-});
+//     if (localStorage) {
+//       localStorage.setItem("el-banner", bannerText);
+//     }
+//   });
+// });
 
