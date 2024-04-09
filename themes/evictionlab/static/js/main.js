@@ -70,25 +70,22 @@ function setupScrollEnd() {
 // Fade-in on scroll for selected div elements
 
 
-const fadeElements = document.querySelectorAll('.fade-in-element');
+const fadeElements = document.querySelectorAll(".fade-in-element");
 
-  function handleScroll() {
-    const windowTop = window.scrollY;
-    const windowCenter = windowTop + window.innerHeight / 1.3;
+function handleScroll() {
+  const windowCenter = window.innerHeight / 1.3;
 
-    fadeElements.forEach(element => {
-      const elementTop = element.offsetTop;
-      const elementHeight = element.offsetHeight;
-      const elementCenter = elementTop + elementHeight / 1.3;
+  fadeElements.forEach((element) => {
+    if (!element.classList.contains("fade-in")) {
+      const { top, height } = element.getBoundingClientRect();
+      const elementCenter = top + height / 1.3;
 
-      if (elementCenter >= windowCenter - elementHeight / 1.3 && elementCenter <= windowCenter + elementHeight / 1.3) {
-        if (!element.classList.contains('faded-in')) {
-          element.classList.add('fade-in');
-          element.classList.add('faded-in'); // Prevent re-animation
-        }
+      if (windowCenter + height / 1.3 >= elementCenter) {
+        element.classList.add("fade-in");
       }
-    });
-  }
+    }
+  });
+}
 
 window.addEventListener('scroll', handleScroll);
 handleScroll(); // Initial fade-in on page load
