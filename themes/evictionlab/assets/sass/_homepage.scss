@@ -180,11 +180,11 @@
             position: relative;
             animation: fadeInText 1s forwards .25s;
             opacity: 0;
-            transform: translateY(5px);
+            transform: translateY(4px);
         }
         
         .splash-body {
-            animation-delay: 1s;
+            animation-delay: 0.75s;
         }
     }
 
