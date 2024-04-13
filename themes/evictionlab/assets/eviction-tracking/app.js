@@ -274,9 +274,10 @@ Elab.Utils = (function (Elab) {
   /**
    * Creates a stat paragraph (interpolate values)
    */
-  function createStatParagraph(el, text, statFiles, stats, getVal) {
+  function createStatParagraph({ el, text, statFiles, stats, getVal, dataNote = "" }) {
     loadAll(statFiles, {}, (dataMap) => {
       var $el = $(el);
+      dataNote && $el.append(`<p class="data-note">${dataNote}</p>`);
       var interpolatedText = text;
       var hasAllData = true;
       stats.forEach((s) => {
