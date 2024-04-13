@@ -1631,6 +1631,9 @@
   line-height: 1.5;
 }
 
+.intro .intro__text .data-note {
+  font-family: var(--body-font-italic);
+}
 .intro .intro__stats-wrapper {
   /* flex-grow: 1; */
   /* letter-spacing: 0.04rem; */

@@ -185,7 +185,8 @@
 
       var siteText = site_id.length === 2 ? '' : ` (${renterssite})`;
       var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.<sup>1</sup>".replace('%{site}', siteText)
-      Elab.Utils.createStatParagraph('#summaryStats', paragraphText, statFiles, paragraphStats, getVal)
+      var dataNote = "Please note: The April 2024 data update will be delayed as we update our data management systems. We apologize for any inconvenience.";
+      Elab.Utils.createStatParagraph({ el: '#summaryStats', text: paragraphText, statFiles, stats: paragraphStats, getVal, dataNote });
 
       Elab.Utils.addLatestUpdateDate("#latestUpdate", "/uploads/filing_data_by_site.csv", site_id);
 
