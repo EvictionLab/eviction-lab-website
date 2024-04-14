@@ -73,14 +73,14 @@ function setupScrollEnd() {
 const fadeElements = document.querySelectorAll(".fade-in-element");
 
 function handleScroll() {
-  const windowCenter = window.innerHeight / 1.2;
+  const windowCenter = window.innerHeight / 1.1;
 
   fadeElements.forEach((element) => {
     if (!element.classList.contains("fade-in")) {
       const { top, height } = element.getBoundingClientRect();
-      const elementCenter = top + height / 1.2;
+      const elementCenter = top + height / 1.1;
 
-      if (windowCenter + height / 1.2 >= elementCenter) {
+      if (windowCenter + height / 1.1 >= elementCenter) {
         element.classList.add("fade-in");
       }
     }
