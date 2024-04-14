@@ -103,12 +103,14 @@
             }
         }
         @include media-breakpoint-up(md) {
-            height: 640px;
+            height: 75vh;
+            max-height: 750px;
             top: -160px;
             margin-bottom: -160px;
         }
         @include media-breakpoint-up(xxl) {
-            height: 780px;
+            height: 85vh;
+            max-height: 850px;
         }
     }
     .home-hero-image {
@@ -175,6 +177,20 @@
         animation-delay: 0.75s;
     }
     @media (min-width: 768px) {
+        .splash-header,
+        .splash-body {
+            position: relative;
+            animation: fadeInText 1s forwards 0s;
+            opacity: 0;
+            transform: translateY(4px);
+        }
+        
+        .splash-body {
+            animation-delay: 0s;
+        }
+    }
+
+    @media (min-width: 1280px) {
         .splash-header,
         .splash-body {
             position: relative;
