@@ -7,7 +7,7 @@
       const scrollTop = window.scrollY;
       const heroImage = document.querySelector('.home-hero-image.desktop');
       // 0 gives no parallax effect, 1 gives stationary img while text scrolls
-      const pRate = 0.125;
+      const pRate = 0.25;
       heroImage.style.transform = 'translate3d(0,' + scrollTop * pRate + 'px, 0)';
     });
   });
@@ -29,7 +29,7 @@
   </div>
 
   <!-- MOBILE VERSION -->
-  <div class="home-hero-image mobile d-block d-md-none"></div>
+  <div class="home-hero-image mobile d-block d-md-none fade-in-element nomotion"></div>
 </div>
   
   <div id="home-hero-sub" class="d-block d-md-none">
