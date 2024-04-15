@@ -168,7 +168,6 @@ To capture this variation, in Figure 3 we plot eviction filings relative to hist
   data="./fig3.csv"
   xMax="175"
   mobileCutoff="Infinity"
-  legendIncArrowText="increase in filings"
   axisLabelText=""
   legendDecArrowText=""
   legendIncArrowText="increase in filings"

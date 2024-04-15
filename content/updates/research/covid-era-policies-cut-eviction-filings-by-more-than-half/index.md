@@ -95,7 +95,6 @@ Eviction filings were reduced much more in some cities than in others. Differenc
   numeratorField="num_filings"
   denominatorField="num_filings_hist_avg"
   mobileCutoff="Infinity"
-  legendIncArrowText="increase in filings"
   axisLabelText=""
   legendDecArrowText=""
   legendIncArrowText="increase in filings"

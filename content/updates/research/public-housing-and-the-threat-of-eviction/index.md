@@ -69,7 +69,6 @@ Even among larger housing authorities, serial eviction filing isn’t a universa
   nameField="name"
   numeratorField="sefr"
   mobileCutoff="Infinity"
-  legendIncArrowText="increase in filings"
   axisLabelText=""
   legendDecArrowText=""
   legendIncArrowText="increase in filings"
