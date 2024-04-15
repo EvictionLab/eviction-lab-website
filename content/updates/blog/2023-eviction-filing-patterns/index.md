@@ -19,6 +19,7 @@ image: 24153653237_6d5182fb1b_o.jpeg
 fbImage: 24153653237_6d5182fb1b_o.jpeg
 scripts:
   - charts
+  - grouped-bar-chart
 ---
 
 <span class="dropcap red">I</span>As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. The country lacks millions of units of affordable rental housing, and in those units that are available, a record number of tenants are paying well beyond their means. High interest rates prevent younger, middle-class renters from buying homes, which in turn increases demand in the rental sector. How did this combination of factors affect eviction rates in 2023? How does the answer vary across the U.S.?
@@ -58,9 +59,20 @@ By contrast, only four cities saw eviction filings that were at least 25% below 
 
 In line with previous trends, we find that women and Black renters faced a disproportionate share of eviction filings in 2023. In most of the ETS locations, we are able to estimate the likely race/ethnicity and gender of tenants facing eviction (for an explanation of how we do this, see our methods page). Fully 60% of those filed against for eviction last year were women. In Figure 3 we plot the share of defendants listed on eviction filings in 2023 who were Black, Latinx, or White. We compare those numbers to Census Bureau figures on the share of renters in each racial/ethnic group in the same set of places. 
 
-Figure 3. Share of renters and eviction filing defendants, by race/ethnicity
 
-
+{{% grouped-bar-chart 
+  id="fig3" 
+  saneLoading="true"
+  titlePrefix="Figure 3. Share of renters and eviction filing defendants, by race/ethnicity" 
+  data="./fig3.csv" 
+  yTicks="5" 
+  yMin="0"
+  yFormat=".0%" 
+  type="barGroup" 
+  search="false" 
+  themed="true"
+  autoGenLegend="true"
+%}}
 
 The eviction crisis weighs most heavily on Black renters. Despite making up only 28% of renters, half of eviction filings are against Black individuals in these areas. By contrast, all other racial/ethnic groups see an underrepresentation when it comes to eviction filings. 
 
