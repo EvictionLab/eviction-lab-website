@@ -47,9 +47,20 @@ To capture that variation, we display changes in eviction filings for each of th
 
 Of the 30 cities where we have complete data coverage, 23 saw a relative increase in eviction filings between 2022 and 2023. This proportional increase was largest in the Twin Cities of Minneapolis and St. Paul, MN, where caseloads rose from 138% of average (11,178 cases) to 165% of average (13,431 cases). We observed similarly large increases in Phoenix, Albuquerque, and Providence.
 
-Figure 2. Change in eviction filings relative to historical average from 2022 to 2023
-
-
+{{% arrow-chart
+  id="fig2"
+  title="Figure 2. Change in eviction filings relative to historical average from 2022 to 2023"
+  data="./fig2.csv"
+  xMax="175"
+  mobileCutoff="Infinity"
+  legendIncArrowText="increase in filings"
+  axisLabelText=""
+  legendDecArrowText=""
+  nameCol="site"
+  beforeCol="pct_historical_2022"
+  afterCol="pct_historical_2023"
+  legendLabelText=""
+%}}
 
 But not all cities saw eviction case loads increase. Indeed, seven of the ETS cities saw reductions. In Dallas, landlords filed nearly 5,000 fewer eviction cases in 2023 than in 2022, a reduction from 106% to 94% of historical average. We also saw large reductions, both in absolute and relative terms, in places like Philadelphia and Hartford, CT. 
 
