@@ -1,7 +1,7 @@
 ---
 draft: true
 childof: research
-url: preliminary-analysis-eviction-filing-patterns-in-2023
+url: ets-report-2023
 contenttype: updates
 collection: true
 contentcat: research
