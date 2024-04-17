@@ -1,0 +1,2 @@
+<a href='{{ index .Params 1 }}' {{ if not (strings.Contains (index .Params 1) "evictionlab.org" ) }}target="_blank"
+  rel="noreferrer noopener" {{ end }}>{{ index .Params 0 }}</a>
