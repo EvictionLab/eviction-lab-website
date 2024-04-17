@@ -12,8 +12,8 @@ date: 2024-04-18T18:49:04.271Z
 postauthorname: Peter Hepburn, Danny Grubbs-Donovan, and Grace Hartley
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. We use data from the Eviction Tracking System to see how this affected eviction rates in 2023.
-listSummary: As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. We use data from the Eviction Tracking System to see how this affected eviction rates in 2023.
+description: As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. We investigate how this affected eviction rates in 2023.
+listSummary: As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. We investigate how this affected eviction rates in 2023.
 twImage: ets-alt-graphic.png
 image: ets-alt-graphic.png
 fbImage: ets-alt-graphic.png
