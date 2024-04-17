@@ -1,10 +1,10 @@
 ---
 draft: true
-childof: blog
+childof: research
 url: preliminary-analysis-eviction-filing-patterns-in-2023
 contenttype: updates
 collection: true
-contentcat: blog
+contentcat: research
 featured: true
 in_index: true
 title: "Preliminary Analysis: Eviction Filing Patterns in 2023"
@@ -12,17 +12,17 @@ date: 2024-04-18T18:49:04.271Z
 postauthorname: Peter Hepburn, Danny Grubbs-Donovan, and Grace Hartley
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: lorem ipsum.
-listSummary: lorem ipsum.
-twImage: 24153653237_6d5182fb1b_o.jpeg
-image: 24153653237_6d5182fb1b_o.jpeg
-fbImage: 24153653237_6d5182fb1b_o.jpeg
+description: As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. We use data from the Eviction Tracking System to see how this affected eviction rates in 2023.
+listSummary: As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. We use data from the Eviction Tracking System to see how this affected eviction rates in 2023.
+twImage: ets-alt-graphic.png
+image: ets-alt-graphic.png
+fbImage: ets-alt-graphic.png
 scripts:
   - charts
   - grouped-bar-chart
 ---
 
-<span class="dropcap red">I</span>As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. The country lacks millions of units of affordable rental housing, and in those units that are available, a record number of tenants are paying well beyond their means. High interest rates prevent younger, middle-class renters from buying homes, which in turn increases demand in the rental sector. How did this combination of factors affect eviction rates in 2023? How does the answer vary across the U.S.?
+<span class="dropcap green">A</span>s the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. The country lacks millions of units of affordable rental housing, and in those units that are available, a record number of tenants are paying well beyond their means. High interest rates prevent younger, middle-class renters from buying homes, which in turn increases demand in the rental sector. How did this combination of factors affect eviction rates in 2023? How does the answer vary across the U.S.?
 
 To answer those questions, we turn to data from the Eviction Tracking System (ETS). Since 2020, we’ve been tracking the records of new eviction court filings in 10 states and 34 cities nationwide, areas that are collectively home to about one in every three American renters. In this brief, we provide an annual recap of eviction trends, as we did in previous years (check our older blog posts for our analysis in 2020, 2021, and 2022). We are particularly interested in how renters in different places face different levels of eviction risk. Housing instability varied prior to the pandemic, and here we highlight how those divides grew over the last four years. 
 
