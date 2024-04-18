@@ -64,7 +64,7 @@ Of the 32 cities where we have complete data coverage, 25 saw an increase in evi
   xMax="175"
   mobileCutoff="Infinity"
   legendIncArrowText="increase"
-  axisLabelText="Change relative to pre-pandemic average"
+  axisLabelText="Eviction filings relative to pre-pandemic average"
   legendDecArrowText="decrease"
   nameCol="site"
   beforeCol="pct_historical_2022"
