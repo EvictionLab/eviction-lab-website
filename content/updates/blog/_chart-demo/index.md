@@ -270,6 +270,7 @@ The following graphics all take the form of a stack of rows (one per location, y
   legendDecArrowText=""
   legendIncArrowText="increase in filings"
   legendLabelText=""
+  labelLine="pre-pandemic average;100;0"
 %}}
 
 The arrow chart also has lollipop chart variant:
