@@ -63,13 +63,14 @@ Of the 32 cities where we have complete data coverage, 25 saw an increase in evi
   data="./fig2.csv"
   xMax="175"
   mobileCutoff="Infinity"
-  legendIncArrowText="increase in filings"
-  axisLabelText=""
-  legendDecArrowText=""
+  legendIncArrowText="increase"
+  axisLabelText="Change relative to pre-pandemic average"
+  legendDecArrowText="decrease"
   nameCol="site"
   beforeCol="pct_historical_2022"
   afterCol="pct_historical_2023"
   legendLabelText=""
+  labelLine="pre-pandemic average;100;0"
 %}}
 
 But not all cities saw eviction case loads increase. Indeed, seven of the ETS cities saw reductions. In Dallas, for example, landlords filed nearly 5,000 fewer eviction cases in 2023 than in 2022, a reduction from 106% to 94% of historical average. We also saw reductions in places like Philadelphia and Hartford, CT. 

@@ -53,11 +53,28 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       stroke: white;
       stroke-width: 0.25;
     }
+    .arrow-chart__body .axis-lines line.label-line {
+      stroke: rgba(0,0,0,.3);
+      stroke-width: 0.5;
+      stroke-dasharray: 1.2 1.7;
+    }
+    .arrow-chart__body .chart-row text.label-line-label {
+      fill: rgba(0,0,0,.6);
+      transform: translateY(-4px);
+      text-anchor: middle;
+    }
 
-    .arrow-chart__body text.name {
+    .arrow-chart__body .chart-row text {
       text-anchor: end;
       dominant-baseline: text-before-edge;
-      transform: translate(-3px, 1px);
+      transform: translate(-2px, 1.4px);
+    }
+    .arrow-chart__body .chart-row text.right {
+      text-anchor: start;
+      transform: translate(2px, 1.4px);
+    }
+    .arrow-chart__body .sticky-leg .arrow .row-value.right {
+      transform: translateX(2px);
     }
 
     .arrow-chart__body .arrow line {
@@ -89,15 +106,6 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
 
     .arrow-chart__body .arrow line {
       transform: translate(0, -0.1px);
-    }
-    .arrow-chart__body .arrow .row-value.right {
-      transform: translate(2px, 0);
-      text-anchor: start;
-    }
-
-    .arrow-chart__body .arrow .row-value.left {
-      transform: translate(-2px, 0);
-      text-anchor: end;
     }
 
     .lollipop-variant circle {
@@ -238,31 +246,40 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     // immediately invoked function so that we don't pollute the global scope
     // (variables overwrite those in other component script tags)
   (() => {
-    var id = {{ .Get "id" }};
-    var csv = {{ .Get "data" }};
-    var xMax = {{ .Get "xMax" }} || 100;
-    var scaleFactor = {{ .Get "scaleFactor" }} || 1;
-    var xMinMobile = {{ .Get "xMinMobile" }} || -42;
-    var xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
-    var rHeight = {{ .Get "rowHeight" }};
-    var mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
-    var legendDecArrowText = {{ .Get "legendDecArrowText" }} || "";
-    var legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
-    var legendLabelText = {{ .Get "legendLabelText" }} || "";
-    var axisLabelText = {{ .Get "axisLabelText" }} || "";
-    var isLollipop = {{ .Get "variant" }} === "lollipop";
-    var nameCol = {{ .Get "nameCol" }} || "metro";
-    var beforeCol = {{ .Get "beforeCol" }} || "before";
-    var afterCol = {{ .Get "afterCol" }} || "after";
-    var isPercentValue = {{ .Get "isPercent" }}
-    var isPercent = String(isPercentValue) !== "false";
+    const id = {{ .Get "id" }};
+    const csv = {{ .Get "data" }};
+    const xMax = {{ .Get "xMax" }} || 100;
+    const scaleFactor = {{ .Get "scaleFactor" }} || 1;
+    const xMinMobile = {{ .Get "xMinMobile" }} || -42;
+    const xMinDesktop = {{ .Get "xMinDesktop" }} || -30;
+    const rHeight = {{ .Get "rowHeight" }};
+    const mobileCutoff = {{ .Get "mobileCutoff" }} || 600;
+    const legendDecArrowText = {{ .Get "legendDecArrowText" }} || "";
+    const legendIncArrowText = {{ .Get "legendIncArrowText" }} || "";
+    const legendLabelText = {{ .Get "legendLabelText" }} || "";
+    const axisLabelText = {{ .Get "axisLabelText" }} || "";
+    const isLollipop = {{ .Get "variant" }} === "lollipop";
+    const nameCol = {{ .Get "nameCol" }} || "metro";
+    const beforeCol = {{ .Get "beforeCol" }} || "before";
+    const afterCol = {{ .Get "afterCol" }} || "after";
+    const isPercentValue = {{ .Get "isPercent" }}
+    const isPercent = String(isPercentValue) !== "false";
+    const labelLine = {{ .Get "labelLine" }};
+    let labelLineText, labelLineX, labelLineRow;
+    if (labelLine) {
+      const labelLineConfig = labelLine.split(";")
+      labelLineText = labelLineConfig[0]
+      labelLineX = Number(labelLineConfig[1])
+      labelLineRow = Number(labelLineConfig[2] || 0)
+      labelLineLabelClass = labelLineConfig[3] || "" // eg "right"
+    }
 
-    var format = isPercent ? '.1%' : '';
+    const format = isPercent ? '.1%' : '';
     
     window.addEventListener('load', function () {
-      var $el = $("#" + id);
+      const $el = $("#" + id);
       
-      var isMobile = window.innerWidth <= Number(mobileCutoff);
+      const isMobile = window.innerWidth <= Number(mobileCutoff);
       const rowHeight = rHeight
         ? rHeight
         : isMobile
@@ -273,8 +290,8 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       const $rows = $el.find('.arrow-chart g.rows')
       const $arrows = $el.find('.arrow-chart g.arrows')
 
-      const getRowValue = ({ content, classes = "", dx }) => `
-        <text class="row-value ${classes}" ${dx && `dx="${dx}"`}>
+      const getRowValue = ({ content, classes = "", dx = 0}) => `
+        <text class="row-value ${classes}" dx="${dx}">
           ${content}
         </text>
       `
@@ -317,9 +334,11 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         }
 
         return `
-<g class="${arrowClass}" transform="translate(${before}, ${yOffset})">
-  <line x1="0" y1="0" x2="${shift}" y2="0" />
-  ${shapes}
+<g class="${arrowClass}" transform="translate(${before})">
+  <g transform="translate(0, ${yOffset})">
+    <line x1="0" y1="0" x2="${shift}" y2="0" />
+    ${shapes}
+  </g>
   ${rowValues}
 </g>
 `
@@ -343,6 +362,9 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
             let rowClasses = "chart-row"
             if (r.highlighted) rowClasses += " highlighted"
             if (!(i % 2)) rowClasses += " odd"
+            const labelLineLine = labelLine 
+              ? `<line class="label-line" data-val="${labelLineX}" x1="${labelLineX}" x2="${labelLineX}" y1="0" y2="${rowHeight}"></line>`
+              : '';
             const axisLines = `
   <g class="axis-lines xMax-dependent">
     <line data-val="0" x1="0" x2="0" y1="0" y2="${rowHeight}"></line>
@@ -359,13 +381,22 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     <line data-val="250" x1="250" x2="250" y1="0" y2="${rowHeight}"></line>
     <line data-val="275" x1="275" x2="275" y1="0" y2="${rowHeight}"></line>
     <line data-val="300" x1="300" x2="300" y1="0" y2="${rowHeight}"></line>
+    ${labelLineLine}
   </g>
 `
+            const labelLineLabel = labelLine && i === labelLineRow
+              ? `<text 
+                    class="label-line-label ${labelLineLabelClass}"
+                    x="${labelLineX}"
+                    y="0"
+                  >${labelLineText}</text>`
+              : '';
             const rowWrapper = `
 <g class="${rowClasses}" transform="translate(0, ${y})">
   <rect x="${xMin}" y="0" height="${rowHeight}" width="100%" width="100%" height="${rowHeight}" />
   ${axisLines}
   <text class="name" x="0" y="0">${r.name}</text>
+  ${labelLineLabel}
   ${getArrow({ ...r, yOffset: rowHeight / 2 + 0.1, includeTooltip: true })}
 </g>
           `
@@ -406,7 +437,8 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
         $el.find(".legend-desc").append(legendLabel)
         axisLabelText && $el.find(".axis-title").append(axisLabelText)
 
-        const viewBoxChart = `${xMin} 0 ${xMax - xMin} ${data.length * rowHeight}`
+        const yMin = !!labelLine ? 5 : 0
+        const viewBoxChart = `${xMin} ${-yMin} ${xMax - xMin} ${data.length * rowHeight + yMin}`
         const viewBoxLegend = `${xMin} 0 ${xMax - xMin} ${isMobile ? 30 : 20}`
         $el.find(".arrow-chart").attr("viewBox", viewBoxChart)
         $el.find(".sticky-leg").attr("viewBox", viewBoxLegend)
