@@ -33,7 +33,7 @@ Across the jurisdictions we track, we find that:
 - Eviction caseloads increased between 2022 and 2023 in three-quarters of the cities we track.
 - In most cities, eviction filings in 2023 were above levels that were normal prior to the COVID-19 pandemic.
 - 60% of eviction case defendants in 2023 were women.
-- Despite making up only 28% of renters, half of eviction case defendants in 2023 were Black. 
+- Despite making up less than one-third of renters, nearly half of eviction case defendants in 2023 were Black. 
 - In many places, a large share of eviction filings were repeated cases brought against the same tenants at the same addresses. 
 
 Landlords filed 10.5% more eviction cases in 2023 than in 2022. In total, 1,114,340 eviction cases were filed across the jurisdictions where we collect data.<sup>1</sup> Overall, that represents 2.9% fewer cases than we would have seen in these places prior to the pandemic, but still a large increase from what we observed early in the pandemic, when about 540,000 cases were filed in 2020 and 2021 (see Figure 1).
@@ -97,7 +97,7 @@ By contrast, only four cities saw eviction filings that were at least 25% below 
   autoGenLegend="true"
 %}}
 
-The eviction crisis weighs most heavily on Black renters. Despite making up only 28% of renters, half of eviction filings are against Black individuals in these areas. By contrast, all other racial/ethnic groups see an underrepresentation when it comes to eviction filings. 
+The eviction crisis weighs most heavily on Black renters. Despite making up only 31% of renters, nearly half of eviction filings are against Black individuals in these areas. By contrast, all other racial/ethnic groups see an underrepresentation when it comes to eviction filings. 
 
 Eviction filings are not always one-time events; {{< smartlink "a significant share of eviction cases are repeated, serial filings against the same households at the same addresses" "https://evictionlab.org/serial-eviction-filings/" >}}. That remains true after the pandemic. In most of the ETS sites, we are able to identify these repeated cases and calculate serial eviction filing rates: the share of unique households that were filed against repeatedly within the last two years. In Figure 4 we plot serial eviction filing rates in 2023 for all available cities.
 
@@ -107,14 +107,14 @@ Eviction filings are not always one-time events; {{< smartlink "a significant sh
   x="site"
   y="serial_filing_rate"
   yMin="0"
-  yMax="0.55"
+  yMax="0.5"
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Figure 4. Serial eviction filing rates in 2023"
   margin="8 8 100 40"
 %}}
 
-In some places—cities like Philadelphia and Cleveland—serial eviction filings were relatively rare. But in others they happen with striking regularity. For instance, over half of households that receive an eviction filing in Greenville, SC have received more than one at the same address. This was true of 44% of households in Las Vegas and 29% in Houston. Landlords are routinely burdening the courts in these jurisdictions with multiple case filings against the same households. 
+In some places—cities like Philadelphia and Cleveland—serial eviction filings were relatively rare. But in others they happen with striking regularity. For instance, nearly 40% of households that receive an eviction filing in Charleston, SC have received more than one at the same address. This was true of 37% of households in Las Vegas and 23% in Houston. Landlords are routinely burdening the courts in these jurisdictions with multiple case filings against the same households. 
 
 In many ways, 2023 represented a return to the status quo. Overall, eviction caseloads returned to pre-pandemic levels. Racial and gender disparities in eviction rates—disparities that were {{< smartlink "at least partly addressed by pandemic-era renter protections like eviction moratoria and emergency rental assistance" "https://evictionlab.org/covid-era-policies-cut-eviction-filings-by-more-than-half/" >}}—were again strikingly large. And in many places landlords continued to turn quickly and often to the courts, using serial eviction filings to facilitate rent collection.
 
