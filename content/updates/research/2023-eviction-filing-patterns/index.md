@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: ets-report-2023
 contenttype: updates
@@ -36,7 +36,7 @@ Across the jurisdictions we track, we find that:
 - Despite making up less than one-third of renters, nearly half of eviction case defendants in 2023 were Black. 
 - In many places, a large share of eviction filings were repeated cases brought against the same tenants at the same addresses. 
 
-Landlords filed 10.5% more eviction cases in 2023 than in 2022. In total, 1,114,340 eviction cases were filed across the jurisdictions where we collect data.<sup>1</sup> Overall, that represents 2.9% fewer cases than we would have seen in these places prior to the pandemic, but still a large increase from what we observed early in the pandemic, when about 540,000 cases were filed in 2020 and 2021 (see Figure 1).
+Landlords filed 10.5% more eviction cases in 2023 than in 2022. In total, 1,114,340 eviction cases were filed across the jurisdictions where we collect data.<sup>1</sup> Overall, that represents 2.9% fewer cases than we would have seen in these places prior to the pandemic, but still a large increase from what we observed early in the pandemic, when less than 600,000 cases were filed in 2020 and 2021 (see Figure 1).
 
 {{% proportion-bars
   id="fig1"
@@ -107,7 +107,7 @@ Eviction filings are not always one-time events; {{< smartlink "a significant sh
   x="site"
   y="serial_filing_rate"
   yMin="0"
-  yMax="0.5"
+  yMax="0.4"
   yTooltipFormat=".1%"
   yFormat=".0%"
   title="Figure 4. Serial eviction filing rates in 2023"
