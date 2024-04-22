@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "Preliminary Analysis: Eviction Filing Patterns in 2023"
-date: 2024-04-18T11:49:04.271Z
+date: 2024-04-22T00:49:04.271Z
 postauthorname: Peter Hepburn, Danny Grubbs-Donovan, and Grace Hartley
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
