@@ -64,7 +64,7 @@ Miami-Dade, Broward, and Palm Beach Counties are divided into 1219 census tracts
 {{%/ report_map %}}
 
 
-{{% report_chart id="race" data="/uploads/charleston_linechart.csv" imputedNoteNumber="2" %}}
+{{% report_chart id="race" data="/uploads/miami_linechart.csv" imputedNoteNumber="2" %}}
 
 # The demographics of eviction filings
 
