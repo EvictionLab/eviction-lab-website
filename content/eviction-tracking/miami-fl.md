@@ -77,7 +77,7 @@ Miami-Dade, Broward, and Palm Beach Counties are divided into 1219 census tracts
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2014–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2014–2019.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Miami-Dade, Broward, and Palm Beach Counties were collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 2. We are unable to assign many cases from prior to 2020 in Miami-Dade County to a census tract due to missing street address information. As a result, the “.vs Average” tab in the Eviction Filings by Neighborhood race/ethnicity reflects data in Broward and Palm Beach Counties only.
