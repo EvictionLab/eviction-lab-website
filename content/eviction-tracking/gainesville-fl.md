@@ -38,7 +38,7 @@ This plot shows monthly eviction filings in Gainesville over the last year. Fili
 
 
 
-{{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/gainesville_map.csv" %}}
+<!-- {{% report_map shapes="/uploads/gainesville_shapes.json" data="/uploads/gainesville_map.csv" %}}
 
 # The geography of eviction filings
 
@@ -47,8 +47,7 @@ Gainesville is divided into 56 census tracts. In each of those tracts, we map th
 1. Eviction filing data for Alachua County were collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
-{{%/ report_map %}}
-
+{{%/ report_map %}} 
 
 {{% report_chart id="race" data="/uploads/gainesville_linechart.csv" imputedNoteNumber="2" %}}
 
@@ -62,4 +61,4 @@ When you toggle the figure to see data relative to average, comparisons are bein
 
 1. Eviction filing data for Alachua County were collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 
-{{%/ report_chart %}}
+{{%/ report_chart %}} -->
