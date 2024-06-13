@@ -87,3 +87,5 @@ other = "Get"
 other ="Resources"
 [superhead]
 other = "<span class='boldface'>Facing eviction?</span> &nbsp;<a href='/questions'>Read our FAQ to learn more and find resources</a>."
+[superheadETS]
+other = "<span class='boldface'>Note:</span>&nbsp;historical eviction filing counts in all sites may have shifted due to changes in our commercial defendant flagging criteria."
