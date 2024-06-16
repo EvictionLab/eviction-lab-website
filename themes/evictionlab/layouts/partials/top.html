@@ -5,6 +5,13 @@
 		<img alt="Interactive Tools icon" src="/images/icons/close_x.svg">
 	</button>
 </div>
+{{ else if eq .Type "eviction-tracking" }}
+<div class="superheader d-block d-md-block text-md-center align-items-center justify-content-center">
+	<div class="super-content d-block pr-md-8">{{ i18n "superheadETS" | safeHTML }}</div>
+	<button type="button" class="close d-none d-md-block" aria-label="Close">
+		<img alt="Interactive Tools icon" src="/images/icons/close_x.svg">
+	</button>
+</div>
 {{ end }}
 
 <header>
