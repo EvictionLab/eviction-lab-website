@@ -2302,7 +2302,7 @@ label #labels_top-100 {
     margin-bottom: 0;
   }
 }
-.section:nth-child(2n-1) {
+.section:nth-child(2n) {
   background: var(--section-alt);
 }
 
