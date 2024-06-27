@@ -692,16 +692,9 @@
 
 .table + .footnote {
   max-width: 42em;
-  font-size: 1.2rem;
   color: var(--text-secondary);
   padding: 8px 24px;
   margin: auto;
-}
-
-@media (min-width: 768px) {
-  .table + .footnote {
-    font-size: 1.4rem;
-  }
 }
 
 /** END TABLE FOOTER */
@@ -2098,6 +2091,10 @@
 
 #race .details strong {
   font-family: var(--heading-font);
+  color: var(--c2);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
 }
 
 .visual .chart,
@@ -2446,6 +2443,7 @@ label #labels_top-100 {
   padding-left: 1em;
   max-width: 26em;
   font-family: var(--body-font);
+  font-size: 1.3rem;
 }
 .intro__content .footnote ol li {
   max-width: unset;
