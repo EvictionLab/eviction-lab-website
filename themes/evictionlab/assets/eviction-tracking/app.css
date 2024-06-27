@@ -1630,6 +1630,8 @@
 .intro .intro__stats-wrapper {
   /* flex-grow: 1; */
   /* letter-spacing: 0.04rem; */
+  position: sticky;
+  top: 56px;
   padding-top: 32px;
   padding-left: 0;
   opacity: 0;
