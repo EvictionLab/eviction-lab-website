@@ -1652,6 +1652,28 @@
   justify-content: space-between;
 }
 
+.intro .intro__acknowledgements {
+  display: flex;
+  font-size: 1.8rem;
+  font-family: var(--body-font-bold);
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.intro .intro__acknowledgements i {
+  background-image: url("/img/icon--partner.svg");
+  flex-shrink: 0;
+  width: 20px;
+  height: 17px;
+  margin-right: 4px;
+  position: relative;
+  top: 2.5px;
+}
+
+.intro .intro__acknowledgements div {
+  /* prevent the span from joining the first line */
+  max-width: 430px;
+}
 #latestUpdate.outdated {
   color: var(--c1);
 }
@@ -1724,7 +1746,7 @@
 }
 .stat-block-sub-stat dt {
   display: inline-block;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
   padding-left: 6px;
   letter-spacing: 0.02rem;
 }
@@ -2009,7 +2031,8 @@
 .share {
   display: flex;
 }
-.share .share__link {
+.share .share__link,
+.share .share__title {
   display: flex;
   flex-direction: row;
   align-items: center;

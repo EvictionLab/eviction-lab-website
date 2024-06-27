@@ -1,9 +1,13 @@
 {{ $rentersSite := .Page.Params.rentersSite }}
+{{ $h1 := .Page.Params.h1 }}
+{{ $cleanedH1 := replaceRE "^.*?,\\s*" "" $h1 }}
+{{ $processedH1 := replaceRE "\\s+" "-" $cleanedH1 }}
+{{ $anchor := lower $processedH1 }}
 <div class="intro">
   <div class="layout">
     <div class="intro__content">
       <h1 class="intro__heading">
-        <a id="top">{{ .Page.Params.h1 }}</a>
+        <a id="top">{{ $h1 }}</a>
       </h1>
       <!-- {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
         {{ if eq $rentersSite $element.site }}
@@ -29,14 +33,23 @@
               </li>
             </ol>
           </span>
+          <div class="intro__acknowledgements">
+            <i></i>
+            <div>
+              <a href="localhost:1313/eviction-tracking/acknowledgements#{{ $anchor }}">See our partner organizations and
+                more resources</a>
+              <span>for {{ $h1 }}</span>
+            </div>
+            </div>
           <div class="share">
+            <span class="share__title">Share on</span>
             <a class="share__link share__link--twitter">
               <i class="fa fa-twitter"></i>
-              <span>Share on Twitter</span>
+              <span>Twitter</span>
             </a>
             <a class="share__link share__link--facebook">
               <i class="fa fa-facebook"></i>
-              <span>Share on Facebook</span>
+              <span>Facebook</span>
             </a>
           </div>
     </div>
