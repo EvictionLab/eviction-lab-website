@@ -692,9 +692,16 @@
 
 .table + .footnote {
   max-width: 42em;
+  font-size: 1.2rem;
   color: var(--text-secondary);
   padding: 8px 24px;
   margin: auto;
+}
+
+@media (min-width: 768px) {
+  .table + .footnote {
+    font-size: 1.4rem;
+  }
 }
 
 /** END TABLE FOOTER */
@@ -1630,6 +1637,8 @@
 .intro .intro__stats-wrapper {
   /* flex-grow: 1; */
   /* letter-spacing: 0.04rem; */
+  position: sticky;
+  top: 78px;
   padding-top: 32px;
   padding-left: 0;
   opacity: 0;
@@ -1645,28 +1654,6 @@
   justify-content: space-between;
 }
 
-.intro .intro__acknowledgements {
-  display: flex;
-  font-size: 1.8rem;
-  font-family: var(--body-font-bold);
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-}
-
-.intro .intro__acknowledgements i {
-  background-image: url("/img/icon--partner.svg");
-  flex-shrink: 0;
-  width: 20px;
-  height: 17px;
-  margin-right: 4px;
-  position: relative;
-  top: 2.5px;
-}
-
-.intro .intro__acknowledgements div {
-  /* prevent the span from joining the first line */
-  max-width: 430px;
-}
 #latestUpdate.outdated {
   color: var(--c1);
 }
@@ -1739,7 +1726,7 @@
 }
 .stat-block-sub-stat dt {
   display: inline-block;
-  /* color: var(--text-secondary); */
+  color: var(--text-secondary);
   padding-left: 6px;
   letter-spacing: 0.02rem;
 }
@@ -2024,8 +2011,7 @@
 .share {
   display: flex;
 }
-.share .share__link,
-.share .share__title {
+.share .share__link {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2091,10 +2077,6 @@
 
 #race .details strong {
   font-family: var(--heading-font);
-  color: var(--c2);
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.08rem;
 }
 
 .visual .chart,
@@ -2443,7 +2425,6 @@ label #labels_top-100 {
   padding-left: 1em;
   max-width: 26em;
   font-family: var(--body-font);
-  font-size: 1.3rem;
 }
 .intro__content .footnote ol li {
   max-width: unset;
