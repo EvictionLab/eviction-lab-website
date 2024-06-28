@@ -180,7 +180,7 @@ ul.anchor-links a {
     letter-spacing: 0.08rem;
   }
   @include for-tablet-portrait-up {
-    text-transform: none;
+    // text-transform: none;
   }
   @include for-tablet-landscape-up {
     @include altFont($subnavFontDesktop);
