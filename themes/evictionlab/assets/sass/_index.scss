@@ -155,6 +155,10 @@
 
 /* subnav */
 
+.nav a.highlighted-link,
+.subnav a.highlighted-link {
+  color: $color1;
+}
 .subnav {
   z-index: 991;
 }

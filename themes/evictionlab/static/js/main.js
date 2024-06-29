@@ -336,64 +336,100 @@ function smoothScroll(path, cb) {
   }
 }
 
+function callOnEnter(el, handler, options) {
+  options = options || {
+    rootMargin: "-120px 0px -300px 0px",
+    threshold: 0.01,
+  };
+
+  if (!!window.IntersectionObserver) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) handler();
+      });
+    }, options);
+    observer.observe(el);
+  }
+}
+
 $(function () {
   // Run smoothscroll on page load
   smoothScroll(window.location, function (target) {
     // If link is an accordion, toggle it
-    if (target.hasClass('collapsed')) {
-      target.collapse('toggle');
-      $(target.attr('href')).collapse('toggle');
+    if (target.hasClass("collapsed")) {
+      target.collapse("toggle");
+      $(target.attr("href")).collapse("toggle");
     }
   });
 
-  $('.smoothScroll').click(function () {
+  $(".smoothScroll").click(function () {
     smoothScroll(this);
     // Close dropdown if dropdown link
-    if ($(this).hasClass('dropdown-item')) {
-      $(this).closest('div.dropdown').find('.dropdown-toggle').dropdown('toggle');
+    if ($(this).hasClass("dropdown-item")) {
+      $(this).closest("div.dropdown").find(".dropdown-toggle").dropdown("toggle");
     }
   });
+
+  // setup auto-highlighting of in page nav links based on scroll position
+  try {
+    var navEls = $(".anchor-links a:not(.dropdown-item)");
+    navEls.each((i, el) => {
+      var sectionName = el.getAttribute("href");
+      var section = document.querySelector('a[name="' + sectionName.replace("#", "") + '"]');
+      if (!!section) {
+        callOnEnter(section, function () {
+          navEls.removeClass("active highlight highlighted-link");
+          $(el).addClass("active highlight highlighted-link");
+        });
+      }
+    });
+  } catch (error) {
+    console.error(error);
+  }
 });
 
 /**
  * Update URL on accordion expand
  */
-$(function() {
-  $('.accordion-section .collapsed').click(function() {
+$(function () {
+  $(".accordion-section .collapsed").click(function () {
     if (history.pushState) {
-      history.replaceState(null, null, $(this).attr('href'));
-    }
-    else {
-      location.hash = $(this).attr('href');
+      history.replaceState(null, null, $(this).attr("href"));
+    } else {
+      location.hash = $(this).attr("href");
     }
   });
 });
 
-/** 
- * Social Share Popup 
+/**
+ * Social Share Popup
  * ---
  * Add event listeners to all social share popups that open links in a popup window
  */
-   $(document).ready(function () {
-    $('a.social-share-popup').each(function () {
-      var el = $(this);
-      el.on('click', function (e) {
-        e.preventDefault();
-        window.open(el.attr('href'), 'Social Share', 'height=285,width=550,resizable=1');
-      });
+$(document).ready(function () {
+  $("a.social-share-popup").each(function () {
+    var el = $(this);
+    el.on("click", function (e) {
+      e.preventDefault();
+      window.open(el.attr("href"), "Social Share", "height=285,width=550,resizable=1");
     });
   });
+});
   
 
 // Single post Twitter share
 
-$('.twittershare').off('click').on('click', function() {
-  var field_list = {
-    text: this.getAttribute('data-text'),
-    url: this.getAttribute('data-url'),
-  }
-  window.open('https://twitter.com/share?'+$.param(field_list), '_blank', 'width=550,height=420').focus();
-});
+$(".twittershare")
+  .off("click")
+  .on("click", function () {
+    var field_list = {
+      text: this.getAttribute("data-text"),
+      url: this.getAttribute("data-url"),
+    };
+    window
+      .open("https://twitter.com/share?" + $.param(field_list), "_blank", "width=550,height=420")
+      .focus();
+  });
 
 /**
  * Subnav link highlighting
@@ -401,20 +437,20 @@ $('.twittershare').off('click').on('click', function() {
 
 $(document).ready(function () {
   $(".nav a").click(function () {
-    $(".nav a").css("color", "#050403").removeClass("highlight");
+    $(".nav a").removeClass("highlight highlighted-link");
     $(".nav li").removeClass("active");
-    $(this).css("color", "#E24000").addClass("highlight");
+    $(this).addClass("highlight highlighted-link");
   });
 
   $(".subnav a").click(function () {
-    $(".subnav a").css("color", "#050403").removeClass("highlight");
-    $(this).css("color", "#E24000").addClass("highlight");
+    $(".subnav a").removeClass("highlight highlighted-link");
+    $(this).addClass("highlight highlighted-link");
   });
 
   $(".video-panel .nav a").click(function () {
-    $(".nav a").css("color", "#fff").removeClass("highlight");
+    $(".nav a").removeClass("highlight highlighted-link");
     $(".nav li").removeClass("active");
-    $(this).css("color", "#E24000").addClass("highlight");
+    $(this).addClass("highlight highlighted-link");
   });
 });
 
