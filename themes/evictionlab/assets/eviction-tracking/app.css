@@ -1649,7 +1649,7 @@
 
 .intro .intro__acknowledgements {
   display: flex;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: var(--body-font-bold);
   color: var(--text-secondary);
   margin-bottom: 12px;
@@ -1658,16 +1658,16 @@
 .intro .intro__acknowledgements i {
   background-image: url("/img/icon--partner.svg");
   flex-shrink: 0;
-  width: 20px;
-  height: 17px;
+  width: 17px;
+    height: 15px;
   margin-right: 4px;
   position: relative;
-  top: 2.5px;
+  top: 4px;
 }
 
 .intro .intro__acknowledgements div {
   /* prevent the span from joining the first line */
-  max-width: 430px;
+  max-width: 385px;
 }
 #latestUpdate.outdated {
   color: var(--c1);
@@ -1849,13 +1849,13 @@
 
 .section--chart.section--race .comparison-block-wrapper {
   margin-top: 40px;
-  border: white solid 3px;
+  border: #fff solid 3px;
   padding: 40px 24px 24px 40px;
   text-align: start;
 }
 
-.section:nth-child(2n).section--chart.section--race .comparison-block-wrapper {
-  border: #f5f7f9 solid 3px;
+.section:nth-child(2n-1).section--chart.section--race .comparison-block-wrapper {
+  border-color: var(--section-alt);
 }
 
 @media (min-width: 600px) {
@@ -2999,31 +2999,31 @@ div.section.section--map .top-filers-only {
 /** white background section */
 .section .chart__box,
 .section .chart__frame {
-  stroke: #f4f7f9;
+  stroke: #fff;
 }
 
 .section .chart__axis--x .domain,
 .section .chart__axis--x .tick line {
-  stroke: #f4f7f9;
+  stroke: #fff;
 }
 
 .section .chart__axis--y .tick line {
-  stroke: #f4f7f9;
+  stroke: #fff;
 }
 
 /** alt background section */
 .section:nth-child(2n-1) .chart__box,
 .section:nth-child(2n-1) .chart__frame {
-  stroke: #fff;
+  stroke: var(--section-alt);
 }
 
 .section:nth-child(2n-1) .chart__axis--x .domain,
 .section:nth-child(2n-1) .chart__axis--x .tick line {
-  stroke: #fff;
+  stroke: var(--section-alt);
 }
 
 .section:nth-child(2n-1) .chart__axis--y .tick line {
-  stroke: #fff;
+  stroke: var(--section-alt);
 }
 
 
