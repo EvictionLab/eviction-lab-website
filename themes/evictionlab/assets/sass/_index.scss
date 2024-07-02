@@ -168,7 +168,7 @@ ul.anchor-links li {
   color: $secondaryTextColor;
   @include altFont(12px);
   @include for-tablet-portrait-up {
-    @include altFont(15px);
+    @include altFont(16px);
   }
 }
 // sub nav links
@@ -191,7 +191,7 @@ ul.anchor-links a {
     letter-spacing: 0.04rem;
   }
   @include media-breakpoint-up(xl) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   &:hover {
     text-decoration: none;
