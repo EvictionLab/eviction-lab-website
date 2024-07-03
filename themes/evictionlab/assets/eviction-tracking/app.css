@@ -1696,8 +1696,9 @@
 
 #filingCounts .stat-block-stat.missing>dd,
 #filingRates .stat-block-stat.missing>dd {
-    color: var(--c4);
-    font-size: 2.8rem;
+    color: var(--text-secondary);
+    font-size: 2rem;
+    font-weight: 500;
     /*even smaller missing stats should get same height for alignment */
     line-height: 4rem;
 }
