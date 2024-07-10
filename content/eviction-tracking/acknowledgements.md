@@ -7,7 +7,7 @@ cascade:
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Real time eviction tracking in U.S. cities during COVID-19.
-h1: Acknowledgements
+h1: Resources and Acknowledgements
 layout: content
 date: 2023-09-20T01:00:00.000Z
 similar: >-

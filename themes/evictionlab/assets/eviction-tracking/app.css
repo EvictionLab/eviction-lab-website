@@ -692,16 +692,9 @@
 
 .table + .footnote {
   max-width: 42em;
-  font-size: 1.2rem;
   color: var(--text-secondary);
   padding: 8px 24px;
   margin: auto;
-}
-
-@media (min-width: 768px) {
-  .table + .footnote {
-    font-size: 1.4rem;
-  }
 }
 
 /** END TABLE FOOTER */
@@ -1481,6 +1474,12 @@
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
+  /* align breadcrumbs with logo rather than content */
+  max-width: unset;
+  @media (min-width: 1280px) {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
 }
 .breadcrumbs .center-page > * {
   min-height: 50px;
@@ -1637,6 +1636,8 @@
 .intro .intro__stats-wrapper {
   /* flex-grow: 1; */
   /* letter-spacing: 0.04rem; */
+  position: sticky;
+  top: 74px;
   padding-top: 32px;
   padding-left: 0;
   opacity: 0;
@@ -1650,6 +1651,24 @@
   line-height: 2;
   display: flex;
   justify-content: space-between;
+}
+
+.intro .intro__acknowledgements {
+  display: flex;
+  font-size: 1.6rem;
+  font-family: var(--body-font-bold);
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.intro .intro__acknowledgements i {
+  background-image: url("/img/icon--partner.svg");
+  flex-shrink: 0;
+  width: 17px;
+    height: 15px;
+  margin-right: 4px;
+  position: relative;
+  top: 4px;
 }
 
 #latestUpdate.outdated {
@@ -1673,8 +1692,9 @@
 
 #filingCounts .stat-block-stat.missing>dd,
 #filingRates .stat-block-stat.missing>dd {
-    color: var(--c4);
-    font-size: 2.8rem;
+    color: var(--text-secondary);
+    font-size: 2rem;
+    font-weight: 500;
     /*even smaller missing stats should get same height for alignment */
     line-height: 4rem;
 }
@@ -1724,7 +1744,7 @@
 }
 .stat-block-sub-stat dt {
   display: inline-block;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
   padding-left: 6px;
   letter-spacing: 0.02rem;
 }
@@ -1832,13 +1852,13 @@
 
 .section--chart.section--race .comparison-block-wrapper {
   margin-top: 40px;
-  border: white solid 3px;
+  border: #fff solid 3px;
   padding: 40px 24px 24px 40px;
   text-align: start;
 }
 
-.section:nth-child(2n).section--chart.section--race .comparison-block-wrapper {
-  border: #f5f7f9 solid 3px;
+.section:nth-child(2n-1).section--chart.section--race .comparison-block-wrapper {
+  border-color: var(--section-alt);
 }
 
 @media (min-width: 600px) {
@@ -2009,7 +2029,8 @@
 .share {
   display: flex;
 }
-.share .share__link {
+.share .share__link,
+.share .share__title {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2035,19 +2056,10 @@
 }
 
 .intro .share {
-  flex-direction: column;
+  margin-bottom: 16px;
+  flex-direction: row;
 }
-@media (min-width: 480px) {
-  .intro .share {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-@media (min-width: 1024px) {
-  .intro .share {
-    justify-content: flex-start;
-  }
-}
+
 
 /** END INTRO SHARE */
 
@@ -2075,6 +2087,10 @@
 
 #race .details strong {
   font-family: var(--heading-font);
+  color: var(--c2);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
 }
 
 .visual .chart,
@@ -2356,7 +2372,7 @@ label #labels_top-100 {
 }
 
 /** map section toggles, stay left */
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .section__toggle .button-group {
     justify-content: flex-start;
   }
@@ -2423,6 +2439,7 @@ label #labels_top-100 {
   padding-left: 1em;
   max-width: 26em;
   font-family: var(--body-font);
+  font-size: 1.3rem;
 }
 .intro__content .footnote ol li {
   max-width: unset;
@@ -2911,9 +2928,10 @@ div.section.section--map .top-filers-only {
   left: 2em;
   line-height: 1;
   font-size: 1.2em;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   color: #fff;
   text-transform: uppercase;
+  font-family: var(--heading-font);
 }
 .card__link span:after {
   content: "";
@@ -2976,31 +2994,31 @@ div.section.section--map .top-filers-only {
 /** white background section */
 .section .chart__box,
 .section .chart__frame {
-  stroke: #f4f7f9;
+  stroke: #fff;
 }
 
 .section .chart__axis--x .domain,
 .section .chart__axis--x .tick line {
-  stroke: #f4f7f9;
+  stroke: #fff;
 }
 
 .section .chart__axis--y .tick line {
-  stroke: #f4f7f9;
+  stroke: #fff;
 }
 
 /** alt background section */
 .section:nth-child(2n-1) .chart__box,
 .section:nth-child(2n-1) .chart__frame {
-  stroke: #fff;
+  stroke: var(--section-alt);
 }
 
 .section:nth-child(2n-1) .chart__axis--x .domain,
 .section:nth-child(2n-1) .chart__axis--x .tick line {
-  stroke: #fff;
+  stroke: var(--section-alt);
 }
 
 .section:nth-child(2n-1) .chart__axis--y .tick line {
-  stroke: #fff;
+  stroke: var(--section-alt);
 }
 
 
