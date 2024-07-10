@@ -1671,10 +1671,6 @@
   top: 4px;
 }
 
-.intro .intro__acknowledgements div {
-  /* prevent the span from joining the first line */
-  max-width: 385px;
-}
 #latestUpdate.outdated {
   color: var(--c1);
 }
