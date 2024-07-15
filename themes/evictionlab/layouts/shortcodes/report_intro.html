@@ -59,6 +59,11 @@
           var renterssite = {{ .Page.Params.renterssite }};
           window.addEventListener('load', function () {
 
+          var percentChange = function (d) {
+            var v = d3.format('.0%')(d - 1)
+            return v[0] === '-' ? `${v}` : `+${v}`
+          }
+          
       var statFiles = [
         { id: "filing", url: "/uploads/filing_data_by_site.csv" },
         { id: "basic", url: "/uploads/basic_data_by_site.csv" },
@@ -72,9 +77,9 @@
           subStat: {
             file: 'filing',
             field: 'filings_pandemic_pct_hist',
-            display: 'of average',
+            display: 'vs. average',
             tooltip: 'Compared to filings over the same time frame before the COVID-19 pandemic',
-            formatter: d3.format('.0%'),
+            formatter: percentChange,
           }
         },
         {
@@ -85,9 +90,9 @@
           subStat: {
             file: 'filing',
             field: 'filings_past_year_pct_hist',
-            display: 'of average',
+            display: 'vs. average',
             tooltip: 'Compared to filings over an average year before the COVID-19 pandemic',
-            formatter: d3.format('.0%'),
+            formatter: percentChange,
           }
         },
         {
@@ -98,9 +103,9 @@
           subStat: {
             file: 'filing',
             field: 'filings_past_month_pct_hist',
-            display: 'of average',
+            display: 'vs. average',
             tooltip: 'Compared to filings over the same month before the COVID-19 pandemic',
-            formatter: d3.format('.0%'),
+            formatter: percentChange,
           }
         },
       ]
