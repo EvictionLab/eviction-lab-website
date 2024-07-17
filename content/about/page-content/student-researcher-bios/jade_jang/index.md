@@ -6,5 +6,5 @@ title: Jade Jang
 position: Research Assistant
 image: jjang_full.jpg
 thumb: jjang_thumb.jpg
-weight: 80
+weight: 120
 ---
