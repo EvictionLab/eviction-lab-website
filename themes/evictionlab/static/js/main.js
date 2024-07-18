@@ -370,11 +370,13 @@ $(function () {
     }
   });
 
-  // setup auto-highlighting of in page nav links based on scroll position
+  // setup auto-highlighting of in-page nav links based on scroll position
+  // nav-tabs shouldn't update with scroll position, nor should dropdown navs
   try {
-    var navEls = $(".anchor-links a:not(.dropdown-item)");
+    var navEls = $(".anchor-links:not(.nav-tabs) a:not(.dropdown-item)");
     navEls.each((i, el) => {
       var sectionName = el.getAttribute("href");
+      // a name attribute on the section matches it to the nav link
       var section = document.querySelector('a[name="' + sectionName.replace("#", "") + '"]');
       if (!!section) {
         callOnEnter(section, function () {
