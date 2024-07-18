@@ -1,16 +1,19 @@
 <!-- Modal setup for bios -->
-
+{{ $alumniClass := "" }}
+{{ if eq .Params.childof "alumni-bios" }}
+  {{ $alumniClass = "alumni" }}
+{{ end }}
 <!-- Student researchers --------------------->
 
  
 
 
-  {{ if eq .Params.childof "alumni-bios" }} 
+  {{ if or (eq .Params.childof "alumni-bios") (eq .Params.category "intern") }}
   {{/* trigger if person is alumni  */}}
   
   <div class="bio-thumb-wrapper">
   
-      <div class="bio-container alumni d-flex flex-column align-items-center">
+      <div class="bio-container {{ $alumniClass }} d-flex flex-column align-items-center">
         <picture>
           <!--<source media="(max-width: 799px)" srcset='/images/bios/grayscale{{ strings.TrimPrefix "/images/bios" .Params.thumb }}'>-->
           {{ if in .Params.thumb "images/" }}

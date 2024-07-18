@@ -1,10 +1,10 @@
 ---
 childof: student-researcher-bios
-category: student
+category: intern
 abbrev: aluu
 title: Andy Luu
 position: Summer Intern
 image: aluu_full.jpg
 thumb: aluu_thumb.jpg
-weight: 130
+weight: 113
 ---

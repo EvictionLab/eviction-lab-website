@@ -715,6 +715,7 @@ collections:
         options:
           - { label: "Graduate Research Assistants", value: "graduate" }
           - { label: "Research Assistants", value: "student" }
+          - { label: "Summer Intern", value: "intern" }
           - { label: "Alumni", value: "alumni", }
       - {
           label: "Position",

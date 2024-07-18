@@ -6,7 +6,7 @@ title: Katherine Lee
 position: Research Assistant
 image: klee_full.jpg
 thumb: klee_thumb.jpg
-weight: 90
+weight: 123
 ---
 Katherine is a first-year student in the School of Public and International Affairs. She hopes to pursue a minor in Korean Language and a certificate in Entrepreneurship. Her prior internship experiences involve an investigation on the district-level impact of key issues in the 2022 NJ-08 Democratic primary race, such as Medicare for All, housing insecurity, and the abolishment of qualified immunity. She has also previously worked as a legal intern.
 

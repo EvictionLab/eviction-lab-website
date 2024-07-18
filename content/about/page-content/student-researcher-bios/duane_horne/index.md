@@ -1,6 +1,6 @@
 ---
 childof: student-researcher-bios
-category: student
+category: intern
 abbrev: dhorne
 title: Duane Horne
 position: Summer Intern

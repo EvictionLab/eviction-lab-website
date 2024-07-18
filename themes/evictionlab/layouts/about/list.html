@@ -206,6 +206,17 @@
                 {{ end }}
               {{ end }}    
 
+          <h2 class="w-100 text-center page-section-headerv3 mt-md-5">SUMMER INTERNS</h2>
+
+  
+              {{ range (where .Site.RegularPages "Params.childof" ("student-researcher-bios")) }}
+                {{ if eq .Params.childof "student-researcher-bios" }} 
+                  {{ if eq .Params.category "intern" }}
+                    {{ partial "about-modal" . }}
+                  {{ end }}   
+                {{ end }}
+              {{ end }}    
+
 
 
 

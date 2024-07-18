@@ -384,7 +384,7 @@
         filter: grayscale(100%);
         transition: 150ms;
       }
-      a:hover .bio-thumb {
+      .bio-container:not(.alumni) picture:hover .bio-thumb {
         filter: none;
       } 
     }
@@ -438,7 +438,11 @@
       justify-content: stretch;
       align-items: stretch;
       flex-wrap:nowrap;
-    }    
+    }
+    .right-column {
+      // so nav stays in lower right even when bio empty
+      width: 100%;
+    }
     .bio-nav {
       @include defaultFont(1.4rem);
       .fa { font-size: 1.2rem;}
