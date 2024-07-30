@@ -1,9 +1,9 @@
 ---
 collection: true
 draft: false
-title: Miami - Ft. Lauderdale, Florida | Eviction Tracking System
-h1: Miami-Ft. Lauderdale, Florida
-rentersSite: Miami-Ft. Lauderdale
+title: Miami - Ft. Lauderdale, Florida 2 | Eviction Tracking System
+h1: Miami-Ft. Lauderdale, Florida 2
+rentersSite: Miami-Ft. Lauderdale 2
 slug: miami-ft-lauderdale-fl-2
 date: 2024-07-02T03:27:06.983Z
 ---
