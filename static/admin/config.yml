@@ -1,7 +1,9 @@
 backend:
  name: github
  repo: EvictionLab/eviction-lab-website
- branch: staging
+#  TODO: reset to staging branch before merging back to staging
+#  branch: staging 
+ branch: 2020-shapes
  
 # FOR LOCAL DEVELOPMENT:
 # ---
