@@ -1,10 +1,10 @@
 ---
 collection: true
 draft: false
-title: Ft. Lauderdale, Florida | Eviction Tracking System
-h1: Ft. Lauderdale, Florida
-rentersSite: Ft. Lauderdale
-slug: ft-lauderdale-fl
+title: Fort Lauderdale, Florida | Eviction Tracking System
+h1: Fort Lauderdale, Florida
+rentersSite: Fort Lauderdale
+slug: fort-lauderdale-fl
 date: 2024-07-02T03:27:06.983Z
 ---
 {{< report_intro site_id="12086" data="/uploads/table.csv" >}}
@@ -54,7 +54,7 @@ This plot shows monthly eviction filings in Miami-Ft. Lauderdale over the last y
 
 
 
-{{% report_map shapes="/uploads/ftlauderdale_shapes.json" data="/uploads/miami_map.csv" %}}
+{{% report_map shapes="/uploads/fortlauderdale_shapes.json" data="/uploads/miami_map.csv" %}}
 
 # The geography of eviction filings
 
