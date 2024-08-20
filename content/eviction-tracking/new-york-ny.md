@@ -51,7 +51,7 @@ When a landlord files an eviction claim in New York, we observe the amount they 
 {{%/ report_median_claims %}}
 
 
-{{% report_map shapes="/uploads/new-york_shapes.json" data="/uploads/newyork_map.csv" %}}
+{{% report_map shapes="/uploads/newyork_shapes.json" data="/uploads/newyork_map.csv" %}}
 
 # The geography of eviction filings
 

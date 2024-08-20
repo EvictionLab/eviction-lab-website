@@ -41,7 +41,7 @@ This plot shows monthly eviction filings in New Mexico over the last year. Filin
 
 
 
-{{% report_map shapes="/uploads/new-mexico_shapes.json" data="/uploads/newmexico_map.csv" %}}
+{{% report_map shapes="/uploads/newmexico_shapes.json" data="/uploads/newmexico_map.csv" %}}
 
 
 

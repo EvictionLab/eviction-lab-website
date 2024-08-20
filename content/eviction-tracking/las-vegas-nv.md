@@ -42,7 +42,7 @@ This plot shows monthly eviction filings in Las Vegas over the last year. Filing
 
 
 
-{{% report_map shapes="/uploads/las-vegas-shapes.json" data="/uploads/lasvegas_map.csv" %}}
+{{% report_map shapes="/uploads/lasvegas_shapes.json" data="/uploads/lasvegas_map.csv" %}}
 
 
 
