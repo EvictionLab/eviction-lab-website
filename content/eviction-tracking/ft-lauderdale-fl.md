@@ -56,8 +56,6 @@ This plot shows monthly eviction filings in Miami-Ft. Lauderdale over the last y
 
 {{% report_map shapes="/uploads/ftlauderdale_shapes.json" data="/uploads/miami_map.csv" %}}
 
-FUKCKCKCK
-
 # The geography of eviction filings
 
 Miami-Dade, Broward, and Palm Beach Counties are divided into 1219 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup> <sup>3</sup>
