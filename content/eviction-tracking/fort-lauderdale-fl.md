@@ -48,6 +48,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 
 When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2014–2019.<sup>1</sup> <sup>2</sup>
 
-1. Eviction filing data for Broward County was collected by the \[Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
+1. Eviction filing data for Broward County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 
 {{%/ report_chart %}}
