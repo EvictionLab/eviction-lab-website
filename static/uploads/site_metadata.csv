@@ -19,6 +19,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 39035,Cleveland,cleveland-oh,OH,41.4993,-81.6944
 39049,Columbus,columbus-oh,OH,39.9612,-82.9988
 48113,Dallas,dallas-tx,TX,32.7767,-96.7970
+12011,Fort Lauderdale,fort-lauderdale-fl,FL,26.1791,-80.1634
 48439,Fort Worth,fort-worth-tx,TX,32.7555,-97.3308
 12001,Gainesville,gainesville-fl,FL,29.6516,-82.3248
 45045,Greenville,greenville-sc,SC,34.8526,-82.3940
@@ -29,12 +30,13 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 29095,Kansas City,kansas-city-mo,MO,39.0997,-94.5786
 32003,Las Vegas,las-vegas-nv,NV,36.1716,-115.1391
 47157,Memphis,memphis-tn,TN,35.1495,-90.0490
-12086,Miami–Ft. Lauderdale,miami-ft-lauderdale-fl,FL,25.7617,-80.1918
+12086,Miami,miami-fl,FL,25.7642,-80.2789
 55079,Milwaukee,milwaukee-wi,WI,43.0389,-87.9065
 27053,Minneapolis–Saint Paul,minneapolis-saint-paul-mn,MN,44.9778,-93.2650
 47037,Nashville,nashville-tn,TN,36.1627,-86.7816
 22071,New Orleans,new-orleans-la,LA,29.9511,-90.0715
 36061,New York,new-york-ny,NY,40.7128,-74.0060
+12099,Palm Beach,palm-beach-fl,FL,26.7475,-80.1085
 42101,Philadelphia,philadelphia-pa,PA,39.9526,-75.1652
 04013,Phoenix,phoenix-az,AZ,33.4484,-112.0740
 42003,Pittsburgh,pittsburgh-pa,PA,40.4406,-79.9959
