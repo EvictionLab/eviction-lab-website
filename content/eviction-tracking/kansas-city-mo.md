@@ -48,7 +48,7 @@ Eviction Hotspot data are updated semi-annually.
 {{%/ report_top_evictors %}}
 
 
-{{% report_map shapes="/uploads/kansas_shapes.json" data="/uploads/kansascity_map.csv" topFilers="/uploads/kansascity_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/kansascity_shapes.json" data="/uploads/kansascity_map.csv" topFilers="/uploads/kansascity_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 

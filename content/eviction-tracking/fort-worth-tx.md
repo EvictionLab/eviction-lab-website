@@ -32,7 +32,7 @@ This plot shows monthly eviction filings in Fort Worth over the last year. Filin
 
 
 
-{{% report_map shapes="/uploads/fort-worth_shapes.json" data="/uploads/fortworth_map.csv" %}}
+{{% report_map shapes="/uploads/fortworth_shapes.json" data="/uploads/fortworth_map.csv" %}}
 
 # The geography of eviction filings
 

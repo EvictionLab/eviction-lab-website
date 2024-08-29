@@ -41,7 +41,7 @@ This plot shows monthly eviction filings in Rhode Island over the last year. Fil
 
 
 
-{{% report_map shapes="/uploads/rhode-island_shapes.json" data="/uploads/rhode_island_map.csv" %}}
+{{% report_map shapes="/uploads/rhodeisland_shapes.json" data="/uploads/rhode_island_map.csv" %}}
 
 
 

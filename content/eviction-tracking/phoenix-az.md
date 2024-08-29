@@ -8,6 +8,7 @@ rentersSite: Phoenix
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Phoenix Arizona | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
+geographies: zips
 ---
 
 {{< report_intro site_id="04013" data="/uploads/table.csv" >}}
