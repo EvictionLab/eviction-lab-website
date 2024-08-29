@@ -14,7 +14,9 @@ In most locations that we track, we are able to access eviction filing records s
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/miami_barchart.csv" %}}
+{{% report_chart id="avg" data="/uploads/ftlauderdale_barchart.csv" %}}
+
+
 
 # Trends in eviction filings
 
@@ -22,11 +24,15 @@ This plot shows monthly eviction filings in Fort Lauderdale over the last year. 
 
 1. Eviction filing data for Broward County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 
+
+
 {{%/ report_chart %}}
 
 
 
-{{% report_map shapes="/uploads/fortlauderdale_shapes.json" data="/uploads/miami_map.csv" %}}
+{{% report_map shapes="/uploads/fortlauderdale_shapes.json" data="/uploads/ftlauderdale_map.csv" %}}
+
+
 
 # The geography of eviction filings
 
@@ -34,6 +40,8 @@ Broward County is divided into 417 census tracts. In each of those tracts, we ma
 
 1. Eviction filing data for Broward County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+
+
 
 {{%/ report_map %}}
 
