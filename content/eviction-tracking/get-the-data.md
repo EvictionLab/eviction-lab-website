@@ -1,12 +1,19 @@
 ---
 draft: false
+h1: Get the Data
+headers:
+  siteheader: Site
+  baselineheader: Baseline Years
+  geoheader: Smallest Geography
+  fileheader: Weekly Data
+  monthfileheader: Monthly Data
+layout: downloads
 cascade:
   title: Eviction Tracking System | Get the Data
   description: Get the data for real time eviction tracking in U.S. cities during COVID-19.
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
-h1: Get the Data
 date: 2022-01-28T01:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
@@ -24,13 +31,6 @@ intro: >-
 
 
   *Note: Some eviction filing data have a number of cases with missing or incorrect tract/zip code information. These cases will be listed in rows where the tract/zip is described as "sealed". Values of filings by tract/zip may be underestimates as a result.*
-headers:
-  siteheader: Site
-  baselineheader: Baseline Years
-  geoheader: Smallest Geography
-  fileheader: Weekly Data
-  monthfileheader: Monthly Data
-layout: downloads
 data:
   - site: All Cities
     years: "-"
@@ -97,6 +97,11 @@ data:
     geo: Census Tract
     file: /uploads/delaware_weekly_2020_2021.csv
     monthfile: /uploads/delaware_monthly_2020_2021.csv
+  - site: Fort Lauderdale
+    years: 2014-2019
+    geo: Tract
+    file: /uploads/fortlauderdale_weekly_2020_2021.csv
+    monthfile: /uploads/fortlauderdale_monthly_2020_2021.csv
   - site: Fort Worth
     years: 2016-2019
     geo: Census Tract
@@ -147,7 +152,7 @@ data:
     geo: Census Tract
     file: /uploads/lasvegas_weekly_2020_2021.csv
     monthfile: /uploads/lasvegas_monthly_2020_2021.csv
-  - site: Miami-Ft. Lauderdale
+  - site: Miami
     years: 2014-2019
     geo: Tract (County for Miami-Dade)
     file: /uploads/miami_weekly_2020_2021.csv
@@ -197,6 +202,11 @@ data:
     geo: ZIP Code
     file: /uploads/newyork_weekly_2020_2021.csv
     monthfile: /uploads/newyork_monthly_2020_2021.csv
+  - years: 2014-2019
+    site: Palm Beach
+    geo: Tract
+    file: /uploads/palmbeach_weekly_2020_2021.csv
+    monthfile: /uploads/palmbeach_monthly_2020_2021.csv
   - site: Pennsylvania
     years: 2016-2019
     geo: ZIP Code
