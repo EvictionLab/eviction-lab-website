@@ -1,11 +1,11 @@
 ---
-collection: true
 draft: false
 h1: Las Vegas, Nevada
 slug: las-vegas-nv
-date: 2022-07-20T04:00:00.000Z
+date: 2024-08-30T04:00:00.000Z
 rentersSite: Las Vegas
 twImage: /images/assets/graphics/ets-bg-social.png
+collection: true
 title: Las Vegas, Nevada | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
@@ -26,11 +26,15 @@ In most locations that we track, we are able to access eviction filing records s
 
 
 
+
+
 # Trends in eviction filings
 
 This plot shows monthly eviction filings in Las Vegas over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
 
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019.
+
+
 
 
 
@@ -44,24 +48,12 @@ This plot shows monthly eviction filings in Las Vegas over the last year. Filing
 
 {{% report_map shapes="/uploads/lasvegas_shapes.json" data="/uploads/lasvegas_map.csv" %}}
 
-
-
-
-
-
-
 # The geography of eviction filings
 
-Clark County is divided into 487 census tracts. In these tracts, we map the number of eviction filings over the last year.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>2</sup>
+Clark County is divided into 535 census tracts. In these tracts, we map the number of eviction filings over the last year.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>2</sup>
 
 1. Data for Clark County were collected by Subrina Hudson of the Las Vegas Review-Journal; historical averages cover 2016-2019. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
-
-
-
-
-
-
 
 {{%/ report_map %}}
 
