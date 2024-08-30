@@ -1,11 +1,11 @@
 ---
-collection: true
 draft: false
 h1: Cleveland, Ohio
 slug: cleveland-oh
-date: 2022-07-20T04:00:00.000Z
+date: 2024-08-30T04:00:00.000Z
 rentersSite: Cleveland
 twImage: /images/assets/graphics/ets-bg-social.png
+collection: true
 title: Cleveland Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
@@ -13,11 +13,12 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 While the state of Ohio did not institute a general eviction moratorium, the Cleveland Municipal Housing Court halted the processing of non-emergency eviction filings on March 16, 2020. This policy reduced filings to near zero until its expiration on June 15, 2020, after which filings increased. During the summer of 2020, Cleveland also extended the [right to counsel for many tenants facing eviction](https://freeevictionhelp.org/).
 
-
 {{</ report_intro >}}
 
 
 {{% report_chart id="avg" data="/uploads/cleveland_barchart.csv" %}}
+
+
 
 
 
@@ -32,26 +33,20 @@ This plot shows monthly eviction filings in Cleveland over the last year. Filing
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/cleveland_shapes.json" data="/uploads/cleveland_map.csv" %}}
 
-
-
-
-
 # The geography of eviction filings
 
-Cleveland is divided into 177 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Cleveland is divided into 160 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings are based on data from 2016-2019, collected by [LSC](https://www.lsc.gov/).
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
-
-
-
-
 
 {{%/ report_map %}}
 
