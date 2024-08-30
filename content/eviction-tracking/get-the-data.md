@@ -14,7 +14,7 @@ cascade:
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
-date: 2022-01-28T01:00:00.000Z
+date: 2024-08-31T00:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
   that you find new and productive ways to make use of them. When you do so,
@@ -30,7 +30,11 @@ intro: >-
   A data dictionary for these downloadable files can be found [here](https://eviction-lab-data-downloads.s3.amazonaws.com/ets/data_dictionary_weekly_monthly.xlsx). 
 
 
-  *Note: Some eviction filing data have a number of cases with missing or incorrect tract/zip code information. These cases will be listed in rows where the tract/zip is described as "sealed". Values of filings by tract/zip may be underestimates as a result.*
+  *Note: Some eviction filing data have a number of cases with missing or incorrect tract/zip code information. These cases will be listed in rows where the tract/zip is described as "sealed". Values of filings by tract/zip may be underestimates as a result.*\
+
+  \
+
+  *Note: As of August 2024, we have revised our baseline data to use 2020 census boundary definitions.*
 data:
   - site: All Cities
     years: "-"
