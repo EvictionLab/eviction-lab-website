@@ -1,11 +1,11 @@
 ---
-collection: true
 draft: false
 h1: Cincinnati, Ohio
 slug: cincinnati-oh
-date: 2022-07-20T04:00:00.000Z
+date: 2024-08-30T04:00:00.000Z
 rentersSite: Cincinnati
 twImage: /images/assets/graphics/ets-bg-social.png
+collection: true
 title: Cincinnati, OH | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
@@ -22,6 +22,8 @@ On April 1, 2021, The Hamilton County Municipal Court stopped enforcing the nati
 
 
 
+
+
 # Trends in eviction filings
 
 This plot shows monthly eviction filings in Cincinnati over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
@@ -31,11 +33,14 @@ This plot shows monthly eviction filings in Cincinnati over the last year. Filin
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/cincinnati_hotspots_output.csv" %}}
+
 
 # Eviction Hotspots
 
@@ -43,11 +48,13 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 
 Eviction Hotspot data are updated semi-annually.
 
+
 {{%/ report_top_evictors %}}
 
 
 
 {{% report_median_claims id="medianFilings" data="/uploads/cincinnati_claims_monthly.csv" %}}
+
 
 
 
@@ -71,6 +78,7 @@ When a landlord files an eviction claim in Cincinnati, we observe the amount the
 
 
 
+
 {{%/ report_median_claims %}}
 
 
@@ -78,7 +86,7 @@ When a landlord files an eviction claim in Cincinnati, we observe the amount the
 
 # The geography of eviction filings
 
-Cincinnati is divided into 222 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Cincinnati is divided into 226 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
