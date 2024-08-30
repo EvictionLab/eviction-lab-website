@@ -34,7 +34,7 @@ intro: >-
 
   \
 
-  *Note: As of August 2024, we have revised our baseline data to use 2020 census boundary definitions.*
+  *Note: As of August 2024, we have revised the census tracts in our baseline data to 2020 boundary definitions.*
 data:
   - site: All Cities
     years: "-"
