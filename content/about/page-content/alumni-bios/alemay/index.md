@@ -3,6 +3,7 @@ childof: alumni-bios
 abbrev: alemay
 title: Annalaan LeMay
 position: Administrative Assistant
+newposition: Bruce Springsteen Archives at Monmouth University
 image: alemay-full.jpg
 thumb: alemay-thumb.jpg
 weight: 320
