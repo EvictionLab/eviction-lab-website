@@ -3242,6 +3242,7 @@ Elab.Ranking = (function (Elab) {
     $el = $(elId);
 
     Elab.Data.loadData(csv, function (data) {
+      data = data.slice(0, 10);
       addEndDate(data);
       data = shapeTopEvictions(data);
       groups = Elab.Utils.group(data, "group");
