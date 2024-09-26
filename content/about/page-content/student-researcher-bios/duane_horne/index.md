@@ -1,9 +1,9 @@
 ---
 childof: student-researcher-bios
-category: intern
+category: student
 abbrev: dhorne
 title: Duane Horne
-position: Summer Intern
+position: Intern, Rutgers University
 image: dhorne_full.jpg
 thumb: dhorne_thumb.jpg
 weight: 110
