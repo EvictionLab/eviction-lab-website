@@ -56,6 +56,9 @@ Elab.StateMap = (function (Elab) {
     var hovered;
     // if states with 0 value should use pattern
     var zeroPattern;
+    // if states are categorical rather than numerical, this is the
+    // array of strings that will be selected from with the value
+    var binValues;
     var legendGradient;
     var legendColorScale;
     var legendAxis;
@@ -73,7 +76,12 @@ Elab.StateMap = (function (Elab) {
         window.innerWidth - rect.width / 2 - 12,
         Math.max(12 + rect.width / 2, e.clientX)
       );
-      var valueString = valueTemplate.replace("{{value}}", valueFormat(data.value))
+
+      binValues = dataOptions.binValues && dataOptions.binValues.split(";");
+
+      var valueString = binValues
+        ? binValues[data.value]
+        : valueTemplate.replace("{{value}}", valueFormat(data.value));
       var html = "<span>" + data.name + "</span><span>" + valueString + "</span>"
       tooltip
         .style("top", topOffset + "px")
