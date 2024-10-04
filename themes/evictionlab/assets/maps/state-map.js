@@ -21,9 +21,9 @@ Elab.StateMap = (function (Elab) {
     return "_" + Math.random().toString(36).substr(2, 9);
   }
       
+  var zeroPatternId = "svg-map__pattern-zero";
 
   function StateMap(root, data, dataOptions) {
-
     // stores width of the root DOM element (.svg-map__body)
     var containerWidth;
     // svg selection for map
@@ -65,8 +65,8 @@ Elab.StateMap = (function (Elab) {
 
     /**
      * Displays the tooltip for the given data
-     * @param {*} e 
-     * @param {*} data 
+     * @param {*} e
+     * @param {*} data
      */
     function showTooltip(e, data) {
       tooltip.classed("svg-map__tooltip--show", true);
@@ -74,7 +74,7 @@ Elab.StateMap = (function (Elab) {
       var rect = tooltip.node().getBoundingClientRect();
       var xPos = Math.min(
         window.innerWidth - rect.width / 2 - 12,
-        Math.max(12 + rect.width / 2, e.clientX)
+        Math.max(12 + rect.width / 2, e.clientX),
       );
 
       binValues = dataOptions.binValues && dataOptions.binValues.split(";");
@@ -82,31 +82,28 @@ Elab.StateMap = (function (Elab) {
       var valueString = binValues
         ? binValues[data.value]
         : valueTemplate.replace("{{value}}", valueFormat(data.value));
-      var html = "<span>" + data.name + "</span><span>" + valueString + "</span>"
+      var html = "<span>" + data.name + "</span><span>" + valueString + "</span>";
       tooltip
         .style("top", topOffset + "px")
         .style("left", xPos + "px")
         .html(html);
-    };
+    }
 
     /** Hides the tooltip */
     function hideTooltip() {
       tooltip.classed("svg-map__tooltip--show", false);
-    };
+    }
 
     function renderLegend() {
-      window.innerWidth > 768 ? renderVerticalLegend() : renderHorizontalLegend()
+      window.innerWidth > 768 ? renderVerticalLegend() : renderHorizontalLegend();
     }
 
     /** Renders the legend */
     function renderVerticalLegend() {
       var w = 50,
-          h = 200;
+        h = 200;
 
-      legend
-        .attr("width", w)
-        .attr("height", h)
-        .classed("svg-map__legend--horizontal", false)
+      legend.attr("width", w).attr("height", h).classed("svg-map__legend--horizontal", false);
 
       // create color gradient
       legendGradient
@@ -116,12 +113,12 @@ Elab.StateMap = (function (Elab) {
         .attr("y2", "100%")
         .attr("spreadMethod", "pad");
 
-      legendGradient.html('')
+      legendGradient.html("");
 
       var stepSize = 100 / (colors.length - 1);
       for (var i = 0; i < colors.length; i++) {
-        var percent = (stepSize * i);
-        var position = maxVal - ((i / (colors.length - 1)) * (maxVal - minVal))
+        var percent = stepSize * i;
+        var position = maxVal - (i / (colors.length - 1)) * (maxVal - minVal);
         legendGradient
           .append("stop")
           .attr("offset", percent + "%")
@@ -137,25 +134,24 @@ Elab.StateMap = (function (Elab) {
         .attr("transform", "translate(0,10)");
 
       // render axis
-      legendAxis.html('')
-      var y = d3.scaleLinear().range([h-20, 0]).domain([minVal, maxVal]).nice();
+      legendAxis.html("");
+      var y = d3
+        .scaleLinear()
+        .range([h - 20, 0])
+        .domain([minVal, maxVal])
+        .nice();
       var yAxis = d3.axisRight(y).ticks(ticks);
-      legendAxis
-        .attr("transform", "translate(16,10)")
-        .call(yAxis);
+      legendAxis.attr("transform", "translate(16,10)").call(yAxis);
     }
 
     /** Renders the legend */
     function renderHorizontalLegend() {
       var w = 300,
-          h = 50;
+        h = 50;
 
-      legend
-        .attr("width", w)
-        .attr("height", h)
-        .classed("svg-map__legend--horizontal", true)
+      legend.attr("width", w).attr("height", h).classed("svg-map__legend--horizontal", true);
 
-      legendGradient.html('')
+      legendGradient.html("");
 
       // create color gradient
       legendGradient
@@ -167,8 +163,8 @@ Elab.StateMap = (function (Elab) {
 
       var stepSize = 100 / (colors.length - 1);
       for (var i = 0; i < colors.length; i++) {
-        var percent = (stepSize * i);
-        var position = ((i / (colors.length - 1)) * (maxVal - minVal))
+        var percent = stepSize * i;
+        var position = (i / (colors.length - 1)) * (maxVal - minVal);
         legendGradient
           .append("stop")
           .attr("offset", percent + "%")
@@ -184,12 +180,14 @@ Elab.StateMap = (function (Elab) {
         .attr("transform", "translate(0,10)");
 
       // render axis
-      legendAxis.html('')
-      var x = d3.scaleLinear().range([0, w-32]).domain([minVal, maxVal]).nice();
+      legendAxis.html("");
+      var x = d3
+        .scaleLinear()
+        .range([0, w - 32])
+        .domain([minVal, maxVal])
+        .nice();
       var xAxis = d3.axisBottom(x).ticks(ticks);
-      legendAxis
-        .attr("transform", "translate(16,26)")
-        .call(xAxis);
+      legendAxis.attr("transform", "translate(16,26)").call(xAxis);
     }
 
     function renderOutline() {
@@ -200,26 +198,34 @@ Elab.StateMap = (function (Elab) {
         .attr("class", "svg-map__shape--hovered")
         .merge(hoverData)
         .attr("d", path)
-        .style("pointer-events", "none")
-      hoverData.exit().remove()
+        .style("pointer-events", "none");
+      hoverData.exit().remove();
     }
 
     function renderZeroPattern() {
-      svg
-        .append('defs')
-        .append('pattern')
-          .attr('id', 'svg-map__pattern-zero')
-          .attr('patternUnits', 'userSpaceOnUse')
-          .attr('width', 4)
-          .attr('height', 4)
-        .append('path')
-          .attr('d', 'M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2');
-    }
+      const pattern = svg.select("#" + zeroPatternId);
+      const patternPath = ["d", "M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2"];
 
+      if (!pattern.empty()) {
+        // If pattern has already been created, just add the path
+        pattern.append("path").attr(...patternPath);
+        return;
+      }
+
+      svg
+        .append("defs")
+        .append("pattern")
+        .attr("id", zeroPatternId)
+        .attr("patternUnits", "userSpaceOnUse")
+        .attr("width", 4)
+        .attr("height", 4)
+        .append("path")
+        .attr(...patternPath);
+    }
 
     function render() {
       var rect = root.getBoundingClientRect();
-      containerWidth = rect.width
+      containerWidth = rect.width;
       var width = 720;
       var height = 480;
       var scaleFactor = containerWidth / width;
@@ -250,26 +256,23 @@ Elab.StateMap = (function (Elab) {
         .merge(svgData)
         .attr("d", path)
         .style("fill", function (d) {
-          if(zeroPattern && !d.properties.value)
-            return "url(#svg-map__pattern-zero)";
+          if (zeroPattern && !d.properties.value) return "url(#" + zeroPatternId + ")";
           return ramp(d.properties.value);
         })
-        .on("mousemove", function(d) {
-          hovered = d
-          showTooltip(d3.event, d.properties)
-          renderOutline()
-
+        .on("mousemove", function (d) {
+          hovered = d;
+          showTooltip(d3.event, d.properties);
+          renderOutline();
         })
-        .on("mouseout", function(d) {
-          hovered = null
-          hideTooltip()
-          renderOutline()
-
+        .on("mouseout", function (d) {
+          hovered = null;
+          hideTooltip();
+          renderOutline();
         });
 
-      if(zeroPattern) renderZeroPattern();
+      if (zeroPattern) renderZeroPattern();
 
-      svgData.exit().remove()
+      svgData.exit().remove();
     }
 
     function create() {
@@ -277,34 +280,37 @@ Elab.StateMap = (function (Elab) {
 
       // configure based on data options
       var shapes = dataOptions.shapesUrl || "/uploads/us-states.json";
-      colors = (dataOptions.colors && dataOptions.colors.split(";")) || [
-        "#f9f9f9",
-        "#bc2a66",
-      ];
+      colors = (dataOptions.colors && dataOptions.colors.split(";")) || ["#f9f9f9", "#bc2a66"];
       minVal = dataOptions.minVal && parseFloat(dataOptions.minVal);
       maxVal = dataOptions.maxVal && parseFloat(dataOptions.maxVal);
-      ticks = (dataOptions.ticks && parseInt(dataOptions.ticks)) || 5
-      valueFormat = (dataOptions.valueFormat && d3.format(dataOptions.valueFormat)) || d3.format(".1f")
-      valueTemplate = dataOptions.valueTemplate || "{{value}}"
+      ticks = (dataOptions.ticks && parseInt(dataOptions.ticks)) || 5;
+      valueFormat =
+        (dataOptions.valueFormat && d3.format(dataOptions.valueFormat)) || d3.format(".1f");
+      valueTemplate = dataOptions.valueTemplate || "{{value}}";
 
       // create elements and selections
-      svg = d3.select(root).append("svg").attr("class", "svg-map__map svg-map__map--" + dataOptions.id);
-      tooltip = d3.select(root).append("div").attr("class", "svg-map__tooltip")
+      svg = d3
+        .select(root)
+        .append("svg")
+        .attr("class", "svg-map__map svg-map__map--" + dataOptions.id);
+      tooltip = d3.select(root).append("div").attr("class", "svg-map__tooltip");
       legend = d3.select(root).append("svg").attr("class", "svg-map__legend");
-      legendGradient = legend.append("defs").append("svg:linearGradient").attr("id", gradientId)
-      legendColorScale = legend.append("rect").style("fill", "url(#" + gradientId + ")")
-      legendAxis = legend.append("g")
+      legendGradient = legend.append("defs").append("svg:linearGradient").attr("id", gradientId);
+      legendColorScale = legend.append("rect").style("fill", "url(#" + gradientId + ")");
+      legendAxis = legend.append("g");
 
       // set min / max vals based on data
       if (!minVal || !maxVal) {
-        var extent = d3.extent(data, function (d) { return parseFloat(d.value) })
-        minVal = minVal || extent[0]
-        maxVal = maxVal || extent[1]
+        var extent = d3.extent(data, function (d) {
+          return parseFloat(d.value);
+        });
+        minVal = minVal || extent[0];
+        maxVal = maxVal || extent[1];
       }
 
       // calculate domain for color scale, based on number of colors
-      var steps = d3.range(minVal,  maxVal, (maxVal - minVal) / (colors.length-1))
-      steps[colors.length - 1] = maxVal
+      var steps = d3.range(minVal, maxVal, (maxVal - minVal) / (colors.length - 1));
+      steps[colors.length - 1] = maxVal;
 
       // create color ramp
       ramp = d3.scaleLinear().domain(steps).range(colors);
@@ -323,20 +329,19 @@ Elab.StateMap = (function (Elab) {
             }
           }
         }
-        features = json.features
+        features = json.features;
 
         render();
-        renderLegend()
+        renderLegend();
 
-        window.addEventListener('resize', function () {
+        window.addEventListener("resize", function () {
           render();
-          renderLegend()
-        })
+          renderLegend();
+        });
       });
     }
 
-    create()
-
+    create();
   }
 
   /**
