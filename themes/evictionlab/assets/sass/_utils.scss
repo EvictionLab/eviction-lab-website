@@ -31,6 +31,30 @@
     }
 }
 
+// Fade in on scroll
+
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in-element.delay1 {
+  transition-delay: .1s;
+}
+.fade-in-element.delay2 {
+  transition-delay: .2s;
+}
+.fade-in-element.nomotion {
+  transform: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-element.fade-in {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 .center-page-wrapper {
   width: 100%;
   display: block;

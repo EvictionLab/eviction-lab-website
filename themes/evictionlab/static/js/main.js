@@ -67,6 +67,31 @@ function setupScrollEnd() {
   }, false);
 } 
 
+// Fade-in on scroll for selected div elements
+
+
+const fadeElements = document.querySelectorAll(".fade-in-element");
+
+function handleScroll() {
+  const windowCenter = window.innerHeight / 1.1;
+
+  fadeElements.forEach((element) => {
+    if (!element.classList.contains("fade-in")) {
+      const { top, height } = element.getBoundingClientRect();
+      const elementCenter = top + height / 1.1;
+
+      if (windowCenter + height / 1.1 >= elementCenter) {
+        element.classList.add("fade-in");
+      }
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+handleScroll(); // Initial fade-in on page load
+
+
+  // Carousel
 
 $('.carousel .carousel-item').each(function(){
   var next = $(this).next();
@@ -573,21 +598,31 @@ if (!count3.error) {
 
 /**
  * Check for banner cookie
+ * For now always show the banner
  */
-$(function() {
+// $(function () {
+//   const $Superheader = $(".superheader");
+//   const bannerText = $Superheader.text();
+//   // console.log("current banner: ", bannerText);
+//   if (localStorage && localStorage.getItem("el-banner") == bannerText) {
+//     // console.log("header already dismissed");
+//   } else {
+//     // transition header from off-screen
+//     $Superheader.css("margin-top", `-${$Superheader.height()}px`);
+//     setTimeout(() => {
+//       $Superheader.removeClass("inactive");
+//       $Superheader.css("margin-top", 0);
+//     }, 200);
+//   }
 
-  if(localStorage && localStorage.getItem("el-banner") == $(".superheader").html()) {
-    $(".superheader").addClass("inactive");
-  }else {
-    console.log($(".superheader").html())
-  }
-});
+//   $Superheader.find(".close").click(function () {
+//     // transition header off-screen before removing
+//     $Superheader.css("margin-top", `-${$Superheader.height()}px`);
+//     setTimeout(() => $Superheader.addClass("inactive"), 200);
 
-$(".superheader .close").click(function () {
-  $(".superheader").addClass("inactive");
-
-  if(localStorage) {
-    localStorage.setItem("el-banner", $(".superheader").html())
-  }
-});
+//     if (localStorage) {
+//       localStorage.setItem("el-banner", bannerText);
+//     }
+//   });
+// });
 

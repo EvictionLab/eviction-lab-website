@@ -89,27 +89,10 @@
 
     #home-hero {
         height: 54vh;
-        background-position-x: 56%;
         top:-56px;
         margin-bottom: -56px;
-        background-size: 213%;
-        @include media-breakpoint-up(md) {
-            height: 640px;
-            background-position-y: 31%;
-            top: -160px;
-            margin-bottom: -160px;
-            background-size: cover;
-        }
-        @include media-breakpoint-up(xxl) {
-            height: 780px;
-        }
-        @include media-breakpoint-up(x4l) {
-            height: 780px;
-        }
-        background-color: #11152F;
-        background-image: url('/img/hp-hero-2021-2560px.jpg');
-        background-repeat: no-repeat;
         position: relative;
+        overflow: hidden;
         h1 {
             color: #fff;
         }
@@ -119,6 +102,33 @@
                 font-size: 1.8rem;
             }
         }
+        @include media-breakpoint-up(md) {
+            height: 75vh;
+            max-height: 750px;
+            top: -160px;
+            margin-bottom: -160px;
+        }
+        @include media-breakpoint-up(xxl) {
+           // height: 780px;
+            height: 83vh;
+            max-height: 860px;
+        }
+    }
+    .home-hero-image {
+        background-color: #11152f;
+        background-image: url('/img/hp-hero-2021-2560px.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-position-x: 56%;
+        @include media-breakpoint-up(md) {
+            background-position-y: 31%;
+        }
+    }
+    .home-hero-image.mobile {
+        background-size: 213%;
     }
     #home-hero-sub {
         h1 {
@@ -155,6 +165,51 @@
            background-size: 50%;
            background-position: 95% 60%;
        }
+    }
+    .splash-header,
+    .splash-body {
+        position: relative;
+        animation: fadeInText 1.25s forwards 0.5s;
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    
+    .splash-body {
+        animation-delay: 0.75s;
+    }
+    @media (min-width: 768px) {
+        .splash-header,
+        .splash-body {
+            position: relative;
+            animation: fadeInText 1s forwards 0s;
+            opacity: 0;
+            transform: translateY(4px);
+        }
+        
+        .splash-body {
+            animation-delay: 0.25s;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .splash-header,
+        .splash-body {
+            position: relative;
+            animation: fadeInText 1s forwards .25s;
+            opacity: 0;
+            transform: translateY(4px);
+        }
+        
+        .splash-body {
+            animation-delay: 0.75s;
+        }
+    }
+
+    @keyframes fadeInText {
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 
 // GENERAL TYPOGRPAPHY -------------------
@@ -300,7 +355,7 @@
 
     }
 
-    // Featured updates
+    // Featured updates ---------------------------------------
 
     .ets-homepage {
         p {
@@ -351,40 +406,21 @@
         }
     }
 
+    #feature-map-container {
+        display: flex;
+        flex-direction: column;
+    }
     #feature-map {
         background-color: #EAEFF3;
-        background-image: url(/images/assets/graphics/map-circles2.svg);
-        background-repeat: no-repeat;
-        background-size: 80%;
-        background-position: 50% 1rem;
-        transition: background-color .3s ease;
-        @include media-breakpoint-up(smm) {
-            background-size: 88%;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        svg {
+            max-height: 365px;
+            padding: 3.6rem 2.4rem 2.4rem 3.6rem;
         }
-        @include media-breakpoint-up(mm) {
-            background-size: 46%;
-        }
-        @include media-breakpoint-up(md) {
-            background-size: 70%;
-        }
-        @include media-breakpoint-up(lg) {
-            background-position: 50% center;
-            background-size: 90%;
-            height: 87%;
-        }
-        @include media-breakpoint-up(xl) {
-            background-position: 68% center;
-            background-size: 88%;
-        }
-        @include media-breakpoint-up(xxxl) {
-            background-size: 78%;
-        }
-            &:hover {
-                background-color: #e6ecf2;
-                a.sublink {
-                    color: $color1;
-                }  
-            } 
     }
     #feature-rankings {
         background-color: #F4E9E7;
@@ -414,43 +450,7 @@
         @include media-breakpoint-up(xxxl) {
             background-size: 90%;
         }
-    }
-    .main-feature {
-        padding: 19rem 0 3.2rem;
-        @include media-breakpoint-up(mm) {
-            padding: 20rem 0 3.2rem;
-        }
-        @include media-breakpoint-up(md) {
-            padding: 22rem 0 3.2rem;
-        }
-        @include media-breakpoint-up(lg) {
-            padding: 30rem 0 3.2rem;
-        }
-        @include media-breakpoint-up(xl) {
-            padding: 32rem 0 3.2rem;
-        }
-        @include media-breakpoint-up(xxxl) {
-            padding: 33rem 0 3.2rem;
-        }
-        a.sublink {
-            letter-spacing: 0.01rem;
-            i.fa.fa-chevron-right {
-                position: relative;
-                top: 2px;
-                transition: transform .3s ease;
-                &:before {
-                    font-size: 1.6rem;
-                }
-            }
-        }
-        &:hover {
-            a.sublink {
-                i.fa.fa-chevron-right {
-                    transform: translateX(4px);
-                }
-            }
-        }   
-    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
     #covid-gateway.alt-bg {
         @include media-breakpoint-down(md) {
             background-color: #fff;

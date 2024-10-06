@@ -1,6 +1,6 @@
 ---
-childof: alumni-bios
-category: alumni-student
+childof: student-researcher-bios
+category: student
 abbrev: ltraum
 title: Lauren Traum
 position: Summer Intern
