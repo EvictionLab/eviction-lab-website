@@ -41,11 +41,11 @@ download
 
 “I think it's kind of telling that we have entire infrastructures related to tracking the things that are really important to U.S. policymakers, and… [to] some extent it feels like housing has kind of slipped through the cracks,” said Sabiha Zainulbhai, Deputy Director of Domestic Housing for New America's Future of Land and Housing program.
 
-{{< pullquote "“It's kind of telling that we have entire infrastructures related to tracking the things that are really important to U.S. policymakers, and… [to] some extent it feels like housing has kind of slipped through the cracks.”" >}}
+{{< pullquote "“It's kind of telling that we have entire infrastructures related to tracking the things that are really important to U.S. policymakers... it feels like housing has kind of slipped through the cracks.”" >}}
 
 Since the federal government doesn’t track evictions and there is no national mandate for courts to collect it, how well do states track this issue? To answer this question, we decided to make a baseline request for eviction data in all 50 states. Spoiler: In many places, it wasn’t easy to find these numbers.
 
-Although there are national efforts to collect these data from organizations like the {{< smartlink "Legal Services Corporation" "https://civilcourtdata.lsc.gov/data/eviction" >}}, the {{< smartlink "Court Statistics Project" "https://www.courtstatistics.org/" >}}, {{< smartlink "New America" "https://www.newamerica.org/future-land-housing/eviction-and-foreclosure-data/" >}}, and the {{< smartlink "Eviction Lab" "https://evictionlab.org/" >}}, as well as local initiatives, through this exercise we realized that actual numbers on what is happening in real-time, state by state, and year by year, are difficult to pinpoint.
+Although there are national efforts to collect these data from organizations like the {{< smartlink "Legal Services Corporation" "https://civilcourtdata.lsc.gov/data/eviction" >}}, the {{< smartlink "Court Statistics Project" "https://www.courtstatistics.org/" >}}, {{< smartlink "New America" "https://www.newamerica.org/future-land-housing/reports/why-is-eviction-data-bad/" >}}, and the {{< smartlink "Eviction Lab" "https://evictionlab.org/" >}}, as well as local initiatives, through this exercise we realized that actual numbers on what is happening in real-time, state by state, and year by year, are difficult to pinpoint.
 
 <br/>
 
