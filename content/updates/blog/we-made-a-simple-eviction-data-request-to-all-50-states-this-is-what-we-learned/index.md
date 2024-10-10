@@ -62,6 +62,7 @@ We set out to ask each state the same question about eviction records: <strong>h
   title="Availability of 2018-2021 State-Level Eviction Data"
   idColumn="fips"
   valueColumn="score1"
+  zeroPattern="true"
   minVal="0"
   maxVal="2"
   valueTemplate=""
@@ -78,16 +79,14 @@ We set out to ask each state the same question about eviction records: <strong>h
   <div class="legend-item__color"></div>
   <div class="legend-item__label">Data found after request</div>
   </div>
-  <div class="legend-item legend-item--3">
+  <div class="legend-item legend-item--non-zero">
   <div class="legend-item__color"></div>
   <div class="legend-item__label">Data not available<sup>1,2</sup></div>
   </div>
 </div>
 
 
-We found data for 41 states either via requests or through the state’s judicial branch website. Nearly a third of the states had this information available on dashboards or annual reports, though in some it was easier to track down than in others. This was the case in large states like Ohio, but also in less populous states like New Hampshire. 
-
-<a class="btn buttonlink" href="./statewide-eviction-data.csv" target="_blank" rel="noreferrer noopener" style="width: unset; max-width: 324px">Download the Data</a>
+We found data for 41 states either via requests or through the state’s judicial branch website (available for download <a href="./statewide-eviction-data.csv" target="_blank" rel="noreferrer noopener">here</a>). Nearly a third of the states had this information available on dashboards or annual reports, though in some it was easier to track down than in others. This was the case in large states like Ohio, but also in less populous states like New Hampshire. 
 
 Jeanette Bilodeau is a business analyst for the circuit courts in New Hampshire who's been in charge of creating eviction filing reports for the state since late 2018. 
 
