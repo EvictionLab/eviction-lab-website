@@ -36,7 +36,6 @@ scripts:
     height: 0.75rem;
   }
 </style>
-download
 <span class="dropcap red">I</span>n the United States, we track monthly {{< smartlink "unemployment" "https://www.dol.gov/general/topic/statistics/employment" >}} and {{< smartlink "inflation" "https://www.bls.gov/cpi/home.htm" >}} trends. Every year, we get updates on {{< smartlink "population growth" "https://www.census.gov/" >}} and {{< smartlink "educational outcomes" "https://nces.ed.gov/" >}}. Why? Because these metrics give us a sense of whether our country is on the right track or we need to sound an alarm. Yet when it comes to housing—particularly rental housing—we often lack the numbers we need to track stability. Eviction figures are one example.  
 
 “I think it's kind of telling that we have entire infrastructures related to tracking the things that are really important to U.S. policymakers, and… [to] some extent it feels like housing has kind of slipped through the cracks,” said Sabiha Zainulbhai, Deputy Director of Domestic Housing for New America's Future of Land and Housing program.
