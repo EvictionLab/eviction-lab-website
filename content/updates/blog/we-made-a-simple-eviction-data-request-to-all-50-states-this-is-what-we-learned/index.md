@@ -14,9 +14,9 @@ postauthortitle: The Eviction Lab
 authorpic: /about/page-content/research-team-bios/camila-vallejo/cvallejo_thumb.jpg
 description: "The federal government doesn’t track evictions and there is no national mandate for courts to collect it, so we made a request for eviction data in all 50 states. Spoiler: In many places, it wasn’t easy to find these numbers."
 listSummary: "The federal government doesn’t track evictions and there is no national mandate for courts to collect it, so we made a request for eviction data in all 50 states. Spoiler: In many places, it wasn’t easy to find these numbers."
-twImage: map.jpg
-image: map.jpg
-fbImage: map.jpg
+twImage: courtroom.jpg
+image: courtroom.jpg
+fbImage: courtroom.jpg
 scripts:
   - charts
   - maps
