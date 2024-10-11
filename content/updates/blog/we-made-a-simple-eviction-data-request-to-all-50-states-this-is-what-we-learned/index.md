@@ -88,8 +88,7 @@ We set out to ask each state the same question about eviction records: <strong>h
 </div>
 
 
-We found data for 41 states either via requests or through the state’s judicial branch website (available for download <a href="./statewide-eviction-data.csv" target="_blank" rel="noreferrer noopener">here</a>). Nearly a third of the states had this information available on dashboards or annual reports, though in some it was easier to track down than in others. This was the case in large states like Ohio, but also in less populous states like New Hampshire. 
-
+<strong>We found data for 41 states either via requests or through the state’s judicial branch website (available for download <a href="./statewide-eviction-data.csv" target="_blank" rel="noreferrer noopener">here</a>).</strong> Nearly a third of the states had this information available on dashboards or annual reports, though in some it was easier to track down than in others. This was the case in large states like Ohio, but also in less populous states like New Hampshire. 
 Jeanette Bilodeau is a business analyst for the circuit courts in New Hampshire who's been in charge of creating eviction filing reports for the state since late 2018. 
 
 While the will from the judicial branch was key, she said it wouldn’t have been possible without the existing foundation. 
