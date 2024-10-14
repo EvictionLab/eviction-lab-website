@@ -1,5 +1,8 @@
 ---
-draft: true
+draft: false
+scripts:
+  - charts
+  - maps
 childof: blog
 url: we-made-a-simple-eviction-data-request-to-all-50-states-this-is-what-we-learned
 contenttype: updates
@@ -7,19 +10,23 @@ collection: true
 contentcat: blog
 featured: true
 in_index: true
-title: "We made a simple eviction data request to all 50 states. This is what we learned"
+title: We made a simple eviction data request to all 50 states. This is what we
+  learned
 date: 2024-10-11T18:49:04.271Z
 postauthorname: Camila Vallejo
 postauthortitle: The Eviction Lab
 authorpic: /about/page-content/research-team-bios/camila-vallejo/cvallejo_thumb.jpg
-description: "The federal government doesn’t track evictions and there is no national mandate for courts to collect it, so we made a request for eviction data in all 50 states. Spoiler: In many places, it wasn’t easy to find these numbers."
-listSummary: "The federal government doesn’t track evictions and there is no national mandate for courts to collect it, so we made a request for eviction data in all 50 states. Spoiler: In many places, it wasn’t easy to find these numbers."
+description: "The federal government doesn’t track evictions and there is no
+  national mandate for courts to collect it, so we made a request for eviction
+  data in all 50 states. Spoiler: In many places, it wasn’t easy to find these
+  numbers."
+listSummary: "The federal government doesn’t track evictions and there is no
+  national mandate for courts to collect it, so we made a request for eviction
+  data in all 50 states. Spoiler: In many places, it wasn’t easy to find these
+  numbers."
 twImage: courtroom.jpg
 image: courtroom.jpg
 fbImage: courtroom.jpg
-scripts:
-  - charts
-  - maps
 ---
 <style>
   .svg-map__legend {
