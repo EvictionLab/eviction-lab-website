@@ -35,6 +35,12 @@ When making content updates, use the CMS or use the following flow:
 - wait for the automated deploy (daily at 3AM/3PM ET) or manually merge `staging` into `production`
 - for hotfixes, cherry pick the commit containing the hotfix into the `development` branch.
 
+### Data
+
+The following data files are consumed by the [eviction-lab](https://github.com/Hyperobjekt/eviction-lab/tree/development/apps/el-site) repo to populate data in the /eviction-tracking page (rendered by its el-site app): site_metadata.csv, filing_data_by_site.csv, main_landing_page_data.csv, and main_landing_page_demographics.csv.
+
+In order to keep /eviction-tracking up to date when data is updated here, this repo has [Rebuild Landing Page actions](https://github.com/EvictionLab/eviction-lab-website/actions) that trigger rebuilds of the development, staging, and production sites of the eviction-lab repo when a commit is pushed to the corresponding branch of this repo.
+
 ## Layouts
 
 The template is based on small, content-agnostic partials that can be mixed and matched. The pre-built pages showcase just a few of the possible combinations. Refer to the `site/layouts/partials` folder for all available partials.
