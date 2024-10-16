@@ -1,0 +1,51 @@
+name,fips,score1
+Alabama,1,0
+Alaska,2,2
+Arizona,4,2
+Arkansas,5,1
+California,6,1
+Colorado,8,1
+Connecticut,9,1
+Delaware,10,1
+Florida,12,1
+Georgia,13,1
+Hawaii,15,1
+Idaho,16,1
+Illinois,17,0
+Indiana,18,0
+Iowa,19,1
+Kansas,20,1
+Kentucky,21,2
+Louisiana,22,0
+Maine,23,2
+Maryland,24,1
+Massachusetts,25,2
+Michigan,26,1
+Minnesota,27,2
+Mississippi,28,0
+Missouri,29,2
+Montana,30,0
+Nebraska,31,1
+Nevada,32,2
+New Hampshire,33,2
+New Jersey,34,1
+New Mexico,35,1
+New York,36,1
+North Carolina,37,1
+North Dakota,38,1
+Ohio,39,2
+Oklahoma,40,0
+Oregon,41,2
+Pennsylvania,42,1
+Rhode Island,44,1
+South Carolina,45,0
+South Dakota,46,1
+Tennessee,47,0
+Texas,48,1
+Utah,49,2
+Vermont,50,2
+Virginia,51,1
+Washington,53,1
+West Virginia,54,1
+Wisconsin,55,1
+Wyoming,56,1

@@ -95,6 +95,35 @@ colors="#dfefed;#7bcac1;#2c897f"
 caption="Colors represent state eviction policy scores from our <a href='#'>COVID-19 housing policy scorecard</a>"
 %}}
 
+{{% state-map
+  id="statemap2"
+  data="/uploads/example_binned_map.csv"
+  title="50 state choropleth map with bins"
+  idColumn="fips"
+  valueColumn="score1"
+  zeroPattern="true"
+  minVal="0"
+  maxVal="2"
+  valueTemplate=""
+  valueFormat=".2f"
+  binValues="Data not available;Data found after request;Data on website"
+  colors="#94aabd;#434878;#2c897f"
+%}}
+<div class="legend mb-3">
+  <div class="legend-item legend-item--2">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">Data on website</div>
+  </div>
+  <div class="legend-item legend-item--1">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">Data found after request</div>
+  </div>
+  <div class="legend-item legend-item--non-zero">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">Data not available<sup>1,2</sup></div>
+  </div>
+</div>
+
 {{% histogram
   id="hist1"
   data="/uploads/hisd_data.csv"

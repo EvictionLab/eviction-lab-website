@@ -95,6 +95,8 @@ Elab.StateMap = (function (Elab) {
     }
 
     function renderLegend() {
+      // spectrum legend doesn't apply to binned value maps
+      if (!!dataOptions.binValues) return null;
       window.innerWidth > 768 ? renderVerticalLegend() : renderHorizontalLegend();
     }
 
