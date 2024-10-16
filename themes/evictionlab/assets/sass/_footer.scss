@@ -304,10 +304,14 @@ footer {
     margin-right: grid(1);
     &:last-child { margin-right: 0; }
   }
-  img.linkedin-icon {
+  img.custom-social-icon {
     width: 16px;
     height: 16px;
     margin-top: -2px;
+  }
+  img.custom-social-icon:hover {
+    // simpulate color change of the fa icons to #B2B5B7
+    opacity: 0.64;
   }
   a.btn.btn-border {
     position:relative;
