@@ -7,7 +7,7 @@ position: Graduate Research Assistant
 date: 2017-11-26T03:46:25.603Z
 image: mfineman_full.jpg
 thumb: mfineman_thumb.jpg
-weight: 9
+weight: 10
 ---
 Max is a doctoral student in Sociology and Social Policy at Princeton. Their current research projects examine the causes of rising corporate ownership of residential property, the racial structure of financial bubbles, and exploitation in housing markets.
 
