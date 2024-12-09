@@ -1,5 +1,5 @@
 group,month,month_last_day,month_filings,avg_filings,month_diff,month_filings_imputed,baseline_share
-White,04/2023,,0,4974,0,,0.503362367851575
-Black,04/2023,,0,1567,0,,0.340014116515548
+White,04/2023,,0,4974,0,,0.504973129361326
+Black,04/2023,,0,1567,0,,0.333780552703179
 Other,04/2023,,0,3882.66666666667,0,,
-Female,04/2023,,,,,,
+Female,04/2023,,,,,,0.519428139292016
