@@ -1,13 +1,25 @@
 ---
-collection: true
-geographies: counties
 draft: false
-title: Virginia | Eviction Tracking System
 h1: Virginia
-rentersSite: Virginia
 slug: virginia
-date: 2022-12-13T14:46:49.422Z
+date: 2024-12-11T14:46:49.422Z
+rentersSite: Virginia
+title: Virginia | Eviction Tracking System
+geographies: counties
+collection: true
 ---
+<div class="intro">
+
+## Currently Unavailable
+
+<br />
+<p>
+Filings information for VA is currently unavailable while we fix an error in our data collection process.
+</p>
+</div>
+
+<!-- 
+
 {{< report_intro site_id="51" data="/uploads/states_table.csv" >}}
 
 Virginia implemented a state-wide eviction moratorium between March 16, 2020 and June 28, 2020.  Further protections restricting the circumstances under which evictions could be filed were in place from August 10, 2020 to September 7, 2020, and then from January 1, 2021 to June 30, 2021. These were again renewed from August 10, 2021 to June 30, 2022. Eviction filings remained low in the state during these periods, but have increased since these protections were lifted.
@@ -18,6 +30,8 @@ Virginia implemented a state-wide eviction moratorium between March 16, 2020 and
 
 
 {{% report_chart id="avg" data="/uploads/virginia_barchart.csv" %}}
+
+
 
 
 
@@ -45,11 +59,15 @@ This plot shows monthly eviction filings in Virginia over the last year. Filings
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/virginia_shapes.json" data="/uploads/virginia_map.csv" %}}
+
+
 
 
 
@@ -63,4 +81,9 @@ Virginia is divided into 134 counties and jurisdictions. In 124<sup>1</sup> of t
 
 
 
+
+
 {{%/ report_map %}}
+
+
+!-->
