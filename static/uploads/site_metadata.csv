@@ -1,15 +1,15 @@
 site_id,display_name,slug,parent_state,lat,lng,disabled
-0,All Sites,,,,
-09,Connecticut,connecticut,,,
-10,Delaware,delaware,,,
-18,Indiana,indiana,,,
-27,Minnesota,minnesota,,,
-29,Missouri,missouri,,,
-35,New Mexico,new-mexico,,,
-42,Pennsylvania,pennsylvania,,,
-44,Rhode island,rhode-island,,,
-51,Virginia,virginia,,,
-55,Wisconsin,wisconsin,,,
+0,All Sites,,,,,
+09,Connecticut,connecticut,,,,
+10,Delaware,delaware,,,,
+18,Indiana,indiana,,,,
+27,Minnesota,minnesota,,,,true
+29,Missouri,missouri,,,,
+35,New Mexico,new-mexico,,,,
+42,Pennsylvania,pennsylvania,,,,
+44,Rhode island,rhode-island,,,,
+51,Virginia,virginia,,,,true
+55,Wisconsin,wisconsin,,,,
 35001,Albuquerque,albuquerque-nm,NM,35.0844,-106.6504
 48453,Austin,austin-tx,TX,30.2672,-97.7431
 25025,Boston,boston-ma,MA,42.3601,-71.0589,true
@@ -32,7 +32,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 47157,Memphis,memphis-tn,TN,35.1495,-90.0490
 12086,Miami,miami-fl,FL,25.7042,-80.2789
 55079,Milwaukee,milwaukee-wi,WI,43.0389,-87.9065
-27053,Minneapolis–Saint Paul,minneapolis-saint-paul-mn,MN,44.9778,-93.2650
+27053,Minneapolis–Saint Paul,minneapolis-saint-paul-mn,MN,44.9778,-93.2650,true
 47037,Nashville,nashville-tn,TN,36.1627,-86.7816
 22071,New Orleans,new-orleans-la,LA,29.9511,-90.0715
 36061,New York,new-york-ny,NY,40.7128,-74.0060
@@ -41,7 +41,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 04013,Phoenix,phoenix-az,AZ,33.4484,-112.0740
 42003,Pittsburgh,pittsburgh-pa,PA,40.4406,-79.9959
 44007,Providence,providence-ri,RI,41.8240,-71.4128
-51760,Richmond,richmond-va,VA,37.5407,-77.4360
+51760,Richmond,richmond-va,VA,37.5407,-77.4360,true
 18141,South Bend,south-bend-in,IN,41.6764,-86.2520
 29510,St Louis,st-louis-mo,MO,38.6270,-90.1994
 12103,Tampa,tampa-fl,FL,27.9506,-82.4572
