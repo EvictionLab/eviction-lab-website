@@ -2,13 +2,27 @@
 draft: false
 h1: Minneapolis–Saint Paul, Minnesota
 slug: minneapolis-saint-paul-mn
-date: 2024-08-30T04:00:00.000Z
+date: 2024-12-11T05:00:00.000Z
 rentersSite: Minneapolis-Saint Paul
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Minneapolis–Saint Paul, Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
+<div class="intro">
+
+## Currently Unavailable
+
+<br />
+<p>
+Filings information for Boston is currently unavailable while we fix an error in our data collection process.
+</p>
+</div>
+
+<!-- 
+
+
+
 {{< report_intro site_id="27053" data="/uploads/table.csv" >}}
 
 Eviction filings in Minneapolis-Saint Paul fell sharply in mid-March 2020 when a statewide moratorium on evictions was put in place on March 16. The moratorium was renewed each month until June 2021, after which the state [began phasing out protections](https://nlihc.org/resource/minnesotas-eviction-moratorium-ramp).
@@ -17,6 +31,8 @@ Eviction filings in Minneapolis-Saint Paul fell sharply in mid-March 2020 when a
 
 
 {{% report_chart id="avg" data="/uploads/minneapolis_barchart.csv" %}}
+
+
 
 
 
@@ -36,11 +52,15 @@ This plot shows monthly eviction filings in the Twin Cities over the last year. 
 
 
 
+
+
 {{%/ report_chart %}}
 
 
 
 {{% report_map shapes="/uploads/minneapolis_shapes.json" data="/uploads/minneapolis_map.csv" %}}
+
+
 
 # The geography of eviction filings
 
@@ -48,6 +68,8 @@ Hennepin and Ramsey Counties are divided into 472 census tracts. In each of thos
 
 1. Eviction filing data for Hennepin and Ramsey Counties were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+
+
 
 {{%/ report_map %}}
 
@@ -65,3 +87,7 @@ When you toggle the figure to see data relative to average, comparisons are bein
 1. Eviction filing data for Hennepin and Ramsey Counties were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). Historical averages cover the years 2012-2019.
 
 {{%/ report_chart %}}
+
+
+
+\--!>
