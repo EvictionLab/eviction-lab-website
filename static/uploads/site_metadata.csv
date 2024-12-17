@@ -3,7 +3,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 09,Connecticut,connecticut,,,,
 10,Delaware,delaware,,,,
 18,Indiana,indiana,,,,
-27,Minnesota,minnesota,,,,true
+27,Minnesota,minnesota,,,,
 29,Missouri,missouri,,,,
 35,New Mexico,new-mexico,,,,
 42,Pennsylvania,pennsylvania,,,,
@@ -32,7 +32,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 47157,Memphis,memphis-tn,TN,35.1495,-90.0490
 12086,Miami,miami-fl,FL,25.7042,-80.2789
 55079,Milwaukee,milwaukee-wi,WI,43.0389,-87.9065
-27053,Minneapolis–Saint Paul,minneapolis-saint-paul-mn,MN,44.9778,-93.2650,true
+27053,Minneapolis–Saint Paul,minneapolis-saint-paul-mn,MN,44.9778,-93.2650
 47037,Nashville,nashville-tn,TN,36.1627,-86.7816
 22071,New Orleans,new-orleans-la,LA,29.9511,-90.0715
 36061,New York,new-york-ny,NY,40.7128,-74.0060
