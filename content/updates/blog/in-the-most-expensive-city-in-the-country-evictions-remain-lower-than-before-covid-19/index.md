@@ -12,8 +12,8 @@ date: 2025-01-14T16:46:40.089Z
 postauthorname: Juan Pablo Garnham
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: Despite housing costs reaching record heights, eviction filings remain well below pre-pandemic averages.
-socialDescription: Despite housing costs reaching record heights, eviction filings remain well below pre-pandemic averages.
+description: Despite housing costs reaching record heights in New York City, eviction filings remain well below pre-pandemic averages.
+listSummary: Despite housing costs reaching record heights in New York City, eviction filings remain well below pre-pandemic averages.
 image: 'federal-moratorium-update-hero3.jpg'
 fbImage: 'federal-moratorium-update-hero3.jpg'
 twImage: 'federal-moratorium-update-hero3.jpg'
