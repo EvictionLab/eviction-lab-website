@@ -101,7 +101,7 @@ Still, this sort of analysis might miss sudden jumps in evictions during the gen
   </div>
   <div class="legend-item legend-item--2">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label eesti--bold">High-SES</div>
+  <div class="legend-item__label">High-SES</div>
   </div>
 </div>
 

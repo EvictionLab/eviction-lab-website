@@ -326,7 +326,7 @@ Poor households are at greatest risk of eviction. As household income increases,
   </div>
   <div class="legend-item legend-item--2">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label eesti--bold">White</div>
+  <div class="legend-item__label">White</div>
   </div>
 </div>
 <ul class="nav nav-pills nav--children-lines mb-3" id="pills-children-lines" role="tablist" data-toggle="pills">

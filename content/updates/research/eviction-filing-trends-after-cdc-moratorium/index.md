@@ -171,7 +171,7 @@ But looking at the numbers city-by-city shows concerning trends in many areas of
   </div>
   <div class="legend-item legend-item--0">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label eesti--bold">No Protections</div>
+  <div class="legend-item__label">No Protections</div>
   </div>
 </div>
 
