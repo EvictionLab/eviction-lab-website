@@ -14,24 +14,23 @@ postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Despite housing costs reaching record heights in New York City, eviction filings remain well below pre-pandemic averages.
 listSummary: Despite housing costs reaching record heights in New York City, eviction filings remain well below pre-pandemic averages.
-image: 'federal-moratorium-update-hero3.jpg'
-fbImage: 'federal-moratorium-update-hero3.jpg'
-twImage: 'federal-moratorium-update-hero3.jpg'
+image: 'bronx.jpeg'
+fbImage: 'bronx.jpeg'
+twImage: 'bronx.jpeg'
 url: /in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-before-covid-19
 scripts:
   - charts
 ---
-In the most expensive city in the country, evictions remain lower than before COVID-19
-
 New York City’s housing costs have reached record heights: {{< smartlink "according to Zillow" "https://www.zillow.com/research/data/" >}}, the typical market rent at the start of 2021 was $2,576. Average rent increased by more than $500 a year later and by early 2024 it almost reached $3,500. In the meantime, finding an apartment has become a huge challenge as the city experiences its lowest vacancy rate—the percentage of units that are empty—{{< smartlink "since 1968" "https://www.politico.com/news/2024/02/08/new-york-city-sees-tightest-rental-market-in-more-than-five-decades-00140564" >}}. But there’s one piece of good news for New Yorkers: eviction filings remain well below pre-pandemic averages.
 
 In places like {{< smartlink "Phoenix" "https://evictionlab.org/eviction-tracking/phoenix-az/" >}}, {{< smartlink "Las Vegas" "https://evictionlab.org/eviction-tracking/las-vegas-nv/" >}}, {{< smartlink "Minneapolis" "https://evictionlab.org/eviction-tracking/minneapolis-saint-paul-mn/" >}}, and {{< smartlink "Houston" "https://evictionlab.org/eviction-tracking/houston-tx/" >}}, landlords are filing more evictions than before COVID-19. Meanwhile, in {{< smartlink "New York City" "https://evictionlab.org/eviction-tracking/new-york-ny/" >}}, we’re seeing the opposite. In 2019, landlords filed almost 15,000 cases a month, but in 2023 they only filed 12,000 cases per month, according to data collected by the {{< smartlink "Housing Data Coalition" "https://www.housingdatanyc.org/" >}}. And, so far in 2024, we‘ve seen an even lower monthly average.
 
 Despite New York City’s sky high rents, the eviction filing rate in the city is now well below the national average in every borough except the Bronx. But even there, the rate has been cut in half.
+{{< pullquote "Despite New York City’s sky high rents, the eviction filing rate in the city is now well below the national average in every borough except the Bronx. But even there, the rate has been cut in half." >}}
 
 What is behind these improvements? According to legal aid attorneys, advocates, and other experts in New York, a series of reforms that were implemented before the pandemic have limited evictions, including retaliatory actions and efforts by landlords to push tenants out to hike up rents.
 
-These policies are not a silver bullet and do not consist in just one single law or requirement that changed things radically. On the contrary, New York’s ongoing change in filings is a lesson for other governments on the importance of proactively addressing tenant’s challenges, keeping long-term policies in place, and adapting over time to cover gaps.
+These policies are not a silver bullet and do not consist of just one single law or requirement that changed things radically. On the contrary, New York’s ongoing change in filings is a lesson for other governments on the importance of proactively addressing tenant’s challenges, keeping long-term policies in place, and adapting over time to cover gaps.
 
 ### How policy has changed the eviction landscape
 
@@ -60,11 +59,13 @@ These policies are not a silver bullet and do not consist in just one single law
   </div>
 </div>
 
-The first milestone in this journey was Right to Counsel—formally known as the {{< smartlink "Universal Access to Legal Services Law" "https://nycourts.gov/courts/nyc/housing/aboutUniversalAccess.shtml" >}}—which was signed into law in 2017 and made New York the first city in the country to guarantee legal representation for tenants in housing courts. The law was implemented first in three zip codes in each borough, expanding to more areas each year until 2022, when it was available for tenants across the city with an income at or below 200% of the Federal Poverty Guidelines.
+The first milestone in this journey was Right to Counsel—formally known as the {{< smartlink "Universal Access to Legal Services Law" "https://nycourts.gov/courts/nyc/housing/aboutUniversalAccess.shtml" >}}—which was signed into law in 2017 and made New York the first city in the country to guarantee legal representation for tenants in housing courts. The law was implemented first in three zip codes in each borough, expanding to more areas each year until 2022, when it was available for tenants across the city with an income at or below 200% of the federal poverty guidelines.
 
-According to a study conducted in 2013, before the new law, in New York {{< smartlink "just one percent of tenants had lawyers" "https://www.tandfonline.com/doi/full/10.1080/10511482.2020.1825009#d1e278" >}}, compared to 99% of landlords. But when the policy was implemented first in a handful of zip codes, it wasn’t long until {{< smartlink "representation increased in those areas" "https://www.tandfonline.com/doi/full/10.1080/10511482.2020.1825009?scroll=top&needAccess=true#d1e219" >}}. Researchers that evaluated the first years of the program noted that tenants experienced {{< smartlink "less sentences against them, smaller monetary damages and were less likely to be evicted" "https://www.sciencedirect.com/science/article/pii/S0047272723000269#ab005" >}}. Another paper described that, in areas where there was right to counsel, there were better {{< smartlink "birth outcomes in people in those communities" "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2825403" >}}. 
+According to a study conducted in 2013, before the new law, in New York {{< smartlink "just one percent of tenants had lawyers" "https://www.tandfonline.com/doi/full/10.1080/10511482.2020.1825009#d1e278" >}}, compared to 99% of landlords. But when the policy was implemented first in a handful of zip codes, it wasn’t long until {{< smartlink "representation increased in those areas" "https://www.tandfonline.com/doi/full/10.1080/10511482.2020.1825009?scroll=top&needAccess=true#d1e219" >}}. Researchers that evaluated the first years of the program noted that tenants experienced {{< smartlink "less sentences against them, smaller monetary damages and were less likely to be evicted" "https://www.sciencedirect.com/science/article/pii/S0047272723000269#ab005" >}}. Another paper described that, in areas where there was right to counsel, there were better {{< smartlink "birth outcomes for people in those communities" "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2825403" >}}. 
 
 Although the program has been increasing coverage every year (during the fiscal year 2023 it helped {{< smartlink "more than 43,000 households" "https://www.nyc.gov/assets/hra/downloads/pdf/services/civiljustice/OCJ_UA_Annual_Report_2023.pdf" >}}), several reports have also mentioned challenges, like the pace to increase coverage and staffing issues. A {{< smartlink "recent testimony by members of the New York City Bar Association" "https://www.nycbar.org/reports/testimony-on-the-right-to-counsel-program/" >}} mentioned that “there are not enough attorneys available to meet the need, with the result that thousands of tenants are going unrepresented.” At the same time they added that the initiative is “an enormous success” in terms of keeping over 83% of represented tenants housed.
+
+{{< pullquote "“As right to counsel was rolled out and phased in, and more and more people had lawyers, we did start to see a drop in the number of case filings, because no longer could landlords assume that these frivolous cases were going to yield the same results.”" >}}
 
 For Marika Dias, managing director of the Safety Net Project at the Urban Justice Center, there’s a connection between the decrease in the eviction filings and the policy, especially as it expanded its reach.
 
@@ -79,6 +80,8 @@ Between this policy and the role of Right to Counsel, it is difficult to disting
 “The results we're seeing is that combination of [the end of] a lot of the incentives landlords had to remove tenants,” said Andrea Shapiro, director of Programs and Advocacy at the Met Council on Housing. “Eviction cases just to harass tenants out, refuse them to give succession rights, all those things which ended up off in an eviction court were removed.”
 
 In 2020, another factor drastically reduced evictions, this time to historic low levels. As the pandemic unfolded, New York City developed and enforced strong protections for renters, which included the federal moratorium and a rent assistance program that distributed {{< smartlink "more than $2.8 billion among tenants in need" "https://otda.ny.gov/programs/emergency-rental-assistance/program-reports.asp" >}}. Not all evictions were stopped, but in 2021 landlords filed around a quarter of the evictions that they filed in 2019.
+
+{{< pullquote "There’s been no month since the pandemic started when evictions have been higher than pre-COVID levels. April 2024 saw the highest filing count in this period ... but this was still 30% below pre-COVID averages.">}}
 
 “The emergency rental assistance program… was just like a blanket for tenants,” said Cynthia Norris, senior director at New York Communities for Change, who now misses the impact that this policy had in previous years. “Especially for tenants that [were] backed up in rent, who lost their jobs, who lost a breadwinner in their family, who just was suffering from domestic violence, anxiety, just getting sick from COVID, anything.”
 
@@ -136,6 +139,8 @@ Even with the reduction in eviction filing rates, several thousand families are 
 Another caveat is that landlords might still be adapting to these new tenant protections and how to deal with issues like non-payment of rent.
 
 “My sense is that the anti-eviction sentiment in the current political environment is very high coming out of COVID,” said Jonathan J. Miller, CEO of Miller Samuel Inc., a real estate consulting firm. “Given all the actions taken to protect tenants, it may take longer for landlords to normalize their eviction practices, and there may be an element of confusion among smaller landlords.”
+
+{{< pullquote "Even with the reduction in eviction filing rates, several thousand families are threatened with losing their homes each month. In September 2024, the number of eviction filings in New York City was the same as Austin, Cincinnati, Memphis, Philadelphia and St. Louis combined." >}}
 
 At the same time, affordable housing providers are concerned about the amounts of rent owed by tenants in the post-pandemic era.
 
