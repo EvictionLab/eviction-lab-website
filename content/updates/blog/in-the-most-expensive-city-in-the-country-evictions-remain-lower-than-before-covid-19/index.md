@@ -14,14 +14,14 @@ postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Despite housing costs reaching record heights in New York City, eviction filings remain well below pre-pandemic averages.
 listSummary: Despite housing costs reaching record heights in New York City, eviction filings remain well below pre-pandemic averages.
-image: 'bronx.jpeg'
-fbImage: 'bronx.jpeg'
-twImage: 'bronx.jpeg'
+image: 'bronx.jpg'
+fbImage: 'bronx.jpg'
+twImage: 'bronx.jpg'
 url: /in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-before-covid-19
 scripts:
   - charts
 ---
-New York City’s housing costs have reached record heights: {{< smartlink "according to Zillow" "https://www.zillow.com/research/data/" >}}, the typical market rent at the start of 2021 was $2,576. Average rent increased by more than $500 a year later and by early 2024 it almost reached $3,500. In the meantime, finding an apartment has become a huge challenge as the city experiences its lowest vacancy rate—the percentage of units that are empty—{{< smartlink "since 1968" "https://www.politico.com/news/2024/02/08/new-york-city-sees-tightest-rental-market-in-more-than-five-decades-00140564" >}}. But there’s one piece of good news for New Yorkers: eviction filings remain well below pre-pandemic averages.
+<span class="dropcap red">N</span>ew York City’s housing costs have reached record heights: {{< smartlink "according to Zillow" "https://www.zillow.com/research/data/" >}}, the typical market rent at the start of 2021 was $2,576. Average rent increased by more than $500 a year later and by early 2024 it almost reached $3,500. In the meantime, finding an apartment has become a huge challenge as the city experiences its lowest vacancy rate—the percentage of units that are empty—{{< smartlink "since 1968" "https://www.politico.com/news/2024/02/08/new-york-city-sees-tightest-rental-market-in-more-than-five-decades-00140564" >}}. But there’s one piece of good news for New Yorkers: eviction filings remain well below pre-pandemic averages.
 
 In places like {{< smartlink "Phoenix" "https://evictionlab.org/eviction-tracking/phoenix-az/" >}}, {{< smartlink "Las Vegas" "https://evictionlab.org/eviction-tracking/las-vegas-nv/" >}}, {{< smartlink "Minneapolis" "https://evictionlab.org/eviction-tracking/minneapolis-saint-paul-mn/" >}}, and {{< smartlink "Houston" "https://evictionlab.org/eviction-tracking/houston-tx/" >}}, landlords are filing more evictions than before COVID-19. Meanwhile, in {{< smartlink "New York City" "https://evictionlab.org/eviction-tracking/new-york-ny/" >}}, we’re seeing the opposite. In 2019, landlords filed almost 15,000 cases a month, but in 2023 they only filed 12,000 cases per month, according to data collected by the {{< smartlink "Housing Data Coalition" "https://www.housingdatanyc.org/" >}}. And, so far in 2024, we‘ve seen an even lower monthly average.
 
@@ -31,6 +31,8 @@ Despite New York City’s sky high rents, the eviction filing rate in the city i
 What is behind these improvements? According to legal aid attorneys, advocates, and other experts in New York, a series of reforms that were implemented before the pandemic have limited evictions, including retaliatory actions and efforts by landlords to push tenants out to hike up rents.
 
 These policies are not a silver bullet and do not consist of just one single law or requirement that changed things radically. On the contrary, New York’s ongoing change in filings is a lesson for other governments on the importance of proactively addressing tenant’s challenges, keeping long-term policies in place, and adapting over time to cover gaps.
+
+<br>
 
 ### How policy has changed the eviction landscape
 
@@ -95,8 +97,11 @@ It’s important to note that there’s been no month since the pandemic started
 
 “Evictions are creeping up, but they will likely never be as high as before the HSTPA,” said Matthew Tropp, director of Housing for the Legal Aid Society. 
 
+<br>
 
 ### The Bronx: the epicenter of eviction activity
+
+<br>
 
 Despite this good news, the data still shows the extent to which evictions are a major challenge for the most vulnerable New Yorkers. When we analyze trends by county both in terms of total filings or by eviction rates, it becomes clear that the Bronx, the poorest borough in the city, is where most evictions are concentrated in the city. 
 
@@ -129,8 +134,11 @@ The eviction rate in the Bronx is twice the rate in any other borough. More than
 
 “Folks who have unstable income will often face non-payment evictions,” said Joseph Loonam, Housing Campaign coordinator for Vocal New York. Loonam adds that many people in low-income areas of the city live paycheck to paycheck, vulnerable to any unexpected problems in their lives which could lead to not being able to afford their rents.
 
+<br>
 
 ### The future for the eviction landscape in NYC
+
+<br>
 
 Even with the reduction in eviction filing rates, several thousand families are threatened with losing their homes each month. In September 2024, the number of eviction filings in New York City was the same as Austin, Cincinnati, Memphis, Philadelphia and St. Louis combined. Many more experience housing insecurity or homelessness beyond evictions.
 
