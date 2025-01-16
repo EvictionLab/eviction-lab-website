@@ -38,3 +38,18 @@ Davidson County is divided into 39 zip codes. In each of those zip codes, we map
 2. Zip code breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
 {{%/ report_map %}}
+
+
+{{% report_chart id="race" data="/uploads/nashville_linechart.csv" imputedNoteNumber="2" %}}
+
+# The demographics of eviction filings
+
+**Eviction filings by neighborhood race/ethnicity**
+
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In this barplot, we show the distribution of eviction filings over the last year by neighborhood racial/ethnic majority.  
+
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2017-2019.<sup>1</sup>
+
+1. Eviction filing data for Nashville were collected by [LSC](https://www.lsc.gov/). Historical averages cover the years 2017-2019.
+
+{{%/ report_chart %}}
