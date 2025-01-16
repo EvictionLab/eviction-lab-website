@@ -10,3 +10,8 @@
 [context.branch-deploy]
   command = "hugo -D"
   HUGO_VERSION = "0.101"
+
+[[headers]]
+  for = "/uploads/*.csv" # for all CSV files in /uploads:
+  [headers.values]
+    Cache-Control = "no-cache" # prevent caching
