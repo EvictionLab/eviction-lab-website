@@ -106,7 +106,7 @@ It’s important to note that there’s been no month since the pandemic started
 Despite this good news, the data still shows the extent to which evictions are a major challenge for the most vulnerable New Yorkers. When we analyze trends by county both in terms of total filings or by eviction rates, it becomes clear that the Bronx, the poorest borough in the city, is where most evictions are concentrated in the city. 
 
 <div class="figheader">Figure 2. Eviction rates in NYC by borough</div>
-<iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/nyc-evictions/"></iframe>
+<iframe class="visual" src="https://development--eviction-lab-site.netlify.app/blog/nyc-evictions-min/"></iframe>
 <div class="legend mb-3">
   <div class="legend-item legend-item--0">
   <div class="legend-item__color"></div>
