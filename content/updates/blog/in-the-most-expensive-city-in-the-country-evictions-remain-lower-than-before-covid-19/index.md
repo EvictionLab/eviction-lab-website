@@ -21,9 +21,19 @@ url: /in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-befo
 scripts:
   - charts
 ---
+<style>
+  .mobile-hint {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    @media(min-width: 600px) {
+      display: none;
+    }
+  }
+</style>
 <span class="dropcap red">N</span>ew York City’s housing costs have reached record heights: {{< smartlink "according to Zillow" "https://www.zillow.com/research/data/" >}}, the typical market rent at the start of 2021 was $2,576. Average rent increased by more than $500 a year later and by early 2024 it almost reached $3,500. In the meantime, finding an apartment has become a huge challenge as the city experiences its lowest vacancy rate—the percentage of units that are empty—{{< smartlink "since 1968" "https://www.politico.com/news/2024/02/08/new-york-city-sees-tightest-rental-market-in-more-than-five-decades-00140564" >}}. But there’s one piece of good news for New Yorkers: eviction filings remain well below pre-pandemic averages.
 
-In places like {{< smartlink "Phoenix" "https://evictionlab.org/eviction-tracking/phoenix-az/" >}}, {{< smartlink "Las Vegas" "https://evictionlab.org/eviction-tracking/las-vegas-nv/" >}}, {{< smartlink "Minneapolis" "https://evictionlab.org/eviction-tracking/minneapolis-saint-paul-mn/" >}}, and {{< smartlink "Houston" "https://evictionlab.org/eviction-tracking/houston-tx/" >}}, landlords are filing more evictions than before COVID-19. Meanwhile, in {{< smartlink "New York City" "https://evictionlab.org/eviction-tracking/new-york-ny/" >}}, we’re seeing the opposite. In 2019, landlords filed almost 15,000 cases a month, but in 2023 they only filed 12,000 cases per month, according to data collected by the {{< smartlink "Housing Data Coalition" "https://www.housingdatanyc.org/" >}}. And, so far in 2024, we‘ve seen an even lower monthly average.
+In places like {{< smartlink "Phoenix" "https://evictionlab.org/eviction-tracking/phoenix-az/" >}}, {{< smartlink "Las Vegas" "https://evictionlab.org/eviction-tracking/las-vegas-nv/" >}}, {{< smartlink "Minneapolis" "https://evictionlab.org/eviction-tracking/minneapolis-saint-paul-mn/" >}}, and {{< smartlink "Houston" "https://evictionlab.org/eviction-tracking/houston-tx/" >}}, landlords are filing more evictions than before COVID-19. Meanwhile, in {{< smartlink "New York City" "https://evictionlab.org/eviction-tracking/new-york-ny/" >}}, we’re seeing the opposite. In 2019, landlords filed almost 15,000 cases a month, but in 2023 they only filed 12,000 cases per month, according to data collected by the {{< smartlink "Housing Data Coalition" "https://www.housingdatanyc.org/" >}}. And our early estimates for 2024 show around 9,300 cases per month.
 
 Despite New York City’s sky high rents, the eviction filing rate in the city is now well below the national average in every borough except the Bronx. But even there, the rate has been cut in half.
 {{< pullquote "Despite New York City’s sky high rents, the eviction filing rate in the city is now well below the national average in every borough except the Bronx. But even there, the rate has been cut in half." >}}
@@ -38,27 +48,30 @@ These policies are not a silver bullet and do not consist of just one single law
 
 <div class="figheader">Figure 1. Eviction filings in NYC by borough</div>
 <iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/nyc-evictions-stacked/"></iframe>
-<div class="legend mb-3">
-  <div class="legend-item legend-item--0">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">Bronx</div>
+<div class="mb-3">
+  <div class="legend">
+    <div class="legend-item legend-item--0">
+      <div class="legend-item__color"></div>
+      <div class="legend-item__label">Bronx</div>
+    </div>
+    <div class="legend-item legend-item--1">
+      <div class="legend-item__color"></div>
+      <div class="legend-item__label">New York</div>
+    </div>
+    <div class="legend-item legend-item--2">
+      <div class="legend-item__color"></div>
+      <div class="legend-item__label">Kings</div>
+    </div>
+    <div class="legend-item legend-item--3">
+      <div class="legend-item__color"></div>
+      <div class="legend-item__label">Queens</div>
+    </div>
+    <div class="legend-item legend-item--5">
+      <div class="legend-item__color"></div>
+      <div class="legend-item__label">Richmond</div>
+    </div>
   </div>
-  <div class="legend-item legend-item--1">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">New York</div>
-  </div>
-  <div class="legend-item legend-item--2">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">Kings</div>
-  </div>
-  <div class="legend-item legend-item--3">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">Queens</div>
-  </div>
-  <div class="legend-item legend-item--5">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">Richmond</div>
-  </div>
+  <p><i class="mobile-hint">Scroll right to view full chart</i></p>
 </div>
 
 The first milestone in this journey was Right to Counsel—formally known as the {{< smartlink "Universal Access to Legal Services Law" "https://nycourts.gov/courts/nyc/housing/aboutUniversalAccess.shtml" >}}—which was signed into law in 2017 and made New York the first city in the country to guarantee legal representation for tenants in housing courts. The law was implemented first in three zip codes in each borough, expanding to more areas each year until 2022, when it was available for tenants across the city with an income at or below 200% of the federal poverty guidelines.
@@ -89,7 +102,7 @@ In 2020, another factor drastically reduced evictions, this time to historic low
 
 Other policies might have also contributed, such as the decision by the New York City Housing Authority to {{< smartlink "drop more than 31,000 non-payment cases" "https://www.nyc.gov/site/nycha/about/press/pr-2022/pr-20220203.page" >}} that existed in housing court. The agency, also known as NYCHA, is the biggest housing provider in New York and the largest public housing authority in the country, managing more than 177,000 units across the city, with around half a million tenants. 
 
-Nonetheless, by 2022 eviction cases started increasing as moratoria expired, rental assistance funding was depleted, and landlords went back to the courthouses to file evictions again. That year, eviction filings more than doubled compared to 2021. In 2023, the city reached more than 132,000 eviction cases. And as of September, there have been 92,981 filings in the five boroughs during 2024 ({{< smartlink "more information in our Eviction Tracking System" "https://evictionlab.org/eviction-tracking/new-york-ny/" >}}).
+Nonetheless, by 2022 eviction cases started increasing as moratoria expired, rental assistance funding was depleted, and landlords went back to the courthouses to file evictions again. That year, eviction filings more than doubled compared to 2021. In 2023, the city reached more than 132,000 eviction cases. And, according to our estimates, in 2024 there have been 111,830 filings in the five boroughs. ({{< smartlink "more information in our Eviction Tracking System" "https://evictionlab.org/eviction-tracking/new-york-ny/" >}}).
 
 Although it’s too soon to tell, there’s another policy that might impact eviction trends in the future: the new {{< smartlink "Good Cause Eviction" "https://www.nyc.gov/site/hpd/services-and-information/good-cause-eviction.page" >}} law, enacted in New York City in April 2024. This bill not only forces landlords to demonstrate a valid reason to evict tenants or to not renew a lease, but also limits rent increases to 10% or 5% plus the Consumer Price Index (whichever is lower). According to an estimate by the housing justice technology nonprofit, {{< smartlink "JustFix" "http://www.justfix.org/" >}}, up to 400,000 units of the 2.3 million rental units in the city should be covered by this policy in NYC. 
 
@@ -109,24 +122,24 @@ Despite this good news, the data still shows the extent to which evictions are a
 <iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/nyc-evictions/"></iframe>
 <div class="legend mb-3">
   <div class="legend-item legend-item--0">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">Bronx</div>
+    <div class="legend-item__color"></div>
+    <div class="legend-item__label">Bronx</div>
   </div>
   <div class="legend-item legend-item--1">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">New York</div>
+    <div class="legend-item__color"></div>
+    <div class="legend-item__label">New York</div>
   </div>
   <div class="legend-item legend-item--2">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">Kings</div>
+    <div class="legend-item__color"></div>
+    <div class="legend-item__label">Kings</div>
   </div>
   <div class="legend-item legend-item--3">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">Queens</div>
+    <div class="legend-item__color"></div>
+    <div class="legend-item__label">Queens</div>
   </div>
   <div class="legend-item legend-item--5">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">Richmond</div>
+    <div class="legend-item__color"></div>
+    <div class="legend-item__label">Richmond</div>
   </div>
 </div>
 
