@@ -47,7 +47,7 @@ These policies are not a silver bullet and do not consist of just one single law
 ### How policy has changed the eviction landscape
 
 <div class="figheader">Figure 1. Eviction filings in NYC by borough</div>
-<iframe class="visual" src="https://development--eviction-lab-site.netlify.app/blog/nyc-evictions-min/"></iframe>
+<iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/nyc-evictions-stacked/"></iframe>
 <div class="mb-3">
   <div class="legend">
     <div class="legend-item legend-item--0">
