@@ -8,7 +8,7 @@ rentersSite: Rhode Island
 slug: rhode-island
 date: 2023-02-09T18:00:25.655Z
 ---
-{{< report_intro site_id="44" data="/uploads/states_table.csv" >}}
+{{< report_intro site_id="44"  >}}
 
 The state of Rhode Island implemented an eviction moratorium that ran from March 17 to July 1, 2020. Filings spiked immediately after that moratorium lifted.
 

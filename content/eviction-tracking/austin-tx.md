@@ -11,7 +11,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 geographies: zips
 ---
 
-{{< report_intro site_id="48453" data="/uploads/table.csv" >}}
+{{< report_intro site_id="48453" area_site="true" >}}
 
 
 

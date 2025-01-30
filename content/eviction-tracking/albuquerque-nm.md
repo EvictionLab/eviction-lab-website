@@ -9,7 +9,7 @@ collection: true
 title: Albuquerque, New Mexico | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="35001" data="/uploads/table.csv" >}}
+{{< report_intro site_id="35001" area_site="true" >}}
 
 Eviction filings in Albuquerque fell sharply in early 2020. While eviction filings and hearings were allowed to proceed, on March 24, 2020, the New Mexico Supreme Court implemented a stay on the execution of writs for nonpayment of rent. This order remained in effect through March 2022.
 
@@ -17,12 +17,6 @@ Eviction filings in Albuquerque fell sharply in early 2020. While eviction filin
 
 
 {{% report_chart id="avg" data="/uploads/albuquerque_barchart.csv" %}}
-
-
-
-
-
-
 
 # Trends in eviction filings
 

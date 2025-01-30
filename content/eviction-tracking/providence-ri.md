@@ -7,7 +7,7 @@ rentersSite: Providence
 slug: providence-ri
 date: 2024-08-30T17:28:49.024Z
 ---
-{{< report_intro site_id="44007" data="/uploads/table.csv" >}}
+{{< report_intro site_id="44007" area_site="true" >}}
 
 Eviction filings in Providence fell sharply in early 2020 after the state of Rhode Island implemented an eviction moratorium, which was in place from March 17 to July 1, 2020. Filings spiked immediately after the moratorium was lifted.
 

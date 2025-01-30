@@ -9,7 +9,7 @@ collection: true
 title: Tampa, Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="12103" data="/uploads/table.csv" >}}
+{{< report_intro site_id="12103" area_site="true" >}}
 
 Eviction filings in Tampa fell sharply during the early months of the pandemic. Florida instituted a state-wide eviction moratorium which expired at the end of July 2020. After the moratorium expired, execution of eviction orders was also delayed until October 1, 2020. Regardless, new eviction filings increased by August 2020.
 

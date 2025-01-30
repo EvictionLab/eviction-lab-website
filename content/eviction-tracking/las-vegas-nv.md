@@ -9,7 +9,7 @@ collection: true
 title: Las Vegas, Nevada | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="32003" data="/uploads/table.csv" >}}
+{{< report_intro site_id="32003" area_site="true" >}}
 
 Eviction filings in Las Vegas fell sharply by March 2020. The state of Nevada put in place a moratorium on eviction proceedings from late-March until mid-October 2020. After the expiration of these protections, eviction filings rose. The state then implemented a second moratorium in December 2020 for tenants who affirmed that they had been financially affected by COVID-19 or would be made homeless by eviction. Those protections expired at the end of May 2021. 
 
