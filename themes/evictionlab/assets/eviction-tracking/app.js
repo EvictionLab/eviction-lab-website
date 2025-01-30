@@ -55,7 +55,9 @@ var Elab = Elab || {};
 
 Elab.Utils = (function (Elab) {
   function isNumeric(val) {
-    return val !== "" && val !== undefined && !isNaN(Number(val));
+    return (
+      val !== "" && val !== undefined && val !== null && !isNaN(val) && typeof val !== "boolean"
+    );
   }
 
   /**
@@ -289,9 +291,9 @@ Elab.Utils = (function (Elab) {
         }
         var fVal = s.formatter ? s.formatter(val) : val;
         fVal = s.bold ? "<b>" + fVal + "</b>" : fVal;
-        interpolatedText = interpolatedText.replace("%{" + s.placeholder + "}", fVal);
+        interpolatedText = interpolatedText.replace(`%{${s.placeholder}}`, fVal);
       });
-      hasAllData && $el.append(`<p>${interpolatedText}</p>`);
+      hasAllData && $el.append(interpolatedText);
       // $el.css("opacity", 1);
     });
   }

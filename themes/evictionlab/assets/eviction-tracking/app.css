@@ -1607,6 +1607,23 @@
   margin: 0 auto 24px auto;
 }
 
+.intro__content.area_site .intro__heading {
+  margin-bottom: 16px;
+}
+
+.intro__content:not(.area_site) .if_area_site {
+  display: none;
+}
+
+.intro__content h2 {
+  font-family: var(--heading-font);
+  color: var(--c2);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  margin-bottom: 12px;
+}
+
 .intro__renter-population {
   font-family: var(--heading-font);
   text-transform: uppercase;

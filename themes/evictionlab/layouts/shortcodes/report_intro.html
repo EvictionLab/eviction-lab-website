@@ -3,11 +3,13 @@
 {{ $cleanedH1 := replaceRE "^.*?,\\s*" "" $h1 }}
 {{ $processedH1 := replaceRE "\\s+" "-" $cleanedH1 }}
 {{ $anchor := lower $processedH1 }}
+{{ $areaSite := .Get `area_site` }}
 <div class="intro">
   <div class="layout">
-    <div class="intro__content">
+    <div class="intro__content {{ if $areaSite }}area_site{{ end }}">
       <h1 class="intro__heading">
-        <a id="top">{{ $h1 }}</a>
+        {{ $h1 }}
+        {{ if $areaSite }}AREA{{ end }}
       </h1>
       <!-- {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
         {{ if eq $rentersSite $element.site }}
@@ -72,15 +74,36 @@
 
   <script>
 
-          var site_id = {{ .Get "site_id" }}
-          var renterssite = {{ .Page.Params.renterssite }};
-          window.addEventListener('load', function () {
+      var site_id = {{ .Get "site_id" }}
+      var areaSite = {{ .Get "area_site" }}
+      var renterssite = {{ .Page.Params.renterssite }};
+      window.addEventListener('load', function () {
 
-          var percentChange = function (d) {
-            var v = d3.format('.0%')(d - 1)
-            return v[0] === '-' ? `${v}` : `+${v}`
-          }
-          
+      var percentChange = function (d) {
+        var v = d3.format('.0%')(d - 1)
+        return v[0] === '-' ? `${v}` : `+${v}`
+      }
+      
+      var getRow = (fileData) => {
+        if (!fileData) {
+          console.error("No filedata found ", fileData);
+          return null;
+        }
+        // NOTE: closure around site_id value
+        return fileData.find((d) => d.site_id === site_id);
+      };
+      var getValFromRow = (row, stat) => {
+        if (!row || !row[stat.field]) {
+          console.log("missing data for ", row, stat.field);
+          return null;
+        }
+        return row[stat.field];
+      }
+      var getVal = (fileData, stat) => {
+        var row = getRow(fileData);
+        return getValFromRow(row, stat);
+      }
+
       var statFiles = [
         { id: "filing", url: "/uploads/filing_data_by_site.csv" },
         { id: "basic", url: "/uploads/basic_data_by_site.csv" },
@@ -155,44 +178,39 @@
       ]
       var paragraphStats = [
         {
+          placeholder: 'area_name',
+          file: 'basic',
+          field: 'borders',
+        },
+        {
+          placeholder: 'households',
           file: 'filing',
           field: 'renter_hh',
-          placeholder: 'households',
           formatter: d3.format(',')
         },
         {
+          placeholder: 'borders',
+          file: 'basic',
+          field: 'borders',
+        },
+        {
+          placeholder: 'rent',
           file: 'filing',
           field: 'median_rent',
-          placeholder: 'rent',
           formatter: d3.format('$,')
         },
         {
+          placeholder: 'days',
           file: 'basic',
           field: 'notice_requirement',
-          placeholder: 'days',
         },
         {
+          placeholder: 'fee',
           file: 'basic',
           field: 'avg_filing_fee',
-          placeholder: 'fee',
           // formatter: d3.format('$,')
         },
-        {
-          file: 'basic',
-          field: 'borders',
-          placeholder: 'county',
-        },
       ]
-
-            var getVal = (fileData, stat) => {
-        if (!fileData) {
-          console.error("No filedata found ", fileData, stat);
-          return null;
-        }
-        var row = fileData.find((d) => d.site_id === site_id);
-        if (!row || !row[stat.field]) console.log("missing for ", row, stat.field);
-        return row ? row[stat.field] : null;
-      }
 
       var otherBlockLoaded = false;
       var displayStatBlock = () => {
@@ -205,8 +223,7 @@
       Elab.Utils.createStatBlock('#filingCounts', statFiles, filingCounts, getVal, displayStatBlock)
       Elab.Utils.createStatBlock('#filingRates', statFiles, filingRates, getVal, displayStatBlock)
 
-      var siteText = site_id.length === 2 ? '' : ` (${renterssite})`;
-      var paragraphText = "There are %{households} renter households in %{county}%{site}, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.<sup>1</sup>".replace('%{site}', siteText)
+      var paragraphText = `<h2 class='if_area_site'>(%{area_name})</h2><p>There are %{households} renter households in %{borders}<span class='if_area_site'> (${renterssite})</span>, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.<sup>1</sup></p>`
       Elab.Utils.createStatParagraph({ el: '#summaryStats', text: paragraphText, statFiles, stats: paragraphStats, getVal });
 
       Elab.Utils.addLatestUpdateDate("#latestUpdate", "/uploads/filing_data_by_site.csv", site_id);
@@ -216,18 +233,15 @@
 
       var dateFormat = d3.timeFormat("%b %e, %Y")
 
-
       var cdcMoratorium = Elab.Utils.getCdcMoratoriumRange().map(function(d) {
         return dateFormat(d)
       }).join(' - ')
       $('#cdcGuidelines').text(cdcMoratorium)
-
-            // move footnotes into proper container
-            var rootEl = $('.intro .layout');
-            var contentEl = rootEl.find(".intro__text");
-            var footnoteEl = rootEl.find(".footnote ol");
-            window.cc = contentEl;
-            footnoteEl.append(contentEl.find("ol li"));
+        // move footnotes into proper container
+        var rootEl = $('.intro .layout');
+        var contentEl = rootEl.find(".intro__text");
+        var footnoteEl = rootEl.find(".footnote ol");
+        footnoteEl.append(contentEl.find("ol li"));
     })
   </script>
 </div>
