@@ -5,7 +5,7 @@
 {{ $anchor := lower $processedH1 }}
 {{ $areaSite := .Get `area_site` }}
 {{ if $areaSite }}
-  {{ $h1 = replaceRE "^(.*?),\\s*(.*)$" "$1 AREA, $2" $h1 }}
+  {{ $h1 = replaceRE "^(.*?)(,.*)?$" "${1} AREA${2}" $h1 }}
 {{ end }}
 <div class="intro">
   <div class="layout">
