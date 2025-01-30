@@ -4,12 +4,14 @@
 {{ $processedH1 := replaceRE "\\s+" "-" $cleanedH1 }}
 {{ $anchor := lower $processedH1 }}
 {{ $areaSite := .Get `area_site` }}
+{{ if $areaSite }}
+  {{ $h1 = replaceRE "^(.*?),\\s*(.*)$" "$1 AREA, $2" $h1 }}
+{{ end }}
 <div class="intro">
   <div class="layout">
     <div class="intro__content {{ if $areaSite }}area_site{{ end }}">
       <h1 class="intro__heading">
         {{ $h1 }}
-        {{ if $areaSite }}AREA{{ end }}
       </h1>
       <!-- {{ range $index, $element := .Site.Data.renter_hhs_by_state }}
         {{ if eq $rentersSite $element.site }}
