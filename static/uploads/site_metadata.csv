@@ -8,7 +8,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 35,New Mexico,new-mexico,,,,
 42,Pennsylvania,pennsylvania,,,,
 44,Rhode island,rhode-island,,,,
-51,Virginia,virginia,,,,true
+51,Virginia,virginia,,,,
 55,Wisconsin,wisconsin,,,,
 35001,Albuquerque,albuquerque-nm,NM,35.0844,-106.6504
 48453,Austin,austin-tx,TX,30.2672,-97.7431
@@ -41,7 +41,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 04013,Phoenix,phoenix-az,AZ,33.4484,-112.0740
 42003,Pittsburgh,pittsburgh-pa,PA,40.4406,-79.9959
 44007,Providence,providence-ri,RI,41.8240,-71.4128
-51760,Richmond,richmond-va,VA,37.5407,-77.4360,true
+51760,Richmond,richmond-va,VA,37.5407,-77.4360
 18141,South Bend,south-bend-in,IN,41.6764,-86.2520
 29510,St Louis,st-louis-mo,MO,38.6270,-90.1994
 12103,Tampa,tampa-fl,FL,27.9506,-82.4572
