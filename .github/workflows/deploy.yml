@@ -45,11 +45,11 @@ jobs:
         id: deploy-bucket
         run: |
           if [[ $GITHUB_REF == 'refs/heads/production' ]]; then
-              echo "::set-output name=S3_BUCKET::eviction-lab-website"
-              echo "::set-output name=CLOUDFRONT_ID::${{ secrets.AWS_CLOUDFRONT_ID_PROD }}"
+              echo "S3_BUCKET=eviction-lab-website" >> $GITHUB_OUTPUT
+              echo "CLOUDFRONT_ID=${{ secrets.AWS_CLOUDFRONT_ID_PROD }}" >> $GITHUB_OUTPUT
           else
-              echo "::set-output name=S3_BUCKET::eviction-lab-website-staging"
-              echo "::set-output name=CLOUDFRONT_ID::${{ secrets.AWS_CLOUDFRONT_ID_STAGING }}"
+              echo "S3_BUCKET=eviction-lab-website-staging" >> $GITHUB_OUTPUT
+              echo "CLOUDFRONT_ID=${{ secrets.AWS_CLOUDFRONT_ID_STAGING }}" >> $GITHUB_OUTPUT
           fi
 
       - name: Deploy
