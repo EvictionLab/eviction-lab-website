@@ -5,7 +5,6 @@ on:
     branches:
       - staging
       - production
-      - ets-last-update-action
 
 jobs:
   deploy:
@@ -29,11 +28,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "16.x"
-
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
 
       - name: Cache dependencies
         uses: actions/cache@v4
