@@ -1,6 +1,6 @@
 ---
 abbrev: ebenfer
-position: Visiting Research Collaborator
+position: Professor of Clinical Law
 date: 2017-11-26T03:46:25.603Z
 childof: research-team-bios
 title: Emily A. Benfer
