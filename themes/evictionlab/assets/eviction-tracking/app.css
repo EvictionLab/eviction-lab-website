@@ -2620,6 +2620,13 @@ label #labels_top-100 {
   text-overflow: ellipsis;
 }
 
+/* hide unnecessary elements on the landing page (which is only used on the staging deploy */
+.url-eviction-tracking .hero,
+.url-eviction-tracking .list-crisis,
+.url-eviction-tracking .list-additional,
+.url-eviction-tracking .app-footer {
+  display: none;
+}
 /* Overrides for sites without plaintiff info to display */
 
 
