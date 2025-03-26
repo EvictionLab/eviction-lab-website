@@ -67,6 +67,8 @@ Our second finding was that eviction-led school moves tended to be to campuses o
 
 For example, eviction-led moves were to schools with larger shares of students qualifying for free or reduced-price lunch and identified by the school district as economically disadvantaged. These schools also had significantly higher attrition rates, the sort of routine student turnover that can be disruptive to learning. On top of this, students moving after an eviction went to schools with worse scores on standardized tests than students that moved for other reasons.
 
+{{< pullquote "In the year in which their parents are filed against for eviction, students have two more absences than would otherwise be expected." >}}
+
 Our third finding relates to the effects that eviction filings have on absences and suspensions. Here we carried out a set of tests that let us compare the experience of students facing eviction to those of students not facing eviction. But we also went a step further and analyzed whether the combination of an eviction filing and a school move—or a school move without an eviction filing—had different effects. 
 
 We found that both eviction filings and school moves led to increases in absences, especially in the year in which the eviction case and/or school move happens. For instance, in the year in which their parents are filed against for eviction, students have two more absences than would otherwise be expected. Given that students average just over seven absences per year, this represents a meaningful increase in missed days of school. 
