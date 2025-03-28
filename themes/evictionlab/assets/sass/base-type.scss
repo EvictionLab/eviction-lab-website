@@ -30,7 +30,8 @@ body {
     }
   }
   
-  h3 {
+  h3,
+  .h3-like {
     @include altFont(1.6rem);
     line-height: 1.5;
     letter-spacing: 0.1rem;
