@@ -21,7 +21,7 @@ scripts:
   - charts
   - grouped-bar-chart
 ---
-<span class="dropcap green">W</span>hen parents face an eviction case, it has consequences for their kids. In an article published in the journal Sociology of Education, we for the first time explore what some of these consequences are for students’ academic trajectories. Using the case study of children enrolled in the Houston Independent School District, we show that kids whose parents face eviction cases are more likely than students not facing eviction to leave the district. The students who remained in the district and experienced eviction filings were more likely to have switched schools, often relocating to campuses with fewer resources, more student turnover, and lower test scores. Students whose parents faced eviction experienced an increase in absences and, among those who switched schools, more suspensions.
+<span class="dropcap green">W</span>hen parents face an eviction case, it has consequences for their kids. In an article published in the journal <i>Sociology of Education</i>, we for the first time explore what some of these consequences are for students’ academic trajectories. Using the case study of children enrolled in the Houston Independent School District, we show that kids whose parents face eviction cases are more likely than students not facing eviction to leave the district. The students who remained in the district and experienced eviction filings were more likely to have switched schools, often relocating to campuses with fewer resources, more student turnover, and lower test scores. Students whose parents faced eviction experienced an increase in absences and, among those who switched schools, more suspensions.
 
 [ARTICLE LINK]
 
