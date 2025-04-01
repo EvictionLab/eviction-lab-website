@@ -1,7 +1,7 @@
 ---
 draft: true
 childof: research
-url: "/losing-your-home-losing-your-school-how-evictions-affect-kids-educational-trajectories/"
+url: "/eviction-and-educational-trajectories/"
 contenttype: updates
 collection: true
 contentcat: research
@@ -32,6 +32,8 @@ scripts:
 One of the cruel realities of housing in America is that nearly three million children risk losing their homes every year through the eviction process. In fact, if you are a renter and have kids, your chances of facing an eviction filing are twice as high as people without kids, as previous {{< smartlink "Eviction Lab research shows" "https://evictionlab.org/who-is-evicted-in-america/" >}}. Yet, there’s been little study of how evictions affect classrooms and children’s education. We know that any move can have long-lasting effects on children, but what happens when a move is sudden and involuntary for the whole family?
 
 To address that question, we built a new linkage of housing court data and educational records. The court data include the records of all 728,952 eviction cases filed in Harris County, TX between 2002 and 2016. The educational records were accessed through the {{< smartlink "Houston Education Research Consortium" "https://kinder.rice.edu/centers/houston-education-research-consortium" >}} (HERC), a partnership between the Kinder Institute at Rice University and eight Houston-area school districts. HERC staff conduct research on a range of critical issues to improve educational equity, and also facilitate partnerships with external researchers like us. Their records contain enrollment, attendance, disciplinary, and grade data for over 685,000 students enrolled in the Houston Independent School District over the 2002-2016 period. Because of how parents register their kids with the school each fall, we have a consistent annual record of where and with whom students live each year. We were able to link parents’ names and addresses from the enrollment records to defendant names and addresses in eviction filings. We identified over 13,000 students whose parents were filed against for eviction at least once. {{< smartlink "In line with our previous research, it’s extremely common to be impacted by evictions more than once" "https://evictionlab.org/serial-eviction-filings/" >}}: nearly a quarter had parents who were filed against repeatedly. 
+
+{{< pullquote "Eviction filings put students at increased risk of switching schools and leaving the district." >}}
 
 Our analysis of these data yielded three key findings.
 
