@@ -15,8 +15,9 @@ listSummary: Kids whose parents face eviction cases are more likely to leave the
 socialDescription: Kids whose parents face eviction cases are more likely to leave their district, end up in schools with fewer resources, and experience an increase in absences and suspensions.
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-fbImage: todo.jpg
-twImage: todo.jpg
+image: pexels-caleboquendo-3042432-small.jpg
+fbImage: pexels-caleboquendo-3042432-small.jpg
+twImage: pexels-caleboquendo-3042432-small.jpg
 scripts:
   - charts
   - grouped-bar-chart
