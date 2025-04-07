@@ -1,8 +1,5 @@
 ---
 draft: false
-scripts:
-  - charts
-  - maps
 childof: blog
 url: we-made-a-simple-eviction-data-request-to-all-50-states-this-is-what-we-learned
 contenttype: updates
@@ -27,6 +24,9 @@ listSummary: "The federal government doesn’t track evictions and there is no
 twImage: courtroom.jpg
 image: courtroom.jpg
 fbImage: courtroom.jpg
+scripts:
+  - charts
+  - maps
 ---
 <style>
   .svg-map__legend {
@@ -64,7 +64,6 @@ Although there are national efforts to collect these data from organizations lik
 
 We set out to ask each state the same question about eviction records: <strong>how many residential evictions were filed from 2018 to 2021 in your entire state?</strong> Asking this direct and seemingly simple question to all 50 states would give us a scope of the problem and a sense of how far we could be from a national eviction data tracking system. While insightful, it’s important to note that annual eviction numbers just scratch the surface of the eviction crisis and don’t tell us where evictions are happening or who they happen to — the next step in understanding the crisis.  
 
-<!-- TODO: add to _chart-demo -->
 {{% state-map
   id="statemap1"
   data="./map_data.csv"

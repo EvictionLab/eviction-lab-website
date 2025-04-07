@@ -1,0 +1,36 @@
+{{/* 
+  Shortcode for rendering flexible arrow charts.
+  Be sure to include:
+  scripts:
+    - arrow-chart3
+*/}}
+{{ $title := .Get "title" }}
+<div class="chart chart--arrow2 chart--{{ .Get `id` }}">
+  {{ if $title }}
+  <h3 class="chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}">
+    <svg></svg>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      console.log("INITIALING ARROW CHART 3");
+      Elab.ArrowChart3.init(document.getElementById("{{ .Get `id` }}"), {
+        id: "{{ .Get `id` }}",
+        data: "{{ .Get `data` }}",
+        xMin: "{{ .Get `xMin` }}",
+        xMax: "{{ .Get `xMax` }}",
+        axisLabelText: "{{ .Get `axisLabelText` }}",
+        xTicks: "{{ .Get `xTicks` }}",
+        nameCol: "{{ .Get `nameCol` }}",
+        beforeCol: "{{ .Get `beforeCol` }}",
+        afterCol: "{{ .Get `afterCol` }}",
+        isPercent: "{{ .Get `isPercent` }}",
+        valueType: "{{ .Get `valueType` }}",
+        legendDecArrowText: "{{ .Get `legendDecArrowText` }}",
+        legendIncArrowText: "{{ .Get `legendIncArrowText` }}",
+        legendLabelText: "{{ .Get `legendLabelText` }}"
+      });
+    });
+  </script>
+</div>

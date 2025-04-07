@@ -234,6 +234,8 @@ iframe.visual {
   --c2: #434878;
   --c3: #2c897f;
   --c4: #94aabd;
+  --highlight-row: #2c898028;
+    --highlight-partial-row: #2c89803b;
   --chart-frame: #fff;
   --grid-lines: #fff;
   --text-secondary: #7d7d7d;
@@ -704,8 +706,6 @@ body .visual .visual__title, body .visual .visual__title > * {
   fill: #e24000
 }
 
-
-
 /** GROUPED BAR CHART + SEARCH OVERRIDES */
 
 .chart #autoComplete_list {
@@ -750,6 +750,219 @@ body .visual .visual__title, body .visual .visual__title > * {
 .chart .chart__bar.judgment {
   fill: var(--c3);
 }
+
+
+/** ARROW CHART */
+.chart--arrow2 svg {
+  height: 100%;
+}
+
+.chart--arrow2 text {
+  font-size: 12px;
+  font-family: Akkurat-Regular, sans-serif;
+  dominant-baseline: middle;
+}
+
+.chart--arrow2 .sticky-leg .chart__axis .tick text {
+  font-size: 10px;
+}
+
+@media(max-width: 600px) {
+  .chart--arrow2 text {
+    font-size: 14px;
+  }
+
+  .chart--arrow2 .sticky-leg .chart__axis .tick text {
+    font-size: 12px;
+  }
+}
+/* .chart--arrow2 .is-mobile text {
+  font-size: 3.5px;
+}
+
+.chart--arrow2 .chart-row {
+  fill: #E6EFF4;
+  }
+    */
+.chart--arrow2 .chart-row:nth-child(2n) rect.background {
+  fill: #E6EFF4;
+}
+
+.chart--arrow2 .chart-row rect.background {
+  fill: #F4F7F9;
+}
+
+/* .chart--arrow2 .chart-row rect.partial-highlight {
+  fill: #2c898028;
+}
+
+.chart--arrow2 .chart-row rect.highlight {
+  fill: #2c89803b;
+}
+
+*/
+*/
+.chart--arrow2 .axis-lines line,
+.chart--arrow2 .tick-lines line {
+  stroke: white;
+  stroke-width: 1;
+}
+/* 
+.chart--arrow2 .axis-lines line.label-line {
+  stroke: rgba(0, 0, 0, .3);
+  stroke-width: 0.5;
+  stroke-dasharray: 1.2 1.7;
+}
+
+.chart--arrow2 .chart-row text.label-line-label {
+  fill: rgba(0, 0, 0, .6);
+  transform: translateY(-4.5px);
+  text-anchor: middle;
+}
+
+.chart--arrow2 .chart-row text {
+  text-anchor: end;
+  dominant-baseline: text-before-edge;
+  transform: translate(-2px, 1.4px);
+}
+
+.chart--arrow2 .chart-row text.right {
+  text-anchor: start;
+  transform: translate(2px, 1.4px);
+}
+
+*/
+/* .chart--arrow2 .sticky-leg .arrow .row-value.right {
+  transform: translateX(2px);
+}
+
+*/
+.chart--arrow2 line.arrow {
+  stroke-width: 1.2;
+}
+
+/* .chart--arrow2:not(.lollipop-variant) line.arrow {
+  stroke: #434878;
+  marker-end: url(#arrowhead-dec);
+}
+
+#arrowhead-dec {
+  stroke: #434878;
+}
+
+.chart--arrow2:not(.lollipop-variant) line.arrow.inc {
+  stroke: #E24000;
+  marker-end: url(#arrowhead-inc);
+}
+
+#arrowhead-inc {
+  stroke: #E24000;
+}
+
+*/
+/* 
+.chart--arrow2 .arrowhead {
+  fill: none;
+}
+
+.chart--arrow2 line.arrow {
+  transform: translate(0, -0.1px);
+}
+
+*/
+.chart--arrow2.lollipop-variant circle {
+  /* stroke-width: 0.2; */
+  fill-opacity: 0.7;
+}
+
+.chart--arrow2.lollipop-variant .chart-row:hover circle {
+  fill-opacity: 0.9;
+}
+
+.chart--arrow2.lollipop-variant circle.before {
+  stroke: var(--c2);
+    fill: var(--c2);
+}
+
+.chart--arrow2.lollipop-variant circle.after {
+  stroke: var(--c1);
+    fill: var(--c1);
+}
+
+.chart--arrow2 .chart-row:not(.highlighted) text.row-value {
+  display: none;
+}
+
+.chart--arrow2 .chart-row:hover text.row-value {
+  display: block;
+}
+
+.chart--arrow2 .tick-values text {
+  text-anchor: middle;
+  dominant-baseline: text-before-edge;
+}
+
+.chart--arrow2 .tick-values text:first-of-type {
+  text-anchor: start;
+}
+
+.chart--arrow2 .tick-values text:last-of-type {
+  text-anchor: end;
+}
+
+/* .chart--arrow2 .is-mobile .tick-values text:last-of-type {
+  transform: translate(-1px, 0);
+}
+
+.chart--arrow2 .axis-title {
+  text-anchor: middle;
+  transform: translate(0, 8px);
+}
+
+*/
+/* .chart--arrow2 .is-mobile .axis-title {
+  transform: translate(0, 12px);
+}
+
+*/
+/* .chart--arrow2 .legend-desc {
+  transform: translate(0, 14px);
+}
+
+.chart--arrow2 .is-mobile .legend-desc {
+  transform: translate(0, 22px);
+}
+
+*/ .chart--arrow2 text.legend-label,
+.chart--arrow2 .legend-items text {
+  text-transform: uppercase;
+  font-family: GT-Eesti-Display-Medium, sans-serif;
+  /* dominant-baseline: unset; */
+}
+
+.chart--arrow2 .arrow-chart {
+  display: block;
+}
+
+.chart--arrow2 .sticky-leg {
+  background: #F4F7F9;
+  opacity: 0.93;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+
+/* .chart--arrow2.lollipop-variant .legend-desc .arrow.inc circle.before,
+.chart--arrow2.lollipop-variant .legend-desc .arrow:not(.inc) circle.after,
+.chart--arrow2.lollipop-variant .legend-desc line.arrow {
+  display: none;
+}
+
+*/
+/* .chart--arrow2 .arrow-chart__body {
+  height: 100% !important;
+}
+*/
 
 /** WEEKLY EVICTION % CHART */
 

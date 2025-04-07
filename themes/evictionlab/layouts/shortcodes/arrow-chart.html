@@ -22,67 +22,67 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
 
 <div class="chart chart--arrow chart--{{ .Get `id` }} {{ if $variant }}{{ $variant }}-variant{{ end }}">
   <style type="text/css">
-    .arrow-chart__body text {
+    .chart--arrow text {
       font-size: 2.25px;
       font-family: Akkurat-Regular, sans-serif;
       dominant-baseline: middle;
     }
 
     /* HACK: 2nd CSS rule gets deleted (🤦‍♂️ hugo) */
-    .arrow-chart__body.is-mobile text {}
+    .chart--arrow .is-mobile text {}
 
-    .arrow-chart__body.is-mobile text {
+    .chart--arrow .is-mobile text {
       font-size: 3.5px;
     }
 
-    .arrow-chart__body .chart-row rect {
+    .chart--arrow .chart-row rect {
       fill: #E6EFF4;
     }
     
-    .arrow-chart__body .chart-row.odd rect {
+    .chart--arrow .chart-row.odd rect {
       fill: #F4F7F9;
     }
 
-    .arrow-chart__body .chart-row.highlighted rect {
+    .chart--arrow .chart-row.highlighted rect {
       fill: #c6e0bf;
       fill: #2c89803b;
     }
 
-    .arrow-chart__body .axis-lines line,
-    .arrow-chart__body .tick-lines line {
+    .chart--arrow .axis-lines line,
+    .chart--arrow .tick-lines line {
       stroke: white;
       stroke-width: 0.25;
     }
-    .arrow-chart__body .axis-lines line.label-line {
+    .chart--arrow .axis-lines line.label-line {
       stroke: rgba(0,0,0,.3);
       stroke-width: 0.5;
       stroke-dasharray: 1.2 1.7;
     }
-    .arrow-chart__body .chart-row text.label-line-label {
+    .chart--arrow .chart-row text.label-line-label {
       fill: rgba(0,0,0,.6);
       transform: translateY(-4.5px);
       text-anchor: middle;
     }
 
-    .arrow-chart__body .chart-row text {
+    .chart--arrow .chart-row text {
       text-anchor: end;
       dominant-baseline: text-before-edge;
       transform: translate(-2px, 1.4px);
     }
-    .arrow-chart__body .chart-row text.right {
+    .chart--arrow .chart-row text.right {
       text-anchor: start;
       transform: translate(2px, 1.4px);
     }
-    .arrow-chart__body .sticky-leg .arrow .row-value.right {
+    .chart--arrow .sticky-leg .arrow .row-value.right {
       transform: translateX(2px);
     }
 
-    .arrow-chart__body .arrow line {
+    .chart--arrow .arrow line {
       stroke: #aaa;
       stroke-width: .3;
     }
 
-    .chart:not(.lollipop-variant) .arrow-chart__body .arrow line {
+    .chart--arrow:not(.lollipop-variant) .arrow line {
       stroke: #434878;
       marker-end: url(#arrowhead-dec);
     }
@@ -91,7 +91,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       stroke: #434878;
     }
 
-    .chart:not(.lollipop-variant) .arrow-chart__body .arrow.inc line {
+    .chart--arrow:not(.lollipop-variant) .arrow.inc line {
       stroke: #E24000;
       marker-end: url(#arrowhead-inc);
     }
@@ -108,20 +108,20 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       transform: translate(0, -0.1px);
     }
 
-    .lollipop-variant circle {
+    .chart--arrow.lollipop-variant circle {
       stroke-width: 0.2;
       fill-opacity: 0.7;
     }
-    .lollipop-variant .chart-row:hover circle {
+    .chart--arrow.lollipop-variant .chart-row:hover circle {
       fill-opacity: 0.9;
     }
 
-    .lollipop-variant circle.before {
+    .chart--arrow.lollipop-variant circle.before {
       stroke: #434878;
       fill: #434878;
     }
     
-    .lollipop-variant circle.after {
+    .chart--arrow.lollipop-variant circle.after {
       stroke: #E24000;
       fill: #E24000;
     }
@@ -146,7 +146,7 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
     .arrow-chart__body .tick-values text:last-of-type {
       text-anchor: end;
     }
-    .arrow-chart__body.is-mobile .tick-values text:last-of-type {
+    .chart--arrow .is-mobile .tick-values text:last-of-type {
       transform: translate(-1px, 0);
     }
 
@@ -154,13 +154,13 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       text-anchor: middle;
       transform: translate(0, 8px);
     }
-    .arrow-chart__body.is-mobile .axis-title {
+    .chart--arrow .is-mobile .axis-title {
       transform: translate(0, 12px);
     }
     .arrow-chart__body .legend-desc {
       transform: translate(0, 14px);
     }
-    .arrow-chart__body.is-mobile .legend-desc {
+    .chart--arrow .is-mobile .legend-desc {
       transform: translate(0, 22px);
     }
     
@@ -181,9 +181,9 @@ See: /the-growing-risk-of-eviction-in-the-suburbs/index.md for usage
       left: 0;
     }
 
-    .lollipop-variant .legend-desc .arrow.inc circle.before,
-    .lollipop-variant .legend-desc .arrow:not(.inc) circle.after,
-    .lollipop-variant .legend-desc .arrow line {
+    .chart--arrow.lollipop-variant .legend-desc .arrow.inc circle.before,
+    .chart--arrow.lollipop-variant .legend-desc .arrow:not(.inc) circle.after,
+    .chart--arrow.lollipop-variant .legend-desc .arrow line {
       display: none;
     }
 

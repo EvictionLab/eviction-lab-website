@@ -1,0 +1,38 @@
+{{/* 
+  Shortcode for rendering flexible arrow charts.
+  Be sure to include:
+  scripts:
+    - arrow-chart2
+*/}}
+{{ $title := .Get "title" }}
+<div class="chart chart--arrow2 chart--{{ .Get `id` }}">
+  {{ if $title }}
+  <h3 class="chart__title">{{ $title }}</h3>
+  {{ end }}
+  <div id="{{ .Get `id` }}">
+    <svg></svg>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      console.log("INITIALING ARROW CHART 2");
+      Elab.ArrowChart2.init(document.getElementById("{{ .Get `id` }}"), {
+        id: "{{ .Get `id` }}",
+        data: "{{ .Get `data` }}",
+        xMin: "{{ .Get `xMin` }}",
+        xMax: "{{ .Get `xMax` }}",
+        axisLabelText: "{{ .Get `axisLabelText` }}",
+        xTicks: "{{ .Get `xTicks` }}",
+        nameCol: "{{ .Get `nameCol` }}" || "metro",
+        beforeCol: "{{ .Get `beforeCol` }}" || "before",
+        afterCol: "{{ .Get `afterCol` }}" || "after",
+        highlightCol: "{{ .Get `highlightCol` }}",
+        highlightStartCol: "{{ .Get `highlightStartCol` }}",
+        valueType: "{{ .Get `valueType` }}",
+        legendDecArrowText: "{{ .Get `legendDecArrowText` }}",
+        legendIncArrowText: "{{ .Get `legendIncArrowText` }}",
+        legendLabelText: "{{ .Get `legendLabelText` }}",
+        groupCol: "{{ .Get `groupCol` }}"
+      });
+    });
+  </script>
+</div>
