@@ -20,10 +20,11 @@ Elab.StateMap = (function (Elab) {
   function makeId() {
     return "_" + Math.random().toString(36).substr(2, 9);
   }
-      
+
   var zeroPatternId = "svg-map__pattern-zero";
 
-  function StateMap(root, data, dataOptions) {
+  function StateMap(root, data, dataOptions, markers) {
+    var simpleDisplay;
     // stores width of the root DOM element (.svg-map__body)
     var containerWidth;
     // svg selection for map
@@ -81,7 +82,10 @@ Elab.StateMap = (function (Elab) {
 
       var valueString = binValues
         ? binValues[data.value]
-        : valueTemplate.replace("{{value}}", valueFormat(data.value));
+        : valueTemplate.replace(/{{(.*?)}}/g, (match, key) => {
+            const formatter = key === "value" ? valueFormat : (v) => v;
+            return formatter(data[key]);
+          });
       var html = "<span>" + data.name + "</span><span>" + valueString + "</span>";
       tooltip
         .style("top", topOffset + "px")
@@ -96,7 +100,7 @@ Elab.StateMap = (function (Elab) {
 
     function renderLegend() {
       // spectrum legend doesn't apply to binned value maps
-      if (!!dataOptions.binValues) return null;
+      if (!!dataOptions.binValues || !!simpleDisplay) return null;
       window.innerWidth > 768 ? renderVerticalLegend() : renderHorizontalLegend();
     }
 
@@ -193,6 +197,7 @@ Elab.StateMap = (function (Elab) {
     }
 
     function renderOutline() {
+      // TODO: use native :hover styles instead?
       var hoverData = svg.selectAll(".svg-map__shape--hovered").data([hovered]);
       hoverData
         .enter()
@@ -226,6 +231,8 @@ Elab.StateMap = (function (Elab) {
     }
 
     function render() {
+      // TODOxxx
+      simpleDisplay = dataOptions.simpleDisplay || true;
       var rect = root.getBoundingClientRect();
       containerWidth = rect.width;
       var width = 720;
@@ -239,7 +246,8 @@ Elab.StateMap = (function (Elab) {
       // Define path generator
       path = d3
         .geoPath() // path generator that will convert GeoJSON to SVG paths
-        .projection(projection); // tell path generator to use albersUsa projection
+        .projection(projection) // tell path generator to use albersUsa projection
+        .pointRadius(5.5);
 
       //Create SVG element and append map to the SVG
       svg
@@ -259,10 +267,19 @@ Elab.StateMap = (function (Elab) {
         .attr("d", path)
         .style("fill", function (d) {
           if (zeroPattern && !d.properties.value) return "url(#" + zeroPatternId + ")";
+          // console.
+          if (simpleDisplay && d.properties.value === undefined) {
+            return "#cdcdcd";
+          }
           return ramp(d.properties.value);
         })
         .on("mousemove", function (d) {
+          // TODOxxx
+          if (simpleDisplay && d.properties.value === undefined) {
+            return;
+          }
           hovered = d;
+          console.log("hovered", hovered);
           showTooltip(d3.event, d.properties);
           renderOutline();
         })
@@ -288,7 +305,9 @@ Elab.StateMap = (function (Elab) {
       ticks = (dataOptions.ticks && parseInt(dataOptions.ticks)) || 5;
       valueFormat =
         (dataOptions.valueFormat && d3.format(dataOptions.valueFormat)) || d3.format(".1f");
+      //
       valueTemplate = dataOptions.valueTemplate || "{{value}}";
+      var tooltipKeys = [...valueTemplate.matchAll(/{{(.*?)}}/g)].map((match) => match[1]);
 
       // create elements and selections
       svg = d3
@@ -303,7 +322,8 @@ Elab.StateMap = (function (Elab) {
 
       // set min / max vals based on data
       if (!minVal || !maxVal) {
-        var extent = d3.extent(data, function (d) {
+        var allData = [...data, ...markers];
+        var extent = d3.extent(allData, function (d) {
           return parseFloat(d.value);
         });
         minVal = minVal || extent[0];
@@ -319,7 +339,7 @@ Elab.StateMap = (function (Elab) {
 
       // Load GeoJSON data and merge with states data
       d3.json(shapes, function (json) {
-        // add CSV data to json features
+        // add CSV data (state-level data) to GeoJSON features
         for (var i = 0; i < data.length; i++) {
           var dataState = data[i].state;
           var dataValue = data[i].value;
@@ -327,11 +347,38 @@ Elab.StateMap = (function (Elab) {
             var jsonState = json.features[j].id;
             if (dataState === jsonState) {
               json.features[j].properties.value = dataValue;
+              tooltipKeys.forEach((key) => {
+                json.features[j].properties[key] = data[i][key];
+              });
               break;
             }
           }
         }
+
+        // Merge in markers (cities/counties) if marker data exists
+        if (markers) {
+          // TODO keep separate from state features?
+          markers.forEach(function (marker) {
+            var markerFeature = {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [marker.lng, marker.lat],
+              },
+              properties: {
+                name: marker.name,
+                value: marker.value,
+              },
+            };
+            tooltipKeys.forEach((key) => {
+              markerFeature.properties[key] = marker[key];
+            });
+            json.features.push(markerFeature);
+          });
+        }
+
         features = json.features;
+        console.log({ features });
 
         render();
         renderLegend();
@@ -347,35 +394,59 @@ Elab.StateMap = (function (Elab) {
   }
 
   /**
-   * Loads and parses the CSV table
+   * Loads and parses the CSVs
    */
   function loadData(options, callback) {
     const yParse = function (d) {
       return parseFloat(d);
     };
-    d3.csv(options.data, function (data) {
-      var result = data.map(function (d) {
-        return {
-          state: shapeStateId(d[options.idColumn]),
-          value: yParse(d[options.valueColumn]),
-        };
+    const files = [
+      {
+        id: "states",
+        url: options.data,
+        shaper: (data) =>
+          data.map((d) => ({
+            ...d,
+            state: shapeStateId(d[options.idColumn]),
+            value: yParse(d[options.valueColumn]),
+          })),
+      },
+    ];
+    if (options.markerData) {
+      // add marker data to files for loading
+      files.push({
+        id: "markers",
+        url: options.markerData,
+        shaper: (data) =>
+          data.map((d) => ({
+            ...d,
+            name: d.name,
+            value: yParse(d[options.valueColumn]),
+            lat: parseFloat(d.lat),
+            lng: parseFloat(d.lng),
+          })),
       });
-      callback && callback(result);
-    });
+    }
+
+    Elab.Utils.loadAll(files, callback);
   }
 
   /**
    * Creates the state map
    */
   function init(rootEl, options) {
-    if (!options || typeof options !== "object")
+    if (!options || typeof options !== "object") {
       throw new Error("state-map: no options object provided");
-    if (!options.data)
+    }
+    if (!options.data) {
       throw new Error("state-map: must provide file URL in options");
+    }
     options.valueColumn = options.valueColumn || "value";
     options.idColumn = options.idColumn || "state";
-    loadData(options, function (data) {
-      StateMap(rootEl, data, options);
+
+    loadData(options, function (dataMap) {
+      console.log({ dataMap });
+      StateMap(rootEl, dataMap.states, options, dataMap.markers || []);
     });
   }
 

@@ -234,6 +234,7 @@ iframe.visual {
   --c2: #434878;
   --c3: #2c897f;
   --c4: #94aabd;
+  --choro3: rgba(241, 241, 241, 0.7);
   --highlight-row: #2c898028;
     --highlight-partial-row: #2c89803b;
   --chart-frame: #fff;
@@ -547,6 +548,9 @@ body .visual .visual__title, body .visual .visual__title > * {
   margin-right: 8px;
   background: #999;
 }
+.legend-item__color.circle {
+  border-radius: 50%;
+}
 .legend-item--0 .legend-item__color {
   background: var(--c1);
   background: #e24000
@@ -785,11 +789,14 @@ body .visual .visual__title, body .visual .visual__title > * {
   }
     */
 .chart--arrow2 .chart-row:nth-child(2n) rect.background {
-  fill: #E6EFF4;
+  /* fill: #0509911a; */
+    fill: #58a7ba1c;
+    /* fill: #5897ba21; */
+    /* fill: #E6EFF4; */
 }
 
 .chart--arrow2 .chart-row rect.background {
-  fill: #F4F7F9;
+  fill: none;
 }
 
 /* .chart--arrow2 .chart-row rect.partial-highlight {
@@ -800,7 +807,6 @@ body .visual .visual__title, body .visual .visual__title > * {
   fill: #2c89803b;
 }
 
-*/
 */
 .chart--arrow2 .axis-lines line,
 .chart--arrow2 .tick-lines line {
@@ -952,6 +958,10 @@ body .visual .visual__title, body .visual .visual__title > * {
   left: 0;
 }
 
+.chart--arrow2 .sticky-leg .highlight {
+  fill: var(--highlight-partial-row);
+  stroke: #2c898055;
+}
 /* .chart--arrow2.lollipop-variant .legend-desc .arrow.inc circle.before,
 .chart--arrow2.lollipop-variant .legend-desc .arrow:not(.inc) circle.after,
 .chart--arrow2.lollipop-variant .legend-desc line.arrow {
