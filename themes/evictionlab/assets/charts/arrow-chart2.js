@@ -74,7 +74,7 @@ Elab.ArrowChart2 = (function (Elab) {
           group: groupCol ? d[groupCol] : null,
         }))
         // TODO: make data sorting configurable
-        .sort((a, b) => (a.before > b.before ? -1 : 1));
+        .sort((a, b) => (a.before < b.before ? -1 : 1));
       // console.log({ parsed });
       callback(parsed);
     });
