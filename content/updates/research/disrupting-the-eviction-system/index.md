@@ -717,7 +717,7 @@ Across the 23 programs we studied, 21 limited the right to counsel to tenants wh
 The most common limitation among these programs is income. In many cases, cities have expanded programs and removed eligibility requirements to participate. Louisville, for example, removed the limitation that offered RTC only to households with children.
 {{% arrow-chart2
   id="arrows-elig"
-  title="Figure 2. Right to counsel eligibility by jurisdiction"
+  title="Figure 2. Right to counsel passage & eligibility by jurisdiction"
   data="./figure2.csv"
   axisLabelText="Suburban Share of Evictions"
   xTicks="2018|2"

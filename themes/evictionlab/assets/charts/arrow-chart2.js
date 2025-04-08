@@ -169,7 +169,7 @@ Elab.ArrowChart2 = (function (Elab) {
     const width = options.width || 600;
     const rowHeight = options.rowHeight || 24;
     // Set margins for the chart rows and for the sticky axis
-    const nameWidth = options.nameWidth || 200;
+    const nameWidth = options.nameWidth || 215;
     const margin = { top: 0, right: 0, bottom: 0, left: nameWidth };
     // Height for the main chart is based on rows
     const height = margin.top + margin.bottom + rowHeight * data.length;
@@ -337,7 +337,7 @@ Elab.ArrowChart2 = (function (Elab) {
 
     // --- Legend Labels in Sticky Axis ---
     const legendItemHeight = 20;
-    const legendLeftOffset = options.legendLeftOffset || 80;
+    const legendLeftOffset = options.legendLeftOffset || 70;
     const legendGroup = stickySvg
       .append("g")
       .attr("transform", `translate(${legendLeftOffset}, 28)`);
@@ -369,7 +369,7 @@ Elab.ArrowChart2 = (function (Elab) {
       legendGroup
         .append("text")
         .attr("class", "legend-label")
-        .attr("x", 30)
+        .attr("x", 0)
         .attr("y", legendItemsOffset + legendItemHeight / 2)
         .attr("text-anchor", "start")
         .text(options.legendLabelText + ":");
