@@ -80,7 +80,7 @@ Legislators enact RTC as a way of addressing multiple problems caused by evictio
 Why did legislators adopt the RTC? In 19 of the 23 jurisdictions that now have the RTC, lawmakers included preambles that described their objectives or reasoning for introducing the RTC. These statements often represent the factors that are timely and important to legislators and their expectations of the law’s impact. As we show in Figure 1, the purpose of the legislation varies widely across the country.
 
 
-<div class="figheader">Figure 1. Legislative Justification for Right to Counsel in Jurisdictions 
+<div class="figheader mb-0">Figure 1. Legislative Justification for Right to Counsel in Jurisdictions 
 </div>
 <!-- {{< inlinesvg svg="content/updates/research/disrupting-the-eviction-system/RTC.svg"  >}} -->
 
