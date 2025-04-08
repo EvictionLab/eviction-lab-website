@@ -32,23 +32,6 @@
       var binValues = {{ .Get "binValues" }}
       var zeroPattern = {{ .Get "zeroPattern" }}
       var rootEl = document.getElementById(id)
-        console.log({
-          id,
-          csv,
-          markerCsv,
-          idColumn,
-          valueColumn,
-          colors,
-          minVal,
-          maxVal,
-          ticks,
-          valueTemplate,
-          valueFormat,
-          binValues,
-          zeroPattern,
-          rootEl,
-          Elab
-        })
       
       Elab.StateMap.init(rootEl, { id:id, data: csv, markerData: markerCsv, valueTemplate: valueTemplate, valueFormat: valueFormat, ticks: ticks, minVal: minVal, maxVal: maxVal, colors: colors, idColumn: idColumn, valueColumn: valueColumn, zeroPattern: zeroPattern, binValues: binValues })
     });

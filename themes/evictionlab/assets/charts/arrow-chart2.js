@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("Arrow chart2 module loaded");
-
 /**
  * ARROW CHART MODULE
  * ----
@@ -64,7 +62,7 @@ Elab.ArrowChart2 = (function (Elab) {
       valueType,
     } = opts;
     const parseValue = valueParsers[valueType] || parseDefault;
-    console.log(opts);
+    // console.log(opts);
     d3.csv(data, (d) => {
       const parsed = d
         .map((d) => ({
@@ -77,7 +75,7 @@ Elab.ArrowChart2 = (function (Elab) {
         }))
         // TODO: make data sorting configurable
         .sort((a, b) => (a.before > b.before ? -1 : 1));
-      console.log({ parsed });
+      // console.log({ parsed });
       callback(parsed);
     });
   }
@@ -89,15 +87,15 @@ Elab.ArrowChart2 = (function (Elab) {
     const actualMax = Math.max(...allVals);
     const padding = (actualMax - actualMin) * 0.1;
 
-    console.log({
-      allVals,
-      xMin,
-      xMax,
-      actualMin,
-      actualMax,
-      paddedMin: actualMin - padding,
-      paddedMax: actualMax + padding,
-    });
+    // console.log({
+    //   allVals,
+    //   xMin,
+    //   xMax,
+    //   actualMin,
+    //   actualMax,
+    //   paddedMin: actualMin - padding,
+    //   paddedMax: actualMax + padding,
+    // });
 
     return [
       isNumberLike(xMin) ? Number(xMin) : valueType === "percent" ? 0 : actualMin - padding,
@@ -134,7 +132,7 @@ Elab.ArrowChart2 = (function (Elab) {
   }
 
   function parseTicks(config, domain) {
-    console.log({ config, domain });
+    // console.log({ config, domain });
     if (!config) return getSaneTickValues(domain);
     if (config.includes(",")) return config.split(",").map(Number);
     if (config.includes("|")) {
@@ -143,7 +141,7 @@ Elab.ArrowChart2 = (function (Elab) {
       const step = parseInt(stepStr);
       const result = [];
       for (let v = start; v <= domain[1]; v += step) result.push(v);
-      console.log({ result });
+      // console.log({ result });
       return result;
     }
     console.log("Invalid xTicks config: ", config);
@@ -212,7 +210,7 @@ Elab.ArrowChart2 = (function (Elab) {
     // include one separating names from lines
     [xDomain[0], ...tickValues].forEach((tick) => {
       const x = xScale(tick);
-      console.log({ tick, x });
+      // console.log({ tick, x });
       axisLinesGroup
         .append("line")
         .attr("x1", x)
@@ -386,7 +384,7 @@ Elab.ArrowChart2 = (function (Elab) {
     const legendItems = [];
     if (groups.length > 0) {
       groups.forEach((group) => {
-        console.log(group);
+        // console.log(group);
         legendItems.push({
           type: "group",
           label: group,

@@ -181,11 +181,10 @@
   {{ $linechart := resources.Get "charts/line-chart.js" }}
   {{ $barchart := resources.Get "charts/bar-chart.js" }}
   {{ $arrowchart2 := resources.Get "charts/arrow-chart2.js" }}
-  {{ $arrowchart3 := resources.Get "charts/arrow-chart3.js" }}
   {{ $stackchart := resources.Get "charts/stack-area-chart.js" }}
   {{ $histogram := resources.Get "charts/histogram.js" }}
   {{ $legend := resources.Get "charts/legend.js" }}
-  {{ $js := slice $d3 $builder $utils $linechart $barchart $arrowchart2 $arrowchart3 $stackchart $histogram $legend |
+  {{ $js := slice $d3 $builder $utils $linechart $barchart $arrowchart2 $stackchart $histogram $legend |
   resources.Concat
   "js/charts/bundle.js" | resources.Minify }}
   <script src="{{ ($js | fingerprint).RelPermalink }}"></script>

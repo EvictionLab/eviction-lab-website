@@ -21,7 +21,6 @@ scripts:
   - charts
   - maps
   - arrow-chart2
-  - arrow-chart3
 ---
 <style>
   .svg-map__legend {

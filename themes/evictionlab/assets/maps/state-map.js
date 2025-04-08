@@ -279,7 +279,7 @@ Elab.StateMap = (function (Elab) {
             return;
           }
           hovered = d;
-          console.log("hovered", hovered);
+          // console.log("hovered", hovered);
           showTooltip(d3.event, d.properties);
           renderOutline();
         })
@@ -378,7 +378,7 @@ Elab.StateMap = (function (Elab) {
         }
 
         features = json.features;
-        console.log({ features });
+        // console.log({ features });
 
         render();
         renderLegend();
@@ -445,7 +445,7 @@ Elab.StateMap = (function (Elab) {
     options.idColumn = options.idColumn || "state";
 
     loadData(options, function (dataMap) {
-      console.log({ dataMap });
+      // console.log({ dataMap });
       StateMap(rootEl, dataMap.states, options, dataMap.markers || []);
     });
   }
