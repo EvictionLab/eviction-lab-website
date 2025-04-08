@@ -50,7 +50,7 @@ Elab.ArrowChart2 = (function (Elab) {
 
   /** ~~~~~~~~~ */
 
-  function parseCSV(opts, callback) {
+  function parseCSV(options, callback) {
     const {
       data,
       nameCol,
@@ -60,9 +60,9 @@ Elab.ArrowChart2 = (function (Elab) {
       highlightCol,
       highlightStartCol,
       valueType,
-    } = opts;
+    } = options;
     const parseValue = valueParsers[valueType] || parseDefault;
-    // console.log(opts);
+    // console.log(options);
     d3.csv(data, (d) => {
       const parsed = d
         .map((d) => ({
@@ -80,8 +80,8 @@ Elab.ArrowChart2 = (function (Elab) {
     });
   }
 
-  function getDomain(data, opts) {
-    const { xMin, xMax, valueType } = opts;
+  function getDomain(data, options) {
+    const { xMin, xMax, valueType } = options;
     const allVals = data.flatMap((d) => [d.before, d.after]);
     const actualMin = Math.min(...allVals);
     const actualMax = Math.max(...allVals);
@@ -164,10 +164,13 @@ Elab.ArrowChart2 = (function (Elab) {
   }
 
   function renderChart(el, data, options) {
-    const width = options.width || 600;
-    const rowHeight = options.rowHeight || 24;
+    // determines the scaling of everything in the svg
+    // if width not provided, svg scales such that 12 in the svg corresponds to 12px
+    // this means things like font size can stay consistent
+    const width = options.width || el.getBoundingClientRect().width;
+    const rowHeight = options.rowHeight || 28;
     // Set margins for the chart rows and for the sticky axis
-    const nameWidth = options.nameWidth || 215;
+    const nameWidth = options.nameWidth || 230;
     const margin = { top: 0, right: 0, bottom: 0, left: nameWidth };
     // Height for the main chart is based on rows
     const height = margin.top + margin.bottom + rowHeight * data.length;
@@ -183,7 +186,7 @@ Elab.ArrowChart2 = (function (Elab) {
 
     const yScale = d3
       .scaleBand()
-      .domain(data.map((d) => d.name)) // todo
+      .domain(data.map((d) => d.name))
       .range([0, innerHeight]);
 
     // Clear container and set the base class
@@ -210,7 +213,6 @@ Elab.ArrowChart2 = (function (Elab) {
     // include one separating names from lines
     [xDomain[0], ...tickValues].forEach((tick) => {
       const x = xScale(tick);
-      // console.log({ tick, x });
       axisLinesGroup
         .append("line")
         .attr("x1", x)
@@ -446,9 +448,14 @@ Elab.ArrowChart2 = (function (Elab) {
     }
   }
 
-  function init(rootEl, opts) {
-    parseCSV(opts, (data) => {
-      renderChart(rootEl, data, opts);
+  function init(rootEl, options) {
+    parseCSV(options, (data) => {
+      if (!options.width) {
+        window.addEventListener("resize", function () {
+          renderChart(rootEl, data, options);
+        });
+      }
+      renderChart(rootEl, data, options);
     });
   }
 
