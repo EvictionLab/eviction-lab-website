@@ -125,7 +125,7 @@ Elab.ArrowChart2 = (function (Elab) {
     // avoid floating point issues
     const decimals = Math.floor(step) === step ? 0 : step.toString().split(".")[1].length;
     for (let v = Math.floor(domain[0] / step) * step; v <= domain[1]; v += step) {
-      result.push(Number(v.toFixed(decimals)));
+      v >= domain[0] && v <= domain[1] && result.push(Number(v.toFixed(decimals)));
     }
     // console.log({ humanRelevantTicks: result });
     return result;
@@ -154,8 +154,8 @@ Elab.ArrowChart2 = (function (Elab) {
       .attr("viewBox", "0 -5 10 10")
       .attr("refX", 10)
       .attr("refY", 0)
-      .attr("markerWidth", 12)
-      .attr("markerHeight", 12)
+      .attr("markerWidth", 13)
+      .attr("markerHeight", 13)
       .attr("orient", "auto")
       .append("path")
       .attr("d", "M0,-5L10,0L0,5")
@@ -327,13 +327,17 @@ Elab.ArrowChart2 = (function (Elab) {
 
     // Render the x-axis (using the same xScale and tick config)
     const formatter = valueFormatters[options.valueType] || formatDefault;
-    axisG.call(
-      d3
-        .axisBottom(xScale)
-        .tickValues(tickValues)
-        // TODO: use a value formatter instead of String
-        .tickFormat((d) => formatter(d)),
-    );
+    axisG
+      .call(
+        d3
+          .axisBottom(xScale)
+          .tickValues(tickValues)
+          .tickFormat((d) => formatter(d)),
+      )
+      .selectAll("text")
+      .attr("text-anchor", (d) =>
+        d === xDomain[0] ? "start" : d === xDomain[1] ? "end" : "middle",
+      );
 
     // --- Legend Labels in Sticky Axis ---
     const legendItemHeight = 20;
