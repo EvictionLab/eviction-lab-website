@@ -235,8 +235,9 @@ iframe.visual {
   --c3: #2c897f;
   --c4: #94aabd;
   --choro3: rgba(241, 241, 241, 0.7);
-  --highlight-row: #2c898028;
-    --highlight-partial-row: #2c89803b;
+  --highlighted-row: #2c89803b;
+  /* --highlighted-row: #2c898028; */
+  --highlighted-portion-row: #2c89803b;
   --chart-frame: #fff;
   --grid-lines: #fff;
   --text-secondary: #7d7d7d;
@@ -770,6 +771,13 @@ body .visual .visual__title, body .visual .visual__title > * {
   fill: none;
 }
 
+.chart--arrow2 .chart-row rect.background.highlighted {
+  fill: var(--highlighted-row);
+}
+
+.chart--arrow2 .chart-row rect.highlighted-portion {
+  fill: var(--highlighted-portion-row);
+}
 .chart--arrow2 .axis-lines line,
 .chart--arrow2 .tick-lines line {
   stroke: white;
@@ -777,6 +785,9 @@ body .visual .visual__title, body .visual .visual__title > * {
 }
 .chart--arrow2 line.arrow {
   stroke-width: 1.5;
+}
+.chart--arrow2 defs marker.arrowhead {
+  stroke-width: 1;
 }
 
 .chart--arrow2 text.legend-label,
@@ -795,7 +806,7 @@ body .visual .visual__title, body .visual .visual__title > * {
 }
 
 .chart--arrow2 .sticky-leg .highlight {
-  fill: var(--highlight-partial-row);
+  fill: var(--highlighted-portion-row);
   stroke: #2c898055;
 }
 
@@ -809,7 +820,7 @@ body .visual .visual__title, body .visual .visual__title > * {
   dominant-baseline: middle;
 }
 
-.chart--arrow2 .sticky-leg .chart__axis .tick text {
+.chart--arrow2 .sticky-leg .tick text {
   font-size: 12px;
 }
 
@@ -828,7 +839,7 @@ body .visual .visual__title, body .visual .visual__title > * {
   .chart--arrow2 text {
     font-size: 16px;
   }
-  .chart--arrow2 .sticky-leg .chart__axis .tick text {
+                                                          .chart--arrow2 .sticky-leg .tick text {
     font-size: 14px;
   }
   /* in auto-scaled version font-sizes stay the same as the svg shrinks */
@@ -836,7 +847,7 @@ body .visual .visual__title, body .visual .visual__title > * {
   .chart--arrow2 svg.auto-scaling text {
     font-size: 12px;
   }
-  .chart--arrow2 svg.auto-scaling .sticky-leg .chart__axis .tick text {
+                                                          .chart--arrow2 svg.auto-scaling .sticky-leg .tick text {
     font-size: 10px;
   }
 }

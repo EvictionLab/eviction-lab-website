@@ -48,8 +48,6 @@ Elab.ArrowChart2 = (function (Elab) {
   };
   const formatDefault = String;
 
-  /** ~~~~~~~~~ */
-
   function parseCSV(options, callback) {
     const {
       data,
@@ -147,16 +145,18 @@ Elab.ArrowChart2 = (function (Elab) {
     console.log("Invalid xTicks config: ", config);
   }
 
-  function appendArrowDefs(defs, id, color) {
+  function appendArrowDefs(defs, color, id, className = "") {
     defs
       .append("marker")
       .attr("id", id)
+      .attr("class", "arrowhead " + className)
       .attr("viewBox", "0 -5 10 10")
       .attr("refX", 10)
       .attr("refY", 0)
-      .attr("markerWidth", 13)
-      .attr("markerHeight", 13)
+      .attr("markerWidth", 17)
+      .attr("markerHeight", 17)
       .attr("orient", "auto")
+      .attr("markerUnits", "userSpaceOnUse") // Prevent scaling with stroke width
       .append("path")
       .attr("d", "M0,-5L10,0L0,5")
       .attr("fill", "none")
@@ -185,12 +185,11 @@ Elab.ArrowChart2 = (function (Elab) {
       nameWidth *= mobileFontSize / fontSize;
     }
     const margin = { top: 0, right: 0, bottom: 0, left: nameWidth };
-    // Height for the main chart is based on rows
-    const height = margin.top + margin.bottom + rowHeight * data.length;
+    const totalHeight = margin.top + margin.bottom + rowHeight * data.length;
 
     // Compute inner dimensions for the main chart area
     const innerWidth = BBoxWidth - margin.left - margin.right;
-    const innerHeight = height - margin.top - margin.bottom;
+    const innerHeight = totalHeight - margin.top - margin.bottom;
 
     const xDomain = getDomain(data, options);
     const xScale = d3.scaleLinear().domain(xDomain).range([0, innerWidth]);
@@ -205,36 +204,18 @@ Elab.ArrowChart2 = (function (Elab) {
 
     const svg = container
       .append("svg")
-      .attr("class", `chart__root ${autoScaling ? "auto-scaling" : ""}`)
-      .attr("viewBox", `0 0 ${BBoxWidth} ${height}`)
+      .attr("class", autoScaling ? "auto-scaling" : "")
+      .attr("viewBox", `0 0 ${BBoxWidth} ${totalHeight}`)
       .attr("preserveAspectRatio", "xMinYMin meet");
 
-    // Create a group for the chart rows in the main svg
+    // area where arrows are drawn
     const chartArea = svg
       .append("g")
       .attr("class", "chart_area")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // Add axis lines group
-    const axisLinesGroup = chartArea.append("g").attr("class", "axis-lines");
-    const tickValues = parseTicks(options.xTicks, xDomain);
-    // include one separating names from chart area
-    [xDomain[0], ...tickValues].forEach((tick) => {
-      const x = xScale(tick);
-      axisLinesGroup
-        .append("line")
-        .attr("x1", x)
-        .attr("x2", x)
-        .attr("y1", 0)
-        .attr("y2", innerHeight);
-    });
-
-    // Create a group for the chart rows in the main svg
-    const rowsGroup = chartArea.append("g").attr("class", "rows");
-    // .attr("transform", `translate(${margin.left},${margin.top})`);
-
-    // For each row, append a group with proper class "chart-row"
-    const rows = rowsGroup
+    const chartRows = chartArea.append("g").attr("class", "chart-rows");
+    const rows = chartRows
       .selectAll("g.chart-row")
       .data(data)
       .enter()
@@ -242,98 +223,111 @@ Elab.ArrowChart2 = (function (Elab) {
       .attr("class", "chart-row")
       .attr("transform", (d, i) => `translate(0, ${yScale.bandwidth() * i})`);
 
+    // each row gets a background rect...
     rows
       .append("rect")
-      .attr("class", "background")
+      .attr("class", (d) => `background ${d.highlight ? "highlighted" : ""}`)
       // chart row rect covers name area as well as data area
       .attr("transform", `translate(${-margin.left})`)
       .attr("width", innerWidth + margin.left)
       .attr("height", yScale.bandwidth());
 
-    // Append another rect for rows with full highlight
-    rows
-      .filter((d) => d.highlight)
-      .append("rect")
-      .attr("class", "highlight")
-      .attr("transform", `translate(${-margin.left})`)
-      .attr("width", innerWidth + margin.left)
-      .attr("height", yScale.bandwidth())
-      .attr("fill", "var(--highlight-row)");
+    // ...axis lines (so they can go above background, below arrows)...
+    const axisLines = rows.append("g").attr("class", "axis-lines");
+    const tickValues = parseTicks(options.xTicks, xDomain);
+    // include axis line separating names from chart area
+    [xDomain[0], ...tickValues].forEach((tick) => {
+      const x = xScale(tick);
+      axisLines
+        .append("line")
+        .attr("x1", x)
+        .attr("x2", x)
+        .attr("y1", 0)
+        .attr("y2", yScale.bandwidth());
+    });
 
-    // Add row labels with proper class
+    // ...a partial highlight (if applicable)...
+    rows
+      .filter((d) => d.highlightStart)
+      .append("rect")
+      .attr("class", "highlighted-portion")
+      .attr("transform", (d) => `translate(${xScale(d.highlightStart)})`)
+      .attr("width", (d) => innerWidth - xScale(d.highlightStart))
+      .attr("height", yScale.bandwidth());
+
+    // ...a name (to the left of the chart area)...
     rows
       .append("text")
-      .attr("class", "chart__row-label")
       .attr("x", -10)
       .attr("y", yScale.bandwidth() / 2)
       // .attr("dy", "0.35em")
       .attr("text-anchor", "end")
       .text((d) => d.name);
 
-    // Append another rect for rows with partial highlight
-    rows
-      .filter((d) => d.highlightStart)
-      .append("rect")
-      .attr("class", "highlight-partial")
-      .attr("transform", (d) => `translate(${xScale(d.highlightStart)})`)
-      .attr("width", (d) => innerWidth - xScale(d.highlightStart))
-      .attr("height", yScale.bandwidth())
-      .attr("fill", "var(--highlight-partial-row)");
-
+    // if data are grouped, determine what they are
     const groups = Array.from(new Set(data.map((d) => d.group)))
       .filter(Boolean)
       // TODO: make group sorting configurable
       .sort((a, b) => (a.length > b.length ? 1 : -1));
-    const colorScale = d3.scaleOrdinal().domain(groups).range(groupColors);
-    const getColor = (d) => {
-      if (!!groups.length) return colorScale(d.group) || "#000";
+
+    const groupColorScale = d3.scaleOrdinal().domain(groups).range(groupColors);
+    const getArrowColor = (d) => {
+      // color based on group if grouped, otherwise inc/dec
+      if (!!groups.length) return groupColorScale(d.group) || "#000";
       return d.before < d.after ? incColor : decColor;
     };
-    const formatGroupName = (group) => group.toLowerCase().replace(/\s/g, "-");
-    const getArrowheadId = (d) => {
-      let id = "";
-      if (!!groups.length) id = formatGroupName(d.group);
-      else id = d.before < d.after ? "inc" : "dec";
-      return `arrowhead-${id}`;
+
+    const formatGroupName = (group) => group.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    // util for determining arrowhead id for an arrow
+    const getArrowheadId = (d, knownId = null) => {
+      const idBase = (options.id || "a2") + "-arrowhead-";
+      if (knownId) return idBase + knownId;
+      if (!!groups.length) return idBase + formatGroupName(d.group);
+      return `${idBase}${d.before < d.after ? "inc" : "dec"}`;
     };
 
-    // Add arrow lines with proper class; these will pick up your arrow styles
+    // ...and an arrow
     rows
       .append("line")
       .attr("class", (d) => `arrow ${d.before < d.after ? "inc" : "dec"}`)
-      .attr("stroke", getColor)
+      .attr("stroke", getArrowColor)
       .attr("marker-end", (d) => `url(#${getArrowheadId(d)})`)
       .attr("x1", (d) => xScale(d.before))
       .attr("x2", (d) => xScale(d.after))
       .attr("y1", yScale.bandwidth() / 2)
       .attr("y2", yScale.bandwidth() / 2);
 
-    // Append arrow marker definitions in the main svg
+    // add arrow marker defs to the main svg (legend arrows pick them up from there as well)
     const defs = svg.append("defs");
-    appendArrowDefs(defs, "arrowhead-inc", incColor);
-    appendArrowDefs(defs, "arrowhead-dec", decColor);
-
+    // add defs for inc/dec arrows and groups
+    appendArrowDefs(defs, incColor, getArrowheadId(null, "inc"), "inc");
+    appendArrowDefs(defs, decColor, getArrowheadId(null, "dec"), "dec");
     groups.forEach((group) =>
-      appendArrowDefs(defs, `arrowhead-${formatGroupName(group)}`, colorScale(group)),
+      appendArrowDefs(
+        defs,
+        groupColorScale(group),
+        getArrowheadId({ group }),
+        formatGroupName(group),
+      ),
     );
+
     // --- Sticky Leg Axis ---
-    // if no height provided, set initial value that increases as needed
-    let axisHeight = options.axisHeight || 40;
-    // Append the sticky axis SVG below the main chart
+    // minimum legend height for axis + ticks, increase as more height is needed
+    let calculatedLegHeight = 40;
+
+    // add svg for legend/axis which will stick below the chart
     const stickySvg = container
       .append("svg")
-      .attr("class", `sticky-leg chart__root ${autoScaling ? "auto-scaling" : ""}`);
+      .attr("class", `sticky-leg ${autoScaling ? "auto-scaling" : ""}`);
 
-    // Append an axis group in the sticky svg.
-    // Offset the group by the left margin so ticks align with the chart.
-    const axisG = stickySvg
+    // Offset ticks by the left margin so ticks align with the chart area
+    const ticks = stickySvg
       .append("g")
       .attr("class", "chart__axis")
       .attr("transform", `translate(${margin.left}, 0)`);
 
-    // Render the x-axis (using the same xScale and tick config)
     const formatter = valueFormatters[options.valueType] || formatDefault;
-    axisG
+    ticks
       .call(
         d3
           .axisBottom(xScale)
@@ -342,36 +336,36 @@ Elab.ArrowChart2 = (function (Elab) {
       )
       .selectAll("text")
       .attr("text-anchor", (d) =>
+        // if there are ticks at the edges, shift them to stay within chart area
         d === xDomain[0] ? "start" : d === xDomain[1] ? "end" : "middle",
       );
 
     // TODO: add axisLabelText if provided
 
-    // --- Legend Labels in Sticky Axis ---
-    const legendItemHeight = 20;
+    const legendItemHeight = 24;
     const legendGroup = stickySvg
       .append("g")
       .attr("class", "legend-group-wrapper")
       .attr("transform", `translate(5, 32)`)
       .append("g")
       .attr("class", "legend-group");
-    let legendItemsOffset = 0;
 
+    let legendItemsOffset = 0;
     // Append highlight label if supplied
     if (options.highlightLabel) {
-      axisHeight += legendItemHeight;
+      calculatedLegHeight += legendItemHeight;
       legendItemsOffset += legendItemHeight;
+      // highlight icon
       legendGroup
         .append("rect")
         .attr("class", "highlight")
-        // .attr("x", 345)
-        // .attr("y", legendItemHeight / 2)
-        .attr("width", 25)
+        .attr("width", 28)
         .attr("height", legendItemHeight - 4);
+      // highlight label
       legendGroup
         .append("text")
         .attr("class", "legend-label")
-        .attr("x", 30)
+        .attr("x", 35)
         .attr("y", legendItemHeight / 2)
         .attr("text-anchor", "start")
         .text(options.highlightLabel);
@@ -385,87 +379,91 @@ Elab.ArrowChart2 = (function (Elab) {
         .attr("y", legendItemsOffset + legendItemHeight / 2)
         .attr("text-anchor", "start")
         .text(options.legendLabelText + ":");
-      axisHeight += legendItemHeight;
+      calculatedLegHeight += legendItemHeight;
       legendItemsOffset += legendItemHeight;
     }
 
-    // Group for legend items positioned below the legend label
-    const legendItemsGroup = legendGroup
+    const legendItems = legendGroup
       .append("g")
       .attr("class", "legend-items")
       .attr("transform", `translate(0, ${legendItemsOffset})`);
 
-    // Consolidate legend items logic into one block
-    const legendItems = [];
+    // establish legend items
+    const items = [];
     if (groups.length > 0) {
       groups.forEach((group) => {
         // console.log(group);
-        legendItems.push({
+        items.push({
           type: "group",
           label: group,
-          color: colorScale(group),
-          arrowheadId: `arrowhead-${formatGroupName(group)}`,
+          color: groupColorScale(group),
+          arrowheadId: getArrowheadId({ group }),
         });
       });
     } else {
       if (options.legendDecArrowText) {
-        legendItems.push({
+        items.push({
           type: "dec",
           label: options.legendDecArrowText,
           color: decColor,
-          arrowheadId: "arrowhead-dec",
+          arrowheadId: getArrowheadId(null, "dec"),
         });
       }
       if (options.legendIncArrowText) {
-        legendItems.push({
+        items.push({
           type: "inc",
           label: options.legendIncArrowText,
           color: incColor,
-          arrowheadId: "arrowhead-inc",
+          arrowheadId: getArrowheadId(null, "inc"),
         });
       }
     }
 
-    const itemsPerCol = options.legItemsPerCol || isMobile ? 8 : 2;
     const colWidth = options.legColWidth || 175;
+    // util for calculating legend item transforms
     function getLegendItemTransform(d, index) {
+      // on mobile we stack the legend items bc we don't have much horizontal space
+      const itemsPerCol = options.legItemsPerCol || isMobile ? 8 : 2;
+      // we fill each column before moving to the next row because groups are sorted
+      // by increasing group name length (so we can make first columns narrower)
       const colIdx = Math.floor(index / itemsPerCol);
       const offsetX = colIdx * colWidth;
       const offsetY = (index % itemsPerCol) * legendItemHeight;
-      // increase axisHeight for each row
-      if (colIdx === 0) axisHeight += legendItemHeight;
+      // increase calculatedLegHeight for each new row
+      if (colIdx === 0) calculatedLegHeight += legendItemHeight;
       return `translate(${offsetX}, ${offsetY})`;
     }
     // Render legend items vertically with each item on its own row
-    if (legendItems.length > 0) {
-      legendItemsGroup
+    if (items.length > 0) {
+      const legendItem = legendItems
         .selectAll("g.arrow-legend-item")
-        .data(legendItems)
+        .data(items)
         .enter()
         .append("g")
         .attr("class", "arrow-legend-item")
-        .attr("transform", getLegendItemTransform)
-        .each(function (d) {
-          const g = d3.select(this);
-          g.append("line")
-            .attr("x1", 0)
-            .attr("x2", 25)
-            .attr("y1", legendItemHeight / 2)
-            .attr("y2", legendItemHeight / 2)
-            .attr("stroke", d.color)
-            .attr("marker-end", `url(#${d.arrowheadId})`);
-          g.append("text")
-            .attr("x", 30)
-            .attr("y", legendItemHeight / 2 + 1)
-            // .attr("dy", "0.35em")
-            .attr("text-anchor", "start")
-            .text(d.label);
-        });
+        .attr("transform", getLegendItemTransform);
+      // arrow marker
+      legendItem
+        .append("line")
+        .attr("class", "arrow")
+        .attr("x1", (d) => (d.type === "dec" ? 28 : 0))
+        .attr("x2", (d) => (d.type === "dec" ? 0 : 28))
+        .attr("y1", legendItemHeight / 2)
+        .attr("y2", legendItemHeight / 2)
+        .attr("stroke", (d) => d.color)
+        .attr("marker-end", (d) => `url(#${d.arrowheadId})`);
+      // group label
+      legendItem
+        .append("text")
+        .attr("x", 34)
+        .attr("y", legendItemHeight / 2 + 1)
+        .attr("text-anchor", "start")
+        .text((d) => d.label);
     }
 
-    // add the viewBox after axisHeight has been finalized
+    // add the viewBox after calculatedLegHeight has been finalized
     stickySvg
-      .attr("viewBox", `0 0 ${BBoxWidth} ${axisHeight}`)
+      .attr("viewBox", `0 0 ${BBoxWidth} ${calculatedLegHeight}`)
       .attr("preserveAspectRatio", "xMinYMin meet");
   }
 
