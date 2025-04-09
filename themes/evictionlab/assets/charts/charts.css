@@ -157,7 +157,7 @@ iframe.visual {
 }
 
 /** add margin when scale is below map */
-@media(max-width: 768px) {
+@media(max-width: 767px) {
   .svg-map__body {
     margin-bottom: 64px;
   }
@@ -256,7 +256,7 @@ iframe.visual {
 
 
 
-@media(max-width: 480px) {
+@media(max-width: 479px) {
   .chart, .visual {
     margin-left: -24px;
     margin-right: -24px;
@@ -599,7 +599,7 @@ body .visual .visual__title, body .visual .visual__title > * {
 
 
 /** INDIVIDUAL LINE CHART OVERRIDES **/
-@media(max-width: 540px) {
+@media(max-width: 539px) {
   .chart--summed .chart__axis--time .tick text {
     font-size: 11px;
   }
@@ -691,7 +691,7 @@ body .visual .visual__title, body .visual .visual__title > * {
 .chart.chart--bar .chart__bar:hover {
   fill: #e24000
 }
-@media(max-width: 480px) {
+@media(max-width: 479px) {
   .chart.chart--bar .tick text {
     font-size: 10px
   }
@@ -761,123 +761,94 @@ body .visual .visual__title, body .visual .visual__title > * {
   height: 100%;
 }
 
-.chart--arrow2 text {
-  font-size: 12px;
-  font-family: Akkurat-Regular, sans-serif;
-  dominant-baseline: middle;
-}
-
-.chart--arrow2 .sticky-leg .chart__axis .tick text {
-  font-size: 10px;
-}
-
-@media(max-width: 600px) {
-  .chart--arrow2 text {
-    font-size: 14px;
-  }
-
-  .chart--arrow2 .sticky-leg .chart__axis .tick text {
-    font-size: 12px;
-  }
-}
-/* .chart--arrow2 .is-mobile text {
-  font-size: 3.5px;
-}
-
-.chart--arrow2 .chart-row {
-  fill: #E6EFF4;
-  }
-    */
 .chart--arrow2 .chart-row:nth-child(2n) rect.background {
-  /* fill: #0509911a; */
-    fill: #58a7ba1c;
-    /* fill: #5897ba21; */
-    /* fill: #E6EFF4; */
+  fill: #58a7ba1c;
+  /* fill: #E6EFF4; */
 }
 
 .chart--arrow2 .chart-row rect.background {
   fill: none;
 }
 
-/* .chart--arrow2 .chart-row rect.partial-highlight {
-  fill: #2c898028;
-}
-
-.chart--arrow2 .chart-row rect.highlight {
-  fill: #2c89803b;
-}
-
-*/
 .chart--arrow2 .axis-lines line,
 .chart--arrow2 .tick-lines line {
   stroke: white;
   stroke-width: 1;
 }
-/* 
-.chart--arrow2 .axis-lines line.label-line {
-  stroke: rgba(0, 0, 0, .3);
-  stroke-width: 0.5;
-  stroke-dasharray: 1.2 1.7;
-}
-
-.chart--arrow2 .chart-row text.label-line-label {
-  fill: rgba(0, 0, 0, .6);
-  transform: translateY(-4.5px);
-  text-anchor: middle;
-}
-
-.chart--arrow2 .chart-row text {
-  text-anchor: end;
-  dominant-baseline: text-before-edge;
-  transform: translate(-2px, 1.4px);
-}
-
-.chart--arrow2 .chart-row text.right {
-  text-anchor: start;
-  transform: translate(2px, 1.4px);
-}
-
-*/
-/* .chart--arrow2 .sticky-leg .arrow .row-value.right {
-  transform: translateX(2px);
-}
-
-*/
 .chart--arrow2 line.arrow {
-  stroke-width: 1.2;
+  stroke-width: 1.5;
 }
 
-/* .chart--arrow2:not(.lollipop-variant) line.arrow {
-  stroke: #434878;
-  marker-end: url(#arrowhead-dec);
+.chart--arrow2 text.legend-label,
+.chart--arrow2 .legend-items text {
+  text-transform: uppercase;
+  font-family: GT-Eesti-Display-Medium, sans-serif;
+  /* dominant-baseline: unset; */
 }
 
-#arrowhead-dec {
-  stroke: #434878;
+.chart--arrow2 .sticky-leg {
+  background: #F4F7F9;
+  opacity: 0.93;
+  position: sticky;
+  bottom: 0;
+  left: 0;
 }
 
-.chart--arrow2:not(.lollipop-variant) line.arrow.inc {
-  stroke: #E24000;
-  marker-end: url(#arrowhead-inc);
+.chart--arrow2 .sticky-leg .highlight {
+  fill: var(--highlight-partial-row);
+  stroke: #2c898055;
 }
 
-#arrowhead-inc {
-  stroke: #E24000;
+.chart--arrow2 .sticky-leg .legend-group {
+  transform: translateX(120px);
 }
 
+.chart--arrow2 text {
+  font-size: 14px;
+  font-family: Akkurat-Regular, sans-serif;
+  dominant-baseline: middle;
+}
+
+.chart--arrow2 .sticky-leg .chart__axis .tick text {
+  font-size: 12px;
+}
+
+@media(max-width: 1199px) {
+  .chart--arrow2 .sticky-leg .legend-group {
+    transform: translateX(80px);
+  }
+}
+@media(max-width: 767px) {
+  .chart--arrow2 .sticky-leg .legend-group {
+    transform: translateX(0);
+  }
+}
+@media(max-width: 599px) {
+  /* font sizes increase on mobile to counter shrinking svg size */
+  .chart--arrow2 text {
+    font-size: 16px;
+  }
+  .chart--arrow2 .sticky-leg .chart__axis .tick text {
+    font-size: 14px;
+  }
+  /* in auto-scaled version font-sizes stay the same as the svg shrinks */
+  /* so reduce font-size to fit chart on smaller screen */
+  .chart--arrow2 svg.auto-scaling text {
+    font-size: 12px;
+  }
+  .chart--arrow2 svg.auto-scaling .sticky-leg .chart__axis .tick text {
+    font-size: 10px;
+  }
+}
+
+/* TODO: use when implementing lollipop and row values */
+/* .chart--arrow2.lollipop-variant .legend-desc .arrow.inc circle.before,
+.chart--arrow2.lollipop-variant .legend-desc .arrow:not(.inc) circle.after,
+.chart--arrow2.lollipop-variant .legend-desc line.arrow {
+  display: none;
+}
 */
-/* 
-.chart--arrow2 .arrowhead {
-  fill: none;
-}
-
-.chart--arrow2 line.arrow {
-  transform: translate(0, -0.1px);
-}
-
-*/
-.chart--arrow2.lollipop-variant circle {
-  /* stroke-width: 0.2; */
+/* .chart--arrow2.lollipop-variant circle {
   fill-opacity: 0.7;
 }
 
@@ -895,82 +866,14 @@ body .visual .visual__title, body .visual .visual__title > * {
     fill: var(--c1);
 }
 
-.chart--arrow2 .chart-row:not(.highlighted) text.row-value {
+*/
+
+/* .chart--arrow2 .chart-row:not(.highlighted) text.row-value {
   display: none;
 }
 
 .chart--arrow2 .chart-row:hover text.row-value {
   display: block;
-}
-
-.chart--arrow2 .tick-values text {
-  text-anchor: middle;
-  dominant-baseline: text-before-edge;
-}
-
-.chart--arrow2 .tick-values text:first-of-type {
-  text-anchor: start;
-}
-
-.chart--arrow2 .tick-values text:last-of-type {
-  text-anchor: end;
-}
-
-/* .chart--arrow2 .is-mobile .tick-values text:last-of-type {
-  transform: translate(-1px, 0);
-}
-
-.chart--arrow2 .axis-title {
-  text-anchor: middle;
-  transform: translate(0, 8px);
-}
-
-*/
-/* .chart--arrow2 .is-mobile .axis-title {
-  transform: translate(0, 12px);
-}
-
-*/
-/* .chart--arrow2 .legend-desc {
-  transform: translate(0, 14px);
-}
-
-.chart--arrow2 .is-mobile .legend-desc {
-  transform: translate(0, 22px);
-}
-
-*/ .chart--arrow2 text.legend-label,
-.chart--arrow2 .legend-items text {
-  text-transform: uppercase;
-  font-family: GT-Eesti-Display-Medium, sans-serif;
-  /* dominant-baseline: unset; */
-}
-
-.chart--arrow2 .arrow-chart {
-  display: block;
-}
-
-.chart--arrow2 .sticky-leg {
-  background: #F4F7F9;
-  opacity: 0.93;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-}
-
-.chart--arrow2 .sticky-leg .highlight {
-  fill: var(--highlight-partial-row);
-  stroke: #2c898055;
-}
-/* .chart--arrow2.lollipop-variant .legend-desc .arrow.inc circle.before,
-.chart--arrow2.lollipop-variant .legend-desc .arrow:not(.inc) circle.after,
-.chart--arrow2.lollipop-variant .legend-desc line.arrow {
-  display: none;
-}
-
-*/
-/* .chart--arrow2 .arrow-chart__body {
-  height: 100% !important;
 }
 */
 

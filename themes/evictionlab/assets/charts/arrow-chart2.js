@@ -164,23 +164,34 @@ Elab.ArrowChart2 = (function (Elab) {
   }
 
   function renderChart(el, data, options) {
-    // determines the scaling of everything in the svg
-    // if width not provided, svg scales such that 12 in the svg corresponds to 12px
-    // this means things like font size can stay consistent
-    const width = options.width || el.getBoundingClientRect().width;
+    const windowWidth = window.innerWidth;
+    // keep in-sync with .chart--arrow2 media query for font-size
+    const isMobile = windowWidth <= 599;
+    /*
+     * Determines the scaling of everything in the svg.
+     * If width isn't provided, viewbox autoscales with content size so that
+     * 12 in the svg corresponds to 12px, so font sizes etc stay consistent.
+     * If width is fixed, 600-700 yields reasonable results on desktop.
+     */
+    const BBoxWidth = options.width || el.getBoundingClientRect().width;
+    const autoScaling = !options.width;
     const rowHeight = options.rowHeight || 28;
-    // Set margins for the chart rows and for the sticky axis
-    const nameWidth = options.nameWidth || 230;
+
+    let nameWidth = options.nameWidth || 230;
+    if (isMobile) {
+      // adjust nameWidth to account for mobile font size
+      const fontSize = 12;
+      const mobileFontSize = autoScaling ? 10 : 14;
+      nameWidth *= mobileFontSize / fontSize;
+    }
     const margin = { top: 0, right: 0, bottom: 0, left: nameWidth };
     // Height for the main chart is based on rows
     const height = margin.top + margin.bottom + rowHeight * data.length;
-    // Height for the sticky axis (can be overwritten via options)
 
-    // Compute inner dimensions for the main chart
-    const innerWidth = width - margin.left - margin.right;
+    // Compute inner dimensions for the main chart area
+    const innerWidth = BBoxWidth - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
-    // Compute xScale and yScale based on data and optional overrides
     const xDomain = getDomain(data, options);
     const xScale = d3.scaleLinear().domain(xDomain).range([0, innerWidth]);
 
@@ -189,16 +200,13 @@ Elab.ArrowChart2 = (function (Elab) {
       .domain(data.map((d) => d.name))
       .range([0, innerHeight]);
 
-    // Clear container and set the base class
     const container = d3.select(el);
-    // container.attr("class", "chart");
     container.html(""); // clear previous content
 
-    // Append the main SVG for chart rows
     const svg = container
       .append("svg")
-      .attr("class", "chart__root")
-      .attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("class", `chart__root ${autoScaling ? "auto-scaling" : ""}`)
+      .attr("viewBox", `0 0 ${BBoxWidth} ${height}`)
       .attr("preserveAspectRatio", "xMinYMin meet");
 
     // Create a group for the chart rows in the main svg
@@ -210,7 +218,7 @@ Elab.ArrowChart2 = (function (Elab) {
     // Add axis lines group
     const axisLinesGroup = chartArea.append("g").attr("class", "axis-lines");
     const tickValues = parseTicks(options.xTicks, xDomain);
-    // include one separating names from lines
+    // include one separating names from chart area
     [xDomain[0], ...tickValues].forEach((tick) => {
       const x = xScale(tick);
       axisLinesGroup
@@ -309,14 +317,12 @@ Elab.ArrowChart2 = (function (Elab) {
       appendArrowDefs(defs, `arrowhead-${formatGroupName(group)}`, colorScale(group)),
     );
     // --- Sticky Leg Axis ---
-    // TODOxxx make dynamic
-    const axisHeight = options.axisHeight || 120;
+    // if no height provided, set initial value that increases as needed
+    let axisHeight = options.axisHeight || 40;
     // Append the sticky axis SVG below the main chart
     const stickySvg = container
       .append("svg")
-      .attr("class", "sticky-leg")
-      .attr("viewBox", `0 0 ${width} ${axisHeight}`)
-      .attr("preserveAspectRatio", "xMinYMin meet");
+      .attr("class", `sticky-leg chart__root ${autoScaling ? "auto-scaling" : ""}`);
 
     // Append an axis group in the sticky svg.
     // Offset the group by the left margin so ticks align with the chart.
@@ -339,19 +345,21 @@ Elab.ArrowChart2 = (function (Elab) {
         d === xDomain[0] ? "start" : d === xDomain[1] ? "end" : "middle",
       );
 
+    // TODO: add axisLabelText if provided
+
     // --- Legend Labels in Sticky Axis ---
     const legendItemHeight = 20;
-    const legendLeftOffset = options.legendLeftOffset || 70;
     const legendGroup = stickySvg
       .append("g")
-      .attr("transform", `translate(${legendLeftOffset}, 28)`);
-
+      .attr("class", "legend-group-wrapper")
+      .attr("transform", `translate(5, 32)`)
+      .append("g")
+      .attr("class", "legend-group");
     let legendItemsOffset = 0;
 
     // Append highlight label if supplied
-    // todoxxx
-    options.highlightLabel = "expansion in population coverage";
     if (options.highlightLabel) {
+      axisHeight += legendItemHeight;
       legendItemsOffset += legendItemHeight;
       legendGroup
         .append("rect")
@@ -377,6 +385,7 @@ Elab.ArrowChart2 = (function (Elab) {
         .attr("y", legendItemsOffset + legendItemHeight / 2)
         .attr("text-anchor", "start")
         .text(options.legendLabelText + ":");
+      axisHeight += legendItemHeight;
       legendItemsOffset += legendItemHeight;
     }
 
@@ -417,11 +426,14 @@ Elab.ArrowChart2 = (function (Elab) {
       }
     }
 
-    const itemsPerCol = options.legItemsPerCol || 2;
-    const colWidth = options.legColWidth || 150;
+    const itemsPerCol = options.legItemsPerCol || isMobile ? 8 : 2;
+    const colWidth = options.legColWidth || 175;
     function getLegendItemTransform(d, index) {
-      const offsetX = Math.floor(index / itemsPerCol) * colWidth;
+      const colIdx = Math.floor(index / itemsPerCol);
+      const offsetX = colIdx * colWidth;
       const offsetY = (index % itemsPerCol) * legendItemHeight;
+      // increase axisHeight for each row
+      if (colIdx === 0) axisHeight += legendItemHeight;
       return `translate(${offsetX}, ${offsetY})`;
     }
     // Render legend items vertically with each item on its own row
@@ -450,15 +462,19 @@ Elab.ArrowChart2 = (function (Elab) {
             .text(d.label);
         });
     }
+
+    // add the viewBox after axisHeight has been finalized
+    stickySvg
+      .attr("viewBox", `0 0 ${BBoxWidth} ${axisHeight}`)
+      .attr("preserveAspectRatio", "xMinYMin meet");
   }
 
   function init(rootEl, options) {
     parseCSV(options, (data) => {
-      if (!options.width) {
-        window.addEventListener("resize", function () {
-          renderChart(rootEl, data, options);
-        });
-      }
+      // options.width = ;
+      window.addEventListener("resize", function () {
+        renderChart(rootEl, data, options);
+      });
       renderChart(rootEl, data, options);
     });
   }
