@@ -26,8 +26,35 @@ Elab.Utils = Object.assign(
         .entries(data);
     }
 
+    function loadData(dataUrl, shaper, callback) {
+      d3.csv(dataUrl, function (data) {
+        if (!data) {
+          console.error("unable to load data from " + dataUrl);
+          return;
+        }
+
+        var result = shaper ? shaper(data) : data;
+        callback && callback(result);
+      });
+    }
+    /**
+     * Loads multiple files in sequence.
+     * Each file has an id, url, and (optionally) a shaper
+     */
+    function loadAll(files, callback, dataMap = {}) {
+      if (!files.length) return callback(dataMap);
+      const [file, ...restFiles] = files;
+      // chains one load after the next
+      loadData(file.url, file.shaper, (fileData) => {
+        dataMap[file.id] = fileData;
+        loadAll(restFiles, callback, dataMap);
+      });
+    }
+
     return {
       group: group,
+      loadData: loadData,
+      loadAll: loadAll,
     };
-  })(Elab)
+  })(Elab),
 );

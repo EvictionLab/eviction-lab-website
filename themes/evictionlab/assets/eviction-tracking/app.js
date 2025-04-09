@@ -124,17 +124,6 @@ Elab.Utils = (function (Elab) {
 </span>`;
   }
 
-  function loadAll(files, dataMap, callback) {
-    if (!files.length) return callback(dataMap);
-
-    const [file, ...restFiles] = files;
-    // chains one load after the next. could convert to a Promise.all for efficiency
-    Elab.Data.loadData(file.url, file.shaper, (fileData) => {
-      dataMap[file.id] = fileData;
-      loadAll(restFiles, dataMap, callback);
-    });
-  }
-
   /**
    * Adds the Last Updated date to stat block
    */
@@ -167,7 +156,7 @@ Elab.Utils = (function (Elab) {
    * Creates a stat block
    */
   function createStatBlock(el, statFiles, stats, getVal, callback) {
-    loadAll(statFiles, {}, (dataMap) => {
+    Elab.Data.loadAll(statFiles, (dataMap) => {
       var $el = $(el);
       var someStatFound = false;
 
@@ -220,7 +209,7 @@ Elab.Utils = (function (Elab) {
    * Creates a comparison block
    */
   function createComparisonBlock(el, compFiles, comps, getVals, callback) {
-    loadAll(compFiles, {}, (dataMap) => {
+    Elab.Data.loadAll(compFiles, (dataMap) => {
       var $el = $(el);
       var someCompFound = false;
 
@@ -277,7 +266,7 @@ Elab.Utils = (function (Elab) {
    * Creates a stat paragraph (interpolate values)
    */
   function createStatParagraph({ el, text, statFiles, stats, getVal, dataNote = "" }) {
-    loadAll(statFiles, {}, (dataMap) => {
+    Elab.Data.loadAll(statFiles, (dataMap) => {
       var $el = $(el);
       dataNote && $el.append(`<p class="data-note">${dataNote}</p>`);
       var interpolatedText = text;
@@ -948,11 +937,26 @@ Elab.Data = (function (Elab) {
     });
   }
 
+  /**
+   * Loads multiple files in sequence.
+   * Each file has an id, url, and (optionally) a shaper
+   */
+  function loadAll(files, callback, dataMap = {}) {
+    if (!files.length) return callback(dataMap);
+    const [file, ...restFiles] = files;
+    // chains one load after the next
+    loadData(file.url, file.shaper, (fileData) => {
+      dataMap[file.id] = fileData;
+      loadAll(restFiles, callback, dataMap);
+    });
+  }
+
   return {
     loadData: loadData,
     loadCityTable: loadCityTable,
     loadStateTable: loadStateTable,
     loadAllTables: loadAllTables,
+    loadAll: loadAll,
   };
 })(Elab);
 /**
@@ -2506,328 +2510,7 @@ Elab.Map = (function (Elab) {
     createMap: createMap,
   };
 })(Elab);
-/**
- * INTRO MODULE
- * ----
- * Creates the intro figure and populates data into
- * placeholders for the intro section.
- *
- * Public methods:
- * - initIntroChart(root, dataUrl, locationId)
- *
- */
 
-Elab.Intro = (function (Elab) {
-  /**
-   * Renders the intro chart tooltip on hover
-   * @param {*} chart ChartBuilder instance
-   * @param {*} xHovered hovered value
-   */
-  // var showIntroTooltip = function showIntroTooltip(chart, xHovered) {
-  //   var bisectX = d3.bisector(function (d) {
-  //     return d[0];
-  //   }).left; // midpoint of the current hovered week
-
-  //   var xPosition = d3.timeDay.offset(d3.timeWeek.floor(xHovered), 3.5); // index of currently hovered week
-
-  //   var dataIndex = bisectX(chart.data, xHovered) - 1; // data point for the hovered week
-
-  //   var weekStart = chart.data[dataIndex]; // exit early if no data point or if out of range
-
-  //   if (!weekStart || +xPosition > chart.xScale.domain()[1]) return; // create tooltip
-
-  //   var title = "Eviction Filings";
-  //   var dayFormat = d3.timeFormat("%b %e");
-  //   var weekLabel = [weekStart[0], d3.timeDay.offset(weekStart[0], 7)]
-  //     .map(function (d) {
-  //       return dayFormat(d);
-  //     })
-  //     .join(" - ");
-  //   var items = [
-  //     {
-  //       idx: 0,
-  //       name: weekLabel,
-  //       value: weekStart[1],
-  //     },
-  //   ];
-  //   var context = {
-  //     els: {
-  //       tooltip: chart.selections["tooltip"],
-  //     },
-  //   };
-  //   window.Elab.Chart.renderBarTooltip(title, items, context, undefined, "top"); // position hover line
-
-  //   var position = chart.xScale(xPosition) + 1.5;
-  //   chart
-  //     .getSelection("hover-line")
-  //     .style("display", "block")
-  //     .transition()
-  //     .duration(100)
-  //     .ease(d3.easeLinear)
-  //     .attr("x1", position)
-  //     .attr("x2", position)
-  //     .attr("y1", 0)
-  //     .attr("y2", chart.getInnerHeight());
-  // };
-  /**
-   * Handler to hide tooltip on hover out
-   * @param {*} chart
-   */
-
-  // var hideIntroTooltip = function hideIntroTooltip(chart) {
-  //   chart.getSelection("hover-line").style("display", "none");
-  //   chart.getSelection("tooltip").style("display", "none");
-  // };
-  /**
-   * Selects the line data set from the chart data
-   * @param {*} data
-   */
-
-  // var selectLineData = function selectLineData(data) {
-  //   return [
-  //     data
-  //       .map(function (d) {
-  //         return [d3.timeDay.offset(d[0], 3.5), d[2]];
-  //       })
-  //       .filter(function (d, i) {
-  //         return i !== data.length - 1;
-  //       }),
-  //   ];
-  // };
-  /**
-   * Selects the bar data set from the chart data
-   * @param {*} data
-   */
-
-  // var selectBarsData = function selectBarsData(data) {
-  //   return data.map(function (d) {
-  //     return [d[0], d[1]];
-  //   });
-  // };
-  /**
-   * Creates the label paths for the markers
-   * (last week filings and total filings)
-   * @param {*} chart
-   */
-
-  // var createLabelMarkers = function createLabelMarkers(chart) {
-  //   function createSpanPathSelection(parentSelection) {
-  //     return parentSelection.append("path").attr("class", "chart__span-path");
-  //   }
-
-  //   function createSpanPathRenderFunction(selection, chart) {
-  //     function draw() {
-  //       return (
-  //         "M 0," +
-  //         chart.getInnerHeight() +
-  //         " h " +
-  //         (chart.getInnerWidth() + 8) +
-  //         " v 108 h -46"
-  //       );
-  //     }
-
-  //     return function () {
-  //       selection.attr("d", draw());
-  //     };
-  //   }
-
-  //   function createBarMarkerSelection(parentSelection) {
-  //     return parentSelection.append("path").attr("class", "chart__bar-path");
-  //   }
-
-  //   function createBarMarkerRenderFunction(selection, chart) {
-  //     function draw() {
-  //       var lastDate = chart.data[chart.data.length - 1][0];
-  //       var barPosition = chart.xScale(d3.timeDay.offset(lastDate, 4));
-  //       return (
-  //         "M " + barPosition + "," + chart.getInnerHeight() + " v 72 h -24"
-  //       );
-  //     }
-
-  //     return function () {
-  //       selection.attr("d", draw());
-  //     };
-  //   }
-
-  //   chart.addElement(
-  //     "span-path",
-  //     "overlay",
-  //     createSpanPathSelection,
-  //     createSpanPathRenderFunction
-  //   );
-  //   chart.addElement(
-  //     "bar-path",
-  //     "overlay",
-  //     createBarMarkerSelection,
-  //     createBarMarkerRenderFunction
-  //   );
-  // };
-  /**
-   * Creates the chart and renders
-   * @param {*} root
-   * @param {*} cityData
-   */
-
-  // function createIntroFigure(root, cityData) {
-  //   var seriesData = cityData.values;
-  //   var options = {
-  //     margin: [32, 12, 104, 40],
-  //   };
-  //   var chart = new Elab.ChartBuilder(root, seriesData, options);
-  //   chart // adds y axis, using max of the trend line value or bar value
-  //     .addAxisY({
-  //       selector: function selector(d) {
-  //         return Math.max(d[2], d[1]);
-  //       },
-  //       adjustExtent: function adjustExtent(extent) {
-  //         return [0, extent[1] + extent[1] * 0.05];
-  //       },
-  //       ticks: 4,
-  //       tickFormat: d3.format(",d"),
-  //     }) // adds time axis from dates in the dataset
-  //     .addTimeAxis({
-  //       selector: function selector(d) {
-  //         return d[0];
-  //       },
-  //       adjustExtent: function adjustExtent(extent) {
-  //         return [
-  //           d3.timeDay.offset(extent[0], -2),
-  //           d3.timeDay.offset(extent[1], 9),
-  //         ];
-  //       },
-  //       adjustLabels: function adjustLabels(selection) {
-  //         selection
-  //           .selectAll(".tick text")
-  //           .attr("text-anchor", "end")
-  //           .attr(
-  //             "transform",
-  //             "translate(" + this.monthToPixels(1) / 2 + ",0) rotate(-50)"
-  //           )
-  //           .attr("dx", "-0.25em")
-  //           .attr("dy", "0.333em");
-  //         selection.selectAll(".tick:last-child text").attr("opacity", 0);
-  //       },
-  //       ticks: d3.timeMonth.every(2),
-  //       tickFormat: Elab.Utils.monthAxisFormatter,
-  //     }); // adds local moratorium areas
-
-  //   cityData.start.forEach(function (d, i) {
-  //     chart = chart.addArea([cityData.start[i], cityData.end[i]], {
-  //       areaId: "area" + i,
-  //       patternId: "stripes",
-  //       addPattern: i === 0,
-  //     });
-  //   }); // adds federal moratorium
-
-  //   return chart
-  //     .addArea(Elab.Utils.getCdcMoratoriumRange(), {
-  //       areaId: "cdcArea",
-  //       patternId: "cdcStripes",
-  //       angle: -45,
-  //     }) // adds the bars for weekly filings
-  //     .addBars({
-  //       selector: selectBarsData,
-  //     }) // adds the trend line
-  //     .addLines({
-  //       selector: selectLineData,
-  //       curve: d3.curveMonotoneX,
-  //     }) // adds a tooltip with the provided render function
-  //     .addTooltip(showIntroTooltip, hideIntroTooltip) // adds a custom element with markers for the last bar and chart span
-  //     .addCustom(createLabelMarkers) // renders the chart
-  //     .render();
-  // }
-
-  // function getMoratoriumRange(data) {
-  //   var dateFormat = d3.timeFormat("%b %e, %Y");
-  //   var ranges = Elab.Utils.getMoratoriumRanges(data);
-  //   if (!ranges || ranges.length === 0) return "";
-  //   return ranges
-  //     .map(function (dates) {
-  //       if (!dates[0]) return "No local moratorium";
-  //       return dates
-  //         .map(function (d) {
-  //           return d ? dateFormat(d) : "Ongoing";
-  //         })
-  //         .join(" - ");
-  //     })
-  //     .join("<br />");
-  // }
-  /**
-   * Inserts the data for the location into the placeholders
-   */
-
-  // function initDataValues(cityData) {
-  //   var numFormat = d3.format(",d");
-  //   var moratorium = getMoratoriumRange(cityData);
-  //   $("#evictionMoratorium").html(moratorium);
-  //   $("#filingsLastWeek").html(
-  //     "<span>" + numFormat(cityData.lastWeek) + "</span> filings last week*"
-  //   );
-  //   $("#filingsCumulative").html(
-  //     "<span>" +
-  //       numFormat(cityData.cumulative) +
-  //       "</span> filings since Mar 15, '20"
-  //   );
-  //   addSubgroupBreakdown(cityData);
-  // }
-  /**
-   * Prepends a paragraph to the intro with a breakdown
-   * of all of the counties within the dataset.
-   * @param {*} cityData data from table.csv
-   */
-
-  // function addSubgroupBreakdown(cityData) {
-  //   if (
-  //     !cityData.subgroups ||
-  //     !cityData.subgroup_values ||
-  //     cityData.subgroups.length === 0
-  //   )
-  //     return;
-  //   var numFormat = d3.format(",d");
-  //   cityData.subgroup_values = cityData.subgroup_values.map(function (v) {
-  //     return numFormat(v);
-  //   });
-  //   var templateData = Object.assign({}, cityData, {
-  //     cumulative: numFormat(cityData.cumulative),
-  //   });
-  //   var template = Handlebars.compile(
-  //     "<p>Of the {{cumulative}} filings in {{city}} since March 15th, " +
-  //       "{{#each subgroups}}" +
-  //       "{{#if @last}}" +
-  //       " and {{lookup ../subgroup_values @index}} were filed in {{this}}." +
-  //       "{{else}}" +
-  //       "{{lookup ../subgroup_values @index}} were filed in {{this}}{{#if ../subgroup_values.[2]}}, {{/if}}" +
-  //       "{{/if}}" +
-  //       "{{/each}}</p>"
-  //   );
-  //   var html = template(templateData);
-  //   $("#introText").prepend(html);
-  // }
-  /**
-   * Creates the intro chart
-   */
-
-  // function initIntroChart(root, dataUrl, locationId) {
-  //   Elab.Data.loadCityTable(dataUrl, function (data) {
-  //     var cityData = data.find(function (d) {
-  //       return Number(d.id) === Number(locationId);
-  //     });
-
-  //     if (!cityData) {
-  //       $(".intro").addClass("intro--error");
-  //       throw new Error("no data found for city");
-  //     }
-
-  //     $(".intro").removeClass("intro--loading");
-  //     createIntroFigure(root, cityData);
-  //     initDataValues(cityData);
-  //   });
-  // }
-
-  return {
-    // initIntroChart: initIntroChart,
-  };
-})(Elab);
 /**
  * LIST PAGE MODULE
  * ---

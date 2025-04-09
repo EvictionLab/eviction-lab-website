@@ -20,6 +20,7 @@
     window.addEventListener('load', function() {
       var id = {{ .Get "id" }}
       var csv = {{ .Get "data" }}
+      var markerCsv = {{ .Get "markerData" }}
       var idColumn = {{ .Get "idColumn" }}
       var valueColumn = {{ .Get "valueColumn" }}
       var colors = {{ .Get "colors" }}
@@ -31,7 +32,8 @@
       var binValues = {{ .Get "binValues" }}
       var zeroPattern = {{ .Get "zeroPattern" }}
       var rootEl = document.getElementById(id)
-      Elab.StateMap.init(rootEl, { id:id, data: csv, valueTemplate: valueTemplate, valueFormat: valueFormat, ticks: ticks, minVal: minVal, maxVal: maxVal, colors: colors, idColumn: idColumn, valueColumn: valueColumn, zeroPattern: zeroPattern, binValues: binValues })
+      
+      Elab.StateMap.init(rootEl, { id:id, data: csv, markerData: markerCsv, valueTemplate: valueTemplate, valueFormat: valueFormat, ticks: ticks, minVal: minVal, maxVal: maxVal, colors: colors, idColumn: idColumn, valueColumn: valueColumn, zeroPattern: zeroPattern, binValues: binValues })
     });
   </script>
 </div>

@@ -157,7 +157,7 @@ iframe.visual {
 }
 
 /** add margin when scale is below map */
-@media(max-width: 768px) {
+@media(max-width: 767px) {
   .svg-map__body {
     margin-bottom: 64px;
   }
@@ -234,6 +234,10 @@ iframe.visual {
   --c2: #434878;
   --c3: #2c897f;
   --c4: #94aabd;
+  --choro3: rgba(241, 241, 241, 0.7);
+  --highlighted-row: #2c89803b;
+  /* --highlighted-row: #2c898028; */
+  --highlighted-portion-row: #2c89803b;
   --chart-frame: #fff;
   --grid-lines: #fff;
   --text-secondary: #7d7d7d;
@@ -253,7 +257,7 @@ iframe.visual {
 
 
 
-@media(max-width: 480px) {
+@media(max-width: 479px) {
   .chart, .visual {
     margin-left: -24px;
     margin-right: -24px;
@@ -545,6 +549,9 @@ body .visual .visual__title, body .visual .visual__title > * {
   margin-right: 8px;
   background: #999;
 }
+.legend-item__color.circle {
+  border-radius: 50%;
+}
 .legend-item--0 .legend-item__color {
   background: var(--c1);
   background: #e24000
@@ -593,7 +600,7 @@ body .visual .visual__title, body .visual .visual__title > * {
 
 
 /** INDIVIDUAL LINE CHART OVERRIDES **/
-@media(max-width: 540px) {
+@media(max-width: 539px) {
   .chart--summed .chart__axis--time .tick text {
     font-size: 11px;
   }
@@ -685,7 +692,7 @@ body .visual .visual__title, body .visual .visual__title > * {
 .chart.chart--bar .chart__bar:hover {
   fill: #e24000
 }
-@media(max-width: 480px) {
+@media(max-width: 479px) {
   .chart.chart--bar .tick text {
     font-size: 10px
   }
@@ -703,8 +710,6 @@ body .visual .visual__title, body .visual .visual__title > * {
 .chart.chart--histogram .chart__bar:hover {
   fill: #e24000
 }
-
-
 
 /** GROUPED BAR CHART + SEARCH OVERRIDES */
 
@@ -750,6 +755,138 @@ body .visual .visual__title, body .visual .visual__title > * {
 .chart .chart__bar.judgment {
   fill: var(--c3);
 }
+
+
+/** ARROW CHART */
+.chart--arrow2 svg {
+  height: 100%;
+}
+
+.chart--arrow2 .chart-row:nth-child(2n) rect.background {
+  fill: #58a7ba1c;
+  /* fill: #E6EFF4; */
+}
+
+.chart--arrow2 .chart-row rect.background {
+  fill: none;
+}
+
+.chart--arrow2 .chart-row rect.background.highlighted {
+  fill: var(--highlighted-row);
+}
+
+.chart--arrow2 .chart-row rect.highlighted-portion {
+  fill: var(--highlighted-portion-row);
+}
+.chart--arrow2 .axis-lines line,
+.chart--arrow2 .tick-lines line {
+  stroke: white;
+  stroke-width: 1;
+}
+.chart--arrow2 line.arrow {
+  stroke-width: 1.5;
+}
+.chart--arrow2 defs marker.arrowhead {
+  stroke-width: 1;
+}
+
+.chart--arrow2 text.legend-label,
+.chart--arrow2 .legend-items text {
+  text-transform: uppercase;
+  font-family: GT-Eesti-Display-Medium, sans-serif;
+  /* dominant-baseline: unset; */
+}
+
+.chart--arrow2 .sticky-leg {
+  background: #F4F7F9;
+  opacity: 0.93;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+
+.chart--arrow2 .sticky-leg .highlight {
+  fill: var(--highlighted-portion-row);
+  stroke: #2c898055;
+}
+
+.chart--arrow2 .sticky-leg .legend-group {
+  transform: translateX(120px);
+}
+
+.chart--arrow2 text {
+  font-size: 14px;
+  font-family: Akkurat-Regular, sans-serif;
+  dominant-baseline: middle;
+}
+
+.chart--arrow2 .sticky-leg .tick text {
+  font-size: 12px;
+}
+
+@media(max-width: 1199px) {
+  .chart--arrow2 .sticky-leg .legend-group {
+    transform: translateX(80px);
+  }
+}
+@media(max-width: 767px) {
+  .chart--arrow2 .sticky-leg .legend-group {
+    transform: translateX(0);
+  }
+}
+@media(max-width: 599px) {
+  /* font sizes increase on mobile to counter shrinking svg size */
+  .chart--arrow2 text {
+    font-size: 16px;
+  }
+                                                          .chart--arrow2 .sticky-leg .tick text {
+    font-size: 14px;
+  }
+  /* in auto-scaled version font-sizes stay the same as the svg shrinks */
+  /* so reduce font-size to fit chart on smaller screen */
+  .chart--arrow2 svg.auto-scaling text {
+    font-size: 12px;
+  }
+                                                          .chart--arrow2 svg.auto-scaling .sticky-leg .tick text {
+    font-size: 10px;
+  }
+}
+
+/* TODO: use when implementing lollipop and row values */
+/* .chart--arrow2.lollipop-variant .legend-desc .arrow.inc circle.before,
+.chart--arrow2.lollipop-variant .legend-desc .arrow:not(.inc) circle.after,
+.chart--arrow2.lollipop-variant .legend-desc line.arrow {
+  display: none;
+}
+*/
+/* .chart--arrow2.lollipop-variant circle {
+  fill-opacity: 0.7;
+}
+
+.chart--arrow2.lollipop-variant .chart-row:hover circle {
+  fill-opacity: 0.9;
+}
+
+.chart--arrow2.lollipop-variant circle.before {
+  stroke: var(--c2);
+    fill: var(--c2);
+}
+
+.chart--arrow2.lollipop-variant circle.after {
+  stroke: var(--c1);
+    fill: var(--c1);
+}
+
+*/
+
+/* .chart--arrow2 .chart-row:not(.highlighted) text.row-value {
+  display: none;
+}
+
+.chart--arrow2 .chart-row:hover text.row-value {
+  display: block;
+}
+*/
 
 /** WEEKLY EVICTION % CHART */
 
