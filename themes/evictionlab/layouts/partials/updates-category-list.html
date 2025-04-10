@@ -41,24 +41,25 @@
               <a href="{{ .RelPermalink }}" class="{{ .Params.childof }}-type">{{ .Title }}</a>
             {{ end }}
           </h2>
+            {{ $maxChar := .Params.listSummaryMaxChars | default 240 }}
             {{ if eq .Params.childof "reporting" }}
               {{ if .Params.listSummary }} 
                 <div class="post-summary">
-                    {{ .Params.listSummary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
+                    {{ .Params.listSummary | truncate $maxChar }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
                 </div>
               {{ else }}
                 <div class="post-summary">
-                    {{ .Summary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
+                    {{ .Summary | truncate $maxChar }} <br /><br/><a class="read-more" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">Read more at {{ .Params.outlet }} <i class="fa fa-chevron-right"></i></a>
                 </div>
               {{ end }}
             {{ else }}
               {{ if .Params.listSummary }}
               <div class="post-summary">
-                  {{ .Params.listSummary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
+                  {{ .Params.listSummary | truncate $maxChar }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
               </div>
               {{ else }}
               <div class="post-summary">
-                  {{ .Summary | truncate 240 }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
+                  {{ .Summary | truncate $maxChar }} <br /><br/><a class="read-more" href="{{ .RelPermalink }}">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
               </div>
               {{ end }}
             {{ end }}  

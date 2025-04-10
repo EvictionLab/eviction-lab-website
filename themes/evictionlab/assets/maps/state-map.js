@@ -3,7 +3,8 @@
 /**
  * STATE MAP MODULE
  * ----
- * Creates a base bar chart (no grouping)
+ * Creates an svg map of the US, with states colored based on data.
+ * Optionally adds markers for cities/counties.
  *
  * Public methods:
  * - init(root, options)
