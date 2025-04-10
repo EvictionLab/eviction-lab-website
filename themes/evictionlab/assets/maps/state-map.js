@@ -202,7 +202,7 @@ Elab.StateMap = (function (Elab) {
     }
 
     function renderOutline() {
-      if (options.cssHover) return;
+      if (dataOptions.cssHover) return;
       // TODO: use native :hover styles instead?
       var hoverData = svg.selectAll(".svg-map__shape--hovered").data([hovered]);
       hoverData
