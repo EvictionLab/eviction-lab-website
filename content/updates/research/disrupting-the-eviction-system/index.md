@@ -12,8 +12,6 @@ date: 2025-04-08T15:28:51.756Z
 postauthorname: Emily A. Benfer, Peter Hepburn, Valerie Nazarro, Leah Robinson,
   Jamila Michener, and Danya E. Keene
 researchauthorname: Peter Hepburn
-postauthortitle: The Eviction Lab
-authorpic: /images/bios/elab_thumb_sm.jpg
 description: As a growing number of jurisdictions consider adopting RTC—and as
   researchers seek to analyze the effects of such programs—it is critical to
   understand their challenges and the keys to their success. Here we highlight
