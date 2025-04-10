@@ -17,23 +17,24 @@
   {{ end }}
   
   <script>
-    window.addEventListener('load', function() {
-      var id = {{ .Get "id" }}
-      var csv = {{ .Get "data" }}
-      var markerCsv = {{ .Get "markerData" }}
-      var idColumn = {{ .Get "idColumn" }}
-      var valueColumn = {{ .Get "valueColumn" }}
-      var colors = {{ .Get "colors" }}
-      var minVal = {{ .Get "minVal" }}
-      var maxVal = {{ .Get "maxVal" }}
-      var ticks = {{ .Get "ticks" }}
-      var valueTemplate = {{ .Get "valueTemplate" }}
-      var valueFormat = {{ .Get "valueFormat" }}
-      var binValues = {{ .Get "binValues" }}
-      var zeroPattern = {{ .Get "zeroPattern" }}
-      var rootEl = document.getElementById(id)
-      
-      Elab.StateMap.init(rootEl, { id:id, data: csv, markerData: markerCsv, valueTemplate: valueTemplate, valueFormat: valueFormat, ticks: ticks, minVal: minVal, maxVal: maxVal, colors: colors, idColumn: idColumn, valueColumn: valueColumn, zeroPattern: zeroPattern, binValues: binValues })
+    window.addEventListener('load', function () {
+      Elab.StateMap.init(document.getElementById("{{ .Get `id` }}"), {
+        id: {{ .Get `id` }},
+        data: {{ .Get `data` }},
+        markerData: {{ .Get `markerData` }},
+        idColumn: {{ .Get `idColumn` }},
+        valueColumn: {{ .Get `valueColumn` }},
+        colors: {{ .Get `colors` }},
+        minVal: {{ .Get `minVal` }},
+        maxVal: {{ .Get `maxVal` }},
+        ticks: {{ .Get `ticks` }},
+        valueTemplate: {{ .Get `valueTemplate` }},
+        valueFormat: {{ .Get `valueFormat` }},
+        binValues: {{ .Get `binValues` }},
+        zeroPattern: {{ .Get `zeroPattern` }},
+        simpleDisplay: {{ .Get `simpleDisplay` }},
+        cssHover: {{ .Get `cssHover` }}
+      });
     });
   </script>
 </div>

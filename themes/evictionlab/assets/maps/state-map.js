@@ -24,6 +24,7 @@ Elab.StateMap = (function (Elab) {
   var zeroPatternId = "svg-map__pattern-zero";
 
   function StateMap(root, data, dataOptions, markers) {
+    // TODOxxx document simpleDisplay mode
     var simpleDisplay;
     // stores width of the root DOM element (.svg-map__body)
     var containerWidth;
@@ -196,7 +197,12 @@ Elab.StateMap = (function (Elab) {
       legendAxis.attr("transform", "translate(16,26)").call(xAxis);
     }
 
+    function ignoreValue(d) {
+      return simpleDisplay && d.properties.value === undefined;
+    }
+
     function renderOutline() {
+      if (options.cssHover) return;
       // TODO: use native :hover styles instead?
       var hoverData = svg.selectAll(".svg-map__shape--hovered").data([hovered]);
       hoverData
@@ -231,7 +237,6 @@ Elab.StateMap = (function (Elab) {
     }
 
     function render() {
-      // TODOxxx
       simpleDisplay = dataOptions.simpleDisplay;
       var rect = root.getBoundingClientRect();
       containerWidth = rect.width;
@@ -262,22 +267,19 @@ Elab.StateMap = (function (Elab) {
       svgData
         .enter()
         .append("path")
-        .attr("class", "svg-map__shape")
+        .attr("class", (d) => `svg-map__shape ${!ignoreValue(d) ? "hoverable" : ""}`)
         .merge(svgData)
         .attr("d", path)
         .style("fill", function (d) {
           if (zeroPattern && !d.properties.value) return "url(#" + zeroPatternId + ")";
           // console.
-          if (simpleDisplay && d.properties.value === undefined) {
-            return "#cdcdcd";
-          }
+          if (ignoreValue(d)) return "#cdcdcd";
+
           return ramp(d.properties.value);
         })
         .on("mousemove", function (d) {
-          // TODOxxx
-          if (simpleDisplay && d.properties.value === undefined) {
-            return;
-          }
+          if (ignoreValue(d)) return;
+
           hovered = d;
           // console.log("hovered", hovered);
           showTooltip(d3.event, d.properties);
@@ -313,7 +315,11 @@ Elab.StateMap = (function (Elab) {
       svg = d3
         .select(root)
         .append("svg")
-        .attr("class", "svg-map__map svg-map__map--" + dataOptions.id);
+        .attr(
+          "class",
+          `svg-map__map svg-map__map--${dataOptions.id} ${dataOptions.cssHover ? "css-hover" : ""}`,
+        );
+
       tooltip = d3.select(root).append("div").attr("class", "svg-map__tooltip");
       legend = d3.select(root).append("svg").attr("class", "svg-map__legend");
       legendGradient = legend.append("defs").append("svg:linearGradient").attr("id", gradientId);

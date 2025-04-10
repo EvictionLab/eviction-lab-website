@@ -174,7 +174,8 @@ iframe.visual {
   stroke-width: 1;
 }
 
-.svg-map__shape--hovered {
+.svg-map__shape--hovered,
+.svg-map__map.css-hover .svg-map__shape.hoverable:hover {
   stroke: #2c897f;
   fill: none;
   stroke-width: 2;
@@ -835,11 +836,12 @@ body .visual .visual__title, body .visual .visual__title > * {
   }
 }
 @media(max-width: 599px) {
-  /* font sizes increase on mobile to counter shrinking svg size */
+  /* font sizes increase on mobile to counter shrinking (non auto-scaling) svg size */
   .chart--arrow2 text {
     font-size: 16px;
   }
-                                                          .chart--arrow2 .sticky-leg .tick text {
+
+  .chart--arrow2 .sticky-leg .tick text {
     font-size: 14px;
   }
   /* in auto-scaled version font-sizes stay the same as the svg shrinks */
@@ -847,7 +849,8 @@ body .visual .visual__title, body .visual .visual__title > * {
   .chart--arrow2 svg.auto-scaling text {
     font-size: 12px;
   }
-                                                          .chart--arrow2 svg.auto-scaling .sticky-leg .tick text {
+
+  .chart--arrow2 svg.auto-scaling .sticky-leg .tick text {
     font-size: 10px;
   }
 }
