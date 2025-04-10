@@ -16,29 +16,20 @@
 
   <script>
     window.addEventListener("load", function () {
-      var id = {{ .Get "id" }};
-      var geojson = {{ .Get "shapes" }};
-      var csv = {{ .Get "data" }};
-      var join = {{ .Get "join" }};
-      var column = {{ .Get "column" }};
-      var legendTitle = {{ .Get "legendTitle" }}
-      var gradientType = {{ .Get "gradientType" }}
-      var name = {{ .Get "name" }}
-      var format = {{ .Get "format" }}
-      var rootEl = document.getElementById(id)
-      var colors = {{ .Get "colors" }}
-      var cutoffs = {{ .Get "cutoffs" }}
-      Elab.Mapbox.init(rootEl, { 
-        geojson: geojson, 
-        csv: csv,
-        join: join,
-        column: column,
-        name: name,
-        colors: colors,
-        cutoffs: cutoffs,
-        legendTitle: legendTitle,
-        gradientType: gradientType,
-        format: format
+      Elab.Mapbox.init(document.getElementById({{ .Get "id" }}), { 
+        geojson: {{ .Get "shapes" }},
+        csv: {{ .Get "data" }},
+        join: {{ .Get "join" }},
+        column: {{ .Get "column" }},
+        name: {{ .Get "name" }},
+        legendTitle: {{ .Get "legendTitle" }},
+        gradientType: {{ .Get "gradientType" }},
+        format: {{ .Get "format" }},
+        colors: {{ .Get "colors" }},
+        binValues: {{ .Get "binValues" }},
+        cutoffs: {{ .Get "cutoffs" }},
+        useFullUSBounds: {{ .Get "useFullUSBounds" }},
+        noLegend: {{ .Get "noLegend" }},
       })
     })
   </script>

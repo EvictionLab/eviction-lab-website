@@ -266,10 +266,17 @@ Elab.Mapbox = (function (Elab) {
     var colorScale = null;
     var layersAdded = false;
     var formatter = getFormatter(config.format);
-    var usBounds = [
-      [-129.54443, 18.235058],
-      [-63.802242, 52.886017],
-    ];
+    var binValues = config.binValues && config.binValues.split(";");
+
+    var usBounds = config.useFullUSBounds
+      ? [
+          [-179.15, 13.0],
+          [-58.95, 71.55],
+        ]
+      : [
+          [-129.54443, 18.235058],
+          [-63.802242, 52.886017],
+        ];
 
     mapboxgl.accessToken = accessToken;
     var map = new mapboxgl.Map({
@@ -282,8 +289,11 @@ Elab.Mapbox = (function (Elab) {
 
     function getTooltipValue(feature, prop) {
       if (!feature.properties[prop] && feature.properties[prop] !== 0) return null;
-      var value = formatter(feature.properties[prop]);
-      return value;
+
+      if (binValues) {
+        return binValues[Number(feature.properties[prop])];
+      }
+      return formatter(feature.properties[prop]);
     }
 
     /**
@@ -402,6 +412,7 @@ Elab.Mapbox = (function (Elab) {
 
     /** add DOM elements for legend */
     function createLegend() {
+      if (config.noLegend) return;
       rootEl.append(
         '<div class="legend"><p class="legend__title"></p><div class="legend__gradient"></div><div class="legend__gradient-labels"></div></div>',
       );
@@ -414,6 +425,7 @@ Elab.Mapbox = (function (Elab) {
 
     /** renders a legend for a discrete scale */
     function renderDiscreteLegend() {
+      if (config.noLegend) return;
       // container elements
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
@@ -502,6 +514,7 @@ Elab.Mapbox = (function (Elab) {
     }
 
     function renderLegend() {
+      if (config.noLegend) return;
       var gradientContainer = rootEl.find(".legend__gradient");
       var labelContainer = rootEl.find(".legend__gradient-labels");
       var titleContainer = rootEl.find(".legend__title");
