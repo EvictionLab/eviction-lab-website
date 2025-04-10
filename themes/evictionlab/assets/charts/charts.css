@@ -812,7 +812,7 @@ body .visual .visual__title, body .visual .visual__title > * {
 }
 
 .chart--arrow2 .sticky-leg .legend-group {
-  transform: translateX(120px);
+  transform: translateX(230px);
 }
 
 .chart--arrow2 text {
