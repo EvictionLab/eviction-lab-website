@@ -60,7 +60,7 @@ For 2,218 counties (69% of all counties nationwide), we are able to say how much
   gradientType="discrete"
   title="Figure 1. ERA distribution data coverage by county"
   colors="#94aabd;#434878;#2c897f"
-  binValues="Included in County-Month and County-Total;Included only in County-Total;No data"
+  binValues="No data;Included only in County-Total;Included in County-Month and County-Total"
   useFullUSBounds=true
   noLegend=true
 %}}
