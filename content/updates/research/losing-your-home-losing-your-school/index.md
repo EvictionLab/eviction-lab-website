@@ -9,7 +9,7 @@ featured: true
 in_index: true
 title: "Losing your home, losing your school: how evictions affect kids' educational trajectories"
 date: 2025-04-04T15:28:51.756Z
-postauthorname: Peter Hepburn, Danny Grubbs-Donovan, Nick Graetz, Olivia Jin & Matthew Desmond
+postauthorname: Peter Hepburn, Danny Grubbs-Donovan, Nick Graetz, Olivia Jin, and Matthew Desmond
 description: Kids whose parents face eviction cases are more likely to leave their district, end up in schools with fewer resources, and experience an increase in absences and suspensions.
 listSummary: Kids whose parents face eviction cases are more likely to leave their district, end up in schools with fewer resources, and experience an increase in absences and suspensions.
 socialDescription: Kids whose parents face eviction cases are more likely to leave their district, end up in schools with fewer resources, and experience an increase in absences and suspensions.
