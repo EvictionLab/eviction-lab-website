@@ -960,7 +960,9 @@ Elab.ChartBuilder = (function (Elab) {
             return chart.xScale(d[0]);
           })
           .y(function (d) {
-            return chart.yScale(d[1]);
+            // lines added by other charts (eg bar-chart) may provide a separate yScale
+            const ys = options.yScale || chart.yScale;
+            return ys(d[1]);
           })
           .defined(function (d) {
             return d[1] || d[1] === 0;

@@ -45,10 +45,14 @@
 
   window.addEventListener('load', function () {
     Elab.BarChart.init(document.getElementById({{ .Get `id` }}), {
-      id: {{ .Get `id` }},
       data: {{ .Get `data` }},
       x: {{ .Get `x` }},
       y: {{ .Get `y` }},
+      lineData: {{ .Get `lineData` }},
+      lineX: {{ .Get `lineX` }},
+      lineY: {{ .Get `lineY` }},
+      lineYMin: {{ .Get `lineYMin` }},
+      lineYMax: {{ .Get `lineYMax` }},
       barClass: {{ .Get `barClass` }},
       yTicks: {{ .Get `yTicks` }},
       margin: {{ .Get `margin` }},
