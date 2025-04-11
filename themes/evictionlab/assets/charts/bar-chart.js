@@ -49,6 +49,10 @@ Elab.BarChart = (function (Elab) {
     );
   }
 
+  function deriveFormatter(format = "") {
+    return format.includes("=>") ? new Function(`return ${format}`)() : d3.format(format || ",d");
+  }
+
   /**
    * Creates the chart and renders
    * @param {HTMLElement} root
@@ -56,10 +60,8 @@ Elab.BarChart = (function (Elab) {
    * @param {Object} dataOptions { margin, x, y, , yTicks, yFormat, title }
    */
   function createFigure(root, data, dataOptions) {
-    const yFormat = d3.format(dataOptions.yFormat || ",d");
-    const yTooltipFormat = d3.format(
-      dataOptions.yTooltipFormat || dataOptions.yFormat || ",d"
-    );
+    const yFormat = deriveFormatter(dataOptions.yFormat);
+    const yTooltipFormat = deriveFormatter(dataOptions.yTooltipFormat || dataOptions.yFormat);
     const parseDate = d3.timeParse("%m/%d/%Y");
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
     chart
@@ -68,10 +70,7 @@ Elab.BarChart = (function (Elab) {
         selector: ySelector,
         adjustExtent: function (extent) {
           var range = extent[1] - extent[0];
-          const paddedExtent = [
-            extent[0] - range * 0.05,
-            extent[1] + range * 0.05,
-          ];
+          const paddedExtent = [extent[0] - range * 0.05, extent[1] + range * 0.05];
           if (dataOptions.yMin) paddedExtent[0] = parseFloat(dataOptions.yMin);
           if (dataOptions.yMax) paddedExtent[1] = parseFloat(dataOptions.yMax);
           return paddedExtent;
@@ -166,13 +165,13 @@ Elab.BarChart = (function (Elab) {
       chart.addAxisLabel({
         label: dataOptions.xLabel,
         position: "bottom",
-      })
+      });
     }
     if (dataOptions.yLabel) {
       chart.addAxisLabel({
         label: dataOptions.yLabel,
         position: "left",
-      })
+      });
     }
     return chart.render();
   }

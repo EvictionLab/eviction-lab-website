@@ -83,9 +83,20 @@ In total, these data reflect $20.6 billion in ERA spending, a little less than h
 
 In Figure 2, we plot the timing of this spending, with each bar reflecting the total amount of ERA spent in the given month. Spending was relatively slow at the start of this period as grantees got their programs set up, but by May 2021, $438 million per month was flowing to tenants and landlords. Across these counties, spending peaked in October 2021 with almost $1.8 billion in ERA distributed. The pace of spending then declined gradually. By March 2023, only about $128 million was being distributed across these counties. 
 
-Figure 2. ERA spending by month
 
 
+{{% bar-chart
+  id="fig2"
+  data="./figure2.csv"
+  x="month_of_payment"
+  axis="time"
+  timeUnit="month"
+  y="total_assistance"
+  yFormat="(y) => d3.format('$.2s')(y / 1).replace('G','B')"
+  yTooltipFormat="(y) => d3.format('$.3s')(y / 1).replace('G','B')"
+  title="Figure 2. ERA spending by month"
+  margin="8 8 134 60"
+%}}
 
 Our database lets us better understand how the timing of ERA distribution varied across the country. Rental assistance was distributed much faster in some places than in others. Take Kodiak Island Borough, AK and Portage County, WI, for example. Both made roughly the same amount of total payments ($4,694,111 and $4,743,179, respectively), but as we show in Figure 3, those payments were processed much more quickly in Kodiak Island Borough. By the end of  2021, 74.8% of all payments had been made in Kodiak Island Borough, compared to just 44.7% in Portage County. Portage County didn’t hit the 75% spending threshold until September 2022, nearly nine months later.
 
