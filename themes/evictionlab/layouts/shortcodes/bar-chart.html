@@ -43,30 +43,28 @@
 
   <script>
 
-    window.addEventListener('load', function() {
-      var id = {{ .Get "id" }}
-      var rootEl = document.getElementById(id);
-      var csv = {{ .Get "data" }}
-      var x = {{ .Get "x" }}
-      var y = {{ .Get "y" }}
-      var barClass = {{ .Get "barClass" }}
-      var yTicks = {{ .Get "yTicks" }}
-      var margin = {{ .Get "margin" }}
-      var xTooltipFormat = {{ .Get "xTooltipFormat" }}
-      var yTooltipFormat = {{ .Get "yTooltipFormat" }}
-      var yFormat = {{ .Get "yFormat" }}
-      var yMin = {{ .Get "yMin" }}
-      var yMax = {{ .Get "yMax" }}
-      var axis = {{ .Get "axis" }}
-      var timeUnit = {{ .Get "timeUnit" }}
-      var mark = {{ .Get "mark" }}
-      var xLabel = {{ .Get "xLabel" }}
-      var yLabel = {{ .Get "yLabel" }}
-      var centerLabels = {{ .Get "centerLabels" }}
-      var maxBarWidth = {{ .Get "maxBarWidth" }}
-      
-      // Init chart on page load.
-      Elab.BarChart.init(rootEl, { xLabel: xLabel, yLabel: yLabel, barClass: barClass, mark: mark, axis: axis, id: id, data: csv, x: x, y: y, yMin: yMin, yMax: yMax, yTicks: yTicks, yFormat: yFormat, yTooltipFormat: yTooltipFormat, xTooltipFormat: xTooltipFormat, margin: margin, timeUnit: timeUnit, maxBarWidth: maxBarWidth, centerLabels: centerLabels })
+  window.addEventListener('load', function () {
+    Elab.BarChart.init(document.getElementById({{ .Get `id` }}), {
+      id: {{ .Get `id` }},
+      data: {{ .Get `data` }},
+      x: {{ .Get `x` }},
+      y: {{ .Get `y` }},
+      barClass: {{ .Get `barClass` }},
+      yTicks: {{ .Get `yTicks` }},
+      margin: {{ .Get `margin` }},
+      xTooltipFormat: {{ .Get `xTooltipFormat` }},
+      yTooltipFormat: {{ .Get `yTooltipFormat` }},
+      yFormat: {{ .Get `yFormat` }},
+      yMin: {{ .Get `yMin` }},
+      yMax: {{ .Get `yMax` }},
+      axis: {{ .Get `axis` }},
+      timeUnit: {{ .Get `timeUnit` }},
+      mark: {{ .Get `mark` }},
+      xLabel: {{ .Get `xLabel` }},
+      yLabel: {{ .Get `yLabel` }},
+      centerLabels: {{ .Get `centerLabels` }},
+      maxBarWidth: {{ .Get `maxBarWidth` }}
     });
+  });
   </script>
 </div>

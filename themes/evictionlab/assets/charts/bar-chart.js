@@ -133,6 +133,7 @@ Elab.BarChart = (function (Elab) {
         })
         .addBars({
           selector: barSelector,
+          correctMonthWidth: dataOptions.timeUnit === "month",
           renderTooltip: function (hoverData) {
             var label = "";
             if (dataOptions.xTooltipFormat) {

@@ -677,6 +677,21 @@ Elab.ChartBuilder = (function (Elab) {
       );
       var selection = _this.selections["bars"].selectAll(".chart__bar").data(barData);
 
+      var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      var avgDaysInMonth = 365 / 12;
+      // corrects width of bars to account for month length
+      // (otherwise february bars encroach on march)
+      var correctedWidth = (date) => {
+        if (!overrides.correctMonthWidth) return bandWidth;
+        try {
+          var m = date.getMonth();
+          return bandWidth * (daysInMonth[m] / avgDaysInMonth);
+        } catch (error) {
+          // console.log(error);
+          return bandWidth;
+        }
+      };
+
       selection
         .enter()
         .append("rect")
@@ -684,7 +699,7 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("x", function (d) {
           return _this.xScale(d[0]) + spacing;
         })
-        .attr("width", bandWidth)
+        .attr("width", (d) => correctedWidth(d[0]))
         .attr("y", _this.getInnerHeight())
         .attr("height", 0)
         .on("mousemove", function (d) {
@@ -701,7 +716,7 @@ Elab.ChartBuilder = (function (Elab) {
         .attr("x", function (d) {
           return _this.xScale(d[0]) + spacing;
         })
-        .attr("width", bandWidth)
+        .attr("width", (d) => correctedWidth(d[0]))
         .attr("y", function (d) {
           return _this.yScale(d[1]);
         })
