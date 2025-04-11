@@ -70,8 +70,12 @@ Elab.BarChart = (function (Elab) {
         selector: ySelector,
         adjustExtent: function (extent) {
           var range = extent[1] - extent[0];
+          // add some padding around the extreme y values
           const paddedExtent = [extent[0] - range * 0.05, extent[1] + range * 0.05];
+          // unless overridden directly
           if (dataOptions.yMin) paddedExtent[0] = parseFloat(dataOptions.yMin);
+          // if the data is all positive, don't allow the padding to push the lower extent below 0
+          else if (extent[0] > 0 && paddedExtent[0] < 0) paddedExtent[0] = 0;
           if (dataOptions.yMax) paddedExtent[1] = parseFloat(dataOptions.yMax);
           return paddedExtent;
         },
