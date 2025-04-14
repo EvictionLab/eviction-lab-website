@@ -87,7 +87,7 @@ In an article published in the journal {{< smartlink"Housing Policy Debate" "htt
 
 \[LINK TO ARTICLE]
 
-As a growing number of jurisdictions consider adopting RTC—and as researchers seek to analyze the effects of such programs—it is critical to understand their challenges and the keys to their success. Here, we highlight five key findings.
+As a growing number of jurisdictions consider adopting RTC—and as researchers seek to analyze the effects of such programs—it is critical to understand their challenges and the keys to their success. In this study, we evaluated 23 out of the 26 jurisdictions that have adopted right to counsel as of April 2025. Here, we highlight five key findings.
 
 1. **Legislators enact RTC as a way of addressing multiple problems caused by evictions**
 
