@@ -44,6 +44,7 @@ In 2000, evictions were far more common in cities than in suburbs, but that gap 
   data="./blog_fig1.csv"
   x="year"
   y="evictions"
+  yMin="0"
   groupBy="place_type"
   yLabel="Evictions in Tract per Year"
   xTicks="year"

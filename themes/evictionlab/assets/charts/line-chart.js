@@ -140,7 +140,12 @@ Elab.LineChart = (function (Elab) {
             var range = max - min;
 
             // buffer of 5% on either end
-            return [min - range * 0.05, max + range * 0.05];
+            var extentL = min - range * 0.05;
+            var extentH = max + range * 0.05;
+            // unless overridden directly
+            if (dataOptions.yMin) extentL = parseFloat(dataOptions.yMin);
+            if (dataOptions.yMax) extentH = parseFloat(dataOptions.yMax);
+            return [extentL, extentH];
           },
           ticks: dataOptions.yTicks || 5,
           tickFormat: d3.format(dataOptions.yFormat || ",d"),

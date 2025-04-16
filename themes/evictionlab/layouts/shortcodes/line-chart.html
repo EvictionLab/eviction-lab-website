@@ -31,6 +31,8 @@
       var x = {{ .Get "x" }}
       // column name to use for y values
       var y = {{ .Get "y" }}
+      var yMin = {{ .Get "yMin" }}
+        var yMax = {{ .Get "yMax" }}
       // column name to group entries by
       var groupBy = {{ .Get "groupBy" }}
       // number of y ticks to show
@@ -55,7 +57,7 @@
       var yTooltipFormat = {{ .Get "yTooltipFormat" }}
       var mark = {{ .Get "mark" }}
       var rootEl = document.getElementById(id);
-      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, yLabel: yLabel, xTicks: xTicks, maxTicks: maxTicks, xFormat: xFormat, highlight: highlight, curve: curve, xTooltipFormat: xTooltipFormat, yTooltipFormat: yTooltipFormat, mark: mark })
+      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, yMin: yMin, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, yLabel: yLabel, xTicks: xTicks, maxTicks: maxTicks, xFormat: xFormat, highlight: highlight, curve: curve, xTooltipFormat: xTooltipFormat, yTooltipFormat: yTooltipFormat, mark: mark })
     });
   </script>
 </div>
