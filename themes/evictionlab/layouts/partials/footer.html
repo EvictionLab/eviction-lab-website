@@ -175,6 +175,9 @@
 
 
 {{ if in .Params.scripts "charts" }}
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.0.2/dist/css/autoComplete.min.css">
+  <script src="https://unpkg.com/papaparse@5.3.0/papaparse.min.js"></script>
   {{ $d3 := resources.Get "lib/d3.min.js" }}
   {{ $builder := resources.Get "charts/chart-builder.js" }}
   {{ $utils := resources.Get "charts/utils.js" }}

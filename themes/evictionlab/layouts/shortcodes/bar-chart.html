@@ -30,12 +30,21 @@
 */}}
 
 {{ $title := .Get "title" }}
+{{ $searchId := .Get "searchId" }}
 
 <div
   class="chart chart--bar chart--{{ .Get `id` }}"
+  id="chart--{{ .Get `id` }}"
 >
   {{ if $title }}
   <h3 class="chart__title">{{ $title }}</h3>
+  {{ end }}
+  {{ if $searchId }}
+  <span id="searchLocation"></span>
+  <div class="chart__search-group">
+    <input class="chart__search search" type="text" id="chart_autocomplete" value="Search by county... " />{{ partial
+    "searchbutton" }}
+  </div>
   {{ end }}
   <div id="{{ .Get `id` }}" class="chart__body">
     <svg></svg>
@@ -43,32 +52,95 @@
 
   <script>
 
+(() => {
   window.addEventListener('load', function () {
-    Elab.BarChart.init(document.getElementById({{ .Get `id` }}), {
-      data: {{ .Get `data` }},
+    var searchId = {{ .Get `searchId`}};
+    var id = {{ .Get `id` }};
+    var csv = {{ .Get `data` }};
+    var wrapperEl = document.getElementById("chart--" + id);
+    var initChart = (geoid = "48491", name) => Elab.BarChart.init(document.getElementById(id), {
+      searchId: searchId,
+      data: csv,
+      searchValue: geoid,
+      // searchValue: {{ .Get `searchValue` }},
       x: {{ .Get `x` }},
+      xMin: {{ .Get `xMin` }},
+      xMax: {{ .Get `xMax` }},
+      xLabel: {{ .Get `xLabel` }},
+      xTooltipFormat: {{ .Get `xTooltipFormat` }},
       y: {{ .Get `y` }},
+      yMin: {{ .Get `yMin` }},
+      yMax: {{ .Get `yMax` }},
+      yLabel: {{ .Get `yLabel` }},
+      yFormat: {{ .Get `yFormat` }},
+      yTooltipFormat: {{ .Get `yTooltipFormat` }},
+      yTicks: {{ .Get `yTicks` }},
       lineData: {{ .Get `lineData` }},
       lineX: {{ .Get `lineX` }},
       lineY: {{ .Get `lineY` }},
       lineYMin: {{ .Get `lineYMin` }},
       lineYMax: {{ .Get `lineYMax` }},
       barClass: {{ .Get `barClass` }},
-      yTicks: {{ .Get `yTicks` }},
-      margin: {{ .Get `margin` }},
-      xTooltipFormat: {{ .Get `xTooltipFormat` }},
-      yTooltipFormat: {{ .Get `yTooltipFormat` }},
-      yFormat: {{ .Get `yFormat` }},
-      yMin: {{ .Get `yMin` }},
-      yMax: {{ .Get `yMax` }},
       axis: {{ .Get `axis` }},
       timeUnit: {{ .Get `timeUnit` }},
       mark: {{ .Get `mark` }},
-      xLabel: {{ .Get `xLabel` }},
-      yLabel: {{ .Get `yLabel` }},
       centerLabels: {{ .Get `centerLabels` }},
+      margin: {{ .Get `margin` }},
       maxBarWidth: {{ .Get `maxBarWidth` }}
     });
+
+  // Store selector for search input.
+  if (!searchId) return initChart();
+  var searchInput = wrapperEl.querySelector('#chart_autocomplete');
+  searchInput.addEventListener('click', function () {
+    searchInput.value = '';
+  })
+
+  var nameIdMap = {};
+  Papa.parse(csv, {
+    header: true,
+    download: true,
+    complete: function (result) {
+      result.data.forEach(row => {
+        nameIdMap[row.name] = row[searchId];
+      });
+
+      var nameArray = Object.keys(nameIdMap);
+
+      console.log('nameMap: ', nameArray);
+      var barChartAutoComplete = !searchId ? null : new autoComplete({
+        data: {
+          src: nameArray,
+          // src: Object.values(x).map(item => item.name),
+          cache: false,
+        },
+        selector: '#chart_autocomplete',
+        threshold: 2,
+        debounce: 100,
+        searchEngine: "strict",
+        feedback: function (data) {
+          console.log('feedback, ', data);
+        },
+        onSelection: function (feedback) {
+          var selectedName = feedback.selection.value;
+          searchInput.value = selectedName;
+
+          var selectedId = nameIdMap[selectedName]
+          console.log('Selected geoid: ', feedback, selectedName, selectedId);
+          var svg = wrapperEl.querySelector('.chart__root');
+          svg.innerHTML = '';
+          // Re-init the chart.
+          initChart(selectedId, selectedName);
+        },
+        onInit: function () {
+          console.log('init of autocomplete');
+        }
+      });
+    }
   });
+  // Init chart on page load.
+                          initChart();
+  });
+}) ();
   </script>
 </div>
