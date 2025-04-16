@@ -112,6 +112,7 @@ Elab.BarChart = (function (Elab) {
           },
           maxBarWidth: dataOptions.maxBarWidth,
           renderTooltip: function (hoverData) {
+            // console.log({ hoverData });
             const tooltip = {
               title: hoverData[0],
               value: yTooltipFormat(hoverData[1]),
@@ -125,7 +126,11 @@ Elab.BarChart = (function (Elab) {
       chart
         .addTimeAxis({
           adjustExtent: function (extent) {
-            return [d3.timeDay.offset(extent[0], -2), d3.timeDay.offset(extent[1], endXOffset)];
+            // console.log({ extent, dataOptions });
+            return [
+              d3.timeDay.offset(dataOptions.xMin || extent[0], -2),
+              d3.timeDay.offset(dataOptions.xMax || extent[1], endXOffset),
+            ];
           },
           adjustLabels: function (selection) {
             selection
@@ -141,7 +146,7 @@ Elab.BarChart = (function (Elab) {
         })
         .addBars({
           selector: barSelector,
-          correctMonthWidth: dataOptions.timeUnit === "month",
+          timeUnit: dataOptions.timeUnit,
           renderTooltip: function (hoverData) {
             var label = "";
             if (dataOptions.xTooltipFormat) {
@@ -198,12 +203,18 @@ Elab.BarChart = (function (Elab) {
         selector: () => [
           lineData.map((d) => {
             if (dataOptions.timeUnit !== "month") return [d.x, d.y];
+            // shift the line points by 15 days to center them on the bars
             let shiftedDate = new Date(d.x);
             shiftedDate.setDate(shiftedDate.getDate() + 15);
             return [shiftedDate, d.y];
           }),
         ],
         yScale: chart.yScaleLines,
+      });
+    }
+    if (dataOptions.avgLines) {
+      chart.addAvgLine({
+        lines: dataOptions.avgLines,
       });
     }
     if (dataOptions.xLabel) {
@@ -221,14 +232,14 @@ Elab.BarChart = (function (Elab) {
     return chart.render();
   }
 
+  const parseDate = d3.timeParse("%m/%d/%Y");
+  const xParse = function (d, options = {}) {
+    return options.axis === "time" ? parseDate(d) : d;
+  };
   /**
    * Loads and parses the CSV table
    */
   function loadData(options, callback) {
-    const parseDate = d3.timeParse("%m/%d/%Y");
-    const xParse = function (d) {
-      return options.axis === "time" ? parseDate(d) : d;
-    };
     const yParse = function (d) {
       return parseFloat(d);
     };
@@ -238,11 +249,13 @@ Elab.BarChart = (function (Elab) {
         id: "bars",
         url: options.data,
         shaper: (data) =>
-          data.map((d) => ({
-            x: xParse(d[options.x]),
-            y: yParse(d[options.y]),
-            barClass: d[options.barClass],
-          })),
+          data
+            .filter((d) => !options.searchId || d[options.searchId] === options.searchValue)
+            .map((d) => ({
+              x: xParse(d[options.x], options),
+              y: yParse(d[options.y]),
+              barClass: d[options.barClass],
+            })),
       },
     ];
     if (options.lineData) {
@@ -252,7 +265,7 @@ Elab.BarChart = (function (Elab) {
         url: options.lineData,
         shaper: (data) =>
           data.map((d) => ({
-            x: xParse(d[options.lineX || options.x]),
+            x: xParse(d[options.lineX || options.x], options),
             y: yParse(d[options.lineY || options.y]),
           })),
       });
@@ -271,6 +284,9 @@ Elab.BarChart = (function (Elab) {
     options.x = options.x || "x";
     options.y = options.y || "y";
     loadData(options, function (dataMap) {
+      // console.log({ dataMap, options });
+      if (options.xMin) options.xMin = xParse(options.xMin, options);
+      if (options.xMax) options.xMax = xParse(options.xMax, options);
       createFigure(rootEl, dataMap.bars, options, dataMap.lines || []);
     });
   }

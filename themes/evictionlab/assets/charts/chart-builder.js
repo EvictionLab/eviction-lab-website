@@ -666,23 +666,27 @@ Elab.ChartBuilder = (function (Elab) {
        * HACK: bar placement is based on date, but bar width is fixed. for this reason, february
        * bars sometimes don't quite fit (run into next bar) on larger screens.
        * fix with added spacing.
-       *
        */
       var spacing = window.innerWidth >= 1200 ? 3 : 1.5;
-      // NOTE: with enough data points bars become 0px wide... need to thin out
-      // bars if we continue using chart (but chart being retired)
-      var bandWidth = Math.max(
-        1,
-        _this.xScale(barData[1][0]) - _this.xScale(barData[0][0]) - spacing * 2,
-      );
-      var selection = _this.selections["bars"].selectAll(".chart__bar").data(barData);
+
+      // determine bandwidth based on consecutive data points
+      var v1 = barData[0][0];
+      var v2 = barData[1][0];
+      if (overrides.timeUnit === "month") {
+        // some month charts are missing data, so use ticks instead of data points
+        var ticks = _this.xScale.ticks(d3.timeMonth);
+        v1 = ticks[0];
+        v2 = ticks[1];
+      }
+      // factor spacing into bandwidth, clamp to 1
+      var bandWidth = Math.max(1, _this.xScale(v2) - _this.xScale(v1) - spacing * 2);
 
       var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
       var avgDaysInMonth = 365 / 12;
       // corrects width of bars to account for month length
       // (otherwise february bars encroach on march)
       var correctedWidth = (date) => {
-        if (!overrides.correctMonthWidth) return bandWidth;
+        if (!overrides.timeUnit === "month") return bandWidth;
         try {
           var m = date.getMonth();
           return bandWidth * (daysInMonth[m] / avgDaysInMonth);
@@ -692,6 +696,7 @@ Elab.ChartBuilder = (function (Elab) {
         }
       };
 
+      var selection = _this.selections["bars"].selectAll(".chart__bar").data(barData);
       selection
         .enter()
         .append("rect")
