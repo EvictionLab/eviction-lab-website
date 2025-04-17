@@ -364,13 +364,13 @@ Elab.ArrowChart2 = (function (Elab) {
       .attr("class", `sticky-leg ${autoScaling ? "auto-scaling" : ""}`);
 
     // Offset ticks by the left margin so ticks align with the chart area
-    const ticks = stickySvg
+    const axisWithTicks = stickySvg
       .append("g")
       .attr("class", "chart__axis")
       .attr("transform", `translate(${margin.left}, 0)`);
 
     const formatter = getFormatter(options.format, options.valueType);
-    ticks
+    axisWithTicks
       .call(
         d3
           .axisBottom(xScale)
@@ -383,9 +383,21 @@ Elab.ArrowChart2 = (function (Elab) {
         d === xDomain[0] ? "start" : d === xDomain[1] ? "end" : "middle",
       );
 
-    // TODO: add axisLabelText if provided
-
+    let legendItemsOffset = 0;
     const legendItemHeight = 24;
+    console.log(1, { legendItemsOffset, calculatedLegHeight });
+    if (options.axisLabelText) {
+      calculatedLegHeight += legendItemHeight;
+      legendItemsOffset += legendItemHeight;
+      axisWithTicks
+        .append("text")
+        .attr("class", "axis-label")
+        .attr("x", xScale((xDomain[0] + xDomain[1]) / 2))
+        .attr("y", 38)
+        .attr("text-anchor", "middle")
+        .text(options.axisLabelText);
+    }
+    console.log(2, { legendItemsOffset, calculatedLegHeight });
     const legendGroup = stickySvg
       .append("g")
       .attr("class", "legend-group-wrapper")
@@ -393,7 +405,6 @@ Elab.ArrowChart2 = (function (Elab) {
       .append("g")
       .attr("class", "legend-group");
 
-    let legendItemsOffset = 0;
     // Append highlight label if supplied
     if (options.highlightLabel) {
       calculatedLegHeight += legendItemHeight;
@@ -426,6 +437,7 @@ Elab.ArrowChart2 = (function (Elab) {
       legendItemsOffset += legendItemHeight;
     }
 
+    console.log(3, { legendItemsOffset, calculatedLegHeight });
     const legendItems = legendGroup
       .append("g")
       .attr("class", "legend-items")
@@ -465,7 +477,7 @@ Elab.ArrowChart2 = (function (Elab) {
     // util for calculating legend item transforms
     function getLegendItemTransform(d, index) {
       // on mobile we stack the legend items bc we don't have much horizontal space
-      const itemsPerCol = Number(options.legItemsPerCol) || isMobile ? 8 : 2;
+      const itemsPerCol = Number(options.legItemsPerCol) || (isMobile ? 8 : 2);
       // we fill each column before moving to the next row because groups are sorted
       // by increasing group name length (so we can make first columns narrower)
       const colIdx = Math.floor(index / itemsPerCol);

@@ -834,6 +834,7 @@ body .visual .visual__title, body .visual .visual__title > * {
   font-size: 14px;
   font-family: Akkurat-Regular, sans-serif;
   dominant-baseline: central;
+  fill: currentColor;
 }
 
 .chart--arrow2 .sticky-leg .tick text {
