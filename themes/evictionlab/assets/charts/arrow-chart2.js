@@ -118,7 +118,7 @@ Elab.ArrowChart2 = (function (Elab) {
     return result;
   }
 
-  function parseTicks(options, domain) {
+  function getTicks(options, domain) {
     const { xTicks, valueType } = options;
     const parseValue = getParser(valueType);
     if (!xTicks) {
@@ -195,13 +195,14 @@ Elab.ArrowChart2 = (function (Elab) {
       const mobileFontSize = autoScaling ? 10 : 14;
       nameWidth *= mobileFontSize / fontSize;
     }
-    const margin = { top: 0, right: 0, bottom: 0, left: nameWidth };
+    const margin = { top: options.labelLine ? 18 : 0, right: 0, bottom: 0, left: nameWidth };
     const totalHeight = margin.top + margin.bottom + rowHeight * data.length;
 
     // Compute inner dimensions for the main chart area
     const innerWidth = BBoxWidth - margin.left - margin.right;
     const innerHeight = totalHeight - margin.top - margin.bottom;
 
+    const parseValue = getParser(options.valueType);
     const xDomain = getDomain(data, options);
     const xScale = d3.scaleLinear().domain(xDomain).range([0, innerWidth]);
 
@@ -249,7 +250,8 @@ Elab.ArrowChart2 = (function (Elab) {
 
     // ...axis lines (so they can go above background, below arrows)...
     const axisLines = rows.append("g").attr("class", "axis-lines");
-    const tickValues = parseTicks(options, xDomain);
+    const tickValues = getTicks(options, xDomain);
+
     // include axis line separating names from chart area
     [xDomain[0], ...tickValues].forEach((tick) => {
       const x = xScale(tick);
@@ -260,6 +262,29 @@ Elab.ArrowChart2 = (function (Elab) {
         .attr("y1", 0)
         .attr("y2", yScale.bandwidth());
     });
+    if (options.labelLine) {
+      const [label, xVal] = options.labelLine.split(";");
+      const x = xScale(parseValue(xVal));
+      const strokeUnit = rowHeight / 3;
+      axisLines
+        .append("line")
+        .attr("class", "label-line")
+        // make dashes fit neatly within each row
+        .attr("stroke-dasharray", `${(strokeUnit * 3) / 8}, ${(strokeUnit * 5) / 8}`)
+        .attr("x1", x)
+        .attr("x2", x)
+        .attr("y1", 0)
+        .attr("y2", yScale.bandwidth());
+      // add label for the line
+      axisLines
+        .filter((d, i) => i === 0) // add label to the first row
+        .append("text")
+        .attr("class", "label-line-label")
+        .attr("x", x)
+        .attr("y", -12)
+        .attr("text-anchor", "middle")
+        .text(label);
+    }
 
     // ...a partial highlight (if applicable)...
     rows
@@ -522,7 +547,7 @@ Elab.ArrowChart2 = (function (Elab) {
       }
       const midPoint = innerWidth / 2;
       const buffer = innerWidth / 50;
-      
+
       const isRootItem = index === 0 && items.length > 2;
       const isLeftCenterItem = index === items.length - 2;
       const isRightCenterItem = index === items.length - 1;

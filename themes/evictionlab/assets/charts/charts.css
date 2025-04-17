@@ -794,16 +794,25 @@ body .visual .visual__title, body .visual .visual__title > * {
 .chart--arrow2 .chart-row rect.highlighted-portion {
   fill: var(--highlighted-portion-row);
 }
+.chart--arrow2 line.arrow {
+  stroke-width: 1.5;
+}
+
+.chart--arrow2 defs marker.arrowhead {
+  stroke-width: 1;
+}
 .chart--arrow2 .axis-lines line,
 .chart--arrow2 .tick-lines line {
   stroke: white;
   stroke-width: 1;
 }
-.chart--arrow2 line.arrow {
-  stroke-width: 1.5;
+.chart--arrow2 .axis-lines line.label-line {
+  /* stroke-dasharray: set by d3 to respond to row height; */
+  stroke-width: 2;
+  stroke: rgba(0, 0, 0, .3);
 }
-.chart--arrow2 defs marker.arrowhead {
-  stroke-width: 1;
+.chart--arrow2 .axis-lines .label-line-label {
+  fill: rgba(0, 0, 0, .6);
 }
 
 .chart--arrow2 text.legend-label,
