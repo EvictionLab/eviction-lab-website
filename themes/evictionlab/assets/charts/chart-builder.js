@@ -815,7 +815,7 @@ Elab.ChartBuilder = (function (Elab) {
       .append("g")
       .attr("class", "avg__line-labels")
       // shift right to account for left margin
-      .attr("transform", `translate(${getMargin()[3]}, 0)`);
+      .attr("transform", `translate(${this.options.margin[3]}, 0)`);
 
     this.updaters["avg__labels"] = function () {
       var labelSelection = _this.selections["avg__labels"]

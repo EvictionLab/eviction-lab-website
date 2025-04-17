@@ -1432,7 +1432,7 @@ Elab.Chart = (function (Elab) {
       // y axis mark lines
       var markLine = context.els.markLines.selectAll(".chart__mark-line--y").data(
         config.markLines.filter(function (v) {
-          return v.labelOnly;
+          return !v.labelOnly;
         }),
       );
       markLine
@@ -2315,7 +2315,6 @@ Elab.Map = (function (Elab) {
             },
           }));
 
-          // console.log({ data, allData, pointJson, extent }, geojson.features);
           map.addSource("points", {
             type: "geojson",
             data: pointJson,

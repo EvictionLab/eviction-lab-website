@@ -213,9 +213,15 @@ Elab.BarChart = (function (Elab) {
       });
     }
     if (dataOptions.avgLines) {
-      chart.addAvgLine({
-        lines: dataOptions.avgLines,
+      const lines = dataOptions.avgLines.split(";").map((lineOptions) => {
+        const parts = lineOptions.split(",");
+        return {
+          y: parseFloat(parts[0]),
+          label: parts[1],
+          labelOnly: parts[2] === "true",
+        };
       });
+      chart.addAvgLine({ lines });
     }
     if (dataOptions.xLabel) {
       chart.addAxisLabel({
@@ -233,8 +239,11 @@ Elab.BarChart = (function (Elab) {
   }
 
   const parseDate = d3.timeParse("%m/%d/%Y");
-  const xParse = function (d, options = {}) {
-    return options.axis === "time" ? parseDate(d) : d;
+  const getXParse = function (options = {}) {
+    const parserMap = {
+      time: parseDate,
+    };
+    return parserMap[options.axis] || ((d) => d);
   };
   /**
    * Loads and parses the CSV table
@@ -243,6 +252,7 @@ Elab.BarChart = (function (Elab) {
     const yParse = function (d) {
       return parseFloat(d);
     };
+    const xParse = getXParse(options);
 
     const files = [
       {
@@ -252,7 +262,7 @@ Elab.BarChart = (function (Elab) {
           data
             .filter((d) => !options.searchId || d[options.searchId] === options.searchValue)
             .map((d) => ({
-              x: xParse(d[options.x], options),
+              x: xParse(d[options.x]),
               y: yParse(d[options.y]),
               barClass: d[options.barClass],
             })),
@@ -265,7 +275,7 @@ Elab.BarChart = (function (Elab) {
         url: options.lineData,
         shaper: (data) =>
           data.map((d) => ({
-            x: xParse(d[options.lineX || options.x], options),
+            x: xParse(d[options.lineX || options.x]),
             y: yParse(d[options.lineY || options.y]),
           })),
       });
@@ -284,9 +294,9 @@ Elab.BarChart = (function (Elab) {
     options.x = options.x || "x";
     options.y = options.y || "y";
     loadData(options, function (dataMap) {
-      // console.log({ dataMap, options });
-      if (options.xMin) options.xMin = xParse(options.xMin, options);
-      if (options.xMax) options.xMax = xParse(options.xMax, options);
+      const xParse = getXParse(options);
+      if (options.xMin) options.xMin = xParse(options.xMin);
+      if (options.xMax) options.xMax = xParse(options.xMax);
       createFigure(rootEl, dataMap.bars, options, dataMap.lines || []);
     });
   }
