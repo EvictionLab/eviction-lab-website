@@ -18,17 +18,14 @@ Elab.ArrowChart2 = (function (Elab) {
     return !Number.isNaN(Number(value));
   }
 
-  function parseDefault(value) {
-    return value;
-  }
-  // function parsePercent(value) {
-  //   return value * 1;
+  // NOTE: not used
+  // function parseDate(value) {
+  //   // Check for YYYY-MM-DD or MM-DD-YYYY style and convert to Date
+  //   const timestamp = Date.parse(value);
+  //   return isNaN(timestamp) ? null : timestamp;
   // }
-  function parseDate(value) {
-    // Check for YYYY-MM-DD or MM-DD-YYYY style and convert to Date
-    const timestamp = Date.parse(value);
-    return isNaN(timestamp) ? null : timestamp;
-  }
+
+  // Parse a date string into a decimal year (e.g. 07/01/2023 => ~2023.5)
   function parseYearDecimal(dateStr) {
     if (!Date.parse(dateStr)) return null;
     const date = new Date(dateStr);
@@ -38,15 +35,26 @@ Elab.ArrowChart2 = (function (Elab) {
     return year + (date - start) / (end - start);
   }
   const valueParsers = {
-    date: parseDate,
+    // date: parseDate,
     yearDecimal: parseYearDecimal,
-    // percent: parsePercent,
+    percent: parseFloat,
+    percentInflated: (x) => parseFloat(x) / 100,
   };
+  function getParser(valueType) {
+    return valueParsers[valueType] || parseFloat;
+  }
 
   const valueFormatters = {
+    yearDecimal: String,
     percent: d3.format(".0%"),
+    percentInflated: d3.format(".0%"),
   };
-  const formatDefault = String;
+  function getFormatter(format, valueType) {
+    if (format) {
+      return d3.format(format);
+    }
+    return valueFormatters[valueType] || d3.format(",d");
+  }
 
   function parseCSV(options, callback) {
     const {
@@ -56,24 +64,28 @@ Elab.ArrowChart2 = (function (Elab) {
       afterCol,
       groupCol,
       highlightCol,
+      highlightEndCol,
       highlightStartCol,
       valueType,
     } = options;
-    const parseValue = valueParsers[valueType] || parseDefault;
-    // console.log(options);
+    const parseValue = getParser(valueType);
+    const sortFn = options.customSort
+      ? new Function(`return ${options.customSort}`)()
+      : (a, b) => (a.before < b.before ? -1 : 1);
     d3.csv(data, (d) => {
       const parsed = d
         .map((d) => ({
           name: d[nameCol],
           before: parseValue(d[beforeCol]),
           after: parseValue(d[afterCol]),
+          change: parseValue(d[afterCol]) - parseValue(d[beforeCol]),
           highlightStart: !!highlightStartCol && parseValue(d[highlightStartCol]),
+          highlightEnd: !!highlightEndCol && parseValue(d[highlightEndCol]),
           highlight: !!highlightCol && !!d[highlightCol],
           group: groupCol ? d[groupCol] : null,
         }))
-        // TODO: make data sorting configurable
-        .sort((a, b) => (a.before < b.before ? -1 : 1));
-      // console.log({ parsed });
+
+        .sort(sortFn);
       callback(parsed);
     });
   }
@@ -85,67 +97,65 @@ Elab.ArrowChart2 = (function (Elab) {
     const actualMax = Math.max(...allVals);
     const padding = (actualMax - actualMin) * 0.1;
 
-    // console.log({
-    //   allVals,
-    //   xMin,
-    //   xMax,
-    //   actualMin,
-    //   actualMax,
-    //   paddedMin: actualMin - padding,
-    //   paddedMax: actualMax + padding,
-    // });
-
+    const parseValue = getParser(valueType);
     return [
-      isNumberLike(xMin) ? Number(xMin) : valueType === "percent" ? 0 : actualMin - padding,
-      isNumberLike(xMax) ? Number(xMax) : actualMax + padding,
+      isNumberLike(xMin) ? parseValue(xMin) : actualMin - padding,
+      isNumberLike(xMax) ? parseValue(xMax) : actualMax + padding,
     ];
   }
 
-  function getSaneTickValues(domain) {
-    const range = domain[1] - domain[0];
-    const roughStep = range / 6; // Aim for around 6 ticks
-
-    let step = null;
-    let multiplier = 1;
-    while (!step) {
-      // Choose a sane step value
-      for (const baseStep of [0.1, 0.2, 0.5]) {
-        const scaledStep = baseStep * multiplier;
-        if (roughStep <= scaledStep) {
-          step = scaledStep;
-          break;
-        }
-      }
-      multiplier *= 10;
-    }
-
+  function getValuesByStep(start, end, step) {
     const result = [];
-    // avoid floating point issues
-    const decimals = Math.floor(step) === step ? 0 : step.toString().split(".")[1].length;
-    for (let v = Math.floor(domain[0] / step) * step; v <= domain[1]; v += step) {
-      v >= domain[0] && v <= domain[1] && result.push(Number(v.toFixed(decimals)));
+    // determine how many decimals step has
+    const decimals = step.toString().split(".")[1]?.length || 0;
+    let v = start;
+    while (v <= end) {
+      result.push(v);
+      v += step;
+      // always use same # decimals as step to avoid floating point issues
+      v = Number(v.toFixed(decimals));
     }
-    // console.log({ humanRelevantTicks: result });
     return result;
   }
 
-  function parseTicks(config, domain) {
-    // console.log({ config, domain });
-    if (!config) return getSaneTickValues(domain);
-    if (config.includes(",")) return config.split(",").map(Number);
-    if (config.includes("|")) {
-      const [startStr, stepStr] = config.split("|");
-      const start = Number(startStr);
-      const step = parseInt(stepStr);
-      const result = [];
-      for (let v = start; v <= domain[1]; v += step) result.push(v);
-      // console.log({ result });
-      return result;
+  function parseTicks(options, domain) {
+    const { xTicks, valueType } = options;
+    const parseValue = getParser(valueType);
+    if (!xTicks) {
+      const range = domain[1] - domain[0];
+      const roughStep = range / 6; // Aim for around 6 ticks
+
+      let step = null;
+      let multiplier = 1;
+      while (!step) {
+        // Choose a sane step value
+        for (const baseStep of [0.1, 0.2, 0.5]) {
+          const scaledStep = baseStep * multiplier;
+          if (roughStep <= scaledStep) {
+            step = scaledStep;
+            break;
+          }
+        }
+        multiplier *= 10;
+      }
+
+      let start = Math.floor(domain[0] / step) * step;
+      if (start < domain[0]) {
+        start += step; // ensure we start inside the domain
+      }
+      return getValuesByStep(start, domain[1], step);
     }
-    console.log("Invalid xTicks config: ", config);
+    if (xTicks.includes(",")) return xTicks.split(",").map(parseValue);
+    if (xTicks.includes("|")) {
+      const [startStr, stepStr] = xTicks.split("|");
+      const start = parseValue(startStr);
+      const step = parseValue(stepStr);
+      return getValuesByStep(start, domain[1], step);
+    }
+    console.log("Invalid xTicks config: ", xTicks);
   }
 
-  function appendArrowDefs(defs, color, id, className = "") {
+  function appendArrowDefs(defs, color, id, size, className = "") {
     defs
       .append("marker")
       .attr("id", id)
@@ -153,8 +163,8 @@ Elab.ArrowChart2 = (function (Elab) {
       .attr("viewBox", "0 -5 10 10")
       .attr("refX", 10)
       .attr("refY", 0)
-      .attr("markerWidth", 17)
-      .attr("markerHeight", 17)
+      .attr("markerWidth", size)
+      .attr("markerHeight", size)
       .attr("orient", "auto")
       .attr("markerUnits", "userSpaceOnUse") // Prevent scaling with stroke width
       .append("path")
@@ -173,11 +183,12 @@ Elab.ArrowChart2 = (function (Elab) {
      * 12 in the svg corresponds to 12px, so font sizes etc stay consistent.
      * If width is fixed, 600-700 yields reasonable results on desktop.
      */
-    const BBoxWidth = options.width || el.getBoundingClientRect().width;
+    const BBoxWidth = Number(options.width) || el.getBoundingClientRect().width;
     const autoScaling = !options.width;
-    const rowHeight = options.rowHeight || 28;
+    const rowHeight = Number(options.rowHeight) || 28;
+    const arrowSize = rowHeight * 0.6;
 
-    let nameWidth = options.nameWidth || 230;
+    let nameWidth = Number(options.nameWidth) || 230;
     if (isMobile) {
       // adjust nameWidth to account for mobile font size
       const fontSize = 12;
@@ -196,7 +207,7 @@ Elab.ArrowChart2 = (function (Elab) {
 
     const yScale = d3
       .scaleBand()
-      .domain(data.map((d) => d.name))
+      .domain(data.map((d, i) => i))
       .range([0, innerHeight]);
 
     const container = d3.select(el);
@@ -220,13 +231,17 @@ Elab.ArrowChart2 = (function (Elab) {
       .data(data)
       .enter()
       .append("g")
-      .attr("class", "chart-row")
+      .attr(
+        "class",
+        (d) =>
+          `chart-row ${d.before < d.after ? "inc" : "dec"} ${d.highlight ? "highlighted" : ""}`,
+      )
       .attr("transform", (d, i) => `translate(0, ${yScale.bandwidth() * i})`);
 
     // each row gets a background rect...
     rows
       .append("rect")
-      .attr("class", (d) => `background ${d.highlight ? "highlighted" : ""}`)
+      .attr("class", "background")
       // chart row rect covers name area as well as data area
       .attr("transform", `translate(${-margin.left})`)
       .attr("width", innerWidth + margin.left)
@@ -234,7 +249,7 @@ Elab.ArrowChart2 = (function (Elab) {
 
     // ...axis lines (so they can go above background, below arrows)...
     const axisLines = rows.append("g").attr("class", "axis-lines");
-    const tickValues = parseTicks(options.xTicks, xDomain);
+    const tickValues = parseTicks(options, xDomain);
     // include axis line separating names from chart area
     [xDomain[0], ...tickValues].forEach((tick) => {
       const x = xScale(tick);
@@ -248,11 +263,17 @@ Elab.ArrowChart2 = (function (Elab) {
 
     // ...a partial highlight (if applicable)...
     rows
-      .filter((d) => d.highlightStart)
+      .filter((d) => d.highlightStart || d.highlightEnd)
       .append("rect")
       .attr("class", "highlighted-portion")
-      .attr("transform", (d) => `translate(${xScale(d.highlightStart)})`)
-      .attr("width", (d) => innerWidth - xScale(d.highlightStart))
+      .attr("transform", (d) => `translate(${xScale(d.highlightStart || xDomain[0])})`)
+      .attr("width", (d) => {
+        const emptyBefore =
+          typeof d.highlightStart === "number" ? xScale(d.highlightStart) - xDomain[0] : 0;
+        const emptyAfter =
+          typeof d.highlightEnd === "number" ? xScale(xDomain[1]) - xScale(d.highlightEnd) : 0;
+        return innerWidth - emptyBefore - emptyAfter;
+      })
       .attr("height", yScale.bandwidth());
 
     // ...a name (to the left of the chart area)...
@@ -286,10 +307,9 @@ Elab.ArrowChart2 = (function (Elab) {
       return `${idBase}${d.before < d.after ? "inc" : "dec"}`;
     };
 
-    // ...and an arrow
+    // ...an arrow...
     rows
       .append("line")
-      .attr("class", (d) => `arrow ${d.before < d.after ? "inc" : "dec"}`)
       .attr("stroke", getArrowColor)
       .attr("marker-end", (d) => `url(#${getArrowheadId(d)})`)
       .attr("x1", (d) => xScale(d.before))
@@ -297,16 +317,39 @@ Elab.ArrowChart2 = (function (Elab) {
       .attr("y1", yScale.bandwidth() / 2)
       .attr("y2", yScale.bandwidth() / 2);
 
+    // ...and a "tooltip" value to display on hover (or if highlighted)
+    if (!options.hideTooltip) {
+      const tooltipFormatter = getFormatter(options.tooltipFormat, options.valueType);
+      rows
+        .append("text")
+        .attr("class", "row-value")
+        .attr("x", (d) => xScale(d.before))
+        .attr("dx", (d) => {
+          // offset from arrow
+          let buffer = 5;
+          const lineLength = Math.abs(xScale(d.change));
+          if (lineLength < arrowSize) {
+            // make space for arrowhead even if line is shorter than it
+            buffer += arrowSize - lineLength;
+          }
+          return buffer * -Math.sign(d.change);
+        })
+        .attr("y", yScale.bandwidth() / 2)
+        .attr("text-anchor", (d) => (d.change < 0 ? "start" : "end"))
+        .text((d) => tooltipFormatter(d.change));
+    }
+
     // add arrow marker defs to the main svg (legend arrows pick them up from there as well)
     const defs = svg.append("defs");
     // add defs for inc/dec arrows and groups
-    appendArrowDefs(defs, incColor, getArrowheadId(null, "inc"), "inc");
-    appendArrowDefs(defs, decColor, getArrowheadId(null, "dec"), "dec");
+    appendArrowDefs(defs, incColor, getArrowheadId(null, "inc"), arrowSize, "inc");
+    appendArrowDefs(defs, decColor, getArrowheadId(null, "dec"), arrowSize, "dec");
     groups.forEach((group) =>
       appendArrowDefs(
         defs,
         groupColorScale(group),
         getArrowheadId({ group }),
+        arrowSize,
         formatGroupName(group),
       ),
     );
@@ -326,7 +369,7 @@ Elab.ArrowChart2 = (function (Elab) {
       .attr("class", "chart__axis")
       .attr("transform", `translate(${margin.left}, 0)`);
 
-    const formatter = valueFormatters[options.valueType] || formatDefault;
+    const formatter = getFormatter(options.format, options.valueType);
     ticks
       .call(
         d3
@@ -392,7 +435,6 @@ Elab.ArrowChart2 = (function (Elab) {
     const items = [];
     if (groups.length > 0) {
       groups.forEach((group) => {
-        // console.log(group);
         items.push({
           type: "group",
           label: group,
@@ -419,11 +461,11 @@ Elab.ArrowChart2 = (function (Elab) {
       }
     }
 
-    const colWidth = options.legColWidth || 175;
+    const colWidth = Number(options.legColWidth) || 175;
     // util for calculating legend item transforms
     function getLegendItemTransform(d, index) {
       // on mobile we stack the legend items bc we don't have much horizontal space
-      const itemsPerCol = options.legItemsPerCol || isMobile ? 8 : 2;
+      const itemsPerCol = Number(options.legItemsPerCol) || isMobile ? 8 : 2;
       // we fill each column before moving to the next row because groups are sorted
       // by increasing group name length (so we can make first columns narrower)
       const colIdx = Math.floor(index / itemsPerCol);
