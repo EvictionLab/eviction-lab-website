@@ -826,8 +826,8 @@ body .visual .visual__title, body .visual .visual__title > * {
   stroke: #2c898055;
 }
 
-.chart--arrow2 .sticky-leg .legend-group {
-  transform: translateX(230px);
+.chart--arrow2 .sticky-leg.standard-layout .legend-group {
+  transform: translateX(235px);
 }
 
 .chart--arrow2 text {
@@ -842,13 +842,13 @@ body .visual .visual__title, body .visual .visual__title > * {
 }
 
 @media(max-width: 1199px) {
-  .chart--arrow2 .sticky-leg .legend-group {
-    transform: translateX(80px);
+  .chart--arrow2 .sticky-leg.standard-layout .legend-group {
+    transform: translateX(85px);
   }
 }
 @media(max-width: 767px) {
-  .chart--arrow2 .sticky-leg .legend-group {
-    transform: translateX(0);
+  .chart--arrow2 .sticky-leg.standard-layout .legend-group {
+    transform: translateX(5px);
   }
 }
 @media(max-width: 599px) {

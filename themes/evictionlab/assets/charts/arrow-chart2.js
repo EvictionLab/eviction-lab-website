@@ -357,9 +357,9 @@ Elab.ArrowChart2 = (function (Elab) {
     // --- Sticky Leg Axis ---
 
     // add svg for legend/axis which will stick below the chart
-    const stickySvg = container
-      .append("svg")
-      .attr("class", `sticky-leg ${autoScaling ? "auto-scaling" : ""}`);
+    let legendClass = "sticky-leg " + (options.simpleLegend ? "simple-legend" : "standard-layout");
+    if (autoScaling) legendClass += " auto-scaling";
+    const stickySvg = container.append("svg").attr("class", legendClass);
 
     // Offset ticks by the left margin so ticks align with the chart area
     const axisWithTicks = stickySvg
@@ -399,7 +399,7 @@ Elab.ArrowChart2 = (function (Elab) {
       axisWithTicks
         .append("text")
         .attr("class", "axis-label")
-        .attr("x", xScale((xDomain[0] + xDomain[1]) / 2))
+        .attr("x", innerWidth / 2)
         .attr("y", runningOffset)
         .attr("text-anchor", "middle")
         .text(options.axisLabelText);
@@ -407,13 +407,7 @@ Elab.ArrowChart2 = (function (Elab) {
     }
     console.log(2, { runningOffset });
     // const legendGroupOffset = 0;
-    const legendGroup = stickySvg
-      .append("g")
-      // TODO: remove?
-      .attr("class", "legend-group-wrapper")
-      .attr("transform", `translate(5, 0)`)
-      .append("g")
-      .attr("class", "legend-group");
+    const legendGroup = stickySvg.append("g").attr("class", "legend-group");
 
     // Append highlight label if supplied
     if (options.highlightLabel) {
@@ -440,7 +434,7 @@ Elab.ArrowChart2 = (function (Elab) {
     console.log(2.5, { runningOffset });
 
     // Append legend label text if supplied
-    if (options.legendLabelText) {
+    if (options.legendLabelText && !options.simpleLegend) {
       runningOffset += lgBuffer;
       legendGroup
         .append("text")
@@ -463,6 +457,13 @@ Elab.ArrowChart2 = (function (Elab) {
 
     // establish legend items
     const items = [];
+    if (options.legendLabelText && options.simpleLegend) {
+      items.push({
+        type: "simple-legend-label",
+        label: options.legendLabelText + ":",
+        noIcon: true,
+      });
+    }
     if (groups.length > 0) {
       groups.forEach((group) => {
         items.push({
@@ -491,9 +492,9 @@ Elab.ArrowChart2 = (function (Elab) {
       }
     }
 
-    const colWidth = Number(options.legColWidth) || 175;
     // util for calculating legend item transforms
     function getLegendItemTransform(d, index) {
+      const colWidth = Number(options.legColWidth) || 175;
       // on mobile we stack the legend items bc we don't have much horizontal space
       const itemsPerCol = Number(options.legItemsPerCol) || (isMobile ? 8 : 2);
       // we fill each column before moving to the next row because groups are sorted
@@ -508,6 +509,32 @@ Elab.ArrowChart2 = (function (Elab) {
       }
       return `translate(${offsetX}, ${offsetY})`;
     }
+    function getSimpleLegendItemTransform(d, index) {
+      if (index >= 3) {
+        console.warn(`Simple legend centers a dec/inc label below the center of the axis
+              with an optional legend label at axis root in front of them. It is not designed
+              to support more than 3 items.`);
+      }
+      // increase calculatedLegHeight once for the single row
+      if (index === 0) {
+        // calculatedLegHeight += legendItemHeight;
+        runningOffset += legendItemHeight;
+      }
+      const midPoint = innerWidth / 2;
+      const buffer = innerWidth / 50;
+      
+      const isRootItem = index === 0 && items.length > 2;
+      const isLeftCenterItem = index === items.length - 2;
+      const isRightCenterItem = index === items.length - 1;
+      let offsetX = nameWidth;
+      if (isLeftCenterItem) {
+        const itemWidth = Number(options.decLegItemOffset) || 100;
+        offsetX += midPoint - itemWidth - buffer;
+      } else if (isRightCenterItem) {
+        offsetX += midPoint + buffer;
+      }
+      return `translate(${offsetX}, 0)`;
+    }
     // Render legend items vertically with each item on its own row
     if (items.length > 0) {
       const legendItem = legendItems
@@ -516,21 +543,26 @@ Elab.ArrowChart2 = (function (Elab) {
         .enter()
         .append("g")
         .attr("class", "arrow-legend-item")
-        .attr("transform", getLegendItemTransform);
-      // arrow marker
+        .attr(
+          "transform",
+          options.simpleLegend ? getSimpleLegendItemTransform : getLegendItemTransform,
+        );
+      // item marker
       legendItem
+        .filter((d) => !d.noIcon) // Skip items with noIcon
         .append("line")
-        .attr("class", "arrow")
+        .attr("class", (d) => `arrow legend-item ${d.type}`)
         .attr("x1", (d) => (d.type === "dec" ? 28 : 0))
         .attr("x2", (d) => (d.type === "dec" ? 0 : 28))
         .attr("y1", legendItemHeight / 2)
         .attr("y2", legendItemHeight / 2)
         .attr("stroke", (d) => d.color)
         .attr("marker-end", (d) => `url(#${d.arrowheadId})`);
-      // group label
+      // item label
       legendItem
         .append("text")
-        .attr("x", 34)
+        .attr("class", (d) => `label legend-item ${d.type}`)
+        .attr("x", (d) => (d.noIcon ? 0 : 34))
         .attr("y", legendItemHeight / 2)
         .attr("text-anchor", "start")
         .text((d) => d.label);
