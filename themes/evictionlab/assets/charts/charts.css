@@ -866,7 +866,7 @@ body .visual .visual__title, body .visual .visual__title > * {
     font-size: 12px;
   }
 
-  .chart--arrow2 svg.auto-scaling .sticky-leg .tick text {
+  .chart--arrow2 svg.auto-scaling.sticky-leg .tick text {
     font-size: 10px;
   }
 }

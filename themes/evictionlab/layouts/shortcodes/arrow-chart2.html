@@ -31,6 +31,7 @@
         legendDecArrowText: {{ .Get `legendDecArrowText` }},
         legendIncArrowText: {{ .Get `legendIncArrowText` }},
         legendLabelText: {{ .Get `legendLabelText` }},
+        legItemsPerCol: {{ .Get `legItemsPerCol` }},
         groupCol: {{ .Get `groupCol` }}
       })
       Elab.ArrowChart2.init(document.getElementById({{ .Get `id` }}), {
@@ -56,6 +57,7 @@
         legendLabelText: {{ .Get `legendLabelText` }},
         legColWidth: {{ .Get `legColWidth` }},
         legItemsPerCol: {{ .Get `legItemsPerCol` }},
+        legendLayout: {{ .Get `legendLayout` }},
         nameWidth: {{ .Get `nameWidth` }},
         rowHeight: {{ .Get `rowHeight` }},
         width: {{ .Get `width` }},

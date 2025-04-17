@@ -355,8 +355,6 @@ Elab.ArrowChart2 = (function (Elab) {
     );
 
     // --- Sticky Leg Axis ---
-    // minimum legend height for axis + ticks, increase as more height is needed
-    let calculatedLegHeight = 40;
 
     // add svg for legend/axis which will stick below the chart
     const stickySvg = container
@@ -383,65 +381,85 @@ Elab.ArrowChart2 = (function (Elab) {
         d === xDomain[0] ? "start" : d === xDomain[1] ? "end" : "middle",
       );
 
-    let legendItemsOffset = 0;
+    // minimum legend height for axis + ticks, increase as more height is needed
+    // let calculatedLegHeight = 40;
+    // let legendItemsOffset = 0;
+    let runningOffset = 35;
+    // sync with chart.css
+    const legFontSize = 14;
+    const smBuffer = 4;
+    const lgBuffer = 8;
+
     const legendItemHeight = 24;
-    console.log(1, { legendItemsOffset, calculatedLegHeight });
+    console.log(1, { runningOffset });
     if (options.axisLabelText) {
-      calculatedLegHeight += legendItemHeight;
-      legendItemsOffset += legendItemHeight;
+      // calculatedLegHeight += legendItemHeight;
+      // legendItemsOffset += legendItemHeight;
+      runningOffset += smBuffer;
       axisWithTicks
         .append("text")
         .attr("class", "axis-label")
         .attr("x", xScale((xDomain[0] + xDomain[1]) / 2))
-        .attr("y", 38)
+        .attr("y", runningOffset)
         .attr("text-anchor", "middle")
         .text(options.axisLabelText);
+      runningOffset += legFontSize;
     }
-    console.log(2, { legendItemsOffset, calculatedLegHeight });
+    console.log(2, { runningOffset });
+    // const legendGroupOffset = 0;
     const legendGroup = stickySvg
       .append("g")
+      // TODO: remove?
       .attr("class", "legend-group-wrapper")
-      .attr("transform", `translate(5, 32)`)
+      .attr("transform", `translate(5, 0)`)
       .append("g")
       .attr("class", "legend-group");
 
     // Append highlight label if supplied
     if (options.highlightLabel) {
-      calculatedLegHeight += legendItemHeight;
-      legendItemsOffset += legendItemHeight;
+      // calculatedLegHeight += legendItemHeight;
+      // legendItemsOffset += legendItemHeight;
+      runningOffset += lgBuffer;
       // highlight icon
       legendGroup
         .append("rect")
         .attr("class", "highlight")
+        .attr("y", runningOffset - legFontSize / 2 - 2)
         .attr("width", 28)
-        .attr("height", legendItemHeight - 4);
+        .attr("height", 16);
       // highlight label
       legendGroup
         .append("text")
         .attr("class", "legend-label")
         .attr("x", 35)
-        .attr("y", legendItemHeight / 2)
+        .attr("y", runningOffset)
         .attr("text-anchor", "start")
         .text(options.highlightLabel);
+      runningOffset += legFontSize;
     }
+    console.log(2.5, { runningOffset });
+
     // Append legend label text if supplied
     if (options.legendLabelText) {
+      runningOffset += lgBuffer;
       legendGroup
         .append("text")
         .attr("class", "legend-label")
         .attr("x", 0)
-        .attr("y", legendItemsOffset + legendItemHeight / 2)
+        .attr("y", runningOffset)
         .attr("text-anchor", "start")
         .text(options.legendLabelText + ":");
-      calculatedLegHeight += legendItemHeight;
-      legendItemsOffset += legendItemHeight;
+      // calculatedLegHeight += legendItemHeight;
+      // legendItemsOffset += legendItemHeight;
+      runningOffset += legFontSize;
     }
 
-    console.log(3, { legendItemsOffset, calculatedLegHeight });
+    // runningOffset += smBuffer;s
+    console.log(3, { runningOffset });
     const legendItems = legendGroup
       .append("g")
       .attr("class", "legend-items")
-      .attr("transform", `translate(0, ${legendItemsOffset})`);
+      .attr("transform", `translate(0, ${runningOffset})`);
 
     // establish legend items
     const items = [];
@@ -484,7 +502,10 @@ Elab.ArrowChart2 = (function (Elab) {
       const offsetX = colIdx * colWidth;
       const offsetY = (index % itemsPerCol) * legendItemHeight;
       // increase calculatedLegHeight for each new row
-      if (colIdx === 0) calculatedLegHeight += legendItemHeight;
+      if (colIdx === 0) {
+        // calculatedLegHeight += legendItemHeight;
+        runningOffset += legendItemHeight;
+      }
       return `translate(${offsetX}, ${offsetY})`;
     }
     // Render legend items vertically with each item on its own row
@@ -510,14 +531,14 @@ Elab.ArrowChart2 = (function (Elab) {
       legendItem
         .append("text")
         .attr("x", 34)
-        .attr("y", legendItemHeight / 2 + 1)
+        .attr("y", legendItemHeight / 2)
         .attr("text-anchor", "start")
         .text((d) => d.label);
     }
 
     // add the viewBox after calculatedLegHeight has been finalized
     stickySvg
-      .attr("viewBox", `0 0 ${BBoxWidth} ${calculatedLegHeight}`)
+      .attr("viewBox", `0 0 ${BBoxWidth} ${runningOffset + lgBuffer}`)
       .attr("preserveAspectRatio", "xMinYMin meet");
   }
 
