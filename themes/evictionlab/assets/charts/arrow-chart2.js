@@ -413,23 +413,21 @@ Elab.ArrowChart2 = (function (Elab) {
     let runningOffset = 35;
     // sync with chart.css
     const legFontSize = 14;
-    const smBuffer = 4;
-    const lgBuffer = 8;
+    const yBuffer = 8;
 
     const legendItemHeight = 26;
     // console.log(1, { runningOffset });
     if (options.axisLabelText) {
       // calculatedLegHeight += legendItemHeight;
       // legendItemsOffset += legendItemHeight;
-      runningOffset += smBuffer;
+      runningOffset += yBuffer / 2;
       axisWithTicks
         .append("text")
         .attr("class", "axis-label")
-        .attr("x", innerWidth / 2)
-        .attr("y", runningOffset)
+        .attr("transform", `translate(${innerWidth / 2}, ${runningOffset})`)
         .attr("text-anchor", "middle")
         .text(options.axisLabelText);
-      runningOffset += legFontSize;
+      runningOffset += legFontSize + yBuffer / 2;
     }
     // console.log(2, { runningOffset });
     // const legendGroupOffset = 0;
@@ -439,34 +437,36 @@ Elab.ArrowChart2 = (function (Elab) {
     if (options.highlightLabel) {
       // calculatedLegHeight += legendItemHeight;
       // legendItemsOffset += legendItemHeight;
-      runningOffset += lgBuffer;
+      runningOffset += yBuffer;
+      const highlightItem = legendGroup
+        .append("g")
+        .attr("class", "a2-legend-item highlight")
+        .attr("transform", `translate(0, ${runningOffset})`);
       // highlight icon
-      legendGroup
+      highlightItem
         .append("rect")
-        .attr("class", "highlight")
-        .attr("y", runningOffset - legFontSize / 2 - 2)
-        .attr("width", 28)
-        .attr("height", 16);
+        .attr("class", "highlight legend-icon")
+        .attr("y", -16 / 2)
+        .attr("height", 16)
+        .attr("width", 28);
       // highlight label
-      legendGroup
+      highlightItem
         .append("text")
         .attr("class", "legend-label")
         .attr("x", 35)
-        .attr("y", runningOffset)
         .attr("text-anchor", "start")
         .text(options.highlightLabel);
       runningOffset += legFontSize;
     }
     // console.log(2.5, { runningOffset });
 
-    // Append legend label text if supplied
+    // legend label comes before the line items, unless it's a simpleLegend
     if (options.legendLabelText && !options.simpleLegend) {
-      runningOffset += lgBuffer;
+      runningOffset += yBuffer;
       legendGroup
         .append("text")
         .attr("class", "legend-label")
-        .attr("x", 0)
-        .attr("y", runningOffset)
+        .attr("transform", `translate(0, ${runningOffset})`)
         .attr("text-anchor", "start")
         .text(options.legendLabelText + ":");
       // calculatedLegHeight += legendItemHeight;
@@ -474,17 +474,13 @@ Elab.ArrowChart2 = (function (Elab) {
       runningOffset += legFontSize;
     }
 
-    // runningOffset += smBuffer;s
+    // runningOffset += smBuffer;
     // console.log(3, { runningOffset });
-    const legendItems = legendGroup
-      .append("g")
-      .attr("class", "legend-items")
-      .attr("transform", `translate(0, ${runningOffset})`);
 
-    // establish legend items
-    const items = [];
+    // create a config of the line-related legend items
+    const lineItems = [];
     if (options.legendLabelText && options.simpleLegend) {
-      items.push({
+      lineItems.push({
         type: "simple-legend-label",
         label: options.legendLabelText + ":",
         noIcon: true,
@@ -492,7 +488,7 @@ Elab.ArrowChart2 = (function (Elab) {
     }
     if (groups.length > 0) {
       groups.forEach((group) => {
-        items.push({
+        lineItems.push({
           type: "group",
           label: group,
           color: groupColorScale(group),
@@ -501,7 +497,7 @@ Elab.ArrowChart2 = (function (Elab) {
       });
     } else {
       if (options.legendDecArrowText) {
-        items.push({
+        lineItems.push({
           type: "dec",
           label: options.legendDecArrowText,
           color: decColor,
@@ -509,7 +505,7 @@ Elab.ArrowChart2 = (function (Elab) {
         });
       }
       if (options.legendIncArrowText) {
-        items.push({
+        lineItems.push({
           type: "inc",
           label: options.legendIncArrowText,
           color: incColor,
@@ -518,10 +514,10 @@ Elab.ArrowChart2 = (function (Elab) {
       }
     }
 
-    // util for calculating legend item transforms
+    // utils for calculating legend item transforms
     function getLegendItemTransform(d, index) {
       const colWidth = Number(options.legColWidth) || 175;
-      // on mobile we stack the legend items bc we don't have much horizontal space
+      // on mobile we stack the legend lineItems bc we don't have much horizontal space
       const itemsPerCol = Number(options.legItemsPerCol) || (isMobile ? 8 : 2);
       // we fill each column before moving to the next row because groups are sorted
       // by increasing group name length (so we can make first columns narrower)
@@ -549,9 +545,9 @@ Elab.ArrowChart2 = (function (Elab) {
       const midPoint = innerWidth / 2;
       const buffer = innerWidth / 50;
 
-      const isRootItem = index === 0 && items.length > 2;
-      const isLeftCenterItem = index === items.length - 2;
-      const isRightCenterItem = index === items.length - 1;
+      const isRootItem = index === 0 && lineItems.length > 2;
+      const isLeftCenterItem = index === lineItems.length - 2;
+      const isRightCenterItem = index === lineItems.length - 1;
       let offsetX = nameWidth;
       if (isLeftCenterItem) {
         const itemWidth = Number(options.decLegItemOffset) || 100;
@@ -561,14 +557,21 @@ Elab.ArrowChart2 = (function (Elab) {
       }
       return `translate(${offsetX}, 0)`;
     }
-    // Render legend items vertically with each item on its own row
-    if (items.length > 0) {
-      const legendItem = legendItems
-        .selectAll("g.arrow-legend-item")
-        .data(items)
+
+    // Render legend lineItems vertically with each item on its own row
+    if (lineItems.length > 0) {
+      runningOffset += yBuffer;
+      const legendLineItems = legendGroup
+        .append("g")
+        .attr("class", "legend-line-items")
+        .attr("transform", `translate(0, ${runningOffset})`);
+
+      const legendItem = legendLineItems
+        .selectAll("g.a2-legend-item")
+        .data(lineItems)
         .enter()
         .append("g")
-        .attr("class", "arrow-legend-item")
+        .attr("class", (d) => `a2-legend-item ${d.type}`)
         .attr(
           "transform",
           options.simpleLegend ? getSimpleLegendItemTransform : getLegendItemTransform,
@@ -577,38 +580,34 @@ Elab.ArrowChart2 = (function (Elab) {
       legendItem
         .filter((d) => !d.noIcon) // Skip items with noIcon
         .append("line")
-        .attr("class", (d) => `arrow legend-item ${d.type}`)
+        .attr("class", "arrow legend-icon")
         .attr("x1", (d) => (d.type === "dec" ? 28 : 0))
         .attr("x2", (d) => (d.type === "dec" ? 0 : 28))
-        .attr("y1", legendItemHeight / 2)
-        .attr("y2", legendItemHeight / 2)
         .attr("stroke", (d) => d.color)
         .attr("marker-end", (d) => `url(#${d.arrowheadId})`);
       // item label
       legendItem
         .append("text")
-        .attr("class", (d) => `label legend-item ${d.type}`)
+        .attr("class", "legend-label")
         .attr("x", (d) => (d.noIcon ? 0 : 34))
-        .attr("y", legendItemHeight / 2)
         .attr("text-anchor", "start")
         .text((d) => d.label);
     }
 
     if (options.legendCaption) {
-      runningOffset += lgBuffer * 2;
+      runningOffset += yBuffer / 2;
       stickySvg
         .append("text")
         .attr("class", "legend-caption")
-        .attr("x", BBoxWidth / 2)
-        .attr("y", runningOffset)
+        .attr("transform", `translate(${BBoxWidth / 2}, ${runningOffset})`)
         .attr("text-anchor", "middle")
         .text(options.legendCaption);
-      runningOffset += legFontSize;
+      runningOffset += legFontSize + yBuffer;
     }
-    
+
     // add the viewBox after calculatedLegHeight has been finalized
     stickySvg
-      .attr("viewBox", `0 0 ${BBoxWidth} ${runningOffset + lgBuffer}`)
+      .attr("viewBox", `0 0 ${BBoxWidth} ${runningOffset}`)
       .attr("preserveAspectRatio", "xMinYMin meet");
   }
 

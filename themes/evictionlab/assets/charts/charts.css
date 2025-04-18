@@ -815,8 +815,7 @@ body .visual .visual__title, body .visual .visual__title > * {
   fill: rgba(0, 0, 0, .6);
 }
 
-.chart--arrow2 text.legend-label,
-.chart--arrow2 .legend-items text {
+.chart--arrow2 text.legend-label {
   text-transform: uppercase;
   font-family: GT-Eesti-Display-Medium, sans-serif;
   /* dominant-baseline: unset; */
