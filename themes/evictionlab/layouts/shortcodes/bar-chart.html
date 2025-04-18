@@ -55,14 +55,14 @@
 (() => {
   window.addEventListener('load', function () {
     var searchId = {{ .Get `searchId`}};
+    var defaultSearchValue = {{ .Get `defaultSearchValue` }};
     var id = {{ .Get `id` }};
     var csv = {{ .Get `data` }};
     var wrapperEl = document.getElementById("chart--" + id);
-    var initChart = (geoid = "48491", name) => Elab.BarChart.init(document.getElementById(id), {
+    var initChart = (searchValId = defaultSearchValue, name) => Elab.BarChart.init(document.getElementById(id), {
       searchId: searchId,
       data: csv,
-      searchValue: geoid,
-      // searchValue: {{ .Get `searchValue` }},
+      searchValue: searchValId,
       x: {{ .Get `x` }},
       xMin: {{ .Get `xMin` }},
       xMax: {{ .Get `xMax` }},
@@ -93,6 +93,7 @@
 
   // Store selector for search input.
   if (!searchId) return initChart();
+
   var searchInput = wrapperEl.querySelector('#chart_autocomplete');
   searchInput.addEventListener('click', function () {
     searchInput.value = '';
@@ -128,7 +129,7 @@
           searchInput.value = selectedName;
 
           var selectedId = nameIdMap[selectedName]
-          console.log('Selected geoid: ', feedback, selectedName, selectedId);
+          console.log('Selected id: ', feedback, selectedName, selectedId);
           var svg = wrapperEl.querySelector('.chart__root');
           svg.innerHTML = '';
           // Re-init the chart.
@@ -141,7 +142,7 @@
     }
   });
   // Init chart on page load.
-                          initChart();
+        initChart();
   });
 }) ();
   </script>
