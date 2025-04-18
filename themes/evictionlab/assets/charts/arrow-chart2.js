@@ -417,7 +417,7 @@ Elab.ArrowChart2 = (function (Elab) {
     const lgBuffer = 8;
 
     const legendItemHeight = 26;
-    console.log(1, { runningOffset });
+    // console.log(1, { runningOffset });
     if (options.axisLabelText) {
       // calculatedLegHeight += legendItemHeight;
       // legendItemsOffset += legendItemHeight;
@@ -431,7 +431,7 @@ Elab.ArrowChart2 = (function (Elab) {
         .text(options.axisLabelText);
       runningOffset += legFontSize;
     }
-    console.log(2, { runningOffset });
+    // console.log(2, { runningOffset });
     // const legendGroupOffset = 0;
     const legendGroup = stickySvg.append("g").attr("class", "legend-group");
 
@@ -457,7 +457,7 @@ Elab.ArrowChart2 = (function (Elab) {
         .text(options.highlightLabel);
       runningOffset += legFontSize;
     }
-    console.log(2.5, { runningOffset });
+    // console.log(2.5, { runningOffset });
 
     // Append legend label text if supplied
     if (options.legendLabelText && !options.simpleLegend) {
@@ -475,7 +475,7 @@ Elab.ArrowChart2 = (function (Elab) {
     }
 
     // runningOffset += smBuffer;s
-    console.log(3, { runningOffset });
+    // console.log(3, { runningOffset });
     const legendItems = legendGroup
       .append("g")
       .attr("class", "legend-items")

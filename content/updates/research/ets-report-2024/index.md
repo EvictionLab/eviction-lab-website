@@ -12,8 +12,8 @@ date: 2025-04-17T00:49:04.271Z
 postauthorname: Sarah Johnson, Lorae Stojanovic, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. We investigate how this affected eviction rates in 2023.
-listSummary: As the United States moves past the COVID-19 pandemic, low-income renters face a deeply inhospitable housing market. We investigate how this affected eviction rates in 2023.
+description: lorem ipsum
+listSummary: lorem ipsum
 twImage: ets-alt-graphic.png
 image: ets-alt-graphic.png
 fbImage: ets-alt-graphic.png
@@ -86,8 +86,7 @@ scripts:
 }
 </style>
 
-<span class="dropcap green">T</span>
-he days of emergency rental assistance and eviction protections are long gone. These programs got the United States to historically low levels of housing displacement during the COVID-19 pandemic. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020. In some concerning cases like Phoenix, Las Vegas, and Houston, landlords are evicting many more tenants than before.
+<span class="dropcap green">T</span>he days of emergency rental assistance and eviction protections are long gone. These programs got the United States to historically low levels of housing displacement during the COVID-19 pandemic. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020. In some concerning cases like Phoenix, Las Vegas, and Houston, landlords are evicting many more tenants than before.
 
 <div class="boxed-content">
 <p>
@@ -166,7 +165,7 @@ To demonstrate the range of variation, we plot eviction filing rates and changes
   valueType="percentInflated"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
   axisLabelText="Eviction filing rate"
-  legendCaption="Note: the 7.8% average reflects the total eviction filing rate across all ETS cities in 2024."
+  legendCaption="Note: the 7.8% average reflects the total eviction filing rate across all ETS cities in 2024"
   legendDecArrowText="Decrease"
   legendIncArrowText="Increase"
   simpleLegend="true"
