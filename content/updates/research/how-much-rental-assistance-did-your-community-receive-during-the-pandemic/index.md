@@ -1,10 +1,10 @@
 ---
 draft: true
-childof: blog
+childof: research
 url: "/how-much-rental-assistance-did-your-community-receive-during-the-pandemic/"
 contenttype: updates
 collection: true
-contentcat: blog
+contentcat: research
 featured: true
 in_index: true
 title: "How Much Rental Assistance Did Your Community Receive During the Pandemic?"
@@ -51,7 +51,7 @@ scripts:
   }
 </style>
 
-<span class="dropcap red">O</span>ver the course of 2021 and 2022, the U.S. carried out an unprecedented experiment: we invested $46.55 billion to help Americans pay rent when they fell behind. These emergency rental assistance (ERA) funds, paid primarily to tenants, landlords, and utility companies, were intended to help renters to catch up on unpaid bills and remain stably housed in the wake of the COVID-19 pandemic. 
+<span class="dropcap green">O</span>ver the course of 2021 and 2022, the U.S. carried out an unprecedented experiment: we invested $46.55 billion to help Americans pay rent when they fell behind. These emergency rental assistance (ERA) funds, paid primarily to tenants, landlords, and utility companies, were intended to help renters to catch up on unpaid bills and remain stably housed in the wake of the COVID-19 pandemic. 
 
 In a new public data release, we provide insight into how this money was distributed. This dataset, which was produced through a collaboration between the Eviction Lab, the {{< smartlink "Housing Initiative at Penn" "https://www.design.upenn.edu/work/housing-initiative-penn-hip" >}}, and the {{< smartlink "Urban Displacement Project" "https://www.urbandisplacement.org/" >}}, details the number of ERA recipients and the amount of ERA paid in most counties nationwide between January 2021 and March 2023. It represents the most precise picture yet available of when and where ERA funds were distributed. 
 
