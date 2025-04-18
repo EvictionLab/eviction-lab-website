@@ -736,6 +736,7 @@ The most common limitation among these programs is income. In many cases, cities
   groupCol="restriction"
   highlightStartCol="expansion_date"
   valueType="yearDecimal"
+  hideTooltip="true"
   legendLabelText="eligibility restrictions"
 %}}
 
