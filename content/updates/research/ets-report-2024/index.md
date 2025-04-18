@@ -161,7 +161,7 @@ To demonstrate the range of variation, we plot eviction filing rates and changes
   xMax="30"
   tooltipFormat=".1%"
   xTicks="0|5"
-  labelLine="pre-pandemic average;7.8"
+  labelLine="2024 average;7.8"
   valueType="percentInflated"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
   axisLabelText="Eviction filing rate"
