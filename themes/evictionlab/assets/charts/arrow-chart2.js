@@ -390,7 +390,8 @@ Elab.ArrowChart2 = (function (Elab) {
     const axisWithTicks = stickySvg
       .append("g")
       .attr("class", "chart__axis")
-      .attr("transform", `translate(${margin.left}, 0)`);
+      // shift by 0.5 to counter 0.5 tick transforms by d3
+      .attr("transform", `translate(${margin.left - 0.5}, 0)`);
 
     const formatter = getFormatter(options.format, options.valueType);
     axisWithTicks
@@ -415,7 +416,7 @@ Elab.ArrowChart2 = (function (Elab) {
     const smBuffer = 4;
     const lgBuffer = 8;
 
-    const legendItemHeight = 24;
+    const legendItemHeight = 26;
     console.log(1, { runningOffset });
     if (options.axisLabelText) {
       // calculatedLegHeight += legendItemHeight;
@@ -593,6 +594,18 @@ Elab.ArrowChart2 = (function (Elab) {
         .text((d) => d.label);
     }
 
+    if (options.legendCaption) {
+      runningOffset += lgBuffer * 2;
+      stickySvg
+        .append("text")
+        .attr("class", "legend-caption")
+        .attr("x", BBoxWidth / 2)
+        .attr("y", runningOffset)
+        .attr("text-anchor", "middle")
+        .text(options.legendCaption);
+      runningOffset += legFontSize;
+    }
+    
     // add the viewBox after calculatedLegHeight has been finalized
     stickySvg
       .attr("viewBox", `0 0 ${BBoxWidth} ${runningOffset + lgBuffer}`)

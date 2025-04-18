@@ -850,6 +850,10 @@ body .visual .visual__title, body .visual .visual__title > * {
   font-size: 12px;
 }
 
+.chart--arrow2 .sticky-leg .legend-caption {
+  font-family: var(--body-font-italic);
+}
+
 @media(max-width: 1199px) {
   .chart--arrow2 .sticky-leg.standard-layout .legend-group {
     transform: translateX(85px);
