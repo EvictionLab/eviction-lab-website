@@ -14,28 +14,6 @@
   </div>
   <script>
     window.addEventListener('load', function () {
-      // console.log({
-      //   id: {{ .Get `id` }},
-      //   data: {{ .Get `data` }},
-      //   xMin: {{ .Get `xMin` }},
-      //   xMax: {{ .Get `xMax` }},
-      //   axisLabelText: {{ .Get `axisLabelText` }},
-      //   highlightLabel: {{ .Get `highlightLabel` }},
-      //   xTicks: {{ .Get `xTicks` }},
-      //   nameCol: {{ .Get `nameCol` }} || "metro",
-      //   beforeCol: {{ .Get `beforeCol` }} || "before",
-      //   afterCol: {{ .Get `afterCol` }} || "after",
-      //   highlightCol: {{ .Get `highlightCol` }},
-      //   highlightStartCol: {{ .Get `highlightStartCol` }},
-      //   valueType: {{ .Get `valueType` }},
-      //   labelLine: {{ .Get `labelLine` }},
-      //   legendDecArrowText: {{ .Get `legendDecArrowText` }},
-      //   legendIncArrowText: {{ .Get `legendIncArrowText` }},
-      //   legendLabelText: {{ .Get `legendLabelText` }},
-      //   legendCaption: {{ .Get `legendCaption` }},
-      //   legItemsPerCol: {{ .Get `legItemsPerCol` }},
-      //   groupCol: {{ .Get `groupCol` }}
-      // })
       Elab.ArrowChart2.init(document.getElementById({{ .Get `id` }}), {
         id: {{ .Get `id` }},
         data: {{ .Get `data` }},
