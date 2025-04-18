@@ -254,6 +254,12 @@ Elab.BarChart = (function (Elab) {
     };
     const xParse = getXParse(options);
 
+    const sortFn =
+      options.sort === "asc"
+        ? (a, b) => a.y - b.y
+        : options.sort === "desc"
+        ? (a, b) => b.y - a.y
+        : () => 0;
     const files = [
       {
         id: "bars",
@@ -265,7 +271,8 @@ Elab.BarChart = (function (Elab) {
               x: xParse(d[options.x]),
               y: yParse(d[options.y]),
               barClass: d[options.barClass],
-            })),
+            }))
+            .sort(sortFn),
       },
     ];
     if (options.lineData) {
