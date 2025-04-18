@@ -596,13 +596,25 @@ Elab.ArrowChart2 = (function (Elab) {
 
     if (options.legendCaption) {
       runningOffset += yBuffer / 2;
-      stickySvg
+      // break the caption into multiple lines on mobile
+      const captionBits = isMobile
+        ? options.legendCaption.split("|")
+        : [options.legendCaption.replace("|", " ")];
+      const captionText = stickySvg
         .append("text")
         .attr("class", "legend-caption")
         .attr("transform", `translate(${BBoxWidth / 2}, ${runningOffset})`)
-        .attr("text-anchor", "middle")
-        .text(options.legendCaption);
-      runningOffset += legFontSize + yBuffer;
+        .attr("text-anchor", "middle");
+
+      captionBits.forEach((bit, i) => {
+        runningOffset += legFontSize;
+        captionText
+          .append("tspan")
+          .attr("x", 0)
+          .attr("dy", i === 0 ? 0 : "1.2em")
+          .text(bit);
+      });
+      runningOffset += yBuffer;
     }
 
     // add the viewBox after calculatedLegHeight has been finalized

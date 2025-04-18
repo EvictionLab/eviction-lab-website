@@ -165,7 +165,7 @@ To demonstrate the range of variation, we plot eviction filing rates and changes
   valueType="percentInflated"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
   axisLabelText="Eviction filing rate"
-  legendCaption="Note: the 7.8% average reflects the total eviction filing rate across all ETS cities in 2024"
+  legendCaption="Note: the 7.8% average reflects the total|eviction filing rate across all ETS cities in 2024"
   legendDecArrowText="Decrease"
   legendIncArrowText="Increase"
   simpleLegend="true"
