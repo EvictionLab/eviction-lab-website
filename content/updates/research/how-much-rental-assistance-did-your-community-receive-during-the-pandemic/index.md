@@ -24,25 +24,50 @@ scripts:
   - grouped-bar-chart
 ---
 <style>
+  .visual__tooltip h1 {
+    font-size: 14px;
+    font-family: GT-Eesti-Display-Bold, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    margin-bottom: 4px;
+  }
+  .visual__tooltip div {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .extra-grow .visual {
+    display: flex;
+  }
+
+  .county-comparison .chart {
+    width: 100%;
+    margin: 0;
+  }
+  .county-comparison h3 {
+    font-family: 'Akkurat-Bold' !important;
+    font-size: 16px !important;
+    letter-spacing: .1px !important;
+    color: #5a5a5a !important;
+  }
 </style>
 
 <span class="dropcap red">O</span>ver the course of 2021 and 2022, the U.S. carried out an unprecedented experiment: we invested $46.55 billion to help Americans pay rent when they fell behind. These emergency rental assistance (ERA) funds, paid primarily to tenants, landlords, and utility companies, were intended to help renters to catch up on unpaid bills and remain stably housed in the wake of the COVID-19 pandemic. 
 
-In a new public data release, we provide insight into how this money was distributed. This dataset, which was produced through a collaboration between the Eviction Lab, the Housing Initiative at Penn, and the Urban Displacement Project, details the number of ERA recipients and the amount of ERA paid in most counties nationwide between January 2021 and March 2023. It represents the most precise picture yet available of when and where ERA funds were distributed. 
+In a new public data release, we provide insight into how this money was distributed. This dataset, which was produced through a collaboration between the Eviction Lab, the {{< smartlink "Housing Initiative at Penn" "https://www.design.upenn.edu/work/housing-initiative-penn-hip" >}}, and the {{< smartlink "Urban Displacement Project" "https://www.urbandisplacement.org/" >}}, details the number of ERA recipients and the amount of ERA paid in most counties nationwide between January 2021 and March 2023. It represents the most precise picture yet available of when and where ERA funds were distributed. 
 
 [GET THE DATA AND DOCUMENTATION]
 
 WHY EMERGENCY RENTAL ASSISTANCE?
 
-While a handful of ERA programs existed at the local level before the pandemic—for example, “one shot deals” in New York City—these programs had never been tested on a large scale. Early in the pandemic, state and local governments began building up ERA resources. At least $3.9 billion in ERA was made available through these programs in 2020. 
+While a handful of ERA programs existed at the local level before the pandemic—for example, {{< smartlink "“one shot deals” in New York City" "https://access.nyc.gov/programs/one-shot-deal/" >}}—these programs had never been tested on a large scale. Early in the pandemic, state and local governments began building up ERA resources. {{< smartlink "At least $3.9 billion in ERA was made available through these programs in 2020" "https://nlihc.org/sites/default/files/Emergency-Rental-Assistance-Programs-3.pdf" >}}. 
 
-The infusion of federal funding in late 2020 and early 2021, though, represented a watershed moment. Between the Consolidated Appropriations Act of 2021 (December 2020) and the American Rescue Plan (March 2021), Congress provided nearly as much funding for ERA as they did in the previous year for the entire budget of the Department of Housing and Urban Development (HUD). 
+The infusion of federal funding in late 2020 and early 2021, though, represented a watershed moment. Between the Consolidated Appropriations Act of 2021 (December 2020) and the American Rescue Plan (March 2021), {{< smartlink "Congress provided nearly as much funding for ERA as they did in the previous year for the entire budget of the Department of Housing and Urban Development (HUD)" "https://www.novoco.com/notes-from-novogradac/2020-appropriations-provides-hud-funding-increases-5-billion-nmtc-1-billion-lihtc-calif-wildfires" >}}. 
 
-ERA was just one of a range of policies that were hard to imagine before the pandemic. We expanded the scale of unemployment insurance and access to many social services, provided millions of households with stimulus checks, established two federal eviction moratoria (and many state-level moratoria), and expanded the tax credits that helped lift an unprecedented number of children out of poverty. 
+ERA was just one of a {{< smartlink "range of policies that were hard to imagine before the pandemic" "https://www.nytimes.com/interactive/2022/03/11/us/how-covid-stimulus-money-was-spent.html" >}}. We expanded {{< smartlink "the scale of unemployment insurance" "https://pandemicoversight.gov/news/articles/how-much-money-did-pandemic-unemployment-programs-pay-out" >}} and {{< smartlink "access to many social services" "https://www.rsfjournal.org/content/9/3/32" >}}, provided millions of households with {{< smartlink "stimulus checks" "https://www.pandemicoversight.gov/data-interactive-tools/data-stories/update-three-rounds-stimulus-checks-see-how-many-went-out-and" >}}, established two federal eviction moratoria (and {{< smartlink "many state-level moratoria" "https://evictionlab.org/assessing-state-eviction-prevention-covid-19/" >}}), and expanded the tax credits that helped lift {{< smartlink "an unprecedented number of children out of poverty" "https://www.nber.org/system/files/working_papers/w29285/w29285.pdf" >}}. 
 
 WHAT’S IN OUR ERA DATABASE?
 
-The ERA program was overseen by the Department of Treasury, but funds were paid out to state, territorial, county, city, and tribal grantees. Treasury set guidelines for the administration of the program, but each grantee established its own methods for processing applications and payments. Those grantees, with the exception of tribal grantees, were then required to submit periodic, detailed reports back to Treasury on the payments they made. 
+{{< smartlink "The ERA program was overseen by the Department of Treasury" "https://home.treasury.gov/policy-issues/coronavirus/assistance-for-state-local-and-tribal-governments/emergency-rental-assistance-program" >}}, but funds were paid out to state, territorial, county, city, and tribal grantees. Treasury set guidelines for the administration of the program, but each grantee established its own methods for processing applications and payments. Those grantees, with the exception of tribal grantees, were then required to submit periodic, detailed reports back to Treasury on the payments they made. 
 
 The dataset that we’re releasing here relies on those confidential ERA payment reports that grantees submitted to Treasury. These reports were intended to offer payment-by-payment details on how ERA funds were distributed: amounts and dates of payments, addresses of the assisted property, justification for payment (e.g., rent arrearage), and more. The project team was granted access to these data through an agreement with HUD and Treasury.
 
@@ -84,24 +109,35 @@ In total, these data reflect $20.6 billion in ERA spending, a little less than h
 In Figure 2, we plot the timing of this spending, with each bar reflecting the total amount of ERA spent in the given month. Spending was relatively slow at the start of this period as grantees got their programs set up, but by May 2021, $438 million per month was flowing to tenants and landlords. Across these counties, spending peaked in October 2021 with almost $1.8 billion in ERA distributed. The pace of spending then declined gradually. By March 2023, only about $128 million was being distributed across these counties. 
 
 
-<!-- 
 {{% bar-chart
   id="fig2"
   data="./figure2.csv"
   x="month_of_payment"
-  lineData="./figure2.csv"
-  lineX="month_of_payment"
-  lineY="total_assistance"
   axis="time"
   timeUnit="month"
   y="total_assistance"
+  yMax="2000000000"
   yFormat="y => d3.format('$.2s')(y / 1).replace('G','B')"
   yTooltipFormat="y => d3.format('$.3s')(y / 1).replace('G','B')"
   title="Figure 2. ERA spending by month"
   margin="8 8 50 50"
 %}}
 
-{{% bar-chart
+Our database lets us better understand how the timing of ERA distribution varied across the country. Rental assistance was distributed much faster in some places than in others. Take Kodiak Island Borough, AK and Portage County, WI, for example. Both made roughly the same amount of total payments ($4,694,111 and $4,743,179, respectively), but as we show in Figure 3, those payments were processed much more quickly in Kodiak Island Borough. By the end of  2021, 74.8% of all payments had been made in Kodiak Island Borough, compared to just 44.7% in Portage County. Portage County didn’t hit the 75% spending threshold until September 2022, nearly nine months later.
+
+
+</div>
+</div>
+</div>
+<div class="row mx-4 county-comparison">
+<div class="col-12">
+<div class="figheader px-0 px-md-3 my-0">Figure 3. ERA spending by month in two sites</div>
+</div>
+  
+  <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 pl-md-2">
+
+
+{{% bar-chart 
   id="fig3"
   data="./figure3.csv"
   x="month_of_payment"
@@ -109,42 +145,56 @@ In Figure 2, we plot the timing of this spending, with each bar reflecting the t
   lineData="./figure2.csv"
   lineX="month_of_payment"
   lineY="total_assistance"
-  lineYMax="3000000000"
+  lineYMax="2000000000"
   lineYMin="0"
   axis="time"
   timeUnit="month"
   yFormat="y => d3.format('.0%')(y/100)"
   yMax="20"
-  title="Figure 3. ERA spending by month"
-  margin="8 8 50 50"
-%}} -->
-________________________________________________________________________________
+  title="Kodiak Island, AK"
+  margin="4 4 60 40"
+%}}
 
-<!-- {{% bar-chart
-  id="fig44"
-  searchId="geoid"
-  searchValue="48251"
-  data="./figure4b.csv"
+  </div>
+
+  <div class="col-12 col-lg-6 col-x4l-5 px-0 pr-md-2">
+
+
+{{% bar-chart
+  id="fig3b"
+  data="./figure3b.csv"
   x="month_of_payment"
-  xMin="01/01/2021"
-  xMax="03/01/2023"
   y="pct_county_all_spending_monthly"
   lineData="./figure2.csv"
   lineX="month_of_payment"
   lineY="total_assistance"
-  lineYMax="3000000000"
+  lineYMax="2000000000"
   lineYMin="0"
   axis="time"
   timeUnit="month"
   yFormat="y => d3.format('.0%')(y/100)"
-  yMax="80"
-  title="Figure 3. ERA spending by month"
-  margin="8 8 50 50"
-%}} -->
+  yMax="20"
+  title="Portage County, WI"
+  margin="4 4 60 40"
+%}}
+
+  </div>
+  <div class="figcaption col-12 col-lg-7 col-xxxl-6 col-x4l-5 mx-auto mt-1 mb-0"><p>Note: red line in both panels is the overall national distribution of ERA, mirroring Figure 2 above</p></div>
+  </div>
+
+<div class="center-content-post updates-post pb-2">
+<div class="page-content pt-4 pt-md-0">
+<div class="post-body pt-lg-3">
+<!-- <p class="figcaption">Note: red line in both panels is the overall national distribution of ERA, mirroring Figure 2 above.</p> -->
+
+
+
+We hope that this database helps researchers to analyze the effects of ERA on renters and their communities, for instance showing how rental assistance helped to safeguard health or prevent homelessness. We also want it to allow the general public to better understand how this program helped their neighbors. To that end, we encourage you to use the tool below to look up details on ERA spending in your county. Type your county into the look-up box and, if it’s included in our dataset, you’ll find details on how much ERA was distributed, to how many addresses, and at what pace.
+
 {{% bar-chart
   id="fig4"
   searchId="geoid"
-  searchValue="48287"
+  defaultSearchValue="01001"
   data="./figure4c.csv"
   x="month_of_payment"
   xMin="01/01/2021"
@@ -153,35 +203,14 @@ ________________________________________________________________________________
   lineData="./figure2.csv"
   lineX="month_of_payment"
   lineY="total_assistance"
-  lineYMax="3000000000"
+  lineYMax="2000000000"
   lineYMin="0"
   axis="time"
   timeUnit="month"
   yFormat="y => d3.format('.0%')(y/100)"
-  yMax="80"
-  title="Figure 3. ERA spending by month"
+  yMin="0"
+  title="Figure 4. ERA distribution by county"
   margin="8 8 50 50"
 %}}
-
-Our database lets us better understand how the timing of ERA distribution varied across the country. Rental assistance was distributed much faster in some places than in others. Take Kodiak Island Borough, AK and Portage County, WI, for example. Both made roughly the same amount of total payments ($4,694,111 and $4,743,179, respectively), but as we show in Figure 3, those payments were processed much more quickly in Kodiak Island Borough. By the end of  2021, 74.8% of all payments had been made in Kodiak Island Borough, compared to just 44.7% in Portage County. Portage County didn’t hit the 75% spending threshold until September 2022, nearly nine months later.
-
-
-
-
-Figure 3. ERA spending by month in Kodiak Island, AK and Portage County, WI
-
-
-
-Note: red line in both panels is the overall national distribution of ERA, mirroring Figure 2 above.
-
-We hope that this database helps researchers to analyze the effects of ERA on renters and their communities, for instance showing how rental assistance helped to safeguard health or prevent homelessness. We also want it to allow the general public to better understand how this program helped their neighbors. To that end, we encourage you to use the tool below to look up details on ERA spending in your county. Type your county into the look-up box and, if it’s included in our dataset, you’ll find details on how much ERA was distributed, to how many addresses, and at what pace.
-
-Figure 4. ERA distribution by county
-Dynamic look-up tool. We've done this before (e.g., Figure 1 here). I'd like three elements for every included county:
-(1) total ERA distributed (from county-total)
-(2) total addresses assisted (from county-total)
-(3) a version of Figure 3 for the county. That is, the county-specific monthly spending between Jan 2021 and Mar 2023. It would be super cool to superimpose a density plot of Fig 3 (national spending) so that people can tell really quickly if their county's spending was relatively slower or faster
-
-
 
 Rental assistance can be a key tool to stop people from falling into homelessness and struggling with economic difficulties. With this data, we hope that researchers, advocates, reporters and the general public can better understand how these programs worked in their communities. Hopefully, this will help us all to learn more about how financial aid programs can be designed to keep tenants safely housed, whether it is during a future emergency or as we face our current housing crisis.
