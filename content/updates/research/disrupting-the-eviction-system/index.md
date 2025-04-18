@@ -11,7 +11,9 @@ title: "Disrupting the Eviction System: Tenant Right to Counsel"
 date: 2025-04-08T15:28:51.756Z
 postauthorname: Emily A. Benfer, Peter Hepburn, Valerie Nazarro, Leah Robinson,
   Jamila Michener, and Danya E. Keene
-researchauthorname: Peter Hepburn
+researchauthorname: " "
+postauthortitle: The Eviction Lab
+authorpic: /images/bios/elab_thumb_sm.jpg
 description: As a growing number of jurisdictions consider adopting RTC—and as
   researchers seek to analyze the effects of such programs—it is critical to
   understand their challenges and the keys to their success. Here we highlight
@@ -85,7 +87,7 @@ In an article published in the journal {{< smartlink"Housing Policy Debate" "htt
 
 \[LINK TO ARTICLE]
 
-As a growing number of jurisdictions consider adopting RTC—and as researchers seek to analyze the effects of such programs—it is critical to understand their challenges and the keys to their success. Here, we highlight five key findings.
+As a growing number of jurisdictions consider adopting RTC—and as researchers seek to analyze the effects of such programs—it is critical to understand their challenges and the keys to their success. In this study, we evaluated 23 out of the 26 jurisdictions that have adopted right to counsel as of April 2025. Here, we highlight five key findings.
 
 1. **Legislators enact RTC as a way of addressing multiple problems caused by evictions**
 
@@ -672,7 +674,7 @@ Why did legislators adopt the RTC? In 19 of the 23 jurisdictions that now have s
 <text transform="matrix(0.819432 -0.573176 0.573977 0.818872 664.39 864.864)" fill="#3A3A3A" xml:space="preserve" style="white-space: pre" font-family="Akkurat-Regular" font-size="15" letter-spacing="0em"><tspan x="6.88222" y="11.43">Crime and public safety</tspan></text>
 <text transform="matrix(0.819432 -0.573176 0.573977 0.818872 499.396 924.579)" fill="#3A3A3A" xml:space="preserve" style="white-space: pre" font-family="Akkurat-Regular" font-size="15" letter-spacing="0em"><tspan x="26.8519" y="11.43">Increased or costs of homelessness</tspan></text>
 <text transform="matrix(0.819432 -0.573176 0.573977 0.818872 560.566 909.394)" fill="#3A3A3A" xml:space="preserve" style="white-space: pre" font-family="Akkurat-Regular" font-size="15" letter-spacing="0em"><tspan x="4.42555" y="11.43">Economic/societal costs &#38; impacts</tspan></text>
-<text transform="matrix(0.819432 -0.573176 0.573977 0.818872 198.553 908.669)" fill="#3A3A3A" xml:space="preserve" style="white-space: pre" font-family="Akkurat-Regular" font-size="15" letter-spacing="0em"><tspan x="67" y="11.43">Other health justifications</tspan></text>
+<text transform="matrix(0.819432 -0.573176 0.573977 0.818872 198.553 908.669)" fill="#3A3A3A" xml:space="preserve" style="white-space: pre" font-family="Akkurat-Regular" font-size="15" letter-spacing="0em"><tspan x="7.77522" y="11.43">SDOH and other harms (education)</tspan></text>
 <text transform="matrix(0.819432 -0.573176 0.573977 0.818872 255.351 811.808)" fill="#3A3A3A" xml:space="preserve" style="white-space: pre" font-family="Akkurat-Regular" font-size="15" letter-spacing="0em"><tspan x="8.75445" y="11.43">Pandemic</tspan></text>
 <text transform="matrix(0.819432 -0.573176 0.573977 0.818872 277.236 827.497)" fill="#3A3A3A" xml:space="preserve" style="white-space: pre" font-family="Akkurat-Regular" font-size="15" letter-spacing="0em"><tspan x="13.5881" y="11.43">Public health</tspan></text>
 <text transform="matrix(0.819432 -0.573176 0.573977 0.818872 795.414 956.177)" fill="#3A3A3A" xml:space="preserve" style="white-space: pre" font-family="Akkurat-Regular" font-size="15" letter-spacing="0em"><tspan x="7.13254" y="11.43">Tenant lack of knowledge of or access to rights</tspan></text>
@@ -694,14 +696,14 @@ Why did legislators adopt the RTC? In 19 of the 23 jurisdictions that now have s
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="1127.99" y="65.9249">Solution</tspan></text>
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="1126.18" y="81.4962">Oriented</tspan></text>
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="736.044" y="66.4249">Impact on&#10;</tspan><tspan x="731.059" y="82.4249">Community</tspan></text>
-<text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="344.907" y="73.9249">Health</tspan></text>
+<text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="344.907" y="66.4249">Public&#10;</tspan><tspan x="315.931" y="82.4249">Health/SDOH</tspan></text>
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="901.001" y="73.9249">Rights/Justice-based</tspan></text>
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="487.337" y="73.9249">Eviction/Housing Crisis</tspan></text>
 </g>
 <text transform="matrix(0 -1 1 0 33 662.785)" fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="15" letter-spacing="0em"><tspan x="72.6023" y="13.3">JURISDICTION (ORDERED BY DATE OF PASSAGE)</tspan></text>
 <g>
 <text fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="780.831" y="1021.98">NO</tspan></text>
-<text fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="17" letter-spacing="0em"><tspan x="571.831" y="1022.8">JUSTIFICATION GIVEN</tspan></text>
+<text fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="17" letter-spacing="0em"><tspan x="577.831" y="1022.8">JURISDICTION GIVEN</tspan></text>
 <text fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="838.831" y="1021.98">YES</tspan></text>
 <path d="M832.831 1009.36H817.831V1024.36H832.831V1009.36Z" fill="#2C897F"/>
 <rect x="755.983" y="1008.86" width="16" height="16" fill="white" stroke="#95AABC"/>
