@@ -26,16 +26,6 @@ Elab.BarChart = (function (Elab) {
     return d.y;
   };
 
-  /**
-   * Selects the line data set from the chart data
-   * @param {*} data
-   */
-  var barSelector = function (data) {
-    return data.map(function (d) {
-      return [d.x, d.y, d.name, d.barClass];
-    });
-  };
-
   function renderTooltip(tooltip) {
     return (
       '<h1 class="tooltip__title">' +
@@ -74,6 +64,20 @@ Elab.BarChart = (function (Elab) {
    * @param {Array<Object>} lineData
    */
   function createFigure(root, data, dataOptions, lineData) {
+    /**
+     * Selects the line data set from the chart data
+     * @param {*} data
+     */
+    var barSelector = function (data) {
+      return data.map(function (d) {
+        const extras = {};
+        dataOptions.tooltipKeys?.forEach((key) => {
+          extras[key] = d[key];
+        });
+        return [d.x, d.y, d.name, d.barClass, extras];
+      });
+    };
+
     const yFormat = deriveFormatter(dataOptions.yFormat);
     const yTooltipFormat = deriveFormatter(dataOptions.yTooltipFormat || dataOptions.yFormat);
     const parseDate = d3.timeParse("%m/%d/%Y");
@@ -112,10 +116,12 @@ Elab.BarChart = (function (Elab) {
           },
           maxBarWidth: dataOptions.maxBarWidth,
           renderTooltip: function (hoverData) {
-            // console.log({ hoverData });
+            const tooltipTemplate = dataOptions.tooltipTemplate || "{{value}}";
             const tooltip = {
               title: hoverData[0],
-              value: yTooltipFormat(hoverData[1]),
+              value: tooltipTemplate
+                .replace(/{{value}}/g, yTooltipFormat(hoverData[1]))
+                .replace(/{{(.*?)}}/g, (match, key) => hoverData[4][key]),
             };
             return renderTooltip(tooltip);
           },
@@ -267,11 +273,21 @@ Elab.BarChart = (function (Elab) {
         shaper: (data) =>
           data
             .filter((d) => !options.searchId || d[options.searchId] === options.searchValue)
-            .map((d) => ({
-              x: xParse(d[options.x]),
-              y: yParse(d[options.y]),
-              barClass: d[options.barClass],
-            }))
+            .map((d) => {
+              const bar = {
+                x: xParse(d[options.x]),
+                y: yParse(d[options.y]),
+                barClass: d[options.barClass],
+              };
+              const tooltipTemplate = options.tooltipTemplate || "";
+              options.tooltipKeys = [...tooltipTemplate.matchAll(/{{(.*?)}}/g)].map(
+                (match) => match[1],
+              );
+              options.tooltipKeys.forEach((key) => {
+                if (key !== "value") bar[key] = d[key];
+              });
+              return bar;
+            })
             .sort(sortFn),
       },
     ];

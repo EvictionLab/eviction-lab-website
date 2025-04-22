@@ -55,14 +55,14 @@
 (() => {
   window.addEventListener('load', function () {
     var searchId = {{ .Get `searchId`}};
-    var defaultSearchValue = {{ .Get `defaultSearchValue` }};
+            var defaultSearchValue = {{ .Get `defaultSearchValue` }};
     var id = {{ .Get `id` }};
     var csv = {{ .Get `data` }};
     var wrapperEl = document.getElementById("chart--" + id);
-    var initChart = (searchValId = defaultSearchValue, name) => Elab.BarChart.init(document.getElementById(id), {
+            var initChart = (searchValId = defaultSearchValue, name) => Elab.BarChart.init(document.getElementById(id), {
       searchId: searchId,
       data: csv,
-      searchValue: searchValId,
+            searchValue: searchValId,
       x: {{ .Get `x` }},
       xMin: {{ .Get `xMin` }},
       xMax: {{ .Get `xMax` }},
@@ -73,8 +73,9 @@
       yMax: {{ .Get `yMax` }},
       yLabel: {{ .Get `yLabel` }},
       yFormat: {{ .Get `yFormat` }},
-      yTooltipFormat: {{ .Get `yTooltipFormat` }},
       yTicks: {{ .Get `yTicks` }},
+      yTooltipFormat: {{ .Get `yTooltipFormat` }},
+      tooltipTemplate: {{ .Get `tooltipTemplate` }},
       sort: {{ .Get `sort` }},
       lineData: {{ .Get `lineData` }},
       lineX: {{ .Get `lineX` }},
