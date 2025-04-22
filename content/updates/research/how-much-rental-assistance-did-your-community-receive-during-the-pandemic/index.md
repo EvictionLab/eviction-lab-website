@@ -141,16 +141,16 @@ Our database lets us better understand how the timing of ERA distribution varied
   id="fig3"
   data="./figure3.csv"
   x="month_of_payment"
+  xMin="01/01/2021"
+  xMax="03/01/2023"
   y="pct_county_all_spending_monthly"
-  lineData="./figure2.csv"
+  lineData="./figure2b.csv"
   lineX="month_of_payment"
-  lineY="total_assistance"
-  lineYMax="2000000000"
-  lineYMin="0"
+  lineY="pct"
   axis="time"
   timeUnit="month"
+  yMin="0"
   yFormat="y => d3.format('.0%')(y/100)"
-  yMax="20"
   title="Kodiak Island, AK"
   margin="4 4 60 40"
 %}}
@@ -164,22 +164,22 @@ Our database lets us better understand how the timing of ERA distribution varied
   id="fig3b"
   data="./figure3b.csv"
   x="month_of_payment"
+  xMin="01/01/2021"
+  xMax="03/01/2023"
   y="pct_county_all_spending_monthly"
-  lineData="./figure2.csv"
+  lineData="./figure2b.csv"
   lineX="month_of_payment"
-  lineY="total_assistance"
-  lineYMax="2000000000"
-  lineYMin="0"
+  lineY="pct"
   axis="time"
   timeUnit="month"
+  yMin="0"
   yFormat="y => d3.format('.0%')(y/100)"
-  yMax="20"
   title="Portage County, WI"
   margin="4 4 60 40"
 %}}
 
   </div>
-  <div class="figcaption col-12 col-lg-7 col-xxxl-6 col-x4l-5 mx-auto mt-1 mb-0"><p>Note: red line in both panels is the overall national distribution of ERA, mirroring Figure 2 above</p></div>
+  <div class="figcaption col-12 mt-1 mb-0"><p>Note: red line in both panels is the overall national distribution of ERA, mirroring Figure 2 above</p></div>
   </div>
 
 <div class="center-content-post updates-post pb-2">
@@ -200,9 +200,9 @@ We hope that this database helps researchers to analyze the effects of ERA on re
   xMin="01/01/2021"
   xMax="03/01/2023"
   y="pct_county_all_spending_monthly"
-  lineData="./figure2.csv"
+  lineData="./figure2b.csv"
   lineX="month_of_payment"
-  lineY="total_assistance"
+  lineY="pct"
   lineYMax="2000000000"
   lineYMin="0"
   axis="time"
@@ -212,5 +212,7 @@ We hope that this database helps researchers to analyze the effects of ERA on re
   title="Figure 4. ERA distribution by county"
   margin="8 8 50 50"
 %}}
+
+  <div class="figcaption col-12 mb-3"><p>Note: red line is the overall national distribution of ERA, mirroring Figure 2 above.</p></div>
 
 Rental assistance can be a key tool to stop people from falling into homelessness and struggling with economic difficulties. With this data, we hope that researchers, advocates, reporters and the general public can better understand how these programs worked in their communities. Hopefully, this will help us all to learn more about how financial aid programs can be designed to keep tenants safely housed, whether it is during a future emergency or as we face our current housing crisis.
