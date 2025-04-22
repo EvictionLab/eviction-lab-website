@@ -185,26 +185,6 @@ Elab.BarChart = (function (Elab) {
     if (lineData.length) {
       // color the added lines
       $(root).addClass("chart__body--highlight5");
-      const lineExtent = d3.extent(lineData, (d) => d.y);
-      chart.yScaleLines = d3
-        .scaleLinear()
-        .rangeRound([chart.getInnerHeight(), 0])
-        .domain(getPaddedExtent(lineExtent, dataOptions.lineYMin, dataOptions.lineYMax))
-        .nice();
-
-      // // Add the right-hand y-axis for the line data using chart.yScaleLines
-      // const lineYFormat = deriveFormatter(dataOptions.lineYFormat || ",.0f");
-      // chart.selections["yAxisLines"] = chart.selections["base"]
-      //   .append("g")
-      //   .attr("class", "chart__axis chart__axis--y-lines");
-      // const yAxisLines = d3.axisRight(chart.yScaleLines).tickSize(-chart.getInnerWidth());
-      // chart.selections["yAxisLines"]
-      //   .attr("transform", "translate(" + chart.getInnerWidth() + ",0)")
-      //   .transition()
-      //   .duration(1000)
-      //   .call(yAxisLines.tickFormat(lineYFormat));
-
-      // Plot the line over the bars using the new chart.yScaleLines scale
       chart.addLines({
         selector: () => [
           lineData.map((d) => {
@@ -215,7 +195,7 @@ Elab.BarChart = (function (Elab) {
             return [shiftedDate, d.y];
           }),
         ],
-        yScale: chart.yScaleLines,
+        // yScale: chart.yScaleLines,
       });
     }
     if (dataOptions.avgLines) {
