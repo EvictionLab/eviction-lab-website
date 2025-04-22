@@ -55,9 +55,15 @@ scripts:
 
 In a new public data release, we provide insight into how this money was distributed. This dataset, which was produced through a collaboration between the Eviction Lab, the {{< smartlink "Housing Initiative at Penn" "https://www.design.upenn.edu/work/housing-initiative-penn-hip" >}}, and the {{< smartlink "Urban Displacement Project" "https://www.urbandisplacement.org/" >}}, details the number of ERA recipients and the amount of ERA paid in most counties nationwide between January 2021 and March 2023. It represents the most precise picture yet available of when and where ERA funds were distributed. 
 
-[GET THE DATA AND DOCUMENTATION]
+<!-- <p style="text-align:center;"><strong><a href="https://housinginitiative.github.io/era-county-level-dataset-public/" download target="_blank">GET THE DATA AND DOCUMENTATION</a></strong></p>
+<a class="btn buttonlink mb-2" href="https://housinginitiative.github.io/era-county-level-dataset-public/" target="_blank" rel="noreferrer noopener">GET THE DATA AND DOCUMENTATION</a>
+-->
+<a class="link-button" href="https://housinginitiative.github.io/era-county-level-dataset-public/" style="color: #fff;" target="_blank">
+<span>Get the data and documentation <i class="fa fa-chevron-right"></i></span>
+</a> 
 
-WHY EMERGENCY RENTAL ASSISTANCE?
+
+### Why emergency rental assistance?
 
 While a handful of ERA programs existed at the local level before the pandemic—for example, {{< smartlink "“one shot deals” in New York City" "https://access.nyc.gov/programs/one-shot-deal/" >}}—these programs had never been tested on a large scale. Early in the pandemic, state and local governments began building up ERA resources. {{< smartlink "At least $3.9 billion in ERA was made available through these programs in 2020" "https://nlihc.org/sites/default/files/Emergency-Rental-Assistance-Programs-3.pdf" >}}. 
 
@@ -65,7 +71,7 @@ The infusion of federal funding in late 2020 and early 2021, though, represented
 
 ERA was just one of a {{< smartlink "range of policies that were hard to imagine before the pandemic" "https://www.nytimes.com/interactive/2022/03/11/us/how-covid-stimulus-money-was-spent.html" >}}. We expanded {{< smartlink "the scale of unemployment insurance" "https://pandemicoversight.gov/news/articles/how-much-money-did-pandemic-unemployment-programs-pay-out" >}} and {{< smartlink "access to many social services" "https://www.rsfjournal.org/content/9/3/32" >}}, provided millions of households with {{< smartlink "stimulus checks" "https://www.pandemicoversight.gov/data-interactive-tools/data-stories/update-three-rounds-stimulus-checks-see-how-many-went-out-and" >}}, established two federal eviction moratoria (and {{< smartlink "many state-level moratoria" "https://evictionlab.org/assessing-state-eviction-prevention-covid-19/" >}}), and expanded the tax credits that helped lift {{< smartlink "an unprecedented number of children out of poverty" "https://www.nber.org/system/files/working_papers/w29285/w29285.pdf" >}}. 
 
-WHAT’S IN OUR ERA DATABASE?
+### WHAT’S IN OUR ERA DATABASE?
 
 {{< smartlink "The ERA program was overseen by the Department of Treasury" "https://home.treasury.gov/policy-issues/coronavirus/assistance-for-state-local-and-tribal-governments/emergency-rental-assistance-program" >}}, but funds were paid out to state, territorial, county, city, and tribal grantees. Treasury set guidelines for the administration of the program, but each grantee established its own methods for processing applications and payments. Those grantees, with the exception of tribal grantees, were then required to submit periodic, detailed reports back to Treasury on the payments they made. 
 
@@ -85,18 +91,18 @@ For 2,218 counties (69% of all counties nationwide), we are able to say how much
   gradientType="discrete"
   title="Figure 1. ERA distribution data coverage by county"
   colors="#94aabd;#434878;#2c897f"
-  binValues="No data;Included only in County-Total;Included in County-Month and County-Total"
+  binValues="No data;Data Only on Total Distribution;Data on Monthly Distribution"
   useFullUSBounds=true
   noLegend=true
 %}}
 <div class="legend my-3">
   <div class="legend-item legend-item--2">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">Included in County-Month and County-Total</div>
+  <div class="legend-item__label">Data on Monthly Distribution</div>
   </div>
   <div class="legend-item legend-item--1">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">Included only in County-Total</div>
+  <div class="legend-item__label">Data Only on Total Distribution</div>
   </div>
   <div class="legend-item legend-item--3">
   <div class="legend-item__color"></div>
