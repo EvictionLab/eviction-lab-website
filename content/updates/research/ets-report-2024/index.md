@@ -84,6 +84,10 @@ scripts:
   padding: 3.6em 2.4em;
   margin-bottom: 3rem;
 }
+
+.chart__tooltip.chart__tooltip--fig3 .tooltip__item span span {
+  font-weight: normal;
+}
 </style>
 
 <span class="dropcap green">T</span>he days of emergency rental assistance and eviction protections are long gone. These programs got the United States to historically low levels of housing displacement during the COVID-19 pandemic. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020. In some concerning cases like Phoenix, Las Vegas, and Houston, landlords are evicting many more tenants than before.
@@ -192,6 +196,7 @@ These differences that we see across states and cities also happen within metrop
   yMax="0.6"
   yTooltipFormat=".1%"
   yFormat=".0%"
+  tooltipTemplate="{{value}} <span>({{filings}} filings)</span>"
   sort="asc"
   title="Figure 3. Share of eviction filings by the top 100 buildings"
   margin="8 8 100 40"
