@@ -39,10 +39,6 @@ Elab.BarChart = (function (Elab) {
     );
   }
 
-  function deriveFormatter(format = "") {
-    return format.includes("=>") ? new Function(`return ${format}`)() : d3.format(format || ",d");
-  }
-
   function getPaddedExtent(extent, overrideMin, overrideMax) {
     var range = extent[1] - extent[0];
     // add some padding around the extreme y values
@@ -78,8 +74,8 @@ Elab.BarChart = (function (Elab) {
       });
     };
 
-    const yFormat = deriveFormatter(dataOptions.yFormat);
-    const yTooltipFormat = deriveFormatter(dataOptions.yTooltipFormat || dataOptions.yFormat);
+    const yFormat = Elab.Utils.deriveFormatter(dataOptions.yFormat);
+    const yTooltipFormat = Elab.Utils.deriveFormatter(dataOptions.yTooltipFormat || dataOptions.yFormat);
     const parseDate = d3.timeParse("%m/%d/%Y");
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
     chart

@@ -51,10 +51,22 @@ Elab.Utils = Object.assign(
       });
     }
 
+    /**
+     * Derives a formatter from a format string.
+     * If the format string contains "=>", it is treated as a function, allowing shortcodes
+     * to pass more complex formatting functions, eg:
+     *   yFormat="y => d3.format('.0%')(y/100)"
+     *   panelPropsFormatter="v => `<span>${d3.format('$,d')(v)}</span> distributed`"
+     */
+    function deriveFormatter(format = "") {
+      return format.includes("=>") ? new Function(`return ${format}`)() : d3.format(format || ",d");
+    }
+
     return {
       group: group,
       loadData: loadData,
       loadAll: loadAll,
+      deriveFormatter: deriveFormatter,
     };
   })(Elab),
 );
