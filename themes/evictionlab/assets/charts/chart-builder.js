@@ -669,14 +669,17 @@ Elab.ChartBuilder = (function (Elab) {
        */
       var spacing = window.innerWidth >= 1200 ? 3 : 1.5;
 
-      // determine bandwidth based on consecutive data points
-      var v1 = barData[0][0];
-      var v2 = barData[1][0];
+      var v1;
+      var v2;
       if (overrides.timeUnit === "month") {
         // some month charts are missing data, so use ticks instead of data points
         var ticks = _this.xScale.ticks(d3.timeMonth);
         v1 = ticks[0];
         v2 = ticks[1];
+      } else {
+      // determine bandwidth based on consecutive data points
+        v1 = barData[0][0];
+        v2 = barData[1][0];
       }
       // factor spacing into bandwidth, clamp to 1
       var bandWidth = Math.max(1, _this.xScale(v2) - _this.xScale(v1) - spacing * 2);
