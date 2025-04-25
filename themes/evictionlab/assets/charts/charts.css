@@ -763,6 +763,31 @@ body .visual .visual__title, body .visual .visual__title > * {
     top: 4px;
 }
 
+.chart__no-data-warning {
+  /* gets activated programatically */
+  display: none;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 182px;
+  text-align: center;
+  font-family: var(--body-font-italic);
+  background: white;
+  padding: 16px;
+}
+
+.chart__panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 12px;
+  margin-top: 16px;
+}
+
+.chart__panel p {
+  margin: 0 !important;
+}
 .chart .chart__bar.renters {
   fill: var(--c1);
 }

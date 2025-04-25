@@ -31,6 +31,8 @@
 
 {{ $title := .Get "title" }}
 {{ $searchId := .Get "searchId" }}
+{{ $noDataWarning := .Get "noDataWarning" }}
+{{ $panelProps := .Get "panelProps" }}
 
 <div
   class="chart chart--bar chart--{{ .Get `id` }}"
@@ -46,23 +48,35 @@
     "searchbutton" }}
   </div>
   {{ end }}
+  {{ if $noDataWarning }}
+  <p class="chart__no-data-warning">{{ $noDataWarning }}</p>
+  {{ end }}
   <div id="{{ .Get `id` }}" class="chart__body">
     <svg></svg>
   </div>
-
+  {{ if $panelProps }}
+  <div class="chart__panel">
+  {{ range (split $panelProps ";") }}<p class="chart__panel-{{ . }}"></p>{{ end }}
+  </div>
+  {{ end }}
   <script>
 
 (() => {
   window.addEventListener('load', function () {
     var searchId = {{ .Get `searchId`}};
-            var defaultSearchValue = {{ .Get `defaultSearchValue` }};
+    var defaultSearchValue = {{ .Get `defaultSearchValue` }};
+    var nameCol = {{ .Get `nameCol` }} || "name";
+    var panelProps = {{ .Get `panelProps` }};
+    var panelPropFormatters = {{ .Get `panelPropFormatters` }} || "";
+    var noDataWarning = {{ .Get `noDataWarning` }};
+      var yMaxNoData = {{ .Get `yMaxNoData` }};
     var id = {{ .Get `id` }};
     var csv = {{ .Get `data` }};
     var wrapperEl = document.getElementById("chart--" + id);
-            var initChart = (searchValId = defaultSearchValue, name) => Elab.BarChart.init(document.getElementById(id), {
+    var initChart = (searchValue, options={}) => Elab.BarChart.init(document.getElementById(id), {
       searchId: searchId,
       data: csv,
-            searchValue: searchValId,
+      searchValue: searchValue,
       x: {{ .Get `x` }},
       xMin: {{ .Get `xMin` }},
       xMax: {{ .Get `xMax` }},
@@ -89,10 +103,10 @@
       avgLines: {{ .Get `avgLines` }},
       centerLabels: {{ .Get `centerLabels` }},
       margin: {{ .Get `margin` }},
-      maxBarWidth: {{ .Get `maxBarWidth` }}
+      maxBarWidth: {{ .Get `maxBarWidth` }},
+      ...options
     });
 
-  // Store selector for search input.
   if (!searchId) return initChart();
 
   var searchInput = wrapperEl.querySelector('#chart_autocomplete');
@@ -100,50 +114,69 @@
     searchInput.value = '';
   })
 
-  var nameIdMap = {};
+  const configurePanel = selectedRow => {
+    const warningEl = wrapperEl.querySelector('.chart__no-data-warning');
+    if (!!warningEl) warningEl.style.display = 'none';
+    const options = {};
+    searchInput.value = selectedRow[nameCol];
+    if (!!selectedRow['no_data'] && !!yMaxNoData) {
+      options.yMax = yMaxNoData;
+    }
+    if (!!selectedRow['no_data'] && !!noDataWarning) {
+      warningEl.style.display = 'block';
+    }
+    if (!!panelProps) {
+      const formatters = panelPropFormatters.split(';');
+      panelProps.split(';').forEach((prop, i) => {
+        const formatterStr = formatters[i];
+        const formatter = formatterStr ? Elab.Utils.deriveFormatter(formatterStr) : v => v;
+        const el = wrapperEl.querySelector(`.chart__panel-${prop}`);
+        const rowValue = selectedRow[prop];
+        el.innerHTML = !!rowValue ? formatter(rowValue) : '';
+      });
+    }
+    // re-init chart with new data
+    initChart(selectedRow[searchId], options);
+  }
+
+  var nameDataMap = {};
   Papa.parse(csv, {
     header: true,
     download: true,
     complete: function (result) {
       result.data.forEach(row => {
-        nameIdMap[row.name] = row[searchId];
+        nameDataMap[row[nameCol]] = row;
       });
-
-      var nameArray = Object.keys(nameIdMap);
-
-      console.log('nameMap: ', nameArray);
-      var barChartAutoComplete = !searchId ? null : new autoComplete({
+      var initialValue = nameDataMap[defaultSearchValue];
+      // Init chart/panel after loading data.
+      configurePanel(initialValue);
+      new autoComplete({
         data: {
-          src: nameArray,
-          // src: Object.values(x).map(item => item.name),
+          src: Object.keys(nameDataMap),
           cache: false,
         },
         selector: '#chart_autocomplete',
         threshold: 2,
         debounce: 100,
-        searchEngine: "strict",
+        searchEngine: 'strict',
         feedback: function (data) {
-          console.log('feedback, ', data);
+          // console.log('feedback, ', data);
         },
         onSelection: function (feedback) {
           var selectedName = feedback.selection.value;
-          searchInput.value = selectedName;
+          var selectedRow = nameDataMap[selectedName];
+          // console.log('Selected id: ', feedback, selectedName, selectedRow);
 
-          var selectedId = nameIdMap[selectedName]
-          console.log('Selected id: ', feedback, selectedName, selectedId);
           var svg = wrapperEl.querySelector('.chart__root');
           svg.innerHTML = '';
-          // Re-init the chart.
-          initChart(selectedId, selectedName);
+          configurePanel(selectedRow);
         },
         onInit: function () {
-          console.log('init of autocomplete');
+          // console.log('init of autocomplete');
         }
       });
     }
   });
-  // Init chart on page load.
-        initChart();
   });
 }) ();
   </script>
