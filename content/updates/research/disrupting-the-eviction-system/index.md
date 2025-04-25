@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "Disrupting the Eviction System: Tenant Right to Counsel"
-date: 2025-04-08T15:28:51.756Z
+date: 2025-04-25T00:28:51.756Z
 postauthorname: Emily A. Benfer, Peter Hepburn, Valerie Nazarro, Leah Robinson,
   Jamila Michener, and Danya E. Keene
 researchauthorname: Peter Hepburn
@@ -84,13 +84,17 @@ Over the last decade, the scales have started to shift. Starting in 2017, New Yo
 
 In an article published in the journal {{< smartlink"Housing Policy Debate" "http://dx.doi.org/10.1080/10511482.2025.2467136" >}}, we describe how RTC laws have been designed and implemented. Why did jurisdictions adopt these policies? Who has access to the right? How did states, cities, and counties implement them in practice? What challenges affected implementation efforts? How did these policies unfold in the courts? 
 
-\[LINK TO ARTICLE]
+{{< researchpaperlink "Eviction and the Rental Housing Crisis in Rural America" "https://www.tandfonline.com/doi/full/10.1080/10511482.2025.2467136" "Emily Benfer, Peter Hepburn, Valerie Nazarro, Leah Robinson, Jamila Michener, & Danya E. Keene" "housing-policy-debate-cover.jpg" >}}
+
+<br/>
 
 As a growing number of jurisdictions consider adopting RTC—and as researchers seek to analyze the effects of such programs—it is critical to understand their challenges and the keys to their success. In this study, we evaluated 23 out of the 26 jurisdictions that have adopted right to counsel as of April 2025. Here, we highlight five key findings.
+<br><br>
 
 1. **Legislators enact RTC as a way of addressing multiple problems caused by evictions**
 
 Why did legislators adopt the RTC? In 19 of the 23 jurisdictions that now have such a program, lawmakers included preambles that described their objectives or reasoning for introducing it. These statements often represent the factors that are timely and important to legislators and their expectations of the law’s impact. As we show in Figure 2, the purpose of the legislation varies widely across the country.
+<br><br>
 
 <div class="figheader mb-0">Figure 2. Legislative justification for right to counsel in jurisdictions 
 </div>
@@ -699,7 +703,7 @@ Why did legislators adopt the RTC? In 19 of the 23 jurisdictions that now have s
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="901.001" y="73.9249">Rights/Justice-based</tspan></text>
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="487.337" y="73.9249">Eviction/Housing Crisis</tspan></text>
 </g>
-<text transform="matrix(0 -1 1 0 33 662.785)" fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="15" letter-spacing="0em"><tspan x="72.6023" y="13.3">JURISDICTION (ORDERED BY DATE OF PASSAGE)</tspan></text>
+<text transform="matrix(0 -1 1 0 33 662.785)" fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="72.6023" y="13.3">JURISDICTION (ORDERED BY DATE OF PASSAGE)</tspan></text>
 <g>
 <text fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="16" letter-spacing="0em"><tspan x="780.831" y="1021.98">NO</tspan></text>
 <text fill="#212529" xml:space="preserve" style="white-space: pre" font-family="GT-Eesti-Display-Medium" font-size="17" letter-spacing="0em"><tspan x="571.831" y="1022.8">JUSTIFICATION GIVEN</tspan></text>
@@ -718,12 +722,14 @@ Why did legislators adopt the RTC? In 19 of the 23 jurisdictions that now have s
 </div>
 
 In more than half of the jurisdictions, lawmakers cited the health consequences of evictions, broader benefits for the community, the housing crisis, and the need for a more fair justice process as justifications for RTC. In some cases, they also mentioned the scale of the eviction crisis and historical inequalities. For example, the Kansas City law recognized that “like many other American cities, Kansas City is haunted by a history of racial segregation, restrictive covenants, redlining, predatory lending, and disinvestment” and “tenants of color, specifically Black women, are disproportionately impacted by evictions due to decades of inequalities in the American housing system.”
+<br><br>
 
 2. **RTC programs increase tenant representation, but not everyone is eligible for a lawyer**
 
 Across the 23 programs we studied, 15 limited the right to counsel to tenants who met criteria defined by income level or household characteristics, like presence of a child (Figure 3). Other jurisdictions limited RTC coverage to tenants in certain housing or types of housing cases.
 
 The most common limitation among these programs is income. In many cases, cities have expanded programs and removed eligibility requirements to participate. Louisville, for example, removed the limitation that offered RTC only to households with children and opened it up to all households.
+<br><br>
 
 {{% arrow-chart2
   id="arrows-elig"
@@ -740,8 +746,10 @@ The most common limitation among these programs is income. In many cases, cities
   hideTooltip="true"
   legendLabelText="eligibility restrictions"
 %}}
+<br>
 
 Another important characteristic to consider is when in the eviction process tenants can access legal aid. While in seven jurisdictions an attorney can help at any point during the eviction process, in multiple jurisdictions, a lawyer is only available at the filing or hearing stage. Attorneys can continue to provide legal assistance to tenants during an appeal in 11 jurisdictions and bring affirmative cases—such as for an illegal lockout, record sealing after the case, or a fair housing claim—in nine jurisdictions.
+<br><br>
 
 3. **Successful RTC programs need proper funding and invest in education and outreach**
 
@@ -754,6 +762,7 @@ Local actors emphasized the importance of increasing access to and knowledge of 
 But money tended to be a barrier: without sufficient funding, RTC jurisdictions struggled to meet tenant needs and fill attorney positions. For example, the right to counsel budget in one jurisdiction was only enough to hire two additional attorneys, who stretched to handle 200 cases in a system with 6,000 eviction cases filed annually. Even where funding was available, multiple large jurisdictions struggled to identify a pool of attorneys to staff the program. 
 
 Without enough funds, the goals of RTC that lawmakers themselves established—from protecting public health to addressing eviction to upholding fundamental principles of fairness and justice—will be hard to achieve.
+<br><br>
 
 4. **Right to counsel can pave the road for centralized services for tenants**
 
@@ -764,6 +773,7 @@ In some jurisdictions, the central intake doubled as a hotline where tenants who
 {{< pullquote "In jurisdictions where the court took an active role in administering RTC, local actors described “a complete shift in the landscape.”" >}}
 
 Coordination among service providers also helped prevent confusion and duplication of efforts, while reducing stress among tenants. A local actor described how coordination between providers relieved the burden of searching for an attorney as well as the “re-traumatization” that comes with explaining the situation to multiple people. 
+<br><br>
 
 5. **RTC can change courthouse culture and develop tenant protections**
 
@@ -777,6 +787,9 @@ Tenants’ new-found voice in court led to the development of new landlord-tenan
 
 RTC puts tenants in a position to advocate and seek further systemic changes. This effect can be seen in local pushes for greater legislative action, such as “just cause” laws and increased affordable housing.
 
-<hr />
+
+<hr style="margin: 4rem 0 4.8rem;" />
+
+
 
 RTC programs can have substantial benefits, from stabilizing housing to changing eviction court systems and increasing tenant protections. But approaches to design and implementation, as well as funding levels, vary in ways that impact the quality of the benefits that tenants receive and the success of the program overall. Due to the ongoing threat of eviction and its effect on households and the community at large, it is necessary to fully understand these measures and how they are implemented in practice. Our work provides researchers and policymakers with the tools to advance, evaluate, and refine RTC in ways that safeguard the communities most impacted by eviction.
