@@ -44,7 +44,7 @@
   {{ if $searchId }}
   <span id="searchLocation"></span>
   <div class="chart__search-group">
-    <input class="chart__search search" type="text" id="chart_autocomplete" value="Search by county... " />{{ partial
+    <input class="chart__search search" type="text" id="chart_autocomplete"/>{{ partial
     "searchbutton" }}
   </div>
   {{ end }}
@@ -65,6 +65,7 @@
   window.addEventListener('load', function () {
     var searchId = {{ .Get `searchId`}};
     var defaultSearchValue = {{ .Get `defaultSearchValue` }};
+    var searchHint = {{ .Get `searchHint` }} || "Search by county... ";
     var nameCol = {{ .Get `nameCol` }} || "name";
     var panelProps = {{ .Get `panelProps` }};
     var panelPropFormatters = {{ .Get `panelPropFormatters` }} || "";
@@ -114,11 +115,11 @@
     searchInput.value = '';
   })
 
-  const configurePanel = selectedRow => {
+  const configurePanel = (selectedRow, searchInputValue=null) => {
     const warningEl = wrapperEl.querySelector('.chart__no-data-warning');
     if (!!warningEl) warningEl.style.display = 'none';
     const options = {};
-    searchInput.value = selectedRow[nameCol];
+    searchInput.value = searchInputValue || selectedRow[nameCol];
     if (!!selectedRow['no_data'] && !!yMaxNoData) {
       options.yMax = yMaxNoData;
     }
@@ -149,7 +150,7 @@
       });
       var initialValue = nameDataMap[defaultSearchValue];
       // Init chart/panel after loading data.
-      configurePanel(initialValue);
+      configurePanel(initialValue, searchHint);
       new autoComplete({
         data: {
           src: Object.keys(nameDataMap),
