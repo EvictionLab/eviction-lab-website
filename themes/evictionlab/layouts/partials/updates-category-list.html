@@ -24,13 +24,16 @@
               {{ end }}
             {{ end }}  
           </div>  
-          <div class="authorname mb-md-2">{{ .Params.postauthorname | truncate 40 }}</div>
-          <div class="post-date mb-md-2 mb-xxl-1">{{ .Date.Format "January 2, 2006" }}</div>
-          <div class="post-cat">
+            <div class="authorname mb-md-2">{{ .Params.postauthorname | truncate 40 }}</div>
+            <div class="post-date mb-md-2 mb-xxl-1">
+            {{ .Date.Format "January 2, 2006" }}
+            {{ if .Params.draft }}•{{ end }}
+            </div>
+            <div class="post-cat">
             <img src="/images/icons/{{ .Params.childof }}_bookmark.png" class="cat-bookmark" alt="Bookmark icon" />
             <a href="/updates/{{ .Params.childof }}" class="{{ .Params.childof }}-type cat-link"> 
             {{ .Params.childof }}</a>
-          </div>  
+            </div>  
         </div>
 
         <div class="postlist-right-col">
