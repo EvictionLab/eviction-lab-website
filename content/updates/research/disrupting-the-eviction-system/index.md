@@ -84,7 +84,7 @@ Over the last decade, the scales have started to shift. Starting in 2017, New Yo
 
 In an article published in the journal {{< smartlink"Housing Policy Debate" "http://dx.doi.org/10.1080/10511482.2025.2467136" >}}, we describe how RTC laws have been designed and implemented. Why did jurisdictions adopt these policies? Who has access to the right? How did states, cities, and counties implement them in practice? What challenges affected implementation efforts? How did these policies unfold in the courts? 
 
-{{< researchpaperlink "Eviction and the Rental Housing Crisis in Rural America" "https://www.tandfonline.com/doi/full/10.1080/10511482.2025.2467136" "Emily Benfer, Peter Hepburn, Valerie Nazarro, Leah Robinson, Jamila Michener, & Danya E. Keene" "housing-policy-debate-cover.jpg" >}}
+{{< researchpaperlink "A Descriptive Analysis of Tenant Right to Counsel Law and Praxis 2017–2024" "https://www.tandfonline.com/doi/full/10.1080/10511482.2025.2467136" "Emily Benfer, Peter Hepburn, Valerie Nazarro, Leah Robinson, Jamila Michener, & Danya E. Keene" "housing-policy-debate-cover.jpg" >}}
 
 <br/>
 
