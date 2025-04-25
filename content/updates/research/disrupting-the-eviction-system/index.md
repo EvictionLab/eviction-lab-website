@@ -28,8 +28,9 @@ socialDescription: As a growing number of jurisdictions consider adopting
   RTC—and as researchers seek to analyze the effects of such programs—it is
   critical to understand their challenges and the keys to their success. Here we
   highlight five key findings.
-twImage: todo.jpg
-fbImage: todo.jpg
+twImage: rtc-blog-camden-court.jpg
+fbImage: rtc-blog-camden-court.jpg
+image: rtc-blog-camden-court.jpg
 ---
 <style>
   .svg-map__legend {
