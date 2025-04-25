@@ -39,7 +39,14 @@ Elab.BarChart = (function (Elab) {
     );
   }
 
-  function getPaddedExtent(extent, overrideMin, overrideMax) {
+  function getPaddedExtent(extent, overrideMin, overrideMax, lineData) {
+    // be sure to fit the line if present
+    if (!!lineData?.length) {
+      var lineExtent = d3.extent(lineData, (d) => d.y);
+      if (!!lineExtent.length) {
+        extent = [Math.min(extent[0], lineExtent[0]), Math.max(extent[1], lineExtent[1])];
+      }
+    }
     var range = extent[1] - extent[0];
     // add some padding around the extreme y values
     var paddedExtent = [extent[0] - range * 0.05, extent[1] + range * 0.05];
@@ -75,14 +82,17 @@ Elab.BarChart = (function (Elab) {
     };
 
     const yFormat = Elab.Utils.deriveFormatter(dataOptions.yFormat);
-    const yTooltipFormat = Elab.Utils.deriveFormatter(dataOptions.yTooltipFormat || dataOptions.yFormat);
+    const yTooltipFormat = Elab.Utils.deriveFormatter(
+      dataOptions.yTooltipFormat || dataOptions.yFormat,
+    );
     const parseDate = d3.timeParse("%m/%d/%Y");
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
     chart
       // adds y axis, pads it if no extend is passed
       .addAxisY({
         selector: ySelector,
-        adjustExtent: (extent) => getPaddedExtent(extent, dataOptions.yMin, dataOptions.yMax),
+        adjustExtent: (extent) =>
+          getPaddedExtent(extent, dataOptions.yMin, dataOptions.yMax, lineData),
         ticks: dataOptions.yTicks || 5,
         tickFormat: yFormat,
       });
