@@ -249,7 +249,7 @@ We hope that this database helps researchers to analyze the effects of ERA on re
   noDataWarning="Monthly county data not available"
 %}}
 
-  <div class="figcaption col-12 mb-3"><p>Note: red line is the overall national distribution of ERA, mirroring Figure 2 above. If a county does not appear in the search results, it either did not have data available or its data has been suppressed.<sup>1</sup></p></div>
+  <div class="figcaption col-12 mb-3"><p>Note: red line is the overall national distribution of ERA, mirroring Figure 2 above. If a county does not appear in the search results, it either did not have data available or its data have been suppressed.<sup>1</sup></p></div>
 
 Rental assistance can be a key tool to stop people from falling into homelessness and struggling with economic difficulties. With this data, we hope that researchers, advocates, reporters and the general public can better understand how these programs worked in their communities. Hopefully, this will help us all to learn more about how financial aid programs can be designed to keep tenants safely housed, whether it is during a future emergency or as we face our current housing crisis.
 
