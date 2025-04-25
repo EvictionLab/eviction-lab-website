@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: ets-report-2024
 contenttype: updates
@@ -8,15 +8,15 @@ contentcat: research
 featured: true
 in_index: true
 title: "Preliminary Analysis: Eviction Filing Patterns in 2024"
-date: 2025-04-17T00:49:04.271Z
+date: 2025-04-24T00:49:04.271Z
 postauthorname: Sarah Johnson, Lorae Stojanovic, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: lorem ipsum
-listSummary: lorem ipsum
-twImage: ets-alt-graphic.png
-image: ets-alt-graphic.png
-fbImage: ets-alt-graphic.png
+description: The days of emergency rental assistance and eviction protections are long gone. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020.
+listSummary: The days of emergency rental assistance and eviction protections are long gone. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020.
+twImage: ets-filing-patterns-2024-hero.jpg
+image: ets-filing-patterns-2024-hero.jpg
+fbImage: ets-filing-patterns-2024-hero.jpg
 scripts:
   - arrow-chart2
   - charts
