@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: /disrupting-the-eviction-system/
 contenttype: updates
