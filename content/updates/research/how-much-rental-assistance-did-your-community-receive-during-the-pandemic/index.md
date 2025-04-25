@@ -24,6 +24,7 @@ scripts:
   - grouped-bar-chart
 ---
 <style>
+  /* map tooltip */
   .visual__tooltip h1 {
     font-size: 14px;
     font-family: GT-Eesti-Display-Bold, sans-serif;
@@ -34,9 +35,6 @@ scripts:
   .visual__tooltip div {
     font-size: 12px;
     line-height: 1.5;
-  }
-  .extra-grow .visual {
-    display: flex;
   }
 
   .county-comparison .chart {
@@ -49,6 +47,31 @@ scripts:
     letter-spacing: .1px !important;
     color: #5a5a5a !important;
   }
+
+  /* figure 4 chart panel  */
+  .chart--fig4 .chart__panel p span {
+    font-weight: 500;
+    font-family: var(--number-font);
+  }
+
+  @media(max-width: 767px) {
+    /* on small screens position name above stats */
+    .chart--fig4 .chart__panel .chart__panel-name {
+      flex-basis: 100%;
+      text-align: center;
+    }
+   }
+ .chart--fig4 .chart__panel .chart__panel-name {
+    /* font-family: 'Akkurat-Bold' !important; */
+    /* font-family: gt-eesti-display-bold, sans-serif;
+    font-family: var(--heading-font);
+    color: #434878;
+    color: var(--c2);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    margin-bottom: 12px; */
+  } 
 </style>
 
 <span class="dropcap green">O</span>ver the course of 2021 and 2022, the U.S. carried out an unprecedented experiment: we invested $46.55 billion to help Americans pay rent when they fell behind. These emergency rental assistance (ERA) funds, paid primarily to tenants, landlords, and utility companies, were intended to help renters to catch up on unpaid bills and remain stably housed in the wake of the COVID-19 pandemic. 
@@ -61,7 +84,6 @@ In a new public data release, we provide insight into how this money was distrib
 <a class="link-button" href="https://housinginitiative.github.io/era-county-level-dataset-public/" style="color: #fff;" target="_blank">
 <span>Get the data and documentation <i class="fa fa-chevron-right"></i></span>
 </a> 
-
 
 ### Why emergency rental assistance?
 
@@ -83,15 +105,15 @@ For 2,218 counties (69% of all counties nationwide), we are able to say how much
 
 {{% mapbox
   id="mapbox3"
-  data="./era-map.csv"
+  data="./figure1e.csv"
   shapes="./county_shapes.json"
-  column="group"
+  column="source"
   join="GEOID"
   name="NAME"
   gradientType="discrete"
   title="Figure 1. ERA distribution data coverage by county"
-  colors="#94aabd;#434878;#2c897f"
-  binValues="No data;Data Only on Total Distribution;Data on Monthly Distribution"
+  colors="#999999;#94aabd;#434878;#2c897f"
+  binValues="No data;Data suppressed;Data Only on Total Distribution;Data on Monthly Distribution"
   useFullUSBounds=true
   noLegend=true
 %}}
@@ -106,6 +128,10 @@ For 2,218 counties (69% of all counties nationwide), we are able to say how much
   </div>
   <div class="legend-item legend-item--3">
   <div class="legend-item__color"></div>
+  <div class="legend-item__label">Data suppressed<sup>1</sup></div>
+  </div>
+  <div class="legend-item">
+  <div class="legend-item__color"></div>
   <div class="legend-item__label">No data</div>
   </div>
 </div>
@@ -117,14 +143,14 @@ In Figure 2, we plot the timing of this spending, with each bar reflecting the t
 
 {{% bar-chart
   id="fig2"
-  data="./figure2.csv"
+  data="./figure2d.csv"
   x="month_of_payment"
   axis="time"
   timeUnit="month"
   y="total_assistance"
   yMax="2000000000"
-  yFormat="y => d3.format('$.2s')(y / 1).replace('G','B')"
-  yTooltipFormat="y => d3.format('$.3s')(y / 1).replace('G','B')"
+  yFormat="y => d3.format('$.2s')(y).replace('G','B')"
+  yTooltipFormat="y => d3.format('$.3s')(y).replace('G','B')"
   title="Figure 2. ERA spending by month"
   margin="8 8 50 50"
 %}}
@@ -145,12 +171,12 @@ Our database lets us better understand how the timing of ERA distribution varied
 
 {{% bar-chart 
   id="fig3"
-  data="./figure3.csv"
+  data="./figure3AK.csv"
   x="month_of_payment"
   xMin="01/01/2021"
   xMax="03/01/2023"
   y="pct_county_all_spending_monthly"
-  lineData="./figure2b.csv"
+  lineData="./figure2d.csv"
   lineX="month_of_payment"
   lineY="pct"
   axis="time"
@@ -168,12 +194,12 @@ Our database lets us better understand how the timing of ERA distribution varied
 
 {{% bar-chart
   id="fig3b"
-  data="./figure3b.csv"
+  data="./figure3WI.csv"
   x="month_of_payment"
   xMin="01/01/2021"
   xMax="03/01/2023"
   y="pct_county_all_spending_monthly"
-  lineData="./figure2b.csv"
+  lineData="./figure2d.csv"
   lineX="month_of_payment"
   lineY="pct"
   axis="time"
@@ -195,21 +221,21 @@ Our database lets us better understand how the timing of ERA distribution varied
 
 
 
-We hope that this database helps researchers to analyze the effects of ERA on renters and their communities, for instance showing how rental assistance helped to safeguard health or prevent homelessness. We also want it to allow the general public to better understand how this program helped their neighbors. To that end, we encourage you to use the tool below to look up details on ERA spending in your county. Type your county into the look-up box and, if it’s included in our dataset, you’ll find details on how much ERA was distributed, to how many addresses, and at what pace.
+We hope that this database helps researchers to analyze the effects of ERA on renters and their communities, for instance showing how rental assistance helped to safeguard health or prevent homelessness. We also want it to allow the general public to better understand how this program helped their neighbors. To that end, we encourage you to use the tool below to look up details on ERA spending in your county. Type your county into the search box and, if it’s included in our dataset, you’ll find details on how much ERA was distributed, to how many addresses, and at what pace.
 
+<!-- TODO: add to chart gallery -->
 {{% bar-chart
   id="fig4"
   searchId="geoid"
-  defaultSearchValue="01001"
-  data="./figure4c.csv"
+  defaultSearchValue="Los Angeles County, CA"
+  data="./figure4ii.csv"
   x="month_of_payment"
   xMin="01/01/2021"
   xMax="03/01/2023"
   y="pct_county_all_spending_monthly"
-  lineData="./figure2b.csv"
+  lineData="./figure2d.csv"
   lineX="month_of_payment"
   lineY="pct"
-  lineYMax="2000000000"
   lineYMin="0"
   axis="time"
   timeUnit="month"
@@ -217,8 +243,21 @@ We hope that this database helps researchers to analyze the effects of ERA on re
   yMin="0"
   title="Figure 4. ERA distribution by county"
   margin="8 8 50 50"
+  panelProps="name;total;addresses"
+  panelPropFormatters="v => v + ':';v => `<span>${d3.format('$,d')(v)}</span> distributed`;v => `<span>${d3.format(',d')(v)}</span> addresses assisted`"
+  yMaxNoData="10"
+  noDataWarning="Monthly county data not available"
 %}}
 
-  <div class="figcaption col-12 mb-3"><p>Note: red line is the overall national distribution of ERA, mirroring Figure 2 above.</p></div>
+  <div class="figcaption col-12 mb-3"><p>Note: red line is the overall national distribution of ERA, mirroring Figure 2 above. If a county does not appear in the search results, it either did not have data available or its data has been suppressed.<sup>1</sup></p></div>
 
 Rental assistance can be a key tool to stop people from falling into homelessness and struggling with economic difficulties. With this data, we hope that researchers, advocates, reporters and the general public can better understand how these programs worked in their communities. Hopefully, this will help us all to learn more about how financial aid programs can be designed to keep tenants safely housed, whether it is during a future emergency or as we face our current housing crisis.
+
+
+<hr />
+<div class="footnotes">
+<ol>
+<li>
+To comply with Department of Housing and Urban Development data standards, we cannot report any county or county-month totals when less than 11 households received assistance.
+</li>
+</ol>
