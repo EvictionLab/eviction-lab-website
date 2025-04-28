@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: "/eviction-and-educational-trajectories/"
 contenttype: updates
@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "Losing your home, losing your school: how evictions affect kids' educational trajectories"
-date: 2025-04-04T15:28:51.756Z
+date: 2025-04-28T00:00:00.756Z
 postauthorname: Peter Hepburn, Danny Grubbs-Donovan, Nick Graetz, Olivia Jin, and Matthew Desmond
 description: Kids whose parents face eviction cases are more likely to leave their district, end up in schools with fewer resources, and experience an increase in absences and suspensions.
 listSummary: Kids whose parents face eviction cases are more likely to leave their district, end up in schools with fewer resources, and experience an increase in absences and suspensions.
@@ -24,11 +24,20 @@ scripts:
 ---
 <span class="dropcap green">W</span>hen parents face an eviction case, it has consequences for their kids. In an article published in the journal <i>Sociology of Education</i>, we for the first time explore what some of these consequences are for students’ academic trajectories. Using the case study of children enrolled in the Houston Independent School District, we show that kids whose parents face eviction cases are more likely than students not facing eviction to leave the district. The students who remained in the district and experienced eviction filings were more likely to have switched schools, often relocating to campuses with fewer resources, more student turnover, and lower test scores. Students whose parents faced eviction experienced an increase in absences and, among those who switched schools, more suspensions.
 
-[ ARTICLE LINK ]
+{{< researchpaperlink "Consequences of Eviction-Led Forced Mobility for School-Age Children in Houston" "https://journals.sagepub.com/doi/10.1177/00380407251333651" "Peter Hepburn, Danny Grubbs-Donovan, Nick Graetz, Olivia Jin, and Matthew Desmond" "soea_98_2.webp" >}}
+
+<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-3">
+    <div class="pr-12 pr-md-0">
+        <a href='https://apnews.com/article/eviction-school-transfer-absenteeism-suspension-99841ffaa06984ce5bb1b0cdcf1bca6d' target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src='download.webp' /></a>
+    </div>
+    <div class="ml-md-3"><p class="green gt-eesti journal-subheading">READ NEWS COVERAGE:</p>
+        <p><a class="green gt-eesti journal-heading" href='https://apnews.com/article/eviction-school-transfer-absenteeism-suspension-99841ffaa06984ce5bb1b0cdcf1bca6d' target="_blank" rel="noreferrer noopener">When kids are evicted, they often lose both home and school</a></p>
+        <p class="mt-3" style="font-size: 1.6rem;">The Associated Press</p>
+    </div>
+</div>
+<hr style="border-top-color: #2c897f; margin: 2.4rem 0 2.4rem;">
 
 
-[READ COVERAGE IN THE ASSOCIATED PRESS: LINK]
-<!-- {{< researchpaperlink "Eviction and the Rental Housing Crisis in Rural America" "https://onlinelibrary.wiley.com/doi/full/10.1111/ruso.12528" "Carl Gershenson and Matthew Desmond" "rural-sociology-cover.jpg" >}} -->
 
 
 One of the cruel realities of housing in America is that nearly three million children risk losing their homes every year through the eviction process. In fact, if you are a renter and have kids, your chances of facing an eviction filing are twice as high as people without kids, as previous {{< smartlink "Eviction Lab research shows" "https://evictionlab.org/who-is-evicted-in-america/" >}}. Yet, there’s been little study of how evictions affect classrooms and children’s education. We know that any move can have long-lasting effects on children, but what happens when a move is sudden and involuntary for the whole family?
