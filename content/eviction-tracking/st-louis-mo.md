@@ -26,7 +26,7 @@ In most locations that we track, we are able to access eviction filing records s
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in St. Louis City and St. Louis County over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
+This plot shows monthly eviction filings in St. Louis City and St. Louis County over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/)

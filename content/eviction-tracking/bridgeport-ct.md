@@ -26,7 +26,7 @@ Eviction filings in Bridgeport fell significantly below average when a state-wid
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Bridgeport over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Bridgeport over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
 

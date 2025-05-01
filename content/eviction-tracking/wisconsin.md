@@ -25,7 +25,7 @@ Filing counts in some counties for baseline years may differ slightly compared t
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Wisconsin were higher than average in January and February of 2020. That pattern reversed in March, and filings over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
+This plot shows monthly eviction filings in Wisconsin were higher than average in January and February of 2020. That pattern reversed in March, and filings over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2016-2018. 
 2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/).

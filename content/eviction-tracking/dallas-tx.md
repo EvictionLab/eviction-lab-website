@@ -24,7 +24,7 @@ Eviction filings in Dallas fell sharply when eviction proceedings were suspended
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Dallas over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Dallas over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
 1. Data for Dallas County were collected by the [Child Poverty Action Lab](https://childpovertyactionlab.org/); historical averages cover 2017-2019.
 
