@@ -174,13 +174,24 @@ Elab.Utils = (function (Elab) {
         statClass += ` ${stat.field}`;
         if (missingVal) statClass += " missing";
 
+        var displayVal = stat.display;
+        if (displayVal.includes("{latest_year}")) {
+          var latestUpdate = getVal(dataMap[stat.file], {
+            ...stat,
+            field: "latest_update",
+          });
+          var year = latestUpdate.match(/\d{4}/);
+          if (year) {
+            displayVal = displayVal.replace("{latest_year}", year[0]);
+          }
+        }
         return (
           '<dl class="' +
           statClass +
           '"><dd>' +
           fVal +
           "</dd><dt>" +
-          stat.display +
+          displayVal +
           createTooltip(tooltipContent) +
           "</dt>" +
           subStat +
