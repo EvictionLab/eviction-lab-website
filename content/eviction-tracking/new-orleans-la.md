@@ -46,7 +46,7 @@ When a landlord files an eviction claim in New Orleans, we observe the amount th
 
 # The geography of eviction filings
 
-New Orleans is divided into 184 census tracts. In most of those tracts, we map the number of eviction filings over the past 12 months.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>2</sup>
+New Orleans is divided into 184 census tracts. In most of those tracts, we map the number of eviction filings over the past 12 months.<sup>1</sup> If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>2</sup>
 
 1. We do not have tract-level data for areas covered by the Second City Court, on the West Bank of Orleans Parish (south of the Mississippi River). Eviction filing data were collected by [Professor Davida Finger](https://law.loyno.edu/academics/faculty-and-staff-directory/davida-finger) (Loyola University New Orleans College of Law). Professor Finger works in partnership with [Jane Place Neighborhood Sustainability Initiative.](https://www.jpnsi.org/evictions) Historical averages are taken from 2019 data. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.

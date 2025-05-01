@@ -35,7 +35,7 @@ This plot shows monthly eviction filings in Pennsylvania over the past 12 months
 
 # The geography of eviction filings
 
-Pennsylvania is divided into 67 counties. In each of those counties, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Pennsylvania is divided into 67 counties. In each of those counties, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Historical averages cover the years 2016-2019. Additional data was provided by [Lancaster Stands Up](https://lancasterstandsup.org/).
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.

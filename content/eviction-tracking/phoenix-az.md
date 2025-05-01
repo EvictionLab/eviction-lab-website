@@ -58,7 +58,7 @@ When a landlord files an eviction claim in Phoenix, we observe the amount they c
 
 # The geography of eviction filings
 
-Maricopa County is divided into 916 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Maricopa County is divided into 916 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
 1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). Historical averages are taken over the years 2015-2019. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.

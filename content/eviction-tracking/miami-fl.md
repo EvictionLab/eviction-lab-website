@@ -34,7 +34,7 @@ This plot shows monthly eviction filings in Miami over the past 12 months. Filin
 
 # The geography of eviction filings
 
-Miami-Dade County is divided into 707 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup> <sup>3</sup>
+Miami-Dade County is divided into 707 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup> <sup>3</sup>
 
 1. Eviction filing data for Miami-Dade County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. Historical averages cover the years 2014-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
