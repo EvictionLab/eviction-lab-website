@@ -68,7 +68,7 @@
       </h3>
       <div id="filingCounts" class="stat-block-wrapper">
       </div>
-      <h3>Filing Rates Over the Past Year</h3>
+      <h3>Filing Rates Over the Past 12 Months</h3>
       <div id="filingRates" class="stat-block-wrapper">
       </div>
     </div>
@@ -113,40 +113,42 @@
       var filingCounts = [
         {
           file: 'filing',
-          field: 'filings_pandemic',
-          display: 'filings since 3/15/2020',
-          formatter: d3.format(','),
-          subStat: {
-            file: 'filing',
-            field: 'filings_pandemic_pct_hist',
-            display: 'vs. average',
-            tooltip: 'Compared to filings over the same time frame before the COVID-19 pandemic',
-            formatter: percentChange,
-          }
-        },
-        {
-          file: 'filing',
-          field: 'filings_past_year',
-          display: 'filings in the past year',
-          formatter: d3.format(','),
-          subStat: {
-            file: 'filing',
-            field: 'filings_past_year_pct_hist',
-            display: 'vs. average',
-            tooltip: 'Compared to filings over an average year before the COVID-19 pandemic',
-            formatter: percentChange,
-          }
-        },
-        {
-          file: 'filing',
           field: 'filings_past_month',
           display: 'filings in the past month',
           formatter: d3.format(','),
           subStat: {
             file: 'filing',
             field: 'filings_past_month_pct_hist',
-            display: 'vs. average',
-            tooltip: 'Compared to filings over the same month before the COVID-19 pandemic',
+            display: 'vs. baseline',
+            tooltip: 'The baseline represents average filings for the same period across 2023 and 2024',
+            formatter: percentChange,
+          }
+        },
+        {
+          file: 'filing',
+        // TODOxxx field: 'filings_ytd',
+          field: 'filings_pandemic',
+          display: '2025 YTD filings',
+          formatter: d3.format(','),
+          subStat: {
+            file: 'filing',
+            // TODOxxx field: 'filings_ytd_pct_hist',
+            field: 'filings_pandemic_pct_hist',
+            display: 'vs. baseline',
+            tooltip: 'The baseline represents average filings for the same period across 2023 and 2024',
+            formatter: percentChange,
+          }
+        },
+        {
+          file: 'filing',
+          field: 'filings_past_year',
+          display: 'filings over the past 12 months',
+          formatter: d3.format(','),
+          subStat: {
+            file: 'filing',
+            field: 'filings_past_year_pct_hist',
+            display: 'vs. baseline',
+            tooltip: 'The baseline represents average filings for the same period across 2023 and 2024',
             formatter: percentChange,
           }
         },

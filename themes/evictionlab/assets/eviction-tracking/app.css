@@ -1650,7 +1650,7 @@
 .intro .intro__text .data-note {
   font-family: var(--body-font-italic);
 }
-.intro .intro__stats-wrapper {
+.intro div.intro__stats-wrapper {
   /* flex-grow: 1; */
   /* letter-spacing: 0.04rem; */
   position: sticky;
@@ -1659,6 +1659,8 @@
   padding-left: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  /* let it grow 10px larger to make space for past 12 months */
+  max-width: 490px;
 }
 .intro .intro__stats-wrapper h3 {
   color: var(--text-secondary);
@@ -3320,6 +3322,8 @@ span.value--up {
 
 .section--avg .visual__toggle {
   display: flex;
+  justify-content: start;
+  margin-left: 48px;
   gap: 16px;
 }
 /** END VISUALIZATION TOOLTIP */
