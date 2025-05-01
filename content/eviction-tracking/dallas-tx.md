@@ -67,7 +67,7 @@ When a landlord files an eviction claim in Dallas, we observe the amount they cl
 
 # The geography of eviction filings
 
-Dallas County is divided into 645 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Dallas County is divided into 645 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Data for Dallas County were collected by the [Child Poverty Action Lab](https://childpovertyactionlab.org/); historical averages cover 2017-2019.
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
@@ -83,7 +83,7 @@ Dallas County is divided into 645 census tracts. In each of those tracts, we map
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in the historical years.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in the historical years.<sup>1</sup>
 
 1. Data for Dallas County were collected by the [Child Poverty Action Lab](https://childpovertyactionlab.org/); historical averages cover 2017-2019.
 

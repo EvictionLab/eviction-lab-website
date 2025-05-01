@@ -43,7 +43,7 @@ This plot shows monthly eviction filings in Cleveland over the past 12 months. F
 
 # The geography of eviction filings
 
-Cleveland is divided into 160 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Cleveland is divided into 160 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings are based on data from 2016-2019, collected by [LSC](https://www.lsc.gov/).
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.

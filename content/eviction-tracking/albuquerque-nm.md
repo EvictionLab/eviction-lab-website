@@ -57,7 +57,7 @@ Eviction Hotspot data are updated semi-annually.
 
 # The geography of eviction filings
 
-Bernalillo County is divided into 176 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Bernalillo County is divided into 176 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
@@ -71,9 +71,9 @@ Bernalillo County is divided into 176 census tracts. In each of those tracts, we
 
 **Eviction filings by neighborhood race/ethnicity**
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In this barplot, we show the distribution of eviction filings over the last year by neighborhood racial/ethnic majority.  
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In this barplot, we show the distribution of eviction filings over the past 12 months by neighborhood racial/ethnic majority.  
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2017–2019.<sup>1</sup>
+When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in 2017–2019.<sup>1</sup>
 
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). Historical averages cover 2017-2019.
 
