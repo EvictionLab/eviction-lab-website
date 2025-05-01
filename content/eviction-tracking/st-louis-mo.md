@@ -72,7 +72,7 @@ St. Louis is made up of 341 census tracts. In each of those tracts, we map the n
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to baseline, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in previous years.<sup>1</sup>
+When you toggle the figure to see data relative to baseline, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in 2023–2024.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 
