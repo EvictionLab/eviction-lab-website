@@ -30,7 +30,7 @@ window.addEventListener('load', function() {
   var csv = {{ .Get "data" }}
   var yCol = "median_claim"
   var xCol = "month_date"
-  var avg = "median_claim_prepandemic"
+  var avg = "median_claim_prepandemic" // TODOxxx median_claim_baseline
   var rootEl = '#'+id
   var statFiles = [
     { id: "claims", url: csv },

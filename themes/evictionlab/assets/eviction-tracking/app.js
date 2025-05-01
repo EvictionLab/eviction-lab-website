@@ -321,13 +321,13 @@ Elab.Utils = (function (Elab) {
   var formatLabel = function formatLabel(id) {
     switch (id) {
       case "avg_filings":
-        return "Average Filings";
+        return "Baseline Filings";
 
       case "month_filings":
-        return "Filings This Year";
+        return "Past 12 Months Filings";
 
       case "percentage_diff":
-        return "Filings This Year<span>relative to average</span>";
+        return "Past 12 Months Filings<span>relative to baseline</span>";
 
       case "Other":
         return "Other/None";
@@ -574,7 +574,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text: "Monthly Eviction Filings Relative To Average",
+        text: "Monthly Eviction Filings Relative To Baseline",
       },
     ],
     margin: {
@@ -583,11 +583,11 @@ Elab.Config = (function (Elab) {
     markLines: [
       {
         y: 1,
-        label: "pre-COVID",
+        label: "2023–24",
       },
       {
         y: 1,
-        label: "average",
+        label: "baseline",
         labelOnly: true,
       },
     ],
@@ -1634,39 +1634,39 @@ Elab.Chart = (function (Elab) {
     /**
      * Render buttons for the available groups, and bind click handlers.
      */
-    function renderButtonGroups() {
-      var buttons = [
-        {
-          label: "Past year",
-          date: yearAgo,
-        },
-        {
-          label: "Since ".concat(dateFormatter(dateParse(earliestDate))),
-          date: earliestDate,
-        },
-      ]
-        // .map(function (date, i) {
-        //   return {
-        //     label: "Since ".concat(dateFormatter(dateParse(date))),
-        //     date: date,
-        //   };
-        // })
-        .map(buttonGroupTemplate)
-        .map($);
-      var container = $("#avg .button-group.time-span");
-      container.empty();
-      buttons.forEach(function (button, i) {
-        var isActiveButton = (showLast12 && i === 0) || (!showLast12 && i === 1);
-        isActiveButton ? button.addClass("toggle--active") : button.removeClass("active");
-        button.click(function () {
-          if (isActiveButton) return;
-          showLast12 = !showLast12;
-          renderButtonGroups();
-          update();
-        });
-        container.append(button);
-      });
-    }
+    // function renderButtonGroups() {
+    //   var buttons = [
+    //     {
+    //       label: "Past year",
+    //       date: yearAgo,
+    //     },
+    //     {
+    //       label: "Since ".concat(dateFormatter(dateParse(earliestDate))),
+    //       date: earliestDate,
+    //     },
+    //   ]
+    //     // .map(function (date, i) {
+    //     //   return {
+    //     //     label: "Since ".concat(dateFormatter(dateParse(date))),
+    //     //     date: date,
+    //     //   };
+    //     // })
+    //     .map(buttonGroupTemplate)
+    //     .map($);
+    //   var container = $("#avg .button-group.time-span");
+    //   container.empty();
+    //   buttons.forEach(function (button, i) {
+    //     var isActiveButton = (showLast12 && i === 0) || (!showLast12 && i === 1);
+    //     isActiveButton ? button.addClass("toggle--active") : button.removeClass("active");
+    //     button.click(function () {
+    //       if (isActiveButton) return;
+    //       showLast12 = !showLast12;
+    //       renderButtonGroups();
+    //       update();
+    //     });
+    //     container.append(button);
+    //   });
+    // }
 
     function initialRender() {
       if (config.rootId === "avg") {
@@ -1677,7 +1677,7 @@ Elab.Chart = (function (Elab) {
         // initialize to just show last 12 months of data for avg chart
         showLast12 = true;
         // and provide buttons for selecting start date
-        renderButtonGroups();
+        // renderButtonGroups();
       }
 
       update(config);
@@ -3137,7 +3137,7 @@ Elab.MedianFilings = (function (Elab) {
   /** Renders the median claim line chart */
   function renderLineChart() {
     // chunk label to break btw lines
-    var avgLabel = ["pre-COVID", "average"];
+    var avgLabel = ["2023–24", "baseline"];
     var avgLines =
       data[0].avg &&
       avgLabel.map((w, i) => ({
