@@ -102,7 +102,7 @@ Cincinnati is divided into 226 census tracts. In each of those tracts, we map th
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in 2012–2016.<sup>1</sup> 
+When you toggle the figure to see data relative to baseline, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in 2023–2024.<sup>1</sup> 
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 

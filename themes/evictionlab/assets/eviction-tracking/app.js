@@ -652,7 +652,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text: "Filings over the last year relative to average, by Neighborhood Racial/Ethnic Majority",
+        text: "Filings over the past 12 months relative to average, by Neighborhood Racial/Ethnic Majority",
       },
     ],
     margin: {
@@ -663,11 +663,11 @@ Elab.Config = (function (Elab) {
     markLines: [
       {
         y: 1,
-        label: "average",
+        label: "2023–24",
       },
       {
         y: 1,
-        label: "filings",
+        label: "baseline",
         labelOnly: true,
       },
     ],
@@ -725,7 +725,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text: "Filings over the last year by Neighborhood Racial/Ethnic Majority",
+        text: "Filings over the past 12 months by Neighborhood Racial/Ethnic Majority",
       },
     ],
     margin: {
