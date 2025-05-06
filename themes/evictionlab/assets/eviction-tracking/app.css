@@ -301,9 +301,13 @@
 
 .callout {
   position: relative;
-  border-left: 0.5em solid var(--c1);
+  border-left: 0.5rem solid var(--c1);
   background: var(--section-alt);
-  padding: 3.6em 2.4em;
+  padding: 1.6rem 2.4rem;
+  }
+  
+  .section:nth-child(2n) .callout {
+    background: #fff;
 }
 .callout .callout__heading,
 .callout h3 {
@@ -1677,7 +1681,7 @@
   font-size: 1.6rem;
   font-family: var(--body-font-bold);
   color: var(--text-secondary);
-  margin-bottom: 12px;
+  margin-bottom: 1.6rem;
 }
 
 .intro .intro__acknowledgements i {
@@ -1911,16 +1915,14 @@
 }
 
 /* specifically for callout blocks */
-.callout.stat-block-wrapper,
-.callout.comparison-block-wrapper {
+.section .callout.stat-block-wrapper {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   padding-right: 0;
   background: unset;
 }
 
-.callout.stat-block-wrapper p,
-.callout.comparison-block-wrapper p {
+.callout.stat-block-wrapper p {
   font-size: 16px;
 }
 
@@ -1953,8 +1955,7 @@
 }
 
 @media (max-width: 1024px) {
-  .callout.stat-block-wrapper,
-  .callout.comparison-block-wrapper {
+  .callout.stat-block-wrapper {
     max-width: 480px;
     margin: 0 auto 16px;
   }
@@ -2164,11 +2165,13 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.legend-item:not(:last-child) {
   margin-bottom: 12px;
 }
 
 @media (min-width: 600px) {
-  .legend-item {
+  .legend-item:not(:last-child) {
     margin-bottom: 16px;
   }
 }
@@ -2232,7 +2235,7 @@
   margin-top: 4px;
   color: #646464;
 }
-#race .legend-item__label span {
+#race .legend {
   display: none;
 }
 .section .legend-item {
@@ -2495,7 +2498,10 @@ label #labels_top-100 {
 .section .additional-footnote .data-download {
   font-family: Akkurat-Bold, sans-serif;
   font-size: 1.6rem;
-  margin-bottom: 2rem;
+}
+.section .footnote .callout, 
+.section .additional-footnote .callout {
+  margin: 2.4rem 0;
 }
 .section .footnote .data-download a:before,
 .section .additional-footnote .data-download a:before {
@@ -2522,11 +2528,8 @@ label #labels_top-100 {
   color: var(--secondary);
 }
 
-.section.section--map .footnote .data-download {
+.section.section--map .footnote .data-download.emphasize:not(:last-child) {
   margin-bottom: 8px;
-}
-.section.section--map .footnote ol {
-  padding-top: 12px;
 }
 
 .get-the-data-icon {
