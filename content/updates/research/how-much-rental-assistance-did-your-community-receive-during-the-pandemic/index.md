@@ -29,8 +29,9 @@ socialDescription: "Over the course of 2021 and 2022, the U.S. carried out an
   unprecedented experiment: we invested $46.55 billion to help Americans pay
   rent when they fell behind. Here we provide insight into how this money was
   distributed and the impact it had."
-twImage: todo.jpg
-fbImage: todo.jpg
+image: era-blog-se-map.png  
+twImage: era-blog-se-map.png
+fbImage: era-blog-se-map.png
 ---
 <style>
   /* map tooltip */
