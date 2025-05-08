@@ -126,14 +126,12 @@
         },
         {
           file: 'filing',
-        // TODOxxx field: 'filings_ytd',
-          field: 'filings_pandemic',
+          field: 'filings_ytd',
           display: '{latest_year} YTD filings',
           formatter: d3.format(','),
           subStat: {
             file: 'filing',
-            // TODOxxx field: 'filings_ytd_pct_hist',
-            field: 'filings_pandemic_pct_hist',
+            field: 'filings_ytd_pct_hist',
             display: 'vs. baseline',
             tooltip: 'The baseline represents average filings for the same period across 2023 and 2024',
             formatter: percentChange,
