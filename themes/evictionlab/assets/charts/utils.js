@@ -52,20 +52,26 @@ Elab.Utils = Object.assign(
     }
 
     /**
-     * Derives a formatter from a format string.
-     * If the format string contains "=>", it is treated as a function, allowing shortcodes
-     * to pass more complex formatting functions, eg:
+     * Converts a string to a function, allowing shortcodes to pass in functions as argumenst, eg:
      *   yFormat="y => d3.format('.0%')(y/100)"
      *   panelPropsFormatter="v => `<span>${d3.format('$,d')(v)}</span> distributed`"
      */
+    function createFunctionFromStr(strFn) {
+      return new Function(`return ${strFn}`)();
+    }
+
+    /**
+     * Derives a formatter from a string, treating as fn if or d3 format string.
+     */
     function deriveFormatter(format = "") {
-      return format.includes("=>") ? new Function(`return ${format}`)() : d3.format(format || ",d");
+      return format.includes("=>") ? createFunctionFromStr(format) : d3.format(format || ",d");
     }
 
     return {
       group: group,
       loadData: loadData,
       loadAll: loadAll,
+      createFunctionFromStr: createFunctionFromStr,
       deriveFormatter: deriveFormatter,
     };
   })(Elab),
