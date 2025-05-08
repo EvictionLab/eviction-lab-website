@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 listSummaryMaxChars: 250
 childof: research
 url: /pandemic-rental-assistance/
@@ -9,7 +9,7 @@ contentcat: research
 featured: true
 in_index: true
 title: How Much Rental Assistance Did Your Community Receive During the Pandemic?
-date: 2025-04-18T15:28:51.756Z
+date: 2025-05-08T00:28:51.756Z
 postauthorname: Grace Hartley, Jacob Haas, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
