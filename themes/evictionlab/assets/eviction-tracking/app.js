@@ -3115,7 +3115,8 @@ Elab.MedianFilings = (function (Elab) {
     '\n    <div class="legend-item legend-item--{{index}} legend-item--{{label}}">\n      <div class="legend-item__color"></div>\n      <div class="legend-item__label">{{label}}</div>\n    </div>\n  ',
   );
   var dateParse = d3.timeParse("%Y-%m-%d");
-  var dollarFormat = d3.format("$.2s");
+  // var dollarFormat = d3.format("$.2s");
+  var dollarFormat = d3.format("$,d");
   var $el; // jquery wrapped root element
   var config;
   var data;
