@@ -13,6 +13,7 @@ date: 2025-05-08T00:28:51.756Z
 postauthorname: Grace Hartley, Jacob Haas, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
+image: era-blog-se-map.png
 description: "Over the course of 2021 and 2022, the U.S. carried out an
   unprecedented experiment: we invested $46.55 billion to help Americans pay
   rent when they fell behind. Here we provide insight into how this money was
@@ -29,7 +30,6 @@ socialDescription: "Over the course of 2021 and 2022, the U.S. carried out an
   unprecedented experiment: we invested $46.55 billion to help Americans pay
   rent when they fell behind. Here we provide insight into how this money was
   distributed and the impact it had."
-image: era-blog-se-map.png  
 twImage: era-blog-se-map.png
 fbImage: era-blog-se-map.png
 ---
@@ -86,12 +86,13 @@ fbImage: era-blog-se-map.png
 
 <span class="dropcap green">O</span>ver the course of 2021 and 2022, the U.S. carried out an unprecedented experiment: we invested $46.55 billion to help Americans pay rent when they fell behind. These emergency rental assistance (ERA) funds, paid primarily to tenants, landlords, and utility companies, were intended to help renters to catch up on unpaid bills and remain stably housed in the wake of the COVID-19 pandemic. 
 
-In a new public data release, we provide insight into how this money was distributed. This dataset, which was produced through a collaboration between the Eviction Lab, the {{< smartlink "Housing Initiative at Penn" "https://www.design.upenn.edu/work/housing-initiative-penn-hip" >}}, and the {{< smartlink "Urban Displacement Project" "https://www.urbandisplacement.org/" >}}, details the number of ERA recipients and the amount of ERA paid in most counties nationwide between January 2021 and March 2023. It represents the most precise picture yet available of when and where ERA funds were distributed. 
+In a new public data release, we provide insight into how this money was distributed. This dataset, which was produced through a collaboration between the Eviction Lab, the {{< smartlink "Housing Initiative at Penn" "https://www.housinginitiative.org/" >}}, and the {{< smartlink "Urban Displacement Project" "https://www.urbandisplacement.org/" >}}, details the number of ERA recipients and the amount of ERA paid in most counties nationwide between January 2021 and March 2023. It represents the most precise picture yet available of when and where ERA funds were distributed. 
 <br><br>
 
 <!-- <p style="text-align:center;"><strong><a href="https://housinginitiative.github.io/era-county-level-dataset-public/" download target="_blank">GET THE DATA AND DOCUMENTATION</a></strong></p>
 <a class="btn buttonlink mb-2" href="https://housinginitiative.github.io/era-county-level-dataset-public/" target="_blank" rel="noreferrer noopener">GET THE DATA AND DOCUMENTATION</a>
 -->
+
 <hr style="border-top-color: #2c897f; margin: 2.4rem 0 2.4rem;">
 <div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-3">
     <div class="pr-12 pr-md-0">
@@ -108,6 +109,7 @@ In a new public data release, we provide insight into how this money was distrib
 </a> -->
 
 ### Why emergency rental assistance?
+
 <br>
 
 While a handful of ERA programs existed at the local level before the pandemic—for example, {{< smartlink "“one shot deals” in New York City" "https://access.nyc.gov/programs/one-shot-deal/" >}}—these programs had never been tested on a large scale. Early in the pandemic, state and local governments began building up ERA resources. {{< smartlink "At least $3.9 billion in ERA was made available through these programs in 2020" "https://nlihc.org/sites/default/files/Emergency-Rental-Assistance-Programs-3.pdf" >}}. 
@@ -118,6 +120,7 @@ ERA was just one of a {{< smartlink "range of policies that were hard to imagine
 <br><br>
 
 ### WHAT’S IN OUR ERA DATABASE?
+
 <br>
 
 {{< smartlink "The ERA program was overseen by the Department of Treasury" "https://home.treasury.gov/policy-issues/coronavirus/assistance-for-state-local-and-tribal-governments/emergency-rental-assistance-program" >}}, but funds were paid out to state, territorial, county, city, and tribal grantees. Treasury set guidelines for the administration of the program, but each grantee established its own methods for processing applications and payments. Those grantees, with the exception of tribal grantees, were then required to submit periodic, detailed reports back to Treasury on the payments they made. 
