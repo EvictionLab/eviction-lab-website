@@ -143,8 +143,8 @@ Elab.LineChart = (function (Elab) {
             var extentL = min - range * 0.05;
             var extentH = max + range * 0.05;
             // unless overridden directly
-            if (dataOptions.yMin) extentL = parseFloat(dataOptions.yMin);
-            if (dataOptions.yMax) extentH = parseFloat(dataOptions.yMax);
+            if (typeof dataOptions.yMin === "number") extentL = parseFloat(dataOptions.yMin);
+            if (typeof dataOptions.yMax === "number") extentH = parseFloat(dataOptions.yMax);
             return [extentL, extentH];
           },
           ticks: dataOptions.yTicks || 5,
