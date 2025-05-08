@@ -17,6 +17,8 @@ description: "todo."
 listSummary: "todo."
 scripts:
   - charts
+  - arrow-chart2
+  - mapbox
 socialDescription: "todo."
 twImage: todo.jpg
 fbImage: todo.jpg
@@ -35,72 +37,317 @@ The total eviction filing numbers that we report remain the same, and the basic 
 
 In an average month prior to the pandemic, both sites would have seen a little over 1,600 cases. Comparing the March 2025 numbers to those pre-pandemic levels shows that filings were 19% above baseline in Franklin County (1,934/1621 = 119%) but 32% below baseline in Philadelphia (1,139/1,669 = 68%, which is 32% less than 100%). 
 
+<style>
+   .table.table--text td {
+    width: unset;
+   }
+   .table.table--text td.numeric {
+    font-family: "Gotham A", "Gotham B", sans-serif;
+    font-weight: 400;
+   }
+
+  .table.table--text .arrow {
+    background: url("arrow2.png") no-repeat center;
+    width: 25px;
+    height: 15px;
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+    margin: 0 2px;
+  }
+
+  table.pivot-condensed th,
+  table.original-condensed th {
+    border: 2px solid #efefef;
+  }
+  table.pivot-condensed,
+  table.original-condensed,
+  table.pivot-verbose {
+    display: block;
+  }
+  table.pivot-verbose thead tr th:nth-child(3) {
+    color: white;
+    background: #434878;
+  }
+  table.pivot-verbose thead tr th:nth-child(4) {
+    color: white;
+    background: #2c897f;
+  }
+  table.pivot-verbose tbody tr:first-child td {
+    font-family: Akkurat-Bold, sans-serif;
+  }
+  table.pivot-verbose tbody tr td:nth-child(2) {
+    background: #94aabd22;
+  }
+  table.pivot-verbose tbody tr td:nth-child(3),
+  table.pivot-verbose tbody tr td:nth-child(4) {
+    background: #43487822;
+  }
+  table.pivot-verbose tbody tr td:nth-child(5),
+  table.pivot-verbose tbody tr td:nth-child(6) {
+    background: #2c897f22;
+  }
+
+</style>
+
+<div class="figheader">Table 1a. Eviction filings in greater Columbus (Franklin County) and Philadelphia</div>
+<!-- <div class="upscale pb-0 pb-xxl-0"> -->
+<table class="table table--text blog-table pivot-condensed table-responsive" style="width:100%">
+  <thead>
+   <tr>
+    <th></th>
+    <th>March 2025<br>filings</th>
+    <th>...as % of<br>Pre-COVID Baseline</th>
+    <th>...as % of<br>2023-2024 Baseline</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Franklin County</td>
+    <td class="numeric"><strong>1,934</strong></td>
+    <td class="numeric"><strong>+19%</strong> (1,621<span class="arrow"></span>1,934)</td>
+    <td class="numeric"><strong>-32%</strong> (1,669<span class="arrow"></span>1,139)</td>
+  </tr>
+  <tr>
+    <td>Philadelphia</td>
+    <td class="numeric"><strong>1,139</strong></td>
+    <td class="numeric"><strong>+9%</strong> (1,770<span class="arrow"></span>1,934)</td>
+    <td class="numeric"><strong>-0.3%</strong> (1,142<span class="arrow"></span>1,139)</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="figcaption"><p>Pivoted, combined columns. Clearest communication of comparison? <br/> "...as % of" could also be "change from" or "3/25 filings as % of"</p></div>
+
+<div class="figheader">Table 1b. Eviction filings in greater Columbus (Franklin County) and Philadelphia</div>
+
+<div class="upscale pb-0 pb-xxl-0">
+<table class="table original-condensed blog-table table--text table-responsive" style="width:100%">
+   <thead>
+   <tr>
+    <th></th>
+    <th>Franklin County</th>
+    <th>Philadelphia</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>March 2025</td>
+    <td><strong>1,934</strong></td>
+    <td><strong>1,139</strong></td>
+  </tr>
+  <tr>
+    <td>Pre-COVID Baseline</td>
+    <td><strong>1,621</strong> (+19%)</td>
+    <td><strong>1,669</strong> (-32%)</td>
+  </tr>
+  <tr>
+    <td>2023-2024 Baseline</td>
+    <td><strong>1,770</strong> (+9%)</td>
+    <td><strong>1,142</strong> (-0.3%)</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="figcaption"><p>The percentages in parentheses indicate how the March 2025 value has changed from this baseline.<br />OR<br />In parentheses we compare the March 2025 value to the baseline.</p></div>
+
+<div class="figheader">Table 1bb. Eviction filings in greater Columbus (Franklin County) and Philadelphia</div>
+
+<div class="upscale pb-0 pb-xxl-0">
+<table class="table original-condensed blog-table table--text table-responsive" style="width:100%">
+   <thead>
+   <tr>
+    <th></th>
+    <th>Franklin County</th>
+    <th>Philadelphia</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>March 2025 filings</td>
+    <td><strong>1,934</strong></td>
+    <td><strong>1,139</strong></td>
+  </tr>
+  <tr>
+    <td>...as % of Pre-COVID Baseline</td>
+    <td><strong>+19%</strong> (1,621<span class="arrow"></span>1,934)</td>
+    <td><strong>-32%</strong> (1,669<span class="arrow"></span>1,139)</td>
+  </tr>
+  <tr>
+    <td>...as % of 2023-2024 Baseline</td>
+    <td><strong>+9%</strong> (1,770<span class="arrow"></span>1,934)</td>
+    <td><strong>-0.3%</strong> (1,142<span class="arrow"></span>1,139)</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="figcaption"><p>Originalish</p></div>
+
+<!-- </div> -->
+
+<hr/>
+<div class="figheader">Table 1c. Eviction filings in greater Columbus (Franklin County) and Philadelphia</div>
+<div class="upscale124 pb-0 pb-xxl-0">
+<table class="table table--text blog-table pivot-verbose table-responsive" style="width:100%">
+  <thead>
+   <tr>
+    <th></th>
+    <th></th>
+    <th colspan="2">Pre-COVID Baseline</th>
+    <th colspan="2">2023-2024 Baseline</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td>March 2025<br>filings</td>
+    <td>Average<br>Filings</td>
+    <td>3/25 filings as<br>% of baseline</td>
+    <td>Average<br>Filings</td>
+    <td>3/25 filings as<br>% of baseline</td>
+  </tr>
+  <tr>
+    <td>Franklin County</td>
+    <td class="numeric">1,934</td>
+    <td class="numeric"> 1,621</td>
+    <td class="numeric">+19%</td>
+    <td class="numeric"> 1,669</td>
+    <td class="numeric">-32%</td>
+  </tr>
+  <tr>
+    <td>Philadelphia</td>
+    <td class="numeric">1,139</td>
+    <td class="numeric"> 1,770</td>
+    <td class="numeric">+9%</td>
+    <td class="numeric"> 1,142</td>
+    <td class="numeric">-0.3%</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="figcaption"><p>Pivoted, grouped columns</p></div>
+
+<hr/>
+<div class="figheader">Table 1d. Eviction filings in greater Columbus (Franklin County) and Philadelphia</div>
+
+<table class="table table--text blog-table table-responsive" style="width:100%">
+  <thead>
+   <tr>
+    <th></th>
+    <th>Franklin County</th>
+    <th>Philadelphia</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>March 2025</td>
+    <td class="numeric"><strong>1,934</strong></td>
+    <td class="numeric"><strong>1,139</strong></td>
+  </tr>
+  <tr>
+    <td>Change from Pre-COVID Baseline</td>
+    <td class="numeric"><strong>+19%</strong> (1,934/1,621)</td>
+    <td class="numeric"><strong>-32%</strong> (1,139/1,669)</td>
+  </tr>
+  <tr>
+    <td>Change from 2023-2024 Baseline</td>
+    <td class="numeric"><strong>+9%</strong> (1,934/1,770)</td>
+    <td class="numeric"><strong>-0.3%</strong> (1,139/1,142)</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="figcaption"><p>Combined rows & columns</p></div>
+<hr />
 
 
-Table 1. Eviction filings in greater Columbus and Philadelphia
-<table class="blog-table table-responsive my-3" cellspacing="0" cellpadding="0">
-<thead>
-<tr>
-<td style="border: none;"></td>
-<td dir="ltr" style="background-color: #e24000; color: #fff;" colspan="2">ETS</td>
-<td dir="ltr" style="background-color: #5a5e88; color: #fff;" colspan="2">U.S.</td>
-</tr>
-</thead>
-<tbody>
+<div class="figheader">Table 1e. Eviction filings in greater Columbus (Franklin County) and Philadelphia</div>
 
-<tr>
-<td style="border: none; background-color: none;"></td>
-<td style="background-color: #fbf6f3;" class="blog-table__text subhead" dir="ltr">Estimate</td>
-<td style="background-color: #fbf6f3;" class="blog-table__text subhead" dir="ltr">SD</td>
-<td style="background-color: #eeeeef;" class="blog-table__text subhead" dir="ltr">Estimate</td>
-<td style="background-color: #eeeeef;" class="blog-table__text subhead" dir="ltr">SD</td>
-</tr>
-<tr>
+<div class="upscale pb-0 pb-xxl-0">
+<table class="table table--text blog-table table-responsive" style="width:100%">
+  <thead>
+   <tr>
+    <th></th>
+    <th></th>
+    <th>Franklin County</th>
+    <th>Philadelphia</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>March 2025</td>
+    <td>Filings</td>
+    <td class="numeric">1,934</td>
+    <td class="numeric">1,139</td>
+  </tr>
+  <tr>
+    <td>Pre-COVID Baseline</td>
+    <td>Filings (2025 as % of baseline)</td>
+    <td class="numeric">1,621 (+19%)</td>
+    <td class="numeric">1,669 (-32%)</td>
+  </tr>
+  <tr>
+    <td>2023-2024 Baseline</td>
+    <td>Filings (2025 as % of baseline)</td>
+    <td class="numeric">1,770 (+9%)</td>
+    <td class="numeric">1,142 (-0.3%)</td>
+  </tr>
+  </tbody>
+</table>
+</div>
 
-<td class="blog-table__text" dir="ltr">Number of Renter HHs</td>
-<td dir="ltr">11,076,250</td>
-<td dir="ltr">17,124</td>
-<td dir="ltr">43,669,988</td>
-<td dir="ltr">21,378</td>
-</tr>
-<tr>
-<td class="blog-table__text" dir="ltr">Median Rental Housing Age</td>
-<td dir="ltr">64.5</td>
-<td dir="ltr">167</td>
-<td dir="ltr">49.6</td>
-<td dir="ltr">86.1</td>
-</tr>
-<tr>
-<td  class="blog-table__text"dir="ltr">Median Rent ($)</td>
-<td dir="ltr">1105</td>
-<td dir="ltr">293</td>
-<td dir="ltr">1,076</td>
-<td dir="ltr">317</td>
-</tr>
+<div class="figcaption"><p>Combined rows, updated styles</p></div>
+
+<hr />
 
 
+<div class="figheader">Table 1f. Eviction filings in greater Columbus (Franklin County) and Philadelphia</div>
 
-Franklin County
-Philadelphia
-March 2025
-Eviction Filings
-1,934
-1,139
-OLD BASELINE
-Baseline Filings
-1,621
-1,669
-2025 as % of baseline
-+19%
--32%
-NEW BASELINE
-Baseline Filings
-1,770
-1,142
-2025 as % of baseline
-+9%
--0.3%
+<div class="upscale pb-0 pb-xxl-0">
+<table class="blog-table table-responsive" style="width:100%">
+  <tbody>
+   <tr>
+    <td></td>
+    <td></td>
+    <td>Franklin County</td>
+    <td>Philadelphia</td>
+  </tr>
+  <tr>
+    <td>March 2025</td>
+    <td>Eviction filings</td>
+    <td>1,934</td>
+    <td>1,139</td>
+  </tr>
+  <tr>
+    <td rowspan="2">OLD BASELINE</td>
+    <td>Baseline filings</td>
+    <td>1,621</td>
+    <td>1,669</td>
+  </tr>
+  <tr>
+    <td>2025 as % of baseline</td>
+    <td>+19%</td>
+    <td>-32%</td>
+  </tr>
+  <tr>
+    <td rowspan="2">NEW BASELINE</td>
+    <td>Baseline filings</td>
+    <td>1,770</td>
+    <td>1,142</td>
+  </tr>
+  <tr>
+    <td>2025 as % of baseline</td>
+    <td>+9%</td>
+    <td>-0.3%</td>
+  </tr>
+  </tbody>
+</table>
+</div>
 
+<div class="figcaption"><p>Original</p></div>
 
 
 When we switch to our new baseline of filings in 2023 and 2024, these numbers shift. On average, in March of those two years, we would expect 1,770 eviction filings in Franklin County and 1,142 in Philadelphia. Comparing the March 2025 numbers to this new baseline, we now report that filings were 9% above average in Franklin County and only 0.3% below average in Philadelphia. 
@@ -114,17 +361,74 @@ In Franklin County, eviction filings were higher in 2023 and 2024 than they were
 
 These changes are also reflected in our maps of eviction filing rates, which incorporate the new baselines. Specifically, if you select the “Relative to Average” option, the map now reflects a comparison between current filings and the post-pandemic baseline filings (see Figure 2 for an example in Cleveland). This update also affects our estimates of eviction filings by neighborhood racial composition when you select the “Vs. Average” toggle button. 
 
-Figure 2. Eviction filings relative to average in Cleveland, Ohio
+{{% bar-chart
+  id="2a"
+  data="./fig-1-columbus.csv"
+  x="date"
+  y="pct_diff_old"
+  axis="time"
+  timeUnit="month"
+  yMin="0"
+  yMax="1.7"
+  yTransform="y => (y + 100)/100"
+  yFormat=".0%"
+  avgLines="1,pre-COVID,;1,baseline,true"
+  title="Figure 2. Eviction filings relative to average in Cleveland, Ohio"
+  margin="8 70 50 40"
+%}}
+{{% bar-chart
+  id="2b"
+  data="./fig-1-columbus.csv"
+  x="date"
+  y="pct_diff_new"
+  axis="time"
+  timeUnit="month"
+  yMin="0"
+  yMax="1.7"
+  yTransform="y => (y + 100)/100"
+  yFormat=".0%"
+  avgLines="1,2023-24,;1,baseline,true"
+  title="Figure 2. Eviction filings relative to average in Cleveland, Ohio"
+  margin="8 70 50 40"
+%}}
 
-
-
+{{% mapbox
+  id="mapbox2"
+  data="./cleve.csv"
+  shapes="./cleveland_shapes.json"
+  column="rel_new"
+  join="GEOID"
+  format="percent"
+  name="NAME"
+  colors="#434878;#c1c5ea;rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
+  title="Figure 2. Eviction filings relative to average in Cleveland, Ohio"
+  legendTitle="Filings relative to baseline"
+%}}
+  <!-- --choro1: #434878;
+  --choro2: #c1c5ea;
+  --choro3: rgba(241, 241, 241, 0.7);
+  --choro4: #e99c7e;
+  --choro5: #e24000; -->
 
 Where Changes are Largest
 
 In some of the places we track, eviction filing counts in 2023 and 2024 looked similar to what was typical prior to the pandemic. In these places, the change in baseline makes very little difference to the numbers we report. In other places, the changes are more pronounced. In Figure 3, we plot changes in baseline for each site. The arrows signal the size and direction of the change. A left-facing arrow means that average monthly filings are smaller under the new, post-pandemic baseline than they were under the pre-pandemic baseline. A right-facing arrow indicates the opposite: a higher baseline. 
 
-Figure 3. Change in average monthly filings between the pre- and post-pandemic baselines
-
+{{% arrow-chart2
+  id="fig3"
+  title="Figure 3. Change in average monthly filings between the pre- and post-pandemic baselines"
+  data="./fig-3-baseline-changes.csv"
+  nameCol="site_label"
+  nameWidth="180"
+  beforeCol="start"
+  format=".0%"
+  afterCol="pct_change"
+  customSort="(a, b) => (a.after < b.after ? 1 : -1)"
+  axisLabelText="Change in baseline"
+  legendDecArrowText="Decrease"
+  legendIncArrowText="Increase"
+  simpleLegend="true"
+%}}
 
 Of the 45 jurisdictions in the ETS—10 states and 35 metro-area sites—the new post-pandemic baseline is higher in 23 sites. For example, in {{< smartlink "Harris and Galveston Counties, Texas" "https://evictionlab.org/eviction-tracking/houston-tx/" >}}, average monthly eviction filings increased from 4,865 in the pre-pandemic baseline to 6,743 in the post-pandemic baseline, an increase of 38%. When we compare new filings to this larger post-pandemic baseline, we’re dividing by a bigger number, so they appear relatively smaller. 
 
