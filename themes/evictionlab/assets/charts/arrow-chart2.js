@@ -344,7 +344,10 @@ Elab.ArrowChart2 = (function (Elab) {
 
     // ...and a "tooltip" value to display on hover (or if highlighted)
     if (!options.hideTooltip) {
-      const tooltipFormatter = getFormatter(options.tooltipFormat, options.valueType);
+      const tooltipFormatter = getFormatter(
+        options.tooltipFormat || options.format,
+        options.valueType,
+      );
       rows
         .append("text")
         .attr("class", "row-value")
@@ -352,7 +355,7 @@ Elab.ArrowChart2 = (function (Elab) {
         .attr("dx", (d) => {
           // offset from arrow
           let buffer = 5;
-          const lineLength = Math.abs(xScale(d.change));
+          const lineLength = Math.abs(xScale(d.after) - xScale(d.before));
           if (lineLength < arrowSize) {
             // make space for arrowhead even if line is shorter than it
             buffer += arrowSize - lineLength;
