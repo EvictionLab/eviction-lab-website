@@ -156,7 +156,7 @@
           file: 'filing',
           field: 'eviction_filing_rate',
           display: 'eviction filing rate',
-          tooltip: 'The number of evictions filed per 100 renter households over the last 12 months',
+          tooltip: 'The number of evictions filed per 100 renter households over the past 12 months',
           formatter: d3.format('.0%'),
         },
         {
@@ -172,8 +172,8 @@
           file: 'filing',
           field: 'serial_share',
           display: 'serial filing rate',
-          tooltip: 'Of unique households filed against in the last 12 months, the share filed against repeatedly at the same address within the last two years',
-          tooltipMissingValue: `Of unique households filed against in the last 12 months, the share filed against repeatedly at the same address within the last two years.<br/><br/>Address data are currently insufficient to calculate this rate.`,
+          tooltip: 'Of unique households filed against in the past 12 months, the share filed against repeatedly at the same address within the last two years',
+          tooltipMissingValue: `Of unique households filed against in the past 12 months, the share filed against repeatedly at the same address within the last two years.<br/><br/>Address data are currently insufficient to calculate this rate.`,
           formatter: d3.format('.0%'),
           default: 'Unavailable'
         },
