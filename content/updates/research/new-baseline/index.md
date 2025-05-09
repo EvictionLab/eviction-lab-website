@@ -118,7 +118,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
 </div>
 <div class="row mx-4 county-comparison">
 <div class="col-12">
-<div class="figheader px-0 px-md-3 my-0">Figure 1. Comparing monthly eviction filings relative to different baselines in Franklin County</div>
+<div class="figheader px-0 px-md-3 my-0">Figure 1. Monthly eviction filings relative to pre- and post-pandemic baselines in Franklin County</div>
 </div>
   
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 pl-md-2">
@@ -136,7 +136,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
   yFormat=".0%"
   avgLines="1,pre-COVID,;1,baseline,true"
   title="Pre-COVID baseline"
-  margin="4 70 50 40"
+  margin="4 70 60 40"
 %}}
 
   </div>
@@ -156,7 +156,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
   yFormat=".0%"
   avgLines="1,2023-24,;1,baseline,true"
   title="2023-2024 baseline"
-  margin="4 70 50 40"
+  margin="4 70 60 40"
 %}}
 
   </div>
@@ -175,7 +175,7 @@ These changes are also reflected in our maps of eviction filing rates, which inc
 </div>
 <div class="row mx-4 county-comparison">
 <div class="col-12">
-<div class="figheader px-0 px-md-3 my-0">Figure 2. Eviction filings relative to average in Cleveland, Ohio</div>
+<div class="figheader px-0 px-md-3 my-0">Figure 2. Eviction filings relative to pre- and post-pandemic baselines in Cleveland, Ohio</div>
 </div>
   
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 px-md-2">
@@ -190,7 +190,7 @@ These changes are also reflected in our maps of eviction filing rates, which inc
   name="NAME"
   gradientType="diverging"
   colors="#434878;#c1c5ea;rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
-  title="Filings relative to 2023-24 baseline"
+  title="Pre-COVID baseline"
 %}}
 
   </div>
@@ -207,14 +207,14 @@ These changes are also reflected in our maps of eviction filing rates, which inc
   name="NAME"
   gradientType="diverging"
   colors="#434878;#c1c5ea;rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
-  title="Filings relative to Pre-COVID baseline"
+  title="2023-2024 baseline"
 %}}
 
   </div>
   </div>
 
 <div class="center-content-post updates-post pb-2">
-<div class="page-content pt-6 pt-md-0">
+<div class="page-content pt-8 pt-md-0">
 <div class="post-body pt-lg-3">
 
   <!-- --choro1: #434878;
@@ -229,7 +229,7 @@ In some of the places we track, eviction filing counts in 2023 and 2024 looked s
 
 {{% arrow-chart2
   id="fig3"
-  title="Figure 3. Change in average monthly filings between the pre- and post-pandemic baselines"
+  title="Figure 3. Change in average monthly filings between pre- and post-pandemic baselines"
   data="./fig-3-baseline-changes.csv"
   nameCol="site_label"
   nameWidth="200"
