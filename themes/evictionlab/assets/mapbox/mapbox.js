@@ -365,7 +365,8 @@ Elab.Mapbox = (function (Elab) {
           }
           allData = parseValues(data);
           geojsonData = addDataToGeojson(geojson, allData, config);
-          colorScale = getColorScale(allData, currentProp);
+          var range = getRange(currentProp);
+          colorScale = getColorScale(range, colors);
           map.addSource("choropleth", {
             type: "geojson",
             data: geojsonData,
@@ -386,6 +387,12 @@ Elab.Mapbox = (function (Elab) {
       var extent = d3.extent(allData, function (d) {
         return d[prop];
       });
+      if (gradientType === "diverging") {
+        // Ensures that the range is symmetric around 0, producing the same scale as for site maps
+        // (though there we use a range of 0 to 2 and adjust values reported as % of average)
+        return [-1, 1];
+        // return [extent[0], extent[1]];
+      }
       return [0, extent[1]];
     }
 
@@ -419,8 +426,13 @@ Elab.Mapbox = (function (Elab) {
     }
 
     /** return labels for ends of legend */
-    function getGradientLabels(prop, range) {
-      return [formatter(range[0]), formatter(range[1])];
+    function getGradientLabels(prop, range, gradientType) {
+      var labels = [formatter(range[0])];
+      if (gradientType === "diverging") {
+        labels.push("baseline");
+      }
+      labels.push(formatter(range[1]));
+      return labels;
     }
 
     /** renders a legend for a discrete scale */
@@ -522,7 +534,7 @@ Elab.Mapbox = (function (Elab) {
       var linearGradient = getCssGradient(colors);
       gradientContainer.css("background-image", linearGradient);
       var html = LegendLabelTemplate({
-        labels: getGradientLabels(currentProp, range),
+        labels: getGradientLabels(currentProp, range, gradientType),
       });
       labelContainer.html(html);
       titleContainer.html(legendTitle);
