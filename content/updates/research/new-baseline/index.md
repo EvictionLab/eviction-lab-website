@@ -237,7 +237,7 @@ In some of the places we track, eviction filing counts in 2023 and 2024 looked s
   format=".0%"
   afterCol="pct_change"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
-  axisLabelText="Change in baseline"
+  axisLabelText="Change in baseline filings"
   legendDecArrowText="Decrease"
   legendIncArrowText="Increase"
   simpleLegend="true"
