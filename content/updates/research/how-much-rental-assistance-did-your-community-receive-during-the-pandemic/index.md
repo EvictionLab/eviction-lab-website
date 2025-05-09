@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 listSummaryMaxChars: 250
 childof: research
 url: /pandemic-rental-assistance/
@@ -9,10 +9,11 @@ contentcat: research
 featured: true
 in_index: true
 title: How Much Rental Assistance Did Your Community Receive During the Pandemic?
-date: 2025-04-18T15:28:51.756Z
+date: 2025-05-08T00:28:51.756Z
 postauthorname: Grace Hartley, Jacob Haas, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
+image: era-blog-se-map.png
 description: "Over the course of 2021 and 2022, the U.S. carried out an
   unprecedented experiment: we invested $46.55 billion to help Americans pay
   rent when they fell behind. Here we provide insight into how this money was
@@ -29,8 +30,8 @@ socialDescription: "Over the course of 2021 and 2022, the U.S. carried out an
   unprecedented experiment: we invested $46.55 billion to help Americans pay
   rent when they fell behind. Here we provide insight into how this money was
   distributed and the impact it had."
-twImage: todo.jpg
-fbImage: todo.jpg
+twImage: era-blog-se-map.png
+fbImage: era-blog-se-map.png
 ---
 <style>
   /* map tooltip */
@@ -85,25 +86,42 @@ fbImage: todo.jpg
 
 <span class="dropcap green">O</span>ver the course of 2021 and 2022, the U.S. carried out an unprecedented experiment: we invested $46.55 billion to help Americans pay rent when they fell behind. These emergency rental assistance (ERA) funds, paid primarily to tenants, landlords, and utility companies, were intended to help renters to catch up on unpaid bills and remain stably housed in the wake of the COVID-19 pandemic. 
 
-In a new public data release, we provide insight into how this money was distributed. This dataset, which was produced through a collaboration between the Eviction Lab, the {{< smartlink "Housing Initiative at Penn" "https://www.design.upenn.edu/work/housing-initiative-penn-hip" >}}, and the {{< smartlink "Urban Displacement Project" "https://www.urbandisplacement.org/" >}}, details the number of ERA recipients and the amount of ERA paid in most counties nationwide between January 2021 and March 2023. It represents the most precise picture yet available of when and where ERA funds were distributed. 
+In a new public data release, we provide insight into how this money was distributed. This dataset, which was produced through a collaboration between the Eviction Lab, the {{< smartlink "Housing Initiative at Penn" "https://www.housinginitiative.org/" >}}, and the {{< smartlink "Urban Displacement Project" "https://www.urbandisplacement.org/" >}}, details the number of ERA recipients and the amount of ERA paid in most counties nationwide between January 2021 and March 2023. It represents the most precise picture yet available of when and where ERA funds were distributed. 
+<br><br>
 
 <!-- <p style="text-align:center;"><strong><a href="https://housinginitiative.github.io/era-county-level-dataset-public/" download target="_blank">GET THE DATA AND DOCUMENTATION</a></strong></p>
 <a class="btn buttonlink mb-2" href="https://housinginitiative.github.io/era-county-level-dataset-public/" target="_blank" rel="noreferrer noopener">GET THE DATA AND DOCUMENTATION</a>
 -->
 
-<a class="link-button" href="https://housinginitiative.github.io/era-county-level-dataset-public/" style="color: #fff;" target="_blank">
+<hr style="border-top-color: #2c897f; margin: 2.4rem 0 2.4rem;">
+<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-3">
+    <div class="pr-12 pr-md-0">
+        <a href='https://housinginitiative.github.io/era-county-level-dataset-public/' target="_blank" rel="noreferrer noopener"><img class="journal-image mb-3 mb-md-0" src='get-the-data.jpg' /></a>
+    </div>
+    <div class="ml-md-3">
+        <p><a class="green gt-eesti journal-heading link-button" href='https://housinginitiative.github.io/era-county-level-dataset-public/' target="_blank" rel="noreferrer noopener">Get the data and documentation <i class="fa fa-chevron-right" style="font-size: 16px"></i></a></p>
+    </div>
+</div>
+<hr style="border-top-color: #2c897f; margin: 2.4rem 0 2.4rem;">
+<br>
+<!--<a class="link-button" href="https://housinginitiative.github.io/era-county-level-dataset-public/" style="color: #fff;" target="_blank">
 <span>Get the data and documentation <i class="fa fa-chevron-right"></i></span>
-</a> 
+</a> -->
 
 ### Why emergency rental assistance?
+
+<br>
 
 While a handful of ERA programs existed at the local level before the pandemic—for example, {{< smartlink "“one shot deals” in New York City" "https://access.nyc.gov/programs/one-shot-deal/" >}}—these programs had never been tested on a large scale. Early in the pandemic, state and local governments began building up ERA resources. {{< smartlink "At least $3.9 billion in ERA was made available through these programs in 2020" "https://nlihc.org/sites/default/files/Emergency-Rental-Assistance-Programs-3.pdf" >}}. 
 
 The infusion of federal funding in late 2020 and early 2021, though, represented a watershed moment. Between the Consolidated Appropriations Act of 2021 (December 2020) and the American Rescue Plan (March 2021), {{< smartlink "Congress provided nearly as much funding for ERA as they did in the previous year for the entire budget of the Department of Housing and Urban Development (HUD)" "https://www.novoco.com/notes-from-novogradac/2020-appropriations-provides-hud-funding-increases-5-billion-nmtc-1-billion-lihtc-calif-wildfires" >}}. 
 
 ERA was just one of a {{< smartlink "range of policies that were hard to imagine before the pandemic" "https://www.nytimes.com/interactive/2022/03/11/us/how-covid-stimulus-money-was-spent.html" >}}. We expanded {{< smartlink "the scale of unemployment insurance" "https://pandemicoversight.gov/news/articles/how-much-money-did-pandemic-unemployment-programs-pay-out" >}} and {{< smartlink "access to many social services" "https://www.rsfjournal.org/content/9/3/32" >}}, provided millions of households with {{< smartlink "stimulus checks" "https://www.pandemicoversight.gov/data-interactive-tools/data-stories/update-three-rounds-stimulus-checks-see-how-many-went-out-and" >}}, established two federal eviction moratoria (and {{< smartlink "many state-level moratoria" "https://evictionlab.org/assessing-state-eviction-prevention-covid-19/" >}}), and expanded the tax credits that helped lift {{< smartlink "an unprecedented number of children out of poverty" "https://www.nber.org/system/files/working_papers/w29285/w29285.pdf" >}}. We believe it’s important to understand how these policies worked in practice, who they helped, and how this varies across the country. This ERA database is our contribution to that broader project.
+<br><br>
 
 ### WHAT’S IN OUR ERA DATABASE?
+
+<br>
 
 {{< smartlink "The ERA program was overseen by the Department of Treasury" "https://home.treasury.gov/policy-issues/coronavirus/assistance-for-state-local-and-tribal-governments/emergency-rental-assistance-program" >}}, but funds were paid out to state, territorial, county, city, and tribal grantees. Treasury set guidelines for the administration of the program, but each grantee established its own methods for processing applications and payments. Those grantees, with the exception of tribal grantees, were then required to submit periodic, detailed reports back to Treasury on the payments they made. 
 
@@ -146,6 +164,7 @@ For 2,218 counties (69% of all counties nationwide), we are able to say how much
   <div class="legend-item__label">No data</div>
   </div>
 </div>
+<br>
 
 In total, these data reflect $20.6 billion in ERA spending, a little less than half of the total amount that Congress made available. Ideally, we would have complete data on how all ERA funds were spent. The reality is that grantees focused on getting this money to tenants and landlords as quickly as possible, and didn’t always have the technical capacity to perfectly maintain and report payment records. We used strict criteria to only include places where we know that we have reliable data from all grantees operating in a given county. For example, if both a city and a state ERA program were operating in the same county, we had to have reliable data from both grantees. In many cases, counties marked as having “no data” in Figure 1 in fact did have some data available, but not enough to meet our validation criteria. Treasury continues to collect data from grantees, and we hope that future data releases will be able to expand coverage over more of the country.
 
@@ -164,6 +183,8 @@ In Figure 2, we plot the timing of this spending, with each bar reflecting the t
   title="Figure 2. ERA spending by month"
   margin="8 8 50 50"
 %}}
+
+<br>
 
 Our database lets us better understand how the timing of ERA distribution varied across the country. Rental assistance was distributed much faster in some places than in others. Take Kodiak Island Borough, AK and Portage County, WI, for example. Both made roughly the same amount of total payments ($4,694,111 and $4,743,179, respectively), but as we show in Figure 3, those payments were processed much more quickly in Kodiak Island Borough. By the end of  2021, 74.8% of all payments had been made in Kodiak Island Borough, compared to just 44.7% in Portage County. Portage County didn’t hit the 75% spending threshold until September 2022, nearly nine months later.
 
@@ -256,6 +277,7 @@ We hope that this database helps researchers to analyze the effects of ERA on re
 %}}
 
   <div class="figcaption col-12 mb-3"><p>Note: red line is the overall national distribution of ERA, mirroring Figure 2 above. If a county does not appear in the search results, it either did not have data available or its data have been suppressed.<sup>1</sup></p></div>
+<br>
 
 Rental assistance can be a key tool to stop people from falling into homelessness and struggling with economic difficulties. With this data, we hope that researchers, advocates, reporters and the general public can better understand how these programs worked in their communities. Hopefully, this will help us all to learn more about how financial aid programs can be designed to keep tenants safely housed, whether it is during a future emergency or as we face our current housing crisis.
 
