@@ -12,13 +12,13 @@ date: 2025-05-08T15:28:51.756Z
 postauthorname: Sarah Johnson, Grace Hartley, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: "todo."
-listSummary: "todo."
+description: "lorem ipsum"
+listSummary: "lorem ipsum"
 scripts:
   - charts
   - arrow-chart2
   - mapbox
-socialDescription: "todo."
+socialDescription: "lorem ipsum"
 twImage: todo.jpg
 fbImage: todo.jpg
 ---
@@ -66,12 +66,12 @@ In an average month prior to the pandemic, both sites would have seen a little o
     width: 100%;
     margin: 0;
   }
-  .county-comparison .chart h3 {
+  .county-comparison h3 {
     font-family: 'Akkurat-Bold' !important;
     font-size: 16px !important;
     letter-spacing: .1px !important;
     color: #5a5a5a !important;
-    margin: 24px 0 0;
+    margin: 24px 0 8px !important;
   }
 </style>
 
@@ -118,7 +118,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
 </div>
 <div class="row mx-4 county-comparison">
 <div class="col-12">
-<div class="figheader px-0 px-md-3 my-0">Figure 1. Comparing monthly eviction filings relative to different baselines</div>
+<div class="figheader px-0 px-md-3 my-0">Figure 1. Comparing monthly eviction filings relative to different baselines in Franklin County</div>
 </div>
   
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 pl-md-2">
@@ -136,7 +136,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
   yFormat=".0%"
   avgLines="1,pre-COVID,;1,baseline,true"
   title="Pre-COVID baseline"
-  margin="8 70 50 40"
+  margin="4 70 50 40"
 %}}
 
   </div>
@@ -156,7 +156,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
   yFormat=".0%"
   avgLines="1,2023-24,;1,baseline,true"
   title="2023-2024 baseline"
-  margin="8 70 50 40"
+  margin="4 70 50 40"
 %}}
 
   </div>
@@ -168,7 +168,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
 
 In Franklin County, eviction filings were higher in 2023 and 2024 than they were prior to the pandemic. That means that our post-pandemic baseline in that county is bigger than our pre-pandemic baseline. When we were comparing to pre-pandemic levels (left panel), filings between April 2024 and March 2025 were consistently above the historical average. Switching to the new, higher baseline (right panel), reported numbers are relatively smaller. 
 
-These changes are also reflected in our maps of eviction filing rates, which incorporate the new baselines. Specifically, if you select the “Relative to Average” option, the map now reflects a comparison between current filings and the post-pandemic baseline filings (see Figure 2 for an example in Cleveland). This update also affects our estimates of eviction filings by neighborhood racial composition when you select the “Vs. Average” toggle button. 
+These changes are also reflected in our maps of eviction filing rates, which incorporate the new baselines. Specifically, if you select the “Relative to Baseline option, the map now reflects a comparison between current filings and the post-pandemic baseline filings (see Figure 2 for an example in Cleveland). This update also affects our estimates of eviction filings by neighborhood racial composition when you select the “Vs. Baseline toggle button. 
 
 </div>
 </div>
@@ -232,7 +232,7 @@ In some of the places we track, eviction filing counts in 2023 and 2024 looked s
   title="Figure 3. Change in average monthly filings between the pre- and post-pandemic baselines"
   data="./fig-3-baseline-changes.csv"
   nameCol="site_label"
-  nameWidth="180"
+  nameWidth="200"
   beforeCol="start"
   format=".0%"
   afterCol="pct_change"
