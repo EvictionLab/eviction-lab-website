@@ -315,6 +315,18 @@ Elab.Utils = (function (Elab) {
     $(el).attr("target", "_blank");
   }
   /**
+   * Create a Bluesky share intent link with provided element
+   * @param {*} el `a` tag DOM element
+   */
+  function createBlueskyLink(el) {
+    var url = Elab.Utils.getCurrentURL();
+    var params = [];
+    params.push("text=" + encodeURIComponent(url));
+    $(el).attr("href", "https://bsky.app/intent/compose?" + params.join("&"));
+    $(el).attr("target", "_blank");
+  }
+
+  /**
    * Create a facebook share intent link with provided element
    * @param {*} el `a` tag DOM element
    */
@@ -432,6 +444,7 @@ Elab.Utils = (function (Elab) {
     isNumeric: isNumeric,
     slugify: slugify,
     createTwitterLink: createTwitterLink,
+    createBlueskyLink: createBlueskyLink,
     createFacebookLink: createFacebookLink,
     addLatestUpdateDate: addLatestUpdateDate,
     createStatBlock: createStatBlock,
