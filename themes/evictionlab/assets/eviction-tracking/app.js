@@ -1645,39 +1645,39 @@ Elab.Chart = (function (Elab) {
     /**
      * Render buttons for the available groups, and bind click handlers.
      */
-    // function renderButtonGroups() {
-    //   var buttons = [
-    //     {
-    //       label: "Past year",
-    //       date: yearAgo,
-    //     },
-    //     {
-    //       label: "Since ".concat(dateFormatter(dateParse(earliestDate))),
-    //       date: earliestDate,
-    //     },
-    //   ]
-    //     // .map(function (date, i) {
-    //     //   return {
-    //     //     label: "Since ".concat(dateFormatter(dateParse(date))),
-    //     //     date: date,
-    //     //   };
-    //     // })
-    //     .map(buttonGroupTemplate)
-    //     .map($);
-    //   var container = $("#avg .button-group.time-span");
-    //   container.empty();
-    //   buttons.forEach(function (button, i) {
-    //     var isActiveButton = (showLast12 && i === 0) || (!showLast12 && i === 1);
-    //     isActiveButton ? button.addClass("toggle--active") : button.removeClass("active");
-    //     button.click(function () {
-    //       if (isActiveButton) return;
-    //       showLast12 = !showLast12;
-    //       renderButtonGroups();
-    //       update();
-    //     });
-    //     container.append(button);
-    //   });
-    // }
+    function renderButtonGroups() {
+      var buttons = [
+        {
+          label: "Past year",
+          date: yearAgo,
+        },
+        {
+          label: "Since ".concat(dateFormatter(dateParse(earliestDate))),
+          date: earliestDate,
+        },
+      ]
+        // .map(function (date, i) {
+        //   return {
+        //     label: "Since ".concat(dateFormatter(dateParse(date))),
+        //     date: date,
+        //   };
+        // })
+        .map(buttonGroupTemplate)
+        .map($);
+      var container = $("#avg .button-group.time-span");
+      container.empty();
+      buttons.forEach(function (button, i) {
+        var isActiveButton = (showLast12 && i === 0) || (!showLast12 && i === 1);
+        isActiveButton ? button.addClass("toggle--active") : button.removeClass("active");
+        button.click(function () {
+          if (isActiveButton) return;
+          showLast12 = !showLast12;
+          renderButtonGroups();
+          update();
+        });
+        container.append(button);
+      });
+    }
 
     function initialRender() {
       if (config.rootId === "avg") {
@@ -1688,7 +1688,7 @@ Elab.Chart = (function (Elab) {
         // initialize to just show last 12 months of data for avg chart
         showLast12 = true;
         // and provide buttons for selecting start date
-        // renderButtonGroups();
+        renderButtonGroups();
       }
 
       update(config);
