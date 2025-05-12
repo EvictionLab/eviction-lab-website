@@ -37,11 +37,16 @@ The total eviction filing numbers that we report remain the same, and the basic 
 In an average month prior to the pandemic, both sites would have seen a little over 1,600 cases. Comparing the March 2025 numbers to those pre-pandemic levels shows that filings were 19% above baseline in Franklin County (1,934/1621 = 119%) but 32% below baseline in Philadelphia (1,139/1,669 = 68%, which is 32% less than 100%). 
 
 <style>
+    table {
+      margin-left: -42px !important;
+      margin-right: -42px !important;
+      min-width: calc(100% + 84px) !important;
+    }
     table th {
       border: 2px solid #efefef;
     }
    table td {
-    width: unset;
+    width: unset !important;
    }
    table td.numeric {
     font-family: "Gotham A", "Gotham B", sans-serif;
@@ -89,18 +94,18 @@ In an average month prior to the pandemic, both sites would have seen a little o
   <tbody>
   <tr>
     <td>March 2025 filings</td>
-    <td><strong>1,934</strong></td>
-    <td><strong>1,139</strong></td>
+    <td>1,934</td>
+    <td>1,139</td>
   </tr>
   <tr>
     <td>...as % of Pre-COVID Baseline</td>
-    <td><strong>+19%</strong> <span class="d-inline-block">(1,621<span class="arrow"></span>1,934)</span></td>
-    <td><strong>-32%</strong> <span class="d-inline-block">(1,669<span class="arrow"></span>1,139)</span></td>
+    <td>+19%</td>
+    <td>-32%</td>
   </tr>
   <tr>
     <td>...as % of 2023-2024 Baseline</td>
-    <td><strong>+9%</strong> <span class="d-inline-block">(1,770<span class="arrow"></span>1,934)</span></td>
-    <td><strong>-0.3%</strong> <span class="d-inline-block">(1,142<span class="arrow"></span>1,139)</span></td>
+    <td>+9%</td>
+    <td>-0.3%</td>
   </tr>
   </tbody>
 </table>
@@ -131,6 +136,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
   axis="time"
   timeUnit="month"
   yMin="0"
+  yMax="1.8"
   yTicks="6"
   yTransform="y => (y + 100)/100"
   yFormat=".0%"
@@ -151,6 +157,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
   axis="time"
   timeUnit="month"
   yMin="0"
+  yMax="1.8"
   yTicks="6"
   yTransform="y => (y + 100)/100"
   yFormat=".0%"
@@ -168,7 +175,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
 
 In Franklin County, eviction filings were higher in 2023 and 2024 than they were prior to the pandemic. That means that our post-pandemic baseline in that county is bigger than our pre-pandemic baseline. When we were comparing to pre-pandemic levels (left panel), filings between April 2024 and March 2025 were consistently above the historical average. Switching to the new, higher baseline (right panel), reported numbers are relatively smaller. 
 
-These changes are also reflected in our maps of eviction filing rates, which incorporate the new baselines. Specifically, if you select the “Relative to Baseline option, the map now reflects a comparison between current filings and the post-pandemic baseline filings (see Figure 2 for an example in Cleveland). This update also affects our estimates of eviction filings by neighborhood racial composition when you select the “Vs. Baseline toggle button. 
+These changes are also reflected in our maps of eviction filing rates, which incorporate the new baselines. Specifically, if you select the “Relative to Baseline” option, the map now reflects a comparison between current filings and the post-pandemic baseline filings (see Figure 2 for an example in Cleveland). This update also affects our estimates of eviction filings by neighborhood racial composition when you select the “Vs. Baseline” toggle button. 
 
 </div>
 </div>
