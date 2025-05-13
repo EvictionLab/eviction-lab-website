@@ -19,8 +19,8 @@ scripts:
   - arrow-chart2
   - mapbox
 socialDescription: "lorem ipsum"
-twImage: todo.jpg
-fbImage: todo.jpg
+twImage: el-baseline-thumb.png
+fbImage: el-baseline-thumb.png
 image: el-baseline2.gif
 ---
 <span class="dropcap green">W</span>e launched the {{< smartlink "Eviction Tracking System" "https://evictionlab.org/eviction-tracking/" >}} (ETS) in June 2020, three months after the COVID-19 pandemic had locked down much of the country. As millions were struggling to pay their bills, we wanted to know how many new evictions landlords were filing around the country. For example, in May of 2020, 394 eviction cases were filed in {{< smartlink "Franklin County, Ohio" "https://evictionlab.org/eviction-tracking/columbus-oh/" >}}, home to Columbus and its inner-ring suburbs. 
