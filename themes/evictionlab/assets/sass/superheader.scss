@@ -3,17 +3,17 @@
     background-color: #11152F;
     color: #fff;
     transition: all 0.2s ease-in-out;
-    a {
-        color: #fff;
-        font-family: $boldFontStack;
-        text-decoration: underline;
-    }
+    // a {
+    //     color: #fff;
+    //     font-family: $boldFontStack;
+    //     text-decoration: underline;
+    // }
     @include media-breakpoint-up(md) {
         background-color: #F4F7F9;
         color: #484958;
-        a {
-            color: #484958;
-        }
+        // a {
+        //     color: #484958;
+        // }
     }
     
     position: relative;

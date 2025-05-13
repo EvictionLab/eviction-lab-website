@@ -5,9 +5,9 @@
 {{ else if and (eq .Type "eviction-tracking") (i18n "superheadETS") }}
 <div class="superheader d-block d-md-block text-md-center align-items-center justify-content-center">
 	<div class="super-content d-block pr-md-8">{{ i18n "superheadETS" | safeHTML }}</div>
-	<button type="button" class="close d-none d-md-block" aria-label="Close">
+	<!-- banner not dismissible <button type="button" class="close d-none d-md-block" aria-label="Close">
 		<img alt="Interactive Tools icon" src="/images/icons/close_x.svg">
-	</button>
+	</button> -->
 </div>
 {{ end }}
 
