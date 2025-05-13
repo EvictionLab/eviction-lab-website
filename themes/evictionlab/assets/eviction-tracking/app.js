@@ -638,7 +638,7 @@ Elab.Config = (function (Elab) {
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
 
         if (dir === "mid") {
-          return "Filings about average.";
+          return "Filings about the same as baseline.";
         }
 
         return (
@@ -649,7 +649,7 @@ Elab.Config = (function (Elab) {
           dir +
           " " +
           d3.format(",.0%")(value) +
-          "</span>&nbsp;from average" +
+          "</span>&nbsp;from baseline" +
           (d._raw.extras["month_last_day"]
             ? ", <br />as of " + d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
             : "") +
@@ -1916,8 +1916,14 @@ Elab.Map = (function (Elab) {
       value = formatter(Math.abs(distance));
       var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
       return dir === "mid"
-        ? "Filings about average."
-        : "Filings <span class='value--" + dir + "'>" + dir + " " + value + "</span> from average.";
+        ? "Filings about the same as baseline."
+        : "Filings <span class='value--" +
+            dir +
+            "'>" +
+            dir +
+            " " +
+            value +
+            "</span> from baseline.";
     }
 
     if (isRate(prop)) return "filings against " + value + " of renters";
