@@ -40,7 +40,7 @@ This plot shows monthly eviction filings in Fort Worth over the past 12 months. 
 Tarrant and Denton Counties are divided into 643 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Tarrant County were collected by [January Advisors](https://www.januaryadvisors.com/). Data for Denton County were collected by [LSC](https://www.lsc.gov/).
-2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 
 {{%/ report_map %}}
 

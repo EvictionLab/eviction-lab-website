@@ -35,7 +35,7 @@ This plot shows monthly eviction filings in El Paso over the past 12 months. Fil
 El Paso Map
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2014–2018
+2. Tract racial majority determined using American Community Survey (ACS) estimates for 2016–2020
    {{%/ report_map %}}
 
 {{% report_chart id="race" data="/uploads/richmond_w17_linechart.csv" imputedNoteNumber="2" %}}

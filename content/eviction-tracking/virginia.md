@@ -37,6 +37,6 @@ Virginia is divided into 134 counties and jurisdictions. In 124<sup>1</sup> of t
 
 1. Filings could not be tracked at the county-level in 10 counties due to the use of combined court jurisdictions in Virginia.
 2. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). 
-3. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+3. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 
 {{%/ report_map %}}
