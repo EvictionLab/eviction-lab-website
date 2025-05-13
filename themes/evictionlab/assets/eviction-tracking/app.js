@@ -1374,7 +1374,7 @@ Elab.Chart = (function (Elab) {
           return "#E24000";
         }
         if (d.id === "avg_filings" || d.id === "Black") return "#434878";
-        if (d.id === "Latinx") return "#2C897F";
+        if (d.id === "Hispanic") return "#2C897F";
         if (d.id === "Other") return "#94AABD";
         return "#E24000";
       });
@@ -1848,7 +1848,7 @@ Elab.Map = (function (Elab) {
     }
 
     var result = {};
-    ["White", "Black", "Latinx"].sort(sortValue).forEach(function (race, i) {
+    ["White", "Black", "Hispanic"].sort(sortValue).forEach(function (race, i) {
       var key = "pct_" + race.toLowerCase();
       result[race] =
         (data[key] || data[key] === 0) && data[key] !== "null"
@@ -2491,7 +2491,7 @@ Elab.Map = (function (Elab) {
         var hasPercents =
           feature.properties.hasOwnProperty("pct_white") ||
           feature.properties.hasOwnProperty("pct_black") ||
-          feature.properties.hasOwnProperty("pct_latinx");
+          feature.properties.hasOwnProperty("pct_hispanic");
         html = TooltipTemplate({
           name: feature.properties.NAME ? feature.properties.NAME.split(",")[0] : "Unknown",
           value: getTooltipValue(feature, currentProp),

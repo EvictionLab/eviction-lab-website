@@ -1,4 +1,4 @@
-id,month_date,month_filings,month_rate,month_rate_scale_max,month_diff,pct_white,pct_black,pct_latinx
+id,month_date,month_filings,month_rate,month_rate_scale_max,month_diff,pct_white,pct_black,pct_hispanic
 09003330100,01/03/2024,0,0,0.123370041064976,1,1,0,0
 09003400101,01/03/2024,9,0.017578125,0.123370041064976,1.17647058823529,0.9453125,0,0
 09003400102,01/03/2024,8,0.0258064516129032,0.123370041064976,1.05882352941176,1,0,0

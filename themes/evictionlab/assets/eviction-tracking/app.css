@@ -3342,7 +3342,7 @@ span.value--up {
 .chart__bar.chart__bar--black {
   fill: var(--c2);
 }
-.chart__bar.chart__bar--latinx {
+.chart__bar.chart__bar--hispanic {
   fill: var(--c3);
 }
 .chart__bar.chart__bar--other {
@@ -3356,7 +3356,7 @@ span.value--up {
 .legend-item.legend-item--black .legend-item__color {
   background: var(--c2);
 }
-.legend-item.legend-item--latinx .legend-item__color {
+.legend-item.legend-item--hispanic .legend-item__color {
   background: var(--c3);
 }
 .legend-item.legend-item--other .legend-item__color {
@@ -3371,7 +3371,7 @@ span.value--up {
 .chart__tooltip-row.chart__tooltip-row--black .tooltip__item--multi:before {
   background: var(--c2);
 }
-.chart__tooltip-row.chart__tooltip-row--latinx .tooltip__item--multi:before {
+.chart__tooltip-row.chart__tooltip-row--hispanic .tooltip__item--multi:before {
   background: var(--c3);
 }
 .chart__tooltip-row.chart__tooltip-row--other .tooltip__item--multi:before {

@@ -57,7 +57,7 @@ Clark County is divided into 535 census tracts. In these tracts, we map the numb
 
 **Eviction filings by neighborhood race/ethnicity**
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Hispanic, or Other/None. 
 
 When you toggle the figure to see data relative to baseline, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in 2023–2024.<sup>1</sup>
 

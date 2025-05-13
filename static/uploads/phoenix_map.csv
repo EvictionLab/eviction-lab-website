@@ -1,4 +1,4 @@
-id,month_date,month_filings,month_rate,month_rate_scale_max,month_diff,pct_white,pct_black,pct_latinx
+id,month_date,month_filings,month_rate,month_rate_scale_max,month_diff,pct_white,pct_black,pct_hispanic
 85001,01/04/2024,44,Inf,Inf,1.83673469387755,,,
 85002,01/04/2024,0,,Inf,1,,,
 85003,01/04/2024,495,0.173501577287066,Inf,1.10714285714286,0.599018576936558,0.0918331580792148,0.267437784787943
