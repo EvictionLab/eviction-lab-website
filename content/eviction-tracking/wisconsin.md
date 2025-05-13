@@ -48,7 +48,7 @@ This plot shows monthly eviction filings in Wisconsin were higher than average i
 
 Wisconsin is divided into 72 counties. In each of those counties, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
-1. Eviction filing data were collected by [January Advisors](https://www.januaryadvisors.com/). Historical averages were taken from Eviction Lab data and cover the years 2016-2018.
+1. Eviction filing data were collected by [January Advisors](https://www.januaryadvisors.com/). 
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
 

@@ -22,7 +22,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 This plot shows monthly eviction filings in Pittsburgh over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Historical averages cover the years 2016-2019. Additional data were provided by [Lancaster Stands Up](https://lancasterstandsup.org/) and the [CMU CREATE Lab](https://docs.google.com/presentation/d/1Dtzm3l7ylTzU9Aj9H94EWBfxb79o8CRWb5t8-vVY9kU/edit#slide=id.p).
+1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Additional data were provided by [Lancaster Stands Up](https://lancasterstandsup.org/) and the [CMU CREATE Lab](https://docs.google.com/presentation/d/1Dtzm3l7ylTzU9Aj9H94EWBfxb79o8CRWb5t8-vVY9kU/edit#slide=id.p).
 
 
 
@@ -38,7 +38,7 @@ This plot shows monthly eviction filings in Pittsburgh over the past 12 months. 
 
 Allegheny County is divided into 115 zip codes. In each of those zip codes, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
-1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Historical averages cover the years 2016-2019. Additional data were provided by [Lancaster Stands Up](https://lancasterstandsup.org/) and the [CMU CREATE Lab](https://docs.google.com/presentation/d/1Dtzm3l7ylTzU9Aj9H94EWBfxb79o8CRWb5t8-vVY9kU/edit#slide=id.p).
+1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Additional data were provided by [Lancaster Stands Up](https://lancasterstandsup.org/) and the [CMU CREATE Lab](https://docs.google.com/presentation/d/1Dtzm3l7ylTzU9Aj9H94EWBfxb79o8CRWb5t8-vVY9kU/edit#slide=id.p).
 2. Zip code breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
 
 
@@ -56,6 +56,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 
 When you toggle the figure to see data relative to baseline, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings in 2020-2022 and average filings in 2023–2024.<sup>1</sup> 
 
-1. Eviction filing data were collected by Legal Services Corporation. Historical averages cover the years 2016-2019. Additional data were provided by Lancaster Stands Up and the CMU CREATE Lab.
+1. Eviction filing data were collected by Legal Services Corporation. Additional data were provided by Lancaster Stands Up and the CMU CREATE Lab.
 
 {{%/ report_chart %}}
