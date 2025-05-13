@@ -8,9 +8,6 @@ slug: nashville-tn
 date: 2025-01-16T16:07:21.761Z
 ---
 {{< report_intro site_id="47037" area_site="true" >}}
-
-Eviction filings in Nashville began to fall in March 2020. Compared to equivalent periods in 2017-2019, eviction filings were far below average throughout April and May of that year. Tennessee implemented a state-wide eviction moratorium between March 13, 2020 and June 1, 2020. Filings remained low in the state during this periods, but have increased since these protections were lifted.
-
 {{</ report_intro >}}
 
 

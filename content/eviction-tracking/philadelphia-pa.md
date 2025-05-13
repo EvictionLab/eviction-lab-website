@@ -10,11 +10,6 @@ title: Philadelphia, Pennsylvania | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 {{< report_intro site_id="42101" area_site="true" >}}
-
-The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31, 2020. Eviction filings related to nonpayment of rent were not accepted during that period, and filings in Philadelphia County were down to zero in April, May, and June 2020. Filings increased following the end of the moratorium. Execution of eviction orders were generally banned until at least May 16, 2021.
-
-Starting in April 2021, Philadelphia landlords were required to participate in the city's eviction diversion program before filing for eviction for non-payment of rent. 
-
 {{</ report_intro >}}
 
 

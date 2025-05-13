@@ -10,9 +10,6 @@ title: New Orleans, Louisiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 {{< report_intro site_id="22071" area_site="true" >}}
-
-Eviction filings in New Orleans fell sharply in late-March 2020 and have remained below historical averages. The state of Louisiana instituted an eviction moratorium in March 2020, but those statewide protections expired in mid-June 2020. In August and September 2021, Hurricane Ida caused local courts to close and led Governor Edwards to halt court proceedings until September 24. 
-
 {{</ report_intro >}}
 
 

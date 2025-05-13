@@ -14,13 +14,6 @@ rentersSite: New Mexico
 ---
 
 {{< report_intro site_id="35"  >}}
-
-
-
-Eviction filings in New Mexico fell sharply in early 2020. While eviction filings and hearings were allowed to proceed, on March 24, 2020, the New Mexico Supreme Court implemented a stay on the execution of writs for nonpayment of rent. This order remained in effect until early 2022.
-
-
-
 {{</ report_intro >}}
 
 

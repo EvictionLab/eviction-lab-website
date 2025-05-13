@@ -10,9 +10,6 @@ title: Hartford, Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 {{< report_intro site_id="09003" area_site="true" >}}
-
-Eviction filings in Hartford fell below average when a state-wide eviction moratorium was instituted in April 2020. These eviction protections expired on June 30, 2021.
-
 {{</ report_intro >}}
 
 

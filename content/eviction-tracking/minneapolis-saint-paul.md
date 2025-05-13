@@ -10,9 +10,6 @@ title: Minneapolis–Saint Paul, Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 {{< report_intro site_id="27053" area_site="true" >}}
-
-Eviction filings in Minneapolis-Saint Paul fell sharply in mid-March 2020 when a statewide moratorium on evictions was put in place on March 16. The moratorium was renewed each month until June 2021, after which the state [began phasing out protections](https://nlihc.org/resource/minnesotas-eviction-moratorium-ramp).
-
 {{</ report_intro >}}
 
 

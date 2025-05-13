@@ -8,9 +8,6 @@ slug: miami-fl
 date: 2024-09-28T03:27:06.983Z
 ---
 {{< report_intro site_id="12086" area_site="true" >}}
-Eviction filings in Miami fell sharply in early 2020. Florida instituted a state-wide eviction moratorium which expired at the end of July 2020. After the moratorium expired, execution of eviction orders was also delayed until October 1, 2020. 
-
-In most locations that we track, we are able to access eviction filing records shortly after they are filed with the courts. In Miami, however, these records are only available with a delay. We update this page with the most recent data that we have available. The past month reported here is the most recent month for which we have data.
 {{</ report_intro >}}
 
 

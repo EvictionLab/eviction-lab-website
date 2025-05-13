@@ -10,9 +10,6 @@ title: Columbus Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 {{< report_intro site_id="39049" area_site="true" >}}
-
-While the state of Ohio did not institute a general eviction moratorium, the courts in Franklin County (Columbus) halted the processing of non-emergency eviction filings between March 16 and June 1, 2020. 
-
 {{</ report_intro >}}
 
 
