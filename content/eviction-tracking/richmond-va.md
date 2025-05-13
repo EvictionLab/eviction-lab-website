@@ -57,7 +57,7 @@ Richmond is divided into 36 zip codes. In each of those zip codes, we map the nu
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, or Other/None. 
 
-When you toggle the figure to see data relative to baseline, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and filings in 2016-2019.<sup>1</sup>
+Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2016-2019.
 

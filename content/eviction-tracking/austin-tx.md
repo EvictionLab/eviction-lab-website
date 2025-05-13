@@ -60,7 +60,7 @@ Travis County is divided into 64 zip codes. In each of those zip codes, we map t
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Hispanic, or Other/None. This barplot shows the distribution of eviction filings in the past 12 months by neighborhood racial/ethnic majority.  
 
-When you toggle the figure to see data relative to baseline, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in 2023–2024.<sup>1</sup>
+Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup>
 
 1. Eviction filings data for 2014-2019 for Travis County were collected by [BASTA Austin](http://www.bastaaustin.org/) and [Open Austin](https://www.open-austin.org/). Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/).
 

@@ -66,7 +66,7 @@ St. Joseph County is divided into 82 census tracts. In each of those tracts, we 
 
 American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Hispanic, or Other/None. 
 
-When you toggle the figure to see data relative to baseline, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the past 12 months and average filings in 2023–2024.<sup>1</sup>
+Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup>
 
 1. Eviction filing data for St. Joseph County were collected by [LSC](https://www.lsc.gov/). 
 
