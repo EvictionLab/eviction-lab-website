@@ -1,4 +1,4 @@
-id,month_date,month_filings,month_rate,month_rate_scale_max,month_diff,pct_white,pct_black,pct_Hispanic
+id,month_date,month_filings,month_rate,month_rate_scale_max,month_diff,pct_white,pct_black,pct_hispanic
 25017300100,01/11/2022,0,0,0.0586711822257125,1,1,0,0
 25017301101,01/11/2022,0,0,0.0586711822257125,1,0.742690058479532,0.157894736842105,0.0321637426900585
 25017301102,01/11/2022,0,0,0.0586711822257125,1,0.946808510638298,0,0
