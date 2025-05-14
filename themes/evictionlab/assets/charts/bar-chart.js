@@ -204,6 +204,7 @@ Elab.BarChart = (function (Elab) {
         // yScale: chart.yScaleLines,
       });
     }
+    // TODOxxx add to chart gallery
     if (dataOptions.avgLines) {
       const lines = dataOptions.avgLines.split(";").map((lineOptions) => {
         const parts = lineOptions.split(",");
@@ -237,6 +238,7 @@ Elab.BarChart = (function (Elab) {
     };
     return parserMap[options.axis] || ((d) => d);
   };
+
   /**
    * Loads and parses the CSV table
    */
@@ -244,6 +246,9 @@ Elab.BarChart = (function (Elab) {
     const yParse = function (d) {
       return parseFloat(d);
     };
+    const yTransform = options.yTransform
+      ? Elab.Utils.createFunctionFromStr(options.yTransform)
+      : (d) => d;
     const xParse = getXParse(options);
 
     const sortFn =
@@ -262,7 +267,7 @@ Elab.BarChart = (function (Elab) {
             .map((d) => {
               const bar = {
                 x: xParse(d[options.x]),
-                y: yParse(d[options.y]),
+                y: yTransform(yParse(d[options.y])),
                 barClass: d[options.barClass],
               };
               const tooltipTemplate = options.tooltipTemplate || "";
