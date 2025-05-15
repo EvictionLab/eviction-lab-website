@@ -3076,6 +3076,9 @@ div.section.section--map .top-filers-only {
   stroke: var(--c4);
 }
 
+.section--trend .chart__line--1 {
+  stroke-width: 3;
+}
 
 .chart__hover-line {
   stroke-width: 1;

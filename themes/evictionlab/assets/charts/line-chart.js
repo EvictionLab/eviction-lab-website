@@ -167,6 +167,14 @@ Elab.LineChart = (function (Elab) {
           adjustLabels: function (selection) {
             const tickCount = selection.selectAll(".tick text").nodes().length;
 
+            if (dataOptions.filterTickMonths) {
+              // thin down to keep only provided months (eg [0,6])
+              selection
+                .selectAll(".tick text")
+                .attr("display", (d) =>
+                  dataOptions.filterTickMonths.includes(d.getMonth()) ? "block" : "none",
+                );
+            }
             if (dataOptions.maxTicks && tickCount > dataOptions.maxTicks) {
               const factorToKeep = Math.ceil(tickCount / dataOptions.maxTicks);
               // thin down to every other (or fewer) when many labels

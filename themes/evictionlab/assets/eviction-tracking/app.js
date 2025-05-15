@@ -1758,6 +1758,7 @@ Elab.Chart = (function (Elab) {
     var rootEl = $(rootEl);
     var chartEl = rootEl.find(".chart")[0]; // add button to toggle state
 
+    // TODO: update to only avg
     var countToggleEl = rootEl.find(".toggle--count");
     var avgToggleEl = rootEl.find(".toggle--avg");
     if (config.id === "avg") avgToggleEl.addClass("toggle--active");
@@ -3147,7 +3148,7 @@ Elab.MedianFilings = (function (Elab) {
     id = options.id;
     $el = $(elId);
     Elab.Data.loadData(csv, shapeLineData, function (result) {
-      data = result.sort((a, b) => a.date - b.date).slice(-12);
+     data = result.sort((a, b) => a.date - b.date).slice(-12);
       Elab.Utils.callOnEnter($el[0], render);
     });
   }
@@ -3225,6 +3226,180 @@ Elab.MedianFilings = (function (Elab) {
 })(Elab);
 
 /**
+ * TRENDS LINE CHART MODULE
+ * Similar to MedianFilings but adds toggles for y‑axis and time span.
+ */
+Elab.Trends = (function (Elab) {
+  var chartOptions = {
+    month_filings: {
+      yFormat: d3.format(",d"),
+      buttonLabel: "Filing Counts",
+      legendItems: ["FILINGS THIS YEAR", "AVERAGE FILINGS"],
+    },
+    percentage_diff: {
+      yFormat: d3.format(",.0%"),
+      buttonLabel: "Vs. Baseline",
+      legendItems: ["Past 12 Months Filings<span>relative to baseline</span>"],
+      avgLine: {
+        y: 1,
+        label: ["2023–24", "baseline"],
+      },
+    },
+    // for both metrics
+    ALL_DATA: {
+      tickMonths: [0, 6],
+    },
+    LAST_12: {},
+  };
+
+  var xCol = "month";
+  var yCols = ["month_filings", "percentage_diff"];
+  var yCol = yCols[0];
+  var avgCol = "avg_filings";
+  var showLast12 = true;
+  var allData;
+  var $el;
+  var config;
+
+  function init(elId, options) {
+    config = options;
+    $el = $(elId);
+    // load and parse CSV
+    d3.csv(config.csv, function (rows) {
+      // parse dates and numbers
+      var parseDate = d3.timeParse("%m/%Y");
+      allData = rows
+        .map((r) => {
+          const row = {
+            x: parseDate(r[xCol]),
+            avg: +r[avgCol],
+          };
+          yCols.forEach((col) => (row[col] = +r[col]));
+          return row;
+        })
+        .sort((a, b) => a.x - b.x);
+      setupToggles(elId);
+      render();
+    });
+  }
+
+  function setupToggles(elId) {
+    var root = $(elId);
+    // y‑axis toggle
+    var yButtons = root.find(".button-group.metric");
+    yButtons.empty();
+    yCols.forEach(function (col) {
+      var btn = $("<button class='toggle'>").text(chartOptions[col].buttonLabel).val(col);
+      btn.on("click", function () {
+        if (yCol === col) return;
+        yCol = col;
+        render();
+      });
+      yButtons.append(btn);
+    });
+    // time-span toggle
+    var tButtons = root.find(".button-group.time-span");
+    tButtons.empty();
+    [
+      { label: "Past year", value: true },
+      { label: "Since 01/2020", value: false },
+    ].forEach(function (opt) {
+      var btn = $("<button class='toggle'>").text(opt.label).data("last12", opt.value);
+      btn.on("click", function () {
+        if (showLast12 === opt.value) return;
+        showLast12 = opt.value;
+        render();
+      });
+      tButtons.append(btn);
+    });
+  }
+
+  function render() {
+    var data = allData
+      .map((d) => ({
+        name: "Trend",
+        x: d.x,
+        y: d[yCol],
+        avg: d.avg,
+      }))
+      .slice(showLast12 ? -12 : undefined);
+    if (yCol === "month_filings") {
+      data = [
+        ...data.map((d) => ({
+          name: "Baseline",
+          x: d.x,
+          y: d.avg,
+        })),
+        ...data,
+      ];
+    }
+
+    const { avgLine, yFormat } = chartOptions[yCol];
+    const { tickMonths } = chartOptions[showLast12 ? "LAST_12" : "ALL_DATA"];
+    var avgLines =
+      avgLine &&
+      avgLine.label.map((w, i) => ({
+        y: avgLine.y,
+        label: w,
+        // first item gets used for plotting line, rest just for the label word
+        labelOnly: !i,
+      }));
+
+    $el.find(".visual__chart svg").empty();
+    console.log("data", data, yCol, $el, $el.find(".visual__chart svg")[0]);
+    Elab.LineChart.createFigure($el.find(".visual__chart")[0], data, {
+      x: "x",
+      y: "y",
+      groupBy: "name",
+      xFormat: Elab.Utils.monthAxisFormatter,
+      xTicks: "month",
+      filterTickMonths: tickMonths,
+      yFormat: yFormat,
+      yMin: 0,
+      xTooltipFormat: d3.timeFormat("%B %Y"),
+      yTooltipFormat: yFormat,
+      avgLines,
+      margin: "8 68 60 54",
+    });
+    // update toggle active classes
+    updateToggleStates();
+    renderLegend();
+  }
+
+  function renderLegend() {
+    var LegendItem = function LegendItem(label, i) {
+      return (
+        '<div class="legend-item legend-item--' +
+        i +
+        " legend-item--" +
+        i +
+        '">' +
+        '<div class="legend-item__color"></div>' +
+        '<div class="legend-item__label">' +
+        label +
+        "</div>" +
+        "</div>"
+      );
+    };
+
+    var el = $el.find(".legend")[0];
+
+    el.innerHTML = chartOptions[yCol].legendItems.map(LegendItem).join("");
+  }
+
+  function updateToggleStates() {
+    $el.find(".button-group.metric button").each(function () {
+      $(this).toggleClass("toggle--active", $(this).val() === yCol);
+    });
+    $el.find(".button-group.time-span button").each(function () {
+      $(this).toggleClass("toggle--active", $(this).data("last12") === showLast12);
+    });
+  }
+
+  return { init: init };
+})(Elab);
+
+/**
  * SECTION MODULE
  * ---
  * Public
@@ -3245,6 +3420,9 @@ Elab.Section = (function (Elab) {
 
     if (type === "chart") {
       return Elab.Chart.init(rootEl[0], config);
+    }
+    if (type === "trends") {
+      return Elab.Trends.init(rootEl[0], config);
     }
 
     if (type === "ranking") {
