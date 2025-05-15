@@ -179,6 +179,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
 <div class="post-body pt-lg-3">
 
 <br>
+
 In Franklin County, eviction filings were higher in 2023 and 2024 than they were prior to the pandemic. That means that our post-pandemic baseline in that county is bigger than our pre-pandemic baseline. When we were comparing to pre-pandemic levels (left panel), filings between April 2024 and March 2025 were consistently above the historical average. Switching to the new, higher baseline (right panel), reported numbers are relatively smaller. 
 
 These changes are also reflected in our maps of eviction filing rates, which incorporate the new baselines. Specifically, if you select the “Relative to Baseline” option, the map now reflects a comparison between current filings and the post-pandemic baseline filings (see Figure 2 for an example in Cleveland). This update also affects our estimates of eviction filings by neighborhood racial composition when you select the “Vs. Baseline” toggle button. 
@@ -266,8 +267,11 @@ In some of the places we track, eviction filing counts in 2023 and 2024 looked s
 Of the 45 jurisdictions in the ETS—10 states and 35 metro-area sites—the new post-pandemic baseline is higher in 23 sites. For example, in {{< smartlink "Harris and Galveston Counties, Texas" "https://evictionlab.org/eviction-tracking/houston-tx/" >}}, average monthly eviction filings increased from 4,865 in the pre-pandemic baseline to 6,743 in the post-pandemic baseline, an increase of 38%. When we compare new filings to this larger post-pandemic baseline, we’re dividing by a bigger number, so they appear relatively smaller. 
 
 By contrast, our baseline has gotten much smaller in some places, most notably {{< smartlink "New York City" "https://evictionlab.org/eviction-tracking/new-york-ny/" >}}. Our pre-pandemic baseline covered the years 2016-2018 and implied a monthly average of 18,795 filings. {{< smartlink "Due to a combination of policy changes, eviction filings have been falling in NYC since at least 2019" "https://evictionlab.org/in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-before-covid-19/" >}}. The average month in the post-pandemic baseline only includes 8,130 eviction cases, less than half of what was previously normal. 
+<br><br>
 
 ### What Doesn’t Change
+
+<br>
 
 Some numbers that we report on the ETS are unaffected by the change in baseline. The change does not shift:
 
