@@ -12,15 +12,15 @@ date: 2025-05-08T15:28:51.756Z
 postauthorname: Sarah Johnson, Grace Hartley, and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: "lorem ipsum"
-listSummary: "lorem ipsum"
+description: "When we launched the Eviction Tracking System, the best way to provide context was to compare against what was typical before the pandemic. Five years later, we’ve decided it’s time to change that baseline."
+listSummary: "When we launched the Eviction Tracking System, the best way to contextualize the numbers was to compare against what was typical before the pandemic. Five years later, we’ve decided it’s time to change that baseline."
 scripts:
   - charts
   - arrow-chart2
   - mapbox
-socialDescription: "lorem ipsum"
-twImage: el-baseline-thumb.png
-fbImage: el-baseline-thumb.png
+socialDescription: "When we launched the Eviction Tracking System, the best way to provide context was to compare against what was typical before the pandemic. Five years later, we’ve decided it’s time to change that baseline."
+twImage: el-baseline-thumb2.png
+fbImage: el-baseline-thumb2.png
 image: el-baseline2.gif
 ---
 <span class="dropcap green">W</span>e launched the {{< smartlink "Eviction Tracking System" "https://evictionlab.org/eviction-tracking/" >}} (ETS) in June 2020, three months after the COVID-19 pandemic had locked down much of the country. As millions were struggling to pay their bills, we wanted to know how many new evictions landlords were filing around the country. For example, in May of 2020, 394 eviction cases were filed in {{< smartlink "Franklin County, Ohio" "https://evictionlab.org/eviction-tracking/columbus-oh/" >}}, home to Columbus and its inner-ring suburbs. 
@@ -31,7 +31,11 @@ For each site in the ETS, we established a baseline of one or more pre-pandemic 
 
 Five years after starting the ETS, we’ve decided that it’s time to change that baseline. Moving forward, we will compare current eviction filings to a “post-pandemic” baseline of filings in 2023 and 2024. We think this post-pandemic baseline will offer more relevant comparisons and better context for eviction filing data. The ETS now reflects this new baseline, and this post offers an in-depth look at what that means.
 
+<br>
+
 ### What Changes with a New Baseline
+
+<br>
 
 The total eviction filing numbers that we report remain the same, and the basic structure of each ETS site remains stable. What changes are statistics measuring change over time. To explain what this looks like, it’s helpful to take two sites: Franklin County and {{< smartlink "Philadelphia, Pennsylvania" "https://evictionlab.org/eviction-tracking/philadelphia-pa/" >}}. In March of 2025, landlords filed 1,934 eviction cases in Franklin County and 1,139 cases in Philadelphia (see Table 1). 
 
@@ -113,7 +117,7 @@ In an average month prior to the pandemic, both sites would have seen a little o
 </div>
 
 <!-- <div class="figcaption"><p>Originalish</p></div> -->
-
+<br>
 
 When we switch to our new baseline of filings in 2023 and 2024, these numbers shift. On average, in March of those two years, we would expect 1,770 eviction filings in Franklin County and 1,142 in Philadelphia. Comparing the March 2025 numbers to this new baseline, we now report that filings were 9% above average in Franklin County and only 0.3% below average in Philadelphia. 
 
@@ -174,6 +178,7 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
 <div class="page-content pt-6 pt-md-0">
 <div class="post-body pt-lg-3">
 
+<br>
 In Franklin County, eviction filings were higher in 2023 and 2024 than they were prior to the pandemic. That means that our post-pandemic baseline in that county is bigger than our pre-pandemic baseline. When we were comparing to pre-pandemic levels (left panel), filings between April 2024 and March 2025 were consistently above the historical average. Switching to the new, higher baseline (right panel), reported numbers are relatively smaller. 
 
 These changes are also reflected in our maps of eviction filing rates, which incorporate the new baselines. Specifically, if you select the “Relative to Baseline” option, the map now reflects a comparison between current filings and the post-pandemic baseline filings (see Figure 2 for an example in Cleveland). This update also affects our estimates of eviction filings by neighborhood racial composition when you select the “Vs. Baseline” toggle button. 
@@ -231,9 +236,14 @@ These changes are also reflected in our maps of eviction filing rates, which inc
   --choro4: #e99c7e;
   --choro5: #e24000; -->
 
+<br>
+
 ### Where Changes are Largest
 
+<br>
+
 In some of the places we track, eviction filing counts in 2023 and 2024 looked similar to what was typical prior to the pandemic. In these places, the change in baseline makes very little difference to the numbers we report. In other places, the changes are more pronounced. In Figure 3, we plot changes in baseline for each site. The arrows signal the size and direction of the change. A left-facing arrow means that average monthly filings are smaller under the new, post-pandemic baseline than they were under the pre-pandemic baseline. A right-facing arrow indicates the opposite: a higher baseline. 
+
 
 {{% arrow-chart2
   id="fig3"
@@ -250,6 +260,8 @@ In some of the places we track, eviction filing counts in 2023 and 2024 looked s
   legendIncArrowText="Increase"
   simpleLegend="true"
 %}}
+
+<br>
 
 Of the 45 jurisdictions in the ETS—10 states and 35 metro-area sites—the new post-pandemic baseline is higher in 23 sites. For example, in {{< smartlink "Harris and Galveston Counties, Texas" "https://evictionlab.org/eviction-tracking/houston-tx/" >}}, average monthly eviction filings increased from 4,865 in the pre-pandemic baseline to 6,743 in the post-pandemic baseline, an increase of 38%. When we compare new filings to this larger post-pandemic baseline, we’re dividing by a bigger number, so they appear relatively smaller. 
 
