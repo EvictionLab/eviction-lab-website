@@ -306,7 +306,7 @@
   padding: 1.6rem 2.4rem;
   }
   
-  .section:nth-child(2n-1) .callout {
+  .section:nth-child(2n) .callout {
     background: #fff;
 }
 .callout .callout__heading,
@@ -497,7 +497,7 @@
 }
 
 /** zebra stripe rows */
-.table__row:nth-child(2n-1) {
+.table__row:nth-child(2n) {
   background-color: var(--row-alt);
 }
 
@@ -1880,7 +1880,7 @@
   text-align: start;
 }
 
-.section:nth-child(2n).section--chart.section--race .comparison-block-wrapper {
+.section:nth-child(2n-1).section--chart.section--race .comparison-block-wrapper {
   border-color: var(--section-alt);
 }
 
@@ -2340,7 +2340,7 @@ label #labels_top-100 {
     margin-bottom: 0;
   }
 }
-.section:nth-child(2n-1) {
+.section:nth-child(2n) {
   background: var(--section-alt);
 }
 
@@ -3039,17 +3039,17 @@ div.section.section--map .top-filers-only {
 }
 
 /** alt background section */
-.section:nth-child(2n) .chart__box,
-.section:nth-child(2n) .chart__frame {
+.section:nth-child(2n-1) .chart__box,
+.section:nth-child(2n-1) .chart__frame {
   stroke: var(--section-alt);
 }
 
-.section:nth-child(2n) .chart__axis--x .domain,
-.section:nth-child(2n) .chart__axis--x .tick line {
+.section:nth-child(2n-1) .chart__axis--x .domain,
+.section:nth-child(2n-1) .chart__axis--x .tick line {
   stroke: var(--section-alt);
 }
 
-.section:nth-child(2n) .chart__axis--y .tick line {
+.section:nth-child(2n-1) .chart__axis--y .tick line {
   stroke: var(--section-alt);
 }
 
