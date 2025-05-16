@@ -1654,7 +1654,7 @@
 .intro .intro__text .data-note {
   font-family: var(--body-font-italic);
 }
-.intro div.intro__stats-wrapper {
+.intro .intro__stats-wrapper {
   /* flex-grow: 1; */
   /* letter-spacing: 0.04rem; */
   position: sticky;
@@ -1664,7 +1664,7 @@
   opacity: 0;
   transition: opacity 1s ease-in-out;
   /* let it grow 10px larger to make space for past 12 months */
-  max-width: 490px;
+  max-width: 490px !important;
 }
 .intro .intro__stats-wrapper h3 {
   color: var(--text-secondary);
