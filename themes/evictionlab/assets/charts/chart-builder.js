@@ -88,7 +88,7 @@ Elab.ChartBuilder = (function (Elab) {
       var html = render(_this.hovered, _this);
       var rect = selection.node().getBoundingClientRect();
       var xPos = Math.min(
-        window.innerWidth - rect.width / 2 - 12,
+        window.innerWidth - rect.width - 12,
         Math.max(12 + rect.width / 2, e.clientX),
       );
       selection
