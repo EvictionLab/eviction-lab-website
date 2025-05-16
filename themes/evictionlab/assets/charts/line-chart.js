@@ -125,18 +125,14 @@ Elab.LineChart = (function (Elab) {
         .addAxisY({
           selector: ySelector,
           adjustExtent: function (extent) {
-            var avgLineMax = dataOptions.avgLines &&
-              Math.max(...dataOptions.avgLines.map(l => l.y));
-            var avgLineMin = dataOptions.avgLines &&
-              Math.min(...dataOptions.avgLines.map(l => l.y));
+            var avgLineMax =
+              dataOptions.avgLines && Math.max(...dataOptions.avgLines.map((l) => l.y));
+            var avgLineMin =
+              dataOptions.avgLines && Math.min(...dataOptions.avgLines.map((l) => l.y));
 
-            var max = typeof avgLineMax !== "number"
-              ? extent[1]
-              : Math.max(extent[1], avgLineMax);
-            var min = typeof avgLineMin !== "number"
-              ? extent[0]
-              : Math.min(extent[0], avgLineMin);
-            
+            var max = typeof avgLineMax !== "number" ? extent[1] : Math.max(extent[1], avgLineMax);
+            var min = typeof avgLineMin !== "number" ? extent[0] : Math.min(extent[0], avgLineMin);
+
             var range = max - min;
 
             // buffer of 5% on either end
@@ -204,62 +200,64 @@ Elab.LineChart = (function (Elab) {
         .addHoverLine()
         .addHoverDot()
         .addVoronoi({
-          renderTooltip: function (hoverData) {
-            var yFormat = dataOptions.yTooltipFormat || dataOptions.yFormat || ".0%";
-            var yFormatter = d3.format(yFormat);
-            var xFormat = dataOptions.xTooltipFormat || dataOptions.xFormat || "%B %d, %Y";
-            var xFormatter = d3.timeFormat(xFormat);
-            function getWeekTooltip() {
-              var weekFormat = d3.timeFormat("%b %d");
-              var start = weekFormat(xSelector(hoverData));
-              var end = weekFormat(d3.timeDay.offset(xSelector(hoverData), 6));
-              return {
-                title: hoverData.name,
-                xValue: start + " - " + end,
-                yValue: yFormatter(ySelector(hoverData)),
-              };
-            }
+          renderTooltip:
+            dataOptions.renderTooltip ||
+            function (hoverData) {
+              var yFormat = dataOptions.yTooltipFormat || dataOptions.yFormat || ".0%";
+              var yFormatter = d3.format(yFormat);
+              var xFormat = dataOptions.xTooltipFormat || dataOptions.xFormat || "%B %d, %Y";
+              var xFormatter = d3.timeFormat(xFormat);
+              function getWeekTooltip() {
+                var weekFormat = d3.timeFormat("%b %d");
+                var start = weekFormat(xSelector(hoverData));
+                var end = weekFormat(d3.timeDay.offset(xSelector(hoverData), 6));
+                return {
+                  title: hoverData.name,
+                  xValue: start + " - " + end,
+                  yValue: yFormatter(ySelector(hoverData)),
+                };
+              }
 
-            function getMonthTooltip() {
-              const monthFormat = d3.timeFormat(
-                dataOptions.xTooltipFormat || dataOptions.xFormat || "%B",
+              function getMonthTooltip() {
+                const monthFormat = d3.timeFormat(
+                  dataOptions.xTooltipFormat || dataOptions.xFormat || "%B",
+                );
+                return {
+                  title: hoverData.name,
+                  xValue: monthFormat(xSelector(hoverData)),
+                  yValue: yFormatter(ySelector(hoverData)),
+                };
+              }
+
+              function getDefaultTooltip() {
+                return {
+                  title: hoverData.name,
+                  xValue: xFormatter(xSelector(hoverData)),
+                  yValue: yFormatter(ySelector(hoverData)),
+                };
+              }
+
+              const tooltip =
+                dataOptions.xTicks === "week"
+                  ? getWeekTooltip()
+                  : dataOptions.xTicks === "month"
+                  ? getMonthTooltip()
+                  : getDefaultTooltip();
+
+              return (
+                '<h1 class="tooltip__title">' +
+                tooltip.title +
+                "</h1>" +
+                '<div class="tooltip__item">' +
+                "<span>" +
+                tooltip.xValue +
+                ":</span>" +
+                "<span> " +
+                tooltip.yValue +
+                "</span>" +
+                "</div>"
               );
-              return {
-                title: hoverData.name,
-                xValue: monthFormat(xSelector(hoverData)),
-                yValue: yFormatter(ySelector(hoverData)),
-              };
-            }
-
-            function getDefaultTooltip() {
-              return {
-                title: hoverData.name,
-                xValue: xFormatter(xSelector(hoverData)),
-                yValue: yFormatter(ySelector(hoverData)),
-              };
-            }
-
-            const tooltip =
-              dataOptions.xTicks === "week"
-                ? getWeekTooltip()
-                : dataOptions.xTicks === "month"
-                ? getMonthTooltip()
-                : getDefaultTooltip();
-
-            return (
-              '<h1 class="tooltip__title">' +
-              tooltip.title +
-              "</h1>" +
-              '<div class="tooltip__item">' +
-              "<span>" +
-              tooltip.xValue +
-              ":</span>" +
-              "<span> " +
-              tooltip.yValue +
-              "</span>" +
-              "</div>"
-            );
-          },
+            },
         })
         // vertical lines marking dates
         .addMarkLine({
