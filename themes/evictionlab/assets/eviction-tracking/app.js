@@ -3223,6 +3223,8 @@ Elab.MedianFilings = (function (Elab) {
 Elab.Trends = (function (Elab) {
   var chartOptions = {
     month_filings: {
+      // leaves out year bc baseline value is not from the same year
+      xFormat: d3.timeFormat("%B"),
       yFormat: d3.format(",d"),
       buttonLabel: "Filing Counts",
       legendItems: {
@@ -3231,6 +3233,7 @@ Elab.Trends = (function (Elab) {
       },
     },
     percentage_diff: {
+      xFormat: d3.timeFormat("%B %Y"),
       yFormat: d3.format(",.0%"),
       buttonLabel: "Vs. Baseline",
       legendItems: {
@@ -3250,7 +3253,6 @@ Elab.Trends = (function (Elab) {
   };
 
   var xCol = "month";
-  var xFormat = d3.timeFormat("%B %Y");
   var yCols = ["month_filings", "percentage_diff"];
   var yCol = yCols[1];
   var avgCol = "avg_filings";
@@ -3365,7 +3367,7 @@ Elab.Trends = (function (Elab) {
   }
 
   function renderTooltip(hoverData) {
-    const { yFormat } = chartOptions[yCol];
+    const { yFormat, xFormat } = chartOptions[yCol];
 
     if (yCol === "month_filings")
       return `
