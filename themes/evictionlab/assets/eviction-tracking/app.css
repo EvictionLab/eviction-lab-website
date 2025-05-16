@@ -3282,7 +3282,7 @@ span.value--up {
   min-width: 80px;
   margin-right: 8px;
 }
-.chart__tooltip--trends .tooltip__item--multi span:first-child {
+.chart__tooltip--filing-trends .tooltip__item--multi span:first-child {
   min-width: 0;
 }
 
