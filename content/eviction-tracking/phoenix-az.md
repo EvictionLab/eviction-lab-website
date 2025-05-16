@@ -14,9 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/phoenix_barchart.csv" %}}
-
-
+{{% trends_chart id="trends" data="/uploads/phoenix_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -25,18 +23,7 @@ This plot shows monthly eviction filings in Phoenix over the past 12 months. Fil
 1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). 
 
 
-
-
-
-
-
-
-
-
-
-
-
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 {{% report_median_claims id="medianFilings" data="/uploads/phoenix_claims_monthly.csv" %}}

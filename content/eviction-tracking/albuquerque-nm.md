@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/albuquerque_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/albuquerque_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -22,12 +22,7 @@ This plot shows monthly eviction filings in Bernalillo County (Albuquerque) over
 1. Data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). 
 
 
-
-
-
-
-
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 
