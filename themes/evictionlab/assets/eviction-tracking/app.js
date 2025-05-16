@@ -261,13 +261,6 @@ Elab.Utils = (function (Elab) {
         }
       });
 
-      // console.log({ someCompFound, comps });
-      // if (someCompFound) {
-      //   var $displayEl = $(elToDisplay);
-      //   console.log({ someCompFound, elToDisplay, $displayEl });
-      //   window.dd = $displayEl;
-      //   setTimeout(() => $el.css("opacity", 1), 1);
-      // }
       Elab.Utils.callOnEnter($el[0], () => $el.toggleClass("in-view"));
       callback && callback(someCompFound);
     });
@@ -506,8 +499,6 @@ Elab.Config = (function (Elab) {
    */
 
   function groupItems(items, selector) {
-    window.items = items;
-    window.selector = selector;
     var xValues = items.reduce(function (values, item, i) {
       item.data.forEach(function (d) {
         var value = selector(d);
@@ -3148,7 +3139,7 @@ Elab.MedianFilings = (function (Elab) {
     id = options.id;
     $el = $(elId);
     Elab.Data.loadData(csv, shapeLineData, function (result) {
-     data = result.sort((a, b) => a.date - b.date).slice(-12);
+      data = result.sort((a, b) => a.date - b.date).slice(-12);
       Elab.Utils.callOnEnter($el[0], render);
     });
   }
@@ -3234,12 +3225,18 @@ Elab.Trends = (function (Elab) {
     month_filings: {
       yFormat: d3.format(",d"),
       buttonLabel: "Filing Counts",
-      legendItems: ["FILINGS THIS YEAR", "AVERAGE FILINGS"],
+      legendItems: {
+        ALL_DATA: ["filings", "baseline filings"],
+        LAST_12: ["filings", "baseline filings"],
+      },
     },
     percentage_diff: {
       yFormat: d3.format(",.0%"),
       buttonLabel: "Vs. Baseline",
-      legendItems: ["Past 12 Months Filings<span>relative to baseline</span>"],
+      legendItems: {
+        ALL_DATA: ["filings<span>relative to baseline</span>"],
+        LAST_12: ["filings<span>relative to baseline</span>"],
+      },
       avgLine: {
         y: 1,
         label: ["2023–24", "baseline"],
@@ -3253,8 +3250,9 @@ Elab.Trends = (function (Elab) {
   };
 
   var xCol = "month";
+  var xFormat = d3.timeFormat("%B %Y");
   var yCols = ["month_filings", "percentage_diff"];
-  var yCol = yCols[0];
+  var yCol = yCols[1];
   var avgCol = "avg_filings";
   var showLast12 = true;
   var allData;
@@ -3317,7 +3315,7 @@ Elab.Trends = (function (Elab) {
   function render() {
     var data = allData
       .map((d) => ({
-        name: "Trend",
+        name: "Filings",
         x: d.x,
         y: d[yCol],
         avg: d.avg,
@@ -3329,6 +3327,7 @@ Elab.Trends = (function (Elab) {
           name: "Baseline",
           x: d.x,
           y: d.avg,
+          V_IGNORE: true,
         })),
         ...data,
       ];
@@ -3346,24 +3345,52 @@ Elab.Trends = (function (Elab) {
       }));
 
     $el.find(".visual__chart svg").empty();
-    console.log("data", data, yCol, $el, $el.find(".visual__chart svg")[0]);
     Elab.LineChart.createFigure($el.find(".visual__chart")[0], data, {
       x: "x",
       y: "y",
       groupBy: "name",
       xFormat: Elab.Utils.monthAxisFormatter,
       xTicks: "month",
-      filterTickMonths: tickMonths,
       yFormat: yFormat,
       yMin: 0,
-      xTooltipFormat: d3.timeFormat("%B %Y"),
-      yTooltipFormat: yFormat,
+      filterTickMonths: tickMonths,
+      height: 330,
+      renderTooltip: renderTooltip,
       avgLines,
       margin: "8 68 60 54",
     });
     // update toggle active classes
     updateToggleStates();
     renderLegend();
+  }
+
+  function renderTooltip(hoverData) {
+    const { yFormat } = chartOptions[yCol];
+
+    if (yCol === "month_filings")
+      return `
+      <h1 class="tooltip__title">${xFormat(hoverData.x)}</h1>
+      <div class="chart__tooltip-row chart__tooltip-row--0">
+      <div class="tooltip__item tooltip__item--multi">
+        <span>Filings:</span>${yFormat(hoverData.y)}
+      </div>
+      </div>
+      <div class="chart__tooltip-row chart__tooltip-row--1">
+      <div class="tooltip__item tooltip__item--multi">
+        <span>Baseline Filings:</span>${yFormat(hoverData.avg)}
+      </div>
+      </div>
+    `;
+
+    var amt = hoverData.y - 1;
+    var dir = amt > 0 ? "up" : "down";
+    return `
+      <h1 class="tooltip__title">${xFormat(hoverData.x)}</h1>
+      <div class="tooltip__item--${dir}">
+        Filings <span>${dir} ${yFormat(Math.abs(amt))}</span> from baseline
+      </div>
+      </div>
+    `;
   }
 
   function renderLegend() {
@@ -3384,7 +3411,9 @@ Elab.Trends = (function (Elab) {
 
     var el = $el.find(".legend")[0];
 
-    el.innerHTML = chartOptions[yCol].legendItems.map(LegendItem).join("");
+    el.innerHTML = chartOptions[yCol].legendItems[showLast12 ? "LAST_12" : "ALL_DATA"]
+      .map(LegendItem)
+      .join("");
   }
 
   function updateToggleStates() {

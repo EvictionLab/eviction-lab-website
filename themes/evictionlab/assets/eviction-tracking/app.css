@@ -2380,6 +2380,9 @@ label #labels_top-100 {
   max-width: 296px;
   justify-content: center;
 }
+.section--trends .legend {
+  flex-direction: column;
+}
 .section .section__content {
   position: relative;
   max-width: 1146px;
@@ -3076,7 +3079,7 @@ div.section.section--map .top-filers-only {
   stroke: var(--c4);
 }
 
-.section--trend .chart__line--1 {
+.section--trends .chart__line--1 {
   stroke-width: 3;
 }
 
@@ -3248,6 +3251,7 @@ span.value--down {
   font-weight: 700;
   color: rgb(67, 202, 189);
 }
+/* TODO */
 .map__tooltip-row--up span,
 .tooltip__item--up span,
 span.value--up {
@@ -3277,6 +3281,9 @@ span.value--up {
   font-weight: 700;
   min-width: 80px;
   margin-right: 8px;
+}
+.chart__tooltip--trends .tooltip__item--multi span:first-child {
+  min-width: 0;
 }
 
 .tooltip__item--multi span + span {
@@ -3319,14 +3326,15 @@ span.value--up {
   background: var(--c4);
 }
 /** avg chart overrides */
-.chart__tooltip--avg .chart__tooltip-row--0 .tooltip__item--multi:before {
+/* .chart__tooltip--avg .chart__tooltip-row--0 .tooltip__item--multi:before {
   background: var(--c2);
 }
 .chart__tooltip--avg .chart__tooltip-row--1 .tooltip__item--multi:before {
   background: var(--c1);
 }
+*/
 
-.section--avg .visual__toggle {
+.section--trends .visual__toggle {
   display: flex;
   justify-content: start;
   margin-left: 48px;

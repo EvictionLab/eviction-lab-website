@@ -7,7 +7,7 @@
 {{ $imputedNoteNumber := .Get `imputedNoteNumber` }}
 <section
   id="{{ .Get `id` }}"
-  class="section section--chart section--trend"
+  class="section section--chart section--trends"
 >
   <div class="section__content">
     <div class="details">{{ .Inner }}</div>
@@ -15,7 +15,7 @@
       <div class="visual__header">
         <h3 class="visual__title"></h3>
       </div>
-      <div id="avg" class="visual__chart"><svg></svg></div>
+      <div id="trends" class="visual__chart"><svg></svg></div>
       <div class="visual__toggle d-flex">
         <div class="button-group metric"></div>
         <div class="button-group time-span"></div>
