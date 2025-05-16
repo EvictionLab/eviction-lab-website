@@ -3254,7 +3254,7 @@ Elab.Trends = (function (Elab) {
 
   var xCol = "month";
   var yCols = ["month_filings", "percentage_diff"];
-  var yCol = yCols[1];
+  var yCol = yCols[0];
   var avgCol = "avg_filings";
   var showLast12 = true;
   var allData;
