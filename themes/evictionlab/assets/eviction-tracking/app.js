@@ -54,10 +54,9 @@ var Elab = Elab || {};
  */
 
 Elab.Utils = (function (Elab) {
-  function isNumeric(val) {
-    return (
-      val !== "" && val !== undefined && val !== null && !isNaN(val) && typeof val !== "boolean"
-    );
+  function isNumberLike(value) {
+    if (!["string", "number"].includes(typeof value)) return false;
+    return value !== "" && !Number.isNaN(Number(value));
   }
 
   /**
@@ -161,7 +160,7 @@ Elab.Utils = (function (Elab) {
       var someStatFound = false;
 
       var createStat = (val, stat, isSubStat) => {
-        var missingVal = !Elab.Utils.isNumeric(val);
+        var missingVal = !Elab.Utils.isNumberLike(val);
         var fVal = missingVal ? stat.default : stat.formatter ? stat.formatter(val) : val;
 
         var tooltipContent = missingVal ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
@@ -225,7 +224,7 @@ Elab.Utils = (function (Elab) {
       var someCompFound = false;
 
       var createComp = (vals, comp) => {
-        var fVals = vals.map((v) => (Elab.Utils.isNumeric(v) ? comp.formatter(v) : ""));
+        var fVals = vals.map((v) => (Elab.Utils.isNumberLike(v) ? comp.formatter(v) : ""));
         var bars = fVals.map((v, i) => {
           if (v === undefined) return "";
           const width = vals[i] * 100;
@@ -252,10 +251,10 @@ Elab.Utils = (function (Elab) {
       comps.forEach((s) => {
         var vals = getVals(dataMap[s.file], s);
         // create a comparison for any metric with at least one value...
-        if (Elab.Utils.isNumeric(vals[0]) || Elab.Utils.isNumeric(vals[1])) {
+        if (Elab.Utils.isNumberLike(vals[0]) || Elab.Utils.isNumberLike(vals[1])) {
           // ...but both values must exist for some metric to merit displaying the block
           someCompFound =
-            someCompFound || (Elab.Utils.isNumeric(vals[0]) && Elab.Utils.isNumeric(vals[1]));
+            someCompFound || (Elab.Utils.isNumberLike(vals[0]) && Elab.Utils.isNumberLike(vals[1]));
           var comp = createComp(vals, s);
           $el.append(comp);
         }
@@ -434,7 +433,7 @@ Elab.Utils = (function (Elab) {
     group: group,
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
-    isNumeric: isNumeric,
+    isNumberLike: isNumberLike,
     slugify: slugify,
     createTwitterLink: createTwitterLink,
     createBlueskyLink: createBlueskyLink,
@@ -1164,7 +1163,7 @@ Elab.Chart = (function (Elab) {
       // get rid of groups w/o data to plot
       data = data.filter((d) => {
         var v = d[config.data.y.col];
-        return Elab.Utils.isNumeric(v);
+        return Elab.Utils.isNumberLike(v);
       });
     }
     var result = {
