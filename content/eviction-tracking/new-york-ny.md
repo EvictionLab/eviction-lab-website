@@ -16,7 +16,7 @@ geographies: zips
 
 
 
-{{% report_chart id="avg" data="/uploads/newyork_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/newyork_barchart.csv" %}}
 
 
 
@@ -28,7 +28,7 @@ This plot shows monthly eviction filings in New York City over the past 12 month
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 {{% report_median_claims id="medianFilings" data="/uploads/new york_claims_monthly.csv" %}}

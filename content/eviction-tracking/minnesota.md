@@ -16,7 +16,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/minnesota_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/minnesota_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -24,7 +24,7 @@ This plot shows monthly eviction filings in Minnesota over the past 12 months. F
 
 1. Eviction filing data for Minnesota were provided by the [Court Services Division of the Minnesota Judicial Branch](<1. https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx>). 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

@@ -11,7 +11,7 @@ date: 2025-01-16T16:07:21.761Z
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/nashville_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/nashville_barchart.csv" %}}
 
 
 
@@ -23,7 +23,7 @@ This plot shows monthly eviction filings in Nashville over the past 12 months. F
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

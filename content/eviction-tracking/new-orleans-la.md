@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/neworleans_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/neworleans_barchart.csv" %}}
 
 
 
@@ -27,7 +27,7 @@ This plot shows monthly eviction filings in New Orleans over the past 12 months.
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 {{% report_median_claims id="medianFilings" data="/uploads/new orleans_claims_monthly.csv" %}}

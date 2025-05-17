@@ -19,7 +19,7 @@ Filing counts in some counties for baseline years may differ slightly compared t
 {{< /report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/wisconsin_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/wisconsin_barchart.csv" %}}
 
 
 
@@ -32,7 +32,7 @@ This plot shows monthly eviction filings in Wisconsin were higher than average i
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/columbus_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/columbus_barchart.csv" %}}
 
 
 
@@ -30,7 +30,7 @@ This plot shows monthly eviction filings in Columbus over the past 12 months. Fi
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

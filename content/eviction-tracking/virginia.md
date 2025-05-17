@@ -17,7 +17,7 @@ Virginia implemented a state-wide eviction moratorium between March 16, 2020 and
 {{< /report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/virginia_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/virginia_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -25,7 +25,7 @@ This plot shows monthly eviction filings in Virginia over the past 12 months. Fi
 
 1. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

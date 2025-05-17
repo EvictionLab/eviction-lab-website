@@ -11,7 +11,7 @@ date: 2024-08-30T17:28:49.024Z
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/providence_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/providence_barchart.csv" %}}
 
 
 
@@ -31,7 +31,7 @@ This plot shows monthly eviction filings in Providence County over the past 12 m
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

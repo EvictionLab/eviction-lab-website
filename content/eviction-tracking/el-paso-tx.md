@@ -18,7 +18,7 @@ El Paso Intro
 
 {{%/ report_intro %}}
 
-{{% report_chart id="avg" data="/uploads/richmond_w17_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/richmond_w17_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -26,7 +26,7 @@ This plot shows monthly eviction filings in El Paso over the past 12 months. Fil
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2015
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 {{% report_map shapes="/uploads/richmond_shapes.json" data="/uploads/richmond_w17_map.csv" %}}
 

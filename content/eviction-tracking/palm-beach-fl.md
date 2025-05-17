@@ -11,7 +11,7 @@ date: 2024-07-02T03:27:06.983Z
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/palmbeach_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/palmbeach_barchart.csv" %}}
 
 
 
@@ -23,7 +23,7 @@ This plot shows monthly eviction filings in Palm Beach over the past 12 months. 
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

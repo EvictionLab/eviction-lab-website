@@ -16,7 +16,7 @@ geographies: zips
 
 
 
-{{% report_chart id="avg" data="/uploads/austin_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/austin_barchart.csv" %}}
 
 
 
@@ -29,7 +29,7 @@ This plot shows monthly eviction filings in Austin over the past 12 months. Fili
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

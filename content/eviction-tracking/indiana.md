@@ -18,7 +18,7 @@ rentersSite: Indiana
 
 
 
-{{% report_chart id="avg" data="/uploads/indiana_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/indiana_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -26,7 +26,7 @@ This plot shows monthly eviction filings in Indiana over the past 12 months. Fil
 
 1. Eviction filing data for Indiana were collected by [LSC](https://www.lsc.gov/). 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

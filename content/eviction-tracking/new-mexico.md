@@ -18,7 +18,7 @@ rentersSite: New Mexico
 
 
 
-{{% report_chart id="avg" data="/uploads/newmexico_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/newmexico_barchart.csv" %}}
 
 
 
@@ -30,7 +30,7 @@ This plot shows monthly eviction filings in New Mexico over the past 12 months. 
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

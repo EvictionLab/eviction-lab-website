@@ -24,7 +24,7 @@ Filings information for Boston is currently unavailable while we fix an error in
 
 
 
-{{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/boston_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -33,5 +33,5 @@ This plot shows monthly eviction filings in Boston over the past 12 months. Fili
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 -->

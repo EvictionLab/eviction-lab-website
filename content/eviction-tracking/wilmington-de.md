@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/wilmington_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/wilmington_barchart.csv" %}}
 
 
 
@@ -25,7 +25,7 @@ This plot shows monthly eviction filings in Wilmington over the past 12 months. 
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

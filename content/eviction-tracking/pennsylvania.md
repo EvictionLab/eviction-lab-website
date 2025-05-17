@@ -19,7 +19,7 @@ Our state-wide counts of eviction filings are slight underestimates when compare
 {{< /report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/pennsylvania_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/pennsylvania_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -27,7 +27,7 @@ This plot shows monthly eviction filings in Pennsylvania over the past 12 months
 
 1. Eviction filing data were collected by [Legal Services Corporation](https://www.lsc.gov/). Additional data was provided by [Lancaster Stands Up](https://lancasterstandsup.org/).
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

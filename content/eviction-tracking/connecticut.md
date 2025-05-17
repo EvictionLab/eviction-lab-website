@@ -23,7 +23,7 @@ Eviction filings in Connecticut fell significantly below average when a state-wi
 
 
 
-{{% report_chart id="avg" data="/uploads/connecticut_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/connecticut_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -31,7 +31,7 @@ This plot shows monthly eviction filings in Connecticut over the past 12 months.
 
 1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

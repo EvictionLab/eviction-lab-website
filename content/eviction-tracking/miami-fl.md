@@ -11,7 +11,7 @@ date: 2024-09-28T03:27:06.983Z
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/miami_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/miami_barchart.csv" %}}
 
 
 
@@ -23,7 +23,7 @@ This plot shows monthly eviction filings in Miami over the past 12 months. Filin
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

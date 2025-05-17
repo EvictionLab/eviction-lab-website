@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/stlouis_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/stlouis_barchart.csv" %}}
 
 
 
@@ -30,7 +30,7 @@ This plot shows monthly eviction filings in St. Louis City and St. Louis County 
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

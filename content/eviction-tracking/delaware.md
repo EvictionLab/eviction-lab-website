@@ -23,7 +23,7 @@ Delaware implemented a state-wide eviction moratorium between March 17 and July 
 
 
 
-{{% report_chart id="avg" data="/uploads/delaware_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/delaware_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -31,7 +31,7 @@ This plot shows monthly eviction filings in Delaware over the past 12 months. Fi
 
 1. Eviction filing data for Delaware were collected by [LSC](https://www.lsc.gov/). 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

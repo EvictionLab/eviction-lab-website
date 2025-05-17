@@ -13,7 +13,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/minneapolis_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/minneapolis_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -21,7 +21,7 @@ This plot shows monthly eviction filings in the Twin Cities over the past 12 mon
 
 1. Eviction filing data for Hennepin and Ramsey Counties were provided by the [Court Services Division of the Minnesota Judicial Branch](https://www.mncourts.gov/State-Court-Administrators-Office/Court-Services.aspx). 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 

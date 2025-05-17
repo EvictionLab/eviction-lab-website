@@ -12,7 +12,7 @@ date: 2023-02-09T18:00:25.655Z
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/rhode_island_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/rhode_island_barchart.csv" %}}
 
 
 
@@ -32,7 +32,7 @@ This plot shows monthly eviction filings in Rhode Island over the past 12 months
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 
