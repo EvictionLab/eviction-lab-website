@@ -228,6 +228,7 @@ caption="Colors represent state eviction policy scores from our <a href='#'>COVI
   xTicks="month"
   xFormat="%b"
   xTooltipFormat="%B"
+  yMin="0"
   yFormat=".0%"
   highlight="Cincinnati;Houston;New York;Philadelphia;Phoenix"
   title="Line chart ex. 2"
