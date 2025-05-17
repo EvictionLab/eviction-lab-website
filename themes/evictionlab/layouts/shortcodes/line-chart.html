@@ -23,41 +23,29 @@
   {{ end }}
   <script>
     window.addEventListener('load', function() {
-      // identifier for chart (must be unique on page)
-      var id = {{ .Get "id" }}
-      // url to csv file
-      var csv = {{ .Get "data" }}
-      // column name to use for x values
-      var x = {{ .Get "x" }}
-      // column name to use for y values
-      var y = {{ .Get "y" }}
-      var yMin = {{ .Get "yMin" }}
-        var yMax = {{ .Get "yMax" }}
-      // column name to group entries by
-      var groupBy = {{ .Get "groupBy" }}
-      // number of y ticks to show
-      var yTicks = {{ .Get "yTicks" }}
-      // d3 formatting string for y values
-      var yFormat = {{ .Get "yFormat" }}
-      // label for y axis
-      var yLabel = {{ .Get "yLabel" }}
-      // frequency of x ticks (e.g. week, month)
-      var xTicks = {{ .Get "xTicks" }}
-      // max x ticks (more will be thinned)
-      var maxTicks = {{ .Get "maxTicks" }}
-      // d3 formatting string for x values
-      var xFormat = {{ .Get "xFormat" }}
-      // semi-colon separated string of data groups to highlight
-      var highlight = {{ .Get "highlight" }}
-      // true if lines should be curved
-      var curve = {{ .Get "curve" }}
-      // formatter for x values on tooltip
-      var xTooltipFormat = {{ .Get "xTooltipFormat" }}
-      // formatter for y values on tooltip
-      var yTooltipFormat = {{ .Get "yTooltipFormat" }}
-      var mark = {{ .Get "mark" }}
-      var rootEl = document.getElementById(id);
-      Elab.LineChart.init(rootEl, { data: csv, x: x, y: y, yMin: yMin, groupBy: groupBy, yTicks: yTicks, yFormat: yFormat, yLabel: yLabel, xTicks: xTicks, maxTicks: maxTicks, xFormat: xFormat, highlight: highlight, curve: curve, xTooltipFormat: xTooltipFormat, yTooltipFormat: yTooltipFormat, mark: mark })
+      Elab.LineChart.init(document.getElementById({{ .Get `id` }}), {
+        data: {{ .Get `data` }},
+        x: {{ .Get `x` }},
+        y: {{ .Get `y` }},
+        yMin: {{ .Get `yMin` }},
+        yMax: {{ .Get `yMax` }},
+        groupBy: {{ .Get `groupBy` }},
+        yTicks: {{ .Get `yTicks` }},
+        yFormat: {{ .Get `yFormat` }},
+        yLabel: {{ .Get `yLabel` }},
+        xTicks: {{ .Get `xTicks` }},
+        maxTicks: {{ .Get `maxTicks` }},
+        xFormat: {{ .Get `xFormat` }},
+        highlight: {{ .Get `highlight` }},
+        curve: {{ .Get `curve` }},
+        xAsNameInTooltip: {{ .Get `xAsNameInTooltip` }},
+        xTooltipFormat: {{ .Get `xTooltipFormat` }},
+        yTooltipFormat: {{ .Get `yTooltipFormat` }},
+        yTransform: {{ .Get `yTransform` }},
+        avgLines: {{ .Get `avgLines` }},
+        margin: {{ .Get `margin` }},
+        mark: {{ .Get `mark` }}
+      });
     });
   </script>
 </div>

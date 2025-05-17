@@ -244,19 +244,18 @@ Elab.LineChart = (function (Elab) {
                   ? getMonthTooltip()
                   : getDefaultTooltip();
 
-              return (
-                '<h1 class="tooltip__title">' +
-                tooltip.title +
-                "</h1>" +
-                '<div class="tooltip__item">' +
-                "<span>" +
-                tooltip.xValue +
-                ":</span>" +
-                "<span> " +
-                tooltip.yValue +
-                "</span>" +
-                "</div>"
-              );
+              if (dataOptions.xAsNameInTooltip) {
+                tooltip.title = tooltip.xValue;
+                tooltip.xValue = "";
+              }
+
+              return `
+                <h1 class="tooltip__title">${tooltip.title}</h1>
+                <div class="tooltip__item">
+                  ${!!tooltip.xValue ? `<span>${tooltip.xValue}:</span>` : ""}
+                  <span> ${tooltip.yValue}</span>
+                </div>
+                `;
             },
         })
         // vertical lines marking dates
@@ -280,13 +279,16 @@ Elab.LineChart = (function (Elab) {
    */
   function loadData(options, callback) {
     var parseDate = d3.timeParse("%m/%d/%Y");
+    const yTransform = options.yTransform
+      ? Elab.Utils.createFunctionFromStr(options.yTransform)
+      : d => d;
     d3.csv(options.data, function (data) {
       var result = data
         .map(function (d) {
           return {
             name: d[options.groupBy],
             x: parseDate(d[options.x]),
-            y: parseFloat(d[options.y]),
+            y: yTransform(parseFloat(d[options.y])),
           };
         })
         .sort(function (a, b) {
@@ -306,8 +308,20 @@ Elab.LineChart = (function (Elab) {
     options.x = options.x || "x";
     options.y = options.y || "y";
     options.groupBy = options.groupBy || "name";
+    if (options.avgLines) {
+      options.avgLines = options.avgLines.split(";").map((lineOptions) => {
+        const parts = lineOptions.split(",");
+        return {
+          y: parseFloat(parts[0]),
+          label: parts[1],
+          labelOnly: parts[2] === "true",
+        };
+      });
+    }
     loadData(options, function (data) {
       createFigure(rootEl, data, options);
+      // HACK: gets the chart to resize, which properly makes room for its axis labels
+      window.dispatchEvent(new Event("resize"));
     });
   }
 
