@@ -5,15 +5,12 @@ title: Miami, Florida | Eviction Tracking System
 h1: Miami, Florida
 rentersSite: Miami
 slug: miami-fl
-date: 2024-09-28T03:27:06.983Z
+date: 2025-05-21T03:27:06.983Z
 ---
 {{< report_intro site_id="12086" area_site="true" >}}
 {{</ report_intro >}}
 
-
 {{% trends_chart id="trends" data="/uploads/miami_barchart.csv" %}}
-
-
 
 # Trends in eviction filings
 
@@ -21,21 +18,17 @@ This plot shows monthly eviction filings in Miami over the past 12 months. Filin
 
 1. Eviction filing data for Miami-Dade County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. 
 
-
-
 {{%/ trends_chart %}}
-
 
 
 {{% report_map shapes="/uploads/miami_shapes.json" data="/uploads/miami_map.csv" %}}
 
 # The geography of eviction filings
 
-Miami-Dade County is divided into 707 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup> <sup>3</sup>
+Miami-Dade County is divided into 707 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Miami-Dade County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
-3. We are unable to assign many cases from prior to 2020 in Miami-Dade County to a census tract due to missing street address information. As a result, the “Filings Relative to Average” tab in Miami-Dade County is currently unavailable.
 
 {{%/ report_map %}}
 
@@ -51,6 +44,5 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup> <sup>2</sup>
 
 1. Eviction filing data for Miami-Dade County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. 
-2. We are unable to assign many cases from prior to 2020 in Miami-Dade County to a census tract due to missing street address information. As a result, the “.vs Average” tab in the Eviction Filings by Neighborhood race/ethnicity is currently unavailable.
 
 {{%/ report_chart %}}
