@@ -2447,7 +2447,7 @@ Elab.Map = (function (Elab) {
       });
 
       if (!extents || extents.includes(undefined)) {
-        console.log("No extents provided for point legend.");
+        // console.log("No extents provided for point legend.");
         return;
       }
       // the set of elements to display if we have top filers data

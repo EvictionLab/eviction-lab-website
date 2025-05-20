@@ -107,7 +107,7 @@
       };
       var getValFromRow = (row, stat) => {
         if (!row || !row[stat.field]) {
-          console.log("missing data for ", row, stat.field);
+          // console.log("missing data for ", row, stat.field);
           return null;
         }
         return row[stat.field];
