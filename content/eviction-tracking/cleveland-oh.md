@@ -21,7 +21,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Cleveland over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup> <sup>2</sup>
+This plot shows monthly eviction filings in Cleveland over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
 1. Eviction filing data for the city of Cleveland are collected by [LSC](https://www.lsc.gov/).
 
