@@ -125,26 +125,22 @@ Elab.LineChart = (function (Elab) {
         .addAxisY({
           selector: ySelector,
           adjustExtent: function (extent) {
-            var avgLineMax = dataOptions.avgLines &&
-              Math.max(...dataOptions.avgLines.map(l => l.y));
-            var avgLineMin = dataOptions.avgLines &&
-              Math.min(...dataOptions.avgLines.map(l => l.y));
+            var avgLineMax =
+              dataOptions.avgLines && Math.max(...dataOptions.avgLines.map((l) => l.y));
+            var avgLineMin =
+              dataOptions.avgLines && Math.min(...dataOptions.avgLines.map((l) => l.y));
 
-            var max = typeof avgLineMax !== "number"
-              ? extent[1]
-              : Math.max(extent[1], avgLineMax);
-            var min = typeof avgLineMin !== "number"
-              ? extent[0]
-              : Math.min(extent[0], avgLineMin);
-            
+            var max = typeof avgLineMax !== "number" ? extent[1] : Math.max(extent[1], avgLineMax);
+            var min = typeof avgLineMin !== "number" ? extent[0] : Math.min(extent[0], avgLineMin);
+
             var range = max - min;
 
             // buffer of 5% on either end
             var extentL = min - range * 0.05;
             var extentH = max + range * 0.05;
             // unless overridden directly
-            if (dataOptions.yMin) extentL = parseFloat(dataOptions.yMin);
-            if (dataOptions.yMax) extentH = parseFloat(dataOptions.yMax);
+            if (Elab.Utils.isNumberLike(dataOptions.yMin)) extentL = parseFloat(dataOptions.yMin);
+            if (Elab.Utils.isNumberLike(dataOptions.yMax)) extentH = parseFloat(dataOptions.yMax);
             return [extentL, extentH];
           },
           ticks: dataOptions.yTicks || 5,
@@ -167,6 +163,14 @@ Elab.LineChart = (function (Elab) {
           adjustLabels: function (selection) {
             const tickCount = selection.selectAll(".tick text").nodes().length;
 
+            if (dataOptions.filterTickMonths) {
+              // thin down to keep only provided months (eg [0,6])
+              selection
+                .selectAll(".tick text")
+                .attr("display", (d) =>
+                  dataOptions.filterTickMonths.includes(d.getMonth()) ? "block" : "none",
+                );
+            }
             if (dataOptions.maxTicks && tickCount > dataOptions.maxTicks) {
               const factorToKeep = Math.ceil(tickCount / dataOptions.maxTicks);
               // thin down to every other (or fewer) when many labels
@@ -196,62 +200,63 @@ Elab.LineChart = (function (Elab) {
         .addHoverLine()
         .addHoverDot()
         .addVoronoi({
-          renderTooltip: function (hoverData) {
-            var yFormat = dataOptions.yTooltipFormat || dataOptions.yFormat || ".0%";
-            var yFormatter = d3.format(yFormat);
-            var xFormat = dataOptions.xTooltipFormat || dataOptions.xFormat || "%B %d, %Y";
-            var xFormatter = d3.timeFormat(xFormat);
-            function getWeekTooltip() {
-              var weekFormat = d3.timeFormat("%b %d");
-              var start = weekFormat(xSelector(hoverData));
-              var end = weekFormat(d3.timeDay.offset(xSelector(hoverData), 6));
-              return {
-                title: hoverData.name,
-                xValue: start + " - " + end,
-                yValue: yFormatter(ySelector(hoverData)),
-              };
-            }
+          renderTooltip:
+            dataOptions.renderTooltip ||
+            function (hoverData) {
+              var yFormat = dataOptions.yTooltipFormat || dataOptions.yFormat || ".0%";
+              var yFormatter = d3.format(yFormat);
+              var xFormat = dataOptions.xTooltipFormat || dataOptions.xFormat || "%B %d, %Y";
+              var xFormatter = d3.timeFormat(xFormat);
+              function getWeekTooltip() {
+                var weekFormat = d3.timeFormat("%b %d");
+                var start = weekFormat(xSelector(hoverData));
+                var end = weekFormat(d3.timeDay.offset(xSelector(hoverData), 6));
+                return {
+                  title: hoverData.name,
+                  xValue: start + " - " + end,
+                  yValue: yFormatter(ySelector(hoverData)),
+                };
+              }
 
-            function getMonthTooltip() {
-              const monthFormat = d3.timeFormat(
-                dataOptions.xTooltipFormat || dataOptions.xFormat || "%B",
-              );
-              return {
-                title: hoverData.name,
-                xValue: monthFormat(xSelector(hoverData)),
-                yValue: yFormatter(ySelector(hoverData)),
-              };
-            }
+              function getMonthTooltip() {
+                const monthFormat = d3.timeFormat(
+                  dataOptions.xTooltipFormat || dataOptions.xFormat || "%B",
+                );
+                return {
+                  title: hoverData.name,
+                  xValue: monthFormat(xSelector(hoverData)),
+                  yValue: yFormatter(ySelector(hoverData)),
+                };
+              }
 
-            function getDefaultTooltip() {
-              return {
-                title: hoverData.name,
-                xValue: xFormatter(xSelector(hoverData)),
-                yValue: yFormatter(ySelector(hoverData)),
-              };
-            }
+              function getDefaultTooltip() {
+                return {
+                  title: hoverData.name,
+                  xValue: xFormatter(xSelector(hoverData)),
+                  yValue: yFormatter(ySelector(hoverData)),
+                };
+              }
 
-            const tooltip =
-              dataOptions.xTicks === "week"
-                ? getWeekTooltip()
-                : dataOptions.xTicks === "month"
-                ? getMonthTooltip()
-                : getDefaultTooltip();
+              const tooltip =
+                dataOptions.xTicks === "week"
+                  ? getWeekTooltip()
+                  : dataOptions.xTicks === "month"
+                  ? getMonthTooltip()
+                  : getDefaultTooltip();
 
-            return (
-              '<h1 class="tooltip__title">' +
-              tooltip.title +
-              "</h1>" +
-              '<div class="tooltip__item">' +
-              "<span>" +
-              tooltip.xValue +
-              ":</span>" +
-              "<span> " +
-              tooltip.yValue +
-              "</span>" +
-              "</div>"
-            );
-          },
+              if (dataOptions.xAsNameInTooltip) {
+                tooltip.title = tooltip.xValue;
+                tooltip.xValue = "";
+              }
+
+              return `
+                <h1 class="tooltip__title">${tooltip.title}</h1>
+                <div class="tooltip__item">
+                  ${!!tooltip.xValue ? `<span>${tooltip.xValue}:</span>` : ""}
+                  <span> ${tooltip.yValue}</span>
+                </div>
+                `;
+            },
         })
         // vertical lines marking dates
         .addMarkLine({
@@ -274,13 +279,16 @@ Elab.LineChart = (function (Elab) {
    */
   function loadData(options, callback) {
     var parseDate = d3.timeParse("%m/%d/%Y");
+    const yTransform = options.yTransform
+      ? Elab.Utils.createFunctionFromStr(options.yTransform)
+      : d => d;
     d3.csv(options.data, function (data) {
       var result = data
         .map(function (d) {
           return {
             name: d[options.groupBy],
             x: parseDate(d[options.x]),
-            y: parseFloat(d[options.y]),
+            y: yTransform(parseFloat(d[options.y])),
           };
         })
         .sort(function (a, b) {
@@ -300,8 +308,20 @@ Elab.LineChart = (function (Elab) {
     options.x = options.x || "x";
     options.y = options.y || "y";
     options.groupBy = options.groupBy || "name";
+    if (options.avgLines) {
+      options.avgLines = options.avgLines.split(";").map((lineOptions) => {
+        const parts = lineOptions.split(",");
+        return {
+          y: parseFloat(parts[0]),
+          label: parts[1],
+          labelOnly: parts[2] === "true",
+        };
+      });
+    }
     loadData(options, function (data) {
       createFigure(rootEl, data, options);
+      // HACK: gets the chart to resize, which properly makes room for its axis labels
+      window.dispatchEvent(new Event("resize"));
     });
   }
 

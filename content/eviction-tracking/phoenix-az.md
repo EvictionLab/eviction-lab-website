@@ -11,42 +11,26 @@ collection: true
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 {{< report_intro site_id="04013" area_site="true" >}}
-
-Eviction filings in Phoenix fell sharply in April 2020. The state of Arizona instituted an eviction moratorium in late-March 2020, but this policy only suspended enforcement of COVID-19-related nonpayment evictions, and new filings were being accepted. These eviction protections in the state expired at the end of October 2020.
-
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/phoenix_barchart.csv" %}}
-
-
+{{% trends_chart id="trends" data="/uploads/phoenix_barchart.csv" %}}
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Phoenix over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Phoenix over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). Historical averages are taken over the years 2015-2019.
-
-
+1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). 
 
 
-
-
-
-
-
-
-
-
-
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 {{% report_median_claims id="medianFilings" data="/uploads/phoenix_claims_monthly.csv" %}}
 
 # Changes in claim amounts
 
-When a landlord files an eviction claim in Phoenix, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month over the last year. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed. The dashed horizontal line on the plot marks the typical claim on an eviction case filed before the pandemic.
+When a landlord files an eviction claim in Phoenix, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month over the past 12 months. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed. The dashed horizontal line on the plot marks the typical claim on an eviction case filed during 2023 and 2024 (the "baseline").
 
 {{%/ report_median_claims %}}
 
@@ -58,10 +42,10 @@ When a landlord files an eviction claim in Phoenix, we observe the amount they c
 
 # The geography of eviction filings
 
-Maricopa County is divided into 916 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Maricopa County is divided into 916 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
-1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). Historical averages are taken over the years 2015-2019. 
-2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). 
+2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 
 
 
@@ -84,10 +68,10 @@ Maricopa County is divided into 916 census tracts. In each of those tracts, we m
 
 **Eviction filings by neighborhood race/ethnicity**
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. In this barplot, we show the distribution of eviction filings over the last year by neighborhood racial/ethnic majority.  
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Hispanic, or Other/None. This barplot shows the distribution of eviction filings in the past 12 months by neighborhood racial/ethnic majority.  
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2015-2019.<sup>1</sup>
+Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup>
 
-1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). Historical averages are taken over the years 2015-2019.
+1. Eviction filings data are provided by the [Maricopa County Justice Courts](http://justicecourts.maricopa.gov/). 
 
 {{%/ report_chart %}}

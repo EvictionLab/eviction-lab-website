@@ -54,10 +54,9 @@ var Elab = Elab || {};
  */
 
 Elab.Utils = (function (Elab) {
-  function isNumeric(val) {
-    return (
-      val !== "" && val !== undefined && val !== null && !isNaN(val) && typeof val !== "boolean"
-    );
+  function isNumberLike(value) {
+    if (!["string", "number"].includes(typeof value)) return false;
+    return value !== "" && !Number.isNaN(Number(value));
   }
 
   /**
@@ -161,7 +160,7 @@ Elab.Utils = (function (Elab) {
       var someStatFound = false;
 
       var createStat = (val, stat, isSubStat) => {
-        var missingVal = !Elab.Utils.isNumeric(val);
+        var missingVal = !Elab.Utils.isNumberLike(val);
         var fVal = missingVal ? stat.default : stat.formatter ? stat.formatter(val) : val;
 
         var tooltipContent = missingVal ? stat.tooltipMissingValue || stat.tooltip : stat.tooltip;
@@ -174,13 +173,24 @@ Elab.Utils = (function (Elab) {
         statClass += ` ${stat.field}`;
         if (missingVal) statClass += " missing";
 
+        var displayVal = stat.display;
+        if (displayVal.includes("{latest_year}")) {
+          var latestUpdate = getVal(dataMap[stat.file], {
+            ...stat,
+            field: "latest_update",
+          });
+          var year = latestUpdate.match(/\d{4}/);
+          if (year) {
+            displayVal = displayVal.replace("{latest_year}", year[0]);
+          }
+        }
         return (
           '<dl class="' +
           statClass +
           '"><dd>' +
           fVal +
           "</dd><dt>" +
-          stat.display +
+          displayVal +
           createTooltip(tooltipContent) +
           "</dt>" +
           subStat +
@@ -214,7 +224,7 @@ Elab.Utils = (function (Elab) {
       var someCompFound = false;
 
       var createComp = (vals, comp) => {
-        var fVals = vals.map((v) => (Elab.Utils.isNumeric(v) ? comp.formatter(v) : ""));
+        var fVals = vals.map((v) => (Elab.Utils.isNumberLike(v) ? comp.formatter(v) : ""));
         var bars = fVals.map((v, i) => {
           if (v === undefined) return "";
           const width = vals[i] * 100;
@@ -241,22 +251,15 @@ Elab.Utils = (function (Elab) {
       comps.forEach((s) => {
         var vals = getVals(dataMap[s.file], s);
         // create a comparison for any metric with at least one value...
-        if (Elab.Utils.isNumeric(vals[0]) || Elab.Utils.isNumeric(vals[1])) {
+        if (Elab.Utils.isNumberLike(vals[0]) || Elab.Utils.isNumberLike(vals[1])) {
           // ...but both values must exist for some metric to merit displaying the block
           someCompFound =
-            someCompFound || (Elab.Utils.isNumeric(vals[0]) && Elab.Utils.isNumeric(vals[1]));
+            someCompFound || (Elab.Utils.isNumberLike(vals[0]) && Elab.Utils.isNumberLike(vals[1]));
           var comp = createComp(vals, s);
           $el.append(comp);
         }
       });
 
-      // console.log({ someCompFound, comps });
-      // if (someCompFound) {
-      //   var $displayEl = $(elToDisplay);
-      //   console.log({ someCompFound, elToDisplay, $displayEl });
-      //   window.dd = $displayEl;
-      //   setTimeout(() => $el.css("opacity", 1), 1);
-      // }
       Elab.Utils.callOnEnter($el[0], () => $el.toggleClass("in-view"));
       callback && callback(someCompFound);
     });
@@ -304,6 +307,18 @@ Elab.Utils = (function (Elab) {
     $(el).attr("target", "_blank");
   }
   /**
+   * Create a Bluesky share intent link with provided element
+   * @param {*} el `a` tag DOM element
+   */
+  function createBlueskyLink(el) {
+    var url = Elab.Utils.getCurrentURL();
+    var params = [];
+    params.push("text=" + encodeURIComponent(url));
+    $(el).attr("href", "https://bsky.app/intent/compose?" + params.join("&"));
+    $(el).attr("target", "_blank");
+  }
+
+  /**
    * Create a facebook share intent link with provided element
    * @param {*} el `a` tag DOM element
    */
@@ -321,13 +336,13 @@ Elab.Utils = (function (Elab) {
   var formatLabel = function formatLabel(id) {
     switch (id) {
       case "avg_filings":
-        return "Average Filings";
+        return "Baseline Filings";
 
       case "month_filings":
-        return "Filings This Year";
+        return "Past 12 Months Filings";
 
       case "percentage_diff":
-        return "Filings This Year<span>relative to average</span>";
+        return "Past 12 Months Filings<span>relative to baseline</span>";
 
       case "Other":
         return "Other/None";
@@ -418,9 +433,10 @@ Elab.Utils = (function (Elab) {
     group: group,
     getCssVar: getCssVar,
     getCurrentURL: getCurrentURL,
-    isNumeric: isNumeric,
+    isNumberLike: isNumberLike,
     slugify: slugify,
     createTwitterLink: createTwitterLink,
+    createBlueskyLink: createBlueskyLink,
     createFacebookLink: createFacebookLink,
     addLatestUpdateDate: addLatestUpdateDate,
     createStatBlock: createStatBlock,
@@ -482,8 +498,6 @@ Elab.Config = (function (Elab) {
    */
 
   function groupItems(items, selector) {
-    window.items = items;
-    window.selector = selector;
     var xValues = items.reduce(function (values, item, i) {
       item.data.forEach(function (d) {
         var value = selector(d);
@@ -574,7 +588,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text: "Monthly Eviction Filings Relative To Average",
+        text: "Monthly Eviction Filings Relative To Baseline",
       },
     ],
     margin: {
@@ -583,11 +597,11 @@ Elab.Config = (function (Elab) {
     markLines: [
       {
         y: 1,
-        label: "pre-COVID",
+        label: "2023–24",
       },
       {
         y: 1,
-        label: "average",
+        label: "baseline",
         labelOnly: true,
       },
     ],
@@ -614,7 +628,7 @@ Elab.Config = (function (Elab) {
         var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
 
         if (dir === "mid") {
-          return "Filings about average.";
+          return "Filings about the same as baseline.";
         }
 
         return (
@@ -625,7 +639,7 @@ Elab.Config = (function (Elab) {
           dir +
           " " +
           d3.format(",.0%")(value) +
-          "</span>&nbsp;from average" +
+          "</span>&nbsp;from baseline" +
           (d._raw.extras["month_last_day"]
             ? ", <br />as of " + d3.timeFormat("%B %e")(rawParse(d._raw.extras["month_last_day"]))
             : "") +
@@ -641,7 +655,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text: "Filings over the last year relative to average, by Neighborhood Racial/Ethnic Majority",
+        text: "Filings over the past 12 months relative to average, by Neighborhood Racial/Ethnic Majority",
       },
     ],
     margin: {
@@ -652,11 +666,11 @@ Elab.Config = (function (Elab) {
     markLines: [
       {
         y: 1,
-        label: "average",
+        label: "2023–24",
       },
       {
         y: 1,
-        label: "filings",
+        label: "baseline",
         labelOnly: true,
       },
     ],
@@ -714,7 +728,7 @@ Elab.Config = (function (Elab) {
     content: [
       {
         selector: ".visual__title",
-        text: "Filings over the last year by Neighborhood Racial/Ethnic Majority",
+        text: "Filings over the past 12 months by Neighborhood Racial/Ethnic Majority",
       },
     ],
     margin: {
@@ -1149,7 +1163,7 @@ Elab.Chart = (function (Elab) {
       // get rid of groups w/o data to plot
       data = data.filter((d) => {
         var v = d[config.data.y.col];
-        return Elab.Utils.isNumeric(v);
+        return Elab.Utils.isNumberLike(v);
       });
     }
     var result = {
@@ -1350,7 +1364,7 @@ Elab.Chart = (function (Elab) {
           return "#E24000";
         }
         if (d.id === "avg_filings" || d.id === "Black") return "#434878";
-        if (d.id === "Latinx") return "#2C897F";
+        if (d.id === "Hispanic") return "#2C897F";
         if (d.id === "Other") return "#94AABD";
         return "#E24000";
       });
@@ -1734,6 +1748,7 @@ Elab.Chart = (function (Elab) {
     var rootEl = $(rootEl);
     var chartEl = rootEl.find(".chart")[0]; // add button to toggle state
 
+    // TODO: update to only avg
     var countToggleEl = rootEl.find(".toggle--count");
     var avgToggleEl = rootEl.find(".toggle--avg");
     if (config.id === "avg") avgToggleEl.addClass("toggle--active");
@@ -1824,7 +1839,7 @@ Elab.Map = (function (Elab) {
     }
 
     var result = {};
-    ["White", "Black", "Latinx"].sort(sortValue).forEach(function (race, i) {
+    ["White", "Black", "Hispanic"].sort(sortValue).forEach(function (race, i) {
       var key = "pct_" + race.toLowerCase();
       result[race] =
         (data[key] || data[key] === 0) && data[key] !== "null"
@@ -1892,8 +1907,14 @@ Elab.Map = (function (Elab) {
       value = formatter(Math.abs(distance));
       var dir = distance === 0 ? "mid" : distance > 0 ? "up" : "down";
       return dir === "mid"
-        ? "Filings about average."
-        : "Filings <span class='value--" + dir + "'>" + dir + " " + value + "</span> from average.";
+        ? "Filings about the same as baseline."
+        : "Filings <span class='value--" +
+            dir +
+            "'>" +
+            dir +
+            " " +
+            value +
+            "</span> from baseline.";
     }
 
     if (isRate(prop)) return "filings against " + value + " of renters";
@@ -2461,7 +2482,7 @@ Elab.Map = (function (Elab) {
         var hasPercents =
           feature.properties.hasOwnProperty("pct_white") ||
           feature.properties.hasOwnProperty("pct_black") ||
-          feature.properties.hasOwnProperty("pct_latinx");
+          feature.properties.hasOwnProperty("pct_hispanic");
         html = TooltipTemplate({
           name: feature.properties.NAME ? feature.properties.NAME.split(",")[0] : "Unknown",
           value: getTooltipValue(feature, currentProp),
@@ -3104,7 +3125,8 @@ Elab.MedianFilings = (function (Elab) {
     '\n    <div class="legend-item legend-item--{{index}} legend-item--{{label}}">\n      <div class="legend-item__color"></div>\n      <div class="legend-item__label">{{label}}</div>\n    </div>\n  ',
   );
   var dateParse = d3.timeParse("%Y-%m-%d");
-  var dollarFormat = d3.format("$.2s");
+  // var dollarFormat = d3.format("$.2s");
+  var dollarFormat = d3.format("$,d");
   var $el; // jquery wrapped root element
   var config;
   var data;
@@ -3137,7 +3159,7 @@ Elab.MedianFilings = (function (Elab) {
   /** Renders the median claim line chart */
   function renderLineChart() {
     // chunk label to break btw lines
-    var avgLabel = ["pre-COVID", "average"];
+    var avgLabel = ["2023–24", "baseline"];
     var avgLines =
       data[0].avg &&
       avgLabel.map((w, i) => ({
@@ -3194,6 +3216,220 @@ Elab.MedianFilings = (function (Elab) {
 })(Elab);
 
 /**
+ * TRENDS LINE CHART MODULE
+ * Similar to MedianFilings but adds toggles for y‑axis and time span.
+ */
+Elab.Trends = (function (Elab) {
+  var chartOptions = {
+    month_filings: {
+      // leaves out year bc baseline value is not from the same year
+      xFormat: d3.timeFormat("%B"),
+      yFormat: d3.format(",d"),
+      buttonLabel: "Filing Counts",
+      legendItems: {
+        ALL_DATA: ["filings", "baseline filings"],
+        LAST_12: ["filings", "baseline filings"],
+      },
+    },
+    percentage_diff: {
+      xFormat: d3.timeFormat("%B %Y"),
+      yFormat: d3.format(",.0%"),
+      buttonLabel: "Vs. Baseline",
+      legendItems: {
+        ALL_DATA: ["filings<span>relative to baseline</span>"],
+        LAST_12: ["filings<span>relative to baseline</span>"],
+      },
+      avgLine: {
+        y: 1,
+        label: ["2023–24", "baseline"],
+      },
+    },
+    // for both metrics
+    ALL_DATA: {
+      tickMonths: [0, 6],
+    },
+    LAST_12: {},
+  };
+
+  var xCol = "month";
+  var yCols = ["month_filings", "percentage_diff"];
+  var yCol = yCols[0];
+  var avgCol = "avg_filings";
+  var showLast12 = true;
+  var allData;
+  var $el;
+  var config;
+
+  function init(elId, options) {
+    config = options;
+    $el = $(elId);
+    // load and parse CSV
+    d3.csv(config.csv, function (rows) {
+      // parse dates and numbers
+      var parseDate = d3.timeParse("%m/%Y");
+      allData = rows
+        .map((r) => {
+          const row = {
+            x: parseDate(r[xCol]),
+            avg: +r[avgCol],
+          };
+          yCols.forEach((col) => (row[col] = +r[col]));
+          return row;
+        })
+        .sort((a, b) => a.x - b.x);
+      setupToggles(elId);
+      render();
+    });
+  }
+
+  function setupToggles(elId) {
+    var root = $(elId);
+    // y‑axis toggle
+    var yButtons = root.find(".button-group.metric");
+    yButtons.empty();
+    yCols.forEach(function (col) {
+      var btn = $("<button class='toggle'>").text(chartOptions[col].buttonLabel).val(col);
+      btn.on("click", function () {
+        if (yCol === col) return;
+        yCol = col;
+        render();
+      });
+      yButtons.append(btn);
+    });
+    // time-span toggle
+    var tButtons = root.find(".button-group.time-span");
+    tButtons.empty();
+    [
+      { label: "Past year", value: true },
+      { label: "Since 01/2020", value: false },
+    ].forEach(function (opt) {
+      var btn = $("<button class='toggle'>").text(opt.label).data("last12", opt.value);
+      btn.on("click", function () {
+        if (showLast12 === opt.value) return;
+        showLast12 = opt.value;
+        render();
+      });
+      tButtons.append(btn);
+    });
+  }
+
+  function render() {
+    var data = allData
+      .map((d) => ({
+        name: "Filings",
+        x: d.x,
+        y: d[yCol],
+        avg: d.avg,
+      }))
+      .slice(showLast12 ? -12 : undefined);
+    if (yCol === "month_filings") {
+      data = [
+        ...data.map((d) => ({
+          name: "Baseline",
+          x: d.x,
+          y: d.avg,
+          V_IGNORE: true,
+        })),
+        ...data,
+      ];
+    }
+
+    const { avgLine, yFormat } = chartOptions[yCol];
+    const { tickMonths } = chartOptions[showLast12 ? "LAST_12" : "ALL_DATA"];
+    var avgLines =
+      avgLine &&
+      avgLine.label.map((w, i) => ({
+        y: avgLine.y,
+        label: w,
+        // first item gets used for plotting line, rest just for the label word
+        labelOnly: !i,
+      }));
+
+    $el.find(".visual__chart svg").empty();
+    Elab.LineChart.createFigure($el.find(".visual__chart")[0], data, {
+      x: "x",
+      y: "y",
+      groupBy: "name",
+      xFormat: Elab.Utils.monthAxisFormatter,
+      xTicks: "month",
+      yFormat: yFormat,
+      yMin: 0,
+      filterTickMonths: tickMonths,
+      height: 330,
+      renderTooltip: renderTooltip,
+      avgLines,
+      margin: "8 68 60 54",
+    });
+    // update toggle active classes
+    updateToggleStates();
+    renderLegend();
+  }
+
+  function renderTooltip(hoverData) {
+    const { yFormat, xFormat } = chartOptions[yCol];
+
+    if (yCol === "month_filings")
+      return `
+      <h1 class="tooltip__title">${xFormat(hoverData.x)}</h1>
+      <div class="chart__tooltip-row chart__tooltip-row--0">
+      <div class="tooltip__item tooltip__item--multi">
+        <span>Filings:</span>${yFormat(hoverData.y)}
+      </div>
+      </div>
+      <div class="chart__tooltip-row chart__tooltip-row--1">
+      <div class="tooltip__item tooltip__item--multi">
+        <span>Baseline Filings:</span>${yFormat(hoverData.avg)}
+      </div>
+      </div>
+    `;
+
+    var amt = hoverData.y - 1;
+    var dir = amt > 0 ? "up" : "down";
+    return `
+      <h1 class="tooltip__title">${xFormat(hoverData.x)}</h1>
+      <div class="tooltip__item--${dir}">
+        Filings <span>${dir} ${yFormat(Math.abs(amt))}</span> from baseline
+      </div>
+      </div>
+    `;
+  }
+
+  function renderLegend() {
+    var LegendItem = function LegendItem(label, i) {
+      return (
+        '<div class="legend-item legend-item--' +
+        i +
+        " legend-item--" +
+        i +
+        '">' +
+        '<div class="legend-item__color"></div>' +
+        '<div class="legend-item__label">' +
+        label +
+        "</div>" +
+        "</div>"
+      );
+    };
+
+    var el = $el.find(".legend")[0];
+
+    el.innerHTML = chartOptions[yCol].legendItems[showLast12 ? "LAST_12" : "ALL_DATA"]
+      .map(LegendItem)
+      .join("");
+  }
+
+  function updateToggleStates() {
+    $el.find(".button-group.metric button").each(function () {
+      $(this).toggleClass("toggle--active", $(this).val() === yCol);
+    });
+    $el.find(".button-group.time-span button").each(function () {
+      $(this).toggleClass("toggle--active", $(this).data("last12") === showLast12);
+    });
+  }
+
+  return { init: init };
+})(Elab);
+
+/**
  * SECTION MODULE
  * ---
  * Public
@@ -3214,6 +3450,9 @@ Elab.Section = (function (Elab) {
 
     if (type === "chart") {
       return Elab.Chart.init(rootEl[0], config);
+    }
+    if (type === "trends") {
+      return Elab.Trends.init(rootEl[0], config);
     }
 
     if (type === "ranking") {

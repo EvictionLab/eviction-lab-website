@@ -90,8 +90,8 @@ Elab.StackAreaChart = (function (Elab) {
               });
             });
             var extent = [];
-            if (dataOptions.yMin) extent[0] = parseFloat(dataOptions.yMin);
-            if (dataOptions.yMax) extent[1] = parseFloat(dataOptions.yMax);
+            if (Elab.Utils.isNumberLike(dataOptions.yMin)) extent[0] = parseFloat(dataOptions.yMin);
+            if (Elab.Utils.isNumberLike(dataOptions.yMax)) extent[1] = parseFloat(dataOptions.yMax);
             var result = [extent[0] || 0, extent[1] || yDataMax];
             return result;
           },

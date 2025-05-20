@@ -20,29 +20,18 @@ Filings information for Boston is currently unavailable while we fix an error in
 
 <!-- 
 {{< report_intro site_id="25025" area_site="true" >}}
-
-Eviction filings in Boston fell sharply after eviction proceedings were suspended across Massachusetts on March 17, 2020. A subsequent moratorium halted evictions through mid-October of 2020. Compared to equivalent periods in previous years (2012–2013, 2015–2016), eviction filings fell far below average beginning in April 2020, though filings rose modestly in November 2020 after the state moratorium expired.
-
-The City of Boston enacted new protections in August 2021, prohibiting landlords and owners from serving or enforcing residential evictions, except in cases of serious lease violations or health and safety issues. These local protections were [struck down](https://www.bostonglobe.com/2021/11/29/business/judge-strikes-down-bostons-eviction-moratorium/) on November 29, 2021.<sup>2</sup>
-
-_We are experiencing temporary technical issues with our data collection process for the state of Massachusetts.  We apologize for any inconvenience._
-
-
-
-1. Boston eviction filing data has a disproportionate number of cases with missing census tract information in recent months. We have temporarily pulled our tract-level analyses as a result.
-
 {{</ report_intro >}}
 
 
 
-{{% report_chart id="avg" data="/uploads/boston_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/boston_barchart.csv" %}}
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Boston over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
+This plot shows monthly eviction filings in Boston over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
 2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 -->

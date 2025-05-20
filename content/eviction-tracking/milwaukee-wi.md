@@ -10,26 +10,23 @@ title: Milwaukee, Wisconsin | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 {{< report_intro site_id="55079" area_site="true" >}}
-
-Eviction filings in Milwaukee fell sharply once Governor Tony Evers blocked the initiation of non-emergency eviction proceedings on March 27, 2020. Compared to equivalent periods in previous years (2012–2016), eviction filings were far below average in March, April, and May 2020. Eviction protections in Wisconsin began to expire on May 26, 2020, after which filings increased. 
-
 {{</ report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/milwaukee_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/milwaukee_barchart.csv" %}}
 
 
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Milwaukee over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
+This plot shows monthly eviction filings in Milwaukee over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/)
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 
@@ -37,10 +34,10 @@ This plot shows monthly eviction filings in Milwaukee over the last year. Filing
 
 # The geography of eviction filings
 
-Milwaukee is made up of 302 census tracts. In each of those tracts, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Milwaukee is made up of 302 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
-2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 
 {{%/ report_map %}}
 
@@ -51,9 +48,9 @@ Milwaukee is made up of 302 census tracts. In each of those tracts, we map the n
 
 **Eviction filings by neighborhood race/ethnicity**
 
-American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Latinx, or Other/None. 
+American Community Survey (ACS) data allow us to categorize neighborhoods by their racial/ethnic majority: White, Black, Hispanic, or Other/None. This barplot shows the distribution of eviction filings in the past 12 months by neighborhood racial/ethnic majority.
 
-When you toggle the figure to see data relative to average, comparisons are being drawn—within the same set of neighborhoods defined by racial/ethnic majority—between filings over the last year and average filings in 2012–2016.<sup>1</sup>
+Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2012–2016
 

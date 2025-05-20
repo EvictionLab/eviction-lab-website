@@ -83,6 +83,12 @@ In an average month prior to the pandemic, both sites would have seen a little o
     color: #5a5a5a !important;
     margin: 24px 0 8px !important;
   }
+
+  /* line charts */
+  .chart--line .chart__line {
+    stroke: var(--c1);
+    stroke-width: 5;
+  }
 </style>
 
 <div class="figheader mb-0">Table 1. Eviction filings in greater Columbus (Franklin County) and Philadelphia</div>
@@ -133,42 +139,50 @@ This affects numbers throughout each ETS site page. For example, this doesn’t 
   
   <div class="col-12 col-lg-6 col-x4l-5 offset-x4l-1 px-0 pl-md-2">
 
-{{% bar-chart
-  id="2a"
+
+{{% line-chart
+  id="11months_fig1"
   data="./fig-1-columbus.csv"
   x="date"
   y="pct_diff_old"
-  axis="time"
-  timeUnit="month"
-  yMin="0"
-  yMax="1.8"
-  yTicks="6"
+  groupBy="site"
+  xTicks="month"
+  xFormat="%b '%y"
+  xTooltipFormat="%B %Y"
+  xTicks="month"
+  xAsNameInTooltip="true"
   yTransform="y => (y + 100)/100"
+  yMin="0"
+  yMax=1.8
+  yTicks="6"
   yFormat=".0%"
-  avgLines="1,pre-COVID,;1,baseline,true"
-  title="Pre-COVID baseline"
-  margin="4 70 60 40"
+  title="pre-COVID baseline"
+  avgLines="1,pre-COVID,false;1,baseline,true"
+  margin="4 80 70 40"
 %}}
 
   </div>
 
   <div class="col-12 col-lg-6 col-x4l-5 px-0 pr-md-2">
 
-{{% bar-chart
-  id="2b"
+{{% line-chart
+  id="11months_fig12"
   data="./fig-1-columbus.csv"
   x="date"
   y="pct_diff_new"
-  axis="time"
-  timeUnit="month"
-  yMin="0"
-  yMax="1.8"
-  yTicks="6"
+  groupBy="site"
+  xTicks="month"
+  xFormat="%b '%y"
+  xTooltipFormat="%B %Y"
+  xAsNameInTooltip="true"
   yTransform="y => (y + 100)/100"
+  yMin="0"
+  yMax=1.8
+  yTicks="6"
   yFormat=".0%"
-  avgLines="1,2023-24,;1,baseline,true"
-  title="2023-2024 baseline"
-  margin="4 70 60 40"
+  title="2023-24 baseline"
+  avgLines="1,2023-24,false;1,baseline,true"
+  margin="4 80 70 40"
 %}}
 
   </div>

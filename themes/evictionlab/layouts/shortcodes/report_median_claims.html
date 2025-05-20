@@ -17,11 +17,11 @@
   <div class="legend"></div>
   <div id="claimsStats" class="callout stat-block-wrapper">
     <p>
-      Over the past year, of all eviction claims,
+      Over the past 12 months, of all eviction claims,
     </p>
   </div>
   <div class="footnote">
-    <span class="data-download"><a href="{{ .Get `data` }}">Get the data</a> for this figure</span>
+    <span class="callout data-download"><a href="{{ .Get `data` }}">Get the data</a> for this figure</span>
   </div>
 </div>
 <script>
@@ -30,7 +30,7 @@ window.addEventListener('load', function() {
   var csv = {{ .Get "data" }}
   var yCol = "median_claim"
   var xCol = "month_date"
-  var avg = "median_claim_prepandemic"
+  var avg = "median_claim_baseline"
   var rootEl = '#'+id
   var statFiles = [
     { id: "claims", url: csv },

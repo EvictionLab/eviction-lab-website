@@ -19,20 +19,20 @@ Filing counts in some counties for baseline years may differ slightly compared t
 {{< /report_intro >}}
 
 
-{{% report_chart id="avg" data="/uploads/wisconsin_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/wisconsin_barchart.csv" %}}
 
 
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Wisconsin were higher than average in January and February of 2020. That pattern reversed in March, and filings over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup> <sup>2</sup>
+This plot shows monthly eviction filings in Wisconsin were higher than average in January and February of 2020. That pattern reversed in March, and filings over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup> <sup>2</sup>
 
 1. Average eviction filings taken from Eviction Lab data for 2016-2018. 
 2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/).
 
 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 
@@ -46,10 +46,10 @@ This plot shows monthly eviction filings in Wisconsin were higher than average i
 
 # The geography of eviction filings
 
-Wisconsin is divided into 72 counties. In each of those counties, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Wisconsin is divided into 72 counties. In each of those counties, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
-1. Eviction filing data were collected by [January Advisors](https://www.januaryadvisors.com/). Historical averages were taken from Eviction Lab data and cover the years 2016-2018.
-2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+1. Eviction filing data were collected by [January Advisors](https://www.januaryadvisors.com/). 
+2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 
 
 

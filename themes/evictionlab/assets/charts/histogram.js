@@ -37,13 +37,13 @@ Elab.Histogram = (function (Elab) {
     var yExtent = d3.extent(bins, function (b) {
       return b.length;
     });
-    if (dataOptions.yMin) yExtent[0] = Number(dataOptions.yMin);
-    if (dataOptions.yMax) yExtent[1] = Number(dataOptions.yMax);
+    if (Elab.Utils.isNumberLike(dataOptions.yMin)) yExtent[0] = Number(dataOptions.yMin);
+    if (Elab.Utils.isNumberLike(dataOptions.yMax)) yExtent[1] = Number(dataOptions.yMax);
     var xExtent = d3.extent(data, function (d) {
       return d.x;
     });
-    if (dataOptions.xMin) xExtent[0] = Number(dataOptions.xMin);
-    if (dataOptions.xMax) xExtent[1] = Number(dataOptions.xMax);
+    if (Elab.Utils.isNumberLike(dataOptions.xMin)) xExtent[0] = Number(dataOptions.xMin);
+    if (Elab.Utils.isNumberLike(dataOptions.xMax)) xExtent[1] = Number(dataOptions.xMax);
     var chart = new Elab.ChartBuilder(root, data, dataOptions);
     chart
       // adds y axis, pads it if no extend is passed

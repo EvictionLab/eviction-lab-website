@@ -51,6 +51,11 @@ Elab.Utils = Object.assign(
       });
     }
 
+    function isNumberLike(value) {
+      if (!["string", "number"].includes(typeof value)) return false;
+      return value !== "" && !Number.isNaN(Number(value));
+    }
+
     /**
      * Converts a string to a function, allowing shortcodes to pass in functions as argumenst, eg:
      *   yFormat="y => d3.format('.0%')(y/100)"
@@ -71,6 +76,7 @@ Elab.Utils = Object.assign(
       group: group,
       loadData: loadData,
       loadAll: loadAll,
+      isNumberLike: isNumberLike,
       createFunctionFromStr: createFunctionFromStr,
       deriveFormatter: deriveFormatter,
     };

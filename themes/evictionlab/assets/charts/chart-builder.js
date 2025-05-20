@@ -88,7 +88,7 @@ Elab.ChartBuilder = (function (Elab) {
       var html = render(_this.hovered, _this);
       var rect = selection.node().getBoundingClientRect();
       var xPos = Math.min(
-        window.innerWidth - rect.width / 2 - 12,
+        window.innerWidth - rect.width - 12,
         Math.max(12 + rect.width / 2, e.clientX),
       );
       selection
@@ -677,7 +677,7 @@ Elab.ChartBuilder = (function (Elab) {
         v1 = ticks[0];
         v2 = ticks[1];
       } else {
-      // determine bandwidth based on consecutive data points
+        // determine bandwidth based on consecutive data points
         v1 = barData[0][0];
         v2 = barData[1][0];
       }
@@ -1485,7 +1485,7 @@ Elab.ChartBuilder = (function (Elab) {
           ]);
         var voronoiData = chart.voronoi.polygons(
           chart.data.filter(function (d) {
-            return !!d.y;
+            return !!d.y && !d.V_IGNORE;
           }),
         );
         var voronoi = selection.selectAll("path").data(voronoiData);

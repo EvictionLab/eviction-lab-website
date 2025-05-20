@@ -28,7 +28,7 @@
         <p>{{ .Inner | markdownify }}</p>
       </div>
          
-          <div class="intro__acknowledgements">
+          <div class="callout intro__acknowledgements">
             <i></i>
             <div>
               <a href="/eviction-tracking/acknowledgements#{{ $anchor }}">See our partner organizations and
@@ -40,6 +40,17 @@
             <a class="share__link share__link--twitter">
               <i class="fa fa-twitter"></i>
               <span>Twitter</span>
+            </a>
+            <a class="share__link share__link--bluesky">
+              <i class="fa">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  style="padding:1px;"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                  <path fill="currentColor"
+                    d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z" />
+                </svg>
+              </i>
+              <span>Bluesky</span>
             </a>
             <a class="share__link share__link--facebook">
               <i class="fa fa-facebook"></i>
@@ -68,7 +79,7 @@
       </h3>
       <div id="filingCounts" class="stat-block-wrapper">
       </div>
-      <h3>Filing Rates Over the Past Year</h3>
+      <h3>Filing Rates Over the Past 12 Months</h3>
       <div id="filingRates" class="stat-block-wrapper">
       </div>
     </div>
@@ -113,40 +124,40 @@
       var filingCounts = [
         {
           file: 'filing',
-          field: 'filings_pandemic',
-          display: 'filings since 3/15/2020',
-          formatter: d3.format(','),
-          subStat: {
-            file: 'filing',
-            field: 'filings_pandemic_pct_hist',
-            display: 'vs. average',
-            tooltip: 'Compared to filings over the same time frame before the COVID-19 pandemic',
-            formatter: percentChange,
-          }
-        },
-        {
-          file: 'filing',
-          field: 'filings_past_year',
-          display: 'filings in the past year',
-          formatter: d3.format(','),
-          subStat: {
-            file: 'filing',
-            field: 'filings_past_year_pct_hist',
-            display: 'vs. average',
-            tooltip: 'Compared to filings over an average year before the COVID-19 pandemic',
-            formatter: percentChange,
-          }
-        },
-        {
-          file: 'filing',
           field: 'filings_past_month',
           display: 'filings in the past month',
           formatter: d3.format(','),
           subStat: {
             file: 'filing',
             field: 'filings_past_month_pct_hist',
-            display: 'vs. average',
-            tooltip: 'Compared to filings over the same month before the COVID-19 pandemic',
+            display: 'vs. baseline',
+            tooltip: 'The baseline represents average filings for the same period across 2023 and 2024',
+            formatter: percentChange,
+          }
+        },
+        {
+          file: 'filing',
+          field: 'filings_ytd',
+          display: '{latest_year} YTD filings',
+          formatter: d3.format(','),
+          subStat: {
+            file: 'filing',
+            field: 'filings_ytd_pct_hist',
+            display: 'vs. baseline',
+            tooltip: 'The baseline represents average filings for the same period across 2023 and 2024',
+            formatter: percentChange,
+          }
+        },
+        {
+          file: 'filing',
+          field: 'filings_past_year',
+          display: 'filings over the past 12 months',
+          formatter: d3.format(','),
+          subStat: {
+            file: 'filing',
+            field: 'filings_past_year_pct_hist',
+            display: 'vs. baseline',
+            tooltip: 'The baseline represents average filings for the same period across 2023 and 2024',
             formatter: percentChange,
           }
         },
@@ -156,7 +167,7 @@
           file: 'filing',
           field: 'eviction_filing_rate',
           display: 'eviction filing rate',
-          tooltip: 'The number of evictions filed per 100 renter households over the last 12 months',
+          tooltip: 'The number of evictions filed per 100 renter households over the past 12 months',
           formatter: d3.format('.0%'),
         },
         {
@@ -172,8 +183,8 @@
           file: 'filing',
           field: 'serial_share',
           display: 'serial filing rate',
-          tooltip: 'Of unique households filed against in the last 12 months, the share filed against repeatedly at the same address within the last two years',
-          tooltipMissingValue: `Of unique households filed against in the last 12 months, the share filed against repeatedly at the same address within the last two years.<br/><br/>Address data are currently insufficient to calculate this rate.`,
+          tooltip: 'Of unique households filed against in the past 12 months, the share filed against repeatedly at the same address within the last two years',
+          tooltipMissingValue: `Of unique households filed against in the past 12 months, the share filed against repeatedly at the same address within the last two years.<br/><br/>Address data are currently insufficient to calculate this rate.`,
           formatter: d3.format('.0%'),
           default: 'Unavailable'
         },
@@ -232,6 +243,7 @@
 
       Elab.Utils.createTwitterLink('.share__link--twitter')
       Elab.Utils.createFacebookLink('.share__link--facebook')
+      Elab.Utils.createBlueskyLink('.share__link--bluesky')
 
       var dateFormat = d3.timeFormat("%b %e, %Y")
 

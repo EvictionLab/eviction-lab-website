@@ -23,15 +23,15 @@ Eviction filings in Connecticut fell significantly below average when a state-wi
 
 
 
-{{% report_chart id="avg" data="/uploads/connecticut_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/connecticut_barchart.csv" %}}
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Connecticut over the last year. Filings are displayed relative to the pre-pandemic average for the same set of months. You can toggle the plot to display filing counts and to extend the time frame back to January 2020.<sup>1</sup>
+This plot shows monthly eviction filings in Connecticut over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
+1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). 
 
-{{%/ report_chart %}}
+{{%/ trends_chart %}}
 
 
 
@@ -39,9 +39,9 @@ This plot shows monthly eviction filings in Connecticut over the last year. Fili
 
 # The geography of eviction filings
 
-Connecticut is divided into eight counties. In each of those counties, we map the number of eviction filings over the last year. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in the average year.<sup>1</sup> <sup>2</sup>
+Connecticut is divided into eight counties. In each of those counties, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
-1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). Historical averages cover the years 2017-2019.
-2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2015–2019.
+1. Eviction filing data were collected by the [Connecticut Fair Housing Center](https://www.ctfairhousing.org/). 
+2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 
 {{%/ report_map %}}

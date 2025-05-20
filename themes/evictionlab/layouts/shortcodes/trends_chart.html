@@ -1,0 +1,78 @@
+{{ if eq (.Get `id`) "avg" }}
+{{ $.Scratch.Set "ariaLabel" "Bar chart showing average filings and filing counts by month" }}
+{{ end }}
+{{ if eq (.Get `id`) "race" }}
+{{ $.Scratch.Set "ariaLabel" "Bar chart showing average filings and filing counts by month grouped by neighborhood demographics" }}
+{{ end }}
+{{ $imputedNoteNumber := .Get `imputedNoteNumber` }}
+<section
+  id="{{ .Get `id` }}"
+  class="section section--chart section--trends"
+>
+  <div class="section__content">
+    <div class="details">{{ .Inner }}</div>
+    <div class="visual">
+      <div class="visual__header">
+        <h3 class="visual__title"></h3>
+      </div>
+      <div id="filing-trends" class="visual__chart"><svg></svg></div>
+      <div class="visual__toggle d-flex">
+        <div class="button-group metric"></div>
+        <div class="button-group time-span"></div>
+      </div>
+    </div>
+    <div class="legend"></div>
+    <p class="footnote">
+      <span class="callout data-download"><a href="{{ .Get `data` }}">Get the data</a> for this figure</sp>
+    </p>
+    </div>
+    <div class="section__content imputed-data-only">
+      <div class="details">
+        <p><strong>Eviction filings by defendant race/ethnicity and gender</strong></p>
+        <p>
+        There are often large
+        <a href="https://evictionlab.org/demographics-of-eviction/">
+          racial/ethnic and gender disparities in eviction risk</a>.
+        Here, we estimate the demographic characteristics of those filed against for eviction over
+        the past 12 months. We compare to data from the ACS that show the share of renters in the same
+        categories.<sup>1</sup> </p>
+        <div class="comparison-legend">
+          <div><span class="color-chip chip-a"></span>
+            <p class="caption">Share of eviction filings</p>
+          </div>
+          <div><span class="color-chip chip-b"></span>
+            <p class="caption">Share of renters</p>
+          </div>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="visual__header">
+          <h3 class="visual__title">FILINGS OVER THE PAST 12 MONTHS BY DEFENDANT RACE/ETHNICITY AND GENDER
+          </h3>
+        </div>
+        <div class="comparison-block-wrapper" id="imputedComps--{{ .Get `id` }}">
+        </div>
+    </div>
+    <div class="additional-footnote">
+      <div class="mt-2 mt-md-0">
+        <span class="callout data-download"><a href="{{ .Get `data` }}">Get the data</a> for these figures</span>
+      </div>
+      <ul>
+        <li>
+          Statistics rely on imputation of race/ethnicity and gender based on defendant names and addresses. We refer to “gender”
+          throughout while acknowledging necessarily limitations of the imputation process and its inability to capture important
+          subtleties in individuals’ gender identification. A complete description of this process can be found in the <a href="https://evictionlab.org/eviction-tracking/methods/">ETS 
+          methods page</a>. ACS data are from 2016-2020 five-year estimates.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', function() {
+      var id = {{ .Get "id" }}
+      var csv = {{ .Get "data" }}
+      var rootEl = '#'+id
+      Elab.Section.init('trends', rootEl, { id, csv })
+    });
+  </script>
+</section>
