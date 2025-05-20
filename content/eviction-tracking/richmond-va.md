@@ -16,19 +16,11 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 {{% trends_chart id="trends" data="/uploads/richmond_barchart.csv" %}}
 
-
-
-
-
-
-
 # Trends in eviction filings
 
 This plot shows monthly eviction filings in Richmond over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-
-
-
+1. Eviction filing data for Virginia are collected by [LSC](https://www.lsc.gov/). 
 
 
 
@@ -43,7 +35,7 @@ This plot shows monthly eviction filings in Richmond over the past 12 months. Fi
 
 Richmond is divided into 36 zip codes. In each of those zip codes, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
-1. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). 
+1. Eviction filing data for Virginia are collected by [LSC](https://www.lsc.gov/). 
 2. Zip code breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 
 {{%/ report_map %}}
