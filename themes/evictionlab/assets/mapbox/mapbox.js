@@ -38,6 +38,8 @@ Elab.Mapbox = (function (Elab) {
     }
   }
 
+  var missingColor = "#eee";
+
   var LegendLabelTemplate = Handlebars.compile(
     "{{#each labels}}" + "<span class='legend__gradient-label'>{{this}}</span>" + "{{/each}}",
   );
@@ -48,7 +50,7 @@ Elab.Mapbox = (function (Elab) {
       "{{#if value}}" +
       "{{{value}}}" +
       "{{else}}" +
-      "Data not available." +
+      "Data not available" +
       "{{/if}}" +
       "</div>",
   );
@@ -95,10 +97,10 @@ Elab.Mapbox = (function (Elab) {
       .filter(function (f) {
         return dataDict[f.properties[config.join]];
       })
-      .map(function (feature, i) {
-        feature.id = feature.properties[config.join];
-        Object.assign(feature.properties, dataDict[feature.properties[config.join]]);
-        return feature;
+      .map(function (f, i) {
+        f.id = f.properties[config.join];
+        Object.assign(f.properties, dataDict[f.properties[config.join]]);
+        return f;
       });
     return Object.assign(geojson, { features: newFeatures });
   }
@@ -178,6 +180,7 @@ Elab.Mapbox = (function (Elab) {
     gradientType,
     cutoffs,
     usesCustomCutoffs,
+    handleMissing = false,
   ) {
     var fillColor;
     if (gradientType === "discrete") {
@@ -190,6 +193,9 @@ Elab.Mapbox = (function (Elab) {
       fillColor = ["interpolate", ["linear"], ["get", prop]].concat(
         getLayerColors(range, colors, gradientType, cutoffs),
       );
+    }
+    if (handleMissing) {
+      fillColor = ["case", ["!=", ["typeof", ["get", prop]], "number"], missingColor, fillColor];
     }
     map.addLayer(
       {
@@ -207,7 +213,15 @@ Elab.Mapbox = (function (Elab) {
     );
   }
 
-  function addChoroplethStrokeLayer(map, prop, range, colors, gradientType, cutoffs) {
+  function addChoroplethStrokeLayer(
+    map,
+    prop,
+    range,
+    colors,
+    gradientType,
+    cutoffs,
+    handleMissing = false,
+  ) {
     var strokeColor;
     if (gradientType === "discrete") {
       strokeColor = ["step", ["get", prop]].concat(
@@ -218,6 +232,14 @@ Elab.Mapbox = (function (Elab) {
       strokeColor = ["interpolate", ["linear"], ["get", prop]].concat(
         getLayerColors(range, colors, gradientType, cutoffs),
       );
+    }
+    if (handleMissing) {
+      strokeColor = [
+        "case",
+        ["!=", ["typeof", ["get", prop]], "number"],
+        missingColor,
+        strokeColor,
+      ];
     }
 
     map.addLayer(
@@ -288,12 +310,13 @@ Elab.Mapbox = (function (Elab) {
     createLegend();
 
     function getTooltipValue(feature, prop) {
-      if (!feature.properties[prop] && feature.properties[prop] !== 0) return null;
-
+      var value = feature.properties[prop];
+      if (!value && value !== 0) return null;
+      if (config.handleMissing && value === "missing") return null;
       if (binValues) {
-        return binValues[Number(feature.properties[prop])];
+        return binValues[Number(value)];
       }
-      return formatter(feature.properties[prop]);
+      return formatter(value);
     }
 
     /**
@@ -343,17 +366,26 @@ Elab.Mapbox = (function (Elab) {
      */
     function handleLoad() {
       d3.json(geojsonUrl, function (err, json) {
+        var bounds = null;
         if (err) {
           console.error("unable to load geojson from " + geojsonUrl);
           return;
         }
         var geojson = json;
-        var bbox = geojson.bbox;
-        var padding = 0;
-        var bounds = [
-          [bbox[0] - padding, bbox[1] - padding],
-          [bbox[2] + padding, bbox[3] + padding],
-        ];
+
+        try {
+          var bbox = geojson.bbox;
+          var padding = 0;
+          var bounds = [
+            [bbox[0] - padding, bbox[1] - padding],
+            [bbox[2] + padding, bbox[3] + padding],
+          ];
+        } catch (error) {
+          console.error(
+            `Error calculating bounds. Ensure ${geojsonUrl} has a properly formatted bbox.\nbbox: ${bbox}\nError: ${error}`,
+          );
+          return;
+        }
         function zoomToLocation() {
           map.fitBounds(bounds, { padding: 16 });
         }
@@ -411,8 +443,17 @@ Elab.Mapbox = (function (Elab) {
         gradientType,
         cutoffs,
         usesCustomCutoffs,
+        config.handleMissing,
       );
-      addChoroplethStrokeLayer(map, currentProp, range, colors, gradientType, cutoffs);
+      addChoroplethStrokeLayer(
+        map,
+        currentProp,
+        range,
+        colors,
+        gradientType,
+        cutoffs,
+        config.handleMissing,
+      );
       layersAdded = true;
       gradientType === "discrete" ? renderDiscreteLegend() : renderLegend();
     }
@@ -459,18 +500,24 @@ Elab.Mapbox = (function (Elab) {
 
       // creates an axis with the given scale
       function axis(scale) {
-        return Object.assign(d3.axisBottom(scale.range([margin, width - margin])), {
-          render: function () {
-            return d3
-              .create("svg")
-              .attr("viewBox", [0, -4, width, 32])
-              .attr("width", width)
-              .attr("height", 32)
-              .style("display", "block")
-              .call(this)
-              .node();
+        return Object.assign(
+          d3
+            .axisBottom(scale.range([margin, width - margin]))
+            // apply formatter to tick values
+            .tickFormat(getFormatter(config.format)),
+          {
+            render: function () {
+              return d3
+                .create("svg")
+                .attr("viewBox", [0, -4, width, 32])
+                .attr("width", width)
+                .attr("height", 32)
+                .style("display", "block")
+                .call(this)
+                .node();
+            },
           },
-        });
+        );
       }
 
       // create swatches for colors
