@@ -1,0 +1,68 @@
+ID,NAME,GEOID,mhc_filing_rate,geom,pattern,mhc_filing_rate_bins
+"florida,alachua",Alachua County,12001,0.06019118600129618,,none,Over 6%
+"florida,baker",Baker County,12003,0.03977272727272727,,none,2% to 4%
+"florida,bay",Bay County,12005,0.029128570272675784,,none,2% to 4%
+"florida,bradford",Bradford County,12007,0.025252525252525252,,none,2% to 4%
+"florida,brevard",Brevard County,12009,0.02245693420846307,,none,2% to 4%
+"florida,broward",Broward County,12011,0.018661408321902148,,none,Less than 2%
+"florida,calhoun",Calhoun County,12013,missing,,stripe,NA
+"florida,charlotte",Charlotte County,12015,0.003038558256496228,,none,Less than 2%
+"florida,citrus",Citrus County,12017,0.00463263226165107,,none,Less than 2%
+"florida,clay",Clay County,12019,0,,none,Less than 2%
+"florida,collier",Collier County,12021,0.016008021297928984,,none,Less than 2%
+"florida,columbia",Columbia County,12023,0.013061650992685475,,none,Less than 2%
+"florida,miami-dade",Miami-Dade County,12086,0.015167760148726676,,none,Less than 2%
+"florida,de soto",DeSoto County,12027,0.004873294346978557,,none,Less than 2%
+"florida,dixie",Dixie County,12029,missing,,stripe,NA
+"florida,duval",Duval County,12031,0.07589032267963727,,none,Over 6%
+"florida,escambia",Escambia County,12033,missing,,stripe,NA
+"florida,flagler",Flagler County,12035,0.005893058323944883,,none,Less than 2%
+"florida,franklin",Franklin County,12037,missing,,stripe,NA
+"florida,gadsden",Gadsden County,12039,0.0273972602739726,,none,2% to 4%
+"florida,gilchrist",Gilchrist County,12041,missing,,stripe,NA
+"florida,glades",Glades County,12043,8.244023083264633e-4,,none,Less than 2%
+"florida,gulf",Gulf County,12045,missing,,stripe,NA
+"florida,hamilton",Hamilton County,12047,0.013888888888888888,,none,Less than 2%
+"florida,hardee",Hardee County,12049,0.016835016835016835,,none,Less than 2%
+"florida,hendry",Hendry County,12051,0.010321233909312305,,none,Less than 2%
+"florida,hernando",Hernando County,12053,0.008455073043826295,,none,Less than 2%
+"florida,highlands",Highlands County,12055,0.004497499695084766,,none,Less than 2%
+"florida,hillsborough",Hillsborough County,12057,0.028371452869035897,,none,2% to 4%
+"florida,holmes",Holmes County,12059,0.031818181818181815,,none,2% to 4%
+"florida,indian river",Indian River County,12061,0.00793506964220991,,none,Less than 2%
+"florida,jackson",Jackson County,12063,0.02847571189279732,,none,2% to 4%
+"florida,jefferson",Jefferson County,12065,0.00522466039707419,,none,Less than 2%
+"florida,lafayette",Lafayette County,12067,missing,,stripe,NA
+"florida,lake",Lake County,12069,0.011093858155763007,,none,Less than 2%
+"florida,lee",Lee County,12071,0.00996198506499199,,none,Less than 2%
+"florida,leon",Leon County,12073,0.04098919840818647,,none,4% to 6%
+"florida,levy",Levy County,12075,0.005934718100890208,,none,Less than 2%
+"florida,liberty",Liberty County,12077,missing,,stripe,NA
+"florida,madison",Madison County,12079,0.012121212121212121,,none,Less than 2%
+"florida,manatee",Manatee County,12081,missing,,stripe,NA
+"florida,marion",Marion County,12083,0.010487374423024708,,none,Less than 2%
+"florida,martin",Martin County,12085,0.020660903684630003,,none,2% to 4%
+"florida,monroe",Monroe County,12087,0.009369817578772803,,none,Less than 2%
+"florida,nassau",Nassau County,12089,0.05491990846681922,,none,4% to 6%
+"florida,okaloosa",Okaloosa County,12091,missing,,stripe,NA
+"florida,okeechobee",Okeechobee County,12093,0.00847895770861338,,none,Less than 2%
+"florida,orange",Orange County,12095,0.025198315895990316,,none,2% to 4%
+"florida,osceola",Osceola County,12097,0.018962800332867083,,none,Less than 2%
+"florida,palm beach",Palm Beach County,12099,0.025933512634475856,,none,2% to 4%
+"florida,pasco",Pasco County,12101,0.01073291326238355,,none,Less than 2%
+"florida,pinellas",Pinellas County,12103,0.022494353234669452,,none,2% to 4%
+"florida,polk",Polk County,12105,0.013369290584157353,,none,Less than 2%
+"florida,putnam",Putnam County,12107,0.03354188390684741,,none,2% to 4%
+"florida,st johns",St. Johns County,12109,0.005764966740576497,,none,Less than 2%
+"florida,st lucie",St. Lucie County,12111,0.017520518682307088,,none,Less than 2%
+"florida,santa rosa",Santa Rosa County,12113,0,,none,Less than 2%
+"florida,sarasota",Sarasota County,12115,0.010807215894920608,,none,Less than 2%
+"florida,seminole",Seminole County,12117,0.014358044283231315,,none,Less than 2%
+"florida,sumter",Sumter County,12119,0.007956754130223518,,none,Less than 2%
+"florida,suwannee",Suwannee County,12121,missing,,stripe,NA
+"florida,taylor",Taylor County,12123,0,,none,Less than 2%
+"florida,union",Union County,12125,0.041666666666666664,,none,4% to 6%
+"florida,volusia",Volusia County,12127,0.011921054717429786,,none,Less than 2%
+"florida,wakulla",Wakulla County,12129,0,,none,Less than 2%
+"florida,walton",Walton County,12131,0.017045454545454544,,none,Less than 2%
+"florida,washington",Washington County,12133,missing,,stripe,NA
