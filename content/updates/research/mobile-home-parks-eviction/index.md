@@ -52,7 +52,7 @@ Our research shows that park residents do have more stability than the average F
   cutoffs="0,.08"
   colors="rgba(226, 64, 0, 0.25);rgba(226, 64, 0, 1)"
 %}}
-
+<br />
 Previous research from the Eviction Lab shows that, although {{< smartlink "most landlords rarely evict residents" "https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/" >}}, a small number of owners file a large number of the evictions in a given area. This is also the case in mobile home parks. We identified the one hundred parks that filed the most eviction cases between 2012 and 2022. These hundred top-filing locations—which make up less than three percent of all parks in operation statewide during this period—were responsible for over 30% of all eviction cases filed within mobile home parks. 
 
 ### THE THREAT OF MASS EVICTIONS
@@ -61,19 +61,36 @@ Pines Trailer Park residents have long-enjoyed their beachfront community along 
 
 We were particularly interested in instances like this, where a park was shuttered and all residents were at risk of displacement, often to make way for a new development plan under a new owner. Mobile home parks are common sites for rezoning and redevelopment, partly because some view them as undesirable spaces to have nearby. These park closures may not result in eviction cases, but they do displace residents. 
 
-We estimate that at least 127 parks with over 6,000 units closed across Florida between 2012 and 2022, though the true number of closures and units lost may be substantially higher. While some park sales lead to closures and mass displacement, on other occasions new owners might continue operating a park. Our research showed that, in the months after a park sale, eviction filings increased by 40%, suggesting that certain new investors may increase rents or pursue more aggressive eviction policies.
+We estimate that at least 127 parks with over 6,000 units closed across Florida between 2012 and 2022, though the true number of closures and units lost may be substantially higher.<sup>1</sup> While some park sales lead to closures and mass displacement, on other occasions new owners might continue operating a park. Our research showed that, in the months after a park sale, eviction filings increased by 40%, suggesting that certain new investors may increase rents or pursue more aggressive eviction policies.<sup>2</sup>
 
 
 ### PRESERVING THE AFFORDABILITY OF MOBILE HOME PARKS
 
 There is a critical need for affordable housing in Florida. {{< smartlink "According to the National Low Income Housing Coalition" "https://nlihc.org/sites/default/files/SHP_FL.pdf" >}}, the state needs to build more than 400,000 units for extremely low income households. Mobile homes, with the right protections, can be part of the solution to this problem.
   
-Florida does offer some tools to mobile home residents that are not commonly available in other states, but these programs could be improved. For example, the state provides assistance for people living in parks that shut down, {{< smartlink "but the application process can be difficult and the aid is not enough to help with relocation" "https://journals.sagepub.com/doi/full/10.1177/0003122416688667" >}}. Florida is also one of the few states that allows residents to raise funds and put in an offer to purchase their community when it goes up for sale. Other states could mirror this policy, but practitioners have {{< smartlink "noted the importance of providing sufficient time" "https://shelterforce.org/2025/03/19/how-we-organized-to-keep-mobile-home-park-residents-in-their-homes/" >}} for them to organize the community, secure funding, and put in competitive bids. 
+Florida does offer some tools to mobile home residents that are not commonly available in other states, but these programs could be improved. For example, the state provides assistance for people living in parks that shut down, {{< smartlink "but the application process can be difficult and the aid is not enough to help with relocation" "https://journals.sagepub.com/doi/full/10.1177/0003122416688667" >}}. Florida is also one of the few states that allows residents to raise funds and put in an offer to purchase their community when it goes up for sale. Other states could mirror this policy, but practitioners have {{< smartlink "noted the importance of providing sufficient time" "https://shelterforce.org/2025/03/19/how-we-organized-to-keep-mobile-home-park-residents-in-their-homes/" >}} for them to organize the community, secure funding, and put in competitive bids.<sup>3</sup>
 
 The speed of an eviction can be a key factor here. In mortgage foreclosures or most land contract forfeitures, residents have months to react and find a solution. But for individual eviction cases, park residents in Florida are afforded a five-day notice period prior to a case being filed and a five-day response window. This occurs even though residents may have spent decades living in these communities or invested significant financial resources into purchasing and maintaining their homes.  More time could be allowed for them to cure debts and avoid eviction. 
 
-Conversely, park residents in Florida are provided with certain protections that traditional renters are not. Florida’s Mobile Home Act provides residents with a longer notice period prior to a case being filed (five days instead of three), designates fewer causes for eviction, and makes it more difficult for owners to refuse to renew leases to current residents. Expanding these protections to all renters could be an important step in improving housing stability. 
+Conversely, park residents in Florida are provided with certain protections that traditional renters are not. Florida’s Mobile Home Act provides residents with a longer notice period prior to a case being filed (five days instead of three), designates fewer causes for eviction, and makes it more difficult for owners to refuse to renew leases to current residents.<sup>4</sup> Expanding these protections to all renters could be an important step in improving housing stability. 
 
 Our research shows that three percent of active parks account for a disproportionate share of eviction activity. Officials or organizations looking to proactively address this problem could efficiently direct their efforts by targeting rental assistance or programs that encourage alternative business practices towards the small subset of landlords who make up a large portion of eviction activity. 
 
 Almost three million families across the United States live in mobile home parks. Their experience is not too different from those in Florida’s parks: they are often low-income households, but they can enjoy an affordable place to live and often own their own home. To ensure their stability, we need to consider how to support them when they face troubles from missing a payment or rising rents, or when they face the closure of their community. 
+
+<hr />
+<div class="footnotes">
+<ol>
+<li>
+This only represents about one extra eviction filing for a park every 18 months, as most mobile home parks rarely file for eviction in a given month. One limitation of our study is that there may be limited cases when park owners file eviction cases against the residents in a park who have not yet relocated towards the end of a mass displacement process. If this is the case, the heightened eviction activity could partially be capturing park closures following sales rather than individual evictions.
+</li>
+<li>
+Our methods of identifying park closures are imperfect. An alternative method we detail in Table A3 of the full paper’s appendix finds over 900 park closings, for example. See the full paper for more information on our identification methods and their limitations.
+</li>
+<li>
+The residents of Pines Trailer Park in Bradenton Beach were offered the opportunity to purchase their park for $75 million, {{< smartlink "more than four times the amount it had previously appraised for" "https://www.fox13news.com/news/residents-pines-trailer-park-fighting-eviction-post-helene" >}}.
+</li>
+<li>
+Mobile home park residents also face a less onerous version of Florida’s {{< smartlink "“pay-to-play”" "https://www.tampabay.com/news/real-estate/2022/08/09/for-florida-tenants-fighting-eviction-comes-at-a-price/" >}} rule. This statute generally requires tenants to pay the full amount a landlord claims is owed to a court’s registry in order to receive a hearing, rather than getting their day in court prior to paying the amount owed.
+</li>
+</ol>
