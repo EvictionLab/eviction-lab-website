@@ -16,7 +16,7 @@ Initial site selection for the Eviction Tracking System (ETS) was based on (1) t
 
 ## Valid Prepandemic Baseline Data
 
-*The following describes the logic used to initially select sites and the method of validation for our previous ("pre-pandemic") baseline data. These data are no longer used on our website interface, but are referenced in files found on  our {{<exlink "Get the Data" "https://evictionlab.org/eviction-tracking/get-the-data/" >}} page. For information about our current baseline data, see the following section **"2020-Present Eviction Filing Data."***
+*The following describes the logic used to initially select sites and the method of validation for our previous ("prepandemic") baseline data. These data are no longer used on our website interface, but are referenced in files found on  our {{<exlink "Get the Data" "https://evictionlab.org/eviction-tracking/get-the-data/" >}} page. For information about our current baseline data, see the following section **"2020-Present Eviction Filing Data."***
 
 Individual-level eviction records between 2000 and 2018 have been collected by The Eviction Lab, LexisNexis Risk Solutions, and American Information Research Services and then compiled by the Eviction Lab at Princeton University. Records were cleaned, stripped of duplicates and commercial eviction cases, geocoded, and validated against publicly-available data sources published by county- and state-court systems.
 
