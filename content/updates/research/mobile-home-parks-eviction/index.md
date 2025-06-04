@@ -1,5 +1,6 @@
 ---
 draft: true
+listSummaryMaxChars: 262
 childof: research
 url: /mobile-home-parks-eviction/
 contenttype: updates
@@ -8,7 +9,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "A Costly Form of Displacement: Eviction From Mobile Home Parks"
-date: 2025-06-08T15:28:51.756Z
+date: 2025-06-04T15:28:51.756Z
 postauthorname: Jacob Haas and Peter Hepburn
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
@@ -17,7 +18,7 @@ listSummary: "Mobile home parks offer many residents a chance at affordable home
 scripts:
   - mapbox
   - charts
-socialDescription: "lorem ipsum"
+socialDescription: "Mobile home parks offer many residents a chance at affordable homeownership. But eviction from these communities can be particularly harmful. Our study documents for the first time the extent of eviction activity in mobile home parks across the state of Florida."
 twImage: mobile-homes-jp.jpg
 fbImage: mobile-homes-jp.jpg
 image: mobile-homes-jp.jpg
@@ -35,6 +36,8 @@ In an article published in {{< smartlink "Urban Studies" "https://doi.org/10.117
 
 These benefits can hide a costly risk, though. If you get evicted from a mobile home park, you will have to choose from the least bad of three options: abandon your property outright, sell it for pennies on the dollar, or try to move it to another location. This last possibility is often impossible: despite their name, mobile homes are not usually “mobile” and relocation would destroy or severely damage most units. In cases where moving the home is possible, it can cost {{< smartlink "up to $15,000" "https://journals.sagepub.com/doi/10.1111/cico.12252" >}} according to some estimates. 
 
+{{< pullquote "If you get evicted from a mobile home park, you will have to choose from the least bad of three options: abandon your property outright, sell it for pennies on the dollar, or try to move it to another location." >}}
+
 Our research shows that park residents do have more stability than the average Florida renter. In 2022, park residents in Florida faced a 1.5% eviction filing rate, compared to 5% for the average renter in this state. But this is much more precarious when compared to traditional homeowners: mobile home park residents have a displacement rate that is more than triple the state’s {{< smartlink "foreclosure filing rate of 0.5%" "http://flhousingdata.shimberg.ufl.edu/eviction-foreclosure/results?nid=1" >}}. Park residents in some parts of the state also face much higher eviction rates. For example,  eviction filing rates around Jacksonville and Gainesville are above 6%, more than triple the state average for parks. 
 
 
@@ -46,7 +49,7 @@ Our research shows that park residents do have more stability than the average F
   join="GEOID"
   name="NAME"
   title="Figure 1. Average annual mobile home park eviction filing rate by county, 2012-2022"
-  legendTitle="Eviction Filings (2012 - 2022)"
+  legendTitle="Eviction Filing Rate (2012 - 2022)"
   format="percent"
   handleMissing="true"
   cutoffs="0,.08"
@@ -77,6 +80,8 @@ There is a critical need for affordable housing in Florida. {{< smartlink "Accor
 Florida does offer some tools to mobile home residents that are not commonly available in other states, but these programs could be improved. For example, the state provides assistance for people living in parks that shut down, {{< smartlink "but the application process can be difficult and the aid is not enough to help with relocation" "https://journals.sagepub.com/doi/full/10.1177/0003122416688667" >}}. Florida is also one of the few states that allows residents to raise funds and put in an offer to purchase their community when it goes up for sale. Other states could mirror this policy, but practitioners have {{< smartlink "noted the importance of providing sufficient time" "https://shelterforce.org/2025/03/19/how-we-organized-to-keep-mobile-home-park-residents-in-their-homes/" >}} for them to organize the community, secure funding, and put in competitive bids.<sup>3</sup>
 
 The speed of an eviction can be a key factor here. In mortgage foreclosures or most land contract forfeitures, residents have months to react and find a solution. But for individual eviction cases, park residents in Florida are afforded a five-day notice period prior to a case being filed and a five-day response window. This occurs even though residents may have spent decades living in these communities or invested significant financial resources into purchasing and maintaining their homes.  More time could be allowed for them to cure debts and avoid eviction. 
+
+{{< pullquote "In the months after a park sale, eviction filings increased by 40%" >}}
 
 Conversely, park residents in Florida are provided with certain protections that traditional renters are not. Florida’s Mobile Home Act provides residents with a longer notice period prior to a case being filed (five days instead of three), designates fewer causes for eviction, and makes it more difficult for owners to refuse to renew leases to current residents.<sup>4</sup> Expanding these protections to all renters could be an important step in improving housing stability. 
 
