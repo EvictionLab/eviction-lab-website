@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 listSummaryMaxChars: 262
 childof: research
 url: /mobile-home-parks-eviction/
