@@ -14,7 +14,7 @@ cascade:
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
-date: 2025-05-21T00:00:00.000Z
+date: 2025-06-05T00:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
   that you find new and productive ways to make use of them. When you do so,
@@ -188,7 +188,7 @@ data:
     monthfile: /uploads/missouri_monthly_2020_2021.csv
   - site: Nashville
     years: 2017-2019
-    geo: ZIP Code
+    geo: Census Tract
     file: /uploads/nashville_weekly_2020_2021.csv
     monthfile: /uploads/nashville_monthly_2020_2021.csv
   - site: New Mexico
