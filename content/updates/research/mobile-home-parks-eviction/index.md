@@ -23,7 +23,7 @@ twImage: mobile-homes-jp.jpg
 fbImage: mobile-homes-jp.jpg
 image: mobile-homes-jp.jpg
 ---
-<span class="dropcap green">N</span>estled on the east side of Jacksonville, about half an hour from downtown, Portside Mobile Home Park offers a pool, a playground, and basketball courts. You can purchase a two-bedroom mobile home here for about $30,000, roughly one-tenth of what {{< smartlink "the typical home in the metro area costs" "https://www.zillow.com/home-values/25290/jacksonville-fl/" >}}. But this seemingly attractive proposition hides the fact that  residents often face displacement and instability. Every year, the park files one eviction case for every thirteen households living in the complex.
+<span class="dropcap green">N</span>estled on the east side of Jacksonville, about half an hour from downtown, Portside Mobile Home Park offers a pool, a playground, and basketball courts. In real estate websites, you can see ads to purchase a two-bedroom mobile home here for about $45,000, roughly one-sixth of what {{< smartlink "the typical home in the metro area costs" "https://www.zillow.com/home-values/25290/jacksonville-fl/" >}}. But this seemingly attractive proposition hides the fact that residents often face displacement and instability. Every year, the park files one eviction case for every thirteen households living in the complex.
 
 For their residents, mobile home parks offer a possibility that in today’s America is vanishing quickly: an affordable place to live. Those who own their home can often keep their housing costs fairly low by paying only a few hundred dollars per month in lot rent. However, these residents are not afforded the same protections against displacement as other homeowners and, if they miss a payment or if the park owner decides to sell, they could join the millions of Americans who face eviction each year. 
 
@@ -64,6 +64,7 @@ Previous research from the Eviction Lab shows that, although {{< smartlink "most
 ### THE THREAT OF MASS EVICTIONS
 
 <br/>
+
 Pines Trailer Park residents have long-enjoyed their beachfront community along the western coastline of Florida in Bradenton Beach, just south of Tampa Bay. But the 55-plus community, already badly hit by Hurricane Helene in late 2024, {{< smartlink "found out in January " "https://amisun.com/owner-closes-pines-trailer-park/" >}} that their owner was planning to shut down the park. When the property was sold in 2023 to Pines Park Investors LLC, {{< smartlink "residents assert they were told they could stay for at least five years" "https://www.fox13news.com/news/residents-pines-trailer-park-fighting-eviction-post-helene" >}}. They have been fighting the mass displacement for months, hoping to buy more time.
 
 We were particularly interested in instances like this, where a park was shuttered and all residents were at risk of displacement, often to make way for a new development plan under a new owner. Mobile home parks are common sites for rezoning and redevelopment, partly because some view them as undesirable spaces to have nearby. These park closures may not result in eviction cases, but they do displace residents. 
@@ -75,6 +76,7 @@ We estimate that at least 127 parks with over 6,000 units closed across Florida 
 ### PRESERVING THE AFFORDABILITY OF MOBILE HOME PARKS
 
 <br/>
+
 There is a critical need for affordable housing in Florida. {{< smartlink "According to the National Low Income Housing Coalition" "https://nlihc.org/sites/default/files/SHP_FL.pdf" >}}, the state needs to build more than 400,000 units for extremely low income households. Mobile homes, with the right protections, can be part of the solution to this problem.
   
 Florida does offer some tools to mobile home residents that are not commonly available in other states, but these programs could be improved. For example, the state provides assistance for people living in parks that shut down, {{< smartlink "but the application process can be difficult and the aid is not enough to help with relocation" "https://journals.sagepub.com/doi/full/10.1177/0003122416688667" >}}. Florida is also one of the few states that allows residents to raise funds and put in an offer to purchase their community when it goes up for sale. Other states could mirror this policy, but practitioners have {{< smartlink "noted the importance of providing sufficient time" "https://shelterforce.org/2025/03/19/how-we-organized-to-keep-mobile-home-park-residents-in-their-homes/" >}} for them to organize the community, secure funding, and put in competitive bids.<sup>3</sup>
