@@ -8,13 +8,15 @@ cascade:
   socialDescription: We’ve built the first nationwide database of evictions.
 h1: Methods
 layout: content
-date: 2023-09-28T00:00:00.000Z
+date: 2025-06-05T00:00:00.000Z
 ---
 # Methods
 
-Initial site selection for the Eviction Tracking System (ETS) was based on (1) the availability of valid baseline data in the given county and (2) the availability of eviction filing data through public-facing court websites. We briefly explain both criteria.
+Initial site selection for the Eviction Tracking System (ETS) was based on (1) the availability of valid prepandemic baseline data in the given county and (2) the availability of eviction filing data through public-facing court websites. We briefly explain both criteria.
 
-## Valid Baseline Data
+## Valid Prepandemic Baseline Data
+
+*The following describes the logic used to initially select sites and the method of validation for our previous ("pre-pandemic") baseline data. These data are no longer used on our website interface, but are referenced in files found on  our* {{< extlink *"Get the Data"[*https://evictionlab.org/eviction-tracking/get-the-data/]}} *page. For information about our current baseline data, see the following section* **"2020-Present Eviction Filing Data."**
 
 Individual-level eviction records between 2000 and 2018 have been collected by The Eviction Lab, LexisNexis Risk Solutions, and American Information Research Services and then compiled by the Eviction Lab at Princeton University. Records were cleaned, stripped of duplicates and commercial eviction cases, geocoded, and validated against publicly-available data sources published by county- and state-court systems.
 
@@ -28,9 +30,11 @@ Using these data, we compiled a set of 73 of the 200 largest U.S. metropolitan a
 
 In other sites, additional baseline data were provided by partner organizations. For example, {{< extlink "BASTA Austin" "http://www.bastaaustin.org/" >}} and {{< extlink "Open Austin" "https://www.open-austin.org/" >}} provided baseline data for Travis County, TX. The {{< extlink "CREATE Lab" "https://www.cmucreatelab.org/home" >}} at Carnegie Mellon University provided both baseline and 2020 data for Allegheny County, PA. Sources for each ETS site can be found on [individual site pages](https://evictionlab.org/eviction-tracking/). Similar cleaning procedures, and validation where possible, was conducted on baseline data for these sites as well. 
 
-## 2020-2022 Eviction Filing Data
+## 2020-Present Eviction Filing Data
 
-Data about eviction cases are accessed through public-facing websites by each county or jurisdiction that we are monitoring. We, or our partners, query these websites each week and collect the case filings into a dataset for analysis. From there, we geocode the defendant/property address and add Census tract details. Four jurisdictions – Richmond, VA, Travis County, TX, Allegheny County, PA, and New York City, NY – only provide data on defendant zip code, not the full address. One site, New Orleans, LA, only has address-level data available in certain portions of the site. The data we collect is necessarily limited to information made publicly available by each jurisdiction, but this approach offers an accurate method for understanding eviction case volume.
+Data about eviction cases are accessed through public-facing websites by each county or jurisdiction that we are monitoring. We, or our partners, query these websites each week and collect the case filings into a dataset for analysis. From there, we geocode the defendant/property address and add Census tract details. Four jurisdictions – Richmond, VA, Travis County, TX, and New York City, NY – only provide data on defendant zip code, not the full address. One site, New Orleans, LA, only has address-level data available in certain portions of the site. The data we collect is necessarily limited to information made publicly available by each jurisdiction, but this approach offers an accurate method for understanding eviction case volume.
+
+As of May 2025, the data described in this section are used as our baseline data ("postpandemic baseline"). Instead of comparing our current Eviction Filing Data to years prior to 2020 (specific years dependent on site), we now compare the current Eviction Filing Data to average data across 2023 and 2024. 
 
 ## Eviction Hotspots
 
@@ -61,4 +65,3 @@ AAPI defendants are grouped in the "Other" category due to high margins of error
 Gender and race imputations rely on an imperfect process of assigning probabilities of identities to individuals based on names and geographies. Error is not equally distributed among demographic groups. People who are non-binary are always misgendered by gender imputation algorithms, and research has shown that people who are transgender and women are more likely to be misgendered (for example, see {{< extlink "Lockhart, King and Munsch" "https://doi.org/10.1038/s41562-023-01587-9" >}}. Despite recent improvements from {{< extlink "Imai and Khanna" "https://www-cambridge-org.ezproxy.princeton.edu/core/services/aop-cambridge-core/content/view/9DC8EBA269C25B1C606040196A3CB779/S1047198700010962a.pdf/improving-ecological-inference-by-predicting-individual-ethnicity-from-voter-registration-records.pdf" >}} and {{< extlink "Rosenman, Olivella and Imai" "https://www.nature.com/articles/s41597-023-02202-2" >}}, studies have also shown that imputations algorithms will see higher rates of false negatives for those who are Black, Latinx, and Asian - for example, incorrectly classifying a person who self-identifies as Black as non-Black. In the aggregate, this means that we likely underestimate the share of renters of color being filed against for eviction. False negative rates for Black individuals reported by {{< extlink "Imai, Olivella, and Rosenman" "https://www.science.org/doi/full/10.1126/sciadv.adc9824" >}} are roughly 20% on a dataset of voter registration records, but those rates increase dramatically, approaching 100%, in higher-income Census tracts according to research from {{< extlink "Argyle and Barber" "https://www.cambridge.org/core/journals/american-political-science-review/article/abs/misclassification-and-bias-in-predictions-of-individual-ethnicity-from-administrative-records/18E20B8D196D734401DCB96C83E492F7" >}}.
 
 Please contact research@evictionlab.org with any questions or concerns on these estimates.
-
