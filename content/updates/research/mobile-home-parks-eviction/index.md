@@ -100,3 +100,4 @@ The residents of Pines Trailer Park in Bradenton Beach were offered the opportun
 Mobile home park residents also face a less onerous version of Florida’s {{< smartlink "“pay-to-play”" "https://www.tampabay.com/news/real-estate/2022/08/09/for-florida-tenants-fighting-eviction-comes-at-a-price/" >}} rule. This statute generally requires tenants to pay the full amount a landlord claims is owed to a court’s registry in order to receive a hearing, rather than getting their day in court prior to paying the amount owed.
 </li>
 </ol>
+</div>

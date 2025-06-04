@@ -288,3 +288,4 @@ Rental assistance can be a key tool to stop people from falling into homelessnes
 To comply with Department of Housing and Urban Development data standards, we cannot report any county or county-month totals when less than 11 households received assistance.
 </li>
 </ol>
+</div>

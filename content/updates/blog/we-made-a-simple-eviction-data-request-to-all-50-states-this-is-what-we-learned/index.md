@@ -174,3 +174,4 @@ While Indiana and Illinois could not fulfill the request for the required years 
 As of March 2024, eviction filing data for South Carolina is available via Legal Services Corporation thanks to a {{< smartlink "lawsuit" "https://www.southcarolinapublicradio.org/sc-news/2024-03-14/south-carolina-naacp-won-the-right-to-publish-current-eviction-data-the-data-are-finally-out" >}}. 
 </li>
 </ol>
+</div>
