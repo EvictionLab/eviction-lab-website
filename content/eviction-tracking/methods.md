@@ -8,7 +8,7 @@ cascade:
   socialDescription: We’ve built the first nationwide database of evictions.
 h1: Methods
 layout: content
-date: 2025-06-05T00:00:00.000Z
+date: 2025-06-06T00:00:00.000Z
 ---
 # Methods
 
@@ -16,7 +16,7 @@ The Eviction Tracking System (ETS) includes sites selected based on the availabi
 
 ## Current Eviction Filing Data
 
-Data about eviction cases are accessed through public-facing websites by each county or jurisdiction that we are monitoring. We, or our partners, query these websites each week and collect the case filings into a dataset for analysis. From there, we geocode the defendant/property address and add Census tract details. Four jurisdictions – Richmond, VA, Travis County, TX, and New York City, NY – only provide data on defendant zip code, not the full address. One site, New Orleans, LA, only has address-level data available in certain portions of the site. The data we collect is necessarily limited to information made publicly available by each jurisdiction, but this approach offers an accurate method for understanding eviction case volume.
+Data about eviction cases are accessed through public-facing websites by each county or jurisdiction that we are monitoring. We, or our partners, query these websites each week and collect the case filings into a dataset for analysis. From there, we geocode the defendant/property address and add Census tract details. Four jurisdictions – Richmond, VA, Travis County, TX, Allegheny County, PA, and New York City, NY – only provide data on defendant zip code, not the full address. One site, New Orleans, LA, only has address-level data available in certain portions of the site. The data we collect is necessarily limited to information made publicly available by each jurisdiction, but this approach offers an accurate method for understanding eviction case volume.
 
 As of May 2025, the data described in this section are used as our baseline data ("postpandemic baseline"). Instead of comparing our current Eviction Filing Data to years prior to 2020 (specific years dependent on site), we now compare the current Eviction Filing Data to average data across 2023 and 2024. For more details, please see {{< extlink "A New Baseline: Changes to Our Eviction Metrics" "https://evictionlab.org/new-baseline/" >}}.
 
