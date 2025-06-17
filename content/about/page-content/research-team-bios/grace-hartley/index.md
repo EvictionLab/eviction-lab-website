@@ -7,4 +7,8 @@ image: ghartley_full.jpg
 thumb: ghartley_thumb.jpg
 weight: 85
 ---
-Grace Hartley is a Research Specialist at the Eviction Lab. Grace earned her B.A. from Smith College with a double-major in Statistical & Data Sciences and American Studies. She focused on studying mechanisms within the production of knowledge that drive inequality and oppression in America. As an undergraduate, Grace co-authored an R package that facilitates Partial Least Squares Regression on lake sediment core spectroscopy data. Through a partnership with a local public health non-profit, she worked on a team of students to create an interactive data atlas of public health indicator data in Springfield, Massachusetts. Prior to joining the lab, Grace worked on a small organic farm in Maine. She enjoys hiking, amateur film photography, and sailing.
+Grace Hartley is a Research Specialist at the Eviction Lab. At the lab, she collaborates on extensive data cleaning, wrangling, validation, and the maintenance of the lab’s data pipeline across several projects, including the [Eviction Tracking System](https://evictionlab.org/eviction-tracking/). She also supports data requests and linkage efforts, and has contributed to research on the impacts of the Emergency Rental Assistance program during the COVID-19 pandemic.
+
+Grace earned her A.B. from Smith College with a double-major in Statistical & Data Sciences and American Studies. 
+
+Originally from Maine, Grace previously worked on a small organic farm. In her free time, she enjoys hiking, amateur film photography, and sailing.
