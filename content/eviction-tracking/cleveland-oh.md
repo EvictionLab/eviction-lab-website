@@ -3,7 +3,6 @@ draft: false
 h1: Cleveland, Ohio
 slug: cleveland-oh
 date: 2024-08-30T04:00:00.000Z
-rentersSite: Cleveland
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Cleveland Ohio | Eviction Tracking System

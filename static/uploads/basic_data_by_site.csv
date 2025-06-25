@@ -24,9 +24,9 @@ site_id,site,notice_requirement,avg_filing_fee,historical_baseline_years,borders
 27053,Minneapolis-Saint Paul,no advance notice (in the case of nonpayment of rent),$297 filing fee,2012-2019,Hennepin and Ramsey Counties
 47037,Nashville,"14 days notice (for nonpayment of rent cases, though in many cases less)",$127.75 filing fee,2017-2019,Davidson County
 22071,New Orleans,at least five days notice (in some cases more),$100 filing fee,2019,Orleans Parish
-36061,New York,at least 14 days notice (in some cases more),$45 filing fee,2016-2018,"Kings, Queens, Richmond, New York, and Bronx Counties"
+36061,New York,at least 14 days notice (in some cases more),$45 filing fee,2016-2018,"New York City"
 12099,Palm Beach,at least three days notice (in some cases more),$185 filing fee,2014-2019,"Palm Beach County"
-42101,Philadelphia,at least ten days notice (in some cases more),$139.75 filing fee,2016-2019,Philadelphia County
+42101,Philadelphia,at least ten days notice (in some cases more),$139.75 filing fee,2016-2019,the city of Philadelphia
 04013,Phoenix,at least five days notice (in some cases more),$119 filing fee,2015-2019,Maricopa County
 42003,Pittsburgh,at least ten days notice (in some cases more),$147 filing fee,2016-2019,Allegheny County
 44007,Providence,at least five days notice (in some cases more),$100.75 filing fee,2016-2019,Providence County

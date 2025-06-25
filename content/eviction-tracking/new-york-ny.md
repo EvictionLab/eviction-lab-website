@@ -1,17 +1,16 @@
 ---
 collection: true
 draft: false
-h1: New York, New York
+h1: New York City, New York
 slug: new-york-ny
 date: 2022-07-24T04:00:00.000Z
-rentersSite: New York City
 twImage: /images/assets/graphics/ets-bg-social.png
 title: New York, New York | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 geographies: zips
 ---
 
-{{< report_intro site_id="36061" area_site="true" >}}
+{{< report_intro site_id="36061" >}}
 {{</ report_intro >}}
 
 

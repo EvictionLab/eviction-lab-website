@@ -3,13 +3,12 @@ draft: false
 h1: Philadelphia, Pennsylvania
 slug: philadelphia-pa
 date: 2024-08-30T04:00:00.000Z
-rentersSite: Philadelphia
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Philadelphia, Pennsylvania | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="42101" area_site="true" >}}
+{{< report_intro site_id="42101" >}}
 {{</ report_intro >}}
 
 
@@ -23,7 +22,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 This plot shows monthly eviction filings in Philadelphia over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). 
+1. Eviction filing data for the city of Philadelphia were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). 
 
 
 
@@ -64,9 +63,9 @@ When a landlord files an eviction claim in Philadelphia, we observe the amount t
 
 # The geography of eviction filings
 
-Philadelphia County is divided into 408 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
+Philadelphia is divided into 408 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
-1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). 
+1. Eviction filing data for the city of Philadelphia were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). 
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts. We exclude buildings with fewer than 15 filings, in which case fewer than 100 buildings will be displayed. 
 
@@ -82,6 +81,6 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 
 Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup> 
 
-1. Eviction filing data for Philadelphia County were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). 
+1. Eviction filing data for the city of Philadelphia were collected by Jonathan Pyle at [Philadelphia Legal Assistance](https://philalegal.org/). 
 
 {{%/ report_chart %}}
