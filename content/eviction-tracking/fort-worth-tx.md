@@ -4,12 +4,13 @@ h1: Fort Worth, Texas
 slug: fort-worth-tx
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Fort Worth
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Fort Worth, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="48439" area_site="true" >}}
+{{< report_intro site_id="48439"  >}}
 {{</ report_intro >}}
 
 

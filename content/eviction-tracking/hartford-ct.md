@@ -4,12 +4,13 @@ h1: Hartford, Connecticut
 slug: hartford-ct
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Hartford
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Hartford, Connecticut | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="09003" area_site="true" >}}
+{{< report_intro site_id="09003"  >}}
 {{</ report_intro >}}
 
 

@@ -4,12 +4,13 @@ h1: Charleston, South Carolina
 slug: charleston-sc
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Charleston
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Charleston, South Carolina | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="45019" area_site="true" >}}
+{{< report_intro site_id="45019"  >}}
 {{</ report_intro >}}
 
 

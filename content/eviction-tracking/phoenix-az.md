@@ -4,13 +4,14 @@ h1: Phoenix, Arizona
 slug: phoenix-az
 date: 2024-10-02T04:00:00.000Z
 rentersSite: Phoenix
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Phoenix Arizona | Eviction Tracking System
 geographies: zips
 collection: true
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="04013" area_site="true" >}}
+{{< report_intro site_id="04013"  >}}
 {{</ report_intro >}}
 
 

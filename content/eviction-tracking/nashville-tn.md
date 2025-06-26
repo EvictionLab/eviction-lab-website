@@ -4,10 +4,11 @@ draft: false
 title: Nashville, Tennessee | Eviction Tracking System
 h1: Nashville, Tennessee
 rentersSite: Nashville
+areaSite: true
 slug: nashville-tn
 date: 2025-01-16T16:07:21.761Z
 ---
-{{< report_intro site_id="47037" area_site="true" >}}
+{{< report_intro site_id="47037"  >}}
 {{</ report_intro >}}
 
 

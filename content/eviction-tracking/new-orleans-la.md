@@ -4,12 +4,13 @@ h1: New Orleans, Louisiana
 slug: new-orleans-la
 date: 2024-08-30T04:00:00.000Z
 rentersSite: New Orleans
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: New Orleans, Louisiana | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="22071" area_site="true" >}}
+{{< report_intro site_id="22071"  >}}
 {{</ report_intro >}}
 
 

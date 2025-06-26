@@ -4,12 +4,13 @@ h1: Greenville, South Carolina
 slug: greenville-sc
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Greenville
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Greenville, South Carolina | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="45045" area_site="true" >}}
+{{< report_intro site_id="45045"  >}}
 {{</ report_intro >}}
 
 

@@ -4,12 +4,13 @@ h1: Dallas, Texas
 slug: dallas-tx
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Dallas
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Dallas, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="48113" area_site="true" >}}
+{{< report_intro site_id="48113"  >}}
 {{</ report_intro >}}
 
 

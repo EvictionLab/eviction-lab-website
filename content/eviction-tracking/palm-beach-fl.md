@@ -4,10 +4,11 @@ draft: false
 title: Palm Beach, Florida | Eviction Tracking System
 h1: Palm Beach, Florida
 rentersSite: Palm Beach
+areaSite: true
 slug: palm-beach-fl
 date: 2024-07-02T03:27:06.983Z
 ---
-{{< report_intro site_id="12099" area_site="true" >}}
+{{< report_intro site_id="12099"  >}}
 {{</ report_intro >}}
 
 

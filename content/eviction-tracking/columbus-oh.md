@@ -4,12 +4,13 @@ h1: Columbus, Ohio
 slug: columbus-oh
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Columbus
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Columbus Ohio | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="39049" area_site="true" >}}
+{{< report_intro site_id="39049"  >}}
 {{</ report_intro >}}
 
 

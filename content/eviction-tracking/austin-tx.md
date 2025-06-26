@@ -5,13 +5,14 @@ h1: Austin, Texas
 slug: austin-tx
 date: 2022-07-20T04:00:00.000Z
 rentersSite: Austin
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Austin Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 geographies: zips
 ---
 
-{{< report_intro site_id="48453" area_site="true" >}}
+{{< report_intro site_id="48453"  >}}
 {{</ report_intro >}}
 
 

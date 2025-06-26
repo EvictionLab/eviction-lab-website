@@ -4,12 +4,13 @@ h1: St. Louis, Missouri
 slug: st-louis-mo
 date: 2024-08-30T04:00:00.000Z
 rentersSite: St. Louis
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: St. Louis, Missouri | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="29510" area_site="true" >}}
+{{< report_intro site_id="29510"  >}}
 {{</ report_intro >}}
 
 

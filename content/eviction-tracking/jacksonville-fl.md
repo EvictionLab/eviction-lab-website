@@ -4,12 +4,13 @@ h1: Jacksonville, Florida
 slug: jacksonville-fl
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Jacksonville
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Jacksonville Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="12031" area_site="true" >}}
+{{< report_intro site_id="12031"  >}}
 {{</ report_intro >}}
 
 

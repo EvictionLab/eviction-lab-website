@@ -4,12 +4,13 @@ h1: Gainesville, Florida
 slug: gainesville-fl
 date: 2024-07-01T04:00:00.000Z
 rentersSite: Gainesville
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Gainesville Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="12001" area_site="true" >}}
+{{< report_intro site_id="12001"  >}}
 {{</ report_intro >}}
 
 

@@ -4,13 +4,14 @@ h1: Richmond, Virginia
 slug: richmond-va
 date: 2025-01-03T05:00:00.000Z
 rentersSite: Richmond
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Richmond, Virginia | Eviction Tracking System
 geographies: zips
 collection: true
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="51760" area_site="true" >}}
+{{< report_intro site_id="51760"  >}}
 {{</ report_intro >}}
 
 

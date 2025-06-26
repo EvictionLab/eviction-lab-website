@@ -4,10 +4,11 @@ draft: false
 title: Fort Lauderdale, Florida | Eviction Tracking System
 h1: Fort Lauderdale, Florida
 rentersSite: Fort Lauderdale
+areaSite: true
 slug: fort-lauderdale-fl
 date: 2024-07-02T03:27:06.983Z
 ---
-{{< report_intro site_id="12011" area_site="true" >}}
+{{< report_intro site_id="12011"  >}}
 {{</ report_intro >}}
 
 

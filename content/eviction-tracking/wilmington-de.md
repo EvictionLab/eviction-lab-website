@@ -4,12 +4,13 @@ h1: Wilmington, Delaware
 slug: wilmington-de
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Wilmington
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Wilmington, Delaware | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="10003" area_site="true" >}}
+{{< report_intro site_id="10003"  >}}
 {{</ report_intro >}}
 
 

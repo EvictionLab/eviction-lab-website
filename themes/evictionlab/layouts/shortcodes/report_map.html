@@ -1,9 +1,15 @@
+{{ $place := "city" }}
+{{ if .Page.Params.areaSite }}
+{{ $place = "county" }}
+{{ end }}
 {{ $geographies := .Page.Params.geographies | default "tracts" }}
 <div class="section section--map">
   <div class="section__content">
     <div class="details">
       <p class="description">{{ .Inner }}</p>
-      <p class="description top-filers-only">On map, we also plot the location of the top 100 eviction hotspots in the county (see above). Hover over the circles to
+      <p class="description top-filers-only">On map, we also plot the location of the top 100
+        eviction hotspots in the {{
+        $place }} (see above). Hover over the circles to
       see more information about filings from these locations.<sup>3</sup></p>
     </div>
     <div class="visual">

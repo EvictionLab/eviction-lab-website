@@ -4,12 +4,13 @@ h1: Minneapolis–Saint Paul, Minnesota
 slug: minneapolis-saint-paul-mn
 date: 2025-01-03T05:00:00.000Z
 rentersSite: Minneapolis-Saint Paul
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Minneapolis–Saint Paul, Minnesota | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="27053" area_site="true" >}}
+{{< report_intro site_id="27053"  >}}
 {{</ report_intro >}}
 
 

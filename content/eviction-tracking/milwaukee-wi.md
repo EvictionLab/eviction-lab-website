@@ -4,12 +4,13 @@ h1: Milwaukee, Wisconsin
 slug: milwaukee-wi
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Milwaukee
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Milwaukee, Wisconsin | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="55079" area_site="true" >}}
+{{< report_intro site_id="55079"  >}}
 {{</ report_intro >}}
 
 

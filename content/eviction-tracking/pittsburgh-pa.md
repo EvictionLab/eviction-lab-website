@@ -4,13 +4,14 @@ h1: Pittsburgh, Pennsylvania
 slug: pittsburgh-pa
 date: 2023-01-11T05:00:00.000Z
 rentersSite: Pittsburgh
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Pittsburgh, Pennsylvania | Eviction Tracking System
 geographies: zips
 collection: true
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="42003" area_site="true" >}}
+{{< report_intro site_id="42003"  >}}
 {{</ report_intro >}}
 
 

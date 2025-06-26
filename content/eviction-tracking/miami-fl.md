@@ -4,10 +4,11 @@ draft: false
 title: Miami, Florida | Eviction Tracking System
 h1: Miami, Florida
 rentersSite: Miami
+areaSite: true
 slug: miami-fl
 date: 2025-05-21T03:27:06.983Z
 ---
-{{< report_intro site_id="12086" area_site="true" >}}
+{{< report_intro site_id="12086"  >}}
 {{</ report_intro >}}
 
 {{% trends_chart id="trends" data="/uploads/miami_barchart.csv" %}}

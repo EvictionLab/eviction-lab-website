@@ -4,12 +4,13 @@ h1: Tampa, Florida
 slug: tampa-fl
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Tampa
+areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
 collection: true
 title: Tampa, Florida | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="12103" area_site="true" >}}
+{{< report_intro site_id="12103"  >}}
 {{</ report_intro >}}
 
 

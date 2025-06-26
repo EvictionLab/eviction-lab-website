@@ -4,10 +4,11 @@ draft: false
 title: Providence, RI | Eviction Tracking
 h1: Providence, Rhode Island
 rentersSite: Providence
+areaSite: true
 slug: providence-ri
 date: 2024-08-30T17:28:49.024Z
 ---
-{{< report_intro site_id="44007" area_site="true" >}}
+{{< report_intro site_id="44007"  >}}
 {{</ report_intro >}}
 
 
