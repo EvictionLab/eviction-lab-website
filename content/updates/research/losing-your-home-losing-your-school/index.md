@@ -36,6 +36,16 @@ scripts:
     </div>
 </div>
 <hr style="border-top-color: #2c897f; margin: 2.4rem 0 2.4rem;">
+<div class="d-flex flex-wrap flex-md-nowrap align-items-center mw-100 mt-2 mb-3">
+    <div class="pr-12 pr-md-0">
+        <a href='https://apnews.com/article/eviction-school-transfer-absenteeism-suspension-99841ffaa06984ce5bb1b0cdcf1bca6d' target="_blank" rel="noreferrer noopener"><img style="width:240px;" class="journal-image mb-3 mb-md-0" src='ASA-logo.svg' /></a>
+    </div>
+    <div class="ml-md-3"><p class="green gt-eesti journal-subheading">LISTEN TO A PODCAST:</p>
+        <p><a class="green gt-eesti journal-heading" href='https://sagesociology.libsyn.com/sociology-of-education-consequences-of-eviction-led-forced-mobility-for-school-age-children-in-houston' target="_blank" rel="noreferrer noopener">Peter Hepburn in conversation with Catherine Yim about the study</a></p>
+        <p class="mt-3" style="font-size: 1.6rem;">American Sociological Association</p>
+    </div>
+</div>
+<hr style="border-top-color: #2c897f; margin: 2.4rem 0 2.4rem;">
 
 
 
