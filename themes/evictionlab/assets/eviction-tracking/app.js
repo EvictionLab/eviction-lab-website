@@ -2172,7 +2172,7 @@ Elab.Map = (function (Elab) {
       bounds: usBounds,
       maxBounds: usBounds,
     });
-    window.map = map;
+
     /**
      * Show tooltip and set outline of feature when hovering
      * @param {*} e
@@ -2495,6 +2495,8 @@ Elab.Map = (function (Elab) {
       var flipped = e.originalEvent.pageX > window.innerWidth - 240;
       var space = flipped ? -32 : 32;
       tooltipContainer
+        .addClass("chart__tooltip")
+        .removeClass("tooltip")
         .toggleClass("chart__tooltip--flip", flipped)
         .css({
           display: "block",
