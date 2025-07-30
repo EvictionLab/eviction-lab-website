@@ -27,7 +27,10 @@ Many cities are promoting eviction diversion programs and mediation initiatives.
 While advocates prepare for {{< smartlink "cuts in housing and social safety programs" "https://stateline.org/2025/06/16/housing-advocates-worry-states-cant-fill-rental-aid-gaps-if-trump-cuts-go-through/" >}} stemming from the federal government, these are four cities that have created innovative initiatives to counteract the effect that an eviction can have on their residents.
 
 
-**Philadelphia’s mandatory diversion program**
+<br/>
+
+### Philadelphia’s mandatory diversion program
+<br/>
 
 Before the pandemic, Philadelphia saw more than 22,000 eviction filings a year. Yet in 2024, landlords in that city filed fewer than 14,000 evictions. Local leaders believe the drastic drop is due to Philadelphia's exemplary eviction diversion program.
 
@@ -49,7 +52,10 @@ The program was so successful that in 2024 the city made it permanent. Officials
 
 Learn more about Philadelphia’s eviction diversion program {{< smartlink "here" "https://eviction-diversion.phila.gov/#/" >}}.
  
-**Charleston County: Inspiring a state**
+<br/>
+
+### Charleston County: Inspiring a state
+<br/>
 
 Every day, more than 10 households were evicted. That was the reality for North Charleston, South Carolina — the city with the most evictions according to Eviction Lab’s 2016 {{< smartlink "ranking" "https://evictionlab.org/rankings/#/evictions?r=United%20States&a=0&d=evictionRate&lang=en" >}}.
 
@@ -81,7 +87,10 @@ Despite not being able to reach every tenant, the housing court program proves h
 
 To learn more about Charleston County’s housing court, contact {{< smartlink "Charleston Pro Bono Legal Services" "https://charlestonprobono.org/" >}} or {{< smartlink "Trident United Way’s" "https://www.tuw.org/" >}} 2-1-1. 
 
-**Delaware’s innovation in legal aid**
+<br/>
+
+### Delaware’s innovation in legal aid
+<br/>
 
 Landlords once filed more than 17,000 evictions every year in Delaware, but in those cases only 2% of the tenants involved had access to legal help. For legal and housing advocates, this meant that the scales of justice were heavily skewed to one side and tenants needed a better chance in court.
 
@@ -123,7 +132,10 @@ While an in-depth analysis of Delaware’s Right to Representation and QTA model
 
 To learn more about Delaware’s program, find more information {{< smartlink "here" "https://delegalhelplink.org/dehousing-1" >}}. 
 
-**Rochester, Minnesota: schools helping tenants**
+<br/>
+
+### Rochester, Minnesota: schools helping tenants
+<br/>
 
 According to the latest Eviction Lab estimates, almost {{< smartlink "three million children face the threat of an eviction every year" "https://evictionlab.org/who-is-evicted-in-america/" >}}.  For these children, an eviction is not just about housing stability. It’s a destabilizing force that impacts education, health, and their lives as a whole. 
 
