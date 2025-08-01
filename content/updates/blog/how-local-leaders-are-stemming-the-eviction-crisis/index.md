@@ -218,7 +218,7 @@ the eviction but addressing the issue at hand: the couple needed a home that acc
 life. Thanks to Mullet’s interventions, the landlord repaired the unit and added special rails to
 prevent future damage and risk of displacement.
 
-{{< pullquote "A legislative report evaluating the first seven months of the program finds that the majority of the cases were litigated (36%) or resolved outside of court (38%)" >}}
+{{< pullquote "More than 70% ended up getting free legal representation or resolved their situation outside of court" >}}
 
 As much as many lawyers would like to help tenants beyond the courtroom, their workload and how the
 judicial system works forces them to move quickly, limiting ongoing help for tenants
@@ -249,11 +249,7 @@ have to navigate this process alone — it is terrifying, and confusing, and har
 
 {{< pullquote "“No one should have to navigate this process alone — it is terrifying, and confusing, and hard to decipher”" >}}
 
-While an in-depth analysis of Delaware’s Right to Representation and QTA model is still a work in
-progress, preliminary data shows it’s making an impact. A legislative
-{{< smartlink "report" "https://courts.delaware.gov/forms/download.aspx?id=275428" >}} evaluating
-the first seven months of the program finds that the majority of the cases were litigated (36%) or
-resolved outside of court (38%).
+While the program is still working on a deeper analysis of its performance, {{< smartlink "preliminary data" "https://courts.delaware.gov/forms/download.aspx?id=275428" >}} show that it has assisted more than 600 people in its first seven months. Of those cases, more than 70% ended up getting free legal representation or resolved their situation outside of court, saving justice system resources. 
 
 <div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-2">
     <div class="ml-md-3 ml-sm-2 mr-sm-1">
