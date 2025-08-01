@@ -1,6 +1,6 @@
 ---
 childof: alumni-bios
-newposition: Yale University, PhD Student (History)
+newposition: Yale University, PhD Student (Political Science)
 abbrev: achapnik
 title: Adam Chapnik
 position: Research Specialist
