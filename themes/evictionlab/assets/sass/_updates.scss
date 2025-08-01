@@ -259,6 +259,12 @@ picture img {
   background: #f4f7f9;
 }
 
+.callout {
+  position: relative;
+  border-left: 0.5rem solid #e24000;
+  background: white;
+  padding: 1.6rem 2.4rem;
+}
 .link-button {
   position: relative;
   display: block;
@@ -268,7 +274,7 @@ picture img {
   margin-top: 3.2rem;
   margin-bottom: 3.2rem;
   p,
-  span {
+  span:not(.normal-span) {
     padding: 1.6rem 2.4rem;
     display: block;
     text-align: center;
