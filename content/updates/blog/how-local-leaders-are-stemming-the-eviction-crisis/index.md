@@ -1,7 +1,7 @@
 ---
 draft: true
 childof: blog
-url: how-local-leaders-are-stemming-the-eviction-crisis-
+url: how-local-leaders-are-stemming-the-eviction-crisis
 contenttype: updates
 collection: true
 contentcat: blog
