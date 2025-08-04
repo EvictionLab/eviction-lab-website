@@ -9,7 +9,7 @@ listSummaryMaxChars: 250
 featured: true
 in_index: true
 title: "How local leaders are stemming the eviction crisis"
-date: 2025-08-01T18:49:04.271Z
+date: 2025-08-04T18:49:04.271Z
 postauthorname: Camila Vallejo
 postauthortitle: The Eviction Lab
 authorpic: /about/page-content/research-team-bios/camila-vallejo/cvallejo_thumb.jpg
@@ -21,9 +21,9 @@ listSummary:
   The outcomes of the over seven million eviction cases filed each year can vary dramatically
   depending on where they occur. These four cities have created innovative initiatives to counteract
   the effect eviction filings can have on their residents.
-twImage: 24153653237_6d5182fb1b_o.jpeg
-image: 24153653237_6d5182fb1b_o.jpeg
-fbImage: 24153653237_6d5182fb1b_o.jpeg
+twImage: local-leaders-stemming-eviction-crisis.jpg
+image: local-leaders-stemming-eviction-crisis.jpg
+fbImage: local-leaders-stemming-eviction-crisis.jpg
 ---
 
 The outcomes of the more than seven million eviction cases filed in America each year can be
@@ -62,7 +62,7 @@ Between 2020, when the eviction diversion program began, and June 2025, the init
 than 81,000 landlord applicants. According to the city, it offered mediation to over 11,000
 landlord-tenant pairs and reached agreements to stop an eviction in nearly 70% of cases.
 
-{{< pullquote "Landlords were required to apply to the eviction diversion program before filing an eviction case. This gives tenants more time and space to find an alternative solution to losing their homes in the court process." >}}
+<!-- {{< pullquote "Landlords were required to apply to the eviction diversion program before filing an eviction case. This gives tenants more time and space to find an alternative solution to losing their homes in the court process." >}} -->
 
 Before applying, landlords are required to give tenants information on the eviction diversion
 program and the resources available. Once a landlord applies and is approved, the program has four
@@ -86,7 +86,7 @@ tenants’ long term stability.
 court system and other city systems as well,” said Michal Bilick, program manager for the city’s
 eviction prevention programs.
 
-{{< pullquote "“By intervening early, [eviction diversion programs] can help stabilize households, reduce filings and ease the burden on the court system and other city systems as well”" >}}
+<!-- {{< pullquote "“By intervening early, [eviction diversion programs] can help stabilize households, reduce filings and ease the burden on the court system and other city systems as well”" >}} -->
 
 The program was so successful that in 2024 the city made it permanent. Officials in charge of the
 program say that they know that cases can be complex, but their goal is to always find the most
@@ -118,7 +118,7 @@ The ranking was a signal to policymakers and advocates in South Carolina that so
 change, Lietzow added. And it has. Shortly after the list set into perspective the risk tenants were
 facing, the Supreme Court of South Carolina piloted the “housing court” model in 2019.
 
-{{< pullquote "Residential eviction cases are heard once a week in each court. Clustering the cases into a single day allows service providers to better engage with the people impacted by evictions." >}}
+<!-- {{< pullquote "Residential eviction cases are heard once a week in each court. Clustering the cases into a single day allows service providers to better engage with the people impacted by evictions." >}} -->
 
 Instead of eviction case hearings being scheduled several times a week,
 {{< smartlink "this policy consists" "https://www.aclusc.org/en/publications/episode-3-see-you-housing-court" >}}
@@ -147,7 +147,7 @@ In 2024, over 10,000 evictions were filed in Charleston — a significant decrea
 numbers. Yet, only 2,523 hearings were requested. Lietzow said that fear and a lack of education are
 the main challenges to get more people to come to court.
 
-{{< pullquote "In cases where tenants show up to court, approximately 9 out of every 10 cases with legal aid avoid an eviction judgment the day of the hearing" >}}
+<!-- {{< pullquote "In cases where tenants show up to court, approximately 9 out of every 10 cases with legal aid avoid an eviction judgment the day of the hearing" >}} -->
 
 Since March 2021 to May 2025, Charleston County Housing Court Program has helped 4,423 people and is
 constantly working on increasing participation, but that might require an overhaul of the eviction
@@ -192,7 +192,7 @@ supervision via the “Right to Representation” model. Under this model, lawye
 work in tandem, complementing each other’s work: while some cases demand complex litigation, others
 are better addressed out of the courtroom.
 
-{{< pullquote "Qualified tenant advocates are allies in expanding the reach of legal aid and are a solution that focuses on giving both sides a fair chance" >}}
+<!-- {{< pullquote "Qualified tenant advocates are allies in expanding the reach of legal aid and are a solution that focuses on giving both sides a fair chance" >}} -->
 
 Sandy Mullet is the state’s first qualified tenant advocate. She said the majority of her work
 focuses on eliminating bureaucratic challenges.
@@ -218,7 +218,7 @@ the eviction but addressing the issue at hand: the couple needed a home that acc
 life. Thanks to Mullet’s interventions, the landlord repaired the unit and added special rails to
 prevent future damage and risk of displacement.
 
-{{< pullquote "More than 70% ended up getting free legal representation or resolved their situation outside of court" >}}
+<!-- {{< pullquote "More than 70% ended up getting free legal representation or resolved their situation outside of court" >}} -->
 
 As much as many lawyers would like to help tenants beyond the courtroom, their workload and how the
 judicial system works forces them to move quickly, limiting ongoing help for tenants
@@ -247,7 +247,7 @@ attorneys.
 “There just are not enough lawyers interested in doing legal aid work,” Atkin said. "No one should
 have to navigate this process alone — it is terrifying, and confusing, and hard to decipher.”
 
-{{< pullquote "“No one should have to navigate this process alone — it is terrifying, and confusing, and hard to decipher”" >}}
+<!-- {{< pullquote "“No one should have to navigate this process alone — it is terrifying, and confusing, and hard to decipher”" >}} -->
 
 While the program is still working on a deeper analysis of its performance, {{< smartlink "preliminary data" "https://courts.delaware.gov/forms/download.aspx?id=275428" >}} show that it has assisted more than 600 people in its first seven months. Of those cases, more than 70% ended up getting free legal representation or resolved their situation outside of court, saving justice system resources. 
 
@@ -275,7 +275,7 @@ of evictions were trickling down to students.
 alarming statistic if you’re looking at all the ripple effects on families and kids,” said Karen
 Fairbairn Nath, the executive director of the Legal Assistance of Olmsted County.
 
-{{< pullquote "“In a given 12-month period, 32% of the eviction cases involved school-aged children. That’s an alarming statistic if you’re looking at all the ripple effects on families and kids.”" >}}
+<!-- {{< pullquote "“In a given 12-month period, 32% of the eviction cases involved school-aged children. That’s an alarming statistic if you’re looking at all the ripple effects on families and kids.”" >}} -->
 
 Since last year, Nath’s organization has been working closely with the Rochester School District to
 limit the number of students displaced.
@@ -292,7 +292,7 @@ role is to avoid evictions and prevent homelessness at its root.
 Although the program started last September, metrics collected so far show Nicols has been able to
 avoid eviction in the majority of the cases she’s identified.
 
-{{< pullquote "Nicols has been able to avoid eviction in the majority of the cases she’s identified" >}}
+<!-- {{< pullquote "Nicols has been able to avoid eviction in the majority of the cases she’s identified" >}} -->
 
 Proponents of the program are excited for its potential and see it as a way to promote stability and
 save resources in the long term.
