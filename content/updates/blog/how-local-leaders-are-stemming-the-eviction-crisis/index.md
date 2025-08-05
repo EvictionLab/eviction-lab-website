@@ -27,14 +27,13 @@ fbImage: local-leaders-stemming-eviction-crisis.jpg
 ---
 
 The outcomes of the more than seven million eviction cases filed in America each year can be
-radically different depending on where they happen. The experience of a tenant in Philadelphia,
+radically different depending on where they happen. The experience of a tenant in {{< smartlink "Philadelphia" "https://evictionlab.org/eviction-tracking/philadelphia-pa/" >}},
 where there are currently 4 filings per 100 renter households, could vary greatly from a tenant in
-Las Vegas, where this rate is in double digits. This difference often relies on the policies and
-initiatives that elected officials have created.
+{{< smartlink "Las Vegas" "https://evictionlab.org/eviction-tracking/las-vegas-nv/" >}}, where this rate is in double digits. This difference often relies on the policies and
+initiatives that localities have created.
 
 Many cities are promoting eviction diversion programs and mediation initiatives. Others are trying
-to increase their capacity to offer legal aid. And, in some instances, schools are getting involved,
-trying to avoid the negative consequences of evictions on their students.
+to increase their capacity to offer legal aid. And, in some instances, schools are getting involved, to avoid the negative consequences of evictions on their students.
 
 While advocates prepare for
 {{< smartlink "cuts in housing and social safety programs" "https://stateline.org/2025/06/16/housing-advocates-worry-states-cant-fill-rental-aid-gaps-if-trump-cuts-go-through/" >}}
@@ -66,7 +65,7 @@ landlord-tenant pairs and reached agreements to stop an eviction in nearly 70% o
 
 Before applying, landlords are required to give tenants information on the eviction diversion
 program and the resources available. Once a landlord applies and is approved, the program has four
-pathways available: just mediation, just financial assistance, a combination of both, or direct
+pathways: just mediation, just financial assistance, a combination of both, or direct
 negotiation. For example, if a case is due to repairs, the parties may be referred to mediation. But
 if there is back rent, they may receive direct financial assistance. Between 2020 and June 2025,
 More than 12,000 landlord-tenant pairs avoided eviction thanks to financial assistance with an
@@ -211,7 +210,7 @@ When asked if any cases depict her work as a QTA the best, she recalls a couple 
 weeks.
 
 “I have an elderly couple who were both in scooters and in a small apartment, and so the walls were
-getting damaged by the scooters.”
+getting damaged by the scooters,” she said.
 
 The couple was facing an eviction. Fully leaning into her role, Mullet advocated not only to stop
 the eviction but addressing the issue at hand: the couple needed a home that accommodated their
@@ -221,7 +220,7 @@ prevent future damage and risk of displacement.
 <!-- {{< pullquote "More than 70% ended up getting free legal representation or resolved their situation outside of court" >}} -->
 
 As much as many lawyers would like to help tenants beyond the courtroom, their workload and how the
-judicial system works forces them to move quickly, limiting ongoing help for tenants
+judicial system works forces them to move quickly, limiting ongoing help for tenants.
 
 Mullet is one of seven qualified tenant advocates and 10 lawyers behind Delaware’s program. As part
 of its recruitment, the initiative is open to people without a background in legal matters, as it
@@ -280,7 +279,7 @@ Fairbairn Nath, the executive director of the Legal Assistance of Olmsted County
 Since last year, Nath’s organization has been working closely with the Rochester School District to
 limit the number of students displaced.
 
-Denetria “Shai” Nicols was hired as the district's eviction prevention specialist. In her role,
+Denetria “Shai” Nicols was hired as the district's {{< smartlink "eviction prevention specialist" "https://www.mprnews.org/story/2025/03/12/in-rochester-a-new-program-helps-students-families-avoid-eviction" >}}. In her role,
 she’s tasked with cross-referencing weekly eviction filings to school records to identify families
 facing eviction. Nicols then does everything possible to help the family access resources, whether
 it’s legal aid, financial assistance, or more.
