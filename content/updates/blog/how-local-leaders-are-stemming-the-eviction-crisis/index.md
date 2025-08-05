@@ -94,7 +94,7 @@ favorable outcome for both parties, with over 300 trained mediators willing to h
 If no solution is available via the eviction diversion program, tenants can also be referred to
 legal aid.
 
-<div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-2">
+<div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-4">
     <div class="ml-md-3 ml-sm-2 mr-sm-1">
         <p><a class="gt-eesti link-button" href='https://eviction-diversion.phila.gov/#/' target="_blank" rel="noreferrer noopener">Learn more about Philadelphia’s eviction diversion <span class="normal-span d-inline-block">program <i class="fa fa-chevron-right" style="font-size: 16px"></i></span></a></p>
     </div>
@@ -159,7 +159,7 @@ try to find somewhere else to live,” she said.
 Despite not being able to reach every tenant, the housing court program proves how one locality can
 change the outlook for an entire state.
 
-<div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-2">
+<div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-4">
     <div class="ml-md-3 ml-sm-2 mr-sm-1">
     <p class="mt-4 mb-0"><strong>
       Learn more about Charleston County’s housing court:
@@ -251,7 +251,7 @@ have to navigate this process alone — it is terrifying, and confusing, and har
 
 While the program is still working on a deeper analysis of its performance, {{< smartlink "preliminary data" "https://courts.delaware.gov/forms/download.aspx?id=275428" >}} show that it has assisted more than 600 people in its first seven months. Of those cases, more than 70% ended up getting free legal representation or resolved their situation outside of court, saving justice system resources. 
 
-<div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-2">
+<div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-4">
     <div class="ml-md-3 ml-sm-2 mr-sm-1">
         <p><a class="gt-eesti link-button" href='https://delegalhelplink.org/dehousing-1' target="_blank" rel="noreferrer noopener">Learn more about Delaware's <span class="normal-span d-inline-block">program <i class="fa fa-chevron-right" style="font-size: 16px"></i></span></a></p>
     </div>
@@ -303,7 +303,7 @@ prevent it all together in the first place, we never have to go down that road,�
 coordinator of community partnerships with Rochester School District. “It ensures that kids get to
 continue to access their education, and they're safe and stable in homes.”
 
-<div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-2">
+<div class="callout d-flex flex-wrap flex-md-nowrap align-items-center mw-100 py-0 px-1 mt-1 mb-4">
     <div class="ml-md-3 ml-sm-2 mr-sm-1">
         <p><a class="gt-eesti link-button" href='https://www.rochesterschools.org/' target="_blank" rel="noreferrer noopener">Learn more about the program by contacting Rochester Public <span class="normal-span d-inline-block">Schools <i class="fa fa-chevron-right" style="font-size: 16px"></i></span></a></p>
     </div>
