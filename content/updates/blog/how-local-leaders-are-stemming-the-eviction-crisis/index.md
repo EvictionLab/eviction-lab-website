@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: blog
 url: how-local-leaders-are-stemming-the-eviction-crisis
 contenttype: updates
@@ -280,16 +280,12 @@ Since last year, Nath’s organization has been working closely with the Rochest
 limit the number of students displaced.
 
 Denetria “Shai” Nicols was hired as the district's {{< smartlink "eviction prevention specialist" "https://www.mprnews.org/story/2025/03/12/in-rochester-a-new-program-helps-students-families-avoid-eviction" >}}. In her role,
-she’s tasked with cross-referencing weekly eviction filings to school records to identify families
-facing eviction. Nicols then does everything possible to help the family access resources, whether
-it’s legal aid, financial assistance, or more.
+she’s tasked with cross-referencing weekly eviction filings to school records to identify families facing eviction. Nicols then does everything possible to help the family access resources, whether it’s legal aid, financial assistance, or more.
 
-In the United States, every district has a liaison tasked with limiting barriers for any student
-navigating homelessness, but they might lack time and resources on preventing it altogether. Her
-role is to avoid evictions and prevent homelessness at its root.
+In the United States, every district has a {{< smartlink "liaison" "https://schoolhouseconnection.org/homeless-education-directory" >}} tasked with limiting barriers for any student
+navigating homelessness, but they might lack time and resources on preventing it altogether. Nicols' role is to avoid evictions and prevent homelessness at its root.
 
-Although the program started last September, metrics collected so far show Nicols has been able to
-avoid eviction in the majority of the cases she’s identified.
+Although the program started last September, metrics collected so far show Nicols has been able to avoid eviction in the majority of the cases she’s identified.
 
 <!-- {{< pullquote "Nicols has been able to avoid eviction in the majority of the cases she’s identified" >}} -->
 
