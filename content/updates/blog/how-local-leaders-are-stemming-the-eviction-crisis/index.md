@@ -26,7 +26,7 @@ image: local-leaders-stemming-eviction-crisis.jpg
 fbImage: local-leaders-stemming-eviction-crisis.jpg
 ---
 
-The outcomes of the more than seven million eviction cases filed in America each year can be
+<span class="dropcap red">T</span>he outcomes of the more than seven million eviction cases filed in America each year can be
 radically different depending on where they happen. The experience of a tenant in {{< smartlink "Philadelphia" "https://evictionlab.org/eviction-tracking/philadelphia-pa/" >}},
 where there are currently 4 filings per 100 renter households, could vary greatly from a tenant in
 {{< smartlink "Las Vegas" "https://evictionlab.org/eviction-tracking/las-vegas-nv/" >}}, where this rate is in double digits. This difference often relies on the policies and
