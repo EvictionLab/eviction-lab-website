@@ -1,31 +1,30 @@
 ---
 draft: false
+listSummaryMaxChars: 250
 childof: blog
 url: how-local-leaders-are-stemming-the-eviction-crisis
 contenttype: updates
 collection: true
 contentcat: blog
-listSummaryMaxChars: 250
 featured: true
 in_index: true
-title: "How local leaders are stemming the eviction crisis"
+title: How local leaders are stemming the eviction crisis
 date: 2025-08-04T18:49:04.271Z
 postauthorname: Camila Vallejo
 postauthortitle: The Eviction Lab
 authorpic: /about/page-content/research-team-bios/camila-vallejo/cvallejo_thumb.jpg
-description:
-  The outcomes of the over seven million eviction cases filed each year can vary dramatically
-  depending on where they occur. These four cities have created innovative initiatives to counteract
-  the effect eviction filings can have on their residents.
-listSummary:
-  The outcomes of the over seven million eviction cases filed each year can vary dramatically
-  depending on where they occur. These four cities have created innovative initiatives to counteract
-  the effect eviction filings can have on their residents.
+description: The outcomes of the over seven million eviction cases filed each
+  year can vary dramatically depending on where they occur. These four cities
+  have created innovative initiatives to counteract the effect eviction filings
+  can have on their residents.
+listSummary: The outcomes of the over seven million eviction cases filed each
+  year can vary dramatically depending on where they occur. These four cities
+  have created innovative initiatives to counteract the effect eviction filings
+  can have on their residents.
 twImage: local-leaders-stemming-eviction-crisis.jpg
 image: local-leaders-stemming-eviction-crisis.jpg
 fbImage: local-leaders-stemming-eviction-crisis.jpg
 ---
-
 <span class="dropcap red">T</span>he outcomes of the more than seven million eviction cases filed in America each year can be
 radically different depending on where they happen. The experience of a tenant in {{< smartlink "Philadelphia" "https://evictionlab.org/eviction-tracking/philadelphia-pa/" >}},
 where there are currently 4 filings per 100 renter households, could vary greatly from a tenant in
@@ -85,7 +84,7 @@ tenants’ long term stability.
 court system and other city systems as well,” said Michal Bilick, program manager for the city’s
 eviction prevention programs.
 
-<!-- {{< pullquote "“By intervening early, [eviction diversion programs] can help stabilize households, reduce filings and ease the burden on the court system and other city systems as well”" >}} -->
+<!-- {{< pullquote "“By intervening early, \[eviction diversion programs] can help stabilize households, reduce filings and ease the burden on the court system and other city systems as well”" >}} -->
 
 The program was so successful that in 2024 the city made it permanent. Officials in charge of the
 program say that they know that cases can be complex, but their goal is to always find the most
@@ -142,9 +141,7 @@ case: they must request it within 10 days of receiving the eviction notice, or t
 forward with the next step of the eviction process. Tenants are encouraged to contact 211 to get
 legal help as early in the eviction process as possible but many fail to do so.
 
-In 2024, over 10,000 evictions were filed in Charleston — a significant decrease from pre-pandemic
-numbers. Yet, only 2,523 hearings were requested. Lietzow said that fear and a lack of education are
-the main challenges to get more people to come to court.
+In 2024, over {{< smartlink "10,000 evictions" "https://civilcourtdata.lsc.gov/data/eviction/south-carolina/charleston/" >}} were filed in Charleston — a significant decrease from pre-pandemic numbers. Yet, most tenants did not request a hearing. Lietzow said that fear and a lack of education are the main challenges to get more people to come to court.
 
 <!-- {{< pullquote "In cases where tenants show up to court, approximately 9 out of every 10 cases with legal aid avoid an eviction judgment the day of the hearing" >}} -->
 
