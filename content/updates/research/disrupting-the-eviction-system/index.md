@@ -13,6 +13,7 @@ postauthorname: Emily A. Benfer, Peter Hepburn, Valerie Nazarro, Leah Robinson,
   Jamila Michener, and Danya E. Keene
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
+image: rtc-blog-camden-court.jpg
 description: As a growing number of jurisdictions consider adopting RTC—and as
   researchers seek to analyze the effects of such programs—it is critical to
   understand their challenges and the keys to their success. Here we highlight
@@ -31,7 +32,6 @@ socialDescription: As a growing number of jurisdictions consider adopting
   highlight five key findings.
 twImage: rtc-blog-camden-court.jpg
 fbImage: rtc-blog-camden-court.jpg
-image: rtc-blog-camden-court.jpg
 ---
 <style>
   .svg-map__legend {
@@ -749,7 +749,7 @@ The most common limitation among these programs is income. In many cases, cities
 %}}
 <br>
 
-Another important characteristic to consider is when in the eviction process tenants can access legal aid. While in seven jurisdictions an attorney can help at any point during the eviction process, in multiple jurisdictions, a lawyer is only available at the filing or hearing stage. Attorneys can continue to provide legal assistance to tenants during an appeal in 11 jurisdictions and bring affirmative cases—such as for an illegal lockout, record sealing after the case, or a fair housing claim—in nine jurisdictions.
+Another important characteristic to consider is when in the eviction process tenants can access legal aid. While in seven jurisdictions an attorney can help at any point during the eviction process, in multiple jurisdictions, a lawyer is only available at the filing or hearing stage. Attorneys can continue to provide legal assistance to tenants during an appeal in 14 jurisdictions and bring affirmative cases—such as for an illegal lockout, record sealing after the case, or a fair housing claim—in nine jurisdictions.
 <br><br>
 
 3. **Successful RTC programs need proper funding and invest in education and outreach**
@@ -788,9 +788,6 @@ Tenants’ new-found voice in court led to the development of new landlord-tenan
 
 RTC puts tenants in a position to advocate and seek further systemic changes. This effect can be seen in local pushes for greater legislative action, such as “just cause” laws and increased affordable housing.
 
-
 <hr style="margin: 4rem 0 4.8rem;" />
-
-
 
 RTC programs can have substantial benefits, from stabilizing housing to changing eviction court systems and increasing tenant protections. But approaches to design and implementation, as well as funding levels, vary in ways that impact the quality of the benefits that tenants receive and the success of the program overall. Due to the ongoing threat of eviction and its effect on households and the community at large, it is necessary to fully understand these measures and how they are implemented in practice. Our work provides researchers and policymakers with the tools to advance, evaluate, and refine RTC in ways that safeguard the communities most impacted by eviction.
