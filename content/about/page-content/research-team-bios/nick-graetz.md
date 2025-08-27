@@ -2,7 +2,7 @@
 childof: research-team-bios
 title: Nick Graetz
 abbrev: ngraetz
-position: Visiting Research Collaborator 
+position: Research Collaborator 
 date: 2017-11-26T03:52:04.376Z
 image: /images/bios/ngraetz_full.jpg
 thumb: /images/bios/ngraetz_thumb.jpg
