@@ -208,7 +208,7 @@ data:
     monthfile: /uploads/newyork_monthly_2020_2021.csv
   - site: Palm Beach
     years: 2014-2019
-    geo: Tract
+    geo: Census Tract
     file: /uploads/palmbeach_weekly_2020_2021.csv
     monthfile: /uploads/palmbeach_monthly_2020_2021.csv
   - site: Pennsylvania
@@ -223,7 +223,7 @@ data:
     monthfile: /uploads/philadelphia_monthly_2020_2021.csv
   - site: Phoenix
     years: 2015-2019
-    geo: Census Tract
+    geo: Zip Code
     file: /uploads/phoenix_weekly_2020_2021.csv
     monthfile: /uploads/phoenix_monthly_2020_2021.csv
   - site: Pittsburgh
