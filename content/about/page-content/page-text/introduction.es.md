@@ -8,7 +8,7 @@ image: /images/assets/woman-with-belongings.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
 caption: Una mujer observa mientras sus pertenencias son sacadas de su hogar.
 credit: '(Foto: Michael Kienitz)'
-weight: 1
+weight: 10
 color: red
 ---
 Hoy en día, la mayoría de las familias pobres que alquilan en Estados Unidos gastan más de la mitad de sus ingresos en costos de vivienda, y el desalojo está transformando sus vidas. Sin embargo, se sabe poco sobre la prevalencia, las causas y las consecuencias de la inseguridad de vivienda.

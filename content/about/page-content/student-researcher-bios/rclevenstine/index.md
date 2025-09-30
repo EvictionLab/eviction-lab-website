@@ -7,7 +7,7 @@ position: Graduate Research Assistant
 date: 2017-11-26T03:46:25.603Z
 image: rclevenstine.jpg
 thumb: rclevenstine_sq.jpg
-weight: 6
+weight: 60
 ---
 Ronnie Clevenstine is a doctoral student in Sociology and Social Policy at Princeton University, affiliated with the Princeton Office of Population Research. Her research primarily focuses on poverty, rural populations, property insurance, and the social safety net. She is particularly interested how climate risk and state policy environments shape community well-being and exploitation in rural areas and the American South.
 

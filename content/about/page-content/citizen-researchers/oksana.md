@@ -5,5 +5,5 @@ position: Housing Policy Analysts
 organization: Community Service Society
 assisted: 'Assisted with: New York City'
 date: 2017-11-26T03:46:25.603Z
-weight: 6
+weight: 60
 ---

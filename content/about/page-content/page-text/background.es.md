@@ -7,7 +7,7 @@ attr: —Matthew Desmond
 date: 2017-11-26T03:54:30.075Z
 image: 
 thumb: /images/bios/mdesmond_thumb.jpg
-weight: 2
+weight: 20
 class: no-img
 color: blue
 ---

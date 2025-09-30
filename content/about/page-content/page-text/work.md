@@ -6,7 +6,7 @@ blockquote: Big problems demand big data.
 date: 2017-11-26T03:54:30.075Z
 image: /images/assets/eviction-court.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
-weight: 2
+weight: 20
 color: green
 caption: 'Case files are stacked high inside a housing courtroom.' 
 credit: '(Photo: Sally Ryan)'

@@ -6,5 +6,5 @@ title: Sehrish Taqweem
 position: Summer Intern
 image: staqweem_full.jpg
 thumb: staqweem_thumb.jpg
-weight: 410
+weight: 4100
 ---

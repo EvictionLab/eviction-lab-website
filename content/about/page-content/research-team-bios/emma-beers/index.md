@@ -6,7 +6,7 @@ position:  Senior Research Specialist
 date: 2025-09-18T03:52:04.376Z
 image: full.jpg
 thumb: thumb.jpg
-weight: 20
+weight: 200
 ---
 Emma is a Senior Research Specialist at the Eviction Lab. Emma joined the Lab in 2025 to research and solve for barriers U.S. Department of Housing and Urban Development Continuum of Care program grantees experience in managing and analyzing locally administered Homeless Management Information System data.
 

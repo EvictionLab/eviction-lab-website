@@ -6,5 +6,5 @@ title: Andy Luu
 position: Summer Intern
 image: aluu_full.jpg
 thumb: aluu_thumb.jpg
-weight: 318
+weight: 3180
 ---

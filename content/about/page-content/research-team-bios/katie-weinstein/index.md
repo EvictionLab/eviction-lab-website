@@ -5,7 +5,7 @@ abbrev: kweinstein
 position: Administrative Assistant
 thumb: kw_thumb.jpg
 image: kw_full.jpg
-weight: 148
+weight: 1480
 ---
 Katie Weinstein is the Administrative Assistant at the Eviction Lab. She holds a Bachelor of Fine Arts from the University of North Carolina School of the Arts.
 

@@ -6,7 +6,7 @@ blockquote: Problemas grandes demandan datos masivos.
 date: 2017-11-26T03:54:30.075Z
 image: /images/assets/eviction-court.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
-weight: 2
+weight: 20
 color: green
 caption: 'Los archivos de caso están apilados en una sala judicial de viviendas.' 
 credit: '(Foto: Sally Ryan)'

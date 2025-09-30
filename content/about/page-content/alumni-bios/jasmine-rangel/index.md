@@ -5,5 +5,5 @@ title: Jasmine Rangel
 position: Research Specialist
 newposition: Jasmine Rangel – Senior Housing Associate, PolicyLink
 thumb: jrangel_thumb.jpg
-weight: 400
+weight: 4000
 ---

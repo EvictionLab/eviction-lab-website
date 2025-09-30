@@ -6,7 +6,7 @@ childof: research-team-bios
 title: Carl Gershenson
 image: cgershenson_full.jpg
 thumb: cgershenson_thumb.jpg
-weight: 65
+weight: 650
 ---
 Carl Gershenson is Lab Director at Eviction Lab. He has published on the causes and consequences of housing instability, with a special focus on how eviction leads to further economic and residential insecurity. He received his Ph.D. in Sociology from Harvard University, where his dissertation explored the political and cultural origins of the American business corporation. After graduation, Carl joined the Sociology Department at Washington University in St. Louis as a Postdoctoral Research Fellow.
 

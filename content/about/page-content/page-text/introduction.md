@@ -8,7 +8,7 @@ image: /images/assets/woman-with-belongings.jpg
 thumb: /images/bios/mdesmond_thumb.jpg
 caption: 'A woman watches as her belongings are removed from her home.' 
 credit: '(Photo: Michael Kienitz)'
-weight: 1
+weight: 10
 color: red
 ---
 Today, the majority of poor renting families in America spend over half of their income on housing costs, and eviction is transforming their lives. Yet little is known about the prevalence, causes, and consequences of housing insecurity.

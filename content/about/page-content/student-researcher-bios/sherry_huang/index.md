@@ -6,5 +6,5 @@ title: Sherry Huang
 position: Summer Intern
 image: shuang_full.jpg
 thumb: shuang_thumb.jpg
-weight: 315
+weight: 3150
 ---

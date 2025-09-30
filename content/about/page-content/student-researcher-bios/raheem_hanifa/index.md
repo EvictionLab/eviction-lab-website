@@ -6,7 +6,7 @@ title: Raheem Hanifa
 position: Graduate Research Assistant
 image: rhanifa_full.jpg
 thumb: rhanifa_thumb.jpg
-weight: 15
+weight: 150
 ---
 Raheem Hanifa is a doctoral student in the Sociology department at Princeton. His research interests are in urban sociology, neighborhood change, and race. He is particularly interested in understanding the historical impacts of Black homeownership exclusion from US housing markets on the socio-economic trajectories of Black households and neighborhoods. Raheem is also interested in perceptions of reparations and the role of reparations in mitigating White-Black racial wealth gaps.
 
