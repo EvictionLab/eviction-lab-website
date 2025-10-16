@@ -10,7 +10,9 @@ collection: true
 title: Dallas, Texas | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
+
 {{< report_intro site_id="48113"  >}}
+Changes in the case-filing system in Dallas County, Texas, led to an undercount in the data between 2022 and 2024. We have updated our site to include these missing filings. More information is available [here](/dallas-data-update). The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.
 {{</ report_intro >}}
 
 
