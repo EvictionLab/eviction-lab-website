@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 listSummaryMaxChars: 250
 childof: blog
 url: dallas-data-update
