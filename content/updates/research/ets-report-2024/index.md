@@ -90,10 +90,12 @@ scripts:
 }
 </style>
 
+<!-- 
 <em>Correction: Changes in the case-filing system in [Dallas County, Texas](/eviction-tracking/dallas-tx), led to an undercount in the data between 2022 and 2024. We have updated our site to include these missing filings. More information is available [here](/dallas-data-update). The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
 <br/>
 <hr />
 <br/>
+-->
 
 <span class="dropcap green">T</span>he days of emergency rental assistance and eviction protections are long gone. These programs got the United States to historically low levels of housing displacement during the COVID-19 pandemic. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020. In some concerning cases like Phoenix, Las Vegas, and Houston, landlords are evicting many more tenants than before.
 
