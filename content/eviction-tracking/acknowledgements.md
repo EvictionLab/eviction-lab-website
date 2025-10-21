@@ -20,7 +20,7 @@ similar: >-
 
   - Does the dataset track all eviction _filings_ or only _orders_? While most sources listed here track all filings, some only collect data on executed evictions, that is where law enforcement is ordered to displace tenants. [New America’s guide on court eviction data](https://www.newamerica.org/future-land-housing/reports/understanding-evictions-a-guide-to-using-local-court-data/common-questions-to-address-using-court-eviction-data/) clarifies the differences between court related eviction terminology
   
-  - How are sealed or expunged cases handled? [PolicyLink](https://www.policylink.org/mapping-the-growth-of-eviction-record) provides a database of jurisdictions with policies for sealing or expungement.Where applicable, how are sealed or expunged cases handled?
+  - How are sealed or expunged cases handled? [PolicyLink](https://www.policylink.org/mapping-the-growth-of-eviction-record) provides a database of jurisdictions with policies for sealing or expungement. Where applicable, how are sealed or expunged cases handled?
   
   - Does the data capture all venues where eviction filings can be made? Some states have multiple courts handling eviction cases; ensure all are represented.
   
@@ -106,7 +106,7 @@ similar: >-
   
   ### Kentucky
   
-  - [Reports by the Root Cause Research Center (the research arm of the Louisville Tenants Union)](https://www.rootcauseresearch.org/lel): visualizes eviction cases in Louisville and tracks top evictors in 2020 and 2021
+  - Reports by the Root Cause Research Center (the research arm of the Louisville Tenants Union): visualizes eviction cases in Louisville and tracks top evictors in 2020 and 2021; project link no longer active
   
   - [Dashboard by Kentucky Court of Justice](https://www.kycourts.gov/AOC/Information-and-Technology/Analytics/Pages/Caseload-Yearly-by-Category.aspx): provides yearly case counts. To view forcible detainer cases, you can select case category “District Civil” and filter to case group “Forcible Detainer”
   
@@ -148,7 +148,7 @@ similar: >-
   
   ### New Hampshire
   
-  - [Statistics by the New Hampshire Judicial Branch](https://www.notion.so/Homepage-6bda67bd835546efa2fca8a2adec434e?pvs=21): publishes monthly totals of “landlord tenant writ filings” and “writs of possession”
+  - [Statistics by the New Hampshire Judicial Branch](https://www.courts.nh.gov/media/data-reports): publishes monthly totals of “landlord tenant writ filings” and “writs of possession”
   
   ### New Jersey
   
