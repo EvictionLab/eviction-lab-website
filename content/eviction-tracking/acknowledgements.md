@@ -15,14 +15,14 @@ similar: >-
 
   A number of other groups and organizations have produced systems to track eviction filings. Below we list some of those resources. Each source relies on its own data collection and reporting practices. We recommend reviewing methodology reports to identify underlying data sources and examining local eviction processes to assess how legal requirements or jurisdictional exclusions may contribute to incomplete or limited data. Triangulating across sources covering the same region and speaking with tenant support organizations and legal aid groups could help confirm the validity of data.
 
-  
+
   Questions to consider before interpreting eviction data:
 
   - Does the dataset track all eviction _filings_ or only _orders_? While most sources listed here track all filings, some only collect data on executed evictions, that is where law enforcement is ordered to displace tenants. [New America’s guide on court eviction data](https://www.newamerica.org/future-land-housing/reports/understanding-evictions-a-guide-to-using-local-court-data/common-questions-to-address-using-court-eviction-data/) clarifies the differences between court related eviction terminology
   
-  - Where applicable, how are sealed or expunged cases handled? [PolicyLink provides a database](https://www.policylink.org/mapping-the-growth-of-eviction-record) of jurisdictions with policies in place for sealing or expungement
+  - How are sealed or expunged cases handled? [PolicyLink](https://www.policylink.org/mapping-the-growth-of-eviction-record) provides a database of jurisdictions with policies for sealing or expungement.Where applicable, how are sealed or expunged cases handled?
   
-  - Does the data capture all venues where eviction filings can be made? In some cases, multiple courts may handle eviction cases, and it’s important to understand whether the reported data reflect all of those sources
+  - Does the data capture all venues where eviction filings can be made? Some states have multiple courts handling eviction cases; ensure all are represented.
   
 
   Do you know of any ongoing efforts to track eviction activity not listed here? Feel free to contact [research@evictionlab.org](mailto:research@evictionlab.org).
