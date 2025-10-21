@@ -112,7 +112,7 @@ similar: >-
   
   ### Maine
   
-  - [Dashboard by State of Maine’s Judicial Branch](https://www.courts.maine.gov/help/eviction/index.html): tracks eviction filing trends across the state, updated monthly
+  - [Statistics Tables by State of Maine’s Judicial Branch](https://www.courts.maine.gov/help/eviction/index.html): tracks eviction filing trends across the state, updated monthly
   
   - [Report by Pine Tree Legal](https://www.ptla.org/sites/default/files/Eviction%20Report%20May%202023%20Final.pdf): examines the causes of evictions, the frequency of default judgments, and patterns in tenant representation, based on eviction cases filed in 24 district courts in Maine between March 2019 and March 2022
   
@@ -186,7 +186,7 @@ similar: >-
   
   - [Report by Carnegie Mellon University’s CREATE Lab](http://evict-response.earthtime.org/): analyzes eviction filings in Pittsburgh, PA from 2006 to 2019
   
-  - [Dashboard by Allegheny County Analytics](https://www.notion.so/External-Eviction-Data-Orgs-Updates-24db6dc6d4ae80c7aaa6fe49f118d822?pvs=21): tracks evictions filed in Allegheny County magisterial district courts, updated frequently (users can filter to Pittsburgh City)
+  - [Dashboard by Allegheny County Analytics](https://tableau.alleghenycounty.us/t/PublicSite/views/LandlordTenantCasesDashboard/CasesFiled?%3AshowAppBanner=false&%3Adisplay_count=n&%3AshowVizHome=n&%3Aorigin=viz_share_link&%3AisGuestRedirectFromVizportal=y&%3Aembed=y#1): tracks evictions filed in Allegheny County magisterial district courts, updated frequently (users can filter to Pittsburgh City)
   
   - [Dashboard by Lancaster Stands Up](https://lookerstudio.google.com/u/0/reporting/ad9a4d86-a85f-493e-b41e-e25ca17b481c/page/p_7ho3jkz40c?s=g5zUeMsgG14): tracks cases across Pennsylvania from 2019 to mid-2020
   
@@ -200,13 +200,12 @@ similar: >-
   
   ### Texas
   
-  - [Dashboard by Child Poverty Action Lab](https://northtexasevictions.org/#/map/counties/efr/mhi/2021-01-01/2025-10-03/8.625/32.997/-96.914?group=avg7): tracks filings in the Dallas-Fort Worth area, updated frequently
+  - [Dashboard and Report by Child Poverty Action Lab](https://childpovertyactionlab.github.io/eviction-court-observations/#eviction-court-observation-process): tracks filings in Dallas County, updated frequently
   
   - [Dashboard by BASTA Austin](https://lookerstudio.google.com/u/0/reporting/f9f2545d-a0c0-477c-b98c-a5ea1dfa906c/page/CNG7C): tracks filings and judgements in the City of Austin and Travis County, updated annually 
   
   - [Dashboard by January Advisors](https://www.januaryadvisors.com/evictions/): tracks filings and top evictors in Harris County, TX, updated frequently
   
-  - [Maps and Reports by Texas Housers](https://texashousers.org/dashboard/#dashboard-evictions): tracks eviction filings reported to the Texas Office of Court Administration, last update 2024
   
   ### Virginia
   
