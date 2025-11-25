@@ -11,6 +11,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 51,Virginia,virginia,,,,
 55,Wisconsin,wisconsin,,,,
 35001,Albuquerque,albuquerque-nm,NM,35.0844,-106.6504
+13121,Atlanta,atlanta-ga,GA,33.7490,-84.3880
 48453,Austin,austin-tx,TX,30.2672,-97.7431
 25025,Boston,boston-ma,MA,42.3601,-71.0589,true
 09001,Bridgeport,bridgeport-ct,CT,41.1792,-73.1894

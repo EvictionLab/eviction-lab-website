@@ -18,6 +18,7 @@
  *  - filter-fields GEOID,NAME // filter to the necessary fields
  * 5. export as GeoJSON and save the json to static/uploads
  * 6. to generate the map bbox, (keep mapshaper open and) see addMapBbox.js
+ *  - alternatively, run 'mapshaper static/uploads/xx_shapes.json' and add bounds as "bbox" to the output json
  *
  * USING THIS SCRIPT:
  * 3. export as GeoJSON and save the json to this directory
