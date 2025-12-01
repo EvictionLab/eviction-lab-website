@@ -52,7 +52,7 @@ Eviction Hotspot data are updated semi-annually.
 
 Cobb, Clayton, DeKalb, Gwinnett, and Fulton Counties are divided into 1006 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1</sup> <sup>2</sup>
 
-1. Access to Metro Atlanta eviction filing data has been made possible through a partnership with the Federal Reserve Bank of Atlanta, the Atlanta Regional Commission, Georgia Tech, and the Atlanta Volunteer Lawyers Foundation
+1. Access to Metro Atlanta eviction filing data has been made possible through a partnership with the [Federal Reserve Bank of Atlanta](https://www.atlantafed.org/), the [Atlanta Regional Commission](https://atlantaregional.org/), [Georgia Tech,](https://www.gatech.edu/) and the [Atlanta Volunteer Lawyers Foundation](https://avlf.org/).
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts. We exclude buildings with fewer than 15 filings, in which case fewer than 100 buildings will be displayed. 
 
