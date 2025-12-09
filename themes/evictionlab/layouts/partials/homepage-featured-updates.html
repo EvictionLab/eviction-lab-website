@@ -20,9 +20,32 @@
                 <a href="/eviction-tracking" class="title title-large mb-2">
                       See up-to-date maps, charts and data on eviction filings in select cities
                       </a>
-                      {{ range where .Site.Pages ".Params.contentcat" ("data") }}
-                <p class="mb-0">Updated {{ .Date.Format "January 2, 2006" }}</p>
-                {{ end }}
+                      {{ $csv := readFile "static/uploads/filing_data_by_site.csv" }}
+                      {{ $lines := split (chomp $csv) "\n" }}
+                      {{ $headers := split (index $lines 0) "," }}
+                      {{ $idx := -1 }}
+                      {{ range $i, $h := $headers }}
+                      {{ if eq (trim $h " ") "latest_update" }}
+                      {{ $idx = $i }}
+                      {{ end }}
+                      {{ end }}
+                      {{ $target := "" }}
+                      {{ if ge $idx 0 }}
+                      {{ range $i, $l := $lines }}
+                      {{ if gt $i 0 }}
+                      {{ $cols := split $l "," }}
+                      {{ $siteid := trim (index $cols 0) " " }}
+                      {{ if eq $siteid "0" }}
+                      {{ $target = trim (index $cols $idx) " " }}
+                      {{ end }}
+                      {{ end }}
+                      {{ end }}
+                      {{ end }}
+                      {{ if ne $target "" }}
+                      <p class="mb-0">Updated {{ dateFormat "January 2, 2006" $target }}</p>
+                      {{ else }}
+                      <p class="mb-0">Updated November 1, 2025</p>
+                      {{ end }}
               </div>
             </div>
           </div>
