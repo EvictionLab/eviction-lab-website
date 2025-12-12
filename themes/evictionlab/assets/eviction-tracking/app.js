@@ -279,6 +279,7 @@ Elab.Utils = (function (Elab) {
         // only add paragraph if all values found
         if (!val) {
           hasAllData = false;
+          // console.log("missing val for", s);
           return null;
         }
         var fVal = s.formatter ? s.formatter(val) : val;

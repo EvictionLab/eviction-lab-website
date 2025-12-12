@@ -13,12 +13,12 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{< report_intro site_id="13121"  >}}
 {{</ report_intro >}}
 
-<!-- 
-{{% trends_chart id="trends" data="/uploads/albuquerque_barchart.csv" %}}
+
+{{% trends_chart id="trends" data="/uploads/atlanta_barchart.csv" %}}
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Bernalillo County (Albuquerque) over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
+This plot shows monthly eviction filings in Atlanta over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
 1. Data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). 
 
@@ -27,11 +27,7 @@ This plot shows monthly eviction filings in Bernalillo County (Albuquerque) over
 
 
 
-{{% report_top_evictors id="topEvictorsSection" data="/uploads/albuquerque_hotspots_media_report.csv" %}}
-
-
-
-
+<!-- {{% report_top_evictors id="topEvictorsSection" data="/uploads/albuquerque_hotspots_media_report.csv" %}} 
 
 # Eviction Hotspots
 
@@ -39,14 +35,10 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 
 Eviction Hotspot data are updated semi-annually.
 
+{{%/ report_top_evictors %}}
+-->
 
-
-
-
-{{%/ report_top_evictors %}} -->
-
-
-{{% report_map shapes="/uploads/atlanta_shapes.json" data="/uploads/atlanta_map.csv" topFilers="/uploads/albuquerque_hotspots_media_report.csv" %}}
+{{% report_map shapes="/uploads/atlanta_shapes.json" data="/uploads/atlanta_map.csv" %}}
 
 # The geography of eviction filings
 
@@ -58,8 +50,8 @@ Cobb, Clayton, DeKalb, Gwinnett, and Fulton Counties are divided into 1006 censu
 
 {{%/ report_map %}}
 
-<!-- 
-{{% report_chart id="race" data="/uploads/albuquerque_linechart.csv" imputedNoteNumber="2" %}}
+
+{{% report_chart id="race" data="/uploads/atlanta_linechart.csv" imputedNoteNumber="2" %}}
 
 # The demographics of eviction filings
 
@@ -72,4 +64,4 @@ Toggle the figure to compare recent filings to average filings in 2023–2024, k
 1. Eviction filing data for Bernalillo County are provided by the [New Mexico Administrative Office of the Courts](https://www.nmcourts.gov/). 
 
 {{%/ report_chart %}}
- -->
+
