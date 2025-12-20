@@ -7,6 +7,7 @@ headers:
   geoheader: Smallest Geography
   fileheader: Weekly Data
   monthfileheader: Monthly Data
+  updatedheader: Last Updated
 layout: downloads
 cascade:
   title: Eviction Tracking System | Get the Data
@@ -41,6 +42,8 @@ data:
     geo: Census Tract / ZIP Code
     file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_weekly_2020_2021.csv
     monthfile: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_monthly_2020_2021.csv
+    # use local version of file to determine date last updated
+    datefile: /uploads/all_sites_monthly_2020_2021.csv
   - site: All States
     years: "-"
     geo: Census Tract / ZIP Code

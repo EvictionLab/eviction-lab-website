@@ -23,6 +23,7 @@
               <th>{{ .Params.headers.geoheader }}</th>
               <th>{{ .Params.headers.fileheader }}</th>
               <th>{{ .Params.headers.monthfileheader }}</th>
+              <th>{{ .Params.headers.updatedheader }}</th>
           </tr>
         </thead>
         <tbody>
@@ -33,6 +34,26 @@
             <td>{{ .geo }}</td>
             <td><a href="{{ .file }}">Download CSV</a></td>
             <td><a href="{{ .monthfile }}">Download CSV</a></td>
+            <td>
+              <!-- use .datefile if it exists, otherwise use .monthfile -->
+              {{ $filePath := .datefile }}
+              {{ if not $filePath }}
+              {{ $filePath = .monthfile }}
+              {{ end }}
+              {{ $lastUpdated := "" }}
+            
+              {{ $staticPath := printf "static/%s" (replaceRE "^/" "" $filePath) }}
+              {{ if fileExists $staticPath }}
+              {{ $info := os.Stat $staticPath }}
+              {{ $lastUpdated = $info.ModTime }}
+              {{ end }}
+            
+              {{ if $lastUpdated }}
+              {{ time.Format "01/2006" $lastUpdated }}
+              {{ else }}
+              —
+              {{ end }}
+            </td>
           </tr>
           {{ end }} 
         </tbody>
