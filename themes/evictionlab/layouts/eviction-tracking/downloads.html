@@ -35,23 +35,35 @@
             <td><a href="{{ .file }}">Download CSV</a></td>
             <td><a href="{{ .monthfile }}">Download CSV</a></td>
             <td>
-              <!-- use .datefile if it exists, otherwise use .monthfile -->
-              {{ $filePath := .datefile }}
-              {{ if not $filePath }}
-              {{ $filePath = .monthfile }}
+              {{ $sid := int .siteid }}
+              {{ $csv := readFile "static/uploads/filing_data_by_site.csv" }}
+              {{ $lines := split (chomp $csv) "\n" }}
+              {{ $headers := split (index $lines 0) "," }}
+              {{ $idx := -1 }}
+                {{ range $i, $h := $headers }}
+                {{ if eq (trim $h " ") "latest_update" }}
+                  {{ $idx = $i }}
+                {{ end }}
               {{ end }}
-              {{ $lastUpdated := "" }}
-            
-              {{ $staticPath := printf "static/%s" (replaceRE "^/" "" $filePath) }}
-              {{ if fileExists $staticPath }}
-              {{ $info := os.Stat $staticPath }}
-              {{ $lastUpdated = $info.ModTime }}
+              {{ $target := "" }}
+              {{ if ge $idx 0 }}
+                {{ range $i, $l := $lines }}
+                  {{ if gt $i 0 }}
+                    {{ $cols := split $l "," }}
+                    {{ $raw := trim (index $cols 0) " " }}
+                    {{ $clean := replaceRE "^0+" "" $raw }}
+                    {{ if eq $clean "" }}{{ $clean = "0" }}{{ end }}
+                    {{ $site_id := int $clean }}
+                    {{ if eq $site_id $sid }}
+                      {{ $target = trim (index $cols $idx) " " }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
               {{ end }}
-            
-              {{ if $lastUpdated }}
-              {{ time.Format "01/2006" $lastUpdated }}
+              {{ if ne $target "" }}
+                {{ dateFormat "01/2006" $target }}
               {{ else }}
-              —
+                —
               {{ end }}
             </td>
           </tr>

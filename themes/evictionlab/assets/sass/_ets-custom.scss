@@ -14,15 +14,29 @@
             border: none;
             outline: 1px solid #efefef;
         }
-        @include media-breakpoint-up(md) {
-            width: 120%;
-            margin-left: -8%;
-        }
         &.page-stats {
             font-size: 1.8rem;
             td {
                 font-family: Akkurat-Bold,sans-serif;
             }
+        }
+    }
+    .table-responsive-sm {
+        overflow-x: auto;
+    }
+    @include media-breakpoint-up(md) {
+        table.data-table#ets-get-data {
+            width: 120%;
+            margin-left: -10%;
+        }
+        .table-responsive-sm {
+            overflow-x: unset;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        table.data-table#ets-get-data {
+            width: 130%;
+            margin-left: -15%;
         }
     }
 }
