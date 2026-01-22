@@ -25,7 +25,7 @@ Elab.StateMap = (function (Elab) {
   var zeroPatternId = "svg-map__pattern-zero";
 
   function StateMap(root, data, dataOptions, markers) {
-    // TODOxxx document simpleDisplay mode
+    // map mode where states without data are ignored (gray, not hoverable)
     var simpleDisplay;
     // stores width of the root DOM element (.svg-map__body)
     var containerWidth;
@@ -289,7 +289,6 @@ Elab.StateMap = (function (Elab) {
         .attr("d", path)
         .style("fill", function (d) {
           if (zeroPattern && !d.properties.value) return "url(#" + zeroPatternId + ")";
-          // console.
           if (ignoreValue(d)) return "#cdcdcd";
 
           return ramp(d.properties.value);

@@ -324,6 +324,8 @@ Than include the shortcode in the body of the `.md` file.
 - caption: caption text below the map
 - zeroPattern: if states with 0 value should use pattern
 - zeroValNoteColumn: column containing note to display for falsy values
+- simpleDisplay: map mode where states without data are ignored (gray, not hoverable)
+
 
 #### Demo
 

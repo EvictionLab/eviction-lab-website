@@ -96,6 +96,24 @@ caption="Colors represent state eviction policy scores from our <a href='#'>COVI
 %}}
 
 {{% state-map
+  id="statemap112"
+  data="/uploads/revenue-cleaned.csv"
+  title="How much local legal aid depends on LSC funding"
+  idColumn="fips"
+  valueColumn="reliance"
+  zeroValNoteColumn="note"
+  minVal="0"
+  maxVal="80"
+  valueTemplate="{{value}}%"
+  scaleValueTemplate="{{value}}%"
+  zeroPattern="true"
+  valueFormat=".0f"
+  caption="See CT tooltip for example use of note where value is missing"
+  colors="#dfefed;#7bcac1;#2c897f"
+%}}
+
+
+{{% state-map
   id="statemap2"
   data="/uploads/example_binned_map.csv"
   title="50 state choropleth map with bins"
@@ -123,6 +141,19 @@ caption="Colors represent state eviction policy scores from our <a href='#'>COVI
   <div class="legend-item__label">Data not available<sup>1,2</sup></div>
   </div>
 </div>
+
+{{% state-map
+  id="simple-state-map"
+  data="/uploads/map_states_simple.csv"
+  markerData="/uploads/map_markers_simple.csv"
+  title="simpleDisplay mode (states without data are ignored) + markers"
+  idColumn="fips"
+  valueColumn="geo"
+  valueTemplate="{{year}}"
+  colors="#ef0000;#434878;#2c897f"
+  simpleDisplay=true
+  cssHover=true
+%}}
 
 {{% histogram
   id="hist1"
