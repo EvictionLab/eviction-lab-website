@@ -319,9 +319,11 @@ Than include the shortcode in the body of the `.md` file.
 - maxVal: (optional) high end of the choropleth scale
 - valueFormat: formatting for values in the tooltip
 - valueTemplate: template string for tooltip
+- scaleValueTemplate: template string for scale
 - colors: colors to use for the choropleths, separated by semi colon
 - caption: caption text below the map
 - zeroPattern: if states with 0 value should use pattern
+- zeroValNoteColumn: column containing note to display for falsy values
 
 #### Demo
 

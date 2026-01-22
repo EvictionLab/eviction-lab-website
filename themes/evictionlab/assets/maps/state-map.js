@@ -53,6 +53,8 @@ Elab.StateMap = (function (Elab) {
     var valueFormat;
     // template for rendering tooltip value
     var valueTemplate;
+    // template for rendering scale value
+    var scaleValueTemplate;
     // number of ticks for scale
     var ticks;
     // hovered featue
@@ -88,6 +90,10 @@ Elab.StateMap = (function (Elab) {
             const formatter = key === "value" ? valueFormat : (v) => v;
             return formatter(data[key]);
           });
+      if (!data.value && data.note) {
+        valueString = data.note;
+      }
+
       var html = "<span>" + data.name + "</span><span>" + valueString + "</span>";
       tooltip
         .style("top", topOffset + "px")
@@ -148,8 +154,13 @@ Elab.StateMap = (function (Elab) {
         .range([h - 20, 0])
         .domain([minVal, maxVal])
         .nice();
-      var yAxis = d3.axisRight(y).ticks(ticks);
-      legendAxis.attr("transform", "translate(16,10)").call(yAxis);
+      var yAxis = d3
+        .axisRight(y)
+        .ticks(ticks)
+        .tickFormat(function (d) {
+          return scaleValueTemplate.replace("{{value}}", d);
+        });
+      legendAxis.attr("transform", "translate(15,10)").call(yAxis);
     }
 
     /** Renders the legend */
@@ -194,7 +205,12 @@ Elab.StateMap = (function (Elab) {
         .range([0, w - 32])
         .domain([minVal, maxVal])
         .nice();
-      var xAxis = d3.axisBottom(x).ticks(ticks);
+      var xAxis = d3
+        .axisBottom(x)
+        .ticks(ticks)
+        .tickFormat(function (d) {
+          return scaleValueTemplate.replace("{{value}}", d);
+        });
       legendAxis.attr("transform", "translate(16,26)").call(xAxis);
     }
 
@@ -311,6 +327,7 @@ Elab.StateMap = (function (Elab) {
       //
       valueTemplate = dataOptions.valueTemplate || "{{value}}";
       var tooltipKeys = [...valueTemplate.matchAll(/{{(.*?)}}/g)].map((match) => match[1]);
+      scaleValueTemplate = dataOptions.scaleValueTemplate || "{{value}}";
 
       // create elements and selections
       svg = d3
@@ -350,10 +367,12 @@ Elab.StateMap = (function (Elab) {
         for (var i = 0; i < data.length; i++) {
           var dataState = data[i].state;
           var dataValue = data[i].value;
+          var dataNote = data[i].note;
           for (var j = 0; j < json.features.length; j++) {
             var jsonState = json.features[j].id;
             if (dataState === jsonState) {
               json.features[j].properties.value = dataValue;
+              json.features[j].properties.note = dataNote;
               tooltipKeys.forEach((key) => {
                 json.features[j].properties[key] = data[i][key];
               });
@@ -416,6 +435,7 @@ Elab.StateMap = (function (Elab) {
             ...d,
             state: shapeStateId(d[options.idColumn]),
             value: yParse(d[options.valueColumn]),
+            note: d[options.zeroValNoteColumn],
           })),
       },
     ];
