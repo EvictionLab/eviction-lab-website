@@ -49,7 +49,11 @@ Funding for legal aid work comes from a variety of sources, including donations,
   caption="This map shows how much of the funding for organizations comes from LSC. It’s important to note that this only includes institutions that are LSC grantees there are legal aid organizations across the country that choose to fund themselves independently."
   colors="#dfefed;#7bcac1;#2c897f"
 %}}
-
+<style>
+  .svg-map__tooltip {
+    max-width: 234px;
+  }
+</style>
 
 The cuts may also hit certain regions of a state harder than others. “Clearly, [for] rural areas and grantees who serve more rural populations, any cut to their funding hits harder, because those legal deserts […] already need all of those dollars,” Stevens explains. “The impact would be more than in other jurisdictions where there may be other funding to offset that impact.”
 
