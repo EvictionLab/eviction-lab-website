@@ -10,22 +10,24 @@ in_index: true
 title: "Legal aid under threat: the human cost of federal budget cuts"
 date: 2026-01-26T18:49:04.271Z
 postauthorname: The Eviction Lab
-postauthortitle: Princeton University
+postauthortitle: Juan Pablo Garnham
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: lorem ipsum
-listSummary: lorem ipsum
-twImage: dallas-data-update.jpg
-image: dallas-data-update.jpg
-fbImage: dallas-data-update.jpg
+description: "The Legal Services Corporation funds over 100 legal aid organizations nationwide. Proposed budget cuts put their services in jeopardy, with potentially dire consequences for tenants facing eviction across the country."
+listSummary: "The Legal Services Corporation funds over 100 legal aid organizations nationwide. Proposed budget cuts put their services in jeopardy, with potentially dire consequences for tenants facing eviction across the country."
+twImage: court.jpg
+image: court.jpg
+fbImage: court.jpg
 scripts:
   - charts
   - maps
 ---
-<span class="dropcap red">M</span>anhattan’s housing court is hectic. At street level, a line of seven people forms just to go through the metal detector. Once inside, another crowd waits by the elevator. It’s a continuous cycle—as some make it in, more line up. Upstairs it’s not any better. Tenants and landlords alike wait some more outside the courtrooms for their cases to be heard. Some pace the corridor, others sit restlessly and few chat with their lawyers.   All while a mix of languages fill the space as translators briskly walk from one room to the other. In one of the courtrooms, a judge asks the landlord and tenant attorneys: “So, did you reach an agreement?”
+<span class="dropcap red">M</span>anhattan’s housing court is hectic. At street level, a line of seven people forms just to go through the metal detector. Once inside, another crowd waits by the elevator. It’s a continuous cycle—as some make it in, more line up. Upstairs it’s not any better. Tenants and landlords alike wait some more outside the courtrooms for their cases to be heard. Some pace the corridor, others sit restlessly and few chat with their lawyers. All while a mix of languages fill the space as translators briskly walk from one room to the other. In one of the courtrooms, a judge asks the landlord and tenant attorneys: “So, did you reach an agreement?”
 
 The ambiance mirrors the complicated process behind an eviction case. “It's very intimidating for ordinary people,” 59-year-old James Quinn says. For the last couple of years, with his wife Brenda, they’ve been fighting an eviction from their one-bedroom apartment in the Upper West Side and have visited this court several times. “It feels like the landlord’s lawyers know everything, and they know the judge or whoever. And it always seems like it's stilted towards them.”
 
 However, James and Brenda did have one advantage: a free lawyer on their side through their local legal aid organization. Attorney Sagar Sharma ultimately helped them keep their place, something invaluable in a city with as expensive and tight a rental market as New York City. But these kinds of resources, traditionally funded through the Legal Services Corporation (LSC), are in jeopardy. In May 2025, the Trump administration {{< smartlink "proposed defunding LSC" "https://www.lsc.gov/press-release/white-house-budget-proposes-eliminating-lsc-defunding-civil-legal-aid-millions-low-income-americans" >}}, and only after months of debate, the Senate and the House decided to avoid drastic cuts, but still decreasing the funding on 3.6%. 
+
+{{< pullquote "“LSC’s current funding level doesn’t begin to meet the needs of low-income seniors, veterans, and families in dire situations like natural disasters and domestic violence.”" >}}
 
 LSC may not be a household name, but for millions of Americans navigating the civil legal system, it’s a critical lifeline. “We fund 130 locations or legal services organizations across the country and all of the U.S. territories. They provide services in every zip code across the United States,” Holly Stevens, chief data officer of the Legal Services Corporation, explains. Since COVID, housing has become the main area of concern for legal aid organizations. “That's about 40% of the cases that LSC grantees handle annually at this moment.”
 
@@ -64,6 +66,8 @@ Cuts also hit the poorest and most vulnerable American citizens the hardest. “
 This is why Shamas Malik, mayor of Akron, OH, describes these funds as “essential.” “[Legal aid services] are generally just a safety net for folks who are low income,” Malik says. Previously, as a city councilmember, he would constantly refer constituents’ eviction cases to local legal aid, and he also pushed for a right to counsel program, now underway as a pilot in the city. The city council has invested money, which adds to already existing funds from legal aid and other organizations. This allows them to provide renters with a wide range of support, including a hotline, mediation, and legal representation. 
 
 Decreasing LSC funding could put all of these programs in jeopardy. “Cutting back on LSC funding is just going to cause more homelessness. It's going to cause more bad outcomes for folks. And at the end of the day, the legal system is already complicated enough,” Malik explains.
+
+{{< pullquote "“Cutting back on LSC funding is just going to cause more homelessness. It’s going to cause more bad outcomes for folks. And at the end of the day, the legal system is already complicated enough.”" >}}
 
 In Akron’s case, the Right to Counsel (RTC) program has been {{< smartlink "open since September 2025" "https://www.communitylegalaid.org/rtc" >}} and is serving low income tenants with children and older than 60. RTC initiatives, {{< smartlink "which have sprouted across the country" "https://evictionlab.org/disrupting-the-eviction-system/" >}}, also rely on LSC funds in other cities. In New York City, which has the largest RTC program in the United States, LSC helps to fund many of the organizations that provide legal services. In the case of the Quinns, they got help from Legal Services NYC, which received $17 million from LSC last year. 
 
