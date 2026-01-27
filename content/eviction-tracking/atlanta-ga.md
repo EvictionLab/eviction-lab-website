@@ -20,7 +20,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 This plot shows monthly eviction filings in Atlanta over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Access to Metro Atlanta eviction filing data has been made possible through a partnership with the Federal Reserve Bank of Atlanta, the Atlanta Regional Commission, Georgia Tech, and the Atlanta Volunteer Lawyers Foundation.
+1. Access to Metro Atlanta eviction filing data has been made possible through a partnership with the [Federal Reserve Bank of Atlanta](https://www.atlantafed.org/), the [Atlanta Regional Commission](https://atlantaregional.org/), [Georgia Tech](https://www.gatech.edu/), and the [Atlanta Volunteer Lawyers Foundation](https://avlf.org/).
 
 
 {{%/ trends_chart %}}
@@ -58,7 +58,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 
 Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup>
 
-1. Access to Metro Atlanta eviction filing data has been made possible through a partnership with the Federal Reserve Bank of Atlanta, the Atlanta Regional Commission, Georgia Tech, and the Atlanta Volunteer Lawyers Foundation.
+1. Access to Metro Atlanta eviction filing data has been made possible through a partnership with the [Federal Reserve Bank of Atlanta](https://www.atlantafed.org/), the [Atlanta Regional Commission](https://atlantaregional.org/), [Georgia Tech](https://www.gatech.edu/), and the [Atlanta Volunteer Lawyers Foundation](https://avlf.org/).
 
 {{%/ report_chart %}}
 
