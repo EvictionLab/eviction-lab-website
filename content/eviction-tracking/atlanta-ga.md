@@ -35,7 +35,7 @@ Eviction Hotspot data are updated semi-annually.
 
 {{%/ report_top_evictors %}}
 
-{{% report_map shapes="/uploads/atlanta_shapes.json" data="/uploads/atlanta_map.csv" %}}
+{{%  report_map shapes="/uploads/atlanta_shapes.json" data="/uploads/atlanta_map.csv"  topFilers="/uploads/atlanta_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 
