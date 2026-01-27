@@ -25,18 +25,15 @@ This plot shows monthly eviction filings in Atlanta over the past 12 months. Fil
 
 {{%/ trends_chart %}}
 
-
-
-<!-- {{% report_top_evictors id="topEvictorsSection" data="/uploads/albuquerque_hotspots_media_report.csv" %}} 
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/atlanta_hotspots_media_report.csv" %}} 
 
 # Eviction Hotspots
 
-Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), continued in 2020 and beyond. We analyzed eviction records in Bernalillo County to determine where the most cases are being filed. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the past 12 months. We also display the plaintiff name most often listed with a given building in the court filings. Below we map the top 100 hotspots across the county.
+Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), continued in 2020 and beyond. We analyzed eviction records in the Atlanta Metro Area to determine where the most cases are being filed. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the past 12 months. We also display the plaintiff name most often listed with a given building in the court filings. Below we map the top 100 hotspots across the county.
 
 Eviction Hotspot data are updated semi-annually.
 
 {{%/ report_top_evictors %}}
--->
 
 {{% report_map shapes="/uploads/atlanta_shapes.json" data="/uploads/atlanta_map.csv" %}}
 
