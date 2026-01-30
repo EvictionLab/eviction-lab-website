@@ -127,4 +127,7 @@
   margin: 2em;
   color: #7d7d7d;
 }
-
+.center-content-post.updates-post .page-content .svg-map .svg-map__caption.above {
+  margin-top: 0;
+  margin-bottom: 0;
+}

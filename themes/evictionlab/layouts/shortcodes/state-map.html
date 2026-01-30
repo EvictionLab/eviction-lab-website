@@ -4,16 +4,19 @@
 
 {{ $title := .Get "title" }}
 {{ $caption := .Get "caption" }}
-
+{{ $captionAbove := .Get "captionAbove" }}
 <div
   class="svg-map svg-map--states svg-map--{{ .Get `id` }}"
 >
   {{ if $title }}
   <h3 class="svg-map__title">{{ $title }}</h3>
   {{ end }}
+  {{ if $captionAbove }}
+  <p class="svg-map__caption above">{{ $captionAbove | safeHTML }}</p>
+  {{ end }}
   <div id="{{ .Get `id` }}" class="svg-map__body"></div>
   {{ if $caption }}
-  <p class="svg-map__caption">{{ $caption | safeHTML }}</p>
+  <p class="svg-map__caption below">{{ $caption | safeHTML }}</p>
   {{ end }}
   
   <script>
