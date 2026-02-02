@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: blog
 url: legal-aid-under-threat
 contenttype: updates
