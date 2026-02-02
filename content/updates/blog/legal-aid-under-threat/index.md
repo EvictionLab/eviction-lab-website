@@ -8,7 +8,7 @@ contentcat: blog
 featured: true
 in_index: true
 title: "Legal aid under threat: the human cost of federal budget cuts"
-date: 2026-01-26T18:49:04.271Z
+date: 2026-02-02T00:01:04.271Z
 postauthorname: Juan Pablo Garnham
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/jpgarnham_thumb.jpg
