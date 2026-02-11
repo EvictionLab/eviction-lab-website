@@ -82,7 +82,7 @@ Evictions are commonplace in the United States, but most research to date has fo
 Approximately 17 million people rented homes in rural America in 2018. As in the rest of the country, these tenants are burdened by unaffordable rents and a shortage of rental housing. Using the [Eviction Lab’s national database](http://www.evictionlab.org/map), we found that approximately 220,000 evictions were filed against rural renters each year between 2000 to 2018. The annual eviction filing rate in rural counties was 4.3%, lower than the national average and the 9.7% rate in urban counties, but {{< extlink "still higher than what we see in other high-income countries" "https://www.oecd.org/els/family/HC3-3-Evictions.pdf" >}}. And while urban eviction rates fell over this period, rural rates remained flat.
 
 <div class="figheader">Figure 1. Urban vs rural eviction filing rate by year</div>
-<iframe class="visual" src="https://staging--eviction-lab-site.netlify.app/blog/rural-viz"></iframe>
+<iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/rural-viz"></iframe>
 
 Evictions can have a series of negative effects on tenants and their families: they can {{< extlink "deepen financial hardship" "https://www.nber.org/papers/w30382" >}}, {{< extlink "harm physical and mental health" "https://www.tandfonline.com/doi/abs/10.1080/10511482.2020.1812690" >}}, {{< extlink "make it more difficult to find a job" "https://academic.oup.com/socpro/article-abstract/63/1/46/1844105?redirectedFrom=fulltext" >}}, and disrupt the education of children. Evictions are even {{< extlink "associated with early mortality" "https://www.sciencedirect.com/science/article/pii/S0277953623007554" >}}. Reducing evictions is one way rural communities could combat economic and demographic decline trends. 
 
@@ -97,14 +97,14 @@ At the same time, our research also found eviction risk for Black renters was no
 
 <div class="figheader">Figure 2. Share of eviction filings by demographic composition in rural counties</div>
 <div class="stacked">
-  <iframe class="visual" src="https://staging--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=black"></iframe>
-  <iframe class="visual" src="https://staging--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=hispanic"></iframe>
-  <iframe class="visual" src="https://staging--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=white"></iframe>
+  <iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=black"></iframe>
+  <iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=hispanic"></iframe>
+  <iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=white"></iframe>
 </div>
 <div class="side-by-side">
-  <div class="vis-wrapper"><iframe class="visual" src="https://staging--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=black&hideXAxis"></iframe></div>
-  <div class="vis-wrapper"><iframe class="visual" src="https://staging--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=hispanic&hideYAxis"></iframe></div>
-  <div class="vis-wrapper"><iframe class="visual" src="https://staging--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=white&hideXAxis&hideYAxis"></iframe></div>
+  <div class="vis-wrapper"><iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=black&hideXAxis"></iframe></div>
+  <div class="vis-wrapper"><iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=hispanic&hideYAxis"></iframe></div>
+  <div class="vis-wrapper"><iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/rural-race-viz/?dem=white&hideXAxis&hideYAxis"></iframe></div>
 </div>
 
 We also found that counties with higher levels of rent burden—tenants paying large shares of their income toward rent—experienced higher rates of eviction filing. In fact, the most impoverished rural communities were not necessarily those with the highest eviction filing rates. Extremely isolated communities may have low eviction rates because of the sheer affordability of housing. But in places like Vance County, a quick 40-minute drive up the I-85 from Durham, housing costs tend to be higher relative to income and eviction filings were extremely common.
