@@ -1,0 +1,139 @@
+{{ $tickerRows := slice }}
+{{ $siteMetadata := dict }}
+
+{{ with readFile "static/uploads/site_metadata.csv" }}
+  {{ $metadataLines := split (chomp .) "\n" }}
+  {{ if gt (len $metadataLines) 1 }}
+    {{ $metadataHeaders := split (index $metadataLines 0) "," }}
+    {{ $siteIdIdx := -1 }}
+    {{ $displayNameIdx := -1 }}
+    {{ $parentStateIdx := -1 }}
+    {{ range $i, $h := $metadataHeaders }}
+      {{ $header := trim $h " " }}
+      {{ if eq $header "site_id" }}{{ $siteIdIdx = $i }}{{ end }}
+      {{ if eq $header "display_name" }}{{ $displayNameIdx = $i }}{{ end }}
+      {{ if eq $header "parent_state" }}{{ $parentStateIdx = $i }}{{ end }}
+    {{ end }}
+    {{ if and (ge $siteIdIdx 0) (ge $displayNameIdx 0) }}
+      {{ range $i, $line := $metadataLines }}
+        {{ if gt $i 0 }}
+          {{ $cols := split $line "," }}
+          {{ if and (gt (len $cols) $siteIdIdx) (gt (len $cols) $displayNameIdx) }}
+            {{ $siteId := trim (index $cols $siteIdIdx) " " }}
+            {{ $displayName := trim (index $cols $displayNameIdx) " " }}
+            {{ $parentState := "" }}
+            {{ if and (ge $parentStateIdx 0) (gt (len $cols) $parentStateIdx) }}
+            {{ $parentState = trim (index $cols $parentStateIdx) " " }}
+            {{ end }}
+            {{ if and (ne $siteId "") (ne $displayName "") }}
+              {{ $fullDisplayName := $displayName }}
+              {{ if ne $parentState "" }}
+              {{ $fullDisplayName = printf "%s, %s" $displayName $parentState }}
+              {{ end }}
+              {{ $siteMetadata = merge $siteMetadata (dict $siteId $fullDisplayName) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with readFile "static/uploads/filing_data_by_site.csv" }}
+  {{ $lines := split (chomp .) "\n" }}
+  {{ if gt (len $lines) 1 }}
+    {{ $headers := split (index $lines 0) "," }}
+    {{ $siteIdIdx := -1 }}
+    {{ $filingsIdx := -1 }}
+    {{ $hideIdx := -1 }}
+    {{ $latestUpdateIdx := -1 }}
+    {{ range $i, $h := $headers }}
+      {{ $header := trim $h " " }}
+      {{ if eq $header "site_id" }}{{ $siteIdIdx = $i }}{{ end }}
+      {{ if eq $header "filings_past_year" }}{{ $filingsIdx = $i }}{{ end }}
+      {{ if eq $header "hide_ticker" }}{{ $hideIdx = $i }}{{ end }}
+      {{ if eq $header "latest_update" }}{{ $latestUpdateIdx = $i }}{{ end }}
+    {{ end }}
+    {{ if and (ge $siteIdIdx 0) (ge $filingsIdx 0) (ge $latestUpdateIdx 0) }}
+    {{ $latestDate := "" }}
+      {{ range $i, $line := $lines }}
+        {{ if gt $i 0 }}
+          {{ $cols := split $line "," }}
+          {{ if gt (len $cols) $latestUpdateIdx }}
+          {{ $updateDate := trim (index $cols $latestUpdateIdx) " " }}
+          {{ if and (ne $updateDate "") (or (eq $latestDate "") (gt $updateDate $latestDate)) }}
+          {{ $latestDate = $updateDate }}
+          {{ end }}
+          {{ end }}
+          {{ end }}
+          {{ end }}
+          {{ range $i, $line := $lines }}
+          {{ if gt $i 0 }}
+          {{ $cols := split $line "," }}
+          {{ if and (gt (len $cols) $filingsIdx) (gt (len $cols) $siteIdIdx) (gt (len $cols) $latestUpdateIdx) }}
+            {{ $siteId := trim (index $cols $siteIdIdx) " " }}
+            {{ $filings := trim (index $cols $filingsIdx) " " }}
+            {{ $updateDate := trim (index $cols $latestUpdateIdx) " " }}
+            {{ $hide := "" }}
+            {{ if ge $hideIdx 0 }}
+              {{ $hide = trim (index $cols $hideIdx) " " }}
+            {{ end }}
+            {{ if and (ne $siteId "") (ne $siteId "0") (ne $filings "") (eq $updateDate $latestDate) (eq $hide "") }}
+              {{ $displayName := index $siteMetadata $siteId }}
+              {{ if $displayName }}
+                {{ $tickerRows = $tickerRows | append (dict "site" $displayName "filings_past_year" $filings) }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<div>
+    <div id="ets-feature" class="row mx-0 feature-panel">
+      <div class="col-12 col-xxl-11 col-xxxl-10 col-x4l-9 d-flex flex-wrap mx-auto px-0 pt-3 pb-2 pt-xl-4">
+          <div class="col-12 col-xxl-11 col-xxxl-10 col-x4l-9 mx-auto px-0 d-flex flex-wrap">
+            <div class="col-12 col-md-8 col-lg-6 pl-0 pr-3 px-md-2">
+            <div class="feature main-feature px-0 ml-3 my-3 mt-lg-4">
+                <h2 class="ets-heading bordered-header border-0 pt-0 mx-0 mb-2">
+                  {{ i18n "ETSHeading" }}
+                </h2>
+                <h2 class="ets-sub title title-large mb-2">
+                  {{ i18n "ETSSub" }}
+                </h2>
+                <a class="bordered-header border-0 m-0 ets-link" href="/eviction-tracking">
+                    {{ i18n "ETSLink" }}
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+            </div>
+            <div class="col-12 col-md-9 col-lg-6 px-3 pl-md-2 pr-md-5">
+                <div class="px-0 ml-md-3 mt-1 mt-md-3 my-md-3">
+                    <p>{{ i18n "ETSBlurb" }}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        {{ if gt (len $tickerRows) 0 }}
+        <div class="col-12 px-0 mt-5 mb-12">
+            <div class="ets-ticker">
+                  <div class="ets-ticker__track">
+                      {{ range seq 1 2 }}
+                          {{ range $tickerRows }}
+                              <div class="ets-ticker__item">
+                                  <div class="ets-ticker__site">{{ .site }}</div>
+                                  <div class="ets-ticker__stat">
+                                      <div class="ets-ticker__value mb-2">{{ lang.NumFmt 0 .filings_past_year }}</div>
+                                      <div class="ets-ticker__label">{{ i18n "ETSTickerLabel" }}</div>
+                                  </div>
+                              </div>
+                          {{ end }}
+                      {{ end }}
+                  </div>
+              </div>
+          </div>
+        {{ end }}
+    </div>
+</div>

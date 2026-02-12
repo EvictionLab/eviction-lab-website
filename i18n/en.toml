@@ -15,6 +15,16 @@ other = "Engage with the data"
 other = "Explore our research"
 [toolsHeading]
 other = "Comprehensive national data"
+[ETSHeading]
+other = "Eviction Tracking System"
+[ETSSub]
+other = "In the past year, we have tracked 900,000 eviction filings"
+[ETSLink]
+other = "go to the tracker"
+[ETSBlurb]
+other = "The Eviction Tracking System (ETS) is a real-time data platform developed by the Eviction Lab to monitor eviction court filings as they happen in selected jurisdictions across the United States."
+[ETSTickerLabel]
+other = "filings in past 12 months"
 [toolsSub]
 other = "Explore nationwide eviction data spanning the years 2000-2016. View maps and charts, download reports, and more."  
 [mapData]

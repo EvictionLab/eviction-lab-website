@@ -363,6 +363,110 @@
         }
         
     }
+    #ets-feature {
+        background: #13173b;
+        color: white;
+    }
+    .ets-ticker {
+        color: #0b1d6b;
+        overflow: hidden;
+    }
+
+    .ets-heading {
+        color: $color1;
+    }
+    .ets-sub {
+        color: white !important;
+    }
+    .ets-link {
+        max-width: max-content;
+        i {
+            font-size: 12px;
+            transform: translate(0px, 1px);
+        }
+        &:hover {
+            text-decoration: none;
+            color: $color1;
+            i {
+                transform: translate(4px, 1px);
+                transition: transform .3s ease;
+            }
+        }
+    }
+    .ets-ticker__track {
+        display: inline-flex;
+        align-items: center;
+        gap: 160px;
+        min-width: 100%;
+        animation: etsTickerScroll 220s linear infinite;
+        will-change: transform;
+    }
+    // .ets-ticker:hover .ets-ticker__track {
+    //     animation-play-state: paused;
+    // }
+    .ets-ticker__item {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 1rem;
+        padding: 0.4rem 0;
+        flex-shrink: 0;
+        color: #858bff;
+    }
+    .ets-ticker__site {
+        font-family: Akkurat-Regular, sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.04em;
+        text-transform: capitalize;
+    }
+    .ets-ticker__stat {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+    }
+    .ets-ticker__value {
+        font-family: GT-Eesti-Display-Bold, sans-serif;
+        font-size: 6rem;
+    }
+    .ets-ticker__label {
+        font-family: Akkurat-Regular, sans-serif;
+        font-size: 1.6rem;
+    }
+    // @include media-breakpoint-up(md) {
+    //     .ets-ticker {
+    //         margin-top: 2rem;
+    //         padding: 1.8rem 1.6rem;
+    //     }
+    //     .ets-ticker__mask::before,
+    //     .ets-ticker__mask::after {
+    //         width: 88px;
+    //     }
+    //     .ets-ticker__item {
+    //         gap: 1.4rem;
+    //     }
+    //     .ets-ticker__site {
+    //         font-size: 1.6rem;
+    //     }
+    //     .ets-ticker__value {
+    //         font-size: 3rem;
+    //     }
+    //     .ets-ticker__label {
+    //         font-size: 1.4rem;
+    //     }
+    // }
+    // @include media-breakpoint-up(xl) {
+    //     .ets-ticker__value {
+    //         font-size: 3.2rem;
+    //     }
+    // }
+    @keyframes etsTickerScroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
     .blog-research-panel {
         .feature-image {
             max-height: 140px;
