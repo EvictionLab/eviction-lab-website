@@ -5,7 +5,7 @@
       <div class="col-12 col-xxl-11 col-xxxl-10 col-x4l-9 mx-auto px-0 d-flex flex-wrap">
         <div class="col-12 col-lg-8 mb-md-3 mb-lg-0 blog-research-panel">
           <!-- ETS section -->
-          <div class="fade-in-element">
+          <!-- TODOxxx delete <div class="fade-in-element">
             <div class="bordered-header d-none d-lg-block border-0 pt-0 blue mb-3 mx-3 ">
               Eviction Tracking System
             </div>
@@ -48,7 +48,7 @@
                       {{ end }}
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Research section -->
           <div class="fade-in-element">
@@ -69,11 +69,23 @@
                 <p class="mb-0">Our research explores topics such as the consequences of eviction, landlords and rental markets, and
                   zoning, and offers tools to address the eviction crisis.</p>
               </div>
+              <div class="research-findings px-1 px-md-2">
+                <p>Nationwide, 3.6 million evictions were filed in 2018 against 2.7 million unique households.</p>
+                <p>Every year, 7.6 million individual renters are threatened with eviction, many of them children.</p>
+                <p>Nearly one-third of all evictions filed in 2014 were repeated cases against the same household at the same address.
+                </p>
+                <div class="mt-3">
+                  <a class="bordered-header border-0 pt-4" href="/research">
+                    see more key findings
+                    <i class="fa fa-chevron-right"></i>
+                  </a>
+                </div>
+                </div>
             </div>
-          </div>
-          
+            </div>
+            {{ partial "homepage-interactives-block-mini" . }}
           <!-- Updates section -->
-          <div class="fade-in-element">
+          <!-- TODOxxx delete <div class="fade-in-element">
             <div class="bordered-header blue d-none d-md-flex justify-content-between mb-3 mx-2 mx-lg-3">
               Updates
               <a class="see-all" href="/updates">SEE ALL</a>
@@ -104,19 +116,19 @@
                 {{ end }}
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
     
     <!-- Right panel ---------------->
     
     {{ if eq .Site.Language.LanguageName "Español" }}
       {{ range .Translations }}
-          {{ partial "reporting" . }}
+          {{ partial "updates" . }}
         {{ end }}
       {{ end }}
 
       {{ if eq .Site.Language.LanguageName "English" }}
-          {{ partial "reporting" . }}
+          {{ partial "updates" . }}
       {{ end }}  
 
 

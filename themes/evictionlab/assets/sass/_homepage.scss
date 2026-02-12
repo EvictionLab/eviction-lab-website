@@ -11,7 +11,7 @@
         z-index: 999;
     }
 
-// HEADER ---------------------------   
+// HEADER ---------------------------
 
     .header-position-relative {
         &.header-wrapper {
@@ -42,8 +42,8 @@
                     color: #fff;
                 }
             }
-        } 
-    }    
+        }
+    }
 
     header {
         z-index: 99;
@@ -60,7 +60,7 @@
       //  position: sticky;
         transition: transform .4s ease;
         transform: translateY(0px);
-     
+
         .header-wrapper {
            // transition: background 0.5s ease;
             background: #fff;
@@ -146,6 +146,7 @@
         background: linear-gradient(
             180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7) 100%);
     }
+    // TODO: delete
     #mobile-ets-link {
         height: 364px;
         background-color: #11152F;
@@ -173,7 +174,7 @@
         opacity: 0;
         transform: translateY(5px);
     }
-    
+
     .splash-body {
         animation-delay: 0.75s;
     }
@@ -185,7 +186,7 @@
             opacity: 0;
             transform: translateY(4px);
         }
-        
+
         .splash-body {
             animation-delay: 0.25s;
         }
@@ -199,7 +200,7 @@
             opacity: 0;
             transform: translateY(4px);
         }
-        
+
         .splash-body {
             animation-delay: 0.75s;
         }
@@ -221,7 +222,7 @@
             font-size: 3.6rem;
             line-height: 1.2;
             @include media-breakpoint-up(md) {
-                font-size: 4.2rem; 
+                font-size: 4.2rem;
                 line-height: 1.1;
             }
             @include media-breakpoint-up(lg) {
@@ -292,6 +293,32 @@
                 min-height: 170px;
             }
         }
+        #research-page-block .research-findings p {
+            display: list-item;
+            margin-left: 1.6rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0;
+            &::marker {
+                font-size: 22px;
+                color: $color1;
+            }
+            &:last-child {
+                margin-bottom: 1.6rem;
+            }   
+        }
+        #research-page-block  a {
+            i {
+                transform: translate(0px, 1px);
+            }
+            &:hover {
+                text-decoration: none;
+                color: $color1;
+                i {
+                    transform: translate(4px, 1px);
+                    transition: transform .3s ease;
+                }
+            }
+        }
         .title {
             font-family: GT-Eesti-Display-Bold, sans-serif;
             font-size: 1.8rem;
@@ -306,9 +333,9 @@
                 }
             }
             &.title-large {
-             
+
                     font-size: 3rem;
-                
+
                 @include media-breakpoint-up(lg) {
                     font-size: 3.2em;
                 }
@@ -361,7 +388,7 @@
         p {
             font-family: Akkurat-Italic, sans-serif;
         }
-        
+
     }
     #ets-feature {
         background: #13173b;
@@ -493,7 +520,7 @@
           text-transform: uppercase;
           @include media-breakpoint-up(md) {
             font-size: 3rem;
-            } 
+            }
           @include media-breakpoint-up(xl) {
             font-size: 3.2rem;
             margin-bottom: 1.6rem;
@@ -520,7 +547,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
         svg {
             max-height: 365px;
             padding: 3.6rem 2.4rem 2.4rem 3.6rem;
@@ -537,7 +564,7 @@
            background-color: #f0e1df;
             a.sublink {
                 color: $color1;
-            }  
+            }
         }
         @include media-breakpoint-up(smm) {
             background-size: 100%;
@@ -566,21 +593,21 @@
             height: 200px;
         }
     }
-    .bg-1 { 
+    .bg-1 {
         background-size: 125%;
         @include media-breakpoint-up(md) {
             background-size: cover;
-        }  
+        }
         @include media-breakpoint-up(lg) {
             background-size: 100%;
         }
-        background-repeat: no-repeat; 
-        background-color: #f4e9e7;   
+        background-repeat: no-repeat;
+        background-color: #f4e9e7;
         background-image: url('/images/assets/graphics/rankings-bars.svg');
         }
     .bg-2 {
         background-size: 180%;
-        
+
         @include media-breakpoint-up(smm) {
             background-size: 151%;
         }
@@ -590,11 +617,11 @@
         @include media-breakpoint-up(md) {
             background-size: cover;
             background-position-x: center;
-        } 
-        background-repeat: no-repeat; 
+        }
+        background-repeat: no-repeat;
             background-image: url('/images/assets/graphics/nzlu-graphic10.png');
         }
-    .bg-3 { 
+    .bg-3 {
         background-size: 178%;
         @include media-breakpoint-up(smm) {
             background-size: 151%;
@@ -605,17 +632,17 @@
         @include media-breakpoint-up(md) {
             background-size: cover;
             background-position-x: right;
-        }  
+        }
         @include media-breakpoint-up(lg) {
             background-size: cover;
         }
-        background-repeat: no-repeat;    
+        background-repeat: no-repeat;
             background-image: url('/images/assets/graphics/resources-bg.jpg');
-        } 
+        }
 
 
     #hp-eviction-image {
-        
+
     }
 }
 // Mobile carousel
@@ -732,7 +759,7 @@
       color: $color1;
     }
   }
-  
+
   .carousel-control-prev, .carousel-control-next {
     opacity: 1;
     &:hover {
@@ -783,7 +810,7 @@
     }
   }
 
-  .carousel-inner .carousel-item-left.active, 
+  .carousel-inner .carousel-item-left.active,
   .carousel-inner .carousel-item-prev {
     will-change: transform;
     transform: translateX(-83.333333333%);
@@ -791,9 +818,9 @@
         transform: translateX(-66.6666666%);
     }
   }
-    
+
   .carousel-inner .carousel-item-right,
-  .carousel-inner .carousel-item-left{ 
+  .carousel-inner .carousel-item-left{
     will-change: transform;
     transform: translateX(0);
   }
