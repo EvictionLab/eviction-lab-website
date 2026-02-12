@@ -72,7 +72,7 @@ Zip Code,73301,Other,10/2025,0,0,0,
 Zip Code,73301,Other,11/2025,0,0,0,
 Zip Code,73301,Other,12/2025,0,0,0,
 Zip Code,73301,Other,01/2026,0,0,,
-Zip Code,73301,Other,02/2026,0,0,,2026-02-07
+Zip Code,73301,Other,02/2026,0,0,,2026-02-14
 Zip Code,76574,Other,01/2020,0,0,0,
 Zip Code,76574,Other,02/2020,0,0,0,
 Zip Code,76574,Other,03/2020,0,0,0,
@@ -146,7 +146,7 @@ Zip Code,76574,Other,10/2025,0,0,0,
 Zip Code,76574,Other,11/2025,0,0,0,
 Zip Code,76574,Other,12/2025,0,0,0,
 Zip Code,76574,Other,01/2026,0,0,,
-Zip Code,76574,Other,02/2026,0,0,,2026-02-07
+Zip Code,76574,Other,02/2026,0,0,,2026-02-14
 Zip Code,78610,White,01/2020,0,0.5,0.5,
 Zip Code,78610,White,02/2020,0,1.5,0.667,
 Zip Code,78610,White,03/2020,0,0.5,0,
@@ -220,7 +220,7 @@ Zip Code,78610,White,10/2025,0,0,1.167,
 Zip Code,78610,White,11/2025,0,0,0.833,
 Zip Code,78610,White,12/2025,0,0.5,1.167,
 Zip Code,78610,White,01/2026,0,0.5,,
-Zip Code,78610,White,02/2026,0,0,,2026-02-07
+Zip Code,78610,White,02/2026,0,1.5,,2026-02-14
 Zip Code,78612,Hispanic,01/2020,0,0,0.5,
 Zip Code,78612,Hispanic,02/2020,0,0,0.333,
 Zip Code,78612,Hispanic,03/2020,0,0,0,
@@ -294,7 +294,7 @@ Zip Code,78612,Hispanic,10/2025,0,0,0.333,
 Zip Code,78612,Hispanic,11/2025,0,0,0.333,
 Zip Code,78612,Hispanic,12/2025,0,0,0,
 Zip Code,78612,Hispanic,01/2026,0,0,,
-Zip Code,78612,Hispanic,02/2026,0,0,,2026-02-07
+Zip Code,78612,Hispanic,02/2026,0,0,,2026-02-14
 Zip Code,78613,White,01/2020,0,0,0.333,
 Zip Code,78613,White,02/2020,0,0.5,0.167,
 Zip Code,78613,White,03/2020,0,0.5,0.167,
@@ -368,7 +368,7 @@ Zip Code,78613,White,10/2025,0,0,0.5,
 Zip Code,78613,White,11/2025,0,0.5,0.667,
 Zip Code,78613,White,12/2025,0,0,0.667,
 Zip Code,78613,White,01/2026,0,0,,
-Zip Code,78613,White,02/2026,0,0,,2026-02-07
+Zip Code,78613,White,02/2026,0,0,,2026-02-14
 Zip Code,78615,White,01/2020,0,0,0.333,
 Zip Code,78615,White,02/2020,0,0,0.167,
 Zip Code,78615,White,03/2020,0,0,0,
@@ -442,7 +442,7 @@ Zip Code,78615,White,10/2025,0,0,0.333,
 Zip Code,78615,White,11/2025,0,0,0,
 Zip Code,78615,White,12/2025,0,0,0.167,
 Zip Code,78615,White,01/2026,0,0,,
-Zip Code,78615,White,02/2026,0,0,,2026-02-07
+Zip Code,78615,White,02/2026,0,0,,2026-02-14
 Zip Code,78616,Hispanic,01/2020,0,0,0,
 Zip Code,78616,Hispanic,02/2020,0,0,0,
 Zip Code,78616,Hispanic,03/2020,0,0,0,
@@ -516,7 +516,7 @@ Zip Code,78616,Hispanic,10/2025,0,0,0,
 Zip Code,78616,Hispanic,11/2025,0,0,0,
 Zip Code,78616,Hispanic,12/2025,0,0,0,
 Zip Code,78616,Hispanic,01/2026,0,0,,
-Zip Code,78616,Hispanic,02/2026,0,0,,2026-02-07
+Zip Code,78616,Hispanic,02/2026,0,0,,2026-02-14
 Zip Code,78617,Hispanic,01/2020,0,9.5,9,
 Zip Code,78617,Hispanic,02/2020,0,5,9,
 Zip Code,78617,Hispanic,03/2020,0,5,7,
@@ -590,7 +590,7 @@ Zip Code,78617,Hispanic,10/2025,0,10,7.833,
 Zip Code,78617,Hispanic,11/2025,0,10,9,
 Zip Code,78617,Hispanic,12/2025,0,8,7.333,
 Zip Code,78617,Hispanic,01/2026,0,9.5,,
-Zip Code,78617,Hispanic,02/2026,0,2.5,,2026-02-07
+Zip Code,78617,Hispanic,02/2026,0,4.5,,2026-02-14
 Zip Code,78620,White,01/2020,0,0,0,
 Zip Code,78620,White,02/2020,0,0,0.333,
 Zip Code,78620,White,03/2020,0,0.5,0,
@@ -664,7 +664,7 @@ Zip Code,78620,White,10/2025,0,0,0.167,
 Zip Code,78620,White,11/2025,0,0,0,
 Zip Code,78620,White,12/2025,0,0,0,
 Zip Code,78620,White,01/2026,0,0,,
-Zip Code,78620,White,02/2026,0,0,,2026-02-07
+Zip Code,78620,White,02/2026,0,0,,2026-02-14
 Zip Code,78621,Other,01/2020,0,2,0.833,
 Zip Code,78621,Other,02/2020,0,1,1.167,
 Zip Code,78621,Other,03/2020,0,1,1.833,
@@ -738,7 +738,7 @@ Zip Code,78621,Other,10/2025,0,3.5,1.5,
 Zip Code,78621,Other,11/2025,0,2,1,
 Zip Code,78621,Other,12/2025,0,3,0.833,
 Zip Code,78621,Other,01/2026,0,2,,
-Zip Code,78621,Other,02/2026,0,0,,2026-02-07
+Zip Code,78621,Other,02/2026,0,0.5,,2026-02-14
 Zip Code,78634,White,01/2020,0,0.5,0.167,
 Zip Code,78634,White,02/2020,0,0.5,0.333,
 Zip Code,78634,White,03/2020,0,0.5,0,
@@ -812,7 +812,7 @@ Zip Code,78634,White,10/2025,0,0.5,0,
 Zip Code,78634,White,11/2025,0,0,0.167,
 Zip Code,78634,White,12/2025,0,0.5,0,
 Zip Code,78634,White,01/2026,0,0.5,,
-Zip Code,78634,White,02/2026,0,0,,2026-02-07
+Zip Code,78634,White,02/2026,0,0,,2026-02-14
 Zip Code,78640,Hispanic,01/2020,0,0,0.167,
 Zip Code,78640,Hispanic,02/2020,0,0,0.167,
 Zip Code,78640,Hispanic,03/2020,0,0,0,
@@ -886,7 +886,7 @@ Zip Code,78640,Hispanic,10/2025,0,0.5,0.5,
 Zip Code,78640,Hispanic,11/2025,0,0,0,
 Zip Code,78640,Hispanic,12/2025,0,0,0,
 Zip Code,78640,Hispanic,01/2026,0,0,,
-Zip Code,78640,Hispanic,02/2026,0,0,,2026-02-07
+Zip Code,78640,Hispanic,02/2026,0,0,,2026-02-14
 Zip Code,78641,White,01/2020,0,0,2,
 Zip Code,78641,White,02/2020,0,2.5,2.333,
 Zip Code,78641,White,03/2020,0,1,2.5,
@@ -960,7 +960,7 @@ Zip Code,78641,White,10/2025,0,1,2,
 Zip Code,78641,White,11/2025,0,2,1.5,
 Zip Code,78641,White,12/2025,0,1,1.333,
 Zip Code,78641,White,01/2026,0,0,,
-Zip Code,78641,White,02/2026,0,0.5,,2026-02-07
+Zip Code,78641,White,02/2026,0,1.5,,2026-02-14
 Zip Code,78642,White,01/2020,0,0,0,
 Zip Code,78642,White,02/2020,0,0,0,
 Zip Code,78642,White,03/2020,0,0,0,
@@ -1034,7 +1034,7 @@ Zip Code,78642,White,10/2025,0,0,0,
 Zip Code,78642,White,11/2025,0,0,0,
 Zip Code,78642,White,12/2025,0,0,0,
 Zip Code,78642,White,01/2026,0,0,,
-Zip Code,78642,White,02/2026,0,0,,2026-02-07
+Zip Code,78642,White,02/2026,0,0,,2026-02-14
 Zip Code,78645,White,01/2020,0,3,2.5,
 Zip Code,78645,White,02/2020,0,0.5,2,
 Zip Code,78645,White,03/2020,0,2.5,3,
@@ -1108,7 +1108,7 @@ Zip Code,78645,White,10/2025,0,1.5,2.167,
 Zip Code,78645,White,11/2025,0,4.5,2.167,
 Zip Code,78645,White,12/2025,0,2.5,1.333,
 Zip Code,78645,White,01/2026,0,3,,
-Zip Code,78645,White,02/2026,0,0,,2026-02-07
+Zip Code,78645,White,02/2026,0,0.5,,2026-02-14
 Zip Code,78652,White,01/2020,0,1.5,0.5,
 Zip Code,78652,White,02/2020,0,1,0.667,
 Zip Code,78652,White,03/2020,0,1.5,1,
@@ -1182,7 +1182,7 @@ Zip Code,78652,White,10/2025,0,1.5,1.167,
 Zip Code,78652,White,11/2025,0,1,0.333,
 Zip Code,78652,White,12/2025,0,7,0.167,
 Zip Code,78652,White,01/2026,0,1.5,,
-Zip Code,78652,White,02/2026,0,0,,2026-02-07
+Zip Code,78652,White,02/2026,0,1,,2026-02-14
 Zip Code,78653,Hispanic,01/2020,0,29.5,4.833,
 Zip Code,78653,Hispanic,02/2020,0,20,5.5,
 Zip Code,78653,Hispanic,03/2020,0,18,3.5,
@@ -1256,7 +1256,7 @@ Zip Code,78653,Hispanic,10/2025,0,41.5,2.5,
 Zip Code,78653,Hispanic,11/2025,0,26.5,3.5,
 Zip Code,78653,Hispanic,12/2025,0,29,5.5,
 Zip Code,78653,Hispanic,01/2026,0,29.5,,
-Zip Code,78653,Hispanic,02/2026,0,4.5,,2026-02-07
+Zip Code,78653,Hispanic,02/2026,0,9,,2026-02-14
 Zip Code,78654,White,01/2020,0,0,0.167,
 Zip Code,78654,White,02/2020,0,0.5,0.167,
 Zip Code,78654,White,03/2020,0,0.5,0,
@@ -1330,7 +1330,7 @@ Zip Code,78654,White,10/2025,0,0,0,
 Zip Code,78654,White,11/2025,0,0,0.333,
 Zip Code,78654,White,12/2025,0,0,0.333,
 Zip Code,78654,White,01/2026,0,0,,
-Zip Code,78654,White,02/2026,0,0,,2026-02-07
+Zip Code,78654,White,02/2026,0,0.5,,2026-02-14
 Zip Code,78660,Other,01/2020,0,110.5,58,
 Zip Code,78660,Other,02/2020,0,69.5,50.333,
 Zip Code,78660,Other,03/2020,0,88,39.833,
@@ -1404,7 +1404,7 @@ Zip Code,78660,Other,10/2025,0,109,66.333,
 Zip Code,78660,Other,11/2025,0,71,63.167,
 Zip Code,78660,Other,12/2025,0,93,63.167,
 Zip Code,78660,Other,01/2026,0,110.5,,
-Zip Code,78660,Other,02/2026,0,11.5,,2026-02-07
+Zip Code,78660,Other,02/2026,0,24.5,,2026-02-14
 Zip Code,78663,White,01/2020,0,0,0,
 Zip Code,78663,White,02/2020,0,0,0,
 Zip Code,78663,White,03/2020,0,0.5,0,
@@ -1478,7 +1478,7 @@ Zip Code,78663,White,10/2025,0,0,0,
 Zip Code,78663,White,11/2025,0,0,0,
 Zip Code,78663,White,12/2025,0,0,0,
 Zip Code,78663,White,01/2026,0,0,,
-Zip Code,78663,White,02/2026,0,0,,2026-02-07
+Zip Code,78663,White,02/2026,0,0,,2026-02-14
 Zip Code,78664,Other,01/2020,0,7.5,1.167,
 Zip Code,78664,Other,02/2020,0,4.5,1.167,
 Zip Code,78664,Other,03/2020,0,3.5,0.667,
@@ -1552,7 +1552,7 @@ Zip Code,78664,Other,10/2025,0,5.5,0.667,
 Zip Code,78664,Other,11/2025,0,4.5,0.667,
 Zip Code,78664,Other,12/2025,0,4,1.5,
 Zip Code,78664,Other,01/2026,0,7.5,,
-Zip Code,78664,Other,02/2026,0,1,,2026-02-07
+Zip Code,78664,Other,02/2026,0,1.5,,2026-02-14
 Zip Code,78669,White,01/2020,0,1.5,1,
 Zip Code,78669,White,02/2020,0,1.5,1,
 Zip Code,78669,White,03/2020,0,1,0.667,
@@ -1626,7 +1626,7 @@ Zip Code,78669,White,10/2025,0,0.5,0.667,
 Zip Code,78669,White,11/2025,0,0.5,1.167,
 Zip Code,78669,White,12/2025,0,3,0.5,
 Zip Code,78669,White,01/2026,0,1.5,,
-Zip Code,78669,White,02/2026,0,0.5,,2026-02-07
+Zip Code,78669,White,02/2026,0,1,,2026-02-14
 Zip Code,78691,Other,01/2020,0,0,0,
 Zip Code,78691,Other,02/2020,0,0,0,
 Zip Code,78691,Other,03/2020,0,0,0,
@@ -1700,7 +1700,7 @@ Zip Code,78691,Other,10/2025,0,0,0,
 Zip Code,78691,Other,11/2025,0,0,0,
 Zip Code,78691,Other,12/2025,0,0,0,
 Zip Code,78691,Other,01/2026,0,0,,
-Zip Code,78691,Other,02/2026,0,0,,2026-02-07
+Zip Code,78691,Other,02/2026,0,0,,2026-02-14
 Zip Code,78701,White,01/2020,0,12,2.667,
 Zip Code,78701,White,02/2020,0,10,6.667,
 Zip Code,78701,White,03/2020,0,10,5.167,
@@ -1774,7 +1774,7 @@ Zip Code,78701,White,10/2025,0,14,4,
 Zip Code,78701,White,11/2025,0,14.5,4.333,
 Zip Code,78701,White,12/2025,0,16,3.833,
 Zip Code,78701,White,01/2026,0,12,,
-Zip Code,78701,White,02/2026,0,1.5,,2026-02-07
+Zip Code,78701,White,02/2026,0,2.5,,2026-02-14
 Zip Code,78702,Other,01/2020,0,15,10.5,
 Zip Code,78702,Other,02/2020,0,12.5,10.667,
 Zip Code,78702,Other,03/2020,0,12,9.167,
@@ -1848,7 +1848,7 @@ Zip Code,78702,Other,10/2025,0,12,14.333,
 Zip Code,78702,Other,11/2025,0,8.5,8.667,
 Zip Code,78702,Other,12/2025,0,16,12.833,
 Zip Code,78702,Other,01/2026,0,15,,
-Zip Code,78702,Other,02/2026,0,0.5,,2026-02-07
+Zip Code,78702,Other,02/2026,0,4,,2026-02-14
 Zip Code,78703,White,01/2020,0,2.5,2.167,
 Zip Code,78703,White,02/2020,0,0.5,1.833,
 Zip Code,78703,White,03/2020,0,2.5,2.5,
@@ -1922,7 +1922,7 @@ Zip Code,78703,White,10/2025,0,2.5,4.167,
 Zip Code,78703,White,11/2025,0,4.5,2,
 Zip Code,78703,White,12/2025,0,3,2,
 Zip Code,78703,White,01/2026,0,2.5,,
-Zip Code,78703,White,02/2026,0,0,,2026-02-07
+Zip Code,78703,White,02/2026,0,0,,2026-02-14
 Zip Code,78704,White,01/2020,0,25.5,32.167,
 Zip Code,78704,White,02/2020,0,30.5,28.833,
 Zip Code,78704,White,03/2020,0,27.5,22.333,
@@ -1996,7 +1996,7 @@ Zip Code,78704,White,10/2025,0,21.5,26.5,
 Zip Code,78704,White,11/2025,0,30.5,29.333,
 Zip Code,78704,White,12/2025,0,21.5,26.333,
 Zip Code,78704,White,01/2026,0,25.5,,
-Zip Code,78704,White,02/2026,0,4.5,,2026-02-07
+Zip Code,78704,White,02/2026,0,10,,2026-02-14
 Zip Code,78705,White,01/2020,0,10.5,8.333,
 Zip Code,78705,White,02/2020,0,12.5,5.5,
 Zip Code,78705,White,03/2020,0,9,7,
@@ -2070,7 +2070,7 @@ Zip Code,78705,White,10/2025,0,5,5.667,
 Zip Code,78705,White,11/2025,0,7,5.5,
 Zip Code,78705,White,12/2025,0,15,7,
 Zip Code,78705,White,01/2026,0,10.5,,
-Zip Code,78705,White,02/2026,0,4,,2026-02-07
+Zip Code,78705,White,02/2026,0,6.5,,2026-02-14
 Zip Code,78708,Other,01/2020,0,0,0,
 Zip Code,78708,Other,02/2020,0,0,0,
 Zip Code,78708,Other,03/2020,0,0,0.167,
@@ -2144,7 +2144,7 @@ Zip Code,78708,Other,10/2025,0,0,0,
 Zip Code,78708,Other,11/2025,0,0,0,
 Zip Code,78708,Other,12/2025,0,0,0,
 Zip Code,78708,Other,01/2026,0,0,,
-Zip Code,78708,Other,02/2026,0,0,,2026-02-07
+Zip Code,78708,Other,02/2026,0,0,,2026-02-14
 Zip Code,78709,Other,01/2020,0,0,0,
 Zip Code,78709,Other,02/2020,0,0,0,
 Zip Code,78709,Other,03/2020,0,0,0.167,
@@ -2218,7 +2218,7 @@ Zip Code,78709,Other,10/2025,0,0,0,
 Zip Code,78709,Other,11/2025,0,0,0,
 Zip Code,78709,Other,12/2025,0,0,0,
 Zip Code,78709,Other,01/2026,0,0,,
-Zip Code,78709,Other,02/2026,0,0,,2026-02-07
+Zip Code,78709,Other,02/2026,0,0,,2026-02-14
 Zip Code,78710,Other,01/2020,0,0,0,
 Zip Code,78710,Other,02/2020,0,0,0,
 Zip Code,78710,Other,03/2020,0,0,0,
@@ -2292,7 +2292,7 @@ Zip Code,78710,Other,10/2025,0,0,0,
 Zip Code,78710,Other,11/2025,0,0,0,
 Zip Code,78710,Other,12/2025,0,0,0,
 Zip Code,78710,Other,01/2026,0,0,,
-Zip Code,78710,Other,02/2026,0,0,,2026-02-07
+Zip Code,78710,Other,02/2026,0,0,,2026-02-14
 Zip Code,78711,Other,01/2020,0,0,0,
 Zip Code,78711,Other,02/2020,0,0,0,
 Zip Code,78711,Other,03/2020,0,0,0,
@@ -2366,7 +2366,7 @@ Zip Code,78711,Other,10/2025,0,0,0,
 Zip Code,78711,Other,11/2025,0,0,0,
 Zip Code,78711,Other,12/2025,0,0,0,
 Zip Code,78711,Other,01/2026,0,0,,
-Zip Code,78711,Other,02/2026,0,0,,2026-02-07
+Zip Code,78711,Other,02/2026,0,0,,2026-02-14
 Zip Code,78712,White,01/2020,0,0,0,
 Zip Code,78712,White,02/2020,0,0,0,
 Zip Code,78712,White,03/2020,0,0,0,
@@ -2440,7 +2440,7 @@ Zip Code,78712,White,10/2025,0,0,0,
 Zip Code,78712,White,11/2025,0,0,0,
 Zip Code,78712,White,12/2025,0,0,0,
 Zip Code,78712,White,01/2026,0,0,,
-Zip Code,78712,White,02/2026,0,0,,2026-02-07
+Zip Code,78712,White,02/2026,0,0,,2026-02-14
 Zip Code,78713,Other,01/2020,0,0,0,
 Zip Code,78713,Other,02/2020,0,0,0,
 Zip Code,78713,Other,03/2020,0,0,0,
@@ -2514,7 +2514,7 @@ Zip Code,78713,Other,10/2025,0,0,0,
 Zip Code,78713,Other,11/2025,0,0,0,
 Zip Code,78713,Other,12/2025,0,0,0,
 Zip Code,78713,Other,01/2026,0,0,,
-Zip Code,78713,Other,02/2026,0,0,,2026-02-07
+Zip Code,78713,Other,02/2026,0,0,,2026-02-14
 Zip Code,78714,Other,01/2020,0,0,0,
 Zip Code,78714,Other,02/2020,0,0,0.167,
 Zip Code,78714,Other,03/2020,0,0,0,
@@ -2588,7 +2588,7 @@ Zip Code,78714,Other,10/2025,0,0,0,
 Zip Code,78714,Other,11/2025,0,0,0,
 Zip Code,78714,Other,12/2025,0,0,0,
 Zip Code,78714,Other,01/2026,0,0,,
-Zip Code,78714,Other,02/2026,0,0,,2026-02-07
+Zip Code,78714,Other,02/2026,0,0,,2026-02-14
 Zip Code,78715,Other,01/2020,0,0,0,
 Zip Code,78715,Other,02/2020,0,0,0,
 Zip Code,78715,Other,03/2020,0,0,0,
@@ -2662,7 +2662,7 @@ Zip Code,78715,Other,10/2025,0,0,0,
 Zip Code,78715,Other,11/2025,0,0,0,
 Zip Code,78715,Other,12/2025,0,0,0,
 Zip Code,78715,Other,01/2026,0,0,,
-Zip Code,78715,Other,02/2026,0,0,,2026-02-07
+Zip Code,78715,Other,02/2026,0,0,,2026-02-14
 Zip Code,78716,Other,01/2020,0,0,0,
 Zip Code,78716,Other,02/2020,0,0,0.167,
 Zip Code,78716,Other,03/2020,0,0,0,
@@ -2736,7 +2736,7 @@ Zip Code,78716,Other,10/2025,0,0,0,
 Zip Code,78716,Other,11/2025,0,0,0,
 Zip Code,78716,Other,12/2025,0,0,0,
 Zip Code,78716,Other,01/2026,0,0,,
-Zip Code,78716,Other,02/2026,0,0,,2026-02-07
+Zip Code,78716,Other,02/2026,0,0,,2026-02-14
 Zip Code,78718,Other,01/2020,0,0,0.167,
 Zip Code,78718,Other,02/2020,0,0,0,
 Zip Code,78718,Other,03/2020,0,0,0,
@@ -2810,7 +2810,7 @@ Zip Code,78718,Other,10/2025,0,0,0,
 Zip Code,78718,Other,11/2025,0,0,0,
 Zip Code,78718,Other,12/2025,0,0,0,
 Zip Code,78718,Other,01/2026,0,0,,
-Zip Code,78718,Other,02/2026,0,0,,2026-02-07
+Zip Code,78718,Other,02/2026,0,0,,2026-02-14
 Zip Code,78719,Hispanic,01/2020,0,0.5,0.833,
 Zip Code,78719,Hispanic,02/2020,0,0.5,1,
 Zip Code,78719,Hispanic,03/2020,0,1,0.5,
@@ -2884,7 +2884,7 @@ Zip Code,78719,Hispanic,10/2025,0,0,0.5,
 Zip Code,78719,Hispanic,11/2025,0,0.5,0.5,
 Zip Code,78719,Hispanic,12/2025,0,0,0.333,
 Zip Code,78719,Hispanic,01/2026,0,0.5,,
-Zip Code,78719,Hispanic,02/2026,0,0.5,,2026-02-07
+Zip Code,78719,Hispanic,02/2026,0,0.5,,2026-02-14
 Zip Code,78720,Other,01/2020,0,0,0,
 Zip Code,78720,Other,02/2020,0,0,0,
 Zip Code,78720,Other,03/2020,0,0,0,
@@ -2958,7 +2958,7 @@ Zip Code,78720,Other,10/2025,0,0,0.167,
 Zip Code,78720,Other,11/2025,0,0,0,
 Zip Code,78720,Other,12/2025,0,0,0,
 Zip Code,78720,Other,01/2026,0,0,,
-Zip Code,78720,Other,02/2026,0,0,,2026-02-07
+Zip Code,78720,Other,02/2026,0,0,,2026-02-14
 Zip Code,78721,Other,01/2020,0,5,8,
 Zip Code,78721,Other,02/2020,0,8,7,
 Zip Code,78721,Other,03/2020,0,5.5,4.833,
@@ -3032,7 +3032,7 @@ Zip Code,78721,Other,10/2025,0,9.5,7.833,
 Zip Code,78721,Other,11/2025,0,9,6.5,
 Zip Code,78721,Other,12/2025,0,5,4.5,
 Zip Code,78721,Other,01/2026,0,5,,
-Zip Code,78721,Other,02/2026,0,0,,2026-02-07
+Zip Code,78721,Other,02/2026,0,3,,2026-02-14
 Zip Code,78722,White,01/2020,0,7.5,3.833,
 Zip Code,78722,White,02/2020,0,4.5,2.5,
 Zip Code,78722,White,03/2020,0,6,2.167,
@@ -3106,7 +3106,7 @@ Zip Code,78722,White,10/2025,0,4.5,2.833,
 Zip Code,78722,White,11/2025,0,4.5,3.333,
 Zip Code,78722,White,12/2025,0,4,6.333,
 Zip Code,78722,White,01/2026,0,7.5,,
-Zip Code,78722,White,02/2026,0,0,,2026-02-07
+Zip Code,78722,White,02/2026,0,1.5,,2026-02-14
 Zip Code,78723,Other,01/2020,0,29.5,48.667,
 Zip Code,78723,Other,02/2020,0,45.5,40.833,
 Zip Code,78723,Other,03/2020,0,36.5,39.167,
@@ -3180,7 +3180,7 @@ Zip Code,78723,Other,10/2025,0,44,54.333,
 Zip Code,78723,Other,11/2025,0,36.5,45,
 Zip Code,78723,Other,12/2025,0,43.5,61.167,
 Zip Code,78723,Other,01/2026,0,29.5,,
-Zip Code,78723,Other,02/2026,0,7.5,,2026-02-07
+Zip Code,78723,Other,02/2026,0,15,,2026-02-14
 Zip Code,78724,Hispanic,01/2020,0,36,23.667,
 Zip Code,78724,Hispanic,02/2020,0,36,19.5,
 Zip Code,78724,Hispanic,03/2020,0,30,15,
@@ -3254,7 +3254,7 @@ Zip Code,78724,Hispanic,10/2025,0,66,22,
 Zip Code,78724,Hispanic,11/2025,0,43,22.667,
 Zip Code,78724,Hispanic,12/2025,0,45.5,24.833,
 Zip Code,78724,Hispanic,01/2026,0,36,,
-Zip Code,78724,Hispanic,02/2026,0,6,,2026-02-07
+Zip Code,78724,Hispanic,02/2026,0,17,,2026-02-14
 Zip Code,78725,Hispanic,01/2020,0,3.5,1.833,
 Zip Code,78725,Hispanic,02/2020,0,4,3.167,
 Zip Code,78725,Hispanic,03/2020,0,5.5,2,
@@ -3328,7 +3328,7 @@ Zip Code,78725,Hispanic,10/2025,0,2,2,
 Zip Code,78725,Hispanic,11/2025,0,1.5,2,
 Zip Code,78725,Hispanic,12/2025,0,2.5,2.667,
 Zip Code,78725,Hispanic,01/2026,0,3.5,,
-Zip Code,78725,Hispanic,02/2026,0,0,,2026-02-07
+Zip Code,78725,Hispanic,02/2026,0,1.5,,2026-02-14
 Zip Code,78726,White,01/2020,0,31.5,14.5,
 Zip Code,78726,White,02/2020,0,39,18,
 Zip Code,78726,White,03/2020,0,37,10.5,
@@ -3402,7 +3402,7 @@ Zip Code,78726,White,10/2025,0,48.5,21.5,
 Zip Code,78726,White,11/2025,0,40.5,17.167,
 Zip Code,78726,White,12/2025,0,35,17.167,
 Zip Code,78726,White,01/2026,0,31.5,,
-Zip Code,78726,White,02/2026,0,9,,2026-02-07
+Zip Code,78726,White,02/2026,0,17,,2026-02-14
 Zip Code,78727,White,01/2020,0,11.5,13.667,
 Zip Code,78727,White,02/2020,0,20,10.5,
 Zip Code,78727,White,03/2020,0,11,7.667,
@@ -3476,7 +3476,7 @@ Zip Code,78727,White,10/2025,0,13,14.5,
 Zip Code,78727,White,11/2025,0,13,13.667,
 Zip Code,78727,White,12/2025,0,16.5,12.5,
 Zip Code,78727,White,01/2026,0,11.5,,
-Zip Code,78727,White,02/2026,0,1,,2026-02-07
+Zip Code,78727,White,02/2026,0,10,,2026-02-14
 Zip Code,78728,Other,01/2020,0,39,65,
 Zip Code,78728,Other,02/2020,0,51.5,55.167,
 Zip Code,78728,Other,03/2020,0,42.5,45.167,
@@ -3550,7 +3550,7 @@ Zip Code,78728,Other,10/2025,0,64.5,68.167,
 Zip Code,78728,Other,11/2025,0,64.5,56.667,
 Zip Code,78728,Other,12/2025,0,55,58.667,
 Zip Code,78728,Other,01/2026,0,39,,
-Zip Code,78728,Other,02/2026,0,7.5,,2026-02-07
+Zip Code,78728,Other,02/2026,0,32,,2026-02-14
 Zip Code,78729,White,01/2020,0,2.5,1.667,
 Zip Code,78729,White,02/2020,0,4,1.667,
 Zip Code,78729,White,03/2020,0,3.5,1.667,
@@ -3624,7 +3624,7 @@ Zip Code,78729,White,10/2025,0,3,2.667,
 Zip Code,78729,White,11/2025,0,5,5.167,
 Zip Code,78729,White,12/2025,0,3.5,3.5,
 Zip Code,78729,White,01/2026,0,2.5,,
-Zip Code,78729,White,02/2026,0,0,,2026-02-07
+Zip Code,78729,White,02/2026,0,2.5,,2026-02-14
 Zip Code,78730,White,01/2020,0,4.5,3.5,
 Zip Code,78730,White,02/2020,0,4.5,1.5,
 Zip Code,78730,White,03/2020,0,4,1.667,
@@ -3698,7 +3698,7 @@ Zip Code,78730,White,10/2025,0,1.5,2.333,
 Zip Code,78730,White,11/2025,0,0,2.667,
 Zip Code,78730,White,12/2025,0,4.5,2.333,
 Zip Code,78730,White,01/2026,0,4.5,,
-Zip Code,78730,White,02/2026,0,0.5,,2026-02-07
+Zip Code,78730,White,02/2026,0,2,,2026-02-14
 Zip Code,78731,White,01/2020,0,5,4.333,
 Zip Code,78731,White,02/2020,0,7,3.333,
 Zip Code,78731,White,03/2020,0,8.5,4.167,
@@ -3772,7 +3772,7 @@ Zip Code,78731,White,10/2025,0,7.5,3.333,
 Zip Code,78731,White,11/2025,0,7.5,3.167,
 Zip Code,78731,White,12/2025,0,6,2.833,
 Zip Code,78731,White,01/2026,0,5,,
-Zip Code,78731,White,02/2026,0,0.5,,2026-02-07
+Zip Code,78731,White,02/2026,0,3.5,,2026-02-14
 Zip Code,78732,White,01/2020,0,13.5,2.833,
 Zip Code,78732,White,02/2020,0,7,3.667,
 Zip Code,78732,White,03/2020,0,6,3,
@@ -3846,7 +3846,7 @@ Zip Code,78732,White,10/2025,0,4.5,5.833,
 Zip Code,78732,White,11/2025,0,18,2.833,
 Zip Code,78732,White,12/2025,0,9,4.333,
 Zip Code,78732,White,01/2026,0,13.5,,
-Zip Code,78732,White,02/2026,0,1.5,,2026-02-07
+Zip Code,78732,White,02/2026,0,2.5,,2026-02-14
 Zip Code,78733,White,01/2020,0,0,0.5,
 Zip Code,78733,White,02/2020,0,0.5,0.5,
 Zip Code,78733,White,03/2020,0,1.5,0.667,
@@ -3920,7 +3920,7 @@ Zip Code,78733,White,10/2025,0,0,0.167,
 Zip Code,78733,White,11/2025,0,1.5,0.5,
 Zip Code,78733,White,12/2025,0,1,0.667,
 Zip Code,78733,White,01/2026,0,0,,
-Zip Code,78733,White,02/2026,0,0,,2026-02-07
+Zip Code,78733,White,02/2026,0,0,,2026-02-14
 Zip Code,78734,White,01/2020,0,4,2.167,
 Zip Code,78734,White,02/2020,0,2.5,3.167,
 Zip Code,78734,White,03/2020,0,1.5,3.167,
@@ -3994,7 +3994,7 @@ Zip Code,78734,White,10/2025,0,3,4.333,
 Zip Code,78734,White,11/2025,0,4,2.833,
 Zip Code,78734,White,12/2025,0,1.5,3.5,
 Zip Code,78734,White,01/2026,0,4,,
-Zip Code,78734,White,02/2026,0,0.5,,2026-02-07
+Zip Code,78734,White,02/2026,0,2.5,,2026-02-14
 Zip Code,78735,White,01/2020,0,5.5,7.167,
 Zip Code,78735,White,02/2020,0,11.5,4,
 Zip Code,78735,White,03/2020,0,9,4.167,
@@ -4068,7 +4068,7 @@ Zip Code,78735,White,10/2025,0,10,7.333,
 Zip Code,78735,White,11/2025,0,9.5,6.5,
 Zip Code,78735,White,12/2025,0,3,5.5,
 Zip Code,78735,White,01/2026,0,5.5,,
-Zip Code,78735,White,02/2026,0,3.5,,2026-02-07
+Zip Code,78735,White,02/2026,0,6,,2026-02-14
 Zip Code,78736,White,01/2020,0,2,1.667,
 Zip Code,78736,White,02/2020,0,3,1.833,
 Zip Code,78736,White,03/2020,0,0.5,1.167,
@@ -4142,7 +4142,7 @@ Zip Code,78736,White,10/2025,0,3.5,1.833,
 Zip Code,78736,White,11/2025,0,1,2.833,
 Zip Code,78736,White,12/2025,0,1,1.833,
 Zip Code,78736,White,01/2026,0,2,,
-Zip Code,78736,White,02/2026,0,1.5,,2026-02-07
+Zip Code,78736,White,02/2026,0,2,,2026-02-14
 Zip Code,78737,White,01/2020,0,0,0.667,
 Zip Code,78737,White,02/2020,0,0,0.667,
 Zip Code,78737,White,03/2020,0,0,0.333,
@@ -4216,7 +4216,7 @@ Zip Code,78737,White,10/2025,0,0,0.333,
 Zip Code,78737,White,11/2025,0,0,0.167,
 Zip Code,78737,White,12/2025,0,0.5,0.167,
 Zip Code,78737,White,01/2026,0,0,,
-Zip Code,78737,White,02/2026,0,0,,2026-02-07
+Zip Code,78737,White,02/2026,0,0,,2026-02-14
 Zip Code,78738,White,01/2020,0,7.5,6,
 Zip Code,78738,White,02/2020,0,3,4.167,
 Zip Code,78738,White,03/2020,0,5,4.333,
@@ -4290,7 +4290,7 @@ Zip Code,78738,White,10/2025,0,4.5,4.667,
 Zip Code,78738,White,11/2025,0,4,3.5,
 Zip Code,78738,White,12/2025,0,3,3.167,
 Zip Code,78738,White,01/2026,0,7.5,,
-Zip Code,78738,White,02/2026,0,0.5,,2026-02-07
+Zip Code,78738,White,02/2026,0,1,,2026-02-14
 Zip Code,78739,White,01/2020,0,0.5,0.167,
 Zip Code,78739,White,02/2020,0,0.5,0.833,
 Zip Code,78739,White,03/2020,0,0.5,0.667,
@@ -4364,7 +4364,7 @@ Zip Code,78739,White,10/2025,0,0,0.667,
 Zip Code,78739,White,11/2025,0,1,0.333,
 Zip Code,78739,White,12/2025,0,0,0.667,
 Zip Code,78739,White,01/2026,0,0.5,,
-Zip Code,78739,White,02/2026,0,0.5,,2026-02-07
+Zip Code,78739,White,02/2026,0,0.5,,2026-02-14
 Zip Code,78741,Other,01/2020,0,86.5,102.333,
 Zip Code,78741,Other,02/2020,0,86.5,83.333,
 Zip Code,78741,Other,03/2020,0,83,73.833,
@@ -4438,7 +4438,7 @@ Zip Code,78741,Other,10/2025,0,48,98.833,
 Zip Code,78741,Other,11/2025,0,50,81,
 Zip Code,78741,Other,12/2025,0,42.5,99.167,
 Zip Code,78741,Other,01/2026,0,86.5,,
-Zip Code,78741,Other,02/2026,0,20.5,,2026-02-07
+Zip Code,78741,Other,02/2026,0,41,,2026-02-14
 Zip Code,78742,Hispanic,01/2020,0,0,0.167,
 Zip Code,78742,Hispanic,02/2020,0,0,0.333,
 Zip Code,78742,Hispanic,03/2020,0,0,1,
@@ -4512,7 +4512,7 @@ Zip Code,78742,Hispanic,10/2025,0,0,0.5,
 Zip Code,78742,Hispanic,11/2025,0,0,0.5,
 Zip Code,78742,Hispanic,12/2025,0,0,0.167,
 Zip Code,78742,Hispanic,01/2026,0,0,,
-Zip Code,78742,Hispanic,02/2026,0,0,,2026-02-07
+Zip Code,78742,Hispanic,02/2026,0,0,,2026-02-14
 Zip Code,78744,Hispanic,01/2020,0,53.5,42.667,
 Zip Code,78744,Hispanic,02/2020,0,52,41.833,
 Zip Code,78744,Hispanic,03/2020,0,34.5,31.333,
@@ -4586,7 +4586,7 @@ Zip Code,78744,Hispanic,10/2025,0,13,42.333,
 Zip Code,78744,Hispanic,11/2025,0,27.5,40,
 Zip Code,78744,Hispanic,12/2025,0,23.5,41.5,
 Zip Code,78744,Hispanic,01/2026,0,53.5,,
-Zip Code,78744,Hispanic,02/2026,0,4.5,,2026-02-07
+Zip Code,78744,Hispanic,02/2026,0,13.5,,2026-02-14
 Zip Code,78745,White,01/2020,0,38.5,48.167,
 Zip Code,78745,White,02/2020,0,36.5,40.5,
 Zip Code,78745,White,03/2020,0,41.5,33.5,
@@ -4660,7 +4660,7 @@ Zip Code,78745,White,10/2025,0,55,44.5,
 Zip Code,78745,White,11/2025,0,39,37,
 Zip Code,78745,White,12/2025,0,48.5,38.167,
 Zip Code,78745,White,01/2026,0,38.5,,
-Zip Code,78745,White,02/2026,0,6,,2026-02-07
+Zip Code,78745,White,02/2026,0,15,,2026-02-14
 Zip Code,78746,White,01/2020,0,2.5,3.167,
 Zip Code,78746,White,02/2020,0,6,2.333,
 Zip Code,78746,White,03/2020,0,1.5,1.833,
@@ -4734,7 +4734,7 @@ Zip Code,78746,White,10/2025,0,3,2.667,
 Zip Code,78746,White,11/2025,0,3.5,3,
 Zip Code,78746,White,12/2025,0,3,3.167,
 Zip Code,78746,White,01/2026,0,2.5,,
-Zip Code,78746,White,02/2026,0,0,,2026-02-07
+Zip Code,78746,White,02/2026,0,3.5,,2026-02-14
 Zip Code,78747,Hispanic,01/2020,0,32,16.333,
 Zip Code,78747,Hispanic,02/2020,0,25,8.667,
 Zip Code,78747,Hispanic,03/2020,0,14.5,8,
@@ -4808,7 +4808,7 @@ Zip Code,78747,Hispanic,10/2025,0,10,13.833,
 Zip Code,78747,Hispanic,11/2025,0,12.5,13.5,
 Zip Code,78747,Hispanic,12/2025,0,11.5,14,
 Zip Code,78747,Hispanic,01/2026,0,32,,
-Zip Code,78747,Hispanic,02/2026,0,2,,2026-02-07
+Zip Code,78747,Hispanic,02/2026,0,13,,2026-02-14
 Zip Code,78748,Other,01/2020,0,29.5,26,
 Zip Code,78748,Other,02/2020,0,32.5,24.5,
 Zip Code,78748,Other,03/2020,0,29.5,20.833,
@@ -4882,7 +4882,7 @@ Zip Code,78748,Other,10/2025,0,31.5,24,
 Zip Code,78748,Other,11/2025,0,33,23.667,
 Zip Code,78748,Other,12/2025,0,26.5,27,
 Zip Code,78748,Other,01/2026,0,29.5,,
-Zip Code,78748,Other,02/2026,0,6,,2026-02-07
+Zip Code,78748,Other,02/2026,0,15.5,,2026-02-14
 Zip Code,78749,White,01/2020,0,14,6,
 Zip Code,78749,White,02/2020,0,6,5.167,
 Zip Code,78749,White,03/2020,0,9,7.333,
@@ -4956,7 +4956,7 @@ Zip Code,78749,White,10/2025,0,11.5,6.5,
 Zip Code,78749,White,11/2025,0,9.5,6,
 Zip Code,78749,White,12/2025,0,10.5,8.667,
 Zip Code,78749,White,01/2026,0,14,,
-Zip Code,78749,White,02/2026,0,0.5,,2026-02-07
+Zip Code,78749,White,02/2026,0,2,,2026-02-14
 Zip Code,78750,White,01/2020,0,1.5,4,
 Zip Code,78750,White,02/2020,0,6,2.167,
 Zip Code,78750,White,03/2020,0,5,2,
@@ -5030,7 +5030,7 @@ Zip Code,78750,White,10/2025,0,12,3.5,
 Zip Code,78750,White,11/2025,0,3.5,1.833,
 Zip Code,78750,White,12/2025,0,4,3.5,
 Zip Code,78750,White,01/2026,0,1.5,,
-Zip Code,78750,White,02/2026,0,2.5,,2026-02-07
+Zip Code,78750,White,02/2026,0,3.5,,2026-02-14
 Zip Code,78751,White,01/2020,0,12.5,7.5,
 Zip Code,78751,White,02/2020,0,14.5,7.667,
 Zip Code,78751,White,03/2020,0,9.5,7.667,
@@ -5104,7 +5104,7 @@ Zip Code,78751,White,10/2025,0,12,6.833,
 Zip Code,78751,White,11/2025,0,13,7.667,
 Zip Code,78751,White,12/2025,0,10.5,8.167,
 Zip Code,78751,White,01/2026,0,12.5,,
-Zip Code,78751,White,02/2026,0,2.5,,2026-02-07
+Zip Code,78751,White,02/2026,0,8.5,,2026-02-14
 Zip Code,78752,Other,01/2020,0,17,29.5,
 Zip Code,78752,Other,02/2020,0,20,19.167,
 Zip Code,78752,Other,03/2020,0,27,15.833,
@@ -5178,7 +5178,7 @@ Zip Code,78752,Other,10/2025,0,22,23.5,
 Zip Code,78752,Other,11/2025,0,18.5,25.333,
 Zip Code,78752,Other,12/2025,0,17,18.833,
 Zip Code,78752,Other,01/2026,0,17,,
-Zip Code,78752,Other,02/2026,0,2.5,,2026-02-07
+Zip Code,78752,Other,02/2026,0,8,,2026-02-14
 Zip Code,78753,Hispanic,01/2020,0,90,85.333,
 Zip Code,78753,Hispanic,02/2020,0,91.5,64,
 Zip Code,78753,Hispanic,03/2020,0,95,50,
@@ -5252,7 +5252,7 @@ Zip Code,78753,Hispanic,10/2025,0,119,82.333,
 Zip Code,78753,Hispanic,11/2025,0,78,72.333,
 Zip Code,78753,Hispanic,12/2025,0,99.5,73.167,
 Zip Code,78753,Hispanic,01/2026,0,90,,
-Zip Code,78753,Hispanic,02/2026,0,11,,2026-02-07
+Zip Code,78753,Hispanic,02/2026,0,28,,2026-02-14
 Zip Code,78754,Other,01/2020,0,24,22.333,
 Zip Code,78754,Other,02/2020,0,29,14.167,
 Zip Code,78754,Other,03/2020,0,26,15.667,
@@ -5326,7 +5326,7 @@ Zip Code,78754,Other,10/2025,0,37.5,21.833,
 Zip Code,78754,Other,11/2025,0,31.5,21.667,
 Zip Code,78754,Other,12/2025,0,27.5,19.5,
 Zip Code,78754,Other,01/2026,0,24,,
-Zip Code,78754,Other,02/2026,0,6,,2026-02-07
+Zip Code,78754,Other,02/2026,0,15,,2026-02-14
 Zip Code,78755,Other,01/2020,0,0,0,
 Zip Code,78755,Other,02/2020,0,0,0,
 Zip Code,78755,Other,03/2020,0,0,0,
@@ -5400,7 +5400,7 @@ Zip Code,78755,Other,10/2025,0,0,0,
 Zip Code,78755,Other,11/2025,0,0,0,
 Zip Code,78755,Other,12/2025,0,0,0,
 Zip Code,78755,Other,01/2026,0,0,,
-Zip Code,78755,Other,02/2026,0,0,,2026-02-07
+Zip Code,78755,Other,02/2026,0,0,,2026-02-14
 Zip Code,78756,White,01/2020,0,4.5,1.833,
 Zip Code,78756,White,02/2020,0,3.5,0.833,
 Zip Code,78756,White,03/2020,0,3.5,1.333,
@@ -5474,7 +5474,7 @@ Zip Code,78756,White,10/2025,0,5,2.833,
 Zip Code,78756,White,11/2025,0,2,2.333,
 Zip Code,78756,White,12/2025,0,2.5,3.5,
 Zip Code,78756,White,01/2026,0,4.5,,
-Zip Code,78756,White,02/2026,0,1.5,,2026-02-07
+Zip Code,78756,White,02/2026,0,3,,2026-02-14
 Zip Code,78757,White,01/2020,0,8,9,
 Zip Code,78757,White,02/2020,0,8.5,5.5,
 Zip Code,78757,White,03/2020,0,8.5,5.833,
@@ -5548,7 +5548,7 @@ Zip Code,78757,White,10/2025,0,7,6,
 Zip Code,78757,White,11/2025,0,6,5.833,
 Zip Code,78757,White,12/2025,0,7.5,8.667,
 Zip Code,78757,White,01/2026,0,8,,
-Zip Code,78757,White,02/2026,0,2.5,,2026-02-07
+Zip Code,78757,White,02/2026,0,3,,2026-02-14
 Zip Code,78758,Other,01/2020,0,72,66.333,
 Zip Code,78758,Other,02/2020,0,83,54.167,
 Zip Code,78758,Other,03/2020,0,82.5,44,
@@ -5622,7 +5622,7 @@ Zip Code,78758,Other,10/2025,0,80,71.667,
 Zip Code,78758,Other,11/2025,0,91,59.833,
 Zip Code,78758,Other,12/2025,0,83,55.5,
 Zip Code,78758,Other,01/2026,0,72,,
-Zip Code,78758,Other,02/2026,0,13,,2026-02-07
+Zip Code,78758,Other,02/2026,0,31,,2026-02-14
 Zip Code,78759,White,01/2020,0,28,17.667,
 Zip Code,78759,White,02/2020,0,31,14.333,
 Zip Code,78759,White,03/2020,0,26.5,16.833,
@@ -5696,7 +5696,7 @@ Zip Code,78759,White,10/2025,0,25,20.5,
 Zip Code,78759,White,11/2025,0,44,20,
 Zip Code,78759,White,12/2025,0,38,17.667,
 Zip Code,78759,White,01/2026,0,28,,
-Zip Code,78759,White,02/2026,0,2,,2026-02-07
+Zip Code,78759,White,02/2026,0,15,,2026-02-14
 Zip Code,78760,Other,01/2020,0,0,0,
 Zip Code,78760,Other,02/2020,0,0,0.167,
 Zip Code,78760,Other,03/2020,0,0,0.167,
@@ -5770,7 +5770,7 @@ Zip Code,78760,Other,10/2025,0,0,0,
 Zip Code,78760,Other,11/2025,0,0,0,
 Zip Code,78760,Other,12/2025,0,0,0.167,
 Zip Code,78760,Other,01/2026,0,0,,
-Zip Code,78760,Other,02/2026,0,0,,2026-02-07
+Zip Code,78760,Other,02/2026,0,0,,2026-02-14
 Zip Code,78761,Other,01/2020,0,0,0,
 Zip Code,78761,Other,02/2020,0,0,0,
 Zip Code,78761,Other,03/2020,0,0.5,0.167,
@@ -5844,7 +5844,7 @@ Zip Code,78761,Other,10/2025,0,0,0.333,
 Zip Code,78761,Other,11/2025,0,0,0,
 Zip Code,78761,Other,12/2025,0,0,0,
 Zip Code,78761,Other,01/2026,0,0,,
-Zip Code,78761,Other,02/2026,0,0,,2026-02-07
+Zip Code,78761,Other,02/2026,0,0,,2026-02-14
 Zip Code,78762,Other,01/2020,0,0,0,
 Zip Code,78762,Other,02/2020,0,0,0,
 Zip Code,78762,Other,03/2020,0,0,0,
@@ -5918,7 +5918,7 @@ Zip Code,78762,Other,10/2025,0,0,0,
 Zip Code,78762,Other,11/2025,0,0,0,
 Zip Code,78762,Other,12/2025,0,0,0,
 Zip Code,78762,Other,01/2026,0,0,,
-Zip Code,78762,Other,02/2026,0,0,,2026-02-07
+Zip Code,78762,Other,02/2026,0,0,,2026-02-14
 Zip Code,78763,Other,01/2020,0,0,0,
 Zip Code,78763,Other,02/2020,0,0,0,
 Zip Code,78763,Other,03/2020,0,0,0,
@@ -5992,7 +5992,7 @@ Zip Code,78763,Other,10/2025,0,0,0,
 Zip Code,78763,Other,11/2025,0,0,0,
 Zip Code,78763,Other,12/2025,0,0,0,
 Zip Code,78763,Other,01/2026,0,0,,
-Zip Code,78763,Other,02/2026,0,0,,2026-02-07
+Zip Code,78763,Other,02/2026,0,0,,2026-02-14
 Zip Code,78764,Other,01/2020,0,0,0,
 Zip Code,78764,Other,02/2020,0,0,0,
 Zip Code,78764,Other,03/2020,0,0,0,
@@ -6066,7 +6066,7 @@ Zip Code,78764,Other,10/2025,0,0,0,
 Zip Code,78764,Other,11/2025,0,0,0,
 Zip Code,78764,Other,12/2025,0,0,0,
 Zip Code,78764,Other,01/2026,0,0,,
-Zip Code,78764,Other,02/2026,0,0,,2026-02-07
+Zip Code,78764,Other,02/2026,0,0,,2026-02-14
 Zip Code,78765,Other,01/2020,0,0,0,
 Zip Code,78765,Other,02/2020,0,0,0.167,
 Zip Code,78765,Other,03/2020,0,0,0,
@@ -6140,7 +6140,7 @@ Zip Code,78765,Other,10/2025,0,0,0,
 Zip Code,78765,Other,11/2025,0,0,0,
 Zip Code,78765,Other,12/2025,0,0,0,
 Zip Code,78765,Other,01/2026,0,0,,
-Zip Code,78765,Other,02/2026,0,0,,2026-02-07
+Zip Code,78765,Other,02/2026,0,0,,2026-02-14
 Zip Code,78766,Other,01/2020,0,0,0,
 Zip Code,78766,Other,02/2020,0,0,0,
 Zip Code,78766,Other,03/2020,0,0,0,
@@ -6214,7 +6214,7 @@ Zip Code,78766,Other,10/2025,0,0,0,
 Zip Code,78766,Other,11/2025,0,0,0,
 Zip Code,78766,Other,12/2025,0,0,0,
 Zip Code,78766,Other,01/2026,0,0,,
-Zip Code,78766,Other,02/2026,0,0,,2026-02-07
+Zip Code,78766,Other,02/2026,0,0,,2026-02-14
 Zip Code,78767,Other,01/2020,0,0,0,
 Zip Code,78767,Other,02/2020,0,0,0,
 Zip Code,78767,Other,03/2020,0,0,0,
@@ -6288,7 +6288,7 @@ Zip Code,78767,Other,10/2025,0,0,0,
 Zip Code,78767,Other,11/2025,0,0,0,
 Zip Code,78767,Other,12/2025,0,0,0,
 Zip Code,78767,Other,01/2026,0,0,,
-Zip Code,78767,Other,02/2026,0,0,,2026-02-07
+Zip Code,78767,Other,02/2026,0,0,,2026-02-14
 Zip Code,78768,Other,01/2020,0,0,0,
 Zip Code,78768,Other,02/2020,0,0,0,
 Zip Code,78768,Other,03/2020,0,0,0.167,
@@ -6362,7 +6362,7 @@ Zip Code,78768,Other,10/2025,0,0,0,
 Zip Code,78768,Other,11/2025,0,0,0,
 Zip Code,78768,Other,12/2025,0,0,0,
 Zip Code,78768,Other,01/2026,0,0,,
-Zip Code,78768,Other,02/2026,0,0,,2026-02-07
+Zip Code,78768,Other,02/2026,0,0,,2026-02-14
 Zip Code,78772,Other,01/2020,0,0,0,
 Zip Code,78772,Other,02/2020,0,0,0,
 Zip Code,78772,Other,03/2020,0,0,0,
@@ -6436,7 +6436,7 @@ Zip Code,78772,Other,10/2025,0,0,0,
 Zip Code,78772,Other,11/2025,0,0,0,
 Zip Code,78772,Other,12/2025,0,0,0,
 Zip Code,78772,Other,01/2026,0,0,,
-Zip Code,78772,Other,02/2026,0,0,,2026-02-07
+Zip Code,78772,Other,02/2026,0,0,,2026-02-14
 Zip Code,78774,Other,01/2020,0,0,0,
 Zip Code,78774,Other,02/2020,0,0,0,
 Zip Code,78774,Other,03/2020,0,0,0,
@@ -6510,7 +6510,7 @@ Zip Code,78774,Other,10/2025,0,0,0,
 Zip Code,78774,Other,11/2025,0,0,0,
 Zip Code,78774,Other,12/2025,0,0,0,
 Zip Code,78774,Other,01/2026,0,0,,
-Zip Code,78774,Other,02/2026,0,0,,2026-02-07
+Zip Code,78774,Other,02/2026,0,0,,2026-02-14
 Zip Code,78778,Other,01/2020,0,0,0,
 Zip Code,78778,Other,02/2020,0,0,0,
 Zip Code,78778,Other,03/2020,0,0,0,
@@ -6584,7 +6584,7 @@ Zip Code,78778,Other,10/2025,0,0,0,
 Zip Code,78778,Other,11/2025,0,0,0,
 Zip Code,78778,Other,12/2025,0,0,0,
 Zip Code,78778,Other,01/2026,0,0,,
-Zip Code,78778,Other,02/2026,0,0,,2026-02-07
+Zip Code,78778,Other,02/2026,0,0,,2026-02-14
 Zip Code,78779,Other,01/2020,0,0,0,
 Zip Code,78779,Other,02/2020,0,0,0,
 Zip Code,78779,Other,03/2020,0,0,0,
@@ -6658,7 +6658,7 @@ Zip Code,78779,Other,10/2025,0,0,0,
 Zip Code,78779,Other,11/2025,0,0,0,
 Zip Code,78779,Other,12/2025,0,0,0,
 Zip Code,78779,Other,01/2026,0,0,,
-Zip Code,78779,Other,02/2026,0,0,,2026-02-07
+Zip Code,78779,Other,02/2026,0,0,,2026-02-14
 Zip Code,78799,Other,01/2020,0,0,0,
 Zip Code,78799,Other,02/2020,0,0,0,
 Zip Code,78799,Other,03/2020,0,0,0,
@@ -6732,7 +6732,7 @@ Zip Code,78799,Other,10/2025,0,0,0,
 Zip Code,78799,Other,11/2025,0,0,0,
 Zip Code,78799,Other,12/2025,0,0,0,
 Zip Code,78799,Other,01/2026,0,0,,
-Zip Code,78799,Other,02/2026,0,0,,2026-02-07
+Zip Code,78799,Other,02/2026,0,0,,2026-02-14
 Zip Code,sealed,,01/2020,1098,2.5,4.667,
 Zip Code,sealed,,02/2020,1080,4,3.167,
 Zip Code,sealed,,03/2020,639,3.5,2.833,
@@ -6806,4 +6806,4 @@ Zip Code,sealed,,10/2025,1467,9.5,4,
 Zip Code,sealed,,11/2025,1057,6.5,4.167,
 Zip Code,sealed,,12/2025,1251,7.5,4.667,
 Zip Code,sealed,,01/2026,1259,2.5,,
-Zip Code,sealed,,02/2026,152,1,,2026-02-07
+Zip Code,sealed,,02/2026,152,2,,2026-02-14
