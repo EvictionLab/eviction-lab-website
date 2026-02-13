@@ -20,7 +20,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 39035,Cleveland,cleveland-oh,OH,41.4993,-81.6944
 39049,Columbus,columbus-oh,OH,39.9612,-82.9988
 48113,Dallas,dallas-tx,TX,32.7767,-96.7970
-12011,Fort Lauderdale,fort-lauderdale-fl,FL,26.1791,-80.1634
+12011,Fort Lauderdale,fort-lauderdale-fl,FL,26.1791,-80.1634,true
 48439,Fort Worth,fort-worth-tx,TX,32.7555,-97.3308
 12001,Gainesville,gainesville-fl,FL,29.6516,-82.3248
 45045,Greenville,greenville-sc,SC,34.8526,-82.3940

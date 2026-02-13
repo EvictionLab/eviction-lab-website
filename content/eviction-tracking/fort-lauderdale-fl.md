@@ -8,7 +8,17 @@ areaSite: true
 slug: fort-lauderdale-fl
 date: 2024-07-02T03:27:06.983Z
 ---
-{{< report_intro site_id="12011"  >}}
+
+<div class="intro">
+
+## Currently Unavailable
+<br />
+<p>
+Filing information is currently unavailable due to gaps in data quality
+</p>
+</div>
+
+<!-- {{< report_intro site_id="12011"  >}}
 {{</ report_intro >}}
 
 <style>
@@ -71,4 +81,4 @@ Toggle the figure to compare recent filings to average filings in 2023–2024, k
 
 1. Eviction filing data for Broward County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. 
 
-{{%/ report_chart %}}
+{{%/ report_chart %}} -->
