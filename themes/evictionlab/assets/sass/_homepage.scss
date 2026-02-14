@@ -167,6 +167,9 @@
            background-position: 95% 60%;
        }
     }
+    .splash-content {
+        max-width: 690px;
+    }
     .splash-header,
     .splash-body {
         position: relative;
@@ -296,7 +299,7 @@
         #research-page-block .research-findings p {
             display: list-item;
             margin-left: 1.6rem;
-            margin-top: 1.6rem;
+            margin-top: 1rem;
             margin-bottom: 0;
             &::marker {
                 font-size: 22px;
@@ -331,10 +334,13 @@
                 @include media-breakpoint-up(lg) {
                     font-size: 1.7rem;
                 }
+                @include media-breakpoint-up(xxxl) {
+                    font-size: 2rem;
+                }
             }
             &.title-large {
 
-                    font-size: 3rem;
+                font-size: 3rem;
 
                 @include media-breakpoint-up(lg) {
                     font-size: 3.2em;
@@ -404,6 +410,8 @@
     }
     .ets-sub {
         color: white !important;
+        line-height: 1.1 !important;
+        max-width: 518px;
     }
     .ets-link {
         max-width: max-content;
@@ -419,6 +427,9 @@
                 transition: transform .3s ease;
             }
         }
+    }
+    .ets-blurb {
+        max-width: 444px;
     }
     .ets-ticker__track {
         display: inline-flex;
@@ -438,7 +449,7 @@
         gap: 1rem;
         padding: 0.4rem 0;
         flex-shrink: 0;
-        color: #858bff;
+        color: #9AA4FF;
     }
     .ets-ticker__site {
         font-family: Akkurat-Regular, sans-serif;
@@ -454,6 +465,7 @@
     .ets-ticker__value {
         font-family: GT-Eesti-Display-Bold, sans-serif;
         font-size: 6rem;
+        line-height: 1;
     }
     .ets-ticker__label {
         font-family: Akkurat-Regular, sans-serif;
@@ -509,32 +521,29 @@
     }
 
     // Map and rankings blocks --------------------------------------------
-    #main-features {
-        background-color: #F4F7F9;
+    #feature-map-title {
         .v2icon {
             margin-left: 10px;
         }
-        h3 {
-          color: $color2;
-          font-size: 2.6rem;
-          text-transform: uppercase;
-          @include media-breakpoint-up(md) {
-            font-size: 3rem;
-            }
-          @include media-breakpoint-up(xl) {
-            font-size: 3.2rem;
-            margin-bottom: 1.6rem;
-            }
-        }
-    }
-    #feature-map-title {
-        ul li {
-            font-size: 1.8rem;
-            font-family: Akkurat-Regular, sans-serif;
-            list-style-type: disc;
-            margin-left: 1.6rem;
-            padding-left: 0.8rem;
-        }
+        // h3 {
+        //   color: $color2;
+        //   font-size: 2.6rem;
+        //   text-transform: uppercase;
+        //   @include media-breakpoint-up(md) {
+        //     font-size: 3rem;
+        //     }
+        //   @include media-breakpoint-up(xl) {
+        //     font-size: 3.2rem;
+        //     margin-bottom: 1.6rem;
+        //     }
+        // }
+        // ul li {
+        //     font-size: 1.8rem;
+        //     font-family: Akkurat-Regular, sans-serif;
+        //     list-style-type: disc;
+        //     margin-left: 1.6rem;
+        //     padding-left: 0.8rem;
+        // }
     }
 
     #feature-map-container {
