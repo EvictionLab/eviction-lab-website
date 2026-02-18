@@ -7,11 +7,13 @@
     {{ $metadataHeaders := split (index $metadataLines 0) "," }}
     {{ $siteIdIdx := -1 }}
     {{ $displayNameIdx := -1 }}
+    {{ $slugIdx := -1 }}
     {{ $parentStateIdx := -1 }}
     {{ range $i, $h := $metadataHeaders }}
       {{ $header := trim $h " " }}
       {{ if eq $header "site_id" }}{{ $siteIdIdx = $i }}{{ end }}
       {{ if eq $header "display_name" }}{{ $displayNameIdx = $i }}{{ end }}
+      {{ if eq $header "slug" }}{{ $slugIdx = $i }}{{ end }}
       {{ if eq $header "parent_state" }}{{ $parentStateIdx = $i }}{{ end }}
     {{ end }}
     {{ if and (ge $siteIdIdx 0) (ge $displayNameIdx 0) }}
@@ -21,6 +23,7 @@
           {{ if and (gt (len $cols) $siteIdIdx) (gt (len $cols) $displayNameIdx) }}
             {{ $siteId := trim (index $cols $siteIdIdx) " " }}
             {{ $displayName := trim (index $cols $displayNameIdx) " " }}
+            {{ $slug := trim (index $cols $slugIdx) " " }}
             {{ $parentState := "" }}
             {{ if and (ge $parentStateIdx 0) (gt (len $cols) $parentStateIdx) }}
             {{ $parentState = trim (index $cols $parentStateIdx) " " }}
@@ -30,7 +33,7 @@
               {{ if ne $parentState "" }}
               {{ $fullDisplayName = printf "%s, %s" $displayName $parentState }}
               {{ end }}
-              {{ $siteMetadata = merge $siteMetadata (dict $siteId $fullDisplayName) }}
+              {{ $siteMetadata = merge $siteMetadata (dict $siteId (dict "displayName" $fullDisplayName "slug" $slug)) }}
             {{ end }}
           {{ end }}
         {{ end }}
@@ -79,10 +82,8 @@
               {{ $hide = trim (index $cols $hideIdx) " " }}
             {{ end }}
             {{ if and (ne $siteId "") (ne $siteId "0") (ne $filings "") (eq $updateDate $latestDate) (eq $hide "") }}
-              {{ $displayName := index $siteMetadata $siteId }}
-              {{ if $displayName }}
-                {{ $tickerRows = $tickerRows | append (dict "site" $displayName "filings_past_year" $filings) }}
-              {{ end }}
+              {{ $metadata := index $siteMetadata $siteId }}
+              {{ $tickerRows = $tickerRows | append (dict "site" $metadata.displayName "filings_past_year" $filings "slug" $metadata.slug) }}
             {{ end }}
           {{ end }}
         {{ end }}
@@ -93,7 +94,7 @@
 
 <div>
     <div id="ets-feature" class="row mx-0 feature-panel">
-      <div class="col-12 col-xxl-11 col-xxxl-10 col-x4l-9 d-flex flex-wrap mx-auto px-0 pt-4 pb-2 pt-xl-4">
+      <div class="col-12 col-xxl-11 col-xxxl-10 col-x4l-9 d-flex flex-wrap mx-auto px-0 pt-4 pb-2 pt-xxl-8">
           <div class="col-12 mx-auto px-0 d-flex flex-wrap">
             <div class="col-12 col-md-8 col-lg-6 pl-0 pr-3 px-md-2">
             <div class="feature main-feature px-0 ml-3 my-3 mt-lg-4">
@@ -122,13 +123,13 @@
                   <div class="ets-ticker__track">
                       {{ range seq 1 2 }}
                           {{ range $tickerRows }}
-                              <div class="ets-ticker__item">
+                              <a class="ets-ticker__item" href="/eviction-tracking/{{ .slug }}">
                                   <div class="ets-ticker__site">{{ .site }}</div>
                                   <div class="ets-ticker__stat">
                                       <div class="ets-ticker__value mb-2">{{ lang.NumFmt 0 .filings_past_year }}</div>
                                       <div class="ets-ticker__label">{{ i18n "ETSTickerLabel" }}</div>
                                   </div>
-                              </div>
+                              </a>
                           {{ end }}
                       {{ end }}
                   </div>
