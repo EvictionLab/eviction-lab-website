@@ -1,5 +1,8 @@
 ---
 draft: false
+scripts:
+  - charts
+  - maps
 childof: blog
 url: legal-aid-under-threat
 contenttype: updates
@@ -12,14 +15,17 @@ date: 2026-02-02T00:01:04.271Z
 postauthorname: Juan Pablo Garnham
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/jpgarnham_thumb.jpg
-description: "The Legal Services Corporation funds over 100 legal aid organizations nationwide. Proposed budget cuts put their services in jeopardy, with potentially dire consequences for tenants facing eviction across the country."
-listSummary: "The Legal Services Corporation funds over 100 legal aid organizations nationwide. Proposed budget cuts put their services in jeopardy, with potentially dire consequences for tenants facing eviction across the country."
+description: The Legal Services Corporation funds over 100 legal aid
+  organizations nationwide. Proposed budget cuts put their services in jeopardy,
+  with potentially dire consequences for tenants facing eviction across the
+  country.
+listSummary: The Legal Services Corporation funds over 100 legal aid
+  organizations nationwide. Proposed budget cuts put their services in jeopardy,
+  with potentially dire consequences for tenants facing eviction across the
+  country.
 twImage: court.jpg
 image: court.jpg
 fbImage: court.jpg
-scripts:
-  - charts
-  - maps
 ---
 <span class="dropcap red">M</span>anhattan’s housing court is hectic. At street level, a line of seven people forms just to go through the metal detector. Once inside, another crowd waits by the elevator. It’s a continuous cycle—as some make it in, more line up. Upstairs it’s not any better. Tenants and landlords alike wait some more outside the courtrooms for their cases to be heard. Some pace the corridor, others sit restlessly and few chat with their lawyers. All while a mix of languages fill the space as translators briskly walk from one room to the other. In one of the courtrooms, a judge asks the landlord and tenant attorneys: “So, did you reach an agreement?”
 
@@ -51,19 +57,20 @@ Funding for legal aid work comes from a variety of sources, including donations,
   captionAbove="This map shows how much of the funding for organizations comes from LSC. It’s important to note that this only includes institutions that are LSC grantees. There are legal aid organizations across the country that choose to fund themselves independently."
   colors="#dfefed;#7bcac1;#2c897f"
 %}}
+
 <style>
   .svg-map__tooltip {
     max-width: 234px;
   }
 </style>
 
-The cuts may also hit certain regions of a state harder than others. “Clearly, [for] rural areas and grantees who serve more rural populations, any cut to their funding hits harder, because those legal deserts […] already need all of those dollars,” Stevens explains. “The impact would be more than in other jurisdictions where there may be other funding to offset that impact.”
+The cuts may also hit certain regions of a state harder than others. “Clearly, \[for] rural areas and grantees who serve more rural populations, any cut to their funding hits harder, because those legal deserts \[…] already need all of those dollars,” Stevens explains. “The impact would be more than in other jurisdictions where there may be other funding to offset that impact.”
 
 Even in places where LSC is not the main funding source, Stevens explains it’s a stable and flexible revenue: Many other sources can come with strings attached, limited in time or only available for certain kinds of cases or clients. For this reason, LSC can be even more important in places where there aren’t many alternatives for funding.
 
 Cuts also hit the poorest and most vulnerable American citizens the hardest. “LSC funds folks who are at 125% poverty, which is obviously very, very low. And so these folks are most often women, often with children. They're seniors. They are veterans. They're just everyday Americans,” Stevens says. “Most of them are working. Most of them have jobs.”
 
-This is why Shamas Malik, mayor of Akron, OH, describes these funds as “essential.” “[Legal aid services] are generally just a safety net for folks who are low income,” Malik says. Previously, as a city councilmember, he would constantly refer constituents’ eviction cases to local legal aid, and he also pushed for a right to counsel program, now underway as a pilot in the city. The city council has invested money, which adds to already existing funds from legal aid and other organizations. This allows them to provide renters with a wide range of support, including a hotline, mediation, and legal representation. 
+This is why Shamas Malik, mayor of Akron, OH, describes these funds as “essential.” “\[Legal aid services] are generally just a safety net for folks who are low income,” Malik says. Previously, as a city councilmember, he would constantly refer constituents’ eviction cases to local legal aid, and he also pushed for a right to counsel program, now underway as a pilot in the city. The city council has invested money, which adds to already existing funds from legal aid and other organizations. This allows them to provide renters with a wide range of support, including a hotline, mediation, and legal representation. 
 
 Decreasing LSC funding could put all of these programs in jeopardy. “Cutting back on LSC funding is just going to cause more homelessness. It's going to cause more bad outcomes for folks. And at the end of the day, the legal system is already complicated enough,” Malik explains.
 
@@ -73,8 +80,7 @@ In Akron’s case, the Right to Counsel (RTC) program has been {{< smartlink "op
 
 In theory, the RTC program in New York City guarantees tenants access to a lawyer during eviction. But in practice, the program is underfunded and has never reached its full potential: Roughly a third of all cases have received representation. Organizations like Legal Services NYC depend on the money given by LSC to pay their lawyers and cover shortfalls from other sources. For example, they routinely have to deal with delays in the payments for these programs coming from the city.
 
-“The only way that we can make payroll and not close our doors as an organization is the LSC funding,” said Rosalyn Black, citywide Housing Director of Legal Services, NYC. “That funding comes in every month, regularly in a known amount. We rely on those funds to pay the bills and make ends meet until the city pays.”
-
+“The only way that we can make payroll and not close our doors as an organization is the LSC funding,” said Rosalind Black, citywide Housing Director of Legal Services, NYC. “That funding comes in every month, regularly in a known amount. We rely on those funds to pay the bills and make ends meet until the city pays.”
 
 <br>
 
@@ -97,7 +103,7 @@ Through a friend, she heard of Legal Services of Hudson Valley and she started t
 
 Beyond the fact that the budget was approved on this occasion, there are still reasons to be concerned. LSC has expressed that this funding still won’t be enough to help all the Americans who deserve eviction legal aid or help in other civil law cases.
 
-"We are grateful for the bipartisan support shown in [January 8th’s] House vote and for the strong appropriation, especially in the current political climate," said LSC president Ron Flagg {{< smartlink "in a press release" "https://www.lsc.gov/press-release/bipartisan-show-support-house-passes-540m-legal-services-fy-2026" >}}. “However, LSC’s current funding level doesn’t begin to meet the needs of low-income seniors, veterans, and families in dire situations like natural disasters and domestic violence.”
+"We are grateful for the bipartisan support shown in \[January 8th’s] House vote and for the strong appropriation, especially in the current political climate," said LSC president Ron Flagg {{< smartlink "in a press release" "https://www.lsc.gov/press-release/bipartisan-show-support-house-passes-540m-legal-services-fy-2026" >}}. “However, LSC’s current funding level doesn’t begin to meet the needs of low-income seniors, veterans, and families in dire situations like natural disasters and domestic violence.”
 
 While this is seen as good news given the initial intention from the Trump administration, the threat of budget cuts remains for the upcoming years. The need is still overwhelming and bigger than the resources available. Meanwhile, tenants like the Quinns believe that the consequences of a drastic cut would have been clear for people like them.
 
