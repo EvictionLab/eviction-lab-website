@@ -1,6 +1,7 @@
 ---
 draft: true
-h1: Southwest, Oregon
+h1: Southwest Oregon
+h1Override: Southwest Oregon
 slug: southwest-or
 date: 2024-08-30T04:00:00.000Z
 rentersSite: Southwest Oregon
