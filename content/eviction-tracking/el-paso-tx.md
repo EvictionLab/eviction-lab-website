@@ -24,7 +24,6 @@ El Paso Intro
 
 This plot shows monthly eviction filings in El Paso over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
 
 {{%/ trends_chart %}}
 
@@ -34,8 +33,7 @@ This plot shows monthly eviction filings in El Paso over the past 12 months. Fil
 
 El Paso Map
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Tract racial majority determined using American Community Survey (ACS) estimates for 2016–2020
+1. Tract racial majority determined using American Community Survey (ACS) estimates for 2016–2020
    {{%/ report_map %}}
 
 {{% report_chart id="race" data="/uploads/richmond_w17_linechart.csv" imputedNoteNumber="2" %}}
@@ -46,7 +44,6 @@ El Paso Map
 
 El Paso Chart 2
 
-1. Average eviction filings taken from Eviction Lab data for 2012–2015
-2. Partial filings for May, as of May 9
+1. Partial filings for May, as of May 9
 
 {{%/ report_chart %}}

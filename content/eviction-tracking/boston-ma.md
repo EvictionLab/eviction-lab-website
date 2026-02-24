@@ -29,10 +29,9 @@ Filing information is currently unavailable due to gaps in data quality.
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Boston over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup> <sup>2</sup>
+This plot shows monthly eviction filings in Boston over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Average eviction filings taken from Eviction Lab data for 2012, 2013, 2015, and 2016
-2. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
+1. Filing data for 2020-2022 collected by [January Advisors](https://www.januaryadvisors.com/)
 
 {{%/ trends_chart %}}
 -->

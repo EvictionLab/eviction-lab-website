@@ -22,10 +22,9 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Missouri over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup> <sup>2</sup>
+This plot shows monthly eviction filings in Missouri over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Average eviction filings taken from Missouri state court microdata for 2012–2015.
-2. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/).
+1. Filing data for 2020 onward collected by [January Advisors](https://www.januaryadvisors.com/).
 
 {{%/ trends_chart %}}
 
