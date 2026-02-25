@@ -1,9 +1,9 @@
 ---
 collection: true
 draft: false
-title: Palm Beach, Florida | Eviction Tracking System
-h1: Palm Beach, Florida
-rentersSite: Palm Beach
+title: West Palm Beach, Florida | Eviction Tracking System
+h1: West Palm Beach, Florida
+rentersSite: West Palm Beach
 areaSite: true
 slug: palm-beach-fl
 date: 2024-07-02T03:27:06.983Z
@@ -12,13 +12,13 @@ date: 2024-07-02T03:27:06.983Z
 {{</ report_intro >}}
 
 
-{{% trends_chart id="trends" data="/uploads/palmbeach_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/westpalmbeach_barchart.csv" %}}
 
 
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Palm Beach over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
+This plot shows monthly eviction filings in West Palm Beach over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
 1. Eviction filing data for Palm Beach County was collected by the [Shimberg Center for Housing Studies](http://www.shimberg.ufl.edu/) at the University of Florida. 
 
