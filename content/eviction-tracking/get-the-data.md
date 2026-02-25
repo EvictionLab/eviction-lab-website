@@ -241,7 +241,7 @@ data:
     geo: ZIP Code
     file: /uploads/newyork_weekly_2020_2021.csv
     monthfile: /uploads/newyork_monthly_2020_2021.csv
-  - site: Palm Beach
+  - site: West Palm Beach
     siteid: 12099
     years: 2014-2019
     geo: Census Tract
