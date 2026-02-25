@@ -33,7 +33,7 @@ This plot shows monthly eviction filings in Virginia over the past 12 months. Fi
 
 # The geography of eviction filings
 
-Virginia is divided into 134 counties and jurisdictions. In 124<sup>1</sup> of these, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>2</sup> <sup>3</sup>
+Virginia is divided into 134 counties and jurisdictions. In 124<sup>1</sup> of these, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>2 3</sup>
 
 1. Filings could not be tracked at the county-level in 10 counties due to the use of combined court jurisdictions in Virginia.
 2. Eviction filing data for Virginia were collected by [LSC](https://www.lsc.gov/). 

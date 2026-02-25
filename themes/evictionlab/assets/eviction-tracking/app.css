@@ -1575,6 +1575,7 @@
   margin: auto;
   padding: 48px 24px 72px;
   max-width: 1226px;
+  z-index: 10;
 }
 .intro .layout {
   padding: 0;

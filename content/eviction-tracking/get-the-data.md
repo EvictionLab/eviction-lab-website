@@ -8,6 +8,7 @@ headers:
   fileheader: Weekly Data
   monthfileheader: Monthly Data
   updatedheader: Last Updated
+  dateheader: Last Updated
 layout: downloads
 cascade:
   title: Eviction Tracking System | Get the Data
@@ -39,13 +40,13 @@ intro: >-
 data:
   - site: All Cities
     siteid: 0
-    years: "—"
+    years: —
     geo: Census Tract / ZIP Code
     file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_weekly_2020_2021.csv
     monthfile: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_monthly_2020_2021.csv
   - site: All States
     siteid: 0
-    years: "—"
+    years: —
     geo: Census Tract / ZIP Code
     file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/allstates_weekly_2020_2021.csv
     monthfile: /uploads/allstates_monthly_2020_2021.csv
@@ -55,6 +56,11 @@ data:
     geo: Census Tract
     file: /uploads/albuquerque_weekly_2020_2021.csv
     monthfile: /uploads/albuquerque_monthly_2020_2021.csv
+  - site: Atlanta
+    years: 2018-2019
+    geo: Census Tract
+    file: /uploads/atlanta_weekly_2020_2021.csv
+    monthfile: /uploads/atlanta_monthly_2020_2021.csv
   - site: Austin
     siteid: 48453
     years: 2014-2019
@@ -98,7 +104,7 @@ data:
     file: /uploads/columbus_weekly_2020_2021.csv
     monthfile: /uploads/columbus_monthly_2020_2021.csv
   - site: Connecticut
-    siteid: 09
+    siteid: 9
     years: 2017-2019
     geo: Census Tract
     file: /uploads/connecticut_weekly_2020_2021.csv
@@ -241,7 +247,7 @@ data:
     geo: ZIP Code
     file: /uploads/newyork_weekly_2020_2021.csv
     monthfile: /uploads/newyork_monthly_2020_2021.csv
-  - site: Palm Beach
+  - site: West Palm Beach
     siteid: 12099
     years: 2014-2019
     geo: Census Tract

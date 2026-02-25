@@ -6,6 +6,10 @@
 {{ if $areaSite }}
   {{ $h1 = replaceRE "^(.*?)(,.*)?$" "${1} AREA${2}" $h1 }}
 {{ end }}
+{{ $h1Override := .Page.Params.h1Override }}
+{{ if $h1Override }}
+  {{ $h1 = $h1Override }}
+{{ end }}
 <div class="intro">
   <div class="layout">
     <div class="intro__content {{ if $areaSite }}area_site{{ end }}">
