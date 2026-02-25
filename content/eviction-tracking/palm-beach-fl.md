@@ -12,7 +12,7 @@ date: 2024-07-02T03:27:06.983Z
 {{</ report_intro >}}
 
 
-{{% trends_chart id="trends" data="/uploads/westpalmbeach_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/palmbeach_barchart.csv" %}}
 
 
 
