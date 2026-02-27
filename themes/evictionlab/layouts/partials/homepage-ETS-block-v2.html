@@ -94,7 +94,7 @@
 
 <div>
     <div id="ets-feature" class="row mx-0 feature-panel">
-      <div class="col-12 col-xxl-11 col-xxxl-10 col-x4l-9 d-flex flex-wrap mx-auto px-0 pt-4 pb-2 pt-xxl-8">
+      <div class="col-12 col-xxl-11 col-xxxl-10 col-x4l-9 d-flex flex-wrap mx-auto px-0 pt-4 pb-1 pb-md-2 pt-xxl-8">
           <div class="col-12 mx-auto px-0 d-flex flex-wrap">
             <div class="col-12 col-md-8 col-lg-7 col-xl-7 pl-0 pr-3 px-md-2">
               <div class="feature main-feature px-0 ml-3 my-3 mt-lg-4">
@@ -113,7 +113,7 @@
           </div>
         </div>
         {{ if gt (len $tickerRows) 0 }}
-        <div class="col-12 px-0 mt-4 mb-12">
+        <div class="col-12 px-0 mt-1 mt-md-2 mt-xxl-4 mb-9 mb-xxl-12">
             <div class="ets-ticker">
                   <div class="ets-ticker__track">
                       {{ range seq 1 2 }}
@@ -121,7 +121,7 @@
                               <a class="ets-ticker__item" href="/eviction-tracking/{{ .slug }}">
                                   <div class="ets-ticker__site">{{ .site }}</div>
                                   <div class="ets-ticker__stat">
-                                      <div class="ets-ticker__value mb-2">{{ lang.NumFmt 0 .filings_past_year }}</div>
+                                      <div class="ets-ticker__value mb-1 mb-lg-2">{{ lang.NumFmt 0 .filings_past_year }}</div>
                                       <div class="ets-ticker__label">{{ i18n "ETSTickerLabel" }}</div>
                                   </div>
                               </a>

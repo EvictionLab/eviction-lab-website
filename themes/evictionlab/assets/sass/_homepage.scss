@@ -399,124 +399,129 @@
     #ets-feature {
         background: #13173b;
         color: white;
-    }
-    .ets-ticker {
-        color: #0b1d6b;
-        overflow: hidden;
-    }
-
-    .ets-heading {
-        color: $color1;
-    }
-    .ets-sub {
-        color: white !important;
-        line-height: 1.1 !important;
-        max-width: 560px;
-    }
-    .ets-link {
-        max-width: max-content;
-        i {
-            font-size: 12px;
-            transform: translate(0px, 1px);
-            transition: transform .3s ease;
+            
+        .ets-sub {
+            color: white !important;
+            line-height: 1.1 !important;
+            max-width: 560px;
         }
-        &:hover {
-            text-decoration: none;
+        .ets-heading {
             color: $color1;
+        }
+        .ets-link {
+            max-width: max-content;
             i {
-                transform: translate(4px, 1px);
+                font-size: 12px;
+                transform: translate(0px, 1px);
+                transition: transform .3s ease;
+            }
+            &:hover {
+                text-decoration: none;
+                color: $color1;
+                i {
+                    transform: translate(4px, 1px);
+                }
+            }
+        }
+        .ets-blurb {
+            max-width: 444px;
+        }
+        .ets-ticker {
+            color: #0b1d6b;
+            overflow: hidden;
+        }
+        .ets-ticker__track {
+            display: inline-flex;
+            align-items: center;
+            gap: 100px;
+            min-width: 100%;
+            animation: etsTickerScroll 220s linear infinite;
+            will-change: transform;
+        }
+        .ets-ticker:hover .ets-ticker__track {
+            animation-play-state: paused;
+        }
+        .ets-ticker__item:hover {
+            color: #7e8bfa;
+            text-decoration: none;
+        }
+        .ets-ticker__item {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            gap: 0.6rem;
+            padding: 0.4rem 0;
+            flex-shrink: 0;
+            color: #a8aff0;
+            transition: color .3s ease;
+        }
+        .ets-ticker__stat {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        .ets-ticker__value {
+            font-family: GT-Eesti-Display-Bold, sans-serif;
+            font-size: 4.8rem;
+            line-height: 1;
+        }
+        
+        .ets-ticker__site, .ets-ticker__label {
+            font-family: Akkurat-Regular, sans-serif;
+            font-size: 1.2rem;
+        }
+        .ets-ticker__site {
+            letter-spacing: 0.04em;
+        }
+        @include media-breakpoint-up(md) {
+            .ets-ticker__track {
+                gap: 120px;
+            }
+            // bumped slightly larger than border-headers
+            .ets-ticker__site, .ets-ticker__label, .ets-heading, .ets-link {
+                font-size: 1.4rem;
+            }
+            .ets-ticker__value {
+                font-size: 5rem;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            .ets-ticker__track {
+                gap: 140px;
+            }
+            .ets-ticker__item {
+                gap: 1rem;
+            }
+            .ets-ticker__value {
+                font-size: 5.4rem;
+            }
+        }
+        @include media-breakpoint-up(xxl) {
+            .ets-ticker__track {
+                gap: 160px;
+            }
+            .ets-ticker__site, .ets-ticker__label {
+                font-size: 1.6rem;
+            }
+            .ets-ticker__value {
+                font-size: 6rem;
+            }
+        }
+
+        @keyframes etsTickerScroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        .blog-research-panel {
+            .feature-image {
+                max-height: 140px;
             }
         }
     }
-    .ets-blurb {
-        max-width: 444px;
-    }
-    .ets-ticker__track {
-        display: inline-flex;
-        align-items: center;
-        gap: 160px;
-        min-width: 100%;
-        animation: etsTickerScroll 220s linear infinite;
-        will-change: transform;
-    }
-    .ets-ticker:hover .ets-ticker__track {
-        animation-play-state: paused;
-    }
-    .ets-ticker__item:hover {
-        color: #7e8bfa;
-        text-decoration: none;
-    }
-    .ets-ticker__item {
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-        gap: 1rem;
-        padding: 0.4rem 0;
-        flex-shrink: 0;
-        color: #a8aff0;
-        transition: color .3s ease;
-    }
-    .ets-ticker__site {
-        font-family: Akkurat-Regular, sans-serif;
-        font-size: 1.6rem;
-        letter-spacing: 0.04em;
-        text-transform: capitalize;
-    }
-    .ets-ticker__stat {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.1;
-    }
-    .ets-ticker__value {
-        font-family: GT-Eesti-Display-Bold, sans-serif;
-        font-size: 6rem;
-        line-height: 1;
-    }
-    .ets-ticker__label {
-        font-family: Akkurat-Regular, sans-serif;
-        font-size: 1.6rem;
-    }
-    // @include media-breakpoint-up(md) {
-    //     .ets-ticker {
-    //         margin-top: 2rem;
-    //         padding: 1.8rem 1.6rem;
-    //     }
-    //     .ets-ticker__mask::before,
-    //     .ets-ticker__mask::after {
-    //         width: 88px;
-    //     }
-    //     .ets-ticker__item {
-    //         gap: 1.4rem;
-    //     }
-    //     .ets-ticker__site {
-    //         font-size: 1.6rem;
-    //     }
-    //     .ets-ticker__value {
-    //         font-size: 3rem;
-    //     }
-    //     .ets-ticker__label {
-    //         font-size: 1.4rem;
-    //     }
-    // }
-    // @include media-breakpoint-up(xl) {
-    //     .ets-ticker__value {
-    //         font-size: 3.2rem;
-    //     }
-    // }
-    @keyframes etsTickerScroll {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-50%);
-        }
-    }
-    .blog-research-panel {
-        .feature-image {
-            max-height: 140px;
-        }
-    }
-
     // Reporting panel
 
     #reporting-panel {
@@ -530,25 +535,6 @@
         .v2icon {
             margin-left: 10px;
         }
-        // h3 {
-        //   color: $color2;
-        //   font-size: 2.6rem;
-        //   text-transform: uppercase;
-        //   @include media-breakpoint-up(md) {
-        //     font-size: 3rem;
-        //     }
-        //   @include media-breakpoint-up(xl) {
-        //     font-size: 3.2rem;
-        //     margin-bottom: 1.6rem;
-        //     }
-        // }
-        // ul li {
-        //     font-size: 1.8rem;
-        //     font-family: Akkurat-Regular, sans-serif;
-        //     list-style-type: disc;
-        //     margin-left: 1.6rem;
-        //     padding-left: 0.8rem;
-        // }
     }
 
     #feature-map-container {
