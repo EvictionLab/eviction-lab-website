@@ -1,4 +1,4 @@
-site_id,display_name,slug,parent_state,lat,lng,disabled
+site_id,display_name,slug,parent_state,lat,lng,disabled,draft
 0,All Sites,,,,,
 09,Connecticut,connecticut,,,,
 10,Delaware,delaware,,,,
@@ -48,3 +48,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled
 12103,Tampa,tampa-fl,FL,27.9506,-82.4572
 10003,Wilmington,wilmington-de,DE,39.7447,-75.5484
 
+41039,Eugene,eugene-or,OR,43.864,-122.999,,true
+41051,Portland,portland-or,OR,45.632,-122.803,,true
+41019,Southwest,southwest,,43.864,-122.999,,true
+53053,Tacoma,tacoma-wa,WA,47.066,-122.113,,true
