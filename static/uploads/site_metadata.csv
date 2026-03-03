@@ -50,5 +50,5 @@ site_id,display_name,slug,parent_state,lat,lng,disabled,draft
 
 41039,Eugene,eugene-or,OR,43.864,-122.999,,true
 41051,Portland,portland-or,OR,45.632,-122.803,,true
-41019,Southwest,southwest,,43.864,-122.999,,true
+41019,Southwest Oregon,southwest-or,,42.965,-122.03,,true
 53053,Tacoma,tacoma-wa,WA,47.066,-122.113,,true
