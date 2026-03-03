@@ -1,31 +1,14 @@
 /*
- * General tips for generating a new _shapes.json file:
- *
- * 1. find the shp file of the parent geography
- *  - for tract map, find state shape zip by FIPS code at: 
- *    https://www2.census.gov/geo/tiger/TIGER2020/TRACT/
- *  - for zip code map, download entire US at https://www2.census.gov/geo/tiger/TIGER2020/ZCTA5/
- *  - (counties: https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/)
- * 2. upload the shp, prj, & dbf files to https://mapshaper.org/
- *
- * USING MAPSHAPER (RECOMMENDED):
- * 3. open the Console
- * 4. filter/shape the data, something like the following:
- *  - GEOID=GEOID20 // if geos don't already gave a GEOID (each feature is expected to have a GEOID that aligns with client-provided _map.csv data 'id')
- *  - filter '"85003,...,85545".indexOf(GEOID) > -1' // filter by some property, eg GEOID by known list of zips
- *  - each NAME=NAMELSAD10 // add NAME field, like so for zips, or for tracts eg "Census Tract 1.14" (formatted tract number)
- *    - if formatted name doesn't already exist on featurees, create it eg NAME="ZCTA5 "+GEOID
- *  - filter-fields GEOID,NAME // filter to the necessary fields
- * 5. export as GeoJSON and save the json to static/uploads
- * 6. to generate the map bbox, (keep mapshaper open and) see addMapBbox.js
- *  - alternatively, run 'mapshaper static/uploads/xx_shapes.json' and add bounds as "bbox" to the output json
+ * ~~~~~~~~~~~~~~~~~~ OUTDATED ~~~~~~~~~~~~~~~~~~
+ * See "Adding Site Page" in themes/evictionlab/assets/eviction-tracking/README.md 
+ * for up-to-date instructions on how to generate map json.
  *
  * USING THIS SCRIPT:
- * 3. export as GeoJSON and save the json to this directory
- * 4. run this script, eg (from this directory):
+ * 1. export as GeoJSON and save the json to this directory
+ * 2. run this script, eg (from this directory):
  *     node ./generateMapJson.js ./tl_rd22_44_tract.json providence_shapes.json 
- * 5. to generate the map bbox, see addMapBbox.js
- * 6. move the output to static/uploads and delete the input json file
+ * 3. to generate the map bbox, see addMapBbox.js
+ * 4. move the output to static/uploads and delete the input json file
  */
 
 const fs = require("fs");

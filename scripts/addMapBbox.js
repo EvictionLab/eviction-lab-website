@@ -1,4 +1,8 @@
 /*
+ * ~~~~~~~~~~~~~~~~~~ OUTDATED ~~~~~~~~~~~~~~~~~~
+ * See "Adding Site Page" in themes/evictionlab/assets/eviction-tracking/README.md
+ * for up-to-date instructions on how to generate map json.
+ *
  * ADD BBOX (so map zooms to correct area)
  * example usage (from this directory):
  *  node addMapBbox.js ./nashville_shapes.json nashville_shapes2.json

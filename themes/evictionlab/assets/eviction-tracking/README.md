@@ -34,10 +34,6 @@ This is a technical guide about implementation. See the [User Guide](./user-guid
 
   Using "Eviction Tracking" style created in mapbox studio under the `eviction-lab` account.
 
-## Adding / Editing Reports
-
-Adding and editing reports should be handled using the [CMS](https://eviction-lab.netlify.app/admin), which will automatically populate the required front matter.
-
 ### Front Matter
 
 Front matter for each report should contain:
@@ -49,6 +45,27 @@ Front matter for each report should contain:
 - `date`: date the page was last updated
 - `collection`: set to `true` for this page to show up in the "Eviction Tracking" collection in the CMS
 - `draft`: set to `true` to prevent this page from generating in production builds.
+
+## Adding Site Page
+
+To add a site, create a new .md file in content/eviction-tracking/ (start by copying one, albuquerque-nm is a good choice as it contains all of the sections). Set `draft: false` to prevent the site from showing up on the live site if merged to production. Add the relevant csvs for the site and add it to site_metadata.csv (mark it as "draft" to prevent it from appearing in the landing page table on production), filing_data_by_site.csv, and main_landing_page_data.csv.
+
+To generate {site}_shapes.json for the map element:
+ 1. find the shp file of the parent geography
+  - for tract map, find state shape zip by FIPS code at: 
+    https://www2.census.gov/geo/tiger/TIGER2020/TRACT/
+  - for ZIP code map, download entire US at https://www2.census.gov/geo/tiger/TIGER2020/ZCTA5/
+  - for counties: https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/
+ 2. upload the entire zipped folder (or shp, prj, & dbf files) to https://mapshaper.org/
+  - click cursor icon + "inspect features" and click a shape to examine properties
+ 3. open the Console
+ 4. filter & shape the data, something like the following:
+  - GEOID=GEOID20 // if geos don't already gave a GEOID (each feature is expected to have a GEOID that aligns with client-provided _map.csv data 'id')
+  - filter '"85003,...,85545".indexOf(GEOID) > -1' // filter using client-provided list of GEOIDs (often provided as {site}.csv)
+  - each NAME=NAMELSAD10 // add NAME field, like so for zips, or for tracts eg "Census Tract 1.14" (formatted tract number)
+    - if formatted name doesn't already exist on featurees, create it eg each NAME="ZCTA5 "+GEOID
+  - filter-fields GEOID,NAME // filter to the necessary fields
+ 5. export as GeoJSON with command line option "bbox precision=0.001" and save the output to static/uploads
 
 ### Shortcodes
 
