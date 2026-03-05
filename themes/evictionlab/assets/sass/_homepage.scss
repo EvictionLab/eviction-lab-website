@@ -4,6 +4,7 @@
 
 .v2icon {
     width: 44px;
+    display: none;
 }
 .page-the-eviction-lab {
 
@@ -144,7 +145,7 @@
         background-color: rgba(0, 0, 0, 0.46);
         background: rgb(0,0,0);
         background: linear-gradient(
-            180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7) 100%);
+            180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) 100%);
     }
     // TODO: delete
     #mobile-ets-link {
@@ -297,6 +298,9 @@
                 min-height: 170px;
             }
         }
+        #research-page-block .research-findings {
+            max-width: 820px;
+        }
         #research-page-block .research-findings p {
             display: list-item;
             margin-left: 1.6rem;
@@ -403,8 +407,8 @@
             
         .ets-sub {
             color: white !important;
-            line-height: 1.1 !important;
-            max-width: 560px;
+            line-height: 1.2 !important;
+            max-width: 600px;
         }
         .ets-heading {
             color: $color1;
@@ -443,7 +447,8 @@
             animation-play-state: paused;
         }
         .ets-ticker__item:hover {
-            color: #7e8bfa;
+           // color: #7e8bfa;
+            color: #7882de;
             text-decoration: none;
         }
         .ets-ticker__item {
