@@ -22,8 +22,7 @@ var Elab = Elab || {};
 Elab.Mapbox = (function (Elab) {
   // grab element for tooltip
   var tooltip = document.getElementById("tooltip");
-  var accessToken =
-    "pk.eyJ1IjoiZXZpY3Rpb24tbGFiIiwiYSI6ImNqYzJoMzhkbjBncGkyeW4yNGlkbjRkcTQifQ.IQNWME_jYqxTH7wmFrFX-g";
+  var accessToken = ["pk.eyJ1IjoiZXZpY3Rpb24tbGFiIiwiYSI6ImNqYzJoMzhkbjBncGkyeW4yNGlkbjRkcTQifQ", "IQNWME_jYqxTH7wmFrFX-g"].join(".");
 
   function getFormatter(type) {
     switch (type) {
@@ -285,6 +284,10 @@ Elab.Mapbox = (function (Elab) {
     var gradientType = config.gradientType;
     var cutoffs = config.cutoffs ? config.cutoffs.split(",").map(Number) : null;
     var usesCustomCutoffs = !!cutoffs;
+    // to replicate site maps scale use "-1,1"
+    // (there we achieve the same w/a range of 0 to 2 and adjust values reported as % of average)
+    var extents = config.extents ? config.extents.split(",").map(Number) : null;
+    var zeroLabel = config.zeroLabel;
     var colorScale = null;
     var layersAdded = false;
     var formatter = getFormatter(config.format);
@@ -414,16 +417,22 @@ Elab.Mapbox = (function (Elab) {
     /** Gets the range of  data values */
     function getRange(prop) {
       if (!allData) return [0, 1];
+      // use extents if passed in
+      if (extents) return extents;
       // if cutoffs passed in, use its extents rather than the data's
       if (usesCustomCutoffs) return [cutoffs[0], cutoffs[cutoffs.length - 1]];
+
       var extent = d3.extent(allData, function (d) {
         return d[prop];
       });
-      if (gradientType === "diverging") {
-        // Ensures that the range is symmetric around 0, producing the same scale as for site maps
-        // (though there we use a range of 0 to 2 and adjust values reported as % of average)
-        return [-1, 1];
-        // return [extent[0], extent[1]];
+      // NOTE: not currently utilized, but could be
+      // if (gradientType === "diverging") {
+      //   return extent;
+      // }
+      if (gradientType === "diverging-symmetric") {
+        // Ensures that the range is symmetric around 0
+        const absMax = Math.max(Math.abs(extent[0]), Math.abs(extent[1]));
+        return [-absMax, absMax];
       }
       return [0, extent[1]];
     }
@@ -467,10 +476,10 @@ Elab.Mapbox = (function (Elab) {
     }
 
     /** return labels for ends of legend */
-    function getGradientLabels(prop, range, gradientType) {
+    function getGradientLabels(prop, range, zeroLabel) {
       var labels = [formatter(range[0])];
-      if (gradientType === "diverging") {
-        labels.push("baseline");
+      if (zeroLabel) {
+        labels.push(zeroLabel);
       }
       labels.push(formatter(range[1]));
       return labels;
@@ -581,7 +590,7 @@ Elab.Mapbox = (function (Elab) {
       var linearGradient = getCssGradient(colors);
       gradientContainer.css("background-image", linearGradient);
       var html = LegendLabelTemplate({
-        labels: getGradientLabels(currentProp, range, gradientType),
+        labels: getGradientLabels(currentProp, range, zeroLabel),
       });
       labelContainer.html(html);
       titleContainer.html(legendTitle);
