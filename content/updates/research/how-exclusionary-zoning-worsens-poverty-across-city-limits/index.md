@@ -12,12 +12,12 @@ date: 2026-03-10T15:28:51.756Z
 postauthorname: Matt Mleczko
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/mmleczko_thumb.jpg
-description: "Exclusionary zoning laws exacerbate the national housing shortage, rising housing costs, and segregation."
-listSummary: "Exclusionary zoning laws exacerbate the national housing shortage, rising housing costs, and segregation."
+description: "Exclusionary zoning laws exacerbate the national housing shortage, housing costs, and segregation."
+listSummary: "Exclusionary zoning laws exacerbate the national housing shortage, housing costs, and segregation."
 scripts:
   - charts
   - mapbox
-socialDescription: "Exclusionary zoning laws exacerbate the national housing shortage, rising housing costs, and segregation."
+socialDescription: "Exclusionary zoning laws exacerbate the national housing shortage, housing costs, and segregation."
 twImage: exclusionary-zoning-worsens-poverty.jpg
 fbImage: exclusionary-zoning-worsens-poverty.jpg
 image: exclusionary-zoning-worsens-poverty.jpg
@@ -152,6 +152,12 @@ p.legend__title {
   line-height: 1.5;
 }
 
+h3.bordered-header {
+  font-size: 1.8rem !important;
+}
+.map-intro {
+   font-family: "Akkurat-Italic" !important;
+}
 .map-notes {
      color: #5a5a5a !important;
 }
@@ -184,6 +190,9 @@ The first step in answering this question was measuring zoning regulations over 
 
 The data allow me to identify metro areas with highly restrictive zoning ordinances like Trenton-Princeton and Milwaukee, both displayed below. I also find metro areas with less restrictive regulations, areas like San Antonio and Pittsburgh, also displayed below. These findings alone are noteworthy because metro areas like Milwaukee are typically not thought of as highly-restrictive relative to much higher cost metro areas like San Francisco and New York. Moreover, even relatively less restrictive metro areas like Pittsburgh still feature pockets of restrictive zoning. This research helps illustrate that exclusionary zoning is more prevalent than many realize. 
 
+<h3 class="mt-7 mb-3 bordered-header blue">How maps show the impact of zoning laws</h3>
+
+<p class="map-intro">Zoning restrictiveness can vary enormously from region to region, and even within regions. In the following maps, you can see this variation: orange/red areas have tight zoning regulations, while green areas tend to be more flexible.</p>
 
 </div>
 </div>
@@ -294,6 +303,8 @@ Notes:
 </ol>
 </p>
 <br>
+
+<h3 class="mb-4 bordered-header blue"></h3>
 
 
 I compare impoverished neighborhoods between more- and less-restrictive municipalities and metro areas to determine whether exclusionary zoning explains differences in housing prices, rent burden, and the availability of low-cost housing. 
