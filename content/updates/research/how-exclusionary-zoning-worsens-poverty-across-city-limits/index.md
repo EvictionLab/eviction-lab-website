@@ -17,10 +17,10 @@ listSummary: "lorem ipsum "
 scripts:
   - charts
   - mapbox
-socialDescription: "lorem ipsum "
-twImage: era-blog-se-map.png
-fbImage: era-blog-se-map.png
-image: era-blog-se-map.png
+socialDescription: "Zoning regulations govern virtually everything about development in our communities, and exclusionary zoning laws can make it harder to build affordable housing."
+twImage: exclusionary-zoning-worsens-poverty.jpg
+fbImage: exclusionary-zoning-worsens-poverty.jpg
+image: exclusionary-zoning-worsens-poverty.jpg
 ---
 
 <style>
@@ -308,7 +308,7 @@ Property values also increase faster in poor neighborhoods in more-restrictively
   font-family: Akkurat-Regular, sans-serif;
   font-size: 12px;
   white-space: nowrap;
-  margin-bottom: 8px;
+  margin-bottom: -16px;
 }
 .chart1-hitarea:hover .chart1-tooltip {
   opacity: 1;
@@ -446,7 +446,7 @@ Such reform may seem like a daunting political task, but we have examples of it 
   font-family: Akkurat-Regular, sans-serif;
   font-size: 12px;
   white-space: nowrap;
-  margin-bottom: 8px;
+  margin-bottom: -16px;
 }
 .chart2-hitarea:hover .chart1-tooltip {
   opacity: 1;
@@ -557,7 +557,7 @@ Such reform may seem like a daunting political task, but we have examples of it 
   font-family: Akkurat-Regular, sans-serif;
   font-size: 12px;
   white-space: nowrap;
-  margin-bottom: 8px;
+  margin-bottom: -16px;
 }
 .chart3-hitarea:hover .chart1-tooltip {
   opacity: 1;
