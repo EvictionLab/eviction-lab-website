@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: /how-exclusionary-zoning-worsens-poverty-across-city-limits/
 contenttype: updates
@@ -11,9 +11,9 @@ title: "How exclusionary zoning worsens poverty across city limits"
 date: 2026-03-10T15:28:51.756Z
 postauthorname: Matt Mleczko
 postauthortitle: The Eviction Lab
-authorpic: /images/bios/elab_thumb_sm.jpg
-description: "lorem ipsum "
-listSummary: "lorem ipsum "
+authorpic: /images/bios/mmleczko_thumb.jpg
+description: "Exclusionary zoning laws exacerbate the national housing shortage, rising housing costs, and segregation."
+listSummary: "Exclusionary zoning laws exacerbate the national housing shortage, rising housing costs, and segregation."
 scripts:
   - charts
   - mapbox
@@ -148,7 +148,7 @@ p.legend__title {
   letter-spacing: 0.07em;
 }
 .chart1-tooltip .tooltip__item {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -172,7 +172,7 @@ hr.research__paperlink--hr {
 
 </style>
 
-<span class="dropcap green">Z</span>oning regulations govern virtually everything about development in our communities. If you want to build a new building, zoning codes determine how large it can be, how many parking units it has to include, and even how far it must be set back from the street. During the last decade, there has been growing recognition that exclusionary zoning laws that make it harder to build affordable housing are playing a major role in the national housing shortage, the rising cost of housing, and the segregation we see in our cities.
+<span class="dropcap green">Z</span>oning regulations govern virtually everything about development in our communities. If you want to construct a new building, zoning codes determine how large it can be, how many parking units it has to include, and even how far it must be set back from the street. During the last decade, there has been growing recognition that exclusionary zoning laws that make it harder to build multifamily and affordable housing are playing a major role in the national housing shortage, the rising cost of housing, and the segregation we see across our communities.
 
 Most conversations about exclusionary zoning focus on how it blocks low-income residents from sought-after communities. In a new article published in Demography, I go further, showing how exclusionary zoning is even more consequential: It can both lock people out of opportunity and put additional strain on already high-poverty communities next door. 
 
@@ -180,9 +180,9 @@ Most conversations about exclusionary zoning focus on how it blocks low-income r
 
 In this research, I compare impoverished communities in metropolitan regions with exclusionary zoning policies to similarly impoverished communities in regions with less-strict zoning regulations. Imagine two similar, high-poverty neighborhoods. One neighborhood is subject to exclusionary zoning, either in its own municipality or in the municipalities that surround it. The other is in a place with less restrictive zoning regulations, allowing for easier development. Both neighborhoods have high poverty rates, but do these differences in zoning lead to higher housing costs and more housing precarity in the first sort of neighborhood than in the second?
 
-The first step in answering this question was measuring zoning and changes in regulations over time. I combine the {{< smartlink "National Zoning and Land Use Database" "https://evictionlab.org/national-zoning-and-land-use-database/" >}} and earlier zoning and land use survey data so that I have land use information in two periods: from 2003-2006 and again from 2018-2022. For these same time periods, I construct measures of material hardship in poor neighborhoods, including rent, property values, households experiencing rent burden, and availability of low-cost housing. 
+The first step in answering this question was measuring zoning regulations over time. I combine the {{< smartlink "National Zoning and Land Use Database" "https://evictionlab.org/national-zoning-and-land-use-database/" >}} and earlier zoning and land use survey data so that I have land use information in two periods: from 2003-2006 and again from 2018-2022. For these same time periods, I construct measures of material hardship in poor neighborhoods, including rent, property values, households experiencing rent burden, and availability of low-cost housing. 
 
-The data allow me to identify metro areas with highly restrictive zoning ordinances like Trenton-Princeton and Milwaukee, both displayed below. I also find metro areas with much less restrictive regulations, places like San Antonio and Pittsburgh, also displayed below. These findings alone are noteworthy because metro areas like Milwaukee are typically not thought of as highly-restrictive metro areas relative to much higher cost metro areas like San Francisco and New York. Moreover, even relatively less restrictive regions like Pittsburgh still feature pockets of restrictive zoning. This research helps illustrate that exclusionary zoning is more prevalent than many realize. 
+The data allow me to identify metro areas with highly restrictive zoning ordinances like Trenton-Princeton and Milwaukee, both displayed below. I also find metro areas with less restrictive regulations, areas like San Antonio and Pittsburgh, also displayed below. These findings alone are noteworthy because metro areas like Milwaukee are typically not thought of as highly-restrictive relative to much higher cost metro areas like San Francisco and New York. Moreover, even relatively less restrictive metro areas like Pittsburgh still feature pockets of restrictive zoning. This research helps illustrate that exclusionary zoning is more prevalent than many realize. 
 
 
 </div>
@@ -298,100 +298,18 @@ Notes:
 
 I compare impoverished neighborhoods between more- and less-restrictive municipalities and metro areas to determine whether exclusionary zoning explains differences in housing prices, rent burden, and the availability of low-cost housing. 
 
-Restrictive zoning means higher costs for poor families. Each decade of exclusionary zoning is associated with an average increase in monthly median rent of $24-27 in impoverished neighborhoods. Similarly, each decade of exclusionary zoning is associated with an estimated one percentage point increase in the share of renting households experiencing rent burden in these neighborhoods. 
-While these may at first appear to be relatively small numbers, they add up. In areas that have had above-average levels of exclusionary zoning for the past two decades, this amounts to $50 more in rent each month and $600 more in rent each year since 2000. These are additional costs on top of all the other factors driving housing to be more expensive everywhere. This means that residents in the most disadvantaged neighborhoods are paying more for arbitrary zoning rules, oftentimes implemented in other, more affluent jurisdictions. 
+Restrictive zoning means higher costs for families in poorer neighborhoods. Each decade of exclusionary zoning is associated with an average increase in monthly median rent of $24-27 in impoverished neighborhoods. Similarly, each decade of exclusionary zoning is associated with an estimated one percentage point increase in the share of renting households experiencing rent burden in these neighborhoods. 
 
-{{< pullquote "Residents in the most disadvantaged neighborhoods are paying more for arbitrary zoning rules, oftentimes implemented in other, more affluent jurisdictions. " >}}
-
-Property values also increase faster in poor neighborhoods in more-restrictively zoned areas, pushing properties out of reach for low-income households. Results indicate that each decade of restrictive zoning is associated with an average decline of 1-2 percentage points in the stock of housing affordable to households with below-median earnings. In the New York City metro area, this corresponds to an estimated loss of just over 137,000 low-cost apartments over two decades simply due to exclusionary zoning. 
-
-<!--
-<div class="figheader mb-0">Table 1. Notable results from MSM analyses</div>
-
-<div>
-<table class="table blog-table table--text table-responsive">
-   <thead>
-   <tr>
-    <th>Measure</th>
-    <th>Level</th>
-    <th>Poverty/income level</th>
-    <th>Per-decade result <span>Difference between neighborhoods experiencing high and low levels of exclusionary zoning</span></th>
-    <th>95% confidence interval </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>Monthly median gross rent</td>
-    <td>Metro</td>
-    <td>Above-average (poverty rate > 0.13)</td>
-    <td>$24 </td>
-    <td>($8.81, $50.96)</td>
-  </tr>
-  <tr>
-    <td>Monthly median gross rent</td>
-    <td>Municipal</td>
-    <td>Above-average (poverty rate > 0.13)</td>
-    <td>$27</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Share of renting households experiencing rent burden</td>
-    <td>Municipal </td>
-    <td>Above-average (poverty rate > 0.13)</td>
-    <td>1 percentage point</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Median property value</td>
-    <td>Metro</td>
-    <td>Above-average (poverty rate > 0.13)</td>
-    <td>$16,000</td>
-    <td>($6,429.86, $26,406.69)</td>
-  </tr>
-  <tr>
-    <td>Median property value</td>
-    <td>Municipal </td>
-    <td>Above-average (poverty rate > 0.13)</td>
-    <td>$22,000</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Median property value</td>
-    <td>Municipal </td>
-    <td>High-poverty (poverty rate > 0.4)</td>
-    <td>$25,000</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Share of housing units affordable to households earning below-median incomes</td>
-    <td>Metro</td>
-    <td>Housing units affordable for very low-income (50% of area median income)</td>
-    <td>1 percentage point</td>
-    <td>(-0.024, -0.0004)</td>
-  </tr>
-  
-  <tr>
-    <td>Share of housing units affordable to households earning below-median incomes</td>
-    <td>Metro</td>
-    <td>Housing units affordable for low-income (80% of area median income)</td>
-    <td>2 percentage points</td>
-    <td>(-0.033, -0.005) </td>
-  </tr>
-  
-  </tbody>
-</table>
-</div>
--->
 <div class="chart chart2-wrapper">
 <h3 class="chart__title" style="pointer-events: auto;">Figure 3. Additional average monthly rent in neighborhoods exposed to exclusionary zoning (at MSA and municipal level)</h3>
-<div class="chart2-hitarea" style="left: 31.55%; top: 54.68%; width: 20.66%; height: 40.92%;">
+<div class="chart2-hitarea" style="left: 31.55%; top: 46.68%; width: 20.66%; height: 40.92%;">
   <div class="chart1-tooltip">
     <div class="tooltip__title">MSA</div>
     <div class="tooltip__item"><strong>$27.50</strong></div>
     <div class="tooltip__item">CI: $8.81 to $50.96</div>
   </div>
 </div>
-<div class="chart2-hitarea" style="left: 54.80%; top: 60.48%; width: 20.66%; height: 35.12%;">
+<div class="chart2-hitarea" style="left: 54.80%; top: 51.48%; width: 20.66%; height: 35.12%;">
   <div class="chart1-tooltip">
     <div class="tooltip__title">Municipal</div>
     <div class="tooltip__item"><strong>$23.65</strong></div>
@@ -457,24 +375,33 @@ Property values also increase faster in poor neighborhoods in more-restrictively
   </div>
 </div>
 
+<p class="map-notes text-center mb-5">
+Note: estimated average difference (and 95% confidence intervals) in monthly median rent between impoverished neighborhoods with high and low levels of exclusionary zoning, separately for above-average poverty (>13%) neighborhoods at the metro level (blue bar) and the municipal level (orange bar).
+</p>
+
+While these may at first appear to be relatively small numbers, they add up. In areas that have had above-average levels of exclusionary zoning for the past two decades, this amounts to $50 more in rent each month and $600 more in rent each year since 2000. These are additional costs on top of all the other factors driving housing to be more expensive everywhere. This means that residents in the most disadvantaged neighborhoods are paying more for arbitrary zoning rules, oftentimes implemented in other, more affluent jurisdictions. 
+
+{{< pullquote "Residents in the most disadvantaged neighborhoods are paying more for arbitrary zoning rules, oftentimes implemented in other, more affluent jurisdictions. " >}}
+
+Property values also increase faster in poor neighborhoods in more-restrictively zoned areas, pushing properties out of reach for low-income households. Results indicate that each decade of restrictive zoning is associated with an average decline of 1-2 percentage points in the stock of housing affordable to households with below-median earnings. In the New York City metro area, this corresponds to an estimated loss of just over 137,000 low-cost apartments over two decades simply due to exclusionary zoning. 
 
 <div class="chart chart3-wrapper">
 <h3 class="chart__title" style="pointer-events: auto;">Figure 4. Increase in median home values in neighborhoods exposed to exclusionary zoning (at MSA and municipal level)</h3>
-<div class="chart3-hitarea" style="left: 20.51%; top: 66.80%; width: 20.60%; height: 28.13%;">
+<div class="chart3-hitarea" style="left: 20.51%; top: 52.8%; width: 20.60%; height: 28.13%;">
   <div class="chart1-tooltip">
     <div class="tooltip__title">MSA / Above-Average Poverty</div>
     <div class="tooltip__item"><strong>$16,067</strong></div>
     <div class="tooltip__item">CI: $6,430 to $26,407</div>
   </div>
 </div>
-<div class="chart3-hitarea" style="left: 43.73%; top: 55.95%; width: 20.60%; height: 38.92%;">
+<div class="chart3-hitarea" style="left: 43.73%; top: 41.95%; width: 20.60%; height: 38.92%;">
   <div class="chart1-tooltip">
     <div class="tooltip__title">Municipal / Above-Average Poverty</div>
     <div class="tooltip__item"><strong>$22,341</strong></div>
     <div class="tooltip__item">CI: $13,907 to $31,909</div>
   </div>
 </div>
-<div class="chart3-hitarea" style="left: 66.95%; top: 52.06%; width: 20.60%; height: 42.85%;">
+<div class="chart3-hitarea" style="left: 66.95%; top:38.06%; width: 20.60%; height: 42.85%;">
   <div class="chart1-tooltip">
     <div class="tooltip__title">Municipal / High Poverty</div>
     <div class="tooltip__item"><strong>$24,588</strong></div>
@@ -558,21 +485,104 @@ Property values also increase faster in poor neighborhoods in more-restrictively
   </div>
 </div>
 
+<p class="map-notes text-center mb-5">
+Note: estimated average difference (and 95% confidence intervals) in median property value between impoverished neighborhoods with high and low levels of exclusionary zoning, separately for above-average poverty (>13%) neighborhoods at the metro level (blue bar), above-average poverty neighborhoods at the municipal level (orange bar), and high poverty (>=40%) neighborhoods at the municipal level (green bar). 
+</p>
+
+<!--
+<div class="figheader mb-0">Table 1. Notable results from MSM analyses</div>
+
+<div>
+<table class="table blog-table table--text table-responsive">
+   <thead>
+   <tr>
+    <th>Measure</th>
+    <th>Level</th>
+    <th>Poverty/income level</th>
+    <th>Per-decade result <span>Difference between neighborhoods experiencing high and low levels of exclusionary zoning</span></th>
+    <th>95% confidence interval </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Monthly median gross rent</td>
+    <td>Metro</td>
+    <td>Above-average (poverty rate > 0.13)</td>
+    <td>$24 </td>
+    <td>($8.81, $50.96)</td>
+  </tr>
+  <tr>
+    <td>Monthly median gross rent</td>
+    <td>Municipal</td>
+    <td>Above-average (poverty rate > 0.13)</td>
+    <td>$27</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Share of renting households experiencing rent burden</td>
+    <td>Municipal </td>
+    <td>Above-average (poverty rate > 0.13)</td>
+    <td>1 percentage point</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Median property value</td>
+    <td>Metro</td>
+    <td>Above-average (poverty rate > 0.13)</td>
+    <td>$16,000</td>
+    <td>($6,429.86, $26,406.69)</td>
+  </tr>
+  <tr>
+    <td>Median property value</td>
+    <td>Municipal </td>
+    <td>Above-average (poverty rate > 0.13)</td>
+    <td>$22,000</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Median property value</td>
+    <td>Municipal </td>
+    <td>High-poverty (poverty rate > 0.4)</td>
+    <td>$25,000</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Share of housing units affordable to households earning below-median incomes</td>
+    <td>Metro</td>
+    <td>Housing units affordable for very low-income (50% of area median income)</td>
+    <td>1 percentage point</td>
+    <td>(-0.024, -0.0004)</td>
+  </tr>
+  
+  <tr>
+    <td>Share of housing units affordable to households earning below-median incomes</td>
+    <td>Metro</td>
+    <td>Housing units affordable for low-income (80% of area median income)</td>
+    <td>2 percentage points</td>
+    <td>(-0.033, -0.005) </td>
+  </tr>
+  
+  </tbody>
+</table>
+</div>
+-->
+
+
 
 <div class="chart chart1-wrapper">
 <h3 class="chart__title" style="pointer-events: auto;">Figure 5. Decline in share of affordable units in metro areas exposed to exclusionary zoning</h3>
-<div class="chart1-hitarea" style="left: 31.65%; top: 6.23%; width: 20.97%; height: 33.64%;">
+<div class="chart1-hitarea" style="left: 31.65%; top: 19.23%; width: 20.97%; height: 33.64%;">
   <div class="chart1-tooltip">
     <div class="tooltip__title">Very Low-Income</div>
-    <div class="tooltip__item"><strong>-1.3%</strong></div>
-    <div class="tooltip__item">CI: -2.4% to -0.04%</div>
+    <div class="tooltip__item"><strong>-1.3 pp</strong></div>
+    <div class="tooltip__item">CI: -2.4 pp to -0.04 pp</div>
   </div>
 </div>
-<div class="chart1-hitarea" style="left: 55.34%; top: 6.23%; width: 20.97%; height: 51.66%;">
+<div class="chart1-hitarea" style="left: 55.34%; top: 19.23%; width: 20.97%; height: 51.66%;">
   <div class="chart1-tooltip">
     <div class="tooltip__title">Low-Income</div>
-    <div class="tooltip__item"><strong>-2.0%</strong></div>
-    <div class="tooltip__item">CI: -3.3% to -0.5%</div>
+    <div class="tooltip__item"><strong>-2.0 pp</strong></div>
+    <div class="tooltip__item">CI: -3.3 pp to -0.5 pp</div>
   </div>
 </div>
 <svg width="515" height="321" viewBox="0 0 515 321" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -633,11 +643,15 @@ Property values also increase faster in poor neighborhoods in more-restrictively
     </div>
   </div>
 </div>
+
+<p class="map-notes text-center mb-3">
+Note: estimated average difference (and 95% confidence intervals) in the share of housing units affordable to very-low (blue bar) and low-income (orange bar) households (those earning 50% and 80% of national median income, respectively) between metro areas with high and low levels of exclusionary zoning.
+</p>
 <br>
 
-Poor neighborhoods within a region with more restrictive zoning laws experience higher average housing costs and more rent burden relative to similarly poor neighborhoods in areas with less restrictive zoning. In other words, exclusionary zoning exacerbates poverty on the margins. 
+Poor neighborhoods within a region with more restrictive zoning laws experience higher average housing costs and more rent burden relative to similarly poor neighborhoods in areas with less restrictive zoning. In other words, exclusionary zoning can exacerbate poverty on the margins. 
 
-These costs for poor neighborhoods are often incurred due to policies determined in other communities, which raises important fair housing questions. After all, it’s one thing if residents of an affluent town or neighborhood decide to block an apartment building, excluding middle or low-income tenants from the area. It’s quite another when those policies negatively impact residents in other communities. That’s exactly what I’ve shown here: Zoning laws can have unanticipated spillover effects, making people poorer in communities beyond the city or town in which they’re enacted. 
+These costs for poor neighborhoods are often incurred due to policies determined in other communities, which raises important fair housing questions. After all, it’s one thing if residents of an affluent town or neighborhood decide to block an apartment building, excluding middle or low-income tenants from the area. It’s quite another when those policies negatively impact residents in other communities. That’s exactly what I’ve shown here: Zoning laws can have unanticipated spillover effects, making aggravating poverty in communities beyond the community in which they’re enacted. 
 
 {{< pullquote "It’s one thing if residents of an affluent town or neighborhood decide to block an apartment building, excluding middle or low-income tenants from the area. It’s quite another when those policies negatively impact residents in other communities." >}}
 
