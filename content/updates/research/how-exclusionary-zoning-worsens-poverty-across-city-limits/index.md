@@ -7,20 +7,23 @@ collection: true
 contentcat: research
 featured: true
 in_index: true
-title: "How exclusionary zoning worsens poverty across city limits"
+title: How exclusionary zoning worsens poverty across city limits
 date: 2026-03-10T15:28:51.756Z
 postauthorname: Matt Mleczko
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/mmleczko_thumb.jpg
-description: "Exclusionary zoning laws exacerbate the national housing shortage, housing costs, and segregation."
-listSummary: "Exclusionary zoning laws exacerbate the national housing shortage, housing costs, and segregation."
+image: exclusionary-zoning-worsens-poverty.jpg
+description: Exclusionary zoning laws exacerbate the national housing shortage,
+  housing costs, and segregation.
+listSummary: Exclusionary zoning laws exacerbate the national housing shortage,
+  housing costs, and segregation.
 scripts:
   - charts
   - mapbox
-socialDescription: "Exclusionary zoning laws exacerbate the national housing shortage, housing costs, and segregation."
+socialDescription: Exclusionary zoning laws exacerbate the national housing
+  shortage, housing costs, and segregation.
 twImage: exclusionary-zoning-worsens-poverty.jpg
 fbImage: exclusionary-zoning-worsens-poverty.jpg
-image: exclusionary-zoning-worsens-poverty.jpg
 ---
 
 <style>
@@ -195,7 +198,7 @@ The data allow me to identify metro areas with highly restrictive zoning ordinan
 
 <h3 class="mt-7 mb-3 bordered-header blue">How maps show the impact of zoning laws</h3>
 
-<p class="map-intro">Zoning restrictiveness can vary enormously from region to region, and even within regions. In the following maps, you can see this variation: orange/red areas have tight zoning regulations, while green areas tend to be more flexible.</p>
+<p class="map-intro">Zoning restrictiveness can vary enormously from region to region, and even within regions. In the following maps, you can see this variation: orange/red areas have tight zoning regulations, while blue areas tend to be more flexible.</p>
 
 </div>
 </div>
