@@ -155,14 +155,17 @@ p.legend__title {
 h3.bordered-header {
   font-size: 1.8rem !important;
 }
+.bordered-header {
+  border-top: 4px solid;
+}
 .map-intro {
-   font-family: "Akkurat-Italic" !important;
+    font-family: "Akkurat-Italic" !important; 
 }
 .map-notes {
      color: #5a5a5a !important;
 }
 .map-notes, ol.map-notes li {
-    font-family: "Akkurat-Italic" !important;
+   /* font-family: "Akkurat-Italic" !important; */
     font-size: 1.5rem !important;
 }
 ol.map-notes {
@@ -170,7 +173,7 @@ ol.map-notes {
 }
 hr.research__paperlink--hr {
   border-color:  #434878 !important;
-  border-width: 3px;
+  border-width: 4px;
 }
 .research__paperlink a, .research__paperlink .journal-subheading {
   color:  #434878 !important;
