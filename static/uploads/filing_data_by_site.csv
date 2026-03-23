@@ -1,4 +1,4 @@
-site_id,serial_share,filings_pandemic,filings_past_year,filings_past_month,filings_ytd,filings_pandemic_pct_hist,filings_past_year_pct_hist,filings_past_month_pct_hist,filings_ytd_pct_hist,median_rent,renter_hh,hhs_threatened_rate,eviction_filing_rate,site,latest_update
+site_id,serial_share,filings_pandemic,filings_past_year,filings_past_month,filings_ytd,filings_pandemic_pct_hist,filings_past_year_pct_hist,filings_past_month_pct_hist,filings_ytd_pct_hist,median_rent,renter_hh,hhs_threatened_rate,eviction_filing_rate,site,latest_update,hide_ticker
 12001,0.06552962298025135,10711,2263,222,2263,0.7825388127853882,0.9572758037225042,1.317507418397626,0.9556587837837838,1370,53954,0.04129443600103791,0.04194313674611706,gainesville,2026-01-01
 18,0.17149491582554635,371106,69990,5539,5539,0.854815080988446,0.9513259300539615,0.8100321731500438,0.8100321731500438,1044,814438,0.06556791308853467,0.08593655993458066,indiana,2026-02-01
 18097,0.19512066603435557,133956,24216,1883,1883,0.8541369108345236,0.9119873460625918,0.7717213114754098,0.7717213114754098,1187,174089,0.10901320588894188,0.13910126429584868,indianapolis,2026-02-01

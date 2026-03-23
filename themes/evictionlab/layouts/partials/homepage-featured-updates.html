@@ -1,64 +1,19 @@
 <!-- Left panel ---------------------->
 
 <div class="d-block" id="featured-updates">
-    <div class="row mx-0 subfeature-panel pt-6 pb-4 pt-md-6 pb-xxl-5 pl-md-1 pl-lg-0">
+    <div class="row mx-0 subfeature-panel pt-6 pb-4 pt-md-8 pt-xxl-11 pb-xxl-8 pl-md-1 pl-lg-0">
       <div class="col-12 col-xxl-11 col-xxxl-10 col-x4l-9 mx-auto px-0 d-flex flex-wrap">
         <div class="col-12 col-lg-8 mb-md-3 mb-lg-0 blog-research-panel">
-          <!-- ETS section -->
-          <div class="fade-in-element">
-            <div class="bordered-header d-none d-lg-block border-0 pt-0 blue mb-3 mx-3 ">
-              Eviction Tracking System
-            </div>
-            <div class="ets-homepage col-12 d-none d-lg-flex mb-5 pl-lg-1">
-              <div id="ets-block" class="col-4 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4">
-                <a href="/eviction-tracking">
-                  <div class="feature-image image-ets mt-1" style="background-image: url('/images/assets/graphics/ets-bg-sm.jpg');">
-                  </div>
-                </a>
-              </div>
-              <div class="col-8 col-lg-8 col-xl-8 col-xxl-8 col-xxxl-8">
-                <a href="/eviction-tracking" class="title title-large mb-2">
-                      See up-to-date maps, charts and data on eviction filings in select cities
-                      </a>
-                      {{ $csv := readFile "static/uploads/filing_data_by_site.csv" }}
-                      {{ $lines := split (chomp $csv) "\n" }}
-                      {{ $headers := split (index $lines 0) "," }}
-                      {{ $idx := -1 }}
-                      {{ range $i, $h := $headers }}
-                      {{ if eq (trim $h " ") "latest_update" }}
-                      {{ $idx = $i }}
-                      {{ end }}
-                      {{ end }}
-                      {{ $target := "" }}
-                      {{ if ge $idx 0 }}
-                      {{ range $i, $l := $lines }}
-                      {{ if gt $i 0 }}
-                      {{ $cols := split $l "," }}
-                      {{ $siteid := trim (index $cols 0) " " }}
-                      {{ if eq $siteid "0" }}
-                      {{ $target = trim (index $cols $idx) " " }}
-                      {{ end }}
-                      {{ end }}
-                      {{ end }}
-                      {{ end }}
-                      {{ if ne $target "" }}
-                      <p class="mb-0">Updated {{ dateFormat "January 2, 2006" $target }}</p>
-                      {{ else }}
-                      <p class="mb-0">Updated November 1, 2025</p>
-                      {{ end }}
-              </div>
-            </div>
-          </div>
 
           <!-- Research section -->
           <div class="fade-in-element">
             <div class="bordered-header d-block blue mb-3 mx-1 mx-md-2 mx-lg-3 px-0 pl-lg-0">
               Research
             </div>
-            <div id="research-page-block" class="ets-homepage col-12 d-flex flex-wrap mb-md-5 px-0 pl-lg-1">
+            <div id="research-page-block" class="ets-homepage col-12 d-flex flex-wrap mb-4 mb-md-5 px-0 pl-lg-1">
               <div class="col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 px-1 px-md-2">
                 <a href="/research">
-                  <div class="feature-image image-ets mb-2 mb-md-0 mt-1"
+                  <div class="feature-image image-ets mb-2 mb-md-0 mt-1 mt-md-0"
                     style="background-image: url('/images/assets/graphics/research-collage.jpg');"></div>
                 </a>
               </div>
@@ -69,54 +24,33 @@
                 <p class="mb-0">Our research explores topics such as the consequences of eviction, landlords and rental markets, and
                   zoning, and offers tools to address the eviction crisis.</p>
               </div>
-            </div>
-          </div>
-          
-          <!-- Updates section -->
-          <div class="fade-in-element">
-            <div class="bordered-header blue d-none d-md-flex justify-content-between mb-3 mx-2 mx-lg-3">
-              Updates
-              <a class="see-all" href="/updates">SEE ALL</a>
-            </div>
-            <div class="col-12 px-0 px-lg-1 d-none d-md-flex flex-wrap">
-              {{ range first 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) }}
-                <div class="col-3 mb-4">
-                  <a href="{{ .RelPermalink }}">
-                    {{ $img := .Params.fbImage }}
-                    {{ with .Resources.GetMatch $img }}
-                      {{ $processed := .Fit "600x400 q50 jpg" }}
-                        <div class="feature-image mt-lg-1" style="background-image: url('{{ $processed.RelPermalink }}');"></div>
-                    {{ end }}
+              <div class="research-findings px-1 px-md-2">
+                <p>Nationwide, 3.6 million evictions were filed in 2018 against 2.7 million unique households.</p>
+                <p>Every year, 7.6 million individual renters are threatened with eviction, many of them children.</p>
+                <p>Nearly one-third of all evictions filed in 2014 were repeated cases against the same household at the same address.
+                </p>
+                <div class="mt-2">
+                  <a class="bordered-header border-0 pt-4" href="/research">
+                    see more key findings
+                    <i class="fa fa-chevron-right"></i>
                   </a>
                 </div>
-                <div class="col-9 pl-0 pl-lg-2 mb-xl-1">
-                  <a href="{{ .RelPermalink }}" class="title mb-3 mb-lg-1">
-                    {{ .Params.title }}
-                  </a>
-                  <p>{{ .Params.listSummary }}</p>
                 </div>
-              {{ end }}
-              <div class="col-12">
-                {{ range first 2 (after 1 ( where (where (where .Site.RegularPages ".Params.contenttype" ("updates")) ".Params.childof" "!=" "reporting" ) ".Params.featured" "!=" false ) ) }}
-                <a class="d-block title mb-2" href="{{ .RelPermalink }}">
-                  {{ .Params.title }}
-                </a>
-                {{ end }}
-              </div>
             </div>
-          </div>
+            </div>
+            {{ partial "homepage-interactives-block-mini" . }}
         </div>
     
     <!-- Right panel ---------------->
     
     {{ if eq .Site.Language.LanguageName "Español" }}
       {{ range .Translations }}
-          {{ partial "reporting" . }}
+          {{ partial "updates" . }}
         {{ end }}
       {{ end }}
 
       {{ if eq .Site.Language.LanguageName "English" }}
-          {{ partial "reporting" . }}
+          {{ partial "updates" . }}
       {{ end }}  
 
 

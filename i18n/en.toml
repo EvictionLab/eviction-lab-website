@@ -14,13 +14,23 @@ other = "Engage with the data"
 [cta2]
 other = "Explore our research"
 [toolsHeading]
-other = "Comprehensive national data"
+other = "National Map & Data"
+[ETSHeading]
+other = "Eviction Tracking System"
+[ETSSub]
+other = "See monthly eviction filings across 37 cities and 10 states in our data."
+[ETSLink]
+other = "go to the dashboard"
+[ETSTickerLabel]
+other = "filings in past 12 months"
 [toolsSub]
 other = "Explore nationwide eviction data spanning the years 2000-2016. View maps and charts, download reports, and more."  
 [mapData]
-other = "Map & Data"
+other = "Explore yearly data for the entire United States"
 [mapSub]
 other = "<p>How is the eviction crisis affecting your community? Find out with our newly updated map, which now covers all 50 U.S. states & D.C. You can search for your county, compare data across regions, interact with demographic characteristics, and create local reports.</p><p>New features include:</p><ul><li>Data from 2000 to 2018</li><li>Estimated data for every county in all 50 U.S. states & D.C.</li><li>New variable: Households threatened with eviction</li></ul>"
+[mapSubMini]
+other = "How is the eviction crisis affecting your community? Find out with our newly updated map, which now covers all 50 U.S. states & D.C. using data from 2000 to 2018."
 [mapCTA]
 other = "Go to the map"
 [rankingsHead]
