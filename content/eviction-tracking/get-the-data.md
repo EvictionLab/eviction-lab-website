@@ -23,7 +23,7 @@ intro: >-
   please cite as follows:
 
 
-  > Peter Hepburn, Jacob Haas, Renee Louis, Adam Chapnik, Danny Grubbs-Donovan, Olivia Jin, Jasmine Rangel, and Matthew Desmond. Eviction Tracking System: Version 2.0. Princeton: Princeton University, 2020. [www.evictionlab.org](http://www.evictionlab.org/)
+  > Peter Hepburn, Jacob Haas, Renee Louis, Adam Chapnik, Danny Grubbs-Donovan, Olivia Jin, Jasmine Rangel, Grace Hartley, and Matthew Desmond. Eviction Tracking System: Version 3.0. Princeton: Princeton University, 2026. [www.evictionlab.org](http://www.evictionlab.org/)
 
 
   Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
@@ -331,6 +331,26 @@ data:
     geo: Census Tract
     file: /uploads/wisconsin_weekly_2020_2021.csv
     monthfile: /uploads/wisconsin_monthly_2020_2021.csv
+  - site: Portland
+    years: "2019"
+    geo: Census Tract
+    file: /uploads/portland_weekly_2020_2021.csv
+    monthfile: /uploads/portland_monthly_2020_2021.csv
+  - site: Tacoma
+    years: 2017-2019
+    geo: Census Tract
+    file: /uploads/tacoma_weekly_2020_2021.csv
+    monthfile: /uploads/tacoma_monthly_2020_2021.csv
+  - site: Southwest Oregon
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/southwest_weekly_2020_2021.csv
+    monthfile: /uploads/southwest_monthly_2020_2021.csv
+  - site: Eugene
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/eugene_weekly_2020_2021.csv
+    monthfile: /uploads/eugene_monthly_2020_2021.csv
 ---
 Sample code:
 
