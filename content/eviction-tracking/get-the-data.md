@@ -121,6 +121,11 @@ data:
     geo: Census Tract
     file: /uploads/delaware_weekly_2020_2021.csv
     monthfile: /uploads/delaware_monthly_2020_2021.csv
+  - site: Eugene
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/eugene_weekly_2020_2021.csv
+    monthfile: /uploads/eugene_monthly_2020_2021.csv
   - years: 2014-2019
     geo: Census Tract
     site: Fort Lauderdale
@@ -247,12 +252,6 @@ data:
     geo: ZIP Code
     file: /uploads/newyork_weekly_2020_2021.csv
     monthfile: /uploads/newyork_monthly_2020_2021.csv
-  - site: West Palm Beach
-    siteid: 12099
-    years: 2014-2019
-    geo: Census Tract
-    file: /uploads/palmbeach_weekly_2020_2021.csv
-    monthfile: /uploads/palmbeach_monthly_2020_2021.csv
   - site: Pennsylvania
     siteid: 42
     years: 2016-2019
@@ -277,6 +276,11 @@ data:
     geo: ZIP Code
     file: /uploads/pittsburgh_weekly_2020_2021.csv
     monthfile: /uploads/pittsburgh_monthly_2020_2021.csv
+  - site: Portland
+    years: "2019"
+    geo: Census Tract
+    file: /uploads/portland_weekly_2020_2021.csv
+    monthfile: /uploads/portland_monthly_2020_2021.csv
   - site: Providence
     siteid: 44007
     years: 2016-2019
@@ -301,12 +305,22 @@ data:
     geo: Census Tract
     file: /uploads/southbend_weekly_2020_2021.csv
     monthfile: /uploads/southbend_monthly_2020_2021.csv
+  - site: Southwest Oregon
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/southwest_weekly_2020_2021.csv
+    monthfile: /uploads/southwest_monthly_2020_2021.csv
   - site: St Louis
     siteid: 29510
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
     file: /uploads/stlouis_weekly_2020_2021.csv
     monthfile: /uploads/stlouis_monthly_2020_2021.csv
+  - site: Tacoma
+    years: 2017-2019
+    geo: Census Tract
+    file: /uploads/tacoma_weekly_2020_2021.csv
+    monthfile: /uploads/tacoma_monthly_2020_2021.csv
   - site: Tampa
     siteid: 12103
     years: 2016-2019
@@ -319,6 +333,12 @@ data:
     geo: ZIP Code
     file: /uploads/virginia_weekly_2020_2021.csv
     monthfile: /uploads/virginia_monthly_2020_2021.csv
+  - site: West Palm Beach
+    siteid: 12099
+    years: 2014-2019
+    geo: Census Tract
+    file: /uploads/palmbeach_weekly_2020_2021.csv
+    monthfile: /uploads/palmbeach_monthly_2020_2021.csv
   - site: Wilmington
     siteid: 10003
     years: 2016-2019
@@ -331,26 +351,6 @@ data:
     geo: Census Tract
     file: /uploads/wisconsin_weekly_2020_2021.csv
     monthfile: /uploads/wisconsin_monthly_2020_2021.csv
-  - site: Portland
-    years: "2019"
-    geo: Census Tract
-    file: /uploads/portland_weekly_2020_2021.csv
-    monthfile: /uploads/portland_monthly_2020_2021.csv
-  - site: Tacoma
-    years: 2017-2019
-    geo: Census Tract
-    file: /uploads/tacoma_weekly_2020_2021.csv
-    monthfile: /uploads/tacoma_monthly_2020_2021.csv
-  - site: Southwest Oregon
-    years: 2016-2019
-    geo: Census Tract
-    file: /uploads/southwest_weekly_2020_2021.csv
-    monthfile: /uploads/southwest_monthly_2020_2021.csv
-  - site: Eugene
-    years: 2016-2019
-    geo: Census Tract
-    file: /uploads/eugene_weekly_2020_2021.csv
-    monthfile: /uploads/eugene_monthly_2020_2021.csv
 ---
 Sample code:
 
