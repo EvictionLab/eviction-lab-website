@@ -48,7 +48,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled,draft
 12103,Tampa,tampa-fl,FL,27.9506,-82.4572
 10003,Wilmington,wilmington-de,DE,39.7447,-75.5484
 
-41039,Eugene,eugene-or,OR,43.864,-122.999,
-41051,Portland,portland-or,OR,45.632,-122.803,
-41019,Southwest Oregon,southwest-or,,42.965,-122.03,
-53053,Tacoma,tacoma-wa,WA,47.066,-122.113,
+41039,Eugene,eugene-or,OR,43.864,-122.999
+41051,Portland,portland-or,OR,45.632,-122.803
+41019,Southwest Oregon,southwest-or,,42.965,-122.03
+53053,Tacoma,tacoma-wa,WA,47.066,-122.113
