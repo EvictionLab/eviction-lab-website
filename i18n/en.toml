@@ -99,4 +99,4 @@ other ="Resources"
 other = "<span class='boldface'>Facing eviction?</span> &nbsp;<a href='/questions'>Read our FAQ to learn more and find resources</a>."
 [superheadETS]
 # banner shown throughout /eviction
-other = "<span class='boldface'></span>We're now tracking Atlanta on the Eviction Tracking System. Have a look at the <a href='/eviction-tracking/atlanta-ga'>new page</a>."
+other = "<span class='boldface'></span>We're now tracking Atlanta and four sites in the Pacific Northwest. Check out the data on the Eviction Tracking System."
