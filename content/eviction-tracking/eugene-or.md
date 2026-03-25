@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 h1: Eugene, Oregon
 slug: eugene-or
 date: 2024-08-30T04:00:00.000Z

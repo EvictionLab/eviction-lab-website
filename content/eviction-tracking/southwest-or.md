@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 h1: Southwest Oregon
 h1Override: Southwest Oregon
 slug: southwest-or
