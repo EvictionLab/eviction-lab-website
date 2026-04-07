@@ -143,10 +143,10 @@ Landlords filed just over one million eviction cases in 2024 in the jurisdiction
 </div>
 <ul class="nav nav-pills mb-3" id="pills-EFR" role="tablist" data-toggle="pills">
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="pills-with-tab" data-toggle="pill" href="#pills-with" role="tab" aria-controls="pills-with" aria-selected="false">Including NYC</a>
+    <a class="nav-link active" id="pills-with-tab" data-toggle="pill" href="#pills-with" role="tab" aria-controls="pills-with" aria-selected="false"> vs. Basline</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="pills-without-tab" data-toggle="pill" href="#pills-without" role="tab" aria-controls="pills-without" aria-selected="true">Excluding NYC</a>
+    <a class="nav-link" id="pills-without-tab" data-toggle="pill" href="#pills-without" role="tab" aria-controls="pills-without" aria-selected="true">Filing Counts</a>
   </li>
 </ul>
 
