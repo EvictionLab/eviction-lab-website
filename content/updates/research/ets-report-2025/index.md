@@ -196,7 +196,7 @@ These differences that we see across states and cities also happen within metrop
 
 {{% bar-chart
   id="fig3"
-  data="./top-evictors-2024.csv"
+  data="./figure5_data.csv"
   x="site"
   y="top100"
   yMin="0"
@@ -217,7 +217,7 @@ In Figure 4 we plot the share of defendants listed on eviction filings in 2024 w
 
 {{% grouped-bar-chart 
   id="fig4" 
-  data="./main_landing_page_demographics.csv" 
+  data="./figure4_data.csv" 
   saneLoading="true"
   titlePrefix="Figure 4. Share of renters and eviction filing defendants by race/ethnicity" 
   yTicks="5" 
