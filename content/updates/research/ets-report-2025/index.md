@@ -212,7 +212,7 @@ One thing remains constant across cities and states: evictions disproportionatel
   title="Figure 3. Eviction Filing Rate by Site in 2025"
   avgLines="0.08,Average EFR,"
    barClass="type"
-  margin="8 8 100 40"
+margin="8 40 100 40"
 %}}
 
 In Figure 4 we plot the share of defendants listed on eviction filings in 2024 who were Black, Hispanic, or White. We compare those numbers to Census Bureau figures on the share of renters in each racial/ethnic group in the same set of places. Despite making up only 28% of renters, 36% of eviction filings are against Black individuals in these areas. By contrast, all other racial/ethnic groups see an underrepresentation when it comes to eviction filings.
