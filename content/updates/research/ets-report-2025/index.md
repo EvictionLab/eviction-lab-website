@@ -9,7 +9,7 @@ featured: true
 in_index: true
 title: "Preliminary Analysis: Eviction Filing Patterns in 2025"
 date: 2026-04-07T00:49:04.271Z
-postauthorname: Sarah Johnson, Lorae Stojanovic, and Peter Hepburn
+postauthorname: Grace Hartley
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: The days of emergency rental assistance and eviction protections are long gone. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020.
