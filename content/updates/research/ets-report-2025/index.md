@@ -112,7 +112,7 @@ Landlords filed just over one million eviction cases in 2024 in the jurisdiction
   <div class="tab-pane fade show active" id="pills-with" role="tabpanel" aria-labelledby="pills-with-tab">
 {{% bar-chart
   id="fig11"
-  data="./fig01a.csv"
+  data="./figure1_data.csv"
   x="year"
   y="percentage_of_historical"
   yMin="0"
@@ -120,7 +120,7 @@ Landlords filed just over one million eviction cases in 2024 in the jurisdiction
   yTooltipFormat=".1%"
   yFormat=".0%"
   avgLines="1,historical,;1,average,true"
-  title="Figure 1. Eviction filings across ETS site compared to historical average"
+  title="Figure 1. Eviction filings across ETS sites compared to historical average"
   centerLabels="true"
   margin="8 60 50 40"
 %}}
@@ -128,15 +128,14 @@ Landlords filed just over one million eviction cases in 2024 in the jurisdiction
   <div class="tab-pane fade" id="pills-without" role="tabpanel" aria-labelledby="pills-without-tab">
 {{% bar-chart
   id="fig12"
-  data="./fig01b.csv"
+  data="./figure1_data.csv"
   x="year"
-  y="percentage_of_historical"
+  y="filings"
   yMin="0"
-  yMax="1.1"
-  yTooltipFormat=".1%"
-  yFormat=".0%"
+  yTooltipFormat=","
+  yFormat=","
   avgLines="1,historical,;1,average,true"
-  title="Figure 1. Eviction filings across ETS site compared to historical average"
+  title="Figure 1. Eviction filings counts across ETS sites"
   centerLabels="true"
   margin="8 60 50 40"
 %}}
