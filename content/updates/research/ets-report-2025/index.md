@@ -204,7 +204,7 @@ One thing remains constant across cities and states: evictions disproportionatel
   x="site"
   y="eviction_filing_rate"
   yMin="0"
-  yMax="0.3"
+  yMax="0.28"
   yTooltipFormat=".1%"
   yFormat=".0%"
   tooltipTemplate="{{value}}"
