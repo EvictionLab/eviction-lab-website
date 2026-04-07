@@ -198,6 +198,21 @@ Eviction hotspots account for 58.2% of all cases filed in Greenville, SC, in 202
 
 One thing remains constant across cities and states: evictions disproportionately target specific groups of more vulnerable renters. {{< smartlink "As our previous work" "https://evictionlab.org/who-is-evicted-in-america/" >}} has shown, Black renters, households with children, and women are the main target of eviction cases. While available court records don’t let us assess all of these disparities in real-time, we’re able to use defendant information to track eviction filings by race/ethnicity and gender. In 2024, 58% of those named on eviction filings were women, despite representing only 53% of the renting population. 
 
+{{% bar-chart
+  id="fig3"
+  data="./figure3_data.csv"
+  x="site"
+  y="eviction_filing_rate"
+  yMin="0"
+  yMax="0.3"
+  yTooltipFormat=".1%"
+  yFormat=".0%"
+  tooltipTemplate="{{value}} <span>({{eviction_filing_rate}} eviction_filing_rate)</span>"
+  sort="asc"
+  title="Figure 3. Eviction Filing Rate by Site in 2025"
+  margin="8 8 100 40"
+%}}
+
 In Figure 4 we plot the share of defendants listed on eviction filings in 2024 who were Black, Hispanic, or White. We compare those numbers to Census Bureau figures on the share of renters in each racial/ethnic group in the same set of places. Despite making up only 28% of renters, 36% of eviction filings are against Black individuals in these areas. By contrast, all other racial/ethnic groups see an underrepresentation when it comes to eviction filings.
 
 {{% grouped-bar-chart 
