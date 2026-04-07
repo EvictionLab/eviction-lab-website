@@ -9,31 +9,31 @@ Cleveland,city,5962,95834,0.06,0.08
 Columbus,city,24561,274822,0.09,0.08
 Dallas,city,47995,493482,0.1,0.08
 Eugene,city,2699,65412,0.04,0.08
-Fortworth,city,46410,458787,0.1,0.08
+Fort Worth,city,46410,458787,0.1,0.08
 Gainesville,city,2263,53954,0.04,0.08
 Hartford,city,5897,121667,0.05,0.08
 Houston,city,77292,848172,0.09,0.08
 Indianapolis,city,24710,174089,0.14,0.08
 Jacksonville,city,14614,177265,0.08,0.08
-Kansascity,city,10312,122597,0.08,0.08
-Lasvegas,city,43201,371427,0.12,0.08
+Kansas City,city,10312,122597,0.08,0.08
+Las Vegas,city,43201,371427,0.12,0.08
 Memphis,city,24345,168231,0.14,0.08
 Miami,city,15853,453324,0.03,0.08
 Milwaukee,city,11990,188131,0.06,0.08
-Minneapolis Saintpaul,city,13377,300194,0.04,0.08
+Minneapolis-Saint Paul,city,13377,300194,0.04,0.08
 Nashville,city,14620,161248,0.09,0.08
-Neworleans,city,5131,68383,0.08,0.08
-Newyork,city,114838,2291001,0.05,0.08
-Palmbeach,city,7894,170772,0.05,0.08
+New Orleans,city,5131,68383,0.08,0.08
+New York,city,114838,2291001,0.05,0.08
+Palm Beach,city,7894,170772,0.05,0.08
 Philadelphia,city,13403,331415,0.04,0.08
 Phoenix,city,84602,606114,0.14,0.08
 Pittsburgh,city,13576,187052,0.07,0.08
 Portland,city,17481,275472,0.06,0.08
 Providence,city,4913,111239,0.04,0.08
 Richmond,city,21031,87921,0.24,0.08
-Southbend,city,2866,33066,0.09,0.08
-Southwestoregon,city,3101,75271,0.04,0.08
-Stlouis,city,17151,201627,0.09,0.08
+South Bend,city,2866,33066,0.09,0.08
+Southwest Oregon,city,3101,75271,0.04,0.08
+St. Louis,city,17151,201627,0.09,0.08
 Tacoma,city,3478,127095,0.03,0.08
 Tampa,city,17983,368395,0.05,0.08
 Wilmington,city,7142,67569,0.11,0.08
@@ -42,7 +42,7 @@ Delaware,state,11095,108917,0.1,0.08
 Indiana,state,71155,814438,0.09,0.08
 Minnesota,state,23623,656737,0.04,0.08
 Missouri,state,44717,798230,0.06,0.08
-Newmexico,state,12779,263167,0.05,0.08
+New Mexico,state,12779,263167,0.05,0.08
 Pennsylvania,state,109991,1626438,0.07,0.08
 Rhode Island,state,6299,159990,0.04,0.08
 Virginia,state,140053,1095593,0.13,0.08
