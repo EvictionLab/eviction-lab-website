@@ -134,7 +134,6 @@ Landlords filed just over one million eviction cases in 2024 in the jurisdiction
   yMin="0"
   yTooltipFormat=","
   yFormat=","
-  avgLines="1,historical,;1,average,true"
   title="Figure 1. Eviction filings counts across ETS sites"
   centerLabels="true"
   margin="8 60 50 40"
