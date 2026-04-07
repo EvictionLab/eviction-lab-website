@@ -194,20 +194,7 @@ It’s also worth noting that changes to eviction filing rates weren’t always 
 
 These differences that we see across states and cities also happen within metropolitan areas. As we’ve demonstrated in previous research, {{< smartlink "eviction cases are often concentrated in a relatively small number of buildings" "https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/" >}}. In 15 of the ETS cities we track which buildings are responsible for the largest number of eviction cases. These “eviction hotspots” are critical to target if city and state governments want to confront the local eviction crisis. In Figure 3 we plot the share of eviction cases in 2024 that originated from the top 100 filers in each of these cities.
 
-{{% bar-chart
-  id="fig3"
-  data="./figure5_data.csv"
-  x="site"
-  y="top100"
-  yMin="0"
-  yMax="0.6"
-  yTooltipFormat=".1%"
-  yFormat=".0%"
-  tooltipTemplate="{{value}} <span>({{filings}} filings)</span>"
-  sort="asc"
-  title="Figure 3. Share of eviction filings by the top 100 buildings"
-  margin="8 8 100 40"
-%}}
+
 
 Eviction hotspots account for 58.2% of all cases filed in Greenville, SC, in 2024. These 100 buildings were responsible for 2,293 eviction cases. Several other cities, including Albuquerque, South Bend, and Memphis saw similarly high shares of filings from eviction hotspots. Filings were relatively less concentrated in Houston, Philadelphia and Dallas. In Houston, only 15.5% of cases came from the top 100 filers. Across all 15 cities, the top evictors filed 18,347 eviction cases in 2024, and on average accounted for 32.6% of all filings in each city. 
 
@@ -237,4 +224,18 @@ Court data alone don’t let us identify the root causes of these trends. But it
 
 {{< pullquote "For renters in Phoenix, Las Vegas, and Houston, housing is less stable now than it was before the pandemic." >}}
 
+{{% bar-chart
+  id="fig5"
+  data="./figure5_data.csv"
+  x="site"
+  y="top100"
+  yMin="0"
+  yMax="0.6"
+  yTooltipFormat=".1%"
+  yFormat=".0%"
+  tooltipTemplate="{{value}} <span>({{filings}} filings)</span>"
+  sort="asc"
+  title="Figure 5. Share of eviction filings by the top 100 buildings"
+  margin="8 8 100 40"
+%}}
 Cities, states, and the federal government are considering a wide range of policies that may affect tenants in the coming years. In the final days of the Biden administration, HUD put in place a requirement guaranteeing residents of public housing and project-based rental assistance properties with {{< smartlink "30 days’ notice before facing an eviction case" "https://nlihc.org/resource/hud-publishes-final-30-day-eviction-notice-rule" >}}. This should benefit some of the nation’s most vulnerable renters, {{< smartlink "a group that has historically faced a large number of eviction cases" "https://evictionlab.org/public-housing-and-the-threat-of-eviction/" >}}. But, at the same time, Congress is considering stripping similar protections written into the CARES Act, and major landlord groups {{< smartlink "have asked the Trump administration to end these benefits through executive action" "https://www.multifamilydive.com/news/naa-nmhc-legislation-policy-congress/742040/" >}}. (Iowa’s Supreme Court {{< smartlink "has already rescinded them" "https://www.ourquadcities.com/news/local-news/changes-to-iowa-law-lower-eviction-notice-policy-from-30-days-to-three/" >}}.) Meanwhile, legislatures {{< smartlink "in at least 11 states are considering or have approved anti-squatting measures" "https://naahq.org/squatters-legislation-rise" >}}, which advocates argue undermine protections for all tenants, even those with valid leases. The patterns that we have documented during 2024 reflect the residential instability of low-income Americans. The picture for 2025 remains uncertain.
