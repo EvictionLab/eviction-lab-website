@@ -210,7 +210,7 @@ One thing remains constant across cities and states: evictions disproportionatel
   tooltipTemplate="{{value}} <span>({{eviction_filing_rate}} Eviction Filing Rate)</span>"
   sort="asc"
   title="Figure 3. Eviction Filing Rate by Site in 2025"
-  avgLines="1,historical,;1,average,true"
+  avgLines="mean_efr,Average EFR,true"
   margin="8 8 100 40"
 %}}
 
