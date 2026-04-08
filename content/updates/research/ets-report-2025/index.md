@@ -169,6 +169,7 @@ To demonstrate the range of variation, we plot eviction filing rates and changes
   nameWidth="170"
   beforeCol="start"
   afterCol="abs_diff"
+  labelLine=";0"
   xMin="-.35"
   xMax=".35"
   format=".0%"
