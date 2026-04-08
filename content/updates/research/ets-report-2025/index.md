@@ -88,6 +88,10 @@ scripts:
 .chart__tooltip.chart__tooltip--fig3 .tooltip__item span span {
   font-weight: normal;
 }
+
+.chart .chart__bar.chart__bar--city {
+  fill: var(--c3);
+}
 </style>
 
 <!-- 
@@ -122,7 +126,7 @@ Landlords filed just over one million eviction cases in 2024 in the jurisdiction
   avgLines="1,historical,;1,average,true"
   title="Figure 1. Eviction filings across ETS sites compared to historical average"
   centerLabels="true"
-  margin="8 60 50 40"
+  margin="8 60 50 90"
 %}}
   </div>
   <div class="tab-pane fade" id="pills-without" role="tabpanel" aria-labelledby="pills-without-tab">
@@ -159,22 +163,18 @@ To demonstrate the range of variation, we plot eviction filing rates and changes
 
 {{% arrow-chart2
   id="fig2"
-  title="Figure 2. Eviction filing rates in 2024 relative to pre-pandemic levels"
-  data="./fig02.csv"
+  title="Figure 2. Eviction filing rates in 2025 relative to baseline rates"
+  data="./figure2_data.csv"
   nameCol="site"
-  nameWidth="150"
-  rowHeight="24"
-  beforeCol="avg_efr_pct"
-  afterCol="efr_2024_pct"
-  xMin="0"
-  xMax="30"
-  tooltipFormat=".1%"
-  xTicks="0|5"
-  labelLine="2024 average;7.8"
-  valueType="percentInflated"
+  nameWidth="170"
+  beforeCol="start"
+  afterCol="abs_diff"
+  xMin="-.35"
+  xMax=".35"
+  format=".0%"
+  labelLine="baseline rate;0"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
-  axisLabelText="Eviction filing rate"
-  legendCaption="Note: the 7.8% average reflects the total|eviction filing rate across all ETS cities in 2024"
+  axisLabelText="Percentage change from site's baseline"
   legendDecArrowText="Decrease"
   legendIncArrowText="Increase"
   simpleLegend="true"
@@ -203,9 +203,10 @@ One thing remains constant across cities and states: evictions disproportionatel
   data="./figure3_data.csv"
   x="site"
   y="eviction_filing_rate"
+  barClass="type"
   yMin="0"
   yMax="0.27"
-  yTooltipFormat=".1%"
+  yTooltipFormat=".0%"
   yFormat=".0%"
   tooltipTemplate="{{value}}"
   sort="asc"
@@ -213,6 +214,16 @@ One thing remains constant across cities and states: evictions disproportionatel
   avgLines="0.08,Average EFR,"
   margin="8 80 140 40"
 %}}
+<div class="legend mb-3">
+  <div class="legend-item legend-item--2">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">City Area</div>
+  </div>
+  <div class="legend-item legend-item--1">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">State</div>
+  </div>
+</div>
 
 In Figure 4 we plot the share of defendants listed on eviction filings in 2024 who were Black, Hispanic, or White. We compare those numbers to Census Bureau figures on the share of renters in each racial/ethnic group in the same set of places. Despite making up only 28% of renters, 36% of eviction filings are against Black individuals in these areas. By contrast, all other racial/ethnic groups see an underrepresentation when it comes to eviction filings.
 
@@ -250,6 +261,6 @@ Court data alone don’t let us identify the root causes of these trends. But it
   tooltipTemplate="{{value}} <span>({{filings}} filings)</span>"
   sort="asc"
   title="Figure 5. Share of eviction filings by the top 100 buildings"
-  margin="8 8 100 40"
+  margin="8 8 120 40"
 %}}
 Cities, states, and the federal government are considering a wide range of policies that may affect tenants in the coming years. In the final days of the Biden administration, HUD put in place a requirement guaranteeing residents of public housing and project-based rental assistance properties with {{< smartlink "30 days’ notice before facing an eviction case" "https://nlihc.org/resource/hud-publishes-final-30-day-eviction-notice-rule" >}}. This should benefit some of the nation’s most vulnerable renters, {{< smartlink "a group that has historically faced a large number of eviction cases" "https://evictionlab.org/public-housing-and-the-threat-of-eviction/" >}}. But, at the same time, Congress is considering stripping similar protections written into the CARES Act, and major landlord groups {{< smartlink "have asked the Trump administration to end these benefits through executive action" "https://www.multifamilydive.com/news/naa-nmhc-legislation-policy-congress/742040/" >}}. (Iowa’s Supreme Court {{< smartlink "has already rescinded them" "https://www.ourquadcities.com/news/local-news/changes-to-iowa-law-lower-eviction-notice-policy-from-30-days-to-three/" >}}.) Meanwhile, legislatures {{< smartlink "in at least 11 states are considering or have approved anti-squatting measures" "https://naahq.org/squatters-legislation-rise" >}}, which advocates argue undermine protections for all tenants, even those with valid leases. The patterns that we have documented during 2024 reflect the residential instability of low-income Americans. The picture for 2025 remains uncertain.
