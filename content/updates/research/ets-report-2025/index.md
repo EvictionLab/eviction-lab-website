@@ -163,7 +163,7 @@ To demonstrate the range of variation, we plot eviction filing rates and changes
 
 {{% arrow-chart2
   id="fig2"
-  title="Figure 2. Eviction filing rates in 2025 relative to baseline rates"
+  title="Figure 2. Change in eviction filings in 2025 relative to baseline average"
   data="./figure2_data.csv"
   nameCol="site"
   nameWidth="170"
