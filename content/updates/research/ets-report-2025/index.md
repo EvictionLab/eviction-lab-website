@@ -172,7 +172,6 @@ To demonstrate the range of variation, we plot eviction filing rates and changes
   xMin="-.35"
   xMax=".35"
   format=".0%"
-  labelLine="baseline rate;0"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
   axisLabelText="Percentage change from site's baseline"
   legendDecArrowText="Decrease"
