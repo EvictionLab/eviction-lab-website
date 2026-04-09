@@ -14,9 +14,9 @@ postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: The days of emergency rental assistance and eviction protections are long gone. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020.
 listSummary: The days of emergency rental assistance and eviction protections are long gone. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020.
-twImage: ets-filing-patterns-2024-hero.jpg
-image: ets-filing-patterns-2024-hero.jpg
-fbImage: ets-filing-patterns-2024-hero.jpg
+twImage: ets-2025-hero-social.png
+image: ets-2025-hero-social.png
+fbImage: ets-2025-hero-social.png
 scripts:
   - arrow-chart2
   - charts
