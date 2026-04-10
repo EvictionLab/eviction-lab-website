@@ -199,7 +199,7 @@ Across all the locations we track, the average eviction filing rate was 7.9%, wh
   legendCaption="*Data directly sourced from the local court system."
   simpleLegend="true"
   avgLines="0.0787,Average EFR,"
-  margin="8 80 140 40"
+  margin="8 80 160 40"
 %}}
 <div class="legend mb-3">
   <div class="legend-item legend-item--2">
