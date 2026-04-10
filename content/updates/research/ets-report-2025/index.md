@@ -94,12 +94,6 @@ scripts:
 }
 </style>
 
-<!-- 
-<em>Correction: Changes in the case-filing system in [Dallas County, Texas](/eviction-tracking/dallas-tx), led to an undercount in the data between 2022 and 2024. We have updated our site to include these missing filings. More information is available [here](/dallas-data-update). The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
-<br/>
-<hr />
-<br/>
--->
 
 <span class="dropcap green">T</span>he past year involved significant change and uncertainty, especially for low-income renting families. During the longest government shutdown in U.S. history, [42 million people were left without SNAP benefits for weeks](https://www.politico.com/news/2025/11/06/judge-orders-trump-administration-to-pay-full-snap-benefits-00640627), and the passage of the  “One Big Beautiful Bill Act” [stripped benefits for 2.5 million people](https://www.cbpp.org/research/food-assistance/snap-tracker-people-are-losing-food-assistance-as-the-republican-megabill) permanently. The average amount of money low-income families have left after paying rent has hit [an all-time low of just $210](https://www.jchs.harvard.edu/blog/six-takeaways-americas-rental-housing-2026). On top of that, the federal immigration crackdown [averaged 746 deportations a day](https://www.reuters.com/world/us/trumps-early-immigration-enforcement-record-by-numbers-2026-02-24/), disrupting daily life for many immigrant households.
 
@@ -118,6 +112,8 @@ Through recent validation efforts, we have determined that our 2025 estimates fo
 </div>
 
 Across all sites that we currently monitor, landlords filed 1.23 million eviction cases in 2025. This total was slightly lower than in 2024 (1.25 million cases) and marks the second year in a row of declining eviction filings (see Figure 1). Overall, eviction case filings in 2025 were 3.2% below the post-pandemic average. 
+
+{{< pullquote "Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025." >}}
 
 While the total number of eviction filings across all sites was lower, this change was not consistent across the country. Eviction filings were up relative to average in 13 of the 48 sites we track (Figure 2). In Travis County, TX (the greater Austin area), landlords filed 30% more eviction filings than normal in 2025. Filings were up substantially in each of our three Oregon sites, as well as in the areas of Charleston, SC, and Columbus, OH. On the other hand, locations from Miami to Connecticut recorded far fewer cases than normal in 2025. The largest drop was in Bridgeport, CT (Fairfield County), where last year, landlords filed 20% fewer cases than average. It’s encouraging that more than two-thirds of the sites we monitor experienced fewer evictions than usual. 
 
@@ -186,7 +182,6 @@ Still, a drop in the number of filings relative to the average can still mean a 
 
 Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025. Like with absolute case volumes, though, we see significant variation in eviction filing rates across the country (Figure 3). Four sites—the areas of Atlanta, GA, Charleston, SC, Indianapolis, IN, and Richmond, VA—had filing rates that were at least double the national average. In Atlanta, landlords filed one eviction case for every four renters. Sites like the South Bend, IN area (8% filing rate), the New Orleans, LA area (8% filing rate), and the Wilmington, DE area (10% filing rate) had many fewer eviction cases filed than in Atlanta, but they also have fewer renter households, and each ended the year with higher-than-average filing rates.
 
-{{< pullquote "Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025." >}}
 
 {{% bar-chart
   id="fig3"
@@ -220,8 +215,6 @@ Across all the locations we track, the average eviction filing rate was 7.9%, wh
 Notably, most of the locations we track had eviction filing rates higher than in New York City. Despite its high rents and low vacancy rate, the eviction filing rate in NYC was only 5% in 2025. Why? A big reason is because [New York has strong renter protections](https://evictionlab.org/in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-before-covid-19/), demonstrating that high rents and a competitive market don’t make eviction inevitable. A similar pattern appears in [Philadelphia](https://evictionlab.org/how-local-leaders-are-stemming-the-eviction-crisis/), the sixth-largest city in the U.S., which has a filing rate smaller than all but three cities we track (Figure 3).
 
 
-{{< pullquote "Black renters are significantly overrepresented in eviction filings (Figure 4). Despite making up 28% of the renter population, 39% of eviction filings in 2025 named a Black defendant." >}}
-
 {{% grouped-bar-chart 
   id="fig4" 
   data="./figure4_data.csv" 
@@ -239,6 +232,8 @@ Notably, most of the locations we track had eviction filing rates higher than in
 <hr />
 
 [As we’ve demonstrated in previous analyses, Black renters are significantly overrepresented in eviction filings ](https://evictionlab.org/who-is-evicted-in-america/)(Figure 4). Despite making up 28% of the renter population, 39% of eviction filings in 2025 named a Black defendant. In contrast, 37% of eviction filings were against White defendants, far lower than their 45% of the renter population. Filings against Hispanic renters were approximately equal to their renter population. The disproportionate number of cases filed against Black renters is staggering in some cities. In greater Milwaukee, WI, 36% of the renter population is Black, but 66% of eviction filings in 2025 were against Black renters. Only 24% of renters in the Gainesville, FL area, are Black, but 53% of defendants on an eviction filing last year were Black. 
+
+{{< pullquote "Black renters are significantly overrepresented in eviction filings. Despite making up 28% of the renter population, 39% of eviction filings in 2025 named a Black defendant." >}}
 
 
 This year’s data also reflect a familiar pattern: [eviction cases are concentrated among a small number of landlords](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/). These landlords, through a handful of buildings, drive a disproportionate number of renters into court(Figure 5). For example, more than half of the evictions filed in the areas of Albuquerque, NM, and South Bend, IN, were from just 100 buildings. We observed nearly 40% of filings from the top 100 buildings in Eugene, OR, Tacoma, WA, and Jacksonville, FL. In Atlanta, only 15% of filings came from the top 100 buildings, but this still amounted to 22,711 filings—more than the total number of cases filed across the entire state of Connecticut.
