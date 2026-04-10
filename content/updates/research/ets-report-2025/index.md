@@ -92,6 +92,23 @@ scripts:
 .chart .chart__bar.chart__bar--city {
   fill: var(--c3);
 }
+.chart--fig3 {
+  overflow: scroll;
+}
+.chart--fig3.chart--bar .chart__body {
+  min-width: 694px;
+}
+.chart--fig3 .avg__line-label--y {
+  transform: translateX(calc(-100% + 60px));
+}
+.mobile-hint {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  @media(min-width: 768px) {
+    display: none;
+  }
+}
 </style>
 
 
@@ -173,7 +190,7 @@ Still, a drop in the number of filings relative to the average can still mean a 
   format=".0%"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
   axisLabelText="Percentage change from site's baseline"
-  legendCaption="Note: data directly sourced from the local court system."
+  legendCaption="Note: data directly sourced from the local court system"
   legendDecArrowText="Decrease"
   legendIncArrowText="Increase"
   simpleLegend="true"
@@ -181,7 +198,7 @@ Still, a drop in the number of filings relative to the average can still mean a 
 
 Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025. Like with absolute case volumes, though, we see significant variation in eviction filing rates across the country (Figure 3). Four sites—the areas of Atlanta, GA, Charleston, SC, Indianapolis, IN, and Richmond, VA—had filing rates that were at least double the national average. In Atlanta, landlords filed one eviction case for every four renters. Sites like South Bend, IN (8% filing rate), New Orleans, LA (8% filing rate), and Wilmington, DE (10% filing rate) had many fewer eviction cases filed than metro Atlanta, but they also have fewer renter households, and each ended the year with higher-than-average filing rates.
 
-
+<div class="figheader">Figure 3. Eviction Filing Rate by Site</div>
 {{% bar-chart
   id="fig3"
   data="./figure3_data.csv"
@@ -194,20 +211,23 @@ Across all the locations we track, the average eviction filing rate was 7.9%, wh
   yFormat=".0%"
   tooltipTemplate="{{value}}"
   sort="asc"
-  title="Figure 3. Eviction Filing Rate by Site"
   simpleLegend="true"
-  avgLines="0.0787,Average EFR,"
-  margin="8 80 160 40"
+  avgLines="0.0787,Average EFR"
+  margin="8 8 160 40"
 %}}
-<div class="legend mb-3">
+<div class="legend">
   <div class="legend-item legend-item--2">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">City Area</div>
+    <div class="legend-item__color"></div>
+    <div class="legend-item__label">City Area</div>
   </div>
   <div class="legend-item legend-item--1">
-  <div class="legend-item__color"></div>
-  <div class="legend-item__label">State</div>
+    <div class="legend-item__color"></div>
+    <div class="legend-item__label">State</div>
   </div>
+</div>
+<div class="mb-3 text-center">
+  <p>Note: Data directly sourced from the local court system</p>
+  <p><i class="mobile-hint">Scroll right to view full chart</i></p>
 </div>
 
 Notably, most of the locations we track had eviction filing rates higher than in New York City. Despite its high rents and low vacancy rate, the eviction filing rate in NYC was only 5% in 2025. Why? A big reason is because {{< smartlink "New York has strong renter protections" "https://evictionlab.org/in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-before-covid-19/" >}}, demonstrating that high rents and a competitive market don’t make eviction inevitable. A similar pattern appears in {{< smartlink "Philadelphia" "https://evictionlab.org/how-local-leaders-are-stemming-the-eviction-crisis/" >}}, the sixth-largest city in the U.S., which has a filing rate smaller than all but three cities we track (Figure 3).
