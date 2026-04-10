@@ -175,6 +175,7 @@ To demonstrate the range of variation, we plot eviction filing rates and changes
   format=".0%"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
   axisLabelText="Percentage change from site's baseline"
+  legendCaption="Note: the 7.8% average reflects the total|eviction filing rate across all ETS cities in 2024"
   legendDecArrowText="Decrease"
   legendIncArrowText="Increase"
   simpleLegend="true"
@@ -211,6 +212,7 @@ One thing remains constant across cities and states: evictions disproportionatel
   tooltipTemplate="{{value}}"
   sort="asc"
   title="Figure 3. Eviction Filing Rate by Site"
+  legendCaption="Note: the 7.8% average reflects the total|eviction filing rate across all ETS cities in 2024"
   avgLines="0.0787,Average EFR,"
   margin="8 80 140 40"
 %}}
