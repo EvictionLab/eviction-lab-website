@@ -101,7 +101,11 @@ scripts:
 <br/>
 -->
 
-<span class="dropcap green">T</span>he days of emergency rental assistance and eviction protections are long gone. These programs got the United States to historically low levels of housing displacement during the COVID-19 pandemic. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020. In some concerning cases like Phoenix, Las Vegas, and Houston, landlords are evicting many more tenants than before.
+<span class="dropcap green">T</span>he past year involved significant change and uncertainty, especially for low-income renting families. During the longest government shutdown in U.S. history, [42 million people were left without SNAP benefits for weeks](https://www.politico.com/news/2025/11/06/judge-orders-trump-administration-to-pay-full-snap-benefits-00640627), and the passage of the  “One Big Beautiful Bill Act”  stripped benefits for 2.5 million people permanently. The average amount of money low-income families have left after paying rent has hit an all-time low of just $210. On top of that, the federal immigration crackdown averaged 746 deportations a day, disrupting daily life for many immigrant households.
+
+Families across the United States had to navigate all of these new obstacles against the backdrop of the long-running housing affordability and eviction crises . For example, in Minneapolis, immigration enforcement related raids forced many immigrants to stay home, losing work—with an estimated cost of $15.7 million in lost wages—and consequently struggling to pay rent. Experiencing an eviction can force people to spend more time in public spaces and then face a greater risk of being detained by ICE. These overlapping and mutually reinforcing pressures illustrate how eviction is both a cause and consequence of poverty. 
+
+The past year of eviction data allows us to assess the ongoing scale of housing instability. As we have seen in previous research, these trends reveal how local policy choices and persistent racial disparities undermine the stability of many renters in the United States. In this context, and despite some specific improvements in the state of the housing crisis, evictions remain widespread throughout the country.
 
 <div class="boxed-content">
 <p>
