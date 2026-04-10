@@ -102,13 +102,12 @@ Families across the United States had to navigate all of these new obstacles aga
 The past year of eviction data allows us to assess the ongoing scale of housing instability. [As we have seen in previous research](https://evictionlab.org/research/), these trends reveal how local policy choices and persistent racial disparities undermine the stability of many renters in the United States. In this context, and despite some specific improvements in the state of the housing crisis, evictions remain widespread throughout the country.
 
 <div class="boxed-content">
-<p>
+
 This report relies on data collected through our {{< smartlink "Eviction Tracking System (ETS)" "https://evictionlab.org/eviction-tracking/">}}, which provides monthly updates on the volume of eviction case filings in 38 city areas and 10 states across the United States ({{< smartlink "you can find last year’s report here" "https://evictionlab.org/ets-report-2024/">}}). While not nationally representative, these locations are home to roughly one-third of all renter households and provide a window into the state of housing instability throughout the country. In recent months, we expanded the Eviction Tracking System to track cases in the cities and suburbs surrounding Atlanta, GA, Tacoma, WA, Portland, OR, Eugene, OR, and Southwest Oregon. Our expansion into the Pacific Northwest means we now track at least one location in each census division of the country. These add up to: 18 sites in the South, 13 sites in the Midwest, nine sites in the Northeast, and eight sites in the West. Unfortunately, we lost access to eviction data in Greenville County, SC and no longer report monthly filings there. 
 
 We present multiple statistics in this report about eviction filings. In some cases, we report the absolute number of cases filed with the courts. In others, we talk about these case filings [compared to the post-pandemic “average”](https://evictionlab.org/new-baseline/)—the typical number of eviction cases filed annually in 2023 and 2024. To make comparisons that better account for the different population sizes—Atlanta being much larger than Tacoma, for example—we also report eviction filing rates: the number of eviction cases filed per 100 renter households. For example, the 14,620 eviction cases filed in the Nashville, TN area, in 2025 represent an eviction filing rate of 9%. This means that in 2025, landlords in Nashville filed nine eviction cases for every 100 renter households. This is 4% greater than our post-pandemic baseline.
 
 Through recent validation efforts, we have determined that our 2025 estimates for Clark County, NV (Las Vegas) and the State of Minnesota are lower than the court-reported numbers, due to case sealing. While we work on correcting these numbers on our Eviction Tracking System, the numbers shown for Las Vegas, Minneapolis, and Minnesota in this report reflect those reported by the courts.
-</p>
 </div>
 
 Across all sites that we currently monitor, landlords filed 1.23 million eviction cases in 2025. This total was slightly lower than in 2024 (1.25 million cases) and marks the second year in a row of declining eviction filings (see Figure 1). Overall, eviction case filings in 2025 were 3.2% below the post-pandemic average. 
@@ -174,7 +173,7 @@ Still, a drop in the number of filings relative to the average can still mean a 
   format=".0%"
   customSort="(a, b) => (a.after < b.after ? 1 : -1)"
   axisLabelText="Percentage change from site's baseline"
-  legendCaption="*Data directly sourced from the local court system."
+  legendCaption="Note: data directly sourced from the local court system."
   legendDecArrowText="Decrease"
   legendIncArrowText="Increase"
   simpleLegend="true"
@@ -229,7 +228,7 @@ Notably, most of the locations we track had eviction filing rates higher than in
   autoGenLegend="true"
 %}}
 
-<hr />
+<!-- <hr />  -->
 
 [As we’ve demonstrated in previous analyses, Black renters are significantly overrepresented in eviction filings ](https://evictionlab.org/who-is-evicted-in-america/)(Figure 4). Despite making up 28% of the renter population, we estimate that 39% of eviction filings in 2025 named a Black defendant. In contrast, 37% of eviction filings were against White defendants, far lower than their 45% of the renter population. Filings against Hispanic renters were approximately equal to their renter population. The disproportionate number of cases filed against Black renters is staggering in some cities. In greater Milwaukee, WI, 36% of the renter population is Black, but 66% of eviction filings in 2025 were against Black renters. Only 24% of renters in the Gainesville, FL area, are Black, but 53% of defendants on an eviction filing last year were Black. 
 
