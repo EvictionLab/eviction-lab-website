@@ -206,7 +206,7 @@ These differences that we see across states and cities also happen within metrop
   tooltipTemplate="{{value}} <span>({{filings}} filings)</span>"
   sort="asc"
   title="Figure 3. Share of eviction filings by the top 100 buildings"
-  margin="8 8 100 40"
+  margin="8 8 120 40"
 %}}
 
 Eviction hotspots account for 58.2% of all cases filed in Greenville, SC, in 2024. These 100 buildings were responsible for 2,293 eviction cases. Several other cities, including Albuquerque, South Bend, and Memphis saw similarly high shares of filings from eviction hotspots. Filings were relatively less concentrated in Houston, Philadelphia and Dallas. In Houston, only 15.5% of cases came from the top 100 filers. Across all 15 cities, the top evictors filed 18,347 eviction cases in 2024, and on average accounted for 32.6% of all filings in each city. 
