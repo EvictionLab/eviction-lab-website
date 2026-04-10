@@ -16,11 +16,11 @@ Houston,city,77292,848172,0.09,0.08
 Indianapolis,city,24710,174089,0.14,0.08
 Jacksonville,city,14614,177265,0.08,0.08
 Kansas City,city,10312,122597,0.08,0.08
-Las Vegas,city,43201,371427,0.12,0.08
+Las Vegas,city,53097,371427,0.14,0.08
 Memphis,city,24345,168231,0.14,0.08
 Miami,city,15853,453324,0.03,0.08
 Milwaukee,city,11990,188131,0.06,0.08
-Minneapolis-Saint Paul,city,13377,300194,0.04,0.08
+Minneapolis-Saint Paul,city,15174,300194,0.05,0.08
 Nashville,city,14620,161248,0.09,0.08
 New Orleans,city,5131,68383,0.08,0.08
 New York,city,114838,2291001,0.05,0.08
@@ -40,7 +40,7 @@ Wilmington,city,7142,67569,0.11,0.08
 Connecticut,state,17543,494848,0.04,0.08
 Delaware,state,11095,108917,0.1,0.08
 Indiana,state,71155,814438,0.09,0.08
-Minnesota,state,23623,656737,0.04,0.08
+Minnesota,state,26174,656737,0.04,0.08
 Missouri,state,44717,798230,0.06,0.08
 New Mexico,state,12779,263167,0.05,0.08
 Pennsylvania,state,109991,1626438,0.07,0.08
