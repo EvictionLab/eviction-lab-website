@@ -100,7 +100,7 @@ scripts:
   min-width: 694px;
 }
 .chart--fig3 .avg__line-label--y {
-  transform: translateX(calc(-100% + 60px));
+  transform: translateX(-90px);
 }
 .mobile-hint {
   text-align: center;
@@ -137,7 +137,7 @@ Across all sites that we currently monitor, landlords filed 1.23 million evictio
 
 {{< pullquote "Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025." >}}
 
-While the total number of eviction filings across all sites was lower, this change was not consistent across the country. Eviction filings were up relative to average in 13 of the 48 sites we track (Figure 2). In Travis County, TX (the greater Austin area), landlords filed 30% more eviction filings than normal in 2025. Filings were up substantially in each of our three Oregon sites, as well as in the areas of Charleston, SC, and Columbus, OH. On the other hand, locations from Miami to Connecticut recorded far fewer cases than normal in 2025. The largest drop was in Bridgeport, CT (Fairfield County), where last year, landlords filed 20% fewer cases than average. It’s encouraging that more than two-thirds of the sites we monitor experienced fewer evictions than usual. 
+While the total number of eviction filings across all sites was lower, this change was not consistent across the country. To better understand this variety, we talk about case filings {{< smartlink "compared to the post-pandemic average" "https://evictionlab.org/new-baseline/" >}}—the typical number of eviction cases filed annually in 2023 and 2024. Eviction filings were up relative to average in 13 of the 48 sites we track (Figure 2). In Travis County, TX (the greater Austin area), landlords filed 30% more eviction filings than normal in 2025. Filings were up substantially in each of our three Oregon sites, as well as in the areas of Charleston, SC, and Columbus, OH. On the other hand, locations from Miami to Connecticut recorded far fewer cases than normal in 2025. The largest drop was in Bridgeport, CT (Fairfield County), where last year, landlords filed 20% fewer cases than average. It’s encouraging that more than two-thirds of the sites we monitor experienced fewer evictions than usual. 
 
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-with" role="tabpanel" aria-labelledby="pills-with-tab">
@@ -204,7 +204,7 @@ Still, a drop in the number of filings relative to the average can still mean a 
 
 <p class="figcaption" style="font-family: 'Akkurat-Italic'">Note: data directly sourced from the local court system.</p>
 
-Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025. Like with absolute case volumes, though, we see significant variation in eviction filing rates across the country (Figure 3). Four sites—the areas of Atlanta, GA, Charleston, SC, Indianapolis, IN, and Richmond, VA—had filing rates that were at least double the national average. In Atlanta, landlords filed one eviction case for every four renters. Sites like South Bend, IN (8% filing rate), New Orleans, LA (8% filing rate), and Wilmington, DE (10% filing rate) had many fewer eviction cases filed than metro Atlanta, but they also have fewer renter households, and each ended the year with higher-than-average filing rates.
+To make comparisons that better account for the different population sizes—Atlanta being much larger than Tacoma, for example—we also report eviction filing rates: the number of eviction cases filed per 100 renter households. Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025. Like with absolute case volumes, though, we see significant variation in eviction filing rates across the country (Figure 3). Four sites—the areas of Atlanta, GA, Charleston, SC, Indianapolis, IN, and Richmond, VA—had filing rates that were at least double the national average. In Atlanta, landlords filed one eviction case for every four renters. Sites like South Bend, IN (8% filing rate), New Orleans, LA (8% filing rate), and Wilmington, DE (10% filing rate) had many fewer eviction cases filed than metro Atlanta, but they also have fewer renter households, and each ended the year with higher-than-average filing rates.
 
 <div class="figheader">Figure 3. Eviction Filing Rate by Site</div>
 {{% bar-chart
@@ -218,7 +218,7 @@ Across all the locations we track, the average eviction filing rate was 7.9%, wh
   yTooltipFormat=".0%"
   yFormat=".0%"
   tooltipTemplate="{{value}}"
-  sort="asc"
+  sort="desc"
   simpleLegend="true"
   avgLines="0.0787,Average EFR"
   margin="8 8 160 40"
@@ -274,7 +274,7 @@ This year’s data also reflect a familiar pattern: {{< smartlink "eviction case
   yTooltipFormat=".1%"
   yFormat=".0%"
   tooltipTemplate="{{value}} <span>({{filings}} filings)</span>"
-  sort="asc"
+  sort="desc"
   title="Figure 5. Share of eviction filings by the top 100 buildings"
   margin="8 8 120 40"
 %}}
