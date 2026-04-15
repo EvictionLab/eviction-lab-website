@@ -154,6 +154,7 @@ While the total number of eviction filings across all sites was lower, this chan
   title="Figure 1. Eviction filings across ETS sites compared to historical average"
   centerLabels="true"
   margin="8 60 50 90"
+  animateOnScroll="true"
 %}}
   </div>
   <div class="tab-pane fade" id="pills-without" role="tabpanel" aria-labelledby="pills-without-tab">
@@ -168,6 +169,7 @@ While the total number of eviction filings across all sites was lower, this chan
   title="Figure 1. Eviction filings counts across ETS sites"
   centerLabels="true"
   margin="8 60 50 90"
+  animateOnScroll="true"
 %}}
   </div>
 </div>
@@ -222,6 +224,7 @@ To make comparisons that better account for the different population sizes—Atl
   simpleLegend="true"
   avgLines="0.0787,Average EFR"
   margin="8 8 160 40"
+  animateOnScroll="true"
 %}}
 <div class="legend">
   <div class="legend-item legend-item--2">
@@ -241,18 +244,19 @@ To make comparisons that better account for the different population sizes—Atl
 Notably, most of the locations we track had eviction filing rates higher than in New York City. Despite its high rents and low vacancy rate, the eviction filing rate in NYC was only 5% in 2025. Why? A big reason is because {{< smartlink "New York has strong renter protections" "https://evictionlab.org/in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-before-covid-19/" >}}, demonstrating that high rents and a competitive market don’t make eviction inevitable. A similar pattern appears in {{< smartlink "Philadelphia" "https://evictionlab.org/how-local-leaders-are-stemming-the-eviction-crisis/" >}}, the sixth-largest city in the U.S., which has a filing rate smaller than all but three cities we track (Figure 3).
 
 
-{{% grouped-bar-chart 
-  id="fig4" 
-  data="./figure4_data.csv" 
+{{% grouped-bar-chart
+  id="fig4"
+  data="./figure4_data.csv"
   saneLoading="true"
-  titlePrefix="Figure 4. Share of renters and eviction filing defendants by race/ethnicity" 
-  yTicks="5" 
+  titlePrefix="Figure 4. Share of renters and eviction filing defendants by race/ethnicity"
+  yTicks="5"
   yMin="0"
-  yFormat=".0%" 
-  type="barGroup" 
-  search="false" 
+  yFormat=".0%"
+  type="barGroup"
+  search="false"
   themed="true"
   autoGenLegend="true"
+  animateOnScroll="true"
 %}}
 
 <!-- <hr />  -->
@@ -277,6 +281,7 @@ This year’s data also reflect a familiar pattern: {{< smartlink "eviction case
   sort="desc"
   title="Figure 5. Share of eviction filings by the top 100 buildings"
   margin="8 8 120 40"
+  animateOnScroll="true"
 %}}
 
 Despite some localized declines in 2025, the broader story of eviction remains far from optimistic. While filings fell in a handful of places, newly available data from previously untracked locations consistently show high, and often worsening, levels of eviction filing activity. As our data coverage expands, the numbers continue to demonstrate the scale and prevalence of housing instability across the entire country. 

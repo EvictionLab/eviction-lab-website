@@ -8,7 +8,7 @@
   scripts:
     - bar-chart
   ```
-  
+
   See: _chart-demo.md for usage
 
   Props:
@@ -27,6 +27,7 @@
     make room on axis for last bar (whose data may be for the 1st of the month)
     - margin: string with margin values to make space for axis labels ("{top} {right} {bottom} {left}", default: "8 8 104 40")
     - centerLabels: don't rotate and shift tick labels (the default)
+    - animateOnScroll: if "true", bars animate from zero when chart scrolls into view (default: false)
 */}}
 
 {{ $title := .Get "title" }}
@@ -109,7 +110,24 @@
       ...options
     });
 
-  if (!searchId) return initChart();
+  // If no search and animateOnScroll is enabled, use IntersectionObserver
+  var animateOnScroll = {{ .Get `animateOnScroll` }} === "true";
+  if (!searchId) {
+    if (animateOnScroll && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            initChart();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(wrapperEl);
+    } else {
+      initChart();
+    }
+    return;
+  }
 
   var searchInput = wrapperEl.querySelector('#chart_autocomplete');
   searchInput.addEventListener('click', function () {
