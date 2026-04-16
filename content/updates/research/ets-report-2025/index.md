@@ -13,8 +13,8 @@ date: 2026-04-13T00:49:04.271Z
 postauthorname: Grace Hartley
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: The days of emergency rental assistance and eviction protections are long gone. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020.
-listSummary: The days of emergency rental assistance and eviction protections are long gone. Now, our data show that landlords are filing evictions at nearly the same levels as before 2020.
+description: Amid benefit cuts, rising rents, and immigration enforcement, renters faced mounting pressures in 2025. Our data show landlords still filed over 1.2 million eviction cases across the country.
+listSummary: Amid benefit cuts, rising rents, and immigration enforcement, renters faced mounting pressures in 2025. Our data show landlords still filed over 1.2 million eviction cases across the country.
 twImage: ets-2025-hero-social.png
 image: ets-2025-hero-social.png
 fbImage: ets-2025-hero-social.png

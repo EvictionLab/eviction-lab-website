@@ -66,6 +66,7 @@ Even though these patterns were consistent nationwide, the rollout did not look 
   sort="desc"
   title="Figure 2. Share of Low-Income Renter Households Receiving ERA in 2021 in the typical Census tract, by State"
   margin="8 8 120 40"
+  animateOnScroll="true"
 %}}
 
 Part of that difference came from how the program was funded. Congress’s allocation of funding guaranteed every state a minimum amount of money. For smaller states, that meant they ended up with more funding per low-income renter than larger states. Those less-populated states tended to spend more slowly overall, likely because they had more funding relative to need. In spite of this, their spending patterns were similar to those of the larger states: The extra funding was still focused on those higher-risk neighborhoods. 
