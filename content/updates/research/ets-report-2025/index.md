@@ -204,7 +204,7 @@ Still, a drop in the number of filings relative to the average can still mean a 
   simpleLegend="true"
 %}}
 
-<p class="figcaption" style="font-family: 'Akkurat-Italic'">Note: data directly sourced from the local court system.</p>
+<p class="figcaption" style="font-family: 'Akkurat-Italic'">*Data directly sourced from the local court system.</p>
 
 To make comparisons that better account for the different population sizes—Atlanta being much larger than Tacoma, for example—we also report eviction filing rates: the number of eviction cases filed per 100 renter households. Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025. Like with absolute case volumes, though, we see significant variation in eviction filing rates across the country (Figure 3). Four sites—the areas of Atlanta, GA, Charleston, SC, Indianapolis, IN, and Richmond, VA—had filing rates that were at least double the national average. In Atlanta, landlords filed one eviction case for every four renters. Sites like South Bend, IN (8% filing rate), New Orleans, LA (8% filing rate), and Wilmington, DE (10% filing rate) had many fewer eviction cases filed than metro Atlanta, but they also have fewer renter households, and each ended the year with higher-than-average filing rates.
 
@@ -237,7 +237,7 @@ To make comparisons that better account for the different population sizes—Atl
   </div>
 </div>
 <div class="mb-3 text-center">
-  <p class="figcaption" style="font-family: 'Akkurat-Italic'">Note: data directly sourced from the local court system.</p>
+  <p class="figcaption" style="font-family: 'Akkurat-Italic'">*Data directly sourced from the local court system.</p>
   <p><i class="mobile-hint">Scroll right to view full chart</i></p>
 </div>
 
