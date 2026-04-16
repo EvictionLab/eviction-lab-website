@@ -23,6 +23,7 @@
   saneLoading: boolean flag to generate data-driven values for numerous parameters (xTicks, columns, xBars, legendItems). when using, csv should include only data relevant to chart, with "group", "metric", and "value" columns (others will be ignored), one row per bar (see fig1saneLoading.csv)
   themed: color bars according to metric, using theme colors
   autoGenLegend: create a legend under chart dynamically with legendItems (which may be generated automatically by saneLoading). canabilizes earlier legend logic without altering (for backwards compatability)
+  animateOnScroll: if "true", bars animate from zero when chart scrolls into view (default: false)
 */}}
 
 
@@ -107,6 +108,7 @@
     var active = {{ .Get "active" }}
     var autoGenLegend = {{ .Get "autoGenLegend" }}
     var legendItems = {{ .Get "legendItems" }}
+    var animateOnScroll = {{ .Get "animateOnScroll" }} === "true";
     var rootEl = document.getElementById(id);
     var wrapperEl = document.getElementById("chart--" + id);
 
@@ -203,8 +205,20 @@
           // console.log('barChartAutoComplete, ', barChartAutoComplete);
       	}
       });
-      // Init chart on page load.
-      initChart()
+      // Init chart on page load, or on scroll if animateOnScroll is enabled
+      if (animateOnScroll && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              initChart();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.2 });
+        observer.observe(wrapperEl);
+      } else {
+        initChart();
+      }
     });
   }) ();
   </script>
