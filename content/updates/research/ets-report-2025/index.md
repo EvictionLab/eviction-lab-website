@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: ets-report-2025
 contenttype: updates
@@ -9,15 +9,15 @@ featured: true
 in_index: true
 photocaption: The above graphic shows eviction filings for sites we track, relative to their historical baseline. Arrows pointing up show sites with above baseline filings; arrows pointing down show the reverse. 
 title: "Preliminary Analysis: Eviction Filing Patterns in 2025"
-date: 2026-04-13T00:49:04.271Z
+date: 2026-04-16T00:49:04.271Z
 postauthorname: Grace Hartley
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Amid benefit cuts, rising rents, and immigration enforcement, renters faced mounting pressures in 2025. Our data show landlords still filed over 1.2 million eviction cases across the country.
 listSummary: Amid benefit cuts, rising rents, and immigration enforcement, renters faced mounting pressures in 2025. Our data show landlords still filed over 1.2 million eviction cases across the country.
-twImage: ets-2025-hero-social.png
-image: ets-2025-hero-social.png
-fbImage: ets-2025-hero-social.png
+twImage: ets-2025-hero-social.jpg
+image: ets-2025-hero-social.jpg
+fbImage: ets-2025-hero-social.jpg
 scripts:
   - arrow-chart2
   - charts
