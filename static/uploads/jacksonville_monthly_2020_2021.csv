@@ -73,7 +73,8 @@ Census Tract,12031000101,White,11/2025,4,4.5,3.6,
 Census Tract,12031000101,White,12/2025,3,5,3.2,
 Census Tract,12031000101,White,01/2026,4,2,,
 Census Tract,12031000101,White,02/2026,5,6,,
-Census Tract,12031000101,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031000101,White,03/2026,1,5.5,,
+Census Tract,12031000101,White,04/2026,0,1.5,,2026-04-11
 Census Tract,12031000102,Black,01/2020,4,8,5.8,
 Census Tract,12031000102,Black,02/2020,4,6.5,4.4,
 Census Tract,12031000102,Black,03/2020,4,8,5,
@@ -148,7 +149,8 @@ Census Tract,12031000102,Black,11/2025,3,4,3.6,
 Census Tract,12031000102,Black,12/2025,3,5.5,4,
 Census Tract,12031000102,Black,01/2026,1,8,,
 Census Tract,12031000102,Black,02/2026,5,6.5,,
-Census Tract,12031000102,Black,03/2026,0,2,,2026-03-07
+Census Tract,12031000102,Black,03/2026,5,8,,
+Census Tract,12031000102,Black,04/2026,1,2,,2026-04-11
 Census Tract,12031000200,Black,01/2020,8,5,5.8,
 Census Tract,12031000200,Black,02/2020,5,6,3.6,
 Census Tract,12031000200,Black,03/2020,6,6,2.4,
@@ -223,7 +225,8 @@ Census Tract,12031000200,Black,11/2025,6,3,5.2,
 Census Tract,12031000200,Black,12/2025,7,4,4.2,
 Census Tract,12031000200,Black,01/2026,3,5,,
 Census Tract,12031000200,Black,02/2026,11,6,,
-Census Tract,12031000200,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031000200,Black,03/2026,9,6,,
+Census Tract,12031000200,Black,04/2026,0,1,,2026-04-11
 Census Tract,12031000300,Black,01/2020,6,6,3.8,
 Census Tract,12031000300,Black,02/2020,5,7.5,4.2,
 Census Tract,12031000300,Black,03/2020,4,5,4.2,
@@ -298,7 +301,8 @@ Census Tract,12031000300,Black,11/2025,5,6,3,
 Census Tract,12031000300,Black,12/2025,6,5,5.2,
 Census Tract,12031000300,Black,01/2026,7,6,,
 Census Tract,12031000300,Black,02/2026,5,7.5,,
-Census Tract,12031000300,Black,03/2026,0,0.5,,2026-03-07
+Census Tract,12031000300,Black,03/2026,8,5,,
+Census Tract,12031000300,Black,04/2026,0,1.5,,2026-04-11
 Census Tract,12031000600,Other,01/2020,4,5.5,5.4,
 Census Tract,12031000600,Other,02/2020,6,10.5,3.4,
 Census Tract,12031000600,Other,03/2020,4,4.5,3.4,
@@ -373,7 +377,8 @@ Census Tract,12031000600,Other,11/2025,11,11,4.6,
 Census Tract,12031000600,Other,12/2025,3,9.5,2.8,
 Census Tract,12031000600,Other,01/2026,8,5.5,,
 Census Tract,12031000600,Other,02/2026,2,10.5,,
-Census Tract,12031000600,Other,03/2026,0,1.5,,2026-03-07
+Census Tract,12031000600,Other,03/2026,13,4.5,,
+Census Tract,12031000600,Other,04/2026,0,0.5,,2026-04-11
 Census Tract,12031000700,White,01/2020,1,1.5,1.6,
 Census Tract,12031000700,White,02/2020,1,0.5,2.2,
 Census Tract,12031000700,White,03/2020,1,0,1.4,
@@ -448,7 +453,8 @@ Census Tract,12031000700,White,11/2025,2,0.5,1,
 Census Tract,12031000700,White,12/2025,4,1,2.8,
 Census Tract,12031000700,White,01/2026,0,1.5,,
 Census Tract,12031000700,White,02/2026,2,0.5,,
-Census Tract,12031000700,White,03/2026,0,0,,2026-03-07
+Census Tract,12031000700,White,03/2026,2,0,,
+Census Tract,12031000700,White,04/2026,0,2.5,,2026-04-11
 Census Tract,12031000800,White,01/2020,3,2.5,3,
 Census Tract,12031000800,White,02/2020,0,4.5,2,
 Census Tract,12031000800,White,03/2020,1,4.5,1.4,
@@ -523,7 +529,8 @@ Census Tract,12031000800,White,11/2025,1,6,1,
 Census Tract,12031000800,White,12/2025,1,1.5,2.6,
 Census Tract,12031000800,White,01/2026,4,2.5,,
 Census Tract,12031000800,White,02/2026,10,3.5,,
-Census Tract,12031000800,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031000800,White,03/2026,11,4.5,,
+Census Tract,12031000800,White,04/2026,2,3,,2026-04-11
 Census Tract,12031001000,Black,01/2020,1,2,2.6,
 Census Tract,12031001000,Black,02/2020,6,1.5,2,
 Census Tract,12031001000,Black,03/2020,6,3,2.4,
@@ -598,7 +605,8 @@ Census Tract,12031001000,Black,11/2025,2,0,1.4,
 Census Tract,12031001000,Black,12/2025,1,2,3,
 Census Tract,12031001000,Black,01/2026,6,2,,
 Census Tract,12031001000,Black,02/2026,3,1.5,,
-Census Tract,12031001000,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031001000,Black,03/2026,5,3,,
+Census Tract,12031001000,Black,04/2026,2,0,,2026-04-11
 Census Tract,12031001100,White,01/2020,2,2,2.6,
 Census Tract,12031001100,White,02/2020,1,1.5,2,
 Census Tract,12031001100,White,03/2020,0,0.5,1,
@@ -673,7 +681,8 @@ Census Tract,12031001100,White,11/2025,1,0,2,
 Census Tract,12031001100,White,12/2025,4,1.5,1.8,
 Census Tract,12031001100,White,01/2026,4,2,,
 Census Tract,12031001100,White,02/2026,3,1.5,,
-Census Tract,12031001100,White,03/2026,0,0,,2026-03-07
+Census Tract,12031001100,White,03/2026,1,0.5,,
+Census Tract,12031001100,White,04/2026,0,1,,2026-04-11
 Census Tract,12031001200,White,01/2020,2,3.5,5,
 Census Tract,12031001200,White,02/2020,3,0.5,1.4,
 Census Tract,12031001200,White,03/2020,1,1.5,2.8,
@@ -748,7 +757,8 @@ Census Tract,12031001200,White,11/2025,1,1,2.6,
 Census Tract,12031001200,White,12/2025,0,5,5.2,
 Census Tract,12031001200,White,01/2026,0,3.5,,
 Census Tract,12031001200,White,02/2026,1,0.5,,
-Census Tract,12031001200,White,03/2026,0,0,,2026-03-07
+Census Tract,12031001200,White,03/2026,0,1.5,,
+Census Tract,12031001200,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031001300,Black,01/2020,7,7.5,8.4,
 Census Tract,12031001300,Black,02/2020,16,11.5,6.8,
 Census Tract,12031001300,Black,03/2020,3,6.5,5.8,
@@ -823,7 +833,8 @@ Census Tract,12031001300,Black,11/2025,6,9.5,7.8,
 Census Tract,12031001300,Black,12/2025,9,5,9,
 Census Tract,12031001300,Black,01/2026,4,7.5,,
 Census Tract,12031001300,Black,02/2026,5,11,,
-Census Tract,12031001300,Black,03/2026,0,1.5,,2026-03-07
+Census Tract,12031001300,Black,03/2026,9,6.5,,
+Census Tract,12031001300,Black,04/2026,1,2.5,,2026-04-11
 Census Tract,12031001401,Black,01/2020,15,9,5.4,
 Census Tract,12031001401,Black,02/2020,6,11,2.4,
 Census Tract,12031001401,Black,03/2020,5,10.5,4.8,
@@ -898,7 +909,8 @@ Census Tract,12031001401,Black,11/2025,7,9,5.4,
 Census Tract,12031001401,Black,12/2025,5,9.5,4.8,
 Census Tract,12031001401,Black,01/2026,5,9,,
 Census Tract,12031001401,Black,02/2026,6,11,,
-Census Tract,12031001401,Black,03/2026,0,3.5,,2026-03-07
+Census Tract,12031001401,Black,03/2026,8,10.5,,
+Census Tract,12031001401,Black,04/2026,1,2,,2026-04-11
 Census Tract,12031001402,Black,01/2020,8,3.5,5.4,
 Census Tract,12031001402,Black,02/2020,2,4,4.4,
 Census Tract,12031001402,Black,03/2020,2,3,5,
@@ -973,7 +985,8 @@ Census Tract,12031001402,Black,11/2025,8,3.5,4.4,
 Census Tract,12031001402,Black,12/2025,6,5.5,4.6,
 Census Tract,12031001402,Black,01/2026,6,3.5,,
 Census Tract,12031001402,Black,02/2026,5,4,,
-Census Tract,12031001402,Black,03/2026,0,0,,2026-03-07
+Census Tract,12031001402,Black,03/2026,1,3,,
+Census Tract,12031001402,Black,04/2026,4,0.5,,2026-04-11
 Census Tract,12031001500,Black,01/2020,11,11.5,9.6,
 Census Tract,12031001500,Black,02/2020,7,9,7,
 Census Tract,12031001500,Black,03/2020,3,5.5,5.6,
@@ -1048,7 +1061,8 @@ Census Tract,12031001500,Black,11/2025,8,11,8.6,
 Census Tract,12031001500,Black,12/2025,11,8.5,8,
 Census Tract,12031001500,Black,01/2026,11,11.5,,
 Census Tract,12031001500,Black,02/2026,9,8.5,,
-Census Tract,12031001500,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031001500,Black,03/2026,12,5.5,,
+Census Tract,12031001500,Black,04/2026,3,3.5,,2026-04-11
 Census Tract,12031001600,Black,01/2020,5,4,3.2,
 Census Tract,12031001600,Black,02/2020,4,3,2.8,
 Census Tract,12031001600,Black,03/2020,3,4,2,
@@ -1123,7 +1137,8 @@ Census Tract,12031001600,Black,11/2025,0,3.5,4.6,
 Census Tract,12031001600,Black,12/2025,3,4,4.2,
 Census Tract,12031001600,Black,01/2026,2,4,,
 Census Tract,12031001600,Black,02/2026,6,3,,
-Census Tract,12031001600,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031001600,Black,03/2026,0,4,,
+Census Tract,12031001600,Black,04/2026,0,0,,2026-04-11
 Census Tract,12031002101,White,01/2020,1,0.5,2.8,
 Census Tract,12031002101,White,02/2020,1,2.5,1.2,
 Census Tract,12031002101,White,03/2020,1,0.5,2,
@@ -1198,7 +1213,8 @@ Census Tract,12031002101,White,11/2025,0,1.5,4,
 Census Tract,12031002101,White,12/2025,1,1.5,0.6,
 Census Tract,12031002101,White,01/2026,2,0.5,,
 Census Tract,12031002101,White,02/2026,1,2,,
-Census Tract,12031002101,White,03/2026,0,0,,2026-03-07
+Census Tract,12031002101,White,03/2026,0,0.5,,
+Census Tract,12031002101,White,04/2026,0,0,,2026-04-11
 Census Tract,12031002102,White,01/2020,1,1,1.2,
 Census Tract,12031002102,White,02/2020,0,2,2,
 Census Tract,12031002102,White,03/2020,0,0.5,0.6,
@@ -1273,7 +1289,8 @@ Census Tract,12031002102,White,11/2025,2,1.5,1,
 Census Tract,12031002102,White,12/2025,2,1,2,
 Census Tract,12031002102,White,01/2026,1,1,,
 Census Tract,12031002102,White,02/2026,1,2,,
-Census Tract,12031002102,White,03/2026,0,0,,2026-03-07
+Census Tract,12031002102,White,03/2026,0,0.5,,
+Census Tract,12031002102,White,04/2026,0,0,,2026-04-11
 Census Tract,12031002200,White,01/2020,2,0.5,1.4,
 Census Tract,12031002200,White,02/2020,1,0,0.8,
 Census Tract,12031002200,White,03/2020,2,0.5,0.8,
@@ -1348,7 +1365,8 @@ Census Tract,12031002200,White,11/2025,1,1.5,1,
 Census Tract,12031002200,White,12/2025,0,0,1.4,
 Census Tract,12031002200,White,01/2026,1,0.5,,
 Census Tract,12031002200,White,02/2026,0,0,,
-Census Tract,12031002200,White,03/2026,0,0,,2026-03-07
+Census Tract,12031002200,White,03/2026,0,0.5,,
+Census Tract,12031002200,White,04/2026,1,0,,2026-04-11
 Census Tract,12031002300,White,01/2020,0,0.5,0.2,
 Census Tract,12031002300,White,02/2020,0,0,0.2,
 Census Tract,12031002300,White,03/2020,0,0.5,0.2,
@@ -1423,7 +1441,8 @@ Census Tract,12031002300,White,11/2025,0,0,0.2,
 Census Tract,12031002300,White,12/2025,0,0.5,0,
 Census Tract,12031002300,White,01/2026,0,0.5,,
 Census Tract,12031002300,White,02/2026,0,0,,
-Census Tract,12031002300,White,03/2026,0,0,,2026-03-07
+Census Tract,12031002300,White,03/2026,0,0.5,,
+Census Tract,12031002300,White,04/2026,0,0,,2026-04-11
 Census Tract,12031002400,White,01/2020,0,0,0.2,
 Census Tract,12031002400,White,02/2020,0,0,0.2,
 Census Tract,12031002400,White,03/2020,0,0,0.2,
@@ -1498,7 +1517,8 @@ Census Tract,12031002400,White,11/2025,0,0.5,0,
 Census Tract,12031002400,White,12/2025,1,0,0,
 Census Tract,12031002400,White,01/2026,0,0,,
 Census Tract,12031002400,White,02/2026,0,0,,
-Census Tract,12031002400,White,03/2026,0,0,,2026-03-07
+Census Tract,12031002400,White,03/2026,0,0,,
+Census Tract,12031002400,White,04/2026,0,0,,2026-04-11
 Census Tract,12031002501,White,01/2020,6,2,8.8,
 Census Tract,12031002501,White,02/2020,6,4,6.6,
 Census Tract,12031002501,White,03/2020,6,2.5,4.8,
@@ -1573,7 +1593,8 @@ Census Tract,12031002501,White,11/2025,3,0.5,6.4,
 Census Tract,12031002501,White,12/2025,0,4,8,
 Census Tract,12031002501,White,01/2026,4,2,,
 Census Tract,12031002501,White,02/2026,5,4,,
-Census Tract,12031002501,White,03/2026,0,0,,2026-03-07
+Census Tract,12031002501,White,03/2026,4,2.5,,
+Census Tract,12031002501,White,04/2026,0,1,,2026-04-11
 Census Tract,12031002502,White,01/2020,3,4,2.2,
 Census Tract,12031002502,White,02/2020,1,5,2.6,
 Census Tract,12031002502,White,03/2020,2,2.5,1.4,
@@ -1648,7 +1669,8 @@ Census Tract,12031002502,White,11/2025,3,2.5,0.6,
 Census Tract,12031002502,White,12/2025,4,1,2.4,
 Census Tract,12031002502,White,01/2026,0,4,,
 Census Tract,12031002502,White,02/2026,2,5,,
-Census Tract,12031002502,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031002502,White,03/2026,1,2.5,,
+Census Tract,12031002502,White,04/2026,0,0,,2026-04-11
 Census Tract,12031002600,Black,01/2020,5,3.5,7.6,
 Census Tract,12031002600,Black,02/2020,4,5.5,5.8,
 Census Tract,12031002600,Black,03/2020,2,4.5,6.2,
@@ -1723,7 +1745,8 @@ Census Tract,12031002600,Black,11/2025,4,4.5,5,
 Census Tract,12031002600,Black,12/2025,9,6.5,5.4,
 Census Tract,12031002600,Black,01/2026,7,3.5,,
 Census Tract,12031002600,Black,02/2026,10,5.5,,
-Census Tract,12031002600,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031002600,Black,03/2026,7,4.5,,
+Census Tract,12031002600,Black,04/2026,2,2.5,,2026-04-11
 Census Tract,12031002701,Black,01/2020,3,4,5.4,
 Census Tract,12031002701,Black,02/2020,4,9,2.4,
 Census Tract,12031002701,Black,03/2020,2,8.5,2.8,
@@ -1798,7 +1821,8 @@ Census Tract,12031002701,Black,11/2025,2,5.5,3.2,
 Census Tract,12031002701,Black,12/2025,3,8.5,4.6,
 Census Tract,12031002701,Black,01/2026,5,4,,
 Census Tract,12031002701,Black,02/2026,8,9,,
-Census Tract,12031002701,Black,03/2026,0,4,,2026-03-07
+Census Tract,12031002701,Black,03/2026,6,8.5,,
+Census Tract,12031002701,Black,04/2026,2,1,,2026-04-11
 Census Tract,12031002702,Black,01/2020,9,7.5,7.8,
 Census Tract,12031002702,Black,02/2020,4,9.5,7,
 Census Tract,12031002702,Black,03/2020,5,9,5,
@@ -1873,7 +1897,8 @@ Census Tract,12031002702,Black,11/2025,6,8,5.4,
 Census Tract,12031002702,Black,12/2025,10,8.5,7.4,
 Census Tract,12031002702,Black,01/2026,10,7.5,,
 Census Tract,12031002702,Black,02/2026,9,9,,
-Census Tract,12031002702,Black,03/2026,0,2,,2026-03-07
+Census Tract,12031002702,Black,03/2026,7,9,,
+Census Tract,12031002702,Black,04/2026,1,3,,2026-04-11
 Census Tract,12031002801,Black,01/2020,15,15,8.6,
 Census Tract,12031002801,Black,02/2020,15,15,3.2,
 Census Tract,12031002801,Black,03/2020,8,9.5,5,
@@ -1948,7 +1973,8 @@ Census Tract,12031002801,Black,11/2025,10,10.5,7.8,
 Census Tract,12031002801,Black,12/2025,12,10.5,8.6,
 Census Tract,12031002801,Black,01/2026,12,15,,
 Census Tract,12031002801,Black,02/2026,7,14.5,,
-Census Tract,12031002801,Black,03/2026,0,2,,2026-03-07
+Census Tract,12031002801,Black,03/2026,10,9.5,,
+Census Tract,12031002801,Black,04/2026,5,3.5,,2026-04-11
 Census Tract,12031002802,Black,01/2020,12,5.5,7.8,
 Census Tract,12031002802,Black,02/2020,10,9.5,7.2,
 Census Tract,12031002802,Black,03/2020,0,7.5,6.2,
@@ -2023,7 +2049,8 @@ Census Tract,12031002802,Black,11/2025,5,4.5,9.6,
 Census Tract,12031002802,Black,12/2025,6,6,6.4,
 Census Tract,12031002802,Black,01/2026,12,5.5,,
 Census Tract,12031002802,Black,02/2026,9,9.5,,
-Census Tract,12031002802,Black,03/2026,0,3.5,,2026-03-07
+Census Tract,12031002802,Black,03/2026,4,7.5,,
+Census Tract,12031002802,Black,04/2026,2,1.5,,2026-04-11
 Census Tract,12031002901,Black,01/2020,14,9.5,10.6,
 Census Tract,12031002901,Black,02/2020,8,11,6.2,
 Census Tract,12031002901,Black,03/2020,6,8,6.8,
@@ -2098,7 +2125,8 @@ Census Tract,12031002901,Black,11/2025,9,10,10.4,
 Census Tract,12031002901,Black,12/2025,17,13,8,
 Census Tract,12031002901,Black,01/2026,10,9.5,,
 Census Tract,12031002901,Black,02/2026,5,11,,
-Census Tract,12031002901,Black,03/2026,0,2,,2026-03-07
+Census Tract,12031002901,Black,03/2026,9,8,,
+Census Tract,12031002901,Black,04/2026,1,3,,2026-04-11
 Census Tract,12031002902,Black,01/2020,12,13,7,
 Census Tract,12031002902,Black,02/2020,6,10,5.2,
 Census Tract,12031002902,Black,03/2020,3,8,5.6,
@@ -2173,7 +2201,8 @@ Census Tract,12031002902,Black,11/2025,9,8,7.8,
 Census Tract,12031002902,Black,12/2025,11,9.5,9.2,
 Census Tract,12031002902,Black,01/2026,9,13,,
 Census Tract,12031002902,Black,02/2026,4,10,,
-Census Tract,12031002902,Black,03/2026,0,3,,2026-03-07
+Census Tract,12031002902,Black,03/2026,8,8,,
+Census Tract,12031002902,Black,04/2026,2,5.5,,2026-04-11
 Census Tract,12031010101,White,01/2020,3,5,0.8,
 Census Tract,12031010101,White,02/2020,3,2,2.4,
 Census Tract,12031010101,White,03/2020,4,4,1.8,
@@ -2248,7 +2277,8 @@ Census Tract,12031010101,White,11/2025,6,3,2,
 Census Tract,12031010101,White,12/2025,10,3,1.8,
 Census Tract,12031010101,White,01/2026,7,5,,
 Census Tract,12031010101,White,02/2026,5,2,,
-Census Tract,12031010101,White,03/2026,1,0.5,,2026-03-07
+Census Tract,12031010101,White,03/2026,6,4,,
+Census Tract,12031010101,White,04/2026,1,0.5,,2026-04-11
 Census Tract,12031010104,White,01/2020,0,2.5,0,
 Census Tract,12031010104,White,02/2020,0,4,0.6,
 Census Tract,12031010104,White,03/2020,1,0,0.6,
@@ -2323,7 +2353,8 @@ Census Tract,12031010104,White,11/2025,0,2.5,0.6,
 Census Tract,12031010104,White,12/2025,0,2,0.2,
 Census Tract,12031010104,White,01/2026,1,2.5,,
 Census Tract,12031010104,White,02/2026,0,4,,
-Census Tract,12031010104,White,03/2026,0,0,,2026-03-07
+Census Tract,12031010104,White,03/2026,1,0,,
+Census Tract,12031010104,White,04/2026,0,2,,2026-04-11
 Census Tract,12031010105,White,01/2020,0,1.5,0,
 Census Tract,12031010105,White,02/2020,1,1,0.6,
 Census Tract,12031010105,White,03/2020,2,0,0,
@@ -2398,7 +2429,8 @@ Census Tract,12031010105,White,11/2025,4,0.5,0,
 Census Tract,12031010105,White,12/2025,1,0,0,
 Census Tract,12031010105,White,01/2026,0,1.5,,
 Census Tract,12031010105,White,02/2026,1,1,,
-Census Tract,12031010105,White,03/2026,0,0,,2026-03-07
+Census Tract,12031010105,White,03/2026,0,0,,
+Census Tract,12031010105,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031010106,White,01/2020,3,4,2,
 Census Tract,12031010106,White,02/2020,1,3,1.8,
 Census Tract,12031010106,White,03/2020,0,1.5,2,
@@ -2473,7 +2505,8 @@ Census Tract,12031010106,White,11/2025,3,1,1.6,
 Census Tract,12031010106,White,12/2025,1,0.5,0.8,
 Census Tract,12031010106,White,01/2026,5,4,,
 Census Tract,12031010106,White,02/2026,1,3,,
-Census Tract,12031010106,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031010106,White,03/2026,4,1.5,,
+Census Tract,12031010106,White,04/2026,1,0,,2026-04-11
 Census Tract,12031010107,White,01/2020,2,1,0.8,
 Census Tract,12031010107,White,02/2020,1,0.5,0.8,
 Census Tract,12031010107,White,03/2020,0,0,1.2,
@@ -2548,7 +2581,8 @@ Census Tract,12031010107,White,11/2025,0,0.5,0,
 Census Tract,12031010107,White,12/2025,0,1.5,0.4,
 Census Tract,12031010107,White,01/2026,0,1,,
 Census Tract,12031010107,White,02/2026,0,0.5,,
-Census Tract,12031010107,White,03/2026,0,0,,2026-03-07
+Census Tract,12031010107,White,03/2026,0,0,,
+Census Tract,12031010107,White,04/2026,0,0,,2026-04-11
 Census Tract,12031010202,White,01/2020,1,1.5,1,
 Census Tract,12031010202,White,02/2020,2,0.5,0.4,
 Census Tract,12031010202,White,03/2020,0,0.5,0.8,
@@ -2623,7 +2657,8 @@ Census Tract,12031010202,White,11/2025,1,0.5,1.4,
 Census Tract,12031010202,White,12/2025,2,1.5,0.4,
 Census Tract,12031010202,White,01/2026,0,1.5,,
 Census Tract,12031010202,White,02/2026,0,0.5,,
-Census Tract,12031010202,White,03/2026,0,0,,2026-03-07
+Census Tract,12031010202,White,03/2026,2,0.5,,
+Census Tract,12031010202,White,04/2026,0,0,,2026-04-11
 Census Tract,12031010203,White,01/2020,4,8,7.4,
 Census Tract,12031010203,White,02/2020,4,10.5,3.4,
 Census Tract,12031010203,White,03/2020,4,6.5,3.6,
@@ -2698,7 +2733,8 @@ Census Tract,12031010203,White,11/2025,7,9,6,
 Census Tract,12031010203,White,12/2025,16,5,3,
 Census Tract,12031010203,White,01/2026,4,8,,
 Census Tract,12031010203,White,02/2026,23,10.5,,
-Census Tract,12031010203,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031010203,White,03/2026,4,6.5,,
+Census Tract,12031010203,White,04/2026,2,2,,2026-04-11
 Census Tract,12031010204,White,01/2020,1,7,2.8,
 Census Tract,12031010204,White,02/2020,1,9.5,0.6,
 Census Tract,12031010204,White,03/2020,1,2.5,1,
@@ -2773,7 +2809,8 @@ Census Tract,12031010204,White,11/2025,3,3.5,1.4,
 Census Tract,12031010204,White,12/2025,4,8.5,1.4,
 Census Tract,12031010204,White,01/2026,2,7,,
 Census Tract,12031010204,White,02/2026,5,9.5,,
-Census Tract,12031010204,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031010204,White,03/2026,7,2.5,,
+Census Tract,12031010204,White,04/2026,0,0,,2026-04-11
 Census Tract,12031010301,White,01/2020,11,27,4,
 Census Tract,12031010301,White,02/2020,4,23.5,3,
 Census Tract,12031010301,White,03/2020,5,23.5,2.4,
@@ -2848,7 +2885,8 @@ Census Tract,12031010301,White,11/2025,18,24.5,2.8,
 Census Tract,12031010301,White,12/2025,31,31,4.8,
 Census Tract,12031010301,White,01/2026,29,27,,
 Census Tract,12031010301,White,02/2026,35,22,,
-Census Tract,12031010301,White,03/2026,0,7,,2026-03-07
+Census Tract,12031010301,White,03/2026,22,23.5,,
+Census Tract,12031010301,White,04/2026,1,4.5,,2026-04-11
 Census Tract,12031010305,Black,01/2020,7,18.5,9.8,
 Census Tract,12031010305,Black,02/2020,3,19,5.2,
 Census Tract,12031010305,Black,03/2020,8,12.5,8.2,
@@ -2923,7 +2961,8 @@ Census Tract,12031010305,Black,11/2025,4,10,6.4,
 Census Tract,12031010305,Black,12/2025,12,10,10,
 Census Tract,12031010305,Black,01/2026,10,18.5,,
 Census Tract,12031010305,Black,02/2026,14,17.5,,
-Census Tract,12031010305,Black,03/2026,0,3,,2026-03-07
+Census Tract,12031010305,Black,03/2026,20,12.5,,
+Census Tract,12031010305,Black,04/2026,3,1,,2026-04-11
 Census Tract,12031010306,Black,01/2020,4,2,2.2,
 Census Tract,12031010306,Black,02/2020,1,1,1.4,
 Census Tract,12031010306,Black,03/2020,0,0,1.2,
@@ -2998,7 +3037,8 @@ Census Tract,12031010306,Black,11/2025,6,3.5,2.4,
 Census Tract,12031010306,Black,12/2025,7,1,2.8,
 Census Tract,12031010306,Black,01/2026,3,2,,
 Census Tract,12031010306,Black,02/2026,3,1,,
-Census Tract,12031010306,Black,03/2026,0,0,,2026-03-07
+Census Tract,12031010306,Black,03/2026,5,0,,
+Census Tract,12031010306,Black,04/2026,0,1,,2026-04-11
 Census Tract,12031010307,Black,01/2020,8,18.5,16,
 Census Tract,12031010307,Black,02/2020,1,23,8.4,
 Census Tract,12031010307,Black,03/2020,0,9.5,14.6,
@@ -3073,7 +3113,8 @@ Census Tract,12031010307,Black,11/2025,28,10.5,19,
 Census Tract,12031010307,Black,12/2025,31,17,21,
 Census Tract,12031010307,Black,01/2026,12,18.5,,
 Census Tract,12031010307,Black,02/2026,30,23,,
-Census Tract,12031010307,Black,03/2026,0,2.5,,2026-03-07
+Census Tract,12031010307,Black,03/2026,15,9.5,,
+Census Tract,12031010307,Black,04/2026,0,0,,2026-04-11
 Census Tract,12031010308,Black,01/2020,7,2.5,5.8,
 Census Tract,12031010308,Black,02/2020,5,19.5,2.6,
 Census Tract,12031010308,Black,03/2020,2,7.5,2.6,
@@ -3148,7 +3189,8 @@ Census Tract,12031010308,Black,11/2025,7,5.5,3.8,
 Census Tract,12031010308,Black,12/2025,10,8,3.8,
 Census Tract,12031010308,Black,01/2026,16,2.5,,
 Census Tract,12031010308,Black,02/2026,12,18.5,,
-Census Tract,12031010308,Black,03/2026,0,2,,2026-03-07
+Census Tract,12031010308,Black,03/2026,4,7.5,,
+Census Tract,12031010308,Black,04/2026,0,2.5,,2026-04-11
 Census Tract,12031010401,Black,01/2020,8,10.5,15.6,
 Census Tract,12031010401,Black,02/2020,6,15,4,
 Census Tract,12031010401,Black,03/2020,1,7,8,
@@ -3223,7 +3265,8 @@ Census Tract,12031010401,Black,11/2025,5,6.5,6.4,
 Census Tract,12031010401,Black,12/2025,6,3.5,8,
 Census Tract,12031010401,Black,01/2026,10,10.5,,
 Census Tract,12031010401,Black,02/2026,9,14,,
-Census Tract,12031010401,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031010401,Black,03/2026,8,7,,
+Census Tract,12031010401,Black,04/2026,0,2,,2026-04-11
 Census Tract,12031010402,Black,01/2020,14,11,19.6,
 Census Tract,12031010402,Black,02/2020,12,16,9.6,
 Census Tract,12031010402,Black,03/2020,8,12.5,12.6,
@@ -3298,7 +3341,8 @@ Census Tract,12031010402,Black,11/2025,6,13.5,18.2,
 Census Tract,12031010402,Black,12/2025,15,3,19.4,
 Census Tract,12031010402,Black,01/2026,27,11,,
 Census Tract,12031010402,Black,02/2026,12,15.5,,
-Census Tract,12031010402,Black,03/2026,0,4,,2026-03-07
+Census Tract,12031010402,Black,03/2026,9,12.5,,
+Census Tract,12031010402,Black,04/2026,1,4,,2026-04-11
 Census Tract,12031010501,Black,01/2020,2,4.5,0.6,
 Census Tract,12031010501,Black,02/2020,0,3,0.8,
 Census Tract,12031010501,Black,03/2020,0,3,1.2,
@@ -3373,7 +3417,8 @@ Census Tract,12031010501,Black,11/2025,5,2.5,1.4,
 Census Tract,12031010501,Black,12/2025,6,3,1.2,
 Census Tract,12031010501,Black,01/2026,7,4.5,,
 Census Tract,12031010501,Black,02/2026,5,3,,
-Census Tract,12031010501,Black,03/2026,0,0,,2026-03-07
+Census Tract,12031010501,Black,03/2026,5,3,,
+Census Tract,12031010501,Black,04/2026,0,1.5,,2026-04-11
 Census Tract,12031010502,White,01/2020,1,1.5,2,
 Census Tract,12031010502,White,02/2020,1,4,2,
 Census Tract,12031010502,White,03/2020,0,3,1.4,
@@ -3448,7 +3493,8 @@ Census Tract,12031010502,White,11/2025,7,2,1.4,
 Census Tract,12031010502,White,12/2025,3,4.5,1.8,
 Census Tract,12031010502,White,01/2026,8,1.5,,
 Census Tract,12031010502,White,02/2026,2,3.5,,
-Census Tract,12031010502,White,03/2026,0,1,,2026-03-07
+Census Tract,12031010502,White,03/2026,2,3,,
+Census Tract,12031010502,White,04/2026,0,0,,2026-04-11
 Census Tract,12031010503,Black,01/2020,3,8.5,8,
 Census Tract,12031010503,Black,02/2020,8,10.5,4,
 Census Tract,12031010503,Black,03/2020,0,4,6,
@@ -3523,7 +3569,8 @@ Census Tract,12031010503,Black,11/2025,4,5.5,6.2,
 Census Tract,12031010503,Black,12/2025,5,9.5,6.6,
 Census Tract,12031010503,Black,01/2026,11,8.5,,
 Census Tract,12031010503,Black,02/2026,2,10,,
-Census Tract,12031010503,Black,03/2026,0,0.5,,2026-03-07
+Census Tract,12031010503,Black,03/2026,5,4,,
+Census Tract,12031010503,Black,04/2026,0,1.5,,2026-04-11
 Census Tract,12031010601,White,01/2020,1,3.5,1.4,
 Census Tract,12031010601,White,02/2020,1,3.5,1.2,
 Census Tract,12031010601,White,03/2020,0,4.5,0.2,
@@ -3598,7 +3645,8 @@ Census Tract,12031010601,White,11/2025,1,1.5,1,
 Census Tract,12031010601,White,12/2025,4,2.5,0.8,
 Census Tract,12031010601,White,01/2026,2,3.5,,
 Census Tract,12031010601,White,02/2026,1,3.5,,
-Census Tract,12031010601,White,03/2026,0,2.5,,2026-03-07
+Census Tract,12031010601,White,03/2026,5,4.5,,
+Census Tract,12031010601,White,04/2026,0,3,,2026-04-11
 Census Tract,12031010602,White,01/2020,1,4,0.2,
 Census Tract,12031010602,White,02/2020,1,1.5,0,
 Census Tract,12031010602,White,03/2020,0,0.5,0.2,
@@ -3673,7 +3721,8 @@ Census Tract,12031010602,White,11/2025,2,1.5,0.2,
 Census Tract,12031010602,White,12/2025,4,2,0.4,
 Census Tract,12031010602,White,01/2026,2,4,,
 Census Tract,12031010602,White,02/2026,1,1.5,,
-Census Tract,12031010602,White,03/2026,0,0,,2026-03-07
+Census Tract,12031010602,White,03/2026,3,0.5,,
+Census Tract,12031010602,White,04/2026,1,1.5,,2026-04-11
 Census Tract,12031010700,Black,01/2020,7,6.5,2.8,
 Census Tract,12031010700,Black,02/2020,7,2.5,3,
 Census Tract,12031010700,Black,03/2020,2,2.5,1.8,
@@ -3748,7 +3797,8 @@ Census Tract,12031010700,Black,11/2025,8,2.5,2.6,
 Census Tract,12031010700,Black,12/2025,6,2.5,3.2,
 Census Tract,12031010700,Black,01/2026,9,6.5,,
 Census Tract,12031010700,Black,02/2026,4,2.5,,
-Census Tract,12031010700,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031010700,Black,03/2026,9,2.5,,
+Census Tract,12031010700,Black,04/2026,1,0,,2026-04-11
 Census Tract,12031010800,Black,01/2020,5,4.5,5.4,
 Census Tract,12031010800,Black,02/2020,3,6,3.8,
 Census Tract,12031010800,Black,03/2020,4,5.5,2.6,
@@ -3823,7 +3873,8 @@ Census Tract,12031010800,Black,11/2025,2,4,3.4,
 Census Tract,12031010800,Black,12/2025,2,6,4,
 Census Tract,12031010800,Black,01/2026,7,4.5,,
 Census Tract,12031010800,Black,02/2026,6,6,,
-Census Tract,12031010800,Black,03/2026,0,2,,2026-03-07
+Census Tract,12031010800,Black,03/2026,5,5.5,,
+Census Tract,12031010800,Black,04/2026,2,1,,2026-04-11
 Census Tract,12031010900,Black,01/2020,3,5,3,
 Census Tract,12031010900,Black,02/2020,2,6.5,2.6,
 Census Tract,12031010900,Black,03/2020,1,2,1.8,
@@ -3898,7 +3949,8 @@ Census Tract,12031010900,Black,11/2025,1,3,1.4,
 Census Tract,12031010900,Black,12/2025,1,4,2.6,
 Census Tract,12031010900,Black,01/2026,1,5,,
 Census Tract,12031010900,Black,02/2026,3,6.5,,
-Census Tract,12031010900,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031010900,Black,03/2026,2,2,,
+Census Tract,12031010900,Black,04/2026,1,1,,2026-04-11
 Census Tract,12031011000,Black,01/2020,6,3.5,5,
 Census Tract,12031011000,Black,02/2020,5,8,3.6,
 Census Tract,12031011000,Black,03/2020,3,4,4,
@@ -3973,7 +4025,8 @@ Census Tract,12031011000,Black,11/2025,3,3.5,3.4,
 Census Tract,12031011000,Black,12/2025,4,7,4.6,
 Census Tract,12031011000,Black,01/2026,4,3.5,,
 Census Tract,12031011000,Black,02/2026,1,7.5,,
-Census Tract,12031011000,Black,03/2026,0,1.5,,2026-03-07
+Census Tract,12031011000,Black,03/2026,6,4,,
+Census Tract,12031011000,Black,04/2026,1,2.5,,2026-04-11
 Census Tract,12031011100,Black,01/2020,9,6.5,5.8,
 Census Tract,12031011100,Black,02/2020,2,5.5,2.2,
 Census Tract,12031011100,Black,03/2020,1,3,4.8,
@@ -4048,7 +4101,8 @@ Census Tract,12031011100,Black,11/2025,3,3.5,5.2,
 Census Tract,12031011100,Black,12/2025,6,3,4.6,
 Census Tract,12031011100,Black,01/2026,3,6.5,,
 Census Tract,12031011100,Black,02/2026,5,5.5,,
-Census Tract,12031011100,Black,03/2026,0,1.5,,2026-03-07
+Census Tract,12031011100,Black,03/2026,1,3,,
+Census Tract,12031011100,Black,04/2026,0,2.5,,2026-04-11
 Census Tract,12031011200,Black,01/2020,3,1.5,2.4,
 Census Tract,12031011200,Black,02/2020,4,3,2.2,
 Census Tract,12031011200,Black,03/2020,2,5,1.2,
@@ -4123,7 +4177,8 @@ Census Tract,12031011200,Black,11/2025,3,6.5,3.2,
 Census Tract,12031011200,Black,12/2025,2,3.5,3.2,
 Census Tract,12031011200,Black,01/2026,6,1.5,,
 Census Tract,12031011200,Black,02/2026,6,3,,
-Census Tract,12031011200,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031011200,Black,03/2026,2,5,,
+Census Tract,12031011200,Black,04/2026,0,0.5,,2026-04-11
 Census Tract,12031011300,Black,01/2020,1,5,3,
 Census Tract,12031011300,Black,02/2020,3,4,3,
 Census Tract,12031011300,Black,03/2020,2,4,4,
@@ -4198,7 +4253,8 @@ Census Tract,12031011300,Black,11/2025,4,4.5,4,
 Census Tract,12031011300,Black,12/2025,3,5.5,3.8,
 Census Tract,12031011300,Black,01/2026,4,5,,
 Census Tract,12031011300,Black,02/2026,6,4,,
-Census Tract,12031011300,Black,03/2026,0,0,,2026-03-07
+Census Tract,12031011300,Black,03/2026,3,4,,
+Census Tract,12031011300,Black,04/2026,1,1,,2026-04-11
 Census Tract,12031011400,Black,01/2020,1,1.5,1.2,
 Census Tract,12031011400,Black,02/2020,0,1.5,0.4,
 Census Tract,12031011400,Black,03/2020,1,2,1.6,
@@ -4273,7 +4329,8 @@ Census Tract,12031011400,Black,11/2025,1,2,1.4,
 Census Tract,12031011400,Black,12/2025,0,1.5,1.4,
 Census Tract,12031011400,Black,01/2026,3,1.5,,
 Census Tract,12031011400,Black,02/2026,1,1.5,,
-Census Tract,12031011400,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031011400,Black,03/2026,0,2,,
+Census Tract,12031011400,Black,04/2026,0,1,,2026-04-11
 Census Tract,12031011500,Black,01/2020,5,7.5,6.8,
 Census Tract,12031011500,Black,02/2020,1,6.5,2.4,
 Census Tract,12031011500,Black,03/2020,5,4.5,3.6,
@@ -4348,7 +4405,8 @@ Census Tract,12031011500,Black,11/2025,13,7.5,4.2,
 Census Tract,12031011500,Black,12/2025,8,5,4.4,
 Census Tract,12031011500,Black,01/2026,5,7.5,,
 Census Tract,12031011500,Black,02/2026,4,6.5,,
-Census Tract,12031011500,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031011500,Black,03/2026,7,4.5,,
+Census Tract,12031011500,Black,04/2026,1,1,,2026-04-11
 Census Tract,12031011600,Black,01/2020,7,3,4.2,
 Census Tract,12031011600,Black,02/2020,6,5.5,3.6,
 Census Tract,12031011600,Black,03/2020,1,2.5,3,
@@ -4423,7 +4481,8 @@ Census Tract,12031011600,Black,11/2025,4,5,6,
 Census Tract,12031011600,Black,12/2025,3,4,3.6,
 Census Tract,12031011600,Black,01/2026,5,3,,
 Census Tract,12031011600,Black,02/2026,1,5.5,,
-Census Tract,12031011600,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031011600,Black,03/2026,4,2.5,,
+Census Tract,12031011600,Black,04/2026,0,1.5,,2026-04-11
 Census Tract,12031011700,White,01/2020,1,6,5.2,
 Census Tract,12031011700,White,02/2020,1,4.5,4.6,
 Census Tract,12031011700,White,03/2020,0,6,3.8,
@@ -4498,7 +4557,8 @@ Census Tract,12031011700,White,11/2025,7,1,5,
 Census Tract,12031011700,White,12/2025,8,2.5,3.8,
 Census Tract,12031011700,White,01/2026,4,6,,
 Census Tract,12031011700,White,02/2026,5,4.5,,
-Census Tract,12031011700,White,03/2026,0,0,,2026-03-07
+Census Tract,12031011700,White,03/2026,6,6,,
+Census Tract,12031011700,White,04/2026,1,1.5,,2026-04-11
 Census Tract,12031011800,White,01/2020,6,4,1.6,
 Census Tract,12031011800,White,02/2020,3,6,3,
 Census Tract,12031011800,White,03/2020,0,4,2.4,
@@ -4573,7 +4633,8 @@ Census Tract,12031011800,White,11/2025,5,5.5,4,
 Census Tract,12031011800,White,12/2025,5,4,2.6,
 Census Tract,12031011800,White,01/2026,4,4,,
 Census Tract,12031011800,White,02/2026,4,5.5,,
-Census Tract,12031011800,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031011800,White,03/2026,8,4,,
+Census Tract,12031011800,White,04/2026,1,1.5,,2026-04-11
 Census Tract,12031011901,White,01/2020,0,15.5,7.2,
 Census Tract,12031011901,White,02/2020,2,11.5,4.2,
 Census Tract,12031011901,White,03/2020,4,5,4.4,
@@ -4648,7 +4709,8 @@ Census Tract,12031011901,White,11/2025,11,1.5,4.6,
 Census Tract,12031011901,White,12/2025,9,8,4.2,
 Census Tract,12031011901,White,01/2026,4,15.5,,
 Census Tract,12031011901,White,02/2026,5,11.5,,
-Census Tract,12031011901,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031011901,White,03/2026,8,5,,
+Census Tract,12031011901,White,04/2026,4,0.5,,2026-04-11
 Census Tract,12031011903,White,01/2020,3,2.5,1.2,
 Census Tract,12031011903,White,02/2020,3,1.5,1.6,
 Census Tract,12031011903,White,03/2020,2,1.5,0.6,
@@ -4723,7 +4785,8 @@ Census Tract,12031011903,White,11/2025,1,1,1,
 Census Tract,12031011903,White,12/2025,2,1,2.2,
 Census Tract,12031011903,White,01/2026,1,2.5,,
 Census Tract,12031011903,White,02/2026,2,1.5,,
-Census Tract,12031011903,White,03/2026,0,0,,2026-03-07
+Census Tract,12031011903,White,03/2026,7,1.5,,
+Census Tract,12031011903,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031011904,Other,01/2020,0,2,1.2,
 Census Tract,12031011904,Other,02/2020,1,3,1.6,
 Census Tract,12031011904,Other,03/2020,0,1.5,1.8,
@@ -4798,7 +4861,8 @@ Census Tract,12031011904,Other,11/2025,1,2.5,1,
 Census Tract,12031011904,Other,12/2025,2,0.5,1.2,
 Census Tract,12031011904,Other,01/2026,3,2,,
 Census Tract,12031011904,Other,02/2026,0,2.5,,
-Census Tract,12031011904,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031011904,Other,03/2026,3,1.5,,
+Census Tract,12031011904,Other,04/2026,0,0.5,,2026-04-11
 Census Tract,12031011905,White,01/2020,12,6,14.4,
 Census Tract,12031011905,White,02/2020,7,6,11.8,
 Census Tract,12031011905,White,03/2020,2,6.5,13.4,
@@ -4873,7 +4937,8 @@ Census Tract,12031011905,White,11/2025,8,3.5,9,
 Census Tract,12031011905,White,12/2025,6,8.5,12.8,
 Census Tract,12031011905,White,01/2026,7,6,,
 Census Tract,12031011905,White,02/2026,9,5.5,,
-Census Tract,12031011905,White,03/2026,0,0,,2026-03-07
+Census Tract,12031011905,White,03/2026,7,6.5,,
+Census Tract,12031011905,White,04/2026,2,1,,2026-04-11
 Census Tract,12031012000,White,01/2020,1,14,3.4,
 Census Tract,12031012000,White,02/2020,6,14.5,2.6,
 Census Tract,12031012000,White,03/2020,0,9.5,3.2,
@@ -4948,7 +5013,8 @@ Census Tract,12031012000,White,11/2025,1,9.5,3.2,
 Census Tract,12031012000,White,12/2025,9,17,4.2,
 Census Tract,12031012000,White,01/2026,17,14,,
 Census Tract,12031012000,White,02/2026,6,14.5,,
-Census Tract,12031012000,White,03/2026,0,2,,2026-03-07
+Census Tract,12031012000,White,03/2026,6,9.5,,
+Census Tract,12031012000,White,04/2026,0,1.5,,2026-04-11
 Census Tract,12031012100,White,01/2020,6,2.5,1.6,
 Census Tract,12031012100,White,02/2020,5,5.5,1.4,
 Census Tract,12031012100,White,03/2020,2,1,2.4,
@@ -5023,7 +5089,8 @@ Census Tract,12031012100,White,11/2025,2,3,3.2,
 Census Tract,12031012100,White,12/2025,1,3,2.6,
 Census Tract,12031012100,White,01/2026,1,2.5,,
 Census Tract,12031012100,White,02/2026,1,5,,
-Census Tract,12031012100,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031012100,White,03/2026,3,1,,
+Census Tract,12031012100,White,04/2026,0,0,,2026-04-11
 Census Tract,12031012201,Black,01/2020,4,2,3,
 Census Tract,12031012201,Black,02/2020,5,4,1.8,
 Census Tract,12031012201,Black,03/2020,0,0,2.6,
@@ -5098,7 +5165,8 @@ Census Tract,12031012201,Black,11/2025,2,0.5,3.4,
 Census Tract,12031012201,Black,12/2025,0,1,4.8,
 Census Tract,12031012201,Black,01/2026,10,2,,
 Census Tract,12031012201,Black,02/2026,4,3.5,,
-Census Tract,12031012201,Black,03/2026,0,0,,2026-03-07
+Census Tract,12031012201,Black,03/2026,2,0,,
+Census Tract,12031012201,Black,04/2026,0,3,,2026-04-11
 Census Tract,12031012202,Other,01/2020,14,12,9.8,
 Census Tract,12031012202,Other,02/2020,8,10,4.8,
 Census Tract,12031012202,Other,03/2020,8,5.5,7.4,
@@ -5173,7 +5241,8 @@ Census Tract,12031012202,Other,11/2025,16,8.5,7.4,
 Census Tract,12031012202,Other,12/2025,23,11,12.4,
 Census Tract,12031012202,Other,01/2026,11,12,,
 Census Tract,12031012202,Other,02/2026,7,9,,
-Census Tract,12031012202,Other,03/2026,0,0.5,,2026-03-07
+Census Tract,12031012202,Other,03/2026,9,5.5,,
+Census Tract,12031012202,Other,04/2026,5,3.5,,2026-04-11
 Census Tract,12031012300,White,01/2020,3,3,4.6,
 Census Tract,12031012300,White,02/2020,2,3,3.8,
 Census Tract,12031012300,White,03/2020,1,2.5,3.2,
@@ -5248,7 +5317,8 @@ Census Tract,12031012300,White,11/2025,2,4.5,2.8,
 Census Tract,12031012300,White,12/2025,1,2,3.2,
 Census Tract,12031012300,White,01/2026,6,3,,
 Census Tract,12031012300,White,02/2026,3,3,,
-Census Tract,12031012300,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031012300,White,03/2026,4,2.5,,
+Census Tract,12031012300,White,04/2026,0,0,,2026-04-11
 Census Tract,12031012400,White,01/2020,3,2.5,2.6,
 Census Tract,12031012400,White,02/2020,1,1,1.2,
 Census Tract,12031012400,White,03/2020,0,1,1.4,
@@ -5323,7 +5393,8 @@ Census Tract,12031012400,White,11/2025,1,1,0.8,
 Census Tract,12031012400,White,12/2025,1,2,1.2,
 Census Tract,12031012400,White,01/2026,1,2.5,,
 Census Tract,12031012400,White,02/2026,1,1,,
-Census Tract,12031012400,White,03/2026,0,0,,2026-03-07
+Census Tract,12031012400,White,03/2026,3,1,,
+Census Tract,12031012400,White,04/2026,0,0,,2026-04-11
 Census Tract,12031012500,Other,01/2020,29,13.5,13.4,
 Census Tract,12031012500,Other,02/2020,10,12,12.4,
 Census Tract,12031012500,Other,03/2020,22,13.5,11,
@@ -5398,7 +5469,8 @@ Census Tract,12031012500,Other,11/2025,12,10,8.4,
 Census Tract,12031012500,Other,12/2025,8,12.5,10.6,
 Census Tract,12031012500,Other,01/2026,8,13.5,,
 Census Tract,12031012500,Other,02/2026,17,9.5,,
-Census Tract,12031012500,Other,03/2026,0,2.5,,2026-03-07
+Census Tract,12031012500,Other,03/2026,12,13.5,,
+Census Tract,12031012500,Other,04/2026,0,2.5,,2026-04-11
 Census Tract,12031012601,Other,01/2020,68,32,25.4,
 Census Tract,12031012601,Other,02/2020,25,5.5,11.4,
 Census Tract,12031012601,Other,03/2020,13,17,9.2,
@@ -5473,7 +5545,8 @@ Census Tract,12031012601,Other,11/2025,24,11,12.4,
 Census Tract,12031012601,Other,12/2025,8,11.5,12.6,
 Census Tract,12031012601,Other,01/2026,23,32,,
 Census Tract,12031012601,Other,02/2026,7,5.5,,
-Census Tract,12031012601,Other,03/2026,0,1.5,,2026-03-07
+Census Tract,12031012601,Other,03/2026,14,17,,
+Census Tract,12031012601,Other,04/2026,0,0,,2026-04-11
 Census Tract,12031012602,Black,01/2020,22,14.5,12.2,
 Census Tract,12031012602,Black,02/2020,24,17.5,8.4,
 Census Tract,12031012602,Black,03/2020,8,19.5,10.4,
@@ -5548,7 +5621,8 @@ Census Tract,12031012602,Black,11/2025,5,11,11.8,
 Census Tract,12031012602,Black,12/2025,15,14.5,9.8,
 Census Tract,12031012602,Black,01/2026,9,14.5,,
 Census Tract,12031012602,Black,02/2026,13,17.5,,
-Census Tract,12031012602,Black,03/2026,0,6.5,,2026-03-07
+Census Tract,12031012602,Black,03/2026,7,19.5,,
+Census Tract,12031012602,Black,04/2026,1,8.5,,2026-04-11
 Census Tract,12031012702,Other,01/2020,11,4,6.2,
 Census Tract,12031012702,Other,02/2020,7,6,6.6,
 Census Tract,12031012702,Other,03/2020,6,7,8,
@@ -5623,7 +5697,8 @@ Census Tract,12031012702,Other,11/2025,2,4,4.4,
 Census Tract,12031012702,Other,12/2025,6,4,4.8,
 Census Tract,12031012702,Other,01/2026,8,4,,
 Census Tract,12031012702,Other,02/2026,3,6,,
-Census Tract,12031012702,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031012702,Other,03/2026,4,7,,
+Census Tract,12031012702,Other,04/2026,0,2,,2026-04-11
 Census Tract,12031012703,Other,01/2020,3,5.5,3,
 Census Tract,12031012703,Other,02/2020,3,7,1.6,
 Census Tract,12031012703,Other,03/2020,3,4,2.4,
@@ -5698,7 +5773,8 @@ Census Tract,12031012703,Other,11/2025,2,2.5,2.6,
 Census Tract,12031012703,Other,12/2025,8,6,3.2,
 Census Tract,12031012703,Other,01/2026,4,5.5,,
 Census Tract,12031012703,Other,02/2026,1,7,,
-Census Tract,12031012703,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031012703,Other,03/2026,0,4,,
+Census Tract,12031012703,Other,04/2026,0,2,,2026-04-11
 Census Tract,12031012704,Black,01/2020,9,7.5,9.8,
 Census Tract,12031012704,Black,02/2020,7,7,11.2,
 Census Tract,12031012704,Black,03/2020,5,7,9.6,
@@ -5773,7 +5849,8 @@ Census Tract,12031012704,Black,11/2025,4,7.5,12.4,
 Census Tract,12031012704,Black,12/2025,4,8.5,12,
 Census Tract,12031012704,Black,01/2026,11,7.5,,
 Census Tract,12031012704,Black,02/2026,6,6.5,,
-Census Tract,12031012704,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031012704,Black,03/2026,7,7,,
+Census Tract,12031012704,Black,04/2026,2,2.5,,2026-04-11
 Census Tract,12031012800,Black,01/2020,9,7.5,4.4,
 Census Tract,12031012800,Black,02/2020,3,13,3.6,
 Census Tract,12031012800,Black,03/2020,6,4.5,5.4,
@@ -5848,7 +5925,8 @@ Census Tract,12031012800,Black,11/2025,6,2.5,4.6,
 Census Tract,12031012800,Black,12/2025,5,9.5,5.6,
 Census Tract,12031012800,Black,01/2026,1,7.5,,
 Census Tract,12031012800,Black,02/2026,5,12.5,,
-Census Tract,12031012800,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031012800,Black,03/2026,1,4.5,,
+Census Tract,12031012800,Black,04/2026,1,2,,2026-04-11
 Census Tract,12031012900,Other,01/2020,0,0.5,0.8,
 Census Tract,12031012900,Other,02/2020,3,4.5,1.6,
 Census Tract,12031012900,Other,03/2020,2,2.5,1.2,
@@ -5923,7 +6001,8 @@ Census Tract,12031012900,Other,11/2025,1,1,2.6,
 Census Tract,12031012900,Other,12/2025,2,1.5,0.4,
 Census Tract,12031012900,Other,01/2026,0,0.5,,
 Census Tract,12031012900,Other,02/2026,1,4.5,,
-Census Tract,12031012900,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031012900,Other,03/2026,2,2.5,,
+Census Tract,12031012900,Other,04/2026,0,0,,2026-04-11
 Census Tract,12031013000,White,01/2020,0,0,0.2,
 Census Tract,12031013000,White,02/2020,0,0,0,
 Census Tract,12031013000,White,03/2020,0,0,0,
@@ -5998,7 +6077,8 @@ Census Tract,12031013000,White,11/2025,0,0,0,
 Census Tract,12031013000,White,12/2025,0,0,0,
 Census Tract,12031013000,White,01/2026,0,0,,
 Census Tract,12031013000,White,02/2026,0,0,,
-Census Tract,12031013000,White,03/2026,0,0,,2026-03-07
+Census Tract,12031013000,White,03/2026,0,0,,
+Census Tract,12031013000,White,04/2026,0,0,,2026-04-11
 Census Tract,12031013100,White,01/2020,1,6.5,1,
 Census Tract,12031013100,White,02/2020,0,3,0.6,
 Census Tract,12031013100,White,03/2020,1,1.5,1.8,
@@ -6073,7 +6153,8 @@ Census Tract,12031013100,White,11/2025,1,1,1.4,
 Census Tract,12031013100,White,12/2025,2,4.5,1.2,
 Census Tract,12031013100,White,01/2026,2,6.5,,
 Census Tract,12031013100,White,02/2026,0,3,,
-Census Tract,12031013100,White,03/2026,0,0,,2026-03-07
+Census Tract,12031013100,White,03/2026,3,1.5,,
+Census Tract,12031013100,White,04/2026,0,1,,2026-04-11
 Census Tract,12031013200,White,01/2020,1,0,0.6,
 Census Tract,12031013200,White,02/2020,0,0.5,0.2,
 Census Tract,12031013200,White,03/2020,0,1,0.2,
@@ -6148,7 +6229,8 @@ Census Tract,12031013200,White,11/2025,2,0,0.2,
 Census Tract,12031013200,White,12/2025,0,0,0,
 Census Tract,12031013200,White,01/2026,0,0,,
 Census Tract,12031013200,White,02/2026,0,0.5,,
-Census Tract,12031013200,White,03/2026,0,0,,2026-03-07
+Census Tract,12031013200,White,03/2026,0,1,,
+Census Tract,12031013200,White,04/2026,0,0,,2026-04-11
 Census Tract,12031013301,Other,01/2020,4,0.5,5.8,
 Census Tract,12031013301,Other,02/2020,3,8,2.2,
 Census Tract,12031013301,Other,03/2020,3,1.5,2,
@@ -6223,7 +6305,8 @@ Census Tract,12031013301,Other,11/2025,2,5.5,3.8,
 Census Tract,12031013301,Other,12/2025,2,2,3.4,
 Census Tract,12031013301,Other,01/2026,1,0.5,,
 Census Tract,12031013301,Other,02/2026,3,7.5,,
-Census Tract,12031013301,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031013301,Other,03/2026,1,1.5,,
+Census Tract,12031013301,Other,04/2026,0,0,,2026-04-11
 Census Tract,12031013302,Other,01/2020,9,19.5,14.4,
 Census Tract,12031013302,Other,02/2020,6,15,8.2,
 Census Tract,12031013302,Other,03/2020,13,13,10.6,
@@ -6298,7 +6381,8 @@ Census Tract,12031013302,Other,11/2025,20,10.5,9,
 Census Tract,12031013302,Other,12/2025,12,13.5,16.4,
 Census Tract,12031013302,Other,01/2026,19,19.5,,
 Census Tract,12031013302,Other,02/2026,30,14,,
-Census Tract,12031013302,Other,03/2026,0,2.5,,2026-03-07
+Census Tract,12031013302,Other,03/2026,16,13,,
+Census Tract,12031013302,Other,04/2026,8,1,,2026-04-11
 Census Tract,12031013402,Other,01/2020,13,8,9.4,
 Census Tract,12031013402,Other,02/2020,8,8,9.8,
 Census Tract,12031013402,Other,03/2020,7,6,6.6,
@@ -6373,7 +6457,8 @@ Census Tract,12031013402,Other,11/2025,5,4,6,
 Census Tract,12031013402,Other,12/2025,0,7.5,11.4,
 Census Tract,12031013402,Other,01/2026,13,8,,
 Census Tract,12031013402,Other,02/2026,6,8,,
-Census Tract,12031013402,Other,03/2026,0,2,,2026-03-07
+Census Tract,12031013402,Other,03/2026,6,6,,
+Census Tract,12031013402,Other,04/2026,1,2.5,,2026-04-11
 Census Tract,12031013403,Other,01/2020,23,19,11.4,
 Census Tract,12031013403,Other,02/2020,8,10.5,9,
 Census Tract,12031013403,Other,03/2020,12,10.5,10.2,
@@ -6448,7 +6533,8 @@ Census Tract,12031013403,Other,11/2025,20,5.5,13,
 Census Tract,12031013403,Other,12/2025,6,1,12,
 Census Tract,12031013403,Other,01/2026,25,19,,
 Census Tract,12031013403,Other,02/2026,36,10.5,,
-Census Tract,12031013403,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031013403,Other,03/2026,20,10.5,,
+Census Tract,12031013403,Other,04/2026,0,0,,2026-04-11
 Census Tract,12031013404,Other,01/2020,8,12,15.4,
 Census Tract,12031013404,Other,02/2020,11,9.5,9.8,
 Census Tract,12031013404,Other,03/2020,4,6.5,7.2,
@@ -6523,7 +6609,8 @@ Census Tract,12031013404,Other,11/2025,3,7,9.8,
 Census Tract,12031013404,Other,12/2025,4,8,12.2,
 Census Tract,12031013404,Other,01/2026,4,12,,
 Census Tract,12031013404,Other,02/2026,3,9.5,,
-Census Tract,12031013404,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031013404,Other,03/2026,5,6.5,,
+Census Tract,12031013404,Other,04/2026,1,2,,2026-04-11
 Census Tract,12031013502,Other,01/2020,1,1,1.6,
 Census Tract,12031013502,Other,02/2020,1,3,2.2,
 Census Tract,12031013502,Other,03/2020,3,1,1.2,
@@ -6598,7 +6685,8 @@ Census Tract,12031013502,Other,11/2025,4,1.5,1.8,
 Census Tract,12031013502,Other,12/2025,2,4,1.2,
 Census Tract,12031013502,Other,01/2026,3,1,,
 Census Tract,12031013502,Other,02/2026,0,3,,
-Census Tract,12031013502,Other,03/2026,0,0.5,,2026-03-07
+Census Tract,12031013502,Other,03/2026,2,1,,
+Census Tract,12031013502,Other,04/2026,1,0.5,,2026-04-11
 Census Tract,12031013504,Other,01/2020,9,11.5,14.4,
 Census Tract,12031013504,Other,02/2020,6,7,5.6,
 Census Tract,12031013504,Other,03/2020,8,10.5,6.4,
@@ -6673,7 +6761,8 @@ Census Tract,12031013504,Other,11/2025,1,8.5,12.4,
 Census Tract,12031013504,Other,12/2025,6,4.5,14,
 Census Tract,12031013504,Other,01/2026,6,11.5,,
 Census Tract,12031013504,Other,02/2026,2,7,,
-Census Tract,12031013504,Other,03/2026,0,4.5,,2026-03-07
+Census Tract,12031013504,Other,03/2026,11,10.5,,
+Census Tract,12031013504,Other,04/2026,0,3.5,,2026-04-11
 Census Tract,12031013522,White,01/2020,15,1.5,5.8,
 Census Tract,12031013522,White,02/2020,4,4.5,1.6,
 Census Tract,12031013522,White,03/2020,4,8,4,
@@ -6748,7 +6837,8 @@ Census Tract,12031013522,White,11/2025,3,6.5,2.6,
 Census Tract,12031013522,White,12/2025,6,7.5,1.8,
 Census Tract,12031013522,White,01/2026,4,1.5,,
 Census Tract,12031013522,White,02/2026,4,4.5,,
-Census Tract,12031013522,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031013522,White,03/2026,6,8,,
+Census Tract,12031013522,White,04/2026,2,1,,2026-04-11
 Census Tract,12031013523,Other,01/2020,15,1.5,6.8,
 Census Tract,12031013523,Other,02/2020,13,7,1.8,
 Census Tract,12031013523,Other,03/2020,5,2,3,
@@ -6823,7 +6913,8 @@ Census Tract,12031013523,Other,11/2025,9,5,5.2,
 Census Tract,12031013523,Other,12/2025,9,5,3,
 Census Tract,12031013523,Other,01/2026,16,1.5,,
 Census Tract,12031013523,Other,02/2026,7,7,,
-Census Tract,12031013523,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031013523,Other,03/2026,9,2,,
+Census Tract,12031013523,Other,04/2026,2,0,,2026-04-11
 Census Tract,12031013524,Other,01/2020,7,1,9.4,
 Census Tract,12031013524,Other,02/2020,3,3.5,3,
 Census Tract,12031013524,Other,03/2020,5,3.5,4.8,
@@ -6898,7 +6989,8 @@ Census Tract,12031013524,Other,11/2025,4,4,4.2,
 Census Tract,12031013524,Other,12/2025,1,1,5.4,
 Census Tract,12031013524,Other,01/2026,8,1,,
 Census Tract,12031013524,Other,02/2026,7,3.5,,
-Census Tract,12031013524,Other,03/2026,0,2,,2026-03-07
+Census Tract,12031013524,Other,03/2026,3,3.5,,
+Census Tract,12031013524,Other,04/2026,1,1,,2026-04-11
 Census Tract,12031013525,Black,01/2020,24,18.5,10.8,
 Census Tract,12031013525,Black,02/2020,7,18,7.6,
 Census Tract,12031013525,Black,03/2020,13,15,8.4,
@@ -6973,7 +7065,8 @@ Census Tract,12031013525,Black,11/2025,11,14,7,
 Census Tract,12031013525,Black,12/2025,20,17,12.4,
 Census Tract,12031013525,Black,01/2026,22,18.5,,
 Census Tract,12031013525,Black,02/2026,6,18,,
-Census Tract,12031013525,Black,03/2026,0,5,,2026-03-07
+Census Tract,12031013525,Black,03/2026,16,15,,
+Census Tract,12031013525,Black,04/2026,1,1.5,,2026-04-11
 Census Tract,12031013526,Other,01/2020,26,20,15.6,
 Census Tract,12031013526,Other,02/2020,13,19.5,11.4,
 Census Tract,12031013526,Other,03/2020,11,22.5,7.6,
@@ -7048,7 +7141,8 @@ Census Tract,12031013526,Other,11/2025,8,20,12.2,
 Census Tract,12031013526,Other,12/2025,23,16.5,16.6,
 Census Tract,12031013526,Other,01/2026,20,20,,
 Census Tract,12031013526,Other,02/2026,21,19,,
-Census Tract,12031013526,Other,03/2026,0,4.5,,2026-03-07
+Census Tract,12031013526,Other,03/2026,11,22.5,,
+Census Tract,12031013526,Other,04/2026,2,4,,2026-04-11
 Census Tract,12031013723,Other,01/2020,5,17,13.4,
 Census Tract,12031013723,Other,02/2020,11,17,12.8,
 Census Tract,12031013723,Other,03/2020,5,15,8,
@@ -7123,7 +7217,8 @@ Census Tract,12031013723,Other,11/2025,16,19.5,8.4,
 Census Tract,12031013723,Other,12/2025,20,18,11.8,
 Census Tract,12031013723,Other,01/2026,23,17,,
 Census Tract,12031013723,Other,02/2026,19,16.5,,
-Census Tract,12031013723,Other,03/2026,0,5.5,,2026-03-07
+Census Tract,12031013723,Other,03/2026,10,15,,
+Census Tract,12031013723,Other,04/2026,0,5.5,,2026-04-11
 Census Tract,12031013728,White,01/2020,2,4,3.4,
 Census Tract,12031013728,White,02/2020,2,5,1.4,
 Census Tract,12031013728,White,03/2020,1,4.5,1.6,
@@ -7198,7 +7293,8 @@ Census Tract,12031013728,White,11/2025,2,5,2.6,
 Census Tract,12031013728,White,12/2025,5,4,2.4,
 Census Tract,12031013728,White,01/2026,4,4,,
 Census Tract,12031013728,White,02/2026,4,5,,
-Census Tract,12031013728,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031013728,White,03/2026,7,4.5,,
+Census Tract,12031013728,White,04/2026,3,1,,2026-04-11
 Census Tract,12031013729,White,01/2020,5,3.5,1.4,
 Census Tract,12031013729,White,02/2020,1,1,1,
 Census Tract,12031013729,White,03/2020,0,1,1.4,
@@ -7273,7 +7369,8 @@ Census Tract,12031013729,White,11/2025,1,5.5,0.8,
 Census Tract,12031013729,White,12/2025,4,2.5,2,
 Census Tract,12031013729,White,01/2026,6,3.5,,
 Census Tract,12031013729,White,02/2026,5,1,,
-Census Tract,12031013729,White,03/2026,0,0,,2026-03-07
+Census Tract,12031013729,White,03/2026,3,1,,
+Census Tract,12031013729,White,04/2026,1,0.5,,2026-04-11
 Census Tract,12031013730,Other,01/2020,0,2.5,1,
 Census Tract,12031013730,Other,02/2020,0,1,1.2,
 Census Tract,12031013730,Other,03/2020,0,0,0.6,
@@ -7348,7 +7445,8 @@ Census Tract,12031013730,Other,11/2025,1,1,0.8,
 Census Tract,12031013730,Other,12/2025,0,0.5,0.6,
 Census Tract,12031013730,Other,01/2026,1,2.5,,
 Census Tract,12031013730,Other,02/2026,0,1,,
-Census Tract,12031013730,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031013730,Other,03/2026,0,0,,
+Census Tract,12031013730,Other,04/2026,0,0,,2026-04-11
 Census Tract,12031013731,White,01/2020,2,2.5,1.2,
 Census Tract,12031013731,White,02/2020,0,3,0.2,
 Census Tract,12031013731,White,03/2020,0,1.5,0.4,
@@ -7423,7 +7521,8 @@ Census Tract,12031013731,White,11/2025,3,1.5,0.8,
 Census Tract,12031013731,White,12/2025,0,4.5,0.4,
 Census Tract,12031013731,White,01/2026,1,2.5,,
 Census Tract,12031013731,White,02/2026,2,3,,
-Census Tract,12031013731,White,03/2026,0,0,,2026-03-07
+Census Tract,12031013731,White,03/2026,3,1.5,,
+Census Tract,12031013731,White,04/2026,1,2,,2026-04-11
 Census Tract,12031013732,Other,01/2020,12,18,12.6,
 Census Tract,12031013732,Other,02/2020,5,24.5,6,
 Census Tract,12031013732,Other,03/2020,1,12.5,8.2,
@@ -7498,7 +7597,8 @@ Census Tract,12031013732,Other,11/2025,9,11,8,
 Census Tract,12031013732,Other,12/2025,10,15,10.2,
 Census Tract,12031013732,Other,01/2026,30,18,,
 Census Tract,12031013732,Other,02/2026,22,24.5,,
-Census Tract,12031013732,Other,03/2026,0,2,,2026-03-07
+Census Tract,12031013732,Other,03/2026,13,12.5,,
+Census Tract,12031013732,Other,04/2026,1,1,,2026-04-11
 Census Tract,12031013733,Other,01/2020,2,5.5,4,
 Census Tract,12031013733,Other,02/2020,6,9.5,2.6,
 Census Tract,12031013733,Other,03/2020,2,6,2.6,
@@ -7573,7 +7673,8 @@ Census Tract,12031013733,Other,11/2025,4,7,2,
 Census Tract,12031013733,Other,12/2025,16,7.5,3,
 Census Tract,12031013733,Other,01/2026,15,5.5,,
 Census Tract,12031013733,Other,02/2026,14,9.5,,
-Census Tract,12031013733,Other,03/2026,0,0.5,,2026-03-07
+Census Tract,12031013733,Other,03/2026,10,6,,
+Census Tract,12031013733,Other,04/2026,2,1.5,,2026-04-11
 Census Tract,12031013800,White,01/2020,0,0,0.4,
 Census Tract,12031013800,White,02/2020,1,0,0,
 Census Tract,12031013800,White,03/2020,0,0.5,0,
@@ -7648,7 +7749,8 @@ Census Tract,12031013800,White,11/2025,0,0,0.4,
 Census Tract,12031013800,White,12/2025,1,0,0,
 Census Tract,12031013800,White,01/2026,0,0,,
 Census Tract,12031013800,White,02/2026,0,0,,
-Census Tract,12031013800,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031013800,White,03/2026,2,0.5,,
+Census Tract,12031013800,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031013901,White,01/2020,4,2,4.4,
 Census Tract,12031013901,White,02/2020,2,3,2,
 Census Tract,12031013901,White,03/2020,3,5.5,2,
@@ -7723,7 +7825,8 @@ Census Tract,12031013901,White,11/2025,5,3,4.2,
 Census Tract,12031013901,White,12/2025,3,7,3.2,
 Census Tract,12031013901,White,01/2026,4,2,,
 Census Tract,12031013901,White,02/2026,1,3,,
-Census Tract,12031013901,White,03/2026,0,2.5,,2026-03-07
+Census Tract,12031013901,White,03/2026,4,5.5,,
+Census Tract,12031013901,White,04/2026,0,1,,2026-04-11
 Census Tract,12031013902,White,01/2020,6,4.5,5.8,
 Census Tract,12031013902,White,02/2020,4,1.5,4,
 Census Tract,12031013902,White,03/2020,4,4.5,5.2,
@@ -7798,7 +7901,8 @@ Census Tract,12031013902,White,11/2025,0,1,5,
 Census Tract,12031013902,White,12/2025,2,3.5,5.2,
 Census Tract,12031013902,White,01/2026,1,4.5,,
 Census Tract,12031013902,White,02/2026,1,1,,
-Census Tract,12031013902,White,03/2026,0,1,,2026-03-07
+Census Tract,12031013902,White,03/2026,2,4.5,,
+Census Tract,12031013902,White,04/2026,0,2,,2026-04-11
 Census Tract,12031013904,White,01/2020,5,5,14.6,
 Census Tract,12031013904,White,02/2020,5,6.5,6.6,
 Census Tract,12031013904,White,03/2020,4,8.5,7.8,
@@ -7873,7 +7977,8 @@ Census Tract,12031013904,White,11/2025,5,1.5,11.6,
 Census Tract,12031013904,White,12/2025,5,3,9.8,
 Census Tract,12031013904,White,01/2026,5,5,,
 Census Tract,12031013904,White,02/2026,9,6,,
-Census Tract,12031013904,White,03/2026,0,2,,2026-03-07
+Census Tract,12031013904,White,03/2026,5,8.5,,
+Census Tract,12031013904,White,04/2026,0,2.5,,2026-04-11
 Census Tract,12031013905,White,01/2020,0,0,0.2,
 Census Tract,12031013905,White,02/2020,1,0,0,
 Census Tract,12031013905,White,03/2020,0,0,0.6,
@@ -7948,7 +8053,8 @@ Census Tract,12031013905,White,11/2025,0,0,0,
 Census Tract,12031013905,White,12/2025,0,0.5,0.4,
 Census Tract,12031013905,White,01/2026,0,0,,
 Census Tract,12031013905,White,02/2026,2,0,,
-Census Tract,12031013905,White,03/2026,0,0,,2026-03-07
+Census Tract,12031013905,White,03/2026,0,0,,
+Census Tract,12031013905,White,04/2026,0,0,,2026-04-11
 Census Tract,12031013906,White,01/2020,1,1.5,1.2,
 Census Tract,12031013906,White,02/2020,0,0.5,0.4,
 Census Tract,12031013906,White,03/2020,0,0,1,
@@ -8023,7 +8129,8 @@ Census Tract,12031013906,White,11/2025,1,1,0,
 Census Tract,12031013906,White,12/2025,3,1,0.4,
 Census Tract,12031013906,White,01/2026,1,1.5,,
 Census Tract,12031013906,White,02/2026,1,0.5,,
-Census Tract,12031013906,White,03/2026,0,0,,2026-03-07
+Census Tract,12031013906,White,03/2026,1,0,,
+Census Tract,12031013906,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014001,White,01/2020,2,0.5,2.4,
 Census Tract,12031014001,White,02/2020,0,1,1.6,
 Census Tract,12031014001,White,03/2020,0,0,1.2,
@@ -8098,7 +8205,8 @@ Census Tract,12031014001,White,11/2025,1,4,1.4,
 Census Tract,12031014001,White,12/2025,0,0.5,2,
 Census Tract,12031014001,White,01/2026,1,0.5,,
 Census Tract,12031014001,White,02/2026,0,1,,
-Census Tract,12031014001,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014001,White,03/2026,2,0,,
+Census Tract,12031014001,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014002,White,01/2020,0,0,0,
 Census Tract,12031014002,White,02/2020,0,0.5,0.4,
 Census Tract,12031014002,White,03/2020,0,0,0.6,
@@ -8173,7 +8281,8 @@ Census Tract,12031014002,White,11/2025,0,0.5,0.2,
 Census Tract,12031014002,White,12/2025,1,0,0.4,
 Census Tract,12031014002,White,01/2026,0,0,,
 Census Tract,12031014002,White,02/2026,3,0.5,,
-Census Tract,12031014002,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014002,White,03/2026,0,0,,
+Census Tract,12031014002,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014101,White,01/2020,0,0,1,
 Census Tract,12031014101,White,02/2020,0,0,0.6,
 Census Tract,12031014101,White,03/2020,2,1,0.2,
@@ -8248,7 +8357,8 @@ Census Tract,12031014101,White,11/2025,1,0,0.2,
 Census Tract,12031014101,White,12/2025,0,0,0.4,
 Census Tract,12031014101,White,01/2026,0,0,,
 Census Tract,12031014101,White,02/2026,0,0,,
-Census Tract,12031014101,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014101,White,03/2026,0,1,,
+Census Tract,12031014101,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014103,White,01/2020,2,0,0.8,
 Census Tract,12031014103,White,02/2020,4,0,0.8,
 Census Tract,12031014103,White,03/2020,1,0,0.6,
@@ -8323,7 +8433,8 @@ Census Tract,12031014103,White,11/2025,0,0.5,1.4,
 Census Tract,12031014103,White,12/2025,0,0,0.6,
 Census Tract,12031014103,White,01/2026,0,0,,
 Census Tract,12031014103,White,02/2026,1,0,,
-Census Tract,12031014103,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014103,White,03/2026,0,0,,
+Census Tract,12031014103,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014104,White,01/2020,0,1,1.6,
 Census Tract,12031014104,White,02/2020,0,1.5,1.2,
 Census Tract,12031014104,White,03/2020,1,0.5,1,
@@ -8398,7 +8509,8 @@ Census Tract,12031014104,White,11/2025,1,0.5,0.6,
 Census Tract,12031014104,White,12/2025,1,1,1.2,
 Census Tract,12031014104,White,01/2026,1,1,,
 Census Tract,12031014104,White,02/2026,0,1.5,,
-Census Tract,12031014104,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014104,White,03/2026,2,0.5,,
+Census Tract,12031014104,White,04/2026,0,1,,2026-04-11
 Census Tract,12031014203,White,01/2020,0,0.5,0.8,
 Census Tract,12031014203,White,02/2020,0,2,0.6,
 Census Tract,12031014203,White,03/2020,0,1,0.6,
@@ -8473,7 +8585,8 @@ Census Tract,12031014203,White,11/2025,0,0,0.2,
 Census Tract,12031014203,White,12/2025,0,0.5,0.6,
 Census Tract,12031014203,White,01/2026,1,0.5,,
 Census Tract,12031014203,White,02/2026,0,2,,
-Census Tract,12031014203,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014203,White,03/2026,1,1,,
+Census Tract,12031014203,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014204,White,01/2020,2,0,1.2,
 Census Tract,12031014204,White,02/2020,2,1,0.8,
 Census Tract,12031014204,White,03/2020,1,0.5,0.8,
@@ -8548,7 +8661,8 @@ Census Tract,12031014204,White,11/2025,2,0.5,2.4,
 Census Tract,12031014204,White,12/2025,5,0.5,0.8,
 Census Tract,12031014204,White,01/2026,2,0,,
 Census Tract,12031014204,White,02/2026,2,1,,
-Census Tract,12031014204,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014204,White,03/2026,0,0.5,,
+Census Tract,12031014204,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014205,White,01/2020,2,0.5,2.2,
 Census Tract,12031014205,White,02/2020,1,1,1.8,
 Census Tract,12031014205,White,03/2020,2,0.5,1.8,
@@ -8623,7 +8737,8 @@ Census Tract,12031014205,White,11/2025,3,0.5,2.8,
 Census Tract,12031014205,White,12/2025,1,0,3.8,
 Census Tract,12031014205,White,01/2026,2,0.5,,
 Census Tract,12031014205,White,02/2026,1,1,,
-Census Tract,12031014205,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014205,White,03/2026,0,0.5,,
+Census Tract,12031014205,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014206,White,01/2020,0,0,1,
 Census Tract,12031014206,White,02/2020,0,0,0,
 Census Tract,12031014206,White,03/2020,0,0.5,0.4,
@@ -8698,7 +8813,8 @@ Census Tract,12031014206,White,11/2025,0,0,0.2,
 Census Tract,12031014206,White,12/2025,1,0,0.4,
 Census Tract,12031014206,White,01/2026,0,0,,
 Census Tract,12031014206,White,02/2026,0,0,,
-Census Tract,12031014206,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014206,White,03/2026,0,0.5,,
+Census Tract,12031014206,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014311,White,01/2020,8,8,5.8,
 Census Tract,12031014311,White,02/2020,5,9.5,2.8,
 Census Tract,12031014311,White,03/2020,5,7,4.2,
@@ -8773,7 +8889,8 @@ Census Tract,12031014311,White,11/2025,5,2,9,
 Census Tract,12031014311,White,12/2025,0,3.5,5.4,
 Census Tract,12031014311,White,01/2026,7,8,,
 Census Tract,12031014311,White,02/2026,3,9.5,,
-Census Tract,12031014311,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031014311,White,03/2026,2,7,,
+Census Tract,12031014311,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014312,White,01/2020,11,4.5,5.6,
 Census Tract,12031014312,White,02/2020,6,6,1.2,
 Census Tract,12031014312,White,03/2020,5,8,2.8,
@@ -8848,7 +8965,8 @@ Census Tract,12031014312,White,11/2025,8,5.5,3,
 Census Tract,12031014312,White,12/2025,2,7.5,2.6,
 Census Tract,12031014312,White,01/2026,4,4.5,,
 Census Tract,12031014312,White,02/2026,3,6,,
-Census Tract,12031014312,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031014312,White,03/2026,1,8,,
+Census Tract,12031014312,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014328,White,01/2020,3,8,1.4,
 Census Tract,12031014328,White,02/2020,2,5,2.2,
 Census Tract,12031014328,White,03/2020,5,3,1.8,
@@ -8923,7 +9041,8 @@ Census Tract,12031014328,White,11/2025,2,4,1,
 Census Tract,12031014328,White,12/2025,6,5,1.8,
 Census Tract,12031014328,White,01/2026,3,8,,
 Census Tract,12031014328,White,02/2026,5,5,,
-Census Tract,12031014328,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014328,White,03/2026,6,3,,
+Census Tract,12031014328,White,04/2026,0,2.5,,2026-04-11
 Census Tract,12031014329,White,01/2020,0,0.5,0.6,
 Census Tract,12031014329,White,02/2020,0,0.5,0.2,
 Census Tract,12031014329,White,03/2020,1,0.5,0,
@@ -8998,7 +9117,8 @@ Census Tract,12031014329,White,11/2025,0,1,0,
 Census Tract,12031014329,White,12/2025,1,0,0.4,
 Census Tract,12031014329,White,01/2026,0,0.5,,
 Census Tract,12031014329,White,02/2026,2,0.5,,
-Census Tract,12031014329,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014329,White,03/2026,0,0.5,,
+Census Tract,12031014329,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014330,White,01/2020,0,0,0.2,
 Census Tract,12031014330,White,02/2020,0,0.5,0,
 Census Tract,12031014330,White,03/2020,1,0,0.2,
@@ -9073,7 +9193,8 @@ Census Tract,12031014330,White,11/2025,1,0.5,0.4,
 Census Tract,12031014330,White,12/2025,0,0,0.4,
 Census Tract,12031014330,White,01/2026,2,0,,
 Census Tract,12031014330,White,02/2026,1,0.5,,
-Census Tract,12031014330,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014330,White,03/2026,0,0,,
+Census Tract,12031014330,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014331,Other,01/2020,7,6,13.2,
 Census Tract,12031014331,Other,02/2020,5,3,14,
 Census Tract,12031014331,Other,03/2020,3,6,9.8,
@@ -9148,7 +9269,8 @@ Census Tract,12031014331,Other,11/2025,3,4,11.2,
 Census Tract,12031014331,Other,12/2025,5,2.5,15.4,
 Census Tract,12031014331,Other,01/2026,9,6,,
 Census Tract,12031014331,Other,02/2026,5,2.5,,
-Census Tract,12031014331,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031014331,Other,03/2026,8,6,,
+Census Tract,12031014331,Other,04/2026,0,0,,2026-04-11
 Census Tract,12031014333,White,01/2020,1,0,1,
 Census Tract,12031014333,White,02/2020,2,0,0.2,
 Census Tract,12031014333,White,03/2020,0,0.5,1,
@@ -9223,7 +9345,8 @@ Census Tract,12031014333,White,11/2025,0,0,0.8,
 Census Tract,12031014333,White,12/2025,1,1,0.8,
 Census Tract,12031014333,White,01/2026,0,0,,
 Census Tract,12031014333,White,02/2026,0,0,,
-Census Tract,12031014333,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014333,White,03/2026,0,0.5,,
+Census Tract,12031014333,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014334,White,01/2020,2,0.5,2.2,
 Census Tract,12031014334,White,02/2020,4,3.5,2,
 Census Tract,12031014334,White,03/2020,1,1.5,3.8,
@@ -9298,7 +9421,8 @@ Census Tract,12031014334,White,11/2025,7,1.5,1.6,
 Census Tract,12031014334,White,12/2025,6,5.5,2.6,
 Census Tract,12031014334,White,01/2026,4,0.5,,
 Census Tract,12031014334,White,02/2026,5,3.5,,
-Census Tract,12031014334,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014334,White,03/2026,4,1.5,,
+Census Tract,12031014334,White,04/2026,0,2,,2026-04-11
 Census Tract,12031014335,White,01/2020,2,1,1,
 Census Tract,12031014335,White,02/2020,2,0.5,1.2,
 Census Tract,12031014335,White,03/2020,1,0,0.4,
@@ -9373,7 +9497,8 @@ Census Tract,12031014335,White,11/2025,2,0.5,1,
 Census Tract,12031014335,White,12/2025,2,1.5,0.8,
 Census Tract,12031014335,White,01/2026,1,1,,
 Census Tract,12031014335,White,02/2026,0,0.5,,
-Census Tract,12031014335,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014335,White,03/2026,2,0,,
+Census Tract,12031014335,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014336,White,01/2020,1,1.5,1,
 Census Tract,12031014336,White,02/2020,0,2.5,1.2,
 Census Tract,12031014336,White,03/2020,0,0.5,1.4,
@@ -9448,7 +9573,8 @@ Census Tract,12031014336,White,11/2025,0,1,0.8,
 Census Tract,12031014336,White,12/2025,1,1.5,1.4,
 Census Tract,12031014336,White,01/2026,1,1.5,,
 Census Tract,12031014336,White,02/2026,3,2,,
-Census Tract,12031014336,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014336,White,03/2026,3,0.5,,
+Census Tract,12031014336,White,04/2026,0,1,,2026-04-11
 Census Tract,12031014338,White,01/2020,0,0.5,4.4,
 Census Tract,12031014338,White,02/2020,1,3.5,2.8,
 Census Tract,12031014338,White,03/2020,1,3,2.8,
@@ -9523,7 +9649,8 @@ Census Tract,12031014338,White,11/2025,1,1.5,2.4,
 Census Tract,12031014338,White,12/2025,0,4.5,4.2,
 Census Tract,12031014338,White,01/2026,3,0.5,,
 Census Tract,12031014338,White,02/2026,1,2.5,,
-Census Tract,12031014338,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014338,White,03/2026,0,3,,
+Census Tract,12031014338,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014339,White,01/2020,1,0.5,0,
 Census Tract,12031014339,White,02/2020,0,0.5,0.4,
 Census Tract,12031014339,White,03/2020,1,0.5,0,
@@ -9598,7 +9725,8 @@ Census Tract,12031014339,White,11/2025,0,0.5,0.4,
 Census Tract,12031014339,White,12/2025,1,0,0.2,
 Census Tract,12031014339,White,01/2026,0,0.5,,
 Census Tract,12031014339,White,02/2026,2,0.5,,
-Census Tract,12031014339,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014339,White,03/2026,4,0.5,,
+Census Tract,12031014339,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014340,White,01/2020,2,12,4,
 Census Tract,12031014340,White,02/2020,0,5,3.4,
 Census Tract,12031014340,White,03/2020,1,0.5,1.8,
@@ -9673,7 +9801,8 @@ Census Tract,12031014340,White,11/2025,4,2,2,
 Census Tract,12031014340,White,12/2025,1,1,2.4,
 Census Tract,12031014340,White,01/2026,0,12,,
 Census Tract,12031014340,White,02/2026,6,5,,
-Census Tract,12031014340,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014340,White,03/2026,1,0.5,,
+Census Tract,12031014340,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014341,White,01/2020,3,2.5,0.6,
 Census Tract,12031014341,White,02/2020,0,2,1,
 Census Tract,12031014341,White,03/2020,0,1,1.6,
@@ -9748,7 +9877,8 @@ Census Tract,12031014341,White,11/2025,1,1,2,
 Census Tract,12031014341,White,12/2025,3,6,1.6,
 Census Tract,12031014341,White,01/2026,1,2.5,,
 Census Tract,12031014341,White,02/2026,2,2,,
-Census Tract,12031014341,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014341,White,03/2026,1,1,,
+Census Tract,12031014341,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014342,White,01/2020,10,12,11.4,
 Census Tract,12031014342,White,02/2020,8,16,5.8,
 Census Tract,12031014342,White,03/2020,4,8,4,
@@ -9823,7 +9953,8 @@ Census Tract,12031014342,White,11/2025,7,12.5,7.2,
 Census Tract,12031014342,White,12/2025,10,20,5.2,
 Census Tract,12031014342,White,01/2026,19,12,,
 Census Tract,12031014342,White,02/2026,8,16,,
-Census Tract,12031014342,White,03/2026,0,2,,2026-03-07
+Census Tract,12031014342,White,03/2026,11,8,,
+Census Tract,12031014342,White,04/2026,0,6.5,,2026-04-11
 Census Tract,12031014343,White,01/2020,0,6,1.6,
 Census Tract,12031014343,White,02/2020,1,1.5,1.8,
 Census Tract,12031014343,White,03/2020,1,1,0.6,
@@ -9898,7 +10029,8 @@ Census Tract,12031014343,White,11/2025,0,0.5,1.2,
 Census Tract,12031014343,White,12/2025,3,1.5,3.4,
 Census Tract,12031014343,White,01/2026,4,6,,
 Census Tract,12031014343,White,02/2026,1,1.5,,
-Census Tract,12031014343,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014343,White,03/2026,3,1,,
+Census Tract,12031014343,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014344,Other,01/2020,6,4,1.4,
 Census Tract,12031014344,Other,02/2020,1,2,0.8,
 Census Tract,12031014344,Other,03/2020,0,2.5,1.6,
@@ -9973,7 +10105,8 @@ Census Tract,12031014344,Other,11/2025,1,0.5,0.8,
 Census Tract,12031014344,Other,12/2025,1,1,1.6,
 Census Tract,12031014344,Other,01/2026,6,4,,
 Census Tract,12031014344,Other,02/2026,0,2,,
-Census Tract,12031014344,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031014344,Other,03/2026,0,2.5,,
+Census Tract,12031014344,Other,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014408,White,01/2020,4,6.5,6,
 Census Tract,12031014408,White,02/2020,2,3.5,5.6,
 Census Tract,12031014408,White,03/2020,0,2,4.4,
@@ -10048,7 +10181,8 @@ Census Tract,12031014408,White,11/2025,1,2.5,3.4,
 Census Tract,12031014408,White,12/2025,3,5,2,
 Census Tract,12031014408,White,01/2026,2,6.5,,
 Census Tract,12031014408,White,02/2026,3,3.5,,
-Census Tract,12031014408,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014408,White,03/2026,1,2,,
+Census Tract,12031014408,White,04/2026,0,1,,2026-04-11
 Census Tract,12031014413,Other,01/2020,5,10,5.8,
 Census Tract,12031014413,Other,02/2020,6,6.5,5.8,
 Census Tract,12031014413,Other,03/2020,0,4.5,5.8,
@@ -10123,7 +10257,8 @@ Census Tract,12031014413,Other,11/2025,4,5,4,
 Census Tract,12031014413,Other,12/2025,4,7,4.4,
 Census Tract,12031014413,Other,01/2026,4,10,,
 Census Tract,12031014413,Other,02/2026,5,6,,
-Census Tract,12031014413,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031014413,Other,03/2026,4,4.5,,
+Census Tract,12031014413,Other,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014414,Other,01/2020,3,4.5,8.2,
 Census Tract,12031014414,Other,02/2020,8,5.5,8.4,
 Census Tract,12031014414,Other,03/2020,3,5,7.4,
@@ -10198,7 +10333,8 @@ Census Tract,12031014414,Other,11/2025,1,8.5,7.4,
 Census Tract,12031014414,Other,12/2025,8,5.5,6,
 Census Tract,12031014414,Other,01/2026,10,4.5,,
 Census Tract,12031014414,Other,02/2026,4,5.5,,
-Census Tract,12031014414,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031014414,Other,03/2026,12,5,,
+Census Tract,12031014414,Other,04/2026,1,3,,2026-04-11
 Census Tract,12031014415,White,01/2020,1,6.5,1.2,
 Census Tract,12031014415,White,02/2020,3,4,0.4,
 Census Tract,12031014415,White,03/2020,4,4,0.2,
@@ -10273,7 +10409,8 @@ Census Tract,12031014415,White,11/2025,0,0.5,0.4,
 Census Tract,12031014415,White,12/2025,4,0.5,0.4,
 Census Tract,12031014415,White,01/2026,3,6.5,,
 Census Tract,12031014415,White,02/2026,2,4,,
-Census Tract,12031014415,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014415,White,03/2026,6,4,,
+Census Tract,12031014415,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014416,White,01/2020,2,2,2.8,
 Census Tract,12031014416,White,02/2020,0,3.5,2.4,
 Census Tract,12031014416,White,03/2020,19,7,2.4,
@@ -10348,7 +10485,8 @@ Census Tract,12031014416,White,11/2025,2,2.5,1,
 Census Tract,12031014416,White,12/2025,6,0.5,1.2,
 Census Tract,12031014416,White,01/2026,11,2,,
 Census Tract,12031014416,White,02/2026,3,3.5,,
-Census Tract,12031014416,White,03/2026,0,1,,2026-03-07
+Census Tract,12031014416,White,03/2026,11,7,,
+Census Tract,12031014416,White,04/2026,0,1.5,,2026-04-11
 Census Tract,12031014417,White,01/2020,4,5,3.2,
 Census Tract,12031014417,White,02/2020,3,4.5,1.6,
 Census Tract,12031014417,White,03/2020,6,3.5,0.8,
@@ -10423,7 +10561,8 @@ Census Tract,12031014417,White,11/2025,6,6.5,0.6,
 Census Tract,12031014417,White,12/2025,4,2,2,
 Census Tract,12031014417,White,01/2026,4,5,,
 Census Tract,12031014417,White,02/2026,3,4.5,,
-Census Tract,12031014417,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014417,White,03/2026,7,3.5,,
+Census Tract,12031014417,White,04/2026,1,0.5,,2026-04-11
 Census Tract,12031014418,White,01/2020,0,0,0,
 Census Tract,12031014418,White,02/2020,0,0,0,
 Census Tract,12031014418,White,03/2020,0,0,0,
@@ -10498,7 +10637,8 @@ Census Tract,12031014418,White,11/2025,0,0.5,0,
 Census Tract,12031014418,White,12/2025,0,0,0,
 Census Tract,12031014418,White,01/2026,0,0,,
 Census Tract,12031014418,White,02/2026,0,0,,
-Census Tract,12031014418,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014418,White,03/2026,0,0,,
+Census Tract,12031014418,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014419,White,01/2020,1,0.5,2.4,
 Census Tract,12031014419,White,02/2020,0,0,2,
 Census Tract,12031014419,White,03/2020,0,0,2.4,
@@ -10573,7 +10713,8 @@ Census Tract,12031014419,White,11/2025,0,0,5,
 Census Tract,12031014419,White,12/2025,1,1,4.2,
 Census Tract,12031014419,White,01/2026,0,0.5,,
 Census Tract,12031014419,White,02/2026,0,0,,
-Census Tract,12031014419,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014419,White,03/2026,0,0,,
+Census Tract,12031014419,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014420,White,01/2020,1,0.5,2.4,
 Census Tract,12031014420,White,02/2020,5,1,1.4,
 Census Tract,12031014420,White,03/2020,1,1,2.8,
@@ -10648,7 +10789,8 @@ Census Tract,12031014420,White,11/2025,2,1.5,1.6,
 Census Tract,12031014420,White,12/2025,0,3,1.6,
 Census Tract,12031014420,White,01/2026,2,0.5,,
 Census Tract,12031014420,White,02/2026,1,1,,
-Census Tract,12031014420,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014420,White,03/2026,1,1,,
+Census Tract,12031014420,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014421,White,01/2020,0,1.5,1.2,
 Census Tract,12031014421,White,02/2020,1,1,0.2,
 Census Tract,12031014421,White,03/2020,0,0.5,0.6,
@@ -10723,7 +10865,8 @@ Census Tract,12031014421,White,11/2025,1,1.5,0.6,
 Census Tract,12031014421,White,12/2025,1,2,1.2,
 Census Tract,12031014421,White,01/2026,1,1.5,,
 Census Tract,12031014421,White,02/2026,0,1,,
-Census Tract,12031014421,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014421,White,03/2026,2,0.5,,
+Census Tract,12031014421,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014422,White,01/2020,1,0,1,
 Census Tract,12031014422,White,02/2020,0,0,1.2,
 Census Tract,12031014422,White,03/2020,0,1,0.8,
@@ -10798,7 +10941,8 @@ Census Tract,12031014422,White,11/2025,0,0.5,1.2,
 Census Tract,12031014422,White,12/2025,1,1,1,
 Census Tract,12031014422,White,01/2026,0,0,,
 Census Tract,12031014422,White,02/2026,1,0,,
-Census Tract,12031014422,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014422,White,03/2026,2,1,,
+Census Tract,12031014422,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014423,White,01/2020,11,26.5,1.4,
 Census Tract,12031014423,White,02/2020,11,22.5,1.8,
 Census Tract,12031014423,White,03/2020,5,16,1.6,
@@ -10873,7 +11017,8 @@ Census Tract,12031014423,White,11/2025,13,17,1.4,
 Census Tract,12031014423,White,12/2025,19,14.5,0.8,
 Census Tract,12031014423,White,01/2026,18,26.5,,
 Census Tract,12031014423,White,02/2026,21,22.5,,
-Census Tract,12031014423,White,03/2026,0,1,,2026-03-07
+Census Tract,12031014423,White,03/2026,9,16,,
+Census Tract,12031014423,White,04/2026,0,4,,2026-04-11
 Census Tract,12031014424,White,01/2020,2,9,0.4,
 Census Tract,12031014424,White,02/2020,8,6,1.6,
 Census Tract,12031014424,White,03/2020,7,7,1.2,
@@ -10948,7 +11093,8 @@ Census Tract,12031014424,White,11/2025,6,11.5,2.2,
 Census Tract,12031014424,White,12/2025,6,8,1.4,
 Census Tract,12031014424,White,01/2026,4,9,,
 Census Tract,12031014424,White,02/2026,7,6,,
-Census Tract,12031014424,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014424,White,03/2026,4,7,,
+Census Tract,12031014424,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014425,Other,01/2020,4,9,0.4,
 Census Tract,12031014425,Other,02/2020,2,5,0.2,
 Census Tract,12031014425,Other,03/2020,0,5.5,0.4,
@@ -11023,7 +11169,8 @@ Census Tract,12031014425,Other,11/2025,2,11.5,0.2,
 Census Tract,12031014425,Other,12/2025,2,5.5,0.4,
 Census Tract,12031014425,Other,01/2026,7,9,,
 Census Tract,12031014425,Other,02/2026,3,5,,
-Census Tract,12031014425,Other,03/2026,0,0.5,,2026-03-07
+Census Tract,12031014425,Other,03/2026,4,5.5,,
+Census Tract,12031014425,Other,04/2026,0,0.5,,2026-04-11
 Census Tract,12031014426,White,01/2020,6,8.5,3.6,
 Census Tract,12031014426,White,02/2020,8,8,3,
 Census Tract,12031014426,White,03/2020,4,4.5,2.4,
@@ -11098,7 +11245,8 @@ Census Tract,12031014426,White,11/2025,6,5,4.8,
 Census Tract,12031014426,White,12/2025,9,4,3.8,
 Census Tract,12031014426,White,01/2026,5,8.5,,
 Census Tract,12031014426,White,02/2026,5,8,,
-Census Tract,12031014426,White,03/2026,0,1,,2026-03-07
+Census Tract,12031014426,White,03/2026,10,4.5,,
+Census Tract,12031014426,White,04/2026,2,1,,2026-04-11
 Census Tract,12031014427,Hispanic,01/2020,0,0,0.8,
 Census Tract,12031014427,Hispanic,02/2020,0,1,0.6,
 Census Tract,12031014427,Hispanic,03/2020,0,0.5,1.4,
@@ -11173,7 +11321,8 @@ Census Tract,12031014427,Hispanic,11/2025,1,2,1,
 Census Tract,12031014427,Hispanic,12/2025,2,2,1.6,
 Census Tract,12031014427,Hispanic,01/2026,0,0,,
 Census Tract,12031014427,Hispanic,02/2026,1,1,,
-Census Tract,12031014427,Hispanic,03/2026,0,0,,2026-03-07
+Census Tract,12031014427,Hispanic,03/2026,1,0.5,,
+Census Tract,12031014427,Hispanic,04/2026,0,1,,2026-04-11
 Census Tract,12031014428,White,01/2020,6,12.5,6,
 Census Tract,12031014428,White,02/2020,11,8,3,
 Census Tract,12031014428,White,03/2020,3,12.5,4.2,
@@ -11248,7 +11397,8 @@ Census Tract,12031014428,White,11/2025,15,9,3.6,
 Census Tract,12031014428,White,12/2025,9,7,5.2,
 Census Tract,12031014428,White,01/2026,8,12.5,,
 Census Tract,12031014428,White,02/2026,14,8,,
-Census Tract,12031014428,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031014428,White,03/2026,8,12.5,,
+Census Tract,12031014428,White,04/2026,1,2.5,,2026-04-11
 Census Tract,12031014500,White,01/2020,8,3.5,4.4,
 Census Tract,12031014500,White,02/2020,8,5.5,2.4,
 Census Tract,12031014500,White,03/2020,9,1,1.8,
@@ -11323,7 +11473,8 @@ Census Tract,12031014500,White,11/2025,1,0.5,2.4,
 Census Tract,12031014500,White,12/2025,4,3.5,2.6,
 Census Tract,12031014500,White,01/2026,5,3.5,,
 Census Tract,12031014500,White,02/2026,6,5.5,,
-Census Tract,12031014500,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014500,White,03/2026,3,1,,
+Census Tract,12031014500,White,04/2026,1,0,,2026-04-11
 Census Tract,12031014601,White,01/2020,0,1,0.2,
 Census Tract,12031014601,White,02/2020,1,1,0.4,
 Census Tract,12031014601,White,03/2020,1,0.5,0,
@@ -11398,7 +11549,8 @@ Census Tract,12031014601,White,11/2025,2,0,0,
 Census Tract,12031014601,White,12/2025,0,0,0.2,
 Census Tract,12031014601,White,01/2026,2,1,,
 Census Tract,12031014601,White,02/2026,0,0.5,,
-Census Tract,12031014601,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014601,White,03/2026,0,0.5,,
+Census Tract,12031014601,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014603,White,01/2020,7,6,8.2,
 Census Tract,12031014603,White,02/2020,5,3.5,5,
 Census Tract,12031014603,White,03/2020,3,6,4.2,
@@ -11473,7 +11625,8 @@ Census Tract,12031014603,White,11/2025,2,5.5,6.4,
 Census Tract,12031014603,White,12/2025,13,4,5,
 Census Tract,12031014603,White,01/2026,8,6,,
 Census Tract,12031014603,White,02/2026,4,3,,
-Census Tract,12031014603,White,03/2026,0,1,,2026-03-07
+Census Tract,12031014603,White,03/2026,6,6,,
+Census Tract,12031014603,White,04/2026,0,3.5,,2026-04-11
 Census Tract,12031014604,Other,01/2020,8,37,26.6,
 Census Tract,12031014604,Other,02/2020,13,21.5,13.6,
 Census Tract,12031014604,Other,03/2020,5,20,12.6,
@@ -11548,7 +11701,8 @@ Census Tract,12031014604,Other,11/2025,9,18.5,21,
 Census Tract,12031014604,Other,12/2025,29,13,22.2,
 Census Tract,12031014604,Other,01/2026,11,37,,
 Census Tract,12031014604,Other,02/2026,38,19.5,,
-Census Tract,12031014604,Other,03/2026,0,2,,2026-03-07
+Census Tract,12031014604,Other,03/2026,15,20,,
+Census Tract,12031014604,Other,04/2026,1,3,,2026-04-11
 Census Tract,12031014702,Other,01/2020,3,0.5,1,
 Census Tract,12031014702,Other,02/2020,1,0,0.4,
 Census Tract,12031014702,Other,03/2020,0,1.5,0.8,
@@ -11623,7 +11777,8 @@ Census Tract,12031014702,Other,11/2025,3,0.5,1.2,
 Census Tract,12031014702,Other,12/2025,1,0.5,0.6,
 Census Tract,12031014702,Other,01/2026,4,0.5,,
 Census Tract,12031014702,Other,02/2026,1,0,,
-Census Tract,12031014702,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031014702,Other,03/2026,0,1.5,,
+Census Tract,12031014702,Other,04/2026,0,1,,2026-04-11
 Census Tract,12031014703,White,01/2020,1,0,0,
 Census Tract,12031014703,White,02/2020,0,0.5,0,
 Census Tract,12031014703,White,03/2020,0,0.5,0.4,
@@ -11698,7 +11853,8 @@ Census Tract,12031014703,White,11/2025,0,0,0,
 Census Tract,12031014703,White,12/2025,1,0.5,0.2,
 Census Tract,12031014703,White,01/2026,0,0,,
 Census Tract,12031014703,White,02/2026,1,0.5,,
-Census Tract,12031014703,White,03/2026,0,0,,2026-03-07
+Census Tract,12031014703,White,03/2026,0,0.5,,
+Census Tract,12031014703,White,04/2026,0,0,,2026-04-11
 Census Tract,12031014704,Black,01/2020,34,25.5,24.4,
 Census Tract,12031014704,Black,02/2020,24,31,18.8,
 Census Tract,12031014704,Black,03/2020,14,34,17.4,
@@ -11773,7 +11929,8 @@ Census Tract,12031014704,Black,11/2025,15,21,20.4,
 Census Tract,12031014704,Black,12/2025,40,21.5,24.8,
 Census Tract,12031014704,Black,01/2026,30,25.5,,
 Census Tract,12031014704,Black,02/2026,20,29.5,,
-Census Tract,12031014704,Black,03/2026,0,8.5,,2026-03-07
+Census Tract,12031014704,Black,03/2026,15,34,,
+Census Tract,12031014704,Black,04/2026,0,2,,2026-04-11
 Census Tract,12031014800,Other,01/2020,34,27,20.6,
 Census Tract,12031014800,Other,02/2020,28,40.5,14.4,
 Census Tract,12031014800,Other,03/2020,17,23,15.4,
@@ -11848,7 +12005,8 @@ Census Tract,12031014800,Other,11/2025,18,7.5,18.2,
 Census Tract,12031014800,Other,12/2025,10,10,20.4,
 Census Tract,12031014800,Other,01/2026,21,27,,
 Census Tract,12031014800,Other,02/2026,25,40,,
-Census Tract,12031014800,Other,03/2026,0,3,,2026-03-07
+Census Tract,12031014800,Other,03/2026,22,23,,
+Census Tract,12031014800,Other,04/2026,0,5,,2026-04-11
 Census Tract,12031014901,Other,01/2020,5,7,11.8,
 Census Tract,12031014901,Other,02/2020,5,4.5,6.2,
 Census Tract,12031014901,Other,03/2020,2,4,5.4,
@@ -11923,7 +12081,8 @@ Census Tract,12031014901,Other,11/2025,1,0.5,9,
 Census Tract,12031014901,Other,12/2025,3,4,8.6,
 Census Tract,12031014901,Other,01/2026,7,7,,
 Census Tract,12031014901,Other,02/2026,1,4.5,,
-Census Tract,12031014901,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031014901,Other,03/2026,3,4,,
+Census Tract,12031014901,Other,04/2026,0,1,,2026-04-11
 Census Tract,12031014902,Other,01/2020,13,12,8.8,
 Census Tract,12031014902,Other,02/2020,6,12.5,3.8,
 Census Tract,12031014902,Other,03/2020,3,7.5,5.4,
@@ -11998,7 +12157,8 @@ Census Tract,12031014902,Other,11/2025,7,8,6.4,
 Census Tract,12031014902,Other,12/2025,11,12.5,9.2,
 Census Tract,12031014902,Other,01/2026,13,12,,
 Census Tract,12031014902,Other,02/2026,8,12.5,,
-Census Tract,12031014902,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031014902,Other,03/2026,9,7.5,,
+Census Tract,12031014902,Other,04/2026,2,4,,2026-04-11
 Census Tract,12031015001,White,01/2020,9,5,3.6,
 Census Tract,12031015001,White,02/2020,8,4.5,2,
 Census Tract,12031015001,White,03/2020,3,6.5,1.4,
@@ -12073,7 +12233,8 @@ Census Tract,12031015001,White,11/2025,9,4,3.6,
 Census Tract,12031015001,White,12/2025,8,8.5,2.6,
 Census Tract,12031015001,White,01/2026,5,5,,
 Census Tract,12031015001,White,02/2026,8,4.5,,
-Census Tract,12031015001,White,03/2026,0,0,,2026-03-07
+Census Tract,12031015001,White,03/2026,16,6.5,,
+Census Tract,12031015001,White,04/2026,1,1,,2026-04-11
 Census Tract,12031015002,White,01/2020,10,19.5,4.6,
 Census Tract,12031015002,White,02/2020,3,8.5,7,
 Census Tract,12031015002,White,03/2020,0,14,3,
@@ -12148,7 +12309,8 @@ Census Tract,12031015002,White,11/2025,1,3,5.6,
 Census Tract,12031015002,White,12/2025,17,3,4.2,
 Census Tract,12031015002,White,01/2026,8,19.5,,
 Census Tract,12031015002,White,02/2026,4,7,,
-Census Tract,12031015002,White,03/2026,0,1,,2026-03-07
+Census Tract,12031015002,White,03/2026,13,14,,
+Census Tract,12031015002,White,04/2026,0,3,,2026-04-11
 Census Tract,12031015100,Other,01/2020,8,6,8.8,
 Census Tract,12031015100,Other,02/2020,7,15,6.6,
 Census Tract,12031015100,Other,03/2020,0,11,4,
@@ -12223,7 +12385,8 @@ Census Tract,12031015100,Other,11/2025,0,4.5,7,
 Census Tract,12031015100,Other,12/2025,5,7.5,7.2,
 Census Tract,12031015100,Other,01/2026,7,6,,
 Census Tract,12031015100,Other,02/2026,1,13,,
-Census Tract,12031015100,Other,03/2026,0,0.5,,2026-03-07
+Census Tract,12031015100,Other,03/2026,7,11,,
+Census Tract,12031015100,Other,04/2026,2,1,,2026-04-11
 Census Tract,12031015200,Other,01/2020,11,5.5,7.8,
 Census Tract,12031015200,Other,02/2020,9,11,4.4,
 Census Tract,12031015200,Other,03/2020,2,3,4,
@@ -12298,7 +12461,8 @@ Census Tract,12031015200,Other,11/2025,1,3.5,6.8,
 Census Tract,12031015200,Other,12/2025,0,5.5,7.2,
 Census Tract,12031015200,Other,01/2026,2,5.5,,
 Census Tract,12031015200,Other,02/2026,16,11,,
-Census Tract,12031015200,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031015200,Other,03/2026,4,3,,
+Census Tract,12031015200,Other,04/2026,0,1.5,,2026-04-11
 Census Tract,12031015300,Other,01/2020,10,8.5,6.4,
 Census Tract,12031015300,Other,02/2020,3,8,3.2,
 Census Tract,12031015300,Other,03/2020,6,13,4.2,
@@ -12373,7 +12537,8 @@ Census Tract,12031015300,Other,11/2025,4,6,8,
 Census Tract,12031015300,Other,12/2025,5,4.5,6.2,
 Census Tract,12031015300,Other,01/2026,9,8.5,,
 Census Tract,12031015300,Other,02/2026,7,7.5,,
-Census Tract,12031015300,Other,03/2026,0,2.5,,2026-03-07
+Census Tract,12031015300,Other,03/2026,5,13,,
+Census Tract,12031015300,Other,04/2026,0,2,,2026-04-11
 Census Tract,12031015400,White,01/2020,3,2.5,6.6,
 Census Tract,12031015400,White,02/2020,3,3.5,4.8,
 Census Tract,12031015400,White,03/2020,0,2,4,
@@ -12448,7 +12613,8 @@ Census Tract,12031015400,White,11/2025,2,3.5,4.4,
 Census Tract,12031015400,White,12/2025,4,3.5,5,
 Census Tract,12031015400,White,01/2026,2,2.5,,
 Census Tract,12031015400,White,02/2026,2,3,,
-Census Tract,12031015400,White,03/2026,0,1,,2026-03-07
+Census Tract,12031015400,White,03/2026,1,2,,
+Census Tract,12031015400,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031015501,Other,01/2020,16,9,9.8,
 Census Tract,12031015501,Other,02/2020,9,18,10.2,
 Census Tract,12031015501,Other,03/2020,16,12,7.8,
@@ -12523,7 +12689,8 @@ Census Tract,12031015501,Other,11/2025,5,8,8,
 Census Tract,12031015501,Other,12/2025,6,5.5,8,
 Census Tract,12031015501,Other,01/2026,5,9,,
 Census Tract,12031015501,Other,02/2026,3,17,,
-Census Tract,12031015501,Other,03/2026,0,5,,2026-03-07
+Census Tract,12031015501,Other,03/2026,2,12,,
+Census Tract,12031015501,Other,04/2026,0,3,,2026-04-11
 Census Tract,12031015502,Black,01/2020,33,39.5,7.2,
 Census Tract,12031015502,Black,02/2020,15,26.5,8,
 Census Tract,12031015502,Black,03/2020,13,24,5.6,
@@ -12598,7 +12765,8 @@ Census Tract,12031015502,Black,11/2025,9,11,6.2,
 Census Tract,12031015502,Black,12/2025,16,13.5,5.4,
 Census Tract,12031015502,Black,01/2026,18,39.5,,
 Census Tract,12031015502,Black,02/2026,4,25.5,,
-Census Tract,12031015502,Black,03/2026,0,10,,2026-03-07
+Census Tract,12031015502,Black,03/2026,9,24,,
+Census Tract,12031015502,Black,04/2026,3,3,,2026-04-11
 Census Tract,12031015600,White,01/2020,15,5.5,6.4,
 Census Tract,12031015600,White,02/2020,6,8.5,5.2,
 Census Tract,12031015600,White,03/2020,2,4.5,5,
@@ -12673,7 +12841,8 @@ Census Tract,12031015600,White,11/2025,11,3.5,4.4,
 Census Tract,12031015600,White,12/2025,0,4,6.4,
 Census Tract,12031015600,White,01/2026,2,5.5,,
 Census Tract,12031015600,White,02/2026,2,8.5,,
-Census Tract,12031015600,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031015600,White,03/2026,2,4.5,,
+Census Tract,12031015600,White,04/2026,0,1.5,,2026-04-11
 Census Tract,12031015701,Other,01/2020,12,6,10.2,
 Census Tract,12031015701,Other,02/2020,5,2,8,
 Census Tract,12031015701,Other,03/2020,4,10.5,5,
@@ -12748,7 +12917,8 @@ Census Tract,12031015701,Other,11/2025,5,4,7.6,
 Census Tract,12031015701,Other,12/2025,4,3.5,9.8,
 Census Tract,12031015701,Other,01/2026,6,6,,
 Census Tract,12031015701,Other,02/2026,5,2,,
-Census Tract,12031015701,Other,03/2026,0,2.5,,2026-03-07
+Census Tract,12031015701,Other,03/2026,6,10.5,,
+Census Tract,12031015701,Other,04/2026,1,1,,2026-04-11
 Census Tract,12031015702,White,01/2020,5,7.5,7.2,
 Census Tract,12031015702,White,02/2020,4,13,6,
 Census Tract,12031015702,White,03/2020,2,9.5,3.6,
@@ -12823,7 +12993,8 @@ Census Tract,12031015702,White,11/2025,4,11.5,4,
 Census Tract,12031015702,White,12/2025,31,8.5,6.6,
 Census Tract,12031015702,White,01/2026,16,7.5,,
 Census Tract,12031015702,White,02/2026,9,13,,
-Census Tract,12031015702,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031015702,White,03/2026,11,9.5,,
+Census Tract,12031015702,White,04/2026,2,1.5,,2026-04-11
 Census Tract,12031015803,White,01/2020,5,7.5,5,
 Census Tract,12031015803,White,02/2020,3,5.5,4.2,
 Census Tract,12031015803,White,03/2020,0,2.5,2.8,
@@ -12898,7 +13069,8 @@ Census Tract,12031015803,White,11/2025,23,7,3.6,
 Census Tract,12031015803,White,12/2025,0,3,5.8,
 Census Tract,12031015803,White,01/2026,10,7.5,,
 Census Tract,12031015803,White,02/2026,1,5,,
-Census Tract,12031015803,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031015803,White,03/2026,3,2.5,,
+Census Tract,12031015803,White,04/2026,0,0,,2026-04-11
 Census Tract,12031015804,White,01/2020,4,0.5,5.4,
 Census Tract,12031015804,White,02/2020,5,4,2.4,
 Census Tract,12031015804,White,03/2020,0,2,3.2,
@@ -12973,7 +13145,8 @@ Census Tract,12031015804,White,11/2025,11,0.5,5.8,
 Census Tract,12031015804,White,12/2025,14,2,4.2,
 Census Tract,12031015804,White,01/2026,9,0.5,,
 Census Tract,12031015804,White,02/2026,3,4,,
-Census Tract,12031015804,White,03/2026,0,0,,2026-03-07
+Census Tract,12031015804,White,03/2026,0,2,,
+Census Tract,12031015804,White,04/2026,0,0,,2026-04-11
 Census Tract,12031015805,Other,01/2020,25,17.5,21.2,
 Census Tract,12031015805,Other,02/2020,21,18.5,15,
 Census Tract,12031015805,Other,03/2020,2,18,15,
@@ -13048,7 +13221,8 @@ Census Tract,12031015805,Other,11/2025,31,3,15.8,
 Census Tract,12031015805,Other,12/2025,34,8,19.4,
 Census Tract,12031015805,Other,01/2026,12,17.5,,
 Census Tract,12031015805,Other,02/2026,18,18,,
-Census Tract,12031015805,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031015805,Other,03/2026,9,18,,
+Census Tract,12031015805,Other,04/2026,0,5,,2026-04-11
 Census Tract,12031015806,White,01/2020,1,3.5,1,
 Census Tract,12031015806,White,02/2020,1,2.5,0.4,
 Census Tract,12031015806,White,03/2020,0,1.5,0.4,
@@ -13123,7 +13297,8 @@ Census Tract,12031015806,White,11/2025,0,1,1.4,
 Census Tract,12031015806,White,12/2025,3,3.5,0.2,
 Census Tract,12031015806,White,01/2026,4,3.5,,
 Census Tract,12031015806,White,02/2026,3,1.5,,
-Census Tract,12031015806,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031015806,White,03/2026,2,1.5,,
+Census Tract,12031015806,White,04/2026,1,0,,2026-04-11
 Census Tract,12031015922,White,01/2020,10,17,17.4,
 Census Tract,12031015922,White,02/2020,12,31,9.8,
 Census Tract,12031015922,White,03/2020,9,20,6.8,
@@ -13198,7 +13373,8 @@ Census Tract,12031015922,White,11/2025,10,18.5,11,
 Census Tract,12031015922,White,12/2025,18,18,9.4,
 Census Tract,12031015922,White,01/2026,12,17,,
 Census Tract,12031015922,White,02/2026,20,30.5,,
-Census Tract,12031015922,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031015922,White,03/2026,33,20,,
+Census Tract,12031015922,White,04/2026,0,4,,2026-04-11
 Census Tract,12031015924,White,01/2020,3,12.5,2.2,
 Census Tract,12031015924,White,02/2020,5,5,3.2,
 Census Tract,12031015924,White,03/2020,5,4,1.8,
@@ -13273,7 +13449,8 @@ Census Tract,12031015924,White,11/2025,8,3,3.2,
 Census Tract,12031015924,White,12/2025,7,12,3.4,
 Census Tract,12031015924,White,01/2026,10,12.5,,
 Census Tract,12031015924,White,02/2026,5,4.5,,
-Census Tract,12031015924,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031015924,White,03/2026,7,4,,
+Census Tract,12031015924,White,04/2026,1,1,,2026-04-11
 Census Tract,12031015925,Other,01/2020,19,18.5,10.4,
 Census Tract,12031015925,Other,02/2020,14,24.5,5.8,
 Census Tract,12031015925,Other,03/2020,17,10.5,5.6,
@@ -13348,7 +13525,8 @@ Census Tract,12031015925,Other,11/2025,10,28,5.4,
 Census Tract,12031015925,Other,12/2025,30,16,9.6,
 Census Tract,12031015925,Other,01/2026,21,18.5,,
 Census Tract,12031015925,Other,02/2026,27,24.5,,
-Census Tract,12031015925,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031015925,Other,03/2026,25,10.5,,
+Census Tract,12031015925,Other,04/2026,1,3.5,,2026-04-11
 Census Tract,12031015926,Other,01/2020,12,18.5,4.8,
 Census Tract,12031015926,Other,02/2020,11,10.5,8,
 Census Tract,12031015926,Other,03/2020,12,17,4.4,
@@ -13423,7 +13601,8 @@ Census Tract,12031015926,Other,11/2025,4,11,4.2,
 Census Tract,12031015926,Other,12/2025,20,16.5,7.8,
 Census Tract,12031015926,Other,01/2026,28,18.5,,
 Census Tract,12031015926,Other,02/2026,11,10.5,,
-Census Tract,12031015926,Other,03/2026,0,2.5,,2026-03-07
+Census Tract,12031015926,Other,03/2026,14,17,,
+Census Tract,12031015926,Other,04/2026,0,3,,2026-04-11
 Census Tract,12031015927,Other,01/2020,1,0.5,3.2,
 Census Tract,12031015927,Other,02/2020,1,1,2.2,
 Census Tract,12031015927,Other,03/2020,1,1.5,1.6,
@@ -13498,7 +13677,8 @@ Census Tract,12031015927,Other,11/2025,3,1,2,
 Census Tract,12031015927,Other,12/2025,3,1.5,3.2,
 Census Tract,12031015927,Other,01/2026,2,0.5,,
 Census Tract,12031015927,Other,02/2026,1,1,,
-Census Tract,12031015927,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031015927,Other,03/2026,4,1.5,,
+Census Tract,12031015927,Other,04/2026,1,1,,2026-04-11
 Census Tract,12031015928,Other,01/2020,5,1,2,
 Census Tract,12031015928,Other,02/2020,4,8,1.8,
 Census Tract,12031015928,Other,03/2020,1,5,2,
@@ -13573,7 +13753,8 @@ Census Tract,12031015928,Other,11/2025,1,3,2.4,
 Census Tract,12031015928,Other,12/2025,3,5,2.8,
 Census Tract,12031015928,Other,01/2026,2,1,,
 Census Tract,12031015928,Other,02/2026,3,8,,
-Census Tract,12031015928,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031015928,Other,03/2026,1,5,,
+Census Tract,12031015928,Other,04/2026,1,3,,2026-04-11
 Census Tract,12031015929,White,01/2020,4,4,1.6,
 Census Tract,12031015929,White,02/2020,4,3.5,1.4,
 Census Tract,12031015929,White,03/2020,8,5.5,0.6,
@@ -13648,7 +13829,8 @@ Census Tract,12031015929,White,11/2025,5,5,2,
 Census Tract,12031015929,White,12/2025,4,6.5,1.4,
 Census Tract,12031015929,White,01/2026,10,4,,
 Census Tract,12031015929,White,02/2026,3,3.5,,
-Census Tract,12031015929,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031015929,White,03/2026,5,5.5,,
+Census Tract,12031015929,White,04/2026,0,1,,2026-04-11
 Census Tract,12031016001,White,01/2020,9,5,8.4,
 Census Tract,12031016001,White,02/2020,8,4.5,2.8,
 Census Tract,12031016001,White,03/2020,1,3.5,4.8,
@@ -13723,7 +13905,8 @@ Census Tract,12031016001,White,11/2025,26,3,4.2,
 Census Tract,12031016001,White,12/2025,0,3,5.4,
 Census Tract,12031016001,White,01/2026,11,5,,
 Census Tract,12031016001,White,02/2026,9,4.5,,
-Census Tract,12031016001,White,03/2026,0,1,,2026-03-07
+Census Tract,12031016001,White,03/2026,3,3.5,,
+Census Tract,12031016001,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016002,White,01/2020,2,7,5.4,
 Census Tract,12031016002,White,02/2020,3,7.5,2.2,
 Census Tract,12031016002,White,03/2020,1,6,4.6,
@@ -13798,7 +13981,8 @@ Census Tract,12031016002,White,11/2025,1,4.5,2.4,
 Census Tract,12031016002,White,12/2025,4,5.5,2.6,
 Census Tract,12031016002,White,01/2026,5,7,,
 Census Tract,12031016002,White,02/2026,6,7.5,,
-Census Tract,12031016002,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031016002,White,03/2026,3,6,,
+Census Tract,12031016002,White,04/2026,2,1,,2026-04-11
 Census Tract,12031016101,Other,01/2020,4,3.5,2.8,
 Census Tract,12031016101,Other,02/2020,1,3,3.6,
 Census Tract,12031016101,Other,03/2020,0,5,3.4,
@@ -13873,7 +14057,8 @@ Census Tract,12031016101,Other,11/2025,10,2.5,4,
 Census Tract,12031016101,Other,12/2025,10,1.5,3.2,
 Census Tract,12031016101,Other,01/2026,10,3.5,,
 Census Tract,12031016101,Other,02/2026,4,2.5,,
-Census Tract,12031016101,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031016101,Other,03/2026,2,5,,
+Census Tract,12031016101,Other,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016102,Other,01/2020,10,3.5,4.2,
 Census Tract,12031016102,Other,02/2020,2,1.5,5,
 Census Tract,12031016102,Other,03/2020,2,1,4.4,
@@ -13948,7 +14133,8 @@ Census Tract,12031016102,Other,11/2025,2,1,5.2,
 Census Tract,12031016102,Other,12/2025,2,1.5,4.6,
 Census Tract,12031016102,Other,01/2026,1,3.5,,
 Census Tract,12031016102,Other,02/2026,4,1.5,,
-Census Tract,12031016102,Other,03/2026,0,1,,2026-03-07
+Census Tract,12031016102,Other,03/2026,3,1,,
+Census Tract,12031016102,Other,04/2026,0,0,,2026-04-11
 Census Tract,12031016200,Other,01/2020,6,2,4,
 Census Tract,12031016200,Other,02/2020,3,5.5,3,
 Census Tract,12031016200,Other,03/2020,2,3.5,2,
@@ -14023,7 +14209,8 @@ Census Tract,12031016200,Other,11/2025,5,3,3.4,
 Census Tract,12031016200,Other,12/2025,1,7.5,4.6,
 Census Tract,12031016200,Other,01/2026,8,2,,
 Census Tract,12031016200,Other,02/2026,3,4.5,,
-Census Tract,12031016200,Other,03/2026,0,0.5,,2026-03-07
+Census Tract,12031016200,Other,03/2026,2,3.5,,
+Census Tract,12031016200,Other,04/2026,0,2.5,,2026-04-11
 Census Tract,12031016300,Other,01/2020,1,1.5,1.6,
 Census Tract,12031016300,Other,02/2020,3,0.5,1.4,
 Census Tract,12031016300,Other,03/2020,0,1.5,0.6,
@@ -14098,7 +14285,8 @@ Census Tract,12031016300,Other,11/2025,1,2,1,
 Census Tract,12031016300,Other,12/2025,1,1,0.8,
 Census Tract,12031016300,Other,01/2026,0,1.5,,
 Census Tract,12031016300,Other,02/2026,3,0.5,,
-Census Tract,12031016300,Other,03/2026,0,0.5,,2026-03-07
+Census Tract,12031016300,Other,03/2026,1,1.5,,
+Census Tract,12031016300,Other,04/2026,1,0,,2026-04-11
 Census Tract,12031016400,White,01/2020,3,3.5,3.2,
 Census Tract,12031016400,White,02/2020,4,3,2.8,
 Census Tract,12031016400,White,03/2020,1,1.5,1.2,
@@ -14173,7 +14361,8 @@ Census Tract,12031016400,White,11/2025,1,3,2,
 Census Tract,12031016400,White,12/2025,1,0,3.4,
 Census Tract,12031016400,White,01/2026,9,3.5,,
 Census Tract,12031016400,White,02/2026,2,3,,
-Census Tract,12031016400,White,03/2026,1,0.5,,2026-03-07
+Census Tract,12031016400,White,03/2026,2,1.5,,
+Census Tract,12031016400,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016500,White,01/2020,1,0,0.4,
 Census Tract,12031016500,White,02/2020,1,0.5,1.2,
 Census Tract,12031016500,White,03/2020,2,1,0.8,
@@ -14248,7 +14437,8 @@ Census Tract,12031016500,White,11/2025,1,0.5,0.8,
 Census Tract,12031016500,White,12/2025,0,0,0.6,
 Census Tract,12031016500,White,01/2026,1,0,,
 Census Tract,12031016500,White,02/2026,0,0.5,,
-Census Tract,12031016500,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016500,White,03/2026,0,1,,
+Census Tract,12031016500,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016603,White,01/2020,3,1.5,1.4,
 Census Tract,12031016603,White,02/2020,2,0.5,1.6,
 Census Tract,12031016603,White,03/2020,1,1.5,0.8,
@@ -14323,7 +14513,8 @@ Census Tract,12031016603,White,11/2025,2,1,0.8,
 Census Tract,12031016603,White,12/2025,1,2.5,1.6,
 Census Tract,12031016603,White,01/2026,0,1.5,,
 Census Tract,12031016603,White,02/2026,0,0.5,,
-Census Tract,12031016603,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031016603,White,03/2026,0,1.5,,
+Census Tract,12031016603,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016604,White,01/2020,3,1.5,1.2,
 Census Tract,12031016604,White,02/2020,1,1.5,1.2,
 Census Tract,12031016604,White,03/2020,0,2.5,0.4,
@@ -14398,7 +14589,8 @@ Census Tract,12031016604,White,11/2025,0,1.5,1,
 Census Tract,12031016604,White,12/2025,1,3.5,1.8,
 Census Tract,12031016604,White,01/2026,3,1.5,,
 Census Tract,12031016604,White,02/2026,3,1.5,,
-Census Tract,12031016604,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031016604,White,03/2026,0,2.5,,
+Census Tract,12031016604,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016605,White,01/2020,1,2,14.2,
 Census Tract,12031016605,White,02/2020,2,1,7.8,
 Census Tract,12031016605,White,03/2020,1,5,10.8,
@@ -14473,7 +14665,8 @@ Census Tract,12031016605,White,11/2025,7,2,8.6,
 Census Tract,12031016605,White,12/2025,6,2,11.6,
 Census Tract,12031016605,White,01/2026,7,2,,
 Census Tract,12031016605,White,02/2026,1,1,,
-Census Tract,12031016605,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031016605,White,03/2026,5,5,,
+Census Tract,12031016605,White,04/2026,0,1.5,,2026-04-11
 Census Tract,12031016606,Other,01/2020,21,12.5,14.6,
 Census Tract,12031016606,Other,02/2020,9,19.5,10.6,
 Census Tract,12031016606,Other,03/2020,2,11.5,11,
@@ -14548,7 +14741,8 @@ Census Tract,12031016606,Other,11/2025,10,15,8,
 Census Tract,12031016606,Other,12/2025,25,12.5,14.6,
 Census Tract,12031016606,Other,01/2026,20,12.5,,
 Census Tract,12031016606,Other,02/2026,21,19.5,,
-Census Tract,12031016606,Other,03/2026,0,1.5,,2026-03-07
+Census Tract,12031016606,Other,03/2026,13,11.5,,
+Census Tract,12031016606,Other,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016711,White,01/2020,0,0,0.2,
 Census Tract,12031016711,White,02/2020,0,1,0,
 Census Tract,12031016711,White,03/2020,0,0,0.2,
@@ -14623,7 +14817,8 @@ Census Tract,12031016711,White,11/2025,0,0,0.6,
 Census Tract,12031016711,White,12/2025,0,0,0.2,
 Census Tract,12031016711,White,01/2026,0,0,,
 Census Tract,12031016711,White,02/2026,0,1,,
-Census Tract,12031016711,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016711,White,03/2026,0,0,,
+Census Tract,12031016711,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016724,White,01/2020,8,10,14.4,
 Census Tract,12031016724,White,02/2020,4,13,9.4,
 Census Tract,12031016724,White,03/2020,5,11,8.2,
@@ -14698,7 +14893,8 @@ Census Tract,12031016724,White,11/2025,5,8,7.4,
 Census Tract,12031016724,White,12/2025,21,10,9.6,
 Census Tract,12031016724,White,01/2026,16,10,,
 Census Tract,12031016724,White,02/2026,10,12.5,,
-Census Tract,12031016724,White,03/2026,0,1,,2026-03-07
+Census Tract,12031016724,White,03/2026,12,11,,
+Census Tract,12031016724,White,04/2026,8,2,,2026-04-11
 Census Tract,12031016725,White,01/2020,9,2,13.4,
 Census Tract,12031016725,White,02/2020,6,3.5,6.2,
 Census Tract,12031016725,White,03/2020,2,17.5,6.4,
@@ -14773,7 +14969,8 @@ Census Tract,12031016725,White,11/2025,9,3,6.2,
 Census Tract,12031016725,White,12/2025,8,4.5,8.6,
 Census Tract,12031016725,White,01/2026,8,2,,
 Census Tract,12031016725,White,02/2026,19,3.5,,
-Census Tract,12031016725,White,03/2026,0,3,,2026-03-07
+Census Tract,12031016725,White,03/2026,7,17.5,,
+Census Tract,12031016725,White,04/2026,0,1,,2026-04-11
 Census Tract,12031016726,White,01/2020,4,1.5,3,
 Census Tract,12031016726,White,02/2020,4,2,4,
 Census Tract,12031016726,White,03/2020,0,3,1.2,
@@ -14848,7 +15045,8 @@ Census Tract,12031016726,White,11/2025,2,1.5,3.6,
 Census Tract,12031016726,White,12/2025,2,1.5,2.4,
 Census Tract,12031016726,White,01/2026,2,1.5,,
 Census Tract,12031016726,White,02/2026,2,2,,
-Census Tract,12031016726,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016726,White,03/2026,1,3,,
+Census Tract,12031016726,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016727,White,01/2020,4,3.5,5,
 Census Tract,12031016727,White,02/2020,5,3,4,
 Census Tract,12031016727,White,03/2020,3,3.5,3.6,
@@ -14923,7 +15121,8 @@ Census Tract,12031016727,White,11/2025,0,2,5.4,
 Census Tract,12031016727,White,12/2025,6,2.5,4.4,
 Census Tract,12031016727,White,01/2026,11,3.5,,
 Census Tract,12031016727,White,02/2026,1,3,,
-Census Tract,12031016727,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031016727,White,03/2026,2,3.5,,
+Census Tract,12031016727,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016728,White,01/2020,2,0,0.8,
 Census Tract,12031016728,White,02/2020,0,1.5,1.4,
 Census Tract,12031016728,White,03/2020,1,0,1.2,
@@ -14998,7 +15197,8 @@ Census Tract,12031016728,White,11/2025,2,0,1.6,
 Census Tract,12031016728,White,12/2025,1,0.5,0.4,
 Census Tract,12031016728,White,01/2026,1,0,,
 Census Tract,12031016728,White,02/2026,1,1.5,,
-Census Tract,12031016728,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016728,White,03/2026,2,0,,
+Census Tract,12031016728,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016729,White,01/2020,7,5.5,6.4,
 Census Tract,12031016729,White,02/2020,6,3.5,2.8,
 Census Tract,12031016729,White,03/2020,3,5,2.8,
@@ -15073,7 +15273,8 @@ Census Tract,12031016729,White,11/2025,5,2.5,4.2,
 Census Tract,12031016729,White,12/2025,6,6,4,
 Census Tract,12031016729,White,01/2026,18,5.5,,
 Census Tract,12031016729,White,02/2026,5,3.5,,
-Census Tract,12031016729,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016729,White,03/2026,5,5,,
+Census Tract,12031016729,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016730,White,01/2020,0,1,0,
 Census Tract,12031016730,White,02/2020,0,0,0.4,
 Census Tract,12031016730,White,03/2020,1,0,0,
@@ -15148,7 +15349,8 @@ Census Tract,12031016730,White,11/2025,0,0,0.2,
 Census Tract,12031016730,White,12/2025,1,0.5,0,
 Census Tract,12031016730,White,01/2026,0,1,,
 Census Tract,12031016730,White,02/2026,0,0,,
-Census Tract,12031016730,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016730,White,03/2026,1,0,,
+Census Tract,12031016730,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016731,White,01/2020,5,5,11.4,
 Census Tract,12031016731,White,02/2020,5,3,4.6,
 Census Tract,12031016731,White,03/2020,1,5.5,9,
@@ -15223,7 +15425,8 @@ Census Tract,12031016731,White,11/2025,4,6.5,5.6,
 Census Tract,12031016731,White,12/2025,6,12.5,11.4,
 Census Tract,12031016731,White,01/2026,7,5,,
 Census Tract,12031016731,White,02/2026,17,3,,
-Census Tract,12031016731,White,03/2026,0,4,,2026-03-07
+Census Tract,12031016731,White,03/2026,8,5.5,,
+Census Tract,12031016731,White,04/2026,0,1,,2026-04-11
 Census Tract,12031016801,White,01/2020,0,0,0,
 Census Tract,12031016801,White,02/2020,0,0,0,
 Census Tract,12031016801,White,03/2020,0,0,0.2,
@@ -15298,7 +15501,8 @@ Census Tract,12031016801,White,11/2025,0,0,0,
 Census Tract,12031016801,White,12/2025,0,0,0.2,
 Census Tract,12031016801,White,01/2026,2,0,,
 Census Tract,12031016801,White,02/2026,0,0,,
-Census Tract,12031016801,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016801,White,03/2026,0,0,,
+Census Tract,12031016801,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016803,White,01/2020,1,1.5,0.4,
 Census Tract,12031016803,White,02/2020,2,5.5,0,
 Census Tract,12031016803,White,03/2020,0,1,0.2,
@@ -15373,7 +15577,8 @@ Census Tract,12031016803,White,11/2025,2,0.5,0.6,
 Census Tract,12031016803,White,12/2025,0,1.5,0.8,
 Census Tract,12031016803,White,01/2026,0,1.5,,
 Census Tract,12031016803,White,02/2026,1,5.5,,
-Census Tract,12031016803,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031016803,White,03/2026,0,1,,
+Census Tract,12031016803,White,04/2026,1,1.5,,2026-04-11
 Census Tract,12031016804,White,01/2020,0,0,0.4,
 Census Tract,12031016804,White,02/2020,0,0,0.2,
 Census Tract,12031016804,White,03/2020,0,0.5,0.4,
@@ -15448,7 +15653,8 @@ Census Tract,12031016804,White,11/2025,2,0,0.2,
 Census Tract,12031016804,White,12/2025,0,0,0.2,
 Census Tract,12031016804,White,01/2026,0,0,,
 Census Tract,12031016804,White,02/2026,0,0,,
-Census Tract,12031016804,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016804,White,03/2026,0,0.5,,
+Census Tract,12031016804,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016807,White,01/2020,6,2.5,2,
 Census Tract,12031016807,White,02/2020,5,4,1.8,
 Census Tract,12031016807,White,03/2020,2,3,2,
@@ -15523,7 +15729,8 @@ Census Tract,12031016807,White,11/2025,4,4.5,0.8,
 Census Tract,12031016807,White,12/2025,1,1,1.6,
 Census Tract,12031016807,White,01/2026,5,2.5,,
 Census Tract,12031016807,White,02/2026,4,4,,
-Census Tract,12031016807,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031016807,White,03/2026,7,3,,
+Census Tract,12031016807,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031016808,White,01/2020,2,6.5,4.2,
 Census Tract,12031016808,White,02/2020,4,5.5,2.6,
 Census Tract,12031016808,White,03/2020,2,5.5,1.8,
@@ -15598,7 +15805,8 @@ Census Tract,12031016808,White,11/2025,4,7.5,1.2,
 Census Tract,12031016808,White,12/2025,3,6.5,2.6,
 Census Tract,12031016808,White,01/2026,8,6.5,,
 Census Tract,12031016808,White,02/2026,5,5.5,,
-Census Tract,12031016808,White,03/2026,0,1,,2026-03-07
+Census Tract,12031016808,White,03/2026,4,5.5,,
+Census Tract,12031016808,White,04/2026,1,1,,2026-04-11
 Census Tract,12031016809,White,01/2020,0,1.5,0.6,
 Census Tract,12031016809,White,02/2020,0,0.5,0.2,
 Census Tract,12031016809,White,03/2020,0,1,0,
@@ -15673,7 +15881,8 @@ Census Tract,12031016809,White,11/2025,0,0.5,0.4,
 Census Tract,12031016809,White,12/2025,0,0,0.2,
 Census Tract,12031016809,White,01/2026,0,1.5,,
 Census Tract,12031016809,White,02/2026,1,0.5,,
-Census Tract,12031016809,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016809,White,03/2026,0,1,,
+Census Tract,12031016809,White,04/2026,1,0,,2026-04-11
 Census Tract,12031016810,White,01/2020,0,0,1.2,
 Census Tract,12031016810,White,02/2020,0,0.5,0,
 Census Tract,12031016810,White,03/2020,0,0,0.2,
@@ -15748,7 +15957,8 @@ Census Tract,12031016810,White,11/2025,0,0.5,0.6,
 Census Tract,12031016810,White,12/2025,1,0,0.2,
 Census Tract,12031016810,White,01/2026,1,0,,
 Census Tract,12031016810,White,02/2026,0,0.5,,
-Census Tract,12031016810,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016810,White,03/2026,1,0,,
+Census Tract,12031016810,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016811,White,01/2020,0,0.5,0.6,
 Census Tract,12031016811,White,02/2020,0,0.5,0.8,
 Census Tract,12031016811,White,03/2020,0,0.5,0.2,
@@ -15823,7 +16033,8 @@ Census Tract,12031016811,White,11/2025,1,0,0.4,
 Census Tract,12031016811,White,12/2025,0,0,0.8,
 Census Tract,12031016811,White,01/2026,0,0.5,,
 Census Tract,12031016811,White,02/2026,0,0,,
-Census Tract,12031016811,White,03/2026,0,0,,2026-03-07
+Census Tract,12031016811,White,03/2026,0,0.5,,
+Census Tract,12031016811,White,04/2026,0,0,,2026-04-11
 Census Tract,12031016812,White,01/2020,3,2.5,1.6,
 Census Tract,12031016812,White,02/2020,1,1,0.2,
 Census Tract,12031016812,White,03/2020,2,1,0.2,
@@ -15898,7 +16109,8 @@ Census Tract,12031016812,White,11/2025,0,1,0.6,
 Census Tract,12031016812,White,12/2025,3,2.5,1.2,
 Census Tract,12031016812,White,01/2026,5,2.5,,
 Census Tract,12031016812,White,02/2026,11,1,,
-Census Tract,12031016812,White,03/2026,0,1,,2026-03-07
+Census Tract,12031016812,White,03/2026,4,1,,
+Census Tract,12031016812,White,04/2026,0,1,,2026-04-11
 Census Tract,12031016813,White,01/2020,2,4,2,
 Census Tract,12031016813,White,02/2020,3,8.5,1.8,
 Census Tract,12031016813,White,03/2020,2,4.5,0.4,
@@ -15973,7 +16185,8 @@ Census Tract,12031016813,White,11/2025,2,2,1.4,
 Census Tract,12031016813,White,12/2025,5,3.5,1.8,
 Census Tract,12031016813,White,01/2026,2,4,,
 Census Tract,12031016813,White,02/2026,6,8,,
-Census Tract,12031016813,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031016813,White,03/2026,7,4.5,,
+Census Tract,12031016813,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031017101,White,01/2020,1,2,4,
 Census Tract,12031017101,White,02/2020,2,2.5,1.4,
 Census Tract,12031017101,White,03/2020,0,1.5,0.8,
@@ -16048,7 +16261,8 @@ Census Tract,12031017101,White,11/2025,3,0.5,0.8,
 Census Tract,12031017101,White,12/2025,2,1,1.2,
 Census Tract,12031017101,White,01/2026,6,2,,
 Census Tract,12031017101,White,02/2026,2,2.5,,
-Census Tract,12031017101,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031017101,White,03/2026,0,1.5,,
+Census Tract,12031017101,White,04/2026,0,0.5,,2026-04-11
 Census Tract,12031017102,White,01/2020,3,5,1,
 Census Tract,12031017102,White,02/2020,4,6.5,0.8,
 Census Tract,12031017102,White,03/2020,1,5.5,0.4,
@@ -16123,7 +16337,8 @@ Census Tract,12031017102,White,11/2025,6,2.5,2,
 Census Tract,12031017102,White,12/2025,6,4.5,1.8,
 Census Tract,12031017102,White,01/2026,7,5,,
 Census Tract,12031017102,White,02/2026,2,6.5,,
-Census Tract,12031017102,White,03/2026,0,1.5,,2026-03-07
+Census Tract,12031017102,White,03/2026,3,5.5,,
+Census Tract,12031017102,White,04/2026,0,1,,2026-04-11
 Census Tract,12031017200,Other,01/2020,4,15.5,4.4,
 Census Tract,12031017200,Other,02/2020,13,7,3.2,
 Census Tract,12031017200,Other,03/2020,7,11,2.4,
@@ -16198,7 +16413,8 @@ Census Tract,12031017200,Other,11/2025,20,6.5,4.2,
 Census Tract,12031017200,Other,12/2025,13,12.5,4.6,
 Census Tract,12031017200,Other,01/2026,17,15.5,,
 Census Tract,12031017200,Other,02/2026,14,7,,
-Census Tract,12031017200,Other,03/2026,0,2,,2026-03-07
+Census Tract,12031017200,Other,03/2026,10,11,,
+Census Tract,12031017200,Other,04/2026,2,3,,2026-04-11
 Census Tract,12031017300,White,01/2020,1,6.5,2.8,
 Census Tract,12031017300,White,02/2020,4,15.5,1.6,
 Census Tract,12031017300,White,03/2020,0,4.5,3,
@@ -16273,7 +16489,8 @@ Census Tract,12031017300,White,11/2025,4,8,3.2,
 Census Tract,12031017300,White,12/2025,13,4.5,5,
 Census Tract,12031017300,White,01/2026,6,6.5,,
 Census Tract,12031017300,White,02/2026,12,15.5,,
-Census Tract,12031017300,White,03/2026,0,0.5,,2026-03-07
+Census Tract,12031017300,White,03/2026,14,4.5,,
+Census Tract,12031017300,White,04/2026,0,3,,2026-04-11
 Census Tract,12031017400,Black,01/2020,3,10.5,5.6,
 Census Tract,12031017400,Black,02/2020,6,11.5,2.8,
 Census Tract,12031017400,Black,03/2020,6,7,3.4,
@@ -16348,7 +16565,8 @@ Census Tract,12031017400,Black,11/2025,3,2.5,5.4,
 Census Tract,12031017400,Black,12/2025,5,6,6,
 Census Tract,12031017400,Black,01/2026,1,10.5,,
 Census Tract,12031017400,Black,02/2026,4,11.5,,
-Census Tract,12031017400,Black,03/2026,0,1,,2026-03-07
+Census Tract,12031017400,Black,03/2026,5,7,,
+Census Tract,12031017400,Black,04/2026,1,1,,2026-04-11
 Census Tract,12031990000,Other,01/2020,0,0,0,
 Census Tract,12031990000,Other,02/2020,0,0,0,
 Census Tract,12031990000,Other,03/2020,0,0,0,
@@ -16423,7 +16641,8 @@ Census Tract,12031990000,Other,11/2025,0,0,0,
 Census Tract,12031990000,Other,12/2025,0,0,0,
 Census Tract,12031990000,Other,01/2026,0,0,,
 Census Tract,12031990000,Other,02/2026,0,0,,
-Census Tract,12031990000,Other,03/2026,0,0,,2026-03-07
+Census Tract,12031990000,Other,03/2026,0,0,,
+Census Tract,12031990000,Other,04/2026,0,0,,2026-04-11
 Census Tract,sealed,,01/2020,4,4.5,1.2,
 Census Tract,sealed,,02/2020,11,7.5,0.8,
 Census Tract,sealed,,03/2020,4,5.5,0.6,
@@ -16498,4 +16717,5 @@ Census Tract,sealed,,11/2025,4,41.5,1.2,
 Census Tract,sealed,,12/2025,9,5.5,1.2,
 Census Tract,sealed,,01/2026,12,4.5,,
 Census Tract,sealed,,02/2026,9,7.5,,
-Census Tract,sealed,,03/2026,1,1,,2026-03-07
+Census Tract,sealed,,03/2026,10,5.5,,
+Census Tract,sealed,,04/2026,2,1,,2026-04-11
