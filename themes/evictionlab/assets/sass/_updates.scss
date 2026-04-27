@@ -43,6 +43,12 @@ a.btn.buttonlink {
     color: #434878;
   }
 }
+@media (min-width: 992px) {
+  .page-the-eviction-lab #home-body p.reporting-type__paragraph {
+    font-size: 1.6rem;
+  }
+}
+
 .research-type,
 .research-type a {
   color: #2c897f;
