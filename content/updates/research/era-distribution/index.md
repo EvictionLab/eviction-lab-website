@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: did-emergency-rental-assistance-reach-the-renters-who-needed-it-most
 contenttype: updates
