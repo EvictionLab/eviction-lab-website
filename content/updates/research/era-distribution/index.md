@@ -8,15 +8,15 @@ contentcat: research
 featured: true
 in_index: true
 title: "Did Emergency Rental Assistance Reach the Renters Who Needed It Most?"
-date: 2026-04-19T00:49:04.271Z
+date: 2026-04-27T00:49:04.271Z
 postauthorname: Peter Hepburn, Jacob Haas, Grace Hartley, Nick Graetz, Carl Gershenson, and Matthew Desmond
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: lorem ipsum
-listSummary: lorem ipsum
-twImage: ets-2025-hero-social.png
-image: ets-2025-hero-social.png
-fbImage: ets-2025-hero-social.png
+description: In the wake of the COVID-19 pandemic, Congress provided $46.6 billion in Emergency Rental Assistance (ERA). Did the money reach the neighborhoods where renters were most likely to lose their homes? 
+listSummary: In the wake of the COVID-19 pandemic, Congress provided $46.6 billion in Emergency Rental Assistance (ERA). Did the money reach the neighborhoods where renters were most likely to lose their homes? 
+twImage: GettyImages-1259023613.jpg
+image: GettyImages-1259023613.jpg
+fbImage: GettyImages-1259023613.jpg
 scripts:
   - charts
   - grouped-bar-chart
@@ -24,9 +24,9 @@ scripts:
 
 When the COVID-19 pandemic hit, millions of households fell behind on rent and utility payments. {{< smartlink "The federal government and many states established eviction moratoria intended to keep people safely housed" "https://evictionlab.org/assessing-state-eviction-prevention-covid-19/" >}}, but these protections never cancelled rent. With families falling further behind, Congress provided $46.6 billion in Emergency Rental Assistance (ERA), a huge sum of money intended to help renters pay back what they owed. These funds were a lifesaver, but they also presented a logistical challenge: In a matter of months, hundreds of state, local, and tribal programs had to develop application systems and start making payments—many building these systems from scratch—all while the pandemic was still unfolding.
 
-That raises an obvious question: Did the money reach the neighborhoods where renters were most likely to lose their homes? In a new study published in the Journal of Urban Affairs, we find that, on the whole, ERA was well-targeted to places where need was greatest. Using Treasury Department payment records, we show that more aid went to places where eviction had been more common before the pandemic. In those same neighborhoods, a larger share of low-income renter households also got help faster.
+That raises an obvious question: Did the money reach the neighborhoods where renters were most likely to lose their homes? In {{< smartlink "a new study published in the Journal of Urban Affairs" "https://www.tandfonline.com/doi/full/10.1080/07352166.2026.2649238" >}}, we find that, on the whole, ERA was well-targeted to places where need was greatest. Using Treasury Department payment records, we show that more aid went to places where eviction had been more common before the pandemic. In those same neighborhoods, a larger share of low-income renter households also got help faster.
 
-{{< researchpaperlink "ARTICLE TITLE" "https://doi.org/10.1080/07352166.2026.2649238" "Peter Hepburn, Jacob Haas, Grace Hartley, Nick Graetz, Carl Gershenson, and Matthew Desmond" "social-forces.jpg" >}}
+{{< researchpaperlink "Where was emergency rental assistance spent? A description of the targeting of federal aid" "https://www.tandfonline.com/doi/full/10.1080/07352166.2026.2649238" "Peter Hepburn, Jacob Haas, Grace Hartley, Nick Graetz, Carl Gershenson, and Matthew Desmond" "jua-cover.jpg" >}}
 
 
 The ERA program was large and fast-moving. The first round of ERA funding was approved by Congress in the last days of 2020, with more following in March, 2021. We had access to data on over half of all ERA payments, totaling approximately $20 billion ({{< smartlink "we have released a public-use version of these data" "https://evictionlab.org/pandemic-rental-assistance/" >}}). Figure 1 shows the timing, by month, of when this money was distributed. Payments to renters and landlords rose quickly through 2021, peaked later that year, and then continued well into 2022 as programs spent down the money they had received. But the pace of this distribution varied across the country, with some places moving much faster than others. This is why we look not only at how much money went out, but also at when and where it was distributed.
