@@ -33,7 +33,7 @@ The ERA program was large and fast-moving. The first round of ERA funding (**ERA
 
 <div class="figheader">Figure 1. ERA Spending by Month</div>
 <!-- TODO: merge dev -> staging -> prod on el-site and update URL -->
-<iframe class="visual" src="https://development--eviction-lab-site.netlify.app/blog/era-distribution"></iframe>
+<iframe class="visual" src="https://production--eviction-lab-site.netlify.app/blog/era-distribution"></iframe>
 <div class="legend">
   <div class="legend-item legend-item--0">
     <div class="legend-item__color"></div>
