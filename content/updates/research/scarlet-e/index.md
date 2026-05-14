@@ -22,6 +22,10 @@ twImage: xxx.jpg
 fbImage: xxx.jpg
 ---
 <style>
+  .research__paperlink img {
+    padding: 28px 24px;
+    background: white;
+  }
   .svg-map__shape--hovered,
   .svg-map__map.css-hover .svg-map__shape.hoverable:hover {
     stroke: #fff;
