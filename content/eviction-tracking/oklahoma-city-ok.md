@@ -1,4 +1,5 @@
 ---
+collection: true
 draft: true
 h1: Oklahoma City, Oklahoma
 slug: oklahoma-city-ok
@@ -6,13 +7,11 @@ date: 2026-05-14T04:00:00.000Z
 rentersSite: Oklahoma City
 areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
-collection: true
 title: Oklahoma City, Oklahoma | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
 {{< report_intro site_id="40109"  >}}
 {{</ report_intro >}}
-
 
 {{% trends_chart id="trends" data="/uploads/oklahomacity_barchart.csv" %}}
 
@@ -22,10 +21,11 @@ This plot shows monthly eviction filings in Oklahoma City over the past 12 month
 
 1. Eviction filing data compiled and provided by [Mental Health Association Oklahoma](https://mhaok.org/) and Dr. Jacob Dearmon with the [Ronnie K. Irani Center for Data Analytics and Artificial Intelligence, Meinders School of Business, Oklahoma City University](https://www.okcu.edu/academics/schools-colleges/meinders-school-of-business/center-for-data-analytics-and-artificial-intelligence).
 
-
 {{%/ trends_chart %}}
 
-{{% report_top_evictors id="topEvictorsSection" data="/uploads/oklahomacity_hotspots_media_report.csv" %}} 
+
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/oklahomacity_hotspots_media_report.csv" %}}
+ 
 
 # Eviction Hotspots
 
@@ -33,9 +33,11 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 
 Eviction Hotspot data are updated semi-annually.
 
+
 {{%/ report_top_evictors %}}
 
-{{%  report_map shapes="/uploads/Oklahoma City_shapes.json" data="/uploads/oklahomacity_map.csv"  topFilers="/uploads/oklahomacity_hotspots_media_report.csv" %}}
+
+{{%  report_map shapes="/uploads/oklahoma-city_shapes.json" data="/uploads/oklahomacity_map.csv"  topFilers="/uploads/oklahomacity_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 
@@ -46,7 +48,6 @@ Oklahoma County is divided into 266 census tracts. In each of those tracts, we m
 3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts. We exclude buildings with fewer than 15 filings, in which case fewer than 100 buildings will be displayed. 
 
 {{%/ report_map %}}
-
 
 {{% report_chart id="race" data="/uploads/oklahomacity_linechart.csv" imputedNoteNumber="2" %}}
 
@@ -61,4 +62,3 @@ Toggle the figure to compare recent filings to average filings in 2023–2024, k
 1. Eviction filing data compiled and provided by [Mental Health Association Oklahoma](https://mhaok.org/) and Dr. Jacob Dearmon with the [Ronnie K. Irani Center for Data Analytics and Artificial Intelligence, Meinders School of Business, Oklahoma City University](https://www.okcu.edu/academics/schools-colleges/meinders-school-of-business/center-for-data-analytics-and-artificial-intelligence).
 
 {{%/ report_chart %}}
-
