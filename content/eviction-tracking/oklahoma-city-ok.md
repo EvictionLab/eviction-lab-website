@@ -39,7 +39,7 @@ Eviction Hotspot data are updated semi-annually.
 
 # The geography of eviction filings
 
-Cobb, Clayton, DeKalb, Gwinnett, and Fulton Counties are divided into 1006 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1 2</sup>
+Oklahoma County is divided into 266 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1 2</sup>
 
 1. Eviction filing data compiled and provided by [Mental Health Association Oklahoma](https://mhaok.org/) and Dr. Jacob Dearmon with the [Ronnie K. Irani Center for Data Analytics and Artificial Intelligence, Meinders School of Business, Oklahoma City University](https://www.okcu.edu/academics/schools-colleges/meinders-school-of-business/center-for-data-analytics-and-artificial-intelligence).
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
