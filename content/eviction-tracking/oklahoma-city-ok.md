@@ -14,7 +14,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 {{</ report_intro >}}
 
 
-{{% trends_chart id="trends" data="/uploads/Oklahoma City_barchart.csv" %}}
+{{% trends_chart id="trends" data="/uploads/oklahomacity_barchart.csv" %}}
 
 # Trends in eviction filings
 
@@ -25,7 +25,7 @@ This plot shows monthly eviction filings in Oklahoma City over the past 12 month
 
 {{%/ trends_chart %}}
 
-{{% report_top_evictors id="topEvictorsSection" data="/uploads/Oklahoma City_hotspots_media_report.csv" %}} 
+{{% report_top_evictors id="topEvictorsSection" data="/uploads/oklahomacity_hotspots_media_report.csv" %}} 
 
 # Eviction Hotspots
 
@@ -35,7 +35,7 @@ Eviction Hotspot data are updated semi-annually.
 
 {{%/ report_top_evictors %}}
 
-{{%  report_map shapes="/uploads/Oklahoma City_shapes.json" data="/uploads/Oklahoma City_map.csv"  topFilers="/uploads/Oklahoma City_hotspots_media_report.csv" %}}
+{{%  report_map shapes="/uploads/Oklahoma City_shapes.json" data="/uploads/oklahomacity_map.csv"  topFilers="/uploads/oklahomacity_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 
@@ -48,7 +48,7 @@ Cobb, Clayton, DeKalb, Gwinnett, and Fulton Counties are divided into 1006 censu
 {{%/ report_map %}}
 
 
-{{% report_chart id="race" data="/uploads/Oklahoma City_linechart.csv" imputedNoteNumber="2" %}}
+{{% report_chart id="race" data="/uploads/oklahomacity_linechart.csv" imputedNoteNumber="2" %}}
 
 # The demographics of eviction filings
 
