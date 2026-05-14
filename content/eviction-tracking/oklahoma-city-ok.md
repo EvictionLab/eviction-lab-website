@@ -1,7 +1,7 @@
 ---
 draft: false
 h1: Oklahoma City, Oklahoma
-slug: oklahomacity-ok
+slug: oklahoma-city-ok
 date: 2025-11-30T04:00:00.000Z
 rentersSite: Oklahoma City
 areaSite: true
