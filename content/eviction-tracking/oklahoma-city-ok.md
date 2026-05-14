@@ -2,7 +2,7 @@
 draft: true
 h1: Oklahoma City, Oklahoma
 slug: oklahoma-city-ok
-date: 2025-11-30T04:00:00.000Z
+date: 2026-05-14T04:00:00.000Z
 rentersSite: Oklahoma City
 areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
@@ -10,7 +10,7 @@ collection: true
 title: Oklahoma City, Oklahoma | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="13121"  >}}
+{{< report_intro site_id="40109"  >}}
 {{</ report_intro >}}
 
 
@@ -20,7 +20,7 @@ fbImage: /images/assets/graphics/ets-bg-social.png
 
 This plot shows monthly eviction filings in Oklahoma City over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Access to Metro Oklahoma City eviction filing data has been made possible through a partnership with the [Federal Reserve Bank of Oklahoma City](https://www.Oklahoma Cityfed.org/), the [Oklahoma City Regional Commission](https://Oklahoma Cityregional.org/), [Georgia Tech](https://www.OKtech.edu/), the [Oklahoma City Volunteer Lawyers Foundation](https://avlf.org/), and [Assemblage Consulting](https://asmblg.io/).
+1. Eviction filing data compiled and provided by [Mental Health Association Oklahoma](https://mhaok.org/) and Dr. Jacob Dearmon with the [Ronnie K. Irani Center for Data Analytics and Artificial Intelligence, Meinders School of Business, Oklahoma City University](https://www.okcu.edu/academics/schools-colleges/meinders-school-of-business/center-for-data-analytics-and-artificial-intelligence).
 
 
 {{%/ trends_chart %}}
@@ -41,7 +41,7 @@ Eviction Hotspot data are updated semi-annually.
 
 Cobb, Clayton, DeKalb, Gwinnett, and Fulton Counties are divided into 1006 census tracts. In each of those tracts, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the area—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1 2</sup>
 
-1. Access to Metro Oklahoma City eviction filing data has been made possible through a partnership with the [Federal Reserve Bank of Oklahoma City](https://www.Oklahoma Cityfed.org/), the [Oklahoma City Regional Commission](https://Oklahoma Cityregional.org/), [Georgia Tech](https://www.OKtech.edu/), the [Oklahoma City Volunteer Lawyers Foundation](https://avlf.org/), and [Assemblage Consulting](https://asmblg.io/).
+1. Eviction filing data compiled and provided by [Mental Health Association Oklahoma](https://mhaok.org/) and Dr. Jacob Dearmon with the [Ronnie K. Irani Center for Data Analytics and Artificial Intelligence, Meinders School of Business, Oklahoma City University](https://www.okcu.edu/academics/schools-colleges/meinders-school-of-business/center-for-data-analytics-and-artificial-intelligence).
 2. Tract-level breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 3. Tract-level eviction data are updated more regularly than eviction hotspots, which may result in some disagreement in filing counts. We exclude buildings with fewer than 15 filings, in which case fewer than 100 buildings will be displayed. 
 
@@ -58,7 +58,7 @@ American Community Survey (ACS) data allow us to categorize neighborhoods by the
 
 Toggle the figure to compare recent filings to average filings in 2023–2024, keeping constant the racial/ethnic majority of each neighborhood.<sup>1</sup>
 
-1. Access to Metro Oklahoma City eviction filing data has been made possible through a partnership with the [Federal Reserve Bank of Oklahoma City](https://www.Oklahoma Cityfed.org/), the [Oklahoma City Regional Commission](https://Oklahoma Cityregional.org/), [Georgia Tech](https://www.OKtech.edu/), the [Oklahoma City Volunteer Lawyers Foundation](https://avlf.org/), and [Assemblage Consulting](https://asmblg.io/).
+1. Eviction filing data compiled and provided by [Mental Health Association Oklahoma](https://mhaok.org/) and Dr. Jacob Dearmon with the [Ronnie K. Irani Center for Data Analytics and Artificial Intelligence, Meinders School of Business, Oklahoma City University](https://www.okcu.edu/academics/schools-colleges/meinders-school-of-business/center-for-data-analytics-and-artificial-intelligence).
 
 {{%/ report_chart %}}
 
