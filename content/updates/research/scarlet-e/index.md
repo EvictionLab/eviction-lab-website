@@ -12,14 +12,14 @@ date: 2026-05-15T00:49:04.271Z
 postauthorname: The Eviction Lab
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: ets-2025-hero-social.jpg
+image: xxx.jpg
 description: lorem ipsum
 listSummary: lorem ipsum
 scripts:
   - charts
   - maps
-twImage: ets-2025-hero-social.jpg
-fbImage: ets-2025-hero-social.jpg
+twImage: xxx.jpg
+fbImage: xxx.jpg
 ---
 <style>
   .svg-map__shape--hovered,
@@ -33,7 +33,7 @@ fbImage: ets-2025-hero-social.jpg
 </style>
 <span class="dropcap green">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-{{< researchpaperlink "Dismantling the 'Scarlet E': Eviction Record Privacy as Health Justice" "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6725321" "Emily Benfer" "journal.png" >}}
+{{< researchpaperlink "Dismantling the 'Scarlet E': Eviction Record Privacy as Health Justice" "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6725321" "Emily A. Benfer" "journal.png" >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
