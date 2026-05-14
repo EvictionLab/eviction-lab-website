@@ -10,8 +10,6 @@ collection: true
 ---
 {{< report_intro site_id="51"  >}}
 
-Virginia implemented a state-wide eviction moratorium between March 16, 2020 and June 28, 2020.  Further protections restricting the circumstances under which evictions could be filed were in place from August 10, 2020 to September 7, 2020, and then from January 1, 2021 to June 30, 2021. These were again renewed from August 10, 2021 to June 30, 2022. Eviction filings remained low in the state during these periods, but have increased since these protections were lifted.
-
  A closer look at eviction filing patterns in Richmond and the surrounding area is [available here](https://evictionlab.org/eviction-tracking/richmond-va/).
 
 {{< /report_intro >}}

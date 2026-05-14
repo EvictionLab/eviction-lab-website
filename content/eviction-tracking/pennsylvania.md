@@ -10,8 +10,6 @@ date: 2023-05-04T21:18:49.059Z
 ---
 {{< report_intro site_id="42"  >}}
 
-The state of Pennsylvania enacted a strong eviction moratorium that extended until August 31, 2020. Eviction filings related to nonpayment of rent were not accepted during that period. Filings increased following the end of the moratorium.
-
 Our state-wide counts of eviction filings are slight underestimates when compared to the official [Pennsylvania court data dashboard](https://www.pacourts.us/news-and-statistics/research-and-statistics/dashboard-table-of-contents/magisterial-district-courts-statewide-dashboard). 
 
  Additional information is available on eviction filing patterns in [Pittsburgh ](https://evictionlab.org/eviction-tracking/pittsburgh-pa/)and [Philadelphia](https://evictionlab.org/eviction-tracking/philadelphia-pa/)

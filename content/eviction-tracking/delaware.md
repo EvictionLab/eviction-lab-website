@@ -15,8 +15,6 @@ rentersSite: Delaware
 
 {{< report_intro site_id="10"  >}}
 
-Delaware implemented a state-wide eviction moratorium between March 17 and July 1, 2020. Almost no new eviction cases were filed in the state during this period. New filings increased after these protections were lifted. 
-
  A closer look at eviction filing patterns in Wilmington and the surrounding area is [available here](https://evictionlab.org/eviction-tracking/wilmington-de/).
 
 {{< /report_intro >}}
