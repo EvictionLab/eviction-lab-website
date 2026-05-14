@@ -2179,34 +2179,35 @@ Elab.Map = (function (Elab) {
      */
 
     function handleHover(e) {
-      // Change the cursor style as a UI indicator.
-      map.getCanvas().style.cursor = "pointer";
-      renderTooltip(e.features[0], e);
+      if (!e.features.length) return;
+      var newHoveredFeat = e.features[0];
+      // prioritize point tooltips: if a point is currently hovered, ignore choropleth hover events
+      if (hoveredFeat?.source === "points" && newHoveredFeat.source !== "points") return;
 
-      if (e.features.length > 0) {
-        if (hoveredFeat) {
-          map.setFeatureState(
-            {
-              source: hoveredFeat.source,
-              id: hoveredFeat.id,
-            },
-            {
-              hover: false,
-            },
-          );
-        }
-
-        hoveredFeat = e.features[0];
+      if (hoveredFeat) {
         map.setFeatureState(
           {
             source: hoveredFeat.source,
             id: hoveredFeat.id,
           },
           {
-            hover: true,
+            hover: false,
           },
         );
       }
+
+      map.getCanvas().style.cursor = "pointer";
+      hoveredFeat = newHoveredFeat;
+      renderTooltip(hoveredFeat, e);
+      map.setFeatureState(
+        {
+          source: hoveredFeat.source,
+          id: hoveredFeat.id,
+        },
+        {
+          hover: true,
+        },
+      );
     }
     /**
      * Clear tooltip and outline of hover out of feature
