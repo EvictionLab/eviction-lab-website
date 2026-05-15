@@ -1,5 +1,5 @@
 group,month,month_last_day,month_filings,avg_filings,month_diff,month_filings_imputed,baseline_share
-White,05/2025,,0,0,,,
-Black,05/2025,,0,0,,,
-Hispanic,05/2025,,0,0,,,
-Other,05/2025,,0,0,,,
+White,05/2025,,7853,0,Inf,,
+Black,05/2025,,1162,0,Inf,,
+Hispanic,05/2025,,1192,0,Inf,,
+Other,05/2025,,6326,0,Inf,,
