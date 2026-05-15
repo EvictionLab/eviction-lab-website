@@ -39,7 +39,7 @@ Eviction Hotspot data are updated semi-annually.
 {{%/ report_top_evictors %}}
 
 
-{{%  report_map shapes="/uploads/oklahoma-city_shapes.json" data="/uploads/oklahomacity_map.csv"  topFilers="/uploads/oklahomacity_hotspots_media_report.csv" %}}
+{{%  report_map shapes="/uploads/oklahomacity_shapes.json" data="/uploads/oklahomacity_map.csv"  topFilers="/uploads/oklahomacity_hotspots_media_report.csv" %}}
 
 # The geography of eviction filings
 
