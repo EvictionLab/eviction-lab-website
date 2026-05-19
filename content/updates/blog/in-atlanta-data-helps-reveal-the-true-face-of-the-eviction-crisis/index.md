@@ -49,6 +49,8 @@ Amid the region’s broader housing crisis, the Hunter Ridge mobile home park ow
 
 In Atlanta, landlords for just 100 addresses account for 15% of all evictions filed. While this concentration is lower than other cities in our tracker, like South Bend or Albuquerque — where about half of filings are tied to 100 buildings —  the scale is still alarming. More than 22,000 evictions annually are filed in these top evicting buildings in the Atlanta region. This is higher than the total number of cases filed across the entire state of Connecticut in 2025. 
 
+{{< pullquote `"We started going door to door ... and it didn’t take long to see that there was a big problem."` >}}
+
 But what does this mean to the people who live in one of these “top evictors”? 
 
 When Alcorn started talking to tenants, concerning landlord practices became evident.
