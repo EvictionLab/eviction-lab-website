@@ -3,7 +3,7 @@ collection: true
 draft: true
 h1: Oklahoma City, Oklahoma
 slug: oklahoma-city-ok
-date: 2026-05-14T04:00:00.000Z
+date: 2026-05-19T04:00:00.000Z
 rentersSite: Oklahoma City
 areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
@@ -26,6 +26,7 @@ This plot shows monthly eviction filings in Oklahoma City over the past 12 month
 
 {{% report_top_evictors id="topEvictorsSection" data="/uploads/oklahomacity_hotspots_media_report.csv" %}}
 
+
  
 
 # Eviction Hotspots
@@ -36,18 +37,27 @@ Eviction Hotspot data are updated semi-annually.
 
 
 
+
 {{%/ report_top_evictors %}}
+
+
 
 
 {{%  report_map shapes="/uploads/oklahomacity_shapes.json" data="/uploads/oklahomacity_map.csv"  topFilers="/uploads/oklahomacity_hotspots_media_report.csv" %}}
 
+
+
+
 {{% report_median_claims id="medianFilings" data="/uploads/oklahomacity_claims_monthly.csv" %}}
+
 
 # Changes in claim amounts
 
 When a landlord files an eviction claim in Oklahoma City, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month over the past 12 months. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed. The dashed horizontal line on the plot marks the typical claim on an eviction case filed during 2023 and 2024 (our baseline).
 
+
 {{%/ report_median_claims %}}
+
 
 # The geography of eviction filings
 
