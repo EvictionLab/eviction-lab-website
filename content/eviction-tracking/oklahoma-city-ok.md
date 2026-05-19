@@ -42,12 +42,6 @@ Eviction Hotspot data are updated semi-annually.
 
 
 
-
-{{%  report_map shapes="/uploads/oklahomacity_shapes.json" data="/uploads/oklahomacity_map.csv"  topFilers="/uploads/oklahomacity_hotspots_media_report.csv" %}}
-
-
-
-
 {{% report_median_claims id="medianFilings" data="/uploads/oklahomacity_claims_monthly.csv" %}}
 
 
@@ -57,6 +51,9 @@ When a landlord files an eviction claim in Oklahoma City, we observe the amount 
 
 
 {{%/ report_median_claims %}}
+
+
+{{%  report_map shapes="/uploads/oklahomacity_shapes.json" data="/uploads/oklahomacity_map.csv"  topFilers="/uploads/oklahomacity_hotspots_media_report.csv" %}}
 
 
 # The geography of eviction filings
