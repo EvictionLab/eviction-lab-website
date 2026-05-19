@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: blog
 url: in-atlanta-data-helps-reveal-the-true-face-of-the-eviction-crisis
 contenttype: updates
