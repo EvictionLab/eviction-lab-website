@@ -8,7 +8,7 @@ contentcat: blog
 featured: true
 in_index: true
 title: "In Atlanta, data helps reveal the true face of the eviction crisis"
-date: 2026-05-15T00:49:04.271Z
+date: 2026-05-20T00:00:00.271Z
 postauthorname: Camila Vallejo
 postauthortitle: The Eviction Lab
 authorpic: /about/page-content/research-team-bios/camila-vallejo/cvallejo_thumb.jpg
