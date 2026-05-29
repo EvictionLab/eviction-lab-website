@@ -12,12 +12,12 @@ date: 2026-05-30T00:49:04.271Z
 postauthorname: Ellie Lochhead, Peter Hepburn, and Ingrid Gould Ellen
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: placeholder.jpg
+image: pexels-brandon-nickerson-129347-410237.jpg
 listSummaryMaxChars: 260
 description: The Rental Assistance Demonstration program has converted nearly one-fifth of all public housing to Section 8 contracts. Despite concerns about tenant displacement, our study found no evidence that conversion led to more formal eviction filings or judgments.
 listSummary: The Rental Assistance Demonstration program has converted nearly one-fifth of all public housing to Section 8 contracts. Despite concerns about tenant displacement, our study found no evidence that conversion led to more formal eviction filings or judgments.
-twImage: placeholder.jpg
-fbImage: placeholder.jpg
+twImage: pexels-brandon-nickerson-129347-410237.jpg
+fbImage: pexels-brandon-nickerson-129347-410237.jpg
 ---
 <span class="dropcap green">P</span>ublic housing in the United States has been slowly decaying for decades. After years of substandard construction and inadequate funding for maintenance, many developments desperately need safer wiring, working elevators, better heating systems, new roofs, and other basic repairs. In 2012, Congress created the {{< smartlink "Rental Assistance Demonstration program" "https://www.hud.gov/hud-partners/rad" >}} (also known as RAD) as one response to that problem. The program allows housing authorities to convert developments from traditional public housing funding to project-based Section 8 contracts, making it easier to borrow money and bring in other funds for major repairs and rehabilitation. By 2024, nearly 230,000 public housing units—almost one-fifth of all public housing—had gone through RAD conversion.
 
