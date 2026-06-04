@@ -26,17 +26,17 @@ scripts:
 
 To answer those questions, we turn to data from the {{< smartlink "Eviction Tracking System" "https://evictionlab.org/eviction-tracking/" >}} (ETS). Since 2020, we’ve been tracking the records of new eviction court filings in 10 states and 34 cities nationwide, areas that are collectively home to about one in every three American renters. In this brief, we provide an annual recap of eviction trends, as we did in previous years (check out our older blog posts for analysis in {{< smartlink "2020" "https://evictionlab.org/us-eviction-filing-patterns-2020/" >}}, {{< smartlink "2021" "https://evictionlab.org/us-eviction-filing-patterns-2021/" >}}, and {{< smartlink "2022" "https://evictionlab.org/ets-report-2022/" >}}). Housing instability varied prior to the pandemic, and here we highlight how those divides continue to grow. 
 
-{{< pullquote "Of the 32 cities where we have complete data coverage, 25 saw an increase in eviction filings between 2022 and 2023." >}}
+{{< pullquote "Of the 34 cities where we have complete data coverage, 27 saw an increase in eviction filings between 2022 and 2023." >}}
 
 Across the jurisdictions we track, we find that:
-- Landlords filed nearly 1,115,000 eviction cases in 2023. That’s over 100,000 more cases than were filed in 2022 and over 500,000 more than in 2021.  
-- Eviction caseloads increased between 2022 and 2023 in three-quarters of the cities we track.
+- Landlords filed nearly 1,130,000 eviction cases in 2023. That’s over 100,000 more cases than were filed in 2022 and almost 600,000 more than in 2021.  
+- Eviction caseloads increased between 2022 and 2023 in more than three-quarters of the cities we track.
 - In most cities, eviction filings in 2023 were above levels that were normal prior to the COVID-19 pandemic.
 - 60% of eviction case defendants in 2023 were women.
 - Despite making up less than one-third of renters, nearly half of eviction case defendants in 2023 were Black. 
 - In many places, a large share of eviction filings were repeated cases brought against the same tenants at the same addresses. 
 
-Landlords filed 10.5% more eviction cases in 2023 than in 2022. In total, 1,114,340 eviction cases were filed across the jurisdictions where we collect data.<sup>1</sup> Overall, that represents 2.9% fewer cases than we would have seen in these places prior to the pandemic, but still a large increase from what we observed early in the pandemic, when less than 600,000 cases were filed in 2020 and 2021 (see Figure 1).
+Landlords filed 12.2% more eviction cases in 2023 than in 2022. In total, 1,129,045 eviction cases were filed across the jurisdictions where we collect data.<sup>1</sup> Overall, that represents 1.6% fewer cases than we would have seen in these places prior to the pandemic, but still a large increase from what we observed early in the pandemic, when less than 600,000 cases were filed in 2020 and 2021 (see Figure 1).
 
 {{% proportion-bars
   id="fig1"
@@ -55,7 +55,7 @@ While eviction caseloads were up overall, there was a lot of variation in year-o
 
 To capture that variation, we display changes in eviction filings for each of the cities in the ETS in Figure 2. Specifically, we plot filings relative to historical, pre-pandemic average in each city for both 2022 and 2023, with an arrow indicating the direction and scale of the year-over-year change. Cities are aligned from top to bottom based on 2023 filings relative to historical average; cities with the highest relative filings are at the top of the graph. 
 
-Of the 32 cities where we have complete data coverage, 25 saw an increase in eviction filings between 2022 and 2023. This proportional increase was largest in the Twin Cities of Minneapolis and St. Paul, MN, where landlords filed 13,431 cases in 2023, up from 11,178 cases the year before. We observed similarly large increases in Phoenix, Providence, and Albuquerque.
+Of the 34 cities where we have complete data coverage, 27 saw an increase in eviction filings between 2022 and 2023. This proportional increase was largest in the Twin Cities of Minneapolis and St. Paul, MN, where landlords filed 14,184 cases in 2023, up from 11,545 cases the year before. We observed similarly large increases in Phoenix, Providence, and Kansas City.
 
 {{% arrow-chart
   id="fig2"
@@ -73,11 +73,11 @@ Of the 32 cities where we have complete data coverage, 25 saw an increase in evi
   labelLine="pre-pandemic average;100;0"
 %}}
 
-But not all cities saw eviction case loads increase. Indeed, seven of the ETS cities saw reductions. In Dallas, for example, landlords filed nearly 5,000 fewer eviction cases in 2023 than in 2022, a reduction from 106% to 94% of historical average. We also saw reductions in places like Philadelphia and Hartford, CT. 
+But not all cities saw eviction case loads increase. Indeed, seven of the ETS cities saw reductions. In Las Vegas, for example, landlords filed over 5,000 fewer eviction cases in 2023 than in 2022, a reduction from 176% to 160% of historical average. We also saw reductions in places like Philadelphia and Hartford, CT. 
 
-All told, 19 cities saw more eviction filings in 2023 than would have been normal for a year before the pandemic (i.e., filings above 100% of historical average). Several of these cities saw case numbers that are particularly troubling. In Houston, for example, landlords filed almost 84,000 cases in 2023, 43.8% more than was typical in a pre-pandemic year. Likewise, filings were 56.8% above average in Las Vegas, 30.1% above average in Phoenix, and 29.8% higher than normal in Columbus. Notably, many of these cities were already above normal levels in 2022, meaning that these elevated filing rates may constitute a stable new normal.
+All told, 21 cities saw more eviction filings in 2023 than would have been normal for a year before the pandemic (i.e., filings above 100% of historical average). Several of these cities saw case numbers that are particularly troubling. In Houston, for example, landlords filed almost 84,000 cases in 2023, 43.8% more than was typical in a pre-pandemic year. Likewise, filings were 36.8% above average in Gainesville, 32.9% above average in Nashville, and 30.5% higher than normal in Columbus. Notably, many of these cities were already above normal levels in 2022, meaning that these elevated filing rates may constitute a stable new normal.
 
-By contrast, only four cities saw eviction filings that were at least 25% below normal, pre-pandemic levels. That group includes New York City, with the nation’s largest population of renters. But even in New York, eviction filings rose significantly over these two years, from 108,278 cases filed in 2022 to 130,988 in 2023 (from 48.1 to 58.0% of historical average).
+By contrast, only four cities saw eviction filings that were at least 25% below normal, pre-pandemic levels. That group includes New York City, with the nation’s largest population of renters. But even in New York, eviction filings rose significantly over these two years, from 108,141 cases filed in 2022 to 132,470 in 2023 (from 48.1 to 59.0% of historical average).
 
 {{< pullquote "Fully 60% of those filed against for eviction last year were women." >}}
 
