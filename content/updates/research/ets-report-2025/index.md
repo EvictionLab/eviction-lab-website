@@ -133,15 +133,13 @@ The past year of eviction data allows us to assess the ongoing scale of housing 
 
 This report relies on data collected through our {{< smartlink "Eviction Tracking System (ETS)" "https://evictionlab.org/eviction-tracking/">}}, which provides monthly updates on the volume of eviction case filings in 38 city areas and 10 states across the United States ({{< smartlink "you can find last year’s report here" "https://evictionlab.org/ets-report-2024/">}}). While not nationally representative, these locations are home to roughly one-third of all renter households and provide a window into the state of housing instability throughout the country. In recent months, we expanded the Eviction Tracking System to track cases in the cities and suburbs surrounding Atlanta, GA, Tacoma, WA, Portland, OR, Eugene, OR, and Southwest Oregon. Our expansion into the Pacific Northwest means we now track at least one location in each census division of the country. These add up to: 18 sites in the South, 13 sites in the Midwest, nine sites in the Northeast, and eight sites in the West. Unfortunately, we lost access to eviction data in Greenville County, SC and no longer report monthly filings there. 
 
-Through recent validation efforts, we have determined that our 2025 estimates for Clark County, NV (Las Vegas) and the State of Minnesota are lower than the court-reported numbers, due to case sealing. While we work on correcting these numbers on our Eviction Tracking System, the numbers shown for Las Vegas, Minneapolis, and Minnesota in this report reflect those reported by the courts.
-
 </div>
 
-Across all sites that we currently monitor, landlords filed 1.23 million eviction cases in 2025. This total was slightly lower than in 2024 (1.25 million cases) and marks the second year in a row of declining eviction filings (see Figure 1). Overall, eviction case filings in 2025 were 3.2% below the post-pandemic average. 
+Across all sites that we currently monitor, landlords filed 1.23 million eviction cases in 2025. This total was slightly lower than in 2024 (1.26 million cases) and marks the second year in a row of declining eviction filings (see Figure 1). Overall, eviction case filings in 2025 were 3.2% below the post-pandemic average. 
 
-{{< pullquote "Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025." >}}
+{{< pullquote "Across all the locations we track, the average eviction filing rate was 8.0%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025." >}}
 
-While the total number of eviction filings across all sites was lower, this change was not consistent across the country. To better understand this variety, we talk about case filings {{< smartlink "compared to the post-pandemic average" "https://evictionlab.org/new-baseline/" >}}—the typical number of eviction cases filed annually in 2023 and 2024. Eviction filings were up relative to average in 13 of the 48 sites we track (Figure 2). In Travis County, TX (the greater Austin area), landlords filed 30% more eviction filings than normal in 2025. Filings were up substantially in each of our three Oregon sites, as well as in the areas of Charleston, SC, and St. Louis, MO. On the other hand, locations from Miami to Connecticut recorded far fewer cases than normal in 2025. The largest drop was in Bridgeport, CT (Fairfield County), where last year, landlords filed 20% fewer cases than average. It’s encouraging that more than two-thirds of the sites we monitor experienced fewer evictions than usual. 
+While the total number of eviction filings across all sites was lower, this change was not consistent across the country. To better understand this variety, we talk about case filings {{< smartlink "compared to the post-pandemic average" "https://evictionlab.org/new-baseline/" >}}—the typical number of eviction cases filed annually in 2023 and 2024. Eviction filings were up relative to average in 14 of the 48 sites we track (Figure 2). In Travis County, TX (the greater Austin area), landlords filed 27% more eviction filings than normal in 2025. Filings were up substantially in each of our three Oregon sites, as well as in the areas of Charleston, SC, and Tacoma, WA. On the other hand, locations from Miami to Connecticut recorded far fewer cases than normal in 2025. The largest drop was in Bridgeport, CT (Fairfield County), where last year, landlords filed 20% fewer cases than average. It’s encouraging that more than two-thirds of the sites we monitor experienced fewer evictions than usual. 
 
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-with" role="tabpanel" aria-labelledby="pills-with-tab">
@@ -186,7 +184,7 @@ While the total number of eviction filings across all sites was lower, this chan
   </li>
 </ul>
 
-Still, a drop in the number of filings relative to the average can still mean a large number of households facing the risk of eviction. For example, Atlanta saw roughly 4% fewer filings than average in 2025, meaning there were 5,600 fewer filings last year than in the preceding years. Despite that reduction, landlords still filed 144,000 eviction cases in 2025. That’s more than the number of eviction filings we recorded in New Mexico, Minnesota, Connecticut, Rhode Island, Delaware, and Wisconsin combined. Though the numbers aren’t quite as staggering, a similar story played out in the Houston, TX area: filings were down 4%, but that still meant 77,000 eviction filings.
+Still, a drop in the number of filings relative to the average can still mean a large number of households facing the risk of eviction. For example, Atlanta saw roughly 4% fewer filings than average in 2025, meaning there were roughly 5,600 fewer filings last year than in the preceding years. Despite that reduction, landlords still filed 144,000 eviction cases in 2025. That’s more than the number of eviction filings we recorded in New Mexico, Minnesota, Connecticut, Rhode Island, Delaware, and Wisconsin combined. Though the numbers aren’t quite as staggering, a similar story played out in the Houston, TX area: filings were down 5%, but that still meant 77,000 eviction filings.
 
 {{% arrow-chart2
   id="fig2"
@@ -208,9 +206,9 @@ Still, a drop in the number of filings relative to the average can still mean a 
   simpleLegend="true"
 %}}
 
-<p class="figcaption" style="font-family: 'Akkurat-Italic'">*Data directly sourced from the local court system.</p>
 
-To make comparisons that better account for the different population sizes—Atlanta being much larger than Tacoma, for example—we also report eviction filing rates: the number of eviction cases filed per 100 renter households. Across all the locations we track, the average eviction filing rate was 7.9%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025. Like with absolute case volumes, though, we see significant variation in eviction filing rates across the country (Figure 3). Four sites—the areas of Atlanta, GA, Charleston, SC, Indianapolis, IN, and Richmond, VA—had filing rates that were at least double the national average. In Atlanta, landlords filed one eviction case for every four renters. Sites like South Bend, IN (8% filing rate), New Orleans, LA (8% filing rate), and Wilmington, DE (10% filing rate) had many fewer eviction cases filed than metro Atlanta, but they also have fewer renter households, and each ended the year with higher-than-average filing rates.
+
+To make comparisons that better account for the different population sizes—Atlanta being much larger than Tacoma, for example—we also report eviction filing rates: the number of eviction cases filed per 100 renter households. Across all the locations we track, the average eviction filing rate was 8.0%, which means that landlords filed roughly one eviction case for every 13 renter households in 2025. Like with absolute case volumes, though, we see significant variation in eviction filing rates across the country (Figure 3). Four sites—the areas of Atlanta, GA, Charleston, SC, Indianapolis, IN, and Memphis, TN—had filing rates that were at least double the national average. In Atlanta, landlords filed one eviction case for every four renters. Sites like South Bend, IN (9% filing rate), New Orleans, LA (8% filing rate), and Wilmington, DE (11% filing rate) had many fewer eviction cases filed than metro Atlanta, but they also have fewer renter households, and each ended the year with higher-than-average filing rates.
 
 <div class="figheader">Figure 3. Eviction Filing Rate by Site</div>
 {{% bar-chart
@@ -226,7 +224,7 @@ To make comparisons that better account for the different population sizes—Atl
   tooltipTemplate="{{value}}"
   sort="desc"
   simpleLegend="true"
-  avgLines="0.0787,Average EFR"
+  avgLines="0.08,Average EFR"
   margin="8 8 160 40"
   animateOnScroll="true"
 %}}
@@ -241,7 +239,7 @@ To make comparisons that better account for the different population sizes—Atl
   </div>
 </div>
 <div class="mb-3 text-center">
-  <p class="figcaption" style="font-family: 'Akkurat-Italic'">*Data directly sourced from the local court system.</p>
+
   <p><i class="mobile-hint">Scroll right to view full chart</i></p>
 </div>
 
@@ -270,7 +268,7 @@ Notably, most of the locations we track had eviction filing rates higher than in
 {{< pullquote "Black renters are significantly overrepresented in eviction filings. Despite making up 28% of the renter population, 39% of eviction filings in 2025 named a Black defendant." >}}
 
 
-This year’s data also reflect a familiar pattern: {{< smartlink "eviction cases are concentrated among a small number of landlords" "https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/" >}}. These landlords, through a handful of buildings, drive a disproportionate number of renters into court(Figure 5). For example, more than half of the evictions filed in the areas of Albuquerque, NM, and South Bend, IN, were from just 100 buildings. We observed nearly 40% of filings from the top 100 buildings in Eugene, OR, Tacoma, WA, and Jacksonville, FL. In Atlanta, only 15% of filings came from the top 100 buildings, but this still amounted to 22,711 filings—more than the total number of cases filed across the entire state of Connecticut.
+This year’s data also reflect a familiar pattern: {{< smartlink "eviction cases are concentrated among a small number of landlords" "https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/" >}}. These landlords, through a handful of buildings, drive a disproportionate number of renters into court (Figure 5). For example, more than half of the evictions filed in the areas of Albuquerque, NM, and South Bend, IN, were from just 100 buildings. We observed nearly 40% of filings from the top 100 buildings in Eugene, OR, Tacoma, WA, and Jacksonville, FL. In Atlanta, only 15% of filings came from the top 100 buildings, but this still amounted to 22,711 filings—more than the total number of cases filed across the entire state of Connecticut.
 
 {{% bar-chart
   id="fig5"
