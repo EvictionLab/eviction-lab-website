@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: did-public-housing-conversion-lead-to-more-evictions
 contenttype: updates
@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "Did Public Housing Conversion Lead to More Evictions?"
-date: 2026-05-30T00:49:04.271Z
+date: 2026-06-08T00:49:04.271Z
 postauthorname: Ellie Lochhead, Peter Hepburn, and Ingrid Gould Ellen
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
