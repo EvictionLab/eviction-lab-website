@@ -22,6 +22,15 @@ scripts:
   - grouped-bar-chart
 ---
 
+<em>Correction: Changes in the case-filing system in [Dallas](/eviction-tracking/dallas-tx), led to an significant undercount in the data between 2022 and 2024. More information is available [here](/dallas-data-update). 
+
+As a result, we conducted an extensive validation process to ensure that all reported data aligns as closely as possible with court-reported aggregates. Through this effort, we identified discrepancies between some of our estimates and court-reported figures. All affected numbers have been corrected on our ETS page, including those that affect this report. The sites with corrected data in this report are: Austin, Dallas, Gainesville, Las Vegas, Miami, Minnesota (including Minneapolis-St. Paul), Missouri (including St. Louis and Kansas City), and Nashville.
+
+We have updated this report to include these missing filings for all sites mentioned above. The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
+<br/>
+<hr />
+<br/>
+
 <span class="dropcap green">A</span>s the United States moves past the COVID-19 pandemic, low-income renters face an increasingly difficult housing market. {{< smartlink "The country lacks millions of units of affordable rental housing" "https://nlihc.org/gap" >}}, and in those units that are available, {{< smartlink "a record number of tenants are paying well beyond their means" "https://www.jchs.harvard.edu/blog/rental-housing-unaffordability-how-did-we-get-here" >}}. High interest rates prevent younger, middle-class renters from buying homes, which in turn increases demand in the rental sector. How did this combination of factors affect eviction rates in 2023? And how did this vary across the U.S.?
 
 To answer those questions, we turn to data from the {{< smartlink "Eviction Tracking System" "https://evictionlab.org/eviction-tracking/" >}} (ETS). Since 2020, we’ve been tracking the records of new eviction court filings in 10 states and 34 cities nationwide, areas that are collectively home to about one in every three American renters. In this brief, we provide an annual recap of eviction trends, as we did in previous years (check out our older blog posts for analysis in {{< smartlink "2020" "https://evictionlab.org/us-eviction-filing-patterns-2020/" >}}, {{< smartlink "2021" "https://evictionlab.org/us-eviction-filing-patterns-2021/" >}}, and {{< smartlink "2022" "https://evictionlab.org/ets-report-2022/" >}}). Housing instability varied prior to the pandemic, and here we highlight how those divides continue to grow. 
