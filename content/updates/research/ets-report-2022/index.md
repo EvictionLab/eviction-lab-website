@@ -88,6 +88,15 @@ description: Over the last three years, eviction filing rates across the United
 }
 </style>
 
+<em>Correction: Changes in the case-filing system in [Dallas](/eviction-tracking/dallas-tx), led to an significant undercount in the data between 2022 and 2024. More information is available [here](/dallas-data-update). 
+
+As a result, we conducted an extensive validation process to ensure that all reported data aligns as closely as possible with court-reported aggregates. Through this effort, we identified discrepancies between some of our estimates and court-reported figures. All affected numbers have been corrected on our ETS page, including those that affect this report. The sites with corrected data in this report are: Missouri (including St. Louis and Kansas City), Minnesota (including Minneapolis-St. Paul), Dallas, Las Vegas, Nashville, and Austin.
+
+We have updated this report to include these missing filings for all sites mentioned above. The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
+<br/>
+<hr />
+<br/>
+
 <span class="dropcap green">O</span>ver the last three years, eviction filing rates across the United States fell below levels that were normal prior to the COVID-19 pandemic. A wide range of policies contributed to this reduction: federal, state, and local eviction moratoria; an unprecedented investment of $46.6 billion in emergency rental assistance (ERA); expansion of the right to legal representation in eviction cases in a number of cities and states; and the growth in eviction diversion programs. These policies prevented millions of American renters from losing their homes to eviction during this public health emergency. 
 
 But evidence from 2022 shows that this exceptional period when renters had additional tools to remain housed has come to an end. Eviction filings are increasing as policies expire. Since the start of the pandemic, we have been tracking eviction court filings in jurisdictions across the country. The ten states and 34 cities in the Eviction Tracking System (ETS) are home to about one in three renter households nationwide. While not designed as a random, representative sample, these data nonetheless allow us to monitor trends and provide the best available picture of shifting eviction risk. In this brief, we update our previous research on filing patterns in <a href="https://evictionlab.org/us-eviction-filing-patterns-2020/">2020</a> and <a href="https://evictionlab.org/us-eviction-filing-patterns-2021">2021</a>, exploring how patterns changed over the third year of the pandemic.
