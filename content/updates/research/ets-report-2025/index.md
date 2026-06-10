@@ -118,11 +118,10 @@ fbImage: ets-2025-hero-social.jpg
 }
 </style>
 
-<em>Correction: Changes in the case-filing system in [Dallas](/eviction-tracking/dallas-tx), led to an significant undercount in the data between 2022 and 2024. More information is available [here](/dallas-data-update). As a result, we conducted an extensive validation process to ensure that all reported data aligns as closely as possible with court-reported aggregates. Through this effort, we identified discrepancies between some of our estimates and court-reported figures. 
+<em>Correction (June 10, 2026): Since the time of publishing, we have received additional data for several sites included in this report. Court data is often reported with a lag, meaning cases from 2025 may not be available until weeks or months after they are filed. These updates are now reflected in both this report and the Eviction Tracking System. Sites affected are: Austin, Fort Worth, Houston, Las Vegas, Memphis, Miami, Minnesota (including Minneapolis-St. Paul), and Tampa. 
 
-All affected numbers have been corrected on our ETS page, including those that affect this report. The sites with corrected data in this report are: Las Vegas and Minnesota (including Minneapolis-St. Paul).
-
-We have updated this report to include these missing filings for all sites mentioned above. The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
+<br/><br/>
+The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
 <br/>
 <hr />
 <br/>
