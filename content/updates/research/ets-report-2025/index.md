@@ -118,6 +118,15 @@ fbImage: ets-2025-hero-social.jpg
 }
 </style>
 
+<em>Correction: Changes in the case-filing system in [Dallas](/eviction-tracking/dallas-tx), led to an significant undercount in the data between 2022 and 2024. More information is available [here](/dallas-data-update). As a result, we conducted an extensive validation process to ensure that all reported data aligns as closely as possible with court-reported aggregates. Through this effort, we identified discrepancies between some of our estimates and court-reported figures. 
+
+All affected numbers have been corrected on our ETS page, including those that affect this report. The sites with corrected data in this report are: Las Vegas and Minnesota (including Minneapolis-St. Paul).
+
+We have updated this report to include these missing filings for all sites mentioned above. The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
+<br/>
+<hr />
+<br/>
+
 
 <span class="dropcap green">T</span>he past year involved significant change and uncertainty, especially for low-income renting families. During the longest government shutdown in U.S. history, {{< smartlink "42 million people were left without SNAP benefits for weeks" "https://www.politico.com/news/2025/11/06/judge-orders-trump-administration-to-pay-full-snap-benefits-00640627" >}}, and the passage of the  “One Big Beautiful Bill Act” {{< smartlink "stripped benefits for 2.5 million people" "https://www.cbpp.org/research/food-assistance/snap-tracker-people-are-losing-food-assistance-as-the-republican-megabill" >}} permanently. The average amount of money low-income families have left after paying rent has hit {{< smartlink "an all-time low of just $210" "https://www.jchs.harvard.edu/blog/six-takeaways-americas-rental-housing-2026" >}}. On top of that, the federal immigration crackdown {{< smartlink "averaged 746 deportations a day" "https://www.reuters.com/world/us/trumps-early-immigration-enforcement-record-by-numbers-2026-02-24/" >}}, disrupting daily life for many immigrant households.
 
