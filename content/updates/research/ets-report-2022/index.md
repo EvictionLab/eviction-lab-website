@@ -89,11 +89,12 @@ description: Over the last three years, eviction filing rates across the United
 </style>
 
 <em>Correction: Changes in the case-filing system in [Dallas](/eviction-tracking/dallas-tx), led to an significant undercount in the data between 2022 and 2024. More information is available [here](/dallas-data-update). 
-<br/><br/>
+<br/>
 
 As a result, we conducted an extensive validation process to ensure that all reported data aligns as closely as possible with court-reported aggregates. Through this effort, we identified discrepancies between some of our estimates and court-reported figures. All affected numbers have been corrected on our ETS page, including those that affect this report. The sites with corrected data in this report are: Missouri (including St. Louis and Kansas City), Minnesota (including Minneapolis-St. Paul), Dallas, Las Vegas, Nashville, and Austin.
-<br/><br/>
-We have updated this report to include these missing filings for all sites mentioned above. The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
+<br/>
+
+The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
 <br/>
 <hr />
 <br/>
