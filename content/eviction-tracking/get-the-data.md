@@ -16,7 +16,7 @@ cascade:
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
-date: 2026-05-01T00:00:00.000Z
+date: 2026-06-12T00:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
   that you find new and productive ways to make use of them. When you do so,
@@ -252,6 +252,11 @@ data:
     geo: ZIP Code
     file: /uploads/newyork_weekly_2020_2021.csv
     monthfile: /uploads/newyork_monthly_2020_2021.csv
+  - site: Oklahoma City
+    years: --
+    geo: Zip Code
+    file: /uploads/oklahomacity_weekly_2020_2021.csv
+    monthfile: /uploads/oklahomacity_monthly_2020_2021.csv
   - site: Pennsylvania
     siteid: 42
     years: 2016-2019
