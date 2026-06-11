@@ -94,7 +94,7 @@ scripts:
 <br/><br/>
 All affected numbers have been corrected on our ETS page, including those that affect this report. The sites with corrected data in this report are: Austin, Columbus, Dallas, Gainesville, Houston, Las Vegas, Miami, Minnesota (including Minneapolis-St. Paul), Missouri (including St. Louis and Kansas City),  Nashville, and Phoenix.
 <br/><br/>
-We have updated this report to include these missing filings for all sites mentioned above. The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
+The Eviction Lab and our partners strive to provide the most up-to-date data. We are constantly fact-checking our numbers, but there may be occasional discrepancies. We apologize for any inconvenience it may have caused.</em>
 <br/>
 <hr />
 <br/>
