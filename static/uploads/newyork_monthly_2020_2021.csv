@@ -76,7 +76,7 @@ Zip Code,10001,White,02/2026,0,24,,
 Zip Code,10001,White,03/2026,0,35,,
 Zip Code,10001,White,04/2026,0,26.5,,
 Zip Code,10001,White,05/2026,0,23.5,,
-Zip Code,10001,White,06/2026,0,4,,2026-06-06
+Zip Code,10001,White,06/2026,0,12.5,,2026-06-13
 Zip Code,10002,Other,01/2020,0,70.5,145.333,
 Zip Code,10002,Other,02/2020,0,41,232.667,
 Zip Code,10002,Other,03/2020,0,52,165.667,
@@ -154,7 +154,7 @@ Zip Code,10002,Other,02/2026,0,37.5,,
 Zip Code,10002,Other,03/2026,0,52,,
 Zip Code,10002,Other,04/2026,0,46.5,,
 Zip Code,10002,Other,05/2026,0,55.5,,
-Zip Code,10002,Other,06/2026,0,14.5,,2026-06-06
+Zip Code,10002,Other,06/2026,0,23,,2026-06-13
 Zip Code,10003,White,01/2020,0,21,50,
 Zip Code,10003,White,02/2020,0,19.5,37.333,
 Zip Code,10003,White,03/2020,0,23,48.333,
@@ -232,7 +232,7 @@ Zip Code,10003,White,02/2026,0,19,,
 Zip Code,10003,White,03/2026,0,23,,
 Zip Code,10003,White,04/2026,0,20.5,,
 Zip Code,10003,White,05/2026,0,24,,
-Zip Code,10003,White,06/2026,0,2,,2026-06-06
+Zip Code,10003,White,06/2026,0,5,,2026-06-13
 Zip Code,10004,White,01/2020,0,0.5,4.333,
 Zip Code,10004,White,02/2020,0,0.5,3,
 Zip Code,10004,White,03/2020,0,1.5,6.333,
@@ -310,7 +310,7 @@ Zip Code,10004,White,02/2026,0,0.5,,
 Zip Code,10004,White,03/2026,0,1.5,,
 Zip Code,10004,White,04/2026,0,2.5,,
 Zip Code,10004,White,05/2026,0,4.5,,
-Zip Code,10004,White,06/2026,0,0.5,,2026-06-06
+Zip Code,10004,White,06/2026,0,1.5,,2026-06-13
 Zip Code,10005,White,01/2020,0,5.5,10,
 Zip Code,10005,White,02/2020,0,10.5,8.667,
 Zip Code,10005,White,03/2020,0,9,11,
@@ -388,7 +388,7 @@ Zip Code,10005,White,02/2026,0,10,,
 Zip Code,10005,White,03/2026,0,9,,
 Zip Code,10005,White,04/2026,0,10.5,,
 Zip Code,10005,White,05/2026,0,10,,
-Zip Code,10005,White,06/2026,0,3,,2026-06-06
+Zip Code,10005,White,06/2026,0,6,,2026-06-13
 Zip Code,10006,White,01/2020,0,1.5,1,
 Zip Code,10006,White,02/2020,0,0.5,3.333,
 Zip Code,10006,White,03/2020,0,1.5,4,
@@ -466,7 +466,7 @@ Zip Code,10006,White,02/2026,0,0.5,,
 Zip Code,10006,White,03/2026,0,1.5,,
 Zip Code,10006,White,04/2026,0,3.5,,
 Zip Code,10006,White,05/2026,0,4,,
-Zip Code,10006,White,06/2026,0,1,,2026-06-06
+Zip Code,10006,White,06/2026,0,1.5,,2026-06-13
 Zip Code,10007,White,01/2020,0,2.5,3,
 Zip Code,10007,White,02/2020,0,5.5,3,
 Zip Code,10007,White,03/2020,0,0.5,1.333,
@@ -544,7 +544,7 @@ Zip Code,10007,White,02/2026,0,5.5,,
 Zip Code,10007,White,03/2026,0,0.5,,
 Zip Code,10007,White,04/2026,0,1,,
 Zip Code,10007,White,05/2026,0,0.5,,
-Zip Code,10007,White,06/2026,0,0.5,,2026-06-06
+Zip Code,10007,White,06/2026,0,1.5,,2026-06-13
 Zip Code,10008,Other,01/2020,0,0,0,
 Zip Code,10008,Other,02/2020,0,0,0,
 Zip Code,10008,Other,03/2020,0,0,0,
@@ -622,7 +622,7 @@ Zip Code,10008,Other,02/2026,0,0,,
 Zip Code,10008,Other,03/2026,0,0,,
 Zip Code,10008,Other,04/2026,0,0,,
 Zip Code,10008,Other,05/2026,0,0,,
-Zip Code,10008,Other,06/2026,0,0,,2026-06-06
+Zip Code,10008,Other,06/2026,0,0,,2026-06-13
 Zip Code,10009,White,01/2020,0,50.5,161.333,
 Zip Code,10009,White,02/2020,0,37.5,152,
 Zip Code,10009,White,03/2020,0,53.5,137,
@@ -700,7 +700,7 @@ Zip Code,10009,White,02/2026,0,34.5,,
 Zip Code,10009,White,03/2026,0,53.5,,
 Zip Code,10009,White,04/2026,0,42.5,,
 Zip Code,10009,White,05/2026,0,63.5,,
-Zip Code,10009,White,06/2026,0,15.5,,2026-06-06
+Zip Code,10009,White,06/2026,0,23.5,,2026-06-13
 Zip Code,10010,White,01/2020,0,10.5,22.333,
 Zip Code,10010,White,02/2020,0,13.5,32,
 Zip Code,10010,White,03/2020,0,11,26.333,
@@ -778,7 +778,7 @@ Zip Code,10010,White,02/2026,0,13.5,,
 Zip Code,10010,White,03/2026,0,11,,
 Zip Code,10010,White,04/2026,0,23,,
 Zip Code,10010,White,05/2026,0,9.5,,
-Zip Code,10010,White,06/2026,0,2,,2026-06-06
+Zip Code,10010,White,06/2026,0,5,,2026-06-13
 Zip Code,10011,White,01/2020,0,20,54,
 Zip Code,10011,White,02/2020,0,18,64,
 Zip Code,10011,White,03/2020,0,31,62.333,
@@ -856,7 +856,7 @@ Zip Code,10011,White,02/2026,0,16,,
 Zip Code,10011,White,03/2026,0,31,,
 Zip Code,10011,White,04/2026,0,23.5,,
 Zip Code,10011,White,05/2026,0,35,,
-Zip Code,10011,White,06/2026,0,8.5,,2026-06-06
+Zip Code,10011,White,06/2026,0,13,,2026-06-13
 Zip Code,10012,White,01/2020,0,11,24,
 Zip Code,10012,White,02/2020,0,8,25.667,
 Zip Code,10012,White,03/2020,0,11.5,27.333,
@@ -934,7 +934,7 @@ Zip Code,10012,White,02/2026,0,8,,
 Zip Code,10012,White,03/2026,0,11.5,,
 Zip Code,10012,White,04/2026,0,7.5,,
 Zip Code,10012,White,05/2026,0,13,,
-Zip Code,10012,White,06/2026,0,1,,2026-06-06
+Zip Code,10012,White,06/2026,0,3.5,,2026-06-13
 Zip Code,10013,White,01/2020,0,16.5,26,
 Zip Code,10013,White,02/2020,0,9.5,23.333,
 Zip Code,10013,White,03/2020,0,11.5,18.333,
@@ -1012,7 +1012,7 @@ Zip Code,10013,White,02/2026,0,9.5,,
 Zip Code,10013,White,03/2026,0,11.5,,
 Zip Code,10013,White,04/2026,0,11,,
 Zip Code,10013,White,05/2026,0,10.5,,
-Zip Code,10013,White,06/2026,0,3.5,,2026-06-06
+Zip Code,10013,White,06/2026,0,5.5,,2026-06-13
 Zip Code,10014,White,01/2020,0,20.5,37.667,
 Zip Code,10014,White,02/2020,0,24,25.333,
 Zip Code,10014,White,03/2020,0,19.5,39.667,
@@ -1090,7 +1090,7 @@ Zip Code,10014,White,02/2026,0,22,,
 Zip Code,10014,White,03/2026,0,19.5,,
 Zip Code,10014,White,04/2026,0,12,,
 Zip Code,10014,White,05/2026,0,12.5,,
-Zip Code,10014,White,06/2026,0,5,,2026-06-06
+Zip Code,10014,White,06/2026,0,8.5,,2026-06-13
 Zip Code,10016,White,01/2020,0,34,67,
 Zip Code,10016,White,02/2020,0,34.5,55,
 Zip Code,10016,White,03/2020,0,36,59.667,
@@ -1168,7 +1168,7 @@ Zip Code,10016,White,02/2026,0,34,,
 Zip Code,10016,White,03/2026,0,36,,
 Zip Code,10016,White,04/2026,0,31.5,,
 Zip Code,10016,White,05/2026,0,34.5,,
-Zip Code,10016,White,06/2026,0,11,,2026-06-06
+Zip Code,10016,White,06/2026,0,24.5,,2026-06-13
 Zip Code,10017,White,01/2020,0,10.5,12.333,
 Zip Code,10017,White,02/2020,0,6,12,
 Zip Code,10017,White,03/2020,0,7.5,13.333,
@@ -1246,7 +1246,7 @@ Zip Code,10017,White,02/2026,0,6,,
 Zip Code,10017,White,03/2026,0,7.5,,
 Zip Code,10017,White,04/2026,0,10,,
 Zip Code,10017,White,05/2026,0,6,,
-Zip Code,10017,White,06/2026,0,0.5,,2026-06-06
+Zip Code,10017,White,06/2026,0,1.5,,2026-06-13
 Zip Code,10018,Other,01/2020,0,15,13,
 Zip Code,10018,Other,02/2020,0,13,13,
 Zip Code,10018,Other,03/2020,0,18.5,16.333,
@@ -1324,7 +1324,7 @@ Zip Code,10018,Other,02/2026,0,13,,
 Zip Code,10018,Other,03/2026,0,18.5,,
 Zip Code,10018,Other,04/2026,0,17,,
 Zip Code,10018,Other,05/2026,0,10,,
-Zip Code,10018,Other,06/2026,0,7.5,,2026-06-06
+Zip Code,10018,Other,06/2026,0,10.5,,2026-06-13
 Zip Code,10019,White,01/2020,0,48.5,82.333,
 Zip Code,10019,White,02/2020,0,54.5,78,
 Zip Code,10019,White,03/2020,0,52,62,
@@ -1402,7 +1402,7 @@ Zip Code,10019,White,02/2026,0,54,,
 Zip Code,10019,White,03/2026,0,52,,
 Zip Code,10019,White,04/2026,0,42.5,,
 Zip Code,10019,White,05/2026,0,45.5,,
-Zip Code,10019,White,06/2026,0,16,,2026-06-06
+Zip Code,10019,White,06/2026,0,28,,2026-06-13
 Zip Code,10020,Other,01/2020,0,0,0.333,
 Zip Code,10020,Other,02/2020,0,0,0.667,
 Zip Code,10020,Other,03/2020,0,0,0,
@@ -1480,7 +1480,7 @@ Zip Code,10020,Other,02/2026,0,0,,
 Zip Code,10020,Other,03/2026,0,0,,
 Zip Code,10020,Other,04/2026,0,0,,
 Zip Code,10020,Other,05/2026,0,0,,
-Zip Code,10020,Other,06/2026,0,0,,2026-06-06
+Zip Code,10020,Other,06/2026,0,0,,2026-06-13
 Zip Code,10021,White,01/2020,0,21.5,31.667,
 Zip Code,10021,White,02/2020,0,19,32.667,
 Zip Code,10021,White,03/2020,0,22.5,46.333,
@@ -1558,7 +1558,7 @@ Zip Code,10021,White,02/2026,0,19,,
 Zip Code,10021,White,03/2026,0,22.5,,
 Zip Code,10021,White,04/2026,0,17.5,,
 Zip Code,10021,White,05/2026,0,19.5,,
-Zip Code,10021,White,06/2026,0,3.5,,2026-06-06
+Zip Code,10021,White,06/2026,0,8,,2026-06-13
 Zip Code,10022,White,01/2020,0,14,30,
 Zip Code,10022,White,02/2020,0,11.5,31,
 Zip Code,10022,White,03/2020,0,15,29,
@@ -1636,7 +1636,7 @@ Zip Code,10022,White,02/2026,0,11,,
 Zip Code,10022,White,03/2026,0,15,,
 Zip Code,10022,White,04/2026,0,19.5,,
 Zip Code,10022,White,05/2026,0,15.5,,
-Zip Code,10022,White,06/2026,0,4,,2026-06-06
+Zip Code,10022,White,06/2026,0,5,,2026-06-13
 Zip Code,10023,White,01/2020,0,19.5,61.667,
 Zip Code,10023,White,02/2020,0,27,84,
 Zip Code,10023,White,03/2020,0,36,78.667,
@@ -1714,7 +1714,7 @@ Zip Code,10023,White,02/2026,0,25,,
 Zip Code,10023,White,03/2026,0,36,,
 Zip Code,10023,White,04/2026,0,28.5,,
 Zip Code,10023,White,05/2026,0,26,,
-Zip Code,10023,White,06/2026,0,4,,2026-06-06
+Zip Code,10023,White,06/2026,0,12.5,,2026-06-13
 Zip Code,10024,White,01/2020,0,19.5,52,
 Zip Code,10024,White,02/2020,0,27,44,
 Zip Code,10024,White,03/2020,0,35,76.333,
@@ -1792,7 +1792,7 @@ Zip Code,10024,White,02/2026,0,27,,
 Zip Code,10024,White,03/2026,0,35,,
 Zip Code,10024,White,04/2026,0,28,,
 Zip Code,10024,White,05/2026,0,32.5,,
-Zip Code,10024,White,06/2026,0,5,,2026-06-06
+Zip Code,10024,White,06/2026,0,14,,2026-06-13
 Zip Code,10025,White,01/2020,0,72.5,183.667,
 Zip Code,10025,White,02/2020,0,72,146,
 Zip Code,10025,White,03/2020,0,80.5,182.333,
@@ -1870,7 +1870,7 @@ Zip Code,10025,White,02/2026,0,69.5,,
 Zip Code,10025,White,03/2026,0,80.5,,
 Zip Code,10025,White,04/2026,0,94,,
 Zip Code,10025,White,05/2026,0,61.5,,
-Zip Code,10025,White,06/2026,0,13,,2026-06-06
+Zip Code,10025,White,06/2026,0,28.5,,2026-06-13
 Zip Code,10026,Other,01/2020,0,85,112.667,
 Zip Code,10026,Other,02/2020,0,78.5,175.333,
 Zip Code,10026,Other,03/2020,0,95,121.667,
@@ -1948,7 +1948,7 @@ Zip Code,10026,Other,02/2026,0,68.5,,
 Zip Code,10026,Other,03/2026,0,95,,
 Zip Code,10026,Other,04/2026,0,91.5,,
 Zip Code,10026,Other,05/2026,0,110,,
-Zip Code,10026,Other,06/2026,0,26.5,,2026-06-06
+Zip Code,10026,Other,06/2026,0,38,,2026-06-13
 Zip Code,10027,Other,01/2020,0,89.5,253,
 Zip Code,10027,Other,02/2020,0,96,228.333,
 Zip Code,10027,Other,03/2020,0,108.5,247.667,
@@ -2026,7 +2026,7 @@ Zip Code,10027,Other,02/2026,0,96,,
 Zip Code,10027,Other,03/2026,0,108.5,,
 Zip Code,10027,Other,04/2026,0,93,,
 Zip Code,10027,Other,05/2026,0,101.5,,
-Zip Code,10027,Other,06/2026,0,27,,2026-06-06
+Zip Code,10027,Other,06/2026,0,43.5,,2026-06-13
 Zip Code,10028,White,01/2020,0,27.5,30.667,
 Zip Code,10028,White,02/2020,0,20.5,29.333,
 Zip Code,10028,White,03/2020,0,25,33.333,
@@ -2104,7 +2104,7 @@ Zip Code,10028,White,02/2026,0,20,,
 Zip Code,10028,White,03/2026,0,25,,
 Zip Code,10028,White,04/2026,0,22,,
 Zip Code,10028,White,05/2026,0,16,,
-Zip Code,10028,White,06/2026,0,4,,2026-06-06
+Zip Code,10028,White,06/2026,0,8,,2026-06-13
 Zip Code,10029,Other,01/2020,0,122,425.333,
 Zip Code,10029,Other,02/2020,0,81,437,
 Zip Code,10029,Other,03/2020,0,164,392.667,
@@ -2182,7 +2182,7 @@ Zip Code,10029,Other,02/2026,0,78.5,,
 Zip Code,10029,Other,03/2026,0,164,,
 Zip Code,10029,Other,04/2026,0,102.5,,
 Zip Code,10029,Other,05/2026,0,83.5,,
-Zip Code,10029,Other,06/2026,0,33,,2026-06-06
+Zip Code,10029,Other,06/2026,0,56.5,,2026-06-13
 Zip Code,10030,Black,01/2020,0,94,222,
 Zip Code,10030,Black,02/2020,0,109,191.667,
 Zip Code,10030,Black,03/2020,0,78,203.333,
@@ -2260,7 +2260,7 @@ Zip Code,10030,Black,02/2026,0,108,,
 Zip Code,10030,Black,03/2026,0,78,,
 Zip Code,10030,Black,04/2026,0,104,,
 Zip Code,10030,Black,05/2026,0,108.5,,
-Zip Code,10030,Black,06/2026,0,16.5,,2026-06-06
+Zip Code,10030,Black,06/2026,0,49,,2026-06-13
 Zip Code,10031,Other,01/2020,0,143.5,224.667,
 Zip Code,10031,Other,02/2020,0,126,244.667,
 Zip Code,10031,Other,03/2020,0,149,215,
@@ -2338,7 +2338,7 @@ Zip Code,10031,Other,02/2026,0,124.5,,
 Zip Code,10031,Other,03/2026,0,149,,
 Zip Code,10031,Other,04/2026,0,107.5,,
 Zip Code,10031,Other,05/2026,0,126.5,,
-Zip Code,10031,Other,06/2026,0,31,,2026-06-06
+Zip Code,10031,Other,06/2026,0,64,,2026-06-13
 Zip Code,10032,Hispanic,01/2020,0,135,188.333,
 Zip Code,10032,Hispanic,02/2020,0,109.5,212.333,
 Zip Code,10032,Hispanic,03/2020,0,153,193.667,
@@ -2416,7 +2416,7 @@ Zip Code,10032,Hispanic,02/2026,0,106,,
 Zip Code,10032,Hispanic,03/2026,0,153,,
 Zip Code,10032,Hispanic,04/2026,0,108.5,,
 Zip Code,10032,Hispanic,05/2026,0,109.5,,
-Zip Code,10032,Hispanic,06/2026,0,34.5,,2026-06-06
+Zip Code,10032,Hispanic,06/2026,0,75.5,,2026-06-13
 Zip Code,10033,Hispanic,01/2020,0,105,163.667,
 Zip Code,10033,Hispanic,02/2020,0,83.5,211.333,
 Zip Code,10033,Hispanic,03/2020,0,129,145.667,
@@ -2494,7 +2494,7 @@ Zip Code,10033,Hispanic,02/2026,0,82.5,,
 Zip Code,10033,Hispanic,03/2026,0,129,,
 Zip Code,10033,Hispanic,04/2026,0,93.5,,
 Zip Code,10033,Hispanic,05/2026,0,97,,
-Zip Code,10033,Hispanic,06/2026,0,22,,2026-06-06
+Zip Code,10033,Hispanic,06/2026,0,45,,2026-06-13
 Zip Code,10034,Hispanic,01/2020,0,112.5,186,
 Zip Code,10034,Hispanic,02/2020,0,89,177.333,
 Zip Code,10034,Hispanic,03/2020,0,103,171.667,
@@ -2572,7 +2572,7 @@ Zip Code,10034,Hispanic,02/2026,0,86,,
 Zip Code,10034,Hispanic,03/2026,0,103,,
 Zip Code,10034,Hispanic,04/2026,0,98,,
 Zip Code,10034,Hispanic,05/2026,0,94,,
-Zip Code,10034,Hispanic,06/2026,0,20.5,,2026-06-06
+Zip Code,10034,Hispanic,06/2026,0,40,,2026-06-13
 Zip Code,10035,Other,01/2020,0,92.5,185.667,
 Zip Code,10035,Other,02/2020,0,81.5,152,
 Zip Code,10035,Other,03/2020,0,76,175.333,
@@ -2650,7 +2650,7 @@ Zip Code,10035,Other,02/2026,0,79,,
 Zip Code,10035,Other,03/2026,0,76,,
 Zip Code,10035,Other,04/2026,0,82,,
 Zip Code,10035,Other,05/2026,0,120.5,,
-Zip Code,10035,Other,06/2026,0,15.5,,2026-06-06
+Zip Code,10035,Other,06/2026,0,60.5,,2026-06-13
 Zip Code,10036,White,01/2020,0,48,73,
 Zip Code,10036,White,02/2020,0,37.5,71.667,
 Zip Code,10036,White,03/2020,0,54.5,65,
@@ -2728,7 +2728,7 @@ Zip Code,10036,White,02/2026,0,35.5,,
 Zip Code,10036,White,03/2026,0,54.5,,
 Zip Code,10036,White,04/2026,0,57.5,,
 Zip Code,10036,White,05/2026,0,39,,
-Zip Code,10036,White,06/2026,0,16,,2026-06-06
+Zip Code,10036,White,06/2026,0,24.5,,2026-06-13
 Zip Code,10037,Black,01/2020,0,63,155.333,
 Zip Code,10037,Black,02/2020,0,68.5,120,
 Zip Code,10037,Black,03/2020,0,63.5,181.333,
@@ -2806,7 +2806,7 @@ Zip Code,10037,Black,02/2026,0,66.5,,
 Zip Code,10037,Black,03/2026,0,63.5,,
 Zip Code,10037,Black,04/2026,0,86.5,,
 Zip Code,10037,Black,05/2026,0,67.5,,
-Zip Code,10037,Black,06/2026,0,22,,2026-06-06
+Zip Code,10037,Black,06/2026,0,56.5,,2026-06-13
 Zip Code,10038,Other,01/2020,0,15,52,
 Zip Code,10038,Other,02/2020,0,13.5,47.333,
 Zip Code,10038,Other,03/2020,0,14,29,
@@ -2884,7 +2884,7 @@ Zip Code,10038,Other,02/2026,0,12.5,,
 Zip Code,10038,Other,03/2026,0,14,,
 Zip Code,10038,Other,04/2026,0,18.5,,
 Zip Code,10038,Other,05/2026,0,10.5,,
-Zip Code,10038,Other,06/2026,0,4,,2026-06-06
+Zip Code,10038,Other,06/2026,0,6,,2026-06-13
 Zip Code,10039,Black,01/2020,0,97,213.333,
 Zip Code,10039,Black,02/2020,0,67,256,
 Zip Code,10039,Black,03/2020,0,121,166,
@@ -2962,7 +2962,7 @@ Zip Code,10039,Black,02/2026,0,64.5,,
 Zip Code,10039,Black,03/2026,0,121,,
 Zip Code,10039,Black,04/2026,0,74.5,,
 Zip Code,10039,Black,05/2026,0,129,,
-Zip Code,10039,Black,06/2026,0,16,,2026-06-06
+Zip Code,10039,Black,06/2026,0,37.5,,2026-06-13
 Zip Code,10040,Hispanic,01/2020,0,114,162,
 Zip Code,10040,Hispanic,02/2020,0,87.5,192.667,
 Zip Code,10040,Hispanic,03/2020,0,121.5,158,
@@ -3040,7 +3040,7 @@ Zip Code,10040,Hispanic,02/2026,0,82.5,,
 Zip Code,10040,Hispanic,03/2026,0,121.5,,
 Zip Code,10040,Hispanic,04/2026,0,82.5,,
 Zip Code,10040,Hispanic,05/2026,0,98.5,,
-Zip Code,10040,Hispanic,06/2026,0,20,,2026-06-06
+Zip Code,10040,Hispanic,06/2026,0,35,,2026-06-13
 Zip Code,10041,Other,01/2020,0,0,0,
 Zip Code,10041,Other,02/2020,0,0,0,
 Zip Code,10041,Other,03/2020,0,0,0,
@@ -3118,7 +3118,7 @@ Zip Code,10041,Other,02/2026,0,0,,
 Zip Code,10041,Other,03/2026,0,0,,
 Zip Code,10041,Other,04/2026,0,0.5,,
 Zip Code,10041,Other,05/2026,0,0,,
-Zip Code,10041,Other,06/2026,0,0,,2026-06-06
+Zip Code,10041,Other,06/2026,0,0,,2026-06-13
 Zip Code,10043,Other,01/2020,0,0,0,
 Zip Code,10043,Other,02/2020,0,0,0,
 Zip Code,10043,Other,03/2020,0,0,0,
@@ -3196,7 +3196,7 @@ Zip Code,10043,Other,02/2026,0,0,,
 Zip Code,10043,Other,03/2026,0,0,,
 Zip Code,10043,Other,04/2026,0,0,,
 Zip Code,10043,Other,05/2026,0,0,,
-Zip Code,10043,Other,06/2026,0,0,,2026-06-06
+Zip Code,10043,Other,06/2026,0,0,,2026-06-13
 Zip Code,10044,Other,01/2020,0,12,22,
 Zip Code,10044,Other,02/2020,0,3.5,21.667,
 Zip Code,10044,Other,03/2020,0,24.5,20.333,
@@ -3274,7 +3274,7 @@ Zip Code,10044,Other,02/2026,0,3.5,,
 Zip Code,10044,Other,03/2026,0,24.5,,
 Zip Code,10044,Other,04/2026,0,16,,
 Zip Code,10044,Other,05/2026,0,18,,
-Zip Code,10044,Other,06/2026,0,2,,2026-06-06
+Zip Code,10044,Other,06/2026,0,4,,2026-06-13
 Zip Code,10045,Other,01/2020,0,0,0,
 Zip Code,10045,Other,02/2020,0,0,0,
 Zip Code,10045,Other,03/2020,0,0,0,
@@ -3352,7 +3352,7 @@ Zip Code,10045,Other,02/2026,0,0,,
 Zip Code,10045,Other,03/2026,0,0,,
 Zip Code,10045,Other,04/2026,0,0,,
 Zip Code,10045,Other,05/2026,0,0,,
-Zip Code,10045,Other,06/2026,0,0,,2026-06-06
+Zip Code,10045,Other,06/2026,0,0,,2026-06-13
 Zip Code,10055,Other,01/2020,0,0,0,
 Zip Code,10055,Other,02/2020,0,0,0,
 Zip Code,10055,Other,03/2020,0,0,0,
@@ -3430,7 +3430,7 @@ Zip Code,10055,Other,02/2026,0,0,,
 Zip Code,10055,Other,03/2026,0,0,,
 Zip Code,10055,Other,04/2026,0,0,,
 Zip Code,10055,Other,05/2026,0,0,,
-Zip Code,10055,Other,06/2026,0,0,,2026-06-06
+Zip Code,10055,Other,06/2026,0,0,,2026-06-13
 Zip Code,10065,White,01/2020,0,12,25,
 Zip Code,10065,White,02/2020,0,10.5,24.667,
 Zip Code,10065,White,03/2020,0,21,28,
@@ -3508,7 +3508,7 @@ Zip Code,10065,White,02/2026,0,10,,
 Zip Code,10065,White,03/2026,0,21,,
 Zip Code,10065,White,04/2026,0,15,,
 Zip Code,10065,White,05/2026,0,11.5,,
-Zip Code,10065,White,06/2026,0,4.5,,2026-06-06
+Zip Code,10065,White,06/2026,0,10,,2026-06-13
 Zip Code,10069,Other,01/2020,0,1,2,
 Zip Code,10069,Other,02/2020,0,2,5.667,
 Zip Code,10069,Other,03/2020,0,3.5,7.333,
@@ -3586,7 +3586,7 @@ Zip Code,10069,Other,02/2026,0,2,,
 Zip Code,10069,Other,03/2026,0,3.5,,
 Zip Code,10069,Other,04/2026,0,5.5,,
 Zip Code,10069,Other,05/2026,0,5.5,,
-Zip Code,10069,Other,06/2026,0,0.5,,2026-06-06
+Zip Code,10069,Other,06/2026,0,3,,2026-06-13
 Zip Code,10075,White,01/2020,0,16.5,21.333,
 Zip Code,10075,White,02/2020,0,11.5,16.667,
 Zip Code,10075,White,03/2020,0,10.5,24,
@@ -3664,7 +3664,7 @@ Zip Code,10075,White,02/2026,0,8.5,,
 Zip Code,10075,White,03/2026,0,10.5,,
 Zip Code,10075,White,04/2026,0,9.5,,
 Zip Code,10075,White,05/2026,0,16.5,,
-Zip Code,10075,White,06/2026,0,2,,2026-06-06
+Zip Code,10075,White,06/2026,0,4,,2026-06-13
 Zip Code,10080,Other,01/2020,0,0,0,
 Zip Code,10080,Other,02/2020,0,0,0,
 Zip Code,10080,Other,03/2020,0,0,0,
@@ -3742,7 +3742,7 @@ Zip Code,10080,Other,02/2026,0,0,,
 Zip Code,10080,Other,03/2026,0,0,,
 Zip Code,10080,Other,04/2026,0,0,,
 Zip Code,10080,Other,05/2026,0,0,,
-Zip Code,10080,Other,06/2026,0,0,,2026-06-06
+Zip Code,10080,Other,06/2026,0,0,,2026-06-13
 Zip Code,10081,Other,01/2020,0,0,0,
 Zip Code,10081,Other,02/2020,0,0,0,
 Zip Code,10081,Other,03/2020,0,0,0,
@@ -3820,7 +3820,7 @@ Zip Code,10081,Other,02/2026,0,0,,
 Zip Code,10081,Other,03/2026,0,0,,
 Zip Code,10081,Other,04/2026,0,0,,
 Zip Code,10081,Other,05/2026,0,0,,
-Zip Code,10081,Other,06/2026,0,0,,2026-06-06
+Zip Code,10081,Other,06/2026,0,0,,2026-06-13
 Zip Code,10101,Other,01/2020,0,0,0,
 Zip Code,10101,Other,02/2020,0,0,0.333,
 Zip Code,10101,Other,03/2020,0,0,0,
@@ -3898,7 +3898,7 @@ Zip Code,10101,Other,02/2026,0,0,,
 Zip Code,10101,Other,03/2026,0,0,,
 Zip Code,10101,Other,04/2026,0,0,,
 Zip Code,10101,Other,05/2026,0,0,,
-Zip Code,10101,Other,06/2026,0,0,,2026-06-06
+Zip Code,10101,Other,06/2026,0,0,,2026-06-13
 Zip Code,10103,Other,01/2020,0,0,0,
 Zip Code,10103,Other,02/2020,0,0,0,
 Zip Code,10103,Other,03/2020,0,0,0,
@@ -3976,7 +3976,7 @@ Zip Code,10103,Other,02/2026,0,0,,
 Zip Code,10103,Other,03/2026,0,0,,
 Zip Code,10103,Other,04/2026,0,0,,
 Zip Code,10103,Other,05/2026,0,0,,
-Zip Code,10103,Other,06/2026,0,0,,2026-06-06
+Zip Code,10103,Other,06/2026,0,0,,2026-06-13
 Zip Code,10104,Other,01/2020,0,0,0,
 Zip Code,10104,Other,02/2020,0,0,0,
 Zip Code,10104,Other,03/2020,0,0,0,
@@ -4054,7 +4054,7 @@ Zip Code,10104,Other,02/2026,0,0,,
 Zip Code,10104,Other,03/2026,0,0,,
 Zip Code,10104,Other,04/2026,0,0,,
 Zip Code,10104,Other,05/2026,0,0,,
-Zip Code,10104,Other,06/2026,0,0,,2026-06-06
+Zip Code,10104,Other,06/2026,0,0,,2026-06-13
 Zip Code,10105,Other,01/2020,0,0,0,
 Zip Code,10105,Other,02/2020,0,0,0,
 Zip Code,10105,Other,03/2020,0,0,0,
@@ -4132,7 +4132,7 @@ Zip Code,10105,Other,02/2026,0,0,,
 Zip Code,10105,Other,03/2026,0,0,,
 Zip Code,10105,Other,04/2026,0,0,,
 Zip Code,10105,Other,05/2026,0,0,,
-Zip Code,10105,Other,06/2026,0,0,,2026-06-06
+Zip Code,10105,Other,06/2026,0,0,,2026-06-13
 Zip Code,10106,Other,01/2020,0,0,0,
 Zip Code,10106,Other,02/2020,0,0,0,
 Zip Code,10106,Other,03/2020,0,0,0,
@@ -4210,7 +4210,7 @@ Zip Code,10106,Other,02/2026,0,0,,
 Zip Code,10106,Other,03/2026,0,0,,
 Zip Code,10106,Other,04/2026,0,0,,
 Zip Code,10106,Other,05/2026,0,0,,
-Zip Code,10106,Other,06/2026,0,0,,2026-06-06
+Zip Code,10106,Other,06/2026,0,0,,2026-06-13
 Zip Code,10107,Other,01/2020,0,0,0,
 Zip Code,10107,Other,02/2020,0,0,0,
 Zip Code,10107,Other,03/2020,0,0,0,
@@ -4288,7 +4288,7 @@ Zip Code,10107,Other,02/2026,0,0,,
 Zip Code,10107,Other,03/2026,0,0,,
 Zip Code,10107,Other,04/2026,0,0,,
 Zip Code,10107,Other,05/2026,0,0,,
-Zip Code,10107,Other,06/2026,0,0,,2026-06-06
+Zip Code,10107,Other,06/2026,0,0,,2026-06-13
 Zip Code,10108,Other,01/2020,0,0,0,
 Zip Code,10108,Other,02/2020,0,0,0,
 Zip Code,10108,Other,03/2020,0,0,0,
@@ -4366,7 +4366,7 @@ Zip Code,10108,Other,02/2026,0,0,,
 Zip Code,10108,Other,03/2026,0,0,,
 Zip Code,10108,Other,04/2026,0,0,,
 Zip Code,10108,Other,05/2026,0,0,,
-Zip Code,10108,Other,06/2026,0,0,,2026-06-06
+Zip Code,10108,Other,06/2026,0,0,,2026-06-13
 Zip Code,10110,Other,01/2020,0,0,0,
 Zip Code,10110,Other,02/2020,0,0,0.333,
 Zip Code,10110,Other,03/2020,0,0,0,
@@ -4444,7 +4444,7 @@ Zip Code,10110,Other,02/2026,0,0,,
 Zip Code,10110,Other,03/2026,0,0,,
 Zip Code,10110,Other,04/2026,0,0,,
 Zip Code,10110,Other,05/2026,0,0,,
-Zip Code,10110,Other,06/2026,0,0,,2026-06-06
+Zip Code,10110,Other,06/2026,0,0,,2026-06-13
 Zip Code,10111,Other,01/2020,0,0,0,
 Zip Code,10111,Other,02/2020,0,0,0,
 Zip Code,10111,Other,03/2020,0,0,0,
@@ -4522,7 +4522,7 @@ Zip Code,10111,Other,02/2026,0,0,,
 Zip Code,10111,Other,03/2026,0,0,,
 Zip Code,10111,Other,04/2026,0,0,,
 Zip Code,10111,Other,05/2026,0,0,,
-Zip Code,10111,Other,06/2026,0,0,,2026-06-06
+Zip Code,10111,Other,06/2026,0,0,,2026-06-13
 Zip Code,10112,Other,01/2020,0,0,0,
 Zip Code,10112,Other,02/2020,0,0,0,
 Zip Code,10112,Other,03/2020,0,0,0,
@@ -4600,7 +4600,7 @@ Zip Code,10112,Other,02/2026,0,0,,
 Zip Code,10112,Other,03/2026,0,0,,
 Zip Code,10112,Other,04/2026,0,0,,
 Zip Code,10112,Other,05/2026,0,0,,
-Zip Code,10112,Other,06/2026,0,0,,2026-06-06
+Zip Code,10112,Other,06/2026,0,0,,2026-06-13
 Zip Code,10113,Other,01/2020,0,0,0,
 Zip Code,10113,Other,02/2020,0,0,0,
 Zip Code,10113,Other,03/2020,0,0,0,
@@ -4678,7 +4678,7 @@ Zip Code,10113,Other,02/2026,0,0,,
 Zip Code,10113,Other,03/2026,0,0,,
 Zip Code,10113,Other,04/2026,0,0,,
 Zip Code,10113,Other,05/2026,0,0,,
-Zip Code,10113,Other,06/2026,0,0,,2026-06-06
+Zip Code,10113,Other,06/2026,0,0,,2026-06-13
 Zip Code,10115,Other,01/2020,0,0,0,
 Zip Code,10115,Other,02/2020,0,0,0,
 Zip Code,10115,Other,03/2020,0,0,0,
@@ -4756,7 +4756,7 @@ Zip Code,10115,Other,02/2026,0,0,,
 Zip Code,10115,Other,03/2026,0,0,,
 Zip Code,10115,Other,04/2026,0,0,,
 Zip Code,10115,Other,05/2026,0,0,,
-Zip Code,10115,Other,06/2026,0,0,,2026-06-06
+Zip Code,10115,Other,06/2026,0,0,,2026-06-13
 Zip Code,10116,Other,01/2020,0,0,0,
 Zip Code,10116,Other,02/2020,0,0,0,
 Zip Code,10116,Other,03/2020,0,0,0,
@@ -4834,7 +4834,7 @@ Zip Code,10116,Other,02/2026,0,0,,
 Zip Code,10116,Other,03/2026,0,0,,
 Zip Code,10116,Other,04/2026,0,0,,
 Zip Code,10116,Other,05/2026,0,0,,
-Zip Code,10116,Other,06/2026,0,0,,2026-06-06
+Zip Code,10116,Other,06/2026,0,0,,2026-06-13
 Zip Code,10117,Other,01/2020,0,0,0,
 Zip Code,10117,Other,02/2020,0,0,0,
 Zip Code,10117,Other,03/2020,0,0,0,
@@ -4912,7 +4912,7 @@ Zip Code,10117,Other,02/2026,0,0,,
 Zip Code,10117,Other,03/2026,0,0,,
 Zip Code,10117,Other,04/2026,0,0,,
 Zip Code,10117,Other,05/2026,0,0,,
-Zip Code,10117,Other,06/2026,0,0,,2026-06-06
+Zip Code,10117,Other,06/2026,0,0,,2026-06-13
 Zip Code,10118,Other,01/2020,0,0,0,
 Zip Code,10118,Other,02/2020,0,0,0,
 Zip Code,10118,Other,03/2020,0,0,0,
@@ -4990,7 +4990,7 @@ Zip Code,10118,Other,02/2026,0,0,,
 Zip Code,10118,Other,03/2026,0,0,,
 Zip Code,10118,Other,04/2026,0,0,,
 Zip Code,10118,Other,05/2026,0,0,,
-Zip Code,10118,Other,06/2026,0,0,,2026-06-06
+Zip Code,10118,Other,06/2026,0,0,,2026-06-13
 Zip Code,10119,Other,01/2020,0,0,0,
 Zip Code,10119,Other,02/2020,0,0,0,
 Zip Code,10119,Other,03/2020,0,0,0,
@@ -5068,7 +5068,7 @@ Zip Code,10119,Other,02/2026,0,0,,
 Zip Code,10119,Other,03/2026,0,0,,
 Zip Code,10119,Other,04/2026,0,0,,
 Zip Code,10119,Other,05/2026,0,0,,
-Zip Code,10119,Other,06/2026,0,0,,2026-06-06
+Zip Code,10119,Other,06/2026,0,0,,2026-06-13
 Zip Code,10120,Other,01/2020,0,0,0,
 Zip Code,10120,Other,02/2020,0,0,0,
 Zip Code,10120,Other,03/2020,0,0,0,
@@ -5146,7 +5146,7 @@ Zip Code,10120,Other,02/2026,0,0,,
 Zip Code,10120,Other,03/2026,0,0,,
 Zip Code,10120,Other,04/2026,0,0,,
 Zip Code,10120,Other,05/2026,0,0,,
-Zip Code,10120,Other,06/2026,0,0,,2026-06-06
+Zip Code,10120,Other,06/2026,0,0,,2026-06-13
 Zip Code,10121,Other,01/2020,0,0,0,
 Zip Code,10121,Other,02/2020,0,0,0,
 Zip Code,10121,Other,03/2020,0,0,0,
@@ -5224,7 +5224,7 @@ Zip Code,10121,Other,02/2026,0,0,,
 Zip Code,10121,Other,03/2026,0,0,,
 Zip Code,10121,Other,04/2026,0,0,,
 Zip Code,10121,Other,05/2026,0,0,,
-Zip Code,10121,Other,06/2026,0,0,,2026-06-06
+Zip Code,10121,Other,06/2026,0,0,,2026-06-13
 Zip Code,10122,Other,01/2020,0,0,0.333,
 Zip Code,10122,Other,02/2020,0,0,0,
 Zip Code,10122,Other,03/2020,0,0,0,
@@ -5302,7 +5302,7 @@ Zip Code,10122,Other,02/2026,0,0,,
 Zip Code,10122,Other,03/2026,0,0,,
 Zip Code,10122,Other,04/2026,0,0,,
 Zip Code,10122,Other,05/2026,0,0,,
-Zip Code,10122,Other,06/2026,0,0,,2026-06-06
+Zip Code,10122,Other,06/2026,0,0,,2026-06-13
 Zip Code,10123,Other,01/2020,0,0,0,
 Zip Code,10123,Other,02/2020,0,0,0,
 Zip Code,10123,Other,03/2020,0,0,0,
@@ -5380,7 +5380,7 @@ Zip Code,10123,Other,02/2026,0,0,,
 Zip Code,10123,Other,03/2026,0,0,,
 Zip Code,10123,Other,04/2026,0,0,,
 Zip Code,10123,Other,05/2026,0,0,,
-Zip Code,10123,Other,06/2026,0,0,,2026-06-06
+Zip Code,10123,Other,06/2026,0,0,,2026-06-13
 Zip Code,10124,Other,01/2020,0,0,0,
 Zip Code,10124,Other,02/2020,0,0,0,
 Zip Code,10124,Other,03/2020,0,0,0,
@@ -5458,7 +5458,7 @@ Zip Code,10124,Other,02/2026,0,0,,
 Zip Code,10124,Other,03/2026,0,0,,
 Zip Code,10124,Other,04/2026,0,0,,
 Zip Code,10124,Other,05/2026,0,0,,
-Zip Code,10124,Other,06/2026,0,0,,2026-06-06
+Zip Code,10124,Other,06/2026,0,0,,2026-06-13
 Zip Code,10125,Other,01/2020,0,0,0,
 Zip Code,10125,Other,02/2020,0,0,0,
 Zip Code,10125,Other,03/2020,0,0,0,
@@ -5536,7 +5536,7 @@ Zip Code,10125,Other,02/2026,0,0,,
 Zip Code,10125,Other,03/2026,0,0,,
 Zip Code,10125,Other,04/2026,0,0,,
 Zip Code,10125,Other,05/2026,0,0,,
-Zip Code,10125,Other,06/2026,0,0,,2026-06-06
+Zip Code,10125,Other,06/2026,0,0,,2026-06-13
 Zip Code,10126,Other,01/2020,0,0,0,
 Zip Code,10126,Other,02/2020,0,0,0,
 Zip Code,10126,Other,03/2020,0,0,0,
@@ -5614,7 +5614,7 @@ Zip Code,10126,Other,02/2026,0,0,,
 Zip Code,10126,Other,03/2026,0,0,,
 Zip Code,10126,Other,04/2026,0,0,,
 Zip Code,10126,Other,05/2026,0,0,,
-Zip Code,10126,Other,06/2026,0,0,,2026-06-06
+Zip Code,10126,Other,06/2026,0,0,,2026-06-13
 Zip Code,10128,White,01/2020,0,41.5,75,
 Zip Code,10128,White,02/2020,0,28.5,55.667,
 Zip Code,10128,White,03/2020,0,35.5,72.333,
@@ -5692,7 +5692,7 @@ Zip Code,10128,White,02/2026,0,28,,
 Zip Code,10128,White,03/2026,0,35.5,,
 Zip Code,10128,White,04/2026,0,23,,
 Zip Code,10128,White,05/2026,0,27.5,,
-Zip Code,10128,White,06/2026,0,3.5,,2026-06-06
+Zip Code,10128,White,06/2026,0,11,,2026-06-13
 Zip Code,10129,Other,01/2020,0,0,0,
 Zip Code,10129,Other,02/2020,0,0,0,
 Zip Code,10129,Other,03/2020,0,0,0,
@@ -5770,7 +5770,7 @@ Zip Code,10129,Other,02/2026,0,0,,
 Zip Code,10129,Other,03/2026,0,0,,
 Zip Code,10129,Other,04/2026,0,0,,
 Zip Code,10129,Other,05/2026,0,0,,
-Zip Code,10129,Other,06/2026,0,0,,2026-06-06
+Zip Code,10129,Other,06/2026,0,0,,2026-06-13
 Zip Code,10130,Other,01/2020,0,0,0,
 Zip Code,10130,Other,02/2020,0,0,0,
 Zip Code,10130,Other,03/2020,0,0,0,
@@ -5848,7 +5848,7 @@ Zip Code,10130,Other,02/2026,0,0,,
 Zip Code,10130,Other,03/2026,0,0,,
 Zip Code,10130,Other,04/2026,0,0,,
 Zip Code,10130,Other,05/2026,0,0,,
-Zip Code,10130,Other,06/2026,0,0,,2026-06-06
+Zip Code,10130,Other,06/2026,0,0,,2026-06-13
 Zip Code,10131,Other,01/2020,0,0,0,
 Zip Code,10131,Other,02/2020,0,0,0,
 Zip Code,10131,Other,03/2020,0,0,0,
@@ -5926,7 +5926,7 @@ Zip Code,10131,Other,02/2026,0,0,,
 Zip Code,10131,Other,03/2026,0,0,,
 Zip Code,10131,Other,04/2026,0,0,,
 Zip Code,10131,Other,05/2026,0,0,,
-Zip Code,10131,Other,06/2026,0,0,,2026-06-06
+Zip Code,10131,Other,06/2026,0,0,,2026-06-13
 Zip Code,10133,Other,01/2020,0,0,0,
 Zip Code,10133,Other,02/2020,0,0,0,
 Zip Code,10133,Other,03/2020,0,0,0,
@@ -6004,7 +6004,7 @@ Zip Code,10133,Other,02/2026,0,0,,
 Zip Code,10133,Other,03/2026,0,0,,
 Zip Code,10133,Other,04/2026,0,0,,
 Zip Code,10133,Other,05/2026,0,0,,
-Zip Code,10133,Other,06/2026,0,0,,2026-06-06
+Zip Code,10133,Other,06/2026,0,0,,2026-06-13
 Zip Code,10138,Other,01/2020,0,0,0,
 Zip Code,10138,Other,02/2020,0,0,0,
 Zip Code,10138,Other,03/2020,0,0,0,
@@ -6082,7 +6082,7 @@ Zip Code,10138,Other,02/2026,0,0,,
 Zip Code,10138,Other,03/2026,0,0,,
 Zip Code,10138,Other,04/2026,0,0,,
 Zip Code,10138,Other,05/2026,0,0,,
-Zip Code,10138,Other,06/2026,0,0,,2026-06-06
+Zip Code,10138,Other,06/2026,0,0,,2026-06-13
 Zip Code,10150,Other,01/2020,0,0,0,
 Zip Code,10150,Other,02/2020,0,0,0,
 Zip Code,10150,Other,03/2020,0,0,0,
@@ -6160,7 +6160,7 @@ Zip Code,10150,Other,02/2026,0,0,,
 Zip Code,10150,Other,03/2026,0,0,,
 Zip Code,10150,Other,04/2026,0,0,,
 Zip Code,10150,Other,05/2026,0,0,,
-Zip Code,10150,Other,06/2026,0,0,,2026-06-06
+Zip Code,10150,Other,06/2026,0,0,,2026-06-13
 Zip Code,10151,Other,01/2020,0,0,0,
 Zip Code,10151,Other,02/2020,0,0,0,
 Zip Code,10151,Other,03/2020,0,0,0,
@@ -6238,7 +6238,7 @@ Zip Code,10151,Other,02/2026,0,0,,
 Zip Code,10151,Other,03/2026,0,0,,
 Zip Code,10151,Other,04/2026,0,0,,
 Zip Code,10151,Other,05/2026,0,0,,
-Zip Code,10151,Other,06/2026,0,0,,2026-06-06
+Zip Code,10151,Other,06/2026,0,0,,2026-06-13
 Zip Code,10152,Other,01/2020,0,0,0,
 Zip Code,10152,Other,02/2020,0,0,0,
 Zip Code,10152,Other,03/2020,0,0,0,
@@ -6316,7 +6316,7 @@ Zip Code,10152,Other,02/2026,0,0,,
 Zip Code,10152,Other,03/2026,0,0,,
 Zip Code,10152,Other,04/2026,0,0,,
 Zip Code,10152,Other,05/2026,0,0,,
-Zip Code,10152,Other,06/2026,0,0,,2026-06-06
+Zip Code,10152,Other,06/2026,0,0,,2026-06-13
 Zip Code,10153,Other,01/2020,0,0,0,
 Zip Code,10153,Other,02/2020,0,0,0,
 Zip Code,10153,Other,03/2020,0,0,0,
@@ -6394,7 +6394,7 @@ Zip Code,10153,Other,02/2026,0,0,,
 Zip Code,10153,Other,03/2026,0,0,,
 Zip Code,10153,Other,04/2026,0,0,,
 Zip Code,10153,Other,05/2026,0,0,,
-Zip Code,10153,Other,06/2026,0,0,,2026-06-06
+Zip Code,10153,Other,06/2026,0,0,,2026-06-13
 Zip Code,10154,Other,01/2020,0,0,0,
 Zip Code,10154,Other,02/2020,0,0,0,
 Zip Code,10154,Other,03/2020,0,0,0,
@@ -6472,7 +6472,7 @@ Zip Code,10154,Other,02/2026,0,0,,
 Zip Code,10154,Other,03/2026,0,0,,
 Zip Code,10154,Other,04/2026,0,0,,
 Zip Code,10154,Other,05/2026,0,0,,
-Zip Code,10154,Other,06/2026,0,0,,2026-06-06
+Zip Code,10154,Other,06/2026,0,0,,2026-06-13
 Zip Code,10155,Other,01/2020,0,0,0,
 Zip Code,10155,Other,02/2020,0,0,0,
 Zip Code,10155,Other,03/2020,0,0,0,
@@ -6550,7 +6550,7 @@ Zip Code,10155,Other,02/2026,0,0,,
 Zip Code,10155,Other,03/2026,0,0,,
 Zip Code,10155,Other,04/2026,0,0,,
 Zip Code,10155,Other,05/2026,0,0,,
-Zip Code,10155,Other,06/2026,0,0,,2026-06-06
+Zip Code,10155,Other,06/2026,0,0,,2026-06-13
 Zip Code,10156,Other,01/2020,0,0,0,
 Zip Code,10156,Other,02/2020,0,0,0,
 Zip Code,10156,Other,03/2020,0,0,0,
@@ -6628,7 +6628,7 @@ Zip Code,10156,Other,02/2026,0,0,,
 Zip Code,10156,Other,03/2026,0,0,,
 Zip Code,10156,Other,04/2026,0,0,,
 Zip Code,10156,Other,05/2026,0,0,,
-Zip Code,10156,Other,06/2026,0,0,,2026-06-06
+Zip Code,10156,Other,06/2026,0,0,,2026-06-13
 Zip Code,10157,Other,01/2020,0,0,0,
 Zip Code,10157,Other,02/2020,0,0,0,
 Zip Code,10157,Other,03/2020,0,0,0,
@@ -6706,7 +6706,7 @@ Zip Code,10157,Other,02/2026,0,0,,
 Zip Code,10157,Other,03/2026,0,0,,
 Zip Code,10157,Other,04/2026,0,0,,
 Zip Code,10157,Other,05/2026,0,0,,
-Zip Code,10157,Other,06/2026,0,0,,2026-06-06
+Zip Code,10157,Other,06/2026,0,0,,2026-06-13
 Zip Code,10158,Other,01/2020,0,0,0,
 Zip Code,10158,Other,02/2020,0,0,0,
 Zip Code,10158,Other,03/2020,0,0,0,
@@ -6784,7 +6784,7 @@ Zip Code,10158,Other,02/2026,0,0,,
 Zip Code,10158,Other,03/2026,0,0,,
 Zip Code,10158,Other,04/2026,0,0,,
 Zip Code,10158,Other,05/2026,0,0,,
-Zip Code,10158,Other,06/2026,0,0,,2026-06-06
+Zip Code,10158,Other,06/2026,0,0,,2026-06-13
 Zip Code,10159,Other,01/2020,0,0,0,
 Zip Code,10159,Other,02/2020,0,0,0,
 Zip Code,10159,Other,03/2020,0,0,0,
@@ -6862,7 +6862,7 @@ Zip Code,10159,Other,02/2026,0,0,,
 Zip Code,10159,Other,03/2026,0,0,,
 Zip Code,10159,Other,04/2026,0,0,,
 Zip Code,10159,Other,05/2026,0,0,,
-Zip Code,10159,Other,06/2026,0,0,,2026-06-06
+Zip Code,10159,Other,06/2026,0,0,,2026-06-13
 Zip Code,10160,Other,01/2020,0,0,0,
 Zip Code,10160,Other,02/2020,0,0,0,
 Zip Code,10160,Other,03/2020,0,0,0,
@@ -6940,7 +6940,7 @@ Zip Code,10160,Other,02/2026,0,0,,
 Zip Code,10160,Other,03/2026,0,0,,
 Zip Code,10160,Other,04/2026,0,0,,
 Zip Code,10160,Other,05/2026,0,0,,
-Zip Code,10160,Other,06/2026,0,0,,2026-06-06
+Zip Code,10160,Other,06/2026,0,0,,2026-06-13
 Zip Code,10162,White,01/2020,0,0.5,1.333,
 Zip Code,10162,White,02/2020,0,0,3,
 Zip Code,10162,White,03/2020,0,5,1.667,
@@ -7018,7 +7018,7 @@ Zip Code,10162,White,02/2026,0,0,,
 Zip Code,10162,White,03/2026,0,5,,
 Zip Code,10162,White,04/2026,0,0.5,,
 Zip Code,10162,White,05/2026,0,1.5,,
-Zip Code,10162,White,06/2026,0,0,,2026-06-06
+Zip Code,10162,White,06/2026,0,0,,2026-06-13
 Zip Code,10163,Other,01/2020,0,0,0,
 Zip Code,10163,Other,02/2020,0,0,0,
 Zip Code,10163,Other,03/2020,0,0,0,
@@ -7096,7 +7096,7 @@ Zip Code,10163,Other,02/2026,0,0,,
 Zip Code,10163,Other,03/2026,0,0,,
 Zip Code,10163,Other,04/2026,0,0,,
 Zip Code,10163,Other,05/2026,0,0,,
-Zip Code,10163,Other,06/2026,0,0,,2026-06-06
+Zip Code,10163,Other,06/2026,0,0,,2026-06-13
 Zip Code,10164,Other,01/2020,0,0,0,
 Zip Code,10164,Other,02/2020,0,0,0,
 Zip Code,10164,Other,03/2020,0,0,0,
@@ -7174,7 +7174,7 @@ Zip Code,10164,Other,02/2026,0,0,,
 Zip Code,10164,Other,03/2026,0,0,,
 Zip Code,10164,Other,04/2026,0,0,,
 Zip Code,10164,Other,05/2026,0,0,,
-Zip Code,10164,Other,06/2026,0,0,,2026-06-06
+Zip Code,10164,Other,06/2026,0,0,,2026-06-13
 Zip Code,10165,Other,01/2020,0,0,0,
 Zip Code,10165,Other,02/2020,0,0,0,
 Zip Code,10165,Other,03/2020,0,0,0,
@@ -7252,7 +7252,7 @@ Zip Code,10165,Other,02/2026,0,0,,
 Zip Code,10165,Other,03/2026,0,0,,
 Zip Code,10165,Other,04/2026,0,0,,
 Zip Code,10165,Other,05/2026,0,0,,
-Zip Code,10165,Other,06/2026,0,0,,2026-06-06
+Zip Code,10165,Other,06/2026,0,0,,2026-06-13
 Zip Code,10166,Other,01/2020,0,0,0,
 Zip Code,10166,Other,02/2020,0,0,0,
 Zip Code,10166,Other,03/2020,0,0,0,
@@ -7330,7 +7330,7 @@ Zip Code,10166,Other,02/2026,0,0,,
 Zip Code,10166,Other,03/2026,0,0,,
 Zip Code,10166,Other,04/2026,0,0,,
 Zip Code,10166,Other,05/2026,0,0,,
-Zip Code,10166,Other,06/2026,0,0,,2026-06-06
+Zip Code,10166,Other,06/2026,0,0,,2026-06-13
 Zip Code,10167,Other,01/2020,0,0,0,
 Zip Code,10167,Other,02/2020,0,0,0,
 Zip Code,10167,Other,03/2020,0,0,0,
@@ -7408,7 +7408,7 @@ Zip Code,10167,Other,02/2026,0,0,,
 Zip Code,10167,Other,03/2026,0,0,,
 Zip Code,10167,Other,04/2026,0,0,,
 Zip Code,10167,Other,05/2026,0,0,,
-Zip Code,10167,Other,06/2026,0,0,,2026-06-06
+Zip Code,10167,Other,06/2026,0,0,,2026-06-13
 Zip Code,10168,Other,01/2020,0,0,0,
 Zip Code,10168,Other,02/2020,0,0,0,
 Zip Code,10168,Other,03/2020,0,0,0,
@@ -7486,7 +7486,7 @@ Zip Code,10168,Other,02/2026,0,0,,
 Zip Code,10168,Other,03/2026,0,0,,
 Zip Code,10168,Other,04/2026,0,0,,
 Zip Code,10168,Other,05/2026,0,0,,
-Zip Code,10168,Other,06/2026,0,0,,2026-06-06
+Zip Code,10168,Other,06/2026,0,0,,2026-06-13
 Zip Code,10169,Other,01/2020,0,0,0,
 Zip Code,10169,Other,02/2020,0,0,0,
 Zip Code,10169,Other,03/2020,0,0,0,
@@ -7564,7 +7564,7 @@ Zip Code,10169,Other,02/2026,0,0,,
 Zip Code,10169,Other,03/2026,0,0,,
 Zip Code,10169,Other,04/2026,0,0,,
 Zip Code,10169,Other,05/2026,0,0,,
-Zip Code,10169,Other,06/2026,0,0,,2026-06-06
+Zip Code,10169,Other,06/2026,0,0,,2026-06-13
 Zip Code,10170,Other,01/2020,0,0,0,
 Zip Code,10170,Other,02/2020,0,0,0,
 Zip Code,10170,Other,03/2020,0,0,0,
@@ -7642,7 +7642,7 @@ Zip Code,10170,Other,02/2026,0,0,,
 Zip Code,10170,Other,03/2026,0,0,,
 Zip Code,10170,Other,04/2026,0,0,,
 Zip Code,10170,Other,05/2026,0,0,,
-Zip Code,10170,Other,06/2026,0,0,,2026-06-06
+Zip Code,10170,Other,06/2026,0,0,,2026-06-13
 Zip Code,10171,Other,01/2020,0,0,0,
 Zip Code,10171,Other,02/2020,0,0,0,
 Zip Code,10171,Other,03/2020,0,0,0,
@@ -7720,7 +7720,7 @@ Zip Code,10171,Other,02/2026,0,0,,
 Zip Code,10171,Other,03/2026,0,0,,
 Zip Code,10171,Other,04/2026,0,0,,
 Zip Code,10171,Other,05/2026,0,0,,
-Zip Code,10171,Other,06/2026,0,0,,2026-06-06
+Zip Code,10171,Other,06/2026,0,0,,2026-06-13
 Zip Code,10172,Other,01/2020,0,0,0,
 Zip Code,10172,Other,02/2020,0,0,0,
 Zip Code,10172,Other,03/2020,0,0,0,
@@ -7798,7 +7798,7 @@ Zip Code,10172,Other,02/2026,0,0,,
 Zip Code,10172,Other,03/2026,0,0,,
 Zip Code,10172,Other,04/2026,0,0,,
 Zip Code,10172,Other,05/2026,0,0,,
-Zip Code,10172,Other,06/2026,0,0,,2026-06-06
+Zip Code,10172,Other,06/2026,0,0,,2026-06-13
 Zip Code,10173,Other,01/2020,0,0,0,
 Zip Code,10173,Other,02/2020,0,0,0,
 Zip Code,10173,Other,03/2020,0,0,0,
@@ -7876,7 +7876,7 @@ Zip Code,10173,Other,02/2026,0,0,,
 Zip Code,10173,Other,03/2026,0,0,,
 Zip Code,10173,Other,04/2026,0,0,,
 Zip Code,10173,Other,05/2026,0,0,,
-Zip Code,10173,Other,06/2026,0,0,,2026-06-06
+Zip Code,10173,Other,06/2026,0,0,,2026-06-13
 Zip Code,10174,Other,01/2020,0,0,0,
 Zip Code,10174,Other,02/2020,0,0,0,
 Zip Code,10174,Other,03/2020,0,0,0,
@@ -7954,7 +7954,7 @@ Zip Code,10174,Other,02/2026,0,0,,
 Zip Code,10174,Other,03/2026,0,0,,
 Zip Code,10174,Other,04/2026,0,0,,
 Zip Code,10174,Other,05/2026,0,0,,
-Zip Code,10174,Other,06/2026,0,0,,2026-06-06
+Zip Code,10174,Other,06/2026,0,0,,2026-06-13
 Zip Code,10175,Other,01/2020,0,0,0,
 Zip Code,10175,Other,02/2020,0,0,0,
 Zip Code,10175,Other,03/2020,0,0,0,
@@ -8032,7 +8032,7 @@ Zip Code,10175,Other,02/2026,0,0,,
 Zip Code,10175,Other,03/2026,0,0,,
 Zip Code,10175,Other,04/2026,0,0,,
 Zip Code,10175,Other,05/2026,0,0,,
-Zip Code,10175,Other,06/2026,0,0,,2026-06-06
+Zip Code,10175,Other,06/2026,0,0,,2026-06-13
 Zip Code,10176,Other,01/2020,0,0,0,
 Zip Code,10176,Other,02/2020,0,0,0,
 Zip Code,10176,Other,03/2020,0,0,0,
@@ -8110,7 +8110,7 @@ Zip Code,10176,Other,02/2026,0,0,,
 Zip Code,10176,Other,03/2026,0,0,,
 Zip Code,10176,Other,04/2026,0,0,,
 Zip Code,10176,Other,05/2026,0,0,,
-Zip Code,10176,Other,06/2026,0,0,,2026-06-06
+Zip Code,10176,Other,06/2026,0,0,,2026-06-13
 Zip Code,10177,Other,01/2020,0,0,0,
 Zip Code,10177,Other,02/2020,0,0,0,
 Zip Code,10177,Other,03/2020,0,0,0,
@@ -8188,7 +8188,7 @@ Zip Code,10177,Other,02/2026,0,0,,
 Zip Code,10177,Other,03/2026,0,0,,
 Zip Code,10177,Other,04/2026,0,0,,
 Zip Code,10177,Other,05/2026,0,0,,
-Zip Code,10177,Other,06/2026,0,0,,2026-06-06
+Zip Code,10177,Other,06/2026,0,0,,2026-06-13
 Zip Code,10178,Other,01/2020,0,0,0,
 Zip Code,10178,Other,02/2020,0,0,0,
 Zip Code,10178,Other,03/2020,0,0,0,
@@ -8266,7 +8266,7 @@ Zip Code,10178,Other,02/2026,0,0,,
 Zip Code,10178,Other,03/2026,0,0,,
 Zip Code,10178,Other,04/2026,0,0,,
 Zip Code,10178,Other,05/2026,0,0,,
-Zip Code,10178,Other,06/2026,0,0,,2026-06-06
+Zip Code,10178,Other,06/2026,0,0,,2026-06-13
 Zip Code,10179,Other,01/2020,0,0,0,
 Zip Code,10179,Other,02/2020,0,0,0,
 Zip Code,10179,Other,03/2020,0,0,0,
@@ -8344,7 +8344,7 @@ Zip Code,10179,Other,02/2026,0,0,,
 Zip Code,10179,Other,03/2026,0,0,,
 Zip Code,10179,Other,04/2026,0,0,,
 Zip Code,10179,Other,05/2026,0,0,,
-Zip Code,10179,Other,06/2026,0,0,,2026-06-06
+Zip Code,10179,Other,06/2026,0,0,,2026-06-13
 Zip Code,10185,Other,01/2020,0,0,0,
 Zip Code,10185,Other,02/2020,0,0,0,
 Zip Code,10185,Other,03/2020,0,0,0,
@@ -8422,7 +8422,7 @@ Zip Code,10185,Other,02/2026,0,0,,
 Zip Code,10185,Other,03/2026,0,0,,
 Zip Code,10185,Other,04/2026,0,0,,
 Zip Code,10185,Other,05/2026,0,0,,
-Zip Code,10185,Other,06/2026,0,0,,2026-06-06
+Zip Code,10185,Other,06/2026,0,0,,2026-06-13
 Zip Code,10199,Other,01/2020,0,0,0,
 Zip Code,10199,Other,02/2020,0,0,0,
 Zip Code,10199,Other,03/2020,0,0,0,
@@ -8500,7 +8500,7 @@ Zip Code,10199,Other,02/2026,0,0,,
 Zip Code,10199,Other,03/2026,0,0,,
 Zip Code,10199,Other,04/2026,0,0,,
 Zip Code,10199,Other,05/2026,0,0,,
-Zip Code,10199,Other,06/2026,0,0,,2026-06-06
+Zip Code,10199,Other,06/2026,0,0,,2026-06-13
 Zip Code,10203,Other,01/2020,0,0,0,
 Zip Code,10203,Other,02/2020,0,0,0,
 Zip Code,10203,Other,03/2020,0,0,0,
@@ -8578,7 +8578,7 @@ Zip Code,10203,Other,02/2026,0,0,,
 Zip Code,10203,Other,03/2026,0,0,,
 Zip Code,10203,Other,04/2026,0,0,,
 Zip Code,10203,Other,05/2026,0,0,,
-Zip Code,10203,Other,06/2026,0,0,,2026-06-06
+Zip Code,10203,Other,06/2026,0,0,,2026-06-13
 Zip Code,10211,Other,01/2020,0,0,0,
 Zip Code,10211,Other,02/2020,0,0,0,
 Zip Code,10211,Other,03/2020,0,0,0,
@@ -8656,7 +8656,7 @@ Zip Code,10211,Other,02/2026,0,0,,
 Zip Code,10211,Other,03/2026,0,0,,
 Zip Code,10211,Other,04/2026,0,0,,
 Zip Code,10211,Other,05/2026,0,0,,
-Zip Code,10211,Other,06/2026,0,0,,2026-06-06
+Zip Code,10211,Other,06/2026,0,0,,2026-06-13
 Zip Code,10212,Other,01/2020,0,0,0,
 Zip Code,10212,Other,02/2020,0,0,0,
 Zip Code,10212,Other,03/2020,0,0,0,
@@ -8734,7 +8734,7 @@ Zip Code,10212,Other,02/2026,0,0,,
 Zip Code,10212,Other,03/2026,0,0,,
 Zip Code,10212,Other,04/2026,0,0,,
 Zip Code,10212,Other,05/2026,0,0,,
-Zip Code,10212,Other,06/2026,0,0,,2026-06-06
+Zip Code,10212,Other,06/2026,0,0,,2026-06-13
 Zip Code,10213,Other,01/2020,0,0,0,
 Zip Code,10213,Other,02/2020,0,0,0,
 Zip Code,10213,Other,03/2020,0,0,0,
@@ -8812,7 +8812,7 @@ Zip Code,10213,Other,02/2026,0,0,,
 Zip Code,10213,Other,03/2026,0,0,,
 Zip Code,10213,Other,04/2026,0,0,,
 Zip Code,10213,Other,05/2026,0,0,,
-Zip Code,10213,Other,06/2026,0,0,,2026-06-06
+Zip Code,10213,Other,06/2026,0,0,,2026-06-13
 Zip Code,10258,Other,01/2020,0,0,0,
 Zip Code,10258,Other,02/2020,0,0,0,
 Zip Code,10258,Other,03/2020,0,0,0,
@@ -8890,7 +8890,7 @@ Zip Code,10258,Other,02/2026,0,0,,
 Zip Code,10258,Other,03/2026,0,0,,
 Zip Code,10258,Other,04/2026,0,0,,
 Zip Code,10258,Other,05/2026,0,0,,
-Zip Code,10258,Other,06/2026,0,0,,2026-06-06
+Zip Code,10258,Other,06/2026,0,0,,2026-06-13
 Zip Code,10268,Other,01/2020,0,0,0,
 Zip Code,10268,Other,02/2020,0,0,0,
 Zip Code,10268,Other,03/2020,0,0,0,
@@ -8968,7 +8968,7 @@ Zip Code,10268,Other,02/2026,0,0,,
 Zip Code,10268,Other,03/2026,0,0,,
 Zip Code,10268,Other,04/2026,0,0,,
 Zip Code,10268,Other,05/2026,0,0,,
-Zip Code,10268,Other,06/2026,0,0,,2026-06-06
+Zip Code,10268,Other,06/2026,0,0,,2026-06-13
 Zip Code,10269,Other,01/2020,0,0,0,
 Zip Code,10269,Other,02/2020,0,0,0,
 Zip Code,10269,Other,03/2020,0,0,0,
@@ -9046,7 +9046,7 @@ Zip Code,10269,Other,02/2026,0,0,,
 Zip Code,10269,Other,03/2026,0,0,,
 Zip Code,10269,Other,04/2026,0,0,,
 Zip Code,10269,Other,05/2026,0,0,,
-Zip Code,10269,Other,06/2026,0,0,,2026-06-06
+Zip Code,10269,Other,06/2026,0,0,,2026-06-13
 Zip Code,10271,Other,01/2020,0,0,0,
 Zip Code,10271,Other,02/2020,0,0,0,
 Zip Code,10271,Other,03/2020,0,0,0,
@@ -9124,7 +9124,7 @@ Zip Code,10271,Other,02/2026,0,0,,
 Zip Code,10271,Other,03/2026,0,0,,
 Zip Code,10271,Other,04/2026,0,0,,
 Zip Code,10271,Other,05/2026,0,0,,
-Zip Code,10271,Other,06/2026,0,0,,2026-06-06
+Zip Code,10271,Other,06/2026,0,0,,2026-06-13
 Zip Code,10272,Other,01/2020,0,0,0,
 Zip Code,10272,Other,02/2020,0,0,0,
 Zip Code,10272,Other,03/2020,0,0,0,
@@ -9202,7 +9202,7 @@ Zip Code,10272,Other,02/2026,0,0,,
 Zip Code,10272,Other,03/2026,0,0,,
 Zip Code,10272,Other,04/2026,0,0,,
 Zip Code,10272,Other,05/2026,0,0,,
-Zip Code,10272,Other,06/2026,0,0,,2026-06-06
+Zip Code,10272,Other,06/2026,0,0,,2026-06-13
 Zip Code,10274,Other,01/2020,0,0,0,
 Zip Code,10274,Other,02/2020,0,0,0,
 Zip Code,10274,Other,03/2020,0,0,0,
@@ -9280,7 +9280,7 @@ Zip Code,10274,Other,02/2026,0,0,,
 Zip Code,10274,Other,03/2026,0,0,,
 Zip Code,10274,Other,04/2026,0,0,,
 Zip Code,10274,Other,05/2026,0,0,,
-Zip Code,10274,Other,06/2026,0,0,,2026-06-06
+Zip Code,10274,Other,06/2026,0,0,,2026-06-13
 Zip Code,10275,Other,01/2020,0,0,0,
 Zip Code,10275,Other,02/2020,0,0,0,
 Zip Code,10275,Other,03/2020,0,0,0,
@@ -9358,7 +9358,7 @@ Zip Code,10275,Other,02/2026,0,0,,
 Zip Code,10275,Other,03/2026,0,0,,
 Zip Code,10275,Other,04/2026,0,0,,
 Zip Code,10275,Other,05/2026,0,0,,
-Zip Code,10275,Other,06/2026,0,0,,2026-06-06
+Zip Code,10275,Other,06/2026,0,0,,2026-06-13
 Zip Code,10276,Other,01/2020,0,0,0,
 Zip Code,10276,Other,02/2020,0,0,0,
 Zip Code,10276,Other,03/2020,0,0,0,
@@ -9436,7 +9436,7 @@ Zip Code,10276,Other,02/2026,0,0,,
 Zip Code,10276,Other,03/2026,0,0,,
 Zip Code,10276,Other,04/2026,0,0,,
 Zip Code,10276,Other,05/2026,0,0,,
-Zip Code,10276,Other,06/2026,0,0,,2026-06-06
+Zip Code,10276,Other,06/2026,0,0,,2026-06-13
 Zip Code,10277,Other,01/2020,0,0,0,
 Zip Code,10277,Other,02/2020,0,0,0,
 Zip Code,10277,Other,03/2020,0,0,0,
@@ -9514,7 +9514,7 @@ Zip Code,10277,Other,02/2026,0,0,,
 Zip Code,10277,Other,03/2026,0,0,,
 Zip Code,10277,Other,04/2026,0,0,,
 Zip Code,10277,Other,05/2026,0,0,,
-Zip Code,10277,Other,06/2026,0,0,,2026-06-06
+Zip Code,10277,Other,06/2026,0,0,,2026-06-13
 Zip Code,10278,Other,01/2020,0,0,0,
 Zip Code,10278,Other,02/2020,0,0,0,
 Zip Code,10278,Other,03/2020,0,0,0,
@@ -9592,7 +9592,7 @@ Zip Code,10278,Other,02/2026,0,0,,
 Zip Code,10278,Other,03/2026,0,0,,
 Zip Code,10278,Other,04/2026,0,0,,
 Zip Code,10278,Other,05/2026,0,0,,
-Zip Code,10278,Other,06/2026,0,0,,2026-06-06
+Zip Code,10278,Other,06/2026,0,0,,2026-06-13
 Zip Code,10279,White,01/2020,0,0,0,
 Zip Code,10279,White,02/2020,0,0,0,
 Zip Code,10279,White,03/2020,0,0,0,
@@ -9670,7 +9670,7 @@ Zip Code,10279,White,02/2026,0,0,,
 Zip Code,10279,White,03/2026,0,0,,
 Zip Code,10279,White,04/2026,0,0,,
 Zip Code,10279,White,05/2026,0,0,,
-Zip Code,10279,White,06/2026,0,0.5,,2026-06-06
+Zip Code,10279,White,06/2026,0,0.5,,2026-06-13
 Zip Code,10280,White,01/2020,0,8,9.333,
 Zip Code,10280,White,02/2020,0,7,11,
 Zip Code,10280,White,03/2020,0,4,16.667,
@@ -9748,7 +9748,7 @@ Zip Code,10280,White,02/2026,0,7,,
 Zip Code,10280,White,03/2026,0,4,,
 Zip Code,10280,White,04/2026,0,9.5,,
 Zip Code,10280,White,05/2026,0,3.5,,
-Zip Code,10280,White,06/2026,0,2.5,,2026-06-06
+Zip Code,10280,White,06/2026,0,6,,2026-06-13
 Zip Code,10281,Other,01/2020,0,0,0,
 Zip Code,10281,Other,02/2020,0,0,0,
 Zip Code,10281,Other,03/2020,0,0,0,
@@ -9826,7 +9826,7 @@ Zip Code,10281,Other,02/2026,0,0,,
 Zip Code,10281,Other,03/2026,0,0,,
 Zip Code,10281,Other,04/2026,0,0,,
 Zip Code,10281,Other,05/2026,0,0,,
-Zip Code,10281,Other,06/2026,0,0,,2026-06-06
+Zip Code,10281,Other,06/2026,0,0,,2026-06-13
 Zip Code,10282,White,01/2020,0,1.5,3.667,
 Zip Code,10282,White,02/2020,0,1,3,
 Zip Code,10282,White,03/2020,0,0,2,
@@ -9904,7 +9904,7 @@ Zip Code,10282,White,02/2026,0,1,,
 Zip Code,10282,White,03/2026,0,0,,
 Zip Code,10282,White,04/2026,0,1.5,,
 Zip Code,10282,White,05/2026,0,3,,
-Zip Code,10282,White,06/2026,0,0,,2026-06-06
+Zip Code,10282,White,06/2026,0,1,,2026-06-13
 Zip Code,10285,Other,01/2020,0,0,0,
 Zip Code,10285,Other,02/2020,0,0,0,
 Zip Code,10285,Other,03/2020,0,0,0,
@@ -9982,7 +9982,7 @@ Zip Code,10285,Other,02/2026,0,0,,
 Zip Code,10285,Other,03/2026,0,0,,
 Zip Code,10285,Other,04/2026,0,0,,
 Zip Code,10285,Other,05/2026,0,0,,
-Zip Code,10285,Other,06/2026,0,0,,2026-06-06
+Zip Code,10285,Other,06/2026,0,0,,2026-06-13
 Zip Code,10301,Other,01/2020,0,43.5,80.667,
 Zip Code,10301,Other,02/2020,0,49,78,
 Zip Code,10301,Other,03/2020,0,34,64.333,
@@ -10060,7 +10060,7 @@ Zip Code,10301,Other,02/2026,0,49,,
 Zip Code,10301,Other,03/2026,0,34,,
 Zip Code,10301,Other,04/2026,0,43,,
 Zip Code,10301,Other,05/2026,0,46,,
-Zip Code,10301,Other,06/2026,0,9,,2026-06-06
+Zip Code,10301,Other,06/2026,0,22,,2026-06-13
 Zip Code,10302,Other,01/2020,0,11.5,21.333,
 Zip Code,10302,Other,02/2020,0,15.5,18.667,
 Zip Code,10302,Other,03/2020,0,15,20,
@@ -10138,7 +10138,7 @@ Zip Code,10302,Other,02/2026,0,15.5,,
 Zip Code,10302,Other,03/2026,0,15,,
 Zip Code,10302,Other,04/2026,0,11,,
 Zip Code,10302,Other,05/2026,0,8.5,,
-Zip Code,10302,Other,06/2026,0,4,,2026-06-06
+Zip Code,10302,Other,06/2026,0,6,,2026-06-13
 Zip Code,10303,Other,01/2020,0,17,59,
 Zip Code,10303,Other,02/2020,0,13,77.333,
 Zip Code,10303,Other,03/2020,0,19.5,50.333,
@@ -10216,7 +10216,7 @@ Zip Code,10303,Other,02/2026,0,13,,
 Zip Code,10303,Other,03/2026,0,19.5,,
 Zip Code,10303,Other,04/2026,0,32,,
 Zip Code,10303,Other,05/2026,0,18,,
-Zip Code,10303,Other,06/2026,0,6.5,,2026-06-06
+Zip Code,10303,Other,06/2026,0,10,,2026-06-13
 Zip Code,10304,Other,01/2020,0,40,104.667,
 Zip Code,10304,Other,02/2020,0,39.5,101.333,
 Zip Code,10304,Other,03/2020,0,39,107.333,
@@ -10294,7 +10294,7 @@ Zip Code,10304,Other,02/2026,0,38.5,,
 Zip Code,10304,Other,03/2026,0,39,,
 Zip Code,10304,Other,04/2026,0,34.5,,
 Zip Code,10304,Other,05/2026,0,52,,
-Zip Code,10304,Other,06/2026,0,5,,2026-06-06
+Zip Code,10304,Other,06/2026,0,32,,2026-06-13
 Zip Code,10305,White,01/2020,0,15,17.667,
 Zip Code,10305,White,02/2020,0,19.5,48.667,
 Zip Code,10305,White,03/2020,0,12,15.333,
@@ -10372,7 +10372,7 @@ Zip Code,10305,White,02/2026,0,19.5,,
 Zip Code,10305,White,03/2026,0,12,,
 Zip Code,10305,White,04/2026,0,15.5,,
 Zip Code,10305,White,05/2026,0,15.5,,
-Zip Code,10305,White,06/2026,0,3,,2026-06-06
+Zip Code,10305,White,06/2026,0,6,,2026-06-13
 Zip Code,10306,White,01/2020,0,16.5,52.667,
 Zip Code,10306,White,02/2020,0,18.5,33,
 Zip Code,10306,White,03/2020,0,25.5,45.333,
@@ -10450,7 +10450,7 @@ Zip Code,10306,White,02/2026,0,18.5,,
 Zip Code,10306,White,03/2026,0,25.5,,
 Zip Code,10306,White,04/2026,0,18.5,,
 Zip Code,10306,White,05/2026,0,19,,
-Zip Code,10306,White,06/2026,0,2.5,,2026-06-06
+Zip Code,10306,White,06/2026,0,5.5,,2026-06-13
 Zip Code,10307,White,01/2020,0,3,2.333,
 Zip Code,10307,White,02/2020,0,1.5,2,
 Zip Code,10307,White,03/2020,0,2.5,4.333,
@@ -10528,7 +10528,7 @@ Zip Code,10307,White,02/2026,0,1.5,,
 Zip Code,10307,White,03/2026,0,2.5,,
 Zip Code,10307,White,04/2026,0,5,,
 Zip Code,10307,White,05/2026,0,4.5,,
-Zip Code,10307,White,06/2026,0,2,,2026-06-06
+Zip Code,10307,White,06/2026,0,2,,2026-06-13
 Zip Code,10308,White,01/2020,0,6.5,4.667,
 Zip Code,10308,White,02/2020,0,3,5.333,
 Zip Code,10308,White,03/2020,0,6,5.333,
@@ -10606,7 +10606,7 @@ Zip Code,10308,White,02/2026,0,2.5,,
 Zip Code,10308,White,03/2026,0,6,,
 Zip Code,10308,White,04/2026,0,7,,
 Zip Code,10308,White,05/2026,0,5.5,,
-Zip Code,10308,White,06/2026,0,1.5,,2026-06-06
+Zip Code,10308,White,06/2026,0,2,,2026-06-13
 Zip Code,10309,White,01/2020,0,4,7.667,
 Zip Code,10309,White,02/2020,0,6,6,
 Zip Code,10309,White,03/2020,0,8,7.333,
@@ -10684,7 +10684,7 @@ Zip Code,10309,White,02/2026,0,6,,
 Zip Code,10309,White,03/2026,0,8,,
 Zip Code,10309,White,04/2026,0,5.5,,
 Zip Code,10309,White,05/2026,0,4.5,,
-Zip Code,10309,White,06/2026,0,2,,2026-06-06
+Zip Code,10309,White,06/2026,0,3,,2026-06-13
 Zip Code,10310,Other,01/2020,0,22.5,57,
 Zip Code,10310,Other,02/2020,0,10.5,29,
 Zip Code,10310,Other,03/2020,0,10.5,34.667,
@@ -10762,7 +10762,7 @@ Zip Code,10310,Other,02/2026,0,10.5,,
 Zip Code,10310,Other,03/2026,0,10.5,,
 Zip Code,10310,Other,04/2026,0,9,,
 Zip Code,10310,Other,05/2026,0,15,,
-Zip Code,10310,Other,06/2026,0,1.5,,2026-06-06
+Zip Code,10310,Other,06/2026,0,3,,2026-06-13
 Zip Code,10311,Other,01/2020,0,0,0,
 Zip Code,10311,Other,02/2020,0,0,6.667,
 Zip Code,10311,Other,03/2020,0,0,0,
@@ -10840,7 +10840,7 @@ Zip Code,10311,Other,02/2026,0,0,,
 Zip Code,10311,Other,03/2026,0,0,,
 Zip Code,10311,Other,04/2026,0,0,,
 Zip Code,10311,Other,05/2026,0,0,,
-Zip Code,10311,Other,06/2026,0,0,,2026-06-06
+Zip Code,10311,Other,06/2026,0,0,,2026-06-13
 Zip Code,10312,White,01/2020,0,8,10,
 Zip Code,10312,White,02/2020,0,8,5.333,
 Zip Code,10312,White,03/2020,0,9,7.667,
@@ -10918,7 +10918,7 @@ Zip Code,10312,White,02/2026,0,8,,
 Zip Code,10312,White,03/2026,0,9,,
 Zip Code,10312,White,04/2026,0,5,,
 Zip Code,10312,White,05/2026,0,6.5,,
-Zip Code,10312,White,06/2026,0,1.5,,2026-06-06
+Zip Code,10312,White,06/2026,0,4.5,,2026-06-13
 Zip Code,10313,Other,01/2020,0,0,0,
 Zip Code,10313,Other,02/2020,0,0,0,
 Zip Code,10313,Other,03/2020,0,0,0,
@@ -10996,7 +10996,7 @@ Zip Code,10313,Other,02/2026,0,0,,
 Zip Code,10313,Other,03/2026,0,0,,
 Zip Code,10313,Other,04/2026,0,0,,
 Zip Code,10313,Other,05/2026,0,0,,
-Zip Code,10313,Other,06/2026,0,0,,2026-06-06
+Zip Code,10313,Other,06/2026,0,0,,2026-06-13
 Zip Code,10314,White,01/2020,0,20.5,34.333,
 Zip Code,10314,White,02/2020,0,21.5,29.333,
 Zip Code,10314,White,03/2020,0,22,26.667,
@@ -11074,7 +11074,7 @@ Zip Code,10314,White,02/2026,0,21,,
 Zip Code,10314,White,03/2026,0,22,,
 Zip Code,10314,White,04/2026,0,16,,
 Zip Code,10314,White,05/2026,0,14,,
-Zip Code,10314,White,06/2026,0,7.5,,2026-06-06
+Zip Code,10314,White,06/2026,0,12,,2026-06-13
 Zip Code,10451,Hispanic,01/2020,0,205,407.667,
 Zip Code,10451,Hispanic,02/2020,0,161.5,391.333,
 Zip Code,10451,Hispanic,03/2020,0,210,384,
@@ -11152,7 +11152,7 @@ Zip Code,10451,Hispanic,02/2026,0,159.5,,
 Zip Code,10451,Hispanic,03/2026,0,210,,
 Zip Code,10451,Hispanic,04/2026,0,169.5,,
 Zip Code,10451,Hispanic,05/2026,0,262.5,,
-Zip Code,10451,Hispanic,06/2026,0,56.5,,2026-06-06
+Zip Code,10451,Hispanic,06/2026,0,86,,2026-06-13
 Zip Code,10452,Hispanic,01/2020,0,309,576.333,
 Zip Code,10452,Hispanic,02/2020,0,277.5,529.667,
 Zip Code,10452,Hispanic,03/2020,0,389.5,496.667,
@@ -11230,7 +11230,7 @@ Zip Code,10452,Hispanic,02/2026,0,266.5,,
 Zip Code,10452,Hispanic,03/2026,0,389.5,,
 Zip Code,10452,Hispanic,04/2026,0,284.5,,
 Zip Code,10452,Hispanic,05/2026,0,318,,
-Zip Code,10452,Hispanic,06/2026,0,42.5,,2026-06-06
+Zip Code,10452,Hispanic,06/2026,0,112.5,,2026-06-13
 Zip Code,10453,Hispanic,01/2020,0,323.5,604,
 Zip Code,10453,Hispanic,02/2020,0,373.5,587.333,
 Zip Code,10453,Hispanic,03/2020,0,383,543.667,
@@ -11308,7 +11308,7 @@ Zip Code,10453,Hispanic,02/2026,0,364.5,,
 Zip Code,10453,Hispanic,03/2026,0,383,,
 Zip Code,10453,Hispanic,04/2026,0,308.5,,
 Zip Code,10453,Hispanic,05/2026,0,304,,
-Zip Code,10453,Hispanic,06/2026,0,64.5,,2026-06-06
+Zip Code,10453,Hispanic,06/2026,0,148.5,,2026-06-13
 Zip Code,10454,Hispanic,01/2020,0,81.5,257.667,
 Zip Code,10454,Hispanic,02/2020,0,96.5,255,
 Zip Code,10454,Hispanic,03/2020,0,96.5,284.667,
@@ -11386,7 +11386,7 @@ Zip Code,10454,Hispanic,02/2026,0,95,,
 Zip Code,10454,Hispanic,03/2026,0,96.5,,
 Zip Code,10454,Hispanic,04/2026,0,117,,
 Zip Code,10454,Hispanic,05/2026,0,122,,
-Zip Code,10454,Hispanic,06/2026,0,16.5,,2026-06-06
+Zip Code,10454,Hispanic,06/2026,0,29.5,,2026-06-13
 Zip Code,10455,Hispanic,01/2020,0,125,276,
 Zip Code,10455,Hispanic,02/2020,0,110.5,257.333,
 Zip Code,10455,Hispanic,03/2020,0,138.5,265,
@@ -11464,7 +11464,7 @@ Zip Code,10455,Hispanic,02/2026,0,109,,
 Zip Code,10455,Hispanic,03/2026,0,138.5,,
 Zip Code,10455,Hispanic,04/2026,0,150,,
 Zip Code,10455,Hispanic,05/2026,0,146.5,,
-Zip Code,10455,Hispanic,06/2026,0,31.5,,2026-06-06
+Zip Code,10455,Hispanic,06/2026,0,58,,2026-06-13
 Zip Code,10456,Hispanic,01/2020,0,330,709.333,
 Zip Code,10456,Hispanic,02/2020,0,242.5,694.333,
 Zip Code,10456,Hispanic,03/2020,0,311.5,615.333,
@@ -11542,7 +11542,7 @@ Zip Code,10456,Hispanic,02/2026,0,235,,
 Zip Code,10456,Hispanic,03/2026,0,311.5,,
 Zip Code,10456,Hispanic,04/2026,0,306,,
 Zip Code,10456,Hispanic,05/2026,0,258,,
-Zip Code,10456,Hispanic,06/2026,0,58.5,,2026-06-06
+Zip Code,10456,Hispanic,06/2026,0,119,,2026-06-13
 Zip Code,10457,Hispanic,01/2020,0,360,552.667,
 Zip Code,10457,Hispanic,02/2020,0,301.5,542,
 Zip Code,10457,Hispanic,03/2020,0,401,468.667,
@@ -11620,7 +11620,7 @@ Zip Code,10457,Hispanic,02/2026,0,289,,
 Zip Code,10457,Hispanic,03/2026,0,401,,
 Zip Code,10457,Hispanic,04/2026,0,284.5,,
 Zip Code,10457,Hispanic,05/2026,0,271.5,,
-Zip Code,10457,Hispanic,06/2026,0,66.5,,2026-06-06
+Zip Code,10457,Hispanic,06/2026,0,123,,2026-06-13
 Zip Code,10458,Hispanic,01/2020,0,293,539.333,
 Zip Code,10458,Hispanic,02/2020,0,275,475,
 Zip Code,10458,Hispanic,03/2020,0,327.5,432,
@@ -11698,7 +11698,7 @@ Zip Code,10458,Hispanic,02/2026,0,269.5,,
 Zip Code,10458,Hispanic,03/2026,0,327.5,,
 Zip Code,10458,Hispanic,04/2026,0,309.5,,
 Zip Code,10458,Hispanic,05/2026,0,258,,
-Zip Code,10458,Hispanic,06/2026,0,59.5,,2026-06-06
+Zip Code,10458,Hispanic,06/2026,0,126.5,,2026-06-13
 Zip Code,10459,Hispanic,01/2020,0,183.5,312.333,
 Zip Code,10459,Hispanic,02/2020,0,117.5,333.667,
 Zip Code,10459,Hispanic,03/2020,0,215.5,302.667,
@@ -11776,7 +11776,7 @@ Zip Code,10459,Hispanic,02/2026,0,114,,
 Zip Code,10459,Hispanic,03/2026,0,215.5,,
 Zip Code,10459,Hispanic,04/2026,0,191,,
 Zip Code,10459,Hispanic,05/2026,0,179.5,,
-Zip Code,10459,Hispanic,06/2026,0,36.5,,2026-06-06
+Zip Code,10459,Hispanic,06/2026,0,65,,2026-06-13
 Zip Code,10460,Hispanic,01/2020,0,220.5,353.667,
 Zip Code,10460,Hispanic,02/2020,0,220.5,401.667,
 Zip Code,10460,Hispanic,03/2020,0,255.5,389,
@@ -11854,7 +11854,7 @@ Zip Code,10460,Hispanic,02/2026,0,218.5,,
 Zip Code,10460,Hispanic,03/2026,0,255.5,,
 Zip Code,10460,Hispanic,04/2026,0,237,,
 Zip Code,10460,Hispanic,05/2026,0,227,,
-Zip Code,10460,Hispanic,06/2026,0,107,,2026-06-06
+Zip Code,10460,Hispanic,06/2026,0,160,,2026-06-13
 Zip Code,10461,Other,01/2020,0,50.5,86,
 Zip Code,10461,Other,02/2020,0,54.5,77,
 Zip Code,10461,Other,03/2020,0,59.5,70.667,
@@ -11932,7 +11932,7 @@ Zip Code,10461,Other,02/2026,0,53,,
 Zip Code,10461,Other,03/2026,0,59.5,,
 Zip Code,10461,Other,04/2026,0,54,,
 Zip Code,10461,Other,05/2026,0,60,,
-Zip Code,10461,Other,06/2026,0,15.5,,2026-06-06
+Zip Code,10461,Other,06/2026,0,23,,2026-06-13
 Zip Code,10462,Other,01/2020,0,243,324.667,
 Zip Code,10462,Other,02/2020,0,154.5,285,
 Zip Code,10462,Other,03/2020,0,187,273.333,
@@ -12010,7 +12010,7 @@ Zip Code,10462,Other,02/2026,0,152.5,,
 Zip Code,10462,Other,03/2026,0,187,,
 Zip Code,10462,Other,04/2026,0,175,,
 Zip Code,10462,Other,05/2026,0,196.5,,
-Zip Code,10462,Other,06/2026,0,35.5,,2026-06-06
+Zip Code,10462,Other,06/2026,0,130,,2026-06-13
 Zip Code,10463,Hispanic,01/2020,0,115.5,275.333,
 Zip Code,10463,Hispanic,02/2020,0,103,267.333,
 Zip Code,10463,Hispanic,03/2020,0,132.5,227.667,
@@ -12088,7 +12088,7 @@ Zip Code,10463,Hispanic,02/2026,0,97,,
 Zip Code,10463,Hispanic,03/2026,0,132.5,,
 Zip Code,10463,Hispanic,04/2026,0,159,,
 Zip Code,10463,Hispanic,05/2026,0,114,,
-Zip Code,10463,Hispanic,06/2026,0,24,,2026-06-06
+Zip Code,10463,Hispanic,06/2026,0,50.5,,2026-06-13
 Zip Code,10464,White,01/2020,0,3,1.667,
 Zip Code,10464,White,02/2020,0,1,2.667,
 Zip Code,10464,White,03/2020,0,1.5,2.333,
@@ -12166,7 +12166,7 @@ Zip Code,10464,White,02/2026,0,1,,
 Zip Code,10464,White,03/2026,0,1.5,,
 Zip Code,10464,White,04/2026,0,1.5,,
 Zip Code,10464,White,05/2026,0,1,,
-Zip Code,10464,White,06/2026,0,0,,2026-06-06
+Zip Code,10464,White,06/2026,0,0,,2026-06-13
 Zip Code,10465,Other,01/2020,0,16,92.667,
 Zip Code,10465,Other,02/2020,0,22.5,63,
 Zip Code,10465,Other,03/2020,0,15,80.667,
@@ -12244,7 +12244,7 @@ Zip Code,10465,Other,02/2026,0,22.5,,
 Zip Code,10465,Other,03/2026,0,15,,
 Zip Code,10465,Other,04/2026,0,21.5,,
 Zip Code,10465,Other,05/2026,0,23.5,,
-Zip Code,10465,Other,06/2026,0,2.5,,2026-06-06
+Zip Code,10465,Other,06/2026,0,3.5,,2026-06-13
 Zip Code,10466,Black,01/2020,0,108.5,301.333,
 Zip Code,10466,Black,02/2020,0,102.5,215,
 Zip Code,10466,Black,03/2020,0,119.5,281.333,
@@ -12322,7 +12322,7 @@ Zip Code,10466,Black,02/2026,0,101.5,,
 Zip Code,10466,Black,03/2026,0,119.5,,
 Zip Code,10466,Black,04/2026,0,128.5,,
 Zip Code,10466,Black,05/2026,0,110,,
-Zip Code,10466,Black,06/2026,0,29.5,,2026-06-06
+Zip Code,10466,Black,06/2026,0,58.5,,2026-06-13
 Zip Code,10467,Hispanic,01/2020,0,320.5,549.333,
 Zip Code,10467,Hispanic,02/2020,0,258.5,514.667,
 Zip Code,10467,Hispanic,03/2020,0,353.5,511.333,
@@ -12400,7 +12400,7 @@ Zip Code,10467,Hispanic,02/2026,0,252.5,,
 Zip Code,10467,Hispanic,03/2026,0,353.5,,
 Zip Code,10467,Hispanic,04/2026,0,321.5,,
 Zip Code,10467,Hispanic,05/2026,0,334.5,,
-Zip Code,10467,Hispanic,06/2026,0,59,,2026-06-06
+Zip Code,10467,Hispanic,06/2026,0,137,,2026-06-13
 Zip Code,10468,Hispanic,01/2020,0,298,511,
 Zip Code,10468,Hispanic,02/2020,0,285,448.667,
 Zip Code,10468,Hispanic,03/2020,0,382.5,453.667,
@@ -12478,7 +12478,7 @@ Zip Code,10468,Hispanic,02/2026,0,279,,
 Zip Code,10468,Hispanic,03/2026,0,382.5,,
 Zip Code,10468,Hispanic,04/2026,0,308,,
 Zip Code,10468,Hispanic,05/2026,0,263,,
-Zip Code,10468,Hispanic,06/2026,0,34,,2026-06-06
+Zip Code,10468,Hispanic,06/2026,0,80,,2026-06-13
 Zip Code,10469,Black,01/2020,0,66.5,120.333,
 Zip Code,10469,Black,02/2020,0,56,123.333,
 Zip Code,10469,Black,03/2020,0,100,136.667,
@@ -12556,7 +12556,7 @@ Zip Code,10469,Black,02/2026,0,55.5,,
 Zip Code,10469,Black,03/2026,0,100,,
 Zip Code,10469,Black,04/2026,0,62,,
 Zip Code,10469,Black,05/2026,0,62,,
-Zip Code,10469,Black,06/2026,0,23.5,,2026-06-06
+Zip Code,10469,Black,06/2026,0,30,,2026-06-13
 Zip Code,10470,Other,01/2020,0,41,38.667,
 Zip Code,10470,Other,02/2020,0,21,25.333,
 Zip Code,10470,Other,03/2020,0,24.5,32.333,
@@ -12634,7 +12634,7 @@ Zip Code,10470,Other,02/2026,0,21,,
 Zip Code,10470,Other,03/2026,0,24.5,,
 Zip Code,10470,Other,04/2026,0,34.5,,
 Zip Code,10470,Other,05/2026,0,44.5,,
-Zip Code,10470,Other,06/2026,0,6,,2026-06-06
+Zip Code,10470,Other,06/2026,0,9.5,,2026-06-13
 Zip Code,10471,White,01/2020,0,22,26,
 Zip Code,10471,White,02/2020,0,20,33,
 Zip Code,10471,White,03/2020,0,19,26,
@@ -12712,7 +12712,7 @@ Zip Code,10471,White,02/2026,0,20,,
 Zip Code,10471,White,03/2026,0,19,,
 Zip Code,10471,White,04/2026,0,17,,
 Zip Code,10471,White,05/2026,0,23.5,,
-Zip Code,10471,White,06/2026,0,4.5,,2026-06-06
+Zip Code,10471,White,06/2026,0,13.5,,2026-06-13
 Zip Code,10472,Hispanic,01/2020,0,145,329.667,
 Zip Code,10472,Hispanic,02/2020,0,113,300,
 Zip Code,10472,Hispanic,03/2020,0,141,324.333,
@@ -12790,7 +12790,7 @@ Zip Code,10472,Hispanic,02/2026,0,111.5,,
 Zip Code,10472,Hispanic,03/2026,0,141,,
 Zip Code,10472,Hispanic,04/2026,0,146,,
 Zip Code,10472,Hispanic,05/2026,0,127,,
-Zip Code,10472,Hispanic,06/2026,0,26,,2026-06-06
+Zip Code,10472,Hispanic,06/2026,0,65,,2026-06-13
 Zip Code,10473,Hispanic,01/2020,0,93,227.333,
 Zip Code,10473,Hispanic,02/2020,0,75.5,274.333,
 Zip Code,10473,Hispanic,03/2020,0,74,269.333,
@@ -12868,7 +12868,7 @@ Zip Code,10473,Hispanic,02/2026,0,75,,
 Zip Code,10473,Hispanic,03/2026,0,74,,
 Zip Code,10473,Hispanic,04/2026,0,96,,
 Zip Code,10473,Hispanic,05/2026,0,107,,
-Zip Code,10473,Hispanic,06/2026,0,24,,2026-06-06
+Zip Code,10473,Hispanic,06/2026,0,31,,2026-06-13
 Zip Code,10474,Hispanic,01/2020,0,43,76.333,
 Zip Code,10474,Hispanic,02/2020,0,33.5,83.333,
 Zip Code,10474,Hispanic,03/2020,0,49,75.667,
@@ -12946,7 +12946,7 @@ Zip Code,10474,Hispanic,02/2026,0,33.5,,
 Zip Code,10474,Hispanic,03/2026,0,49,,
 Zip Code,10474,Hispanic,04/2026,0,42,,
 Zip Code,10474,Hispanic,05/2026,0,36.5,,
-Zip Code,10474,Hispanic,06/2026,0,9,,2026-06-06
+Zip Code,10474,Hispanic,06/2026,0,15.5,,2026-06-13
 Zip Code,10475,Black,01/2020,0,29,105.333,
 Zip Code,10475,Black,02/2020,0,17,101,
 Zip Code,10475,Black,03/2020,0,25.5,64.333,
@@ -13024,7 +13024,7 @@ Zip Code,10475,Black,02/2026,0,17,,
 Zip Code,10475,Black,03/2026,0,25.5,,
 Zip Code,10475,Black,04/2026,0,53.5,,
 Zip Code,10475,Black,05/2026,0,11,,
-Zip Code,10475,Black,06/2026,0,9.5,,2026-06-06
+Zip Code,10475,Black,06/2026,0,12.5,,2026-06-13
 Zip Code,10550,Black,01/2020,0,0,0,
 Zip Code,10550,Black,02/2020,0,0,0,
 Zip Code,10550,Black,03/2020,0,0,0,
@@ -13102,7 +13102,7 @@ Zip Code,10550,Black,02/2026,0,0,,
 Zip Code,10550,Black,03/2026,0,0,,
 Zip Code,10550,Black,04/2026,0,0,,
 Zip Code,10550,Black,05/2026,0,0,,
-Zip Code,10550,Black,06/2026,0,0,,2026-06-06
+Zip Code,10550,Black,06/2026,0,0,,2026-06-13
 Zip Code,10704,White,01/2020,0,0,0,
 Zip Code,10704,White,02/2020,0,0,0,
 Zip Code,10704,White,03/2020,0,0,0,
@@ -13180,7 +13180,7 @@ Zip Code,10704,White,02/2026,0,0,,
 Zip Code,10704,White,03/2026,0,0,,
 Zip Code,10704,White,04/2026,0,0,,
 Zip Code,10704,White,05/2026,0,0,,
-Zip Code,10704,White,06/2026,0,0,,2026-06-06
+Zip Code,10704,White,06/2026,0,0,,2026-06-13
 Zip Code,10705,Hispanic,01/2020,0,0,0,
 Zip Code,10705,Hispanic,02/2020,0,0,0,
 Zip Code,10705,Hispanic,03/2020,0,0,0,
@@ -13258,7 +13258,7 @@ Zip Code,10705,Hispanic,02/2026,0,0,,
 Zip Code,10705,Hispanic,03/2026,0,0,,
 Zip Code,10705,Hispanic,04/2026,0,0,,
 Zip Code,10705,Hispanic,05/2026,0,0,,
-Zip Code,10705,Hispanic,06/2026,0,0,,2026-06-06
+Zip Code,10705,Hispanic,06/2026,0,0,,2026-06-13
 Zip Code,10803,White,01/2020,0,0,0,
 Zip Code,10803,White,02/2020,0,0,0,
 Zip Code,10803,White,03/2020,0,0,0,
@@ -13336,7 +13336,7 @@ Zip Code,10803,White,02/2026,0,0,,
 Zip Code,10803,White,03/2026,0,0,,
 Zip Code,10803,White,04/2026,0,0,,
 Zip Code,10803,White,05/2026,0,0,,
-Zip Code,10803,White,06/2026,0,0,,2026-06-06
+Zip Code,10803,White,06/2026,0,0,,2026-06-13
 Zip Code,11001,White,01/2020,0,0.5,0.667,
 Zip Code,11001,White,02/2020,0,0.5,1,
 Zip Code,11001,White,03/2020,0,0,1.667,
@@ -13414,7 +13414,7 @@ Zip Code,11001,White,02/2026,0,0.5,,
 Zip Code,11001,White,03/2026,0,0,,
 Zip Code,11001,White,04/2026,0,1,,
 Zip Code,11001,White,05/2026,0,2,,
-Zip Code,11001,White,06/2026,0,0,,2026-06-06
+Zip Code,11001,White,06/2026,0,0,,2026-06-13
 Zip Code,11003,Other,01/2020,0,0,0,
 Zip Code,11003,Other,02/2020,0,0,0,
 Zip Code,11003,Other,03/2020,0,0,0,
@@ -13492,7 +13492,7 @@ Zip Code,11003,Other,02/2026,0,0,,
 Zip Code,11003,Other,03/2026,0,0,,
 Zip Code,11003,Other,04/2026,0,0,,
 Zip Code,11003,Other,05/2026,0,0,,
-Zip Code,11003,Other,06/2026,0,0,,2026-06-06
+Zip Code,11003,Other,06/2026,0,0,,2026-06-13
 Zip Code,11004,Other,01/2020,0,1.5,4,
 Zip Code,11004,Other,02/2020,0,2.5,3,
 Zip Code,11004,Other,03/2020,0,5.5,3.667,
@@ -13570,7 +13570,7 @@ Zip Code,11004,Other,02/2026,0,2.5,,
 Zip Code,11004,Other,03/2026,0,5.5,,
 Zip Code,11004,Other,04/2026,0,0.5,,
 Zip Code,11004,Other,05/2026,0,1.5,,
-Zip Code,11004,Other,06/2026,0,0.5,,2026-06-06
+Zip Code,11004,Other,06/2026,0,0.5,,2026-06-13
 Zip Code,11005,White,01/2020,0,0,0,
 Zip Code,11005,White,02/2020,0,0,0.333,
 Zip Code,11005,White,03/2020,0,0,0,
@@ -13648,7 +13648,7 @@ Zip Code,11005,White,02/2026,0,0,,
 Zip Code,11005,White,03/2026,0,0,,
 Zip Code,11005,White,04/2026,0,0,,
 Zip Code,11005,White,05/2026,0,0,,
-Zip Code,11005,White,06/2026,0,0,,2026-06-06
+Zip Code,11005,White,06/2026,0,0,,2026-06-13
 Zip Code,11020,Other,01/2020,0,0,0,
 Zip Code,11020,Other,02/2020,0,0,0,
 Zip Code,11020,Other,03/2020,0,0,0,
@@ -13726,7 +13726,7 @@ Zip Code,11020,Other,02/2026,0,0,,
 Zip Code,11020,Other,03/2026,0,0,,
 Zip Code,11020,Other,04/2026,0,0,,
 Zip Code,11020,Other,05/2026,0,0,,
-Zip Code,11020,Other,06/2026,0,0,,2026-06-06
+Zip Code,11020,Other,06/2026,0,0,,2026-06-13
 Zip Code,11040,Other,01/2020,0,0,0,
 Zip Code,11040,Other,02/2020,0,0,0.333,
 Zip Code,11040,Other,03/2020,0,0.5,0,
@@ -13804,7 +13804,7 @@ Zip Code,11040,Other,02/2026,0,0,,
 Zip Code,11040,Other,03/2026,0,0.5,,
 Zip Code,11040,Other,04/2026,0,0,,
 Zip Code,11040,Other,05/2026,0,0,,
-Zip Code,11040,Other,06/2026,0,0,,2026-06-06
+Zip Code,11040,Other,06/2026,0,1,,2026-06-13
 Zip Code,11101,Other,01/2020,0,49,96,
 Zip Code,11101,Other,02/2020,0,30,91.667,
 Zip Code,11101,Other,03/2020,0,43,69,
@@ -13882,7 +13882,7 @@ Zip Code,11101,Other,02/2026,0,29.5,,
 Zip Code,11101,Other,03/2026,0,43,,
 Zip Code,11101,Other,04/2026,0,53,,
 Zip Code,11101,Other,05/2026,0,47.5,,
-Zip Code,11101,Other,06/2026,0,8,,2026-06-06
+Zip Code,11101,Other,06/2026,0,15,,2026-06-13
 Zip Code,11102,Other,01/2020,0,33,55,
 Zip Code,11102,Other,02/2020,0,19.5,29.333,
 Zip Code,11102,Other,03/2020,0,40,66,
@@ -13960,7 +13960,7 @@ Zip Code,11102,Other,02/2026,0,19.5,,
 Zip Code,11102,Other,03/2026,0,40,,
 Zip Code,11102,Other,04/2026,0,24,,
 Zip Code,11102,Other,05/2026,0,23.5,,
-Zip Code,11102,Other,06/2026,0,3.5,,2026-06-06
+Zip Code,11102,Other,06/2026,0,8.5,,2026-06-13
 Zip Code,11103,White,01/2020,0,25.5,20.333,
 Zip Code,11103,White,02/2020,0,18.5,15.667,
 Zip Code,11103,White,03/2020,0,18,24.333,
@@ -14038,7 +14038,7 @@ Zip Code,11103,White,02/2026,0,18.5,,
 Zip Code,11103,White,03/2026,0,18,,
 Zip Code,11103,White,04/2026,0,15,,
 Zip Code,11103,White,05/2026,0,15.5,,
-Zip Code,11103,White,06/2026,0,5,,2026-06-06
+Zip Code,11103,White,06/2026,0,9.5,,2026-06-13
 Zip Code,11104,Other,01/2020,0,17,47.667,
 Zip Code,11104,Other,02/2020,0,29,47.333,
 Zip Code,11104,Other,03/2020,0,37,53.333,
@@ -14116,7 +14116,7 @@ Zip Code,11104,Other,02/2026,0,29,,
 Zip Code,11104,Other,03/2026,0,37,,
 Zip Code,11104,Other,04/2026,0,22,,
 Zip Code,11104,Other,05/2026,0,26.5,,
-Zip Code,11104,Other,06/2026,0,3,,2026-06-06
+Zip Code,11104,Other,06/2026,0,9,,2026-06-13
 Zip Code,11105,White,01/2020,0,21,28.667,
 Zip Code,11105,White,02/2020,0,19.5,34,
 Zip Code,11105,White,03/2020,0,30,31,
@@ -14194,7 +14194,7 @@ Zip Code,11105,White,02/2026,0,19.5,,
 Zip Code,11105,White,03/2026,0,30,,
 Zip Code,11105,White,04/2026,0,23.5,,
 Zip Code,11105,White,05/2026,0,15,,
-Zip Code,11105,White,06/2026,0,3.5,,2026-06-06
+Zip Code,11105,White,06/2026,0,17,,2026-06-13
 Zip Code,11106,Other,01/2020,0,26,84,
 Zip Code,11106,Other,02/2020,0,18.5,36,
 Zip Code,11106,Other,03/2020,0,29.5,80.333,
@@ -14272,7 +14272,7 @@ Zip Code,11106,Other,02/2026,0,17.5,,
 Zip Code,11106,Other,03/2026,0,29.5,,
 Zip Code,11106,Other,04/2026,0,25.5,,
 Zip Code,11106,Other,05/2026,0,42,,
-Zip Code,11106,Other,06/2026,0,4.5,,2026-06-06
+Zip Code,11106,Other,06/2026,0,11,,2026-06-13
 Zip Code,11109,White,01/2020,0,1.5,11,
 Zip Code,11109,White,02/2020,0,6.5,6,
 Zip Code,11109,White,03/2020,0,8,9,
@@ -14350,7 +14350,7 @@ Zip Code,11109,White,02/2026,0,6.5,,
 Zip Code,11109,White,03/2026,0,8,,
 Zip Code,11109,White,04/2026,0,4,,
 Zip Code,11109,White,05/2026,0,4,,
-Zip Code,11109,White,06/2026,0,0,,2026-06-06
+Zip Code,11109,White,06/2026,0,3,,2026-06-13
 Zip Code,11201,White,01/2020,0,35,74.667,
 Zip Code,11201,White,02/2020,0,32.5,85.667,
 Zip Code,11201,White,03/2020,0,35,82,
@@ -14428,7 +14428,7 @@ Zip Code,11201,White,02/2026,0,32,,
 Zip Code,11201,White,03/2026,0,35,,
 Zip Code,11201,White,04/2026,0,46,,
 Zip Code,11201,White,05/2026,0,29.5,,
-Zip Code,11201,White,06/2026,0,6,,2026-06-06
+Zip Code,11201,White,06/2026,0,23.5,,2026-06-13
 Zip Code,11202,Other,01/2020,0,0,0.333,
 Zip Code,11202,Other,02/2020,0,0,0.333,
 Zip Code,11202,Other,03/2020,0,0.5,0,
@@ -14506,7 +14506,7 @@ Zip Code,11202,Other,02/2026,0,0,,
 Zip Code,11202,Other,03/2026,0,0.5,,
 Zip Code,11202,Other,04/2026,0,0.5,,
 Zip Code,11202,Other,05/2026,0,0,,
-Zip Code,11202,Other,06/2026,0,0.5,,2026-06-06
+Zip Code,11202,Other,06/2026,0,0.5,,2026-06-13
 Zip Code,11203,Black,01/2020,0,116.5,198,
 Zip Code,11203,Black,02/2020,0,121,181.333,
 Zip Code,11203,Black,03/2020,0,112,168.667,
@@ -14584,7 +14584,7 @@ Zip Code,11203,Black,02/2026,0,119.5,,
 Zip Code,11203,Black,03/2026,0,112,,
 Zip Code,11203,Black,04/2026,0,99,,
 Zip Code,11203,Black,05/2026,0,107,,
-Zip Code,11203,Black,06/2026,0,27,,2026-06-06
+Zip Code,11203,Black,06/2026,0,63,,2026-06-13
 Zip Code,11204,White,01/2020,0,24.5,41,
 Zip Code,11204,White,02/2020,0,37.5,46,
 Zip Code,11204,White,03/2020,0,40,47.333,
@@ -14662,7 +14662,7 @@ Zip Code,11204,White,02/2026,0,37,,
 Zip Code,11204,White,03/2026,0,40,,
 Zip Code,11204,White,04/2026,0,29,,
 Zip Code,11204,White,05/2026,0,30.5,,
-Zip Code,11204,White,06/2026,0,6,,2026-06-06
+Zip Code,11204,White,06/2026,0,14,,2026-06-13
 Zip Code,11205,Other,01/2020,0,25,113.333,
 Zip Code,11205,Other,02/2020,0,33.5,101.667,
 Zip Code,11205,Other,03/2020,0,29,141.333,
@@ -14740,7 +14740,7 @@ Zip Code,11205,Other,02/2026,0,33.5,,
 Zip Code,11205,Other,03/2026,0,29,,
 Zip Code,11205,Other,04/2026,0,34,,
 Zip Code,11205,Other,05/2026,0,40.5,,
-Zip Code,11205,Other,06/2026,0,12,,2026-06-06
+Zip Code,11205,Other,06/2026,0,23,,2026-06-13
 Zip Code,11206,Other,01/2020,0,103.5,177.667,
 Zip Code,11206,Other,02/2020,0,65,235.667,
 Zip Code,11206,Other,03/2020,0,90.5,240,
@@ -14818,7 +14818,7 @@ Zip Code,11206,Other,02/2026,0,64,,
 Zip Code,11206,Other,03/2026,0,90.5,,
 Zip Code,11206,Other,04/2026,0,69.5,,
 Zip Code,11206,Other,05/2026,0,80,,
-Zip Code,11206,Other,06/2026,0,15.5,,2026-06-06
+Zip Code,11206,Other,06/2026,0,32.5,,2026-06-13
 Zip Code,11207,Black,01/2020,0,151,364.667,
 Zip Code,11207,Black,02/2020,0,153,373.667,
 Zip Code,11207,Black,03/2020,0,147.5,404.667,
@@ -14896,7 +14896,7 @@ Zip Code,11207,Black,02/2026,0,148,,
 Zip Code,11207,Black,03/2026,0,147.5,,
 Zip Code,11207,Black,04/2026,0,188,,
 Zip Code,11207,Black,05/2026,0,244,,
-Zip Code,11207,Black,06/2026,0,78,,2026-06-06
+Zip Code,11207,Black,06/2026,0,119.5,,2026-06-13
 Zip Code,11208,Other,01/2020,0,141.5,260.667,
 Zip Code,11208,Other,02/2020,0,96,322.333,
 Zip Code,11208,Other,03/2020,0,104,259.667,
@@ -14974,7 +14974,7 @@ Zip Code,11208,Other,02/2026,0,94,,
 Zip Code,11208,Other,03/2026,0,104,,
 Zip Code,11208,Other,04/2026,0,110,,
 Zip Code,11208,Other,05/2026,0,131,,
-Zip Code,11208,Other,06/2026,0,30.5,,2026-06-06
+Zip Code,11208,Other,06/2026,0,52.5,,2026-06-13
 Zip Code,11209,White,01/2020,0,34.5,60,
 Zip Code,11209,White,02/2020,0,36,62,
 Zip Code,11209,White,03/2020,0,51.5,72.333,
@@ -15052,7 +15052,7 @@ Zip Code,11209,White,02/2026,0,36,,
 Zip Code,11209,White,03/2026,0,51.5,,
 Zip Code,11209,White,04/2026,0,43,,
 Zip Code,11209,White,05/2026,0,38,,
-Zip Code,11209,White,06/2026,0,5,,2026-06-06
+Zip Code,11209,White,06/2026,0,19.5,,2026-06-13
 Zip Code,11210,Black,01/2020,0,109,135.667,
 Zip Code,11210,Black,02/2020,0,80.5,187.333,
 Zip Code,11210,Black,03/2020,0,188,126,
@@ -15130,7 +15130,7 @@ Zip Code,11210,Black,02/2026,0,79,,
 Zip Code,11210,Black,03/2026,0,188,,
 Zip Code,11210,Black,04/2026,0,77,,
 Zip Code,11210,Black,05/2026,0,99,,
-Zip Code,11210,Black,06/2026,0,12,,2026-06-06
+Zip Code,11210,Black,06/2026,0,53.5,,2026-06-13
 Zip Code,11211,White,01/2020,0,37,70,
 Zip Code,11211,White,02/2020,0,31.5,75,
 Zip Code,11211,White,03/2020,0,39,68.333,
@@ -15208,7 +15208,7 @@ Zip Code,11211,White,02/2026,0,31.5,,
 Zip Code,11211,White,03/2026,0,39,,
 Zip Code,11211,White,04/2026,0,38.5,,
 Zip Code,11211,White,05/2026,0,35.5,,
-Zip Code,11211,White,06/2026,0,6.5,,2026-06-06
+Zip Code,11211,White,06/2026,0,16,,2026-06-13
 Zip Code,11212,Black,01/2020,0,207,462.667,
 Zip Code,11212,Black,02/2020,0,168,506,
 Zip Code,11212,Black,03/2020,0,215.5,449.667,
@@ -15286,7 +15286,7 @@ Zip Code,11212,Black,02/2026,0,165,,
 Zip Code,11212,Black,03/2026,0,215.5,,
 Zip Code,11212,Black,04/2026,0,178,,
 Zip Code,11212,Black,05/2026,0,219.5,,
-Zip Code,11212,Black,06/2026,0,52,,2026-06-06
+Zip Code,11212,Black,06/2026,0,105.5,,2026-06-13
 Zip Code,11213,Black,01/2020,0,194.5,292,
 Zip Code,11213,Black,02/2020,0,138,272,
 Zip Code,11213,Black,03/2020,0,140,255,
@@ -15364,7 +15364,7 @@ Zip Code,11213,Black,02/2026,0,135.5,,
 Zip Code,11213,Black,03/2026,0,140,,
 Zip Code,11213,Black,04/2026,0,143.5,,
 Zip Code,11213,Black,05/2026,0,136.5,,
-Zip Code,11213,Black,06/2026,0,23,,2026-06-06
+Zip Code,11213,Black,06/2026,0,59.5,,2026-06-13
 Zip Code,11214,Other,01/2020,0,39.5,66,
 Zip Code,11214,Other,02/2020,0,59,79.333,
 Zip Code,11214,Other,03/2020,0,62.5,74.333,
@@ -15442,7 +15442,7 @@ Zip Code,11214,Other,02/2026,0,57.5,,
 Zip Code,11214,Other,03/2026,0,62.5,,
 Zip Code,11214,Other,04/2026,0,52,,
 Zip Code,11214,Other,05/2026,0,49,,
-Zip Code,11214,Other,06/2026,0,6.5,,2026-06-06
+Zip Code,11214,Other,06/2026,0,24.5,,2026-06-13
 Zip Code,11215,White,01/2020,0,15.5,28,
 Zip Code,11215,White,02/2020,0,16.5,26,
 Zip Code,11215,White,03/2020,0,17.5,25.667,
@@ -15520,7 +15520,7 @@ Zip Code,11215,White,02/2026,0,16,,
 Zip Code,11215,White,03/2026,0,17.5,,
 Zip Code,11215,White,04/2026,0,10.5,,
 Zip Code,11215,White,05/2026,0,13.5,,
-Zip Code,11215,White,06/2026,0,1,,2026-06-06
+Zip Code,11215,White,06/2026,0,8.5,,2026-06-13
 Zip Code,11216,Other,01/2020,0,91,145.333,
 Zip Code,11216,Other,02/2020,0,74.5,170,
 Zip Code,11216,Other,03/2020,0,107,140.667,
@@ -15598,7 +15598,7 @@ Zip Code,11216,Other,02/2026,0,72.5,,
 Zip Code,11216,Other,03/2026,0,107,,
 Zip Code,11216,Other,04/2026,0,91,,
 Zip Code,11216,Other,05/2026,0,94.5,,
-Zip Code,11216,Other,06/2026,0,12,,2026-06-06
+Zip Code,11216,Other,06/2026,0,33,,2026-06-13
 Zip Code,11217,White,01/2020,0,36.5,53.333,
 Zip Code,11217,White,02/2020,0,37.5,49,
 Zip Code,11217,White,03/2020,0,29,54.333,
@@ -15676,7 +15676,7 @@ Zip Code,11217,White,02/2026,0,35.5,,
 Zip Code,11217,White,03/2026,0,29,,
 Zip Code,11217,White,04/2026,0,28,,
 Zip Code,11217,White,05/2026,0,50,,
-Zip Code,11217,White,06/2026,0,7.5,,2026-06-06
+Zip Code,11217,White,06/2026,0,13.5,,2026-06-13
 Zip Code,11218,White,01/2020,0,44.5,71.667,
 Zip Code,11218,White,02/2020,0,36,64,
 Zip Code,11218,White,03/2020,0,51.5,66.667,
@@ -15754,7 +15754,7 @@ Zip Code,11218,White,02/2026,0,33.5,,
 Zip Code,11218,White,03/2026,0,51.5,,
 Zip Code,11218,White,04/2026,0,39.5,,
 Zip Code,11218,White,05/2026,0,42.5,,
-Zip Code,11218,White,06/2026,0,7,,2026-06-06
+Zip Code,11218,White,06/2026,0,17,,2026-06-13
 Zip Code,11219,White,01/2020,0,39,33.667,
 Zip Code,11219,White,02/2020,0,36.5,38,
 Zip Code,11219,White,03/2020,0,42.5,43,
@@ -15832,7 +15832,7 @@ Zip Code,11219,White,02/2026,0,36.5,,
 Zip Code,11219,White,03/2026,0,42.5,,
 Zip Code,11219,White,04/2026,0,27.5,,
 Zip Code,11219,White,05/2026,0,31.5,,
-Zip Code,11219,White,06/2026,0,6,,2026-06-06
+Zip Code,11219,White,06/2026,0,12,,2026-06-13
 Zip Code,11220,Other,01/2020,0,36.5,44.667,
 Zip Code,11220,Other,02/2020,0,41.5,45.667,
 Zip Code,11220,Other,03/2020,0,40,50,
@@ -15910,7 +15910,7 @@ Zip Code,11220,Other,02/2026,0,41.5,,
 Zip Code,11220,Other,03/2026,0,40,,
 Zip Code,11220,Other,04/2026,0,47,,
 Zip Code,11220,Other,05/2026,0,42.5,,
-Zip Code,11220,Other,06/2026,0,10.5,,2026-06-06
+Zip Code,11220,Other,06/2026,0,18,,2026-06-13
 Zip Code,11221,Other,01/2020,0,127,189,
 Zip Code,11221,Other,02/2020,0,92.5,205.667,
 Zip Code,11221,Other,03/2020,0,123.5,202.667,
@@ -15988,7 +15988,7 @@ Zip Code,11221,Other,02/2026,0,92,,
 Zip Code,11221,Other,03/2026,0,123.5,,
 Zip Code,11221,Other,04/2026,0,88,,
 Zip Code,11221,Other,05/2026,0,102,,
-Zip Code,11221,Other,06/2026,0,34,,2026-06-06
+Zip Code,11221,Other,06/2026,0,66,,2026-06-13
 Zip Code,11222,White,01/2020,0,32.5,19.333,
 Zip Code,11222,White,02/2020,0,29,18.333,
 Zip Code,11222,White,03/2020,0,17.5,23,
@@ -16066,7 +16066,7 @@ Zip Code,11222,White,02/2026,0,28.5,,
 Zip Code,11222,White,03/2026,0,17.5,,
 Zip Code,11222,White,04/2026,0,24.5,,
 Zip Code,11222,White,05/2026,0,18,,
-Zip Code,11222,White,06/2026,0,7,,2026-06-06
+Zip Code,11222,White,06/2026,0,10.5,,2026-06-13
 Zip Code,11223,White,01/2020,0,43.5,106,
 Zip Code,11223,White,02/2020,0,45.5,96.667,
 Zip Code,11223,White,03/2020,0,41,76.333,
@@ -16144,7 +16144,7 @@ Zip Code,11223,White,02/2026,0,44.5,,
 Zip Code,11223,White,03/2026,0,41,,
 Zip Code,11223,White,04/2026,0,49,,
 Zip Code,11223,White,05/2026,0,49.5,,
-Zip Code,11223,White,06/2026,0,5.5,,2026-06-06
+Zip Code,11223,White,06/2026,0,22.5,,2026-06-13
 Zip Code,11224,Other,01/2020,0,51,143.333,
 Zip Code,11224,Other,02/2020,0,70.5,141.667,
 Zip Code,11224,Other,03/2020,0,54,165,
@@ -16222,7 +16222,7 @@ Zip Code,11224,Other,02/2026,0,70.5,,
 Zip Code,11224,Other,03/2026,0,54,,
 Zip Code,11224,Other,04/2026,0,83,,
 Zip Code,11224,Other,05/2026,0,62.5,,
-Zip Code,11224,Other,06/2026,0,12,,2026-06-06
+Zip Code,11224,Other,06/2026,0,44,,2026-06-13
 Zip Code,11225,Black,01/2020,0,185,249.333,
 Zip Code,11225,Black,02/2020,0,166.5,245,
 Zip Code,11225,Black,03/2020,0,131.5,248,
@@ -16300,7 +16300,7 @@ Zip Code,11225,Black,02/2026,0,162.5,,
 Zip Code,11225,Black,03/2026,0,131.5,,
 Zip Code,11225,Black,04/2026,0,118.5,,
 Zip Code,11225,Black,05/2026,0,111,,
-Zip Code,11225,Black,06/2026,0,34,,2026-06-06
+Zip Code,11225,Black,06/2026,0,64.5,,2026-06-13
 Zip Code,11226,Black,01/2020,0,298,418.667,
 Zip Code,11226,Black,02/2020,0,264.5,456.333,
 Zip Code,11226,Black,03/2020,0,286,416,
@@ -16378,7 +16378,7 @@ Zip Code,11226,Black,02/2026,0,248,,
 Zip Code,11226,Black,03/2026,0,286,,
 Zip Code,11226,Black,04/2026,0,236,,
 Zip Code,11226,Black,05/2026,0,298.5,,
-Zip Code,11226,Black,06/2026,0,58,,2026-06-06
+Zip Code,11226,Black,06/2026,0,136.5,,2026-06-13
 Zip Code,11228,Other,01/2020,0,7,12.667,
 Zip Code,11228,Other,02/2020,0,8.5,10,
 Zip Code,11228,Other,03/2020,0,6.5,17.333,
@@ -16456,7 +16456,7 @@ Zip Code,11228,Other,02/2026,0,8.5,,
 Zip Code,11228,Other,03/2026,0,6.5,,
 Zip Code,11228,Other,04/2026,0,8.5,,
 Zip Code,11228,Other,05/2026,0,7,,
-Zip Code,11228,Other,06/2026,0,2.5,,2026-06-06
+Zip Code,11228,Other,06/2026,0,5,,2026-06-13
 Zip Code,11229,White,01/2020,0,53,114.333,
 Zip Code,11229,White,02/2020,0,45,75,
 Zip Code,11229,White,03/2020,0,52.5,94.333,
@@ -16534,7 +16534,7 @@ Zip Code,11229,White,02/2026,0,44.5,,
 Zip Code,11229,White,03/2026,0,52.5,,
 Zip Code,11229,White,04/2026,0,38.5,,
 Zip Code,11229,White,05/2026,0,45,,
-Zip Code,11229,White,06/2026,0,8,,2026-06-06
+Zip Code,11229,White,06/2026,0,26,,2026-06-13
 Zip Code,11230,White,01/2020,0,103.5,127.333,
 Zip Code,11230,White,02/2020,0,88,138.333,
 Zip Code,11230,White,03/2020,0,95,122.667,
@@ -16612,7 +16612,7 @@ Zip Code,11230,White,02/2026,0,82.5,,
 Zip Code,11230,White,03/2026,0,95,,
 Zip Code,11230,White,04/2026,0,89,,
 Zip Code,11230,White,05/2026,0,95,,
-Zip Code,11230,White,06/2026,0,9.5,,2026-06-06
+Zip Code,11230,White,06/2026,0,35,,2026-06-13
 Zip Code,11231,White,01/2020,0,9.5,8.333,
 Zip Code,11231,White,02/2020,0,7.5,15.667,
 Zip Code,11231,White,03/2020,0,11,13.667,
@@ -16690,7 +16690,7 @@ Zip Code,11231,White,02/2026,0,7.5,,
 Zip Code,11231,White,03/2026,0,11,,
 Zip Code,11231,White,04/2026,0,10.5,,
 Zip Code,11231,White,05/2026,0,6.5,,
-Zip Code,11231,White,06/2026,0,5,,2026-06-06
+Zip Code,11231,White,06/2026,0,10.5,,2026-06-13
 Zip Code,11232,Hispanic,01/2020,0,7.5,16.333,
 Zip Code,11232,Hispanic,02/2020,0,12,20.667,
 Zip Code,11232,Hispanic,03/2020,0,11.5,17.667,
@@ -16768,7 +16768,7 @@ Zip Code,11232,Hispanic,02/2026,0,11.5,,
 Zip Code,11232,Hispanic,03/2026,0,11.5,,
 Zip Code,11232,Hispanic,04/2026,0,9,,
 Zip Code,11232,Hispanic,05/2026,0,11,,
-Zip Code,11232,Hispanic,06/2026,0,3.5,,2026-06-06
+Zip Code,11232,Hispanic,06/2026,0,9,,2026-06-13
 Zip Code,11233,Black,01/2020,0,149,270.333,
 Zip Code,11233,Black,02/2020,0,130,319.667,
 Zip Code,11233,Black,03/2020,0,135.5,293.333,
@@ -16846,7 +16846,7 @@ Zip Code,11233,Black,02/2026,0,129.5,,
 Zip Code,11233,Black,03/2026,0,135.5,,
 Zip Code,11233,Black,04/2026,0,157,,
 Zip Code,11233,Black,05/2026,0,140,,
-Zip Code,11233,Black,06/2026,0,28,,2026-06-06
+Zip Code,11233,Black,06/2026,0,56.5,,2026-06-13
 Zip Code,11234,Other,01/2020,0,25,67.667,
 Zip Code,11234,Other,02/2020,0,33.5,54.333,
 Zip Code,11234,Other,03/2020,0,30.5,77.667,
@@ -16924,7 +16924,7 @@ Zip Code,11234,Other,02/2026,0,33.5,,
 Zip Code,11234,Other,03/2026,0,30.5,,
 Zip Code,11234,Other,04/2026,0,35,,
 Zip Code,11234,Other,05/2026,0,34.5,,
-Zip Code,11234,Other,06/2026,0,8.5,,2026-06-06
+Zip Code,11234,Other,06/2026,0,15.5,,2026-06-13
 Zip Code,11235,White,01/2020,0,57.5,97.333,
 Zip Code,11235,White,02/2020,0,52,110,
 Zip Code,11235,White,03/2020,0,75.5,103,
@@ -17002,7 +17002,7 @@ Zip Code,11235,White,02/2026,0,51.5,,
 Zip Code,11235,White,03/2026,0,75.5,,
 Zip Code,11235,White,04/2026,0,54,,
 Zip Code,11235,White,05/2026,0,63,,
-Zip Code,11235,White,06/2026,0,13,,2026-06-06
+Zip Code,11235,White,06/2026,0,30,,2026-06-13
 Zip Code,11236,Black,01/2020,0,68.5,150.667,
 Zip Code,11236,Black,02/2020,0,58,127,
 Zip Code,11236,Black,03/2020,0,63,207.667,
@@ -17080,7 +17080,7 @@ Zip Code,11236,Black,02/2026,0,58,,
 Zip Code,11236,Black,03/2026,0,63,,
 Zip Code,11236,Black,04/2026,0,55,,
 Zip Code,11236,Black,05/2026,0,61,,
-Zip Code,11236,Black,06/2026,0,14,,2026-06-06
+Zip Code,11236,Black,06/2026,0,26,,2026-06-13
 Zip Code,11237,Hispanic,01/2020,0,24.5,53.667,
 Zip Code,11237,Hispanic,02/2020,0,35,47,
 Zip Code,11237,Hispanic,03/2020,0,33,53.333,
@@ -17158,7 +17158,7 @@ Zip Code,11237,Hispanic,02/2026,0,35,,
 Zip Code,11237,Hispanic,03/2026,0,33,,
 Zip Code,11237,Hispanic,04/2026,0,22.5,,
 Zip Code,11237,Hispanic,05/2026,0,33,,
-Zip Code,11237,Hispanic,06/2026,0,4.5,,2026-06-06
+Zip Code,11237,Hispanic,06/2026,0,9.5,,2026-06-13
 Zip Code,11238,Other,01/2020,0,42.5,109,
 Zip Code,11238,Other,02/2020,0,53,115,
 Zip Code,11238,Other,03/2020,0,62,109.667,
@@ -17236,7 +17236,7 @@ Zip Code,11238,Other,02/2026,0,49,,
 Zip Code,11238,Other,03/2026,0,62,,
 Zip Code,11238,Other,04/2026,0,56.5,,
 Zip Code,11238,Other,05/2026,0,62,,
-Zip Code,11238,Other,06/2026,0,19.5,,2026-06-06
+Zip Code,11238,Other,06/2026,0,37.5,,2026-06-13
 Zip Code,11239,Black,01/2020,0,72,172.667,
 Zip Code,11239,Black,02/2020,0,24,121.667,
 Zip Code,11239,Black,03/2020,0,102.5,215.667,
@@ -17314,7 +17314,7 @@ Zip Code,11239,Black,02/2026,0,23,,
 Zip Code,11239,Black,03/2026,0,102.5,,
 Zip Code,11239,Black,04/2026,0,180.5,,
 Zip Code,11239,Black,05/2026,0,69.5,,
-Zip Code,11239,Black,06/2026,0,5.5,,2026-06-06
+Zip Code,11239,Black,06/2026,0,37.5,,2026-06-13
 Zip Code,11241,Other,01/2020,0,0,0,
 Zip Code,11241,Other,02/2020,0,0,0,
 Zip Code,11241,Other,03/2020,0,0,0,
@@ -17392,7 +17392,7 @@ Zip Code,11241,Other,02/2026,0,0,,
 Zip Code,11241,Other,03/2026,0,0,,
 Zip Code,11241,Other,04/2026,0,0.5,,
 Zip Code,11241,Other,05/2026,0,0,,
-Zip Code,11241,Other,06/2026,0,0,,2026-06-06
+Zip Code,11241,Other,06/2026,0,0,,2026-06-13
 Zip Code,11242,Other,01/2020,0,0.5,0,
 Zip Code,11242,Other,02/2020,0,0,0,
 Zip Code,11242,Other,03/2020,0,0,0.333,
@@ -17470,7 +17470,7 @@ Zip Code,11242,Other,02/2026,0,0,,
 Zip Code,11242,Other,03/2026,0,0,,
 Zip Code,11242,Other,04/2026,0,0,,
 Zip Code,11242,Other,05/2026,0,0,,
-Zip Code,11242,Other,06/2026,0,0,,2026-06-06
+Zip Code,11242,Other,06/2026,0,0,,2026-06-13
 Zip Code,11243,Other,01/2020,0,0,0,
 Zip Code,11243,Other,02/2020,0,0,0,
 Zip Code,11243,Other,03/2020,0,0,0,
@@ -17548,7 +17548,7 @@ Zip Code,11243,Other,02/2026,0,0,,
 Zip Code,11243,Other,03/2026,0,0,,
 Zip Code,11243,Other,04/2026,0,0,,
 Zip Code,11243,Other,05/2026,0,0,,
-Zip Code,11243,Other,06/2026,0,0,,2026-06-06
+Zip Code,11243,Other,06/2026,0,0,,2026-06-13
 Zip Code,11245,Other,01/2020,0,0,0,
 Zip Code,11245,Other,02/2020,0,0,0,
 Zip Code,11245,Other,03/2020,0,0,0,
@@ -17626,7 +17626,7 @@ Zip Code,11245,Other,02/2026,0,0,,
 Zip Code,11245,Other,03/2026,0,0,,
 Zip Code,11245,Other,04/2026,0,0,,
 Zip Code,11245,Other,05/2026,0,0,,
-Zip Code,11245,Other,06/2026,0,0,,2026-06-06
+Zip Code,11245,Other,06/2026,0,0,,2026-06-13
 Zip Code,11247,Other,01/2020,0,0,0,
 Zip Code,11247,Other,02/2020,0,0,0,
 Zip Code,11247,Other,03/2020,0,0,0,
@@ -17704,7 +17704,7 @@ Zip Code,11247,Other,02/2026,0,0,,
 Zip Code,11247,Other,03/2026,0,0,,
 Zip Code,11247,Other,04/2026,0,0,,
 Zip Code,11247,Other,05/2026,0,0,,
-Zip Code,11247,Other,06/2026,0,0,,2026-06-06
+Zip Code,11247,Other,06/2026,0,0,,2026-06-13
 Zip Code,11249,Other,01/2020,0,42,46.667,
 Zip Code,11249,Other,02/2020,0,31,47,
 Zip Code,11249,Other,03/2020,0,39,61.333,
@@ -17782,7 +17782,7 @@ Zip Code,11249,Other,02/2026,0,29.5,,
 Zip Code,11249,Other,03/2026,0,39,,
 Zip Code,11249,Other,04/2026,0,24,,
 Zip Code,11249,Other,05/2026,0,30,,
-Zip Code,11249,Other,06/2026,0,8,,2026-06-06
+Zip Code,11249,Other,06/2026,0,11,,2026-06-13
 Zip Code,11251,Other,01/2020,0,0,0,
 Zip Code,11251,Other,02/2020,0,0,0,
 Zip Code,11251,Other,03/2020,0,0,0,
@@ -17860,7 +17860,7 @@ Zip Code,11251,Other,02/2026,0,0,,
 Zip Code,11251,Other,03/2026,0,0,,
 Zip Code,11251,Other,04/2026,0,0,,
 Zip Code,11251,Other,05/2026,0,0,,
-Zip Code,11251,Other,06/2026,0,0,,2026-06-06
+Zip Code,11251,Other,06/2026,0,0,,2026-06-13
 Zip Code,11252,Other,01/2020,0,0,0,
 Zip Code,11252,Other,02/2020,0,0,0,
 Zip Code,11252,Other,03/2020,0,0,0,
@@ -17938,7 +17938,7 @@ Zip Code,11252,Other,02/2026,0,0,,
 Zip Code,11252,Other,03/2026,0,0,,
 Zip Code,11252,Other,04/2026,0,0,,
 Zip Code,11252,Other,05/2026,0,0,,
-Zip Code,11252,Other,06/2026,0,0,,2026-06-06
+Zip Code,11252,Other,06/2026,0,0,,2026-06-13
 Zip Code,11256,Other,01/2020,0,0,0,
 Zip Code,11256,Other,02/2020,0,0,0,
 Zip Code,11256,Other,03/2020,0,0,0,
@@ -18016,7 +18016,7 @@ Zip Code,11256,Other,02/2026,0,0,,
 Zip Code,11256,Other,03/2026,0,0,,
 Zip Code,11256,Other,04/2026,0,0,,
 Zip Code,11256,Other,05/2026,0,0,,
-Zip Code,11256,Other,06/2026,0,0,,2026-06-06
+Zip Code,11256,Other,06/2026,0,0,,2026-06-13
 Zip Code,11351,Other,01/2020,0,0,0,
 Zip Code,11351,Other,02/2020,0,0,0,
 Zip Code,11351,Other,03/2020,0,0,0,
@@ -18094,7 +18094,7 @@ Zip Code,11351,Other,02/2026,0,0,,
 Zip Code,11351,Other,03/2026,0,0,,
 Zip Code,11351,Other,04/2026,0,0,,
 Zip Code,11351,Other,05/2026,0,0,,
-Zip Code,11351,Other,06/2026,0,0,,2026-06-06
+Zip Code,11351,Other,06/2026,0,0,,2026-06-13
 Zip Code,11352,Other,01/2020,0,0,0,
 Zip Code,11352,Other,02/2020,0,0,0,
 Zip Code,11352,Other,03/2020,0,0,0,
@@ -18172,7 +18172,7 @@ Zip Code,11352,Other,02/2026,0,0,,
 Zip Code,11352,Other,03/2026,0,0,,
 Zip Code,11352,Other,04/2026,0,0,,
 Zip Code,11352,Other,05/2026,0,0,,
-Zip Code,11352,Other,06/2026,0,0,,2026-06-06
+Zip Code,11352,Other,06/2026,0,0,,2026-06-13
 Zip Code,11354,Other,01/2020,0,21.5,68.667,
 Zip Code,11354,Other,02/2020,0,33,57,
 Zip Code,11354,Other,03/2020,0,40,88,
@@ -18250,7 +18250,7 @@ Zip Code,11354,Other,02/2026,0,32.5,,
 Zip Code,11354,Other,03/2026,0,40,,
 Zip Code,11354,Other,04/2026,0,25,,
 Zip Code,11354,Other,05/2026,0,33.5,,
-Zip Code,11354,Other,06/2026,0,6,,2026-06-06
+Zip Code,11354,Other,06/2026,0,13,,2026-06-13
 Zip Code,11355,Other,01/2020,0,58,75.333,
 Zip Code,11355,Other,02/2020,0,47.5,75.667,
 Zip Code,11355,Other,03/2020,0,53.5,78.333,
@@ -18328,7 +18328,7 @@ Zip Code,11355,Other,02/2026,0,46,,
 Zip Code,11355,Other,03/2026,0,53.5,,
 Zip Code,11355,Other,04/2026,0,44,,
 Zip Code,11355,Other,05/2026,0,52.5,,
-Zip Code,11355,Other,06/2026,0,8,,2026-06-06
+Zip Code,11355,Other,06/2026,0,21,,2026-06-13
 Zip Code,11356,Other,01/2020,0,8,8.667,
 Zip Code,11356,Other,02/2020,0,7.5,7.667,
 Zip Code,11356,Other,03/2020,0,7,7.333,
@@ -18406,7 +18406,7 @@ Zip Code,11356,Other,02/2026,0,7.5,,
 Zip Code,11356,Other,03/2026,0,7,,
 Zip Code,11356,Other,04/2026,0,8,,
 Zip Code,11356,Other,05/2026,0,9.5,,
-Zip Code,11356,Other,06/2026,0,4,,2026-06-06
+Zip Code,11356,Other,06/2026,0,4.5,,2026-06-13
 Zip Code,11357,White,01/2020,0,6.5,6.333,
 Zip Code,11357,White,02/2020,0,6,11,
 Zip Code,11357,White,03/2020,0,6.5,11.333,
@@ -18484,7 +18484,7 @@ Zip Code,11357,White,02/2026,0,5.5,,
 Zip Code,11357,White,03/2026,0,6.5,,
 Zip Code,11357,White,04/2026,0,3,,
 Zip Code,11357,White,05/2026,0,3,,
-Zip Code,11357,White,06/2026,0,3,,2026-06-06
+Zip Code,11357,White,06/2026,0,5,,2026-06-13
 Zip Code,11358,Other,01/2020,0,14,15,
 Zip Code,11358,Other,02/2020,0,9.5,11.667,
 Zip Code,11358,Other,03/2020,0,10,19.667,
@@ -18562,7 +18562,7 @@ Zip Code,11358,Other,02/2026,0,9,,
 Zip Code,11358,Other,03/2026,0,10,,
 Zip Code,11358,Other,04/2026,0,10.5,,
 Zip Code,11358,Other,05/2026,0,12.5,,
-Zip Code,11358,Other,06/2026,0,0.5,,2026-06-06
+Zip Code,11358,Other,06/2026,0,3.5,,2026-06-13
 Zip Code,11359,Other,01/2020,0,0,0.333,
 Zip Code,11359,Other,02/2020,0,0,0,
 Zip Code,11359,Other,03/2020,0,0,0,
@@ -18640,7 +18640,7 @@ Zip Code,11359,Other,02/2026,0,0,,
 Zip Code,11359,Other,03/2026,0,0,,
 Zip Code,11359,Other,04/2026,0,0,,
 Zip Code,11359,Other,05/2026,0,0,,
-Zip Code,11359,Other,06/2026,0,0,,2026-06-06
+Zip Code,11359,Other,06/2026,0,0,,2026-06-13
 Zip Code,11360,White,01/2020,0,4,9,
 Zip Code,11360,White,02/2020,0,3.5,7.333,
 Zip Code,11360,White,03/2020,0,7.5,8.667,
@@ -18718,7 +18718,7 @@ Zip Code,11360,White,02/2026,0,3.5,,
 Zip Code,11360,White,03/2026,0,7.5,,
 Zip Code,11360,White,04/2026,0,6,,
 Zip Code,11360,White,05/2026,0,5.5,,
-Zip Code,11360,White,06/2026,0,4,,2026-06-06
+Zip Code,11360,White,06/2026,0,4.5,,2026-06-13
 Zip Code,11361,Other,01/2020,0,7.5,11.333,
 Zip Code,11361,Other,02/2020,0,9,5,
 Zip Code,11361,Other,03/2020,0,8,10.667,
@@ -18796,7 +18796,7 @@ Zip Code,11361,Other,02/2026,0,9,,
 Zip Code,11361,Other,03/2026,0,8,,
 Zip Code,11361,Other,04/2026,0,9,,
 Zip Code,11361,Other,05/2026,0,7.5,,
-Zip Code,11361,Other,06/2026,0,1.5,,2026-06-06
+Zip Code,11361,Other,06/2026,0,4,,2026-06-13
 Zip Code,11362,Other,01/2020,0,1,1,
 Zip Code,11362,Other,02/2020,0,2,2,
 Zip Code,11362,Other,03/2020,0,2,2.333,
@@ -18874,7 +18874,7 @@ Zip Code,11362,Other,02/2026,0,2,,
 Zip Code,11362,Other,03/2026,0,2,,
 Zip Code,11362,Other,04/2026,0,3.5,,
 Zip Code,11362,Other,05/2026,0,2,,
-Zip Code,11362,Other,06/2026,0,1.5,,2026-06-06
+Zip Code,11362,Other,06/2026,0,1.5,,2026-06-13
 Zip Code,11363,Other,01/2020,0,1.5,4,
 Zip Code,11363,Other,02/2020,0,0.5,2,
 Zip Code,11363,Other,03/2020,0,3.5,1.667,
@@ -18952,7 +18952,7 @@ Zip Code,11363,Other,02/2026,0,0.5,,
 Zip Code,11363,Other,03/2026,0,3.5,,
 Zip Code,11363,Other,04/2026,0,1,,
 Zip Code,11363,Other,05/2026,0,5,,
-Zip Code,11363,Other,06/2026,0,0.5,,2026-06-06
+Zip Code,11363,Other,06/2026,0,0.5,,2026-06-13
 Zip Code,11364,Other,01/2020,0,7,16,
 Zip Code,11364,Other,02/2020,0,10,10.667,
 Zip Code,11364,Other,03/2020,0,12.5,16.333,
@@ -19030,7 +19030,7 @@ Zip Code,11364,Other,02/2026,0,10,,
 Zip Code,11364,Other,03/2026,0,12.5,,
 Zip Code,11364,Other,04/2026,0,11.5,,
 Zip Code,11364,Other,05/2026,0,7,,
-Zip Code,11364,Other,06/2026,0,3,,2026-06-06
+Zip Code,11364,Other,06/2026,0,6,,2026-06-13
 Zip Code,11365,Other,01/2020,0,28,108,
 Zip Code,11365,Other,02/2020,0,21,87,
 Zip Code,11365,Other,03/2020,0,43,105.333,
@@ -19108,7 +19108,7 @@ Zip Code,11365,Other,02/2026,0,21,,
 Zip Code,11365,Other,03/2026,0,43,,
 Zip Code,11365,Other,04/2026,0,30.5,,
 Zip Code,11365,Other,05/2026,0,49.5,,
-Zip Code,11365,Other,06/2026,0,14,,2026-06-06
+Zip Code,11365,Other,06/2026,0,17.5,,2026-06-13
 Zip Code,11366,Other,01/2020,0,5.5,4,
 Zip Code,11366,Other,02/2020,0,3,0.333,
 Zip Code,11366,Other,03/2020,0,4,3.667,
@@ -19186,7 +19186,7 @@ Zip Code,11366,Other,02/2026,0,2.5,,
 Zip Code,11366,Other,03/2026,0,4,,
 Zip Code,11366,Other,04/2026,0,2,,
 Zip Code,11366,Other,05/2026,0,1.5,,
-Zip Code,11366,Other,06/2026,0,0,,2026-06-06
+Zip Code,11366,Other,06/2026,0,0.5,,2026-06-13
 Zip Code,11367,Other,01/2020,0,11.5,84,
 Zip Code,11367,Other,02/2020,0,12.5,80,
 Zip Code,11367,Other,03/2020,0,23.5,72,
@@ -19264,7 +19264,7 @@ Zip Code,11367,Other,02/2026,0,12,,
 Zip Code,11367,Other,03/2026,0,23.5,,
 Zip Code,11367,Other,04/2026,0,23.5,,
 Zip Code,11367,Other,05/2026,0,22,,
-Zip Code,11367,Other,06/2026,0,3,,2026-06-06
+Zip Code,11367,Other,06/2026,0,9.5,,2026-06-13
 Zip Code,11368,Hispanic,01/2020,0,132,149.333,
 Zip Code,11368,Hispanic,02/2020,0,118.5,204,
 Zip Code,11368,Hispanic,03/2020,0,136,185.333,
@@ -19342,7 +19342,7 @@ Zip Code,11368,Hispanic,02/2026,0,117,,
 Zip Code,11368,Hispanic,03/2026,0,136,,
 Zip Code,11368,Hispanic,04/2026,0,131,,
 Zip Code,11368,Hispanic,05/2026,0,146,,
-Zip Code,11368,Hispanic,06/2026,0,6.5,,2026-06-06
+Zip Code,11368,Hispanic,06/2026,0,87,,2026-06-13
 Zip Code,11369,Hispanic,01/2020,0,14,21,
 Zip Code,11369,Hispanic,02/2020,0,14,18.667,
 Zip Code,11369,Hispanic,03/2020,0,8.5,22.333,
@@ -19420,7 +19420,7 @@ Zip Code,11369,Hispanic,02/2026,0,14,,
 Zip Code,11369,Hispanic,03/2026,0,8.5,,
 Zip Code,11369,Hispanic,04/2026,0,13,,
 Zip Code,11369,Hispanic,05/2026,0,12.5,,
-Zip Code,11369,Hispanic,06/2026,0,4.5,,2026-06-06
+Zip Code,11369,Hispanic,06/2026,0,7,,2026-06-13
 Zip Code,11370,Other,01/2020,0,7.5,16.333,
 Zip Code,11370,Other,02/2020,0,8.5,11,
 Zip Code,11370,Other,03/2020,0,8.5,11.667,
@@ -19498,7 +19498,7 @@ Zip Code,11370,Other,02/2026,0,8.5,,
 Zip Code,11370,Other,03/2026,0,8.5,,
 Zip Code,11370,Other,04/2026,0,4,,
 Zip Code,11370,Other,05/2026,0,11,,
-Zip Code,11370,Other,06/2026,0,2,,2026-06-06
+Zip Code,11370,Other,06/2026,0,4.5,,2026-06-13
 Zip Code,11371,Other,01/2020,0,0,0,
 Zip Code,11371,Other,02/2020,0,0,0,
 Zip Code,11371,Other,03/2020,0,0,0,
@@ -19576,7 +19576,7 @@ Zip Code,11371,Other,02/2026,0,0,,
 Zip Code,11371,Other,03/2026,0,0,,
 Zip Code,11371,Other,04/2026,0,0.5,,
 Zip Code,11371,Other,05/2026,0,0,,
-Zip Code,11371,Other,06/2026,0,0,,2026-06-06
+Zip Code,11371,Other,06/2026,0,0,,2026-06-13
 Zip Code,11372,Hispanic,01/2020,0,60,93.667,
 Zip Code,11372,Hispanic,02/2020,0,56,123.333,
 Zip Code,11372,Hispanic,03/2020,0,64,107.333,
@@ -19654,7 +19654,7 @@ Zip Code,11372,Hispanic,02/2026,0,56,,
 Zip Code,11372,Hispanic,03/2026,0,64,,
 Zip Code,11372,Hispanic,04/2026,0,50,,
 Zip Code,11372,Hispanic,05/2026,0,47,,
-Zip Code,11372,Hispanic,06/2026,0,15,,2026-06-06
+Zip Code,11372,Hispanic,06/2026,0,34,,2026-06-13
 Zip Code,11373,Other,01/2020,0,89,104.667,
 Zip Code,11373,Other,02/2020,0,57,129,
 Zip Code,11373,Other,03/2020,0,69.5,128.667,
@@ -19732,7 +19732,7 @@ Zip Code,11373,Other,02/2026,0,57,,
 Zip Code,11373,Other,03/2026,0,69.5,,
 Zip Code,11373,Other,04/2026,0,50.5,,
 Zip Code,11373,Other,05/2026,0,76,,
-Zip Code,11373,Other,06/2026,0,9,,2026-06-06
+Zip Code,11373,Other,06/2026,0,29,,2026-06-13
 Zip Code,11374,Other,01/2020,0,47,68.667,
 Zip Code,11374,Other,02/2020,0,34.5,59.667,
 Zip Code,11374,Other,03/2020,0,39.5,64.333,
@@ -19810,7 +19810,7 @@ Zip Code,11374,Other,02/2026,0,34,,
 Zip Code,11374,Other,03/2026,0,39.5,,
 Zip Code,11374,Other,04/2026,0,45.5,,
 Zip Code,11374,Other,05/2026,0,43.5,,
-Zip Code,11374,Other,06/2026,0,7.5,,2026-06-06
+Zip Code,11374,Other,06/2026,0,21,,2026-06-13
 Zip Code,11375,Other,01/2020,0,59,62.333,
 Zip Code,11375,Other,02/2020,0,38,51.333,
 Zip Code,11375,Other,03/2020,0,45.5,74.333,
@@ -19888,7 +19888,7 @@ Zip Code,11375,Other,02/2026,0,38,,
 Zip Code,11375,Other,03/2026,0,45.5,,
 Zip Code,11375,Other,04/2026,0,33.5,,
 Zip Code,11375,Other,05/2026,0,53.5,,
-Zip Code,11375,Other,06/2026,0,19,,2026-06-06
+Zip Code,11375,Other,06/2026,0,33,,2026-06-13
 Zip Code,11377,Other,01/2020,0,47,75,
 Zip Code,11377,Other,02/2020,0,40.5,68.667,
 Zip Code,11377,Other,03/2020,0,57,97.667,
@@ -19966,7 +19966,7 @@ Zip Code,11377,Other,02/2026,0,40.5,,
 Zip Code,11377,Other,03/2026,0,57,,
 Zip Code,11377,Other,04/2026,0,47.5,,
 Zip Code,11377,Other,05/2026,0,49.5,,
-Zip Code,11377,Other,06/2026,0,5.5,,2026-06-06
+Zip Code,11377,Other,06/2026,0,16.5,,2026-06-13
 Zip Code,11378,White,01/2020,0,7.5,6.333,
 Zip Code,11378,White,02/2020,0,11,11.333,
 Zip Code,11378,White,03/2020,0,8.5,10.333,
@@ -20044,7 +20044,7 @@ Zip Code,11378,White,02/2026,0,11,,
 Zip Code,11378,White,03/2026,0,8.5,,
 Zip Code,11378,White,04/2026,0,9,,
 Zip Code,11378,White,05/2026,0,7.5,,
-Zip Code,11378,White,06/2026,0,2.5,,2026-06-06
+Zip Code,11378,White,06/2026,0,5,,2026-06-13
 Zip Code,11379,White,01/2020,0,14.5,20.333,
 Zip Code,11379,White,02/2020,0,3,17,
 Zip Code,11379,White,03/2020,0,5.5,21.333,
@@ -20122,7 +20122,7 @@ Zip Code,11379,White,02/2026,0,3,,
 Zip Code,11379,White,03/2026,0,5.5,,
 Zip Code,11379,White,04/2026,0,12,,
 Zip Code,11379,White,05/2026,0,8.5,,
-Zip Code,11379,White,06/2026,0,1,,2026-06-06
+Zip Code,11379,White,06/2026,0,3,,2026-06-13
 Zip Code,11380,Other,01/2020,0,0,0,
 Zip Code,11380,Other,02/2020,0,0,0,
 Zip Code,11380,Other,03/2020,0,0,0,
@@ -20200,7 +20200,7 @@ Zip Code,11380,Other,02/2026,0,0,,
 Zip Code,11380,Other,03/2026,0,0,,
 Zip Code,11380,Other,04/2026,0,0,,
 Zip Code,11380,Other,05/2026,0,0,,
-Zip Code,11380,Other,06/2026,0,0,,2026-06-06
+Zip Code,11380,Other,06/2026,0,0,,2026-06-13
 Zip Code,11381,Other,01/2020,0,0.5,0,
 Zip Code,11381,Other,02/2020,0,0,0,
 Zip Code,11381,Other,03/2020,0,0,0,
@@ -20278,7 +20278,7 @@ Zip Code,11381,Other,02/2026,0,0,,
 Zip Code,11381,Other,03/2026,0,0,,
 Zip Code,11381,Other,04/2026,0,0,,
 Zip Code,11381,Other,05/2026,0,0,,
-Zip Code,11381,Other,06/2026,0,0,,2026-06-06
+Zip Code,11381,Other,06/2026,0,0,,2026-06-13
 Zip Code,11385,Other,01/2020,0,36,70,
 Zip Code,11385,Other,02/2020,0,39,66,
 Zip Code,11385,Other,03/2020,0,43.5,53.333,
@@ -20356,7 +20356,7 @@ Zip Code,11385,Other,02/2026,0,38,,
 Zip Code,11385,Other,03/2026,0,43.5,,
 Zip Code,11385,Other,04/2026,0,47,,
 Zip Code,11385,Other,05/2026,0,41,,
-Zip Code,11385,Other,06/2026,0,13.5,,2026-06-06
+Zip Code,11385,Other,06/2026,0,24.5,,2026-06-13
 Zip Code,11386,Other,01/2020,0,0,0,
 Zip Code,11386,Other,02/2020,0,0,0,
 Zip Code,11386,Other,03/2020,0,0,0,
@@ -20434,7 +20434,7 @@ Zip Code,11386,Other,02/2026,0,0,,
 Zip Code,11386,Other,03/2026,0,0,,
 Zip Code,11386,Other,04/2026,0,0,,
 Zip Code,11386,Other,05/2026,0,0,,
-Zip Code,11386,Other,06/2026,0,0,,2026-06-06
+Zip Code,11386,Other,06/2026,0,0,,2026-06-13
 Zip Code,11405,Other,01/2020,0,0,0,
 Zip Code,11405,Other,02/2020,0,0,0,
 Zip Code,11405,Other,03/2020,0,0,0,
@@ -20512,7 +20512,7 @@ Zip Code,11405,Other,02/2026,0,0,,
 Zip Code,11405,Other,03/2026,0,0,,
 Zip Code,11405,Other,04/2026,0,0,,
 Zip Code,11405,Other,05/2026,0,0,,
-Zip Code,11405,Other,06/2026,0,0,,2026-06-06
+Zip Code,11405,Other,06/2026,0,0,,2026-06-13
 Zip Code,11411,Black,01/2020,0,4.5,10,
 Zip Code,11411,Black,02/2020,0,4,8,
 Zip Code,11411,Black,03/2020,0,6,8.333,
@@ -20590,7 +20590,7 @@ Zip Code,11411,Black,02/2026,0,4,,
 Zip Code,11411,Black,03/2026,0,6,,
 Zip Code,11411,Black,04/2026,0,6,,
 Zip Code,11411,Black,05/2026,0,8.5,,
-Zip Code,11411,Black,06/2026,0,1.5,,2026-06-06
+Zip Code,11411,Black,06/2026,0,2.5,,2026-06-13
 Zip Code,11412,Black,01/2020,0,21.5,29,
 Zip Code,11412,Black,02/2020,0,20.5,28.333,
 Zip Code,11412,Black,03/2020,0,26,29.667,
@@ -20668,7 +20668,7 @@ Zip Code,11412,Black,02/2026,0,19.5,,
 Zip Code,11412,Black,03/2026,0,26,,
 Zip Code,11412,Black,04/2026,0,30.5,,
 Zip Code,11412,Black,05/2026,0,19,,
-Zip Code,11412,Black,06/2026,0,6.5,,2026-06-06
+Zip Code,11412,Black,06/2026,0,12.5,,2026-06-13
 Zip Code,11413,Black,01/2020,0,23.5,32,
 Zip Code,11413,Black,02/2020,0,25,25.333,
 Zip Code,11413,Black,03/2020,0,17,30.667,
@@ -20746,7 +20746,7 @@ Zip Code,11413,Black,02/2026,0,23,,
 Zip Code,11413,Black,03/2026,0,17,,
 Zip Code,11413,Black,04/2026,0,12.5,,
 Zip Code,11413,Black,05/2026,0,20,,
-Zip Code,11413,Black,06/2026,0,5.5,,2026-06-06
+Zip Code,11413,Black,06/2026,0,13.5,,2026-06-13
 Zip Code,11414,White,01/2020,0,5,13.667,
 Zip Code,11414,White,02/2020,0,7,10.333,
 Zip Code,11414,White,03/2020,0,6.5,9,
@@ -20824,7 +20824,7 @@ Zip Code,11414,White,02/2026,0,7,,
 Zip Code,11414,White,03/2026,0,6.5,,
 Zip Code,11414,White,04/2026,0,4,,
 Zip Code,11414,White,05/2026,0,6.5,,
-Zip Code,11414,White,06/2026,0,0.5,,2026-06-06
+Zip Code,11414,White,06/2026,0,1.5,,2026-06-13
 Zip Code,11415,Other,01/2020,0,30,43.333,
 Zip Code,11415,Other,02/2020,0,33,38,
 Zip Code,11415,Other,03/2020,0,31.5,40,
@@ -20902,7 +20902,7 @@ Zip Code,11415,Other,02/2026,0,33,,
 Zip Code,11415,Other,03/2026,0,31.5,,
 Zip Code,11415,Other,04/2026,0,24,,
 Zip Code,11415,Other,05/2026,0,24.5,,
-Zip Code,11415,Other,06/2026,0,8.5,,2026-06-06
+Zip Code,11415,Other,06/2026,0,15.5,,2026-06-13
 Zip Code,11416,Other,01/2020,0,9.5,17.667,
 Zip Code,11416,Other,02/2020,0,13.5,14.333,
 Zip Code,11416,Other,03/2020,0,13,11,
@@ -20980,7 +20980,7 @@ Zip Code,11416,Other,02/2026,0,13.5,,
 Zip Code,11416,Other,03/2026,0,13,,
 Zip Code,11416,Other,04/2026,0,10,,
 Zip Code,11416,Other,05/2026,0,12,,
-Zip Code,11416,Other,06/2026,0,4,,2026-06-06
+Zip Code,11416,Other,06/2026,0,8,,2026-06-13
 Zip Code,11417,Other,01/2020,0,12.5,15.667,
 Zip Code,11417,Other,02/2020,0,7.5,19.333,
 Zip Code,11417,Other,03/2020,0,11,15.667,
@@ -21058,7 +21058,7 @@ Zip Code,11417,Other,02/2026,0,7.5,,
 Zip Code,11417,Other,03/2026,0,11,,
 Zip Code,11417,Other,04/2026,0,15.5,,
 Zip Code,11417,Other,05/2026,0,15,,
-Zip Code,11417,Other,06/2026,0,2,,2026-06-06
+Zip Code,11417,Other,06/2026,0,6,,2026-06-13
 Zip Code,11418,Other,01/2020,0,27,29.333,
 Zip Code,11418,Other,02/2020,0,24,36.333,
 Zip Code,11418,Other,03/2020,0,23.5,39.667,
@@ -21136,7 +21136,7 @@ Zip Code,11418,Other,02/2026,0,24,,
 Zip Code,11418,Other,03/2026,0,23.5,,
 Zip Code,11418,Other,04/2026,0,13.5,,
 Zip Code,11418,Other,05/2026,0,20,,
-Zip Code,11418,Other,06/2026,0,1.5,,2026-06-06
+Zip Code,11418,Other,06/2026,0,9.5,,2026-06-13
 Zip Code,11419,Other,01/2020,0,19.5,27.667,
 Zip Code,11419,Other,02/2020,0,18,28,
 Zip Code,11419,Other,03/2020,0,25,20.667,
@@ -21214,7 +21214,7 @@ Zip Code,11419,Other,02/2026,0,18,,
 Zip Code,11419,Other,03/2026,0,25,,
 Zip Code,11419,Other,04/2026,0,14.5,,
 Zip Code,11419,Other,05/2026,0,18.5,,
-Zip Code,11419,Other,06/2026,0,6,,2026-06-06
+Zip Code,11419,Other,06/2026,0,10.5,,2026-06-13
 Zip Code,11420,Other,01/2020,0,14,21.667,
 Zip Code,11420,Other,02/2020,0,17,29,
 Zip Code,11420,Other,03/2020,0,16.5,22.333,
@@ -21292,7 +21292,7 @@ Zip Code,11420,Other,02/2026,0,17,,
 Zip Code,11420,Other,03/2026,0,16.5,,
 Zip Code,11420,Other,04/2026,0,20.5,,
 Zip Code,11420,Other,05/2026,0,19,,
-Zip Code,11420,Other,06/2026,0,5,,2026-06-06
+Zip Code,11420,Other,06/2026,0,7.5,,2026-06-13
 Zip Code,11421,Hispanic,01/2020,0,25,31.667,
 Zip Code,11421,Hispanic,02/2020,0,23,32,
 Zip Code,11421,Hispanic,03/2020,0,22.5,23.667,
@@ -21370,7 +21370,7 @@ Zip Code,11421,Hispanic,02/2026,0,21.5,,
 Zip Code,11421,Hispanic,03/2026,0,22.5,,
 Zip Code,11421,Hispanic,04/2026,0,15,,
 Zip Code,11421,Hispanic,05/2026,0,20,,
-Zip Code,11421,Hispanic,06/2026,0,2,,2026-06-06
+Zip Code,11421,Hispanic,06/2026,0,4.5,,2026-06-13
 Zip Code,11422,Black,01/2020,0,13.5,20.667,
 Zip Code,11422,Black,02/2020,0,15.5,18.667,
 Zip Code,11422,Black,03/2020,0,14,20.667,
@@ -21448,7 +21448,7 @@ Zip Code,11422,Black,02/2026,0,15.5,,
 Zip Code,11422,Black,03/2026,0,14,,
 Zip Code,11422,Black,04/2026,0,10,,
 Zip Code,11422,Black,05/2026,0,15,,
-Zip Code,11422,Black,06/2026,0,4,,2026-06-06
+Zip Code,11422,Black,06/2026,0,6.5,,2026-06-13
 Zip Code,11423,Other,01/2020,0,22.5,52.333,
 Zip Code,11423,Other,02/2020,0,25.5,51.333,
 Zip Code,11423,Other,03/2020,0,34.5,68.667,
@@ -21526,7 +21526,7 @@ Zip Code,11423,Other,02/2026,0,25.5,,
 Zip Code,11423,Other,03/2026,0,34.5,,
 Zip Code,11423,Other,04/2026,0,17,,
 Zip Code,11423,Other,05/2026,0,25.5,,
-Zip Code,11423,Other,06/2026,0,8.5,,2026-06-06
+Zip Code,11423,Other,06/2026,0,16.5,,2026-06-13
 Zip Code,11424,Black,01/2020,0,1,0,
 Zip Code,11424,Black,02/2020,0,0,0.333,
 Zip Code,11424,Black,03/2020,0,0,0,
@@ -21604,7 +21604,7 @@ Zip Code,11424,Black,02/2026,0,0,,
 Zip Code,11424,Black,03/2026,0,0,,
 Zip Code,11424,Black,04/2026,0,0.5,,
 Zip Code,11424,Black,05/2026,0,0,,
-Zip Code,11424,Black,06/2026,0,0,,2026-06-06
+Zip Code,11424,Black,06/2026,0,0,,2026-06-13
 Zip Code,11425,Other,01/2020,0,0,0,
 Zip Code,11425,Other,02/2020,0,0,0,
 Zip Code,11425,Other,03/2020,0,0,0,
@@ -21682,7 +21682,7 @@ Zip Code,11425,Other,02/2026,0,0,,
 Zip Code,11425,Other,03/2026,0,0,,
 Zip Code,11425,Other,04/2026,0,0,,
 Zip Code,11425,Other,05/2026,0,0,,
-Zip Code,11425,Other,06/2026,0,0,,2026-06-06
+Zip Code,11425,Other,06/2026,0,0,,2026-06-13
 Zip Code,11426,Other,01/2020,0,3.5,6.667,
 Zip Code,11426,Other,02/2020,0,5,7.667,
 Zip Code,11426,Other,03/2020,0,6.5,8,
@@ -21760,7 +21760,7 @@ Zip Code,11426,Other,02/2026,0,5,,
 Zip Code,11426,Other,03/2026,0,6.5,,
 Zip Code,11426,Other,04/2026,0,2.5,,
 Zip Code,11426,Other,05/2026,0,3,,
-Zip Code,11426,Other,06/2026,0,0,,2026-06-06
+Zip Code,11426,Other,06/2026,0,0,,2026-06-13
 Zip Code,11427,Other,01/2020,0,8.5,34.667,
 Zip Code,11427,Other,02/2020,0,9.5,42.667,
 Zip Code,11427,Other,03/2020,0,15.5,28.333,
@@ -21838,7 +21838,7 @@ Zip Code,11427,Other,02/2026,0,9,,
 Zip Code,11427,Other,03/2026,0,15.5,,
 Zip Code,11427,Other,04/2026,0,10,,
 Zip Code,11427,Other,05/2026,0,10.5,,
-Zip Code,11427,Other,06/2026,0,4,,2026-06-06
+Zip Code,11427,Other,06/2026,0,8.5,,2026-06-13
 Zip Code,11428,Other,01/2020,0,10.5,11.667,
 Zip Code,11428,Other,02/2020,0,9,13.333,
 Zip Code,11428,Other,03/2020,0,13,16.333,
@@ -21916,7 +21916,7 @@ Zip Code,11428,Other,02/2026,0,9,,
 Zip Code,11428,Other,03/2026,0,13,,
 Zip Code,11428,Other,04/2026,0,10,,
 Zip Code,11428,Other,05/2026,0,5.5,,
-Zip Code,11428,Other,06/2026,0,2,,2026-06-06
+Zip Code,11428,Other,06/2026,0,5,,2026-06-13
 Zip Code,11429,Black,01/2020,0,7.5,15.333,
 Zip Code,11429,Black,02/2020,0,12,14.667,
 Zip Code,11429,Black,03/2020,0,8.5,16.667,
@@ -21994,7 +21994,7 @@ Zip Code,11429,Black,02/2026,0,11.5,,
 Zip Code,11429,Black,03/2026,0,8.5,,
 Zip Code,11429,Black,04/2026,0,9.5,,
 Zip Code,11429,Black,05/2026,0,11.5,,
-Zip Code,11429,Black,06/2026,0,4.5,,2026-06-06
+Zip Code,11429,Black,06/2026,0,8,,2026-06-13
 Zip Code,11430,Black,01/2020,0,0,0,
 Zip Code,11430,Black,02/2020,0,0,0,
 Zip Code,11430,Black,03/2020,0,0,0,
@@ -22072,7 +22072,7 @@ Zip Code,11430,Black,02/2026,0,0,,
 Zip Code,11430,Black,03/2026,0,0,,
 Zip Code,11430,Black,04/2026,0,0,,
 Zip Code,11430,Black,05/2026,0,0,,
-Zip Code,11430,Black,06/2026,0,0,,2026-06-06
+Zip Code,11430,Black,06/2026,0,0,,2026-06-13
 Zip Code,11431,Other,01/2020,0,0,0,
 Zip Code,11431,Other,02/2020,0,0,0,
 Zip Code,11431,Other,03/2020,0,0.5,0.333,
@@ -22150,7 +22150,7 @@ Zip Code,11431,Other,02/2026,0,0,,
 Zip Code,11431,Other,03/2026,0,0.5,,
 Zip Code,11431,Other,04/2026,0,0,,
 Zip Code,11431,Other,05/2026,0,0,,
-Zip Code,11431,Other,06/2026,0,0,,2026-06-06
+Zip Code,11431,Other,06/2026,0,0,,2026-06-13
 Zip Code,11432,Other,01/2020,0,102,150,
 Zip Code,11432,Other,02/2020,0,102.5,104.667,
 Zip Code,11432,Other,03/2020,0,94.5,137,
@@ -22228,7 +22228,7 @@ Zip Code,11432,Other,02/2026,0,99.5,,
 Zip Code,11432,Other,03/2026,0,94.5,,
 Zip Code,11432,Other,04/2026,0,54,,
 Zip Code,11432,Other,05/2026,0,112.5,,
-Zip Code,11432,Other,06/2026,0,16,,2026-06-06
+Zip Code,11432,Other,06/2026,0,49,,2026-06-13
 Zip Code,11433,Black,01/2020,0,31,65.667,
 Zip Code,11433,Black,02/2020,0,42,67.667,
 Zip Code,11433,Black,03/2020,0,28,89,
@@ -22306,7 +22306,7 @@ Zip Code,11433,Black,02/2026,0,42,,
 Zip Code,11433,Black,03/2026,0,28,,
 Zip Code,11433,Black,04/2026,0,21,,
 Zip Code,11433,Black,05/2026,0,33.5,,
-Zip Code,11433,Black,06/2026,0,5,,2026-06-06
+Zip Code,11433,Black,06/2026,0,11.5,,2026-06-13
 Zip Code,11434,Black,01/2020,0,80,175.667,
 Zip Code,11434,Black,02/2020,0,51.5,168.667,
 Zip Code,11434,Black,03/2020,0,74.5,187.667,
@@ -22384,7 +22384,7 @@ Zip Code,11434,Black,02/2026,0,51,,
 Zip Code,11434,Black,03/2026,0,74.5,,
 Zip Code,11434,Black,04/2026,0,69,,
 Zip Code,11434,Black,05/2026,0,105.5,,
-Zip Code,11434,Black,06/2026,0,18.5,,2026-06-06
+Zip Code,11434,Black,06/2026,0,32,,2026-06-13
 Zip Code,11435,Other,01/2020,0,81,99.667,
 Zip Code,11435,Other,02/2020,0,100.5,92.333,
 Zip Code,11435,Other,03/2020,0,113.5,105,
@@ -22462,7 +22462,7 @@ Zip Code,11435,Other,02/2026,0,93,,
 Zip Code,11435,Other,03/2026,0,113.5,,
 Zip Code,11435,Other,04/2026,0,71,,
 Zip Code,11435,Other,05/2026,0,108,,
-Zip Code,11435,Other,06/2026,0,38.5,,2026-06-06
+Zip Code,11435,Other,06/2026,0,59,,2026-06-13
 Zip Code,11436,Black,01/2020,0,8.5,16,
 Zip Code,11436,Black,02/2020,0,8.5,12.333,
 Zip Code,11436,Black,03/2020,0,9.5,22.333,
@@ -22540,7 +22540,7 @@ Zip Code,11436,Black,02/2026,0,8.5,,
 Zip Code,11436,Black,03/2026,0,9.5,,
 Zip Code,11436,Black,04/2026,0,6,,
 Zip Code,11436,Black,05/2026,0,7.5,,
-Zip Code,11436,Black,06/2026,0,6,,2026-06-06
+Zip Code,11436,Black,06/2026,0,6.5,,2026-06-13
 Zip Code,11437,Other,01/2020,0,0,0,
 Zip Code,11437,Other,02/2020,0,0,0,
 Zip Code,11437,Other,03/2020,0,0,0,
@@ -22618,7 +22618,7 @@ Zip Code,11437,Other,02/2026,0,0,,
 Zip Code,11437,Other,03/2026,0,0,,
 Zip Code,11437,Other,04/2026,0,0,,
 Zip Code,11437,Other,05/2026,0,0,,
-Zip Code,11437,Other,06/2026,0,0,,2026-06-06
+Zip Code,11437,Other,06/2026,0,0,,2026-06-13
 Zip Code,11439,Other,01/2020,0,0,0,
 Zip Code,11439,Other,02/2020,0,0,0,
 Zip Code,11439,Other,03/2020,0,0,0,
@@ -22696,7 +22696,7 @@ Zip Code,11439,Other,02/2026,0,0,,
 Zip Code,11439,Other,03/2026,0,0,,
 Zip Code,11439,Other,04/2026,0,0,,
 Zip Code,11439,Other,05/2026,0,0,,
-Zip Code,11439,Other,06/2026,0,0,,2026-06-06
+Zip Code,11439,Other,06/2026,0,0,,2026-06-13
 Zip Code,11451,Other,01/2020,0,0,0,
 Zip Code,11451,Other,02/2020,0,0,0,
 Zip Code,11451,Other,03/2020,0,0,0,
@@ -22774,7 +22774,7 @@ Zip Code,11451,Other,02/2026,0,0,,
 Zip Code,11451,Other,03/2026,0,0,,
 Zip Code,11451,Other,04/2026,0,0,,
 Zip Code,11451,Other,05/2026,0,0,,
-Zip Code,11451,Other,06/2026,0,0,,2026-06-06
+Zip Code,11451,Other,06/2026,0,0,,2026-06-13
 Zip Code,11499,Other,01/2020,0,0,0,
 Zip Code,11499,Other,02/2020,0,0,0,
 Zip Code,11499,Other,03/2020,0,0,0,
@@ -22852,7 +22852,7 @@ Zip Code,11499,Other,02/2026,0,0,,
 Zip Code,11499,Other,03/2026,0,0,,
 Zip Code,11499,Other,04/2026,0,0,,
 Zip Code,11499,Other,05/2026,0,0,,
-Zip Code,11499,Other,06/2026,0,0,,2026-06-06
+Zip Code,11499,Other,06/2026,0,0,,2026-06-13
 Zip Code,11559,White,01/2020,0,0,0,
 Zip Code,11559,White,02/2020,0,0,0,
 Zip Code,11559,White,03/2020,0,0,0,
@@ -22930,7 +22930,7 @@ Zip Code,11559,White,02/2026,0,0,,
 Zip Code,11559,White,03/2026,0,0,,
 Zip Code,11559,White,04/2026,0,0,,
 Zip Code,11559,White,05/2026,0,0,,
-Zip Code,11559,White,06/2026,0,0,,2026-06-06
+Zip Code,11559,White,06/2026,0,0,,2026-06-13
 Zip Code,11580,Other,01/2020,0,0,0,
 Zip Code,11580,Other,02/2020,0,0,0,
 Zip Code,11580,Other,03/2020,0,0,0,
@@ -23008,7 +23008,7 @@ Zip Code,11580,Other,02/2026,0,0,,
 Zip Code,11580,Other,03/2026,0,0,,
 Zip Code,11580,Other,04/2026,0,0,,
 Zip Code,11580,Other,05/2026,0,0,,
-Zip Code,11580,Other,06/2026,0,0,,2026-06-06
+Zip Code,11580,Other,06/2026,0,0,,2026-06-13
 Zip Code,11691,Other,01/2020,0,127.5,305.333,
 Zip Code,11691,Other,02/2020,0,130,236.667,
 Zip Code,11691,Other,03/2020,0,147,251.667,
@@ -23086,7 +23086,7 @@ Zip Code,11691,Other,02/2026,0,127,,
 Zip Code,11691,Other,03/2026,0,147,,
 Zip Code,11691,Other,04/2026,0,123.5,,
 Zip Code,11691,Other,05/2026,0,154.5,,
-Zip Code,11691,Other,06/2026,0,24.5,,2026-06-06
+Zip Code,11691,Other,06/2026,0,44,,2026-06-13
 Zip Code,11692,Black,01/2020,0,22,80.333,
 Zip Code,11692,Black,02/2020,0,30.5,59.667,
 Zip Code,11692,Black,03/2020,0,37.5,81.667,
@@ -23164,7 +23164,7 @@ Zip Code,11692,Black,02/2026,0,30,,
 Zip Code,11692,Black,03/2026,0,37.5,,
 Zip Code,11692,Black,04/2026,0,63.5,,
 Zip Code,11692,Black,05/2026,0,56.5,,
-Zip Code,11692,Black,06/2026,0,22.5,,2026-06-06
+Zip Code,11692,Black,06/2026,0,30,,2026-06-13
 Zip Code,11693,Other,01/2020,0,13,53.667,
 Zip Code,11693,Other,02/2020,0,7.5,24,
 Zip Code,11693,Other,03/2020,0,4.5,30.333,
@@ -23242,7 +23242,7 @@ Zip Code,11693,Other,02/2026,0,7.5,,
 Zip Code,11693,Other,03/2026,0,4.5,,
 Zip Code,11693,Other,04/2026,0,4.5,,
 Zip Code,11693,Other,05/2026,0,15.5,,
-Zip Code,11693,Other,06/2026,0,3.5,,2026-06-06
+Zip Code,11693,Other,06/2026,0,5.5,,2026-06-13
 Zip Code,11694,White,01/2020,0,17.5,26.333,
 Zip Code,11694,White,02/2020,0,13.5,27,
 Zip Code,11694,White,03/2020,0,36.5,27,
@@ -23320,7 +23320,7 @@ Zip Code,11694,White,02/2026,0,13.5,,
 Zip Code,11694,White,03/2026,0,36.5,,
 Zip Code,11694,White,04/2026,0,13.5,,
 Zip Code,11694,White,05/2026,0,20,,
-Zip Code,11694,White,06/2026,0,2,,2026-06-06
+Zip Code,11694,White,06/2026,0,6.5,,2026-06-13
 Zip Code,11697,White,01/2020,0,0,0.333,
 Zip Code,11697,White,02/2020,0,0,0,
 Zip Code,11697,White,03/2020,0,0,0,
@@ -23398,7 +23398,7 @@ Zip Code,11697,White,02/2026,0,0,,
 Zip Code,11697,White,03/2026,0,0,,
 Zip Code,11697,White,04/2026,0,0,,
 Zip Code,11697,White,05/2026,0,0,,
-Zip Code,11697,White,06/2026,0,0,,2026-06-06
+Zip Code,11697,White,06/2026,0,0,,2026-06-13
 Zip Code,sealed,,01/2020,14536,356,3.333,
 Zip Code,sealed,,02/2020,13307,266.5,19.667,
 Zip Code,sealed,,03/2020,9055,331.5,3.667,
@@ -23476,4 +23476,4 @@ Zip Code,sealed,,02/2026,9819,258,,
 Zip Code,sealed,,03/2026,10630,331.5,,
 Zip Code,sealed,,04/2026,9565,336.5,,
 Zip Code,sealed,,05/2026,6813,321.5,,
-Zip Code,sealed,,06/2026,649,86.5,,2026-06-06
+Zip Code,sealed,,06/2026,649,196,,2026-06-13
