@@ -5,7 +5,7 @@ h1: Boston, Massachusetts
 slug: boston-ma
 date: 2022-07-20T04:00:00.000Z
 rentersSite: Boston
-areaSite: true
+areaSite: false
 twImage: /images/assets/graphics/ets-bg-social.png
 title: Boston, Massachusetts | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
