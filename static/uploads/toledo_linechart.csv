@@ -1,0 +1,4 @@
+group,month,month_last_day,month_filings,avg_filings,month_diff,month_filings_imputed,baseline_share
+White,06/2025,,3282,3366,0.975044563279857,,0.528436495176849
+Black,06/2025,,1060,1226,0.864600326264274,,0.344611276986679
+Other,06/2025,,1267,1130,1.1212389380531,,
