@@ -58,7 +58,7 @@ similar: >-
   
   - [Dashboard by SF Open Data Portal](https://data.sfgov.org/Housing-and-Buildings/Eviction-Heat-Map/8r57-ee6v): tracks evictions filed with the San Francisco Rent Board, updated frequently. Since not all notices are filed with the rent board, the portal only includes a subset of overall eviction filings in the city
   
-  - [Dashboard by Judicial Branch of California](https://courts.ca.gov/news-reference/research-data/court-statistics/csr-dashboard-page): tracks all case filings, updated yearly. Filtering the case type to “Unlawful Detainer” lets you view eviction case trends
+  - [Dashboard by Judicial Branch of California](https://newsroom.courts.ca.gov/year-review/data-dashboards#:~:text=Court%20Statistics%20Report): tracks all case filings, updated yearly. Filtering the case type to “Unlawful Detainer” lets you view eviction case trends
   
   - [Dashboard by San Diego Eviction Prevention Collaborative, Legal Aid Society of San Diego and UCSD’s Homelessness Hub](https://hhubsandiego-ucsdonline.hub.arcgis.com/apps/c058e269f3854b7ab6a385d08c488b8a/explore): tracks all eviction cases filed with the San Diego Superior Court from 2018 to 2022
   
