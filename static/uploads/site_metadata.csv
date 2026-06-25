@@ -1,5 +1,5 @@
 site_id,display_name,slug,parent_state,lat,lng,disabled,draft
-0,All Sites,,,,,
+0,All Sites,,,,,,
 09,Connecticut,connecticut,,,,
 10,Delaware,delaware,,,,
 18,Indiana,indiana,,,,
