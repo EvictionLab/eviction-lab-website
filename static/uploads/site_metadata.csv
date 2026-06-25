@@ -7,7 +7,7 @@ site_id,display_name,slug,parent_state,lat,lng,disabled,draft
 29,Missouri,missouri,,,,,
 35,New Mexico,new-mexico,,,,,
 42,Pennsylvania,pennsylvania,,,,,
-44,Rhode island,rhode-island,,,,,
+44,Rhode island,rhode-island,,,,,,
 51,Virginia,virginia,,,,
 55,Wisconsin,wisconsin,,,,,,
 35001,Albuquerque,albuquerque-nm,NM,35.0844,-106.6504,
