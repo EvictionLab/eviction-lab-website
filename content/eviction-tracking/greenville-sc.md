@@ -10,7 +10,7 @@ collection: true
 title: Greenville, South Carolina | Eviction Tracking System
 fbImage: /images/assets/graphics/ets-bg-social.png
 ---
-{{< report_intro site_id="45045"  >}}
+{{< report_intro site_id="45045" archived="September 2025" >}}
 {{</ report_intro >}}
 
 
