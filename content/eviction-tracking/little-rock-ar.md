@@ -29,9 +29,11 @@ This plot shows monthly eviction filings in Pulaski, Faulkner, Grant, Lonoke, Pe
 
 # Eviction Hotspots
 
-Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), continued in 2020 and beyond. We analyzed eviction records in Pulaski, Faulkner, Grant, Lonoke, Perry, and Saline Counties to determine where the most cases are being filed. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the past 12 months. We also display the plaintiff name most often listed with a given building in the court filings. Below we map the top 100 hotspots across the county.
+Eviction filings aren’t spread evenly across cities: a small number of buildings are responsible for a disproportionate share of eviction cases. This pattern, [which existed before the pandemic](https://evictionlab.org/top-evicting-landlords-drive-us-eviction-crisis/), continued in 2020 and beyond. We analyzed eviction records in Pulaski County <sup>1</sup> to determine where the most cases are being filed. This is a list of eviction hot spots—the 10 buildings responsible for the most filings—over the course of the past 12 months. We also display the plaintiff name most often listed with a given building in the court filings. Below we map the top 100 hotspots across the county.
 
 Eviction Hotspot data are updated semi-annually.
+
+1. Eviction Hotspots are only available in Pulaski County due to parcel data not being available in Faulkner, Grant, Lonoke, Perry, and Saline Counties. 
 
 
 {{%/ report_top_evictors %}}
