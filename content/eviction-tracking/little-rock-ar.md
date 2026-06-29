@@ -33,7 +33,7 @@ Eviction filings aren’t spread evenly across cities: a small number of buildin
 
 Eviction Hotspot data are updated semi-annually.
 
-1. Eviction Hotspots are only available in Pulaski County due to parcel data not being available in Faulkner, Grant, Lonoke, Perry, and Saline Counties. 
+1. Eviction Hotspots are only available in Pulaski County. Parcel data is not currently available for the other counties in Greater Little Rock (Faulkner, Grant, Lonoke, Perry, and Saline Counties).
 
 
 {{%/ report_top_evictors %}}
