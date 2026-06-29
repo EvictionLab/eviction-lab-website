@@ -42,17 +42,6 @@ Eviction Hotspot data are updated semi-annually.
 
 
 
-{{% report_median_claims id="medianFilings" data="/uploads/toledo_claims_monthly.csv" %}}
-
-
-# Changes in claim amounts
-
-When a landlord files an eviction claim in Toledo, we observe the amount they claim the tenant owes in back rent, late fees, and damages. In this figure, we plot the typical (median) amount claimed in eviction filings for each month over the past 12 months. We exclude cases in which the landlord doesn’t make a monetary claim, and we drop months if there were fewer than 10 eviction cases filed. The dashed horizontal line on the plot marks the typical claim on an eviction case filed during 2023 and 2024 (our baseline).
-
-
-{{%/ report_median_claims %}}
-
-
 {{%  report_map shapes="/uploads/toledo_shapes.json" data="/uploads/toledo_map.csv"  topFilers="/uploads/toledo_hotspots_media_report.csv" %}}
 
 
