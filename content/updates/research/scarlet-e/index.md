@@ -12,14 +12,14 @@ date: 2026-05-15T00:49:04.271Z
 postauthorname: The Eviction Lab
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: xxx.jpg
+image: map.png
 description: lorem ipsum
 listSummary: lorem ipsum
 scripts:
   - charts
   - maps
-twImage: xxx.jpg
-fbImage: xxx.jpg
+twImage: map.png
+fbImage: map.png
 ---
 <style>
   .research__paperlink img {
