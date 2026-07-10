@@ -12,14 +12,15 @@ date: 2026-05-15T00:49:04.271Z
 postauthorname: The Eviction Lab
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
-image: map.png
+image: houston-eviction-court.jpg
 description: lorem ipsum
 listSummary: lorem ipsum
 scripts:
   - charts
   - maps
-twImage: map.png
-fbImage: map.png
+twImage: houston-eviction-court.jpg
+fbImage: houston-eviction-court.jpg
+photocaption: A line forms down the hallway outside Harris County Justice of the Peace court Thursday, Oct. 3, 2024, as persons involved with eviction cases wait to appear before Judge Israel B. Garcia, Jr. in Houston. (Kirk Sides/Houston Chronicle via Getty Images)
 ---
 <style>
   .research__paperlink img {
