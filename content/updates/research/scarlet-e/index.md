@@ -20,7 +20,7 @@ scripts:
   - maps
 twImage: houston-eviction-court.jpg
 fbImage: houston-eviction-court.jpg
-photocaption: A line forms down the hallway outside Harris County Justice of the Peace court Thursday, Oct. 3, 2024, as persons involved with eviction cases wait to appear before Judge Israel B. Garcia, Jr. in Houston. (Kirk Sides/Houston Chronicle via Getty Images)
+photocaption: A line forms down the hallway outside Harris County Justice of the Peace court as persons involved with eviction cases wait to appear before a judge. (Kirk Sides/Houston Chronicle via Getty Images)
 ---
 <style>
   .research__paperlink img {
