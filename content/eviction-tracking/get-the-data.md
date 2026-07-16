@@ -16,7 +16,7 @@ cascade:
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
-date: 2026-06-12T00:00:00.000Z
+date: 2026-07-17T00:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
   that you find new and productive ways to make use of them. When you do so,
@@ -192,6 +192,11 @@ data:
     geo: Census Tract
     file: /uploads/lasvegas_weekly_2020_2021.csv
     monthfile: /uploads/lasvegas_monthly_2020_2021.csv
+  - site: Little Rock
+    years: 2018-2019
+    geo: Census Tract
+    file: /uploads/littlerock_weekly_2020_2021.csv
+    monthfile: /uploads/littlerock_monthly_2020_2021.csv
   - site: Miami
     siteid: 47157
     years: 2014-2019
