@@ -1,7 +1,7 @@
 ﻿fips,State,protection,tooltip
 04,AZ,1,"Eviction sealed when the case is dismissed, or tenant wins"
-06,CA,2,Protections available from the filing<br/> • Sealing of evictions filed during the pandemic
-08,CO,2,Protections available from the filing<br/> • Restrictions to tenant screening procedures
+06,CA,2,Protections available from start of the filing<br/> • Sealing of evictions filed during the pandemic
+08,CO,2,Protections available from start of the filing<br/> • Restrictions to tenant screening procedures
 09,CT,1,"Eviction sealed when the case is dismissed, or tenant wins"
 10,DE,1,Protections depend on the judge’s discretion 
 16,ID,1,"Eviction sealed when the case is dismissed, or tenant wins"
