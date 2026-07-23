@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "The Scarlet E: Confronting the Life-Altering Consequences of an Eviction"
-date: 2026-05-15T00:49:04.271Z
+date: 2026-07-24T00:49:04.271Z
 postauthorname: The Eviction Lab
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
@@ -33,7 +33,7 @@ photocaption: A line forms down the hallway outside Harris County Justice of the
     /* stroke-width: 3; */
   }
   .svg-map__tooltip {
-    max-width: 240px;
+    max-width: 300px;
   }
 </style>
 <span class="dropcap green">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
@@ -44,8 +44,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {{% state-map
   id="statemap111"
-  data="./map_data.csv"
-  markerData="./map_data_cities.csv"
+  data="./scarlet_states.csv"
+  markerData="./scarlet_cities.csv"
   title="Figure 1. Map of protections"
   idColumn="fips"
   valueColumn="protection"
@@ -56,17 +56,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %}}
 
 <div class="legend mb-3">
+  <!-- <div class="legend-item legend-item--1">
+  <div class="legend-item__color circle"></div>
+  <div class="legend-item__label">City with partial protections</div>
+  </div> -->
+  <div class="legend-item legend-item--1">
+  <div class="legend-item__color"></div>
+  <div class="legend-item__label">Protections from start of filing</div>
+  </div>
   <div class="legend-item legend-item--2">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">State with protections</div>
-  </div>
-  <div class="legend-item legend-item--1">
-  <div class="legend-item__color circle"></div>
-  <div class="legend-item__label">City with protections</div>
+  <div class="legend-item__label">Partial protections</div>
   </div>
   <div class="legend-item">
   <div class="legend-item__color"></div>
-  <div class="legend-item__label">State without protections</div>
+  <div class="legend-item__label">No protections</div>
   </div>
 </div>
 
