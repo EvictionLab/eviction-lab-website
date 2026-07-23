@@ -13,8 +13,9 @@ postauthorname: Emily Benfer
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/ebenfer_thumb.jpg
 image: houston-eviction-court.jpg
-description: lorem ipsum
-listSummary: lorem ipsum
+description: Eviction court records are public, permanent, and easily misinterpreted, yet they can brand a renter for life. We examine the "Scarlet E" and the policies that could help prevent a single filing from destroying a family's housing prospects for good.
+listSummary: Eviction court records are public, permanent, and easily misinterpreted, yet they can brand a renter for life. We examine the "Scarlet E" and the policies that could help prevent a single filing from destroying a family's housing prospects for good.
+listSummaryMaxChars: 250
 scripts:
   - charts
   - maps
