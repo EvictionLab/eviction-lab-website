@@ -9,9 +9,9 @@ featured: true
 in_index: true
 title: "The Scarlet E: Confronting the Life-Altering Consequences of an Eviction"
 date: 2026-07-24T00:49:04.271Z
-postauthorname: The Eviction Lab
+postauthorname: Emily Benfer
 postauthortitle: The Eviction Lab
-authorpic: /images/bios/elab_thumb_sm.jpg
+authorpic: /images/bios/ebenfer_thumb.jpg
 image: houston-eviction-court.jpg
 description: lorem ipsum
 listSummary: lorem ipsum
