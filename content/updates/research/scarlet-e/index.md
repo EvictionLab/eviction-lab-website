@@ -24,10 +24,6 @@ fbImage: houston-eviction-court.jpg
 photocaption: A line forms down the hallway outside Harris County Justice of the Peace court as persons involved with eviction cases wait to appear before a judge. (Kirk Sides/Houston Chronicle via Getty Images)
 ---
 <style>
-  .research__paperlink img {
-    padding: 28px 24px;
-    background: white;
-  }
   .svg-map__shape--hovered,
   .svg-map__map.css-hover .svg-map__shape.hoverable:hover {
     stroke: #fff;
@@ -56,7 +52,7 @@ That single filing landed Dillard Sr. on a corporate “do not rent” list. Lan
 
 An article published in the {{< smartlink "Ohio State Law Journal" "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6725321" >}} takes a closer look at these dynamics, documenting the evidence linking eviction court records to negative health outcomes and disproportionate harm to Black renters. The article reviews current federal, state, and local strategies designed to restrict access to these court records. Currently, most jurisdictions nationwide still allow the tenant screening industry to scrape and aggregate decades of eviction data—even pulling case files that are subsequently sealed—on millions of households. 
 
-{{< researchpaperlink "Dismantling the 'Scarlet E': Eviction Record Privacy as Health Justice" "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6725321" "Emily A. Benfer" "journal.png" >}}
+{{< researchpaperlink "Dismantling the 'Scarlet E': Eviction Record Privacy as Health Justice" "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6725321" "Emily A. Benfer" "oslj.png" >}}
 
 The American judicial system is founded on the principle of the public's right to access court proceedings and records. This cornerstone idea is rooted in the belief that judges should always have responsibility to the public. But the public’s open access to the court is easily abused, especially when it comes to eviction filings. 
 
