@@ -43,7 +43,7 @@ photocaption: A line forms down the hallway outside Harris County Justice of the
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
 {{% state-map
-  id="statemap111"
+  id="statemap"
   data="./scarlet_states.csv"
   markerData="./scarlet_cities.csv"
   title="Figure 1. Map of protections"
