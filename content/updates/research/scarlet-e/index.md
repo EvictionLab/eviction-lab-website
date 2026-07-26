@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 childof: research
 url: the-scarlet-e-confronting-the-life-altering-consequences-of-an-eviction
 contenttype: updates
@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "The Scarlet E: Confronting the Life-Altering Consequences of an Eviction"
-date: 2026-07-24T00:49:04.271Z
+date: 2026-07-26T00:00:04.271Z
 postauthorname: Emily Benfer
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/ebenfer_thumb.jpg
@@ -67,7 +67,9 @@ Despite their known errors, tenant screening reports are often the deciding fact
 The human body often pays the price. “It was a nightmare. To wake up, and go to bed, and not knowing where you gonna lay your head... going into a shelter, it's like going into a prison,“ Dillard Sr. remembered. His children developed anxiety, and their grades plummeted from A’s to D’s. “It messes with you mentally,” he added, “it really does.” 
 
 Families branded with an eviction filing are forced to settle for substandard housing where they are more likely to be exposed to environmental hazards like chipping paint, mold, and pests, conditions that trigger asthma, lead poisoning, and chronic safety concerns. The {{< smartlink "physical and psychological toll" "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4852182" >}} of an eviction filing is staggering: research shows that an eviction filing is associated {{< smartlink "with a 19% increase in early mortality" "https://evictionlab.org/rising-rents-and-evictions-linked-to-premature-death/" >}} and individuals facing the loss of their home are more than {{< smartlink "twice as likely to experience depression and suffer from anxiety" "https://link.springer.com/article/10.1007/s00127-020-01953-2" >}}. 
- 
+
+<br/>
+
 ### Why laws aren’t protecting tenants against the “Scarlet E”
 <br/>
 
@@ -81,6 +83,8 @@ What can be done to ensure that tenant screening reports are accurate? In recent
 The Federal Trade Commission (FTC) and the Consumer Financial Protection Bureau (CFPB) can enforce these laws and impose fines on screening companies that don’t comply.  For example, the FTC {{< smartlink "penalized RealPage with a $3 million" "https://www.ftc.gov/news-events/news/press-releases/2018/10/texas-company-will-pay-3-million-settle-ftc-charges-it-failed-meet-accuracy-requirements-its-tenant" >}} fine for using search criteria that included information on people with similar surnames, while a joint CFPB and FTC {{< smartlink "complaint against TransUnion Rental Screening Solutions" "https://www.ftc.gov/news-events/news/press-releases/2023/10/ftc-cfpb-settlement-require-trans-union-pay-15-million-over-charges-it-failed-ensure-accuracy-tenant" >}} secured a $15 million settlement and an agreement to reform their screening practices. The U.S. Department of Housing and Urban Development also issued formal {{< smartlink "guidance" "https://archives.hud.gov/news/2024/FHEO_Guidance_on_Screening_of_Applicants_for_Rental_Housing.pdf" >}} that is still in effect, clarifying that the Fair Housing Act applies directly to background checks and housing decisions that use AI and automated algorithms. 
 
 Yet, federal oversight stops short of addressing the root issue: scoring models and the algorithms underlying tenant screening reports. Because companies are not required to register with the federal government, any attempt at monitoring and enforcement is challenging. A few jurisdictions–including {{< smartlink "Colorado" "https://perma.cc/GMM5-GAPN" >}}, {{< smartlink "Minnesota" "https://www.revisor.mn.gov/statutes/cite/504B.173" >}}, {{< smartlink "New York" "https://www.nysenate.gov/legislation/laws/RPP/227-F" >}}, {{< smartlink "Washington" "https://app.leg.wa.gov/rcw/default.aspx?cite=59.18.367" >}}, {{< smartlink "Minneapolis and St. Paul, MN" "https://perma.cc/TK63-YLPQ" >}}, and {{< smartlink "Philadelphia, PA" "https://clerk.seattle.gov/search/ordinances/125114" >}}–have enacted bolder policies. These states and cities actively control how screening reports can be used, with some effectively prohibiting landlords from denying housing applications based on a previous eviction alone. 
+
+<br/>
 
 ### Dismantling the “Scarlet E” through record sealing
 <br/>
