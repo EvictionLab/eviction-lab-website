@@ -15,7 +15,7 @@ rentersSite: Arkansas
 
 {{< report_intro site_id="05"  >}}
 
- A closer look at eviction filing patterns in Wilmington and the surrounding area is [available here](https://evictionlab.org/eviction-tracking/wilmington-de/).
+ A closer look at eviction filing patterns in Little Rock and the surrounding area is [available here](https://evictionlab.org/eviction-tracking/little-rock-ar/).
 
 {{< /report_intro >}}
 
@@ -25,9 +25,9 @@ rentersSite: Arkansas
 
 # Trends in eviction filings
 
-This plot shows monthly eviction filings in Delaware over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
+This plot shows monthly eviction filings in Arkansas over the past 12 months. Filings are displayed relative to average filings for the same set of months across 2023 and 2024 (the "baseline"). You can toggle the plot to display filing counts.<sup>1</sup>
 
-1. Eviction filing data for Delaware were collected by [LSC](https://www.lsc.gov/). 
+1. Eviction filing data for Arkansas were collected by [January Advisors](https://www.januaryadvisors.com/).
 
 {{%/ trends_chart %}}
 
@@ -37,9 +37,9 @@ This plot shows monthly eviction filings in Delaware over the past 12 months. Fi
 
 # The geography of eviction filings
 
-Delaware is divided into three counties. In each of those counties, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1 2</sup>
+Arkansas is divided into 75 counties. In each of those counties, we map the number of eviction filings over the past 12 months. If you toggle below you can see these numbers as eviction filing rates—the number of eviction filings divided by the number of renter households in the county—or compared to the typical number of filings in 2023–2024 (the "baseline").<sup>1 2</sup>
 
-1. Eviction filing data for Delaware were collected by [LSC](https://www.lsc.gov/). 
+1. Eviction filing data for Arkansas were collected by [January Advisors](https://www.januaryadvisors.com/).
 2. County breakdown of renter race/ethnicity determined using American Community Survey (ACS) estimates for 2016–2020.
 
 {{%/ report_map %}}
