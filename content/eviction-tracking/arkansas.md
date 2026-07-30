@@ -2,7 +2,7 @@
 statePage: true
 geographies: counties
 collection: true
-draft: true
+draft: false
 h1: Arkansas
 layout: state
 slug: arkansas
