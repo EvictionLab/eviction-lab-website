@@ -230,15 +230,13 @@
       Elab.Utils.createStatBlock('#filingRates', statFiles, filingRates, getVal, displayStatBlock)
 
       let siteNote = ``;
+      const disclaimerNoteCopy = "NOTE: Through recent validation efforts, we have determined that our estimates for {site} in {years} are lower than the court-reported aggregates. We are working to correct these numbers. In the meantime, users should interpret the current figures as minimum counts of eviction filings for this site.";
+      const arkCopy = "NOTE: Arkansas permits a criminal eviction process that is not currently reflected in these data. Learn more <a href='https://www.propublica.org/article/when-falling-behind-on-rent-leads-to-jail-time' target='_blank'>here</a>."
       const noteMap = {
-        "12086": {
-          site: "Miami",
-          years: "2020"
-        },
-        "12099": {
-          site: "West Palm Beach",
-          years: "2021, 2022, and 2023"
-        },
+        "05": arkCopy,
+        "05119": arkCopy,
+        "12086": disclaimerNoteCopy.replace("{site}", "Miami").replace("{years}", "2020"),
+        "12099": disclaimerNoteCopy.replace("{site}", "West Palm Beach").replace("{years}", "2021, 2022, and 2023"),
       };
       if (archived) {
         // add archived note
@@ -247,11 +245,7 @@
           .replace("{site}", renterssite)
           .replace("{date}", archived);
       } else if (noteMap[site_id]) {
-        // add temporary data disclaimer
-        const disclaimerNoteCopy = "NOTE: Through recent validation efforts, we have determined that our estimates for {site} in {years} are lower than the court-reported aggregates. We are working to correct these numbers. In the meantime, users should interpret the current figures as minimum counts of eviction filings for this site.";
-        siteNote = disclaimerNoteCopy
-          .replace("{site}", renterssite || noteMap[site_id].site)
-          .replace("{years}", noteMap[site_id].years);
+        siteNote = noteMap[site_id];
       }
       siteNote = !!siteNote ? `<p><i>${siteNote}</i></p>` : "";
 
