@@ -54,3 +54,4 @@ site_id,display_name,slug,parent_state,lat,lng,disabled,draft
 53053,Tacoma,tacoma-wa,WA,47.066,-122.113,
 40109,Oklahoma City,oklahoma-city-ok,OK,35.482,-97.509,
 05119,Little Rock,little-rock-ar,AR,34.747,-92.290,
+39095,Toledo,toledo-oh,OH,41.651,-83.542
