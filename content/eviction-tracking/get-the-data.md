@@ -16,7 +16,7 @@ cascade:
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
-date: 2026-08-01T00:00:00.000Z
+date: 2026-08-08T00:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
   that you find new and productive ways to make use of them. When you do so,
@@ -342,6 +342,11 @@ data:
     geo: Census Tract
     file: /uploads/tampa_weekly_2020_2021.csv
     monthfile: /uploads/tampa_monthly_2020_2021.csv
+  - site: Toledo
+    years: 2018-2019
+    geo: Census Tract
+    file: /uploads/toledo_weekly_2020_2021.csv
+    monthfile: /uploads/toledo_monthly_2020_2021.csv
   - site: Virginia
     siteid: 51
     years: 2016-2019
