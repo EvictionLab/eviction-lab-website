@@ -1,6 +1,6 @@
 ---
 collection: true
-draft: true
+draft: false
 h1: Toledo, Ohio
 slug: toledo-oh
 date: 2026-06-12T04:00:00.000Z
