@@ -65,7 +65,7 @@ To generate {site}_shapes.json for the map element:
   - each NAME=NAMELSAD // add NAME field, like so for zips, or for tracts eg "Census Tract 1.14" (formatted tract number)
     - if formatted name doesn't already exist on features, create it eg each NAME="ZCTA5 "+GEOID
   - filter-fields GEOID,NAME // filter to the necessary fields
- 5. -simplify weighted 2% // keep a fraction of the vertices for reduced file size (visually confirm this looks okay)
+ 5. -simplify weighted interval=20 keep-shapes // simplify shapes to reduce file size (sets a spatial error tolerance of 20m). visually confirm this looks okay, adjusting n if necessary
  6. export as GeoJSON with command line option "bbox precision=0.001" and save the output to static/uploads
 
 ### Shortcodes
