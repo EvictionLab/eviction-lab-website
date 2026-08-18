@@ -1,5 +1,7 @@
 {{ $tickerRows := slice }}
 {{ $siteMetadata := dict }}
+{{ $cityCount := 0 }}
+{{ $stateCount := 0 }}
 
 {{ with readFile "static/uploads/site_metadata.csv" }}
   {{ $metadataLines := split (chomp .) "\n" }}
@@ -9,24 +11,43 @@
     {{ $displayNameIdx := -1 }}
     {{ $slugIdx := -1 }}
     {{ $parentStateIdx := -1 }}
+    {{ $lngIdx := -1 }}
+    {{ $draftIdx := -1 }}
     {{ range $i, $h := $metadataHeaders }}
-      {{ $header := trim $h " " }}
+      {{ $header := trim $h " \r" }}
       {{ if eq $header "site_id" }}{{ $siteIdIdx = $i }}{{ end }}
       {{ if eq $header "display_name" }}{{ $displayNameIdx = $i }}{{ end }}
       {{ if eq $header "slug" }}{{ $slugIdx = $i }}{{ end }}
       {{ if eq $header "parent_state" }}{{ $parentStateIdx = $i }}{{ end }}
+      {{ if eq $header "lng" }}{{ $lngIdx = $i }}{{ end }}
+      {{ if eq $header "draft" }}{{ $draftIdx = $i }}{{ end }}
     {{ end }}
     {{ if and (ge $siteIdIdx 0) (ge $displayNameIdx 0) }}
       {{ range $i, $line := $metadataLines }}
         {{ if gt $i 0 }}
           {{ $cols := split $line "," }}
           {{ if and (gt (len $cols) $siteIdIdx) (gt (len $cols) $displayNameIdx) }}
-            {{ $siteId := trim (index $cols $siteIdIdx) " " }}
-            {{ $displayName := trim (index $cols $displayNameIdx) " " }}
-            {{ $slug := trim (index $cols $slugIdx) " " }}
+            {{ $siteId := trim (index $cols $siteIdIdx) " \r" }}
+            {{ $displayName := trim (index $cols $displayNameIdx) " \r" }}
+            {{ $slug := trim (index $cols $slugIdx) " \r" }}
             {{ $parentState := "" }}
             {{ if and (ge $parentStateIdx 0) (gt (len $cols) $parentStateIdx) }}
-            {{ $parentState = trim (index $cols $parentStateIdx) " " }}
+            {{ $parentState = trim (index $cols $parentStateIdx) " \r" }}
+            {{ end }}
+            {{ $draft := "" }}
+            {{ if and (ge $draftIdx 0) (gt (len $cols) $draftIdx) }}
+            {{ $draft = trim (index $cols $draftIdx) " \r" }}
+            {{ end }}
+            {{ $lng := "" }}
+            {{ if and (ge $lngIdx 0) (gt (len $cols) $lngIdx) }}
+            {{ $lng = trim (index $cols $lngIdx) " \r" }}
+            {{ end }}
+            {{ if and (ne $siteId "") (ne $siteId "0") (eq $draft "") }}
+            {{ if ne $lng "" }}
+            {{ $cityCount = add $cityCount 1 }}
+            {{ else }}
+            {{ $stateCount = add $stateCount 1 }}
+            {{ end }}
             {{ end }}
             {{ if and (ne $siteId "") (ne $displayName "") }}
               {{ $fullDisplayName := $displayName }}
@@ -102,7 +123,7 @@
                   {{ i18n "ETSHeading" }}
                 </h2>
                 <h2 class="ets-sub title d-block title-large mb-2">
-                  {{ i18n "ETSSub" }}
+                  {{ i18n "ETSSub1" }}{{ lang.NumFmt 0 $cityCount }}{{ i18n "ETSSub2" }}{{ lang.NumFmt 0 $stateCount }}{{ i18n "ETSSub3" }}
                 </h2>
                 <a class="bordered-header border-0 m-0 ets-link" href="/eviction-tracking">
                     {{ i18n "ETSLink" }}

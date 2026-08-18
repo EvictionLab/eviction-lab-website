@@ -216,7 +216,8 @@ These changes are also reflected in our maps of eviction filing rates, which inc
   join="GEOID"
   format="percent"
   name="NAME"
-  gradientType="diverging"
+  extents="-1,1"
+  zeroLabel="baseline"
   colors="#434878;#c1c5ea;rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
   title="Pre-COVID baseline"
 %}}
@@ -233,7 +234,8 @@ These changes are also reflected in our maps of eviction filing rates, which inc
   join="GEOID"
   format="percent"
   name="NAME"
-  gradientType="diverging"
+  zeroLabel="baseline"
+  extents="-1,1"
   colors="#434878;#c1c5ea;rgba(241, 241, 241, 0.7);#e99c7e;#e24000"
   title="2023-2024 baseline"
 %}}

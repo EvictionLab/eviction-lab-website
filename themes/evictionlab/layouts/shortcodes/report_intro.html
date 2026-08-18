@@ -81,6 +81,7 @@
   <script>
 
       var site_id = {{ .Get "site_id" }}
+      var archived = {{ .Get "archived" }}
       var renterssite = {{ .Page.Params.renterssite }};
       window.addEventListener('load', function () {
 
@@ -228,7 +229,27 @@
       Elab.Utils.createStatBlock('#filingCounts', statFiles, filingCounts, getVal, displayStatBlock)
       Elab.Utils.createStatBlock('#filingRates', statFiles, filingRates, getVal, displayStatBlock)
 
-      var paragraphText = `<h2 class='if_area_site'>(%{area_name})</h2><p>There are %{households} renter households in %{borders}<span class='if_area_site'> (${renterssite})</span>, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.<sup>1</sup></p>`
+      let siteNote = ``;
+      const disclaimerNoteCopy = "NOTE: Through recent validation efforts, we have determined that our estimates for {site} in {years} are lower than the court-reported aggregates. We are working to correct these numbers. In the meantime, users should interpret the current figures as minimum counts of eviction filings for this site.";
+      const arkCopy = "NOTE: Arkansas permits a criminal eviction process that is not currently reflected in these data. Learn more <a href='https://www.propublica.org/article/when-falling-behind-on-rent-leads-to-jail-time' target='_blank'>here</a>."
+      const noteMap = {
+        "05": arkCopy,
+        "05119": arkCopy,
+        "12086": disclaimerNoteCopy.replace("{site}", "Miami").replace("{years}", "2020"),
+        "12099": disclaimerNoteCopy.replace("{site}", "West Palm Beach").replace("{years}", "2021, 2022, and 2023"),
+      };
+      if (archived) {
+        // add archived note
+        const archivedNoteCopy = "NOTE: due to loss of data access, we have retired our coverage of {site}. Data remains up to date through {date}.";
+        siteNote = archivedNoteCopy
+          .replace("{site}", renterssite)
+          .replace("{date}", archived);
+      } else if (noteMap[site_id]) {
+        siteNote = noteMap[site_id];
+      }
+      siteNote = !!siteNote ? `<p><i>${siteNote}</i></p>` : "";
+
+      var paragraphText = `<h2 class='if_area_site'>(%{area_name})</h2>${siteNote}<p>There are %{households} renter households in %{borders}<span class='if_area_site'> (${renterssite})</span>, paying a typical rent of %{rent} per month. If a landlord chooses to file an eviction, they need to provide their tenants with %{days} and pay a %{fee} to the courts.<sup>1</sup></p>`
       Elab.Utils.createStatParagraph({ el: '#summaryStats', text: paragraphText, statFiles, stats: paragraphStats, getVal });
 
       Elab.Utils.addLatestUpdateDate("#latestUpdate", "/uploads/filing_data_by_site.csv", site_id);

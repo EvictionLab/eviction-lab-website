@@ -17,8 +17,12 @@ other = "Explore our research"
 other = "National Map & Data"
 [ETSHeading]
 other = "Eviction Tracking System"
-[ETSSub]
-other = "See monthly eviction filings across 37 cities and 10 states in our data."
+[ETSSub1]
+other = "See monthly eviction filings across "
+[ETSSub2]
+other = " cities and "
+[ETSSub3]
+other = " states in our data."
 [ETSLink]
 other = "go to the dashboard"
 [ETSTickerLabel]
@@ -99,4 +103,4 @@ other ="Resources"
 other = "<span class='boldface'>Facing eviction?</span> &nbsp;<a href='/questions'>Read our FAQ to learn more and find resources</a>."
 [superheadETS]
 # banner shown throughout /eviction
-other = "<span class='boldface'></span>We're now tracking Atlanta on the Eviction Tracking System. Have a look at the <a href='/eviction-tracking/atlanta-ga'>new page</a>."
+other = "<span class='boldface'></span>We're now tracking <a href='/eviction-tracking/arkansas'>Arkansas</a>, <a href='/eviction-tracking/little-rock-ar'>Little Rock</a>, <a href='/eviction-tracking/oklahoma-city-ok'>Oklahoma City</a>, and <a href='/eviction-tracking/toledo-oh'>Toledo</a> on the Eviction Tracking System."

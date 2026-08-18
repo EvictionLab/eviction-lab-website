@@ -16,14 +16,14 @@ cascade:
   fbImage: /images/assets/graphics/ets-bg-social.png
   twImage: /images/assets/graphics/ets-bg-social.png
   socialDescription: Get the data for real time eviction tracking in U.S. cities during COVID-19.
-date: 2025-09-17T00:00:00.000Z
+date: 2026-08-08T00:00:00.000Z
 intro: >-
   Below are the aggregate data used in the Eviction Tracking System. We hope
   that you find new and productive ways to make use of them. When you do so,
   please cite as follows:
 
 
-  > Peter Hepburn, Jacob Haas, Renee Louis, Adam Chapnik, Danny Grubbs-Donovan, Olivia Jin, Jasmine Rangel, and Matthew Desmond. Eviction Tracking System: Version 2.0. Princeton: Princeton University, 2020. [www.evictionlab.org](http://www.evictionlab.org/)
+  > Peter Hepburn, Jacob Haas, Renee Louis, Adam Chapnik, Danny Grubbs-Donovan, Olivia Jin, Jasmine Rangel, Grace Hartley, and Matthew Desmond. Eviction Tracking System: Version 3.0. Princeton: Princeton University, 2026. [www.evictionlab.org](http://www.evictionlab.org/)
 
 
   Scroll below the data table to find code samples for using the data in your own applications. Please submit additional examples!
@@ -61,6 +61,11 @@ data:
     geo: Census Tract
     file: /uploads/atlanta_weekly_2020_2021.csv
     monthfile: /uploads/atlanta_monthly_2020_2021.csv
+  - site: Arkansas
+    years: 2018-2019
+    geo: Census Tract
+    file: /uploads/arkansas_weekly_2020_2021.csv
+    monthfile: /uploads/arkansas_monthly_2020_2021.csv
   - site: Austin
     siteid: 48453
     years: 2014-2019
@@ -121,6 +126,11 @@ data:
     geo: Census Tract
     file: /uploads/delaware_weekly_2020_2021.csv
     monthfile: /uploads/delaware_monthly_2020_2021.csv
+  - site: Eugene
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/eugene_weekly_2020_2021.csv
+    monthfile: /uploads/eugene_monthly_2020_2021.csv
   - years: 2014-2019
     geo: Census Tract
     site: Fort Lauderdale
@@ -187,6 +197,11 @@ data:
     geo: Census Tract
     file: /uploads/lasvegas_weekly_2020_2021.csv
     monthfile: /uploads/lasvegas_monthly_2020_2021.csv
+  - site: Little Rock
+    years: 2018-2019
+    geo: Census Tract
+    file: /uploads/littlerock_weekly_2020_2021.csv
+    monthfile: /uploads/littlerock_monthly_2020_2021.csv
   - site: Miami
     siteid: 47157
     years: 2014-2019
@@ -247,12 +262,11 @@ data:
     geo: ZIP Code
     file: /uploads/newyork_weekly_2020_2021.csv
     monthfile: /uploads/newyork_monthly_2020_2021.csv
-  - site: West Palm Beach
-    siteid: 12099
-    years: 2014-2019
-    geo: Census Tract
-    file: /uploads/palmbeach_weekly_2020_2021.csv
-    monthfile: /uploads/palmbeach_monthly_2020_2021.csv
+  - site: Oklahoma City
+    years: --
+    geo: Zip Code
+    file: /uploads/oklahomacity_weekly_2020_2021.csv
+    monthfile: /uploads/oklahomacity_monthly_2020_2021.csv
   - site: Pennsylvania
     siteid: 42
     years: 2016-2019
@@ -277,6 +291,11 @@ data:
     geo: ZIP Code
     file: /uploads/pittsburgh_weekly_2020_2021.csv
     monthfile: /uploads/pittsburgh_monthly_2020_2021.csv
+  - site: Portland
+    years: "2019"
+    geo: Census Tract
+    file: /uploads/portland_weekly_2020_2021.csv
+    monthfile: /uploads/portland_monthly_2020_2021.csv
   - site: Providence
     siteid: 44007
     years: 2016-2019
@@ -301,24 +320,45 @@ data:
     geo: Census Tract
     file: /uploads/southbend_weekly_2020_2021.csv
     monthfile: /uploads/southbend_monthly_2020_2021.csv
+  - site: Southwest Oregon
+    years: 2016-2019
+    geo: Census Tract
+    file: /uploads/southwest_weekly_2020_2021.csv
+    monthfile: /uploads/southwest_monthly_2020_2021.csv
   - site: St Louis
     siteid: 29510
     years: 2012, 2013, 2015, 2016
     geo: Census Tract
     file: /uploads/stlouis_weekly_2020_2021.csv
     monthfile: /uploads/stlouis_monthly_2020_2021.csv
+  - site: Tacoma
+    years: 2017-2019
+    geo: Census Tract
+    file: /uploads/tacoma_weekly_2020_2021.csv
+    monthfile: /uploads/tacoma_monthly_2020_2021.csv
   - site: Tampa
     siteid: 12103
     years: 2016-2019
     geo: Census Tract
     file: /uploads/tampa_weekly_2020_2021.csv
     monthfile: /uploads/tampa_monthly_2020_2021.csv
+  - site: Toledo
+    years: 2018-2019
+    geo: Census Tract
+    file: /uploads/toledo_weekly_2020_2021.csv
+    monthfile: /uploads/toledo_monthly_2020_2021.csv
   - site: Virginia
     siteid: 51
     years: 2016-2019
     geo: ZIP Code
     file: /uploads/virginia_weekly_2020_2021.csv
     monthfile: /uploads/virginia_monthly_2020_2021.csv
+  - site: West Palm Beach
+    siteid: 12099
+    years: 2014-2019
+    geo: Census Tract
+    file: /uploads/palmbeach_weekly_2020_2021.csv
+    monthfile: /uploads/palmbeach_monthly_2020_2021.csv
   - site: Wilmington
     siteid: 10003
     years: 2016-2019
@@ -331,6 +371,11 @@ data:
     geo: Census Tract
     file: /uploads/wisconsin_weekly_2020_2021.csv
     monthfile: /uploads/wisconsin_monthly_2020_2021.csv
+  - site: Other Oregon Counties
+    years: --
+    geo: Census Tract
+    file: /uploads/otheroregon_weekly_2020_2021.csv
+    monthfile: /uploads/otheroregon_monthly_2020_2021.csv
 ---
 Sample code:
 

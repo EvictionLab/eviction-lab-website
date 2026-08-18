@@ -267,7 +267,8 @@
             &.image-large {
                 height: 121px;
                 @include media-breakpoint-up(lg) {
-                    height: 200px;
+                    height: auto;
+                    width: 100%;
                 }
             }
         }

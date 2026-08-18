@@ -1,0 +1,23 @@
+﻿fips,State,protection,tooltip
+04,AZ,1,"Eviction sealed when the case is dismissed, or tenant wins"
+06,CA,2,Protections available from start of the filing<br/> • Sealing of evictions filed during the pandemic
+08,CO,2,Protections available from start of the filing<br/> • Restrictions to tenant screening procedures
+09,CT,1,"Eviction sealed when the case is dismissed, or tenant wins"
+10,DE,1,Protections depend on the judge’s discretion 
+16,ID,1,"Eviction sealed when the case is dismissed, or tenant wins"
+17,IL,1,Evictions sealed when a minor is named in the filing<br/> • Evictions sealed in case of foreclosure or sale of property<br/> • Sealing of evictions filed during the pandemic<br/> •  Protections depend on the judge’s discretion
+18,IN,1,"Eviction sealed when the case is dismissed, or tenant wins<br/> • Party must petition court for protections"
+23,ME,1,Court limits access to electronic files
+24,MD,1,"Eviction sealed when the case is dismissed, or tenant wins<br/> • Sealing of evictions filed during the pandemic"
+25,MA,1,Evictions sealed when a minor is named in the filing<br/> • Protections depend on the judge’s discretion
+27,MN,1,"Restrictions to tenant screening procedures<br/> • Eviction sealed when the case is dismissed, or tenant wins<br/> • Evictions sealed in case of foreclosure or sale of property<br/> • Protections depend on the judge’s discretion"
+32,NV,1,"Eviction sealed when the case is dismissed, or tenant wins<br/> • Protections depend on the judge’s discretion"
+34,NJ,1,Eviction sealed after a set time period<br/> • Sealing of evictions filed during the pandemic
+36,NY,1,Restrictions to tenant screening procedures<br/> • Evictions sealed in case of foreclosure or sale of property
+41,OR,1,"Eviction sealed when the case is dismissed, or tenant wins<br/> • Eviction sealed after a set time period<br/> • Sealing of evictions filed during the pandemic"
+44,RI,1,Party must petition court for protections
+48,TX,1,Sealing of evictions filed during the pandemic
+49,UT,1,"Eviction sealed when the case is dismissed, or tenant wins"
+51,VA,1,"Eviction sealed when the case is dismissed, or tenant wins<br/> • Party must petition court for protections"
+53,WA,1,Restrictions to tenant screening procedures<br/> • Protections depend on the judge’s discretion 
+55,WI,1,Eviction sealed after a set time period

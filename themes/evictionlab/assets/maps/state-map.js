@@ -284,7 +284,11 @@ Elab.StateMap = (function (Elab) {
       svgData
         .enter()
         .append("path")
-        .attr("class", (d) => `svg-map__shape ${!ignoreValue(d) ? "hoverable" : ""}`)
+        .attr(
+          "class",
+          (d) =>
+            `svg-map__shape ${d.geometry?.type?.toLowerCase()} ${!ignoreValue(d) ? "hoverable" : ""}`,
+        )
         .merge(svgData)
         .attr("d", path)
         .style("fill", function (d) {

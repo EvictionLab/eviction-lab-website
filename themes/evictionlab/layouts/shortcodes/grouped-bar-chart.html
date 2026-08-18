@@ -58,12 +58,8 @@
     }
   </style>
   <h3 class="chart__title">
-  {{ if eq $search "true" }}
-  {{ $titlePrefix }} in
-  <span id="searchLocation"></span>
-  {{ $titleSuffix }}
-  {{ else }}
-  <span>{{ (printf "%s%s%s" $titlePrefix " " $titleSuffix) }}</span>
+  {{ if eq $search "true" }}{{ $titlePrefix }} in <span id="searchLocation" class="pl-0"></span>{{ $titleSuffix }}
+  {{ else }}<span>{{ (printf "%s%s%s" $titlePrefix " " $titleSuffix) }}</span>
   {{ end }}
   </h3>
   {{ if eq $search "true" }}

@@ -62,10 +62,11 @@ To generate {site}_shapes.json for the map element:
  4. filter & shape the data, something like the following:
   - GEOID=GEOID20 // if geos don't already gave a GEOID (each feature is expected to have a GEOID that aligns with client-provided _map.csv data 'id')
   - filter '"85003,...,85545".indexOf(GEOID) > -1' // filter using client-provided list of GEOIDs (often provided as {site}.csv)
-  - each NAME=NAMELSAD10 // add NAME field, like so for zips, or for tracts eg "Census Tract 1.14" (formatted tract number)
-    - if formatted name doesn't already exist on featurees, create it eg each NAME="ZCTA5 "+GEOID
+  - each NAME=NAMELSAD // add NAME field, like so for zips, or for tracts eg "Census Tract 1.14" (formatted tract number)
+    - if formatted name doesn't already exist on features, create it eg each NAME="ZCTA5 "+GEOID
   - filter-fields GEOID,NAME // filter to the necessary fields
- 5. export as GeoJSON with command line option "bbox precision=0.001" and save the output to static/uploads
+ 5. -simplify weighted interval=20 keep-shapes // simplify shapes to reduce file size (sets a spatial error tolerance of 20m). visually confirm this looks okay, adjusting n if necessary
+ 6. export as GeoJSON with command line option "bbox precision=0.001" and save the output to static/uploads
 
 ### Shortcodes
 

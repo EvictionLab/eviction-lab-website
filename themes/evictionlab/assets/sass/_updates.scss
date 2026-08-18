@@ -43,6 +43,12 @@ a.btn.buttonlink {
     color: #434878;
   }
 }
+@media (min-width: 992px) {
+  .page-the-eviction-lab #home-body p.reporting-type__paragraph {
+    font-size: 1.6rem;
+  }
+}
+
 .research-type,
 .research-type a {
   color: #2c897f;
@@ -140,6 +146,13 @@ a.btn.buttonlink {
       margin-left: -7%;
       image-rendering: -webkit-optimize-contrast;
     }
+  }
+
+  .photocaption {
+    font-family: "Akkurat-Italic" !important;
+    display: block;
+    line-height: 1.5 !important;
+    padding: 1.6rem 0 !important;
   }
 
   ol {

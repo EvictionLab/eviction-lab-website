@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 h1: Tacoma, Washington
 slug: tacoma-wa
 date: 2024-08-30T04:00:00.000Z

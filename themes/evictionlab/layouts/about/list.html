@@ -288,8 +288,8 @@
               {{ end }}
               {{ end }}  
                   <div class="bio-thumbs citizen-r">
-                      {{ range (where .Site.RegularPages "Params.childof" ("citizen-researchers-bios")) }}
-                      {{ if eq .Params.childof "citizen-researchers-bios" }} 
+                      {{ range (where .Site.RegularPages "Params.childof" ("alumni-bios")) }}
+                      {{ if eq .Params.childof "alumni-bios" }}
                         {{ partial "citizens-panel" . }}
                       {{ end }}
                       {{ end }}
