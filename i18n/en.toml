@@ -17,8 +17,12 @@ other = "Explore our research"
 other = "National Map & Data"
 [ETSHeading]
 other = "Eviction Tracking System"
-[ETSSub]
-other = "See monthly eviction filings across 42 cities and 10 states in our data."
+[ETSSub1]
+other = "See monthly eviction filings across "
+[ETSSub2]
+other = " cities and "
+[ETSSub3]
+other = " states in our data."
 [ETSLink]
 other = "go to the dashboard"
 [ETSTickerLabel]
