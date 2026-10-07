@@ -2,7 +2,7 @@
 childof: research-team-bios
 title: Sarah Strochak
 abbrev: sstrochak
-position: Postdoctoral Research Associate
+position: Research Collaborator
 thumb: ss_thumb.jpg
 image: ss_full.jpg
 weight: 1170

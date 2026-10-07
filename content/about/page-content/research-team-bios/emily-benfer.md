@@ -1,6 +1,6 @@
 ---
 abbrev: ebenfer
-position: Professor of Law
+position: Research Collaborator
 date: 2017-11-26T03:46:25.603Z
 childof: research-team-bios
 title: Emily A. Benfer

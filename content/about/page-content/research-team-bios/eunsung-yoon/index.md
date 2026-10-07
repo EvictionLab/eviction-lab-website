@@ -2,7 +2,7 @@
 childof: research-team-bios
 abbrev: eyoon
 title: Eunsung Yoon
-position: Postdoctoral Research Associate
+position: Research Collaborator
 image: eyoon_full.jpg
 thumb: eyoon_thumb.jpg
 weight: 1680
