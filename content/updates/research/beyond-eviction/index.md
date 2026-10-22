@@ -1,7 +1,7 @@
 ---
 draft: true
 childof: research
-url: /beyond-eviction
+url: beyond-eviction
 contenttype: updates
 collection: true
 contentcat: research
@@ -49,7 +49,7 @@ scripts:
   name="name"
   gradientType="discrete"
   title="Chinatown, Boston"
-  filteredPlaceNames="Boston"
+  filteredPlaceNames=" "
   noLegend="true"
   colors="rgba(0, 4, 226, 0.33);rgba(0, 4, 226, 0.66);rgb(0, 15, 226)"
 %}}
@@ -68,7 +68,7 @@ scripts:
   name="name"
   gradientType="discrete"
   title="Gulfton, Houston"
-  filteredPlaceNames="Houston"
+  filteredPlaceNames=" "
   noLegend="true"
   colors="rgba(0, 203, 226, 0.33);rgba(0, 146, 179, 0.66);rgb(0, 140, 145)"
 %}}
@@ -88,22 +88,31 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   window.addEventListener("load", function () {
     // extra labels per map id, added on top of the base style's labels
     var extraLabels = {
-      mapbox1: [{ name: "Chinatown", coordinates: [-71.06168, 42.3438] }],
-      mapbox2: [{ name: "Gulfton", coordinates: [-95.48, 29.699] }],
-      // mapbox2: [{ name: "Gulfton", coordinates: [-95.48, 29.685] }],
+      mapbox1: [
+        { name: "Chinatown", coordinates: [-71.06168, 42.3438] },
+        // left of the center of boston.json's bbox [-71.1912, 42.2279, -70.9228, 42.397]
+        { name: "Boston", coordinates: [-71.075, 42.3195], size: 18 },
+      ],
+      // mapbox1: [{ name: "Chinatown", coordinates: [-71.06168, 42.3438] }],
+      // mapbox2: [{ name: "Gulfton", coordinates: [-95.48, 29.699] }],
+      mapbox2: [
+        { name: "Gulfton", coordinates: [-95.48, 29.685] },
+        // center of houston.json's bbox [-95.771, 29.523, -95.075, 30.111]
+        { name: "Houston", coordinates: [-95.380, 29.780], size: 18 },
+      ],
     };
-    // maps that can't be zoomed or panned (hover tooltips still work)
-    ["mapbox1"].forEach(function (id) {
+    // zoom range per map; users can zoom within it but no further
+    var zoomLimits = {
+      mapbox1: { max: 13 },
+      mapbox2: { max: 12 },
+    };
+    Object.keys(zoomLimits).forEach(function (id) {
       var map = window.elabMaps && window.elabMaps[id];
       if (!map) return;
-      ["scrollZoom", "boxZoom", "dragPan", "dragRotate", "keyboard", "doubleClickZoom", "touchZoomRotate", "touchPitch"].forEach(function (h) {
-        if (map[h]) map[h].disable();
-      });
-      // mapbox.js re-enables scroll zoom on ctrl/cmd + wheel, so make enable() a no-op
-      map.scrollZoom.enable = function () {};
-      // hide the +/- navigation control
-      var ctrl = document.querySelector("#" + id + " .mapboxgl-ctrl-top-right");
-      if (ctrl) ctrl.style.display = "none";
+      var min = zoomLimits[id].min;
+      var max = zoomLimits[id].max;
+      !!min && map.setMinZoom(min);
+      !!max && map.setMaxZoom(max);
     });
     Object.keys(extraLabels).forEach(function (id) {
       var map = window.elabMaps && window.elabMaps[id];
@@ -117,7 +126,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             features: extraLabels[id].map(function (l) {
               return {
                 type: "Feature",
-                properties: { name: l.name },
+                properties: { name: l.name, size: l.size || 12 },
                 geometry: { type: "Point", coordinates: l.coordinates },
               };
             }),
@@ -130,7 +139,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           layout: {
             "text-field": ["get", "name"],
             "text-font": ["DIN Pro Medium", "Arial Unicode MS Regular"],
-            "text-size": 12,
+            "text-size": ["get", "size"],
             "text-allow-overlap": true,
             "text-ignore-placement": true,
           },
