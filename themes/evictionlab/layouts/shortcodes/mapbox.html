@@ -16,7 +16,8 @@
 
   <script>
     window.addEventListener("load", function () {
-      Elab.Mapbox.init(document.getElementById({{ .Get "id" }}), { 
+      window.elabMaps = window.elabMaps || {}
+      window.elabMaps[{{ .Get "id" }}] = Elab.Mapbox.init(document.getElementById({{ .Get "id" }}), { 
         geojson: {{ .Get "shapes" }},
         csv: {{ .Get "data" }},
         join: {{ .Get "join" }},
@@ -33,6 +34,7 @@
         handleMissing: {{ .Get "handleMissing" }},
         useFullUSBounds: {{ .Get "useFullUSBounds" }},
         noLegend: {{ .Get "noLegend" }},
+        filteredPlaceNames: {{ .Get "filteredPlaceNames" }},
       })
     })
   </script>

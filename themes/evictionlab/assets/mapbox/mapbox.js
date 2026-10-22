@@ -367,7 +367,24 @@ Elab.Mapbox = (function (Elab) {
     /**
      * Load CSV and render choropleth on map load
      */
+    // Limits basemap place labels to the names in config.filteredPlaceNames (comma-separated)
+    function restrictPlaceLabels() {
+      var keep = config.filteredPlaceNames.split(",").map(function (n) {
+        return n.trim();
+      });
+      var keepFilter = [
+        "any",
+        ["in", ["get", "name"], ["literal", keep]],
+        ["in", ["get", "name_en"], ["literal", keep]],
+      ];
+      map.getStyle().layers.forEach(function (layer) {
+        if (layer.type !== "symbol" || !/place|settlement|city|town/.test(layer.id)) return;
+        map.setFilter(layer.id, layer.filter ? ["all", layer.filter, keepFilter] : keepFilter);
+      });
+    }
+
     function handleLoad() {
+      if (config.filteredPlaceNames) restrictPlaceLabels();
       d3.json(geojsonUrl, function (err, json) {
         var bounds = null;
         if (err) {
