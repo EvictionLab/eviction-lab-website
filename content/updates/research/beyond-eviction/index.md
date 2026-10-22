@@ -89,10 +89,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     // extra labels per map id, added on top of the base style's labels
     var extraLabels = {
       mapbox1: [{ name: "Chinatown", coordinates: [-71.06168, 42.3438] }],
-      mapbox2: [{ name: "Gulfton", coordinates: [-95.48, 29.685] }],
+      mapbox2: [{ name: "Gulfton", coordinates: [-95.48, 29.699] }],
+      // mapbox2: [{ name: "Gulfton", coordinates: [-95.48, 29.685] }],
     };
     // maps that can't be zoomed or panned (hover tooltips still work)
-    ["mapbox1", "mapbox2"].forEach(function (id) {
+    ["mapbox1"].forEach(function (id) {
       var map = window.elabMaps && window.elabMaps[id];
       if (!map) return;
       ["scrollZoom", "boxZoom", "dragPan", "dragRotate", "keyboard", "doubleClickZoom", "touchZoomRotate", "touchPitch"].forEach(function (h) {
