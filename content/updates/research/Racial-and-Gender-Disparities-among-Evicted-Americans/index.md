@@ -27,6 +27,7 @@ aliases:
   - /racial-and-gender-disparities-among-evicted-americans/
 fbImage: historical-demographics-social.png
 ---
+*Note: View updated research on the demographics of eviction [here](https://evictionlab.org/who-is-evicted-in-america/). Our new estimates are based on the linkage of eviction records directly to U.S. Census Bureau data.*
 
 The Eviction Lab aims to better understand the causes and consequences of eviction in the United States. To do so, we have compiled court records from across the country into a national database. These court records provide a unique opportunity to examine the prevalence of eviction across time and space. But these records contain limited information about each case: case numbers, names of plaintiffs (e.g., landlords, property managers) and defendants (tenants), defendant addresses, filing dates, and case outcomes. Defendant gender and race/ethnicity are not included in eviction records.
 
