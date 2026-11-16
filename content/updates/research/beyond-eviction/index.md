@@ -12,8 +12,8 @@ date: 2026-11-15T18:49:04.271Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
-description: lorem ipsum
-listSummary: lorem ipsum
+description: Immigrants play a significant role in the U.S. housing market. Yet, we know relatively little about this population’s rental housing experiences, including their risk of eviction.
+listSummary: Immigrants play a significant role in the U.S. housing market. Yet, we know relatively little about this population’s rental housing experiences, including their risk of eviction.
 twImage: beyond-eviction.jpg
 image: beyond-eviction.jpg
 fbImage: beyond-eviction.jpg
