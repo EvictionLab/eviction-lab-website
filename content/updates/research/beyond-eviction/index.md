@@ -8,15 +8,15 @@ contentcat: research
 featured: true
 in_index: true
 title: "Beyond eviction: Landlords, community, and housing exploitation in two immigrant Neighborhoods"
-date: 2026-10-31T18:49:04.271Z
+date: 2026-11-15T18:49:04.271Z
 postauthorname: The Eviction Lab
 postauthortitle: Princeton University
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: lorem ipsum
 listSummary: lorem ipsum
-twImage: dallas-data-update.jpg
-image: dallas-data-update.jpg
-fbImage: dallas-data-update.jpg
+twImage: beyond-eviction.jpg
+image: beyond-eviction.jpg
+fbImage: beyond-eviction.jpg
 ---
 <style>
   .visual--mapbox {
@@ -29,7 +29,7 @@ ccounting for {{< smartlink "one-fifth of America's renters" "https://data.censu
 
 In a research article published in the journal {{< smartlink "City and Community" "https://journals.sagepub.com/doi/full/10.1177/15356841261452619#sec-5" >}}, we take a closer look at the neighborhoods where immigrants live and have historically depended on for support. Analyzing data between 2012 and 2016, we find that poor immigrant neighborhoods nationwide have an eviction rate 26 percent lower than similar non-immigrant neighborhoods. This is surprising because earlier research has shown that evictions are generally high in neighborhoods with concentrated {{< smartlink "disadvantage" "https://www.sciencedirect.com/science/article/pii/S0049089X16300977" >}} and {{< smartlink "poverty" "https://journals.sagepub.com/doi/full/10.1111/cico.12487" >}}, characteristics common in these communities. 
 
-[LINK TO PAPER]
+{{< researchpaperlink "Profit or Protection? Evictions and Housing Dynamics in Immigrant Neighborhoods" "https://journals.sagepub.com/doi/10.1177/15356841261452619?int.sj-abstract.similar-articles.8" "Lillian Leung, Renee Louis, Jasmine Rangel, and Matthew Desmond" "ctya_25_3.cover.png" >}}
 
 To understand what is behind this pattern, we visited two immigrant neighborhoods—Gulfton in Houston and Chinatown in Boston—and spoke with ninety renters, landlords, and community members about their housing experience. While low rents (and flexibility from property managers) partially explain low eviction rates in each neighborhood, these conditions result from very different housing dynamics. Immigrant renters in Gulfton maintain low rents by making trade-offs in housing conditions, while residents in Chinatown benefit from housing that co-ethnic landlords and community organizations have kept relatively affordable.
 
@@ -37,10 +37,10 @@ To understand what is behind this pattern, we visited two immigrant neighborhood
 <style>
   .bar-table-wrap { width: 100%; }
   .bar-table { width: 100%; border-collapse: collapse; margin: 2em 0 0.5em; font-family: inherit; }
-  .bar-table th { font-size: 1.6rem; font-weight: 500; text-align: left; vertical-align: bottom; padding: 0 1.2rem 1.2rem 0; color: #5a6270; line-height: 1.35; border-bottom: 2px solid #212529; }
+  .bar-table th { font-size: 1.6rem; font-weight: 500; text-align: left; vertical-align: bottom; padding: 0 1.2rem 1.2rem 0; color: #5a6270; line-height: 1.35; border-bottom: 2px solid #212529; font-family: GT-Eesti-Display-Medium, sans-serif; }
   .bar-table td { padding: 1rem 1.2rem 1rem 0; font-size: 1.8rem; color: #5a6270; white-space: nowrap; }
   .bar-table td.city { font-family: GT-Eesti-Display-Medium, sans-serif; font-size: 2rem; color: #212529; padding-top: 2.4rem; }
-  .bar-table td.area { padding-left: 2rem; white-space: normal; }
+  .bar-table td.area { padding-left: 2rem; white-space: normal; font-family: GT-Eesti-Display-Medium, sans-serif; }
   .bar-table tr.hl td .val { color: #212529; font-weight: 700; }
   .bar-table tr.group-end td { border-bottom: 1px solid #d5d8dc; padding-bottom: 32px; }
   .bar-table tfoot td { border-top: 2px solid #212529; font-size: 1.4rem; white-space: normal; padding-top: 1.2rem; }
@@ -48,7 +48,10 @@ To understand what is behind this pattern, we visited two immigrant neighborhood
   .bar-table .bar { display: inline-block; vertical-align: middle; width: 6rem; height: 1rem; border-radius: 3px; background: #EEF0F2; overflow: hidden; }
   .bar-table .bar i { display: block; height: 100%; border-radius: 3px; background: #9ea7b0; }
   .bar-table tr.hl .bar i { background: #e24000; }
+  .bar-table span.val { font-family: "Gotham A", "Gotham B", sans-serif; }
   @media (max-width: 767px) { .bar-table-wrap { overflow-x: auto; width: 100%; } .bar-table { min-width: 640px; } }
+  .bar-table tr.bottom-row td { padding-bottom: 3.2rem;}
+  
 </style>
 <div class="upscale124 mb-3">
 <div class="bar-table-wrap">
@@ -90,7 +93,7 @@ To understand what is behind this pattern, we visited two immigrant neighborhood
       <td><span class="val">57.8</span><span class="bar"><i style="width:95%"></i></span></td>
       <td><span class="val">$818</span><span class="bar"><i style="width:54%"></i></span></td>
     </tr>
-    <tr class="">
+    <tr class="bottom-row">
       <td class="area">Metrowide</td>
       <td><span class="val">3.8</span><span class="bar"><i style="width:95%"></i></span></td>
       <td><span class="val">7.3</span><span class="bar"><i style="width:95%"></i></span></td>
