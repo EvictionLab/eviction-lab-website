@@ -7,16 +7,17 @@ collection: true
 contentcat: research
 featured: true
 in_index: true
-title: "Beyond eviction: Landlords, community, and housing exploitation in two immigrant Neighborhoods"
+title: "Beyond eviction: Landlords, community, and housing exploitation in two immigrant neighborhoods"
 date: 2026-11-15T18:49:04.271Z
-postauthorname: The Eviction Lab
-postauthortitle: Princeton University
+postauthorname: Lilian Leung and Renee Louis
+postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Immigrants play a significant role in the U.S. housing market. Yet, we know relatively little about this population’s rental housing experiences, including their risk of eviction.
 listSummary: Immigrants play a significant role in the U.S. housing market. Yet, we know relatively little about this population’s rental housing experiences, including their risk of eviction.
 twImage: beyond-eviction.jpg
 image: beyond-eviction.jpg
 fbImage: beyond-eviction.jpg
+photocaption: "Left to right: Renters in Boston's Chinatown and Houston's Gulfton neighborhoods (Lane Turner/The Boston Globe and Raquel Natalicchio/Houston Chronicle via Getty Images)"
 ---
 <style>
   .visual--mapbox {
