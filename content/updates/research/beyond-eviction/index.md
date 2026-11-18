@@ -8,7 +8,7 @@ contentcat: research
 featured: true
 in_index: true
 title: "Beyond eviction: Landlords, community, and housing exploitation in two immigrant neighborhoods"
-date: 2026-11-15T18:49:04.271Z
+date: 2026-11-18T00:00:04.271Z
 postauthorname: Lilian Leung and Renee Louis
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
