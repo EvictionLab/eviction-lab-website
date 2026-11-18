@@ -49,7 +49,7 @@ data:
     years: —
     geo: Census Tract / ZIP Code
     file: https://eviction-lab-data-downloads.s3.amazonaws.com/ets/allstates_weekly_2020_2021.csv
-    monthfile: /uploads/allstates_monthly_2020_2021.csv
+    monthfile: /uploads/allstates_monthly.csv
   - site: Albuquerque
     siteid: 35001
     years: 2017-2019
