@@ -153,8 +153,8 @@ data:
     siteid: 45045
     years: 2016-2019
     geo: Census Tract
-    file: /uploads/greenville_weekly_2020_2021.csv
-    monthfile: /uploads/greenville_monthly_2020_2021.csv
+    file: /uploads/greenville_weekly.csv
+    monthfile: /uploads/greenville_monthly.csv
   - site: Hartford
     siteid: 9003
     years: 2017-2019
