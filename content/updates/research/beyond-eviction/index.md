@@ -25,12 +25,14 @@ photocaption: "Left to right: Renters in Boston's Chinatown and Houston's Gulfto
     margin-left: 0% !important;
   }
 </style>
-<span class="dropcap green">A</span>
-ccounting for {{< smartlink "one-fifth of America's renters" "https://data.census.gov/table/ACSST5Y2024.S0501?q=S0501." >}}, immigrants play a significant role in the U.S. housing market. Like millions of others across the country, they face rising costs and a growing shortage of affordable homes. But they also contend with additional barriers in the housing market, from discrimination in rental applications to heightened immigration enforcement. Yet, we know relatively little about this population’s rental housing experiences, including their risk of eviction.
-
-In a research article published in the journal {{< smartlink "City and Community" "https://journals.sagepub.com/doi/full/10.1177/15356841261452619#sec-5" >}}, we take a closer look at the neighborhoods where immigrants live and have historically depended on for support. Analyzing data between 2012 and 2016, we find that poor immigrant neighborhoods nationwide have an eviction rate 26 percent lower than similar non-immigrant neighborhoods. This is surprising because earlier research has shown that evictions are generally high in neighborhoods with concentrated {{< smartlink "disadvantage" "https://www.sciencedirect.com/science/article/pii/S0049089X16300977" >}} and {{< smartlink "poverty" "https://journals.sagepub.com/doi/full/10.1111/cico.12487" >}}, characteristics common in these communities. 
+<span class="dropcap green">A</span>ccounting for {{< smartlink "one-fifth of America's renters" "https://data.census.gov/table/ACSST5Y2024.S0501?q=S0501." >}}, immigrants play a significant role in the U.S. housing market. Yet, we know relatively little about this population’s rental housing experiences, including their risk of eviction. In a research article published in the journal {{< smartlink "City and Community" "https://journals.sagepub.com/doi/full/10.1177/15356841261452619#sec-5" >}}, we take a closer look at the neighborhoods where immigrants live and have historically depended on for support. Analyzing data between 2012 and 2016, we find that poor immigrant neighborhoods nationwide have an eviction rate 26 percent lower than similar non-immigrant neighborhoods. 
 
 {{< researchpaperlink "Profit or Protection? Evictions and Housing Dynamics in Immigrant Neighborhoods" "https://journals.sagepub.com/doi/10.1177/15356841261452619?int.sj-abstract.similar-articles.8" "Lillian Leung, Renee Louis, Jasmine Rangel, and Matthew Desmond" "ctya_25_3.cover.png" >}}
+
+ This is surprising because earlier research has shown that evictions are generally high in neighborhoods with concentrated {{< smartlink "disadvantage" "https://www.sciencedirect.com/science/article/pii/S0049089X16300977" >}} and {{< smartlink "poverty" "https://journals.sagepub.com/doi/full/10.1111/cico.12487" >}}, characteristics also common in these communities. Furthermore, immigrants not only face rising costs and a growing shortage of affordable homes, like millions of others across the country do, they often also contend with additional barriers in the housing market, from discrimination in rental applications to heightened immigration enforcement. Relatively lower eviction rates in immigrant neighborhoods are therefore all the more unexpected.
+
+ {{< pullquote "Analyzing data between 2012 and 2016, we find that poor immigrant neighborhoods nationwide have an eviction rate 26 percent lower than similar non-immigrant neighborhoods." >}}
+
 
 To understand what is behind this pattern, we visited two immigrant neighborhoods—Gulfton in Houston and Chinatown in Boston—and spoke with ninety renters, landlords, and community members about their housing experience. While low rents (and flexibility from property managers) partially explain low eviction rates in each neighborhood, these conditions result from very different housing dynamics. Immigrant renters in Gulfton maintain low rents by making trade-offs in housing conditions, while residents in Chinatown benefit from housing that co-ethnic landlords and community organizations have kept relatively affordable.
 
@@ -116,15 +118,21 @@ In Houston, Gulfton is home to immigrants and refugees from Mexico and Central A
 
 This lack of investment is reflected in the broken windows, car-sized potholes, and unkempt courtyards in the properties we visited. Inside the apartments, residents deal with mold, water leaks, broken air conditioners and refrigerators, and pests, issues property managers are slow to address. Frustrated, one respondent felt like “they [we]re treating us like animals.” But poor housing conditions were not the only trade-off; some families further minimize housing costs by crowding in smaller units. For example, one undocumented couple and their five young children crammed into a one-bedroom apartment, while transforming the closet into a bed for their oldest son. In the face of more expensive housing options outside of Gulfton, renters feel they have little choice but to endure these poor conditions. 
 
-When tenants do fall behind on rent, some Hispanic property managers occasionally offer arrangements like payment plans. Nonetheless, tenants emphasize that paying rent is the most urgent among their expenses: “My house comes first… I can be without a phone, I can manage without a car, but I have to pay the rent.” 
+When tenants do fall behind on rent, some Hispanic property managers occasionally offer arrangements like payment plans. Nonetheless, tenants emphasize that paying rent is the most urgent among their expenses: “My house comes first … I can be without a phone, I can manage without a car, but I have to pay the rent.” 
 
 <img src="boston.png" class="upscale124 mt-2 mb-5">
 
 1,600 miles away, in Boston’s Chinatown, immigrants also do as much as they can to avoid an eviction. However, they further benefit from co-ethnic housing resources that are not available in Gulfton. They have access to a network of landlords in Chinatown—one stemming from a long history of Chinese settlement in this neighborhood since the early twentieth century—that has helped maintain local housing affordability.
 
+{{< pullquote "Far from naturally occurring, affordable housing in Chinatown is a result of local, intentional effort." >}}
+
 At the time of our research, {{< smartlink "almost half of Chinatown’s units were subsidized" "https://www.mapc.org/resource-library/chinatown-master-plan-2020/" >}}, a much higher level than in Boston as a whole. This unusually large stock of subsidized housing was developed by local community organizations that explicitly prioritize affordable rents for residents and maintain Chinatown’s ethnic and working-class character. 
 
+
 Subsidized units are not the only source of affordable housing. Co-ethnic landlords embedded in the community intentionally keep rents low. Familiar with their tenants (and sometimes their tenants’ employers), these landlords offer informal arrangements and flexibility not always made available by corporate landlords. One set of landlords distinctive to Chinatown are family associations, longstanding organizations in American Chinatowns arranged around people with shared surnames or hometowns. These organizations formed historically to help Chinese immigrants, who faced discrimination and language barriers, and provide them with jobs, social services, and even housing. As landlords, family associations stand out for their democratic rent-setting practices. Members of these organizations, who pool money and collectively own properties in Chinatown, vote on rent increases, meaning units often end up renting at below-market rates. 
+
+{{< pullquote "The case of Gulfton highlights that most immigrant communities do not have access to resources like those in Chinatown, but have to tolerate poor and crowded housing conditions." >}}
+
 
 Taken together, Chinatown offers a model of local ownership arrangements that have staved off displacement pressures. Far from naturally occurring, affordable housing in Chinatown is a result of local, intentional effort. It also demonstrates the significance of place-based housing investment for neighborhood stability. 
 
