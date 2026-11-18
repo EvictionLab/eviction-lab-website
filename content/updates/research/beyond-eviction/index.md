@@ -9,7 +9,7 @@ featured: true
 in_index: true
 title: "Beyond eviction: Landlords, community, and housing exploitation in two immigrant neighborhoods"
 date: 2026-11-18T00:00:04.271Z
-postauthorname: Lilian Leung and Renee Louis
+postauthorname: Lillian Leung and Renee Louis
 postauthortitle: The Eviction Lab
 authorpic: /images/bios/elab_thumb_sm.jpg
 description: Immigrants play a significant role in the U.S. housing market. Yet, we know relatively little about this population’s rental housing experiences, including their risk of eviction.
@@ -31,7 +31,7 @@ photocaption: "Left to right: Renters in Boston's Chinatown and Houston's Gulfto
 
  This is surprising because earlier research has shown that evictions are generally high in neighborhoods with concentrated {{< smartlink "disadvantage" "https://www.sciencedirect.com/science/article/pii/S0049089X16300977" >}} and {{< smartlink "poverty" "https://journals.sagepub.com/doi/full/10.1111/cico.12487" >}}, characteristics also common in these communities. Furthermore, immigrants not only face rising costs and a growing shortage of affordable homes, like millions of others across the country do, they often also contend with additional barriers in the housing market, from discrimination in rental applications to heightened immigration enforcement. Relatively lower eviction rates in immigrant neighborhoods are therefore all the more unexpected.
 
- {{< pullquote "Analyzing data between 2012 and 2016, we find that poor immigrant neighborhoods nationwide have an eviction rate 26 percent lower than similar non-immigrant neighborhoods." >}}
+ {{< pullquote "Poor immigrant neighborhoods nationwide have an eviction rate 26 percent lower than similar non-immigrant neighborhoods." >}}
 
 
 To understand what is behind this pattern, we visited two immigrant neighborhoods—Gulfton in Houston and Chinatown in Boston—and spoke with ninety renters, landlords, and community members about their housing experience. While low rents (and flexibility from property managers) partially explain low eviction rates in each neighborhood, these conditions result from very different housing dynamics. Immigrant renters in Gulfton maintain low rents by making trade-offs in housing conditions, while residents in Chinatown benefit from housing that co-ethnic landlords and community organizations have kept relatively affordable.
