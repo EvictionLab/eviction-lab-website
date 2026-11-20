@@ -2,7 +2,7 @@
 draft: true
 h1: Macon-Bibb, Georgia
 slug: macon-bibb-ga
-date: 2025-11-30T04:00:00.000Z
+date: 2026-11-20T04:00:00.000Z
 rentersSite: Macon-Bibb
 areaSite: true
 twImage: /images/assets/graphics/ets-bg-social.png
